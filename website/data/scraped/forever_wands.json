@@ -282,6 +282,28 @@
         "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
+          {
+            "name": "Blackbone Wand",
+            "itemId": 7514,
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "dps": "15.3 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_06",
+            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+          },
+          {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
             "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -379,6 +401,17 @@
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
         "alts": [
+          {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
@@ -781,6 +814,18 @@
               "Requires Level 56"
             ],
             "source": "Rare World Drop (Req lvl 56)"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19130,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 51,
+            "dps": "56.0 DPS",
+            "speed": "1.60",
+            "stats": "+16 Frost Spell Damage",
+            "icon": "inv_wand_09",
+            "value": "Alterac Valley Quest Reward"
           }
         ],
         "lines": [
@@ -877,6 +922,42 @@
               "Equip: Increases healing done by up to 17"
             ],
             "source": "Best — in — Slot Level 60 Wand"
+          },
+          {
+            "name": "Crimson Shocker",
+            "itemId": 18338,
+            "quality": "q3",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "dps": "60.3 DPS",
+            "speed": "1.70",
+            "stats": "+9 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Dire Maul — Illyanna Ravenoak"
+          },
+          {
+            "name": "Bonecreeper Stylus",
+            "itemId": 13938,
+            "quality": "q3",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "63.5 DPS",
+            "speed": "1.30",
+            "stats": "+4 Intellect, +11 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Scholomance — Darkmaster Gandling"
+          },
+          {
+            "name": "Stormrager",
+            "itemId": 16997,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "dps": "58.0 DPS",
+            "speed": "1.40",
+            "stats": "+5 Nature Spell Damage",
+            "icon": "inv_wand_02",
+            "value": "Eastern Plaguelands Quest Reward"
           }
         ],
         "lines": [
@@ -1173,6 +1254,28 @@
         "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
+          {
+            "name": "Blackbone Wand",
+            "itemId": 7514,
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "dps": "15.3 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_06",
+            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+          },
+          {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
             "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -1246,6 +1349,17 @@
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
         "alts": [
+          {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
@@ -1648,6 +1762,18 @@
               "Requires Level 56"
             ],
             "source": "Rare World Drop (Req lvl 56)"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19130,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 51,
+            "dps": "56.0 DPS",
+            "speed": "1.60",
+            "stats": "+16 Frost Spell Damage",
+            "icon": "inv_wand_09",
+            "value": "Alterac Valley Quest Reward"
           }
         ],
         "lines": [
@@ -1744,6 +1870,42 @@
               "Equip: Increases healing done by up to 17"
             ],
             "source": "Best — in — Slot Level 60 Wand"
+          },
+          {
+            "name": "Crimson Shocker",
+            "itemId": 18338,
+            "quality": "q3",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "dps": "60.3 DPS",
+            "speed": "1.70",
+            "stats": "+9 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Dire Maul — Illyanna Ravenoak"
+          },
+          {
+            "name": "Bonecreeper Stylus",
+            "itemId": 13938,
+            "quality": "q3",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "63.5 DPS",
+            "speed": "1.30",
+            "stats": "+4 Intellect, +11 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Scholomance — Darkmaster Gandling"
+          },
+          {
+            "name": "Stormrager",
+            "itemId": 16997,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "dps": "58.0 DPS",
+            "speed": "1.40",
+            "stats": "+5 Nature Spell Damage",
+            "icon": "inv_wand_02",
+            "value": "Eastern Plaguelands Quest Reward"
           }
         ],
         "lines": [
@@ -2040,6 +2202,28 @@
         "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
+          {
+            "name": "Blackbone Wand",
+            "itemId": 7514,
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "dps": "15.3 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_06",
+            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+          },
+          {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
             "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -2113,6 +2297,17 @@
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
         "alts": [
+          {
+            "name": "Gravestone Scepter",
+            "itemId": 7001,
+            "quality": "q3",
+            "iLvl": 29,
+            "reqLevel": 18,
+            "dps": "29.0 DPS",
+            "speed": "1.50",
+            "icon": "inv_wand_01",
+            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+          },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
@@ -2515,6 +2710,18 @@
               "Requires Level 56"
             ],
             "source": "Rare World Drop (Req lvl 56)"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19130,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 51,
+            "dps": "56.0 DPS",
+            "speed": "1.60",
+            "stats": "+16 Frost Spell Damage",
+            "icon": "inv_wand_09",
+            "value": "Alterac Valley Quest Reward"
           }
         ],
         "lines": [
@@ -2611,6 +2818,42 @@
               "Equip: Increases healing done by up to 17"
             ],
             "source": "Best — in — Slot Level 60 Wand"
+          },
+          {
+            "name": "Crimson Shocker",
+            "itemId": 18338,
+            "quality": "q3",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "dps": "60.3 DPS",
+            "speed": "1.70",
+            "stats": "+9 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Dire Maul — Illyanna Ravenoak"
+          },
+          {
+            "name": "Bonecreeper Stylus",
+            "itemId": 13938,
+            "quality": "q3",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "63.5 DPS",
+            "speed": "1.30",
+            "stats": "+4 Intellect, +11 Spell Power",
+            "icon": "inv_wand_05",
+            "value": "Scholomance — Darkmaster Gandling"
+          },
+          {
+            "name": "Stormrager",
+            "itemId": 16997,
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "dps": "58.0 DPS",
+            "speed": "1.40",
+            "stats": "+5 Nature Spell Damage",
+            "icon": "inv_wand_02",
+            "value": "Eastern Plaguelands Quest Reward"
           }
         ],
         "lines": [

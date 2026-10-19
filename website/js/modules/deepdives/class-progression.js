@@ -131,9 +131,10 @@
     const s = String(tok ?? '').trim();
     if (!s) return false;
     if (/^(equip|use|chance on hit):/i.test(s)) return true;
-    if (/^[+-]\d+%?\s+(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|healing|armor|crit|hit|defense|res|penetration|fire|frost|shadow|nature|arcane|holy|mana regeneration|health regeneration|spell damage|healing spells)/i.test(s)) return true;
-    if (/^\d+%?\s+(mp5|sp|ap|crit|hit|spell power|healing)/i.test(s)) return true;
-    if (/^(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|defense|armor)\s+[+-]\d+/i.test(s)) return true;
+    if (/^\d+\s+(armor|block)\b/i.test(s)) return true;
+    if (/^[+-]\d+%?\s+(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|healing|armor|block|crit|hit|defense|res|penetration|fire|frost|shadow|nature|arcane|holy|mana regeneration|health regeneration|spell damage|healing spells)/i.test(s)) return true;
+    if (/^\d+%?\s+(mp5|sp|ap|crit|hit|spell power|healing|armor|block)/i.test(s)) return true;
+    if (/^(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|defense|armor|block)\s+[+-]\d+/i.test(s)) return true;
     if (/proc on hit|on hit/i.test(s) && /[+-]?\d+/.test(s)) return true;
     return false;
   }
@@ -236,12 +237,18 @@
       const equipText = s.startsWith('Equip:') ? s : `Equip: +${s.replace(/^\+/, '')}`;
       return `<div class="wow-tip-equip">${escapeHtml(equipText)}</div>`;
     }
+    if (/\barmor\b/i.test(s)) {
+      return `<div class="wow-tip-armor" style="color: #fff;">${escapeHtml(s)}</div>`;
+    }
+    if (/\bblock\b/i.test(s)) {
+      return `<div class="wow-tip-block" style="color: #fff;">${escapeHtml(s)}</div>`;
+    }
     return `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(s)}</div>`;
   }
 
   function parseStatsTokens(statsStr, altValStr, detailStr) {
     if (statsStr) {
-      const tokens = statsStr.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+      const tokens = statsStr.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit|armor|block)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|armor|block)\b))/i)
         .map(s => s.trim())
         .filter(Boolean);
       const valid = tokens.filter(isRealStatToken);
@@ -251,14 +258,14 @@
     if (!src) return [];
     const paren = src.match(/\(([^)]+)\)/);
     if (paren) {
-      const tokens = paren[1].split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+      const tokens = paren[1].split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit|armor|block)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|armor|block)\b))/i)
         .map(s => s.trim())
         .filter(Boolean);
       const valid = tokens.filter(isRealStatToken);
       if (valid.length > 0) return valid;
     }
     const left = src.split(/\s*[-–—:]\s*/)[0] || '';
-    const tokens = left.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+    const tokens = left.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit|armor|block)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|armor|block)\b))/i)
       .map(s => s.trim())
       .filter(Boolean);
     return tokens.filter(isRealStatToken);
@@ -276,7 +283,7 @@
     for (const p of rest) {
       const trimmed = p.trim();
       if (!trimmed) continue;
-      const subTokens = trimmed.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+      const subTokens = trimmed.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit|armor|block)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|armor|block)\b))/i)
         .map(s => s.trim())
         .filter(Boolean);
       const allStats = subTokens.length > 0 && subTokens.every(isRealStatToken);
@@ -302,6 +309,8 @@
     const ilvl = target.getAttribute('data-ilvl') || fullItem?.iLvl || fullItem?.ilvl || '';
     const reqLevel = target.getAttribute('data-req-level') || fullItem?.reqLevel || '';
     const weaponType = target.getAttribute('data-weapon-type') || fullItem?.weaponType || 'Weapon';
+    const armor = target.getAttribute('data-armor') || fullItem?.armor || '';
+    const block = target.getAttribute('data-block') || fullItem?.block || '';
     const speed = target.getAttribute('data-speed') || fullItem?.speed || '';
     const dps = target.getAttribute('data-dps') || fullItem?.dps || '';
     const stats = target.getAttribute('data-stats') || fullItem?.stats || '';
@@ -333,6 +342,12 @@
       let statsInjected = false;
 
       html += `<div class="wow-tip-lines">`;
+      if (armor && !fullItem.lines.some(l => l.includes('Armor'))) {
+        html += `<div class="wow-tip-armor" style="color: #fff;">${escapeHtml(armor)} Armor</div>`;
+      }
+      if (block && !fullItem.lines.some(l => l.includes('Block'))) {
+        html += `<div class="wow-tip-block" style="color: #fff;">${escapeHtml(block)} Block</div>`;
+      }
       fullItem.lines.forEach(line => {
         const trimmed = line.trim();
         if (!trimmed || trimmed === name || trimmed.startsWith('Item Level')) return;
@@ -343,6 +358,10 @@
           } else {
             html += `<div class="wow-tip-type-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
           }
+        } else if (trimmed.includes('Armor') && !trimmed.startsWith('Equip:') && !trimmed.startsWith('Use:') && !trimmed.startsWith('Chance on hit:')) {
+          html += `<div class="wow-tip-armor" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
+        } else if (trimmed.includes('Block') && !trimmed.startsWith('Equip:') && !trimmed.startsWith('Use:') && !trimmed.startsWith('Chance on hit:')) {
+          html += `<div class="wow-tip-block" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('(') && trimmed.endsWith(')') && trimmed.toLowerCase().includes('damage per second')) {
           html += `<div class="wow-tip-dps">${escapeHtml(trimmed)}</div>`;
           if (!linesHasStats && !statsInjected && statTokens.length > 0) {
@@ -392,12 +411,20 @@
       }
 
       const slotText = getWeaponSlotText(weaponType);
+      const isShield = weaponType.toLowerCase() === 'shield';
       html += `
         <div class="wow-tip-type-row">
-          <span>${escapeHtml(slotText)}</span>
+          <span>${escapeHtml(isShield ? 'Off Hand' : slotText)}</span>
           <span>${escapeHtml(weaponType || 'Weapon')}</span>
         </div>
       `;
+
+      if (armor) {
+        html += `<div class="wow-tip-armor" style="color: #fff;">${escapeHtml(armor)} Armor</div>`;
+      }
+      if (block) {
+        html += `<div class="wow-tip-block" style="color: #fff;">${escapeHtml(block)} Block</div>`;
+      }
 
       if (speed || dps) {
         const dmg = calculateDmgRange(dps, speed);
@@ -569,6 +596,8 @@
             speed: step.speed,
             dps: step.dps,
             stats: step.stats,
+            armor: step.armor,
+            block: step.block,
             lines: step.lines,
             source: step.source,
             faction: step.faction || 'both',
@@ -587,6 +616,8 @@
             speed: spdMatch || altMatch.speed || step.speed,
             dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
             stats: altMatch.stats || step.stats,
+            armor: altMatch.armor || step.armor,
+            block: altMatch.block || step.block,
             lines: altMatch.lines || null,
             source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
             faction: altMatch.faction || effectiveFaction,
@@ -637,6 +668,8 @@
                  data-speed="${escapeHtml(displayStep.speed || '')}"
                  data-dps="${escapeHtml(displayStep.dps || '')}"
                  data-stats="${escapeHtml(displayStep.stats || '')}"
+                 data-armor="${displayStep.armor || ''}"
+                 data-block="${displayStep.block || ''}"
                  data-source-title="${escapeHtml(displayStep.source?.title || '')}"
                  data-source-detail="${escapeHtml(displayStep.source?.detail || '')}"
                  data-source-kind="${escapeHtml(displayStep.source?.kind || '')}"
@@ -695,6 +728,8 @@
                             data-speed="${escapeHtml(alt.speed || '')}"
                             data-dps="${escapeHtml(alt.dps || '')}"
                             data-stats="${escapeHtml(alt.stats || '')}"
+                            data-armor="${alt.armor || ''}"
+                            data-block="${alt.block || ''}"
                             data-alt-val="${escapeHtml(alt.value || '')}"
                             data-faction="${escapeHtml(altFaction)}">
                         ${altBadge}
@@ -795,15 +830,40 @@
   function renderOffhands(classId) {
     const isShieldClass = ['warrior', 'paladin', 'shaman'].includes(classId);
     const isDruid = classId === 'druid';
+    const isRogue = classId === 'rogue';
+    const isHunter = classId === 'hunter';
+
+    let title = 'Level 1 to 60 Caster Off-Hand Progression';
+    let icon = '🔮';
+    let desc = 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.';
+    let emptyMsg = '⚠️ No off-hand progression recorded for this class in current Beta Build.';
+
+    if (isShieldClass) {
+      title = 'Level 1 to 60 Shield Upgrade Path';
+      icon = '🛡️';
+      desc = 'Best-in-slot shields for leveling and tanking: optimal armor, block value, stamina, and key dungeon boss drops.';
+      emptyMsg = '⚠️ No shield progression recorded for this class in current Beta Build.';
+    } else if (isDruid) {
+      title = 'Level 1 to 60 Off-Hand & Idol Progression';
+      icon = '🔮';
+      desc = 'Held-in-off-hand tomes, furbolg pouches, and class idols for leveling Feral, Balance, and Restoration Druids.';
+    } else if (isRogue) {
+      title = 'Level 1 to 60 Rogue Off-Hand Weapon Upgrade Path';
+      icon = '🗡️';
+      desc = 'Optimal fast off-hand daggers and swords for Combat & Subtlety: poison application speed, stats, and key dungeon drops.';
+      emptyMsg = '⚠️ No rogue off-hand progression recorded for this class in current Beta Build.';
+    } else if (isHunter) {
+      title = 'Level 1 to 60 Hunter Melee & Stat-Stick Progression';
+      icon = '⚔️';
+      desc = 'Optimal two-handed polearms, staves, and dual-wield Agility weapons: critical stats, melee weaving, and Wing Clip utility.';
+      emptyMsg = '⚠️ No hunter melee progression recorded for this class in current Beta Build.';
+    }
+
     return renderItemTimeline(classId, 'offhands', {
-      title: isShieldClass ? 'Level 1 to 60 Shield Upgrade Path' : (isDruid ? 'Level 1 to 60 Off-Hand & Idol Progression' : 'Level 1 to 60 Caster Off-Hand Progression'),
-      icon: isShieldClass ? '🛡️' : '🔮',
-      desc: isShieldClass
-        ? 'Best-in-slot shields for leveling and tanking: optimal armor, block value, stamina, and key dungeon boss drops.'
-        : (isDruid
-            ? 'Held-in-off-hand tomes, furbolg pouches, and class idols for leveling Feral, Balance, and Restoration Druids.'
-            : 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.'),
-      emptyMsg: isShieldClass ? '⚠️ No shield progression recorded for this class in current Beta Build.' : '⚠️ No off-hand progression recorded for this class in current Beta Build.',
+      title,
+      icon,
+      desc,
+      emptyMsg,
       filterId: 'offhand-faction-toggle',
       getFaction: () => activeOffhandFaction
     });

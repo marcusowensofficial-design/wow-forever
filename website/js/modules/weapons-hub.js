@@ -23,6 +23,10 @@
       cats.push({ id: 'offhands', label: 'Shields', icon: '🛡️' });
     } else if (classId === 'druid') {
       cats.push({ id: 'offhands', label: 'Off-Hand & Idols', icon: '🔮' });
+    } else if (classId === 'rogue') {
+      cats.push({ id: 'offhands', label: 'Off-Hand Weapons', icon: '🗡️' });
+    } else if (classId === 'hunter') {
+      cats.push({ id: 'offhands', label: 'Melee Stat-Sticks', icon: '⚔️' });
     } else if (['priest', 'mage', 'warlock'].includes(classId)) {
       cats.push({ id: 'offhands', label: 'Off-Hands', icon: '🔮' });
     }
@@ -30,12 +34,22 @@
   }
 
   function getWeaponCountForClass(classId) {
-    const weapons = window.WOW_PROGRESSION_DATA?.weapons?.[classId]?.levels || [];
     let count = 0;
-    weapons.forEach(step => {
-      count += 1;
-      if (Array.isArray(step.alternatives)) count += step.alternatives.length;
-    });
+    const countItems = (arr) => {
+      if (!Array.isArray(arr)) return;
+      arr.forEach(step => {
+        count += 1;
+        if (Array.isArray(step.alts)) count += step.alts.length;
+        if (Array.isArray(step.alternatives)) count += step.alternatives.length;
+      });
+    };
+    const pData = window.WOW_PROGRESSION_DATA;
+    if (!pData) return 0;
+    countItems(pData.weapons?.[classId]?.levels);
+    countItems(pData.weapons?.[classId]?.healingLevels);
+    countItems(pData.offhands?.[classId]?.levels);
+    countItems(pData.offhands?.[classId]?.healingLevels);
+    countItems(pData.wands?.[classId]?.levels);
     return count;
   }
 

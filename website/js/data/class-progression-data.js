@@ -3400,6 +3400,10 @@ if (typeof window !== 'undefined') {
         {
           "id": "primary",
           "name": "Two-Handed Path (Arms / Fury)"
+        },
+        {
+          "id": "tank",
+          "name": "🛡️ Protection & Tanking (1-Handed Swords / Axes / Maces)"
         }
       ],
       "levels": [
@@ -8645,6 +8649,19 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60"
               ],
               "source": "Sergeant Thunderhorn"
+            },
+            {
+              "name": "Ashkandi, Greatsword of the Brotherhood",
+              "itemId": 19364,
+              "weaponType": "2H Sword",
+              "quality": "q4",
+              "iLvl": 81,
+              "reqLevel": 60,
+              "speed": "3.50",
+              "dps": "81.9 DPS",
+              "stats": "+33 Stamina, Equip: +86 Attack Power",
+              "icon": "inv_sword_12",
+              "value": "Blackwing Lair — Nefarian"
             }
           ],
           "faction": "both",
@@ -8662,7 +8679,5654 @@ if (typeof window !== 'undefined') {
             "Equip: +62 Attack Power."
           ]
         }
-      ]
+      ],
+      "tracksData": {
+        "primary": [
+          {
+            "levelBracket": "1–2",
+            "itemId": 1512,
+            "name": "Crude Battle Axe",
+            "icon": "inv_sword_20",
+            "weaponType": "Two-handed axe",
+            "speed": "2.80",
+            "dps": "2.0 DPS",
+            "source": {
+              "kind": "vendor",
+              "title": "Weapon Vendor",
+              "detail": "Purchased in starting zones (Coldridge, Northshire, Valley of Trials)"
+            },
+            "alts": [
+              {
+                "name": "Club",
+                "itemId": 2130,
+                "value": "1.8 DPS - Starter vendor mace",
+                "faction": "both",
+                "dps": "1.8 DPS",
+                "quality": "q1",
+                "iLvl": 3,
+                "reqLevel": 1,
+                "stats": "",
+                "icon": "inv_axe_10",
+                "weaponType": "One-Handed Mace",
+                "speed": "1.90",
+                "lines": [
+                  "One-Hand",
+                  "1 - 3 Damage\tSpeed 1.90",
+                  "(1.05 damage per second)"
+                ],
+                "source": "Starter vendor mace"
+              },
+              {
+                "name": "Worn Shortsword",
+                "itemId": 25,
+                "value": "1.7 DPS - Starter 1H sword",
+                "faction": "both",
+                "dps": "1.7 DPS",
+                "quality": "q1",
+                "iLvl": 2,
+                "reqLevel": 1,
+                "stats": "",
+                "icon": "inv_sword_04",
+                "weaponType": "One-Handed Sword",
+                "speed": "1.90",
+                "lines": [
+                  "Main Hand",
+                  "1 - 3 Damage\tSpeed 1.90",
+                  "(1.05 damage per second)"
+                ],
+                "source": "Starter 1H sword"
+              },
+              {
+                "name": "Invisible Dagger",
+                "itemId": 280304,
+                "icon": "inv_sword_50",
+                "weaponType": "Dagger",
+                "speed": "2.00",
+                "dps": "6.75 DPS",
+                "value": "6.75 DPS, 2.00s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "Dagger",
+                  "Speed 2.00",
+                  "(6.75 damage per second)"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Gilded Blademaster's Greatsword",
+                "itemId": 287648,
+                "icon": "8422168",
+                "weaponType": "2H Sword",
+                "speed": "3.60",
+                "dps": "5.00 DPS",
+                "value": "5.00 DPS, 3.60s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.60",
+                  "(5.00 damage per second)"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Militia Shortblade",
+                "itemId": 248007,
+                "icon": "inv_weapon_shortblade_15",
+                "weaponType": "Dagger",
+                "speed": "2.00",
+                "dps": "6.50 DPS",
+                "value": "6.50 DPS, 2.00s - +1 Agility - Rare Books",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 12,
+                "reqLevel": 1,
+                "stats": "+1 Agility",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "9 - 17 Damage\tSpeed 2.00",
+                  "(6.50 damage per second)",
+                  "+1 Agility"
+                ],
+                "source": "Rare Books"
+              },
+              {
+                "name": "Militia Sword",
+                "itemId": 248006,
+                "icon": "ability_steelmelee",
+                "weaponType": "1H Sword",
+                "speed": "2.50",
+                "dps": "6.40 DPS",
+                "value": "6.40 DPS, 2.50s - +1 Stamina - Rare Books",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 12,
+                "reqLevel": 1,
+                "stats": "+1 Stamina",
+                "lines": [
+                  "1H Sword",
+                  "Speed 2.50",
+                  "(6.40 damage per second)",
+                  "+1 Stamina"
+                ],
+                "source": "Rare Books"
+              },
+              {
+                "name": "Restored Cleaver",
+                "itemId": 281721,
+                "icon": "inv_axe_04",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "1.61 DPS",
+                "value": "1.61 DPS, 3.10s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(1.61 damage per second)"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Restored Longsword",
+                "itemId": 281729,
+                "icon": "inv_sword_04",
+                "weaponType": "2H Sword",
+                "speed": "3.10",
+                "dps": "1.61 DPS",
+                "value": "1.61 DPS, 3.10s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.10",
+                  "(1.61 damage per second)"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Restored Smasher",
+                "itemId": 281724,
+                "icon": "inv_hammer_16",
+                "weaponType": "2H Mace",
+                "speed": "3.10",
+                "dps": "1.61 DPS",
+                "value": "1.61 DPS, 3.10s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.10",
+                  "(1.61 damage per second)"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Restored Spear",
+                "itemId": 281725,
+                "icon": "inv_spear_08",
+                "weaponType": "Polearm",
+                "speed": "3.10",
+                "dps": "1.61 DPS",
+                "value": "1.61 DPS, 3.10s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.10",
+                  "(1.61 damage per second)"
+                ],
+                "source": "Leveling Drop / Vendor"
+              }
+            ],
+            "faction": "both",
+            "quality": "q0",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "",
+            "lines": [
+              "Two-Hand",
+              "12 - 18 Damage\tSpeed 3.00",
+              "(5.00 damage per second)",
+              "Requires Level 7"
+            ]
+          },
+          {
+            "levelBracket": "3–4",
+            "itemId": 2493,
+            "name": "Wooden Mallet",
+            "icon": "inv_hammer_16",
+            "weaponType": "Two-handed mace",
+            "speed": "2.60",
+            "dps": "5.0 DPS",
+            "source": {
+              "kind": "vendor",
+              "title": "Weapon Vendor",
+              "detail": "Sold in starter hub towns (Kharanos, Goldshire, Razor Hill)"
+            },
+            "alts": [
+              {
+                "name": "Large Club",
+                "itemId": 2480,
+                "value": "3.8 DPS - Early vendor 2H mace",
+                "faction": "both",
+                "dps": "2.78 DPS",
+                "speed": "1.80",
+                "weaponType": "One-handed mace",
+                "quality": "q1",
+                "iLvl": 3,
+                "reqLevel": 2,
+                "stats": "",
+                "icon": "inv_torch_unlit",
+                "lines": [
+                  "Two-Hand",
+                  "4 - 6 Damage\tSpeed 3.20",
+                  "(1.56 damage per second)"
+                ],
+                "source": "Early vendor 2H mace"
+              },
+              {
+                "name": "Copper Axe",
+                "itemId": 2845,
+                "value": "3.8 DPS - Crafted Blacksmithing (skill 20)",
+                "faction": "both",
+                "dps": "3.75 DPS",
+                "speed": "2.40",
+                "weaponType": "One-handed axe",
+                "quality": "q1",
+                "iLvl": 9,
+                "reqLevel": 4,
+                "stats": "",
+                "icon": "inv_axe_23",
+                "lines": [
+                  "One-Hand",
+                  "6 - 12 Damage\tSpeed 2.40",
+                  "(3.75 damage per second)",
+                  "Requires Level 4"
+                ],
+                "source": "Crafted Blacksmithing (skill 20)"
+              },
+              {
+                "name": "Steady Bastard Sword",
+                "itemId": 4939,
+                "icon": "inv_sword_40",
+                "weaponType": "2H Sword",
+                "speed": "2.70",
+                "dps": "7.6 DPS",
+                "value": "7.6 DPS, 2.70s - Skull Rock",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 11,
+                "reqLevel": 4,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.70",
+                  "(7.6 damage per second)",
+                  "Requires Level 4"
+                ],
+                "source": "Skull Rock"
+              },
+              {
+                "name": "Defender Axe",
+                "itemId": 5459,
+                "icon": "inv_axe_01",
+                "weaponType": "1H Axe",
+                "speed": "2.30",
+                "dps": "6.96 DPS",
+                "value": "6.96 DPS, 2.30s - +10 Armor - Ursal the Mauler",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 4,
+                "stats": "+10 Armor",
+                "lines": [
+                  "1H Axe",
+                  "Speed 2.30",
+                  "(6.96 damage per second)",
+                  "+10 Armor",
+                  "Requires Level 4"
+                ],
+                "source": "Ursal the Mauler"
+              },
+              {
+                "name": "Valley Cosh",
+                "itemId": 278002,
+                "icon": "inv_mace_10",
+                "weaponType": "1H Mace",
+                "speed": "1.90",
+                "dps": "6.05 DPS",
+                "value": "6.05 DPS, 1.90s - +1 Stamina - Stalk With The Earthmother",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 11,
+                "reqLevel": 4,
+                "stats": "+1 Stamina",
+                "lines": [
+                  "1H Mace",
+                  "Speed 1.90",
+                  "(6.05 damage per second)",
+                  "+1 Stamina",
+                  "Requires Level 4"
+                ],
+                "source": "Stalk With The Earthmother"
+              },
+              {
+                "name": "Jagged Dagger",
+                "itemId": 4947,
+                "icon": "inv_weapon_shortblade_02",
+                "weaponType": "Dagger",
+                "speed": "1.50",
+                "dps": "6.00 DPS",
+                "value": "6.00 DPS, 1.50s - +1 Strength - Skull Rock",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 11,
+                "reqLevel": 4,
+                "stats": "+1 Strength",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.50",
+                  "(6.00 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 4"
+                ],
+                "source": "Skull Rock"
+              },
+              {
+                "name": "Stinging Mace",
+                "itemId": 4948,
+                "icon": "inv_mace_01",
+                "weaponType": "1H Mace",
+                "speed": "2.30",
+                "dps": "5.87 DPS",
+                "value": "5.87 DPS, 2.30s - +1 Strength - Skull Rock",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 11,
+                "reqLevel": 4,
+                "stats": "+1 Strength",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.30",
+                  "(5.87 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 4"
+                ],
+                "source": "Skull Rock"
+              },
+              {
+                "name": "Hoof-Holstered Blade",
+                "itemId": 277988,
+                "icon": "inv_weapon_shortblade_18",
+                "weaponType": "Dagger",
+                "speed": "1.40",
+                "dps": "5.71 DPS",
+                "value": "5.71 DPS, 1.40s - +1 Strength - Stalk With The Earthmother",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 11,
+                "reqLevel": 4,
+                "stats": "+1 Strength",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.40",
+                  "(5.71 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 4"
+                ],
+                "source": "Stalk With The Earthmother"
+              },
+              {
+                "name": "Copper Shortsword",
+                "itemId": 2847,
+                "icon": "inv_sword_26",
+                "weaponType": "1H Sword",
+                "speed": "2.50",
+                "dps": "5.40 DPS",
+                "value": "5.40 DPS, 2.50s - +1 Strength - Copper Shortsword",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 4,
+                "stats": "+1 Strength",
+                "lines": [
+                  "Binds when equipped",
+                  "One-Hand",
+                  "9 - 18 Damage\tSpeed 2.50",
+                  "(5.40 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 4"
+                ],
+                "source": "Copper Shortsword"
+              },
+              {
+                "name": "Brushwood Blade",
+                "itemId": 18957,
+                "icon": "inv_sword_06",
+                "weaponType": "1H Sword",
+                "speed": "3.00",
+                "dps": "5.33 DPS",
+                "value": "5.33 DPS, 3.00s - +1 Stamina - Druid of the Claw",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 3,
+                "stats": "+1 Stamina",
+                "lines": [
+                  "1H Sword",
+                  "Speed 3.00",
+                  "(5.33 damage per second)",
+                  "+1 Stamina",
+                  "Requires Level 3"
+                ],
+                "source": "Druid of the Claw"
+              }
+            ],
+            "faction": "both",
+            "quality": "q1",
+            "iLvl": 9,
+            "reqLevel": 4,
+            "stats": "",
+            "lines": [
+              "Two-Hand",
+              "10 - 16 Damage\tSpeed 2.60",
+              "(5.00 damage per second)",
+              "Requires Level 4"
+            ]
+          },
+          {
+            "levelBracket": "5–6",
+            "itemId": 7955,
+            "name": "Copper Claymore",
+            "icon": "inv_sword_21",
+            "weaponType": "Two-handed sword",
+            "speed": "3.30",
+            "dps": "7.7 DPS",
+            "source": {
+              "kind": "craft",
+              "title": "Blacksmithing (25)",
+              "detail": "Crafted or bought cheaply on the Auction House"
+            },
+            "alts": [
+              {
+                "name": "Copper Battle Axe",
+                "itemId": 3488,
+                "value": "9.0 DPS, 3.50s - Crafted Blacksmithing (30)",
+                "faction": "both",
+                "dps": "9 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed axe",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 8,
+                "stats": "+3 Stamina",
+                "icon": "inv_throwingaxe_02",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "25 - 38 Damage\tSpeed 3.50",
+                  "(9.00 damage per second)",
+                  "+3 Stamina",
+                  "Requires Level 8"
+                ],
+                "source": "Crafted Blacksmithing (30)"
+              },
+              {
+                "name": "Rough Boomstick",
+                "itemId": 4362,
+                "value": "4.1 DPS - Engineering ranged pulling gun",
+                "faction": "both",
+                "dps": "4.13 DPS",
+                "speed": "2.30",
+                "weaponType": "Gun",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 5,
+                "stats": "+1 Stamina",
+                "icon": "inv_weapon_rifle_02",
+                "lines": [
+                  "Binds when equipped",
+                  "Ranged",
+                  "6 - 13 Damage\tSpeed 2.30",
+                  "(4.13 damage per second)",
+                  "+1 Stamina",
+                  "Requires Level 5"
+                ],
+                "source": "Engineering ranged pulling gun"
+              },
+              {
+                "name": "Goblin Smasher",
+                "itemId": 4964,
+                "value": "8.2 DPS, 3.10s - Mulgore Quest: Supervisor Fizsprocket",
+                "faction": "horde",
+                "dps": "8.23 DPS",
+                "speed": "3.10",
+                "weaponType": "Two-handed mace",
+                "quality": "q2",
+                "iLvl": 12,
+                "reqLevel": 5,
+                "stats": "+2 Strength",
+                "icon": "inv_hammer_15",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "20 - 31 Damage\tSpeed 3.10",
+                  "(8.23 damage per second)",
+                  "+2 Strength"
+                ],
+                "source": "Mulgore Quest: Supervisor Fizsprocket"
+              },
+              {
+                "name": "Honed Greathammer",
+                "itemId": 257345,
+                "icon": "inv_mace_2h_skybornec60_b_01",
+                "weaponType": "2H Mace",
+                "speed": "3.20",
+                "dps": "9.06 DPS",
+                "value": "9.06 DPS, 3.20s - +2 Strength, +2 Spirit - Return to Valanaar",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 6,
+                "stats": "+2 Strength, +2 Spirit",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.20",
+                  "(9.06 damage per second)",
+                  "+2 Strength",
+                  "+2 Spirit",
+                  "Requires Level 6"
+                ],
+                "source": "Return to Valanaar"
+              },
+              {
+                "name": "Coldridge Hammer",
+                "itemId": 3103,
+                "icon": "inv_hammer_15",
+                "weaponType": "2H Mace",
+                "speed": "2.70",
+                "dps": "8.33 DPS",
+                "value": "8.33 DPS, 2.70s - +1 Strength, +1 Spirit - Protecting the Herd",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 12,
+                "reqLevel": 6,
+                "stats": "+1 Strength, +1 Spirit",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.70",
+                  "(8.33 damage per second)",
+                  "+1 Strength",
+                  "+1 Spirit",
+                  "Requires Level 6"
+                ],
+                "source": "Protecting the Herd"
+              },
+              {
+                "name": "Brushwood Blade",
+                "itemId": 9602,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.00",
+                "dps": "7.2 DPS",
+                "value": "7.2 DPS, 3.00s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.00",
+                  "(7.2 damage per second)"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Farmer's Shovel",
+                "itemId": 3334,
+                "icon": "inv_misc_shovel_01",
+                "weaponType": "2H Mace",
+                "speed": "3.70",
+                "dps": "7.16 DPS",
+                "value": "7.16 DPS, 3.70s - +1 Strength - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 5,
+                "stats": "+1 Strength",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.70",
+                  "(7.16 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 5"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Training Sword",
+                "itemId": 8178,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.50",
+                "dps": "7.1 DPS",
+                "value": "7.1 DPS, 3.50s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 5,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.50",
+                  "(7.1 damage per second)",
+                  "Requires Level 5"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Severing Axe",
+                "itemId": 4562,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "3.20",
+                "dps": "7.0 DPS",
+                "value": "7.0 DPS, 3.20s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 5,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.20",
+                  "(7.0 damage per second)",
+                  "Requires Level 5"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Planting Shovel",
+                "itemId": 263312,
+                "icon": "inv_misc_shovel_01",
+                "weaponType": "2H Mace",
+                "speed": "2.50",
+                "dps": "7.00 DPS",
+                "value": "7.00 DPS, 2.50s - +1 Strength - Deliver the News",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 10,
+                "reqLevel": 5,
+                "stats": "+1 Strength",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.50",
+                  "(7.00 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 5"
+                ],
+                "source": "Deliver the News"
+              }
+            ],
+            "faction": "both",
+            "quality": "q2",
+            "iLvl": 11,
+            "reqLevel": 6,
+            "stats": "+1 Strength, +1 Stamina",
+            "lines": [
+              "Binds when equipped",
+              "Two-Hand",
+              "20 - 31 Damage\tSpeed 3.30",
+              "(7.73 damage per second)",
+              "+1 Strength",
+              "+1 Stamina",
+              "Requires Level 6"
+            ]
+          },
+          {
+            "levelBracket": "7–8",
+            "itemId": 248005,
+            "name": "Northshire Hammer",
+            "icon": "inv_hammer_16",
+            "weaponType": "Two-handed mace",
+            "speed": "2.70",
+            "dps": "8.3 DPS",
+            "source": {
+              "kind": "quest",
+              "title": "Rare Books / Kobold Camp",
+              "detail": "Early quest in Elwynn Forest / Dun Morogh"
+            },
+            "alts": [
+              {
+                "name": "Battleguard Captain's Sticker",
+                "itemId": 284286,
+                "value": "8.92 DPS, 3.70s - Captain Flat Tusk in Barrens (+3 Str)",
+                "faction": "both",
+                "dps": "8.92 DPS",
+                "speed": "3.70",
+                "weaponType": "Two-Handed Axe",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 8,
+                "stats": "+3 Strength",
+                "icon": "inv_axe_04",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "26 - 40 Damage\tSpeed 3.70",
+                  "(8.92 damage per second)",
+                  "+3 Strength",
+                  "Requires Level 8"
+                ],
+                "source": "Captain Flat Tusk in Barrens (+3 Str)"
+              },
+              {
+                "name": "Copper Battle Axe",
+                "itemId": 3488,
+                "value": "9.0 DPS, 3.50s - Heavy burst swing",
+                "faction": "both",
+                "dps": "9 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed axe",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 8,
+                "stats": "+3 Stamina",
+                "icon": "inv_throwingaxe_02",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "25 - 38 Damage\tSpeed 3.50",
+                  "(9.00 damage per second)",
+                  "+3 Stamina",
+                  "Requires Level 8"
+                ],
+                "source": "Heavy burst swing"
+              },
+              {
+                "name": "Staff of the Dor'Danil",
+                "itemId": 15396,
+                "value": "8.5 DPS - Teldrassil quest reward",
+                "faction": "alliance",
+                "dps": "8.5 DPS",
+                "quality": "q2",
+                "iLvl": 14,
+                "reqLevel": 6,
+                "stats": "+1 Stamina",
+                "icon": "inv_staff_08",
+                "speed": "1.50",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "7 - 14 Damage\tSpeed 1.50",
+                  "(7.00 damage per second)",
+                  "+1 Stamina"
+                ],
+                "source": "Teldrassil quest reward"
+              },
+              {
+                "name": "Riptear's Cleaver",
+                "itemId": 286742,
+                "value": "8.9 DPS, 3.30s - Durotar Quest: Rear Guard Patrol",
+                "faction": "horde",
+                "dps": "8.94 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed axe",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 6,
+                "stats": "+3 Strength",
+                "icon": "inv_throwingaxe_02",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "23 - 36 Damage\tSpeed 3.30",
+                  "(8.94 damage per second)",
+                  "+3 Strength"
+                ],
+                "source": "Durotar Quest: Rear Guard Patrol"
+              },
+              {
+                "name": "Bonecracker",
+                "itemId": 3440,
+                "value": "9.1 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
+                "faction": "horde",
+                "dps": "9.06 DPS",
+                "speed": "3.20",
+                "weaponType": "Two-handed mace",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 7,
+                "stats": "+3 Strength",
+                "icon": "inv_mace_04",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "23 - 35 Damage\tSpeed 3.20",
+                  "(9.06 damage per second)",
+                  "+3 Strength"
+                ],
+                "source": "Tirisfal Quest: The Family Crypt"
+              },
+              {
+                "name": "Helm Splitter",
+                "itemId": 286755,
+                "value": "6.88 DPS, 2.40s - 1H Sword (+1 Str)",
+                "faction": "both",
+                "dps": "6.88 DPS",
+                "speed": "2.40",
+                "weaponType": "One-Handed Sword",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 8,
+                "stats": "+1 Strength",
+                "icon": "inv_sword_04",
+                "lines": [
+                  "Binds when equipped",
+                  "One-Hand",
+                  "11 - 22 Damage\tSpeed 2.40",
+                  "(6.88 damage per second)",
+                  "+1 Strength",
+                  "Requires Level 8"
+                ],
+                "source": "1H Sword (+1 Str)"
+              },
+              {
+                "name": "Empyrean Greatsword",
+                "itemId": 263407,
+                "icon": "inv_sword_2h_skybornec60_b_01_white",
+                "weaponType": "2H Sword",
+                "speed": "3.00",
+                "dps": "10.17 DPS",
+                "value": "10.17 DPS, 3.00s - +4 Strength - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 15,
+                "reqLevel": 7,
+                "stats": "+4 Strength",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.00",
+                  "(10.17 damage per second)",
+                  "+4 Strength",
+                  "Requires Level 7"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Spiked Club",
+                "itemId": 4564,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Mace",
+                "speed": "3.10",
+                "dps": "9.0 DPS",
+                "value": "9.0 DPS, 3.10s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 8,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.10",
+                  "(9.0 damage per second)",
+                  "Requires Level 8"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Driftwood Smasher",
+                "itemId": 246165,
+                "icon": "inv_hammer_15",
+                "weaponType": "2H Mace",
+                "speed": "3.30",
+                "dps": "8.94 DPS",
+                "value": "8.94 DPS, 3.30s - +2 Stamina - Murlocs at the Gates",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 13,
+                "reqLevel": 7,
+                "stats": "+2 Stamina",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.30",
+                  "(8.94 damage per second)",
+                  "+2 Stamina",
+                  "Requires Level 7"
+                ],
+                "source": "Murlocs at the Gates"
+              },
+              {
+                "name": "Icepane Warhammer",
+                "itemId": 2254,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Mace",
+                "speed": "3.30",
+                "dps": "8.5 DPS",
+                "value": "8.5 DPS, 3.30s - Hammerspine",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 12,
+                "reqLevel": 7,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.30",
+                  "(8.5 damage per second)",
+                  "Requires Level 7"
+                ],
+                "source": "Hammerspine"
+              }
+            ],
+            "faction": "alliance",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 1,
+            "stats": "+2 Strength",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "18 - 27 Damage\tSpeed 2.70",
+              "(8.33 damage per second)",
+              "+2 Strength"
+            ]
+          },
+          {
+            "levelBracket": "9–10",
+            "itemId": 1197,
+            "name": "Giant Mace",
+            "icon": "inv_mace_02",
+            "weaponType": "Two-handed mace",
+            "speed": "3.50",
+            "dps": "9.0 DPS",
+            "source": {
+              "kind": "vendor",
+              "title": "Weapon Vendor",
+              "detail": "Sold in Redridge, Loch Modan, Crossroads, and Auberdine"
+            },
+            "alts": [
+              {
+                "name": "Ironforge Greathammer",
+                "itemId": 279895,
+                "value": "15.97 DPS, 3.10s - Old Ironforge Incursion quest (Alliance)",
+                "faction": "alliance",
+                "dps": "15.97 DPS",
+                "speed": "3.10",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 9,
+                "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+                "icon": "inv_hammer_21",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "39 - 60 Damage\tSpeed 3.10",
+                  "(15.97 damage per second)",
+                  "Chance on hit: Blasts a target for 42 Fire damage.",
+                  "Chance on hit: Blasts a target for 42 Fire damage.",
+                  "Chance on hit: Blasts a target for 42 Fire damage."
+                ],
+                "source": "Old Ironforge Incursion quest (Alliance)"
+              },
+              {
+                "name": "Hammerbone",
+                "itemId": 270018,
+                "value": "20.44 DPS, 3.40s - Leaders of the Fang quest in Wailing Caverns (Horde)",
+                "faction": "horde",
+                "dps": "20.44 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-Handed Mace",
+                "quality": "q3",
+                "iLvl": 24,
+                "reqLevel": 10,
+                "stats": "+7 Strength, +10 Spirit",
+                "icon": "inv_hammer_15",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "55 - 84 Damage\tSpeed 3.40",
+                  "(20.44 damage per second)",
+                  "+7 Strength",
+                  "+10 Spirit"
+                ],
+                "source": "Leaders of the Fang quest in Wailing Caverns (Horde)"
+              },
+              {
+                "name": "Trogg Scepter",
+                "itemId": 272996,
+                "value": "8.1 DPS, 2.40s - Ragefire Chasm: Oggleflint",
+                "faction": "both",
+                "dps": "8.13 DPS",
+                "speed": "2.40",
+                "weaponType": "One-handed mace",
+                "quality": "q3",
+                "iLvl": 18,
+                "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "13 - 26 Damage\tSpeed 2.40",
+                  "(8.13 damage per second)",
+                  "+4 Spirit",
+                  "Requires Level 13",
+                  "Equip: Increases healing done by up to 33"
+                ],
+                "reqLevel": 13,
+                "icon": "inv_misc_bone_10",
+                "source": "Ragefire Chasm: Oggleflint"
+              },
+              {
+                "name": "Thick War Axe",
+                "itemId": 3489,
+                "value": "8.6 DPS - 1H Axe from Blacksmithing (45)",
+                "faction": "both",
+                "dps": "8.6 DPS",
+                "speed": "2.50",
+                "weaponType": "One-handed axe",
+                "quality": "q2",
+                "iLvl": 17,
+                "reqLevel": 12,
+                "stats": "+1 Strength, +1 Stamina",
+                "icon": "inv_throwingaxe_01",
+                "lines": [
+                  "Binds when equipped",
+                  "One-Hand",
+                  "15 - 28 Damage\tSpeed 2.50",
+                  "(8.60 damage per second)",
+                  "+1 Strength",
+                  "+1 Stamina",
+                  "Requires Level 12"
+                ],
+                "source": "1H Axe from Blacksmithing (45)"
+              },
+              {
+                "name": "Thun'grim's Axe",
+                "itemId": 7326,
+                "value": "7.8 DPS, 2.70s - Horde Warrior Quest: Forged Steel",
+                "faction": "horde",
+                "dps": "7.78 DPS",
+                "speed": "2.70",
+                "weaponType": "One-handed axe",
+                "quality": "q2",
+                "iLvl": 15,
+                "reqLevel": 10,
+                "stats": "+1 Stamina",
+                "icon": "inv_axe_01",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "14 - 28 Damage\tSpeed 2.70",
+                  "(7.78 damage per second)",
+                  "+1 Stamina"
+                ],
+                "source": "Horde Warrior Quest: Forged Steel"
+              },
+              {
+                "name": "Thun'grim's Sword",
+                "itemId": 7329,
+                "value": "7.8 DPS, 2.60s - Horde Warrior Quest: Forged Steel",
+                "faction": "horde",
+                "dps": "7.8 DPS",
+                "speed": "2.60",
+                "quality": "q2",
+                "iLvl": 15,
+                "reqLevel": 8,
+                "stats": "+1 Stamina",
+                "icon": "inv_sword_04",
+                "weaponType": "One-Handed Sword",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "11 - 21 Damage\tSpeed 2.10",
+                  "(7.62 damage per second)",
+                  "+1 Stamina"
+                ],
+                "source": "Horde Warrior Quest: Forged Steel"
+              },
+              {
+                "name": "Wingblade",
+                "itemId": 6504,
+                "icon": "inv_sword_16",
+                "weaponType": "1H Sword",
+                "speed": "2.20",
+                "dps": "15.68 DPS",
+                "value": "15.68 DPS, 2.20s - +5 Agility, +2 Stamina - Leaders of the Fang",
+                "faction": "horde",
+                "quality": "q3",
+                "iLvl": 24,
+                "reqLevel": 10,
+                "stats": "+5 Agility, +2 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "24 - 45 Damage\tSpeed 2.20",
+                  "(15.68 damage per second)",
+                  "+5 Agility",
+                  "+2 Stamina",
+                  "Requires Level 10"
+                ],
+                "source": "Leaders of the Fang"
+              },
+              {
+                "name": "Hammer of Orgrimmar",
+                "itemId": 15445,
+                "icon": "inv_hammer_23",
+                "weaponType": "1H Mace",
+                "speed": "2.90",
+                "dps": "12.41 DPS",
+                "value": "12.41 DPS, 2.90s - +3 Strength, +3 Spirit - Hidden Enemies",
+                "faction": "horde",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 9,
+                "stats": "+3 Strength, +3 Spirit",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "25 - 47 Damage\tSpeed 2.90",
+                  "(12.41 damage per second)",
+                  "+3 Strength",
+                  "+3 Spirit",
+                  "Requires Level 9"
+                ],
+                "source": "Hidden Enemies"
+              },
+              {
+                "name": "Samophlange Screwdriver",
+                "itemId": 11854,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "2.50",
+                "dps": "12.6 DPS",
+                "value": "12.6 DPS, 2.50s - Samophlange Manual",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 19,
+                "reqLevel": 10,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.50",
+                  "(12.6 damage per second)",
+                  "Requires Level 10"
+                ],
+                "source": "Samophlange Manual"
+              },
+              {
+                "name": "Talonstrike",
+                "itemId": 3462,
+                "icon": "inv_sword_12",
+                "weaponType": "1H Sword",
+                "speed": "1.60",
+                "dps": "12.19 DPS",
+                "value": "12.19 DPS, 1.60s - +3 Agility - Assault on Fenris Isle",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 24,
+                "reqLevel": 10,
+                "stats": "+3 Agility",
+                "lines": [
+                  "1H Sword",
+                  "Speed 1.60",
+                  "(12.19 damage per second)",
+                  "+3 Agility",
+                  "Requires Level 10"
+                ],
+                "source": "Assault on Fenris Isle"
+              }
+            ],
+            "faction": "both",
+            "quality": "q1",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "",
+            "lines": [
+              "Two-Hand",
+              "25 - 38 Damage\tSpeed 3.50",
+              "(9.00 damage per second)",
+              "Requires Level 10"
+            ]
+          },
+          {
+            "levelBracket": "11–12",
+            "itemId": 6214,
+            "name": "Heavy Copper Maul",
+            "icon": "inv_hammer_18",
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "10.8 DPS",
+            "source": {
+              "kind": "craft",
+              "title": "Blacksmithing (40)",
+              "detail": "Guaranteed crafted spike, trainer taught at 40"
+            },
+            "alts": [
+              {
+                "name": "Woodchopper",
+                "itemId": 2520,
+                "value": "10.5 DPS - Vendor 2H Axe",
+                "faction": "both",
+                "dps": "10.5 DPS",
+                "quality": "q1",
+                "iLvl": 36,
+                "reqLevel": 31,
+                "stats": "",
+                "icon": "inv_axe_02",
+                "speed": "2.30",
+                "lines": [
+                  "Main Hand",
+                  "28 - 53 Damage\tSpeed 2.30",
+                  "(17.61 damage per second)",
+                  "Requires Level 31"
+                ],
+                "source": "Vendor 2H Axe"
+              },
+              {
+                "name": "Trogg Scepter",
+                "itemId": 272996,
+                "value": "8.1 DPS - RFC: Oggleflint",
+                "faction": "both",
+                "dps": "8.13 DPS",
+                "speed": "2.40",
+                "weaponType": "One-handed mace",
+                "quality": "q3",
+                "iLvl": 18,
+                "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "13 - 26 Damage\tSpeed 2.40",
+                  "(8.13 damage per second)",
+                  "+4 Spirit",
+                  "Requires Level 13",
+                  "Equip: Increases healing done by up to 33"
+                ],
+                "reqLevel": 13,
+                "icon": "inv_misc_bone_10",
+                "source": "RFC: Oggleflint"
+              },
+              {
+                "name": "Axe of Orgrimmar",
+                "itemId": 15424,
+                "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
+                "faction": "horde",
+                "dps": "16.06 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 9,
+                "stats": "+6 Sta, +6 Spi",
+                "icon": "inv_axe_06",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "42 - 64 Damage\tSpeed 3.30",
+                  "(16.06 damage per second)",
+                  "+6 Stamina",
+                  "+6 Spirit"
+                ],
+                "source": "RFC Quest: Hidden Enemies"
+              },
+              {
+                "name": "Ironforge Greathammer",
+                "itemId": 279895,
+                "weaponType": "Two-handed mace",
+                "speed": "3.30",
+                "dps": "16.0 DPS",
+                "value": "16.0 DPS, 3.30s - Ironforge Quest",
+                "faction": "alliance",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 9,
+                "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+                "icon": "inv_hammer_21",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "39 - 60 Damage\tSpeed 3.10",
+                  "(15.97 damage per second)",
+                  "Chance on hit: Blasts a target for 42 Fire damage.",
+                  "Chance on hit: Blasts a target for 42 Fire damage.",
+                  "Chance on hit: Blasts a target for 42 Fire damage."
+                ],
+                "source": "Ironforge Quest"
+              },
+              {
+                "name": "Zhovur Axe",
+                "itemId": 5318,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "13.1 DPS",
+                "value": "13.1 DPS, 3.10s - Serena Bloodfeather",
+                "faction": "horde",
+                "quality": "q2",
+                "iLvl": 20,
+                "reqLevel": 12,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(13.1 damage per second)",
+                  "Requires Level 12"
+                ],
+                "source": "Serena Bloodfeather"
+              },
+              {
+                "name": "Woodsman Sword",
+                "itemId": 5615,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.30",
+                "dps": "13.0 DPS",
+                "value": "13.0 DPS, 3.30s - Mathystra Relics",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 20,
+                "reqLevel": 12,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.30",
+                  "(13.0 damage per second)",
+                  "Requires Level 12"
+                ],
+                "source": "Mathystra Relics"
+              },
+              {
+                "name": "Burrowing Shovel",
+                "itemId": 6205,
+                "icon": "inv_misc_shovel_01",
+                "weaponType": "2H Mace",
+                "speed": "3.00",
+                "dps": "11.33 DPS",
+                "value": "11.33 DPS, 3.00s - +5 Strength - Master Digger",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 17,
+                "reqLevel": 12,
+                "stats": "+5 Strength",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.00",
+                  "(11.33 damage per second)",
+                  "+5 Strength",
+                  "Requires Level 12"
+                ],
+                "source": "Master Digger"
+              },
+              {
+                "name": "Cold Iron Pick",
+                "itemId": 1959,
+                "icon": "inv_pick_01",
+                "weaponType": "2H Axe",
+                "speed": "3.00",
+                "dps": "11.33 DPS",
+                "value": "11.33 DPS, 3.00s - +2 Stamina, +4 Spirit - Skeletal Miner",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 17,
+                "reqLevel": 12,
+                "stats": "+2 Stamina, +4 Spirit",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "27 - 41 Damage\tSpeed 3.00",
+                  "(11.33 damage per second)",
+                  "+2 Stamina",
+                  "+4 Spirit",
+                  "Requires Level 12"
+                ],
+                "source": "Skeletal Miner"
+              },
+              {
+                "name": "Coral Claymore",
+                "itemId": 3188,
+                "icon": "inv_sword_38",
+                "weaponType": "2H Sword",
+                "speed": "3.10",
+                "dps": "11.29 DPS",
+                "value": "11.29 DPS, 3.10s - +3 Strength, +3 Stamina - Slark",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 17,
+                "reqLevel": 12,
+                "stats": "+3 Strength, +3 Stamina",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.10",
+                  "(11.29 damage per second)",
+                  "+3 Strength",
+                  "+3 Stamina",
+                  "Requires Level 12"
+                ],
+                "source": "Slark"
+              },
+              {
+                "name": "Twin-bladed Axe",
+                "itemId": 15268,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "2.70",
+                "dps": "10.7 DPS",
+                "value": "10.7 DPS, 2.70s - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q2",
+                "iLvl": 16,
+                "reqLevel": 11,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.70",
+                  "(10.7 damage per second)",
+                  "Requires Level 11"
+                ],
+                "source": "Leveling Drop / Vendor"
+              }
+            ],
+            "faction": "both",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+4 Strength",
+            "lines": [
+              "Binds when equipped",
+              "Two-Hand",
+              "28 - 43 Damage\tSpeed 3.30",
+              "(10.76 damage per second)",
+              "+4 Strength",
+              "Requires Level 11"
+            ]
+          },
+          {
+            "levelBracket": "13–14",
+            "itemId": 279895,
+            "name": "Ironforge Greathammer",
+            "icon": "inv_hammer_21",
+            "weaponType": "Two-handed mace",
+            "speed": "3.10",
+            "dps": "16.0 DPS",
+            "source": {
+              "kind": "quest",
+              "title": "Old Ironforge Incursion",
+              "detail": "Dungeon quest, The Hall of Thanes, level 16"
+            },
+            "alts": [
+              {
+                "name": "Durgen's Crescent Axe",
+                "itemId": 270256,
+                "value": "15.5 DPS, 2.40s, +5 Str, +2 Sta - Hall of Thanes: Durgen",
+                "faction": "both",
+                "dps": "12.29 DPS",
+                "speed": "2.40",
+                "weaponType": "One-handed axe",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "+5 Str, +2 Sta",
+                "icon": "inv_axe_05",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "20 - 39 Damage\tSpeed 2.40",
+                  "(12.29 damage per second)",
+                  "+4 Strength",
+                  "Requires Level 13"
+                ],
+                "source": "Hall of Thanes: Durgen"
+              },
+              {
+                "name": "Heavy Copper Broadsword",
+                "itemId": 3487,
+                "value": "12.6 DPS - Crafted Blacksmithing (skill 65)",
+                "faction": "both",
+                "dps": "12.58 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed sword",
+                "quality": "q2",
+                "iLvl": 19,
+                "reqLevel": 14,
+                "stats": "+6 Stamina",
+                "icon": "inv_sword_14",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "33 - 50 Damage\tSpeed 3.30",
+                  "(12.58 damage per second)",
+                  "+6 Stamina",
+                  "Requires Level 14"
+                ],
+                "source": "Crafted Blacksmithing (skill 65)"
+              },
+              {
+                "name": "Axe of Orgrimmar",
+                "itemId": 15424,
+                "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
+                "faction": "horde",
+                "dps": "16.06 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 9,
+                "stats": "+6 Sta, +6 Spi",
+                "icon": "inv_axe_06",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "42 - 64 Damage\tSpeed 3.30",
+                  "(16.06 damage per second)",
+                  "+6 Stamina",
+                  "+6 Spirit"
+                ],
+                "source": "RFC Quest: Hidden Enemies"
+              },
+              {
+                "name": "Bone Knuckles",
+                "itemId": 272998,
+                "weaponType": "Fist Weapon",
+                "speed": "2.00",
+                "dps": "12.3 DPS",
+                "value": "12.3 DPS, 2.00s - RFC Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "Equip: +6 Attack Power., Equip: +6 Attack Power against Beasts.",
+                "icon": "ability_whirlwind",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "17 - 32 Damage\tSpeed 2.00",
+                  "(12.25 damage per second)",
+                  "Requires Level 13",
+                  "Equip: +6 Attack Power.",
+                  "Equip: +6 Attack Power against Beasts."
+                ],
+                "source": "RFC Drop"
+              },
+              {
+                "name": "Blackwater Cutlass",
+                "itemId": 1951,
+                "icon": "inv_sword_24",
+                "weaponType": "1H Sword",
+                "speed": "1.90",
+                "dps": "12.89 DPS",
+                "value": "12.89 DPS, 1.90s - +4 Agility - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 19,
+                "reqLevel": 14,
+                "stats": "+4 Agility",
+                "lines": [
+                  "1H Sword",
+                  "Speed 1.90",
+                  "(12.89 damage per second)",
+                  "+4 Agility",
+                  "Requires Level 14"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Cursed Felblade",
+                "itemId": 14145,
+                "icon": "inv_weapon_shortblade_12",
+                "weaponType": "1H Sword",
+                "speed": "2.30",
+                "dps": "12.17 DPS",
+                "value": "12.17 DPS, 2.30s - Taragaman the Hungerer",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "",
+                "lines": [
+                  "1H Sword",
+                  "Speed 2.30",
+                  "(12.17 damage per second)",
+                  "Requires Level 13"
+                ],
+                "source": "Taragaman the Hungerer"
+              },
+              {
+                "name": "Goblin Screwdriver",
+                "itemId": 1936,
+                "icon": "inv_weapon_shortblade_05",
+                "weaponType": "Dagger",
+                "speed": "1.40",
+                "dps": "12.14 DPS",
+                "value": "12.14 DPS, 1.40s - +4 Agility - Goblin Engineer",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "+4 Agility",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.40",
+                  "(12.14 damage per second)",
+                  "+4 Agility",
+                  "Requires Level 13"
+                ],
+                "source": "Goblin Engineer"
+              },
+              {
+                "name": "Chanting Blade",
+                "itemId": 14151,
+                "icon": "inv_weapon_shortblade_25",
+                "weaponType": "Dagger",
+                "speed": "1.50",
+                "dps": "12.00 DPS",
+                "value": "12.00 DPS, 1.50s - +2 Agility, +3 Stamina - Jergosh the Invoker",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "+2 Agility, +3 Stamina",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.50",
+                  "(12.00 damage per second)",
+                  "+2 Agility",
+                  "+3 Stamina",
+                  "Requires Level 13"
+                ],
+                "source": "Jergosh the Invoker"
+              },
+              {
+                "name": "Searing Dagger",
+                "itemId": 273003,
+                "icon": "inv_weapon_shortblade_03",
+                "weaponType": "Dagger",
+                "speed": "1.60",
+                "dps": "8.13 DPS",
+                "value": "8.13 DPS, 1.60s - +4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown) - Bazzalan",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 18,
+                "reqLevel": 13,
+                "stats": "+4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)",
+                "lines": [
+                  "Binds when picked up",
+                  "Main Hand",
+                  "9 - 17 Damage\tSpeed 1.60",
+                  "(8.13 damage per second)",
+                  "+4 Spirit",
+                  "Requires Level 13",
+                  "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
+                ],
+                "source": "Bazzalan"
+              },
+              {
+                "name": "Seraph's Strike",
+                "itemId": 5614,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.20",
+                "dps": "21.1 DPS",
+                "value": "21.1 DPS, 3.20s - The Tower of Althalaxx",
+                "faction": "alliance",
+                "quality": "q2",
+                "iLvl": 31,
+                "reqLevel": 13,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.20",
+                  "(21.1 damage per second)",
+                  "Requires Level 13"
+                ],
+                "source": "The Tower of Althalaxx"
+              }
+            ],
+            "faction": "alliance",
+            "quality": "q3",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "39 - 60 Damage\tSpeed 3.10",
+              "(15.97 damage per second)",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage."
+            ]
+          },
+          {
+            "levelBracket": "15–16",
+            "itemId": 5187,
+            "name": "Rhahk'Zor's Hammer",
+            "icon": "inv_hammer_04",
+            "weaponType": "Two-handed mace",
+            "speed": "3.20",
+            "dps": "18.4 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Rhahk'Zor",
+              "detail": "First boss in The Deadmines, levels 18–23"
+            },
+            "alts": [
+              {
+                "name": "Monstrous Cleaver",
+                "itemId": 279864,
+                "value": "15.2 DPS, 3.30s - Dalaran Dungeon",
+                "faction": "both",
+                "dps": "15.2 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed sword",
+                "quality": "q2",
+                "iLvl": 23,
+                "reqLevel": 16,
+                "stats": "+6 Stamina, Equip: +4 Attack Power., Equip: +6 Attack Power against Undead.",
+                "icon": "inv_sword_23",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "40 - 60 Damage\tSpeed 3.30",
+                  "(15.15 damage per second)",
+                  "+6 Stamina",
+                  "Equip: +4 Attack Power.",
+                  "Equip: +6 Attack Power against Undead."
+                ],
+                "source": "Dalaran Dungeon"
+              },
+              {
+                "name": "Meathook Slicer",
+                "itemId": 271204,
+                "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
+                "faction": "both",
+                "dps": "13.61 DPS",
+                "speed": "1.80",
+                "weaponType": "Dagger",
+                "quality": "q3",
+                "iLvl": 20,
+                "reqLevel": 15,
+                "stats": "+5 Stamina",
+                "icon": "inv_weapon_shortblade_02",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "17 - 32 Damage\tSpeed 1.80",
+                  "(13.61 damage per second)",
+                  "+5 Stamina",
+                  "Requires Level 15"
+                ],
+                "source": "Ruins of Lordaeron: The Baron"
+              },
+              {
+                "name": "Black Malice",
+                "itemId": 3194,
+                "icon": "inv_mace_01",
+                "weaponType": "2H Mace",
+                "speed": "3.30",
+                "dps": "18.33 DPS",
+                "value": "18.33 DPS, 3.30s - +2 Shadow Resistance - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "+2 Shadow Resistance",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.30",
+                  "(18.33 damage per second)",
+                  "+2 Shadow Resistance",
+                  "Requires Level 16"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Rakzur Club",
+                "itemId": 12983,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Mace",
+                "speed": "2.60",
+                "dps": "18.3 DPS",
+                "value": "18.3 DPS, 2.60s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.60",
+                  "(18.3 damage per second)",
+                  "Requires Level 16"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Prospector Axe",
+                "itemId": 12975,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "2.40",
+                "dps": "17.5 DPS",
+                "value": "17.5 DPS, 2.40s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 20,
+                "reqLevel": 15,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.40",
+                  "(17.5 damage per second)",
+                  "Requires Level 15"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Emogg's \"Crusher\"",
+                "itemId": 282639,
+                "icon": "inv_weapon_halberd_08",
+                "weaponType": "1H Axe",
+                "speed": "2.60",
+                "dps": "14.04 DPS",
+                "value": "14.04 DPS, 2.60s - +4 Strength, +2 Stamina - Emogg the Crusher",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "+4 Strength, +2 Stamina",
+                "lines": [
+                  "1H Axe",
+                  "Speed 2.60",
+                  "(14.04 damage per second)",
+                  "+4 Strength",
+                  "+2 Stamina",
+                  "Requires Level 16"
+                ],
+                "source": "Emogg the Crusher"
+              },
+              {
+                "name": "Face Smasher",
+                "itemId": 1483,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Mace",
+                "speed": "2.60",
+                "dps": "14.0 DPS",
+                "value": "14.0 DPS, 2.60s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.60",
+                  "(14.0 damage per second)",
+                  "Requires Level 16"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Serpent's Kiss",
+                "itemId": 5426,
+                "icon": "inv_axe_23",
+                "weaponType": "1H Axe",
+                "speed": "2.50",
+                "dps": "14.00 DPS",
+                "value": "14.00 DPS, 2.50s - Trigore the Lasher",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "",
+                "lines": [
+                  "1H Axe",
+                  "Speed 2.50",
+                  "(14.00 damage per second)",
+                  "Requires Level 16"
+                ],
+                "source": "Trigore the Lasher"
+              },
+              {
+                "name": "Cookie's Tenderizer",
+                "itemId": 5197,
+                "icon": "inv_fabric_silk_02",
+                "weaponType": "1H Mace",
+                "speed": "2.80",
+                "dps": "13.93 DPS",
+                "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "+4 Spirit",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.80",
+                  "(13.93 damage per second)",
+                  "+4 Spirit",
+                  "Requires Level 16"
+                ],
+                "source": "Cookie"
+              },
+              {
+                "name": "Tail Spike",
+                "itemId": 6448,
+                "icon": "inv_weapon_shortblade_10",
+                "weaponType": "Dagger",
+                "speed": "1.80",
+                "dps": "13.89 DPS",
+                "value": "13.89 DPS, 1.80s - +3 Strength, +3 Agility - Skum",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "+3 Strength, +3 Agility",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "17 - 33 Damage\tSpeed 1.80",
+                  "(13.89 damage per second)",
+                  "+3 Strength",
+                  "+3 Agility",
+                  "Requires Level 16"
+                ],
+                "source": "Skum"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 21,
+            "reqLevel": 16,
+            "stats": "+8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "47 - 71 Damage\tSpeed 3.20",
+              "(18.44 damage per second)",
+              "+8 Stamina",
+              "Requires Level 16",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
+          },
+          {
+            "levelBracket": "17–18",
+            "itemId": 271217,
+            "name": "Corpse Chopper",
+            "icon": "inv_axe_09",
+            "weaponType": "Two-handed axe",
+            "speed": "3.20",
+            "dps": "17.4 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Bjork",
+              "detail": "Ruins of Lordaeron, levels 15–20 (+7 Str, +4 Sta)"
+            },
+            "alts": [
+              {
+                "name": "Smite's Mighty Hammer",
+                "itemId": 7230,
+                "value": "19.7 DPS, 3.50s - The Deadmines: Mr. Smite",
+                "faction": "both",
+                "dps": "19.71 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "+11 Strength, +4 Agility",
+                "icon": "inv_hammer_09",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "55 - 83 Damage\tSpeed 3.50",
+                  "(19.71 damage per second)",
+                  "+11 Strength",
+                  "+4 Agility",
+                  "Requires Level 18"
+                ],
+                "source": "The Deadmines: Mr. Smite"
+              },
+              {
+                "name": "Haunting Blade",
+                "itemId": 6641,
+                "value": "18.2 DPS, 3.00s, +6 Str, +5 Sta - Ruins of Lordaeron: Captain",
+                "faction": "both",
+                "dps": "22.37 DPS",
+                "speed": "3.80",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 27,
+                "stats": "Equip: Increases healing done by up to 33",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "68 - 102 Damage\tSpeed 3.80",
+                  "(22.37 damage per second)",
+                  "Requires Level 22",
+                  "Equip: Increases healing done by up to 33"
+                ],
+                "reqLevel": 22,
+                "icon": "inv_sword_27",
+                "source": "Ruins of Lordaeron: Captain"
+              },
+              {
+                "name": "Vileblood Scimitar",
+                "itemId": 271218,
+                "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile",
+                "faction": "both",
+                "dps": "14.62 DPS",
+                "speed": "2.60",
+                "weaponType": "One-handed sword",
+                "quality": "q3",
+                "iLvl": 22,
+                "reqLevel": 17,
+                "stats": "+5 Spirit",
+                "icon": "inv_sword_01",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "26 - 50 Damage\tSpeed 2.60",
+                  "(14.62 damage per second)",
+                  "+5 Spirit",
+                  "Requires Level 17"
+                ],
+                "source": "Ruins of Lordaeron: Viktor the Vile"
+              },
+              {
+                "name": "Sword of the Fallen",
+                "itemId": 286977,
+                "weaponType": "Two-handed sword",
+                "speed": "3.50",
+                "dps": "19.7 DPS",
+                "value": "19.7 DPS, 3.50s - Rare Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "+6 Strength, +9 Intellect",
+                "icon": "inv_sword_14",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "55 - 83 Damage\tSpeed 3.50",
+                  "(19.71 damage per second)",
+                  "+6 Strength",
+                  "+9 Intellect",
+                  "Requires Level 18"
+                ],
+                "source": "Rare Drop"
+              },
+              {
+                "name": "Encroacher's Claim",
+                "itemId": 277286,
+                "icon": "inv_axe_17",
+                "weaponType": "2H Axe",
+                "speed": "3.30",
+                "dps": "19.70 DPS",
+                "value": "19.70 DPS, 3.30s - +6 Strength, +9 Spirit - Wrongly Blamed, Justly Corrected",
+                "faction": "horde",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "+6 Strength, +9 Spirit",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.30",
+                  "(19.70 damage per second)",
+                  "+6 Strength",
+                  "+9 Spirit",
+                  "Requires Level 18"
+                ],
+                "source": "Wrongly Blamed, Justly Corrected"
+              },
+              {
+                "name": "Night Reaver",
+                "itemId": 1318,
+                "icon": "inv_throwingaxe_06",
+                "weaponType": "2H Axe",
+                "speed": "3.30",
+                "dps": "19.70 DPS",
+                "value": "19.70 DPS, 3.30s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.30",
+                  "(19.70 damage per second)",
+                  "Requires Level 18"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Rockslicer",
+                "itemId": 872,
+                "icon": "inv_throwingaxe_01",
+                "weaponType": "2H Axe",
+                "speed": "3.30",
+                "dps": "19.70 DPS",
+                "value": "19.70 DPS, 3.30s - +7 Strength - Rhahk'Zor",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "+7 Strength",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.30",
+                  "(19.70 damage per second)",
+                  "+7 Strength",
+                  "Requires Level 18"
+                ],
+                "source": "Rhahk'Zor"
+              },
+              {
+                "name": "Searing Blade",
+                "itemId": 12992,
+                "icon": "inv_sword_21",
+                "weaponType": "2H Sword",
+                "speed": "2.50",
+                "dps": "19.60 DPS",
+                "value": "19.60 DPS, 2.50s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 23,
+                "reqLevel": 18,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.50",
+                  "(19.60 damage per second)",
+                  "Requires Level 18"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Boahn's Fang",
+                "itemId": 5423,
+                "icon": "inv_axe_17",
+                "weaponType": "2H Axe",
+                "speed": "2.50",
+                "dps": "19.00 DPS",
+                "value": "19.00 DPS, 2.50s - +10 Strength, +4 Spirit - Boahn",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 22,
+                "reqLevel": 17,
+                "stats": "+10 Strength, +4 Spirit",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.50",
+                  "(19.00 damage per second)",
+                  "+10 Strength",
+                  "+4 Spirit",
+                  "Requires Level 17"
+                ],
+                "source": "Boahn"
+              },
+              {
+                "name": "Impaling Harpoon",
+                "itemId": 5200,
+                "icon": "inv_spear_07",
+                "weaponType": "Polearm",
+                "speed": "2.40",
+                "dps": "18.96 DPS",
+                "value": "18.96 DPS, 2.40s - +9 Agility, +5 Intellect - Captain Greenskin",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 22,
+                "reqLevel": 17,
+                "stats": "+9 Agility, +5 Intellect",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.40",
+                  "(18.96 damage per second)",
+                  "+9 Agility",
+                  "+5 Intellect",
+                  "Requires Level 17"
+                ],
+                "source": "Captain Greenskin"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 21,
+            "reqLevel": 16,
+            "stats": "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "52 - 79 Damage\tSpeed 3.60",
+              "(18.19 damage per second)",
+              "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
+              "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
+              "Requires Level 16",
+              "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
+            ]
+          },
+          {
+            "levelBracket": "19–20",
+            "itemId": 251533,
+            "name": "Forsaken Greataxe",
+            "icon": "inv_axe_24",
+            "weaponType": "Two-handed axe",
+            "speed": "3.40",
+            "dps": "20.5 DPS",
+            "source": {
+              "kind": "quest",
+              "title": "The Wrath of Rath'mael",
+              "detail": "Ruins of Lordaeron dungeon quest (+8 Str, +5 Sta)"
+            },
+            "alts": [
+              {
+                "name": "Bronze Warhammer",
+                "itemId": 7956,
+                "value": "17.4 DPS - Blacksmithing (90)",
+                "faction": "both",
+                "dps": "16.86 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed mace",
+                "quality": "q2",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "+6 Strength, +6 Stamina",
+                "icon": "inv_hammer_18",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "47 - 71 Damage\tSpeed 3.50",
+                  "(16.86 damage per second)",
+                  "+6 Strength",
+                  "+6 Stamina",
+                  "Requires Level 20"
+                ],
+                "source": "Blacksmithing (90)"
+              },
+              {
+                "name": "Taskmaster Axe",
+                "itemId": 5194,
+                "value": "17.3 DPS, 2.70s - The Deadmines: Sneed",
+                "faction": "both",
+                "dps": "14.63 DPS",
+                "speed": "2.70",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 23,
+                "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 45",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "31 - 48 Damage\tSpeed 2.70",
+                  "(14.63 damage per second)",
+                  "+8 Stamina",
+                  "+8 Spirit",
+                  "Requires Level 18",
+                  "Equip: Increases healing done by up to 45"
+                ],
+                "reqLevel": 18,
+                "icon": "inv_throwingaxe_06",
+                "source": "The Deadmines: Sneed"
+              },
+              {
+                "name": "Verigan's Fist",
+                "itemId": 6953,
+                "icon": "inv_hammer_05",
+                "weaponType": "2H Mace",
+                "speed": "3.20",
+                "dps": "25.63 DPS",
+                "value": "25.63 DPS, 3.20s - +5 Stamina, +6 Intellect, +10 Spirit, Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals. - The Test of Righteousness",
+                "faction": "alliance",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 20,
+                "stats": "+5 Stamina, +6 Intellect, +10 Spirit, Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "65 - 99 Damage\tSpeed 3.20",
+                  "(25.63 damage per second)",
+                  "+5 Stamina",
+                  "+6 Intellect",
+                  "+10 Spirit",
+                  "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
+                  "Requires Level 20"
+                ],
+                "source": "The Test of Righteousness"
+              },
+              {
+                "name": "Duskbringer",
+                "itemId": 2205,
+                "icon": "inv_sword_41",
+                "weaponType": "2H Sword",
+                "speed": "3.40",
+                "dps": "21.03 DPS",
+                "value": "21.03 DPS, 3.40s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.40",
+                  "(21.03 damage per second)",
+                  "Requires Level 20"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Puncturing Spear",
+                "itemId": 285332,
+                "icon": "inv_spear_07",
+                "weaponType": "Polearm",
+                "speed": "3.10",
+                "dps": "20.32 DPS",
+                "value": "20.32 DPS, 3.10s - Swinegart Spearhide",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 24,
+                "reqLevel": 19,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.10",
+                  "(20.32 damage per second)",
+                  "Requires Level 19"
+                ],
+                "source": "Swinegart Spearhide"
+              },
+              {
+                "name": "Gargoyle's Bite",
+                "itemId": 12989,
+                "icon": "inv_spear_05",
+                "weaponType": "Polearm",
+                "speed": "2.90",
+                "dps": "18.97 DPS",
+                "value": "18.97 DPS, 2.90s - +10 Strength - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 22,
+                "reqLevel": 20,
+                "stats": "+10 Strength",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.90",
+                  "(18.97 damage per second)",
+                  "+10 Strength",
+                  "Requires Level 20"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Blackfang",
+                "itemId": 2236,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "Dagger",
+                "speed": "1.50",
+                "dps": "16.3 DPS",
+                "value": "16.3 DPS, 1.50s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.50",
+                  "(16.3 damage per second)",
+                  "Requires Level 20"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Diamond Hammer",
+                "itemId": 2194,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Mace",
+                "speed": "2.50",
+                "dps": "16.2 DPS",
+                "value": "16.2 DPS, 2.50s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.50",
+                  "(16.2 damage per second)",
+                  "Requires Level 20"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Butcher's Cleaver",
+                "itemId": 1292,
+                "icon": "inv_axe_23",
+                "weaponType": "1H Axe",
+                "speed": "1.70",
+                "dps": "16.18 DPS",
+                "value": "16.18 DPS, 1.70s - +5 Strength, +2 Agility - Razorclaw the Butcher",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "+5 Strength, +2 Agility",
+                "lines": [
+                  "1H Axe",
+                  "Speed 1.70",
+                  "(16.18 damage per second)",
+                  "+5 Strength",
+                  "+2 Agility",
+                  "Requires Level 20"
+                ],
+                "source": "Razorclaw the Butcher"
+              },
+              {
+                "name": "Barrens Basher",
+                "itemId": 274744,
+                "icon": "inv_hammer_09",
+                "weaponType": "1H Mace",
+                "speed": "2.10",
+                "dps": "15.95 DPS",
+                "value": "15.95 DPS, 2.10s - +2 Strength, +5 Stamina - Winklespark",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "stats": "+2 Strength, +5 Stamina",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.10",
+                  "(15.95 damage per second)",
+                  "+2 Strength",
+                  "+5 Stamina",
+                  "Requires Level 20"
+                ],
+                "source": "Winklespark"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+8 Strength, +4 Stamina, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "49 - 74 Damage\tSpeed 3.00",
+              "(20.50 damage per second)",
+              "+8 Strength",
+              "+4 Stamina",
+              "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+            ]
+          },
+          {
+            "levelBracket": "21–22",
+            "itemId": 6905,
+            "name": "Reef Axe",
+            "icon": "inv_weapon_halberd_06",
+            "weaponType": "Two-handed axe",
+            "speed": "3.30",
+            "dps": "22.4 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Gelihast",
+              "detail": "Blackfathom Deeps, levels 20–27 (+10 Str, +4 Agi)"
+            },
+            "alts": [
+              {
+                "name": "Wolfsbane",
+                "itemId": 267369,
+                "value": "25.59 DPS, 3.40s - Old Fire-Eye in Hillsbrad (Horde)",
+                "faction": "horde",
+                "dps": "25.59 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-Handed Sword",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 20,
+                "stats": "+9 Stamina, +10 Intellect, Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
+                "icon": "inv_sword_25",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "69 - 105 Damage\tSpeed 3.40",
+                  "(25.59 damage per second)",
+                  "+9 Stamina",
+                  "+10 Intellect",
+                  "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen."
+                ],
+                "source": "Old Fire — Eye in Hillsbrad (Horde)"
+              },
+              {
+                "name": "The Skyblade",
+                "itemId": 286540,
+                "value": "22.36 DPS, 3.60s (56-105 dmg) (+10 Str, +8 Sta) - Rare 2H Sword",
+                "faction": "both",
+                "dps": "22.36 DPS",
+                "speed": "3.60",
+                "weaponType": "Two-Handed Sword",
+                "quality": "q3",
+                "iLvl": 27,
+                "reqLevel": 22,
+                "stats": "+10 Strength, +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+                "icon": "inv_sword_20",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "56 - 105 Damage\tSpeed 3.60",
+                  "(22.36 damage per second)",
+                  "+10 Strength",
+                  "+8 Stamina",
+                  "Requires Level 22",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+                ],
+                "source": "105 dmg) (+10 Str, +8 Sta) — Rare 2H Sword"
+              },
+              {
+                "name": "Strike of the Hydra",
+                "itemId": 6909,
+                "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
+                "faction": "both",
+                "dps": "25.61 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 26,
+                "stats": "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec.",
+                "icon": "inv_sword_42",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "67 - 102 Damage\tSpeed 3.30",
+                  "(25.61 damage per second)",
+                  "Requires Level 26",
+                  "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
+                ],
+                "source": "BFD: Aku'mai"
+              },
+              {
+                "name": "Taurenbane's Family Cleaver",
+                "itemId": 285328,
+                "value": "22.9 DPS, 3.40s, +9 Sta, +32 AP - Barrens Rare: Hagg Taurenbane",
+                "faction": "both",
+                "dps": "22.94 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 28,
+                "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "62 - 94 Damage\tSpeed 3.40",
+                  "(22.94 damage per second)",
+                  "+9 Stamina",
+                  "Requires Level 23",
+                  "Equip: +32 Attack Power against Humanoids."
+                ],
+                "reqLevel": 23,
+                "icon": "inv_axe_04",
+                "source": "Barrens Rare: Hagg Taurenbane"
+              },
+              {
+                "name": "Bronze Battle Axe",
+                "itemId": 7958,
+                "value": "18.8 DPS - Crafted Blacksmithing (105)",
+                "faction": "both",
+                "dps": "18.33 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed axe",
+                "quality": "q2",
+                "iLvl": 27,
+                "reqLevel": 22,
+                "stats": "+10 Strength",
+                "icon": "inv_axe_21",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "48 - 73 Damage\tSpeed 3.30",
+                  "(18.33 damage per second)",
+                  "+10 Strength",
+                  "Requires Level 22"
+                ],
+                "source": "Crafted Blacksmithing (105)"
+              },
+              {
+                "name": "Alliance Outrunner's Sword",
+                "itemId": 285346,
+                "weaponType": "One-handed sword",
+                "speed": "2.10",
+                "dps": "17.1 DPS",
+                "value": "17.1 DPS, 2.10s - Alliance Outrunner Drop",
+                "faction": "alliance",
+                "quality": "q3",
+                "iLvl": 27,
+                "reqLevel": 22,
+                "stats": "+5 Agility, Equip: +6 Attack Power.",
+                "icon": "inv_sword_20",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "25 - 47 Damage\tSpeed 2.10",
+                  "(17.14 damage per second)",
+                  "+5 Agility",
+                  "Requires Level 22",
+                  "Equip: +6 Attack Power."
+                ],
+                "source": "Alliance Outrunner Drop"
+              },
+              {
+                "name": "Headbasher",
+                "itemId": 1264,
+                "icon": "inv_mace_07",
+                "weaponType": "2H Mace",
+                "speed": "2.30",
+                "dps": "23.70 DPS",
+                "value": "23.70 DPS, 2.30s - +9 Strength, +5 Stamina, +10 Intellect - The Fury Runs Deep",
+                "faction": "alliance",
+                "quality": "q3",
+                "iLvl": 29,
+                "reqLevel": 22,
+                "stats": "+9 Strength, +5 Stamina, +10 Intellect",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.30",
+                  "(23.70 damage per second)",
+                  "+9 Strength",
+                  "+5 Stamina",
+                  "+10 Intellect",
+                  "Requires Level 22"
+                ],
+                "source": "The Fury Runs Deep"
+              },
+              {
+                "name": "Guardian Blade",
+                "itemId": 13041,
+                "icon": "inv_sword_25",
+                "weaponType": "2H Sword",
+                "speed": "2.90",
+                "dps": "21.72 DPS",
+                "value": "21.72 DPS, 2.90s - +40 Armor - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 26,
+                "reqLevel": 21,
+                "stats": "+40 Armor",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.90",
+                  "(21.72 damage per second)",
+                  "+40 Armor",
+                  "Requires Level 21"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Killmaim",
+                "itemId": 13016,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "3.20",
+                "dps": "21.7 DPS",
+                "value": "21.7 DPS, 3.20s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 26,
+                "reqLevel": 21,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.20",
+                  "(21.7 damage per second)",
+                  "Requires Level 21"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Arced War Axe",
+                "itemId": 3191,
+                "icon": "inv_axe_06",
+                "weaponType": "2H Axe",
+                "speed": "3.30",
+                "dps": "21.67 DPS",
+                "value": "21.67 DPS, 3.30s - +9 Strength, +9 Stamina - Commander Springvale",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 26,
+                "reqLevel": 21,
+                "stats": "+9 Strength, +9 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.30",
+                  "(21.67 damage per second)",
+                  "+9 Strength",
+                  "+9 Stamina",
+                  "Requires Level 21"
+                ],
+                "source": "Commander Springvale"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+8 Strength, Equip: Increases healing done by up to 24",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "59 - 89 Damage\tSpeed 3.30",
+              "(22.42 damage per second)",
+              "+8 Strength",
+              "Requires Level 22",
+              "Equip: Increases healing done by up to 24"
+            ]
+          },
+          {
+            "levelBracket": "23–24",
+            "itemId": 285328,
+            "name": "Taurenbane's Family Cleaver",
+            "icon": "inv_axe_04",
+            "weaponType": "Two-handed axe",
+            "speed": "3.40",
+            "dps": "22.9 DPS",
+            "source": {
+              "kind": "drop",
+              "title": "Hagg Taurenbane",
+              "detail": "Barrens Rare Elite (+9 Sta, +32 AP vs Humanoids)"
+            },
+            "alts": [
+              {
+                "name": "Trusty Sword",
+                "itemId": 281313,
+                "value": "26.67 DPS, 3.30s (+12 Sta, +12 Spi) - Stopping the Cycle quest",
+                "faction": "alliance",
+                "dps": "26.67 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-Handed Sword",
+                "quality": "q3",
+                "iLvl": 32,
+                "reqLevel": 24,
+                "stats": "+12 Stamina, +12 Spirit",
+                "icon": "inv_sword_04",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "70 - 106 Damage\tSpeed 3.30",
+                  "(26.67 damage per second)",
+                  "+12 Stamina",
+                  "+12 Spirit"
+                ],
+                "source": "Stopping the Cycle quest"
+              },
+              {
+                "name": "Strike of the Hydra",
+                "itemId": 6909,
+                "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
+                "faction": "both",
+                "dps": "25.61 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 26,
+                "stats": "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec.",
+                "icon": "inv_sword_42",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "67 - 102 Damage\tSpeed 3.30",
+                  "(25.61 damage per second)",
+                  "Requires Level 26",
+                  "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
+                ],
+                "source": "BFD: Aku'mai"
+              },
+              {
+                "name": "Heavy Mithril Axe",
+                "itemId": 7941,
+                "value": "20.5 DPS - Blacksmithing (130)",
+                "faction": "both",
+                "dps": "28.82 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed sword",
+                "quality": "q2",
+                "iLvl": 42,
+                "reqLevel": 37,
+                "stats": "+14 Critical Strike Rating",
+                "icon": "inv_sword_05",
+                "lines": [
+                  "Binds when equipped",
+                  "One-Hand",
+                  "45 - 85 Damage\tSpeed 2.70",
+                  "(24.07 damage per second)",
+                  "+7 Stamina",
+                  "Requires Level 37"
+                ],
+                "source": "Blacksmithing (130)"
+              },
+              {
+                "name": "The Skyblade",
+                "itemId": 286540,
+                "weaponType": "Two-handed sword",
+                "speed": "3.60",
+                "dps": "22.4 DPS",
+                "value": "22.4 DPS, 3.60s - Ashenvale Rare",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 27,
+                "reqLevel": 22,
+                "stats": "+10 Strength, +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+                "icon": "inv_sword_20",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "56 - 105 Damage\tSpeed 3.60",
+                  "(22.36 damage per second)",
+                  "+10 Strength",
+                  "+8 Stamina",
+                  "Requires Level 22",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+                ],
+                "source": "Ashenvale Rare"
+              },
+              {
+                "name": "Gizmotron Megachopper",
+                "itemId": 9490,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.20",
+                "dps": "23.9 DPS",
+                "value": "23.9 DPS, 3.20s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 29,
+                "reqLevel": 24,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.20",
+                  "(23.9 damage per second)",
+                  "Requires Level 24"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Slaghammer",
+                "itemId": 1976,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Mace",
+                "speed": "2.80",
+                "dps": "23.8 DPS",
+                "value": "23.8 DPS, 2.80s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 29,
+                "reqLevel": 24,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.80",
+                  "(23.8 damage per second)",
+                  "Requires Level 24"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Bloodpike",
+                "itemId": 13057,
+                "icon": "inv_spear_02",
+                "weaponType": "Polearm",
+                "speed": "3.20",
+                "dps": "23.13 DPS",
+                "value": "23.13 DPS, 3.20s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 28,
+                "reqLevel": 23,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.20",
+                  "(23.13 damage per second)",
+                  "Requires Level 23"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Onyx Claymore",
+                "itemId": 3417,
+                "icon": "inv_sword_13",
+                "weaponType": "2H Sword",
+                "speed": "2.80",
+                "dps": "23.04 DPS",
+                "value": "23.04 DPS, 2.80s - +10 Strength, +5 Stamina, +6 Spirit - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 28,
+                "reqLevel": 23,
+                "stats": "+10 Strength, +5 Stamina, +6 Spirit",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.80",
+                  "(23.04 damage per second)",
+                  "+10 Strength",
+                  "+5 Stamina",
+                  "+6 Spirit",
+                  "Requires Level 23"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Supercharger Battle Axe",
+                "itemId": 9486,
+                "icon": "inv_axe_21",
+                "weaponType": "2H Axe",
+                "speed": "2.80",
+                "dps": "23.04 DPS",
+                "value": "23.04 DPS, 2.80s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 28,
+                "reqLevel": 23,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.80",
+                  "(23.04 damage per second)",
+                  "Requires Level 23"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Graverobber's Shovel",
+                "itemId": 273817,
+                "icon": "inv_misc_shovel_01",
+                "weaponType": "2H Mace",
+                "speed": "3.70",
+                "dps": "22.97 DPS",
+                "value": "22.97 DPS, 3.70s - +10 Stamina - Dextren Ward",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 28,
+                "reqLevel": 23,
+                "stats": "+10 Stamina",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.70",
+                  "(22.97 damage per second)",
+                  "+10 Stamina",
+                  "Requires Level 23"
+                ],
+                "source": "Dextren Ward"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 28,
+            "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "62 - 94 Damage\tSpeed 3.40",
+              "(22.94 damage per second)",
+              "+9 Stamina",
+              "Requires Level 23",
+              "Equip: +32 Attack Power against Humanoids."
+            ],
+            "reqLevel": 23
+          },
+          {
+            "levelBracket": "25–26",
+            "itemId": 271766,
+            "name": "Heavehammer",
+            "icon": "inv_hammer_09",
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "27.7 DPS",
+            "source": {
+              "kind": "quest",
+              "title": "Lost Relic Carry / Elder Knowledge",
+              "detail": "Excavation Site 4 dungeon quest (+60 Armor, +32 AP)"
+            },
+            "alts": [
+              {
+                "name": "Defender of Dalaran",
+                "itemId": 279841,
+                "value": "31.21 DPS, 3.30s - Heart of Disruption quest in City of Dalaran",
+                "faction": "alliance",
+                "dps": "31.21 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-Handed Mace",
+                "quality": "q3",
+                "iLvl": 36,
+                "reqLevel": 24,
+                "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+                "icon": "inv_hammer_04",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "82 - 124 Damage\tSpeed 3.30",
+                  "(31.21 damage per second)",
+                  "+9 Strength",
+                  "+13 Stamina",
+                  "+9 Intellect"
+                ],
+                "source": "Heart of Disruption quest in City of Dalaran"
+              },
+              {
+                "name": "Trusty Sword",
+                "itemId": 281313,
+                "value": "26.7 DPS, 3.20s - Redridge Quest",
+                "faction": "both",
+                "dps": "26.7 DPS",
+                "speed": "3.20",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 32,
+                "stats": "+12 Stamina, +12 Spirit",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "70 - 106 Damage\tSpeed 3.30",
+                  "(26.67 damage per second)",
+                  "+12 Stamina",
+                  "+12 Spirit"
+                ],
+                "reqLevel": 24,
+                "icon": "inv_sword_04",
+                "source": "Redridge Quest"
+              },
+              {
+                "name": "Dendweller's Hammer",
+                "itemId": 284459,
+                "value": "25.6 DPS, 3.30s - Level 26 Mace",
+                "faction": "both",
+                "dps": "25.61 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 31,
+                "stats": "+12 Stamina, +100 Armor",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "67 - 102 Damage\tSpeed 3.30",
+                  "(25.61 damage per second)",
+                  "+12 Stamina",
+                  "+100 Armor",
+                  "Requires Level 26"
+                ],
+                "reqLevel": 26,
+                "icon": "inv_hammer_09",
+                "source": "Level 26 Mace"
+              },
+              {
+                "name": "Solid Iron Maul",
+                "itemId": 3851,
+                "value": "22.8 DPS - Blacksmithing (135)",
+                "faction": "both",
+                "dps": "15.57 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed mace",
+                "quality": "q2",
+                "iLvl": 31,
+                "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "43 - 66 Damage\tSpeed 3.50",
+                  "(15.57 damage per second)",
+                  "+12 Stamina",
+                  "Requires Level 26",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+                ],
+                "reqLevel": 26,
+                "icon": "inv_hammer_07",
+                "source": "Blacksmithing (135)"
+              },
+              {
+                "name": "Ruby-Adorned Blade",
+                "itemId": 277246,
+                "value": "23.91 DPS, 2.30s - 1H Sword (The Eye of Bhossca quest)",
+                "faction": "both",
+                "dps": "23.91 DPS",
+                "speed": "2.30",
+                "weaponType": "One-Handed Sword",
+                "quality": "q3",
+                "iLvl": 36,
+                "reqLevel": 25,
+                "stats": "+3 Agility, +8 Stamina",
+                "icon": "inv_sword_07",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "38 - 72 Damage\tSpeed 2.30",
+                  "(23.91 damage per second)",
+                  "+3 Agility",
+                  "+8 Stamina"
+                ],
+                "source": "1H Sword (The Eye of Bhossca quest)"
+              },
+              {
+                "name": "Deanship Claymore",
+                "itemId": 13049,
+                "icon": "inv_sword_46",
+                "weaponType": "2H Sword",
+                "speed": "2.80",
+                "dps": "23.75 DPS",
+                "value": "23.75 DPS, 2.80s - +4 Spirit - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 29,
+                "reqLevel": 26,
+                "stats": "+4 Spirit",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.80",
+                  "(23.75 damage per second)",
+                  "+4 Spirit",
+                  "Requires Level 26"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Outlaw Sabre",
+                "itemId": 16886,
+                "icon": "inv_sword_33",
+                "weaponType": "1H Sword",
+                "speed": "2.70",
+                "dps": "20.37 DPS",
+                "value": "20.37 DPS, 2.70s - Rare World / Dungeon Drop",
+                "faction": "horde",
+                "quality": "q3",
+                "iLvl": 32,
+                "reqLevel": 25,
+                "stats": "",
+                "lines": [
+                  "1H Sword",
+                  "Speed 2.70",
+                  "(20.37 damage per second)",
+                  "Requires Level 25"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Looming Gavel",
+                "itemId": 13048,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Mace",
+                "speed": "2.40",
+                "dps": "19.8 DPS",
+                "value": "19.8 DPS, 2.40s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 26,
+                "stats": "",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.40",
+                  "(19.8 damage per second)",
+                  "Requires Level 26"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "The Black Knight",
+                "itemId": 12974,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Sword",
+                "speed": "1.90",
+                "dps": "19.7 DPS",
+                "value": "19.7 DPS, 1.90s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 26,
+                "stats": "",
+                "lines": [
+                  "1H Sword",
+                  "Speed 1.90",
+                  "(19.7 damage per second)",
+                  "Requires Level 26"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "The Butcher",
+                "itemId": 8226,
+                "icon": "inv_sword_18",
+                "weaponType": "1H Sword",
+                "speed": "2.80",
+                "dps": "19.64 DPS",
+                "value": "19.64 DPS, 2.80s - +5 Agility, +4 Stamina - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 31,
+                "reqLevel": 26,
+                "stats": "+5 Agility, +4 Stamina",
+                "lines": [
+                  "Binds when equipped",
+                  "Main Hand",
+                  "38 - 72 Damage\tSpeed 2.80",
+                  "(19.64 damage per second)",
+                  "+5 Agility",
+                  "+4 Stamina",
+                  "Requires Level 26"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 33,
+            "stats": "+60 Armor, Equip: +32 Attack Power.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "73 - 110 Damage\tSpeed 3.30",
+              "(27.73 damage per second)",
+              "+60 Armor",
+              "Equip: +32 Attack Power."
+            ],
+            "reqLevel": 24
+          },
+          {
+            "levelBracket": "27–28",
+            "itemId": 273046,
+            "name": "Guardian's Dualblade",
+            "icon": "inv_throwingaxe_05",
+            "weaponType": "Two-handed axe",
+            "speed": "3.40",
+            "dps": "24.6 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Unstable Sentinel",
+              "detail": "City of Dalaran dungeon (+11 Str, +8 Sta)"
+            },
+            "alts": [
+              {
+                "name": "Felbough Arm",
+                "itemId": 273037,
+                "value": "28.8 DPS, 3.00s, +10 Agi, +10 Hit - City of Dalaran: Fel Ancient",
+                "faction": "both",
+                "dps": "28.83 DPS",
+                "speed": "3.00",
+                "weaponType": "Polearm",
+                "quality": "q3",
+                "iLvl": 34,
+                "stats": "+10 Agility, +9 Nature Resistance, Equip: Improves your chance to hit by 1.0%.",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "69 - 104 Damage\tSpeed 3.00",
+                  "(28.83 damage per second)",
+                  "+10 Agility",
+                  "+9 Nature Resistance",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to hit by 1.0%."
+                ],
+                "reqLevel": 29,
+                "icon": "inv_spear_08",
+                "source": "City of Dalaran: Fel Ancient"
+              },
+              {
+                "name": "Defender of Dalaran",
+                "itemId": 279841,
+                "value": "31.2 DPS, 3.30s - City of Dalaran Quest: Heart of Disruption",
+                "faction": "both",
+                "dps": "31.21 DPS",
+                "speed": "3.30",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 36,
+                "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "82 - 124 Damage\tSpeed 3.30",
+                  "(31.21 damage per second)",
+                  "+9 Strength",
+                  "+13 Stamina",
+                  "+9 Intellect"
+                ],
+                "reqLevel": 24,
+                "icon": "inv_hammer_20",
+                "source": "City of Dalaran Quest: Heart of Disruption"
+              },
+              {
+                "name": "Ironwood Destroyer",
+                "itemId": 271770,
+                "value": "22.5 DPS - 2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)",
+                "faction": "both",
+                "dps": "22.5 DPS",
+                "quality": "q1",
+                "iLvl": 1,
+                "reqLevel": 28,
+                "stats": "Use: Use to sketch a location on the Shapers Terrace map.",
+                "icon": "inv_mace_05",
+                "weaponType": "Two-Handed Mace",
+                "lines": [
+                  "Use: Use to sketch a location on the Shapers Terrace map.",
+                  "Use: Use to sketch a location on the Shapers Terrace map.",
+                  "Use: Use to sketch a location on the Shapers Terrace map."
+                ],
+                "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
+              },
+              {
+                "name": "Hornbeam Heft",
+                "itemId": 271772,
+                "value": "16.8 DPS - 1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)",
+                "faction": "both",
+                "dps": "16.8 DPS",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "+6 Strength, +4 Agility",
+                "icon": "inv_axe_02",
+                "weaponType": "One-Handed Axe",
+                "source": "1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)"
+              },
+              {
+                "name": "Darkspear Raider's Reaper",
+                "itemId": 272082,
+                "icon": "inv_axe_18",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "27.90 DPS",
+                "value": "27.90 DPS, 3.10s - +16 Strength, +4 Stamina - Creeg Bothunk",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "+16 Strength, +4 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(27.90 damage per second)",
+                  "+16 Strength",
+                  "+4 Stamina",
+                  "Requires Level 28"
+                ],
+                "source": "Creeg Bothunk"
+              },
+              {
+                "name": "Rebels' Rugged Reaper",
+                "itemId": 271927,
+                "icon": "inv_axe_18",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "27.90 DPS",
+                "value": "27.90 DPS, 3.10s - +16 Strength, +4 Stamina - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "+16 Strength, +4 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(27.90 damage per second)",
+                  "+16 Strength",
+                  "+4 Stamina",
+                  "Requires Level 28"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Ancient Cleaver",
+                "itemId": 286983,
+                "icon": "inv_weapon_halbard_01",
+                "weaponType": "2H Axe",
+                "speed": "3.60",
+                "dps": "27.78 DPS",
+                "value": "27.78 DPS, 3.60s - +12 Strength - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "+12 Strength",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.60",
+                  "(27.78 damage per second)",
+                  "+12 Strength",
+                  "Requires Level 28"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Combatant Claymore",
+                "itemId": 2877,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "2.90",
+                "dps": "27.8 DPS",
+                "value": "27.8 DPS, 2.90s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.90",
+                  "(27.8 damage per second)",
+                  "Requires Level 28"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Burning War Axe",
+                "itemId": 2299,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "3.30",
+                "dps": "27.7 DPS",
+                "value": "27.7 DPS, 3.30s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 33,
+                "reqLevel": 28,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.30",
+                  "(27.7 damage per second)",
+                  "Requires Level 28"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Bloodspiller",
+                "itemId": 7753,
+                "icon": "inv_axe_10",
+                "weaponType": "2H Axe",
+                "speed": "2.70",
+                "dps": "26.67 DPS",
+                "value": "26.67 DPS, 2.70s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 32,
+                "reqLevel": 27,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.70",
+                  "(26.67 damage per second)",
+                  "Requires Level 27"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "1080 armor, Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "78 - 117 Damage\tSpeed 3.50",
+              "(27.86 damage per second)",
+              "1080 armor",
+              "Requires Level 28",
+              "Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)"
+            ]
+          },
+          {
+            "levelBracket": "29–30",
+            "itemId": 6975,
+            "name": "Whirlwind Axe",
+            "icon": "inv_axe_12",
+            "weaponType": "Two-handed axe",
+            "speed": "3.60",
+            "dps": "35.6 DPS",
+            "source": {
+              "kind": "quest",
+              "title": "Whirlwind Weapon",
+              "detail": "Level 30 Warrior class quest in Arathi Highlands (+14 Str, +15 Sta)"
+            },
+            "alts": [
+              {
+                "name": "Whirlwind Warhammer",
+                "itemId": 6976,
+                "value": "35.6 DPS, 3.60s - Mace alternative from class quest",
+                "faction": "both",
+                "dps": "35.74 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 40,
+                "stats": "+16 Strength, +15 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "97 - 146 Damage\tSpeed 3.40",
+                  "(35.74 damage per second)",
+                  "+16 Strength",
+                  "+15 Stamina"
+                ],
+                "reqLevel": 30,
+                "icon": "inv_hammer_08",
+                "source": "Mace alternative from class quest"
+              },
+              {
+                "name": "Whirlwind Sword",
+                "itemId": 6977,
+                "value": "35.6 DPS, 3.60s - Sword alternative from class quest",
+                "faction": "both",
+                "dps": "35.52 DPS",
+                "speed": "2.90",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 40,
+                "stats": "+16 Strength, +15 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "82 - 124 Damage\tSpeed 2.90",
+                  "(35.52 damage per second)",
+                  "+16 Strength",
+                  "+15 Stamina"
+                ],
+                "reqLevel": 30,
+                "icon": "inv_sword_15",
+                "source": "Sword alternative from class quest"
+              },
+              {
+                "name": "Dark Hearted Hammer",
+                "itemId": 270071,
+                "value": "28.9 DPS, 3.80s, +12 Str, +8 Sta - STV Quest: Colonel Kurzen",
+                "faction": "both",
+                "dps": "28.95 DPS",
+                "speed": "3.80",
+                "weaponType": "Two-handed mace",
+                "quality": "q2",
+                "iLvl": 40,
+                "stats": "+12 Strength, +8 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "88 - 132 Damage\tSpeed 3.80",
+                  "(28.95 damage per second)",
+                  "+12 Strength",
+                  "+8 Stamina"
+                ],
+                "reqLevel": 30,
+                "icon": "inv_hammer_16",
+                "source": "STV Quest: Colonel Kurzen"
+              },
+              {
+                "name": "Master Hunter's Spellsword",
+                "itemId": 270085,
+                "value": "32.5 DPS, 2.40s - STV Quest: Big Game Hunter",
+                "faction": "both",
+                "dps": "32.5 DPS",
+                "speed": "2.40",
+                "weaponType": "Two-handed sword",
+                "quality": "q2",
+                "iLvl": 43,
+                "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "62 - 94 Damage\tSpeed 2.40",
+                  "(32.50 damage per second)",
+                  "+12 Strength",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+                ],
+                "reqLevel": 28,
+                "icon": "inv_sword_42",
+                "source": "STV Quest: Big Game Hunter"
+              },
+              {
+                "name": "Corpsemaker",
+                "itemId": 6687,
+                "value": "28.9 DPS, 3.80s - RFK: Overlord Ramtusk",
+                "faction": "both",
+                "dps": "28.95 DPS",
+                "speed": "3.80",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 34,
+                "stats": "+15 Strength, +8 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "88 - 132 Damage\tSpeed 3.80",
+                  "(28.95 damage per second)",
+                  "+15 Strength",
+                  "+8 Stamina",
+                  "Requires Level 29"
+                ],
+                "reqLevel": 29,
+                "icon": "inv_weapon_halbard_01",
+                "source": "RFK: Overlord Ramtusk"
+              },
+              {
+                "name": "Rage of the Storm",
+                "itemId": 280604,
+                "weaponType": "Two-handed mace",
+                "speed": "3.20",
+                "dps": "35.6 DPS",
+                "value": "35.6 DPS, 3.20s - Custom Boss Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 40,
+                "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "91 - 137 Damage\tSpeed 3.20",
+                  "(35.63 damage per second)",
+                  "+15 Stamina",
+                  "+12 Intellect",
+                  "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+                ],
+                "reqLevel": 30,
+                "icon": "inv_mace_42",
+                "source": "Custom Boss Drop"
+              },
+              {
+                "name": "Bonebiter",
+                "itemId": 6830,
+                "value": "38.8 DPS, 3.40s (105–159 dmg) - In the Name of the Light quest (+10 Str, +10 Sta, +5 Agi) (Alliance)",
+                "faction": "alliance",
+                "dps": "38.8 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 44,
+                "reqLevel": 34,
+                "stats": "+10 Strength, +10 Stamina, +5 Agility",
+                "icon": "inv_axe_04",
+                "source": {
+                  "kind": "quest",
+                  "title": "In the Name of the Light",
+                  "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
+                },
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "105 - 159 Damage\tSpeed 3.40",
+                  "(38.82 damage per second)",
+                  "+20 Strength",
+                  "+10 Stamina"
+                ]
+              },
+              {
+                "name": "Morbid Dawn",
+                "itemId": 7689,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "2.90",
+                "dps": "30.2 DPS",
+                "value": "30.2 DPS, 2.90s - Fallen Champion",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 35,
+                "reqLevel": 30,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.90",
+                  "(30.2 damage per second)",
+                  "Requires Level 30"
+                ],
+                "source": "Fallen Champion"
+              },
+              {
+                "name": "Viscous Hammer",
+                "itemId": 13045,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Mace",
+                "speed": "2.90",
+                "dps": "30.2 DPS",
+                "value": "30.2 DPS, 2.90s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 35,
+                "reqLevel": 30,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 2.90",
+                  "(30.2 damage per second)",
+                  "Requires Level 30"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Cobalt Crusher",
+                "itemId": 7730,
+                "icon": "inv_hammer_04",
+                "weaponType": "2H Mace",
+                "speed": "3.20",
+                "dps": "28.91 DPS",
+                "value": "28.91 DPS, 3.20s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 34,
+                "reqLevel": 29,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.20",
+                  "(28.91 damage per second)",
+                  "Requires Level 29"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 40,
+            "stats": "+16 Strength, +15 Stamina",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "102 - 154 Damage\tSpeed 3.60",
+              "(35.56 damage per second)",
+              "+16 Strength",
+              "+15 Stamina"
+            ],
+            "reqLevel": 30
+          },
+          {
+            "levelBracket": "31–36",
+            "itemId": 6687,
+            "name": "Corpsemaker",
+            "icon": "inv_weapon_halbard_01",
+            "weaponType": "Two-handed axe",
+            "speed": "3.80",
+            "dps": "28.9 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Overlord Ramtusk",
+              "detail": "Razorfen Kraul, levels 29–38 (+15 Str, +8 Sta)"
+            },
+            "alts": [
+              {
+                "name": "Whirlwind Axe",
+                "itemId": 6975,
+                "value": "35.6 DPS, 3.60s - Class quest spike remains dominant",
+                "faction": "both",
+                "dps": "35.56 DPS",
+                "speed": "3.60",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 40,
+                "stats": "+16 Strength, +15 Stamina",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "102 - 154 Damage\tSpeed 3.60",
+                  "(35.56 damage per second)",
+                  "+16 Strength",
+                  "+15 Stamina"
+                ],
+                "reqLevel": 30,
+                "icon": "inv_axe_12",
+                "source": "Class quest spike remains dominant"
+              },
+              {
+                "name": "Manual Crowd Pummeler",
+                "itemId": 9449,
+                "value": "31.5 DPS, 2.00s - Gnomeregan: Crowd Pummeler 9-60",
+                "faction": "both",
+                "dps": "29 DPS",
+                "speed": "2.00",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 34,
+                "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "46 - 70 Damage\tSpeed 2.00",
+                  "(29.00 damage per second)",
+                  "+16 Strength",
+                  "+5 Agility",
+                  "Requires Level 29",
+                  "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
+                ],
+                "reqLevel": 29,
+                "icon": "inv_mace_14",
+                "source": "Gnomeregan: Crowd Pummeler 9 — 60"
+              },
+              {
+                "name": "Mighty Iron Hammer",
+                "itemId": 3492,
+                "value": "25.0 DPS - Blacksmithing (145)",
+                "faction": "both",
+                "dps": "15.54 DPS",
+                "speed": "2.80",
+                "weaponType": "One-handed mace",
+                "quality": "q2",
+                "iLvl": 30,
+                "reqLevel": 25,
+                "stats": "+5 Strength",
+                "icon": "inv_hammer_04",
+                "lines": [
+                  "Binds when equipped",
+                  "One-Hand",
+                  "30 - 57 Damage\tSpeed 2.80",
+                  "(15.54 damage per second)",
+                  "+5 Strength",
+                  "Requires Level 25"
+                ],
+                "source": "Blacksmithing (145)"
+              },
+              {
+                "name": "Abandoned Ferocity",
+                "itemId": 271801,
+                "value": "37.19 DPS, 3.20s - Khan Jehn in Maraudon (Horde)",
+                "faction": "horde",
+                "dps": "37.19 DPS",
+                "speed": "3.20",
+                "weaponType": "Two-Handed Axe",
+                "quality": "q3",
+                "iLvl": 42,
+                "reqLevel": 35,
+                "stats": "+10 Strength, +4 Agility, +12 Stamina",
+                "icon": "inv_axe_17",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "95 - 143 Damage\tSpeed 3.20",
+                  "(37.19 damage per second)",
+                  "+10 Strength",
+                  "+4 Agility",
+                  "+12 Stamina",
+                  "Requires Level 35"
+                ],
+                "source": "Khan Jehn in Maraudon (Horde)"
+              },
+              {
+                "name": "Scavenged Magram Armament",
+                "itemId": 271800,
+                "value": "37.17 DPS, 3.00s - Polearm (Khan Jehn in Maraudon)",
+                "faction": "both",
+                "dps": "37.17 DPS",
+                "speed": "3.00",
+                "weaponType": "Polearm",
+                "quality": "q3",
+                "iLvl": 42,
+                "reqLevel": 35,
+                "stats": "+5 Agility, +14 Stamina, Equip: +12 Attack Power.",
+                "icon": "inv_spear_05",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "89 - 134 Damage\tSpeed 3.00",
+                  "(37.17 damage per second)",
+                  "+5 Agility",
+                  "+14 Stamina",
+                  "Requires Level 35",
+                  "Equip: +12 Attack Power."
+                ],
+                "source": "Polearm (Khan Jehn in Maraudon)"
+              },
+              {
+                "name": "Fiery War Axe",
+                "itemId": 870,
+                "icon": "inv_axe_02",
+                "weaponType": "2H Axe",
+                "speed": "3.60",
+                "dps": "40.42 DPS",
+                "value": "40.42 DPS, 3.60s - +15 Strength - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 40,
+                "reqLevel": 35,
+                "stats": "+15 Strength",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.60",
+                  "(40.42 damage per second)",
+                  "+15 Strength",
+                  "Requires Level 35"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Dazzling Longsword",
+                "itemId": 869,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Sword",
+                "speed": "2.60",
+                "dps": "31.5 DPS",
+                "value": "31.5 DPS, 2.60s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 41,
+                "reqLevel": 36,
+                "stats": "",
+                "lines": [
+                  "1H Sword",
+                  "Speed 2.60",
+                  "(31.5 damage per second)",
+                  "Requires Level 36"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Sword of the Magistrate",
+                "itemId": 13042,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Sword",
+                "speed": "3.30",
+                "dps": "36.5 DPS",
+                "value": "36.5 DPS, 3.30s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 41,
+                "reqLevel": 36,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.30",
+                  "(36.5 damage per second)",
+                  "Requires Level 36"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Grim Reaper",
+                "itemId": 13054,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "Polearm",
+                "speed": "3.10",
+                "dps": "35.6 DPS",
+                "value": "35.6 DPS, 3.10s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 40,
+                "reqLevel": 35,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.10",
+                  "(35.6 damage per second)",
+                  "Requires Level 35"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Hellslayer Battle Axe",
+                "itemId": 13017,
+                "icon": "inv_axe_24",
+                "weaponType": "2H Axe",
+                "speed": "2.90",
+                "dps": "35.52 DPS",
+                "value": "35.52 DPS, 2.90s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 40,
+                "reqLevel": 35,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.90",
+                  "(35.52 damage per second)",
+                  "Requires Level 35"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 34,
+            "stats": "+15 Strength, +8 Stamina",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "88 - 132 Damage\tSpeed 3.80",
+              "(28.95 damage per second)",
+              "+15 Strength",
+              "+8 Stamina",
+              "Requires Level 29"
+            ],
+            "reqLevel": 29
+          },
+          {
+            "levelBracket": "37–40",
+            "itemId": 7717,
+            "name": "Ravager",
+            "icon": "inv_axe_04",
+            "weaponType": "Two-handed axe",
+            "speed": "3.50",
+            "dps": "37.3 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Herod",
+              "detail": "Scarlet Monastery Armory, levels 35–45 (Whirlwind proc devastates AoE)"
+            },
+            "alts": [
+              {
+                "name": "Mograine's Might",
+                "itemId": 7723,
+                "value": "38.9 DPS, 3.50s, +16 Str, +17 Sta - SM Cath: Mograine",
+                "faction": "both",
+                "dps": "38.82 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 44,
+                "reqLevel": 39,
+                "stats": "+16 Str, +17 Sta",
+                "icon": "inv_hammer_04",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "105 - 159 Damage\tSpeed 3.40",
+                  "(38.82 damage per second)",
+                  "+8 Strength",
+                  "+14 Stamina",
+                  "+16 Intellect",
+                  "Requires Level 39"
+                ],
+                "source": "SM Cath: Mograine"
+              },
+              {
+                "name": "Bonebiter",
+                "itemId": 6830,
+                "value": "38.8 DPS, 3.40s - Alliance Quest: In the Name of the Light",
+                "faction": "alliance",
+                "dps": "38.82 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed axe",
+                "quality": "q3",
+                "iLvl": 44,
+                "reqLevel": 34,
+                "stats": "+20 Strength, +10 Stamina",
+                "icon": "inv_misc_bowl_01",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "105 - 159 Damage\tSpeed 3.40",
+                  "(38.82 damage per second)",
+                  "+20 Strength",
+                  "+10 Stamina"
+                ],
+                "source": "Alliance Quest: In the Name of the Light"
+              },
+              {
+                "name": "Sword of Serenity",
+                "itemId": 6829,
+                "value": "30.0 DPS, 2.20s, +9 Sta, +4 Spi - Alliance SM Quest: In the Name of the Light",
+                "faction": "alliance",
+                "dps": "30 DPS",
+                "speed": "2.20",
+                "weaponType": "One-handed sword",
+                "quality": "q3",
+                "iLvl": 44,
+                "reqLevel": 34,
+                "stats": "+9 Sta, +4 Spi",
+                "icon": "inv_sword_05",
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand",
+                  "46 - 86 Damage\tSpeed 2.20",
+                  "(30.00 damage per second)",
+                  "+9 Stamina",
+                  "+4 Spirit"
+                ],
+                "source": "Alliance SM Quest: In the Name of the Light"
+              },
+              {
+                "name": "Sword of Omen",
+                "itemId": 6802,
+                "value": "29.7 DPS, 2.20s, +9 Str, +4 Sta, +3 Agi - Horde SM Quest: Into The Scarlet Monastery",
+                "faction": "horde",
+                "dps": "29.7 DPS",
+                "speed": "2.20",
+                "quality": "q3",
+                "iLvl": 42,
+                "reqLevel": 36,
+                "stats": "+9 Str, +4 Sta, +3 Agi",
+                "icon": "inv_sword_24",
+                "source": "Horde SM Quest: Into The Scarlet Monastery"
+              },
+              {
+                "name": "Nightblade",
+                "itemId": 1982,
+                "icon": "inv_sword_02",
+                "weaponType": "2H Sword",
+                "speed": "3.50",
+                "dps": "43.43 DPS",
+                "value": "43.43 DPS, 3.50s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 44,
+                "reqLevel": 39,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.50",
+                  "(43.43 damage per second)",
+                  "Requires Level 39"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Hammer of Expertise",
+                "itemId": 8708,
+                "icon": "inv_hammer_24",
+                "weaponType": "1H Mace",
+                "speed": "2.10",
+                "dps": "36.90 DPS",
+                "value": "36.90 DPS, 2.10s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 50,
+                "reqLevel": 40,
+                "stats": "",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.10",
+                  "(36.90 damage per second)",
+                  "Requires Level 40"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Gut Ripper",
+                "itemId": 2164,
+                "icon": "inv_sword_13",
+                "weaponType": "Dagger",
+                "speed": "1.80",
+                "dps": "33.89 DPS",
+                "value": "33.89 DPS, 1.80s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 45,
+                "reqLevel": 40,
+                "stats": "",
+                "lines": [
+                  "Dagger",
+                  "Speed 1.80",
+                  "(33.89 damage per second)",
+                  "Requires Level 40"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Ardent Custodian",
+                "itemId": 868,
+                "icon": "inv_mace_13",
+                "weaponType": "1H Mace",
+                "speed": "2.10",
+                "dps": "32.86 DPS",
+                "value": "32.86 DPS, 2.10s - +100 Armor - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 43,
+                "reqLevel": 38,
+                "stats": "+100 Armor",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.10",
+                  "(32.86 damage per second)",
+                  "+100 Armor",
+                  "Requires Level 38"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Primitive Fishing Pole",
+                "itemId": 276203,
+                "icon": "inv_spear_06",
+                "weaponType": "Polearm",
+                "speed": "3.30",
+                "dps": "39.55 DPS",
+                "value": "39.55 DPS, 3.30s - +7 Strength, +10 Agility, +20 Stamina - Friz Frazzlespark",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 45,
+                "reqLevel": 40,
+                "stats": "+7 Strength, +10 Agility, +20 Stamina",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.30",
+                  "(39.55 damage per second)",
+                  "+7 Strength",
+                  "+10 Agility",
+                  "+20 Stamina",
+                  "Requires Level 40"
+                ],
+                "source": "Friz Frazzlespark"
+              },
+              {
+                "name": "The Skullcracker",
+                "itemId": 277250,
+                "icon": "inv_hammer_03",
+                "weaponType": "2H Mace",
+                "speed": "3.30",
+                "dps": "39.55 DPS",
+                "value": "39.55 DPS, 3.30s - +22 Spirit - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 45,
+                "reqLevel": 40,
+                "stats": "+22 Spirit",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.30",
+                  "(39.55 damage per second)",
+                  "+22 Spirit",
+                  "Requires Level 40"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 37,
+            "stats": "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "104 - 157 Damage\tSpeed 3.50",
+              "(37.29 damage per second)",
+              "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+              "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+              "Requires Level 37",
+              "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
+            ]
+          },
+          {
+            "levelBracket": "41–44",
+            "itemId": 13018,
+            "name": "Executioner's Cleaver",
+            "icon": "inv_axe_04",
+            "weaponType": "Two-handed axe",
+            "speed": "3.80",
+            "dps": "42.5 DPS",
+            "source": {
+              "kind": "drop",
+              "title": "World Drop BoE",
+              "detail": "Slow 3.80s swing speed maximizes Mortal Strike weapon coefficient"
+            },
+            "alts": [
+              {
+                "name": "Stoneslayer",
+                "itemId": 9413,
+                "value": "40.5 DPS, 3.90s - Uldaman: Archaedas",
+                "faction": "both",
+                "dps": "40.5 DPS",
+                "speed": "3.90",
+                "quality": "q3",
+                "iLvl": 46,
+                "reqLevel": 40,
+                "stats": "",
+                "icon": "inv_sword_04",
+                "source": "Uldaman: Archaedas"
+              },
+              {
+                "name": "The Pacifier",
+                "itemId": 6327,
+                "value": "40.0 DPS - World Drop BoE Mace",
+                "faction": "both",
+                "dps": "36.63 DPS",
+                "speed": "4.00",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 41,
+                "reqLevel": 36,
+                "stats": "+20 Strength, +8 Stamina",
+                "icon": "inv_sword_01",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "117 - 176 Damage\tSpeed 4.00",
+                  "(36.63 damage per second)",
+                  "+20 Strength",
+                  "+8 Stamina",
+                  "Requires Level 36"
+                ],
+                "source": "World Drop BoE Mace"
+              },
+              {
+                "name": "Gul'gash's Greathammer",
+                "itemId": 281648,
+                "weaponType": "Two-handed mace",
+                "speed": "3.60",
+                "dps": "42.8 DPS",
+                "value": "42.8 DPS, 3.60s - Feralas Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 49,
+                "reqLevel": 44,
+                "stats": "+19 Strength, Equip: Increases damage done by magical spells and effects by up to 21",
+                "icon": "inv_hammer_16",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "123 - 185 Damage\tSpeed 3.60",
+                  "(42.78 damage per second)",
+                  "+19 Strength",
+                  "Requires Level 44",
+                  "Equip: Increases damage done by magical spells and effects by up to 21"
+                ],
+                "source": "Feralas Drop"
+              },
+              {
+                "name": "Flurry Axe",
+                "itemId": 871,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Axe",
+                "speed": "1.50",
+                "dps": "35.3 DPS",
+                "value": "35.3 DPS, 1.50s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 47,
+                "reqLevel": 42,
+                "stats": "",
+                "lines": [
+                  "1H Axe",
+                  "Speed 1.50",
+                  "(35.3 damage per second)",
+                  "Requires Level 42"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Diabolic Skiver",
+                "itemId": 9475,
+                "icon": "inv_spear_01",
+                "weaponType": "Polearm",
+                "speed": "2.90",
+                "dps": "42.76 DPS",
+                "value": "42.76 DPS, 2.90s - Shadowpriest Sezz'ziz",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 49,
+                "reqLevel": 44,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.90",
+                  "(42.76 damage per second)",
+                  "Requires Level 44"
+                ],
+                "source": "Shadowpriest Sezz'ziz"
+              },
+              {
+                "name": "Blade of the Titans",
+                "itemId": 13043,
+                "icon": "inv_sword_07",
+                "weaponType": "2H Sword",
+                "speed": "3.30",
+                "dps": "42.58 DPS",
+                "value": "42.58 DPS, 3.30s - +10 Strength, +24 Stamina - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 49,
+                "reqLevel": 44,
+                "stats": "+10 Strength, +24 Stamina",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "112 - 169 Damage\tSpeed 3.30",
+                  "(42.58 damage per second)",
+                  "+10 Strength",
+                  "+24 Stamina",
+                  "Requires Level 44"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Bonechewer",
+                "itemId": 13055,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "Polearm",
+                "speed": "2.80",
+                "dps": "42.0 DPS",
+                "value": "42.0 DPS, 2.80s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 48,
+                "reqLevel": 43,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.80",
+                  "(42.0 damage per second)",
+                  "Requires Level 43"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Wardcleaver",
+                "itemId": 275824,
+                "icon": "inv_axe_66",
+                "weaponType": "2H Axe",
+                "speed": "3.50",
+                "dps": "41.86 DPS",
+                "value": "41.86 DPS, 3.50s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 48,
+                "reqLevel": 1,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.50",
+                  "(41.86 damage per second)"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Grimlok's Charge",
+                "itemId": 9416,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "Polearm",
+                "speed": "2.70",
+                "dps": "40.9 DPS",
+                "value": "40.9 DPS, 2.70s - Grimlok",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 47,
+                "reqLevel": 42,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.70",
+                  "(40.9 damage per second)",
+                  "Requires Level 42"
+                ],
+                "source": "Grimlok"
+              },
+              {
+                "name": "Serpent Slicer",
+                "itemId": 13035,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "1H Sword",
+                "speed": "2.50",
+                "dps": "32.8 DPS",
+                "value": "32.8 DPS, 2.50s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 49,
+                "reqLevel": 44,
+                "stats": "",
+                "lines": [
+                  "1H Sword",
+                  "Speed 2.50",
+                  "(32.8 damage per second)",
+                  "Requires Level 44"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+23 Strength, Equip: Improves your chance to hit by 1.0%.",
+            "lines": [
+              "Binds when equipped",
+              "Two-Hand",
+              "127 - 191 Damage\tSpeed 3.80",
+              "(41.84 damage per second)",
+              "+23 Strength",
+              "Requires Level 43",
+              "Equip: Improves your chance to hit by 1.0%."
+            ]
+          },
+          {
+            "levelBracket": "45–50",
+            "itemId": 17730,
+            "name": "Gatorbite Axe",
+            "icon": "inv_axe_04",
+            "weaponType": "Two-handed axe",
+            "speed": "3.40",
+            "dps": "45.8 DPS",
+            "source": {
+              "kind": "dungeon",
+              "title": "Rotgrip",
+              "detail": "Maraudon, levels 46–55 (+14 Str, +1% Crit)"
+            },
+            "alts": [
+              {
+                "name": "Princess Theradras' Scepter",
+                "itemId": 17766,
+                "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
+                "faction": "both",
+                "dps": "46.47 DPS",
+                "speed": "3.40",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 54,
+                "reqLevel": 49,
+                "stats": "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100.",
+                "icon": "inv_hammer_08",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "126 - 190 Damage\tSpeed 3.40",
+                  "(46.47 damage per second)",
+                  "Requires Level 49",
+                  "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
+                ],
+                "source": "Maraudon: Princess Theradras"
+              },
+              {
+                "name": "Warmonger",
+                "itemId": 13052,
+                "value": "44.6 DPS, 3.50s, +3% Hit - World drop 2H sword",
+                "faction": "both",
+                "dps": "45 DPS",
+                "speed": "3.00",
+                "weaponType": "Two-handed sword",
+                "quality": "q3",
+                "iLvl": 52,
+                "reqLevel": 47,
+                "stats": "+3 Strength, Equip: Improves your chance to hit by 3.0%.",
+                "icon": "inv_sword_04",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "108 - 162 Damage\tSpeed 3.00",
+                  "(45.00 damage per second)",
+                  "+3 Strength",
+                  "Requires Level 47",
+                  "Equip: Improves your chance to hit by 3.0%."
+                ],
+                "source": "World drop 2H sword"
+              },
+              {
+                "name": "Sul'thraze the Lasher",
+                "itemId": 9372,
+                "icon": "inv_sword_40",
+                "weaponType": "2H Sword",
+                "speed": "2.60",
+                "dps": "52.12 DPS",
+                "value": "52.12 DPS, 2.60s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 55,
+                "reqLevel": 50,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 2.60",
+                  "(52.12 damage per second)",
+                  "Requires Level 50"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Hammer of the Northern Wind",
+                "itemId": 810,
+                "icon": "inv_hammer_11",
+                "weaponType": "1H Mace",
+                "speed": "2.10",
+                "dps": "39.52 DPS",
+                "value": "39.52 DPS, 2.10s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 54,
+                "reqLevel": 49,
+                "stats": "",
+                "lines": [
+                  "1H Mace",
+                  "Speed 2.10",
+                  "(39.52 damage per second)",
+                  "Requires Level 49"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Limb Cleaver",
+                "itemId": 12000,
+                "icon": "inv_axe_02",
+                "weaponType": "2H Axe",
+                "speed": "2.40",
+                "dps": "47.50 DPS",
+                "value": "47.50 DPS, 2.40s - +27 Strength, +8 Stamina - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 55,
+                "reqLevel": 50,
+                "stats": "+27 Strength, +8 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.40",
+                  "(47.50 damage per second)",
+                  "+27 Strength",
+                  "+8 Stamina",
+                  "Requires Level 50"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Thorium Greatmace",
+                "itemId": 250613,
+                "icon": "inv_hammer_10",
+                "weaponType": "2H Mace",
+                "speed": "3.60",
+                "dps": "47.36 DPS",
+                "value": "47.36 DPS, 3.60s - +21 Strength - Thorium Greatmace",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 55,
+                "reqLevel": 50,
+                "stats": "+21 Strength",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.60",
+                  "(47.36 damage per second)",
+                  "+21 Strength",
+                  "Requires Level 50"
+                ],
+                "source": "Thorium Greatmace"
+              },
+              {
+                "name": "Smoldering Claw",
+                "itemId": 12243,
+                "icon": "inv_weapon_halberd_04",
+                "weaponType": "Polearm",
+                "speed": "2.90",
+                "dps": "46.55 DPS",
+                "value": "46.55 DPS, 2.90s - +10 Fire Resistance - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 54,
+                "reqLevel": 49,
+                "stats": "+10 Fire Resistance",
+                "lines": [
+                  "Polearm",
+                  "Speed 2.90",
+                  "(46.55 damage per second)",
+                  "+10 Fire Resistance",
+                  "Requires Level 49"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Bleakwood Hew",
+                "itemId": 12769,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "2.70",
+                "dps": "46.5 DPS",
+                "value": "46.5 DPS, 2.70s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 54,
+                "reqLevel": 49,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.70",
+                  "(46.5 damage per second)",
+                  "Requires Level 49"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Darkspear Raider's Reaper",
+                "itemId": 272080,
+                "icon": "inv_axe_18",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "45.81 DPS",
+                "value": "45.81 DPS, 3.10s - +27 Strength, +7 Stamina - Creeg Bothunk",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 53,
+                "reqLevel": 48,
+                "stats": "+27 Strength, +7 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(45.81 damage per second)",
+                  "+27 Strength",
+                  "+7 Stamina",
+                  "Requires Level 48"
+                ],
+                "source": "Creeg Bothunk"
+              },
+              {
+                "name": "Rebels' Rugged Reaper",
+                "itemId": 271925,
+                "icon": "inv_axe_18",
+                "weaponType": "2H Axe",
+                "speed": "3.10",
+                "dps": "45.81 DPS",
+                "value": "45.81 DPS, 3.10s - +27 Strength, +7 Stamina - Bryanna Embreeze",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 53,
+                "reqLevel": 48,
+                "stats": "+27 Strength, +7 Stamina",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.10",
+                  "(45.81 damage per second)",
+                  "+27 Strength",
+                  "+7 Stamina",
+                  "Requires Level 48"
+                ],
+                "source": "Bryanna Embreeze"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+            "lines": [
+              "Binds when picked up",
+              "Two-Hand",
+              "117 - 176 Damage\tSpeed 3.20",
+              "(45.78 damage per second)",
+              "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+              "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+              "Requires Level 48",
+              "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
+            ]
+          },
+          {
+            "levelBracket": "51–54",
+            "itemId": 11608,
+            "name": "Dark Iron Pulverizer",
+            "icon": "inv_hammer_08",
+            "weaponType": "Two-handed mace",
+            "speed": "3.70",
+            "dps": "47.4 DPS",
+            "source": {
+              "kind": "craft",
+              "title": "Blacksmithing (265)",
+              "detail": "Crafted (Plan drops in Blackrock Depths) - 8 sec stun proc!"
+            },
+            "alts": [
+              {
+                "name": "Dreadforge Retaliator",
+                "itemId": 11931,
+                "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
+                "faction": "both",
+                "dps": "49.3 DPS",
+                "speed": "3.70",
+                "quality": "q3",
+                "iLvl": 56,
+                "reqLevel": 50,
+                "stats": "",
+                "icon": "inv_axe_11",
+                "source": "BRD: Emperor Dagran Thaurissan"
+              },
+              {
+                "name": "Enchanted Battlehammer",
+                "itemId": 12776,
+                "value": "48.3 DPS, 3.50s - Crafted Blacksmithing (280)",
+                "faction": "both",
+                "dps": "48.29 DPS",
+                "speed": "3.50",
+                "weaponType": "Two-handed mace",
+                "quality": "q3",
+                "iLvl": 56,
+                "reqLevel": 51,
+                "stats": "+4 Arcane Resistance, Equip: Increases your chance to Parry an attack by 1.4%., Equip: Improves your chance to hit by 2.0%.",
+                "icon": "inv_hammer_04",
+                "lines": [
+                  "Binds when equipped",
+                  "Two-Hand",
+                  "135 - 203 Damage\tSpeed 3.50",
+                  "(48.29 damage per second)",
+                  "+4 Arcane Resistance",
+                  "Requires Level 51",
+                  "Equip: Increases your chance to Parry an attack by 1.4%.",
+                  "Equip: Improves your chance to hit by 2.0%."
+                ],
+                "source": "Crafted Blacksmithing (280)"
+              },
+              {
+                "name": "Axe of the Deep Woods",
+                "itemId": 811,
+                "icon": "inv_axe_07",
+                "weaponType": "1H Axe",
+                "speed": "2.70",
+                "dps": "41.48 DPS",
+                "value": "41.48 DPS, 2.70s - World Drop Epic",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 57,
+                "reqLevel": 52,
+                "stats": "",
+                "lines": [
+                  "1H Axe",
+                  "Speed 2.70",
+                  "(41.48 damage per second)",
+                  "Requires Level 52"
+                ],
+                "source": "World Drop Epic"
+              },
+              {
+                "name": "Ice Barbed Spear",
+                "itemId": 19106,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "Polearm",
+                "speed": "3.60",
+                "dps": "53.9 DPS",
+                "value": "53.9 DPS, 3.60s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 63,
+                "reqLevel": 51,
+                "stats": "",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.60",
+                  "(53.9 damage per second)",
+                  "Requires Level 51"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Twig of the World Tree",
+                "itemId": 13047,
+                "icon": "inv_mace_01",
+                "weaponType": "2H Mace",
+                "speed": "3.70",
+                "dps": "49.7 DPS",
+                "value": "49.7 DPS, 3.70s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 58,
+                "reqLevel": 53,
+                "stats": "",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.70",
+                  "(49.7 damage per second)",
+                  "Requires Level 53"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Corruption",
+                "itemId": 12782,
+                "icon": "inv_sword_07",
+                "weaponType": "2H Sword",
+                "speed": "3.30",
+                "dps": "49.70 DPS",
+                "value": "49.70 DPS, 3.30s - +30 Strength, +30 Stamina - Corruption",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 58,
+                "reqLevel": 53,
+                "stats": "+30 Strength, +30 Stamina",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.30",
+                  "(49.70 damage per second)",
+                  "+30 Strength",
+                  "+30 Stamina",
+                  "Requires Level 53"
+                ],
+                "source": "Corruption"
+              },
+              {
+                "name": "Bear Poking Stick",
+                "itemId": 274419,
+                "icon": "inv_staff_21",
+                "weaponType": "Polearm",
+                "speed": "3.20",
+                "dps": "49.69 DPS",
+                "value": "49.69 DPS, 3.20s - +24 Agility, +9 Stamina - Dala Fairmaw",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 58,
+                "reqLevel": 53,
+                "stats": "+24 Agility, +9 Stamina",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.20",
+                  "(49.69 damage per second)",
+                  "+24 Agility",
+                  "+9 Stamina",
+                  "Requires Level 53"
+                ],
+                "source": "Dala Fairmaw"
+              },
+              {
+                "name": "Thorium Poleaxe",
+                "itemId": 250615,
+                "icon": "inv_spear_05",
+                "weaponType": "Polearm",
+                "speed": "3.40",
+                "dps": "48.97 DPS",
+                "value": "48.97 DPS, 3.40s - +13 Strength, +25 Agility, +10 Stamina - Thorium Poleaxe",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 57,
+                "reqLevel": 52,
+                "stats": "+13 Strength, +25 Agility, +10 Stamina",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.40",
+                  "(48.97 damage per second)",
+                  "+13 Strength",
+                  "+25 Agility",
+                  "+10 Stamina",
+                  "Requires Level 52"
+                ],
+                "source": "Thorium Poleaxe"
+              },
+              {
+                "name": "Demonslayer",
+                "itemId": 13044,
+                "icon": "inv_sword_03",
+                "weaponType": "2H Sword",
+                "speed": "3.10",
+                "dps": "48.87 DPS",
+                "value": "48.87 DPS, 3.10s - Rare World / Dungeon Drop",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 57,
+                "reqLevel": 52,
+                "stats": "",
+                "lines": [
+                  "2H Sword",
+                  "Speed 3.10",
+                  "(48.87 damage per second)",
+                  "Requires Level 52"
+                ],
+                "source": "Rare World / Dungeon Drop"
+              },
+              {
+                "name": "Dark Iron Sunderer",
+                "itemId": 11607,
+                "icon": "inv_weapon_halberd_02",
+                "weaponType": "2H Axe",
+                "speed": "2.60",
+                "dps": "48.85 DPS",
+                "value": "48.85 DPS, 2.60s - Dark Iron Sunderer",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 57,
+                "reqLevel": 52,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 2.60",
+                  "(48.85 damage per second)",
+                  "Requires Level 52"
+                ],
+                "source": "Dark Iron Sunderer"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 55,
+            "reqLevel": 50,
+            "stats": "Chance on hit: Stuns target for 8 sec.",
+            "lines": [
+              "Binds when equipped",
+              "Two-Hand",
+              "140 - 211 Damage\tSpeed 3.70",
+              "(47.43 damage per second)",
+              "Chance on hit: Stuns target for 8 sec.",
+              "Chance on hit: Stuns target for 8 sec.",
+              "Requires Level 50",
+              "Chance on hit: Stuns target for 8 sec."
+            ]
+          },
+          {
+            "levelBracket": "55–60",
+            "itemId": 12784,
+            "name": "Arcanite Reaper",
+            "icon": "inv_axe_09",
+            "weaponType": "Two-handed axe",
+            "speed": "3.80",
+            "dps": "53.8 DPS",
+            "source": {
+              "kind": "craft",
+              "title": "Blacksmithing (275)",
+              "detail": "Legendary physical spike (+62 AP, slow 3.80s Mortal Strikes)"
+            },
+            "alts": [
+              {
+                "name": "Blackhand Doomsaw",
+                "itemId": 12583,
+                "value": "55.4 DPS, 3.50s, 420 bleed proc - LBRS: Warmaster Voone",
+                "faction": "both",
+                "dps": "55.4 DPS",
+                "speed": "3.50",
+                "quality": "q3",
+                "iLvl": 60,
+                "reqLevel": 54,
+                "stats": "",
+                "icon": "inv_weapon_halberd_01",
+                "source": "LBRS: Warmaster Voone"
+              },
+              {
+                "name": "Blackblade of Shahram",
+                "itemId": 12592,
+                "value": "53.6 DPS, 3.50s - UBRS: General Drakkisath",
+                "faction": "both",
+                "dps": "53.6 DPS",
+                "speed": "3.50",
+                "quality": "q3",
+                "iLvl": 60,
+                "reqLevel": 54,
+                "stats": "",
+                "icon": "inv_sword_34",
+                "source": "UBRS: General Drakkisath"
+              },
+              {
+                "name": "The Unstoppable Force",
+                "itemId": 19323,
+                "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
+                "faction": "both",
+                "dps": "56.53 DPS",
+                "speed": "3.60",
+                "weaponType": "Two-handed mace",
+                "quality": "q4",
+                "iLvl": 60,
+                "reqLevel": 55,
+                "stats": "+18 Strength, +17 Stamina, Equip: Improves your chance to get a critical strike by 2.0%., Chance on hit: Stuns target for 1 sec.",
+                "icon": "inv_hammer_09",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "152 - 255 Damage\tSpeed 3.60",
+                  "(56.53 damage per second)",
+                  "+18 Strength",
+                  "+17 Stamina",
+                  "Requires Level 55",
+                  "Equip: Improves your chance to get a critical strike by 2.0%.",
+                  "Chance on hit: Stuns target for 1 sec."
+                ],
+                "source": "Alterac Valley Exalted"
+              },
+              {
+                "name": "Dreadforge Retaliator",
+                "itemId": 11931,
+                "value": "49.3 DPS - BRD Emperor",
+                "faction": "both",
+                "dps": "49.3 DPS",
+                "quality": "q3",
+                "iLvl": 60,
+                "reqLevel": 54,
+                "stats": "",
+                "icon": "inv_axe_11",
+                "source": "BRD Emperor"
+              },
+              {
+                "name": "Icesworn Decapitator",
+                "itemId": 284257,
+                "weaponType": "Two-handed axe",
+                "speed": "3.60",
+                "dps": "50.6 DPS",
+                "value": "50.6 DPS, 3.60s - Winterspring Rare",
+                "faction": "both",
+                "quality": "q3",
+                "iLvl": 59,
+                "reqLevel": 54,
+                "stats": "+17 Strength, +18 Stamina, +10 Frost Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 13",
+                "icon": "inv_axe_69",
+                "lines": [
+                  "Binds when picked up",
+                  "Two-Hand",
+                  "145 - 219 Damage\tSpeed 3.60",
+                  "(50.56 damage per second)",
+                  "+17 Strength",
+                  "+18 Stamina",
+                  "+10 Frost Resistance",
+                  "Requires Level 54",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 13"
+                ],
+                "source": "Winterspring Rare"
+              },
+              {
+                "name": "Sulfuras, Hand of Ragnaros",
+                "itemId": 17182,
+                "icon": "inv_hammer_unique_sulfuras",
+                "weaponType": "2H Mace",
+                "speed": "3.70",
+                "dps": "80.41 DPS",
+                "value": "80.41 DPS, 3.70s - +12 Strength, +12 Stamina - Leveling Drop / Vendor",
+                "faction": "both",
+                "quality": "q5",
+                "iLvl": 80,
+                "reqLevel": 60,
+                "stats": "+12 Strength, +12 Stamina",
+                "lines": [
+                  "2H Mace",
+                  "Speed 3.70",
+                  "(80.41 damage per second)",
+                  "+12 Strength",
+                  "+12 Stamina",
+                  "Requires Level 60"
+                ],
+                "source": "Leveling Drop / Vendor"
+              },
+              {
+                "name": "Thunderfury, Blessed Blade of the Windseeker",
+                "itemId": 19019,
+                "icon": "inv_sword_39",
+                "weaponType": "1H Sword",
+                "speed": "1.90",
+                "dps": "41.84 DPS",
+                "value": "41.84 DPS, 1.90s - +5 Agility, +8 Stamina - Rise, Thunderfury!",
+                "faction": "both",
+                "quality": "q5",
+                "iLvl": 80,
+                "reqLevel": 60,
+                "stats": "+5 Agility, +8 Stamina",
+                "lines": [
+                  "1H Sword",
+                  "Speed 1.90",
+                  "(41.84 damage per second)",
+                  "+5 Agility",
+                  "+8 Stamina",
+                  "Requires Level 60"
+                ],
+                "source": "Rise, Thunderfury!"
+              },
+              {
+                "name": "Dark Edge of Insanity",
+                "itemId": 21134,
+                "icon": "inv_misc_questionmark",
+                "weaponType": "2H Axe",
+                "speed": "3.50",
+                "dps": "86.6 DPS",
+                "value": "86.6 DPS, 3.50s - C'Thun",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 84,
+                "reqLevel": 60,
+                "stats": "",
+                "lines": [
+                  "2H Axe",
+                  "Speed 3.50",
+                  "(86.6 damage per second)",
+                  "Requires Level 60"
+                ],
+                "source": "C'Thun"
+              },
+              {
+                "name": "Grand Marshal's Polearm",
+                "itemId": 234570,
+                "icon": "inv_spear_08",
+                "weaponType": "Polearm",
+                "speed": "3.40",
+                "dps": "80.29 DPS",
+                "value": "80.29 DPS, 3.40s - +27 Agility, +47 Stamina, Improves your chance to get a critical strike by 2.0%. - Captain O'Neal",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 80,
+                "reqLevel": 60,
+                "stats": "+27 Agility, +47 Stamina, Improves your chance to get a critical strike by 2.0%.",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.40",
+                  "(80.29 damage per second)",
+                  "+27 Agility",
+                  "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
+                  "Requires Level 60"
+                ],
+                "source": "Captain O'Neal"
+              },
+              {
+                "name": "High Warlord's Pig Poker",
+                "itemId": 234548,
+                "icon": "inv_spear_01",
+                "weaponType": "Polearm",
+                "speed": "3.40",
+                "dps": "80.29 DPS",
+                "value": "80.29 DPS, 3.40s - +27 Agility, +47 Stamina, Improves your chance to get a critical strike by 2.0%. - Sergeant Thunderhorn",
+                "faction": "both",
+                "quality": "q4",
+                "iLvl": 80,
+                "reqLevel": 60,
+                "stats": "+27 Agility, +47 Stamina, Improves your chance to get a critical strike by 2.0%.",
+                "lines": [
+                  "Polearm",
+                  "Speed 3.40",
+                  "(80.29 damage per second)",
+                  "+27 Agility",
+                  "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
+                  "Requires Level 60"
+                ],
+                "source": "Sergeant Thunderhorn"
+              },
+              {
+                "name": "Ashkandi, Greatsword of the Brotherhood",
+                "itemId": 19364,
+                "weaponType": "2H Sword",
+                "quality": "q4",
+                "iLvl": 81,
+                "reqLevel": 60,
+                "speed": "3.50",
+                "dps": "81.9 DPS",
+                "stats": "+33 Stamina, Equip: +86 Attack Power",
+                "icon": "inv_sword_12",
+                "value": "Blackwing Lair — Nefarian"
+              }
+            ],
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 63,
+            "reqLevel": 58,
+            "stats": "+13 Stamina, Equip: +62 Attack Power.",
+            "lines": [
+              "Binds when equipped",
+              "Two-Hand",
+              "153 - 256 Damage\tSpeed 3.80",
+              "(53.82 damage per second)",
+              "+13 Stamina",
+              "Requires Level 58",
+              "Equip: +62 Attack Power."
+            ]
+          }
+        ],
+        "tank": [
+          {
+            "levelBracket": "1–9",
+            "itemId": 248007,
+            "name": "Militia Shortblade",
+            "weaponType": "1H Sword",
+            "speed": "1.90",
+            "dps": "2.6 DPS",
+            "stats": "+1 Stamina",
+            "quality": "q1",
+            "iLvl": 6,
+            "reqLevel": 2,
+            "icon": "inv_sword_04",
+            "source": {
+              "kind": "vendor",
+              "title": "Starter Vendor",
+              "detail": "Fast early tanking weapon"
+            },
+            "alts": [
+              {
+                "name": "Restored Shortsword",
+                "itemId": 281728,
+                "weaponType": "1H Sword",
+                "quality": "q2",
+                "iLvl": 1,
+                "reqLevel": 1,
+                "speed": "2.20",
+                "dps": "1.14 DPS",
+                "stats": "",
+                "icon": "inv_sword_04",
+                "value": "Starter Drop"
+              }
+            ]
+          },
+          {
+            "levelBracket": "10–14",
+            "itemId": 4565,
+            "name": "Thief's Blade",
+            "weaponType": "1H Sword",
+            "speed": "2.00",
+            "dps": "6.5 DPS",
+            "stats": "+2 Agility, +1 Stamina",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "icon": "inv_sword_21",
+            "source": {
+              "kind": "world",
+              "title": "Westfall / Silverpine Drop",
+              "detail": "High threat fast 1H sword"
+            },
+            "alts": [
+              {
+                "name": "Poniard",
+                "itemId": 2140,
+                "weaponType": "Dagger",
+                "quality": "q1",
+                "iLvl": 12,
+                "reqLevel": 7,
+                "speed": "1.50",
+                "dps": "4.7 DPS",
+                "stats": "",
+                "icon": "inv_weapon_shortblade_05",
+                "value": "Vendor"
+              }
+            ]
+          },
+          {
+            "levelBracket": "15–18",
+            "itemId": 5193,
+            "name": "Cruel Barb",
+            "weaponType": "1H Sword",
+            "speed": "2.80",
+            "dps": "12.3 DPS",
+            "stats": "+6 Attack Power, +3 Agility",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 19,
+            "icon": "inv_sword_23",
+            "source": {
+              "kind": "dungeon",
+              "title": "The Deadmines — Edwin VanCleef",
+              "detail": "Iconic leveling sword for Devastate / Heroic Strike"
+            },
+            "alts": [
+              {
+                "name": "Cookie's Tenderizer",
+                "itemId": 5195,
+                "weaponType": "1H Mace",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "speed": "2.40",
+                "dps": "10.8 DPS",
+                "stats": "+3 Strength, +2 Stamina",
+                "icon": "inv_hammer_07",
+                "value": "The Deadmines — Cookie"
+              }
+            ]
+          },
+          {
+            "levelBracket": "19–22",
+            "itemId": 6504,
+            "name": "Thornspike",
+            "weaponType": "Dagger",
+            "speed": "1.80",
+            "dps": "13.3 DPS",
+            "stats": "+3 Strength, +2 Stamina",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 20,
+            "icon": "inv_weapon_shortblade_01",
+            "source": {
+              "kind": "dungeon",
+              "title": "Wailing Caverns — Lord Cobrahn",
+              "detail": "Fast threat dagger"
+            },
+            "alts": [
+              {
+                "name": "Silver-Thread Rod",
+                "itemId": 4045,
+                "weaponType": "1H Mace",
+                "quality": "q2",
+                "iLvl": 25,
+                "reqLevel": 20,
+                "speed": "2.00",
+                "dps": "11.2 DPS",
+                "stats": "+3 Strength, +3 Stamina",
+                "icon": "inv_mace_04",
+                "value": "World Drop"
+              }
+            ]
+          },
+          {
+            "levelBracket": "23–26",
+            "itemId": 7714,
+            "name": "Hypnotic Blade",
+            "weaponType": "Dagger",
+            "speed": "1.40",
+            "dps": "26.1 DPS",
+            "stats": "+8 Intellect, +3 Spirit, Equip: +9 Spell Damage",
+            "quality": "q3",
+            "iLvl": 39,
+            "reqLevel": 34,
+            "icon": "inv_weapon_shortblade_05",
+            "source": {
+              "kind": "dungeon",
+              "title": "Scarlet Monastery Library — Arcanist Doan",
+              "detail": "Ultra fast 1.40s dagger for Heroic Strike rage queuing"
+            },
+            "alts": [
+              {
+                "name": "Toxic Revenger",
+                "itemId": 9454,
+                "weaponType": "1H Sword",
+                "quality": "q3",
+                "iLvl": 32,
+                "reqLevel": 27,
+                "speed": "2.20",
+                "dps": "18.4 DPS",
+                "stats": "Chance on Hit: 50 Nature DMG poison",
+                "icon": "inv_sword_04",
+                "value": "Gnomeregan — Viscous Fallout"
+              }
+            ]
+          },
+          {
+            "levelBracket": "27–34",
+            "itemId": 6802,
+            "name": "Sword of Omen",
+            "weaponType": "1H Sword",
+            "speed": "2.20",
+            "dps": "23.4 DPS",
+            "stats": "+7 Strength, +5 Agility",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "icon": "inv_sword_24",
+            "source": {
+              "kind": "quest",
+              "title": "Scarlet Monastery — In the Name of the Light",
+              "detail": "Top Alliance dungeon quest reward"
+            },
+            "alts": [
+              {
+                "name": "Black Menace",
+                "itemId": 6803,
+                "weaponType": "1H Mace",
+                "quality": "q3",
+                "iLvl": 39,
+                "reqLevel": 34,
+                "speed": "2.20",
+                "dps": "23.4 DPS",
+                "stats": "+6 Strength, +5 Stamina",
+                "icon": "inv_mace_01",
+                "value": "SM Quest"
+              }
+            ]
+          },
+          {
+            "levelBracket": "35–42",
+            "itemId": 10823,
+            "name": "Vanquisher's Sword",
+            "weaponType": "1H Sword",
+            "speed": "2.20",
+            "dps": "30.5 DPS",
+            "stats": "+28 Attack Power",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "icon": "inv_sword_25",
+            "source": {
+              "kind": "quest",
+              "title": "Razorfen Downs — Bring the End",
+              "detail": "Premier dungeon quest reward for tanks"
+            },
+            "alts": [
+              {
+                "name": "Dazzling Longsword",
+                "itemId": 813,
+                "weaponType": "1H Sword",
+                "quality": "q4",
+                "iLvl": 41,
+                "reqLevel": 36,
+                "speed": "1.70",
+                "dps": "27.4 DPS",
+                "stats": "Chance on hit: Flash of light disorients for 3 sec",
+                "icon": "inv_sword_23",
+                "value": "World Drop Epic"
+              }
+            ]
+          },
+          {
+            "levelBracket": "43–50",
+            "itemId": 17705,
+            "name": "Thrash Blade",
+            "weaponType": "1H Sword",
+            "speed": "2.70",
+            "dps": "37.8 DPS",
+            "stats": "Chance on hit: Grants 1 extra attack",
+            "quality": "q3",
+            "iLvl": 50,
+            "reqLevel": 45,
+            "icon": "inv_sword_34",
+            "source": {
+              "kind": "quest",
+              "title": "Maraudon — Corruption of Earth and Seed",
+              "detail": "Extra attack proc delivers huge tank threat"
+            },
+            "alts": [
+              {
+                "name": "Gatorbite Axe",
+                "itemId": 17738,
+                "weaponType": "1H Axe",
+                "quality": "q3",
+                "iLvl": 53,
+                "reqLevel": 48,
+                "speed": "2.70",
+                "dps": "38.5 DPS",
+                "stats": "+10 Strength, +5 Stamina",
+                "icon": "inv_axe_24",
+                "value": "Maraudon — Rotgrip"
+              }
+            ]
+          },
+          {
+            "levelBracket": "51–54",
+            "itemId": 15805,
+            "name": "Mirah's Song",
+            "weaponType": "1H Sword",
+            "speed": "1.80",
+            "dps": "38.3 DPS",
+            "stats": "+9 Strength, +9 Agility",
+            "quality": "q3",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "icon": "inv_sword_40",
+            "source": {
+              "kind": "quest",
+              "title": "Scholomance — Kirtonos the Herald",
+              "detail": "Fast 1.80s speed sword with perfect tank stats"
+            },
+            "alts": [
+              {
+                "name": "Bonecreaker",
+                "itemId": 13026,
+                "weaponType": "1H Mace",
+                "quality": "q3",
+                "iLvl": 55,
+                "reqLevel": 50,
+                "speed": "2.40",
+                "dps": "37.5 DPS",
+                "stats": "+6 Strength, +7 Stamina",
+                "icon": "inv_hammer_16",
+                "value": "World Drop"
+              },
+              {
+                "name": "Ironfoe",
+                "itemId": 11684,
+                "weaponType": "1H Mace",
+                "quality": "q4",
+                "iLvl": 60,
+                "reqLevel": 55,
+                "speed": "2.40",
+                "dps": "46.7 DPS",
+                "stats": "Chance on hit: Grants 2 extra attacks",
+                "icon": "inv_hammer_03",
+                "value": "BRD — Emperor Thaurissan"
+              }
+            ]
+          },
+          {
+            "levelBracket": "55–60",
+            "itemId": 18348,
+            "name": "Quel'Serrar",
+            "weaponType": "1H Sword",
+            "speed": "2.00",
+            "dps": "52.5 DPS",
+            "stats": "+12 Stamina, Equip: +13 Defense, Chance on hit: +300 Armor & +13 Defense for 10 sec",
+            "quality": "q4",
+            "iLvl": 66,
+            "reqLevel": 60,
+            "icon": "inv_sword_14",
+            "source": {
+              "kind": "quest",
+              "title": "Foror's Compendium / Onyxia Breath",
+              "detail": "The legendary Classic Protection Warrior sword"
+            },
+            "alts": [
+              {
+                "name": "Thunderfury, Blessed Blade of the Windseeker",
+                "itemId": 19019,
+                "weaponType": "1H Sword",
+                "quality": "q5",
+                "iLvl": 80,
+                "reqLevel": 60,
+                "speed": "1.90",
+                "dps": "53.9 DPS",
+                "stats": "+5 Agility, +8 Stamina, Equip: Lightning burst & attack speed slow",
+                "icon": "inv_sword_39",
+                "value": "Legendary Binding of the Windseeker"
+              },
+              {
+                "name": "Timeworn Mace",
+                "itemId": 18376,
+                "weaponType": "1H Mace",
+                "quality": "q3",
+                "iLvl": 62,
+                "reqLevel": 57,
+                "speed": "2.40",
+                "dps": "43.8 DPS",
+                "stats": "+7 Strength, +11 Stamina, +5 Defense",
+                "icon": "inv_mace_01",
+                "value": "Dire Maul West — Tendris Warpwood"
+              },
+              {
+                "name": "Alcor's Sunrazor",
+                "itemId": 14555,
+                "weaponType": "Dagger",
+                "quality": "q4",
+                "iLvl": 63,
+                "reqLevel": 58,
+                "speed": "1.30",
+                "dps": "41.5 DPS",
+                "stats": "Ultra-fast 1.30 speed, Chance on hit: 90 Fire DMG",
+                "icon": "inv_weapon_shortblade_25",
+                "value": "World Drop Epic"
+              }
+            ]
+          }
+        ]
+      }
     },
     "paladin": {
       "classId": "paladin",
@@ -11109,17 +16773,17 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cruel Barb",
-              "itemId": 5191,
-              "icon": "inv_sword_24",
+              "itemId": 5193,
+              "icon": "inv_sword_23",
               "weaponType": "1H Sword",
               "speed": "2.80",
-              "dps": "15.54 DPS",
+              "dps": "12.3 DPS",
               "value": "15.54 DPS, 2.80s - Equip: +12 Attack Power. - Edwin VanCleef",
               "faction": "both",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "Equip: +12 Attack Power.",
+              "stats": "+6 Attack Power, +3 Agility",
               "lines": [
                 "Binds when picked up",
                 "One-Hand",
@@ -12401,6 +18065,19 @@ if (typeof window !== 'undefined') {
                 "Requires Level 39"
               ],
               "source": "Rare World / Dungeon Drop"
+            },
+            {
+              "name": "Ravager",
+              "itemId": 7717,
+              "weaponType": "2H Axe",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "speed": "3.50",
+              "dps": "37.3 DPS",
+              "stats": "Chance on Hit: Whirlwind attack for 3 sec",
+              "icon": "inv_weapon_halberd_05",
+              "value": "Scarlet Monastery Armory — Herod"
             }
           ],
           "faction": "both",
@@ -13384,6 +19061,19 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60"
               ],
               "source": "Captain O'Neal"
+            },
+            {
+              "name": "Ashkandi, Greatsword of the Brotherhood",
+              "itemId": 19364,
+              "weaponType": "2H Sword",
+              "quality": "q4",
+              "iLvl": 81,
+              "reqLevel": 60,
+              "speed": "3.50",
+              "dps": "81.9 DPS",
+              "stats": "+33 Stamina, Equip: +86 Attack Power",
+              "icon": "inv_sword_12",
+              "value": "Blackwing Lair — Nefarian"
             }
           ],
           "faction": "both",
@@ -13396,1385 +19086,258 @@ if (typeof window !== 'undefined') {
       "healingLevels": [
         {
           "levelBracket": "1–6",
-          "itemId": 2493,
-          "name": "Wooden Mallet",
-          "icon": "inv_hammer_01",
-          "weaponType": "One-Handed Mace",
+          "itemId": 2131,
+          "name": "Gavel",
+          "weaponType": "1H Mace",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 3,
           "speed": "2.00",
-          "dps": "1.8 DPS",
-          "stats": "+1 Spirit",
+          "dps": "2.3 DPS",
+          "stats": "+1 Stamina",
+          "icon": "inv_hammer_08",
           "source": {
             "kind": "vendor",
             "title": "Starter Weapon Vendor",
-            "detail": "Starting weapon or purchase from weapon merchants in starting zones."
+            "detail": "Northshire / Starter Zone"
           },
-          "faction": "both",
-          "quality": "q1",
-          "iLvl": 4,
-          "reqLevel": 1,
           "alts": [
             {
-              "name": "Club",
-              "itemId": 2130,
-              "value": "+1 Spirit - Starter vendor mace",
-              "faction": "both",
-              "quality": "q1",
-              "iLvl": 4,
-              "reqLevel": 1,
-              "stats": "+1 Spirit",
-              "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace",
-              "source": "Starter vendor mace"
-            },
-            {
-              "name": "Honed Greathammer",
-              "itemId": 257345,
-              "icon": "inv_mace_2h_skybornec60_b_01",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "9.06 DPS",
-              "value": "9.06 DPS, 3.20s - +2 Strength, +2 Spirit - Return to Valanaar",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": "+2 Strength, +2 Spirit",
-              "lines": [
-                "2H Mace",
-                "Speed 3.20",
-                "(9.06 damage per second)",
-                "+2 Strength",
-                "+2 Spirit",
-                "Requires Level 6"
-              ],
-              "source": "Return to Valanaar"
-            },
-            {
-              "name": "Balanced Quarterstaff",
-              "itemId": 257343,
-              "icon": "inv_staff_2h_skybornec60_b_01",
-              "weaponType": "Staff",
-              "speed": "2.20",
-              "dps": "8.86 DPS",
-              "value": "8.86 DPS, 2.20s - +2 Stamina, +2 Spirit - Return to Valanaar",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": "+2 Stamina, +2 Spirit",
-              "lines": [
-                "Staff",
-                "Speed 2.20",
-                "(8.86 damage per second)",
-                "+2 Stamina",
-                "+2 Spirit",
-                "Requires Level 6"
-              ],
-              "source": "Return to Valanaar"
-            },
-            {
-              "name": "Coldridge Hammer",
-              "itemId": 3103,
-              "icon": "inv_hammer_15",
-              "weaponType": "2H Mace",
-              "speed": "2.70",
-              "dps": "8.33 DPS",
-              "value": "8.33 DPS, 2.70s - +1 Strength, +1 Spirit - Protecting the Herd",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 6,
-              "stats": "+1 Strength, +1 Spirit",
-              "lines": [
-                "2H Mace",
-                "Speed 2.70",
-                "(8.33 damage per second)",
-                "+1 Strength",
-                "+1 Spirit",
-                "Requires Level 6"
-              ],
-              "source": "Protecting the Herd"
-            },
-            {
-              "name": "Wrathroot",
-              "itemId": 286749,
-              "icon": "inv_staff_02",
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "7.12 DPS",
-              "value": "7.12 DPS, 3.30s - +1 Intellect - Wrathvine",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 5,
-              "stats": "+1 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 3.30",
-                "(7.12 damage per second)",
-                "+1 Intellect",
-                "Requires Level 5"
-              ],
-              "source": "Wrathvine"
-            },
-            {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 248008,
-              "icon": "inv_staff_18",
-              "weaponType": "Staff",
-              "speed": "2.20",
-              "dps": "6.36 DPS",
-              "value": "6.36 DPS, 2.20s - +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4 - Rare Books",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 1,
-              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.20",
-                "(6.36 damage per second)",
-                "+2 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ],
-              "source": "Rare Books"
-            },
-            {
-              "name": "Roofing Hammer",
-              "itemId": 263314,
-              "icon": "inv_hammer_20",
+              "name": "Restored Basher",
+              "itemId": 281723,
               "weaponType": "1H Mace",
-              "speed": "2.40",
-              "dps": "5.42 DPS",
-              "value": "5.42 DPS, 2.40s - +1 Spirit - Deliver the News",
-              "faction": "both",
               "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 5,
-              "stats": "+1 Spirit",
-              "lines": [
-                "1H Mace",
-                "Speed 2.40",
-                "(5.42 damage per second)",
-                "+1 Spirit",
-                "Requires Level 5"
-              ],
-              "source": "Deliver the News"
+              "iLvl": 1,
+              "reqLevel": 1,
+              "speed": "2.20",
+              "dps": "1.14 DPS",
+              "stats": "",
+              "icon": "inv_mace_03",
+              "value": "Leveling Drop / Vendor"
             },
             {
-              "name": "Gritroot Staff",
-              "itemId": 9603,
-              "icon": "inv_staff_22",
-              "weaponType": "Staff",
-              "speed": "2.60",
-              "dps": "5.38 DPS",
-              "value": "5.38 DPS, 2.60s - +1 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 2 - The Relics of Wakening",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 4,
-              "stats": "+1 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 2",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.60",
-                "(5.38 damage per second)",
-                "+1 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 2",
-                "Requires Level 4"
-              ],
-              "source": "The Relics of Wakening"
+              "name": "Militia Warhammer",
+              "itemId": 5579,
+              "weaponType": "2H Mace",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "speed": "2.90",
+              "dps": "2.6 DPS",
+              "stats": "",
+              "icon": "inv_hammer_15",
+              "value": "Starter Quest"
             }
           ]
         },
         {
           "levelBracket": "7–12",
-          "itemId": 2493,
-          "name": "Wooden Mallet",
-          "icon": "inv_hammer_01",
-          "weaponType": "One-Handed Mace",
-          "speed": "2.00",
-          "dps": "2.5 DPS",
-          "stats": "+2 Spirit",
+          "itemId": 3487,
+          "name": "Solid Iron Maul",
+          "weaponType": "2H Mace",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "speed": "3.00",
+          "dps": "7.0 DPS",
+          "stats": "+2 Strength, +2 Stamina",
+          "icon": "inv_hammer_09",
           "source": {
             "kind": "vendor",
-            "title": "Low-level Weapon Vendor",
-            "detail": "Purchased from starter merchants in Goldshire or Kharanos."
+            "title": "Ironforge / Stormwind Vendor",
+            "detail": "Solid early leveling hammer"
           },
-          "faction": "both",
-          "quality": "q1",
-          "iLvl": 9,
-          "reqLevel": 6,
           "alts": [
             {
-              "name": "Heavy Copper Maul",
-              "itemId": 3489,
-              "value": "+2 Strength, +2 Stamina - Early Blacksmithing 2H Mace",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 11,
-              "reqLevel": 6,
-              "stats": "+2 Strength, +2 Stamina",
-              "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace",
-              "source": "Early Blacksmithing 2H Mace"
-            },
-            {
-              "name": "Hammerbone",
-              "itemId": 270018,
-              "icon": "inv_hammer_15",
-              "weaponType": "2H Mace",
-              "speed": "3.40",
-              "dps": "20.44 DPS",
-              "value": "20.44 DPS, 3.40s - +7 Strength, +10 Spirit - Leaders of the Fang",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 10,
-              "stats": "+7 Strength, +10 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "55 - 84 Damage\tSpeed 3.40",
-                "(20.44 damage per second)",
-                "+7 Strength",
-                "+10 Spirit",
-                "Requires Level 10"
-              ],
-              "source": "Leaders of the Fang"
-            },
-            {
-              "name": "Crescent Staff",
-              "itemId": 6505,
-              "icon": "inv_staff_04",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "15.17 DPS",
-              "value": "15.17 DPS, 2.90s - +7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26 - Leaders of the Fang",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 10,
-              "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "35 - 53 Damage\tSpeed 2.90",
-                "(15.17 damage per second)",
-                "+7 Agility",
-                "+7 Stamina",
-                "+7 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
-                "Requires Level 10"
-              ],
-              "source": "Leaders of the Fang"
-            },
-            {
-              "name": "Hammer of Orgrimmar",
-              "itemId": 15445,
-              "icon": "inv_hammer_23",
+              "name": "Healer's Mace",
+              "itemId": 1198,
               "weaponType": "1H Mace",
-              "speed": "2.90",
-              "dps": "12.41 DPS",
-              "value": "12.41 DPS, 2.90s - +3 Strength, +3 Spirit - Hidden Enemies",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 18,
+              "quality": "q2",
+              "iLvl": 14,
               "reqLevel": 9,
-              "stats": "+3 Strength, +3 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand",
-                "25 - 47 Damage\tSpeed 2.90",
-                "(12.41 damage per second)",
-                "+3 Strength",
-                "+3 Spirit",
-                "Requires Level 9"
-              ],
-              "source": "Hidden Enemies"
-            },
-            {
-              "name": "Staff of Orgrimmar",
-              "itemId": 15444,
-              "icon": "inv_staff_goldfeathered_01",
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "11.82 DPS",
-              "value": "11.82 DPS, 3.30s - +6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18 - Hidden Enemies",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "31 - 47 Damage\tSpeed 3.30",
-                "(11.82 damage per second)",
-                "+6 Agility",
-                "+6 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 18",
-                "Requires Level 9"
-              ],
-              "source": "Hidden Enemies"
-            },
-            {
-              "name": "Ceranium Rod",
-              "itemId": 3452,
-              "icon": "inv_staff_07",
-              "weaponType": "Staff",
-              "speed": "2.70",
-              "dps": "10.74 DPS",
-              "value": "10.74 DPS, 2.70s - +7 Stamina, +14 Spell Power - The Weaver",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 10,
-              "stats": "+7 Stamina, +14 Spell Power",
-              "lines": [
-                "Staff",
-                "Speed 2.70",
-                "(10.74 damage per second)",
-                "+7 Stamina",
-                "+14 Spell Power",
-                "Requires Level 10"
-              ],
-              "source": "The Weaver"
-            },
-            {
-              "name": "Wind Rider Staff",
-              "itemId": 5306,
-              "icon": "inv_staff_goldfeathered_01",
-              "weaponType": "Staff",
-              "speed": "2.80",
-              "dps": "9.64 DPS",
-              "value": "9.64 DPS, 2.80s - +6 Spirit, +12 Spell Power - Cry of the Thunderhawk",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 20,
-              "reqLevel": 10,
-              "stats": "+6 Spirit, +12 Spell Power",
-              "lines": [
-                "Staff",
-                "Speed 2.80",
-                "(9.64 damage per second)",
-                "+6 Spirit",
-                "+12 Spell Power",
-                "Requires Level 10"
-              ],
-              "source": "Cry of the Thunderhawk"
-            },
-            {
-              "name": "Invader's Mace",
-              "itemId": 281254,
-              "icon": "inv_hammer_03",
-              "weaponType": "1H Mace",
-              "speed": "2.40",
-              "dps": "8.54 DPS",
-              "value": "8.54 DPS, 2.40s - +2 Strength, +1 Spirit - Banner of the Fallen",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 10,
-              "stats": "+2 Strength, +1 Spirit",
-              "lines": [
-                "1H Mace",
-                "Speed 2.40",
-                "(8.54 damage per second)",
-                "+2 Strength",
-                "+1 Spirit",
-                "Requires Level 10"
-              ],
-              "source": "Banner of the Fallen"
+              "speed": "2.10",
+              "dps": "5.2 DPS",
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_mace_01",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "13–17",
-          "itemId": 271207,
-          "name": "Scepter of the Abandoned",
-          "icon": "inv_mace_01",
-          "weaponType": "Main Hand Mace",
-          "speed": "2.20",
-          "dps": "14.0 DPS",
-          "stats": "+4 Stamina, +4 Intellect",
+          "itemId": 5195,
+          "name": "Cookie's Tenderizer",
+          "weaponType": "1H Mace",
+          "quality": "q3",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "speed": "2.40",
+          "dps": "10.8 DPS",
+          "stats": "+3 Strength, +2 Stamina",
+          "icon": "inv_hammer_07",
           "source": {
-            "kind": "drop",
-            "title": "The Abandoned (Ruins of Lordaeron)",
-            "detail": "WoW Forever custom dungeon boss drop. Superb early intellect mace."
+            "kind": "dungeon",
+            "title": "The Deadmines — Cookie",
+            "detail": "Deadmines rare drop"
           },
-          "faction": "both",
-          "quality": "q2",
-          "iLvl": 18,
-          "reqLevel": 14,
           "alts": [
             {
-              "name": "Trogg Scepter",
-              "itemId": 272996,
-              "value": "+4 Spirit, +33 Healing / +11 Spell Dmg - Oggleflint (Ragefire Chasm)",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 11,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
-              "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
-              "source": "Oggleflint (Ragefire Chasm)"
-            },
-            {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5195,
-              "value": "+11 Strength, +4 Agility - Mr. Smite (The Deadmines)",
-              "faction": "both",
+              "itemId": 5191,
+              "weaponType": "2H Mace",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
+              "speed": "3.50",
+              "dps": "13.1 DPS",
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace",
-              "source": "Mr. Smite (The Deadmines)"
-            },
-            {
-              "name": "Rhahk'Zor's Hammer",
-              "itemId": 5187,
               "icon": "inv_hammer_09",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "18.44 DPS",
-              "value": "18.44 DPS, 3.20s - +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8 - Rhahk'Zor",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 16,
-              "stats": "+8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "47 - 71 Damage\tSpeed 3.20",
-                "(18.44 damage per second)",
-                "+8 Stamina",
-                "Requires Level 16",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ],
-              "source": "Rhahk'Zor"
-            },
-            {
-              "name": "Segmented Spider Leg",
-              "itemId": 271203,
-              "icon": "inv_staff_09",
-              "weaponType": "Staff",
-              "speed": "3.60",
-              "dps": "17.50 DPS",
-              "value": "17.50 DPS, 3.60s - +9 Agility, +5 Spirit - Witherfang",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 20,
-              "reqLevel": 15,
-              "stats": "+9 Agility, +5 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "50 - 76 Damage\tSpeed 3.60",
-                "(17.50 damage per second)",
-                "+9 Agility",
-                "+5 Spirit",
-                "Requires Level 15"
-              ],
-              "source": "Witherfang"
-            },
-            {
-              "name": "Gnarled Necromancer's Staff",
-              "itemId": 251534,
-              "icon": "inv_staff_16",
-              "weaponType": "Staff",
-              "speed": "2.80",
-              "dps": "15.18 DPS",
-              "value": "15.18 DPS, 2.80s - +10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills. - The Wrath of Rath'mael",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 15,
-              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "34 - 51 Damage\tSpeed 2.80",
-                "(15.18 damage per second)",
-                "+10 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
-                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
-                "Requires Level 15"
-              ],
-              "source": "The Wrath of Rath'mael"
-            },
-            {
-              "name": "Staff of Westfall",
-              "itemId": 2042,
-              "icon": "inv_staff_10",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "15.17 DPS",
-              "value": "15.17 DPS, 3.00s - +5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines. - The Defias Brotherhood",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 14,
-              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "36 - 55 Damage\tSpeed 3.00",
-                "(15.17 damage per second)",
-                "+5 Intellect",
-                "+6 Spirit",
-                "Equip: Increases healing done by up to 48",
-                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
-                "Requires Level 14"
-              ],
-              "source": "The Defias Brotherhood"
-            },
-            {
-              "name": "Vileblood Scimitar",
-              "itemId": 271218,
-              "icon": "inv_sword_16",
-              "weaponType": "1H Sword",
-              "speed": "2.60",
-              "dps": "14.62 DPS",
-              "value": "14.62 DPS, 2.60s - +5 Spirit - Viktor the Vile",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+5 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "One-Hand",
-                "26 - 50 Damage\tSpeed 2.60",
-                "(14.62 damage per second)",
-                "+5 Spirit",
-                "Requires Level 17"
-              ],
-              "source": "Viktor the Vile"
-            },
-            {
-              "name": "Emberstone Staff",
-              "itemId": 5201,
-              "icon": "inv_staff_13",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "14.17 DPS",
-              "value": "14.17 DPS, 3.00s - +8 Stamina, +8 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24 - Captain Greenskin",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+8 Stamina, +8 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "34 - 51 Damage\tSpeed 3.00",
-                "(14.17 damage per second)",
-                "+8 Stamina",
-                "+8 Fire Resistance",
-                "Requires Level 17",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ],
-              "source": "Captain Greenskin"
+              "value": "The Deadmines — Mr. Smite"
             }
           ]
         },
         {
           "levelBracket": "18–21",
-          "itemId": 6641,
-          "name": "Haunting Blade",
-          "icon": "inv_sword_26",
-          "weaponType": "Two-Handed Sword",
-          "speed": "3.00",
-          "dps": "18.2 DPS",
-          "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11.",
+          "itemId": 4045,
+          "name": "Silver-Thread Rod",
+          "weaponType": "1H Mace",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 20,
+          "speed": "2.00",
+          "dps": "11.2 DPS",
+          "stats": "+3 Intellect, +3 Spirit, +6 Healing",
+          "icon": "inv_mace_04",
           "source": {
-            "kind": "drop",
-            "title": "Lordaeron Captain (Ruins of Lordaeron)",
-            "detail": "Drops from Lordaeron Captain in Ruins of Lordaeron or SFK. Direct +33 Healing 2H blade."
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+3 Intellect, +3 Spirit, +6 Healing"
           },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 27,
-          "reqLevel": 22,
           "alts": [
             {
-              "name": "Verigan's Fist",
-              "itemId": 6953,
-              "value": "+6 Strength, +6 Stamina, +12 Intellect - Paladin Class Quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 29,
-              "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina, +12 Intellect",
-              "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace",
-              "source": "Paladin Class Quest"
-            },
-            {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271207,
-              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
-              "faction": "both",
+              "name": "Blackfathom Bludgeon",
+              "itemId": 6688,
+              "weaponType": "1H Mace",
               "quality": "q2",
-              "iLvl": 18,
-              "reqLevel": 14,
-              "stats": "+4 Stamina, +4 Intellect",
-              "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace",
-              "source": "The Abandoned (Ruins of Lordaeron)"
-            },
-            {
-              "name": "Alliance Outrunner Staff",
-              "itemId": 285350,
-              "icon": "inv_staff_11",
-              "weaponType": "Staff",
-              "speed": "2.50",
-              "dps": "16.20 DPS",
-              "value": "16.20 DPS, 2.50s - +9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28 - Marcus Bel",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 26,
-              "reqLevel": 21,
-              "stats": "+9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "32 - 49 Damage\tSpeed 2.50",
-                "(16.20 damage per second)",
-                "+9 Stamina",
-                "+9 Spirit",
-                "Requires Level 21",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ],
-              "source": "Marcus Bel"
-            },
-            {
-              "name": "Odo's Ley Staff",
-              "itemId": 6318,
-              "icon": "inv_staff_27",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "16.03 DPS",
-              "value": "16.03 DPS, 2.90s - +5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 - Odo the Blindwatcher",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 26,
-              "reqLevel": 21,
-              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "37 - 56 Damage\tSpeed 2.90",
-                "(16.03 damage per second)",
-                "+5 Stamina",
-                "+12 Spirit",
-                "Requires Level 21",
-                "Equip: Increases healing done by up to 52"
-              ],
-              "source": "Odo the Blindwatcher"
-            },
-            {
-              "name": "Staff of the Friar",
-              "itemId": 3415,
-              "icon": "inv_staff_32",
-              "weaponType": "Staff",
-              "speed": "2.60",
-              "dps": "15.96 DPS",
-              "value": "15.96 DPS, 2.60s - +4 Stamina, +3 Intellect, +12 Spirit, Equip: Increases healing done by up to 52 - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 26,
-              "reqLevel": 21,
-              "stats": "+4 Stamina, +3 Intellect, +12 Spirit, Equip: Increases healing done by up to 52",
-              "lines": [
-                "Binds when equipped",
-                "Two-Hand",
-                "33 - 50 Damage\tSpeed 2.60",
-                "(15.96 damage per second)",
-                "+4 Stamina",
-                "+3 Intellect",
-                "+12 Spirit",
-                "Requires Level 21",
-                "Equip: Increases healing done by up to 52"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Staff of the Blessed Seer",
-              "itemId": 2271,
-              "icon": "inv_staff_31",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "15.67 DPS",
-              "value": "15.67 DPS, 3.00s - +9 Stamina, +10 Spirit, +28 Spell Power - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 25,
-              "reqLevel": 20,
-              "stats": "+9 Stamina, +10 Spirit, +28 Spell Power",
-              "lines": [
-                "Staff",
-                "Speed 3.00",
-                "(15.67 damage per second)",
-                "+9 Stamina",
-                "+10 Spirit",
-                "+28 Spell Power",
-                "Requires Level 20"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Living Root",
-              "itemId": 6631,
-              "icon": "inv_staff_25",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "14.66 DPS",
-              "value": "14.66 DPS, 2.90s - +2 Stamina, +5 Spirit, +9 Nature Resistance, Equip: Increases healing done by up to 45 - Verdan the Everliving",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+2 Stamina, +5 Spirit, +9 Nature Resistance, Equip: Increases healing done by up to 45",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "34 - 51 Damage\tSpeed 2.90",
-                "(14.66 damage per second)",
-                "+2 Stamina",
-                "+5 Spirit",
-                "+9 Nature Resistance",
-                "Requires Level 18",
-                "Equip: Increases healing done by up to 45"
-              ],
-              "source": "Verdan the Everliving"
-            },
-            {
-              "name": "Coldflame Saber",
-              "itemId": 276631,
-              "icon": "inv_sword_05",
-              "weaponType": "1H Sword",
-              "speed": "2.00",
-              "dps": "12.25 DPS",
-              "value": "12.25 DPS, 2.00s - +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Melee attacks deal 98 additional Fire damage against Frozen targets. - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 29,
-              "reqLevel": 21,
-              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand",
-                "17 - 32 Damage\tSpeed 2.00",
-                "(12.25 damage per second)",
-                "+7 Intellect",
-                "Requires Level 21",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 32",
-                "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
-              ],
-              "source": "Rare World / Dungeon Drop"
+              "iLvl": 24,
+              "reqLevel": 19,
+              "speed": "2.20",
+              "dps": "10.5 DPS",
+              "stats": "+3 Intellect, +2 Spirit",
+              "icon": "inv_hammer_06",
+              "value": "BFD — Ghamoo-ra"
             }
           ]
         },
         {
           "levelBracket": "22–25",
-          "itemId": 6641,
-          "name": "Haunting Blade",
-          "icon": "inv_sword_26",
-          "weaponType": "Two-Handed Sword",
-          "speed": "3.00",
-          "dps": "18.2 DPS",
-          "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11.",
-          "source": {
-            "kind": "drop",
-            "title": "Lordaeron Captain (Ruins of Lordaeron)",
-            "detail": "Iconic blue 2H sword with +33 Healing."
-          },
-          "faction": "both",
+          "itemId": 2000,
+          "name": "Archeus",
+          "weaponType": "2H Sword",
           "quality": "q3",
-          "iLvl": 27,
-          "reqLevel": 22,
+          "iLvl": 30,
+          "reqLevel": 25,
+          "speed": "3.20",
+          "dps": "19.5 DPS",
+          "stats": "+8 Strength, +7 Stamina",
+          "icon": "inv_sword_39",
+          "source": {
+            "kind": "quest",
+            "title": "Duskwood — The Hermit / Archeus",
+            "detail": "Iconic Alliance quest sword"
+          },
           "alts": [
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271207,
-              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 18,
-              "reqLevel": 14,
-              "stats": "+4 Stamina, +4 Intellect",
-              "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace",
-              "source": "The Abandoned (Ruins of Lordaeron)"
-            },
-            {
-              "name": "Striking Staff",
-              "itemId": 279844,
-              "icon": "inv_staff_28",
-              "weaponType": "Staff",
-              "speed": "3.10",
-              "dps": "31.29 DPS",
-              "value": "31.29 DPS, 3.10s - +9 Strength, +6 Stamina, +14 Intellect - Heart of Disruption",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 36,
-              "reqLevel": 24,
-              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "77 - 117 Damage\tSpeed 3.10",
-                "(31.29 damage per second)",
-                "+9 Strength",
-                "+6 Stamina",
-                "+14 Intellect",
-                "Requires Level 24"
-              ],
-              "source": "Heart of Disruption"
-            },
-            {
-              "name": "Defender of Dalaran",
-              "itemId": 279841,
-              "icon": "inv_hammer_04",
-              "weaponType": "2H Mace",
-              "speed": "3.30",
-              "dps": "31.21 DPS",
-              "value": "31.21 DPS, 3.30s - +9 Strength, +13 Stamina, +9 Intellect - Heart of Disruption",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 36,
-              "reqLevel": 24,
-              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "82 - 124 Damage\tSpeed 3.30",
-                "(31.21 damage per second)",
-                "+9 Strength",
-                "+13 Stamina",
-                "+9 Intellect",
-                "Requires Level 24"
-              ],
-              "source": "Heart of Disruption"
-            },
-            {
-              "name": "Advisor's Gnarled Staff",
-              "itemId": 212584,
-              "icon": "inv_staff_25",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "24.66 DPS",
-              "value": "24.66 DPS, 2.90s - +10 Stamina, +6 Intellect - Kelm Hargunth",
-              "faction": "both",
+              "name": "Beetle Claw",
+              "itemId": 893,
+              "weaponType": "1H Mace",
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+10 Stamina, +6 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(24.66 damage per second)",
-                "+10 Stamina",
-                "+6 Intellect",
-                "Requires Level 25"
-              ],
-              "source": "Kelm Hargunth"
-            },
-            {
-              "name": "Lorekeeper's Staff",
-              "itemId": 212580,
-              "icon": "inv_staff_28",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "24.66 DPS",
-              "value": "24.66 DPS, 2.90s - +10 Stamina, +6 Intellect - Illiyana Moonblaze",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+10 Stamina, +6 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(24.66 damage per second)",
-                "+10 Stamina",
-                "+6 Intellect",
-                "Requires Level 25"
-              ],
-              "source": "Illiyana Moonblaze"
-            },
-            {
-              "name": "Headbasher",
-              "itemId": 1264,
-              "icon": "inv_mace_07",
-              "weaponType": "2H Mace",
-              "speed": "2.30",
-              "dps": "23.70 DPS",
-              "value": "23.70 DPS, 2.30s - +9 Strength, +5 Stamina, +10 Intellect - The Fury Runs Deep",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 29,
-              "reqLevel": 22,
-              "stats": "+9 Strength, +5 Stamina, +10 Intellect",
-              "lines": [
-                "2H Mace",
-                "Speed 2.30",
-                "(23.70 damage per second)",
-                "+9 Strength",
-                "+5 Stamina",
-                "+10 Intellect",
-                "Requires Level 22"
-              ],
-              "source": "The Fury Runs Deep"
-            },
-            {
-              "name": "Twilight Maul",
-              "itemId": 273841,
-              "icon": "inv_hammer_09",
-              "weaponType": "2H Mace",
-              "speed": "3.30",
-              "dps": "22.88 DPS",
-              "value": "22.88 DPS, 3.30s - +12 Spell Power - Lorgus Jett",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 28,
-              "reqLevel": 23,
-              "stats": "+12 Spell Power",
-              "lines": [
-                "2H Mace",
-                "Speed 3.30",
-                "(22.88 damage per second)",
-                "+12 Spell Power",
-                "Requires Level 23"
-              ],
-              "source": "Lorgus Jett"
-            },
-            {
-              "name": "Healer's Staff",
-              "itemId": 271767,
-              "icon": "inv_staff_10",
-              "weaponType": "Staff",
-              "speed": "2.60",
-              "dps": "20.77 DPS",
-              "value": "20.77 DPS, 2.60s - +12 Stamina, Equip: Increases healing done by up to 67 - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 24,
-              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "43 - 65 Damage\tSpeed 2.60",
-                "(20.77 damage per second)",
-                "+12 Stamina",
-                "Equip: Increases healing done by up to 67",
-                "Requires Level 24"
-              ],
-              "source": "Rare World / Dungeon Drop"
+              "speed": "2.20",
+              "dps": "14.8 DPS",
+              "stats": "+4 Intellect, +4 Spirit",
+              "icon": "inv_mace_08",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "26–29",
-          "itemId": 9457,
-          "name": "Royal Diplomatic Scepter",
-          "icon": "inv_mace_01",
-          "weaponType": "Main Hand Mace",
-          "speed": "2.10",
-          "dps": "22.4 DPS",
-          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
-          "source": {
-            "kind": "drop",
-            "title": "Dark Iron Ambassador (Gnomeregan)",
-            "detail": "Rare boss in Gnomeregan crypt tunnels. Best 1H leveling healing scepter in early midgame."
-          },
-          "faction": "both",
+          "itemId": 1705,
+          "name": "Ironstar",
+          "weaponType": "1H Mace",
           "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
+          "iLvl": 34,
+          "reqLevel": 29,
+          "speed": "2.40",
+          "dps": "18.8 DPS",
+          "stats": "+5 Intellect, +4 Spirit",
+          "icon": "inv_hammer_16",
+          "source": {
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+5 Intellect, +4 Spirit"
+          },
           "alts": [
-            {
-              "name": "Death Speaker Scepter",
-              "itemId": 2816,
-              "value": "+68 Healing, +12 HP5, +28 Shadow Dmg - Death Speaker Jargba (Razorfen Kraul)",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
-              "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
-              "source": "Death Speaker Jargba (Razorfen Kraul)"
-            },
             {
               "name": "Manual Crowd Pummeler",
               "itemId": 9449,
-              "value": "25.6 DPS - Crowd Pummeler 9-60 (Gnomeregan)",
-              "faction": "both",
+              "weaponType": "2H Mace",
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+16 Strength, +5 Agility",
-              "icon": "inv_mace_04",
-              "weaponType": "Two-Handed Mace",
-              "source": "Crowd Pummeler 9 — 60 (Gnomeregan)"
-            },
-            {
-              "name": "City Guard's Tarnished Blade",
-              "itemId": 286996,
-              "icon": "inv_sword_23",
-              "weaponType": "1H Sword",
-              "speed": "2.50",
-              "dps": "22.40 DPS",
-              "value": "22.40 DPS, 2.50s - +6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 5 - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 5",
-              "lines": [
-                "Binds when equipped",
-                "One-Hand",
-                "39 - 73 Damage\tSpeed 2.50",
-                "(22.40 damage per second)",
-                "+6 Stamina",
-                "Requires Level 29",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Zealot Blade",
-              "itemId": 13033,
-              "icon": "inv_sword_15",
-              "weaponType": "1H Sword",
-              "speed": "2.80",
-              "dps": "22.14 DPS",
-              "value": "22.14 DPS, 2.80s - +5 Intellect, +6 Spirit - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+5 Intellect, +6 Spirit",
-              "lines": [
-                "Binds when equipped",
-                "One-Hand",
-                "43 - 81 Damage\tSpeed 2.80",
-                "(22.14 damage per second)",
-                "+5 Intellect",
-                "+6 Spirit",
-                "Requires Level 29"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Wind Spirit Staff",
-              "itemId": 6689,
-              "icon": "inv_staff_01",
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "21.36 DPS",
-              "value": "21.36 DPS, 3.30s - +6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 - Earthcaller Halmgar",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "56 - 85 Damage\tSpeed 3.30",
-                "(21.36 damage per second)",
-                "+6 Stamina",
-                "+16 Spirit",
-                "Requires Level 29",
-                "Equip: Increases healing done by up to 71"
-              ],
-              "source": "Earthcaller Halmgar"
-            },
-            {
-              "name": "Spine of the Devourer",
-              "itemId": 273040,
-              "icon": "inv_staff_07",
-              "weaponType": "Staff",
-              "speed": "3.60",
-              "dps": "20.69 DPS",
-              "value": "20.69 DPS, 3.60s - +14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36 - Mana Devourer",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "59 - 90 Damage\tSpeed 3.60",
-                "(20.69 damage per second)",
-                "+14 Stamina",
-                "Requires Level 28",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ],
-              "source": "Mana Devourer"
-            },
-            {
-              "name": "Hydrocane",
-              "itemId": 9452,
-              "icon": "inv_staff_15",
-              "weaponType": "Staff",
-              "speed": "2.80",
-              "dps": "19.82 DPS",
-              "value": "19.82 DPS, 2.80s - +36 Spell Power - Viscous Fallout",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 32,
-              "reqLevel": 27,
-              "stats": "+36 Spell Power",
-              "lines": [
-                "Staff",
-                "Speed 2.80",
-                "(19.82 damage per second)",
-                "+36 Spell Power",
-                "Requires Level 27"
-              ],
-              "source": "Viscous Fallout"
-            },
-            {
-              "name": "Death Prophet Spine",
-              "itemId": 274158,
-              "icon": "inv_staff_17",
-              "weaponType": "Staff",
-              "speed": "2.80",
-              "dps": "18.93 DPS",
-              "value": "18.93 DPS, 2.80s - +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34 - Aggem Thorncurse",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "42 - 64 Damage\tSpeed 2.80",
-                "(18.93 damage per second)",
-                "+11 Stamina",
-                "Requires Level 26",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ],
-              "source": "Aggem Thorncurse"
+              "speed": "2.00",
+              "dps": "24.8 DPS",
+              "stats": "+16 Strength, +5 Agility, Use: 50% Haste",
+              "icon": "inv_hammer_14",
+              "value": "Gnomeregan — Crowd Pummeler 9-60"
             }
           ]
         },
         {
           "levelBracket": "30–34",
-          "itemId": 9457,
-          "name": "Royal Diplomatic Scepter",
-          "icon": "inv_mace_01",
-          "weaponType": "Main Hand Mace",
-          "speed": "2.10",
-          "dps": "22.4 DPS",
-          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
-          "source": {
-            "kind": "drop",
-            "title": "Dark Iron Ambassador (Gnomeregan)",
-            "detail": "Prime 1H healing scepter. Enormous +75 Healing."
-          },
-          "faction": "both",
+          "itemId": 6803,
+          "name": "Black Menace",
+          "weaponType": "1H Mace",
           "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
+          "iLvl": 39,
+          "reqLevel": 34,
+          "speed": "2.20",
+          "dps": "23.4 DPS",
+          "stats": "+6 Intellect, +5 Spirit, Equip: +11 Healing",
+          "icon": "inv_mace_01",
+          "source": {
+            "kind": "quest",
+            "title": "Scarlet Monastery — In the Name of the Light",
+            "detail": "Alliance quest reward for killing Mograine & Whitemane"
+          },
           "alts": [
             {
-              "name": "Black Menace",
-              "itemId": 6802,
-              "value": "+50 Healing / +16 Spell Dmg - In the Name of the Light quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 34,
-              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
-              "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
-              "source": "In the Name of the Light quest"
-            },
-            {
-              "name": "Rage of the Storm",
-              "itemId": 280604,
-              "icon": "inv_mace_42",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "35.63 DPS",
-              "value": "35.63 DPS, 3.20s - +15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%. - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 40,
-              "reqLevel": 30,
-              "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "91 - 137 Damage\tSpeed 3.20",
-                "(35.63 damage per second)",
-                "+15 Stamina",
-                "+12 Intellect",
-                "Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
-                "Requires Level 30"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Sword of Serenity",
-              "itemId": 6829,
-              "icon": "inv_sword_27",
-              "weaponType": "1H Sword",
-              "speed": "2.20",
-              "dps": "30.00 DPS",
-              "value": "30.00 DPS, 2.20s - +9 Stamina, +4 Spirit - In the Name of the Light",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 34,
-              "stats": "+9 Stamina, +4 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "One-Hand",
-                "46 - 86 Damage\tSpeed 2.20",
-                "(30.00 damage per second)",
-                "+9 Stamina",
-                "+4 Spirit",
-                "Requires Level 34"
-              ],
-              "source": "In the Name of the Light"
-            },
-            {
-              "name": "Illusionary Rod",
-              "itemId": 7713,
-              "icon": "inv_wand_04",
-              "weaponType": "Staff",
-              "speed": "3.40",
-              "dps": "25.74 DPS",
-              "value": "25.74 DPS, 3.40s - +10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44 - Arcanist Doan",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "70 - 105 Damage\tSpeed 3.40",
-                "(25.74 damage per second)",
-                "+10 Stamina",
-                "+6 Intellect",
-                "+7 Spirit",
-                "Requires Level 34",
-                "Equip: Improves your chance to get a critical strike by 1.0%.",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ],
-              "source": "Arcanist Doan"
-            },
-            {
-              "name": "Narpas Sword",
-              "itemId": 217497,
-              "icon": "inv_weapon_shortblade_79",
-              "weaponType": "1H Sword",
-              "speed": "2.00",
-              "dps": "19.00 DPS",
-              "value": "19.00 DPS, 2.00s - Equip: Improves your chance to hit by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 48 - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 42,
-              "reqLevel": 34,
-              "stats": "Equip: Improves your chance to hit by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 48",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand",
-                "26 - 50 Damage\tSpeed 2.00",
-                "(19.00 damage per second)",
-                "Requires Level 34",
-                "Equip: Improves your chance to hit by 1.0%.",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Silver Spade",
-              "itemId": 4128,
-              "icon": "inv_misc_shovel_02",
-              "weaponType": "2H Mace",
-              "speed": "3.70",
-              "dps": "30.14 DPS",
-              "value": "30.14 DPS, 3.70s - +4 Stamina, +15 Spirit - Venture Company Mining",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 41,
-              "reqLevel": 30,
-              "stats": "+4 Stamina, +15 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "89 - 134 Damage\tSpeed 3.70",
-                "(30.14 damage per second)",
-                "+4 Stamina",
-                "+15 Spirit",
-                "Requires Level 30"
-              ],
-              "source": "Venture Company Mining"
-            },
-            {
-              "name": "Nimboya's Mystical Staff",
-              "itemId": 4134,
-              "icon": "inv_staff_13",
-              "weaponType": "Staff",
-              "speed": "2.30",
-              "dps": "26.30 DPS",
-              "value": "26.30 DPS, 2.30s - +8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38 - Saving Yenniku",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 46,
-              "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "48 - 73 Damage\tSpeed 2.30",
-                "(26.30 damage per second)",
-                "+8 Intellect",
-                "+15 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 38",
-                "Requires Level 30"
-              ],
-              "source": "Saving Yenniku"
-            },
-            {
-              "name": "Bookmaker's Scepter",
-              "itemId": 4122,
-              "icon": "inv_mace_01",
+              "name": "Glowstar Rod",
+              "itemId": 10697,
               "weaponType": "1H Mace",
-              "speed": "2.30",
-              "dps": "13.04 DPS",
-              "value": "13.04 DPS, 2.30s - +6 Intellect, +30 Spell Power - The Hidden Key",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 37,
-              "reqLevel": 30,
-              "stats": "+6 Intellect, +30 Spell Power",
-              "lines": [
-                "1H Mace",
-                "Speed 2.30",
-                "(13.04 damage per second)",
-                "+6 Intellect",
-                "+30 Spell Power",
-                "Requires Level 30"
-              ],
-              "source": "The Hidden Key"
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "speed": "2.10",
+              "dps": "21.4 DPS",
+              "stats": "+7 Intellect, +5 Spirit",
+              "icon": "inv_mace_04",
+              "value": "World Drop BoE"
+            },
+            {
+              "name": "Sword of Omen",
+              "itemId": 6802,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "speed": "2.20",
+              "dps": "23.4 DPS",
+              "stats": "+7 Strength, +5 Agility",
+              "icon": "inv_sword_24",
+              "value": "Scarlet Monastery Quest Reward"
             }
           ]
         },
@@ -14782,991 +19345,190 @@ if (typeof window !== 'undefined') {
           "levelBracket": "35–39",
           "itemId": 7721,
           "name": "Hand of Righteousness",
-          "icon": "inv_mace_08",
-          "weaponType": "One-Handed Mace",
-          "speed": "2.60",
-          "dps": "25.2 DPS",
-          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
-          "source": {
-            "kind": "drop",
-            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
-            "detail": "Iconic Scarlet Cathedral boss drop. Massive +94 Healing power spike for 1H healers."
-          },
-          "faction": "both",
+          "weaponType": "1H Mace",
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
+          "speed": "2.40",
+          "dps": "28.5 DPS",
+          "stats": "+8 Intellect, +4 Spirit, Equip: +14 Healing",
+          "icon": "inv_hammer_13",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery Cathedral — High Inquisitor Whitemane",
+            "detail": "Premier Holy Paladin healing mace"
+          },
           "alts": [
-            {
-              "name": "Black Menace",
-              "itemId": 6802,
-              "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 34,
-              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
-              "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
-              "source": "SM Quest (In the Name of the Light)"
-            },
-            {
-              "name": "Galgann's Firehammer",
-              "itemId": 9415,
-              "value": "+8 Intellect, +6 Spirit - Galgann Firehammer (Uldaman)",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+8 Intellect, +6 Spirit",
-              "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace",
-              "source": "Galgann Firehammer (Uldaman)"
-            },
-            {
-              "name": "Staff of Jordan",
-              "itemId": 873,
-              "icon": "inv_staff_13",
-              "weaponType": "Staff",
-              "speed": "3.70",
-              "dps": "29.86 DPS",
-              "value": "29.86 DPS, 3.70s - +20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60 - World Drop Epic",
-              "faction": "both",
-              "quality": "q4",
-              "iLvl": 40,
-              "reqLevel": 35,
-              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
-              "lines": [
-                "Binds when equipped",
-                "Two-Hand",
-                "88 - 133 Damage\tSpeed 3.70",
-                "(29.86 damage per second)",
-                "+20 Intellect",
-                "+10 Spirit",
-                "Requires Level 35",
-                "Equip: Improves your chance to hit by 1.5%.",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ],
-              "source": "World Drop Epic"
-            },
             {
               "name": "Mograine's Might",
               "itemId": 7723,
-              "icon": "inv_mace_13",
               "weaponType": "2H Mace",
-              "speed": "3.40",
-              "dps": "38.82 DPS",
-              "value": "38.82 DPS, 3.40s - +8 Strength, +14 Stamina, +16 Intellect - Scarlet Commander Mograine",
-              "faction": "both",
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+8 Strength, +14 Stamina, +16 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "105 - 159 Damage\tSpeed 3.40",
-                "(38.82 damage per second)",
-                "+8 Strength",
-                "+14 Stamina",
-                "+16 Intellect",
-                "Requires Level 39"
-              ],
-              "source": "Scarlet Commander Mograine"
-            },
-            {
-              "name": "Coldbringer Spine",
-              "itemId": 274381,
-              "icon": "inv_skeletonspinepet_bone",
-              "weaponType": "Staff",
-              "speed": "2.80",
-              "dps": "28.21 DPS",
-              "value": "28.21 DPS, 2.80s - +20 Spirit, Improves your chance to hit by 1.0%. - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+20 Spirit, Improves your chance to hit by 1.0%.",
-              "lines": [
-                "Staff",
-                "Speed 2.80",
-                "(28.21 damage per second)",
-                "+20 Spirit, Improves your chance to hit by 1.0%.",
-                "Requires Level 38"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Greatstaff of the Necrokhans",
-              "itemId": 271803,
-              "icon": "inv_staff_08",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "27.67 DPS",
-              "value": "27.67 DPS, 3.00s - +16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48 - Khan Jehn",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 42,
-              "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "66 - 100 Damage\tSpeed 3.00",
-                "(27.67 damage per second)",
-                "+16 Stamina",
-                "+12 Intellect",
-                "+6 Spirit",
-                "Requires Level 35",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ],
-              "source": "Khan Jehn"
-            },
-            {
-              "name": "Celestial Stave",
-              "itemId": 9517,
-              "icon": "inv_staff_14",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "26.50 DPS",
-              "value": "26.50 DPS, 3.00s - +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46 - Celestial Power",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 40,
-              "reqLevel": 35,
-              "stats": "+8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "63 - 96 Damage\tSpeed 3.00",
-                "(26.50 damage per second)",
-                "+8 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 46",
-                "Requires Level 35"
-              ],
-              "source": "Celestial Power"
-            },
-            {
-              "name": "Soulsplatter Mace",
-              "itemId": 271804,
-              "icon": "inv_mace_01",
-              "weaponType": "1H Mace",
-              "speed": "1.80",
-              "dps": "18.89 DPS",
-              "value": "18.89 DPS, 1.80s - +3 Stamina, +6 Intellect, +1 Spirit - Khan Jehn",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 42,
-              "reqLevel": 35,
-              "stats": "+3 Stamina, +6 Intellect, +1 Spirit",
-              "lines": [
-                "1H Mace",
-                "Speed 1.80",
-                "(18.89 damage per second)",
-                "+3 Stamina",
-                "+6 Intellect",
-                "+1 Spirit",
-                "Requires Level 35"
-              ],
-              "source": "Khan Jehn"
+              "speed": "3.50",
+              "dps": "38.9 DPS",
+              "stats": "+17 Strength, +16 Stamina",
+              "icon": "inv_hammer_08",
+              "value": "SM Cathedral — Scarlet Commander Mograine"
             }
           ]
         },
         {
           "levelBracket": "40–44",
-          "itemId": 7721,
-          "name": "Hand of Righteousness",
-          "icon": "inv_mace_08",
-          "weaponType": "One-Handed Mace",
-          "speed": "2.60",
-          "dps": "25.2 DPS",
-          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
-          "source": {
-            "kind": "drop",
-            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
-            "detail": "Whitemane's scepter carries Holy Paladins through the 40s."
-          },
-          "faction": "both",
+          "itemId": 10797,
+          "name": "Dire Nail",
+          "weaponType": "1H Mace",
           "quality": "q3",
-          "iLvl": 44,
-          "reqLevel": 39,
+          "iLvl": 49,
+          "reqLevel": 44,
+          "speed": "2.40",
+          "dps": "32.1 DPS",
+          "stats": "+9 Intellect, +5 Spirit, Equip: +18 Healing",
+          "icon": "inv_mace_08",
+          "source": {
+            "kind": "dungeon",
+            "title": "Sunken Temple — Atal'alarion",
+            "detail": "Sunken Temple boss drop"
+          },
           "alts": [
             {
-              "name": "The Shoveler",
-              "itemId": 9481,
-              "value": "+5 Intellect, +5 Spirit - Digmaster Shovelphlange (Uldaman)",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_mace_07",
-              "weaponType": "One-Handed Mace",
-              "source": "Digmaster Shovelphlange (Uldaman)"
-            },
-            {
-              "name": "The Skullcracker",
-              "itemId": 277250,
-              "icon": "inv_hammer_03",
-              "weaponType": "2H Mace",
-              "speed": "3.30",
-              "dps": "39.55 DPS",
-              "value": "39.55 DPS, 3.30s - +22 Spirit - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+22 Spirit",
-              "lines": [
-                "2H Mace",
-                "Speed 3.30",
-                "(39.55 damage per second)",
-                "+22 Spirit",
-                "Requires Level 40"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Emerald Watcher's Dreamstaff",
-              "itemId": 282007,
-              "icon": "inv_staff_17",
-              "weaponType": "Staff",
-              "speed": "3.00",
-              "dps": "31.67 DPS",
-              "value": "31.67 DPS, 3.00s - +19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56 - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 49,
-              "reqLevel": 44,
-              "stats": "+19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "76 - 114 Damage\tSpeed 3.00",
-                "(31.67 damage per second)",
-                "+19 Intellect",
-                "+19 Spirit",
-                "Requires Level 44",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Spellshifter Rod",
-              "itemId": 9527,
-              "icon": "inv_wand_11",
-              "weaponType": "Staff",
-              "speed": "2.70",
-              "dps": "31.11 DPS",
-              "value": "31.11 DPS, 2.70s - +9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54 - Tiara of the Deep",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 48,
-              "reqLevel": 40,
-              "stats": "+9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "67 - 101 Damage\tSpeed 2.70",
-                "(31.11 damage per second)",
-                "+9 Stamina",
-                "+23 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 54",
-                "Requires Level 40"
-              ],
-              "source": "Tiara of the Deep"
-            },
-            {
-              "name": "Zum'rah's Vexing Cane",
-              "itemId": 18082,
-              "icon": "inv_staff_10",
-              "weaponType": "Staff",
-              "speed": "2.70",
-              "dps": "31.11 DPS",
-              "value": "31.11 DPS, 2.70s - +10 Stamina, +10 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54, Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown) - Witch Doctor Zum'rah",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 48,
-              "reqLevel": 43,
-              "stats": "+10 Stamina, +10 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54, Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "67 - 101 Damage\tSpeed 2.70",
-                "(31.11 damage per second)",
-                "+10 Stamina",
-                "+10 Intellect",
-                "Requires Level 43",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 54",
-                "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
-              ],
-              "source": "Witch Doctor Zum'rah"
-            },
-            {
-              "name": "Galgann's Firehammer",
-              "itemId": 9419,
-              "icon": "inv_hammer_17",
+              "name": "Spirestone Hammer",
+              "itemId": 12621,
               "weaponType": "1H Mace",
-              "speed": "2.20",
-              "dps": "20.91 DPS",
-              "value": "20.91 DPS, 2.20s - +54 Spell Power - Galgann Firehammer",
-              "faction": "both",
               "quality": "q3",
-              "iLvl": 47,
-              "reqLevel": 42,
-              "stats": "+54 Spell Power",
-              "lines": [
-                "1H Mace",
-                "Speed 2.20",
-                "(20.91 damage per second)",
-                "+54 Spell Power",
-                "Requires Level 42"
-              ],
-              "source": "Galgann Firehammer"
-            },
-            {
-              "name": "Strength of the Treant",
-              "itemId": 9683,
-              "icon": "inv_staff_25",
-              "weaponType": "Staff",
-              "speed": "3.70",
-              "dps": "28.78 DPS",
-              "value": "28.78 DPS, 3.70s - +7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42 - Weapons of Spirit",
-              "faction": "horde",
-              "quality": "q2",
               "iLvl": 50,
-              "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "85 - 128 Damage\tSpeed 3.70",
-                "(28.78 damage per second)",
-                "+7 Stamina",
-                "+18 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 42",
-                "Requires Level 40"
-              ],
-              "source": "Weapons of Spirit"
-            },
-            {
-              "name": "Staff of Lore",
-              "itemId": 10826,
-              "icon": "inv_staff_27",
-              "weaponType": "Staff",
-              "speed": "3.10",
-              "dps": "27.58 DPS",
-              "value": "27.58 DPS, 3.10s - +5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40 - Gahz'ridian",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 48,
-              "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "68 - 103 Damage\tSpeed 3.10",
-                "(27.58 damage per second)",
-                "+5 Intellect",
-                "+18 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 40",
-                "Requires Level 43"
-              ],
-              "source": "Gahz'ridian"
+              "reqLevel": 45,
+              "speed": "2.30",
+              "dps": "33.5 DPS",
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_hammer_16",
+              "value": "LBRS — Spirestone"
             }
           ]
         },
         {
           "levelBracket": "45–49",
-          "itemId": 17743,
-          "name": "Princess Theradras' Scepter",
-          "icon": "inv_mace_04",
-          "weaponType": "Two-Handed Mace",
-          "speed": "3.40",
-          "dps": "41.8 DPS",
-          "stats": "+14 Strength, +13 Stamina",
-          "source": {
-            "kind": "drop",
-            "title": "Princess Theradras (Maraudon)",
-            "detail": "Iconic Theradras drop for heavy stats and emergency melee damage."
-          },
-          "faction": "both",
+          "itemId": 11086,
+          "name": "The Hand of Antu'sul",
+          "weaponType": "1H Mace",
           "quality": "q3",
-          "iLvl": 54,
-          "reqLevel": 49,
+          "iLvl": 48,
+          "reqLevel": 43,
+          "speed": "2.70",
+          "dps": "31.5 DPS",
+          "stats": "Chance on hit: AOE stun and thunder strike",
+          "icon": "inv_hammer_15",
+          "source": {
+            "kind": "dungeon",
+            "title": "Zul'Farrak — Antu'sul",
+            "detail": "Iconic Zul'Farrak basilisk boss drop"
+          },
           "alts": [
             {
-              "name": "Hand of Righteousness",
-              "itemId": 7721,
-              "value": "+94 Healing / +31 Spell Dmg - Whitemane (SM Cath)",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 39,
-              "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
-              "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace",
-              "source": "Whitemane (SM Cath)"
-            },
-            {
-              "name": "Whisper",
-              "itemId": 221518,
-              "icon": "inv_hammer_05",
-              "weaponType": "2H Mace",
-              "speed": "3.40",
-              "dps": "45.74 DPS",
-              "value": "45.74 DPS, 3.40s - +23 Strength, +14 Spell Power, +7 Crit - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 1,
-              "stats": "+23 Strength, +14 Spell Power, +7 Crit",
-              "lines": [
-                "2H Mace",
-                "Speed 3.40",
-                "(45.74 damage per second)",
-                "+23 Strength",
-                "+14 Spell Power",
-                "+7 Crit"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Might of Hakkar",
-              "itemId": 10838,
-              "icon": "inv_mace_11",
+              "name": "Hammer of the Northern Wind",
+              "itemId": 810,
               "weaponType": "1H Mace",
-              "speed": "2.40",
-              "dps": "35.83 DPS",
-              "value": "35.83 DPS, 2.40s - +11 Stamina, +3 Spirit, +5 Hit - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
+              "quality": "q4",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+11 Stamina, +3 Spirit, +5 Hit",
-              "lines": [
-                "1H Mace",
-                "Speed 2.40",
-                "(35.83 damage per second)",
-                "+11 Stamina",
-                "+3 Spirit",
-                "+5 Hit",
-                "Requires Level 49"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Fist of Stone",
-              "itemId": 17733,
-              "icon": "inv_hammer_17",
-              "weaponType": "1H Mace",
-              "speed": "1.80",
-              "dps": "35.28 DPS",
-              "value": "35.28 DPS, 1.80s - +11 Stamina, +5 Spirit - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+11 Stamina, +5 Spirit",
-              "lines": [
-                "1H Mace",
-                "Speed 1.80",
-                "(35.28 damage per second)",
-                "+11 Stamina",
-                "+5 Spirit",
-                "Requires Level 48"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Spire of Hakkar",
-              "itemId": 10844,
-              "icon": "inv_staff_32",
-              "weaponType": "Staff",
-              "speed": "3.40",
-              "dps": "34.71 DPS",
-              "value": "34.71 DPS, 3.40s - +16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown) - Rare World / Dungeon Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 54,
-              "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "94 - 142 Damage\tSpeed 3.40",
-                "(34.71 damage per second)",
-                "+16 Stamina",
-                "+16 Spirit",
-                "Requires Level 49",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
-                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ],
-              "source": "Rare World / Dungeon Drop"
-            },
-            {
-              "name": "Kindling Stave",
-              "itemId": 11750,
-              "icon": "inv_staff_18",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "34.14 DPS",
-              "value": "34.14 DPS, 2.90s - +10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown) - Pyromancer Loregrain",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "79 - 119 Damage\tSpeed 2.90",
-                "(34.14 damage per second)",
-                "+10 Stamina",
-                "+12 Intellect",
-                "+10 Fire Resistance",
-                "Requires Level 48",
-                "Equip: Improves your chance to get a critical strike by 1.0%.",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 60",
-                "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ],
-              "source": "Pyromancer Loregrain"
-            },
-            {
-              "name": "Dreamstaff",
-              "itemId": 249454,
-              "icon": "inv_staff_14",
-              "weaponType": "Staff",
-              "speed": "2.40",
-              "dps": "32.29 DPS",
-              "value": "32.29 DPS, 2.40s - +19 Stamina, +19 Spirit - Dreamstaff",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+19 Stamina, +19 Spirit",
-              "lines": [
-                "Staff",
-                "Speed 2.40",
-                "(32.29 damage per second)",
-                "+19 Stamina",
-                "+19 Spirit",
-                "Requires Level 45"
-              ],
-              "source": "Dreamstaff"
-            },
-            {
-              "name": "Radiant Staff",
-              "itemId": 249453,
-              "icon": "inv_staff_13",
-              "weaponType": "Staff",
-              "speed": "2.40",
-              "dps": "32.29 DPS",
-              "value": "32.29 DPS, 2.40s - +19 Stamina, +19 Intellect - Radiant Staff",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+19 Stamina, +19 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 2.40",
-                "(32.29 damage per second)",
-                "+19 Stamina",
-                "+19 Intellect",
-                "Requires Level 45"
-              ],
-              "source": "Radiant Staff"
+              "speed": "2.10",
+              "dps": "39.8 DPS",
+              "stats": "Chance on hit: Frost shock burst",
+              "icon": "inv_hammer_13",
+              "value": "World Drop Epic"
             }
           ]
         },
         {
           "levelBracket": "50–54",
           "itemId": 11923,
-          "name": "Hammer of the Grace",
-          "icon": "inv_mace_01",
-          "weaponType": "One-Handed Mace",
-          "speed": "2.50",
-          "dps": "36.2 DPS",
-          "stats": "+6 Spirit, Equip: Increases healing done by up to 31 and damage done by up to 11.",
-          "source": {
-            "kind": "drop",
-            "title": "Chest of The Seven (Blackrock Depths)",
-            "detail": "Chest reward from The Seven challenge in BRD. Premier pre-raid 1H healing mace."
-          },
-          "faction": "both",
+          "name": "The Hammer of Grace",
+          "weaponType": "1H Mace",
           "quality": "q3",
           "iLvl": 57,
           "reqLevel": 52,
+          "speed": "2.00",
+          "dps": "41.5 DPS",
+          "stats": "+10 Intellect, +5 Spirit, Equip: +31 Healing",
+          "icon": "inv_hammer_12",
+          "source": {
+            "kind": "dungeon",
+            "title": "Blackrock Depths — Seven Dwarves Chest",
+            "detail": "Pre-raid BiS Holy Paladin healing mace"
+          },
           "alts": [
             {
-              "name": "Wisepaw Totem",
-              "itemId": 274420,
-              "icon": "inv_staff_51",
-              "weaponType": "Staff",
-              "speed": "3.20",
-              "dps": "36.88 DPS",
-              "value": "36.88 DPS, 3.20s - +19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66 - Dala Fairmaw",
-              "faction": "both",
+              "name": "Glowspire",
+              "itemId": 13161,
+              "weaponType": "1H Mace",
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "94 - 142 Damage\tSpeed 3.20",
-                "(36.88 damage per second)",
-                "+19 Stamina",
-                "+23 Intellect",
-                "Requires Level 53",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ],
-              "source": "Dala Fairmaw"
-            },
-            {
-              "name": "Soul Harvester",
-              "itemId": 20536,
-              "icon": "inv_sword_48",
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "33.48 DPS",
-              "value": "33.48 DPS, 3.30s - +19 Stamina, +16 Intellect, Equip: Improves your chance to hit by 1.0%., Equip: Increases damage done by Shadow spells and effects by up to 73. - Trolls of a Feather",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 52,
-              "reqLevel": 50,
-              "stats": "+19 Stamina, +16 Intellect, Equip: Improves your chance to hit by 1.0%., Equip: Increases damage done by Shadow spells and effects by up to 73.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "88 - 133 Damage\tSpeed 3.30",
-                "(33.48 damage per second)",
-                "+19 Stamina",
-                "+16 Intellect",
-                "Equip: Improves your chance to hit by 1.0%.",
-                "Equip: Increases damage done by Shadow spells and effects by up to 73.",
-                "Requires Level 50"
-              ],
-              "source": "Trolls of a Feather"
-            },
-            {
-              "name": "Copper Plated Pipe",
-              "itemId": 275701,
-              "icon": "inv_gizmo_pipe_02",
-              "weaponType": "Staff",
-              "speed": "3.20",
-              "dps": "45.00 DPS",
-              "value": "45.00 DPS, 3.20s - +20 Agility, +12 Intellect - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 58,
-              "reqLevel": 1,
-              "stats": "+20 Agility, +12 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 3.20",
-                "(45.00 damage per second)",
-                "+20 Agility",
-                "+12 Intellect"
-              ],
-              "source": "Leveling Drop / Vendor"
-            },
-            {
-              "name": "[TMP] Satyrbane",
-              "itemId": 236760,
-              "icon": "inv_sword_39",
-              "weaponType": "1H Sword",
-              "speed": "2.60",
-              "dps": "34.04 DPS",
-              "value": "34.04 DPS, 2.60s - +8 Strength, +5 Spirit - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 57,
-              "reqLevel": 1,
-              "stats": "+8 Strength, +5 Spirit",
-              "lines": [
-                "1H Sword",
-                "Speed 2.60",
-                "(34.04 damage per second)",
-                "+8 Strength",
-                "+5 Spirit"
-              ],
-              "source": "Leveling Drop / Vendor"
-            },
-            {
-              "name": "Purified Gnarlybark Staff",
-              "itemId": 275648,
-              "icon": "inv_staff_02",
-              "weaponType": "Staff",
-              "speed": "3.10",
-              "dps": "34.03 DPS",
-              "value": "34.03 DPS, 3.10s - +19 Spirit, Improves your chance to get a critical strike by 1.0%. - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 59,
-              "reqLevel": 1,
-              "stats": "+19 Spirit, Improves your chance to get a critical strike by 1.0%.",
-              "lines": [
-                "Staff",
-                "Speed 3.10",
-                "(34.03 damage per second)",
-                "+19 Spirit, Improves your chance to get a critical strike by 1.0%."
-              ],
-              "source": "Leveling Drop / Vendor"
-            },
-            {
-              "name": "Staff of the Deeproar",
-              "itemId": 275291,
-              "icon": "inv_staff_30",
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "33.48 DPS",
-              "value": "33.48 DPS, 3.30s - +13 Stamina, +12 Intellect, +14 Spirit - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 58,
-              "reqLevel": 1,
-              "stats": "+13 Stamina, +12 Intellect, +14 Spirit",
-              "lines": [
-                "Staff",
-                "Speed 3.30",
-                "(33.48 damage per second)",
-                "+13 Stamina",
-                "+12 Intellect",
-                "+14 Spirit"
-              ],
-              "source": "Leveling Drop / Vendor"
-            },
-            {
-              "name": "Staff of Archmage Selwyn",
-              "itemId": 260207,
-              "icon": "inv_staff_07",
-              "weaponType": "Staff",
-              "speed": "2.50",
-              "dps": "31.60 DPS",
-              "value": "31.60 DPS, 2.50s - +16 Stamina, +16 Intellect - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 55,
-              "reqLevel": 1,
-              "stats": "+16 Stamina, +16 Intellect",
-              "lines": [
-                "Staff",
-                "Speed 2.50",
-                "(31.60 damage per second)",
-                "+16 Stamina",
-                "+16 Intellect"
-              ],
-              "source": "Leveling Drop / Vendor"
-            },
-            {
-              "name": "Barkskin Scepter",
-              "itemId": 275293,
-              "icon": "inv_mace_07",
-              "weaponType": "1H Mace",
-              "speed": "2.00",
-              "dps": "23.00 DPS",
-              "value": "23.00 DPS, 2.00s - +13 Intellect - Leveling Drop / Vendor",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 58,
-              "reqLevel": 1,
-              "stats": "+13 Intellect",
-              "lines": [
-                "1H Mace",
-                "Speed 2.00",
-                "(23.00 damage per second)",
-                "+13 Intellect"
-              ],
-              "source": "Leveling Drop / Vendor"
+              "speed": "2.20",
+              "dps": "42.0 DPS",
+              "stats": "+11 Intellect, +6 Spirit",
+              "icon": "inv_mace_04",
+              "value": "Stratholme Live"
             }
           ]
         },
         {
           "levelBracket": "55–60",
-          "itemId": 21410,
-          "name": "Gavel of Infinite Wisdom",
-          "icon": "inv_mace_08",
-          "weaponType": "One-Handed Mace",
-          "speed": "2.60",
-          "dps": "35.8 DPS",
-          "stats": "+14 Intellect, +8 Spirit, Equip: Increases healing done by up to 184 and damage done by up to 61.",
-          "source": {
-            "kind": "drop",
-            "title": "General Rajaxx / AQ20 Tokens",
-            "detail": "Temple of Ahn'Qiraj / Ruins of Ahn'Qiraj premier healing mace."
-          },
-          "faction": "both",
+          "itemId": 17105,
+          "name": "Aurastone Hammer",
+          "weaponType": "1H Mace",
           "quality": "q4",
-          "iLvl": 70,
+          "iLvl": 66,
           "reqLevel": 60,
+          "speed": "2.70",
+          "dps": "51.5 DPS",
+          "stats": "+10 Intellect, +5 Stamina, +13 Spirit, Equip: +25 Spell Damage & Healing, +5 Mana per 5 sec",
+          "icon": "inv_hammer_04",
+          "source": {
+            "kind": "raid",
+            "title": "Molten Core — Garr / Golemagg",
+            "detail": "Premier Tier 1 Holy Paladin raiding weapon"
+          },
           "alts": [
             {
-              "name": "Scepter of the False Prophet",
-              "itemId": 21839,
-              "value": "+210 Healing / +70 Spell Dmg, +19 Int, +10 Spi - C'Thun (Temple of Ahn'Qiraj)",
-              "faction": "both",
+              "name": "Lok'amir il Romathis",
+              "itemId": 19360,
+              "weaponType": "1H Mace",
               "quality": "q4",
-              "iLvl": 84,
+              "iLvl": 83,
               "reqLevel": 60,
-              "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
+              "speed": "2.10",
+              "dps": "60.5 DPS",
+              "stats": "+18 Intellect, +10 Stamina, +8 Spirit, Equip: +84 Healing",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
-              "source": "C'Thun (Temple of Ahn'Qiraj)"
+              "value": "Blackwing Lair — Nefarian"
             },
             {
-              "name": "Grand Marshal's Warhammer",
-              "itemId": 23454,
-              "value": "+199 Healing / +66 Spell Dmg - PvP Rank 14 Officer's Lounge",
-              "faction": "alliance",
+              "name": "Quel'Serrar",
+              "itemId": 18348,
+              "weaponType": "1H Sword",
               "quality": "q4",
-              "iLvl": 78,
+              "iLvl": 66,
               "reqLevel": 60,
-              "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
-              "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace",
-              "source": "PvP Rank 14 Officer's Lounge"
+              "speed": "2.00",
+              "dps": "52.5 DPS",
+              "stats": "+12 Stamina, Equip: +13 Defense, Chance on hit: +300 Armor & +13 Defense",
+              "icon": "inv_sword_14",
+              "value": "Onyxia / Foror's Compendium"
             },
             {
-              "name": "Simone's Cultivating Hammer",
-              "itemId": 22380,
-              "value": "+139 Healing / +46 Spell Dmg - High level world drop / quest",
-              "faction": "both",
+              "name": "The Turning Tide",
+              "itemId": 287648,
+              "weaponType": "2H Sword",
               "quality": "q3",
-              "iLvl": 65,
-              "reqLevel": 60,
-              "stats": "Equip: Increases healing done by up to 139 and damage done by up to 46.",
-              "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace",
-              "source": "High level world drop / quest"
-            },
-            {
-              "name": "Atiesh, Greatstaff of the Guardian",
-              "itemId": 22589,
-              "icon": "inv_staff_medivh",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "64.34 DPS",
-              "value": "64.34 DPS, 2.90s - +31 Stamina, +32 Intellect, +24 Spirit, +150 Spell Power, +20 Hit - Atiesh, Greatstaff of the Guardian",
-              "faction": "both",
-              "quality": "q5",
-              "iLvl": 90,
-              "reqLevel": 60,
-              "stats": "+31 Stamina, +32 Intellect, +24 Spirit, +150 Spell Power, +20 Hit",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(64.34 damage per second)",
-                "+31 Stamina",
-                "+32 Intellect",
-                "+24 Spirit",
-                "+150 Spell Power",
-                "+20 Hit",
-                "Requires Level 60"
-              ],
-              "source": "Atiesh, Greatstaff of the Guardian"
-            },
-            {
-              "name": "Atiesh, Greatstaff of the Guardian",
-              "itemId": 22630,
-              "icon": "inv_staff_medivh",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "64.34 DPS",
-              "value": "64.34 DPS, 2.90s - +30 Stamina, +29 Intellect, +183 Spell Power, +28 Crit - Atiesh, Greatstaff of the Guardian",
-              "faction": "both",
-              "quality": "q5",
-              "iLvl": 90,
-              "reqLevel": 60,
-              "stats": "+30 Stamina, +29 Intellect, +183 Spell Power, +28 Crit",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(64.34 damage per second)",
-                "+30 Stamina",
-                "+29 Intellect",
-                "+183 Spell Power",
-                "+28 Crit",
-                "Requires Level 60"
-              ],
-              "source": "Atiesh, Greatstaff of the Guardian"
-            },
-            {
-              "name": "Atiesh, Greatstaff of the Guardian",
-              "itemId": 22631,
-              "icon": "inv_staff_medivh",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "64.34 DPS",
-              "value": "64.34 DPS, 2.90s - +28 Stamina, +28 Intellect, +27 Spirit, +242 Healing, +120 Spell Power - Atiesh, Greatstaff of the Guardian",
-              "faction": "both",
-              "quality": "q5",
-              "iLvl": 90,
-              "reqLevel": 60,
-              "stats": "+28 Stamina, +28 Intellect, +27 Spirit, +242 Healing, +120 Spell Power",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(64.34 damage per second)",
-                "+28 Stamina",
-                "+28 Intellect",
-                "+27 Spirit",
-                "+242 Healing",
-                "+120 Spell Power",
-                "Requires Level 60"
-              ],
-              "source": "Atiesh, Greatstaff of the Guardian"
-            },
-            {
-              "name": "Atiesh, Greatstaff of the Guardian",
-              "itemId": 22632,
-              "icon": "inv_staff_medivh",
-              "weaponType": "Staff",
-              "speed": "2.90",
-              "dps": "64.34 DPS",
-              "value": "64.34 DPS, 2.90s - +28 Stamina, +28 Intellect, +27 Spirit, +300 Healing, +11 MP5 - Atiesh, Greatstaff of the Guardian",
-              "faction": "both",
-              "quality": "q5",
-              "iLvl": 90,
-              "reqLevel": 60,
-              "stats": "+28 Stamina, +28 Intellect, +27 Spirit, +300 Healing, +11 MP5",
-              "lines": [
-                "Staff",
-                "Speed 2.90",
-                "(64.34 damage per second)",
-                "+28 Stamina",
-                "+28 Intellect",
-                "+27 Spirit",
-                "+300 Healing",
-                "+11 MP5",
-                "Requires Level 60"
-              ],
-              "source": "Atiesh, Greatstaff of the Guardian"
-            },
-            {
-              "name": "Grand Marshal's Demolisher",
-              "itemId": 234568,
-              "icon": "inv_hammer_23",
-              "weaponType": "2H Mace",
-              "speed": "3.90",
-              "dps": "80.26 DPS",
-              "value": "80.26 DPS, 3.90s - +27 Strength, +42 Stamina, +20 Intellect, Improves your chance to get a critical strike by 1.0%. - Captain O'Neal",
-              "faction": "both",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+27 Strength, +42 Stamina, +20 Intellect, Improves your chance to get a critical strike by 1.0%.",
-              "lines": [
-                "2H Mace",
-                "Speed 3.90",
-                "(80.26 damage per second)",
-                "+27 Strength",
-                "+42 Stamina",
-                "+20 Intellect, Improves your chance to get a critical strike by 1.0%.",
-                "Requires Level 60"
-              ],
-              "source": "Captain O'Neal"
+              "iLvl": 1,
+              "reqLevel": 1,
+              "speed": "3.60",
+              "dps": "5.0 DPS",
+              "stats": "",
+              "icon": "8422168",
+              "value": "Forever Rare Drop"
             }
           ]
         }
@@ -23566,17 +27328,17 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cruel Barb",
-              "itemId": 5191,
+              "itemId": 5193,
               "value": "16.8 DPS, 2.80s - The Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "15.54 DPS",
+              "dps": "12.3 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword",
+              "weaponType": "1H Sword",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "Equip: +12 Attack Power.",
-              "icon": "inv_sword_04",
+              "stats": "+6 Attack Power, +3 Agility",
+              "icon": "inv_sword_23",
               "lines": [
                 "Binds when picked up",
                 "One-Hand",
@@ -23819,17 +27581,17 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cruel Barb",
-              "itemId": 5191,
+              "itemId": 5193,
               "value": "16.8 DPS, 2.80s - Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "15.54 DPS",
+              "dps": "12.3 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword",
+              "weaponType": "1H Sword",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "Equip: +12 Attack Power.",
-              "icon": "inv_sword_04",
+              "stats": "+6 Attack Power, +3 Agility",
+              "icon": "inv_sword_23",
               "lines": [
                 "Binds when picked up",
                 "One-Hand",
@@ -24386,12 +28148,12 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Odo's Claw",
-              "itemId": 6323,
+              "itemId": 6327,
               "value": "17.0 DPS, 1.50s - SFK: Odo the Blindwatcher",
               "faction": "both",
               "dps": "16.67 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace",
+              "weaponType": "Dagger",
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
@@ -26759,6 +30521,32 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60"
               ],
               "source": "Sergeant Thunderhorn"
+            },
+            {
+              "name": "Ironfoe",
+              "itemId": 11684,
+              "weaponType": "1H Mace",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "speed": "2.40",
+              "dps": "46.7 DPS",
+              "stats": "Chance on hit: Grants 2 extra attacks",
+              "icon": "inv_hammer_03",
+              "value": "Blackrock Depths — Emperor Dagran Thaurissan"
+            },
+            {
+              "name": "Krol Blade",
+              "itemId": 2244,
+              "weaponType": "1H Sword",
+              "quality": "q4",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "speed": "2.80",
+              "dps": "43.2 DPS",
+              "stats": "+7 Strength, +5 Stamina, Equip: +1% Crit",
+              "icon": "inv_sword_27",
+              "value": "World Drop BoE Epic Sword"
             }
           ],
           "faction": "both",
@@ -33206,7 +36994,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Black Menace",
-              "itemId": 6802,
+              "itemId": 6803,
               "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
               "faction": "alliance",
               "quality": "q3",
@@ -33214,7 +37002,7 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
+              "weaponType": "1H Mace",
               "source": "SM Quest (In the Name of the Light)"
             },
             {
@@ -48655,6 +52443,19 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60"
               ],
               "source": "World Drop Epic"
+            },
+            {
+              "name": "Anathema",
+              "itemId": 18609,
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 75,
+              "reqLevel": 60,
+              "speed": "3.00",
+              "dps": "56.3 DPS",
+              "stats": "+31 Stamina, +22 Intellect, Equip: +69 Shadow Damage, +2% Spell Crit",
+              "icon": "inv_staff_38",
+              "value": "Priest Epic Quest (Shadow Form)"
             }
           ],
           "faction": "both",
@@ -49986,7 +53787,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Black Menace",
-              "itemId": 6802,
+              "itemId": 6803,
               "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
               "faction": "alliance",
               "quality": "q3",
@@ -49994,7 +53795,7 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
+              "weaponType": "1H Mace",
               "source": "SM Quest (In the Name of the Light)"
             },
             {
@@ -57369,7 +61170,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Black Menace",
-              "itemId": 6802,
+              "itemId": 6803,
               "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
               "faction": "alliance",
               "quality": "q3",
@@ -57377,7 +61178,7 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace",
+              "weaponType": "1H Mace",
               "source": "SM Quest (In the Name of the Light)"
             },
             {
@@ -58596,6 +62397,28 @@ if (typeof window !== 'undefined') {
           "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
+            {
+              "name": "Blackbone Wand",
+              "itemId": 7514,
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "dps": "15.3 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_06",
+              "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            },
+            {
               "name": "Snapped Branch Wand",
               "itemId": 284574,
               "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -58693,6 +62516,17 @@ if (typeof window !== 'undefined') {
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
           "alts": [
+            {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
             {
               "name": "Lesser Mystic Wand",
               "itemId": 11289,
@@ -59095,6 +62929,18 @@ if (typeof window !== 'undefined') {
                 "Requires Level 56"
               ],
               "source": "Rare World Drop (Req lvl 56)"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19130,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 51,
+              "dps": "56.0 DPS",
+              "speed": "1.60",
+              "stats": "+16 Frost Spell Damage",
+              "icon": "inv_wand_09",
+              "value": "Alterac Valley Quest Reward"
             }
           ],
           "lines": [
@@ -59191,6 +63037,42 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 17"
               ],
               "source": "Best — in — Slot Level 60 Wand"
+            },
+            {
+              "name": "Crimson Shocker",
+              "itemId": 18338,
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "dps": "60.3 DPS",
+              "speed": "1.70",
+              "stats": "+9 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Dire Maul — Illyanna Ravenoak"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "63.5 DPS",
+              "speed": "1.30",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
+            },
+            {
+              "name": "Stormrager",
+              "itemId": 16997,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "dps": "58.0 DPS",
+              "speed": "1.40",
+              "stats": "+5 Nature Spell Damage",
+              "icon": "inv_wand_02",
+              "value": "Eastern Plaguelands Quest Reward"
             }
           ],
           "lines": [
@@ -59487,6 +63369,28 @@ if (typeof window !== 'undefined') {
           "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
+            {
+              "name": "Blackbone Wand",
+              "itemId": 7514,
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "dps": "15.3 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_06",
+              "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            },
+            {
               "name": "Snapped Branch Wand",
               "itemId": 284574,
               "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -59560,6 +63464,17 @@ if (typeof window !== 'undefined') {
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
           "alts": [
+            {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
             {
               "name": "Lesser Mystic Wand",
               "itemId": 11289,
@@ -59962,6 +63877,18 @@ if (typeof window !== 'undefined') {
                 "Requires Level 56"
               ],
               "source": "Rare World Drop (Req lvl 56)"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19130,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 51,
+              "dps": "56.0 DPS",
+              "speed": "1.60",
+              "stats": "+16 Frost Spell Damage",
+              "icon": "inv_wand_09",
+              "value": "Alterac Valley Quest Reward"
             }
           ],
           "lines": [
@@ -60058,6 +63985,42 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 17"
               ],
               "source": "Best — in — Slot Level 60 Wand"
+            },
+            {
+              "name": "Crimson Shocker",
+              "itemId": 18338,
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "dps": "60.3 DPS",
+              "speed": "1.70",
+              "stats": "+9 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Dire Maul — Illyanna Ravenoak"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "63.5 DPS",
+              "speed": "1.30",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
+            },
+            {
+              "name": "Stormrager",
+              "itemId": 16997,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "dps": "58.0 DPS",
+              "speed": "1.40",
+              "stats": "+5 Nature Spell Damage",
+              "icon": "inv_wand_02",
+              "value": "Eastern Plaguelands Quest Reward"
             }
           ],
           "lines": [
@@ -60354,6 +64317,28 @@ if (typeof window !== 'undefined') {
           "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
+            {
+              "name": "Blackbone Wand",
+              "itemId": 7514,
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "dps": "15.3 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_06",
+              "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            },
+            {
               "name": "Snapped Branch Wand",
               "itemId": 284574,
               "value": "21.18 DPS, 1.70s - Level 22 World Drop",
@@ -60427,6 +64412,17 @@ if (typeof window !== 'undefined') {
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
           "alts": [
+            {
+              "name": "Gravestone Scepter",
+              "itemId": 7001,
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 18,
+              "dps": "29.0 DPS",
+              "speed": "1.50",
+              "icon": "inv_wand_01",
+              "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            },
             {
               "name": "Lesser Mystic Wand",
               "itemId": 11289,
@@ -60829,6 +64825,18 @@ if (typeof window !== 'undefined') {
                 "Requires Level 56"
               ],
               "source": "Rare World Drop (Req lvl 56)"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19130,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 51,
+              "dps": "56.0 DPS",
+              "speed": "1.60",
+              "stats": "+16 Frost Spell Damage",
+              "icon": "inv_wand_09",
+              "value": "Alterac Valley Quest Reward"
             }
           ],
           "lines": [
@@ -60925,6 +64933,42 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 17"
               ],
               "source": "Best — in — Slot Level 60 Wand"
+            },
+            {
+              "name": "Crimson Shocker",
+              "itemId": 18338,
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "dps": "60.3 DPS",
+              "speed": "1.70",
+              "stats": "+9 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Dire Maul — Illyanna Ravenoak"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "63.5 DPS",
+              "speed": "1.30",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
+            },
+            {
+              "name": "Stormrager",
+              "itemId": 16997,
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "dps": "58.0 DPS",
+              "speed": "1.40",
+              "stats": "+5 Nature Spell Damage",
+              "icon": "inv_wand_02",
+              "value": "Eastern Plaguelands Quest Reward"
             }
           ],
           "lines": [
@@ -60976,46 +65020,52 @@ if (typeof window !== 'undefined') {
               "itemId": 2129,
               "icon": "inv_shield_09",
               "weaponType": "Shield",
-              "value": "136 Armor, +4 Block - Low-level vendor/quest",
+              "value": "55 Armor, +1 Block - Starter Vendor",
               "faction": "both",
               "quality": "q1",
               "iLvl": 5,
               "reqLevel": 1,
               "stats": "55 Armor, +1 Block",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "55 Armor",
-                "+1 Block"
+                "1 Block",
+                "Durability 35 / 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 55,
+              "block": 1
             },
             {
-              "name": "Redbeard Crest",
+              "name": "Defender's Aegis",
               "itemId": 263431,
               "icon": "inv_shield_1h_skybornec60_b_01",
               "weaponType": "Shield",
-              "value": "177 Armor, +5 Block, +2 Stamina - Early quest shield",
+              "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor",
               "faction": "both",
               "quality": "q2",
               "iLvl": 10,
-              "reqLevel": null,
-              "stats": "177 Armor, +1 Strength",
+              "reqLevel": 10,
+              "stats": "+1 Strength",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "177 Armor",
+                "4 Block",
                 "+1 Strength"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 177,
+              "block": 4
             }
           ]
         },
         {
           "levelBracket": "10–14",
           "itemId": 263431,
-          "name": "Redbeard Crest",
+          "name": "Defender's Aegis",
           "icon": "inv_shield_1h_skybornec60_b_01",
           "weaponType": "Shield",
-          "stats": "177 Armor, +5 Block, +2 Stamina",
+          "stats": "+1 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61024,47 +65074,58 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q2",
           "iLvl": 10,
-          "reqLevel": null,
+          "reqLevel": 10,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "177 Armor",
-            "+5 Block",
-            "+2 Stamina"
+            "4 Block",
+            "+1 Strength"
           ],
           "alts": [
             {
               "name": "Heavy Pavise",
-              "itemId": null,
+              "itemId": 2448,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "246 Armor, +7 Block, +2 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "646 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 37,
+              "reqLevel": 32,
+              "stats": "646 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "646 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 646,
+              "block": 8
             },
             {
               "name": "Reinforced Shield",
-              "itemId": null,
+              "itemId": 2138,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "297 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "297 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "297 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 297,
+              "block": 8
             }
-          ]
+          ],
+          "armor": 177,
+          "block": 4,
+          "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor"
         },
         {
           "levelBracket": "15–18",
@@ -61114,7 +65175,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Repurposed Rack",
-              "itemId": null,
+              "itemId": 281735,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (Stockade)",
@@ -61130,19 +65191,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crest of Darkshire",
-              "itemId": null,
+              "itemId": 6223,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "490 Armor, +4 Strength, +3 Stamina - Quest reward",
+              "weaponType": "Shield",
+              "value": "661 Armor, 14 Block, +2 Strength, +7 Stamina - Duskwood Quest",
               "faction": "alliance",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 35,
+              "reqLevel": 20,
+              "stats": "+2 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "661 Armor",
+                "14 Block",
+                "+2 Strength",
+                "+7 Stamina",
+                "Requires Level 20"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 661,
+              "block": 14
             }
           ]
         },
@@ -61172,6 +65240,26 @@ if (typeof window !== 'undefined') {
             "Requires Level 21"
           ],
           "alts": [
+            {
+              "name": "Redbeard Crest",
+              "itemId": 12997,
+              "quality": "q3",
+              "reqLevel": 19,
+              "iLvl": 24,
+              "weaponType": "Shield",
+              "armor": 547,
+              "block": 11,
+              "stats": "+6 Strength, +3 Stamina",
+              "value": "547 Armor, 11 Block, +6 Strength, +3 Stamina - World Drop BoE",
+              "lines": [
+                "Off Hand\tShield",
+                "547 Armor",
+                "11 Block",
+                "+6 Strength",
+                "+3 Stamina",
+                "Requires Level 19"
+              ]
+            },
             {
               "name": "Shield of Thorsen",
               "itemId": 13079,
@@ -61215,19 +65303,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Marbled Buckler",
-              "itemId": null,
+              "itemId": 6725,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "614 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "776 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+4 Strength, +4 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "776 Armor",
+                "15 Block",
+                "+4 Strength",
+                "+4 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 776,
+              "block": 15
             }
           ]
         },
@@ -61257,23 +65352,30 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Basalt Buckler",
-              "itemId": null,
+              "itemId": 6746,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "733 Armor, +18 Block, +5 Strength, +5 Stamina - World Drop",
+              "weaponType": "Shield",
+              "value": "963 Armor, 17 Block, +2 Stamina, +8 Intellect - World Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 40,
+              "reqLevel": 26,
+              "stats": "+2 Stamina, +8 Intellect",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "963 Armor",
+                "17 Block",
+                "+2 Stamina",
+                "+8 Intellect",
+                "Requires Level 26"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 963,
+              "block": 17
             },
             {
               "name": "Green Iron Shield",
-              "itemId": null,
+              "itemId": 3840,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "650 Armor, +16 Block - Blacksmithing Crafted",
@@ -61291,26 +65393,27 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "27–30",
-          "itemId": null,
+          "itemId": 7747,
           "name": "Vile Protector",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1078 Armor, +20 Block, +7 Stamina, +4 Strength",
+          "weaponType": "Shield",
+          "stats": "+7 Stamina, +4 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "High-mitigation dungeon boss drop. Incredible 1078 Armor at level 28."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "1078 Armor",
-            "+20 Block",
+            "20 Block",
             "+7 Stamina",
-            "+4 Strength"
+            "+4 Strength",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -61389,16 +65492,41 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": "Drop / Quest"
+            },
+            {
+              "name": "Thermaplugg's Central Core",
+              "itemId": 9458,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "armor": 776,
+              "block": 14,
+              "stats": "+5 Stamina, +14 Armor, Chance on hit: Shock burst for 40 Nature DMG",
+              "icon": "inv_shield_13",
+              "value": "776 Armor, +14 Block, +5 Stamina - Gnomeregan: Thermaplugg",
+              "lines": [
+                "Off Hand\tShield",
+                "776 Armor",
+                "14 Block",
+                "+5 Stamina",
+                "+14 Armor",
+                "Chance on hit: Shock burst for 40 Nature DMG",
+                "Requires Level 31"
+              ]
             }
-          ]
+          ],
+          "armor": 1078,
+          "block": 20,
+          "value": "1078 Armor, +20 Block, +7 Stamina, +4 Strength - World Drop"
         },
         {
           "levelBracket": "31–34",
-          "itemId": null,
+          "itemId": 10686,
           "name": "Aegis of Battle",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "968 Armor, +24 Block, +6 Strength, +6 Stamina",
+          "weaponType": "Shield",
+          "stats": "+10 Stamina, +6 Agility",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61406,31 +65534,39 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 55,
+          "reqLevel": 50,
           "lines": [
-            "Held In Off-hand",
-            "968 Armor",
-            "+24 Block",
-            "+6 Strength",
-            "+6 Stamina"
+            "Off Hand\tShield",
+            "1691 Armor",
+            "29 Block",
+            "+10 Stamina",
+            "+6 Agility",
+            "Requires Level 50"
           ],
           "alts": [
             {
               "name": "Jagged Shield",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1025 Armor, +25 Block, +7 Strength, +7 Stamina - Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+7 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1025 Armor",
+                "25 Block",
+                "+7 Strength",
+                "+7 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1025,
+              "block": 25
             },
             {
               "name": "Mirror of Rath'mael",
@@ -61452,31 +65588,34 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Rath'mael"
             }
-          ]
+          ],
+          "armor": 1691,
+          "block": 29,
+          "value": "1691 Armor, +29 Block, +10 Stamina, +6 Agility - Quest Reward"
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9403,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "1548 Armor, +29 Block, +5 Strength, +10 Stamina",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+8 Stamina, +4 Spirit",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "quality": "q1",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "1548 Armor",
-            "+29 Block",
-            "+5 Strength",
-            "+10 Stamina",
-            "Requires Level 29"
+            "Off Hand\tShield",
+            "907 Armor",
+            "15 Block",
+            "+8 Stamina",
+            "+4 Spirit",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -61501,23 +65640,29 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Skullplate Shield",
-              "itemId": 4836,
+              "itemId": null,
               "icon": "inv_jewelry_talisman_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1314 Armor, +31 Block - High armor drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 28,
-              "reqLevel": 23,
-              "stats": "+6 Fire Resistance",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "1314 Armor, +31 Block",
               "lines": [
-                "Held In Off-hand",
-                "+6 Fire Resistance",
-                "Requires Level 23"
+                "Off Hand\tShield",
+                "1314 Armor",
+                "31 Block",
+                "Requires Level 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1314,
+              "block": 31
             }
-          ]
+          ],
+          "armor": 907,
+          "block": 15,
+          "value": "907 Armor, 15 Block, +8 Stamina, +4 Spirit - Uldaman: Eric the Swift"
         },
         {
           "levelBracket": "39–42",
@@ -61525,7 +65670,7 @@ if (typeof window !== 'undefined') {
           "name": "Aegis of the Scarlet Commander",
           "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "stats": "1548 Armor, +23 Block, +7 Strength, +8 Stamina",
+          "stats": "+7 Strength, +8 Stamina, +7 Spirit",
           "source": {
             "kind": "drop",
             "title": "Scarlet Commander Mograine",
@@ -61536,11 +65681,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 44,
           "reqLevel": 39,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "1548 Armor",
-            "+23 Block",
+            "23 Block",
             "+7 Strength",
             "+8 Stamina",
+            "+7 Spirit",
             "Requires Level 39"
           ],
           "alts": [
@@ -61568,29 +65714,39 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Rare BoE",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 1548,
+          "block": 23,
+          "value": "1548 Armor, +23 Block, +7 Str, +8 Sta, +7 Spi - SM Cathedral: Mograine"
         },
         {
           "levelBracket": "43–46",
-          "itemId": null,
+          "itemId": 1979,
           "name": "Wall of the Dead",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1923 Armor, +35 Block, +10 Stamina, Equip: +150 Armor Proc",
+          "weaponType": "Shield",
+          "stats": "+10 Strength, +15 Stamina, Equip: +150 Armor Proc",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61598,31 +65754,41 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 50,
+          "reqLevel": 45,
           "lines": [
-            "Held In Off-hand",
-            "1923 Armor",
-            "+35 Block",
-            "+10 Stamina",
-            "Equip: +150 Armor Proc"
+            "Off Hand\tShield",
+            "1937 Armor",
+            "34 Block",
+            "+10 Strength",
+            "+15 Stamina",
+            "Equip: When struck in combat has a 3% chance to encase the caster in bone, increasing armor by 150 for 20 sec.",
+            "Requires Level 45"
           ],
           "alts": [
             {
               "name": "Gizlock's Hypertech Buckler",
-              "itemId": null,
+              "itemId": 17718,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1823 Armor, +33 Block, +7 Stamina, +11 Block Value - Maraudon",
+              "weaponType": "Shield",
+              "value": "1835 Armor, +32 Block, +5 Stamina, +10 Intellect, +4 MP5 - Maraudon: Gizlock",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+5 Stamina, +10 Intellect, +4 MP5",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1835 Armor",
+                "32 Block",
+                "+5 Stamina",
+                "+10 Intellect",
+                "Equip: Restores 4 mana per 5 sec.",
+                "Requires Level 48"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1835,
+              "block": 32
             },
             {
               "name": "Elementalist's Guard",
@@ -61646,73 +65812,92 @@ if (typeof window !== 'undefined') {
               ],
               "source": "The Tempest's Weapons"
             }
-          ]
+          ],
+          "armor": 1937,
+          "block": 34,
+          "value": "1937 Armor, +34 Block, +10 Strength, +15 Stamina - World Drop BoE"
         },
         {
           "levelBracket": "47–50",
-          "itemId": null,
+          "itemId": 13375,
           "name": "Crest of Retribution",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2153 Armor, +38 Block, +10 Stamina, Equip: Holy Retaliation DMG on Block",
+          "weaponType": "Shield",
+          "stats": "Equip: Deals 5 to 35 damage every time you block.",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Stratholme: Ramstein / Timmy. High mitigation and superb AOE tank threat."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 60,
+          "reqLevel": 55,
           "lines": [
-            "Held In Off-hand",
-            "2153 Armor",
-            "+38 Block",
-            "+10 Stamina",
-            "Equip: Holy Retaliation DMG on Block"
+            "Off Hand\tShield",
+            "2057 Armor",
+            "38 Block",
+            "Equip: Deals 5 to 35 damage every time you block.",
+            "Requires Level 55"
           ],
           "alts": [
             {
               "name": "Stoneshell Guard",
-              "itemId": null,
+              "itemId": 11631,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1954 Armor, +36 Block, +12 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1803 Armor, +36 Block, +12 Stamina - BRD Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+12 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1803 Armor",
+                "36 Block",
+                "+12 Stamina",
+                "Requires Level 47"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1803,
+              "block": 36
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 2057,
+          "block": 38,
+          "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme"
         },
         {
           "levelBracket": "51–54",
-          "itemId": null,
+          "itemId": 1168,
           "name": "Skullflame Shield",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2256 Armor, +40 Block, Equip: Life Drain & AOE Flame Strike Procs",
+          "weaponType": "Shield",
+          "stats": "+10 Fire Res, +10 Shadow Res, Equip: Life Drain & AOE Flame Strike Procs",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61720,48 +65905,67 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 59,
+          "reqLevel": 54,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "2256 Armor",
-            "+40 Block",
-            "Equip: Life Drain & AOE Flame Strike Procs"
+            "40 Block",
+            "+10 Fire Resistance",
+            "+10 Shadow Resistance",
+            "Equip: When struck in combat has a 3% chance of stealing 35 life from target enemy.",
+            "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you.",
+            "Requires Level 54"
           ],
           "alts": [
             {
               "name": "Crest of Retribution",
-              "itemId": null,
+              "itemId": 13375,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2153 Armor, +38 Block, +10 Stamina - Stratholme",
+              "weaponType": "Shield",
+              "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Deals 5 to 35 damage every time you block.",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2057 Armor",
+                "38 Block",
+                "Equip: Deals 5 to 35 damage every time you block.",
+                "Requires Level 55"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2057,
+              "block": 38
             },
             {
               "name": "Crystal Bulwark",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2079 Armor, +37 Block, +15 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "+15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2079 Armor",
+                "37 Block",
+                "+15 Stamina",
+                "Requires Level 51"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2079,
+              "block": 37
             }
-          ]
+          ],
+          "armor": 2256,
+          "block": 40,
+          "value": "2256 Armor, +40 Block - World Drop BoE"
         },
         {
           "levelBracket": "55–58",
@@ -61769,7 +65973,7 @@ if (typeof window !== 'undefined') {
           "name": "Draconian Deflector",
           "icon": "inv_shield_20",
           "weaponType": "Shield",
-          "stats": "2153 Armor, +40 Block, +7 Stamina, +10 Defense, +8 Fire Res",
+          "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61780,50 +65984,83 @@ if (typeof window !== 'undefined') {
           "iLvl": 63,
           "reqLevel": 58,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "2153 Armor",
-            "+40 Block",
+            "40 Block",
             "+7 Stamina",
-            "+10 Defense",
-            "+8 Fire Res",
+            "+10 Fire Resistance",
+            "Equip: Increased Defense +10.",
             "Requires Level 58"
           ],
           "alts": [
             {
+              "name": "Draconian Deflector",
+              "itemId": 12602,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "armor": 2153,
+              "block": 40,
+              "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
+              "icon": "inv_shield_11",
+              "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath",
+              "lines": [
+                "Off Hand\tShield",
+                "2153 Armor",
+                "40 Block",
+                "+7 Stamina",
+                "+10 Fire Resistance",
+                "Equip: Increased Defense +10.",
+                "Requires Level 58"
+              ]
+            },
+            {
               "name": "The Immovable Object",
-              "itemId": null,
+              "itemId": 19321,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2468 Armor, +44 Block, +15 Stamina, +27 Block Value - Alterac Valley Exalted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+15 Stamina, Equip: +27 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2468 Armor",
+                "44 Block",
+                "+15 Stamina",
+                "Equip: Increases the block value of your shield by 27.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2468,
+              "block": 44
             },
             {
               "name": "Force Reactive Disk",
               "itemId": 18168,
               "icon": "spell_arcane_portaldarnassus",
               "weaponType": "Shield",
-              "value": "2468 Armor, +44 Block, +11 Stamina, AOE Electrical Discharge - Engineering",
+              "value": "2548 Armor, +44 Block, +11 Stamina - Engineering (300)",
               "faction": "both",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "2468 Armor, +44 Block, +11 Stamina",
+              "stats": "+11 Stamina, Equip: AOE Electrical Discharge on Block",
               "lines": [
-                "Shield",
-                "2468 Armor",
-                "+44 Block",
+                "Off Hand\tShield",
+                "2548 Armor",
+                "44 Block",
                 "+11 Stamina",
+                "Requires Engineering (300)",
+                "Equip: When the shield blocks it releases an electrical charge that damages all nearby enemies.",
                 "Requires Level 60"
               ],
-              "source": "Force Reactive Disk"
+              "source": "Force Reactive Disk",
+              "armor": 2548,
+              "block": 44
             },
             {
               "name": "Evergreen Shield",
@@ -61849,15 +66086,18 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Evergreen Shield"
             }
-          ]
+          ],
+          "armor": 2153,
+          "block": 40,
+          "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath"
         },
         {
           "levelBracket": "59–60",
-          "itemId": null,
+          "itemId": 19349,
           "name": "Elementium Reinforced Bulwark",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2816 Armor, +49 Block, +23 Stamina, +7 Defense",
+          "weaponType": "Shield",
+          "stats": "+23 Stamina, Equip: +19 Block Value, +7 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -61865,14 +66105,16 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 77,
+          "reqLevel": 60,
           "lines": [
-            "Held In Off-hand",
-            "2816 Armor",
-            "+49 Block",
+            "Off Hand\tShield",
+            "2893 Armor",
+            "54 Block",
             "+23 Stamina",
-            "+7 Defense"
+            "Equip: Increases the block value of your shield by 19.",
+            "Equip: Increased Defense +7.",
+            "Requires Level 60"
           ],
           "alts": [
             {
@@ -61880,60 +66122,78 @@ if (typeof window !== 'undefined') {
               "itemId": 18825,
               "icon": "inv_shield_05",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "alliance",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Captain O'Neal"
+              "source": "Captain O'Neal",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "High Warlord's Shield Wall",
               "itemId": 18826,
               "icon": "inv_shield_19",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "horde",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Sergeant Thunderhorn"
+              "source": "Sergeant Thunderhorn",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "Drillborer Disk",
-              "itemId": null,
+              "itemId": 17066,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2539 Armor, +45 Block, +10 Stamina, +15 Block Value - Molten Core: Garr",
+              "weaponType": "Shield",
+              "value": "2539 Armor, +46 Block, +10 Stamina - Molten Core: Garr",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 67,
+              "reqLevel": 60,
+              "stats": "+10 Stamina, Equip: 3 Thorns DMG, +2% Block, +23 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2539 Armor",
+                "46 Block",
+                "+10 Stamina",
+                "Equip: When struck in combat inflicts 3 Arcane damage to the attacker.",
+                "Equip: Increases your chance to block attacks with a shield by 2%.",
+                "Equip: Increases the block value of your shield by 23.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2539,
+              "block": 46
             }
-          ]
+          ],
+          "armor": 2893,
+          "block": 54,
+          "value": "2893 Armor, +54 Block, +23 Stamina, +7 Defense - BWL: Chromaggus"
         }
       ]
     },
@@ -61977,46 +66237,52 @@ if (typeof window !== 'undefined') {
               "itemId": 2129,
               "icon": "inv_shield_09",
               "weaponType": "Shield",
-              "value": "136 Armor, +4 Block - Low-level vendor/quest",
+              "value": "55 Armor, +1 Block - Starter Vendor",
               "faction": "both",
               "quality": "q1",
               "iLvl": 5,
               "reqLevel": 1,
               "stats": "55 Armor, +1 Block",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "55 Armor",
-                "+1 Block"
+                "1 Block",
+                "Durability 35 / 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 55,
+              "block": 1
             },
             {
-              "name": "Redbeard Crest",
+              "name": "Defender's Aegis",
               "itemId": 263431,
               "icon": "inv_shield_1h_skybornec60_b_01",
               "weaponType": "Shield",
-              "value": "177 Armor, +5 Block, +2 Stamina - Early quest shield",
+              "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor",
               "faction": "both",
               "quality": "q2",
               "iLvl": 10,
-              "reqLevel": null,
-              "stats": "177 Armor, +1 Strength",
+              "reqLevel": 10,
+              "stats": "+1 Strength",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "177 Armor",
+                "4 Block",
                 "+1 Strength"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 177,
+              "block": 4
             }
           ]
         },
         {
           "levelBracket": "10–14",
           "itemId": 263431,
-          "name": "Redbeard Crest",
+          "name": "Defender's Aegis",
           "icon": "inv_shield_1h_skybornec60_b_01",
           "weaponType": "Shield",
-          "stats": "177 Armor, +5 Block, +2 Stamina",
+          "stats": "+1 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62025,47 +66291,58 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q2",
           "iLvl": 10,
-          "reqLevel": null,
+          "reqLevel": 10,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "177 Armor",
-            "+5 Block",
-            "+2 Stamina"
+            "4 Block",
+            "+1 Strength"
           ],
           "alts": [
             {
               "name": "Heavy Pavise",
-              "itemId": null,
+              "itemId": 2448,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "246 Armor, +7 Block, +2 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "646 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 37,
+              "reqLevel": 32,
+              "stats": "646 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "646 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 646,
+              "block": 8
             },
             {
               "name": "Reinforced Shield",
-              "itemId": null,
+              "itemId": 2138,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "297 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "297 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "297 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 297,
+              "block": 8
             }
-          ]
+          ],
+          "armor": 177,
+          "block": 4,
+          "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor"
         },
         {
           "levelBracket": "15–18",
@@ -62115,7 +66392,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Repurposed Rack",
-              "itemId": null,
+              "itemId": 281735,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (Stockade)",
@@ -62131,19 +66408,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crest of Darkshire",
-              "itemId": null,
+              "itemId": 6223,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "490 Armor, +4 Strength, +3 Stamina - Quest reward",
+              "weaponType": "Shield",
+              "value": "661 Armor, 14 Block, +2 Strength, +7 Stamina - Duskwood Quest",
               "faction": "alliance",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 35,
+              "reqLevel": 20,
+              "stats": "+2 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "661 Armor",
+                "14 Block",
+                "+2 Strength",
+                "+7 Stamina",
+                "Requires Level 20"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 661,
+              "block": 14
             }
           ]
         },
@@ -62173,6 +66457,26 @@ if (typeof window !== 'undefined') {
             "Requires Level 21"
           ],
           "alts": [
+            {
+              "name": "Redbeard Crest",
+              "itemId": 12997,
+              "quality": "q3",
+              "reqLevel": 19,
+              "iLvl": 24,
+              "weaponType": "Shield",
+              "armor": 547,
+              "block": 11,
+              "stats": "+6 Strength, +3 Stamina",
+              "value": "547 Armor, 11 Block, +6 Strength, +3 Stamina - World Drop BoE",
+              "lines": [
+                "Off Hand\tShield",
+                "547 Armor",
+                "11 Block",
+                "+6 Strength",
+                "+3 Stamina",
+                "Requires Level 19"
+              ]
+            },
             {
               "name": "Shield of Thorsen",
               "itemId": 13079,
@@ -62216,19 +66520,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Marbled Buckler",
-              "itemId": null,
+              "itemId": 6725,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "614 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "776 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+4 Strength, +4 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "776 Armor",
+                "15 Block",
+                "+4 Strength",
+                "+4 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 776,
+              "block": 15
             }
           ]
         },
@@ -62258,23 +66569,30 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Basalt Buckler",
-              "itemId": null,
+              "itemId": 6746,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "733 Armor, +18 Block, +5 Strength, +5 Stamina - World Drop",
+              "weaponType": "Shield",
+              "value": "963 Armor, 17 Block, +2 Stamina, +8 Intellect - World Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 40,
+              "reqLevel": 26,
+              "stats": "+2 Stamina, +8 Intellect",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "963 Armor",
+                "17 Block",
+                "+2 Stamina",
+                "+8 Intellect",
+                "Requires Level 26"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 963,
+              "block": 17
             },
             {
               "name": "Green Iron Shield",
-              "itemId": null,
+              "itemId": 3840,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "650 Armor, +16 Block - Blacksmithing Crafted",
@@ -62292,26 +66610,27 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "27–30",
-          "itemId": null,
+          "itemId": 7747,
           "name": "Vile Protector",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1078 Armor, +20 Block, +7 Stamina, +4 Strength",
+          "weaponType": "Shield",
+          "stats": "+7 Stamina, +4 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "High-mitigation dungeon boss drop. Incredible 1078 Armor at level 28."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "1078 Armor",
-            "+20 Block",
+            "20 Block",
             "+7 Stamina",
-            "+4 Strength"
+            "+4 Strength",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -62390,16 +66709,41 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": "Drop / Quest"
+            },
+            {
+              "name": "Thermaplugg's Central Core",
+              "itemId": 9458,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "armor": 776,
+              "block": 14,
+              "stats": "+5 Stamina, +14 Armor, Chance on hit: Shock burst for 40 Nature DMG",
+              "icon": "inv_shield_13",
+              "value": "776 Armor, +14 Block, +5 Stamina - Gnomeregan: Thermaplugg",
+              "lines": [
+                "Off Hand\tShield",
+                "776 Armor",
+                "14 Block",
+                "+5 Stamina",
+                "+14 Armor",
+                "Chance on hit: Shock burst for 40 Nature DMG",
+                "Requires Level 31"
+              ]
             }
-          ]
+          ],
+          "armor": 1078,
+          "block": 20,
+          "value": "1078 Armor, +20 Block, +7 Stamina, +4 Strength - World Drop"
         },
         {
           "levelBracket": "31–34",
-          "itemId": null,
+          "itemId": 10686,
           "name": "Aegis of Battle",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "968 Armor, +24 Block, +6 Strength, +6 Stamina",
+          "weaponType": "Shield",
+          "stats": "+10 Stamina, +6 Agility",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62407,31 +66751,39 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 55,
+          "reqLevel": 50,
           "lines": [
-            "Held In Off-hand",
-            "968 Armor",
-            "+24 Block",
-            "+6 Strength",
-            "+6 Stamina"
+            "Off Hand\tShield",
+            "1691 Armor",
+            "29 Block",
+            "+10 Stamina",
+            "+6 Agility",
+            "Requires Level 50"
           ],
           "alts": [
             {
               "name": "Jagged Shield",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1025 Armor, +25 Block, +7 Strength, +7 Stamina - Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+7 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1025 Armor",
+                "25 Block",
+                "+7 Strength",
+                "+7 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1025,
+              "block": 25
             },
             {
               "name": "Mirror of Rath'mael",
@@ -62453,31 +66805,34 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Rath'mael"
             }
-          ]
+          ],
+          "armor": 1691,
+          "block": 29,
+          "value": "1691 Armor, +29 Block, +10 Stamina, +6 Agility - Quest Reward"
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9403,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "1548 Armor, +29 Block, +5 Strength, +10 Stamina",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+8 Stamina, +4 Spirit",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "quality": "q1",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "1548 Armor",
-            "+29 Block",
-            "+5 Strength",
-            "+10 Stamina",
-            "Requires Level 29"
+            "Off Hand\tShield",
+            "907 Armor",
+            "15 Block",
+            "+8 Stamina",
+            "+4 Spirit",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -62502,23 +66857,29 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Skullplate Shield",
-              "itemId": 4836,
+              "itemId": null,
               "icon": "inv_jewelry_talisman_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1314 Armor, +31 Block - High armor drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 28,
-              "reqLevel": 23,
-              "stats": "+6 Fire Resistance",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "1314 Armor, +31 Block",
               "lines": [
-                "Held In Off-hand",
-                "+6 Fire Resistance",
-                "Requires Level 23"
+                "Off Hand\tShield",
+                "1314 Armor",
+                "31 Block",
+                "Requires Level 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1314,
+              "block": 31
             }
-          ]
+          ],
+          "armor": 907,
+          "block": 15,
+          "value": "907 Armor, 15 Block, +8 Stamina, +4 Spirit - Uldaman: Eric the Swift"
         },
         {
           "levelBracket": "39–42",
@@ -62526,7 +66887,7 @@ if (typeof window !== 'undefined') {
           "name": "Aegis of the Scarlet Commander",
           "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "stats": "1548 Armor, +23 Block, +7 Strength, +8 Stamina",
+          "stats": "+7 Strength, +8 Stamina, +7 Spirit",
           "source": {
             "kind": "drop",
             "title": "Scarlet Commander Mograine",
@@ -62537,11 +66898,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 44,
           "reqLevel": 39,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "1548 Armor",
-            "+23 Block",
+            "23 Block",
             "+7 Strength",
             "+8 Stamina",
+            "+7 Spirit",
             "Requires Level 39"
           ],
           "alts": [
@@ -62569,29 +66931,39 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Rare BoE",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 1548,
+          "block": 23,
+          "value": "1548 Armor, +23 Block, +7 Str, +8 Sta, +7 Spi - SM Cathedral: Mograine"
         },
         {
           "levelBracket": "43–46",
-          "itemId": null,
+          "itemId": 1979,
           "name": "Wall of the Dead",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1923 Armor, +35 Block, +10 Stamina, Equip: +150 Armor Proc",
+          "weaponType": "Shield",
+          "stats": "+10 Strength, +15 Stamina, Equip: +150 Armor Proc",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62599,31 +66971,41 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 50,
+          "reqLevel": 45,
           "lines": [
-            "Held In Off-hand",
-            "1923 Armor",
-            "+35 Block",
-            "+10 Stamina",
-            "Equip: +150 Armor Proc"
+            "Off Hand\tShield",
+            "1937 Armor",
+            "34 Block",
+            "+10 Strength",
+            "+15 Stamina",
+            "Equip: When struck in combat has a 3% chance to encase the caster in bone, increasing armor by 150 for 20 sec.",
+            "Requires Level 45"
           ],
           "alts": [
             {
               "name": "Gizlock's Hypertech Buckler",
-              "itemId": null,
+              "itemId": 17718,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1823 Armor, +33 Block, +7 Stamina, +11 Block Value - Maraudon",
+              "weaponType": "Shield",
+              "value": "1835 Armor, +32 Block, +5 Stamina, +10 Intellect, +4 MP5 - Maraudon: Gizlock",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+5 Stamina, +10 Intellect, +4 MP5",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1835 Armor",
+                "32 Block",
+                "+5 Stamina",
+                "+10 Intellect",
+                "Equip: Restores 4 mana per 5 sec.",
+                "Requires Level 48"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1835,
+              "block": 32
             },
             {
               "name": "Elementalist's Guard",
@@ -62647,73 +67029,92 @@ if (typeof window !== 'undefined') {
               ],
               "source": "The Tempest's Weapons"
             }
-          ]
+          ],
+          "armor": 1937,
+          "block": 34,
+          "value": "1937 Armor, +34 Block, +10 Strength, +15 Stamina - World Drop BoE"
         },
         {
           "levelBracket": "47–50",
-          "itemId": null,
+          "itemId": 13375,
           "name": "Crest of Retribution",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2153 Armor, +38 Block, +10 Stamina, Equip: Holy Retaliation DMG on Block",
+          "weaponType": "Shield",
+          "stats": "Equip: Deals 5 to 35 damage every time you block.",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Stratholme: Ramstein / Timmy. High mitigation and superb AOE tank threat."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 60,
+          "reqLevel": 55,
           "lines": [
-            "Held In Off-hand",
-            "2153 Armor",
-            "+38 Block",
-            "+10 Stamina",
-            "Equip: Holy Retaliation DMG on Block"
+            "Off Hand\tShield",
+            "2057 Armor",
+            "38 Block",
+            "Equip: Deals 5 to 35 damage every time you block.",
+            "Requires Level 55"
           ],
           "alts": [
             {
               "name": "Stoneshell Guard",
-              "itemId": null,
+              "itemId": 11631,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1954 Armor, +36 Block, +12 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1803 Armor, +36 Block, +12 Stamina - BRD Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+12 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1803 Armor",
+                "36 Block",
+                "+12 Stamina",
+                "Requires Level 47"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1803,
+              "block": 36
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 2057,
+          "block": 38,
+          "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme"
         },
         {
           "levelBracket": "51–54",
-          "itemId": null,
+          "itemId": 1168,
           "name": "Skullflame Shield",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2256 Armor, +40 Block, Equip: Life Drain & AOE Flame Strike Procs",
+          "weaponType": "Shield",
+          "stats": "+10 Fire Res, +10 Shadow Res, Equip: Life Drain & AOE Flame Strike Procs",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62721,48 +67122,67 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 59,
+          "reqLevel": 54,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "2256 Armor",
-            "+40 Block",
-            "Equip: Life Drain & AOE Flame Strike Procs"
+            "40 Block",
+            "+10 Fire Resistance",
+            "+10 Shadow Resistance",
+            "Equip: When struck in combat has a 3% chance of stealing 35 life from target enemy.",
+            "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you.",
+            "Requires Level 54"
           ],
           "alts": [
             {
               "name": "Crest of Retribution",
-              "itemId": null,
+              "itemId": 13375,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2153 Armor, +38 Block, +10 Stamina - Stratholme",
+              "weaponType": "Shield",
+              "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Deals 5 to 35 damage every time you block.",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2057 Armor",
+                "38 Block",
+                "Equip: Deals 5 to 35 damage every time you block.",
+                "Requires Level 55"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2057,
+              "block": 38
             },
             {
               "name": "Crystal Bulwark",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2079 Armor, +37 Block, +15 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "+15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2079 Armor",
+                "37 Block",
+                "+15 Stamina",
+                "Requires Level 51"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2079,
+              "block": 37
             }
-          ]
+          ],
+          "armor": 2256,
+          "block": 40,
+          "value": "2256 Armor, +40 Block - World Drop BoE"
         },
         {
           "levelBracket": "55–58",
@@ -62770,7 +67190,7 @@ if (typeof window !== 'undefined') {
           "name": "Draconian Deflector",
           "icon": "inv_shield_20",
           "weaponType": "Shield",
-          "stats": "2153 Armor, +40 Block, +7 Stamina, +10 Defense, +8 Fire Res",
+          "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62781,50 +67201,83 @@ if (typeof window !== 'undefined') {
           "iLvl": 63,
           "reqLevel": 58,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "2153 Armor",
-            "+40 Block",
+            "40 Block",
             "+7 Stamina",
-            "+10 Defense",
-            "+8 Fire Res",
+            "+10 Fire Resistance",
+            "Equip: Increased Defense +10.",
             "Requires Level 58"
           ],
           "alts": [
             {
+              "name": "Draconian Deflector",
+              "itemId": 12602,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "armor": 2153,
+              "block": 40,
+              "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
+              "icon": "inv_shield_11",
+              "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath",
+              "lines": [
+                "Off Hand\tShield",
+                "2153 Armor",
+                "40 Block",
+                "+7 Stamina",
+                "+10 Fire Resistance",
+                "Equip: Increased Defense +10.",
+                "Requires Level 58"
+              ]
+            },
+            {
               "name": "The Immovable Object",
-              "itemId": null,
+              "itemId": 19321,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2468 Armor, +44 Block, +15 Stamina, +27 Block Value - Alterac Valley Exalted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+15 Stamina, Equip: +27 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2468 Armor",
+                "44 Block",
+                "+15 Stamina",
+                "Equip: Increases the block value of your shield by 27.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2468,
+              "block": 44
             },
             {
               "name": "Force Reactive Disk",
               "itemId": 18168,
               "icon": "spell_arcane_portaldarnassus",
               "weaponType": "Shield",
-              "value": "2468 Armor, +44 Block, +11 Stamina, AOE Electrical Discharge - Engineering",
+              "value": "2548 Armor, +44 Block, +11 Stamina - Engineering (300)",
               "faction": "both",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "2468 Armor, +44 Block, +11 Stamina",
+              "stats": "+11 Stamina, Equip: AOE Electrical Discharge on Block",
               "lines": [
-                "Shield",
-                "2468 Armor",
-                "+44 Block",
+                "Off Hand\tShield",
+                "2548 Armor",
+                "44 Block",
                 "+11 Stamina",
+                "Requires Engineering (300)",
+                "Equip: When the shield blocks it releases an electrical charge that damages all nearby enemies.",
                 "Requires Level 60"
               ],
-              "source": "Force Reactive Disk"
+              "source": "Force Reactive Disk",
+              "armor": 2548,
+              "block": 44
             },
             {
               "name": "Evergreen Shield",
@@ -62850,15 +67303,18 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Evergreen Shield"
             }
-          ]
+          ],
+          "armor": 2153,
+          "block": 40,
+          "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath"
         },
         {
           "levelBracket": "59–60",
-          "itemId": null,
+          "itemId": 19349,
           "name": "Elementium Reinforced Bulwark",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2816 Armor, +49 Block, +23 Stamina, +7 Defense",
+          "weaponType": "Shield",
+          "stats": "+23 Stamina, Equip: +19 Block Value, +7 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -62866,14 +67322,16 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 77,
+          "reqLevel": 60,
           "lines": [
-            "Held In Off-hand",
-            "2816 Armor",
-            "+49 Block",
+            "Off Hand\tShield",
+            "2893 Armor",
+            "54 Block",
             "+23 Stamina",
-            "+7 Defense"
+            "Equip: Increases the block value of your shield by 19.",
+            "Equip: Increased Defense +7.",
+            "Requires Level 60"
           ],
           "alts": [
             {
@@ -62881,60 +67339,78 @@ if (typeof window !== 'undefined') {
               "itemId": 18825,
               "icon": "inv_shield_05",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "alliance",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Captain O'Neal"
+              "source": "Captain O'Neal",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "High Warlord's Shield Wall",
               "itemId": 18826,
               "icon": "inv_shield_19",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "horde",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Sergeant Thunderhorn"
+              "source": "Sergeant Thunderhorn",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "Drillborer Disk",
-              "itemId": null,
+              "itemId": 17066,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2539 Armor, +45 Block, +10 Stamina, +15 Block Value - Molten Core: Garr",
+              "weaponType": "Shield",
+              "value": "2539 Armor, +46 Block, +10 Stamina - Molten Core: Garr",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 67,
+              "reqLevel": 60,
+              "stats": "+10 Stamina, Equip: 3 Thorns DMG, +2% Block, +23 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2539 Armor",
+                "46 Block",
+                "+10 Stamina",
+                "Equip: When struck in combat inflicts 3 Arcane damage to the attacker.",
+                "Equip: Increases your chance to block attacks with a shield by 2%.",
+                "Equip: Increases the block value of your shield by 23.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2539,
+              "block": 46
             }
-          ]
+          ],
+          "armor": 2893,
+          "block": 54,
+          "value": "2893 Armor, +54 Block, +23 Stamina, +7 Defense - BWL: Chromaggus"
         }
       ],
       "healingLevels": [
@@ -63026,7 +67502,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Repurposed Rack",
-              "itemId": null,
+              "itemId": 281735,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "490 Armor, +7 Spell Power - Stockade",
@@ -63180,7 +67656,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "31–38",
-          "itemId": null,
+          "itemId": 17718,
           "name": "Gizlock's Hypertech Buckler",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -63204,7 +67680,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Battered Viking Shield",
-              "itemId": 9449,
+              "itemId": 9451,
               "icon": "inv_mace_14",
               "weaponType": "Held In Off-hand",
               "value": "1548 Armor, +29 Block - Uldaman",
@@ -63224,7 +67700,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Aegis of Battle",
-              "itemId": null,
+              "itemId": 13166,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "968 Armor, +24 Block - Drop",
@@ -63287,7 +67763,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Wall of the Dead",
-              "itemId": null,
+              "itemId": 2879,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "1923 Armor, +35 Block - World Drop Epic",
@@ -63305,7 +67781,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "47–54",
-          "itemId": null,
+          "itemId": 13375,
           "name": "Crest of Retribution",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -63329,7 +67805,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 864,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "1548 Armor, +29 Block, +15 Stamina - Rare BoE",
@@ -63345,7 +67821,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Skullflame Shield",
-              "itemId": null,
+              "itemId": 1168,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "2256 Armor, +40 Block - World Drop Epic",
@@ -63363,7 +67839,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "55–60",
-          "itemId": null,
+          "itemId": 19349,
           "name": "Elementium Reinforced Bulwark",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -63429,7 +67905,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "The Immovable Object",
-              "itemId": null,
+              "itemId": 19321,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "2468 Armor, +44 Block, +15 Stamina - AV Exalted",
@@ -63487,46 +67963,52 @@ if (typeof window !== 'undefined') {
               "itemId": 2129,
               "icon": "inv_shield_09",
               "weaponType": "Shield",
-              "value": "136 Armor, +4 Block - Low-level vendor/quest",
+              "value": "55 Armor, +1 Block - Starter Vendor",
               "faction": "both",
               "quality": "q1",
               "iLvl": 5,
               "reqLevel": 1,
               "stats": "55 Armor, +1 Block",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "55 Armor",
-                "+1 Block"
+                "1 Block",
+                "Durability 35 / 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 55,
+              "block": 1
             },
             {
-              "name": "Redbeard Crest",
+              "name": "Defender's Aegis",
               "itemId": 263431,
               "icon": "inv_shield_1h_skybornec60_b_01",
               "weaponType": "Shield",
-              "value": "177 Armor, +5 Block, +2 Stamina - Early quest shield",
+              "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor",
               "faction": "both",
               "quality": "q2",
               "iLvl": 10,
-              "reqLevel": null,
-              "stats": "177 Armor, +1 Strength",
+              "reqLevel": 10,
+              "stats": "+1 Strength",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "177 Armor",
+                "4 Block",
                 "+1 Strength"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 177,
+              "block": 4
             }
           ]
         },
         {
           "levelBracket": "10–14",
           "itemId": 263431,
-          "name": "Redbeard Crest",
+          "name": "Defender's Aegis",
           "icon": "inv_shield_1h_skybornec60_b_01",
           "weaponType": "Shield",
-          "stats": "177 Armor, +5 Block, +2 Stamina",
+          "stats": "+1 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -63535,47 +68017,58 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q2",
           "iLvl": 10,
-          "reqLevel": null,
+          "reqLevel": 10,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "177 Armor",
-            "+5 Block",
-            "+2 Stamina"
+            "4 Block",
+            "+1 Strength"
           ],
           "alts": [
             {
               "name": "Heavy Pavise",
-              "itemId": null,
+              "itemId": 2448,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "246 Armor, +7 Block, +2 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "646 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 37,
+              "reqLevel": 32,
+              "stats": "646 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "646 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 646,
+              "block": 8
             },
             {
               "name": "Reinforced Shield",
-              "itemId": null,
+              "itemId": 2138,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "297 Armor, +8 Block - Vendor / Crafted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "297 Armor, +8 Block",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "297 Armor",
+                "8 Block"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 297,
+              "block": 8
             }
-          ]
+          ],
+          "armor": 177,
+          "block": 4,
+          "value": "177 Armor, 4 Block, +1 Strength - Early Quest / Vendor"
         },
         {
           "levelBracket": "15–18",
@@ -63625,7 +68118,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Repurposed Rack",
-              "itemId": null,
+              "itemId": 281735,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (Stockade)",
@@ -63641,19 +68134,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crest of Darkshire",
-              "itemId": null,
+              "itemId": 6223,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "490 Armor, +4 Strength, +3 Stamina - Quest reward",
+              "weaponType": "Shield",
+              "value": "661 Armor, 14 Block, +2 Strength, +7 Stamina - Duskwood Quest",
               "faction": "alliance",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 35,
+              "reqLevel": 20,
+              "stats": "+2 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "661 Armor",
+                "14 Block",
+                "+2 Strength",
+                "+7 Stamina",
+                "Requires Level 20"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 661,
+              "block": 14
             }
           ]
         },
@@ -63683,6 +68183,26 @@ if (typeof window !== 'undefined') {
             "Requires Level 21"
           ],
           "alts": [
+            {
+              "name": "Redbeard Crest",
+              "itemId": 12997,
+              "quality": "q3",
+              "reqLevel": 19,
+              "iLvl": 24,
+              "weaponType": "Shield",
+              "armor": 547,
+              "block": 11,
+              "stats": "+6 Strength, +3 Stamina",
+              "value": "547 Armor, 11 Block, +6 Strength, +3 Stamina - World Drop BoE",
+              "lines": [
+                "Off Hand\tShield",
+                "547 Armor",
+                "11 Block",
+                "+6 Strength",
+                "+3 Stamina",
+                "Requires Level 19"
+              ]
+            },
             {
               "name": "Shield of Thorsen",
               "itemId": 13079,
@@ -63726,19 +68246,26 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Marbled Buckler",
-              "itemId": null,
+              "itemId": 6725,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "614 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "776 Armor, +15 Block, +4 Strength, +4 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+4 Strength, +4 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "776 Armor",
+                "15 Block",
+                "+4 Strength",
+                "+4 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 776,
+              "block": 15
             }
           ]
         },
@@ -63768,23 +68295,30 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Basalt Buckler",
-              "itemId": null,
+              "itemId": 6746,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "733 Armor, +18 Block, +5 Strength, +5 Stamina - World Drop",
+              "weaponType": "Shield",
+              "value": "963 Armor, 17 Block, +2 Stamina, +8 Intellect - World Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 40,
+              "reqLevel": 26,
+              "stats": "+2 Stamina, +8 Intellect",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "963 Armor",
+                "17 Block",
+                "+2 Stamina",
+                "+8 Intellect",
+                "Requires Level 26"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 963,
+              "block": 17
             },
             {
               "name": "Green Iron Shield",
-              "itemId": null,
+              "itemId": 3840,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "650 Armor, +16 Block - Blacksmithing Crafted",
@@ -63802,26 +68336,27 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "27–30",
-          "itemId": null,
+          "itemId": 7747,
           "name": "Vile Protector",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1078 Armor, +20 Block, +7 Stamina, +4 Strength",
+          "weaponType": "Shield",
+          "stats": "+7 Stamina, +4 Strength",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "High-mitigation dungeon boss drop. Incredible 1078 Armor at level 28."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "1078 Armor",
-            "+20 Block",
+            "20 Block",
             "+7 Stamina",
-            "+4 Strength"
+            "+4 Strength",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -63900,16 +68435,41 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": "Drop / Quest"
+            },
+            {
+              "name": "Thermaplugg's Central Core",
+              "itemId": 9458,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "armor": 776,
+              "block": 14,
+              "stats": "+5 Stamina, +14 Armor, Chance on hit: Shock burst for 40 Nature DMG",
+              "icon": "inv_shield_13",
+              "value": "776 Armor, +14 Block, +5 Stamina - Gnomeregan: Thermaplugg",
+              "lines": [
+                "Off Hand\tShield",
+                "776 Armor",
+                "14 Block",
+                "+5 Stamina",
+                "+14 Armor",
+                "Chance on hit: Shock burst for 40 Nature DMG",
+                "Requires Level 31"
+              ]
             }
-          ]
+          ],
+          "armor": 1078,
+          "block": 20,
+          "value": "1078 Armor, +20 Block, +7 Stamina, +4 Strength - World Drop"
         },
         {
           "levelBracket": "31–34",
-          "itemId": null,
+          "itemId": 10686,
           "name": "Aegis of Battle",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "968 Armor, +24 Block, +6 Strength, +6 Stamina",
+          "weaponType": "Shield",
+          "stats": "+10 Stamina, +6 Agility",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -63917,31 +68477,39 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 55,
+          "reqLevel": 50,
           "lines": [
-            "Held In Off-hand",
-            "968 Armor",
-            "+24 Block",
-            "+6 Strength",
-            "+6 Stamina"
+            "Off Hand\tShield",
+            "1691 Armor",
+            "29 Block",
+            "+10 Stamina",
+            "+6 Agility",
+            "Requires Level 50"
           ],
           "alts": [
             {
               "name": "Jagged Shield",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1025 Armor, +25 Block, +7 Strength, +7 Stamina - Drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+7 Strength, +7 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1025 Armor",
+                "25 Block",
+                "+7 Strength",
+                "+7 Stamina",
+                "Requires Level 31"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1025,
+              "block": 25
             },
             {
               "name": "Mirror of Rath'mael",
@@ -63963,31 +68531,34 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Rath'mael"
             }
-          ]
+          ],
+          "armor": 1691,
+          "block": 29,
+          "value": "1691 Armor, +29 Block, +10 Stamina, +6 Agility - Quest Reward"
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9403,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "1548 Armor, +29 Block, +5 Strength, +10 Stamina",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+8 Stamina, +4 Spirit",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "quality": "q1",
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "1548 Armor",
-            "+29 Block",
-            "+5 Strength",
-            "+10 Stamina",
-            "Requires Level 29"
+            "Off Hand\tShield",
+            "907 Armor",
+            "15 Block",
+            "+8 Stamina",
+            "+4 Spirit",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -64012,23 +68583,29 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Skullplate Shield",
-              "itemId": 4836,
+              "itemId": null,
               "icon": "inv_jewelry_talisman_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "1314 Armor, +31 Block - High armor drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 28,
-              "reqLevel": 23,
-              "stats": "+6 Fire Resistance",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "1314 Armor, +31 Block",
               "lines": [
-                "Held In Off-hand",
-                "+6 Fire Resistance",
-                "Requires Level 23"
+                "Off Hand\tShield",
+                "1314 Armor",
+                "31 Block",
+                "Requires Level 35"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1314,
+              "block": 31
             }
-          ]
+          ],
+          "armor": 907,
+          "block": 15,
+          "value": "907 Armor, 15 Block, +8 Stamina, +4 Spirit - Uldaman: Eric the Swift"
         },
         {
           "levelBracket": "39–42",
@@ -64036,7 +68613,7 @@ if (typeof window !== 'undefined') {
           "name": "Aegis of the Scarlet Commander",
           "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "stats": "1548 Armor, +23 Block, +7 Strength, +8 Stamina",
+          "stats": "+7 Strength, +8 Stamina, +7 Spirit",
           "source": {
             "kind": "drop",
             "title": "Scarlet Commander Mograine",
@@ -64047,11 +68624,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 44,
           "reqLevel": 39,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "1548 Armor",
-            "+23 Block",
+            "23 Block",
             "+7 Strength",
             "+8 Stamina",
+            "+7 Spirit",
             "Requires Level 39"
           ],
           "alts": [
@@ -64079,29 +68657,39 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Rare BoE",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 1548,
+          "block": 23,
+          "value": "1548 Armor, +23 Block, +7 Str, +8 Sta, +7 Spi - SM Cathedral: Mograine"
         },
         {
           "levelBracket": "43–46",
-          "itemId": null,
+          "itemId": 1979,
           "name": "Wall of the Dead",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "1923 Armor, +35 Block, +10 Stamina, Equip: +150 Armor Proc",
+          "weaponType": "Shield",
+          "stats": "+10 Strength, +15 Stamina, Equip: +150 Armor Proc",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -64109,31 +68697,41 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 50,
+          "reqLevel": 45,
           "lines": [
-            "Held In Off-hand",
-            "1923 Armor",
-            "+35 Block",
-            "+10 Stamina",
-            "Equip: +150 Armor Proc"
+            "Off Hand\tShield",
+            "1937 Armor",
+            "34 Block",
+            "+10 Strength",
+            "+15 Stamina",
+            "Equip: When struck in combat has a 3% chance to encase the caster in bone, increasing armor by 150 for 20 sec.",
+            "Requires Level 45"
           ],
           "alts": [
             {
               "name": "Gizlock's Hypertech Buckler",
-              "itemId": null,
+              "itemId": 17718,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1823 Armor, +33 Block, +7 Stamina, +11 Block Value - Maraudon",
+              "weaponType": "Shield",
+              "value": "1835 Armor, +32 Block, +5 Stamina, +10 Intellect, +4 MP5 - Maraudon: Gizlock",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+5 Stamina, +10 Intellect, +4 MP5",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1835 Armor",
+                "32 Block",
+                "+5 Stamina",
+                "+10 Intellect",
+                "Equip: Restores 4 mana per 5 sec.",
+                "Requires Level 48"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1835,
+              "block": 32
             },
             {
               "name": "Elementalist's Guard",
@@ -64157,73 +68755,92 @@ if (typeof window !== 'undefined') {
               ],
               "source": "The Tempest's Weapons"
             }
-          ]
+          ],
+          "armor": 1937,
+          "block": 34,
+          "value": "1937 Armor, +34 Block, +10 Strength, +15 Stamina - World Drop BoE"
         },
         {
           "levelBracket": "47–50",
-          "itemId": null,
+          "itemId": 13375,
           "name": "Crest of Retribution",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2153 Armor, +38 Block, +10 Stamina, Equip: Holy Retaliation DMG on Block",
+          "weaponType": "Shield",
+          "stats": "Equip: Deals 5 to 35 damage every time you block.",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
             "detail": "Stratholme: Ramstein / Timmy. High mitigation and superb AOE tank threat."
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "quality": "q3",
+          "iLvl": 60,
+          "reqLevel": 55,
           "lines": [
-            "Held In Off-hand",
-            "2153 Armor",
-            "+38 Block",
-            "+10 Stamina",
-            "Equip: Holy Retaliation DMG on Block"
+            "Off Hand\tShield",
+            "2057 Armor",
+            "38 Block",
+            "Equip: Deals 5 to 35 damage every time you block.",
+            "Requires Level 55"
           ],
           "alts": [
             {
               "name": "Stoneshell Guard",
-              "itemId": null,
+              "itemId": 11631,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1954 Armor, +36 Block, +12 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1803 Armor, +36 Block, +12 Stamina - BRD Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+12 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1803 Armor",
+                "36 Block",
+                "+12 Stamina",
+                "Requires Level 47"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1803,
+              "block": 36
             },
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 1203,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "1548 Armor, +29 Block, +15 Stamina - Drop",
+              "weaponType": "Shield",
+              "value": "1867 Armor, +33 Block, +6 Strength, +15 Stamina - Rare BoE Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+6 Strength, +15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "1867 Armor",
+                "33 Block",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 1867,
+              "block": 33
             }
-          ]
+          ],
+          "armor": 2057,
+          "block": 38,
+          "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme"
         },
         {
           "levelBracket": "51–54",
-          "itemId": null,
+          "itemId": 1168,
           "name": "Skullflame Shield",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2256 Armor, +40 Block, Equip: Life Drain & AOE Flame Strike Procs",
+          "weaponType": "Shield",
+          "stats": "+10 Fire Res, +10 Shadow Res, Equip: Life Drain & AOE Flame Strike Procs",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -64231,48 +68848,67 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 59,
+          "reqLevel": 54,
           "lines": [
-            "Held In Off-hand",
+            "Off Hand\tShield",
             "2256 Armor",
-            "+40 Block",
-            "Equip: Life Drain & AOE Flame Strike Procs"
+            "40 Block",
+            "+10 Fire Resistance",
+            "+10 Shadow Resistance",
+            "Equip: When struck in combat has a 3% chance of stealing 35 life from target enemy.",
+            "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you.",
+            "Requires Level 54"
           ],
           "alts": [
             {
               "name": "Crest of Retribution",
-              "itemId": null,
+              "itemId": 13375,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2153 Armor, +38 Block, +10 Stamina - Stratholme",
+              "weaponType": "Shield",
+              "value": "2057 Armor, +38 Block, Equip: Retaliation DMG - Stratholme",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Deals 5 to 35 damage every time you block.",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2057 Armor",
+                "38 Block",
+                "Equip: Deals 5 to 35 damage every time you block.",
+                "Requires Level 55"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2057,
+              "block": 38
             },
             {
               "name": "Crystal Bulwark",
               "itemId": null,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2079 Armor, +37 Block, +15 Stamina - Drop",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "+15 Stamina",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2079 Armor",
+                "37 Block",
+                "+15 Stamina",
+                "Requires Level 51"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2079,
+              "block": 37
             }
-          ]
+          ],
+          "armor": 2256,
+          "block": 40,
+          "value": "2256 Armor, +40 Block - World Drop BoE"
         },
         {
           "levelBracket": "55–58",
@@ -64280,7 +68916,7 @@ if (typeof window !== 'undefined') {
           "name": "Draconian Deflector",
           "icon": "inv_shield_20",
           "weaponType": "Shield",
-          "stats": "2153 Armor, +40 Block, +7 Stamina, +10 Defense, +8 Fire Res",
+          "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -64291,50 +68927,83 @@ if (typeof window !== 'undefined') {
           "iLvl": 63,
           "reqLevel": 58,
           "lines": [
-            "Shield",
+            "Off Hand\tShield",
             "2153 Armor",
-            "+40 Block",
+            "40 Block",
             "+7 Stamina",
-            "+10 Defense",
-            "+8 Fire Res",
+            "+10 Fire Resistance",
+            "Equip: Increased Defense +10.",
             "Requires Level 58"
           ],
           "alts": [
             {
+              "name": "Draconian Deflector",
+              "itemId": 12602,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "armor": 2153,
+              "block": 40,
+              "stats": "+7 Stamina, +10 Fire Resistance, Equip: +10 Defense",
+              "icon": "inv_shield_11",
+              "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath",
+              "lines": [
+                "Off Hand\tShield",
+                "2153 Armor",
+                "40 Block",
+                "+7 Stamina",
+                "+10 Fire Resistance",
+                "Equip: Increased Defense +10.",
+                "Requires Level 58"
+              ]
+            },
+            {
               "name": "The Immovable Object",
-              "itemId": null,
+              "itemId": 19321,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
+              "weaponType": "Shield",
               "value": "2468 Armor, +44 Block, +15 Stamina, +27 Block Value - Alterac Valley Exalted",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+15 Stamina, Equip: +27 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2468 Armor",
+                "44 Block",
+                "+15 Stamina",
+                "Equip: Increases the block value of your shield by 27.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2468,
+              "block": 44
             },
             {
               "name": "Force Reactive Disk",
               "itemId": 18168,
               "icon": "spell_arcane_portaldarnassus",
               "weaponType": "Shield",
-              "value": "2468 Armor, +44 Block, +11 Stamina, AOE Electrical Discharge - Engineering",
+              "value": "2548 Armor, +44 Block, +11 Stamina - Engineering (300)",
               "faction": "both",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "2468 Armor, +44 Block, +11 Stamina",
+              "stats": "+11 Stamina, Equip: AOE Electrical Discharge on Block",
               "lines": [
-                "Shield",
-                "2468 Armor",
-                "+44 Block",
+                "Off Hand\tShield",
+                "2548 Armor",
+                "44 Block",
                 "+11 Stamina",
+                "Requires Engineering (300)",
+                "Equip: When the shield blocks it releases an electrical charge that damages all nearby enemies.",
                 "Requires Level 60"
               ],
-              "source": "Force Reactive Disk"
+              "source": "Force Reactive Disk",
+              "armor": 2548,
+              "block": 44
             },
             {
               "name": "Evergreen Shield",
@@ -64360,15 +69029,18 @@ if (typeof window !== 'undefined') {
               ],
               "source": "Evergreen Shield"
             }
-          ]
+          ],
+          "armor": 2153,
+          "block": 40,
+          "value": "2153 Armor, +40 Block, +7 Stamina - UBRS: General Drakkisath"
         },
         {
           "levelBracket": "59–60",
-          "itemId": null,
+          "itemId": 19349,
           "name": "Elementium Reinforced Bulwark",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "2816 Armor, +49 Block, +23 Stamina, +7 Defense",
+          "weaponType": "Shield",
+          "stats": "+23 Stamina, Equip: +19 Block Value, +7 Defense",
           "source": {
             "kind": "quest",
             "title": "Drop / Quest",
@@ -64376,14 +69048,16 @@ if (typeof window !== 'undefined') {
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 6,
-          "reqLevel": 1,
+          "iLvl": 77,
+          "reqLevel": 60,
           "lines": [
-            "Held In Off-hand",
-            "2816 Armor",
-            "+49 Block",
+            "Off Hand\tShield",
+            "2893 Armor",
+            "54 Block",
             "+23 Stamina",
-            "+7 Defense"
+            "Equip: Increases the block value of your shield by 19.",
+            "Equip: Increased Defense +7.",
+            "Requires Level 60"
           ],
           "alts": [
             {
@@ -64391,60 +69065,78 @@ if (typeof window !== 'undefined') {
               "itemId": 18825,
               "icon": "inv_shield_05",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "alliance",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Captain O'Neal"
+              "source": "Captain O'Neal",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "High Warlord's Shield Wall",
               "itemId": 18826,
               "icon": "inv_shield_19",
               "weaponType": "Shield",
-              "value": "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14",
+              "value": "2929 Armor, +55 Block, +10 Strength, +23 Stamina - PvP Rank 14",
               "faction": "horde",
               "quality": "q4",
               "iLvl": 78,
               "reqLevel": 60,
-              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "stats": "+10 Strength, +23 Stamina, Equip: 5% chance 35-65 Nature DMG",
               "lines": [
-                "Shield",
+                "Off Hand\tShield",
                 "2929 Armor",
+                "55 Block",
                 "+10 Strength",
                 "+23 Stamina",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
                 "Requires Level 60"
               ],
-              "source": "Sergeant Thunderhorn"
+              "source": "Sergeant Thunderhorn",
+              "armor": 2929,
+              "block": 55
             },
             {
               "name": "Drillborer Disk",
-              "itemId": null,
+              "itemId": 17066,
               "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "2539 Armor, +45 Block, +10 Stamina, +15 Block Value - Molten Core: Garr",
+              "weaponType": "Shield",
+              "value": "2539 Armor, +46 Block, +10 Stamina - Molten Core: Garr",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
+              "quality": "q4",
+              "iLvl": 67,
+              "reqLevel": 60,
+              "stats": "+10 Stamina, Equip: 3 Thorns DMG, +2% Block, +23 Block Value",
               "lines": [
-                "Held In Off-hand"
+                "Off Hand\tShield",
+                "2539 Armor",
+                "46 Block",
+                "+10 Stamina",
+                "Equip: When struck in combat inflicts 3 Arcane damage to the attacker.",
+                "Equip: Increases your chance to block attacks with a shield by 2%.",
+                "Equip: Increases the block value of your shield by 23.",
+                "Requires Level 60"
               ],
-              "source": "Drop / Quest"
+              "source": "Drop / Quest",
+              "armor": 2539,
+              "block": 46
             }
-          ]
+          ],
+          "armor": 2893,
+          "block": 54,
+          "value": "2893 Armor, +54 Block, +23 Stamina, +7 Defense - BWL: Chromaggus"
         }
       ],
       "healingLevels": [
@@ -64536,7 +69228,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Repurposed Rack",
-              "itemId": null,
+              "itemId": 281735,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "490 Armor, +7 Spell Power - Stockade",
@@ -64690,7 +69382,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "31–38",
-          "itemId": null,
+          "itemId": 17718,
           "name": "Gizlock's Hypertech Buckler",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -64714,7 +69406,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Battered Viking Shield",
-              "itemId": 9449,
+              "itemId": 9451,
               "icon": "inv_mace_14",
               "weaponType": "Held In Off-hand",
               "value": "1548 Armor, +29 Block - Uldaman",
@@ -64734,7 +69426,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Aegis of Battle",
-              "itemId": null,
+              "itemId": 13166,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "968 Armor, +24 Block - Drop",
@@ -64797,7 +69489,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Wall of the Dead",
-              "itemId": null,
+              "itemId": 2879,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "1923 Armor, +35 Block - World Drop Epic",
@@ -64815,7 +69507,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "47–54",
-          "itemId": null,
+          "itemId": 13375,
           "name": "Crest of Retribution",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -64839,7 +69531,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Aegis of Stormwind",
-              "itemId": null,
+              "itemId": 864,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "1548 Armor, +29 Block, +15 Stamina - Rare BoE",
@@ -64855,7 +69547,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Skullflame Shield",
-              "itemId": null,
+              "itemId": 1168,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "2256 Armor, +40 Block - World Drop Epic",
@@ -64873,7 +69565,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "55–60",
-          "itemId": null,
+          "itemId": 19349,
           "name": "Elementium Reinforced Bulwark",
           "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
@@ -64939,7 +69631,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "The Immovable Object",
-              "itemId": null,
+              "itemId": 19321,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "2468 Armor, +44 Block, +15 Stamina - AV Exalted",
@@ -65066,7 +69758,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Tear of Grief",
-              "itemId": null,
+              "itemId": 281734,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+3 Intellect - Darkshore quest",
@@ -65082,7 +69774,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Nightglow Concoction",
-              "itemId": null,
+              "itemId": 281736,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+4 Spirit - Silverpine / Barrens quest",
@@ -65275,25 +69967,6 @@ if (typeof window !== 'undefined') {
                 "+5 Spirit"
               ],
               "source": "Old Habits"
-            },
-            {
-              "name": "Thermaplugg's Central Core",
-              "itemId": 9513,
-              "icon": "inv_staff_21",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Intellect, +5 Stamina - Gnomeregan",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": null,
-              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
-              "lines": [
-                "Held In Off-hand",
-                "+1 Intellect",
-                "+1 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ],
-              "source": "Drop / Quest"
             }
           ]
         },
@@ -65486,7 +70159,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Umbral Crystal",
-              "itemId": null,
+              "itemId": 10842,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+11 Shadow Res, +7 Intellect - Rare World Drop",
@@ -65649,7 +70322,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Drakestone of the Fireflash",
-              "itemId": null,
+              "itemId": 10843,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+21 Fire Spell Power - Sunken Temple: Drakes",
@@ -65665,7 +70338,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Drakestone of the Frozen",
-              "itemId": null,
+              "itemId": 10845,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+21 Frost Spell Power - Sunken Temple: Drakes",
@@ -66008,7 +70681,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Nightglow Concoction",
-              "itemId": null,
+              "itemId": 281736,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+4 Spirit - Silverpine / Barrens quest",
@@ -66360,7 +71033,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Umbral Crystal",
-              "itemId": null,
+              "itemId": 10842,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+11 Shadow Res, +7 Intellect - Rare World Drop",
@@ -66563,7 +71236,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Drakestone of the Fireflash",
-              "itemId": null,
+              "itemId": 10843,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+21 Fire Spell Power - Sunken Temple: Drakes",
@@ -66908,7 +71581,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Nightglow Concoction",
-              "itemId": null,
+              "itemId": 281736,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+4 Spirit - Silverpine / Barrens quest",
@@ -67260,7 +71933,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Umbral Crystal",
-              "itemId": null,
+              "itemId": 10842,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+11 Shadow Res, +7 Intellect - Rare World Drop",
@@ -67463,7 +72136,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Drakestone of the Fireflash",
-              "itemId": null,
+              "itemId": 10843,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+21 Fire Spell Power - Sunken Temple: Drakes",
@@ -67754,7 +72427,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Nightglow Concoction",
-              "itemId": null,
+              "itemId": 281736,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+4 Spirit - Silverpine / Barrens quest",
@@ -67795,7 +72468,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Tear of Grief",
-              "itemId": null,
+              "itemId": 281734,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+3 Intellect - Early quest reward",
@@ -68311,7 +72984,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Brightly Glowing Stone",
-              "itemId": null,
+              "itemId": 18523,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+7 Intellect, +37 Healing - Dire Maul West (Illyanna Ravenoak)",
@@ -68327,7 +73000,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Jin'do's Bag of Whammies",
-              "itemId": null,
+              "itemId": 19891,
               "icon": "inv_misc_orb_01",
               "weaponType": "Held In Off-hand",
               "value": "+11 Intellect, +6 Stamina, +18 Healing, +1% Spell Hit - Zul'Gurub",
@@ -68388,11 +73061,10 @@ if (typeof window !== 'undefined') {
       ]
     },
     "druid": {
-      "role": "Hybrid",
       "tracks": [
         {
           "id": "primary",
-          "name": "🔮 Balance & Feral Off-Hands / Idols"
+          "name": "Off-Hands & Class Idols (Feral, Balance & Resto)"
         },
         {
           "id": "healer",
@@ -68401,1625 +73073,1366 @@ if (typeof window !== 'undefined') {
       ],
       "levels": [
         {
-          "levelBracket": "1–9",
-          "itemId": 279898,
-          "name": "Dwarven Tome",
-          "icon": "inv_misc_book_07",
+          "levelBracket": "1–14",
+          "itemId": 281735,
+          "name": "Repurposed Rack",
           "weaponType": "Held In Off-hand",
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "quality": "q1",
+          "iLvl": 10,
+          "reqLevel": 5,
+          "stats": "+1 Stamina",
+          "icon": "inv_misc_book_06",
           "source": {
-            "kind": "quest",
-            "title": "Important Heirlooms",
-            "detail": "Important Heirlooms quest reward (Loch Modan). First true early spell power off-hand."
+            "kind": "vendor",
+            "title": "Starter Vendor",
+            "detail": "Early off-hand stat stick"
           },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 17,
-          "reqLevel": null,
-          "lines": [
-            "Held In Off-hand",
-            "+1 Spirit",
-            "+3 Spell Power & Healing"
-          ],
+          "faction": "both",
           "alts": [
             {
-              "name": "Native Branch",
-              "itemId": 15970,
-              "icon": "inv_wand_03",
+              "name": "Dwarven Tome",
+              "itemId": 1198,
               "weaponType": "Held In Off-hand",
-              "value": "+2 Intellect - Level 10 Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 15,
-              "reqLevel": 10,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 10"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Disciple's Stein",
-              "itemId": 15932,
-              "icon": "inv_drink_03",
-              "weaponType": "Held In Off-hand",
-              "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
-              "faction": "both",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 7"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Arcane Orb",
-              "itemId": 7507,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+2 Intellect, +1 Spirit - World drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 10,
-              "stats": "+1 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+1 Spirit",
-                "Requires Level 10"
-              ],
-              "source": "Quest Reward"
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_book_09",
+              "value": "World Drop"
             }
           ]
         },
         {
-          "levelBracket": "10–14",
-          "itemId": 1172,
-          "name": "Grayson's Torch",
-          "icon": "inv_torch_lit",
+          "levelBracket": "15–24",
+          "itemId": 273827,
+          "name": "Omega Orb",
           "weaponType": "Held In Off-hand",
-          "stats": "+4 Spirit",
-          "source": {
-            "kind": "quest",
-            "title": "The Coastal Menace",
-            "detail": "The Westfall Lighthouse / coastal quest. Reliable early stat stick."
-          },
-          "faction": "both",
-          "quality": "q2",
-          "iLvl": 21,
-          "reqLevel": 15,
-          "lines": [
-            "Held In Off-hand",
-            "+4 Spirit",
-            "Requires Level 15"
-          ],
-          "alts": [
-            {
-              "name": "Tear of Grief",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+3 Intellect - Darkshore quest",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Nightglow Concoction",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Spirit - Silverpine / Barrens quest",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "15–18",
-          "itemId": 273137,
-          "name": "Skum's Bucket",
-          "icon": "inv_misc_1h_bucket_c_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "+5 Intellect, +3 Stamina, On-Use: Restores 835 Mana",
-          "source": {
-            "kind": "drop",
-            "title": "Skum",
-            "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool and active mana fountain."
-          },
-          "faction": "both",
           "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "lines": [
-            "Held In Off-hand",
-            "+5 Intellect",
-            "+3 Stamina",
-            "On-Use: Restores 835 Mana",
-            "Requires Level 17"
-          ],
-          "alts": [
-            {
-              "name": "Antipodean Rod",
-              "itemId": 2879,
-              "icon": "inv_wand_04",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 17"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Mathystra Channeling Orb",
-              "itemId": 281291,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Intellect, +3 Spirit - Darkshore quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": null,
-              "stats": "+3 Stamina, +5 Intellect",
-              "lines": [
-                "Held In Off-hand",
-                "+3 Stamina",
-                "+5 Intellect"
-              ],
-              "source": "Baron Marinous"
-            },
-            {
-              "name": "Eerie Stable Lantern",
-              "itemId": 6341,
-              "icon": "inv_misc_lantern_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Stamina - SFK Deathsworn Captain",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 19,
-              "stats": "+4 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+4 Stamina",
-                "Requires Level 19"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "19–22",
-          "itemId": 279838,
-          "name": "Arcane Infused Rod",
-          "icon": "inv_wand_04",
-          "weaponType": "Held In Off-hand",
-          "stats": "+11 Arcane Spell Damage",
+          "iLvl": 28,
+          "reqLevel": 23,
+          "stats": "+5 Intellect, +5 Spirit",
+          "icon": "inv_misc_orb_03",
           "source": {
             "kind": "quest",
-            "title": "Starving Arcane",
-            "detail": "Starving Arcane quest in Ashenvale (Alliance). Massive Arcane throughput spike."
+            "title": "Compendium of the Fallen / World Drop",
+            "detail": "Balanced caster off-hand"
           },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 36,
-          "reqLevel": null,
-          "lines": [
-            "Held In Off-hand",
-            "+11 Arcane Spell Damage"
-          ],
+          "faction": "both",
           "alts": [
             {
-              "name": "Totem of Infliction",
-              "itemId": 1131,
-              "icon": "inv_misc_bone_elfskull_01",
+              "name": "Seedcloud Buckler",
+              "itemId": 13166,
               "weaponType": "Held In Off-hand",
-              "value": "+4 Intellect, Shadow Strike Proc - Loch Modan",
-              "faction": "alliance",
               "quality": "q2",
               "iLvl": 25,
-              "reqLevel": 18,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 18"
-              ],
-              "source": "The Totem of Infliction"
-            },
-            {
-              "name": "Apothecary's Concoction",
-              "itemId": 284668,
-              "icon": "inv_potion_80",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Stamina, +3 Intellect - Barrens quest",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 24,
-              "reqLevel": 19,
-              "stats": "-5 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "-5 Stamina",
-                "Requires Level 19"
-              ],
-              "source": "Drop / Quest"
+              "reqLevel": 20,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_shield_08",
+              "value": "World Drop"
             }
           ]
         },
         {
-          "levelBracket": "23–26",
-          "itemId": 249394,
-          "name": "Orb of Mystic Insight",
-          "icon": "inv_misc_orb_blue",
+          "levelBracket": "25–34",
+          "itemId": 271213,
+          "name": "Mirror of Rath'mael",
           "weaponType": "Held In Off-hand",
-          "stats": "+6 Intellect, +7 Spell Power & Healing",
-          "source": {
-            "kind": "drop",
-            "title": "Orb of Mystic Insight",
-            "detail": "Crafted by Enchanters. Reliable high spell power off-hand for mid-20s."
-          },
-          "faction": "both",
           "quality": "q3",
-          "iLvl": 30,
-          "reqLevel": 25,
-          "lines": [
-            "Held In Off-hand",
-            "+6 Intellect",
-            "+7 Spell Power & Healing",
-            "Requires Level 25"
-          ],
-          "alts": [
-            {
-              "name": "Flamescarred Spellbook",
-              "itemId": 281306,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 31,
-              "reqLevel": null,
-              "stats": "+2 Stamina, +5 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+2 Stamina",
-                "+5 Spirit"
-              ],
-              "source": "Old Habits"
-            },
-            {
-              "name": "Thermaplugg's Central Core",
-              "itemId": 9513,
-              "icon": "inv_staff_21",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Intellect, +5 Stamina - Gnomeregan",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": null,
-              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
-              "lines": [
-                "Held In Off-hand",
-                "+1 Intellect",
-                "+1 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "27–30",
-          "itemId": 273027,
-          "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
-          "weaponType": "Held In Off-hand",
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
-          "source": {
-            "kind": "drop",
-            "title": "Shadetooth",
-            "detail": "Excavation Site: Wetlands (Shadetooth). Elite dungeon spell power focus."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "lines": [
-            "Held In Off-hand",
-            "+4 Stamina",
-            "+4 Intellect",
-            "+8 Spell Power & Healing",
-            "Requires Level 26"
-          ],
-          "alts": [
-            {
-              "name": "Skull of Impending Doom",
-              "itemId": 4984,
-              "icon": "inv_misc_bone_elfskull_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+60% Run Speed On-Use, breaks CC - Badlands quest",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 41,
-              "reqLevel": 30,
-              "stats": "+7 Intellect",
-              "lines": [
-                "Held In Off-hand",
-                "+7 Intellect",
-                "Requires Level 30"
-              ],
-              "source": "Forbidden Knowledge"
-            },
-            {
-              "name": "Celestial Orb",
-              "itemId": 7515,
-              "icon": "inv_misc_orb_03",
-              "weaponType": "Held In Off-hand",
-              "value": "+3 Intellect, +3 Spirit, +3 Stamina - Mage Class Quest",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 40,
-              "reqLevel": 35,
-              "stats": "+3 Intellect, +13 Spell Power",
-              "lines": [
-                "Held In Off-hand",
-                "+3 Intellect",
-                "+13 Spell Power",
-                "Requires Level 35"
-              ],
-              "source": "Celestial Power"
-            },
-            {
-              "name": "Ponderous Orb",
-              "itemId": 273052,
-              "icon": "inv_misc_orb_04",
-              "weaponType": "Held In Off-hand",
-              "value": "+2 Intellect, +8 Spirit, +11 Spell Power - Dalaran",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 35,
-              "reqLevel": 30,
-              "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
-              "lines": [
-                "Held In Off-hand",
-                "+2 Intellect",
-                "+8 Spirit",
-                "Equip: Increases healing done by up to 11",
-                "Requires Level 30"
-              ],
-              "source": "Shade of the Archmage"
-            }
-          ]
-        },
-        {
-          "levelBracket": "31–34",
-          "itemId": 7685,
-          "name": "Orb of the Forgotten Seer",
-          "icon": "inv_misc_orb_02",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Spell Power & Healing",
-          "source": {
-            "kind": "drop",
-            "title": "Bloodmage Thalnos",
-            "detail": "Scarlet Monastery Library: Bloodmage Thalnos / Doan. The gold-standard mid-game caster off-hand."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 37,
-          "reqLevel": 32,
-          "lines": [
-            "Held In Off-hand",
-            "+14 Spell Power & Healing",
-            "Requires Level 32"
-          ],
-          "alts": [
-            {
-              "name": "Swampchill Fetish",
-              "itemId": 1992,
-              "icon": "inv_misc_bone_orcskull_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+10 Frost Spell Power, +6 Intellect - Swamp of Sorrows",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 38,
-              "reqLevel": 33,
-              "stats": "+5 Frost Resistance, +5 Shadow Resistance",
-              "lines": [
-                "Held In Off-hand",
-                "+5 Frost Resistance",
-                "+5 Shadow Resistance",
-                "Requires Level 33"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "A Lesson in Destruction",
-              "itemId": 276897,
-              "icon": "inv_misc_book_06",
-              "weaponType": "Held In Off-hand",
-              "value": "+8 Stamina, +6 Spirit - World Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 38,
-              "reqLevel": 1,
-              "stats": "+8 Stamina, +6 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+8 Stamina",
-                "+6 Spirit"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "35–38",
-          "itemId": 271805,
-          "name": "Thrice-Damned Effigy",
+          "iLvl": 38,
+          "reqLevel": 33,
+          "stats": "+7 Intellect, +6 Spirit",
           "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
           "source": {
-            "kind": "drop",
-            "title": "Khan Jehn",
-            "detail": "Maraudon: Khan Jehn. Elite caster off-hand throughout the late 30s."
-          },
-          "faction": "horde",
-          "quality": "q3",
-          "iLvl": 42,
-          "reqLevel": 35,
-          "lines": [
-            "Held In Off-hand",
-            "+4 Intellect",
-            "+7 Spirit",
-            "+2 Stamina",
-            "+10 Spell Power",
-            "Requires Level 35"
-          ],
-          "alts": [
-            {
-              "name": "Mordresh's Lifeless Skull",
-              "itemId": 10770,
-              "icon": "inv_misc_bone_elfskull_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Spirit, +14 Fire Spell Power - Razorfen Downs",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 41,
-              "reqLevel": 36,
-              "stats": "+5 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+5 Spirit",
-                "Requires Level 36"
-              ],
-              "source": "Mordresh Fire Eye"
-            },
-            {
-              "name": "Umbral Crystal",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+11 Shadow Res, +7 Intellect - Rare World Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "39–42",
-          "itemId": 277260,
-          "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
-          "weaponType": "Held In Off-hand",
-          "stats": "+12 Stamina, +7 Fire Spell Damage",
-          "source": {
-            "kind": "quest",
-            "title": "Greater Friend of the Library",
-            "detail": "Greater Friend of the Library quest reward. Heavy durability and spell damage."
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "High mana regeneration off-hand"
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 45,
-          "reqLevel": 40,
-          "lines": [
-            "Held In Off-hand",
-            "+12 Stamina",
-            "+7 Fire Spell Damage",
-            "Requires Level 40"
-          ],
-          "alts": [
-            {
-              "name": "Rotting Meat",
-              "itemId": 282706,
-              "icon": "inv_misc_food_18",
-              "weaponType": "Held In Off-hand",
-              "value": "+12 Stamina - World Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 39,
-              "stats": "+12 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+12 Stamina",
-                "Requires Level 39"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Lord Sakrasis' Scepter",
-              "itemId": 5028,
-              "icon": "inv_wand_10",
-              "weaponType": "Held In Off-hand",
-              "value": "+6 Intellect - Desolace",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 47,
-              "reqLevel": 42,
-              "stats": "+6 Intellect",
-              "lines": [
-                "Held In Off-hand",
-                "+6 Intellect",
-                "Requires Level 42"
-              ],
-              "source": "Lord Sakrasis"
-            }
-          ]
-        },
-        {
-          "levelBracket": "43–46",
-          "itemId": 249455,
-          "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
-          "weaponType": "Held In Off-hand",
-          "stats": "+8 Stamina, +8 Intellect, +10 Spell Power & Healing",
-          "source": {
-            "kind": "drop",
-            "title": "Truesilver Conduit",
-            "detail": "Crafted by Enchanters / Tradeskills. Consistent high spell power leading into endgame."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 50,
-          "reqLevel": 45,
-          "lines": [
-            "Held In Off-hand",
-            "+8 Stamina",
-            "+8 Intellect",
-            "+10 Spell Power & Healing",
-            "Requires Level 45"
-          ],
-          "alts": [
-            {
-              "name": "Heart of Smoldar",
-              "itemId": 282088,
-              "icon": "inv_misc_orb_05",
-              "weaponType": "Held In Off-hand",
-              "value": "+8 Stamina, +14 Fire Spell Power - Burning Steppes",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 47,
-              "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
-              "lines": [
-                "Held In Off-hand",
-                "+8 Stamina",
-                "Equip: Increases healing done by up to 16",
-                "Requires Level 47"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Shard of the Green Flame",
-              "itemId": 18762,
-              "icon": "inv_misc_shadowegg",
-              "weaponType": "Held In Off-hand",
-              "value": "+10 Fire Spell Power, +8 Intellect - Sunken Temple",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 54,
-              "reqLevel": 50,
-              "stats": "+12 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+12 Stamina",
-                "Requires Level 50"
-              ],
-              "source": "Kroshius' Infernal Core"
-            }
-          ]
-        },
-        {
-          "levelBracket": "47–50",
-          "itemId": 11904,
-          "name": "Spirit of Aquementas",
-          "icon": "inv_ore_arcanite_02",
-          "weaponType": "Held In Off-hand",
-          "stats": "+21 Spell Power & Healing",
-          "source": {
-            "kind": "quest",
-            "title": "It's Dangerous to Go Alone",
-            "detail": "It's Dangerous to Go Alone quest reward in Un'Goro Crater (Linken chain). Premier pre-60 focus."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 56,
-          "reqLevel": null,
-          "lines": [
-            "Held In Off-hand",
-            "+21 Spell Power & Healing"
-          ],
-          "alts": [
-            {
-              "name": "Drakestone of the Fireflash",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+21 Fire Spell Power - Sunken Temple: Drakes",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Drakestone of the Frozen",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+21 Frost Spell Power - Sunken Temple: Drakes",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "51–54",
-          "itemId": 274417,
-          "name": "Barkskin Baubles",
-          "icon": "inv_misc_bag_10_black",
-          "weaponType": "Held In Off-hand",
-          "stats": "+10 Stamina, +10 Spirit, +22 Healing & Spell Power",
-          "source": {
-            "kind": "drop",
-            "title": "Dala Fairmaw",
-            "detail": "Dropped by Dala Fairmaw. Outstanding survivability and throughput entering endgame."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 58,
-          "reqLevel": 53,
-          "lines": [
-            "Held In Off-hand",
-            "+10 Stamina",
-            "+10 Spirit",
-            "+22 Healing & Spell Power",
-            "Requires Level 53"
-          ],
-          "alts": [
-            {
-              "name": "Furbolg Medicine Pouch",
-              "itemId": 16768,
-              "icon": "inv_misc_bag_11",
-              "weaponType": "Held In Off-hand",
-              "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 1,
-              "stats": "+10 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+10 Stamina"
-              ],
-              "source": "Gorn One Eye"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271933,
-              "icon": "inv_misc_book_06",
-              "weaponType": "Held In Off-hand",
-              "value": "+14 Stamina, +6 Intellect, +5 Spell Power",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
-              "lines": [
-                "Held In Off-hand",
-                "+14 Stamina",
-                "+6 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 5",
-                "Requires Level 48"
-              ],
-              "source": "Bryanna Embreeze"
-            }
-          ]
-        },
-        {
-          "levelBracket": "55–58",
-          "itemId": 19315,
-          "name": "Therazane's Touch",
-          "icon": "inv_misc_branch_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "+29 Spell Power",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop Epic / Raid",
-            "detail": "Alterac Valley / Reputation. Premier raw damage off-hand focus."
-          },
-          "faction": "both",
-          "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
-          "lines": [
-            "Held In Off-hand",
-            "+29 Spell Power",
-            "Requires Level 55"
-          ],
           "alts": [
             {
               "name": "Tome of the Fiery Arcana",
-              "itemId": 19308,
-              "icon": "inv_misc_book_01",
+              "itemId": 19311,
               "weaponType": "Held In Off-hand",
-              "value": "+34 Fire Spell Power - Alterac Valley (Fire Mage BiS)",
-              "faction": "both",
-              "quality": "q4",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": "+3 MP5",
-              "lines": [
-                "Held In Off-hand",
-                "+3 MP5",
-                "Requires Level 55"
-              ],
-              "source": "World Drop Epic / Raid"
-            },
-            {
-              "name": "Tome of Arcane Domination",
-              "itemId": 19312,
-              "icon": "inv_misc_flower_04",
-              "weaponType": "Held In Off-hand",
-              "value": "+34 Arcane Spell Power - Alterac Valley (Arcane BiS)",
-              "faction": "both",
-              "quality": "q4",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
-              "lines": [
-                "Held In Off-hand",
-                "+11 Stamina",
-                "+25 Healing",
-                "+12 Spell Power",
-                "+5 MP5",
-                "Requires Level 55"
-              ],
-              "source": "World Drop Epic / Raid"
-            },
-            {
-              "name": "Tome of Sacrifice",
-              "itemId": 18602,
-              "icon": "inv_misc_book_06",
-              "weaponType": "Held In Off-hand",
-              "value": "+12 Stamina - Suppression",
-              "faction": "both",
               "quality": "q3",
-              "iLvl": 60,
-              "reqLevel": 60,
-              "stats": "+12 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+12 Stamina",
-                "Requires Level 60"
-              ],
-              "source": "Suppression"
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+8 Intellect",
+              "icon": "inv_misc_book_06",
+              "value": "Alterac Valley"
             }
           ]
         },
         {
-          "levelBracket": "59–60",
-          "itemId": 19309,
-          "name": "Master Dragonslayer's Orb",
-          "icon": "inv_misc_book_06",
+          "levelBracket": "35–44",
+          "itemId": 277258,
+          "name": "Crest of Elucidation",
           "weaponType": "Held In Off-hand",
-          "stats": "+14 Intellect, +28 Spell Power",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 43,
+          "stats": "+10 Intellect, +8 Spirit",
+          "icon": "inv_misc_orb_02",
           "source": {
-            "kind": "quest",
-            "title": "World Drop Epic / Raid",
-            "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+            "kind": "dungeon",
+            "title": "Zul'Farrak / ST Drop",
+            "detail": "Strong healing and balance off-hand"
           },
           "faction": "both",
-          "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
-          "lines": [
-            "Held In Off-hand",
-            "+14 Intellect",
-            "+28 Spell Power",
-            "Requires Level 55"
-          ],
           "alts": [
             {
-              "name": "Grand Marshal's Tome of Power",
-              "itemId": 234589,
-              "icon": "inv_misc_book_12",
+              "name": "Umbral Crystal",
+              "itemId": 10842,
               "weaponType": "Held In Off-hand",
-              "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
-              "faction": "alliance",
-              "quality": "q4",
-              "iLvl": 80,
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+9 Intellect, +7 Spirit",
+              "icon": "inv_misc_gem_crystal_01",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–54",
+          "itemId": 16768,
+          "name": "Furbolg Medicine Pouch",
+          "weaponType": "Held In Off-hand",
+          "quality": "q2",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "stats": "+10 Stamina, Use: Regenerates 800 to 1000 health over 10 sec",
+          "icon": "inv_misc_bag_07_red",
+          "source": {
+            "kind": "reputation",
+            "title": "Timbermaw Hold — Friendly",
+            "detail": "Essential feral & leveling health regen pouch"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Spirit of Aquementas",
+              "itemId": 11904,
+              "weaponType": "Held In Off-hand",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "Equip: +20 Spell Damage & Healing, Reduces mana cost by 25",
+              "icon": "inv_misc_book_08",
+              "value": "Un'Goro — Linken Quest Chain"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 22397,
+          "name": "Idol of Ferocity",
+          "weaponType": "Idol",
+          "quality": "q3",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "stats": "Equip: Reduces the Energy cost of Claw and Rake by 3",
+          "icon": "inv_relics_idolofferocity",
+          "source": {
+            "kind": "dungeon",
+            "title": "Stratholme Undead — The Unforgiven",
+            "detail": "Premier Feral Cat DPS Idol"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Idol of Brutality",
+              "itemId": 23198,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-              "lines": [
-                "Held In Off-hand",
-                "+24 Stamina",
-                "+13 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
-                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-                "Requires Level 60"
-              ],
-              "source": "Captain O'Neal"
+              "stats": "Equip: Reduces Rage cost of Maul and Swipe by 3",
+              "icon": "inv_relics_idolofferocity",
+              "value": "AQ20 — Moam (Bear Tank BiS)"
             },
             {
-              "name": "High Warlord's Tome of Destruction",
-              "itemId": 234563,
-              "icon": "inv_misc_book_15",
-              "weaponType": "Held In Off-hand",
-              "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
-              "faction": "horde",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-              "lines": [
-                "Held In Off-hand",
-                "+24 Stamina",
-                "+13 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
-                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-                "Requires Level 60"
-              ],
-              "source": "Sergeant Thunderhorn"
+              "name": "Idol of the Moon",
+              "itemId": 23004,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Increases Moonfire spell damage by 17%",
+              "icon": "inv_relics_idolofthemoon",
+              "value": "Scholomance — Ras Frostwhisper (Balance BiS)"
             },
             {
-              "name": "Royal Scepter of Vek'lor",
-              "itemId": 21597,
-              "icon": "inv_wand_10",
+              "name": "Idol of Rejuvenation",
+              "itemId": 22398,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Increases Rejuvenation healing by up to 50",
+              "icon": "inv_relics_idolofrejuvenation",
+              "value": "Stratholme Live — Hearthsinger Forresten (Resto BiS)"
+            },
+            {
+              "name": "Idol of Health",
+              "itemId": 22399,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Reduces cast time of Healing Touch by 0.15s",
+              "icon": "inv_relics_idolofrejuvenation",
+              "value": "LBRS — Mor Grayhoof"
+            },
+            {
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
               "weaponType": "Held In Off-hand",
-              "value": "+10 Stamina, +9 Intellect, +20 Spell Power, +14 Crit, +10 Hit - AQ40",
-              "faction": "both",
               "quality": "q4",
-              "iLvl": 81,
+              "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+10 Stamina, +9 Intellect, +20 Spell Power, +14 Crit, +10 Hit",
-              "lines": [
-                "Held In Off-hand",
-                "+10 Stamina",
-                "+9 Intellect",
-                "+20 Spell Power",
-                "+14 Crit",
-                "+10 Hit",
-                "Requires Level 60"
-              ],
-              "source": "Emperor Vek'lor"
+              "stats": "+10 Intellect, +10 Spirit, Equip: +29 Healing",
+              "icon": "inv_misc_flower_02",
+              "value": "Alterac Valley Exalted"
             }
           ]
         }
       ],
       "healingLevels": [
         {
-          "levelBracket": "1–10",
-          "itemId": 1172,
-          "name": "Grayson's Torch",
-          "icon": "inv_torch_lit",
+          "levelBracket": "1–24",
+          "itemId": 281735,
+          "name": "Repurposed Rack",
           "weaponType": "Held In Off-hand",
-          "stats": "+4 Spirit",
+          "quality": "q1",
+          "iLvl": 10,
+          "reqLevel": 5,
+          "stats": "+1 Stamina",
+          "icon": "inv_misc_book_06",
           "source": {
-            "kind": "quest",
-            "title": "The Coastal Menace",
-            "detail": "The Westfall Lighthouse quest. Provides crucial early Spirit mana regeneration."
+            "kind": "vendor",
+            "title": "Starter Vendor",
+            "detail": "Early off-hand stat stick"
           },
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 21,
-          "reqLevel": 15,
-          "lines": [
-            "Held In Off-hand",
-            "+4 Spirit",
-            "Requires Level 15"
-          ],
           "alts": [
             {
               "name": "Dwarven Tome",
-              "itemId": 279898,
-              "icon": "inv_misc_book_07",
+              "itemId": 1198,
               "weaponType": "Held In Off-hand",
-              "value": "+1 Spirit, +3 Healing - Loch Modan",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": null,
-              "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
-              "lines": [
-                "Held In Off-hand",
-                "+1 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 3"
-              ],
-              "source": "Important Heirlooms"
-            },
-            {
-              "name": "Nightglow Concoction",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Spirit - Silverpine / Barrens quest",
-              "faction": "horde",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            }
-          ]
-        },
-        {
-          "levelBracket": "11–16",
-          "itemId": 7344,
-          "name": "Torch of Holy Flame",
-          "icon": "inv_staff_05",
-          "weaponType": "Held In Off-hand",
-          "stats": "+6 Spirit, +4 Intellect",
-          "source": {
-            "kind": "quest",
-            "title": "Morbent Fel",
-            "detail": "Duskwood: Morgan Ladimore quest chain. Outstanding Spirit and Intellect for low-level healing."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 33,
-          "reqLevel": 20,
-          "lines": [
-            "Held In Off-hand",
-            "+6 Spirit",
-            "+4 Intellect",
-            "Requires Level 20"
-          ],
-          "alts": [
-            {
-              "name": "Tear of Grief",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+3 Intellect - Early quest reward",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Disciple's Stein",
-              "itemId": 15932,
-              "icon": "inv_drink_03",
-              "weaponType": "Held In Off-hand",
-              "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
-              "faction": "both",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 7"
-              ],
-              "source": "Drop / Quest"
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_book_09",
+              "value": "World Drop"
             }
           ]
         },
         {
-          "levelBracket": "17–20",
-          "itemId": 273137,
-          "name": "Skum's Bucket",
-          "icon": "inv_misc_1h_bucket_c_01",
+          "levelBracket": "25–44",
+          "itemId": 271213,
+          "name": "Mirror of Rath'mael",
           "weaponType": "Held In Off-hand",
-          "stats": "+3 Stamina, +10 Healing, On-Use: Restores 835 Mana",
-          "source": {
-            "kind": "drop",
-            "title": "Skum",
-            "detail": "Wailing Caverns: Skum. Dedicated early healing power and on-use mana recovery."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "lines": [
-            "Held In Off-hand",
-            "+3 Stamina",
-            "+10 Healing",
-            "On-Use: Restores 835 Mana",
-            "Requires Level 17"
-          ],
-          "alts": [
-            {
-              "name": "Antipodean Rod",
-              "itemId": 2879,
-              "icon": "inv_wand_04",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand",
-                "Requires Level 17"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Mathystra Channeling Orb",
-              "itemId": 281291,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Intellect, +3 Spirit - Darkshore quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": null,
-              "stats": "+3 Stamina, +5 Intellect",
-              "lines": [
-                "Held In Off-hand",
-                "+3 Stamina",
-                "+5 Intellect"
-              ],
-              "source": "Baron Marinous"
-            }
-          ]
-        },
-        {
-          "levelBracket": "21–25",
-          "itemId": 285348,
-          "name": "Alliance Outrunner Healing Rod",
-          "icon": "inv_wand_04",
-          "weaponType": "Held In Off-hand",
-          "stats": "+12 Healing, +4 Spirit",
-          "source": {
-            "kind": "quest",
-            "title": "Hannah Bladeleaf",
-            "detail": "Ashenvale quest reward (Hannah Bladeleaf). High early +Healing throughput focus."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 26,
-          "reqLevel": 21,
-          "lines": [
-            "Held In Off-hand",
-            "+12 Healing",
-            "+4 Spirit",
-            "Requires Level 21"
-          ],
-          "alts": [
-            {
-              "name": "Eye of Paleth",
-              "itemId": 2943,
-              "icon": "inv_misc_orb_03",
-              "weaponType": "Held In Off-hand",
-              "value": "+6 Spirit, +4 Intellect, +9 Healing - Wetlands",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 31,
-              "reqLevel": 22,
-              "stats": "+9 Healing, +4 Spell Power",
-              "lines": [
-                "Held In Off-hand",
-                "+9 Healing",
-                "+4 Spell Power",
-                "Requires Level 22"
-              ],
-              "source": "Cleansing the Eye"
-            },
-            {
-              "name": "Orb of Souls",
-              "itemId": 249395,
-              "icon": "inv_misc_orb_04",
-              "weaponType": "Held In Off-hand",
-              "value": "+6 Spirit, +13 Healing - Crafted",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
-              "lines": [
-                "Held In Off-hand",
-                "+6 Spirit",
-                "Equip: Increases healing done by up to 13",
-                "Requires Level 25"
-              ],
-              "source": "Orb of Souls"
-            }
-          ]
-        },
-        {
-          "levelBracket": "26–30",
-          "itemId": 273052,
-          "name": "Ponderous Orb",
-          "icon": "inv_misc_orb_04",
-          "weaponType": "Held In Off-hand",
-          "stats": "+2 Intellect, +8 Spirit, +11 Healing & Spell Power",
-          "source": {
-            "kind": "drop",
-            "title": "Shade of the Archmage",
-            "detail": "Dalaran: Shade of the Archmage. Premier healing and mana regeneration focus."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
-          "lines": [
-            "Held In Off-hand",
-            "+2 Intellect",
-            "+8 Spirit",
-            "+11 Healing & Spell Power",
-            "Requires Level 30"
-          ],
-          "alts": [
-            {
-              "name": "Salve and Salvation",
-              "itemId": 276898,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+9 Spirit, +50 Armor, +9 Healing - Past Due quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 38,
-              "reqLevel": null,
-              "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
-              "lines": [
-                "Held In Off-hand",
-                "+9 Spirit",
-                "+50 Armor",
-                "Equip: Increases healing done by up to 9"
-              ],
-              "source": "Past Due"
-            },
-            {
-              "name": "Raptor's Gaze",
-              "itemId": 273027,
-              "icon": "spell_nature_crystalball",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Intellect, +4 Stamina, +8 Healing - Wetlands",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
-              "lines": [
-                "Held In Off-hand",
-                "+4 Stamina",
-                "+4 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 8",
-                "Requires Level 26"
-              ],
-              "source": "Shadetooth"
-            },
-            {
-              "name": "Skull of Impending Doom",
-              "itemId": 4984,
-              "icon": "inv_misc_bone_elfskull_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+60% Run Speed On-Use, breaks CC - Badlands",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 41,
-              "reqLevel": 30,
-              "stats": "+7 Intellect",
-              "lines": [
-                "Held In Off-hand",
-                "+7 Intellect",
-                "Requires Level 30"
-              ],
-              "source": "Forbidden Knowledge"
-            }
-          ]
-        },
-        {
-          "levelBracket": "31–36",
-          "itemId": 11262,
-          "name": "Orb of Lorica",
-          "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "+10 Intellect, +12 Healing, +6 Spell Power",
-          "source": {
-            "kind": "quest",
-            "title": "In the Name of the Light",
-            "detail": "Desolace: In the Name of the Light quest reward. High mana pool and healing output."
-          },
-          "faction": "alliance",
-          "quality": "q3",
-          "iLvl": 44,
-          "reqLevel": 34,
-          "lines": [
-            "Held In Off-hand",
-            "+10 Intellect",
-            "+12 Healing",
-            "+6 Spell Power",
-            "Requires Level 34"
-          ],
-          "alts": [
-            {
-              "name": "Orb of the Forgotten Seer",
-              "itemId": 7685,
-              "icon": "inv_misc_orb_02",
-              "weaponType": "Held In Off-hand",
-              "value": "+14 Healing & Spell Power - SM Library",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 37,
-              "reqLevel": 32,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
-              "lines": [
-                "Held In Off-hand",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 14",
-                "Requires Level 32"
-              ],
-              "source": "Bloodmage Thalnos"
-            },
-            {
-              "name": "Mordresh's Lifeless Skull",
-              "itemId": 10770,
-              "icon": "inv_misc_bone_elfskull_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+5 Spirit, +14 Spell Power - RFD",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 41,
-              "reqLevel": 36,
-              "stats": "+5 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+5 Spirit",
-                "Requires Level 36"
-              ],
-              "source": "Mordresh Fire Eye"
-            }
-          ]
-        },
-        {
-          "levelBracket": "37–44",
-          "itemId": 9393,
-          "name": "Beacon of Hope",
-          "icon": "inv_misc_lantern_01",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Healing, +8 Spell Power",
-          "source": {
-            "kind": "quest",
-            "title": "Drop / Quest",
-            "detail": "Uldaman: Ironaya / Archaedas. Unbeatable dedicated healing focus for the late 30s and 40s."
-          },
-          "faction": "both",
           "quality": "q3",
           "iLvl": 38,
           "reqLevel": 33,
-          "lines": [
-            "Held In Off-hand",
-            "+14 Healing",
-            "+8 Spell Power",
-            "Requires Level 33"
-          ],
+          "stats": "+7 Intellect, +6 Spirit",
+          "icon": "inv_misc_orb_01",
+          "source": {
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "High mana regeneration off-hand"
+          },
+          "faction": "both",
           "alts": [
             {
-              "name": "Fermented Restoration Potion",
-              "itemId": 277259,
-              "icon": "inv_potion_19",
+              "name": "Tome of the Fiery Arcana",
+              "itemId": 19311,
               "weaponType": "Held In Off-hand",
-              "value": "+12 Stamina, +5 Spirit, +16 Healing",
-              "faction": "both",
               "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+12 Stamina, +5 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+12 Stamina",
-                "+5 Spirit",
-                "Requires Level 40"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Thrice-Damned Effigy",
-              "itemId": 271805,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+4 Intellect, +7 Spirit, +10 Healing - Maraudon",
-              "faction": "horde",
-              "quality": "q3",
-              "iLvl": 42,
-              "reqLevel": 35,
-              "stats": "+2 Stamina, +4 Intellect, +7 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+2 Stamina",
-                "+4 Intellect",
-                "+7 Spirit",
-                "Requires Level 35"
-              ],
-              "source": "Khan Jehn"
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+8 Intellect",
+              "icon": "inv_misc_book_06",
+              "value": "Alterac Valley"
             }
           ]
         },
         {
-          "levelBracket": "45–52",
-          "itemId": 249456,
-          "name": "Twisting Essence Jar",
-          "icon": "inv_10_misc_dragonorb_color1",
+          "levelBracket": "45–54",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
           "weaponType": "Held In Off-hand",
-          "stats": "+8 Stamina, +8 Spirit, +19 Healing",
+          "quality": "q3",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "stats": "Equip: +20 Spell Damage & Healing, Reduces mana cost by 25",
+          "icon": "inv_misc_book_08",
           "source": {
-            "kind": "drop",
-            "title": "Twisting Essence Jar",
-            "detail": "Crafted by Enchanters / Tradeskills. Top-tier late-game +Healing and Spirit regeneration focus."
+            "kind": "quest",
+            "title": "Un'Goro — Linken Quest Chain",
+            "detail": "Top tier healing & spell damage off-hand"
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 50,
-          "reqLevel": 45,
-          "lines": [
-            "Held In Off-hand",
-            "+8 Stamina",
-            "+8 Spirit",
-            "+19 Healing",
-            "Requires Level 45"
-          ],
-          "alts": [
-            {
-              "name": "Truesilver Conduit",
-              "itemId": 249455,
-              "icon": "inv_rod_enchantedadamantite",
-              "weaponType": "Held In Off-hand",
-              "value": "+8 Stamina, +8 Intellect, +10 Healing - Crafted",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
-              "lines": [
-                "Held In Off-hand",
-                "+8 Stamina",
-                "+8 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 10",
-                "Requires Level 45"
-              ],
-              "source": "Truesilver Conduit"
-            },
-            {
-              "name": "Spirit of Aquementas",
-              "itemId": 11904,
-              "icon": "inv_ore_arcanite_02",
-              "weaponType": "Held In Off-hand",
-              "value": "+21 Healing & Spell Power - Un'Goro Linken quest",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": null,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
-              "lines": [
-                "Held In Off-hand",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-              ],
-              "source": "It's Dangerous to Go Alone"
-            }
-          ]
-        },
-        {
-          "levelBracket": "53–58",
-          "itemId": 274417,
-          "name": "Barkskin Baubles",
-          "icon": "inv_misc_bag_10_black",
-          "weaponType": "Held In Off-hand",
-          "stats": "+10 Stamina, +10 Spirit, +22 Healing",
-          "source": {
-            "kind": "drop",
-            "title": "Dala Fairmaw",
-            "detail": "Dropped by Dala Fairmaw. Outstanding survivability and healing throughput."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 58,
-          "reqLevel": 53,
-          "lines": [
-            "Held In Off-hand",
-            "+10 Stamina",
-            "+10 Spirit",
-            "+22 Healing",
-            "Requires Level 53"
-          ],
           "alts": [
             {
               "name": "Furbolg Medicine Pouch",
               "itemId": 16768,
-              "icon": "inv_misc_bag_11",
               "weaponType": "Held In Off-hand",
-              "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
-              "faction": "both",
               "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 1,
-              "stats": "+10 Stamina",
-              "lines": [
-                "Held In Off-hand",
-                "+10 Stamina"
-              ],
-              "source": "Gorn One Eye"
+              "iLvl": 55,
+              "reqLevel": 50,
+              "stats": "+10 Stamina, Use: 1000 HP regen",
+              "icon": "inv_misc_bag_07_red",
+              "value": "Timbermaw Hold"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 19312,
+          "name": "Lei of the Lifegiver",
+          "weaponType": "Held In Off-hand",
+          "quality": "q4",
+          "iLvl": 65,
+          "reqLevel": 60,
+          "stats": "+10 Intellect, +10 Spirit, Equip: +29 Healing",
+          "icon": "inv_misc_flower_02",
+          "source": {
+            "kind": "pvp",
+            "title": "Alterac Valley Exalted",
+            "detail": "Premier pre-raid Restoration off-hand"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Idol of Rejuvenation",
+              "itemId": 22398,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "Equip: Increases Rejuvenation healing by up to 50",
+              "icon": "inv_relics_idolofrejuvenation",
+              "value": "Stratholme Live"
             },
             {
-              "name": "Yashiro's Spirit Bead",
-              "itemId": 276336,
-              "icon": "inv_misc_orb_05",
-              "weaponType": "Held In Off-hand",
-              "value": "+12 Spirit - Level 60 Rare Drop",
-              "faction": "both",
-              "quality": "q2",
+              "name": "Idol of Health",
+              "itemId": 22399,
+              "weaponType": "Idol",
+              "quality": "q3",
               "iLvl": 60,
-              "reqLevel": 1,
-              "stats": "+12 Spirit",
-              "lines": [
-                "Held In Off-hand",
-                "+12 Spirit"
-              ],
-              "source": "Drop / Quest"
+              "reqLevel": 55,
+              "stats": "Equip: Reduces cast time of Healing Touch by 0.15s",
+              "icon": "inv_relics_idolofrejuvenation",
+              "value": "LBRS"
+            }
+          ]
+        }
+      ]
+    },
+    "rogue": {
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Off-Hand Weapons (Fast Daggers & Swords for Combat / Subtlety)"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "10–14",
+          "itemId": 2494,
+          "name": "Stiletto",
+          "weaponType": "Dagger",
+          "speed": "1.50",
+          "dps": "4.7 DPS",
+          "stats": "",
+          "quality": "q1",
+          "iLvl": 12,
+          "reqLevel": 7,
+          "icon": "inv_weapon_shortblade_05",
+          "source": {
+            "kind": "vendor",
+            "title": "Weapon Vendor",
+            "detail": "Fast 1.50s off-hand for early poison procs"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Thief's Blade",
+              "itemId": 4565,
+              "weaponType": "1H Sword",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "speed": "2.00",
+              "dps": "6.5 DPS",
+              "stats": "+2 Agility, +1 Stamina",
+              "icon": "inv_sword_21",
+              "value": "Westfall / Silverpine Drop"
+            },
+            {
+              "name": "Poniard",
+              "itemId": 2140,
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "speed": "1.50",
+              "dps": "4.7 DPS",
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05",
+              "value": "Vendor"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 5200,
+          "name": "Tail Spike",
+          "weaponType": "Dagger",
+          "speed": "1.40",
+          "dps": "10.0 DPS",
+          "stats": "+2 Agility",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "icon": "inv_weapon_shortblade_01",
+          "source": {
+            "kind": "dungeon",
+            "title": "Wailing Caverns — Skum",
+            "detail": "Ultra-fast 1.40 speed off-hand dagger"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Cruel Barb",
+              "itemId": 5193,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "speed": "2.80",
+              "dps": "12.3 DPS",
+              "stats": "+6 Attack Power, +3 Agility",
+              "icon": "inv_sword_23",
+              "value": "The Deadmines — Edwin VanCleef"
+            },
+            {
+              "name": "Butcher's Cleaver",
+              "itemId": 1292,
+              "weaponType": "1H Axe",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "speed": "2.80",
+              "dps": "12.3 DPS",
+              "stats": "+5 Strength, +2 Agility",
+              "icon": "inv_axe_04",
+              "value": "SFK — Butcher"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 6504,
+          "name": "Thornspike",
+          "weaponType": "Dagger",
+          "speed": "1.80",
+          "dps": "13.3 DPS",
+          "stats": "+3 Strength, +2 Stamina",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 20,
+          "icon": "inv_weapon_shortblade_01",
+          "source": {
+            "kind": "dungeon",
+            "title": "Wailing Caverns — Lord Cobrahn",
+            "detail": "Solid stats off-hand dagger"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Deadly Kris",
+              "itemId": 3187,
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "speed": "1.50",
+              "dps": "12.7 DPS",
+              "stats": "+2 Agility, +2 Strength",
+              "icon": "inv_weapon_shortblade_04",
+              "value": "World Drop"
+            },
+            {
+              "name": "Assassin's Blade",
+              "itemId": 1935,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "speed": "1.90",
+              "dps": "15.3 DPS",
+              "stats": "+3 Agility, +3 Strength",
+              "icon": "inv_weapon_shortblade_03",
+              "value": "World Drop Rare"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 7714,
+          "name": "Hypnotic Blade",
+          "weaponType": "Dagger",
+          "speed": "1.40",
+          "dps": "26.1 DPS",
+          "stats": "+8 Intellect, +3 Spirit, Equip: +9 Spell Damage",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "icon": "inv_weapon_shortblade_05",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery Library — Arcanist Doan",
+            "detail": "1.40s fast poison applicator"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Toxic Revenger",
+              "itemId": 9454,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "speed": "2.20",
+              "dps": "18.4 DPS",
+              "stats": "Chance on Hit: 50 Nature DMG poison",
+              "icon": "inv_sword_04",
+              "value": "Gnomeregan — Viscous Fallout"
+            },
+            {
+              "name": "Meteor Shard",
+              "itemId": 7714,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "speed": "1.80",
+              "dps": "16.7 DPS",
+              "stats": "Chance on hit: Fireball burst",
+              "icon": "inv_weapon_shortblade_05",
+              "value": "SFK — Arugal"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–34",
+          "itemId": 9446,
+          "name": "Electrocutioner Leg",
+          "weaponType": "1H Sword",
+          "speed": "1.70",
+          "dps": "20.6 DPS",
+          "stats": "Chance on hit: Shock burst for 25 Nature DMG",
+          "quality": "q3",
+          "iLvl": 34,
+          "reqLevel": 29,
+          "icon": "inv_sword_25",
+          "source": {
+            "kind": "dungeon",
+            "title": "Gnomeregan — Electrocutioner 6000",
+            "detail": "Fast 1.70s sword for Combat off-hand"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Torturing Poker",
+              "itemId": 7682,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "speed": "1.80",
+              "dps": "18.9 DPS",
+              "stats": "+3 Strength, +2 Agility",
+              "icon": "inv_weapon_shortblade_03",
+              "value": "SM Graveyard — Interrogator Vishas"
+            },
+            {
+              "name": "Sword of Omen",
+              "itemId": 6802,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "speed": "2.20",
+              "dps": "23.4 DPS",
+              "stats": "+7 Strength, +5 Agility",
+              "icon": "inv_sword_24",
+              "value": "SM Quest Reward"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–42",
+          "itemId": 10823,
+          "name": "Vanquisher's Sword",
+          "weaponType": "1H Sword",
+          "speed": "2.20",
+          "dps": "30.5 DPS",
+          "stats": "+28 Attack Power",
+          "quality": "q3",
+          "iLvl": 43,
+          "reqLevel": 38,
+          "icon": "inv_sword_25",
+          "source": {
+            "kind": "quest",
+            "title": "Razorfen Downs — Bring the End",
+            "detail": "Outstanding stats for off-hand"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Widowmaker",
+              "itemId": 2205,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "speed": "1.90",
+              "dps": "26.8 DPS",
+              "stats": "+5 Agility, +5 Stamina",
+              "icon": "inv_weapon_shortblade_12",
+              "value": "World Drop"
+            },
+            {
+              "name": "Dazzling Longsword",
+              "itemId": 813,
+              "weaponType": "1H Sword",
+              "quality": "q4",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "speed": "1.70",
+              "dps": "27.4 DPS",
+              "stats": "Chance on hit: Disorient for 3 sec",
+              "icon": "inv_sword_23",
+              "value": "World Drop Epic"
+            }
+          ]
+        },
+        {
+          "levelBracket": "43–50",
+          "itemId": 17705,
+          "name": "Thrash Blade",
+          "weaponType": "1H Sword",
+          "speed": "2.70",
+          "dps": "37.8 DPS",
+          "stats": "Chance on hit: Grants 1 extra attack",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "icon": "inv_sword_34",
+          "source": {
+            "kind": "quest",
+            "title": "Maraudon — Corruption of Earth and Seed",
+            "detail": "Can be equipped in either hand"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Hanzo Sword",
+              "itemId": 8190,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "speed": "1.50",
+              "dps": "34.7 DPS",
+              "stats": "Equip: +1% Critical Strike",
+              "icon": "inv_sword_01",
+              "value": "Ultra-fast 1.50s Combat off-hand"
+            },
+            {
+              "name": "Julie's Dagger",
+              "itemId": 869,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "speed": "1.30",
+              "dps": "36.5 DPS",
+              "stats": "Chance on hit: Restore mana/energy",
+              "icon": "inv_weapon_shortblade_14",
+              "value": "World Drop Epic"
+            }
+          ]
+        },
+        {
+          "levelBracket": "51–54",
+          "itemId": 12791,
+          "name": "Barman Shanker",
+          "weaponType": "Dagger",
+          "speed": "2.00",
+          "dps": "38.2 DPS",
+          "stats": "Chance on Hit: 100 to 180 Bleed DMG over 30 sec",
+          "quality": "q3",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "icon": "inv_weapon_shortblade_11",
+          "source": {
+            "kind": "dungeon",
+            "title": "BRD — Plugger Spazzring",
+            "detail": "Solo stealth farm dagger"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Mirah's Song",
+              "itemId": 15805,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "speed": "1.80",
+              "dps": "38.3 DPS",
+              "stats": "+9 Strength, +9 Agility",
+              "icon": "inv_sword_40",
+              "value": "Scholomance — Kirtonos the Herald"
+            },
+            {
+              "name": "Heartseeker",
+              "itemId": 12783,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "speed": "1.70",
+              "dps": "38.5 DPS",
+              "stats": "+4 Strength, +9 Agility, Equip: +1% Crit",
+              "icon": "inv_weapon_shortblade_14",
+              "value": "Crafted Blacksmithing"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–58",
+          "itemId": 12939,
+          "name": "Dal'Rend's Tribal Guardian",
+          "weaponType": "1H Sword",
+          "speed": "1.80",
+          "dps": "41.4 DPS",
+          "stats": "+100 Armor, Set: +50 Attack Power",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "icon": "inv_sword_43",
+          "source": {
+            "kind": "dungeon",
+            "title": "UBRS — Warchief Rend Blackhand",
+            "detail": "Premier pre-raid off-hand sword set"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Bonescraper",
+              "itemId": 13368,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "speed": "1.40",
+              "dps": "40.0 DPS",
+              "stats": "+30 Attack Power",
+              "icon": "inv_weapon_shortblade_13",
+              "value": "Stratholme — Baron Rivendare"
+            },
+            {
+              "name": "Felstriker",
+              "itemId": 12590,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "speed": "1.70",
+              "dps": "44.7 DPS",
+              "stats": "Chance on hit: Next attacks 100% crit & guarantee hit for 3 sec",
+              "icon": "inv_weapon_shortblade_02",
+              "value": "UBRS — Warchief Rend Blackhand"
             }
           ]
         },
         {
           "levelBracket": "59–60",
-          "itemId": 19312,
-          "name": "Lei of the Lifegiver",
-          "icon": "inv_misc_flower_04",
-          "weaponType": "Held In Off-hand",
-          "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
+          "itemId": 19866,
+          "name": "Warblade of the Hakkari (Off Hand)",
+          "weaponType": "1H Sword",
+          "speed": "1.70",
+          "dps": "49.4 DPS",
+          "stats": "+40 Attack Power, Set: +6 Sword Skill",
+          "quality": "q4",
+          "iLvl": 68,
+          "reqLevel": 60,
+          "icon": "inv_sword_52",
           "source": {
-            "kind": "drop",
-            "title": "World Drop Epic / Raid",
-            "detail": "Alterac Valley (Exalted). The premier pre-raid and raid healing off-hand with MP5."
+            "kind": "raid",
+            "title": "Zul'Gurub — Bloodlord Mandokir",
+            "detail": "Top tier off-hand sword (+6 Sword Skill Set)"
           },
           "faction": "both",
-          "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
-          "lines": [
-            "Held In Off-hand",
-            "+11 Stamina",
-            "+25 Healing",
-            "+12 Spell Power",
-            "+5 MP5",
-            "Requires Level 55"
-          ],
           "alts": [
             {
-              "name": "Brightly Glowing Stone",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+7 Intellect, +37 Healing - Dire Maul West (Illyanna Ravenoak)",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Jin'do's Bag of Whammies",
-              "itemId": null,
-              "icon": "inv_misc_orb_01",
-              "weaponType": "Held In Off-hand",
-              "value": "+11 Intellect, +6 Stamina, +18 Healing, +1% Spell Hit - Zul'Gurub",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "lines": [
-                "Held In Off-hand"
-              ],
-              "source": "Drop / Quest"
-            },
-            {
-              "name": "Grand Marshal's Tome of Restoration",
-              "itemId": 234590,
-              "icon": "inv_misc_book_13",
-              "weaponType": "Held In Off-hand",
-              "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
-              "faction": "alliance",
+              "name": "Brutality Blade",
+              "itemId": 18832,
+              "weaponType": "1H Sword",
               "quality": "q4",
-              "iLvl": 80,
+              "iLvl": 66,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-              "lines": [
-                "Held In Off-hand",
-                "+23 Stamina",
-                "+14 Intellect",
-                "Equip: Increases healing done by up to 44",
-                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-                "Requires Level 60"
-              ],
-              "source": "Captain O'Neal"
+              "speed": "2.50",
+              "dps": "51.8 DPS",
+              "stats": "+9 Strength, +9 Agility, Equip: +1% Crit",
+              "icon": "inv_sword_15",
+              "value": "Molten Core — Garr"
             },
             {
-              "name": "High Warlord's Tome of Mending",
-              "itemId": 234564,
-              "icon": "inv_misc_book_14",
-              "weaponType": "Held In Off-hand",
-              "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
-              "faction": "horde",
+              "name": "Core Hound Tooth",
+              "itemId": 18805,
+              "weaponType": "Dagger",
               "quality": "q4",
-              "iLvl": 80,
+              "iLvl": 66,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-              "lines": [
-                "Held In Off-hand",
-                "+23 Stamina",
-                "+14 Intellect",
-                "Equip: Increases healing done by up to 44",
-                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
-                "Requires Level 60"
-              ],
-              "source": "Sergeant Thunderhorn"
+              "speed": "1.60",
+              "dps": "51.2 DPS",
+              "stats": "+20 Attack Power, +9 Stamina, Equip: +1% Crit",
+              "icon": "inv_weapon_shortblade_11",
+              "value": "Molten Core — Majordomo Executus Cache"
+            },
+            {
+              "name": "Perdition's Blade",
+              "itemId": 18816,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 73,
+              "reqLevel": 60,
+              "speed": "1.80",
+              "dps": "58.3 DPS",
+              "stats": "Chance on hit: 40-56 Fire DMG",
+              "icon": "inv_weapon_shortblade_27",
+              "value": "Molten Core — Ragnaros"
+            }
+          ]
+        }
+      ]
+    },
+    "hunter": {
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Melee Weapons & Stat-Sticks (2H Polearms, Staves & Dual Agility)"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–9",
+          "itemId": 281725,
+          "name": "Restored Spear",
+          "weaponType": "Polearm",
+          "speed": "3.10",
+          "dps": "1.61 DPS",
+          "stats": "",
+          "quality": "q2",
+          "iLvl": 1,
+          "reqLevel": 1,
+          "icon": "inv_spear_08",
+          "source": {
+            "kind": "vendor",
+            "title": "Starter Vendor",
+            "detail": "Early level melee weapon"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Walking Stick",
+              "itemId": 2495,
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "speed": "2.40",
+              "dps": "2.5 DPS",
+              "stats": "",
+              "icon": "inv_staff_08",
+              "value": "Vendor"
+            },
+            {
+              "name": "Woodsman's Axe",
+              "itemId": 2520,
+              "weaponType": "2H Axe",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "speed": "3.20",
+              "dps": "4.8 DPS",
+              "stats": "",
+              "icon": "inv_axe_07",
+              "value": "Vendor"
+            }
+          ]
+        },
+        {
+          "levelBracket": "10–14",
+          "itemId": 2524,
+          "name": "Heavy Spear",
+          "weaponType": "Polearm",
+          "speed": "3.30",
+          "dps": "7.6 DPS",
+          "stats": "+2 Agility, +1 Stamina",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "icon": "inv_spear_07",
+          "source": {
+            "kind": "vendor",
+            "title": "Weapon Vendor",
+            "detail": "Trained at Level 20 or early starter polearm"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Thief's Blade",
+              "itemId": 4565,
+              "weaponType": "1H Sword",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "speed": "2.00",
+              "dps": "6.5 DPS",
+              "stats": "+2 Agility, +1 Stamina",
+              "icon": "inv_sword_21",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 2042,
+          "name": "Staff of Westfall",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "15.0 DPS",
+          "stats": "+11 Intellect, +5 Spirit",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "icon": "inv_staff_29",
+          "source": {
+            "kind": "quest",
+            "title": "The Deadmines — The Defias Brotherhood",
+            "detail": "Alliance quest staff (great mana pool for Hunter)"
+          },
+          "faction": "alliance",
+          "alts": [
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "speed": "2.90",
+              "dps": "12.8 DPS",
+              "stats": "+7 Intellect, +7 Stamina, +7 Spirit",
+              "icon": "inv_staff_13",
+              "value": "Wailing Caverns Quest Reward (Horde/Both)"
+            },
+            {
+              "name": "Cruel Barb",
+              "itemId": 5193,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "speed": "2.80",
+              "dps": "12.3 DPS",
+              "stats": "+6 Attack Power, +3 Agility",
+              "icon": "inv_sword_23",
+              "value": "The Deadmines — Edwin VanCleef"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 6631,
+          "name": "Living Root",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "14.5 DPS",
+          "stats": "+5 Strength, +12 Stamina",
+          "quality": "q3",
+          "iLvl": 23,
+          "reqLevel": 18,
+          "icon": "inv_staff_15",
+          "source": {
+            "kind": "dungeon",
+            "title": "Wailing Caverns — Verdan the Everliving",
+            "detail": "Big stamina stat-stick"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Strike of the Hydra",
+              "itemId": 6953,
+              "weaponType": "2H Sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "speed": "3.30",
+              "dps": "21.4 DPS",
+              "stats": "Chance on hit: Corrosive poison",
+              "icon": "inv_sword_15",
+              "value": "BFD — Aku'mai"
+            },
+            {
+              "name": "Odo's Ley Staff",
+              "itemId": 6318,
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "speed": "2.80",
+              "dps": "17.3 DPS",
+              "stats": "+5 Stamina, +6 Spirit",
+              "icon": "inv_staff_08",
+              "value": "SFK — Odo the Blindwatcher"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 2271,
+          "name": "Staff of the Blessed Seer",
+          "weaponType": "Staff",
+          "speed": "2.40",
+          "dps": "16.9 DPS",
+          "stats": "+4 Intellect, +11 Spirit",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "icon": "inv_staff_08",
+          "source": {
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "Spirit & mana stat-stick"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Manual Crowd Pummeler",
+              "itemId": 9449,
+              "weaponType": "2H Mace",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "speed": "2.00",
+              "dps": "24.8 DPS",
+              "stats": "+16 Strength, +5 Agility",
+              "icon": "inv_hammer_14",
+              "value": "Gnomeregan — Crowd Pummeler 9-60"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–34",
+          "itemId": 6975,
+          "name": "Whirlwind Axe",
+          "weaponType": "2H Axe",
+          "speed": "3.60",
+          "dps": "35.6 DPS",
+          "stats": "+14 Strength, +15 Stamina",
+          "quality": "q3",
+          "iLvl": 40,
+          "reqLevel": 30,
+          "icon": "inv_axe_11",
+          "source": {
+            "kind": "quest",
+            "title": "Warrior Quest Aid / High Bracket 2H",
+            "detail": "Massive Stamina & Strength stat stick"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Corpsemaker",
+              "itemId": 6687,
+              "weaponType": "2H Axe",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "speed": "3.80",
+              "dps": "28.9 DPS",
+              "stats": "+15 Strength, +8 Stamina",
+              "icon": "inv_axe_17",
+              "value": "RFK — Overlord Ramtusk"
+            },
+            {
+              "name": "Ravager",
+              "itemId": 7717,
+              "weaponType": "2H Axe",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "speed": "3.50",
+              "dps": "37.3 DPS",
+              "stats": "Chance on Hit: Whirlwind attack for 3 sec",
+              "icon": "inv_weapon_halberd_05",
+              "value": "SM Armory — Herod"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–42",
+          "itemId": 10823,
+          "name": "Vanquisher's Sword",
+          "weaponType": "1H Sword",
+          "speed": "2.20",
+          "dps": "30.5 DPS",
+          "stats": "+28 Attack Power",
+          "quality": "q3",
+          "iLvl": 43,
+          "reqLevel": 38,
+          "icon": "inv_sword_25",
+          "source": {
+            "kind": "quest",
+            "title": "Razorfen Downs — Bring the End",
+            "detail": "+28 Ranged Attack Power buff"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Sword of Omen",
+              "itemId": 6802,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "speed": "2.20",
+              "dps": "23.4 DPS",
+              "stats": "+7 Strength, +5 Agility",
+              "icon": "inv_sword_24",
+              "value": "SM Quest"
+            },
+            {
+              "name": "Widowmaker",
+              "itemId": 2205,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "speed": "1.90",
+              "dps": "26.8 DPS",
+              "stats": "+5 Agility, +5 Stamina",
+              "icon": "inv_weapon_shortblade_12",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "43–50",
+          "itemId": 17743,
+          "name": "Princess Theradras' Scepter",
+          "weaponType": "2H Mace",
+          "speed": "3.40",
+          "dps": "41.5 DPS",
+          "stats": "+14 Strength, +15 Stamina",
+          "quality": "q3",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "icon": "inv_hammer_08",
+          "source": {
+            "kind": "dungeon",
+            "title": "Maraudon — Princess Theradras",
+            "detail": "High stamina melee stat-stick"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Gatorbite Axe",
+              "itemId": 17738,
+              "weaponType": "1H Axe",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "speed": "2.70",
+              "dps": "38.5 DPS",
+              "stats": "+10 Strength, +5 Stamina",
+              "icon": "inv_axe_24",
+              "value": "Maraudon — Rotgrip"
+            },
+            {
+              "name": "Thrash Blade",
+              "itemId": 17705,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "speed": "2.70",
+              "dps": "37.8 DPS",
+              "stats": "Chance on hit: Grants 1 extra attack",
+              "icon": "inv_sword_34",
+              "value": "Maraudon Quest"
+            }
+          ]
+        },
+        {
+          "levelBracket": "51–54",
+          "itemId": 19106,
+          "name": "Ice Barbed Spear",
+          "weaponType": "Polearm",
+          "speed": "3.80",
+          "dps": "53.9 DPS",
+          "stats": "+13 Agility, +21 Stamina, +21 Strength, Equip: +1% Critical Strike",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 51,
+          "icon": "inv_spear_06",
+          "source": {
+            "kind": "quest",
+            "title": "Alterac Valley — The Hero of the Frostwolf / Stormpike",
+            "detail": "The legendary level 51 AV quest polearm (+13 Agility, +1% Crit)"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Mirah's Song",
+              "itemId": 15805,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "speed": "1.80",
+              "dps": "38.3 DPS",
+              "stats": "+9 Strength, +9 Agility",
+              "icon": "inv_sword_40",
+              "value": "Scholomance"
+            },
+            {
+              "name": "Dawn's Edge",
+              "itemId": 12774,
+              "weaponType": "1H Axe",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "speed": "2.10",
+              "dps": "37.1 DPS",
+              "stats": "Equip: +1% Critical Strike",
+              "icon": "inv_axe_01",
+              "value": "Crafted Blacksmithing"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–58",
+          "itemId": 18717,
+          "name": "Peacemaker",
+          "weaponType": "Polearm",
+          "speed": "3.60",
+          "dps": "51.9 DPS",
+          "stats": "+11 Strength, +21 Stamina, Equip: +56 Attack Power",
+          "quality": "q3",
+          "iLvl": 61,
+          "reqLevel": 56,
+          "icon": "inv_spear_05",
+          "source": {
+            "kind": "dungeon",
+            "title": "Stratholme Live — Balnazzar",
+            "detail": "+56 Attack Power works for Ranged attacks"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Bone Slicing Hatchet",
+              "itemId": 18737,
+              "weaponType": "1H Axe",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "speed": "1.70",
+              "dps": "41.2 DPS",
+              "stats": "+13 Agility, +5 Stamina",
+              "icon": "inv_axe_22",
+              "value": "Stratholme Undead — Malor / World"
+            },
+            {
+              "name": "Dal'Rend's Sacred Charge",
+              "itemId": 12940,
+              "weaponType": "1H Sword",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "speed": "2.80",
+              "dps": "41.4 DPS",
+              "stats": "+4 Strength, Equip: +1% Crit",
+              "icon": "inv_sword_43",
+              "value": "UBRS — Rend Blackhand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "59–60",
+          "itemId": 18715,
+          "name": "Lok'delar, Stave of the Ancient Keepers",
+          "weaponType": "Staff",
+          "speed": "3.20",
+          "dps": "55.3 DPS",
+          "stats": "+10 Intellect, +10 Stamina, +14 Spirit, Equip: +2% Ranged Critical Strike",
+          "quality": "q4",
+          "iLvl": 75,
+          "reqLevel": 60,
+          "icon": "inv_staff_13",
+          "source": {
+            "kind": "quest",
+            "title": "Hunter Epic Quest — Ancient Petrified Leaf",
+            "detail": "Hunter signature epic staff paired with Rhok'delar"
+          },
+          "faction": "both",
+          "alts": [
+            {
+              "name": "Barbarous Blade",
+              "itemId": 18520,
+              "weaponType": "2H Sword",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "speed": "3.20",
+              "dps": "53.8 DPS",
+              "stats": "+17 Stamina, Equip: +1% Crit, +60 Attack Power",
+              "icon": "inv_sword_39",
+              "value": "Dire Maul North — King Gordok"
+            },
+            {
+              "name": "Ashkandi, Greatsword of the Brotherhood",
+              "itemId": 19364,
+              "weaponType": "2H Sword",
+              "quality": "q4",
+              "iLvl": 81,
+              "reqLevel": 60,
+              "speed": "3.50",
+              "dps": "81.9 DPS",
+              "stats": "+33 Stamina, Equip: +86 Attack Power",
+              "icon": "inv_sword_12",
+              "value": "Blackwing Lair — Nefarian"
+            },
+            {
+              "name": "Zulian Hacker",
+              "itemId": 19901,
+              "weaponType": "1H Axe",
+              "quality": "q3",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "speed": "2.40",
+              "dps": "45.8 DPS",
+              "stats": "Equip: +2 Axe Skill, +15 Attack Power",
+              "icon": "inv_axe_25",
+              "value": "Zul'Gurub"
             }
           ]
         }
