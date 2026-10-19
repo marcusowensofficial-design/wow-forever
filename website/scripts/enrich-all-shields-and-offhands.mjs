@@ -179,124 +179,151 @@ function makeStep(levelBracket, primaryIdOrName, primaryOverrides = {}, alts = [
 const warriorShieldLevels = [
   makeStep('1–9', 1166, {
     name: "Dented Buckler",
-    stats: "55 Armor, +2 Block",
     detail: "Starting armor vendor / starter zone drop."
   }, [
-    makeAlt(2129, { name: "Large Metal Shield", value: "136 Armor, +4 Block - Low-level vendor/quest" }),
-    makeAlt(263431, { name: "Redbeard Crest", value: "177 Armor, +5 Block, +2 Stamina - Early quest shield" })
+    makeAlt(2129, { name: "Large Metal Shield" }),
+    makeAlt(263431, { name: "Redbeard Crest" }),
+    makeAlt(246265, { name: "Salvaged Wooden Tower Shield" }),
+    makeAlt(257255, { name: "Highlands Defender's Shield" })
   ]),
   makeStep('10–14', 263431, {
     name: "Redbeard Crest",
-    stats: "177 Armor, +5 Block, +2 Stamina",
     detail: "Early quest reward offering dependable armor and stamina."
   }, [
-    makeAlt(4831, { name: "Heavy Pavise", value: "246 Armor, +7 Block, +2 Stamina - Drop" }),
-    makeAlt(12996, { name: "Reinforced Shield", value: "297 Armor, +8 Block - Vendor / Crafted" })
+    makeAlt(17192, { name: "Reinforced Targe" }),
+    makeAlt(2442, { name: "Reinforced Targe" }),
+    makeAlt(3650, { name: "Battle Shield" }),
+    makeAlt(257255, { name: "Highlands Defender's Shield" })
   ]),
   makeStep('15–18', 13245, {
     name: "Kresh's Back",
-    stats: "528 Armor, +10 Block, +5 Defense",
     detail: "Dropped by Kresh in Wailing Caverns. Iconic massive armor spike for early dungeon tanking."
   }, [
-    makeAlt(7002, { name: "Arctic Buckler", value: "642 Armor, +16 Block, +5 Frost Res - Blackfathom Deeps" }),
-    makeAlt(271240, { name: "Repurposed Rack", faction: "alliance", value: "490 Armor, +6 Strength, +7 Spell Power - Hamhock (Stockade)" }),
-    makeAlt(4981, { name: "Crest of Darkshire", faction: "alliance", value: "490 Armor, +4 Strength, +3 Stamina - Quest reward" })
+    makeAlt(7002, { name: "Arctic Buckler" }),
+    makeAlt(5443, { name: "Gold-plated Buckler" }),
+    makeAlt(276889, { name: "Thornwoven Shield" }),
+    makeAlt(6223, { name: "Crest of Darkshire", faction: "alliance" }),
+    makeAlt(17192, { name: "Reinforced Targe" })
   ]),
   makeStep('19–22', 6320, {
     name: "Commander's Crest",
-    stats: "585 Armor, +12 Block, +5 Strength, +3 Stamina, +4 HP5",
     detail: "Dropped by Commander Springvale in Shadowfang Keep. Premier early-game dungeon tank shield."
   }, [
-    makeAlt(13079, { name: "Shield of Thorsen", value: "552 Armor, +13 Block, +5 Strength, +5 Stamina - Rare BoE" }),
-    makeAlt(6630, { name: "Seedcloud Buckler", value: "547 Armor, +11 Block, +6 Stamina - World Drop" }),
-    makeAlt(4833, { name: "Marbled Buckler", value: "614 Armor, +15 Block, +4 Strength, +4 Stamina - Drop" })
+    makeAlt(7188, { name: "Stormwind Guard Shield", faction: "alliance" }),
+    makeAlt(6223, { name: "Crest of Darkshire", faction: "alliance" }),
+    makeAlt(6630, { name: "Seedcloud Buckler" }),
+    makeAlt(9607, { name: "Bastion of Stormwind", faction: "alliance" })
   ]),
-  makeStep('23–26', 7748, {
-    name: "Forcestone Buckler",
-    stats: "686 Armor, +17 Block, +6 Stamina, +6 Spirit",
-    detail: "Uldaman preparation / high-level drop. Substantial block budget."
+  makeStep('23–26', 209424, {
+    name: "Shell Plate Barrier",
+    detail: "Blackfathom Deeps drop with defense and high armor."
   }, [
-    makeAlt(4834, { name: "Basalt Buckler", value: "733 Armor, +18 Block, +5 Strength, +5 Stamina - World Drop" }),
-    makeAlt(3826, { name: "Green Iron Shield", value: "650 Armor, +16 Block - Blacksmithing Crafted" })
+    makeAlt(7787, { name: "Resplendent Guardian" }),
+    makeAlt(13079, { name: "Shield of Thorsen" }),
+    makeAlt(6746, { name: "Basalt Buckler" }),
+    makeAlt(273811, { name: "Repurposed Rack" }),
+    makeAlt(285344, { name: "Guard Captain's Barrier" })
   ]),
-  makeStep('27–30', 271220, {
+  makeStep('27–30', 7747, {
     name: "Vile Protector",
-    stats: "1078 Armor, +20 Block, +7 Stamina, +4 Strength",
-    detail: "High-mitigation dungeon boss drop. Incredible 1078 Armor at level 28."
+    detail: "High-mitigation dungeon boss drop. Incredible 1150 Armor at level 28."
   }, [
-    makeAlt(273829, { name: "Collection Plate", value: "1380 Armor, +20 Block, +6 Strength, +6 Stamina - Dungeon Drop" }),
-    makeAlt(273055, { name: "Bonepile Gaze", value: "718 Armor, +19 Block, +6 Stamina, +5 Strength - Drop" }),
-    makeAlt(6694, { name: "Heart of Agamaggan", value: "757 Armor, +20 Block, +10 Stamina - RFK: Charlga Razorflank" }),
-    makeAlt(286982, { name: "Unearthed Barrier", value: "699 Armor, +18 Block, +7 Stamina, +4 Strength - Drop" })
+    makeAlt(4129, { name: "Collection Plate" }),
+    makeAlt(6694, { name: "Heart of Agamaggan" }),
+    makeAlt(273055, { name: "Bonepile Gaze" }),
+    makeAlt(286982, { name: "Unearthed Barrier" }),
+    makeAlt(6725, { name: "Marbled Buckler" })
   ]),
-  makeStep('31–34', 6724, {
-    name: "Aegis of Battle",
-    stats: "968 Armor, +24 Block, +6 Strength, +6 Stamina",
-    detail: "Elite mid-level warrior shield with balanced mitigation and offensive stats."
+  makeStep('31–34', 281307, {
+    name: "Dragonmaw Buckler",
+    detail: "High-strength mid-level shield with balanced mitigation and offensive stats."
   }, [
-    makeAlt(4835, { name: "Jagged Shield", value: "1025 Armor, +25 Block, +7 Strength, +7 Stamina - Drop" }),
-    makeAlt(271213, { name: "Mirror of Rath'mael", value: "547 Armor, +14 Block, +8 Stamina - Dungeon Drop" })
+    makeAlt(13081, { name: "Skullance Shield" }),
+    makeAlt(2448, { name: "Heavy Pavise" }),
+    makeAlt(271213, { name: "Mirror of Rath'mael" }),
+    makeAlt(274043, { name: "Irradiated Shield" })
   ]),
   makeStep('35–38', 9449, {
     name: "Battered Viking Shield",
-    stats: "1548 Armor, +29 Block, +5 Strength, +10 Stamina",
     detail: "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
   }, [
-    makeAlt(7747, { name: "Ironroot Shield", value: "1150 Armor, +28 Block, +8 Stamina, +8 Strength - Drop" }),
-    makeAlt(4836, { name: "Skullplate Shield", value: "1314 Armor, +31 Block - High armor drop" })
+    makeAlt(1204, { name: "The Green Tower" }),
+    makeAlt(9404, { name: "Olaf's All Purpose Shield" }),
+    makeAlt(10767, { name: "Savage Boar's Guard" }),
+    makeAlt(10686, { name: "Aegis of Battle" }),
+    makeAlt(282555, { name: "Shadowforge Shield" })
   ]),
   makeStep('39–42', 7726, {
     name: "Aegis of the Scarlet Commander",
-    stats: "1548 Armor, +23 Block, +7 Strength, +8 Stamina",
     detail: "Scarlet Monastery Cathedral: Scarlet Commander Mograine. Premier mid-game dungeon shield."
   }, [
-    makeAlt(277258, { name: "Crest of Elucidation", value: "1580 Armor, +28 Block, +10 Stamina - Quest reward" }),
-    makeAlt(13080, { name: "Aegis of Stormwind", value: "1548 Armor, +29 Block, +15 Stamina - Rare BoE" })
+    makeAlt(213390, { name: "Whirling Truesilver Gearwall" }),
+    makeAlt(1169, { name: "Blackskull Shield" }),
+    makeAlt(1203, { name: "Aegis of Stormwind" }),
+    makeAlt(277258, { name: "Crest of Elucidation" }),
+    makeAlt(216501, { name: "Bloodstorm Barrier" })
   ]),
-  makeStep('43–46', 1169, {
+  makeStep('43–46', 1979, {
     name: "Wall of the Dead",
-    stats: "1923 Armor, +35 Block, +10 Stamina, Equip: +150 Armor Proc",
-    quality: "q4",
     detail: "Iconic World Drop Epic Shield. Unbeatable physical mitigation throughout the 40s."
   }, [
-    makeAlt(17718, { name: "Gizlock's Hypertech Buckler", value: "1823 Armor, +33 Block, +7 Stamina, +11 Block Value - Maraudon" }),
-    makeAlt(280696, { name: "Elementalist's Guard", value: "1078 Armor, +26 Block, +12 Stamina - Drop" })
+    makeAlt(275864, { name: "Putridus Wall" }),
+    makeAlt(2040, { name: "Troll Protector" }),
+    makeAlt(271798, { name: "Desperate Barrier" }),
+    makeAlt(274652, { name: "Wall of Water" }),
+    makeAlt(280696, { name: "Elementalist's Guard" })
   ]),
-  makeStep('47–50', 13375, {
-    name: "Crest of Retribution",
-    stats: "2153 Armor, +38 Block, +10 Stamina, Equip: Holy Retaliation DMG on Block",
-    detail: "Stratholme: Ramstein / Timmy. High mitigation and superb AOE tank threat."
+  makeStep('47–50', 17718, {
+    name: "Gizlock's Hypertech Buckler",
+    detail: "Maraudon: Tinkerer Gizlock. Superb armor, intellect, and MP5."
   }, [
-    makeAlt(13203, { name: "Stoneshell Guard", value: "1954 Armor, +36 Block, +12 Stamina - Drop" }),
-    makeAlt(13080, { name: "Aegis of Stormwind", value: "1548 Armor, +29 Block, +15 Stamina - Drop" })
+    makeAlt(220600, { name: "Crest of Preeminence" }),
+    makeAlt(221468, { name: "Wall of Whispers" }),
+    makeAlt(220602, { name: "Sewer Turtle Half-Shell" }),
+    makeAlt(11631, { name: "Stoneshell Guard" })
   ]),
   makeStep('51–54', 1168, {
     name: "Skullflame Shield",
-    stats: "2256 Armor, +40 Block, Equip: Life Drain & AOE Flame Strike Procs",
-    quality: "q4",
     detail: "Iconic World Drop Epic Shield. Unrivaled sustain, self-healing, and dungeon AOE threat."
   }, [
-    makeAlt(13375, { name: "Crest of Retribution", value: "2153 Armor, +38 Block, +10 Stamina - Stratholme" }),
-    makeAlt(12068, { name: "Crystal Bulwark", value: "2079 Armor, +37 Block, +15 Stamina - Drop" })
+    makeAlt(274418, { name: "Burrow Barricade" }),
+    makeAlt(11785, { name: "Rock Golem Bulwark" }),
+    makeAlt(10835, { name: "Crest of Supremacy" }),
+    makeAlt(13254, { name: "Astral Guard" }),
+    makeAlt(18673, { name: "Avalanchion's Stony Hide" })
   ]),
   makeStep('55–58', 12602, {
     name: "Draconian Deflector",
-    stats: "2153 Armor, +40 Block, +7 Stamina, +10 Defense, +8 Fire Res",
     detail: "Upper Blackrock Spire: General Drakkisath. The undisputed gold-standard pre-raid tanking shield."
   }, [
-    makeAlt(19325, { name: "The Immovable Object", value: "2468 Armor, +44 Block, +15 Stamina, +27 Block Value - Alterac Valley Exalted" }),
-    makeAlt(18168, { name: "Force Reactive Disk", value: "2468 Armor, +44 Block, +11 Stamina, AOE Electrical Discharge - Engineering" }),
-    makeAlt(279262, { name: "Evergreen Shield", value: "2468 Armor, +44 Block, +12 Stamina, +10 Defense - Level 60 Rare Drop" })
+    makeAlt(18499, { name: "Barrier Shield" }),
+    makeAlt(23139, { name: "Lord Blackwood's Buckler" }),
+    makeAlt(22336, { name: "Draconian Aegis of the Legion" }),
+    makeAlt(13243, { name: "Argent Defender" }),
+    makeAlt(13375, { name: "Crest of Retribution" }),
+    makeAlt(13205, { name: "Rhombeard Protector" }),
+    makeAlt(13529, { name: "Husk of Nerub'enkan" }),
+    makeAlt(18696, { name: "Intricately Runed Shield" }),
+    makeAlt(18756, { name: "Dreadguard's Protector" }),
+    makeAlt(19321, { name: "The Immovable Object" }),
+    makeAlt(18168, { name: "Force Reactive Disk" })
   ]),
   makeStep('59–60', 19349, {
     name: "Elementium Reinforced Bulwark",
-    stats: "2816 Armor, +49 Block, +23 Stamina, +7 Defense",
-    quality: "q4",
     detail: "Blackwing Lair: Chromaggus. Pinnacle raid progression shield with impenetrable armor."
   }, [
-    makeAlt(18825, { name: "Grand Marshal's Aegis", faction: "alliance", value: "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14" }),
-    makeAlt(18826, { name: "High Warlord's Shield Wall", faction: "horde", value: "2754 Armor, +47 Block, +24 Stamina, +13 Strength - PvP Rank 14" }),
-    makeAlt(17066, { name: "Drillborer Disk", value: "2539 Armor, +45 Block, +10 Stamina, +15 Block Value - Molten Core: Garr" })
+    makeAlt(23043, { name: "The Face of Death" }),
+    makeAlt(22818, { name: "The Plague Bearer" }),
+    makeAlt(234807, { name: "Blessed Qiraji Bulwark" }),
+    makeAlt(21485, { name: "Buru's Skull Fragment" }),
+    makeAlt(22198, { name: "Jagged Obsidian Shield" }),
+    makeAlt(19915, { name: "Zulian Defender" }),
+    makeAlt(241015, { name: "Aegis of the Scarlet Bastion" }),
+    makeAlt(235868, { name: "Bulwark of Ire" }),
+    makeAlt(20688, { name: "Earthen Guard" }),
+    makeAlt(18825, { name: "Grand Marshal's Aegis", faction: "alliance" }),
+    makeAlt(18826, { name: "High Warlord's Shield Wall", faction: "horde" }),
+    makeAlt(17066, { name: "Drillborer Disk" })
   ])
 ];
 
@@ -306,70 +333,146 @@ const warriorShieldLevels = [
 const paladinTankingShieldLevels = warriorShieldLevels;
 
 const paladinHealingShieldLevels = [
-  makeStep('1–10', 263431, {
-    name: "Redbeard Crest",
-    stats: "177 Armor, +5 Block, +2 Stamina",
-    detail: "Early quest shield with baseline defensive armor while casting holy spells."
+  makeStep('1–9', 5357, {
+    name: "Ward of the Vale",
+    detail: "Early quest shield with Intellect, Spirit, and solid armor defense."
   }, [
-    makeAlt(2129, { name: "Large Metal Shield", value: "136 Armor, +4 Block - Vendor / Quest" })
+    makeAlt(284322, { name: "Invading Marine's Shield" }),
+    makeAlt(3652, { name: "Hunting Buckler" }),
+    makeAlt(3160, { name: "Ironplate Buckler" }),
+    makeAlt(3653, { name: "Ceremonial Buckler" })
   ]),
-  makeStep('11–18', 7002, {
+  makeStep('10–14', 6380, {
+    name: "Inscribed Buckler",
+    detail: "Reliable early caster shield with Intellect and Spirit."
+  }, [
+    makeAlt(4290, { name: "Dust Bowl" }),
+    makeAlt(263431, { name: "Redbeard Crest" }),
+    makeAlt(276889, { name: "Thornwoven Shield" })
+  ]),
+  makeStep('15–18', 7002, {
     name: "Arctic Buckler",
-    stats: "642 Armor, +16 Block, +5 Frost Res",
-    detail: "Blackfathom Deeps drop. High armor defense while healing low-level dungeons."
+    detail: "Blackfathom Deeps drop. High armor, Stamina, and Spirit for healing low-level dungeons."
   }, [
-    makeAlt(13245, { name: "Kresh's Back", value: "528 Armor, +10 Block - Wailing Caverns" }),
-    makeAlt(271240, { name: "Repurposed Rack", value: "490 Armor, +7 Spell Power - Stockade" })
+    makeAlt(6447, { name: "Worn Turtle Shell Shield" }),
+    makeAlt(4822, { name: "Owl's Disk" }),
+    makeAlt(1276, { name: "Fire Hardened Buckler" }),
+    makeAlt(1557, { name: "Buckler of the Seas" })
   ]),
-  makeStep('19–25', 6320, {
-    name: "Commander's Crest",
-    stats: "585 Armor, +12 Block, +5 Strength, +3 Stamina, +4 HP5",
-    detail: "Shadowfang Keep: Commander Springvale. Steady health recovery and armor."
+  makeStep('19–22', 6630, {
+    name: "Seedcloud Buckler",
+    detail: "Premier early spell power shield with Intellect and Spell Power."
   }, [
-    makeAlt(271213, { name: "Mirror of Rath'mael", value: "547 Armor, +14 Block, +8 Stamina - Drop" }),
-    makeAlt(7748, { name: "Forcestone Buckler", value: "686 Armor, +17 Block, +6 Spirit - Uldaman drop" })
+    makeAlt(6383, { name: "Forest Buckler" }),
+    makeAlt(3743, { name: "Sentry Buckler" }),
+    makeAlt(15894, { name: "Bristlebark Buckler" }),
+    makeAlt(4820, { name: "Guardian Buckler" }),
+    makeAlt(4444, { name: "Black Husk Shield" })
   ]),
-  makeStep('26–30', 6694, {
+  makeStep('23–26', 273811, {
+    name: "Repurposed Rack",
+    detail: "Hamhock in the Stockade. Superb armor, Strength, and Spell Power."
+  }, [
+    makeAlt(1547, { name: "Shield of the Faith", faction: "alliance" }),
+    makeAlt(16660, { name: "Driftmire Shield" }),
+    makeAlt(6746, { name: "Basalt Buckler" }),
+    makeAlt(14608, { name: "Dokebi Buckler" }),
+    makeAlt(211460, { name: "Ancient Arctic Buckler" })
+  ]),
+  makeStep('27–30', 6694, {
     name: "Heart of Agamaggan",
-    stats: "757 Armor, +20 Block, +10 Stamina",
-    detail: "Razorfen Kraul: Charlga Razorflank. Premier stats for survivability."
+    detail: "Razorfen Kraul: Charlga Razorflank. Dedicated +15 Healing equip effect."
   }, [
-    makeAlt(280696, { name: "Elementalist's Guard", value: "1078 Armor, +26 Block, +12 Stamina - Drop" }),
-    makeAlt(286982, { name: "Unearthed Barrier", value: "699 Armor, +18 Block, +7 Stamina - Drop" })
+    makeAlt(17508, { name: "Forcestone Buckler" }),
+    makeAlt(274290, { name: "Painwalker Buckler" }),
+    makeAlt(9522, { name: "Energized Stone Circle" }),
+    makeAlt(280696, { name: "Elementalist's Guard" }),
+    makeAlt(274043, { name: "Irradiated Shield" })
   ]),
-  makeStep('31–38', 17718, {
-    name: "Gizlock's Hypertech Buckler",
-    stats: "1823 Armor, +33 Block, +7 Stamina, +8 Intellect",
-    detail: "Maraudon: Tinkerer Gizlock. Incredible armor and Intellect for Holy Paladins."
+  makeStep('31–34', 15865, {
+    name: "Anchorhold Buckler",
+    detail: "Outstanding mid-game healing shield with +6 Intellect and +5 Spell Power."
   }, [
-    makeAlt(9449, { name: "Battered Viking Shield", value: "1548 Armor, +29 Block - Uldaman" }),
-    makeAlt(6724, { name: "Aegis of Battle", value: "968 Armor, +24 Block - Drop" })
+    makeAlt(270065, { name: "Farseer's Forgotten Shield" }),
+    makeAlt(14607, { name: "Hawkeye's Buckler" }),
+    makeAlt(9458, { name: "Thermaplugg's Central Core" }),
+    makeAlt(4115, { name: "Grom'gol Buckler", faction: "horde" }),
+    makeAlt(4067, { name: "Glyphed Buckler" })
   ]),
-  makeStep('39–46', 277258, {
-    name: "Crest of Elucidation",
-    stats: "1580 Armor, +28 Block, +10 Stamina",
-    detail: "Greater Friend of the Library quest reward. High intellect and spell sustain."
+  makeStep('35–38', 9403, {
+    name: "Battered Viking Shield",
+    detail: "Uldaman: Eric 'The Swift'. High mitigation shield with Spirit and dedicated +13 Healing equip."
   }, [
-    makeAlt(7726, { name: "Aegis of the Scarlet Commander", value: "1548 Armor, +23 Block - SM Cathedral" }),
-    makeAlt(1169, { name: "Wall of the Dead", value: "1923 Armor, +35 Block - World Drop Epic" })
+    makeAlt(282555, { name: "Shadowforge Shield" }),
+    makeAlt(14825, { name: "Symbolic Crest" }),
+    makeAlt(4652, { name: "Salbac Shield", faction: "alliance" })
   ]),
-  makeStep('47–54', 13375, {
-    name: "Crest of Retribution",
-    stats: "2153 Armor, +38 Block, +10 Stamina, Equip: Holy Retaliation DMG",
-    detail: "Stratholme drop. Superb Holy thematic shield with high defensive budget."
+  makeStep('39–42', 213412, {
+    name: "Dielectric Safety Shield",
+    detail: "Gnomeregan raid / dungeon boss drop. Incredible +22 Healing and +4 MP5."
   }, [
-    makeAlt(13080, { name: "Aegis of Stormwind", value: "1548 Armor, +29 Block, +15 Stamina - Rare BoE" }),
-    makeAlt(1168, { name: "Skullflame Shield", value: "2256 Armor, +40 Block - World Drop Epic" })
+    makeAlt(13082, { name: "Mountainside Buckler" }),
+    makeAlt(277258, { name: "Crest of Elucidation" }),
+    makeAlt(216501, { name: "Bloodstorm Barrier" }),
+    makeAlt(276204, { name: "Thrash's Trash" }),
+    makeAlt(213351, { name: "Irradiated Tower Shield" }),
+    makeAlt(9661, { name: "Earthclasp Barrier", faction: "horde" }),
+    makeAlt(14777, { name: "Ravager's Shield" }),
+    makeAlt(1169, { name: "Blackskull Shield" })
   ]),
-  makeStep('55–60', 19349, {
-    name: "Elementium Reinforced Bulwark",
-    stats: "2816 Armor, +49 Block, +23 Stamina, +7 Defense",
-    quality: "q4",
-    detail: "Blackwing Lair: Chromaggus. Ultimate Holy Paladin survivability in high-end raids."
+  makeStep('43–46', 274652, {
+    name: "Wall of Water",
+    detail: "High-level dungeon drop with +14 Spell Power and +3 MP5 sustain."
   }, [
-    makeAlt(12602, { name: "Draconian Deflector", value: "2153 Armor, +40 Block, +10 Defense - UBRS" }),
-    makeAlt(18825, { name: "Grand Marshal's Aegis", faction: "alliance", value: "2754 Armor, +47 Block, +24 Stamina - PvP Rank 14" }),
-    makeAlt(19325, { name: "The Immovable Object", value: "2468 Armor, +44 Block, +15 Stamina - AV Exalted" })
+    makeAlt(14780, { name: "Khan's Buckler" }),
+    makeAlt(8134, { name: "Myrmidon's Defender" }),
+    makeAlt(271798, { name: "Desperate Barrier" })
+  ]),
+  makeStep('47–50', 220602, {
+    name: "Sewer Turtle Half-Shell",
+    detail: "Sunken Temple boss drop. High mitigation, Intellect, and massive +35 Healing."
+  }, [
+    makeAlt(17718, { name: "Gizlock's Hypertech Buckler" }),
+    makeAlt(220601, { name: "Hakkari Witch Doctor's Guard" }),
+    makeAlt(223197, { name: "Defender of the Wilds" }),
+    makeAlt(14790, { name: "Protector Buckler" }),
+    makeAlt(14852, { name: "Sunscale Shield" })
+  ]),
+  makeStep('51–54', 10835, {
+    name: "Crest of Supremacy",
+    detail: "Scholomance / Stratholme drop. All-around stat booster with Intellect, Spirit, and Stamina."
+  }, [
+    makeAlt(8275, { name: "Ebonhold Buckler" }),
+    makeAlt(14800, { name: "Bloodlust Buckler" }),
+    makeAlt(15890, { name: "Vanguard Shield" })
+  ]),
+  makeStep('55–58', 276754, {
+    name: "Sunderbark Vigil",
+    detail: "Rare Dire Maul / high-level drop with +12 Healing, +6 Spell Power, and +3 MP5."
+  }, [
+    makeAlt(228064, { name: "Observer's Shield" }),
+    makeAlt(228591, { name: "Rhombeard Protector" }),
+    makeAlt(16998, { name: "Sacred Protector" }),
+    makeAlt(13083, { name: "Garrett Family Crest" }),
+    makeAlt(14002, { name: "Darrowshire Strongguard" })
+  ]),
+  makeStep('59–60', 19348, {
+    name: "Red Dragonscale Protector",
+    detail: "Blackwing Lair / high-end raid drop. Unrivaled Holy throughput with 2787 Armor and +37 Healing."
+  }, [
+    makeAlt(17106, { name: "Malistar's Defender" }),
+    makeAlt(279262, { name: "Evergreen Shield" }),
+    makeAlt(23075, { name: "Death's Bargain" }),
+    makeAlt(241017, { name: "Demon's Folly" }),
+    makeAlt(241018, { name: "Nathrezim Heart" }),
+    makeAlt(23238, { name: "Stygian Buckler" }),
+    makeAlt(19862, { name: "Aegis of the Blood God" }),
+    makeAlt(21610, { name: "Wormscale Blocker" }),
+    makeAlt(22819, { name: "Shield of Condemnation" }),
+    makeAlt(235473, { name: "Grand Marshal's Barricade", faction: "alliance" }),
+    makeAlt(235474, { name: "High Warlord's Barricade", faction: "horde" }),
+    makeAlt(278468, { name: "Premier Grand Marshal's Barricade", faction: "alliance" }),
+    makeAlt(278469, { name: "Premier High Warlord's Barricade", faction: "horde" })
   ])
 ];
 

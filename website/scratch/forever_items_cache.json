@@ -319,7 +319,7 @@
     "iLvl": 25,
     "reqLevel": 18,
     "quality": "q2",
-    "stats": "",
+    "stats": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
     "inventorySlot": "Held In Off-hand",
     "subclass": "Miscellaneous",
     "subclassName": "Held In Off-hand",
@@ -462,6 +462,34 @@
     "reqLevel": 5,
     "quality": "q1",
     "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "1168": {
+    "id": 1168,
+    "name": "Skullflame Shield",
+    "icon": "inv_shield_01",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q4",
+    "stats": "2256 Armor, +40 Block, +10 Fire Resistance, +10 Shadow Resistance, Equip: When struck in combat has a 3% chance of stealing 35 life from target enemy. (Proc chance: 3%), Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you. (Proc chance: 1%)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "1169": {
+    "id": 1169,
+    "name": "Blackskull Shield",
+    "icon": "spell_shadow_grimward",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q4",
+    "stats": "1895 Armor, +30 Block, +5 Stamina, +10 Spirit, +10 Shadow Resistance",
     "inventorySlot": "Off Hand",
     "subclass": "Shields",
     "subclassName": "Shield",
@@ -1369,6 +1397,20 @@
       }
     ]
   },
+  "1979": {
+    "id": 1979,
+    "name": "Wall of the Dead",
+    "icon": "inv_shield_02",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q4",
+    "stats": "1937 Armor, +34 Block, +10 Strength, +15 Stamina, Equip: When struck in combat has a 3% chance to encase the caster in bone, increasing armor by 150 for 20 sec. (Proc chance: 3%)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "1982": {
     "id": 1982,
     "name": "Nightblade",
@@ -1470,6 +1512,26 @@
         "t": 1,
         "ti": 5847,
         "z": 17
+      }
+    ]
+  },
+  "2040": {
+    "id": 2040,
+    "name": "Troll Protector",
+    "icon": "inv_shield_16",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q3",
+    "stats": "1676 Armor, +27 Block, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 2%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "z": 1176
       }
     ]
   },
@@ -3276,7 +3338,7 @@
     "iLvl": 22,
     "reqLevel": 17,
     "quality": "q3",
-    "stats": "",
+    "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
     "inventorySlot": "Held In Off-hand",
     "subclass": "Miscellaneous",
     "subclassName": "Held In Off-hand",
@@ -11120,7 +11182,7 @@
     "iLvl": 25,
     "reqLevel": 20,
     "quality": "q3",
-    "stats": "",
+    "stats": "Equip: Increases damage done by Fire spells and effects by up to 9., Equip: Increases damage done by Shadow spells and effects by up to 9.",
     "inventorySlot": "Held In Off-hand",
     "subclass": "Miscellaneous",
     "subclassName": "Held In Off-hand",
@@ -11786,6 +11848,20 @@
     "inventorySlot": "Two-Hand",
     "subclass": 14,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7188": {
+    "id": 7188,
+    "name": "Stormwind Guard Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q2",
+    "stats": "478 Armor, +9 Block, +2 Strength, +4 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -15712,6 +15788,27 @@
       "Chance on hit: Launches a bolt of frost at the enemy causing 34 to 50 Frost damage and slowing movement speed by 50% for 5 sec."
     ]
   },
+  "10767": {
+    "id": 10767,
+    "name": "Savage Boar's Guard",
+    "icon": "inv_shield_17",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q3",
+    "stats": "1287 Armor, +22 Block, +11 Strength, +6 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Ragglesnout",
+        "t": 1,
+        "ti": 7354,
+        "z": 722
+      }
+    ]
+  },
   "10770": {
     "id": 10770,
     "name": "Mordresh's Lifeless Skull",
@@ -15859,6 +15956,28 @@
       "+5 Intellect",
       "+18 Spirit",
       "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+    ]
+  },
+  "10835": {
+    "id": 10835,
+    "name": "Crest of Supremacy",
+    "icon": "inv_shield_04",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q3",
+    "stats": "1930 Armor, +35 Block, +6 Strength, +6 Agility, +7 Stamina, +7 Intellect, +7 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Shade of Eranikus",
+        "t": 1,
+        "ti": 5709,
+        "z": 1477
+      }
     ]
   },
   "10838": {
@@ -16460,6 +16579,28 @@
       "Equip: Improves your chance to get a critical strike by 1.0%.",
       "Equip: Increases damage and healing done by magical spells and effects by up to 60",
       "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
+    ]
+  },
+  "11785": {
+    "id": 11785,
+    "name": "Rock Golem Bulwark",
+    "icon": "inv_shield_06",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q3",
+    "stats": "1994 Armor, +36 Block, +10 Stamina, +10 Arcane Resistance, +10 Nature Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Panzor the Invincible",
+        "t": 1,
+        "ti": 8923,
+        "z": 1584
+      }
     ]
   },
   "11855": {
@@ -18289,6 +18430,51 @@
     "side": "both",
     "sourcemore": null
   },
+  "13205": {
+    "id": 13205,
+    "name": "Rhombeard Protector",
+    "icon": "inv_shield_14",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2089 Armor, +38 Block, +15 Intellect, +10 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Gizrul the Slavener",
+        "t": 1,
+        "ti": 10268,
+        "z": 1583
+      }
+    ]
+  },
+  "13243": {
+    "id": 13243,
+    "name": "Argent Defender",
+    "icon": "inv_shield_05",
+    "iLvl": 62,
+    "reqLevel": 55,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, Equip: Has a 1% chance when struck in combat of increasing chance to block by 50% for 10 sec. (Proc chance: 1%)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 139,
+        "c2": 0,
+        "n": "The Argent Hold",
+        "t": 5,
+        "ti": 5265
+      }
+    ]
+  },
   "13245": {
     "id": 13245,
     "name": "Kresh's Back",
@@ -18315,6 +18501,20 @@
       "Equip: Increased Defense +5."
     ]
   },
+  "13254": {
+    "id": 13254,
+    "name": "Astral Guard",
+    "icon": "inv_shield_12",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q3",
+    "stats": "1930 Armor, +35 Block, +6 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "13371": {
     "id": 13371,
     "name": "Father Flame",
@@ -18333,6 +18533,29 @@
         "t": 2,
         "ti": 175245,
         "z": 1583
+      }
+    ]
+  },
+  "13375": {
+    "id": 13375,
+    "name": "Crest of Retribution",
+    "icon": "inv_shield_19",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q3",
+    "stats": "2057 Armor, +38 Block, Equip: Deals 5 to 35 damage every time you block.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Ramstein the Gorger",
+        "t": 1,
+        "ti": 10439,
+        "z": 2017
       }
     ]
   },
@@ -18357,6 +18580,29 @@
         "n": "Locked Away",
         "t": 5,
         "ti": 5060
+      }
+    ]
+  },
+  "13529": {
+    "id": 13529,
+    "name": "Husk of Nerub'enkan",
+    "icon": "inv_shield_02",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2089 Armor, +38 Block, +10 Stamina, +15 Nature Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Nerub'enkan",
+        "t": 1,
+        "ti": 10437,
+        "z": 2017
       }
     ]
   },
@@ -18644,6 +18890,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "14002": {
+    "id": 14002,
+    "name": "Darrowshire Strongguard",
+    "icon": "inv_shield_05",
+    "iLvl": 63,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2153 Armor, +40 Block, +8 Stamina, +8 Spirit, +10 Nature Resistance, +10 Frost Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 2057,
+        "c2": 2,
+        "n": "The Lich, Ras Frostwhisper",
+        "t": 5,
+        "ti": 5466
+      }
+    ]
+  },
   "14145": {
     "id": 14145,
     "name": "Cursed Felblade",
@@ -18722,6 +18990,28 @@
       "Ranged",
       "1 - 3 Damage\tSpeed 1.80",
       "(1.11 damage per second)"
+    ]
+  },
+  "14528": {
+    "id": 14528,
+    "name": "Rattlecage Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +7 Stamina, +12 Intellect, +7 Spirit, +7 Shadow Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Rattlegore",
+        "t": 1,
+        "ti": 11622,
+        "z": 2057
+      }
     ]
   },
   "14607": {
@@ -22179,6 +22469,50 @@
       }
     ]
   },
+  "17066": {
+    "id": 17066,
+    "name": "Drillborer Disk",
+    "icon": "inv_shield_10",
+    "iLvl": 67,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2539 Armor, +69 Block, +10 Stamina, Equip: When struck in combat inflicts 3 Arcane damage to the attacker., Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Garr",
+        "t": 1,
+        "ti": 12057,
+        "z": 2717
+      }
+    ]
+  },
+  "17106": {
+    "id": 17106,
+    "name": "Malistar's Defender",
+    "icon": "inv_shield_08",
+    "iLvl": 75,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2822 Armor, +52 Block, +9 Stamina, +12 Intellect, +9 MP5, Equip: Restores 9 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Ragnaros",
+        "t": 1,
+        "ti": 11502,
+        "z": 2717
+      }
+    ]
+  },
   "17182": {
     "id": 17182,
     "name": "Sulfuras, Hand of Ragnaros",
@@ -22516,6 +22850,28 @@
       "Requires Level 48"
     ]
   },
+  "17718": {
+    "id": 17718,
+    "name": "Gizlock's Hypertech Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q3",
+    "stats": "1835 Armor, +32 Block, +5 Stamina, +10 Intellect, +4 MP5, Equip: Restores 4 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Tinkerer Gizlock",
+        "t": 1,
+        "ti": 13601,
+        "z": 2100
+      }
+    ]
+  },
   "17719": {
     "id": 17719,
     "name": "Inventor's Focal Sword",
@@ -22805,6 +23161,93 @@
       "Equip: Improves your chance to hit by 1.0%."
     ]
   },
+  "18352": {
+    "id": 18352,
+    "name": "Petrified Bark Shield",
+    "icon": "inv_shield_18",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "1861 Armor, +58 Block, Equip: Increases the block value of your shield by 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Tendris Warpwood",
+        "t": 1,
+        "ti": 11489,
+        "z": 2557
+      }
+    ]
+  },
+  "18485": {
+    "id": 18485,
+    "name": "Observer's Shield",
+    "icon": "inv_shield_13",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2089 Armor, +38 Block, +9 Stamina, +14 Intellect, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Cho'Rush the Observer",
+        "t": 1,
+        "ti": 14324,
+        "z": 2557
+      }
+    ]
+  },
+  "18499": {
+    "id": 18499,
+    "name": "Barrier Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +57 Block, Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 18.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 2557
+      }
+    ]
+  },
+  "18535": {
+    "id": 18535,
+    "name": "Milli's Shield",
+    "icon": "inv_shield_12",
+    "iLvl": 59,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2106 Armor, +37 Block, +7 Stamina, +7 Spirit, Equip: Restores 4 health per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 493,
+        "c2": 1,
+        "n": "Shards of the Felvine",
+        "t": 5,
+        "ti": 5526
+      }
+    ]
+  },
   "18602": {
     "id": 18602,
     "name": "Tome of Sacrifice",
@@ -22911,6 +23354,50 @@
       }
     ]
   },
+  "18673": {
+    "id": 18673,
+    "name": "Avalanchion's Stony Hide",
+    "icon": "inv_shield_03",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q3",
+    "stats": "2026 Armor, +47 Block, +16 Stamina, Equip: Increases the block value of your shield by 10.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Avalanchion",
+        "t": 1,
+        "ti": 14464,
+        "z": 16
+      }
+    ]
+  },
+  "18696": {
+    "id": 18696,
+    "name": "Intricately Runed Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +63 Block, +8 Stamina, Equip: Increases the block value of your shield by 24.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Ras Frostwhisper",
+        "t": 1,
+        "ti": 10508,
+        "z": 2057
+      }
+    ]
+  },
   "18713": {
     "id": 18713,
     "name": "Rhok'delar, Longbow of the Ancient Keepers",
@@ -22942,6 +23429,29 @@
     "subclassName": "Staff",
     "side": "both",
     "sourcemore": null
+  },
+  "18756": {
+    "id": 18756,
+    "name": "Dreadguard's Protector",
+    "icon": "inv_shield_17",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +18 Strength, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Lord Hel'nurath",
+        "t": 1,
+        "ti": 14506,
+        "z": 2557
+      }
+    ]
   },
   "18762": {
     "id": 18762,
@@ -23997,7 +24507,7 @@
     "iLvl": 60,
     "reqLevel": 55,
     "quality": "q4",
-    "stats": "",
+    "stats": "Equip: Increases damage done by Fire spells and effects by up to 37.",
     "inventorySlot": "Held In Off-hand",
     "subclass": "Miscellaneous",
     "subclassName": "Held In Off-hand",
@@ -24108,6 +24618,50 @@
     "subclassName": "Dagger",
     "side": "both",
     "sourcemore": null
+  },
+  "19348": {
+    "id": 19348,
+    "name": "Red Dragonscale Protector",
+    "icon": "inv_shield_20",
+    "iLvl": 74,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2787 Armor, +51 Block, +6 Stamina, +17 Intellect, +6 Spirit, +37 Healing, Equip: Increases healing done by spells and effects by up to 37.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Vaelastrasz the Corrupt",
+        "t": 1,
+        "ti": 13020,
+        "z": 2677
+      }
+    ]
+  },
+  "19349": {
+    "id": 19349,
+    "name": "Elementium Reinforced Bulwark",
+    "icon": "inv_shield_17",
+    "iLvl": 77,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2893 Armor, +73 Block, +23 Stamina, Equip: Increases the block value of your shield by 19., Equip: Increased Defense +7.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Chromaggus",
+        "t": 1,
+        "ti": 14020,
+        "z": 2677
+      }
+    ]
   },
   "19366": {
     "id": 19366,
@@ -24353,6 +24907,28 @@
       }
     ]
   },
+  "19862": {
+    "id": 19862,
+    "name": "Aegis of the Blood God",
+    "icon": "inv_shield_12",
+    "iLvl": 68,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2575 Armor, +77 Block, Equip: Increases the block value of your shield by 30., Equip: Increased Defense +7., Equip: Increases your chance to block attacks with a shield by 2%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Hakkar",
+        "t": 1,
+        "ti": 14834,
+        "z": 1977
+      }
+    ]
+  },
   "19884": {
     "id": 19884,
     "name": "Jin'do's Judgement",
@@ -24373,6 +24949,28 @@
         "n": "Jin'do the Hexxer",
         "t": 1,
         "ti": 11380,
+        "z": 1977
+      }
+    ]
+  },
+  "19915": {
+    "id": 19915,
+    "name": "Zulian Defender",
+    "icon": "inv_shield_22",
+    "iLvl": 68,
+    "reqLevel": 60,
+    "quality": "q3",
+    "stats": "2312 Armor, +43 Block, +15 Stamina, +9 Intellect, +8 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "High Priestess Jeklik",
+        "t": 1,
+        "ti": 14517,
         "z": 1977
       }
     ]
@@ -24674,6 +25272,28 @@
         "n": "Wanted - Deathclasp, Terror of the Sands",
         "t": 5,
         "ti": 8283
+      }
+    ]
+  },
+  "20688": {
+    "id": 20688,
+    "name": "Earthen Guard",
+    "icon": "inv_shield_15",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +56 Block, +19 Stamina, Equip: Increased Defense +7., Equip: Increases the block value of your shield by 12.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Baron Kazum",
+        "t": 1,
+        "ti": 15205,
+        "z": 1377
       }
     ]
   },
@@ -25170,6 +25790,28 @@
       }
     ]
   },
+  "21485": {
+    "id": 21485,
+    "name": "Buru's Skull Fragment",
+    "icon": "inv_shield_22",
+    "iLvl": 68,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2575 Armor, +47 Block, +11 Strength, +20 Stamina, Equip: Increased Defense +6.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Buru the Gorger",
+        "t": 1,
+        "ti": 15370,
+        "z": 3429
+      }
+    ]
+  },
   "21520": {
     "id": 21520,
     "name": "Ravencrest's Legacy",
@@ -25445,6 +26087,28 @@
     "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
+  },
+  "22336": {
+    "id": 22336,
+    "name": "Draconian Aegis of the Legion",
+    "icon": "inv_shield_02",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "stats": "2153 Armor, +40 Block, +7 Stamina, +20 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 20.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lord Valthalak",
+        "t": 1,
+        "ti": 16042,
+        "z": 1583
+      }
+    ]
   },
   "22347": {
     "id": 22347,
@@ -25773,6 +26437,134 @@
     "sourcemore": [
       {
         "z": 139
+      }
+    ]
+  },
+  "22818": {
+    "id": 22818,
+    "name": "The Plague Bearer",
+    "icon": "inv_shield_27",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, +21 Stamina, +15 Frost Resistance, Equip: Increased Defense +9.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Patchwerk",
+        "t": 1,
+        "ti": 16028,
+        "z": 3456
+      }
+    ]
+  },
+  "22819": {
+    "id": 22819,
+    "name": "Shield of Condemnation",
+    "icon": "inv_shield_28",
+    "iLvl": 92,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3425 Armor, +68 Block, +10 Stamina, +10 Intellect, +59 Healing, +6 MP5, Equip: Restores 6 mana per 5 sec., Equip: Increases healing done by spells and effects by up to 59.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Kel'Thuzad",
+        "t": 1,
+        "ti": 15990,
+        "z": 3456
+      }
+    ]
+  },
+  "23043": {
+    "id": 23043,
+    "name": "The Face of Death",
+    "icon": "inv_shield_26",
+    "iLvl": 90,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3494 Armor, +87 Block, +21 Stamina, Equip: Increases your chance to block attacks with a shield by 3%., Equip: Increases the block value of your shield by 21.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Sapphiron",
+        "t": 1,
+        "ti": 15989,
+        "z": 3456
+      }
+    ]
+  },
+  "23075": {
+    "id": 23075,
+    "name": "Death's Bargain",
+    "icon": "inv_armor_shield_naxxramas_d_01",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, +12 Stamina, +12 Intellect, +29 Healing, +4 MP5, Equip: Improves your chance to get a critical strike with spells by 1%., Equip: Increases healing done by spells and effects by up to 29., Equip: Restores 4 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Gluth",
+        "t": 1,
+        "ti": 15932,
+        "z": 3456
+      }
+    ]
+  },
+  "23139": {
+    "id": 23139,
+    "name": "Lord Blackwood's Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +66 Block, +10 Stamina, Equip: Increases the block value of your shield by 27.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lord Blackwood",
+        "t": 1,
+        "ti": 14695,
+        "z": 2057
+      }
+    ]
+  },
+  "23238": {
+    "id": 23238,
+    "name": "Stygian Buckler",
+    "icon": "inv_armor_shield_naxxramas_d_02",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, Equip: When struck has a 15% chance of reducing the attacker's movement speed by 50% for 5 secs. (Proc chance: 15%)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 3456
       }
     ]
   },
@@ -26108,6 +26900,46 @@
     "sourcemore": null,
     "subclassName": "Two-Handed Axe"
   },
+  "209424": {
+    "id": 209424,
+    "name": "Shell Plate Barrier",
+    "icon": "inv_shield_18",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "stats": "661 Armor, +14 Block, +12 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Ghamoo-ra",
+        "t": 1,
+        "ti": 201722,
+        "z": 719
+      }
+    ]
+  },
+  "211460": {
+    "id": 211460,
+    "name": "Ancient Arctic Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 33,
+    "reqLevel": 25,
+    "quality": "q3",
+    "stats": "725 Armor, +15 Block, +7 Stamina, +8 Spirit, +5 Frost Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 719
+      }
+    ]
+  },
   "211940": {
     "id": 211940,
     "name": "Ecks'av's Tribal Guardian",
@@ -26340,6 +27172,71 @@
     "side": "both",
     "sourcemore": null
   },
+  "213351": {
+    "id": 213351,
+    "name": "Irradiated Tower Shield",
+    "icon": "inv_misc_ticket_tarot_twistingnether_01",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "stats": "1580 Armor, +24 Block, +5 Stamina, +7 Intellect, +12 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 12.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Grubbis",
+        "t": 1,
+        "ti": 217280,
+        "z": 721
+      }
+    ]
+  },
+  "213390": {
+    "id": 213390,
+    "name": "Whirling Truesilver Gearwall",
+    "icon": "ability_warrior_criticalblock",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q4",
+    "stats": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "ability_warrior_criticalblock",
+        "n": "Whirling Truesilver Gearwall",
+        "s": 202,
+        "t": 6,
+        "ti": 435958
+      }
+    ]
+  },
+  "213412": {
+    "id": 213412,
+    "name": "Dielectric Safety Shield",
+    "icon": "trade_engineering",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q4",
+    "stats": "1760 Armor, +29 Block, +9 Intellect, +22 Healing, +4 MP5, Equip: Increases healing done by spells and effects by up to 22., Equip: Restores 4 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Crowd Pummeler 9-60",
+        "t": 1,
+        "ti": 215728,
+        "z": 721
+      }
+    ]
+  },
   "215235": {
     "id": 215235,
     "name": "2hander Animation as 1hander test copy",
@@ -26419,6 +27316,24 @@
     "subclassName": "One-handed mace",
     "side": "both",
     "sourcemore": null
+  },
+  "216501": {
+    "id": 216501,
+    "name": "Bloodstorm Barrier",
+    "icon": "spell_nature_lightningshield",
+    "iLvl": 40,
+    "reqLevel": 40,
+    "quality": "q4",
+    "stats": "1197 Armor, +24 Block, +5 Stamina, +8 Intellect, +14 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 33
+      }
+    ]
   },
   "217287": {
     "id": 217287,
@@ -26535,6 +27450,69 @@
       "Equip: Increases damage and healing done by magical spells and effects by up to 48"
     ]
   },
+  "220600": {
+    "id": 220600,
+    "name": "Crest of Preeminence",
+    "icon": "inv_shield_04",
+    "iLvl": 53,
+    "reqLevel": 50,
+    "quality": "q4",
+    "stats": "2043 Armor, +57 Block, +8 Strength, +11 Stamina, Equip: Increases the block value of your shield by 21.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Shade of Eranikus",
+        "t": 1,
+        "ti": 218571,
+        "z": 1477
+      }
+    ]
+  },
+  "220601": {
+    "id": 220601,
+    "name": "Hakkari Witch Doctor's Guard",
+    "icon": "inv_shield_12",
+    "iLvl": 53,
+    "reqLevel": 50,
+    "quality": "q4",
+    "stats": "2043 Armor, +36 Block, +8 Intellect, +21 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 21.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Jammal'an the Prophet",
+        "t": 1,
+        "ti": 218721,
+        "z": 1477
+      }
+    ]
+  },
+  "220602": {
+    "id": 220602,
+    "name": "Sewer Turtle Half-Shell",
+    "icon": "inv_shield_18",
+    "iLvl": 53,
+    "reqLevel": 50,
+    "quality": "q4",
+    "stats": "2043 Armor, +36 Block, +8 Stamina, +9 Intellect, +35 Healing, Equip: Increases healing done by spells and effects by up to 35.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Atal'alarion",
+        "t": 1,
+        "ti": 218624,
+        "z": 1477
+      }
+    ]
+  },
   "221344": {
     "id": 221344,
     "name": "Personal Spellbook",
@@ -26550,6 +27528,24 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "221468": {
+    "id": 221468,
+    "name": "Wall of Whispers",
+    "icon": "inv_shield_12",
+    "iLvl": 50,
+    "reqLevel": 50,
+    "quality": "q4",
+    "stats": "1902 Armor, +34 Block, +6 Stamina, Equip: When struck by a harmful spell, the caster of that spell has a 5% chance to be silenced for 3 sec. (Proc chance: 5%, 20s cooldown)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 33
+      }
+    ]
   },
   "221518": {
     "id": 221518,
@@ -26567,6 +27563,86 @@
     "side": "both",
     "sourcemore": null
   },
+  "223197": {
+    "id": 223197,
+    "name": "Defender of the Wilds",
+    "icon": "inv_shield_04",
+    "iLvl": 55,
+    "reqLevel": 50,
+    "quality": "q3",
+    "stats": "1898 Armor, +34 Block, +12 Stamina, +14 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Shadowtooth Emissary",
+        "t": 1,
+        "ti": 222408,
+        "z": 361
+      }
+    ]
+  },
+  "223545": {
+    "id": 223545,
+    "name": "Gizlock's Hypertech Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q3",
+    "stats": "1835 Armor, +32 Block, +5 Stamina, +10 Intellect, +12 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 12.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Tinkerer Gizlock",
+        "t": 1,
+        "ti": 13601,
+        "z": 2100
+      }
+    ]
+  },
+  "224279": {
+    "id": 224279,
+    "name": "Terrestris",
+    "icon": "inv_shield_shaman_a_01",
+    "iLvl": 79,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2964 Armor, +55 Block, +17 Stamina, Equip: Increased Defense +7., Equip: Summoned totems grant a boon of their element.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "224280": {
+    "id": 224280,
+    "name": "Suzerain, Defender of the Dragonflights",
+    "icon": "inv_shield_warrior_a_01",
+    "iLvl": 79,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2964 Armor, +73 Block, +15 Strength, Equip: Protects the wearer from being fully engulfed by Shadow Flame., Equip: Increased Defense +10., Equip: Increases the block value of your shield by 18.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -81,
+        "c2": 4,
+        "n": "A Just Reward",
+        "t": 5,
+        "ti": 85454
+      }
+    ]
+  },
   "227802": {
     "id": 227802,
     "name": "Monster - Torch",
@@ -26583,6 +27659,227 @@
     "side": "both",
     "sourcemore": null
   },
+  "228037": {
+    "id": 228037,
+    "name": "Rattlecage Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +7 Stamina, +12 Intellect, +15 Healing, +7 Shadow Resistance, Equip: Increases healing done by spells and effects by up to 15.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Rattlegore",
+        "t": 1,
+        "ti": 11622,
+        "z": 2057
+      }
+    ]
+  },
+  "228064": {
+    "id": 228064,
+    "name": "Observer's Shield",
+    "icon": "inv_shield_13",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2089 Armor, +38 Block, +5 Stamina, +14 Intellect, +20 Healing, Equip: Increases healing done by spells and effects by up to 20.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "228106": {
+    "id": 228106,
+    "name": "Shield of Life and Death",
+    "icon": "inv_armor_shield_naxxramas_d_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +12 Intellect, +23 Spell Power, +3 MP5, Equip: Increases damage and healing done by magical spells and effects by up to 23., Equip: Restores 3 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Diathorus the Seeker",
+        "t": 1,
+        "ti": 227019,
+        "z": 15475
+      }
+    ]
+  },
+  "228142": {
+    "id": 228142,
+    "name": "Earth and Fire",
+    "icon": "inv_shield_10",
+    "iLvl": 66,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2504 Armor, +45 Block, +9 Stamina, +7 Intellect, +26 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 26.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "z": 2717
+      }
+    ]
+  },
+  "228266": {
+    "id": 228266,
+    "name": "Drillborer Disk",
+    "icon": "inv_shield_10",
+    "iLvl": 68,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2575 Armor, +70 Block, +11 Stamina, Equip: When struck in combat inflicts 3 Arcane damage to the attacker., Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Garr",
+        "t": 1,
+        "ti": 228432,
+        "z": 2717
+      }
+    ]
+  },
+  "228294": {
+    "id": 228294,
+    "name": "Malistar's Defender",
+    "icon": "inv_shield_08",
+    "iLvl": 77,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2893 Armor, +54 Block, +9 Stamina, +12 Intellect, +42 Healing, +5 MP5, Equip: Increases healing done by spells and effects by up to 42., Equip: Restores 5 mana per 5 sec.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "z": 2717
+      }
+    ]
+  },
+  "228591": {
+    "id": 228591,
+    "name": "Rhombeard Protector",
+    "icon": "inv_shield_14",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2089 Armor, +38 Block, +10 Intellect, +33 Healing, Equip: Increases healing done by spells and effects by up to 33.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Gizrul the Slavener",
+        "t": 1,
+        "ti": 10268,
+        "z": 1583
+      }
+    ]
+  },
+  "228702": {
+    "id": 228702,
+    "name": "Drillborer Disk",
+    "icon": "inv_shield_10",
+    "iLvl": 68,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2575 Armor, +70 Block, +11 Stamina, Equip: When struck in combat inflicts 3 Arcane damage to the attacker., Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "230248": {
+    "id": 230248,
+    "name": "Red Dragonscale Protector",
+    "icon": "inv_shield_20",
+    "iLvl": 74,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2787 Armor, +51 Block, +6 Stamina, +10 Intellect, +5 Spirit, +40 Healing, +14 Spell Damage, Equip: Improves your chance to get a critical strike with all spells and attacks by 1%., Equip: Increases healing done by up to 40 and damage done by up to 14 for all magical spells and effects.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Vaelastrasz the Corrupt",
+        "t": 1,
+        "ti": 13020,
+        "z": 2677
+      }
+    ]
+  },
+  "230802": {
+    "id": 230802,
+    "name": "Elementium Reinforced Bulwark",
+    "icon": "inv_shield_17",
+    "iLvl": 77,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2893 Armor, +73 Block, +23 Stamina, Equip: Increases the block value of your shield by 19., Equip: Increased Defense +7.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Chromaggus",
+        "t": 1,
+        "ti": 14020,
+        "z": 2677
+      }
+    ]
+  },
+  "231289": {
+    "id": 231289,
+    "name": "Aegis of the Blood God",
+    "icon": "inv_shield_12",
+    "iLvl": 70,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2645 Armor, +75 Block, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 27., Equip: Increased Defense +7.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Hakkar",
+        "t": 1,
+        "ti": 14834,
+        "z": 1977
+      }
+    ]
+  },
   "231887": {
     "id": 231887,
     "name": "Test Dagger",
@@ -26598,6 +27895,140 @@
     "subclassName": "Dagger",
     "side": "both",
     "sourcemore": null
+  },
+  "231890": {
+    "id": 231890,
+    "name": "Terrestris",
+    "icon": "inv_shield_shaman_a_01",
+    "iLvl": 79,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2964 Armor, +55 Block, +7 Stamina, +8 Intellect, +20 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 20., Equip: Summoned totems grant a boon of their element.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -82,
+        "c2": 4,
+        "n": "Commit to Quality",
+        "t": 5,
+        "ti": 85558
+      }
+    ]
+  },
+  "232299": {
+    "id": 232299,
+    "name": "Zulian Defender",
+    "icon": "inv_shield_22",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +8 Stamina, +10 Intellect, +23 Spell Power, Equip: Increases damage and healing done by magical spells and effects by up to 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "High Priestess Jeklik",
+        "t": 1,
+        "ti": 14517,
+        "z": 1977
+      }
+    ]
+  },
+  "233629": {
+    "id": 233629,
+    "name": "Wormscale Blocker",
+    "icon": "inv_shield_24",
+    "iLvl": 81,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3035 Armor, +57 Block, +7 Stamina, +12 Intellect, +48 Healing, +16 Spell Damage, Equip: Improves your chance to get a critical strike with all spells and attacks by 1%., Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Ouro",
+        "t": 1,
+        "ti": 15517,
+        "z": 3428
+      }
+    ]
+  },
+  "233988": {
+    "id": 233988,
+    "name": "Tuned Force Reactive Disk",
+    "icon": "spell_arcane_portaldalaran",
+    "iLvl": 75,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2822 Armor, +52 Block, +20 Stamina, Equip: Increased Defense +7., Equip: When the shield blocks it releases an electrical charge that damages all nearby enemies. (1s cooldown)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "spell_arcane_portaldalaran",
+        "n": "Tuned Force Reactive Disk",
+        "s": 202,
+        "t": 6,
+        "ti": 1213588
+      }
+    ]
+  },
+  "234089": {
+    "id": 234089,
+    "name": "Buru's Skull Fragment",
+    "icon": "inv_shield_22",
+    "iLvl": 75,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2822 Armor, +52 Block, +11 Strength, +20 Stamina, Equip: Increased Defense +10.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Buru the Gorger",
+        "t": 1,
+        "ti": 15370,
+        "z": 3429
+      }
+    ]
+  },
+  "234459": {
+    "id": 234459,
+    "name": "Jagged Obsidian Shield",
+    "icon": "inv_shield_22",
+    "iLvl": 75,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2822 Armor, +66 Block, +12 Stamina, Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 14., Equip: When struck by a harmful spell, the caster of that spell has a 20% chance to be silenced for 3 sec. (Proc chance: 20%, 20s cooldown)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_shield_22",
+        "n": "Jagged Obsidian Shield",
+        "s": 164,
+        "t": 6,
+        "ti": 1214270
+      }
+    ]
   },
   "234542": {
     "id": 234542,
@@ -27595,6 +29026,28 @@
       "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
     ]
   },
+  "234807": {
+    "id": 234807,
+    "name": "Blessed Qiraji Bulwark",
+    "icon": "inv_shield_23",
+    "iLvl": 79,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2964 Armor, +70 Block, +20 Stamina, Equip: Increases your chance to block attacks with a shield by 3%., Equip: Increases the block value of your shield by 15., Equip: Increased Defense +8.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 3428,
+        "c2": 3,
+        "n": "Imperial Qiraji Armaments",
+        "t": 5,
+        "ti": 86672
+      }
+    ]
+  },
   "235473": {
     "id": 235473,
     "name": "Grand Marshal's Barricade",
@@ -27767,6 +29220,135 @@
     ],
     "subclassName": "One-Handed Axe"
   },
+  "235868": {
+    "id": 235868,
+    "name": "Bulwark of Ire",
+    "icon": "inv_shield_01",
+    "iLvl": 85,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3177 Armor, +61 Block, +14 Stamina, Equip: Deal 100 Shadow damage to melee attackers. Causes twice as much threat as damage dealt., Equip: Increases your chance to block attacks with a shield by 3%., Equip: Increased Defense +10.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 16074
+      }
+    ]
+  },
+  "236224": {
+    "id": 236224,
+    "name": "Stygian Buckler",
+    "icon": "inv_armor_shield_naxxramas_d_02",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, Equip: When struck has a 15% chance of reducing the attacker's movement speed by 50% for 5 secs. (Proc chance: 15%)",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Gluth",
+        "t": 1,
+        "ti": 15932,
+        "z": 3456
+      }
+    ]
+  },
+  "236288": {
+    "id": 236288,
+    "name": "The Plague Bearer",
+    "icon": "inv_shield_27",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, +21 Stamina, +15 Frost Resistance, Equip: Increased Defense +11.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Patchwerk",
+        "t": 1,
+        "ti": 16028,
+        "z": 3456
+      }
+    ]
+  },
+  "236296": {
+    "id": 236296,
+    "name": "Death's Bargain",
+    "icon": "inv_armor_shield_naxxramas_d_01",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3106 Armor, +59 Block, +8 Stamina, +8 Intellect, +44 Healing, +15 Spell Damage, Equip: Improves your chance to get a critical strike with all spells and attacks by 1%., Equip: Increases your casting speed by 1%., Equip: Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Gluth",
+        "t": 1,
+        "ti": 15932,
+        "z": 3456
+      }
+    ]
+  },
+  "236336": {
+    "id": 236336,
+    "name": "The Face of Death",
+    "icon": "inv_shield_26",
+    "iLvl": 90,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3354 Armor, +87 Block, +17 Stamina, Equip: Improves your chance to hit with all spells and attacks by 1%., Equip: Increases the block value of your shield by 21., Equip: Increased Defense +14.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Sapphiron",
+        "t": 1,
+        "ti": 15989,
+        "z": 3456
+      }
+    ]
+  },
+  "236347": {
+    "id": 236347,
+    "name": "Shield of Condemnation",
+    "icon": "inv_shield_28",
+    "iLvl": 92,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3425 Armor, +68 Block, +10 Stamina, +10 Intellect, +51 Healing, +17 Spell Damage, Equip: Increases your casting speed by 2%., Equip: Increases healing done by up to 51 and damage done by up to 17 for all magical spells and effects.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Kel'Thuzad",
+        "t": 1,
+        "ti": 15990,
+        "z": 3456
+      }
+    ]
+  },
   "236759": {
     "id": 236759,
     "name": "[TMP] Furbolg Ritual Stave",
@@ -27799,6 +29381,28 @@
     "sourcemore": null,
     "subclassName": "One-Handed Sword"
   },
+  "238360": {
+    "id": 238360,
+    "name": "Lord Blackwood's Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q4",
+    "stats": "2362 Armor, +74 Block, +10 Stamina, Equip: Increases the block value of your shield by 32.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lord Blackwood",
+        "t": 1,
+        "ti": 14695,
+        "z": 2057
+      }
+    ]
+  },
   "239123": {
     "id": 239123,
     "name": "Monster - BOW_1H_STANDARD_C_01 - Red",
@@ -27812,6 +29416,20 @@
     "inventorySlot": "Ranged",
     "subclass": 2,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "239159": {
+    "id": 239159,
+    "name": "S03 - Scarlet Enclave - Captains Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "1861 Armor, +35 Block, +3 Strength, +14 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -27910,6 +29528,62 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "241015": {
+    "id": 241015,
+    "name": "Aegis of the Scarlet Bastion",
+    "icon": "inv_shield_1h_scarletcrusade_b_01",
+    "iLvl": 98,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3637 Armor, +101 Block, +10 Strength, +20 Stamina, Equip: Improves your chance to hit with all spells and attacks by 1%., Equip: Increases your chance to block attacks with a shield by 2%., Equip: Increases the block value of your shield by 27., Equip: Increased Defense +16.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "241017": {
+    "id": 241017,
+    "name": "Demon's Folly",
+    "icon": "inv_shield_40",
+    "iLvl": 92,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3425 Armor, +68 Block, +7 Stamina, +22 Intellect, +23 Spell Power, Equip: Increases your casting speed by 1%., Equip: Increases damage and healing done by magical spells and effects by up to 23.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Balnazzar",
+        "t": 1,
+        "ti": 240811,
+        "z": 16236
+      }
+    ]
+  },
+  "241018": {
+    "id": 241018,
+    "name": "Nathrezim Heart",
+    "icon": "inv_shield_39",
+    "iLvl": 92,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3425 Armor, +68 Block, +9 Stamina, +9 Intellect, +59 Healing, +20 Spell Damage, Equip: Improves your chance to get a critical strike with all spells and attacks by 1%., Equip: Increases your casting speed by 1%., Equip: Increases healing done by up to 59 and damage done by up to 20 for all magical spells and effects.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Balnazzar",
+        "t": 1,
+        "ti": 240811,
+        "z": 16236
+      }
+    ]
   },
   "241086": {
     "id": 241086,

@@ -76,9 +76,9 @@ function parseXmlTooltip(xml, fallback) {
   }
 
   // Parse equip procs
-  const equipRegex = /<span class="q2">(?:Equip|Chance on hit): ([^<]+)<\/span>/gi;
+  const equipRegex = /<span[^>]*class="q2"[^>]*>(?:Equip|Chance on hit):?\s*([\s\S]*?)<\/span>/gi;
   while ((m = equipRegex.exec(xml)) !== null) {
-    const raw = m[1].replace(/<!--.*?-->/g, '').trim();
+    const raw = m[1].replace(/<[^>]+>/g, '').replace(/<!--.*?-->/g, '').replace(/\s+/g, ' ').trim();
     if (raw && !stats.some(s => s.toLowerCase().includes(raw.toLowerCase()))) {
       stats.push(`Equip: ${raw}`);
     }
