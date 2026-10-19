@@ -41,7 +41,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "inv_wand_01",
+        "icon": "spell_shadow_fingerofdeath",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -61,14 +61,14 @@
             "itemId": 11287,
             "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
             "faction": "both",
-            "dps": "11.3 DPS",
+            "dps": "11.33 DPS",
             "speed": "1.50",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "",
-            "icon": "inv_wand_01"
+            "stats": "+1 Spell Power",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wisesight Wand",
@@ -139,7 +139,7 @@
         "levelBracket": "11–14",
         "itemId": 11288,
         "name": "Greater Magic Wand",
-        "icon": "inv_staff_02",
+        "icon": "inv_staff_07",
         "weaponType": "Wand",
         "speed": "1.30",
         "dps": "17.5 DPS",
@@ -222,14 +222,14 @@
             "itemId": 11288,
             "value": "17.5 DPS, 1.30s - Continue using if unavailable",
             "faction": "both",
-            "dps": "17.5 DPS",
+            "dps": "17.50 DPS",
             "speed": "1.80",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "",
-            "icon": "inv_staff_02"
+            "stats": "+2 Spell Power",
+            "icon": "inv_staff_07"
           }
         ]
       },
@@ -237,7 +237,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_wand_02",
+        "icon": "inv_staff_06",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -257,14 +257,14 @@
             "itemId": 11289,
             "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
             "faction": "both",
-            "dps": "25.4 DPS",
+            "dps": "25.38 DPS",
             "speed": "1.30",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "",
-            "icon": "inv_wand_02"
+            "stats": "+4 Intellect",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -326,8 +326,8 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "",
-            "icon": "inv_wand_07"
+            "stats": "+7 Spell Power",
+            "icon": "inv_wand_03"
           },
           {
             "name": "Greater Mystic Wand",
@@ -340,7 +340,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           }
         ]
@@ -349,7 +349,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_07",
+        "icon": "inv_wand_03",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",
@@ -375,7 +375,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           },
           {
@@ -389,7 +389,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -438,7 +438,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -473,7 +473,7 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "",
+            "stats": "+7 Spell Power",
             "icon": "inv_wand_04"
           },
           {
@@ -487,7 +487,7 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "",
+            "stats": "+8 Spell Power",
             "icon": "inv_wand_05"
           }
         ]
@@ -571,7 +571,7 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "",
+            "stats": "+9 Spell Power",
             "icon": "inv_wand_14"
           },
           {
@@ -634,7 +634,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "inv_wand_01",
+        "icon": "spell_shadow_fingerofdeath",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -654,14 +654,14 @@
             "itemId": 11287,
             "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
             "faction": "both",
-            "dps": "11.3 DPS",
+            "dps": "11.33 DPS",
             "speed": "1.50",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "",
-            "icon": "inv_wand_01"
+            "stats": "+1 Spell Power",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wisesight Wand",
@@ -732,7 +732,7 @@
         "levelBracket": "11–14",
         "itemId": 11288,
         "name": "Greater Magic Wand",
-        "icon": "inv_staff_02",
+        "icon": "inv_staff_07",
         "weaponType": "Wand",
         "speed": "1.30",
         "dps": "17.5 DPS",
@@ -815,14 +815,14 @@
             "itemId": 11288,
             "value": "17.5 DPS, 1.30s - Continue using if unavailable",
             "faction": "both",
-            "dps": "17.5 DPS",
+            "dps": "17.50 DPS",
             "speed": "1.80",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "",
-            "icon": "inv_staff_02"
+            "stats": "+2 Spell Power",
+            "icon": "inv_staff_07"
           }
         ]
       },
@@ -830,7 +830,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_wand_02",
+        "icon": "inv_staff_06",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -850,14 +850,14 @@
             "itemId": 11289,
             "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
             "faction": "both",
-            "dps": "25.4 DPS",
+            "dps": "25.38 DPS",
             "speed": "1.30",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "",
-            "icon": "inv_wand_02"
+            "stats": "+4 Intellect",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -919,8 +919,8 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "",
-            "icon": "inv_wand_07"
+            "stats": "+7 Spell Power",
+            "icon": "inv_wand_03"
           },
           {
             "name": "Greater Mystic Wand",
@@ -933,7 +933,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           }
         ]
@@ -942,7 +942,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_07",
+        "icon": "inv_wand_03",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",
@@ -968,7 +968,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           },
           {
@@ -982,7 +982,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -1031,7 +1031,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -1066,7 +1066,7 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "",
+            "stats": "+7 Spell Power",
             "icon": "inv_wand_04"
           },
           {
@@ -1080,7 +1080,7 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "",
+            "stats": "+8 Spell Power",
             "icon": "inv_wand_05"
           }
         ]
@@ -1164,7 +1164,7 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "",
+            "stats": "+9 Spell Power",
             "icon": "inv_wand_14"
           },
           {
@@ -1227,7 +1227,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "inv_wand_01",
+        "icon": "spell_shadow_fingerofdeath",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -1247,14 +1247,14 @@
             "itemId": 11287,
             "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
             "faction": "both",
-            "dps": "11.3 DPS",
+            "dps": "11.33 DPS",
             "speed": "1.50",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "",
-            "icon": "inv_wand_01"
+            "stats": "+1 Spell Power",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wisesight Wand",
@@ -1325,7 +1325,7 @@
         "levelBracket": "11–14",
         "itemId": 11288,
         "name": "Greater Magic Wand",
-        "icon": "inv_staff_02",
+        "icon": "inv_staff_07",
         "weaponType": "Wand",
         "speed": "1.30",
         "dps": "17.5 DPS",
@@ -1408,14 +1408,14 @@
             "itemId": 11288,
             "value": "17.5 DPS, 1.30s - Continue using if unavailable",
             "faction": "both",
-            "dps": "17.5 DPS",
+            "dps": "17.50 DPS",
             "speed": "1.80",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "",
-            "icon": "inv_staff_02"
+            "stats": "+2 Spell Power",
+            "icon": "inv_staff_07"
           }
         ]
       },
@@ -1423,7 +1423,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_wand_02",
+        "icon": "inv_staff_06",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -1443,14 +1443,14 @@
             "itemId": 11289,
             "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
             "faction": "both",
-            "dps": "25.4 DPS",
+            "dps": "25.38 DPS",
             "speed": "1.30",
-            "weaponType": "Weapon",
+            "weaponType": "Wand",
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "",
-            "icon": "inv_wand_02"
+            "stats": "+4 Intellect",
+            "icon": "inv_staff_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -1512,8 +1512,8 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "",
-            "icon": "inv_wand_07"
+            "stats": "+7 Spell Power",
+            "icon": "inv_wand_03"
           },
           {
             "name": "Greater Mystic Wand",
@@ -1526,7 +1526,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           }
         ]
@@ -1535,7 +1535,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_07",
+        "icon": "inv_wand_03",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",
@@ -1561,7 +1561,7 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "",
+            "stats": "+5 Spell Power",
             "icon": "inv_wand_07"
           },
           {
@@ -1575,7 +1575,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -1624,7 +1624,7 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "",
+            "stats": "+6 Spell Power",
             "icon": "inv_wand_03"
           }
         ]
@@ -1659,7 +1659,7 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "",
+            "stats": "+7 Spell Power",
             "icon": "inv_wand_04"
           },
           {
@@ -1673,7 +1673,7 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "",
+            "stats": "+8 Spell Power",
             "icon": "inv_wand_05"
           }
         ]
@@ -1757,7 +1757,7 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "",
+            "stats": "+9 Spell Power",
             "icon": "inv_wand_14"
           },
           {

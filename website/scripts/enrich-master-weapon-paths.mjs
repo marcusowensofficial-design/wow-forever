@@ -245,7 +245,10 @@ function enrichClassWeapons() {
       lvl25.alts.unshift(makeAlt(282710, { name: "Dun Garok Rifle", value: "14.81 DPS, 2.60s (+3 Agi, +3 Spi) - Hillsbrad" }));
       lvl25.alts.unshift(makeAlt(273029, { name: "Golemsight Long Gun", value: "16.60 DPS, 2.50s (+6 Agi) - Relic Guardian in Excavation Site" }));
     }
-    hLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
+    hLevels.forEach(l => {
+      l.alts = (l.alts || []).filter(a => a.name !== 'Wingblade' && a.name !== 'Crescent Staff');
+      l.alts = cleanAlts(l.alts, l.name);
+    });
   }
 
   // D. ROGUE
@@ -276,7 +279,7 @@ function enrichClassWeapons() {
     rLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
   }
 
-  // E. MAGE, PRIEST, WARLOCK, DRUID, SHAMAN - Staffs and Caster blades
+  // E. MAGE, PRIEST, WARLOCK, DRUID, SHAMAN - Staffs, Caster blades, and Healing upgrades
   const casters = ['mage', 'priest', 'warlock', 'druid', 'shaman'];
   for (const c of casters) {
     if (!weaponsData[c]) continue;
@@ -288,18 +291,114 @@ function enrichClassWeapons() {
       l.alts = cleanAlts(l.alts, l.name);
     }
 
-    // Add Gnarled Necromancer's Staff at 15-16
-    const lvl15 = cLevels.find(l => l.levelBracket === '15–16');
-    if (lvl15) {
-      lvl15.alts.unshift(makeAlt(251534, { name: "Gnarled Necromancer's Staff", faction: "horde", value: "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron" }));
+    // Add Makeshift Stormcaller at 7-8 for Horde casters
+    const lvl7 = cLevels.find(l => l.levelBracket === '7–8');
+    if (lvl7 && c !== 'shaman') {
+      lvl7.alts.push(makeAlt(281274, { name: "Makeshift Stormcaller", faction: "horde", value: "5.8 DPS, 3.30s (+2 Int) - Durotar Shaman/Caster Quest: Stormy Potential" }));
     }
 
-    // Add Striking Staff at 25-26 or 27-28
-    const lvl25 = cLevels.find(l => l.levelBracket === '25–26' || l.levelBracket === '27–28');
+    // Add Clear Crystal Rod at 15-16 (Horde quest staff in Stonetalon)
+    const lvl15 = cLevels.find(l => l.levelBracket === '15–16');
+    if (lvl15) {
+      lvl15.alts.unshift(makeAlt(16894, { name: "Clear Crystal Rod", faction: "horde", value: "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon" }));
+      lvl15.alts.unshift(makeAlt(251534, { name: "Gnarled Necromancer's Staff", faction: "horde", value: "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael" }));
+    }
+
+    // Add Striking Staff and Healer's Staff at 25-26
+    const lvl25 = cLevels.find(l => l.levelBracket === '25–26');
     if (lvl25) {
       lvl25.alts.unshift(makeAlt(279844, { name: "Striking Staff", faction: "horde", value: "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran" }));
       lvl25.alts.unshift(makeAlt(271767, { name: "Healer's Staff", value: "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands" }));
     }
+
+    // Add Wind Spirit Staff (RFK drop with +71 Healing / +23 Spell Damage) and Nimboya's Mystical Staff (STV Horde quest with +38 Spell Power) at 29-30
+    const lvl29 = cLevels.find(l => l.levelBracket === '29–30');
+    if (lvl29) {
+      lvl29.alts.unshift(makeAlt(6689, { name: "Wind Spirit Staff", value: "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar" }));
+      lvl29.alts.unshift(makeAlt(4134, { name: "Nimboya's Mystical Staff", faction: "horde", value: "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV" }));
+    }
+
+    // Add Greatstaff of the Necrokhans (Khan Jehn Maraudon) at 31-35 / 36-40
+    const lvl31 = cLevels.find(l => l.levelBracket === '31–35' || l.levelBracket === '31–36');
+    if (lvl31) {
+      lvl31.alts.unshift(makeAlt(271803, { name: "Greatstaff of the Necrokhans", value: "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn" }));
+    }
+
+    // Add Strength of the Treant (Feralas Horde quest with +42 Spell Power) & Sanctimonial Rod (Alliance quest with +38 Spell Power) at 41-46
+    const lvl41 = cLevels.find(l => l.levelBracket === '41–46');
+    if (lvl41) {
+      lvl41.alts.unshift(makeAlt(9683, { name: "Strength of the Treant", faction: "horde", value: "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas" }));
+      lvl41.alts.unshift(makeAlt(11857, { name: "Sanctimonial Rod", faction: "alliance", value: "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas" }));
+      lvl41.alts.push(makeAlt(10826, { name: "Staff of Lore", value: "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris" }));
+    }
+
+    // Add Resurgence Rod (Maraudon quest with +112 Healing / +37 Spell Damage, 11 MP5) at 47-50 / 47-52
+    const lvl47 = cLevels.find(l => l.levelBracket === '47–50' || l.levelBracket === '47–52');
+    if (lvl47) {
+      lvl47.alts.unshift(makeAlt(17743, { name: "Resurgence Rod", value: "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon" }));
+      lvl47.alts.push(makeAlt(10844, { name: "Spire of Hakkar", value: "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple" }));
+    }
+
+    // Add Sarah's Guide (EPL Horde quest with +54 Spell Power), Corrupted Blackwood Staff (Silithus quest with +54 Spell Power, +22 Int), and Ironbark Staff (AV with +88 Spell Power) at 53-60
+    const lvl53 = cLevels.find(l => l.levelBracket === '53–60' || l.levelBracket === '51–60');
+    if (lvl53) {
+      lvl53.alts.unshift(makeAlt(20724, { name: "Corrupted Blackwood Staff", value: "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus" }));
+      lvl53.alts.unshift(makeAlt(17004, { name: "Sarah's Guide", faction: "horde", value: "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL" }));
+      lvl53.alts.push(makeAlt(20069, { name: "Ironbark Staff", faction: "alliance", value: "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)" }));
+      lvl53.alts.push(makeAlt(20220, { name: "Ironbark Staff", faction: "horde", value: "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)" }));
+    }
+
+    // Clean alts
+    cLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
+  }
+
+  // F. MAGE SPECIFIC CLASS QUESTS
+  if (weaponsData.mage) {
+    const mLevels = weaponsData.mage.levels;
+    const lvl9 = mLevels.find(l => l.levelBracket === '9–10');
+    if (lvl9) {
+      lvl9.alts.unshift(makeAlt(9513, { name: "Ley Staff", value: "5.34 DPS, 2.90s (+2 Spell Power, +1 Int, +1 Spi) - Mage Level 10 Quest: The Mind's Eye (Alliance)" }));
+      lvl9.alts.unshift(makeAlt(9514, { name: "Arcane Staff", value: "5.34 DPS, 2.90s (+2 Spell Power, +1 Int, +1 Spi) - Mage Level 10 Quest: The Mind's Eye (Horde)" }));
+    }
+    const lvl31 = mLevels.find(l => l.levelBracket === '31–35');
+    if (lvl31) {
+      lvl31.alts.unshift(makeAlt(9517, { name: "Celestial Stave", value: "26.50 DPS, 3.00s (+46 Spell Power, +8 Int) - Mage Level 35 Quest: Celestial Power (Tethis in STV)" }));
+    }
+    mLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
+  }
+
+  // G. PRIEST SPECIFIC HEALING UPGRADES
+  if (weaponsData.priest) {
+    const pLevels = weaponsData.priest.levels;
+    const lvl27 = pLevels.find(l => l.levelBracket === '27–28');
+    if (lvl27) {
+      lvl27.alts.unshift(makeAlt(2816, { name: "Death Speaker Scepter", value: "14.4 DPS, 2.00s (+68 Healing) - RFK: Death Speaker Jargba (1H Mace)" }));
+    }
+    const lvl36 = pLevels.find(l => l.levelBracket === '36–40');
+    if (lvl36) {
+      lvl36.alts.unshift(makeAlt(7721, { name: "Hand of Righteousness", value: "26.3 DPS, 2.00s (+94 Healing, +31 Spell Damage, +8 Spi, +7 Sta) - SM Cath: High Inquisitor Whitemane (1H Mace)" }));
+    }
+    pLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
+  }
+
+  // H. DRUID SPECIFIC LEVELING UPGRADES
+  if (weaponsData.druid) {
+    const dLevels = weaponsData.druid.levels;
+    const lvl29 = dLevels.find(l => l.levelBracket === '29–30');
+    if (lvl29) {
+      lvl29.alts.unshift(makeAlt(6689, { name: "Wind Spirit Staff", value: "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar" }));
+    }
+    dLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
+  }
+
+  // I. SHAMAN SPECIFIC LEVELING UPGRADES
+  if (weaponsData.shaman) {
+    const sLevels = weaponsData.shaman.levels;
+    const lvl27 = sLevels.find(l => l.levelBracket === '27–28');
+    if (lvl27) {
+      lvl27.alts.unshift(makeAlt(2816, { name: "Death Speaker Scepter", value: "14.4 DPS, 2.00s (+68 Healing) - RFK: Death Speaker Jargba (1H Mace)" }));
+    }
+    sLevels.forEach(l => l.alts = cleanAlts(l.alts, l.name));
   }
 }
 

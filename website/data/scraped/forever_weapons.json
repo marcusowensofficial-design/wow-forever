@@ -291,7 +291,7 @@
             "faction": "alliance",
             "dps": "15.97 DPS",
             "speed": "3.10",
-            "weaponType": "Two-Handed Mace",
+            "weaponType": "Two-handed mace",
             "quality": "q3",
             "iLvl": 18,
             "reqLevel": 9,
@@ -964,7 +964,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +13 Stamina, +9 Intellect",
-            "icon": "inv_hammer_20"
+            "icon": "inv_hammer_04"
           },
           {
             "name": "Trusty Sword",
@@ -1986,7 +1986,7 @@
             "faction": "alliance",
             "dps": "15.97 DPS",
             "speed": "3.10",
-            "weaponType": "Two-Handed Mace",
+            "weaponType": "Two-handed mace",
             "quality": "q3",
             "iLvl": 18,
             "reqLevel": 9,
@@ -3401,7 +3401,7 @@
             "faction": "both",
             "dps": "9.50 DPS",
             "speed": "2.00",
-            "weaponType": "Crossbow",
+            "weaponType": "Weapon",
             "quality": "q3",
             "iLvl": 18,
             "reqLevel": 13,
@@ -3561,44 +3561,6 @@
             "reqLevel": 11,
             "stats": "",
             "icon": "inv_weapon_bow_01"
-          },
-          {
-            "name": "Wingblade",
-            "itemId": 6504,
-            "value": "15.7 DPS, 2.20s - Leaders of the Fang quest in Wailing Caverns (+5 Agi, +2 Sta) (Horde)",
-            "faction": "horde",
-            "dps": "15.7 DPS",
-            "speed": "2.20",
-            "weaponType": "One-handed sword",
-            "quality": "q3",
-            "iLvl": 24,
-            "reqLevel": 10,
-            "stats": "+5 Agility, +2 Stamina",
-            "icon": "inv_sword_16",
-            "source": {
-              "kind": "quest",
-              "title": "Leaders of the Fang",
-              "detail": "Dungeon quest reward in Wailing Caverns (Horde). Outstanding fast/balanced sword."
-            }
-          },
-          {
-            "name": "Crescent Staff",
-            "itemId": 6505,
-            "value": "+26 Spell Power, +7 Agi, +7 Sta - Leaders of the Fang quest in Wailing Caverns (Horde)",
-            "faction": "horde",
-            "dps": "15.2 DPS",
-            "speed": "2.90",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
-            "reqLevel": 10,
-            "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
-            "icon": "inv_staff_04",
-            "source": {
-              "kind": "quest",
-              "title": "Leaders of the Fang",
-              "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
-            }
           }
         ],
         "faction": "both",
@@ -4944,7 +4906,7 @@
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "+5 Spirit",
-            "icon": "inv_sword_01"
+            "icon": "inv_sword_16"
           },
           {
             "name": "Plaguefang",
@@ -4953,12 +4915,12 @@
             "faction": "horde",
             "dps": "12.38 DPS",
             "speed": "2.10",
-            "weaponType": "One-Handed Sword",
+            "weaponType": "One-handed sword",
             "quality": "q2",
             "iLvl": 24,
             "reqLevel": 16,
             "stats": "",
-            "icon": "inv_sword_05"
+            "icon": "inv_weapon_shortblade_54"
           },
           {
             "name": "Tail Spike",
@@ -6559,7 +6521,7 @@
           {
             "name": "Gnarled Necromancer's Staff",
             "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "value": "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael",
             "faction": "horde",
             "dps": "15.18 DPS",
             "speed": "2.80",
@@ -6571,18 +6533,18 @@
             "icon": "inv_staff_16"
           },
           {
-            "name": "Gnarled Necromancer's Staff",
-            "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "name": "Clear Crystal Rod",
+            "itemId": 16894,
+            "value": "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon",
             "faction": "horde",
-            "dps": "15.18 DPS",
-            "speed": "2.80",
+            "dps": "10.16 DPS",
+            "speed": "3.10",
             "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
+            "quality": "q2",
+            "iLvl": 21,
             "reqLevel": 15,
-            "stats": "+10 Spirit",
-            "icon": "inv_staff_16"
+            "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
+            "icon": "inv_wand_07"
           },
           {
             "name": "Staff of Orgrimmar",
@@ -6983,35 +6945,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Healer's Staff",
-            "itemId": 271767,
-            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
-            "faction": "both",
-            "dps": "20.77 DPS",
-            "speed": "2.60",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "+12 Stamina",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Striking Staff",
-            "itemId": 279844,
-            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
-            "faction": "horde",
-            "dps": "31.29 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
+            "icon": "inv_staff_28"
           },
           {
             "name": "Solid Iron Maul",
@@ -7126,6 +7060,20 @@
         },
         "alts": [
           {
+            "name": "Death Speaker Scepter",
+            "itemId": 2816,
+            "value": "14.4 DPS, 2.00s (+68 Healing) - RFK: Death Speaker Jargba (1H Mace)",
+            "faction": "both",
+            "dps": "14.29 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed mace",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+68 Healing",
+            "icon": "inv_mace_07"
+          },
+          {
             "name": "Striking Staff",
             "itemId": 279844,
             "value": "31.3 DPS, 3.10s, +9 Str, +6 Sta, +14 Int - City of Dalaran Quest: Heart of Disruption",
@@ -7170,25 +7118,6 @@
             ],
             "reqLevel": 24,
             "icon": "inv_staff_10"
-          },
-          {
-            "name": "Death Speaker Scepter",
-            "itemId": 2816,
-            "value": "+68 Healing, +28 Shadow SP, 12 HP5 - Razorfen Kraul (Death Speaker Jargba)",
-            "faction": "both",
-            "dps": "18.5 DPS",
-            "speed": "2.20",
-            "weaponType": "One-handed mace",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 28,
-            "stats": "+68 Healing, +28 Shadow Spell Power, 12 Health per 5 sec",
-            "icon": "inv_mace_07",
-            "source": {
-              "kind": "dungeon",
-              "title": "Razorfen Kraul",
-              "detail": "Dropped by Death Speaker Jargba. Invaluable 1H mace for Priests, Shamans, and Paladins."
-            }
           }
         ],
         "faction": "both",
@@ -7211,6 +7140,34 @@
           "detail": "Level 30 Shaman class chain reward (+12 Int, +15 Sta, +10% Stormstrike damage)"
         },
         "alts": [
+          {
+            "name": "Nimboya's Mystical Staff",
+            "itemId": 4134,
+            "value": "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV",
+            "faction": "horde",
+            "dps": "26.30 DPS",
+            "speed": "2.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 30,
+            "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
+            "icon": "inv_staff_13"
+          },
+          {
+            "name": "Wind Spirit Staff",
+            "itemId": 6689,
+            "value": "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar",
+            "faction": "both",
+            "dps": "21.36 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+            "icon": "inv_staff_01"
+          },
           {
             "name": "Lightning's Grasp",
             "itemId": 280607,
@@ -7333,6 +7290,20 @@
           "detail": "Razorfen Kraul (+15 Str, +8 Sta)"
         },
         "alts": [
+          {
+            "name": "Greatstaff of the Necrokhans",
+            "itemId": 271803,
+            "value": "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn",
+            "faction": "both",
+            "dps": "27.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+            "icon": "inv_staff_08"
+          },
           {
             "name": "Rage of the Storm",
             "itemId": 280604,
@@ -7476,6 +7447,34 @@
         },
         "alts": [
           {
+            "name": "Sanctimonial Rod",
+            "itemId": 11857,
+            "value": "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas",
+            "faction": "alliance",
+            "dps": "26.45 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 40,
+            "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Strength of the Treant",
+            "itemId": 9683,
+            "value": "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas",
+            "faction": "horde",
+            "dps": "28.78 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 40,
+            "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
+            "icon": "inv_staff_25"
+          },
+          {
             "name": "Princess Theradras' Scepter",
             "itemId": 17766,
             "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
@@ -7516,6 +7515,20 @@
             "reqLevel": 44,
             "stats": "",
             "icon": "inv_hammer_16"
+          },
+          {
+            "name": "Staff of Lore",
+            "itemId": 10826,
+            "value": "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris",
+            "faction": "both",
+            "dps": "27.58 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
+            "icon": "inv_staff_27"
           }
         ],
         "faction": "both",
@@ -7538,6 +7551,20 @@
           "detail": "Plan drops in Blackrock Depths - 8s stun proc"
         },
         "alts": [
+          {
+            "name": "Resurgence Rod",
+            "itemId": 17743,
+            "value": "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon",
+            "faction": "both",
+            "dps": "34.08 DPS",
+            "speed": "3.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 45,
+            "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
+            "icon": "inv_staff_goldfeathered_01"
+          },
           {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
@@ -7564,6 +7591,20 @@
             "reqLevel": 51,
             "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
             "icon": "inv_hammer_04"
+          },
+          {
+            "name": "Spire of Hakkar",
+            "itemId": 10844,
+            "value": "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple",
+            "faction": "both",
+            "dps": "34.71 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+            "icon": "inv_staff_32"
           }
         ],
         "faction": "both",
@@ -7586,6 +7627,34 @@
           "detail": "Slow 3.80s swing speed yields monster Windfury procs"
         },
         "alts": [
+          {
+            "name": "Sarah's Guide",
+            "itemId": 17004,
+            "value": "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL",
+            "faction": "horde",
+            "dps": "35.20 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Corrupted Blackwood Staff",
+            "itemId": 20724,
+            "value": "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus",
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 62,
+            "reqLevel": 58,
+            "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
+            "icon": "inv_staff_07"
+          },
           {
             "name": "The Unstoppable Force",
             "itemId": 19323,
@@ -7640,6 +7709,20 @@
             "reqLevel": 54,
             "stats": "",
             "icon": "inv_axe_69"
+          },
+          {
+            "name": "Ironbark Staff",
+            "itemId": 20069,
+            "value": "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)",
+            "faction": "alliance",
+            "dps": "42.06 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
+            "icon": "inv_wand_04"
           }
         ],
         "faction": "both",
@@ -7773,6 +7856,20 @@
             "reqLevel": 7,
             "stats": "+6 Spell Power",
             "icon": "inv_staff_16"
+          },
+          {
+            "name": "Makeshift Stormcaller",
+            "itemId": 281274,
+            "value": "5.8 DPS, 3.30s (+2 Int) - Durotar Shaman/Caster Quest: Stormy Potential",
+            "faction": "horde",
+            "dps": "5.76 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 11,
+            "reqLevel": 7,
+            "stats": "+2 Intellect",
+            "icon": "inv_staff_14"
           }
         ],
         "faction": "alliance",
@@ -7794,7 +7891,36 @@
           "title": "The Relics of Wakening",
           "detail": "Quest reward from Teldrassil / Darkshore barrows."
         },
-        "alts": [],
+        "alts": [
+          {
+            "name": "Arcane Staff",
+            "itemId": 9514,
+            "value": "5.34 DPS, 2.90s (+2 Spell Power, +1 Int, +1 Spi) - Mage Level 10 Quest: The Mind's Eye (Horde)",
+            "faction": "both",
+            "dps": "5.34 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 10,
+            "reqLevel": 10,
+            "stats": "+1 Intellect, +1 Spirit, +2 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Ley Staff",
+            "itemId": 9513,
+            "value": "5.34 DPS, 2.90s (+2 Spell Power, +1 Int, +1 Spi) - Mage Level 10 Quest: The Mind's Eye (Alliance)",
+            "faction": "both",
+            "dps": "5.34 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 10,
+            "reqLevel": 10,
+            "stats": "+1 Intellect, +1 Spirit, +2 Spell Power",
+            "icon": "inv_staff_21"
+          }
+        ],
         "faction": "both",
         "quality": "q2",
         "iLvl": 15,
@@ -7943,7 +8069,7 @@
           {
             "name": "Gnarled Necromancer's Staff",
             "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "value": "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael",
             "faction": "horde",
             "dps": "15.18 DPS",
             "speed": "2.80",
@@ -7955,18 +8081,18 @@
             "icon": "inv_staff_16"
           },
           {
-            "name": "Gnarled Necromancer's Staff",
-            "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "name": "Clear Crystal Rod",
+            "itemId": 16894,
+            "value": "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon",
             "faction": "horde",
-            "dps": "15.18 DPS",
-            "speed": "2.80",
+            "dps": "10.16 DPS",
+            "speed": "3.10",
             "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
+            "quality": "q2",
+            "iLvl": 21,
             "reqLevel": 15,
-            "stats": "+10 Spirit",
-            "icon": "inv_staff_16"
+            "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
+            "icon": "inv_wand_07"
           },
           {
             "name": "Staff of Orgrimmar",
@@ -8330,35 +8456,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Healer's Staff",
-            "itemId": 271767,
-            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
-            "faction": "both",
-            "dps": "20.77 DPS",
-            "speed": "2.60",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "+12 Stamina",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Striking Staff",
-            "itemId": 279844,
-            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
-            "faction": "horde",
-            "dps": "31.29 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
+            "icon": "inv_staff_28"
           },
           {
             "name": "Death Prophet Spine",
@@ -8517,6 +8615,34 @@
         },
         "alts": [
           {
+            "name": "Nimboya's Mystical Staff",
+            "itemId": 4134,
+            "value": "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV",
+            "faction": "horde",
+            "dps": "26.30 DPS",
+            "speed": "2.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 30,
+            "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
+            "icon": "inv_staff_13"
+          },
+          {
+            "name": "Wind Spirit Staff",
+            "itemId": 6689,
+            "value": "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar",
+            "faction": "both",
+            "dps": "21.36 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+            "icon": "inv_staff_01"
+          },
+          {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
             "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
@@ -8591,6 +8717,34 @@
           "detail": "Scarlet Monastery Library (+15 Int, +10 Spi)"
         },
         "alts": [
+          {
+            "name": "Celestial Stave",
+            "itemId": 9517,
+            "value": "26.50 DPS, 3.00s (+46 Spell Power, +8 Int) - Mage Level 35 Quest: Celestial Power (Tethis in STV)",
+            "faction": "both",
+            "dps": "26.50 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+8 Intellect, +46 Spell Power",
+            "icon": "inv_staff_14"
+          },
+          {
+            "name": "Greatstaff of the Necrokhans",
+            "itemId": 271803,
+            "value": "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn",
+            "faction": "both",
+            "dps": "27.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+            "icon": "inv_staff_08"
+          },
           {
             "name": "Hypnotic Blade",
             "itemId": 7714,
@@ -8695,6 +8849,34 @@
         },
         "alts": [
           {
+            "name": "Sanctimonial Rod",
+            "itemId": 11857,
+            "value": "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas",
+            "faction": "alliance",
+            "dps": "26.45 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 40,
+            "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Strength of the Treant",
+            "itemId": 9683,
+            "value": "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas",
+            "faction": "horde",
+            "dps": "28.78 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 40,
+            "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
+            "icon": "inv_staff_25"
+          },
+          {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
@@ -8721,6 +8903,20 @@
             "reqLevel": 44,
             "stats": "",
             "icon": "inv_staff_17"
+          },
+          {
+            "name": "Staff of Lore",
+            "itemId": 10826,
+            "value": "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris",
+            "faction": "both",
+            "dps": "27.58 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
+            "icon": "inv_staff_27"
           }
         ],
         "faction": "both",
@@ -8744,6 +8940,20 @@
         },
         "alts": [
           {
+            "name": "Resurgence Rod",
+            "itemId": 17743,
+            "value": "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon",
+            "faction": "both",
+            "dps": "34.08 DPS",
+            "speed": "3.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 45,
+            "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
+            "icon": "inv_staff_goldfeathered_01"
+          },
+          {
             "name": "Spire of the Stoneshaper",
             "itemId": 11802,
             "value": "33.8 DPS - BRD: Lord Incendius",
@@ -8754,6 +8964,20 @@
             "reqLevel": 46,
             "stats": "",
             "icon": "inv_staff_29"
+          },
+          {
+            "name": "Spire of Hakkar",
+            "itemId": 10844,
+            "value": "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple",
+            "faction": "both",
+            "dps": "34.71 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+            "icon": "inv_staff_32"
           }
         ],
         "faction": "both",
@@ -8776,6 +9000,34 @@
           "detail": "Mount Hyjal vendor (+Spell Power & Healing)"
         },
         "alts": [
+          {
+            "name": "Sarah's Guide",
+            "itemId": 17004,
+            "value": "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL",
+            "faction": "horde",
+            "dps": "35.20 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Corrupted Blackwood Staff",
+            "itemId": 20724,
+            "value": "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus",
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 62,
+            "reqLevel": 58,
+            "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
+            "icon": "inv_staff_07"
+          },
           {
             "name": "Rod of the Ogre Magi",
             "itemId": 18534,
@@ -8800,6 +9052,20 @@
             "reqLevel": 52,
             "stats": "+14 SP",
             "icon": "inv_weapon_shortblade_16"
+          },
+          {
+            "name": "Ironbark Staff",
+            "itemId": 20069,
+            "value": "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)",
+            "faction": "alliance",
+            "dps": "42.06 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
+            "icon": "inv_wand_04"
           }
         ],
         "faction": "both",
@@ -8933,6 +9199,20 @@
             "reqLevel": 7,
             "stats": "+6 Spell Power",
             "icon": "inv_staff_16"
+          },
+          {
+            "name": "Makeshift Stormcaller",
+            "itemId": 281274,
+            "value": "5.8 DPS, 3.30s (+2 Int) - Durotar Shaman/Caster Quest: Stormy Potential",
+            "faction": "horde",
+            "dps": "5.76 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 11,
+            "reqLevel": 7,
+            "stats": "+2 Intellect",
+            "icon": "inv_staff_14"
           }
         ],
         "faction": "alliance",
@@ -9089,7 +9369,7 @@
           {
             "name": "Gnarled Necromancer's Staff",
             "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "value": "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael",
             "faction": "horde",
             "dps": "15.18 DPS",
             "speed": "2.80",
@@ -9101,18 +9381,18 @@
             "icon": "inv_staff_16"
           },
           {
-            "name": "Gnarled Necromancer's Staff",
-            "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "name": "Clear Crystal Rod",
+            "itemId": 16894,
+            "value": "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon",
             "faction": "horde",
-            "dps": "15.18 DPS",
-            "speed": "2.80",
+            "dps": "10.16 DPS",
+            "speed": "3.10",
             "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
+            "quality": "q2",
+            "iLvl": 21,
             "reqLevel": 15,
-            "stats": "+10 Spirit",
-            "icon": "inv_staff_16"
+            "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
+            "icon": "inv_wand_07"
           },
           {
             "name": "Staff of Orgrimmar",
@@ -9494,35 +9774,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Healer's Staff",
-            "itemId": 271767,
-            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
-            "faction": "both",
-            "dps": "20.77 DPS",
-            "speed": "2.60",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "+12 Stamina",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Striking Staff",
-            "itemId": 279844,
-            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
-            "faction": "horde",
-            "dps": "31.29 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
+            "icon": "inv_staff_28"
           },
           {
             "name": "Debt Collector",
@@ -9657,6 +9909,34 @@
         },
         "alts": [
           {
+            "name": "Nimboya's Mystical Staff",
+            "itemId": 4134,
+            "value": "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV",
+            "faction": "horde",
+            "dps": "26.30 DPS",
+            "speed": "2.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 30,
+            "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
+            "icon": "inv_staff_13"
+          },
+          {
+            "name": "Wind Spirit Staff",
+            "itemId": 6689,
+            "value": "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar",
+            "faction": "both",
+            "dps": "21.36 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+            "icon": "inv_staff_01"
+          },
+          {
             "name": "Mindslicer",
             "itemId": 270069,
             "value": "15.3 DPS, +7 Int, +34 SP - Arathi: Call to Arms",
@@ -9729,6 +10009,20 @@
           "detail": "Scarlet Monastery Library (+15 Int, +10 Spi)"
         },
         "alts": [
+          {
+            "name": "Greatstaff of the Necrokhans",
+            "itemId": 271803,
+            "value": "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn",
+            "faction": "both",
+            "dps": "27.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+            "icon": "inv_staff_08"
+          },
           {
             "name": "Hypnotic Blade",
             "itemId": 7714,
@@ -9814,6 +10108,34 @@
         },
         "alts": [
           {
+            "name": "Sanctimonial Rod",
+            "itemId": 11857,
+            "value": "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas",
+            "faction": "alliance",
+            "dps": "26.45 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 40,
+            "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Strength of the Treant",
+            "itemId": 9683,
+            "value": "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas",
+            "faction": "horde",
+            "dps": "28.78 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 40,
+            "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
+            "icon": "inv_staff_25"
+          },
+          {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
@@ -9840,6 +10162,20 @@
             "reqLevel": 44,
             "stats": "",
             "icon": "inv_staff_17"
+          },
+          {
+            "name": "Staff of Lore",
+            "itemId": 10826,
+            "value": "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris",
+            "faction": "both",
+            "dps": "27.58 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
+            "icon": "inv_staff_27"
           }
         ],
         "faction": "both",
@@ -9863,6 +10199,20 @@
         },
         "alts": [
           {
+            "name": "Resurgence Rod",
+            "itemId": 17743,
+            "value": "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon",
+            "faction": "both",
+            "dps": "34.08 DPS",
+            "speed": "3.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 45,
+            "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
+            "icon": "inv_staff_goldfeathered_01"
+          },
+          {
             "name": "Kindling Stave",
             "itemId": 11750,
             "value": "34.1 DPS - BRD: Pyromancer Loregrain",
@@ -9875,6 +10225,20 @@
             "reqLevel": 48,
             "stats": "+14 Critical Strike Rating, +60 Spell Power",
             "icon": "inv_staff_08"
+          },
+          {
+            "name": "Spire of Hakkar",
+            "itemId": 10844,
+            "value": "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple",
+            "faction": "both",
+            "dps": "34.71 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+            "icon": "inv_staff_32"
           }
         ],
         "faction": "both",
@@ -9897,6 +10261,34 @@
           "detail": "Legendary warlock class scythe"
         },
         "alts": [
+          {
+            "name": "Sarah's Guide",
+            "itemId": 17004,
+            "value": "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL",
+            "faction": "horde",
+            "dps": "35.20 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Corrupted Blackwood Staff",
+            "itemId": 20724,
+            "value": "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus",
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 62,
+            "reqLevel": 58,
+            "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
+            "icon": "inv_staff_07"
+          },
           {
             "name": "Wisepaw Totem",
             "itemId": 274420,
@@ -9935,6 +10327,20 @@
             "reqLevel": 50,
             "stats": "+14 SP",
             "icon": "inv_weapon_shortblade_16"
+          },
+          {
+            "name": "Ironbark Staff",
+            "itemId": 20069,
+            "value": "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)",
+            "faction": "alliance",
+            "dps": "42.06 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
+            "icon": "inv_wand_04"
           }
         ],
         "faction": "both",
@@ -10053,6 +10459,20 @@
             "reqLevel": 7,
             "stats": "+6 Spell Power",
             "icon": "inv_staff_16"
+          },
+          {
+            "name": "Makeshift Stormcaller",
+            "itemId": 281274,
+            "value": "5.8 DPS, 3.30s (+2 Int) - Durotar Shaman/Caster Quest: Stormy Potential",
+            "faction": "horde",
+            "dps": "5.76 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 11,
+            "reqLevel": 7,
+            "stats": "+2 Intellect",
+            "icon": "inv_staff_14"
           }
         ],
         "faction": "alliance",
@@ -10218,7 +10638,7 @@
           {
             "name": "Gnarled Necromancer's Staff",
             "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "value": "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael",
             "faction": "horde",
             "dps": "15.18 DPS",
             "speed": "2.80",
@@ -10230,18 +10650,18 @@
             "icon": "inv_staff_16"
           },
           {
-            "name": "Gnarled Necromancer's Staff",
-            "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "name": "Clear Crystal Rod",
+            "itemId": 16894,
+            "value": "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon",
             "faction": "horde",
-            "dps": "15.18 DPS",
-            "speed": "2.80",
+            "dps": "10.16 DPS",
+            "speed": "3.10",
             "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
+            "quality": "q2",
+            "iLvl": 21,
             "reqLevel": 15,
-            "stats": "+10 Spirit",
-            "icon": "inv_staff_16"
+            "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
+            "icon": "inv_wand_07"
           },
           {
             "name": "Staff of Orgrimmar",
@@ -10616,35 +11036,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Healer's Staff",
-            "itemId": 271767,
-            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
-            "faction": "both",
-            "dps": "20.77 DPS",
-            "speed": "2.60",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "+12 Stamina",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Striking Staff",
-            "itemId": 279844,
-            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
-            "faction": "horde",
-            "dps": "31.29 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
+            "icon": "inv_staff_28"
           },
           {
             "name": "Crested Scepter",
@@ -10725,21 +11117,16 @@
           {
             "name": "Death Speaker Scepter",
             "itemId": 2816,
-            "value": "+68 Healing, +28 Shadow SP, 12 HP5 - Razorfen Kraul (Death Speaker Jargba)",
+            "value": "14.4 DPS, 2.00s (+68 Healing) - RFK: Death Speaker Jargba (1H Mace)",
             "faction": "both",
-            "dps": "18.5 DPS",
-            "speed": "2.20",
+            "dps": "14.29 DPS",
+            "speed": "2.80",
             "weaponType": "One-handed mace",
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+68 Healing, +28 Shadow Spell Power, 12 Health per 5 sec",
-            "icon": "inv_mace_07",
-            "source": {
-              "kind": "dungeon",
-              "title": "Razorfen Kraul",
-              "detail": "Dropped by Death Speaker Jargba. Invaluable 1H mace for Priests, Shamans, and Paladins."
-            }
+            "stats": "+68 Healing",
+            "icon": "inv_mace_07"
           },
           {
             "name": "Tendonscraper Dagger",
@@ -10797,6 +11184,34 @@
           "detail": "Excavation Site 4 dungeon quest (+12 Sta, +67 Healing, 5 MP5)"
         },
         "alts": [
+          {
+            "name": "Nimboya's Mystical Staff",
+            "itemId": 4134,
+            "value": "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV",
+            "faction": "horde",
+            "dps": "26.30 DPS",
+            "speed": "2.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 30,
+            "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
+            "icon": "inv_staff_13"
+          },
+          {
+            "name": "Wind Spirit Staff",
+            "itemId": 6689,
+            "value": "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar",
+            "faction": "both",
+            "dps": "21.36 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+            "icon": "inv_staff_01"
+          },
           {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
@@ -10895,6 +11310,20 @@
         },
         "alts": [
           {
+            "name": "Greatstaff of the Necrokhans",
+            "itemId": 271803,
+            "value": "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn",
+            "faction": "both",
+            "dps": "27.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+            "icon": "inv_staff_08"
+          },
+          {
             "name": "Staff of the Friar",
             "itemId": 3415,
             "value": "17.5 DPS, +12 Int, +6 Spi - SM Graveyard: Interrogator Vishas",
@@ -10974,6 +11403,20 @@
         },
         "alts": [
           {
+            "name": "Hand of Righteousness",
+            "itemId": 7721,
+            "value": "26.3 DPS, 2.00s (+94 Healing, +31 Spell Damage, +8 Spi, +7 Sta) - SM Cath: High Inquisitor Whitemane (1H Mace)",
+            "faction": "both",
+            "dps": "19.81 DPS",
+            "speed": "2.70",
+            "weaponType": "One-handed mace",
+            "quality": "q3",
+            "iLvl": 44,
+            "reqLevel": 39,
+            "stats": "+7 Stamina, +8 Spirit, +94 Healing, +31 Spell Damage",
+            "icon": "inv_hammer_02"
+          },
+          {
             "name": "Staff of Jordan",
             "itemId": 873,
             "value": "31.0 DPS, +26 Spell Power - World drop BoE staff",
@@ -11009,6 +11452,34 @@
         },
         "alts": [
           {
+            "name": "Sanctimonial Rod",
+            "itemId": 11857,
+            "value": "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas",
+            "faction": "alliance",
+            "dps": "26.45 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 40,
+            "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Strength of the Treant",
+            "itemId": 9683,
+            "value": "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas",
+            "faction": "horde",
+            "dps": "28.78 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 40,
+            "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
+            "icon": "inv_staff_25"
+          },
+          {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
@@ -11035,6 +11506,20 @@
             "reqLevel": 44,
             "stats": "",
             "icon": "inv_staff_17"
+          },
+          {
+            "name": "Staff of Lore",
+            "itemId": 10826,
+            "value": "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris",
+            "faction": "both",
+            "dps": "27.58 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
+            "icon": "inv_staff_27"
           }
         ],
         "faction": "both",
@@ -11058,6 +11543,20 @@
         },
         "alts": [
           {
+            "name": "Resurgence Rod",
+            "itemId": 17743,
+            "value": "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon",
+            "faction": "both",
+            "dps": "34.08 DPS",
+            "speed": "3.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 45,
+            "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
+            "icon": "inv_staff_goldfeathered_01"
+          },
+          {
             "name": "Spire of the Stoneshaper",
             "itemId": 11802,
             "value": "33.8 DPS - BRD: Lord Incendius",
@@ -11068,6 +11567,20 @@
             "reqLevel": 46,
             "stats": "",
             "icon": "inv_staff_29"
+          },
+          {
+            "name": "Spire of Hakkar",
+            "itemId": 10844,
+            "value": "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple",
+            "faction": "both",
+            "dps": "34.71 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+            "icon": "inv_staff_32"
           }
         ],
         "faction": "both",
@@ -11090,6 +11603,34 @@
           "detail": "Mount Hyjal vendor (+Spell Power & Healing)"
         },
         "alts": [
+          {
+            "name": "Sarah's Guide",
+            "itemId": 17004,
+            "value": "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL",
+            "faction": "horde",
+            "dps": "35.20 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Corrupted Blackwood Staff",
+            "itemId": 20724,
+            "value": "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus",
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 62,
+            "reqLevel": 58,
+            "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
+            "icon": "inv_staff_07"
+          },
           {
             "name": "Benediction",
             "itemId": 18608,
@@ -11115,6 +11656,20 @@
             "reqLevel": 52,
             "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
             "icon": "inv_staff_13"
+          },
+          {
+            "name": "Ironbark Staff",
+            "itemId": 20069,
+            "value": "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)",
+            "faction": "alliance",
+            "dps": "42.06 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
+            "icon": "inv_wand_04"
           }
         ],
         "faction": "both",
@@ -11347,6 +11902,20 @@
             "reqLevel": 7,
             "stats": "+6 Spell Power",
             "icon": "inv_staff_16"
+          },
+          {
+            "name": "Makeshift Stormcaller",
+            "itemId": 281274,
+            "value": "5.8 DPS, 3.30s (+2 Int) - Durotar Shaman/Caster Quest: Stormy Potential",
+            "faction": "horde",
+            "dps": "5.76 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 11,
+            "reqLevel": 7,
+            "stats": "+2 Intellect",
+            "icon": "inv_staff_14"
           }
         ],
         "faction": "alliance",
@@ -11633,7 +12202,7 @@
           {
             "name": "Gnarled Necromancer's Staff",
             "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "value": "15.18 DPS, 2.80s (+12 Spell Power, +10 Spi) - Ruins of Lordaeron: Rath'mael",
             "faction": "horde",
             "dps": "15.18 DPS",
             "speed": "2.80",
@@ -11645,18 +12214,18 @@
             "icon": "inv_staff_16"
           },
           {
-            "name": "Gnarled Necromancer's Staff",
-            "itemId": 251534,
-            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "name": "Clear Crystal Rod",
+            "itemId": 16894,
+            "value": "10.2 DPS, 3.10s (+14 Spell Power, +5 Int, +4 Sta) - Arachnophobia quest in Stonetalon",
             "faction": "horde",
-            "dps": "15.18 DPS",
-            "speed": "2.80",
+            "dps": "10.16 DPS",
+            "speed": "3.10",
             "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 24,
+            "quality": "q2",
+            "iLvl": 21,
             "reqLevel": 15,
-            "stats": "+10 Spirit",
-            "icon": "inv_staff_16"
+            "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
+            "icon": "inv_wand_07"
           },
           {
             "name": "Staff of Orgrimmar",
@@ -12141,35 +12710,7 @@
             "iLvl": 36,
             "reqLevel": 24,
             "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Healer's Staff",
-            "itemId": 271767,
-            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
-            "faction": "both",
-            "dps": "20.77 DPS",
-            "speed": "2.60",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "+12 Stamina",
-            "icon": "inv_staff_10"
-          },
-          {
-            "name": "Striking Staff",
-            "itemId": 279844,
-            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
-            "faction": "horde",
-            "dps": "31.29 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-            "icon": "inv_staff_10"
+            "icon": "inv_staff_28"
           },
           {
             "name": "Dendweller's Hammer",
@@ -12397,6 +12938,34 @@
         },
         "alts": [
           {
+            "name": "Wind Spirit Staff",
+            "itemId": 6689,
+            "value": "21.36 DPS, 3.30s (+71 Healing, +23 Spell Damage, +16 Spi, +6 Sta) - RFK: Earthcaller Halmgar",
+            "faction": "both",
+            "dps": "21.36 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+            "icon": "inv_staff_01"
+          },
+          {
+            "name": "Nimboya's Mystical Staff",
+            "itemId": 4134,
+            "value": "26.30 DPS, 2.30s (+38 Spell Power, +15 Spi, +8 Int) - Saving Yenniku quest in STV",
+            "faction": "horde",
+            "dps": "26.30 DPS",
+            "speed": "2.30",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 30,
+            "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
+            "icon": "inv_staff_13"
+          },
+          {
             "name": "Healer's Staff",
             "itemId": 271767,
             "value": "20.8 DPS, 2.60s, +12 Sta, +67 Healing, 5 MP5 - Excavation Site 4 quest",
@@ -12520,6 +13089,20 @@
           "detail": "The 50% haste active makes this legendary for all druids"
         },
         "alts": [
+          {
+            "name": "Greatstaff of the Necrokhans",
+            "itemId": 271803,
+            "value": "27.67 DPS, 3.00s (+16 Sta, +12 Int, +6 Spi) - Maraudon: Khan Jehn",
+            "faction": "both",
+            "dps": "27.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+            "icon": "inv_staff_08"
+          },
           {
             "name": "Illusionary Rod",
             "itemId": 7713,
@@ -12647,6 +13230,34 @@
         },
         "alts": [
           {
+            "name": "Sanctimonial Rod",
+            "itemId": 11857,
+            "value": "26.45 DPS, 3.80s (+38 Spell Power, +17 Spi, +4 Sta) - A Hero's Welcome quest in Feralas",
+            "faction": "alliance",
+            "dps": "26.45 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 40,
+            "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Strength of the Treant",
+            "itemId": 9683,
+            "value": "28.78 DPS, 3.70s (+42 Spell Power, +18 Int, +7 Sta) - Weapons of Spirit quest in Feralas",
+            "faction": "horde",
+            "dps": "28.78 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 40,
+            "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
+            "icon": "inv_staff_25"
+          },
+          {
             "name": "Spellshifter Rod",
             "itemId": 9527,
             "value": "31.1 DPS - Quest: Tiara of the Deep",
@@ -12699,6 +13310,20 @@
             "reqLevel": 44,
             "stats": "",
             "icon": "inv_staff_17"
+          },
+          {
+            "name": "Staff of Lore",
+            "itemId": 10826,
+            "value": "27.58 DPS, 3.80s (+40 Spell Power, +18 Spi, +5 Int) - Gahz'ridian quest in Tanaris",
+            "faction": "both",
+            "dps": "27.58 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
+            "icon": "inv_staff_27"
           }
         ],
         "faction": "both",
@@ -12721,6 +13346,20 @@
           "detail": "Plan drops in Blackrock Depths - 8s stun proc"
         },
         "alts": [
+          {
+            "name": "Resurgence Rod",
+            "itemId": 17743,
+            "value": "34.08 DPS, 3.00s (+112 Healing, +37 Spell Damage, +11 MP5) - Corruption of Earth and Seed quest in Maraudon",
+            "faction": "both",
+            "dps": "34.08 DPS",
+            "speed": "3.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 45,
+            "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
+            "icon": "inv_staff_goldfeathered_01"
+          },
           {
             "name": "Kindling Stave",
             "itemId": 11750,
@@ -12748,6 +13387,20 @@
             "reqLevel": 51,
             "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
             "icon": "inv_hammer_04"
+          },
+          {
+            "name": "Spire of Hakkar",
+            "itemId": 10844,
+            "value": "34.71 DPS, 3.40s (+62 Spell Power, +16 Sta, +16 Spi) - Sunken Temple",
+            "faction": "both",
+            "dps": "34.71 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+            "icon": "inv_staff_32"
           }
         ],
         "faction": "both",
@@ -12770,6 +13423,34 @@
           "detail": "Undisputed BiS Feral Bear Tanking weapon forever (+260 Armor, +10 Defense)"
         },
         "alts": [
+          {
+            "name": "Sarah's Guide",
+            "itemId": 17004,
+            "value": "35.20 DPS, 2.50s (+54 Spell Power, +20 Sta, +15 Int) - The Corpulent One quest in EPL",
+            "faction": "horde",
+            "dps": "35.20 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 61,
+            "reqLevel": 56,
+            "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Corrupted Blackwood Staff",
+            "itemId": 20724,
+            "value": "35.74 DPS, 3.40s (+54 Spell Power, +22 Int, +11 Sta) - Into The Maw of Madness quest in Silithus",
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q2",
+            "iLvl": 62,
+            "reqLevel": 58,
+            "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
+            "icon": "inv_staff_07"
+          },
           {
             "name": "Wisepaw Totem",
             "itemId": 274420,
@@ -12807,6 +13488,20 @@
             "reqLevel": 52,
             "stats": "",
             "icon": "inv_staff_13"
+          },
+          {
+            "name": "Ironbark Staff",
+            "itemId": 20069,
+            "value": "42.06 DPS, 3.20s (+88 Spell Power, +28 Crit, +18 Sta, +15 Int) - Alterac Valley (Revered)",
+            "faction": "alliance",
+            "dps": "42.06 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
+            "icon": "inv_wand_04"
           }
         ],
         "faction": "both",
