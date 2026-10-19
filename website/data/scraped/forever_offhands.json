@@ -844,9 +844,9 @@
               "Requires Level 28"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Lyn the Ignored",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -995,9 +995,9 @@
               "Requires Level 19"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Rath'mael",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "Ruins of Lordaeron (Levels 15–20)"
             }
           },
           {
@@ -3302,9 +3302,9 @@
               "Requires Level 28"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Lyn the Ignored",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -3453,9 +3453,9 @@
               "Requires Level 19"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Rath'mael",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "Ruins of Lordaeron (Levels 15–20)"
             }
           },
           {
@@ -8215,9 +8215,9 @@
               "Requires Level 28"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Lyn the Ignored",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -8366,9 +8366,9 @@
               "Requires Level 19"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Rath'mael",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "Ruins of Lordaeron (Levels 15–20)"
             }
           },
           {
@@ -12690,9 +12690,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shadetooth",
-          "detail": "Excavation Site: Wetlands (Shadetooth). Elite dungeon spell power focus."
+          "detail": "Excavation Site: Wetlands (Levels 26–31)"
         },
         "faction": "both",
         "quality": "q3",
@@ -12771,9 +12771,9 @@
               "Requires Level 30"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shade of the Archmage",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           }
         ]
@@ -13896,9 +13896,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shadetooth",
-          "detail": "Excavation Site: Wetlands (Shadetooth). Premier dungeon spell power focus."
+          "detail": "Excavation Site: Wetlands (Levels 26–31)"
         },
         "faction": "both",
         "quality": "q3",
@@ -13953,9 +13953,9 @@
               "Requires Level 30"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shade of the Archmage",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           }
         ]
@@ -15089,9 +15089,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shadetooth",
-          "detail": "Excavation Site: Wetlands (Shadetooth). Premier dungeon spell power focus."
+          "detail": "Excavation Site: Wetlands (Levels 26–31)"
         },
         "faction": "both",
         "quality": "q3",
@@ -15146,9 +15146,9 @@
               "Requires Level 30"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shade of the Archmage",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           }
         ]
@@ -16214,9 +16214,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+2 Intellect, +8 Spirit, +11 Healing & Spell Power",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shade of the Archmage",
-          "detail": "Dalaran: Shade of the Archmage. Premier healing and mana regeneration focus."
+          "detail": "City of Dalaran (Levels 28–33)"
         },
         "faction": "both",
         "quality": "q3",
@@ -16272,9 +16272,9 @@
               "Requires Level 26"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shadetooth",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "Excavation Site: Wetlands (Levels 26–31)"
             }
           },
           {
@@ -17252,9 +17252,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shadetooth",
-          "detail": "Excavation Site: Wetlands (Shadetooth). Elite dungeon spell power focus."
+          "detail": "Excavation Site: Wetlands (Levels 26–31)"
         },
         "faction": "both",
         "quality": "q3",
@@ -17333,9 +17333,9 @@
               "Requires Level 30"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shade of the Archmage",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           }
         ]
@@ -18396,9 +18396,9 @@
         "weaponType": "Held In Off-hand",
         "stats": "+2 Intellect, +8 Spirit, +11 Healing & Spell Power",
         "source": {
-          "kind": "drop",
+          "kind": "dungeon",
           "title": "Shade of the Archmage",
-          "detail": "Dalaran: Shade of the Archmage. Premier healing and mana regeneration focus."
+          "detail": "City of Dalaran (Levels 28–33)"
         },
         "faction": "both",
         "quality": "q3",
@@ -18454,9 +18454,9 @@
               "Requires Level 26"
             ],
             "source": {
-              "kind": "world",
+              "kind": "dungeon",
               "title": "Shadetooth",
-              "detail": "Zone Drop / Rare Mob"
+              "detail": "Excavation Site: Wetlands (Levels 26–31)"
             }
           },
           {

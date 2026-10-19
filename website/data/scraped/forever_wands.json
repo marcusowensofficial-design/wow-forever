@@ -537,9 +537,9 @@
               "Requires Level 27"
             ],
             "source": {
-              "kind": "world",
-              "title": "Arcanic Enigma in City of Dalaran",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "dungeon",
+              "title": "Arcanic Enigma",
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -585,9 +585,9 @@
         "speed": "1.70",
         "dps": "31.18 DPS",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+          "kind": "dungeon",
+          "title": "Arcanic Enigma",
+          "detail": "City of Dalaran (Levels 28–33)"
         },
         "faction": "both",
         "quality": "q3",
@@ -1783,9 +1783,9 @@
               "Requires Level 27"
             ],
             "source": {
-              "kind": "world",
-              "title": "Arcanic Enigma in City of Dalaran",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "dungeon",
+              "title": "Arcanic Enigma",
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -1831,9 +1831,9 @@
         "speed": "1.70",
         "dps": "31.18 DPS",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+          "kind": "dungeon",
+          "title": "Arcanic Enigma",
+          "detail": "City of Dalaran (Levels 28–33)"
         },
         "faction": "both",
         "quality": "q3",
@@ -3029,9 +3029,9 @@
               "Requires Level 27"
             ],
             "source": {
-              "kind": "world",
-              "title": "Arcanic Enigma in City of Dalaran",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "dungeon",
+              "title": "Arcanic Enigma",
+              "detail": "City of Dalaran (Levels 28–33)"
             }
           },
           {
@@ -3077,9 +3077,9 @@
         "speed": "1.70",
         "dps": "31.18 DPS",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+          "kind": "dungeon",
+          "title": "Arcanic Enigma",
+          "detail": "City of Dalaran (Levels 28–33)"
         },
         "faction": "both",
         "quality": "q3",

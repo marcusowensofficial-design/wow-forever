@@ -5195,9 +5195,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 13"
               ],
               "source": {
-                "kind": "world",
-                "title": "Hall of Thanes: Durgen",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Durgen Dirgehammer",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -5550,9 +5550,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: The Baron",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Baron",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -5912,7 +5912,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Bjork",
-            "detail": "Ruins of Lordaeron, levels 15–20 (+7 Str, +4 Sta)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -5965,9 +5965,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 22,
               "icon": "inv_sword_27",
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Captain",
-                "detail": "World Drop / Quest"
+                "kind": "dungeon",
+                "title": "Lordaeron Captain",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -5992,9 +5992,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 17"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Viktor the Vile",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Viktor the Vile",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -7706,6 +7706,33 @@ if (typeof window !== 'undefined') {
                 "title": "Rare World / Dungeon Drop",
                 "detail": "Dungeon Drop"
               }
+            },
+            {
+              "name": "Golemsight Long Gun",
+              "itemId": 273029,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "16.60 DPS",
+              "value": "16.60 DPS, 2.60s - +6 Agility - Relic Guardian",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "+6 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "34 - 52 Damage\tSpeed 2.60",
+                "(16.60 damage per second)",
+                "+6 Agility",
+                "Requires Level 26"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "Relic Guardian",
+                "detail": "Excavation Site: Wetlands (Levels 26–31)"
+              }
             }
           ],
           "faction": "both",
@@ -7733,7 +7760,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Unstable Sentinel",
-            "detail": "City of Dalaran dungeon (+11 Str, +8 Sta)"
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -8056,6 +8083,34 @@ if (typeof window !== 'undefined') {
                 "kind": "dungeon",
                 "title": "Grubbis",
                 "detail": "Gnomeregan"
+              }
+            },
+            {
+              "name": "Gravespike Repeater",
+              "itemId": 273033,
+              "icon": "inv_weapon_crossbow_08",
+              "weaponType": "Crossbow",
+              "speed": "2.80",
+              "dps": "15.43 DPS",
+              "value": "15.43 DPS, 2.80s - +6 Agility, +4 Stamina - Atrexis the Grave Knight",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tCrossbow",
+                "33 - 54 Damage\tSpeed 2.80",
+                "(15.43 damage per second)",
+                "+6 Agility",
+                "+4 Stamina",
+                "Requires Level 28"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "Atrexis the Grave Knight",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ],
@@ -12752,9 +12807,9 @@ if (typeof window !== 'undefined') {
                   "Requires Level 13"
                 ],
                 "source": {
-                  "kind": "world",
-                  "title": "Hall of Thanes: Durgen",
-                  "detail": "Zone Drop / Rare Mob"
+                  "kind": "dungeon",
+                  "title": "Durgen Dirgehammer",
+                  "detail": "Hall of Thanes (Levels 13–18)"
                 }
               },
               {
@@ -13107,9 +13162,9 @@ if (typeof window !== 'undefined') {
                   "Requires Level 15"
                 ],
                 "source": {
-                  "kind": "world",
-                  "title": "Ruins of Lordaeron: The Baron",
-                  "detail": "Zone Drop / Rare Mob"
+                  "kind": "dungeon",
+                  "title": "The Baron",
+                  "detail": "Ruins of Lordaeron (Levels 15–20)"
                 }
               },
               {
@@ -13469,7 +13524,7 @@ if (typeof window !== 'undefined') {
             "source": {
               "kind": "dungeon",
               "title": "Bjork",
-              "detail": "Ruins of Lordaeron, levels 15–20 (+7 Str, +4 Sta)"
+              "detail": "Ruins of Lordaeron (Levels 15–20)"
             },
             "alts": [
               {
@@ -13522,9 +13577,9 @@ if (typeof window !== 'undefined') {
                 "reqLevel": 22,
                 "icon": "inv_sword_27",
                 "source": {
-                  "kind": "world",
-                  "title": "Ruins of Lordaeron: Captain",
-                  "detail": "World Drop / Quest"
+                  "kind": "dungeon",
+                  "title": "Lordaeron Captain",
+                  "detail": "Ruins of Lordaeron (Levels 15–20)"
                 }
               },
               {
@@ -13549,9 +13604,9 @@ if (typeof window !== 'undefined') {
                   "Requires Level 17"
                 ],
                 "source": {
-                  "kind": "world",
-                  "title": "Ruins of Lordaeron: Viktor the Vile",
-                  "detail": "Zone Drop / Rare Mob"
+                  "kind": "dungeon",
+                  "title": "Viktor the Vile",
+                  "detail": "Ruins of Lordaeron (Levels 15–20)"
                 }
               },
               {
@@ -15290,7 +15345,7 @@ if (typeof window !== 'undefined') {
             "source": {
               "kind": "dungeon",
               "title": "Unstable Sentinel",
-              "detail": "City of Dalaran dungeon (+11 Str, +8 Sta)"
+              "detail": "City of Dalaran (Levels 28–33)"
             },
             "alts": [
               {
@@ -22492,9 +22547,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 22,
               "icon": "inv_sword_27",
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Captain",
-                "detail": "World Drop / Quest"
+                "kind": "dungeon",
+                "title": "Lordaeron Captain",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -22822,9 +22877,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 22,
               "icon": "inv_sword_27",
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Captain",
-                "detail": "World Drop / Quest"
+                "kind": "dungeon",
+                "title": "Lordaeron Captain",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -31370,8 +31425,8 @@ if (typeof window !== 'undefined') {
           "dps": "15.43 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Atrexis in City of Dalaran",
-            "detail": "City of Dalaran dungeon boss drop crossbow (15.43 DPS)"
+            "title": "Atrexis the Grave Knight",
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "value": "15.43 DPS, 2.30s - Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids. - Atrexis in City of Dalaran",
           "faction": "both",
@@ -31399,8 +31454,8 @@ if (typeof window !== 'undefined') {
               "dps": "16.60 DPS",
               "source": {
                 "kind": "dungeon",
-                "title": "Relic Guardian in Excavation Site",
-                "detail": "Excavation Site dungeon drop rifle (+6 Agility, 16.60 DPS)"
+                "title": "Relic Guardian",
+                "detail": "Excavation Site: Wetlands (Levels 26–31)"
               },
               "value": "16.60 DPS, 2.50s - +6 Agility - Relic Guardian in Excavation Site",
               "faction": "both",
@@ -31614,8 +31669,8 @@ if (typeof window !== 'undefined') {
           "dps": "16.60 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Relic Guardian in Excavation Site",
-            "detail": "Excavation Site dungeon drop rifle (+6 Agility, 16.60 DPS)"
+            "title": "Relic Guardian",
+            "detail": "Excavation Site: Wetlands (Levels 26–31)"
           },
           "value": "16.60 DPS, 2.50s - +6 Agility - Relic Guardian in Excavation Site",
           "faction": "both",
@@ -37074,7 +37129,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Magmatus",
-            "detail": "Hall of Thanes dungeon, levels 13–18 (+2 Agi, +2 Fire SP)"
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "alts": [
             {
@@ -37397,7 +37452,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "The Baron",
-            "detail": "Ruins of Lordaeron, levels 15–20 (+3 Agi, +2 Sta)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -37422,9 +37477,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 17"
               ],
               "source": {
-                "kind": "world",
-                "title": "Viktor the Vile in Ruins of Lordaeron",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Viktor the Vile",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -37781,7 +37836,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Viktor the Vile",
-            "detail": "Ruins of Lordaeron (+4 Str, +3 Sta)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -39404,6 +39459,33 @@ if (typeof window !== 'undefined') {
                 "title": "Archmage Arugal",
                 "detail": "Shadowfang Keep"
               }
+            },
+            {
+              "name": "Golemsight Long Gun",
+              "itemId": 273029,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "16.60 DPS",
+              "value": "16.60 DPS, 2.60s - +6 Agility - Relic Guardian",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "+6 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "34 - 52 Damage\tSpeed 2.60",
+                "(16.60 damage per second)",
+                "+6 Agility",
+                "Requires Level 26"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "Relic Guardian",
+                "detail": "Excavation Site: Wetlands (Levels 26–31)"
+              }
             }
           ],
           "faction": "both",
@@ -39431,7 +39513,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Lyn the Ignored",
-            "detail": "City of Dalaran (+5 Sta, +36 Spell Power)"
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -39736,6 +39818,34 @@ if (typeof window !== 'undefined') {
                 "kind": "dungeon",
                 "title": "Grubbis",
                 "detail": "Gnomeregan"
+              }
+            },
+            {
+              "name": "Gravespike Repeater",
+              "itemId": 273033,
+              "icon": "inv_weapon_crossbow_08",
+              "weaponType": "Crossbow",
+              "speed": "2.80",
+              "dps": "15.43 DPS",
+              "value": "15.43 DPS, 2.80s - +6 Agility, +4 Stamina - Atrexis the Grave Knight",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tCrossbow",
+                "33 - 54 Damage\tSpeed 2.80",
+                "(15.43 damage per second)",
+                "+6 Agility",
+                "+4 Stamina",
+                "Requires Level 28"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "Atrexis the Grave Knight",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ],
@@ -44033,9 +44143,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Plunder",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -44060,9 +44170,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 13"
               ],
               "source": {
-                "kind": "world",
-                "title": "Hall of Thanes: Durgen",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Durgen Dirgehammer",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -44144,8 +44254,8 @@ if (typeof window !== 'undefined') {
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "RFC Drop",
-                "detail": "Dungeon Drop"
+                "title": "Magmatus",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -44362,9 +44472,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 16"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Bjork",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -44446,9 +44556,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: The Abandoned",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Abandoned",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -44474,9 +44584,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Witherfang",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -44781,9 +44891,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage done by Frost spells and effects by up to 32."
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Rath'mael",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Rath'mael",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -45061,6 +45171,34 @@ if (typeof window !== 'undefined') {
                 "kind": "dungeon",
                 "title": "Cookie",
                 "detail": "The Deadmines"
+              }
+            },
+            {
+              "name": "Meathook Slicer",
+              "itemId": 271204,
+              "icon": "inv_weapon_shortblade_07",
+              "weaponType": "Dagger",
+              "speed": "1.60",
+              "dps": "14.69 DPS",
+              "value": "14.7 DPS, 1.60s - +4 Agility, +3 Stamina - The Baron",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+4 Agility, +3 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "18 - 34 Damage\tSpeed 1.60",
+                "(14.69 damage per second)",
+                "+4 Agility",
+                "+3 Stamina",
+                "Requires Level 18"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "The Baron",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             }
           ],
@@ -46510,7 +46648,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Unstable Sentinel",
-            "detail": "City of Dalaran dungeon (+11 Str, +8 Sta)"
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -49625,9 +49763,9 @@ if (typeof window !== 'undefined') {
           "dps": "14.2 DPS",
           "stats": "+5 Intellect, +4 Spirit",
           "source": {
-            "kind": "drop",
-            "title": "Plunder (Hall of Thanes)",
-            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+            "kind": "dungeon",
+            "title": "Plunder",
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "faction": "both",
           "quality": "q2",
@@ -49675,9 +49813,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_01",
               "weaponType": "Main Hand Mace",
               "source": {
-                "kind": "world",
-                "title": "The Abandoned (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Abandoned",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -49734,9 +49872,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -50088,9 +50226,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Rath'mael (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Rath'mael",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -50891,9 +51029,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Mana Devourer",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -50973,9 +51111,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -54958,7 +55096,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Plunder",
-            "detail": "Hall of Thanes dungeon (+5 Int, +4 Spirit)"
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "alts": [
             {
@@ -55012,9 +55150,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
               ],
               "source": {
-                "kind": "world",
-                "title": "Hall of Thanes: Magmatus",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Magmatus",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -55398,9 +55536,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Witherfang",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -55425,9 +55563,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: The Baron",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Baron",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -55676,7 +55814,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Spell Dmg)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -55758,9 +55896,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 17"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Viktor the Vile",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Viktor the Vile",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -57057,7 +57195,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Mana Devourer",
-            "detail": "City of Dalaran (+14 Sta, +36 Spell Power)"
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -57083,9 +57221,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "icon": "inv_misc_bone_06",
               "source": {
-                "kind": "world",
-                "title": "City of Dalaran: Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Lyn the Ignored",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -61169,7 +61307,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Plunder",
-            "detail": "Hall of Thanes dungeon (+5 Int, +4 Spirit)"
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "alts": [
             {
@@ -61223,9 +61361,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
               ],
               "source": {
-                "kind": "world",
-                "title": "Hall of Thanes: Magmatus",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Magmatus",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -61499,7 +61637,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Witherfang",
-            "detail": "Ruins of Lordaeron, levels 15–20 (+5 Int, +4 Sta)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -61637,9 +61775,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: The Baron",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Baron",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -61887,7 +62025,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Dmg)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -61969,9 +62107,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 17"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Viktor",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Viktor the Vile",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -63260,7 +63398,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Mana Devourer",
-            "detail": "City of Dalaran (+14 Sta, +36 Spell Power)"
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -63286,9 +63424,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "icon": "inv_misc_bone_06",
               "source": {
-                "kind": "world",
-                "title": "City of Dalaran: Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Lyn the Ignored",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -67392,7 +67530,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Plunder",
-            "detail": "Hall of Thanes dungeon (+5 Int, +4 Spirit)"
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "alts": [
             {
@@ -67529,9 +67667,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Magmatus",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -67723,7 +67861,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "The Abandoned",
-            "detail": "Ruins of Lordaeron (+4 Sta, +4 Int)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -67833,9 +67971,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Witherfang",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -67970,9 +68108,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "The Baron",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -68112,7 +68250,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Dmg)"
+            "detail": "Ruins of Lordaeron (Levels 15–20)"
           },
           "alts": [
             {
@@ -69576,8 +69714,8 @@ if (typeof window !== 'undefined') {
           "dps": "20.1 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Razorfen Kraul",
-            "detail": "Drop from boss encounters in Razorfen Kraul."
+            "title": "Mana Devourer",
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "alts": [
             {
@@ -69631,9 +69769,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "icon": "inv_misc_bone_06",
               "source": {
-                "kind": "world",
-                "title": "City of Dalaran: Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Lyn the Ignored",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -72491,9 +72629,9 @@ if (typeof window !== 'undefined') {
           "dps": "14.2 DPS",
           "stats": "+5 Intellect, +4 Spirit",
           "source": {
-            "kind": "drop",
-            "title": "Plunder (Hall of Thanes)",
-            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+            "kind": "dungeon",
+            "title": "Plunder",
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "faction": "both",
           "quality": "q2",
@@ -72541,9 +72679,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_01",
               "weaponType": "Main Hand Mace",
               "source": {
-                "kind": "world",
-                "title": "The Abandoned (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Abandoned",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -72600,9 +72738,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -72950,9 +73088,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Rath'mael (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Rath'mael",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -73669,9 +73807,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Mana Devourer",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -73751,9 +73889,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -77427,7 +77565,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "dungeon",
             "title": "Plunder",
-            "detail": "Hall of Thanes dungeon (+5 Int, +4 Spirit)"
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "alts": [
             {
@@ -77565,8 +77703,8 @@ if (typeof window !== 'undefined') {
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "RFC Drop",
-                "detail": "Dungeon Drop"
+                "title": "Magmatus",
+                "detail": "Hall of Thanes (Levels 13–18)"
               }
             },
             {
@@ -77868,9 +78006,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Witherfang",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -77896,9 +78034,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: The Abandoned",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Abandoned",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -78205,9 +78343,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage done by Frost spells and effects by up to 32."
               ],
               "source": {
-                "kind": "world",
-                "title": "Ruins of Lordaeron: Rath'mael",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Rath'mael",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -78516,6 +78654,34 @@ if (typeof window !== 'undefined') {
                 "kind": "dungeon",
                 "title": "Skum",
                 "detail": "Wailing Caverns"
+              }
+            },
+            {
+              "name": "Meathook Slicer",
+              "itemId": 271204,
+              "icon": "inv_weapon_shortblade_07",
+              "weaponType": "Dagger",
+              "speed": "1.60",
+              "dps": "14.69 DPS",
+              "value": "14.7 DPS, 1.60s - +4 Agility, +3 Stamina - The Baron",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+4 Agility, +3 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "18 - 34 Damage\tSpeed 1.60",
+                "(14.69 damage per second)",
+                "+4 Agility",
+                "+3 Stamina",
+                "Requires Level 18"
+              ],
+              "source": {
+                "kind": "dungeon",
+                "title": "The Baron",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             }
           ],
@@ -80076,9 +80242,9 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "icon": "inv_staff_07",
               "source": {
-                "kind": "world",
-                "title": "City of Dalaran: Mana Devourer",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Mana Devourer",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -83188,9 +83354,9 @@ if (typeof window !== 'undefined') {
           "dps": "14.2 DPS",
           "stats": "+5 Intellect, +4 Spirit",
           "source": {
-            "kind": "drop",
-            "title": "Plunder (Hall of Thanes)",
-            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+            "kind": "dungeon",
+            "title": "Plunder",
+            "detail": "Hall of Thanes (Levels 13–18)"
           },
           "faction": "both",
           "quality": "q2",
@@ -83238,9 +83404,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_01",
               "weaponType": "Main Hand Mace",
               "source": {
-                "kind": "world",
-                "title": "The Abandoned (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "The Abandoned",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -83325,9 +83491,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Witherfang",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -83649,9 +83815,9 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Rath'mael (Ruins of Lordaeron)",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Rath'mael",
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               },
               "lines": [
                 "Binds when picked up",
@@ -84481,9 +84647,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Mana Devourer",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -84563,9 +84729,9 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -87264,9 +87430,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": {
-                "kind": "world",
-                "title": "Arcanic Enigma in City of Dalaran",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Arcanic Enigma",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -87312,9 +87478,9 @@ if (typeof window !== 'undefined') {
           "speed": "1.70",
           "dps": "31.18 DPS",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+            "kind": "dungeon",
+            "title": "Arcanic Enigma",
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "faction": "both",
           "quality": "q3",
@@ -88510,9 +88676,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": {
-                "kind": "world",
-                "title": "Arcanic Enigma in City of Dalaran",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Arcanic Enigma",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -88558,9 +88724,9 @@ if (typeof window !== 'undefined') {
           "speed": "1.70",
           "dps": "31.18 DPS",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+            "kind": "dungeon",
+            "title": "Arcanic Enigma",
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "faction": "both",
           "quality": "q3",
@@ -89756,9 +89922,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 27"
               ],
               "source": {
-                "kind": "world",
-                "title": "Arcanic Enigma in City of Dalaran",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "dungeon",
+                "title": "Arcanic Enigma",
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -89804,9 +89970,9 @@ if (typeof window !== 'undefined') {
           "speed": "1.70",
           "dps": "31.18 DPS",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Arcanic Enigma in City of Dalaran. Premier level 27 caster wand with bonus spell power."
+            "kind": "dungeon",
+            "title": "Arcanic Enigma",
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "faction": "both",
           "quality": "q3",
@@ -91311,9 +91477,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -91462,9 +91628,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 19"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Rath'mael",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -93769,9 +93935,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -93920,9 +94086,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 19"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Rath'mael",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -98682,9 +98848,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Lyn the Ignored",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             },
             {
@@ -98833,9 +98999,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 19"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Rath'mael",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Ruins of Lordaeron (Levels 15–20)"
               }
             },
             {
@@ -103157,9 +103323,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shadetooth",
-            "detail": "Excavation Site: Wetlands (Shadetooth). Elite dungeon spell power focus."
+            "detail": "Excavation Site: Wetlands (Levels 26–31)"
           },
           "faction": "both",
           "quality": "q3",
@@ -103238,9 +103404,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shade of the Archmage",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ]
@@ -104363,9 +104529,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shadetooth",
-            "detail": "Excavation Site: Wetlands (Shadetooth). Premier dungeon spell power focus."
+            "detail": "Excavation Site: Wetlands (Levels 26–31)"
           },
           "faction": "both",
           "quality": "q3",
@@ -104420,9 +104586,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shade of the Archmage",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ]
@@ -105556,9 +105722,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shadetooth",
-            "detail": "Excavation Site: Wetlands (Shadetooth). Premier dungeon spell power focus."
+            "detail": "Excavation Site: Wetlands (Levels 26–31)"
           },
           "faction": "both",
           "quality": "q3",
@@ -105613,9 +105779,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shade of the Archmage",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ]
@@ -106681,9 +106847,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+2 Intellect, +8 Spirit, +11 Healing & Spell Power",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shade of the Archmage",
-            "detail": "Dalaran: Shade of the Archmage. Premier healing and mana regeneration focus."
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "faction": "both",
           "quality": "q3",
@@ -106739,9 +106905,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shadetooth",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Excavation Site: Wetlands (Levels 26–31)"
               }
             },
             {
@@ -107719,9 +107885,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+4 Stamina, +4 Intellect, +8 Spell Power & Healing",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shadetooth",
-            "detail": "Excavation Site: Wetlands (Shadetooth). Elite dungeon spell power focus."
+            "detail": "Excavation Site: Wetlands (Levels 26–31)"
           },
           "faction": "both",
           "quality": "q3",
@@ -107800,9 +107966,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shade of the Archmage",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "City of Dalaran (Levels 28–33)"
               }
             }
           ]
@@ -108863,9 +109029,9 @@ if (typeof window !== 'undefined') {
           "weaponType": "Held In Off-hand",
           "stats": "+2 Intellect, +8 Spirit, +11 Healing & Spell Power",
           "source": {
-            "kind": "drop",
+            "kind": "dungeon",
             "title": "Shade of the Archmage",
-            "detail": "Dalaran: Shade of the Archmage. Premier healing and mana regeneration focus."
+            "detail": "City of Dalaran (Levels 28–33)"
           },
           "faction": "both",
           "quality": "q3",
@@ -108921,9 +109087,9 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "source": {
-                "kind": "world",
+                "kind": "dungeon",
                 "title": "Shadetooth",
-                "detail": "Zone Drop / Rare Mob"
+                "detail": "Excavation Site: Wetlands (Levels 26–31)"
               }
             },
             {
