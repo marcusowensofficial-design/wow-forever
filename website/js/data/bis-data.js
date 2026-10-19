@@ -4826,7 +4826,7 @@ const WOW_BIS_DATA = {
         "id": "fury",
         "name": "Fury PvE (Dual-Wield)",
         "role": "Melee DPS",
-        "icon": "ability_warrior_innerrage.jpg",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_innerrage.jpg",
         "description": "Premier Level 30 dual-wield physical DPS build utilizing Flurry, Enrage, and Blood Craze with fast off-hands and hard-hitting main hands.",
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
@@ -30722,14 +30722,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "twoHand": {
-            "name": "Taskmaster Axe",
-            "quality": "q3",
-            "icon": "inv_throwingaxe_06.jpg",
-            "stats": "",
-            "enchant": "",
-            "source": "Sneed, The Deadmines 27.65% in Classic",
-            "itemId": "5194",
-            "tipId": "5194",
+            "name": "Smite's Mighty Hammer", "quality": "q3", "icon": "inv_hammer_09.jpg", "stats": "+11 Strength, +4 Agility", "enchant": "", "source": "Mr. Smite, The Deadmines 20.00% in Classic", "itemId": "7230", "tipId": "7230",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -36004,14 +35997,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "twoHand": {
-            "name": "Taskmaster Axe",
-            "quality": "q3",
-            "icon": "inv_throwingaxe_06.jpg",
-            "stats": "",
-            "enchant": "",
-            "source": "Sneed, The Deadmines 27.65% in Classic",
-            "itemId": "5194",
-            "tipId": "5194",
+            "name": "Smite's Mighty Hammer", "quality": "q3", "icon": "inv_hammer_09.jpg", "stats": "+11 Strength, +4 Agility", "enchant": "", "source": "Mr. Smite, The Deadmines 20.00% in Classic", "itemId": "7230", "tipId": "7230",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -81421,14 +81407,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "held": {
-            "name": "Elder's Amber Stave of Shadow Wrath",
-            "quality": "q2",
-            "icon": "inv_staff_07.jpg",
-            "stats": "Equip: +11 Shadow Spell Damage",
-            "enchant": "",
-            "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-            "itemId": "7609",
-            "tipId": "760912761",
+            "name": "Omega Orb", "quality": "q3", "icon": "inv_misc_orb_03.jpg", "stats": "+5 Intellect, +5 Spirit", "enchant": "", "source": "Compendium of the Fallen / World Drop", "itemId": "273827", "tipId": "273827",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -127940,14 +127919,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "held": {
-            "name": "Elder's Amber Stave of Frozen Wrath",
-            "quality": "q2",
-            "icon": "inv_staff_07.jpg",
-            "stats": "Equip: +11 Frost Spell Damage",
-            "enchant": "",
-            "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-            "itemId": "7609",
-            "tipId": "760912758",
+            "name": "Omega Orb", "quality": "q3", "icon": "inv_misc_orb_03.jpg", "stats": "+5 Intellect, +5 Spirit", "enchant": "", "source": "Compendium of the Fallen / World Drop", "itemId": "273827", "tipId": "273827",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -130291,9 +130263,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -135567,9 +135537,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -140816,9 +140784,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -146098,9 +146064,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -151354,9 +151318,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -156501,9 +156463,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -161794,9 +161754,7 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "9459",
-                "tipId": "9459",
-                "name": "Inventor's Focal Sword",
+                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -164740,14 +164698,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "held": {
-            "name": "Elder's Amber Stave of the Tiger",
-            "quality": "q2",
-            "icon": "inv_staff_07.jpg",
-            "stats": "+5 Strength, +5 Agility",
-            "enchant": "",
-            "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-            "itemId": "7609",
-            "tipId": "760912727",
+            "name": "Omega Orb", "quality": "q3", "icon": "inv_misc_orb_03.jpg", "stats": "+5 Intellect, +5 Spirit", "enchant": "", "source": "Compendium of the Fallen / World Drop", "itemId": "273827", "tipId": "273827",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -169587,14 +169538,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "held": {
-            "name": "Elder's Amber Stave of Stamina",
-            "quality": "q2",
-            "icon": "inv_staff_07.jpg",
-            "stats": "+8 Stamina",
-            "enchant": "",
-            "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-            "itemId": "7609",
-            "tipId": "760912731",
+            "name": "Omega Orb", "quality": "q3", "icon": "inv_misc_orb_03.jpg", "stats": "+5 Intellect, +5 Spirit", "enchant": "", "source": "Compendium of the Fallen / World Drop", "itemId": "273827", "tipId": "273827",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [
@@ -174535,14 +174479,7 @@ const WOW_BIS_DATA = {
             ]
           },
           "held": {
-            "name": "Elder's Amber Stave of the Bear",
-            "quality": "q2",
-            "icon": "inv_staff_07.jpg",
-            "stats": "+5 Strength, +5 Stamina",
-            "enchant": "",
-            "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-            "itemId": "7609",
-            "tipId": "760912722",
+            "name": "Omega Orb", "quality": "q3", "icon": "inv_misc_orb_03.jpg", "stats": "+5 Intellect, +5 Spirit", "enchant": "", "source": "Compendium of the Fallen / World Drop", "itemId": "273827", "tipId": "273827",
             "allianceBis": null,
             "hordeBis": null,
             "alts": [

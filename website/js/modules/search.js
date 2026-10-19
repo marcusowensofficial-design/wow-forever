@@ -672,7 +672,7 @@ window.handleSearchResultClick = function(elem) {
     if (codexBtn) codexBtn.click();
     if (targetId === 'codex-pets' && (petFamily || petName)) {
       setTimeout(() => {
-        const searchInput = document.getElementById('pet-search-input');
+        const searchInput = document.getElementById('modal-pet-search') || document.getElementById('pet-search-input') || document.querySelector('.pet-search-input');
         if (searchInput && petName) {
           searchInput.value = petName;
           searchInput.dispatchEvent(new Event('input'));

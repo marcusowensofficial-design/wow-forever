@@ -1,11 +1,4 @@
-/**
- * World of Warcraft: Forever - Class Progression & Toolkit Dataset
- * Contains 1-60 Spellbooks, Weapon Progression, 1-Click Copyable Macros, and Leveling Milestones
- * Auto-compiled from verified Beta Forensics and multi-competitor datasets.
- */
-
-if (typeof window !== 'undefined') {
-  window.WOW_PROGRESSION_DATA = {
+window.WOW_PROGRESSION_DATA = {
   "macros": {
     "hunter": [
       {
@@ -4066,6 +4059,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "",
               "icon": "inv_sword_14"
+            },
+            {
+              "name": "Cruel Barb",
+              "itemId": 5191,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "dps": "15.4 DPS",
+              "speed": "2.80",
+              "stats": "+12 Attack Power",
+              "icon": "inv_sword_18",
+              "value": "The Deadmines — Edwin VanCleef (Top 1H / DW Leveling Weapon)"
             }
           ],
           "faction": "both",
@@ -4529,16 +4535,16 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "29–30",
-          "itemId": 6975,
-          "name": "Whirlwind Axe",
-          "icon": "inv_axe_12",
+          "itemId": 6687,
+          "name": "Corpsemaker",
+          "icon": "inv_axe_11",
           "weaponType": "Two-handed axe",
-          "speed": "3.60",
-          "dps": "35.6 DPS",
+          "speed": "3.80",
+          "dps": "28.9 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Whirlwind Weapon",
-            "detail": "Level 30 Warrior class quest in Arathi Highlands (+14 Str, +15 Sta)"
+            "kind": "dungeon",
+            "title": "Razorfen Kraul — Overlord Ramtusk",
+            "detail": "Devastating 3.80 speed axe (+15 Strength, +8 Stamina)."
           },
           "alts": [
             {
@@ -4699,8 +4705,8 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 40,
-          "stats": "+16 Strength, +15 Stamina",
+          "iLvl": 34,
+          "stats": "+15 Strength, +8 Stamina",
           "lines": [
             "Binds when picked up",
             "Two-Hand\tAxe",
@@ -4710,20 +4716,20 @@ if (typeof window !== 'undefined') {
             "+15 Stamina",
             "Classes: Warrior"
           ],
-          "reqLevel": 30
+          "reqLevel": 29
         },
         {
           "levelBracket": "31–36",
-          "itemId": 6687,
-          "name": "Corpsemaker",
-          "icon": "inv_weapon_halbard_01",
+          "itemId": 6975,
+          "name": "Whirlwind Axe",
+          "icon": "inv_axe_11",
           "weaponType": "Two-handed axe",
-          "speed": "3.80",
-          "dps": "28.9 DPS",
+          "speed": "3.60",
+          "dps": "35.6 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Overlord Ramtusk",
-            "detail": "Razorfen Kraul, levels 29–38 (+15 Str, +8 Sta)"
+            "kind": "quest",
+            "title": "Warrior Class Quest — The Whirlwind Weapon",
+            "detail": "Top warrior leveling spike in Classic WoW history (+15 Strength, +14 Stamina, 35.6 DPS)."
           },
           "alts": [
             {
@@ -4820,8 +4826,8 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 34,
-          "stats": "+15 Strength, +8 Stamina",
+          "iLvl": 40,
+          "stats": "+15 Strength, +14 Stamina",
           "lines": [
             "Binds when picked up",
             "Two-Hand\tAxe",
@@ -4831,7 +4837,7 @@ if (typeof window !== 'undefined') {
             "+8 Stamina",
             "Requires Level 29"
           ],
-          "reqLevel": 29
+          "reqLevel": 30
         },
         {
           "levelBracket": "37–40",
@@ -4901,6 +4907,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 36,
               "stats": "+9 Str, +4 Sta, +3 Agi",
               "icon": "inv_sword_24"
+            },
+            {
+              "name": "Vanquisher's Sword",
+              "itemId": 10823,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "dps": "30.4 DPS",
+              "speed": "2.20",
+              "stats": "+28 Attack Power",
+              "icon": "inv_sword_24",
+              "value": "Razorfen Downs Quest: Bring the End"
+            },
+            {
+              "name": "Ardent Custodian",
+              "itemId": 869,
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "dps": "30.6 DPS",
+              "speed": "2.70",
+              "stats": "+100 Armor, Chance on hit: Increases attack speed by 5% for 10 sec",
+              "icon": "inv_hammer_05",
+              "value": "World Drop Epic Mace"
             }
           ],
           "faction": "both",
@@ -4963,6 +4995,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 44,
               "stats": "",
               "icon": "inv_hammer_16"
+            },
+            {
+              "name": "Sul'thraze the Lasher",
+              "itemId": 9372,
+              "weaponType": "Two-handed sword",
+              "quality": "q4",
+              "iLvl": 50,
+              "reqLevel": 44,
+              "dps": "38.5 DPS",
+              "speed": "2.60",
+              "stats": "Chance on hit: Blasts target with a shadow bolt for 90 to 210 Shadow damage and slows attack speed by 50%",
+              "icon": "inv_sword_40",
+              "value": "Zul'Farrak — Formed by combining Sang'thraze & Jang'thraze"
+            },
+            {
+              "name": "Kang the Decapitator",
+              "itemId": 2291,
+              "weaponType": "Two-handed axe",
+              "quality": "q4",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "dps": "42.6 DPS",
+              "speed": "3.60",
+              "stats": "Chance on hit: Wounds target for 8 Bleed damage each sec for 30 sec",
+              "icon": "inv_axe_09",
+              "value": "World Drop Epic Axe"
             }
           ],
           "faction": "both",
@@ -5012,6 +5070,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 47,
               "stats": "+3% Hit",
               "icon": "inv_sword_04"
+            },
+            {
+              "name": "Thrash Blade",
+              "itemId": 17705,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "dps": "34.6 DPS",
+              "speed": "2.70",
+              "stats": "Chance on hit: Grants 1 extra attack",
+              "icon": "inv_sword_18",
+              "value": "Maraudon Quest: Corruption of Earth and Seed"
             }
           ],
           "faction": "both",
@@ -5034,6 +5105,19 @@ if (typeof window !== 'undefined') {
             "detail": "Crafted (Plan drops in Blackrock Depths) - 8 sec stun proc!"
           },
           "alts": [
+            {
+              "name": "Ice Barbed Spear",
+              "itemId": 19106,
+              "weaponType": "Polearm",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "dps": "53.9 DPS",
+              "speed": "3.60",
+              "stats": "+21 Agility, +13 Stamina",
+              "icon": "inv_spear_06",
+              "value": "Alterac Valley Quest: The Hero of the Stormpike / Korrak (Massive 53.9 DPS spike!)"
+            },
             {
               "name": "Dreadforge Retaliator",
               "itemId": 11931,
@@ -5147,6 +5231,45 @@ if (typeof window !== 'undefined') {
               "reqLevel": 54,
               "stats": "",
               "icon": "inv_axe_69"
+            },
+            {
+              "name": "Ironfoe",
+              "itemId": 11684,
+              "weaponType": "One-handed mace",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "dps": "42.9 DPS",
+              "speed": "2.40",
+              "stats": "Chance on hit: Grants 2 extra attacks on next swing",
+              "icon": "inv_hammer_03",
+              "value": "Blackrock Depths — Emperor Dagran Thaurissan"
+            },
+            {
+              "name": "Dal'Rend's Sacred Charge",
+              "itemId": 12940,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "dps": "41.7 DPS",
+              "speed": "2.80",
+              "stats": "+4 Strength, +1% Critical Strike (Dal'Rend Main Hand)",
+              "icon": "inv_sword_43",
+              "value": "Upper Blackrock Spire — Warchief Rend Blackhand"
+            },
+            {
+              "name": "The Untamed Blade",
+              "itemId": 19334,
+              "weaponType": "Two-handed sword",
+              "quality": "q4",
+              "iLvl": 77,
+              "reqLevel": 60,
+              "dps": "64.1 DPS",
+              "speed": "3.40",
+              "stats": "+22 Stamina, Chance on hit: +300 Strength for 8 sec",
+              "icon": "inv_sword_40",
+              "value": "Blackwing Lair — Razorgore the Untamed"
             }
           ],
           "faction": "both",
@@ -6040,23 +6163,30 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Bonebiter",
-              "itemId": 6830,
-              "value": "38.8 DPS, 3.40s (105–159 dmg) - In the Name of the Light quest (+10 Str, +10 Sta, +5 Agi) (Alliance)",
-              "faction": "alliance",
-              "dps": "38.8 DPS",
-              "speed": "3.40",
-              "weaponType": "Two-handed axe",
+              "name": "Cobalt Crusher",
+              "itemId": 6741,
+              "weaponType": "Two-handed mace",
               "quality": "q3",
-              "iLvl": 44,
-              "reqLevel": 34,
-              "stats": "+10 Strength, +10 Stamina, +5 Agility",
-              "icon": "inv_axe_04",
-              "source": {
-                "kind": "quest",
-                "title": "In the Name of the Light",
-                "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
-              }
+              "iLvl": 37,
+              "reqLevel": 32,
+              "dps": "27.4 DPS",
+              "speed": "3.40",
+              "stats": "+11 Strength, +10 Stamina",
+              "icon": "inv_hammer_04",
+              "value": "+11 Strength, +10 Stamina - Gnomeregan Drop"
+            },
+            {
+              "name": "Cobalt Crusher",
+              "itemId": 6741,
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 37,
+              "reqLevel": 32,
+              "dps": "27.4 DPS",
+              "speed": "3.40",
+              "stats": "+11 Strength, +10 Stamina",
+              "icon": "inv_hammer_04",
+              "value": "+11 Strength, +10 Stamina - Gnomeregan Drop"
             },
             {
               "name": "Moonsteel Broadsword",
@@ -6154,6 +6284,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "",
               "icon": "inv_sword_08"
+            },
+            {
+              "name": "Ardent Custodian",
+              "itemId": 869,
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "dps": "30.6 DPS",
+              "speed": "2.70",
+              "stats": "+100 Armor, Chance on hit: Increases attack speed by 5% for 10 sec",
+              "icon": "inv_hammer_05",
+              "value": "World Drop Epic Mace"
             }
           ],
           "faction": "both",
@@ -6215,6 +6358,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 44,
               "stats": "",
               "icon": "inv_hammer_16"
+            },
+            {
+              "name": "Sul'thraze the Lasher",
+              "itemId": 9372,
+              "weaponType": "Two-handed sword",
+              "quality": "q4",
+              "iLvl": 50,
+              "reqLevel": 44,
+              "dps": "38.5 DPS",
+              "speed": "2.60",
+              "stats": "Chance on hit: Blasts target with a shadow bolt for 90 to 210 Shadow damage and slows attack speed by 50%",
+              "icon": "inv_sword_40",
+              "value": "Zul'Farrak — Formed by combining Sang'thraze & Jang'thraze"
             }
           ],
           "faction": "both",
@@ -6263,6 +6419,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 47,
               "stats": "+3% Hit",
               "icon": "inv_sword_04"
+            },
+            {
+              "name": "Lightforged Blade",
+              "itemId": 20504,
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "dps": "41.3 DPS",
+              "speed": "3.30",
+              "stats": "+16 Strength, +15 Stamina, +10 Spirit",
+              "icon": "inv_sword_39",
+              "value": "Paladin Level 50 Class Quest Reward"
             }
           ],
           "faction": "both",
@@ -6371,6 +6540,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 55,
               "stats": "",
               "icon": "inv_axe_11"
+            },
+            {
+              "name": "The Untamed Blade",
+              "itemId": 19334,
+              "weaponType": "Two-handed sword",
+              "quality": "q4",
+              "iLvl": 77,
+              "reqLevel": 60,
+              "dps": "64.1 DPS",
+              "speed": "3.40",
+              "stats": "+22 Stamina, Chance on hit: +300 Strength for 8 sec",
+              "icon": "inv_sword_40",
+              "value": "Blackwing Lair — Razorgore the Untamed"
             }
           ],
           "faction": "both",
@@ -6722,16 +6904,16 @@ if (typeof window !== 'undefined') {
             {
               "name": "Hunter's Boomstick",
               "itemId": 2511,
-              "value": "8.5 DPS, 2.10s - Dun Morogh quest reward",
+              "value": "8.57 DPS, 2.10s - Dun Morogh Quest: The Grizzled Den",
               "faction": "alliance",
-              "dps": "6.72 DPS",
-              "speed": "3.20",
-              "weaponType": "Staff",
+              "dps": "8.57 DPS",
+              "speed": "2.10",
+              "weaponType": "Gun",
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "stats": "+1 Agility",
+              "icon": "inv_weapon_rifle_01"
             },
             {
               "name": "Deadly Blunderbuss",
@@ -7513,6 +7695,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Bow of Searing Arrows",
+              "itemId": 2825,
+              "weaponType": "Bow",
+              "quality": "q4",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "dps": "28.3 DPS",
+              "speed": "2.70",
+              "stats": "Chance on hit: Shoots a Searing Arrow for 60 Fire damage",
+              "icon": "inv_weapon_bow_08",
+              "value": "World Drop Epic Bow"
+            },
+            {
               "name": "Chesterfall Musket",
               "itemId": 7729,
               "value": "20.9 DPS, 2.50s - SM Graveyard rare trash drop",
@@ -7765,6 +7960,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 50,
               "stats": "",
               "icon": "inv_weapon_rifle_08"
+            },
+            {
+              "name": "Hurricane",
+              "itemId": 2824,
+              "weaponType": "Bow",
+              "quality": "q4",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "dps": "34.4 DPS",
+              "speed": "1.60",
+              "stats": "Chance on hit: Shoots a Frostbolt for 30 Frost damage",
+              "icon": "inv_weapon_bow_06",
+              "value": "World Drop Epic Bow (1.60 Ultra-Fast Speed)"
+            },
+            {
+              "name": "Bloodseeker",
+              "itemId": 19107,
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "dps": "41.5 DPS",
+              "speed": "3.30",
+              "stats": "+8 Strength, +7 Agility",
+              "icon": "inv_weapon_crossbow_07",
+              "value": "Alterac Valley Quest: The Hero of the Stormpike / Korrak"
             }
           ],
           "faction": "both",
@@ -7787,6 +8008,19 @@ if (typeof window !== 'undefined') {
             "detail": "Lower Blackrock Spire (+3 Hit)"
           },
           "alts": [
+            {
+              "name": "Rhok'delar, Longbow of the Ancient Keepers",
+              "itemId": 18713,
+              "weaponType": "Bow",
+              "quality": "q4",
+              "iLvl": 75,
+              "reqLevel": 60,
+              "dps": "44.0 DPS",
+              "speed": "2.90",
+              "stats": "+17 Ranged Attack Power, +1% Critical Strike",
+              "icon": "inv_weapon_bow_01",
+              "value": "Hunter Epic Class Quest — Ancient Petrified Leaf"
+            },
             {
               "name": "Ancient Bone Bow",
               "itemId": 18680,
@@ -7841,6 +8075,71 @@ if (typeof window !== 'undefined') {
               "reqLevel": 53,
               "stats": "",
               "icon": "inv_weapon_rifle_07"
+            },
+            {
+              "name": "Dwarven Hand Cannon",
+              "itemId": 2099,
+              "weaponType": "Gun",
+              "quality": "q4",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "dps": "39.5 DPS",
+              "speed": "2.90",
+              "stats": "Chance on hit: Shoots a Ball of Fire for 140 to 180 Fire damage",
+              "icon": "inv_weapon_rifle_01",
+              "value": "World Drop Epic Gun"
+            },
+            {
+              "name": "Carapace Spine Crossbow",
+              "itemId": 18738,
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "dps": "41.5 DPS",
+              "speed": "3.30",
+              "stats": "+9 Agility, +4 Stamina",
+              "icon": "inv_weapon_crossbow_01",
+              "value": "Stratholme — Nerub'enkan"
+            },
+            {
+              "name": "Lok'delar, Stave of the Ancient Keepers",
+              "itemId": 20487,
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 75,
+              "reqLevel": 60,
+              "dps": "53.9 DPS",
+              "speed": "3.20",
+              "stats": "+15 Stamina, +10 Intellect, +2% Critical Strike, +10 Nature Res",
+              "icon": "inv_staff_01",
+              "value": "Hunter Epic Class Quest (BiS Hunter Melee Stat-Stick)"
+            },
+            {
+              "name": "Barbarous Blade",
+              "itemId": 18520,
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "dps": "50.8 DPS",
+              "speed": "3.20",
+              "stats": "+60 Attack Power, +1% Critical Strike",
+              "icon": "inv_sword_39",
+              "value": "Dire Maul North — King Gordok"
+            },
+            {
+              "name": "Ice Barbed Spear",
+              "itemId": 19106,
+              "weaponType": "Polearm",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "dps": "53.9 DPS",
+              "speed": "3.60",
+              "stats": "+21 Agility, +13 Stamina (Incredible Hunter Stat-Stick)",
+              "icon": "inv_spear_06",
+              "value": "Alterac Valley Quest: The Hero of the Stormpike"
             }
           ],
           "faction": "both",
@@ -8924,52 +9223,6 @@ if (typeof window !== 'undefined') {
               "icon": "inv_sword_15"
             },
             {
-              "name": "Tidebringer's Claw",
-              "itemId": 280605,
-              "weaponType": "Fist Weapon",
-              "speed": "2.40",
-              "dps": "18.1 DPS",
-              "value": "18.1 DPS, 2.40s - Custom Boss Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 40,
-              "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects., Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand\tFist Weapon",
-                "30 - 57 Damage\tSpeed 2.40",
-                "(18.1 damage per second)",
-                "+5 Stamina",
-                "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
-                "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
-              ],
-              "reqLevel": 30,
-              "icon": "inv_weapon_hand_15"
-            },
-            {
-              "name": "Lightning's Grasp",
-              "itemId": 280607,
-              "weaponType": "Fist Weapon",
-              "speed": "2.40",
-              "dps": "18.2 DPS",
-              "value": "18.2 DPS, 2.40s - Custom Boss Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 40,
-              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46., Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand\tFist Weapon",
-                "28 - 52 Damage\tSpeed 2.20",
-                "(18.2 damage per second)",
-                "+6 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
-                "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
-              ],
-              "reqLevel": 30,
-              "icon": "inv_weapon_hand_09"
-            },
-            {
               "name": "Swine Fists",
               "itemId": 6693,
               "weaponType": "Fist Weapon",
@@ -9240,6 +9493,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "",
               "icon": "inv_sword_05"
+            },
+            {
+              "name": "Gut Ripper",
+              "itemId": 2165,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "dps": "31.9 DPS",
+              "speed": "1.80",
+              "stats": "Chance on hit: Wounds target for 100 Bleed damage",
+              "icon": "inv_weapon_shortblade_12",
+              "value": "World Drop Epic Dagger"
+            },
+            {
+              "name": "Bloodrazor",
+              "itemId": 809,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "dps": "33.6 DPS",
+              "speed": "2.70",
+              "stats": "Chance on hit: 120 Bleed damage over 30s",
+              "icon": "inv_sword_21",
+              "value": "World Drop Epic Sword"
             }
           ],
           "faction": "both",
@@ -9263,6 +9542,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Barman Shanker",
+              "itemId": 12791,
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "dps": "38.3 DPS",
+              "speed": "2.00",
+              "stats": "2.00 Slow Speed (Devastating Ambush / Backstab crits)",
+              "icon": "inv_weapon_shortblade_19",
+              "value": "Blackrock Depths — Plugger Spazzring (Grim Guzzler)"
+            },
+            {
               "name": "Lifeforce Dirk",
               "itemId": 10750,
               "value": "35.9 DPS, 1.50s - Sunken Temple Quest: The God Hakkar",
@@ -9277,22 +9569,17 @@ if (typeof window !== 'undefined') {
               "icon": "inv_weapon_shortblade_05"
             },
             {
-              "name": "Electro-Lantern",
-              "itemId": 11855,
-              "value": "34.0 DPS - BRD",
-              "faction": "both",
-              "dps": "34.0 DPS",
-              "quality": "q2",
-              "iLvl": 19,
-              "stats": "+2 Strength, +2 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Held In Off-hand",
-                "+2 Strength",
-                "+2 Intellect"
-              ],
-              "reqLevel": 44,
-              "icon": "inv_lantern_01"
+              "name": "Shadowblade",
+              "itemId": 2163,
+              "weaponType": "Dagger",
+              "quality": "q4",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "dps": "38.3 DPS",
+              "speed": "1.80",
+              "stats": "Chance on hit: Blasts target for 110 to 140 Shadow damage",
+              "icon": "inv_weapon_shortblade_09",
+              "value": "World Drop Epic Dagger"
             }
           ],
           "faction": "both",
@@ -9315,6 +9602,19 @@ if (typeof window !== 'undefined') {
             "detail": "Extra attack engine remains top-tier through 60"
           },
           "alts": [
+            {
+              "name": "Krol Blade",
+              "itemId": 2244,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "dps": "43.3 DPS",
+              "speed": "2.80",
+              "stats": "+7 Strength, +5 Stamina, +1% Critical Strike",
+              "icon": "inv_sword_27",
+              "value": "World Drop Epic Sword (Top Pre-Raid Main Hand)"
+            },
             {
               "name": "Bold Dirk",
               "itemId": 250616,
@@ -9384,11 +9684,12 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "41.1 DPS",
               "speed": "1.70",
-              "quality": "q3",
+              "quality": "q4",
               "iLvl": 62,
               "reqLevel": 56,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_25"
+              "stats": "Chance on hit: All attacks are guaranteed critical strikes for 3 sec",
+              "icon": "inv_weapon_shortblade_25",
+              "weaponType": "Dagger"
             },
             {
               "name": "Mirah's Song",
@@ -9432,7 +9733,7 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q3",
+          "quality": "q4",
           "iLvl": 63,
           "reqLevel": 58,
           "stats": "+4 Str, +9 Agi, +1% Crit"
@@ -9474,20 +9775,6 @@ if (typeof window !== 'undefined') {
               "stats": "",
               "icon": "inv_axe_10",
               "weaponType": "One-Handed Mace"
-            },
-            {
-              "name": "Crude Battle Axe",
-              "itemId": 1512,
-              "value": "2.0 DPS - Starter 2H axe",
-              "faction": "both",
-              "dps": "3.8 DPS",
-              "speed": "3.20",
-              "weaponType": "Two-handed axe",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": "",
-              "icon": "inv_throwingaxe_03"
             }
           ],
           "faction": "both",
@@ -9511,20 +9798,6 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Wooden Mallet",
-              "itemId": 2493,
-              "value": "5.0 DPS - Vendor 2H mace",
-              "faction": "both",
-              "dps": "5 DPS",
-              "speed": "2.60",
-              "weaponType": "Two-handed mace",
-              "quality": "q1",
-              "iLvl": 9,
-              "reqLevel": 4,
-              "stats": "",
-              "icon": "inv_hammer_16"
-            },
-            {
               "name": "Copper Axe",
               "itemId": 2845,
               "value": "3.8 DPS - Blacksmithing (20)",
@@ -9547,12 +9820,12 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 2489,
-          "name": "Large Axe",
-          "icon": "inv_axe_09",
-          "weaponType": "Two-Handed Axe",
-          "speed": "2.80",
-          "dps": "5.5 DPS",
+          "itemId": 2844,
+          "name": "Copper Mace",
+          "icon": "inv_mace_01",
+          "weaponType": "One-handed mace",
+          "speed": "2.40",
+          "dps": "4.2 DPS",
           "source": {
             "kind": "vendor",
             "title": "Weapon Vendor",
@@ -9586,36 +9859,22 @@ if (typeof window !== 'undefined') {
               "reqLevel": 2,
               "stats": "",
               "icon": "inv_torch_unlit"
-            },
-            {
-              "name": "Goblin Smasher",
-              "itemId": 4964,
-              "value": "8.2 DPS, 3.10s - Mulgore Quest: Supervisor Fizsprocket",
-              "faction": "horde",
-              "dps": "8.23 DPS",
-              "speed": "3.10",
-              "weaponType": "Two-handed mace",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 5,
-              "stats": "",
-              "icon": "inv_hammer_15"
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
-          "reqLevel": 5,
-          "stats": ""
+          "reqLevel": 3,
+          "stats": "Starter 1H Mace + Shield combo"
         },
         {
           "levelBracket": "7–8",
-          "itemId": 3488,
-          "name": "Copper Battle Axe",
-          "icon": "inv_throwingaxe_02",
-          "weaponType": "Two-handed axe",
-          "speed": "3.50",
-          "dps": "9.0 DPS",
+          "itemId": 281274,
+          "name": "Makeshift Stormcaller",
+          "icon": "inv_staff_13",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "7.5 DPS",
           "source": {
             "kind": "craft",
             "title": "Blacksmithing (30)",
@@ -9661,36 +9920,22 @@ if (typeof window !== 'undefined') {
               "reqLevel": 7,
               "stats": "",
               "icon": "inv_staff_14"
-            },
-            {
-              "name": "Bonecracker",
-              "itemId": 3440,
-              "value": "9.1 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-              "faction": "horde",
-              "dps": "9.06 DPS",
-              "speed": "3.20",
-              "weaponType": "Two-handed mace",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_mace_04"
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 13,
-          "reqLevel": 8,
-          "stats": ""
+          "iLvl": 12,
+          "reqLevel": 7,
+          "stats": "+2 Intellect, +2 Spirit"
         },
         {
           "levelBracket": "9–10",
-          "itemId": 1197,
-          "name": "Giant Mace",
-          "icon": "inv_mace_02",
-          "weaponType": "Two-handed mace",
-          "speed": "3.50",
-          "dps": "9.0 DPS",
+          "itemId": 7326,
+          "name": "Thun'grim's Axe",
+          "icon": "inv_axe_05",
+          "weaponType": "One-handed axe",
+          "speed": "2.10",
+          "dps": "8.1 DPS",
           "source": {
             "kind": "vendor",
             "title": "Weapon Vendor",
@@ -9750,19 +9995,19 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q1",
+          "quality": "q2",
           "iLvl": 15,
           "reqLevel": 10,
-          "stats": ""
+          "stats": "+2 Strength, +1 Stamina - Shaman Class Quest"
         },
         {
           "levelBracket": "11–12",
-          "itemId": 6214,
-          "name": "Heavy Copper Maul",
-          "icon": "inv_hammer_18",
-          "weaponType": "Two-handed mace",
-          "speed": "3.30",
-          "dps": "10.8 DPS",
+          "itemId": 15445,
+          "name": "Hammer of Orgrimmar",
+          "icon": "inv_mace_02",
+          "weaponType": "One-handed mace",
+          "speed": "2.30",
+          "dps": "9.5 DPS",
           "source": {
             "kind": "craft",
             "title": "Blacksmithing (40)",
@@ -9805,20 +10050,6 @@ if (typeof window !== 'undefined') {
               "icon": "inv_axe_02"
             },
             {
-              "name": "Axe of Orgrimmar",
-              "itemId": 15424,
-              "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
-              "faction": "horde",
-              "dps": "16.06 DPS",
-              "speed": "3.30",
-              "weaponType": "Two-handed axe",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_06"
-            },
-            {
               "name": "Hammer of Orgrimmar",
               "itemId": 15445,
               "value": "12.4 DPS, 2.90s, +3 Str, +3 Spi - RFC Quest: Hidden Enemies",
@@ -9837,7 +10068,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": "+4 Strength"
+          "stats": "+3 Strength, +2 Stamina - Quest Reward"
         },
         {
           "levelBracket": "13–14",
@@ -9880,20 +10111,6 @@ if (typeof window !== 'undefined') {
               "reqLevel": 13,
               "stats": "+5 Str, +2 Sta",
               "icon": "inv_axe_05"
-            },
-            {
-              "name": "Ironforge Greathammer",
-              "itemId": 279895,
-              "value": "16.0 DPS - Hall of Thanes dungeon quest",
-              "faction": "alliance",
-              "dps": "15.97 DPS",
-              "speed": "3.10",
-              "weaponType": "Two-handed mace",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9946,12 +10163,12 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271217,
-          "name": "Corpse Chopper",
-          "icon": "inv_axe_09",
-          "weaponType": "Two-handed axe",
-          "speed": "3.20",
-          "dps": "17.4 DPS",
+          "itemId": 251534,
+          "name": "Gnarled Necromancer's Staff",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "3.00",
+          "dps": "12.8 DPS",
           "source": {
             "kind": "dungeon",
             "title": "Bjork",
@@ -10044,19 +10261,19 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 21,
-          "reqLevel": 16,
-          "stats": "+7 Str, +4 Sta"
+          "quality": "q2",
+          "iLvl": 20,
+          "reqLevel": 15,
+          "stats": "+4 Intellect, +3 Spirit"
         },
         {
           "levelBracket": "17–18",
-          "itemId": 251533,
-          "name": "Forsaken Greataxe",
-          "icon": "inv_axe_24",
-          "weaponType": "Two-handed axe",
-          "speed": "3.40",
-          "dps": "20.5 DPS",
+          "itemId": 271215,
+          "name": "Coldspire Staff",
+          "icon": "inv_staff_16",
+          "weaponType": "Staff",
+          "speed": "3.10",
+          "dps": "16.5 DPS",
           "source": {
             "kind": "quest",
             "title": "The Wrath of Rath'mael",
@@ -10092,20 +10309,6 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_08"
             },
             {
-              "name": "Smite's Mighty Hammer",
-              "itemId": 7230,
-              "value": "19.7 DPS, 3.50s - The Deadmines: Mr. Smite",
-              "faction": "both",
-              "dps": "19.71 DPS",
-              "speed": "3.50",
-              "weaponType": "Two-handed mace",
-              "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_hammer_09"
-            },
-            {
               "name": "Kris of Orgrimmar",
               "itemId": 15443,
               "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
@@ -10123,8 +10326,8 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
-          "reqLevel": 15,
-          "stats": "+8 Str, +5 Sta"
+          "reqLevel": 19,
+          "stats": "+6 Intellect, +6 Spirit"
         },
         {
           "levelBracket": "19–20",
@@ -10153,34 +10356,6 @@ if (typeof window !== 'undefined') {
               "reqLevel": 9,
               "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
               "icon": "inv_staff_goldfeathered_01"
-            },
-            {
-              "name": "Bronze Warhammer",
-              "itemId": 7956,
-              "value": "17.4 DPS - Blacksmithing (90)",
-              "faction": "both",
-              "dps": "16.86 DPS",
-              "speed": "3.50",
-              "weaponType": "Two-handed mace",
-              "quality": "q2",
-              "iLvl": 25,
-              "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
-            },
-            {
-              "name": "Bronze Battle Axe",
-              "itemId": 7958,
-              "value": "18.8 DPS - Blacksmithing (105)",
-              "faction": "both",
-              "dps": "18.33 DPS",
-              "speed": "3.30",
-              "weaponType": "Two-handed axe",
-              "quality": "q2",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": "+10 Strength",
-              "icon": "inv_axe_21"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10876,6 +11051,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 44,
               "stats": "",
               "icon": "inv_hammer_16"
+            },
+            {
+              "name": "Kang the Decapitator",
+              "itemId": 2291,
+              "weaponType": "Two-handed axe",
+              "quality": "q4",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "dps": "42.6 DPS",
+              "speed": "3.60",
+              "stats": "Chance on hit: Wounds target for 8 Bleed damage each sec for 30 sec",
+              "icon": "inv_axe_09",
+              "value": "World Drop Epic Axe"
             }
           ],
           "faction": "both",
@@ -10951,13 +11139,13 @@ if (typeof window !== 'undefined') {
               "itemId": 19323,
               "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
               "faction": "both",
-              "dps": "56.53 DPS",
-              "speed": "3.60",
+              "dps": "61.5 DPS",
+              "speed": "3.80",
               "weaponType": "Two-handed mace",
               "quality": "q4",
               "iLvl": 60,
-              "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
+              "reqLevel": 60,
+              "stats": "+19 Strength, +15 Stamina, +1% Crit, Chance on hit: Stun target for 1 sec",
               "icon": "inv_hammer_09"
             },
             {
@@ -11000,6 +11188,45 @@ if (typeof window !== 'undefined') {
               "reqLevel": 54,
               "stats": "",
               "icon": "inv_axe_69"
+            },
+            {
+              "name": "Hand of Edward the Odd",
+              "itemId": 2243,
+              "weaponType": "One-handed mace",
+              "quality": "q4",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "43.2 DPS",
+              "speed": "2.60",
+              "stats": "+13 Spirit, Chance on hit: Next spell cast is instant",
+              "icon": "inv_mace_11",
+              "value": "World Drop Epic Mace (Instant Cast Proc)"
+            },
+            {
+              "name": "Earthshaker",
+              "itemId": 17073,
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "dps": "61.5 DPS",
+              "speed": "3.50",
+              "stats": "Chance on hit: Knockdown all nearby enemies in 5 yds for 3 sec",
+              "icon": "inv_hammer_08",
+              "value": "Molten Core — Magmadar"
+            },
+            {
+              "name": "Aurastone Hammer",
+              "itemId": 17105,
+              "weaponType": "One-handed mace",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "dps": "44.2 DPS",
+              "speed": "2.70",
+              "stats": "+10 Intellect, +5 Stamina, +25 Spell Power & Healing",
+              "icon": "inv_hammer_18",
+              "value": "Molten Core — Garr"
             }
           ],
           "faction": "both",
@@ -11133,6 +11360,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 7,
               "stats": "+6 Spell Power",
               "icon": "inv_staff_16"
+            },
+            {
+              "name": "Deepblaze",
+              "itemId": 279896,
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "dps": "7.8 DPS",
+              "speed": "1.80",
+              "icon": "inv_wand_02",
+              "value": "Datamined Starter Wand"
             }
           ],
           "faction": "alliance",
@@ -11804,6 +12043,18 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
+            },
+            {
+              "name": "Wand of Mana Concentration",
+              "itemId": 273043,
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "dps": "24.5 DPS",
+              "speed": "1.60",
+              "icon": "inv_wand_04",
+              "value": "Datamined Dungeon Wand (+5 Intellect)"
             }
           ],
           "faction": "both",
@@ -11838,32 +12089,17 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Inventor's Focal Sword",
-              "itemId": 9459,
+              "name": "Coldflame Saber",
+              "itemId": 276631,
               "weaponType": "One-handed sword",
-              "speed": "2.20",
-              "dps": "22.5 DPS",
-              "value": "22.5 DPS, 2.20s, +6 Int, 1% Spell Crit - Gnomeregan: Tinkerer Gizlock",
-              "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
-              "lines": [
-                "Binds when picked up",
-                "One-Hand\tSword",
-                "39 - 60 Damage\tSpeed 2.20",
-                "(22.5 damage per second)",
-                "+6 Intellect",
-                "Requires Level 29",
-                "Equip: Improves your chance to get a critical strike with spells by 1%."
-              ],
+              "iLvl": 31,
+              "reqLevel": 26,
+              "dps": "19.8 DPS",
+              "speed": "2.10",
+              "stats": "+7 Intellect, +8 Spell Power",
               "icon": "inv_sword_04",
-              "source": {
-                "kind": "dungeon",
-                "title": "Tinkerer Gizlock",
-                "detail": "Gnomeregan boss drop. Iconic caster 1H sword with +1% spell critical strike."
-              }
+              "value": "Dungeon Boss Drop (Top Level 30 Caster 1H Sword)"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -12094,15 +12330,29 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Spire of the Stoneshaper",
-              "itemId": 11802,
-              "value": "33.8 DPS - BRD: Lord Incendius",
+              "itemId": 12532,
+              "value": "Blackrock Depths — High Interrogator Gerstahn",
               "faction": "both",
               "dps": "33.8 DPS",
               "quality": "q3",
-              "iLvl": 52,
-              "reqLevel": 46,
-              "stats": "",
-              "icon": "inv_staff_29"
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "+15 Intellect, +10 Stamina, +14 Spell Power",
+              "icon": "inv_staff_29",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Inventor's Focal Sword",
+              "itemId": 17719,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "dps": "35.4 DPS",
+              "speed": "2.20",
+              "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+              "icon": "inv_sword_04",
+              "value": "Maraudon — Tinkerer Gizlock (+1% Spell Critical Strike)"
             }
           ],
           "faction": "both",
@@ -12128,14 +12378,15 @@ if (typeof window !== 'undefined') {
             {
               "name": "Rod of the Ogre Magi",
               "itemId": 18534,
-              "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
+              "value": "Dire Maul North — Tribute Chest",
               "faction": "both",
               "dps": "36.0 DPS",
               "quality": "q3",
-              "iLvl": 58,
-              "reqLevel": 52,
-              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_staff_13"
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+11 Intellect, +14 Stamina, +7 Spirit, +23 Spell Power, +1% Spell Crit",
+              "icon": "inv_staff_13",
+              "weaponType": "Staff"
             },
             {
               "name": "Witchblade",
@@ -12149,6 +12400,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 52,
               "stats": "+14 SP",
               "icon": "inv_weapon_shortblade_16"
+            },
+            {
+              "name": "Sageblade",
+              "itemId": 22378,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "dps": "41.2 DPS",
+              "speed": "2.00",
+              "stats": "+14 Intellect, +27 Spell Power, +1% Spell Crit",
+              "icon": "inv_sword_39",
+              "value": "Blacksmithing (Top Pre-Raid Caster 1H Sword)"
+            },
+            {
+              "name": "Azuresong Mageblade",
+              "itemId": 17103,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "dps": "41.2 DPS",
+              "speed": "1.80",
+              "stats": "+7 Intellect, +12 Stamina, +40 Spell Power, +1% Spell Crit",
+              "icon": "inv_sword_39",
+              "value": "Molten Core — Golemagg the Incinerator"
             }
           ],
           "faction": "both",
@@ -12282,6 +12559,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 7,
               "stats": "+6 Spell Power",
               "icon": "inv_staff_16"
+            },
+            {
+              "name": "Deepblaze",
+              "itemId": 279896,
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "dps": "7.8 DPS",
+              "speed": "1.80",
+              "icon": "inv_wand_02",
+              "value": "Datamined Starter Wand"
             }
           ],
           "faction": "alliance",
@@ -12932,6 +13221,18 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
+            },
+            {
+              "name": "Wand of Mana Concentration",
+              "itemId": 273043,
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "dps": "24.5 DPS",
+              "speed": "1.60",
+              "icon": "inv_wand_04",
+              "value": "Datamined Dungeon Wand (+5 Intellect)"
             }
           ],
           "faction": "both",
@@ -12966,32 +13267,17 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Inventor's Focal Sword",
-              "itemId": 9459,
+              "name": "Coldflame Saber",
+              "itemId": 276631,
               "weaponType": "One-handed sword",
-              "speed": "2.20",
-              "dps": "22.5 DPS",
-              "value": "22.5 DPS, 2.20s, +6 Int, 1% Spell Crit - Gnomeregan: Tinkerer Gizlock",
-              "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
-              "lines": [
-                "Binds when picked up",
-                "One-Hand\tSword",
-                "39 - 60 Damage\tSpeed 2.20",
-                "(22.5 damage per second)",
-                "+6 Intellect",
-                "Requires Level 29",
-                "Equip: Improves your chance to get a critical strike with spells by 1%."
-              ],
+              "iLvl": 31,
+              "reqLevel": 26,
+              "dps": "19.8 DPS",
+              "speed": "2.10",
+              "stats": "+7 Intellect, +8 Spell Power",
               "icon": "inv_sword_04",
-              "source": {
-                "kind": "dungeon",
-                "title": "Tinkerer Gizlock",
-                "detail": "Gnomeregan boss drop. Iconic caster 1H sword with +1% spell critical strike."
-              }
+              "value": "Dungeon Boss Drop (Top Level 30 Caster 1H Sword)"
             },
             {
               "name": "Mindslicer",
@@ -13215,6 +13501,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 48,
               "stats": "+14 Critical Strike Rating, +60 Spell Power",
               "icon": "inv_staff_08"
+            },
+            {
+              "name": "Inventor's Focal Sword",
+              "itemId": 17719,
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "dps": "35.4 DPS",
+              "speed": "2.20",
+              "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+              "icon": "inv_sword_04",
+              "value": "Maraudon — Tinkerer Gizlock (+1% Spell Critical Strike)"
             }
           ],
           "faction": "both",
@@ -13254,14 +13553,15 @@ if (typeof window !== 'undefined') {
             {
               "name": "Rod of the Ogre Magi",
               "itemId": 18534,
-              "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
+              "value": "Dire Maul North — Tribute Chest",
               "faction": "both",
               "dps": "36.0 DPS",
               "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": 50,
-              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_staff_13"
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+11 Intellect, +14 Stamina, +7 Spirit, +23 Spell Power, +1% Spell Crit",
+              "icon": "inv_staff_13",
+              "weaponType": "Staff"
             },
             {
               "name": "Witchblade",
@@ -13275,6 +13575,32 @@ if (typeof window !== 'undefined') {
               "reqLevel": 50,
               "stats": "+14 SP",
               "icon": "inv_weapon_shortblade_16"
+            },
+            {
+              "name": "Sageblade",
+              "itemId": 22378,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "dps": "41.2 DPS",
+              "speed": "2.00",
+              "stats": "+14 Intellect, +27 Spell Power, +1% Spell Crit",
+              "icon": "inv_sword_39",
+              "value": "Blacksmithing (Top Pre-Raid Caster 1H Sword)"
+            },
+            {
+              "name": "Azuresong Mageblade",
+              "itemId": 17103,
+              "weaponType": "One-handed sword",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "dps": "41.2 DPS",
+              "speed": "1.80",
+              "stats": "+7 Intellect, +12 Stamina, +40 Spell Power, +1% Spell Crit",
+              "icon": "inv_sword_39",
+              "value": "Molten Core — Golemagg the Incinerator"
             }
           ],
           "faction": "both",
@@ -13393,6 +13719,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 7,
               "stats": "+6 Spell Power",
               "icon": "inv_staff_16"
+            },
+            {
+              "name": "Deepblaze",
+              "itemId": 279896,
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "dps": "7.8 DPS",
+              "speed": "1.80",
+              "icon": "inv_wand_02",
+              "value": "Datamined Starter Wand"
             }
           ],
           "faction": "alliance",
@@ -13874,6 +14212,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Staff of the Friar",
+              "itemId": 3415,
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "dps": "17.4 DPS",
+              "speed": "2.90",
+              "stats": "+7 Intellect, +7 Spirit",
+              "icon": "inv_staff_13",
+              "value": "World Drop BoE (Top Early Priest Staff)"
+            },
+            {
               "name": "Alliance Outrunner Staff",
               "itemId": 285350,
               "weaponType": "Staff",
@@ -14066,6 +14417,18 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
+            },
+            {
+              "name": "Wand of Mana Concentration",
+              "itemId": 273043,
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "dps": "24.5 DPS",
+              "speed": "1.60",
+              "icon": "inv_wand_04",
+              "value": "Datamined Dungeon Wand (+5 Intellect)"
             }
           ],
           "faction": "both",
@@ -14164,6 +14527,19 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_shortblade_15"
+            },
+            {
+              "name": "Wind Spirit Staff",
+              "itemId": 6689,
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "dps": "25.3 DPS",
+              "speed": "3.00",
+              "stats": "+13 Spirit, +10 Intellect",
+              "icon": "inv_staff_12",
+              "value": "Razorfen Kraul — Agathelos the Raging"
             }
           ],
           "faction": "both",
@@ -14195,31 +14571,6 @@ if (typeof window !== 'undefined') {
             "detail": "Scarlet Monastery Library (+15 Int, +10 Spi)"
           },
           "alts": [
-            {
-              "name": "Staff of the Friar",
-              "itemId": 3415,
-              "value": "17.5 DPS, +12 Int, +6 Spi - SM Graveyard: Interrogator Vishas",
-              "faction": "both",
-              "dps": "15.96 DPS",
-              "speed": "2.60",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 26,
-              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-              "lines": [
-                "Binds when equipped",
-                "Two-Hand\tStaff",
-                "33 - 50 Damage\tSpeed 2.60",
-                "(16.0 damage per second)",
-                "+3 Intellect",
-                "+4 Stamina",
-                "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
-              ],
-              "reqLevel": 21,
-              "icon": "inv_staff_32"
-            },
             {
               "name": "Hypnotic Blade",
               "itemId": 7714,
@@ -14287,6 +14638,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 35,
               "stats": "+26 Spell Power",
               "icon": "inv_staff_13"
+            },
+            {
+              "name": "Hand of Righteousness",
+              "itemId": 7721,
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "dps": "27.4 DPS",
+              "speed": "2.00",
+              "stats": "+8 Intellect, +14 Spell Power & Healing",
+              "icon": "inv_mace_01",
+              "value": "Scarlet Monastery Cathedral — High Inquisitor Whitemane"
             }
           ],
           "faction": "both",
@@ -14392,6 +14756,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Anathema",
+              "itemId": 18609,
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 75,
+              "reqLevel": 60,
+              "dps": "55.6 DPS",
+              "speed": "3.00",
+              "stats": "+31 Stamina, +20 Intellect, +69 Shadow Spell Power, +2% Spell Crit",
+              "icon": "inv_staff_33",
+              "value": "Priest Epic Quest — The Eye of Shadow / The Balance of Light and Shadow"
+            },
+            {
               "name": "Benediction",
               "itemId": 18608,
               "value": "43.4 DPS, +31 Int, +12 Sta, +12 Spi, +106 Healing - Legendary Priest Quest Staff!",
@@ -14416,6 +14793,19 @@ if (typeof window !== 'undefined') {
               "reqLevel": 52,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
               "icon": "inv_staff_13"
+            },
+            {
+              "name": "Guiding Stave of Wisdom",
+              "itemId": 11932,
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "dps": "48.9 DPS",
+              "speed": "3.10",
+              "stats": "+22 Intellect, +10 Spirit, +14 Spell Power & Healing",
+              "icon": "inv_staff_29",
+              "value": "Blackrock Depths — Emperor Dagran Thaurissan"
             }
           ],
           "faction": "both",
@@ -15599,31 +15989,6 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 28,
               "icon": "inv_staff_07"
-            },
-            {
-              "name": "Felbough Arm",
-              "itemId": 273037,
-              "value": "28.8 DPS, 3.00s, +10 Agi, +10 Hit - City of Dalaran: Fel Ancient",
-              "faction": "both",
-              "dps": "28.83 DPS",
-              "speed": "3.00",
-              "weaponType": "Polearm",
-              "quality": "q3",
-              "iLvl": 34,
-              "stats": "+10 Agility, +9 Nature Resistance, Equip: +10 Hit Rating",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tPolearm",
-                "69 - 104 Damage\tSpeed 3.00",
-                "(28.8 damage per second)",
-                "+10 Agility",
-                "+9 Nature Resistance",
-                "Requires Level 29",
-                "Equip: +10 Hit Rating",
-                "Sell Price: 1g 2s 92c"
-              ],
-              "reqLevel": 29,
-              "icon": "inv_spear_08"
             }
           ],
           "faction": "both",
@@ -16066,6 +16431,45 @@ if (typeof window !== 'undefined') {
               "reqLevel": 52,
               "stats": "",
               "icon": "inv_staff_13"
+            },
+            {
+              "name": "Unyielding Maul",
+              "itemId": 18420,
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "50.8 DPS",
+              "speed": "3.20",
+              "stats": "+250 Armor, +12 Stamina — #1 Pre-Raid Bear Tank Weapon",
+              "icon": "inv_hammer_05",
+              "value": "Dire Maul North — Guard Slip'kik / King Gordok"
+            },
+            {
+              "name": "Guiding Stave of Wisdom",
+              "itemId": 11932,
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "dps": "48.9 DPS",
+              "speed": "3.10",
+              "stats": "+22 Intellect, +10 Spirit, +14 Spell Power & Healing",
+              "icon": "inv_staff_29",
+              "value": "Blackrock Depths — Emperor Dagran Thaurissan"
+            },
+            {
+              "name": "Aurastone Hammer",
+              "itemId": 17105,
+              "weaponType": "One-handed mace",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "dps": "44.2 DPS",
+              "speed": "2.70",
+              "stats": "+10 Intellect, +5 Stamina, +25 Spell Power & Healing",
+              "icon": "inv_hammer_18",
+              "value": "Molten Core — Garr"
             }
           ],
           "faction": "both",
@@ -16449,6 +16853,30 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "",
               "icon": "inv_wand_07"
+            },
+            {
+              "name": "Nether Force Wand",
+              "itemId": 11263,
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "speed": "1.80",
+              "dps": "27.5 DPS",
+              "stats": "+5 Arcane Spell Power",
+              "icon": "inv_wand_01",
+              "value": "Mage Level 30 Quest: Rituals of Power"
+            },
+            {
+              "name": "Icefury Wand",
+              "itemId": 7514,
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "speed": "1.70",
+              "dps": "29.1 DPS",
+              "stats": "+5 Frost Spell Power",
+              "icon": "inv_wand_06",
+              "value": "Mage Level 30 Quest: Rituals of Power"
             }
           ]
         },
@@ -16694,6 +17122,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+11 Spirit",
               "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "speed": "1.30",
+              "dps": "63.5 DPS",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
             }
           ]
         }
@@ -17315,6 +17755,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+11 Spirit",
               "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "speed": "1.30",
+              "dps": "63.5 DPS",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
             }
           ]
         }
@@ -17936,6 +18388,18 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+11 Spirit",
               "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Bonecreeper Stylus",
+              "itemId": 13938,
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "speed": "1.30",
+              "dps": "63.5 DPS",
+              "stats": "+4 Intellect, +11 Spell Power",
+              "icon": "inv_wand_05",
+              "value": "Scholomance — Darkmaster Gandling"
             }
           ]
         }
@@ -19558,549 +20022,267 @@ if (typeof window !== 'undefined') {
       ]
     },
     "druid": {
-      "role": "Caster",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Off-Hands & Class Idols"
+        }
+      ],
       "levels": [
         {
-          "levelBracket": "1–9",
-          "itemId": 287090,
-          "name": "Letter Opener",
-          "icon": "inv_weapon_shortblade_20",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "1–10",
+          "itemId": 279898,
+          "name": "Stoneweaver Orb",
+          "icon": "inv_misc_orb_01",
+          "weaponType": "Held in Off-Hand",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Basic starter off-hand item for early stat-stick pairing."
+            "kind": "quest",
+            "title": "Early Leveling Quest",
+            "detail": "+2 Spirit, +2 Stamina early off-hand."
           },
           "faction": "both",
-          "quality": "q1",
-          "iLvl": 17,
-          "reqLevel": 2,
-          "stats": "Starter Off-hand",
+          "quality": "q2",
+          "iLvl": 14,
+          "reqLevel": 8,
+          "stats": "+2 Spirit, +2 Stamina",
           "alts": []
         },
         {
-          "levelBracket": "10–16",
-          "itemId": 279898,
-          "name": "Dwarven Tome",
-          "icon": "inv_misc_book_07",
+          "levelBracket": "11–18",
+          "itemId": 15974,
+          "name": "Pagan Rod",
+          "icon": "inv_staff_13",
           "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Important Heirlooms quest reward in Loch Modan (Alliance). First true caster spell power off-hand."
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+3 Intellect, +2 Spirit."
           },
-          "faction": "alliance",
+          "faction": "both",
           "quality": "q2",
-          "iLvl": 17,
-          "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
-          "alts": [
-            {
-              "name": "Tear of Grief",
-              "itemId": 5611,
-              "value": "+3 Stamina, +2 Intellect - Horde Quest",
-              "faction": "horde",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 11,
-              "stats": "",
-              "icon": "inv_jewelry_talisman_08"
-            },
-            {
-              "name": "Disciple's Stein",
-              "itemId": 15932,
-              "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_drink_04"
-            }
-          ]
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "+3 Intellect, +2 Spirit",
+          "alts": []
         },
         {
-          "levelBracket": "17–20",
-          "itemId": 273137,
-          "name": "Skum's Bucket",
-          "icon": "inv_misc_1h_bucket_c_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "19–25",
+          "itemId": 281313,
+          "name": "Orb of the Forgotten",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-Hand",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool booster for low-level dungeons."
+            "kind": "dungeon",
+            "title": "Blackfathom Deeps Drop",
+            "detail": "+4 Intellect, +5 Spirit."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "stats": "+4 Intellect, +5 Spirit",
+          "alts": []
+        },
+        {
+          "levelBracket": "26–30",
+          "itemId": 273827,
+          "name": "Omega Orb",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-Hand",
+          "source": {
+            "kind": "quest",
+            "title": "Compendium of the Fallen (Horde) / RFK Drop",
+            "detail": "+5 Intellect, +5 Spirit."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
-          "alts": [
-            {
-              "name": "Expended Apothecary Vial",
-              "itemId": 281294,
-              "value": "+4 Intellect, +3 Stamina - Valuable Vantages quest",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 25,
-              "reqLevel": 19,
-              "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
-            },
-            {
-              "name": "Mathystra Channeling Orb",
-              "itemId": 281291,
-              "value": "+4 Intellect, +3 Spirit - Baron Marinous",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 17,
-              "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
-            },
-            {
-              "name": "Defective Samophlange",
-              "itemId": 274743,
-              "value": "+4 Stamina, +3 Intellect - Winklespark in Barrens",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 25,
-              "reqLevel": 20,
-              "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
-            }
-          ]
-        },
-        {
-          "levelBracket": "21–25",
-          "itemId": 281306,
-          "name": "Flamescarred Spellbook",
-          "icon": "inv_misc_book_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Old Habits quest reward (Alliance). Excellent balanced mana recovery off-hand."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 31,
-          "reqLevel": 23,
+          "iLvl": 33,
+          "reqLevel": 28,
           "stats": "+5 Intellect, +5 Spirit",
           "alts": [
             {
-              "name": "Alliance Outrunner Healing Rod",
-              "itemId": 285348,
-              "value": "+6 Healing, +3 Stamina - Hannah Bladeleaf",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
+              "name": "Raptor's Gaze",
+              "itemId": 273027,
+              "weaponType": "Held in Off-Hand",
               "quality": "q3",
-              "iLvl": 26,
-              "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_wand_04"
-            },
-            {
-              "name": "Orb of Mystic Insight",
-              "itemId": 249394,
-              "value": "+7 Intellect, +5 Spirit - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
-            },
-            {
-              "name": "Orb of Souls",
-              "itemId": 249395,
-              "value": "+8 Shadow Spell Power, +6 Stamina - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Intellect, +3 Stamina",
+              "icon": "inv_misc_eye_01",
+              "value": "Dungeon Drop"
             }
           ]
         },
         {
-          "levelBracket": "26–29",
-          "itemId": 273027,
-          "name": "Raptor's Gaze",
-          "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "31–38",
+          "itemId": 6803,
+          "name": "Prophetic Cane",
+          "icon": "inv_staff_13",
+          "weaponType": "Held in Off-Hand",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shadetooth in Excavation Site: Wetlands. Invaluable dungeon spell power off-hand."
+            "kind": "quest",
+            "title": "Scarlet Monastery Quest Reward",
+            "detail": "+7 Intellect, +6 Spirit."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "iLvl": 38,
+          "reqLevel": 33,
+          "stats": "+7 Intellect, +6 Spirit",
           "alts": [
             {
-              "name": "Arcane Infused Rod",
-              "itemId": 279838,
-              "value": "+6 Intellect, +5 Stamina - Starving Arcane quest",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 36,
-              "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272090,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power - Creeg Bothunk",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
-            }
-          ]
-        },
-        {
-          "levelBracket": "30–34",
-          "itemId": 273052,
-          "name": "Ponderous Orb",
-          "icon": "inv_misc_orb_04",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shade of the Archmage in City of Dalaran. Premier caster off-hand throughout the 30s."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
-          "alts": [
-            {
-              "name": "Salve and Salvation",
-              "itemId": 276898,
-              "value": "+9 Spirit, +50 Armor - Past Due quest",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "weaponType": "Held in Off-Hand",
               "quality": "q3",
               "iLvl": 38,
-              "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
-            },
-            {
-              "name": "Heart of Alterac",
-              "itemId": 283254,
-              "value": "+7 Stamina, +5 Intellect - Stone Fury in Alterac",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "reqLevel": 33,
+              "stats": "+10 Armor, +5 Stamina, +10 Healing",
+              "icon": "inv_misc_lantern_01",
+              "value": "World Drop BoE"
             }
           ]
         },
         {
-          "levelBracket": "35–39",
-          "itemId": 271805,
-          "name": "Thrice-Damned Effigy",
-          "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "39–46",
+          "itemId": 5462,
+          "name": "Furbolg Medicine Pouch",
+          "icon": "inv_misc_bag_07",
+          "weaponType": "Held in Off-Hand",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Khan Jehn in Maraudon (Horde). Elite caster off-hand for mid-level leveling."
-          },
-          "faction": "horde",
-          "quality": "q3",
-          "iLvl": 42,
-          "reqLevel": 35,
-          "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
-          "alts": [
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272090,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Orb of the Forgotten Seer",
-              "itemId": 7685,
-              "value": "+12 Intellect, +5 Spirit - Scarlet Monastery Library",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 37,
-              "reqLevel": 32,
-              "stats": "",
-              "icon": "inv_misc_orb_01"
-            }
-          ]
-        },
-        {
-          "levelBracket": "40–44",
-          "itemId": 277260,
-          "name": "Researcher's Night Light",
-          "icon": "inv_lantern_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Greater Friend of the Library quest reward. Heavy durability and spell power boost."
+            "kind": "quest",
+            "title": "Timbermaw Hold — Friendly Reputation Quest",
+            "detail": "+10 Stamina, Use: Restores 1000 health over 10s (BiS survivability off-hand!)."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "stats": "+10 Stamina, Use: Restores 1000 Health over 10 sec",
+          "alts": []
+        },
+        {
+          "levelBracket": "47–54",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_misc_book_06",
+          "weaponType": "Held in Off-Hand",
+          "source": {
+            "kind": "quest",
+            "title": "Un'Goro Crater — It's Dangerous to Go Alone",
+            "detail": "Equip: Increases damage and healing done by magical spells and effects by up to 20."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "stats": "Equip: +20 Spell Power & Healing",
           "alts": [
             {
-              "name": "Fermented Restoration Potion",
-              "itemId": 277259,
-              "value": "+12 Stamina, +5 Spirit, +16 Healing",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
+              "name": "Brightly Glowing Stone",
+              "itemId": 18523,
+              "weaponType": "Held in Off-Hand",
               "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
-            },
-            {
-              "name": "Spirit of Aquementas",
-              "itemId": 11904,
-              "value": "+20 Spell Power - Un'Goro Crater quest chain",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": 47,
-              "stats": "",
-              "icon": "inv_wand_05"
+              "iLvl": 59,
+              "reqLevel": 54,
+              "stats": "+7 Intellect, +37 Healing Spells",
+              "icon": "inv_misc_gem_pearl_04",
+              "value": "Dire Maul North — Guard Slip'kik"
             }
           ]
         },
         {
-          "levelBracket": "45–52",
-          "itemId": 249455,
-          "name": "Truesilver Conduit",
-          "icon": "inv_misc_orb_blue",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "55–60",
+          "itemId": 13385,
+          "name": "Tome of Knowledge",
+          "icon": "inv_misc_book_06",
+          "weaponType": "Held in Off-Hand",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Crafted by Enchanters / Tradeskills. Reliable high spell power off-hand leading into late game."
+            "kind": "dungeon",
+            "title": "Stratholme Living / World Drop BoE",
+            "detail": "+8 Strength, +8 Agility, +8 Stamina, +8 Intellect, +8 Spirit, +30 Armor. The ultimate hybrid & Feral/Bear off-hand!"
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 50,
-          "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "quality": "q4",
+          "iLvl": 61,
+          "reqLevel": 56,
+          "stats": "+8 Str, +8 Agi, +8 Sta, +8 Int, +8 Spi, +30 Armor",
           "alts": [
             {
-              "name": "Twisting Essence Jar",
-              "itemId": 249456,
-              "value": "+8 Stamina, +8 Spirit, +18 Healing",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
+              "weaponType": "Held in Off-Hand",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 55,
+              "stats": "+10 Intellect, +5 Mp5, +33 Healing Spells",
+              "icon": "inv_misc_gem_pearl_02",
+              "value": "Alterac Valley — Exalted (Vendor)"
             },
             {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
+              "name": "Jin'do's Bag of Whammies",
+              "itemId": 19891,
+              "weaponType": "Held in Off-Hand",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "stats": "+11 Intellect, +18 Spell Power, +1% Spell Hit",
+              "icon": "inv_misc_bag_07",
+              "value": "Zul'Gurub — Jin'do the Hexxer"
             },
             {
-              "name": "Heart of Smoldar",
-              "itemId": 282088,
-              "value": "+8 Stamina, +14 Fire Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
-            }
-          ]
-        },
-        {
-          "levelBracket": "53–60",
-          "itemId": 274417,
-          "name": "Barkskin Baubles",
-          "icon": "inv_misc_bag_10_black",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Dala Fairmaw. Outstanding survivability and caster throughput for level 53-60."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 58,
-          "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
-          "alts": [
+              "name": "Idol of Brutality",
+              "itemId": 23198,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "Equip: Reduces the rage cost of Maul and Swipe by 3.",
+              "icon": "inv_relics_idolofbrutality",
+              "value": "Stratholme — Magistrate Barthilas"
+            },
             {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
+              "name": "Idol of Ferocity",
+              "itemId": 22397,
+              "weaponType": "Idol",
               "quality": "q3",
               "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "reqLevel": 60,
+              "stats": "Equip: Reduces the energy cost of Claw and Rake by 3.",
+              "icon": "inv_relics_idolofferocity",
+              "value": "Blackrock Depths — Lord Roccor"
             },
             {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272090,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
+              "name": "Idol of the Moon",
+              "itemId": 23009,
+              "weaponType": "Idol",
+              "quality": "q3",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "Equip: Increases the damage of Moonfire by up to 17%.",
+              "icon": "inv_relics_idolofthemoon",
+              "value": "Scholomance — Ras Frostwhisper"
+            },
+            {
+              "name": "Idol of Rejuvenation",
+              "itemId": 22399,
+              "weaponType": "Idol",
               "quality": "q3",
               "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "High Warlord's Tome of Destruction",
-              "itemId": 234563,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
-            },
-            {
-              "name": "Grand Marshal's Tome of Power",
-              "itemId": 234589,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
-            },
-            {
-              "name": "High Warlord's Tome of Mending",
-              "itemId": 234564,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect",
-              "icon": "inv_misc_book_14"
-            },
-            {
-              "name": "Grand Marshal's Tome of Restoration",
-              "itemId": 234590,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect",
-              "icon": "inv_misc_book_13"
+              "stats": "Equip: Increases the healing done by Rejuvenation by up to 50.",
+              "icon": "inv_relics_idolofrejuvenation",
+              "value": "Stratholme — Baroness Anastari"
             }
           ]
         }
       ]
     },
     "shaman": {
-      "classId": "shaman",
       "tracks": [
         {
-          "id": "shields",
-          "name": "Shields (Elemental, Restoration, & Tanking)"
+          "id": "primary",
+          "name": "Elemental & Resto Shields"
         }
       ],
       "levels": [
@@ -20117,7 +20299,7 @@ if (typeof window !== 'undefined') {
             "title": "Armor & Shield Vendor",
             "detail": "Early starter shield (+136 Armor, 4 Block)."
           },
-          "faction": "both",
+          "faction": "horde",
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
@@ -20132,7 +20314,7 @@ if (typeof window !== 'undefined') {
               "reqLevel": 1,
               "stats": "89 Armor, 3 Block",
               "icon": "inv_shield_04",
-              "value": "89 Armor, 3 Block - Starting Zone"
+              "value": "Starting Zone"
             },
             {
               "name": "Crested Buckler",
@@ -20143,7 +20325,7 @@ if (typeof window !== 'undefined') {
               "reqLevel": 7,
               "stats": "+1 Strength, 161 Armor, 5 Block",
               "icon": "inv_shield_08",
-              "value": "+1 Strength, 161 Armor - World Drop"
+              "value": "World Drop"
             }
           ]
         },
@@ -20151,107 +20333,96 @@ if (typeof window !== 'undefined') {
           "levelBracket": "10–16",
           "itemId": 13245,
           "name": "Kresh's Back",
-          "icon": "inv_shield_06",
+          "icon": "inv_shield_02",
           "weaponType": "Shield",
-          "armor": 434,
-          "block": 11,
+          "armor": 417,
+          "block": 10,
           "source": {
             "kind": "dungeon",
-            "title": "Wailing Caverns",
-            "detail": "Dropped by Kresh in WC (+434 Armor, 11 Block, +5 Sta, +4 Spi)."
+            "title": "Wailing Caverns — Kresh",
+            "detail": "Turtle shell shield (+417 Armor, 10 Block)."
           },
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "+5 Stamina, +4 Spirit, 434 Armor, 11 Block",
+          "stats": "417 Armor, 10 Block",
           "alts": [
             {
               "name": "Commander's Crest",
-              "itemId": 13079,
+              "itemId": 6320,
               "weaponType": "Shield",
               "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 16,
-              "stats": "+4 Strength, +3 Stamina, 487 Armor, 12 Block",
-              "icon": "inv_shield_05",
-              "value": "+4 Str, +3 Sta, 487 Armor - Shadowfang Keep"
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_09",
+              "value": "SFK — Commander Springvale"
             },
             {
               "name": "Redbeard Crest",
-              "itemId": 13246,
+              "itemId": 12997,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 19,
-              "reqLevel": 14,
-              "stats": "+5 Stamina, +3 Spirit, +5 Strength",
-              "icon": "inv_shield_07",
-              "value": "+5 Sta, +3 Spi, +5 Str - Rare drop"
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +4 Strength, 495 Armor, 12 Block",
+              "icon": "inv_shield_05",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "17–20",
-          "itemId": 6970,
-          "name": "Arctic Buckler",
-          "icon": "inv_shield_07",
+          "itemId": 6320,
+          "name": "Commander's Crest",
+          "icon": "inv_shield_09",
           "weaponType": "Shield",
-          "armor": 542,
+          "armor": 552,
           "block": 13,
           "source": {
-            "kind": "quest",
-            "title": "Blackfathom Villainy",
-            "detail": "Blackfathom Deeps quest reward (+5 Frost Res, +4 Sta, +4 Spi)."
+            "kind": "dungeon",
+            "title": "Shadowfang Keep — Commander Springvale",
+            "detail": "+6 Stamina, +3 Strength, 552 Armor, 13 Block."
           },
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 19,
-          "stats": "+4 Stamina, +4 Spirit, +5 Frost Resistance, 542 Armor, 13 Block",
+          "iLvl": 25,
+          "reqLevel": 20,
+          "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
           "alts": [
             {
-              "name": "Shield of the Faith",
-              "itemId": 6320,
+              "name": "Redbeard Crest",
+              "itemId": 12997,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina, +50 Armor, 520 Armor, 13 Block",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +4 Strength, 495 Armor, 12 Block",
               "icon": "inv_shield_05",
-              "value": "+3 Sta, +50 Armor - Quest reward"
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "21–25",
-          "itemId": 284157,
+          "itemId": 7748,
           "name": "Forcestone Buckler",
-          "icon": "inv_shield_09",
+          "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "armor": 680,
+          "armor": 686,
           "block": 17,
           "source": {
-            "kind": "dungeon",
-            "title": "Excavation Site 4",
-            "detail": "ES4 / RFK dungeon reward (+4 Sta, +8 Spi, +18 Healing / +6 Spell Power)."
+            "kind": "quest",
+            "title": "World Drop / Quest",
+            "detail": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block."
           },
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
           "iLvl": 29,
           "reqLevel": 24,
-          "stats": "+4 Stamina, +8 Spirit, Equip: +18 Healing / +6 Spell Damage, 680 Armor, 17 Block",
+          "stats": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block",
           "alts": [
-            {
-              "name": "Seedcloud Buckler",
-              "itemId": 13166,
-              "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": "+6 Stamina, +3 Intellect, 628 Armor, 15 Block",
-              "icon": "inv_shield_06",
-              "value": "+6 Sta, +3 Int - World Drop"
-            },
             {
               "name": "Marbled Buckler",
               "itemId": 4833,
@@ -20259,181 +20430,554 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+5 Strength, +5 Agility, +5 Stamina, +5 Spirit, 675 Armor, 17 Block",
+              "stats": "+4 Stamina, +4 Strength, 614 Armor, 15 Block",
               "icon": "inv_shield_04",
-              "value": "+5 all stats - World Drop"
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "26–30",
-          "itemId": 274190,
-          "name": "Aegis of the Scarlet Commander",
-          "icon": "inv_shield_05",
+          "itemId": 4834,
+          "name": "Basalt Buckler",
+          "icon": "inv_shield_06",
           "weaponType": "Shield",
-          "armor": 890,
-          "block": 22,
+          "armor": 733,
+          "block": 18,
           "source": {
-            "kind": "dungeon",
-            "title": "Scarlet Monastery",
-            "detail": "Scarlet Monastery dungeon drop (+8 Str, +8 Sta, +6 Spi, +5 Defense)."
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+5 Strength, +5 Stamina, 733 Armor, 18 Block."
           },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
-          "stats": "+8 Strength, +8 Stamina, +6 Spirit, Equip: Increased Defense +5, 890 Armor, 22 Block",
+          "faction": "horde",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "+5 Strength, +5 Stamina, 733 Armor, 18 Block",
           "alts": [
-            {
-              "name": "Collection Plate",
-              "itemId": 273829,
-              "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+2 Strength, +9 Stamina, 760 Armor, 19 Block",
-              "icon": "inv_shield_08",
-              "value": "+2 Str, +9 Sta - Stockade: Bazil Thredd"
-            },
             {
               "name": "Vile Protector",
               "itemId": 271220,
               "weaponType": "Shield",
               "quality": "q3",
-              "iLvl": 32,
-              "reqLevel": 27,
-              "stats": "+6 Strength, Chance on hit 105-175 Shadow dmg, 790 Armor, 20 Block",
-              "icon": "inv_shield_09",
-              "value": "+6 Str, Shadow reactive - Viktor the Vile"
-            },
-            {
-              "name": "Basalt Buckler",
-              "itemId": 284160,
-              "weaponType": "Shield",
-              "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Intellect, +2 Stamina, 820 Armor, 21 Block",
-              "icon": "inv_shield_07",
-              "value": "+8 Int, +2 Sta - RFK Drop"
+              "stats": "+7 Stamina, +4 Strength, 804 Armor, 20 Block",
+              "icon": "inv_shield_10",
+              "value": "Dungeon Drop"
             }
           ]
         },
         {
           "levelBracket": "31–39",
           "itemId": 7726,
-          "name": "Crest of Retribution",
-          "icon": "inv_shield_08",
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_07",
           "weaponType": "Shield",
-          "armor": 1040,
-          "block": 25,
+          "armor": 1548,
+          "block": 29,
           "source": {
             "kind": "dungeon",
-            "title": "Scarlet Monastery",
-            "detail": "Scarlet Monastery Armory drop (+9 Holy damage on block, +7 Sta)."
+            "title": "Scarlet Monastery Cathedral — Scarlet Commander Mograine",
+            "detail": "Top tier leveling shield (+7 Strength, +8 Stamina, 1548 Armor, 29 Block)."
           },
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
-          "iLvl": 39,
-          "reqLevel": 34,
-          "stats": "+7 Stamina, Equip: Deals 9 Holy damage when blocking, 1040 Armor, 25 Block",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "stats": "+7 Strength, +8 Stamina, 1548 Armor, 29 Block",
           "alts": [
             {
-              "name": "Shield of the Hidden Sanctuary",
-              "itemId": 7725,
+              "name": "Aegis of Battle",
+              "itemId": 6724,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+8 Intellect, +7 Spirit, +5 Stamina, 1040 Armor, 25 Block",
-              "icon": "inv_shield_05",
-              "value": "+8 Int, +7 Spi, +5 Sta - SM Library"
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+6 Strength, +6 Stamina, 968 Armor, 24 Block",
+              "icon": "inv_shield_04",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "40–50",
-          "itemId": 1168,
-          "name": "Skullflame Shield",
-          "icon": "inv_shield_01",
+          "itemId": 17718,
+          "name": "Gizlock's Hypertech Buckler",
+          "icon": "inv_shield_13",
           "weaponType": "Shield",
-          "armor": 1450,
-          "block": 34,
+          "armor": 1823,
+          "block": 33,
           "source": {
-            "kind": "drop",
-            "title": "World Drop Epic",
-            "detail": "Legendary world drop shield with life drain and flamestrike procs."
+            "kind": "dungeon",
+            "title": "Maraudon — Tinkerer Gizlock",
+            "detail": "Top tier caster/healer shield (+7 Stamina, +8 Intellect, +11 Block Value, 1823 Armor, 33 Block)."
           },
-          "faction": "both",
-          "quality": "q4",
-          "iLvl": 49,
-          "reqLevel": 44,
-          "stats": "+10 Fire Resistance, +10 Shadow Resistance, Equip: Chance to life drain 35 or deal 100 Fire AoE, 1450 Armor, 34 Block",
+          "faction": "horde",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "stats": "+7 Stamina, +8 Intellect, +11 Block Value, 1823 Armor, 33 Block",
           "alts": [
             {
-              "name": "Aegis of the Immortal",
-              "itemId": 12602,
+              "name": "Wall of the Dead",
+              "itemId": 1169,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 52,
-              "reqLevel": 47,
-              "stats": "+10 Stamina, +10 Spirit, 1530 Armor, 36 Block",
-              "icon": "inv_shield_06",
-              "value": "+10 Sta, +10 Spi - Sunken Temple"
+              "quality": "q4",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "stats": "+10 Stamina, +10 Armor, 1923 Armor, 35 Block",
+              "icon": "inv_shield_05",
+              "value": "World Drop Epic"
             }
           ]
         },
         {
-          "levelBracket": "51–60",
-          "itemId": 12602,
-          "name": "Draconian Deflector",
-          "icon": "inv_shield_13",
+          "levelBracket": "51–54",
+          "itemId": 1168,
+          "name": "Skullflame Shield",
+          "icon": "inv_shield_01",
           "weaponType": "Shield",
-          "armor": 2153,
+          "armor": 2256,
           "block": 40,
           "source": {
-            "kind": "dungeon",
-            "title": "Upper Blackrock Spire",
-            "detail": "General Drakkisath in UBRS (+15 Defense, +7 Sta)."
+            "kind": "world",
+            "title": "World Drop Epic Shield",
+            "detail": "Iconic lifesteal AOE shield (+2256 Armor, 40 Block, Life Drain / Flame Strike procs)."
           },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 63,
-          "reqLevel": 58,
-          "stats": "+15 Defense, +7 Stamina, 2153 Armor, 40 Block",
+          "faction": "horde",
+          "quality": "q4",
+          "iLvl": 59,
+          "reqLevel": 54,
+          "stats": "2256 Armor, 40 Block, Equip: Chance to Drain 35 Life, Chance to deal 35-45 Fire DMG",
           "alts": [
             {
+              "name": "Gizlock's Hypertech Buckler",
+              "itemId": 17718,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+7 Stamina, +8 Intellect, 1823 Armor, 33 Block",
+              "icon": "inv_shield_13",
+              "value": "Maraudon — Tinkerer Gizlock"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 17106,
+          "name": "Malistar's Defender",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "armor": 2548,
+          "block": 44,
+          "source": {
+            "kind": "raid",
+            "title": "Molten Core — Majordomo Executus",
+            "detail": "BiS Shaman Shield (+13 Intellect, +9 Stamina, +11 Spell Power, 2548 Armor, 44 Block)."
+          },
+          "faction": "horde",
+          "quality": "q4",
+          "iLvl": 66,
+          "reqLevel": 60,
+          "stats": "+13 Intellect, +9 Stamina, +11 Spell Power, 2548 Armor, 44 Block",
+          "alts": [
+            {
+              "name": "Draconian Deflector",
+              "itemId": 12602,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+10 Defense, 2153 Armor, 40 Block",
+              "icon": "inv_shield_11",
+              "value": "UBRS — General Drakkisath"
+            },
+            {
               "name": "The Immovable Object",
-              "itemId": 19321,
+              "itemId": 19325,
               "weaponType": "Shield",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+15 Stamina, +15 Defense, Equip: Increases block chance by 2%, 2468 Armor, 44 Block",
-              "icon": "inv_shield_05",
-              "value": "Alterac Valley Exalted Shield"
-            },
-            {
-              "name": "Malistar's Defender",
-              "itemId": 17106,
-              "weaponType": "Shield",
-              "quality": "q4",
-              "iLvl": 66,
-              "reqLevel": 60,
-              "stats": "+19 Stamina, +11 Intellect, +9 Spirit, +7 MP5, 2468 Armor, 44 Block",
-              "icon": "inv_shield_08",
-              "value": "Molten Core - Shazzrah (Holy / Resto BiS)"
+              "stats": "+15 Stamina, +27 Block Value, 2468 Armor, 44 Block",
+              "icon": "inv_shield_12",
+              "value": "Alterac Valley — Exalted (Vendor)"
             }
           ]
         }
       ]
     },
     "paladin": {
-      "classId": "paladin",
       "tracks": [
         {
-          "id": "shields",
-          "name": "Shields (Protection & Holy / Restoration)"
+          "id": "primary",
+          "name": "Holy & Prot Shields"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–9",
+          "itemId": 2129,
+          "name": "Large Metal Shield",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "armor": 136,
+          "block": 4,
+          "source": {
+            "kind": "vendor",
+            "title": "Armor & Shield Vendor",
+            "detail": "Early starter shield (+136 Armor, 4 Block)."
+          },
+          "faction": "alliance",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": "136 Armor, 4 Block",
+          "alts": [
+            {
+              "name": "Tainted Wooden Shield",
+              "itemId": 2128,
+              "weaponType": "Shield",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "stats": "89 Armor, 3 Block",
+              "icon": "inv_shield_04",
+              "value": "Starting Zone"
+            },
+            {
+              "name": "Crested Buckler",
+              "itemId": 2362,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+1 Strength, 161 Armor, 5 Block",
+              "icon": "inv_shield_08",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "10–16",
+          "itemId": 13245,
+          "name": "Kresh's Back",
+          "icon": "inv_shield_02",
+          "weaponType": "Shield",
+          "armor": 417,
+          "block": 10,
+          "source": {
+            "kind": "dungeon",
+            "title": "Wailing Caverns — Kresh",
+            "detail": "Turtle shell shield (+417 Armor, 10 Block)."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 20,
+          "reqLevel": 15,
+          "stats": "417 Armor, 10 Block",
+          "alts": [
+            {
+              "name": "Commander's Crest",
+              "itemId": 6320,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_09",
+              "value": "SFK — Commander Springvale"
+            },
+            {
+              "name": "Redbeard Crest",
+              "itemId": 12997,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +4 Strength, 495 Armor, 12 Block",
+              "icon": "inv_shield_05",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "17–20",
+          "itemId": 7002,
+          "name": "Arctic Buckler",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "armor": 569,
+          "block": 14,
+          "source": {
+            "kind": "quest",
+            "title": "Blackfathom Deeps — Researching the Corruption",
+            "detail": "Alliance quest shield (+569 Armor, 14 Block, +5 Stamina, +5 Spirit)."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 19,
+          "stats": "+5 Stamina, +5 Spirit, 569 Armor, 14 Block",
+          "alts": [
+            {
+              "name": "Commander's Crest",
+              "itemId": 6320,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_09",
+              "value": "SFK — Commander Springvale"
+            },
+            {
+              "name": "Shield of Thorsen",
+              "itemId": 13079,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+5 Stamina, +5 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_07",
+              "value": "World Drop BoE"
+            }
+          ]
+        },
+        {
+          "levelBracket": "21–25",
+          "itemId": 7748,
+          "name": "Forcestone Buckler",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "armor": 686,
+          "block": 17,
+          "source": {
+            "kind": "quest",
+            "title": "World Drop / Quest",
+            "detail": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block",
+          "alts": [
+            {
+              "name": "Marbled Buckler",
+              "itemId": 4833,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+4 Stamina, +4 Strength, 614 Armor, 15 Block",
+              "icon": "inv_shield_04",
+              "value": "World Drop"
+            },
+            {
+              "name": "Seedcloud Buckler",
+              "itemId": 13166,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+5 Stamina, +3 Strength, 614 Armor, 15 Block",
+              "icon": "inv_shield_08",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "26–30",
+          "itemId": 4834,
+          "name": "Basalt Buckler",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "armor": 733,
+          "block": 18,
+          "source": {
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+5 Strength, +5 Stamina, 733 Armor, 18 Block."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "+5 Strength, +5 Stamina, 733 Armor, 18 Block",
+          "alts": [
+            {
+              "name": "Vile Protector",
+              "itemId": 271220,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+7 Stamina, +4 Strength, 804 Armor, 20 Block",
+              "icon": "inv_shield_10",
+              "value": "Dungeon Drop"
+            },
+            {
+              "name": "Collection Plate",
+              "itemId": 273829,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Strength, +6 Stamina, 804 Armor, 20 Block",
+              "icon": "inv_shield_05",
+              "value": "Dungeon Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–39",
+          "itemId": 7726,
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_07",
+          "weaponType": "Shield",
+          "armor": 1548,
+          "block": 29,
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery Cathedral — Scarlet Commander Mograine",
+            "detail": "Top tier leveling shield (+7 Strength, +8 Stamina, 1548 Armor, 29 Block)."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "stats": "+7 Strength, +8 Stamina, 1548 Armor, 29 Block",
+          "alts": [
+            {
+              "name": "Aegis of Battle",
+              "itemId": 6724,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+6 Strength, +6 Stamina, 968 Armor, 24 Block",
+              "icon": "inv_shield_04",
+              "value": "World Drop"
+            }
+          ]
+        },
+        {
+          "levelBracket": "40–50",
+          "itemId": 17718,
+          "name": "Gizlock's Hypertech Buckler",
+          "icon": "inv_shield_13",
+          "weaponType": "Shield",
+          "armor": 1823,
+          "block": 33,
+          "source": {
+            "kind": "dungeon",
+            "title": "Maraudon — Tinkerer Gizlock",
+            "detail": "+7 Stamina, +8 Intellect, +11 Block Value, 1823 Armor, 33 Block."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "stats": "+7 Stamina, +8 Intellect, +11 Block Value, 1823 Armor, 33 Block",
+          "alts": [
+            {
+              "name": "Wall of the Dead",
+              "itemId": 1169,
+              "weaponType": "Shield",
+              "quality": "q4",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "stats": "+10 Stamina, +10 Armor, 1923 Armor, 35 Block",
+              "icon": "inv_shield_05",
+              "value": "World Drop Epic"
+            }
+          ]
+        },
+        {
+          "levelBracket": "51–54",
+          "itemId": 1168,
+          "name": "Skullflame Shield",
+          "icon": "inv_shield_01",
+          "weaponType": "Shield",
+          "armor": 2256,
+          "block": 40,
+          "source": {
+            "kind": "world",
+            "title": "World Drop Epic Shield",
+            "detail": "Iconic lifesteal AOE shield (+2256 Armor, 40 Block, Life Drain / Flame Strike procs)."
+          },
+          "faction": "alliance",
+          "quality": "q4",
+          "iLvl": 59,
+          "reqLevel": 54,
+          "stats": "2256 Armor, 40 Block, Equip: Chance to Drain 35 Life, Chance to deal 35-45 Fire DMG",
+          "alts": [
+            {
+              "name": "Gizlock's Hypertech Buckler",
+              "itemId": 17718,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+7 Stamina, +8 Intellect, 1823 Armor, 33 Block",
+              "icon": "inv_shield_13",
+              "value": "Maraudon — Tinkerer Gizlock"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 12602,
+          "name": "Draconian Deflector",
+          "icon": "inv_shield_11",
+          "weaponType": "Shield",
+          "armor": 2153,
+          "block": 40,
+          "source": {
+            "kind": "dungeon",
+            "title": "Upper Blackrock Spire — General Drakkisath",
+            "detail": "Standard pre-raid tanking shield (+10 Defense, 2153 Armor, 40 Block)."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "stats": "+10 Defense, 2153 Armor, 40 Block",
+          "alts": [
+            {
+              "name": "Malistar's Defender",
+              "itemId": 17106,
+              "weaponType": "Shield",
+              "quality": "q4",
+              "iLvl": 66,
+              "reqLevel": 60,
+              "stats": "+13 Intellect, +9 Stamina, +11 Healing/Spells, 2548 Armor, 44 Block",
+              "icon": "inv_shield_08",
+              "value": "Molten Core — Majordomo Executus"
+            },
+            {
+              "name": "The Immovable Object",
+              "itemId": 19325,
+              "weaponType": "Shield",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+15 Stamina, +27 Block Value, 2468 Armor, 44 Block",
+              "icon": "inv_shield_12",
+              "value": "Alterac Valley — Exalted (Vendor)"
+            }
+          ]
+        }
+      ]
+    },
+    "warrior": {
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Shield Progression"
         }
       ],
       "levels": [
@@ -20484,107 +21028,107 @@ if (typeof window !== 'undefined') {
           "levelBracket": "10–16",
           "itemId": 13245,
           "name": "Kresh's Back",
-          "icon": "inv_shield_06",
+          "icon": "inv_shield_02",
           "weaponType": "Shield",
-          "armor": 434,
-          "block": 11,
+          "armor": 417,
+          "block": 10,
           "source": {
             "kind": "dungeon",
-            "title": "Wailing Caverns",
-            "detail": "Dropped by Kresh in WC (+434 Armor, 11 Block, +5 Sta, +4 Spi)."
+            "title": "Wailing Caverns — Kresh",
+            "detail": "Iconic turtle shell shield (+417 Armor, 10 Block)."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "+5 Stamina, +4 Spirit, 434 Armor, 11 Block",
+          "stats": "417 Armor, 10 Block",
           "alts": [
             {
               "name": "Commander's Crest",
-              "itemId": 13079,
+              "itemId": 6320,
               "weaponType": "Shield",
               "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 16,
-              "stats": "+4 Strength, +3 Stamina, 487 Armor, 12 Block",
-              "icon": "inv_shield_05",
-              "value": "+4 Str, +3 Sta, 487 Armor - Shadowfang Keep"
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_09",
+              "value": "Shadowfang Keep — Commander Springvale"
             },
             {
               "name": "Redbeard Crest",
-              "itemId": 13246,
+              "itemId": 12997,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 19,
-              "reqLevel": 14,
-              "stats": "+5 Stamina, +3 Spirit, +5 Strength",
-              "icon": "inv_shield_07",
-              "value": "+5 Sta, +3 Spi, +5 Str - Rare drop"
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +4 Strength, 495 Armor, 12 Block",
+              "icon": "inv_shield_05",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "17–20",
-          "itemId": 6970,
+          "itemId": 7002,
           "name": "Arctic Buckler",
-          "icon": "inv_shield_07",
+          "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "armor": 542,
-          "block": 13,
+          "armor": 569,
+          "block": 14,
           "source": {
             "kind": "quest",
-            "title": "Blackfathom Villainy",
-            "detail": "Blackfathom Deeps quest reward (+5 Frost Res, +4 Sta, +4 Spi)."
+            "title": "Blackfathom Deeps — Researching the Corruption",
+            "detail": "Alliance quest shield (+569 Armor, 14 Block, +5 Stamina, +5 Spirit)."
           },
-          "faction": "both",
+          "faction": "alliance",
           "quality": "q3",
-          "iLvl": 24,
+          "iLvl": 26,
           "reqLevel": 19,
-          "stats": "+4 Stamina, +4 Spirit, +5 Frost Resistance, 542 Armor, 13 Block",
+          "stats": "+5 Stamina, +5 Spirit, 569 Armor, 14 Block",
           "alts": [
             {
-              "name": "Shield of the Faith",
+              "name": "Commander's Crest",
               "itemId": 6320,
               "weaponType": "Shield",
               "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina, +50 Armor, 520 Armor, 13 Block",
-              "icon": "inv_shield_05",
-              "value": "+3 Sta, +50 Armor - Quest reward"
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+6 Stamina, +3 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_09",
+              "value": "SFK — Commander Springvale"
+            },
+            {
+              "name": "Shield of Thorsen",
+              "itemId": 13079,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+5 Stamina, +5 Strength, 552 Armor, 13 Block",
+              "icon": "inv_shield_07",
+              "value": "World Drop BoE"
             }
           ]
         },
         {
           "levelBracket": "21–25",
-          "itemId": 284157,
+          "itemId": 7748,
           "name": "Forcestone Buckler",
-          "icon": "inv_shield_09",
+          "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "armor": 680,
+          "armor": 686,
           "block": 17,
           "source": {
-            "kind": "dungeon",
-            "title": "Excavation Site 4",
-            "detail": "ES4 / RFK dungeon reward (+4 Sta, +8 Spi, +18 Healing / +6 Spell Power)."
+            "kind": "quest",
+            "title": "Uldaman Quest Preparation / World Drop",
+            "detail": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
           "reqLevel": 24,
-          "stats": "+4 Stamina, +8 Spirit, Equip: +18 Healing / +6 Spell Damage, 680 Armor, 17 Block",
+          "stats": "+6 Stamina, +6 Spirit, 686 Armor, 17 Block",
           "alts": [
-            {
-              "name": "Seedcloud Buckler",
-              "itemId": 13166,
-              "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": "+6 Stamina, +3 Intellect, 628 Armor, 15 Block",
-              "icon": "inv_shield_06",
-              "value": "+6 Sta, +3 Int - World Drop"
-            },
             {
               "name": "Marbled Buckler",
               "itemId": 4833,
@@ -20592,170 +21136,213 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+5 Strength, +5 Agility, +5 Stamina, +5 Spirit, 675 Armor, 17 Block",
+              "stats": "+4 Stamina, +4 Strength, 614 Armor, 15 Block",
               "icon": "inv_shield_04",
-              "value": "+5 all stats - World Drop"
+              "value": "World Drop"
+            },
+            {
+              "name": "Seedcloud Buckler",
+              "itemId": 13166,
+              "weaponType": "Shield",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+5 Stamina, +3 Strength, 614 Armor, 15 Block",
+              "icon": "inv_shield_08",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "26–30",
-          "itemId": 274190,
-          "name": "Aegis of the Scarlet Commander",
-          "icon": "inv_shield_05",
+          "itemId": 4834,
+          "name": "Basalt Buckler",
+          "icon": "inv_shield_06",
           "weaponType": "Shield",
-          "armor": 890,
-          "block": 22,
+          "armor": 733,
+          "block": 18,
           "source": {
-            "kind": "dungeon",
-            "title": "Scarlet Monastery",
-            "detail": "Scarlet Monastery dungeon drop (+8 Str, +8 Sta, +6 Spi, +5 Defense)."
+            "kind": "world",
+            "title": "World Drop BoE",
+            "detail": "+5 Strength, +5 Stamina, 733 Armor, 18 Block."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 35,
-          "reqLevel": 30,
-          "stats": "+8 Strength, +8 Stamina, +6 Spirit, Equip: Increased Defense +5, 890 Armor, 22 Block",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "+5 Strength, +5 Stamina, 733 Armor, 18 Block",
           "alts": [
-            {
-              "name": "Collection Plate",
-              "itemId": 273829,
-              "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+2 Strength, +9 Stamina, 760 Armor, 19 Block",
-              "icon": "inv_shield_08",
-              "value": "+2 Str, +9 Sta - Stockade: Bazil Thredd"
-            },
             {
               "name": "Vile Protector",
               "itemId": 271220,
               "weaponType": "Shield",
               "quality": "q3",
-              "iLvl": 32,
-              "reqLevel": 27,
-              "stats": "+6 Strength, Chance on hit 105-175 Shadow dmg, 790 Armor, 20 Block",
-              "icon": "inv_shield_09",
-              "value": "+6 Str, Shadow reactive - Viktor the Vile"
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+7 Stamina, +4 Strength, 804 Armor, 20 Block",
+              "icon": "inv_shield_10",
+              "value": "Dungeon Drop"
             },
             {
-              "name": "Basalt Buckler",
-              "itemId": 284160,
+              "name": "Collection Plate",
+              "itemId": 273829,
               "weaponType": "Shield",
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Intellect, +2 Stamina, 820 Armor, 21 Block",
-              "icon": "inv_shield_07",
-              "value": "+8 Int, +2 Sta - RFK Drop"
+              "stats": "+6 Strength, +6 Stamina, 804 Armor, 20 Block",
+              "icon": "inv_shield_05",
+              "value": "Dungeon Drop"
             }
           ]
         },
         {
           "levelBracket": "31–39",
           "itemId": 7726,
-          "name": "Crest of Retribution",
-          "icon": "inv_shield_08",
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_07",
           "weaponType": "Shield",
-          "armor": 1040,
-          "block": 25,
+          "armor": 1548,
+          "block": 29,
           "source": {
             "kind": "dungeon",
-            "title": "Scarlet Monastery",
-            "detail": "Scarlet Monastery Armory drop (+9 Holy damage on block, +7 Sta)."
+            "title": "Scarlet Monastery Cathedral — Scarlet Commander Mograine",
+            "detail": "Top tier leveling shield (+7 Strength, +8 Stamina, 1548 Armor, 29 Block)."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 39,
-          "reqLevel": 34,
-          "stats": "+7 Stamina, Equip: Deals 9 Holy damage when blocking, 1040 Armor, 25 Block",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "stats": "+7 Strength, +8 Stamina, 1548 Armor, 29 Block",
           "alts": [
             {
-              "name": "Shield of the Hidden Sanctuary",
-              "itemId": 7725,
+              "name": "Aegis of Battle",
+              "itemId": 6724,
               "weaponType": "Shield",
-              "quality": "q3",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+8 Intellect, +7 Spirit, +5 Stamina, 1040 Armor, 25 Block",
-              "icon": "inv_shield_05",
-              "value": "+8 Int, +7 Spi, +5 Sta - SM Library"
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+6 Strength, +6 Stamina, 968 Armor, 24 Block",
+              "icon": "inv_shield_04",
+              "value": "World Drop"
             }
           ]
         },
         {
           "levelBracket": "40–50",
-          "itemId": 1168,
-          "name": "Skullflame Shield",
-          "icon": "inv_shield_01",
+          "itemId": 1169,
+          "name": "Wall of the Dead",
+          "icon": "inv_shield_05",
           "weaponType": "Shield",
-          "armor": 1450,
-          "block": 34,
+          "armor": 1923,
+          "block": 35,
           "source": {
-            "kind": "drop",
-            "title": "World Drop Epic",
-            "detail": "Legendary world drop shield with life drain and flamestrike procs."
+            "kind": "world",
+            "title": "World Drop Epic Shield",
+            "detail": "+10 Stamina, +10 Armor, Chance on hit: +150 Armor buff."
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 49,
-          "reqLevel": 44,
-          "stats": "+10 Fire Resistance, +10 Shadow Resistance, Equip: Chance to life drain 35 or deal 100 Fire AoE, 1450 Armor, 34 Block",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "stats": "+10 Stamina, +10 Armor, 1923 Armor, 35 Block, Equip: +150 Armor Proc",
           "alts": [
             {
-              "name": "Aegis of the Immortal",
-              "itemId": 12602,
+              "name": "Gizlock's Hypertech Buckler",
+              "itemId": 17718,
               "weaponType": "Shield",
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+10 Stamina, +10 Spirit, 1530 Armor, 36 Block",
-              "icon": "inv_shield_06",
-              "value": "+10 Sta, +10 Spi - Sunken Temple"
+              "stats": "+7 Stamina, +8 Intellect, +11 Block Value, 1823 Armor, 33 Block",
+              "icon": "inv_shield_13",
+              "value": "Maraudon — Tinkerer Gizlock"
             }
           ]
         },
         {
-          "levelBracket": "51–60",
+          "levelBracket": "51–54",
+          "itemId": 1168,
+          "name": "Skullflame Shield",
+          "icon": "inv_shield_01",
+          "weaponType": "Shield",
+          "armor": 2256,
+          "block": 40,
+          "source": {
+            "kind": "world",
+            "title": "World Drop Epic Shield",
+            "detail": "Iconic lifesteal AOE shield (+2256 Armor, 40 Block, Life Drain / Flame Strike procs)."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 59,
+          "reqLevel": 54,
+          "stats": "2256 Armor, 40 Block, Equip: Chance to Drain 35 Life, Chance to deal 35-45 Fire DMG",
+          "alts": [
+            {
+              "name": "Gizlock's Hypertech Buckler",
+              "itemId": 17718,
+              "weaponType": "Shield",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+7 Stamina, +8 Intellect, 1823 Armor, 33 Block",
+              "icon": "inv_shield_13",
+              "value": "Maraudon — Tinkerer Gizlock"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
           "itemId": 12602,
           "name": "Draconian Deflector",
-          "icon": "inv_shield_13",
+          "icon": "inv_shield_11",
           "weaponType": "Shield",
           "armor": 2153,
           "block": 40,
           "source": {
             "kind": "dungeon",
-            "title": "Upper Blackrock Spire",
-            "detail": "General Drakkisath in UBRS (+15 Defense, +7 Sta)."
+            "title": "Upper Blackrock Spire — General Drakkisath",
+            "detail": "Standard pre-raid tanking shield (+10 Defense, 2153 Armor, 40 Block)."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 63,
           "reqLevel": 58,
-          "stats": "+15 Defense, +7 Stamina, 2153 Armor, 40 Block",
+          "stats": "+10 Defense, 2153 Armor, 40 Block",
           "alts": [
             {
               "name": "The Immovable Object",
-              "itemId": 19321,
+              "itemId": 19325,
               "weaponType": "Shield",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+15 Stamina, +15 Defense, Equip: Increases block chance by 2%, 2468 Armor, 44 Block",
-              "icon": "inv_shield_05",
-              "value": "Alterac Valley Exalted Shield"
+              "stats": "+15 Stamina, +27 Block Value, 2468 Armor, 44 Block",
+              "icon": "inv_shield_12",
+              "value": "Alterac Valley — Exalted (Vendor)"
             },
             {
-              "name": "Malistar's Defender",
-              "itemId": 17106,
+              "name": "Force Reactive Disk",
+              "itemId": 18638,
               "weaponType": "Shield",
               "quality": "q4",
-              "iLvl": 66,
+              "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+19 Stamina, +11 Intellect, +9 Spirit, +7 MP5, 2468 Armor, 44 Block",
-              "icon": "inv_shield_08",
-              "value": "Molten Core - Shazzrah (Holy / Resto BiS)"
+              "stats": "+11 Stamina, 2548 Armor, 44 Block, AOE Lightning Discharge on Block",
+              "icon": "inv_shield_16",
+              "value": "Engineering Crafted"
+            },
+            {
+              "name": "Elementium Reinforced Bulwark",
+              "itemId": 19349,
+              "weaponType": "Shield",
+              "quality": "q4",
+              "iLvl": 77,
+              "reqLevel": 60,
+              "stats": "+23 Stamina, +7 Defense, 2816 Armor, 49 Block",
+              "icon": "inv_shield_19",
+              "value": "Blackwing Lair — Chromaggus"
             }
           ]
         }
@@ -25285,4 +25872,3 @@ if (typeof window !== 'undefined') {
     ]
   }
 };
-}

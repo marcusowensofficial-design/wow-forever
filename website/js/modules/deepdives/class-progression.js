@@ -691,13 +691,19 @@
     });
   }
 
-  // Off-Hand Progression Renderer
+  // Off-Hand / Shield Progression Renderer
   function renderOffhands(classId) {
+    const isShieldClass = ['warrior', 'paladin', 'shaman'].includes(classId);
+    const isDruid = classId === 'druid';
     return renderItemTimeline(classId, 'offhands', {
-      title: 'Level 1 to 60 Caster Off-Hand Progression',
-      icon: '🔮',
-      desc: 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.',
-      emptyMsg: '⚠️ No off-hand progression recorded for this class in current Beta Build.',
+      title: isShieldClass ? 'Level 1 to 60 Shield Upgrade Path' : (isDruid ? 'Level 1 to 60 Off-Hand & Idol Progression' : 'Level 1 to 60 Caster Off-Hand Progression'),
+      icon: isShieldClass ? '🛡️' : '🔮',
+      desc: isShieldClass
+        ? 'Best-in-slot shields for leveling and tanking: optimal armor, block value, stamina, and key dungeon boss drops.'
+        : (isDruid
+            ? 'Held-in-off-hand tomes, furbolg pouches, and class idols for leveling Feral, Balance, and Restoration Druids.'
+            : 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.'),
+      emptyMsg: isShieldClass ? '⚠️ No shield progression recorded for this class in current Beta Build.' : '⚠️ No off-hand progression recorded for this class in current Beta Build.',
       filterId: 'offhand-faction-toggle',
       getFaction: () => activeOffhandFaction
     });

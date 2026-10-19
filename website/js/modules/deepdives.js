@@ -181,8 +181,14 @@ function initClassDeepDives() {
               progTabs.push({ id: "wands", label: "Wand Path", icon: "🪄" });
             }
 
-            if (['mage', 'priest', 'warlock', 'druid', 'shaman', 'paladin'].includes(cData.id)) {
-              progTabs.push({ id: "offhands", label: "Off-Hand Path", icon: "🔮" });
+            if (['mage', 'priest', 'warlock', 'druid', 'shaman', 'paladin', 'warrior'].includes(cData.id)) {
+              const isShield = ['warrior', 'paladin', 'shaman'].includes(cData.id);
+              const isDruid = cData.id === 'druid';
+              progTabs.push({
+                id: "offhands",
+                label: isShield ? "Shield Path" : (isDruid ? "Off-Hand & Idols" : "Off-Hand Path"),
+                icon: isShield ? "🛡️" : "🔮"
+              });
             }
 
             progTabs.push(

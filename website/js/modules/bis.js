@@ -126,7 +126,7 @@ function renderBiSApp() {
           <button type="button" 
                   class="bis-spec-pill ${s.id === currentBiSState.specId ? 'active' : ''}"
                   data-spec="${s.id}">
-            <img src="${s.icon}" alt="${s.name}" class="bis-spec-icon" loading="lazy" />
+            <img src="${s.icon && s.icon.startsWith('http') ? s.icon : (s.icon ? 'https://render.worldofwarcraft.com/us/icons/56/' + s.icon.replace(/\.(jpg|png|webp)$/i, '') + '.jpg' : 'https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg')}" alt="${s.name}" class="bis-spec-icon" loading="lazy" />
             <span class="bis-spec-title">${s.name}</span>
             <span class="bis-spec-role-tag">${s.role}</span>
           </button>

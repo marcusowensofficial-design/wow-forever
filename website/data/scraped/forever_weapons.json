@@ -2645,23 +2645,16 @@
         },
         "alts": [
           {
-            "name": "Bonebiter",
-            "itemId": 6830,
-            "value": "38.8 DPS, 3.40s (105–159 dmg) - In the Name of the Light quest (+10 Str, +10 Sta, +5 Agi) (Alliance)",
-            "faction": "alliance",
-            "dps": "38.8 DPS",
-            "speed": "3.40",
-            "weaponType": "Two-handed axe",
+            "name": "Cobalt Crusher",
+            "itemId": 6741,
+            "weaponType": "Two-handed mace",
             "quality": "q3",
-            "iLvl": 44,
-            "reqLevel": 34,
-            "stats": "+10 Strength, +10 Stamina, +5 Agility",
-            "icon": "inv_axe_04",
-            "source": {
-              "kind": "quest",
-              "title": "In the Name of the Light",
-              "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
-            }
+            "iLvl": 37,
+            "reqLevel": 32,
+            "dps": "27.4 DPS",
+            "speed": "3.40",
+            "stats": "+11 Strength, +10 Stamina",
+            "icon": "inv_hammer_04"
           },
           {
             "name": "Moonsteel Broadsword",
