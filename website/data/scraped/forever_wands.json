@@ -41,7 +41,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "spell_shadow_fingerofdeath",
+        "icon": "inv_wand_01",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -68,7 +68,7 @@
             "iLvl": 15,
             "reqLevel": 5,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_01"
           },
           {
             "name": "Wisesight Wand",
@@ -237,7 +237,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_staff_06",
+        "icon": "inv_wand_02",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -264,7 +264,7 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -327,7 +327,7 @@
             "iLvl": 43,
             "reqLevel": 28,
             "stats": "",
-            "icon": "inv_wand_03"
+            "icon": "inv_wand_07"
           },
           {
             "name": "Greater Mystic Wand",
@@ -349,7 +349,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_03",
+        "icon": "inv_wand_07",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",
@@ -634,7 +634,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "spell_shadow_fingerofdeath",
+        "icon": "inv_wand_01",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -661,7 +661,7 @@
             "iLvl": 15,
             "reqLevel": 5,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_01"
           },
           {
             "name": "Wisesight Wand",
@@ -830,7 +830,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_staff_06",
+        "icon": "inv_wand_02",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -857,7 +857,7 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -920,7 +920,7 @@
             "iLvl": 43,
             "reqLevel": 28,
             "stats": "",
-            "icon": "inv_wand_03"
+            "icon": "inv_wand_07"
           },
           {
             "name": "Greater Mystic Wand",
@@ -942,7 +942,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_03",
+        "icon": "inv_wand_07",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",
@@ -1227,7 +1227,7 @@
         "levelBracket": "5–6",
         "itemId": 286743,
         "name": "Riptear's Spare Arm",
-        "icon": "spell_shadow_fingerofdeath",
+        "icon": "inv_wand_01",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "9.41 DPS",
@@ -1254,7 +1254,7 @@
             "iLvl": 15,
             "reqLevel": 5,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_01"
           },
           {
             "name": "Wisesight Wand",
@@ -1423,7 +1423,7 @@
         "levelBracket": "21–25",
         "itemId": 279847,
         "name": "Unstable Power Core",
-        "icon": "inv_staff_06",
+        "icon": "inv_wand_02",
         "weaponType": "Wand",
         "speed": "1.70",
         "dps": "29.71 DPS",
@@ -1450,7 +1450,7 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_wand_02"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -1513,7 +1513,7 @@
             "iLvl": 43,
             "reqLevel": 28,
             "stats": "",
-            "icon": "inv_wand_03"
+            "icon": "inv_wand_07"
           },
           {
             "name": "Greater Mystic Wand",
@@ -1535,7 +1535,7 @@
         "levelBracket": "31–36",
         "itemId": 270084,
         "name": "Master Hunter's Wand",
-        "icon": "inv_wand_03",
+        "icon": "inv_wand_07",
         "weaponType": "Wand",
         "speed": "1.50",
         "dps": "34.67 DPS",

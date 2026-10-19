@@ -51,7 +51,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -63,7 +63,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -185,7 +185,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -304,7 +304,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -316,7 +316,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -336,7 +336,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -344,7 +344,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -389,7 +389,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -418,7 +418,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -463,7 +463,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -475,7 +475,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -589,7 +589,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -601,7 +601,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -723,7 +723,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -842,7 +842,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -854,7 +854,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -874,7 +874,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -882,7 +882,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -927,7 +927,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -956,7 +956,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1001,7 +1001,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1013,7 +1013,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -1127,7 +1127,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -1139,7 +1139,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -1261,7 +1261,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -1380,7 +1380,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1392,7 +1392,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -1412,7 +1412,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -1420,7 +1420,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -1465,7 +1465,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -1494,7 +1494,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1539,7 +1539,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1551,7 +1551,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -1665,7 +1665,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -1677,7 +1677,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -1799,7 +1799,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -1918,7 +1918,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -1930,7 +1930,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -1950,7 +1950,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -1958,7 +1958,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2003,7 +2003,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2032,7 +2032,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -2077,7 +2077,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -2089,7 +2089,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -2203,7 +2203,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -2215,7 +2215,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -2337,7 +2337,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2456,7 +2456,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -2468,7 +2468,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -2488,7 +2488,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -2496,7 +2496,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2541,7 +2541,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2570,7 +2570,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -2615,7 +2615,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -2627,7 +2627,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -2741,7 +2741,7 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_jewelry_talisman_08"
           },
           {
             "name": "Disciple's Stein",
@@ -2753,7 +2753,7 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_drink_04"
           }
         ]
       },
@@ -2875,7 +2875,7 @@
         "levelBracket": "26–29",
         "itemId": 273027,
         "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
+        "icon": "inv_misc_orb_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -2994,7 +2994,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271934,
+            "itemId": 271935,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -3006,7 +3006,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
+            "itemId": 272090,
             "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",
@@ -3026,7 +3026,7 @@
             "iLvl": 37,
             "reqLevel": 32,
             "stats": "",
-            "icon": "inv_misc_questionmark"
+            "icon": "inv_misc_orb_01"
           }
         ]
       },
@@ -3034,7 +3034,7 @@
         "levelBracket": "40–44",
         "itemId": 277260,
         "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
+        "icon": "inv_lantern_01",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -3079,7 +3079,7 @@
         "levelBracket": "45–52",
         "itemId": 249455,
         "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
+        "icon": "inv_misc_orb_blue",
         "weaponType": "Held In Off-hand",
         "speed": "2.80",
         "dps": "",
@@ -3108,7 +3108,7 @@
           },
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271933,
+            "itemId": 271935,
             "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -3153,7 +3153,7 @@
         "alts": [
           {
             "name": "Insurgent's Manifesto",
-            "itemId": 271932,
+            "itemId": 271935,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "both",
             "weaponType": "Held in Off-hand",
@@ -3165,7 +3165,7 @@
           },
           {
             "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
+            "itemId": 272090,
             "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
             "faction": "horde",
             "weaponType": "Held in Off-hand",

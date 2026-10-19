@@ -3405,7 +3405,7 @@ if (typeof window !== 'undefined') {
       "levels": [
         {
           "levelBracket": "1–2",
-          "itemId": 2488,
+          "itemId": 1512,
           "name": "Crude Battle Axe",
           "icon": "inv_sword_20",
           "weaponType": "Two-handed axe",
@@ -3419,7 +3419,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Club",
-              "itemId": 2491,
+              "itemId": 2130,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
               "dps": "1.8 DPS",
@@ -3427,7 +3427,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_axe_10"
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
             },
             {
               "name": "Worn Shortsword",
@@ -3439,7 +3440,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -3464,7 +3466,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Early vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -3537,7 +3539,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_03"
+              "icon": "inv_weapon_rifle_02"
             },
             {
               "name": "Goblin Smasher",
@@ -3612,7 +3614,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Riptear's Cleaver",
@@ -3767,7 +3769,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 14,
               "reqLevel": 8,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -3800,7 +3803,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_sword_05"
+              "icon": "inv_axe_02"
             },
             {
               "name": "Trogg Scepter",
@@ -3837,7 +3840,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_04"
+              "icon": "inv_axe_06"
             },
             {
               "name": "Ironforge Greathammer",
@@ -3876,7 +3879,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Durgen's Crescent Axe",
-              "itemId": 270227,
+              "itemId": 270256,
               "value": "15.5 DPS, 2.40s, +5 Str, +2 Sta - Hall of Thanes: Durgen",
               "faction": "both",
               "dps": "12.29 DPS",
@@ -3886,7 +3889,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+5 Str, +2 Sta",
-              "icon": "inv_misc_necklacea8"
+              "icon": "inv_axe_05"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -3914,7 +3917,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_04"
+              "icon": "inv_axe_06"
             },
             {
               "name": "Bone Knuckles",
@@ -3941,7 +3944,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 5187,
           "name": "Rhahk'Zor's Hammer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "18.4 DPS",
@@ -3967,7 +3970,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Meathook Slicer",
-              "itemId": 271101,
+              "itemId": 271204,
               "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
               "faction": "both",
               "dps": "13.61 DPS",
@@ -3977,7 +3980,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_02"
             }
           ],
           "faction": "both",
@@ -3988,9 +3991,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271104,
+          "itemId": 271217,
           "name": "Corpse Chopper",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_axe_09",
           "weaponType": "Two-handed axe",
           "speed": "3.20",
           "dps": "17.4 DPS",
@@ -4016,7 +4019,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Haunting Blade",
-              "itemId": 271107,
+              "itemId": 6641,
               "value": "18.2 DPS, 3.00s, +6 Str, +5 Sta - Ruins of Lordaeron: Captain",
               "faction": "both",
               "dps": "22.37 DPS",
@@ -4034,11 +4037,11 @@ if (typeof window !== 'undefined') {
                 "Requires Level 22"
               ],
               "reqLevel": 22,
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_27"
             },
             {
               "name": "Vileblood Scimitar",
-              "itemId": 271106,
+              "itemId": 271218,
               "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile",
               "faction": "both",
               "dps": "14.62 DPS",
@@ -4048,7 +4051,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_01"
             },
             {
               "name": "Sword of the Fallen",
@@ -4073,9 +4076,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "19–20",
-          "itemId": 279891,
+          "itemId": 251533,
           "name": "Forsaken Greataxe",
-          "icon": "inv_misc_cape_08",
+          "icon": "inv_axe_24",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "20.5 DPS",
@@ -4288,7 +4291,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Heavy Mithril Axe",
-              "itemId": 3854,
+              "itemId": 7941,
               "value": "20.5 DPS - Blacksmithing (130)",
               "faction": "both",
               "dps": "28.82 DPS",
@@ -4356,7 +4359,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             },
             {
               "name": "Trusty Sword",
@@ -4515,7 +4518,7 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             }
           ],
           "faction": "both",
@@ -4834,7 +4837,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "37–40",
           "itemId": 7717,
           "name": "Ravager",
-          "icon": "inv_weapon_halberd_05",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "37.3 DPS",
@@ -4846,7 +4849,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Mograine's Might",
-              "itemId": 7726,
+              "itemId": 7723,
               "value": "38.9 DPS, 3.50s, +16 Str, +17 Sta - SM Cath: Mograine",
               "faction": "both",
               "dps": "38.82 DPS",
@@ -4856,11 +4859,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 39,
               "stats": "+16 Str, +17 Sta",
-              "icon": "inv_shield_05"
+              "icon": "inv_hammer_04"
             },
             {
               "name": "Bonebiter",
-              "itemId": 6807,
+              "itemId": 6830,
               "value": "38.8 DPS, 3.40s - Alliance Quest: In the Name of the Light",
               "faction": "alliance",
               "dps": "38.82 DPS",
@@ -4884,7 +4887,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +4 Spi",
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_05"
             },
             {
               "name": "Sword of Omen",
@@ -4897,7 +4900,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 42,
               "reqLevel": 36,
               "stats": "+9 Str, +4 Sta, +3 Agi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_24"
             }
           ],
           "faction": "both",
@@ -4910,7 +4913,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–44",
           "itemId": 13018,
           "name": "Executioner's Cleaver",
-          "icon": "inv_axe_24",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.80",
           "dps": "42.5 DPS",
@@ -4931,11 +4934,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 46,
               "reqLevel": 40,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_04"
             },
             {
               "name": "The Pacifier",
-              "itemId": 13053,
+              "itemId": 6327,
               "value": "40.0 DPS - World Drop BoE Mace",
               "faction": "both",
               "dps": "36.63 DPS",
@@ -4984,7 +4987,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Princess Theradras' Scepter",
-              "itemId": 17780,
+              "itemId": 17766,
               "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
               "faction": "both",
               "dps": "46.47 DPS",
@@ -4994,7 +4997,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 49,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_08"
             },
             {
               "name": "Warmonger",
@@ -5008,7 +5011,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 47,
               "stats": "+3% Hit",
-              "icon": "inv_sword_46"
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -5021,7 +5024,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "51–54",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -5042,7 +5045,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_axe_11"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -5056,7 +5059,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 51,
               "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_05"
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -5090,7 +5093,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_halberd_01"
             },
             {
               "name": "Blackblade of Shahram",
@@ -5103,11 +5106,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_34"
             },
             {
               "name": "The Unstoppable Force",
-              "itemId": 18803,
+              "itemId": 19323,
               "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
               "faction": "both",
               "dps": "56.53 DPS",
@@ -5117,7 +5120,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 55,
               "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -5129,7 +5132,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_axe_11"
             },
             {
               "name": "Icesworn Decapitator",
@@ -5179,7 +5182,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Club",
-              "itemId": 2491,
+              "itemId": 2130,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
               "dps": "1.8 DPS",
@@ -5187,7 +5190,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_axe_10"
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
             },
             {
               "name": "Worn Shortsword",
@@ -5199,7 +5203,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "alliance",
@@ -5224,7 +5229,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Starter vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -5273,7 +5278,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -5543,7 +5548,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 5187,
           "name": "Rhahk'Zor's Hammer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "18.4 DPS",
@@ -5555,7 +5560,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Haunting Blade",
-              "itemId": 271107,
+              "itemId": 6641,
               "value": "18.2 DPS, 3.00s, +6 Str, +5 Sta - Ruins of Lordaeron: Captain",
               "faction": "both",
               "dps": "22.37 DPS",
@@ -5573,7 +5578,7 @@ if (typeof window !== 'undefined') {
                 "Requires Level 22"
               ],
               "reqLevel": 22,
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_27"
             },
             {
               "name": "Monstrous Cleaver",
@@ -5612,7 +5617,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Haunting Blade",
-              "itemId": 271107,
+              "itemId": 6641,
               "value": "18.2 DPS, 3.00s - Ruins of Lordaeron: Captain",
               "faction": "both",
               "dps": "22.37 DPS",
@@ -5630,7 +5635,7 @@ if (typeof window !== 'undefined') {
                 "Requires Level 22"
               ],
               "reqLevel": 22,
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_27"
             },
             {
               "name": "Bronze Warhammer",
@@ -5882,7 +5887,7 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             }
           ],
           "faction": "both",
@@ -5934,7 +5939,7 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -6087,7 +6092,7 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit"
               ],
               "reqLevel": 30,
-              "icon": "inv_misc_shovel_02"
+              "icon": "inv_misc_shovel_01"
             }
           ],
           "faction": "both",
@@ -6110,9 +6115,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "36–40",
-          "itemId": 7726,
+          "itemId": 7723,
           "name": "Mograine's Might",
-          "icon": "inv_shield_05",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "38.9 DPS",
@@ -6124,7 +6129,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Sword of Serenity",
-              "itemId": 6802,
+              "itemId": 6829,
               "value": "33.0 DPS, 2.80s, +9 Sta, +15 Spi - Alliance Quest: In the Name of the Light",
               "faction": "alliance",
               "dps": "30 DPS",
@@ -6134,7 +6139,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +15 Spi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_05"
             },
             {
               "name": "Archeus",
@@ -6161,7 +6166,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–45",
           "itemId": 9413,
           "name": "Stoneslayer",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_sword_04",
           "weaponType": "Two-handed sword",
           "speed": "3.90",
           "dps": "40.5 DPS",
@@ -6173,7 +6178,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "The Pacifier",
-              "itemId": 13053,
+              "itemId": 6327,
               "value": "40.0 DPS - BoE 2H Mace",
               "faction": "both",
               "dps": "36.63 DPS",
@@ -6195,7 +6200,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 46,
               "reqLevel": 40,
               "stats": "",
-              "icon": "inv_pick_01"
+              "icon": "inv_misc_bag_10"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -6220,9 +6225,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "46–50",
-          "itemId": 17780,
+          "itemId": 17766,
           "name": "Princess Theradras' Scepter",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.40",
           "dps": "47.1 DPS",
@@ -6234,7 +6239,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Blade of the Titans",
-              "itemId": 13035,
+              "itemId": 13043,
               "value": "44.6 DPS, +12 Str, +12 Sta - World Drop 2H sword",
               "faction": "both",
               "dps": "44.6 DPS",
@@ -6242,7 +6247,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 51,
               "reqLevel": 45,
               "stats": "+12 Str, +12 Sta",
-              "icon": "inv_sword_33"
+              "icon": "inv_sword_33",
+              "weaponType": "Two-Handed Sword"
             },
             {
               "name": "Warmonger",
@@ -6256,7 +6262,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 47,
               "stats": "+3% Hit",
-              "icon": "inv_sword_46"
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -6269,7 +6275,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "51–55",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -6290,7 +6296,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_axe_11"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -6304,7 +6310,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 51,
               "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_05"
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -6317,7 +6323,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "56–60",
           "itemId": 18717,
           "name": "Hammer of the Grand Crusader",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.10",
           "dps": "53.9 DPS",
@@ -6338,11 +6344,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_34"
             },
             {
               "name": "The Unstoppable Force",
-              "itemId": 18803,
+              "itemId": 19323,
               "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
               "faction": "both",
               "dps": "56.53 DPS",
@@ -6352,7 +6358,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 55,
               "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -6364,7 +6370,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_axe_11"
             }
           ],
           "faction": "both",
@@ -6445,7 +6451,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_03"
+              "icon": "inv_weapon_rifle_02"
             },
             {
               "name": "Kolkar Bow",
@@ -6472,7 +6478,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 4362,
           "name": "Rough Boomstick",
-          "icon": "inv_weapon_rifle_03",
+          "icon": "inv_weapon_rifle_02",
           "weaponType": "Gun",
           "speed": "2.30",
           "dps": "4.1 DPS",
@@ -6561,7 +6567,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Reinforced Bow",
-              "itemId": 2507,
+              "itemId": 3026,
               "value": "4.4 DPS, 2.20s - Vendor bow",
               "faction": "both",
               "dps": "5.77 DPS",
@@ -6596,7 +6602,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "9–10",
-          "itemId": 3026,
+          "itemId": 3027,
           "name": "Heavy Recurve Bow",
           "icon": "inv_weapon_bow_02",
           "weaponType": "Bow",
@@ -6648,7 +6654,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_07"
+              "icon": "inv_weapon_bow_05"
             },
             {
               "name": "Rough Boomstick",
@@ -6662,7 +6668,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_03"
+              "icon": "inv_weapon_rifle_02"
             },
             {
               "name": "Orcish Battle Bow",
@@ -6701,7 +6707,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "11–12",
-          "itemId": 3027,
+          "itemId": 2507,
           "name": "Laminated Recurve Bow",
           "icon": "inv_weapon_bow_01",
           "weaponType": "Bow",
@@ -6715,7 +6721,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Hunter's Boomstick",
-              "itemId": 3446,
+              "itemId": 2511,
               "value": "8.5 DPS, 2.10s - Dun Morogh quest reward",
               "faction": "alliance",
               "dps": "6.72 DPS",
@@ -6820,7 +6826,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Laminated Recurve Bow",
-              "itemId": 3027,
+              "itemId": 2507,
               "value": "7.8 DPS - Town vendor fallback",
               "faction": "both",
               "dps": "9.17 DPS",
@@ -6879,7 +6885,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+3 Spirit",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_01"
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6946,7 +6952,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Reinforced Bow",
-              "itemId": 2507,
+              "itemId": 3026,
               "value": "4.4 DPS - Vendor fallback",
               "faction": "both",
               "dps": "5.77 DPS",
@@ -7082,7 +7088,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "BKP 2700 \"Enforcer\"",
-              "itemId": 4384,
+              "itemId": 3024,
               "value": "14.2 DPS, 2.70s - Engineering (155)",
               "faction": "both",
               "dps": "14.2 DPS",
@@ -7091,7 +7097,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 28,
               "reqLevel": 22,
               "stats": "",
-              "icon": "spell_nature_polymorph"
+              "icon": "spell_nature_polymorph",
+              "weaponType": "Gun"
             },
             {
               "name": "Concealed Hand Crossbow",
@@ -7298,7 +7305,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 17687,
           "name": "Master Hunter's Rifle",
-          "icon": "inv_weapon_rifle_05",
+          "icon": "inv_weapon_rifle_06",
           "weaponType": "Gun",
           "speed": "2.60",
           "dps": "20.9 DPS",
@@ -7327,7 +7334,7 @@ if (typeof window !== 'undefined') {
                 "+6 Agility"
               ],
               "reqLevel": 28,
-              "icon": "inv_weapon_bow_11"
+              "icon": "inv_weapon_bow_04"
             },
             {
               "name": "Quilboar Blaster",
@@ -7446,7 +7453,7 @@ if (typeof window !== 'undefined') {
                 "+4 Agility"
               ],
               "reqLevel": 28,
-              "icon": "inv_weapon_rifle_05"
+              "icon": "inv_weapon_rifle_06"
             },
             {
               "name": "Crystalpine Stinger",
@@ -7481,7 +7488,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 30,
               "stats": "",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun"
             }
           ],
           "faction": "both",
@@ -7494,7 +7502,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "35–38",
           "itemId": 17687,
           "name": "Master Hunter's Rifle",
-          "icon": "inv_weapon_rifle_05",
+          "icon": "inv_weapon_rifle_06",
           "weaponType": "Gun",
           "speed": "2.60",
           "dps": "20.9 DPS",
@@ -7544,7 +7552,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina"
               ],
               "reqLevel": 34,
-              "icon": "inv_weapon_rifle_04"
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun"
             },
             {
               "name": "Mithril Blunderbuss",
@@ -7556,7 +7565,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 40,
               "reqLevel": 34,
               "stats": "",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun"
             },
             {
               "name": "Siegebreaker's Blaster",
@@ -7619,7 +7629,8 @@ if (typeof window !== 'undefined') {
                 "+3 Intellect"
               ],
               "reqLevel": 38,
-              "icon": "inv_weapon_rifle_02"
+              "icon": "inv_weapon_rifle_02",
+              "weaponType": "Gun"
             },
             {
               "name": "Ironweaver",
@@ -7690,7 +7701,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 48,
               "reqLevel": 42,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_bow_07"
             },
             {
               "name": "Riphook",
@@ -7738,7 +7749,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun"
             },
             {
               "name": "Dark Iron Rifle",
@@ -7786,7 +7798,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+11 Agi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_bow_08"
             },
             {
               "name": "Flawless Arcanite Rifle",
@@ -7864,7 +7876,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Small Knife",
-              "itemId": 2494,
+              "itemId": 2484,
               "value": "1.8 DPS - Starter vendor dagger",
               "faction": "both",
               "dps": "3.33 DPS",
@@ -7886,7 +7898,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -7897,7 +7910,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "3–4",
-          "itemId": 2494,
+          "itemId": 2484,
           "name": "Small Knife",
           "icon": "inv_weapon_shortblade_05",
           "weaponType": "Dagger",
@@ -7911,7 +7924,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Carving Knife",
-              "itemId": 2494,
+              "itemId": 2140,
               "value": "2.5 DPS, 1.70s - Starter Vendor Dagger",
               "faction": "both",
               "dps": "2.5 DPS",
@@ -7948,7 +7961,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -7987,7 +8001,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Stiletto",
-              "itemId": 2490,
+              "itemId": 2494,
               "value": "4.8 DPS - Fast 1.50s vendor dagger",
               "faction": "both",
               "dps": "3.33 DPS",
@@ -8009,7 +8023,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -8070,11 +8085,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_chest_plate09"
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Stiletto",
-              "itemId": 2490,
+              "itemId": 2494,
               "value": "4.8 DPS - Fast vendor dagger",
               "faction": "both",
               "dps": "3.33 DPS",
@@ -8109,7 +8124,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Thief's Blade",
-              "itemId": 2226,
+              "itemId": 5192,
               "value": "7.2 DPS, 1.70s - Vendor dagger",
               "faction": "both",
               "dps": "14.41 DPS",
@@ -8123,7 +8138,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cutlass",
-              "itemId": 2524,
+              "itemId": 851,
               "value": "7.7 DPS, 2.00s - 1H vendor sword",
               "faction": "both",
               "dps": "6.82 DPS",
@@ -8158,7 +8173,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "11–12",
-          "itemId": 2209,
+          "itemId": 2207,
           "name": "Jambiya",
           "icon": "inv_sword_32",
           "weaponType": "Dagger",
@@ -8172,7 +8187,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cutlass",
-              "itemId": 2524,
+              "itemId": 851,
               "value": "7.7 DPS, 2.00s - 1H vendor sword",
               "faction": "both",
               "dps": "6.82 DPS",
@@ -8218,7 +8233,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_sword_15"
+              "icon": "inv_sword_15",
+              "weaponType": "One-Handed Sword"
             }
           ],
           "faction": "both",
@@ -8229,9 +8245,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "13–14",
-          "itemId": 270226,
+          "itemId": 271095,
           "name": "Fang of Magmatus",
-          "icon": "inv_misc_food_24",
+          "icon": "inv_weapon_shortblade_05",
           "weaponType": "Main Hand Dagger",
           "speed": "1.60",
           "dps": "11.8 DPS",
@@ -8306,9 +8322,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271101,
+          "itemId": 271204,
           "name": "Meathook Slicer",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_weapon_shortblade_02",
           "weaponType": "Dagger",
           "speed": "1.50",
           "dps": "13.2 DPS",
@@ -8330,7 +8346,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "+5 Spirit",
-              "icon": "inv_sword_16"
+              "icon": "inv_sword_01"
             },
             {
               "name": "Plaguefang",
@@ -8344,7 +8360,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 16,
               "stats": "",
-              "icon": "inv_weapon_shortblade_54"
+              "icon": "inv_sword_05"
             },
             {
               "name": "Tail Spike",
@@ -8397,9 +8413,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271106,
+          "itemId": 271218,
           "name": "Vileblood Scimitar",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_sword_01",
           "weaponType": "One-handed sword",
           "speed": "2.20",
           "dps": "15.0 DPS",
@@ -8421,7 +8437,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "",
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_04"
             },
             {
               "name": "Pearl-handled Dagger",
@@ -8460,9 +8476,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "19–20",
-          "itemId": 279892,
+          "itemId": 279876,
           "name": "Plaguefang",
-          "icon": "inv_misc_cape_05",
+          "icon": "inv_sword_05",
           "weaponType": "One-handed sword",
           "speed": "1.60",
           "dps": "16.2 DPS",
@@ -8484,7 +8500,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "",
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_04"
             },
             {
               "name": "Wingblade",
@@ -8660,7 +8676,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 26,
               "reqLevel": 21,
               "stats": "+2 Strength, +3 Stamina",
-              "icon": "inv_mace_02"
+              "icon": "inv_misc_monsterclaw_04"
             },
             {
               "name": "Iridescent Hammer",
@@ -8721,7 +8737,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Serrated Raptor Claw",
-              "itemId": 271770,
+              "itemId": 280805,
               "value": "18.0 DPS, 1.60s - Quest: Changing Tastes",
               "faction": "both",
               "dps": "17.19 DPS",
@@ -8731,7 +8747,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 33,
               "reqLevel": 24,
               "stats": "",
-              "icon": "inv_misc_map07"
+              "icon": "inv_weapon_shortblade_16"
             },
             {
               "name": "Iron Fists",
@@ -8850,7 +8866,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 6681,
           "name": "Thornspike",
-          "icon": "inv_weapon_shortblade_10",
+          "icon": "inv_weapon_shortblade_08",
           "weaponType": "Dagger",
           "speed": "2.00",
           "dps": "20.2 DPS",
@@ -8965,7 +8981,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 34,
               "reqLevel": 28,
               "stats": "",
-              "icon": "inv_misc_bone_05"
+              "icon": "inv_misc_monsterclaw_02"
             }
           ],
           "faction": "both",
@@ -9120,7 +9136,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 40,
               "reqLevel": 34,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_weapon_shortblade_05",
+              "weaponType": "Dagger"
             },
             {
               "name": "Sword of Omen",
@@ -9133,7 +9150,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 40,
               "reqLevel": 34,
               "stats": "+9 Str, +4 Sta, +3 Agi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_24"
             },
             {
               "name": "Sword of Serenity",
@@ -9147,7 +9164,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +4 Spi",
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_05"
             }
           ],
           "faction": "alliance",
@@ -9196,7 +9213,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 39,
               "stats": "+22 Attack Power",
-              "icon": "inv_sword_35"
+              "icon": "inv_sword_07"
             },
             {
               "name": "Sword of Omen",
@@ -9208,7 +9225,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 38,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_24"
             },
             {
               "name": "Sword of Serenity",
@@ -9222,7 +9239,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "",
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_05"
             }
           ],
           "faction": "both",
@@ -9257,7 +9274,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 40,
               "stats": "",
-              "icon": "inv_sword_21"
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Electro-Lantern",
@@ -9275,7 +9292,7 @@ if (typeof window !== 'undefined') {
                 "+2 Intellect"
               ],
               "reqLevel": 44,
-              "icon": "inv_misc_wrench_01"
+              "icon": "inv_lantern_01"
             }
           ],
           "faction": "both",
@@ -9337,7 +9354,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_43"
             }
           ],
           "faction": "both",
@@ -9371,11 +9388,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 62,
               "reqLevel": 56,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_25"
             },
             {
               "name": "Mirah's Song",
-              "itemId": 15805,
+              "itemId": 15806,
               "value": "38.8 DPS, 1.80s, +9 Str, +9 Agi - Scholomance Quest: Kirtonos",
               "faction": "both",
               "dps": "40 DPS",
@@ -9385,7 +9402,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "+9 Str, +9 Agi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_39"
             },
             {
               "name": "Dal'Rend's Tribal Guardian",
@@ -9397,7 +9414,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 62,
               "reqLevel": 56,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_40"
             },
             {
               "name": "Blade of Senseless Slaughter",
@@ -9447,7 +9464,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Club",
-              "itemId": 2491,
+              "itemId": 2130,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
               "dps": "1.8 DPS",
@@ -9455,11 +9472,12 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_axe_10"
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
             },
             {
               "name": "Crude Battle Axe",
-              "itemId": 2490,
+              "itemId": 1512,
               "value": "2.0 DPS - Starter 2H axe",
               "faction": "both",
               "dps": "3.8 DPS",
@@ -9557,7 +9575,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -9614,11 +9632,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -9784,7 +9802,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_sword_05"
+              "icon": "inv_axe_02"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -9798,7 +9816,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_04"
+              "icon": "inv_axe_06"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -9812,7 +9830,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+3 Str, +3 Spi",
-              "icon": "inv_hammer_23"
+              "icon": "inv_mace_01"
             }
           ],
           "faction": "both",
@@ -9825,7 +9843,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -9851,7 +9869,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Durgen's Crescent Axe",
-              "itemId": 270227,
+              "itemId": 270256,
               "value": "15.5 DPS, 2.40s, +5 Str, +2 Sta - Hall of Thanes: Durgen",
               "faction": "both",
               "dps": "12.29 DPS",
@@ -9861,7 +9879,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+5 Str, +2 Sta",
-              "icon": "inv_misc_necklacea8"
+              "icon": "inv_axe_05"
             },
             {
               "name": "Ironforge Greathammer",
@@ -9903,7 +9921,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "",
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Bone Knuckles",
@@ -9928,9 +9946,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271104,
+          "itemId": 271217,
           "name": "Corpse Chopper",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_axe_09",
           "weaponType": "Two-handed axe",
           "speed": "3.20",
           "dps": "17.4 DPS",
@@ -9984,7 +10002,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Scepter of the Abandoned",
-              "itemId": 271103,
+              "itemId": 271216,
               "value": "14.0 DPS, +4 Sta, +4 Int - Ruins of Lordaeron: The Abandoned",
               "faction": "both",
               "dps": "9.62 DPS",
@@ -9994,11 +10012,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "+4 Sta, +4 Int",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_mace_01"
             },
             {
               "name": "Segmented Spider Leg",
-              "itemId": 271102,
+              "itemId": 271203,
               "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
               "faction": "both",
               "dps": "17.5 DPS",
@@ -10008,7 +10026,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10047,9 +10065,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 279891,
+          "itemId": 251533,
           "name": "Forsaken Greataxe",
-          "icon": "inv_misc_cape_08",
+          "icon": "inv_axe_24",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "20.5 DPS",
@@ -10075,7 +10093,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Coldspire Staff",
-              "itemId": 271105,
+              "itemId": 271215,
               "value": "16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath'mael",
               "faction": "both",
               "dps": "15.14 DPS",
@@ -10085,7 +10103,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+7 Int, +5 Spi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -10367,7 +10385,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -10395,7 +10413,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Solid Iron Maul",
@@ -10478,7 +10496,7 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             }
           ],
           "faction": "both",
@@ -10530,7 +10548,7 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -10685,7 +10703,7 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             }
           ],
           "faction": "both",
@@ -10800,7 +10818,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "37–40",
           "itemId": 7717,
           "name": "Ravager",
-          "icon": "inv_weapon_halberd_05",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "37.3 DPS",
@@ -10812,7 +10830,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Mograine's Might",
-              "itemId": 7726,
+              "itemId": 7723,
               "value": "38.9 DPS, 3.50s - SM Cath: Mograine",
               "faction": "both",
               "dps": "38.82 DPS",
@@ -10822,7 +10840,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 39,
               "stats": "+8 Strength, +14 Stamina, +16 Intellect",
-              "icon": "inv_shield_05"
+              "icon": "inv_hammer_04"
             },
             {
               "name": "Illusionary Rod",
@@ -10836,7 +10854,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+15 Int, +10 Spi",
-              "icon": "inv_wand_04"
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
@@ -10861,7 +10879,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Princess Theradras' Scepter",
-              "itemId": 17780,
+              "itemId": 17766,
               "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
               "faction": "both",
               "dps": "46.47 DPS",
@@ -10871,7 +10889,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 49,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_08"
             },
             {
               "name": "Executioner's Cleaver",
@@ -10885,7 +10903,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 48,
               "reqLevel": 43,
               "stats": "+10 Hit Rating",
-              "icon": "inv_axe_24"
+              "icon": "inv_axe_04"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -10912,7 +10930,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -10933,7 +10951,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_axe_11"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -10947,7 +10965,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 51,
               "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_05"
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -10972,7 +10990,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "The Unstoppable Force",
-              "itemId": 18803,
+              "itemId": 19323,
               "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
               "faction": "both",
               "dps": "56.53 DPS",
@@ -10982,7 +11000,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 55,
               "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Wisepaw Totem",
@@ -11000,7 +11018,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Fist of the Damned",
-              "itemId": 13399,
+              "itemId": 10804,
               "value": "39.4 DPS - Stratholme",
               "faction": "both",
               "dps": "39.4 DPS",
@@ -11008,7 +11026,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
             },
             {
               "name": "Icesworn Decapitator",
@@ -11044,7 +11063,7 @@ if (typeof window !== 'undefined') {
       "levels": [
         {
           "levelBracket": "1–2",
-          "itemId": 2495,
+          "itemId": 1159,
           "name": "Militia Quarterstaff",
           "icon": "inv_staff_08",
           "weaponType": "Staff",
@@ -11099,9 +11118,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 6534,
+          "itemId": 3446,
           "name": "Darkwood Staff",
-          "icon": "inv_ingot_mithril",
+          "icon": "inv_staff_16",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "4.8 DPS",
@@ -11141,7 +11160,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Darkwood Staff",
@@ -11168,7 +11187,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 6682,
           "name": "Staff of the Dor'Danil",
-          "icon": "inv_chest_cloth_20",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "7.7 DPS",
@@ -11186,7 +11205,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "11–12",
-          "itemId": 5351,
+          "itemId": 15397,
           "name": "Oakthrush Staff",
           "icon": "inv_jewelry_ring_01",
           "weaponType": "Staff",
@@ -11200,7 +11219,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Pagan Rod",
-              "itemId": 6449,
+              "itemId": 15974,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
@@ -11208,7 +11227,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_chest_cloth_15"
+              "icon": "inv_staff_11",
+              "weaponType": "Held In Off-hand"
             },
             {
               "name": "Cauldron Stirrer",
@@ -11235,7 +11255,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -11261,7 +11281,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Fang of Magmatus",
-              "itemId": 270226,
+              "itemId": 271095,
               "value": "11.8 DPS, 1.60s, +2 Agi, +2 Fire SP - Hall of Thanes: Magmatus",
               "faction": "both",
               "dps": "7.94 DPS",
@@ -11271,7 +11291,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+2 Agi, +2 Fire SP",
-              "icon": "inv_misc_food_24"
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -11366,7 +11386,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Segmented Spider Leg",
-              "itemId": 271102,
+              "itemId": 271203,
               "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
               "faction": "both",
               "dps": "17.5 DPS",
@@ -11376,11 +11396,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Meathook Slicer",
-              "itemId": 271101,
+              "itemId": 271204,
               "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
               "faction": "both",
               "dps": "13.61 DPS",
@@ -11390,7 +11410,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_02"
             }
           ],
           "faction": "both",
@@ -11401,9 +11421,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271105,
+          "itemId": 271215,
           "name": "Coldspire Staff",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -11453,7 +11473,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Vileblood Scimitar",
-              "itemId": 271106,
+              "itemId": 271218,
               "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile",
               "faction": "both",
               "dps": "14.62 DPS",
@@ -11463,7 +11483,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_01"
             }
           ],
           "faction": "both",
@@ -11712,7 +11732,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -11740,7 +11760,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Death Prophet Spine",
@@ -11888,7 +11908,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 279844,
           "name": "Striking Staff",
-          "icon": "inv_staff_28",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "3.10",
           "dps": "31.3 DPS",
@@ -11963,7 +11983,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -12031,7 +12051,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -12088,7 +12108,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 48,
               "reqLevel": 43,
               "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_01"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -12115,7 +12135,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11750,
           "name": "Kindling Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "34.1 DPS",
@@ -12135,7 +12155,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_29"
             }
           ],
           "faction": "both",
@@ -12168,7 +12188,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Witchblade",
@@ -12181,7 +12201,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 SP",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_16"
             }
           ],
           "faction": "both",
@@ -12258,9 +12278,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 6534,
+          "itemId": 3446,
           "name": "Darkwood Staff",
-          "icon": "inv_ingot_mithril",
+          "icon": "inv_staff_16",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "4.8 DPS",
@@ -12300,7 +12320,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Darkwood Staff",
@@ -12327,7 +12347,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 6682,
           "name": "Staff of the Dor'Danil",
-          "icon": "inv_chest_cloth_20",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "7.7 DPS",
@@ -12345,7 +12365,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "11–12",
-          "itemId": 3336,
+          "itemId": 5340,
           "name": "Cauldron Stirrer",
           "icon": "inv_weapon_shortblade_10",
           "weaponType": "Staff",
@@ -12359,7 +12379,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Pagan Rod",
-              "itemId": 6449,
+              "itemId": 15974,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
@@ -12367,7 +12387,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_chest_cloth_15"
+              "icon": "inv_staff_11",
+              "weaponType": "Held In Off-hand"
             }
           ],
           "faction": "both",
@@ -12380,7 +12401,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -12406,7 +12427,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Fang of Magmatus",
-              "itemId": 270226,
+              "itemId": 271095,
               "value": "11.8 DPS, 1.60s, +2 Agi, +2 Fire SP - Hall of Thanes: Magmatus",
               "faction": "both",
               "dps": "7.94 DPS",
@@ -12416,7 +12437,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+2 Agi, +2 Fire SP",
-              "icon": "inv_misc_food_24"
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -12455,9 +12476,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271102,
+          "itemId": 271203,
           "name": "Segmented Spider Leg",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_staff_13",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "14.8 DPS",
@@ -12525,7 +12546,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Meathook Slicer",
-              "itemId": 271101,
+              "itemId": 271204,
               "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
               "faction": "both",
               "dps": "13.61 DPS",
@@ -12535,7 +12556,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_02"
             }
           ],
           "faction": "both",
@@ -12546,9 +12567,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271105,
+          "itemId": 271215,
           "name": "Coldspire Staff",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -12598,7 +12619,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Vileblood Scimitar",
-              "itemId": 271106,
+              "itemId": 271218,
               "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor",
               "faction": "both",
               "dps": "14.62 DPS",
@@ -12608,7 +12629,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_sword_01"
             },
             {
               "name": "Witching Stave",
@@ -12837,9 +12858,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "25–26",
-          "itemId": 6631,
+          "itemId": 274158,
           "name": "Death Prophet Spine",
-          "icon": "inv_staff_25",
+          "icon": "inv_staff_17",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "19.3 DPS",
@@ -12875,7 +12896,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -12903,7 +12924,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Debt Collector",
@@ -13025,9 +13046,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "29–30",
-          "itemId": 6536,
+          "itemId": 281312,
           "name": "Fallen Dragon's Scepter",
-          "icon": "inv_shirt_green_01",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "3.00",
           "dps": "22.5 DPS",
@@ -13100,7 +13121,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -13149,7 +13170,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -13206,7 +13227,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 48,
               "reqLevel": 43,
               "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_01"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -13255,7 +13276,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 53,
               "reqLevel": 48,
               "stats": "+14 Critical Strike Rating, +60 Spell Power",
-              "icon": "inv_staff_18"
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
@@ -13302,7 +13323,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Witchblade",
@@ -13315,7 +13336,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "+14 SP",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_weapon_shortblade_16"
             }
           ],
           "faction": "both",
@@ -13377,9 +13398,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 6534,
+          "itemId": 3446,
           "name": "Darkwood Staff",
-          "icon": "inv_ingot_mithril",
+          "icon": "inv_staff_16",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "4.8 DPS",
@@ -13419,7 +13440,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Darkwood Staff",
@@ -13446,7 +13467,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 6682,
           "name": "Staff of the Dor'Danil",
-          "icon": "inv_chest_cloth_20",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "7.7 DPS",
@@ -13464,9 +13485,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "11–12",
-          "itemId": 2026,
+          "itemId": 272996,
           "name": "Trogg Scepter",
-          "icon": "inv_hammer_09",
+          "icon": "inv_misc_bone_10",
           "weaponType": "One-handed mace",
           "speed": "2.10",
           "dps": "8.6 DPS",
@@ -13478,7 +13499,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Pagan Rod",
-              "itemId": 6449,
+              "itemId": 15974,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
@@ -13486,7 +13507,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_chest_cloth_15"
+              "icon": "inv_staff_11",
+              "weaponType": "Held In Off-hand"
             },
             {
               "name": "Cauldron Stirrer",
@@ -13513,7 +13535,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -13583,9 +13605,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271103,
+          "itemId": 271216,
           "name": "Scepter of the Abandoned",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_mace_01",
           "weaponType": "One-handed mace",
           "speed": "2.20",
           "dps": "14.0 DPS",
@@ -13639,7 +13661,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Segmented Spider Leg",
-              "itemId": 271102,
+              "itemId": 271203,
               "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
               "faction": "both",
               "dps": "17.5 DPS",
@@ -13649,7 +13671,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Emberstone Staff",
@@ -13688,9 +13710,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271105,
+          "itemId": 271215,
           "name": "Coldspire Staff",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -13915,7 +13937,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "21–24",
-          "itemId": 6536,
+          "itemId": 1155,
           "name": "Rod of the Sleepwalker",
           "icon": "inv_shirt_green_01",
           "weaponType": "Staff",
@@ -13958,9 +13980,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "25–26",
-          "itemId": 6631,
+          "itemId": 274158,
           "name": "Death Prophet Spine",
-          "icon": "inv_staff_25",
+          "icon": "inv_staff_17",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "19.3 DPS",
@@ -13996,7 +14018,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -14024,7 +14046,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Crested Scepter",
@@ -14090,9 +14112,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "27–28",
-          "itemId": 6631,
+          "itemId": 273040,
           "name": "Spine of the Devourer",
-          "icon": "inv_staff_25",
+          "icon": "inv_staff_07",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "20.1 DPS",
@@ -14219,7 +14241,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32."
               ],
               "reqLevel": 28,
-              "icon": "inv_weapon_shortblade_15"
+              "icon": "inv_weapon_shortblade_15",
+              "weaponType": "Dagger"
             },
             {
               "name": "Mindslicer",
@@ -14263,7 +14286,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -14342,7 +14365,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_wand_04",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -14399,7 +14422,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 48,
               "reqLevel": 43,
               "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_01"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -14426,7 +14449,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11750,
           "name": "Kindling Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "34.1 DPS",
@@ -14446,7 +14469,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_29"
             }
           ],
           "faction": "both",
@@ -14493,7 +14516,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -14529,7 +14552,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Club",
-              "itemId": 2491,
+              "itemId": 2130,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
               "dps": "1.8 DPS",
@@ -14537,7 +14560,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 1,
               "stats": "",
-              "icon": "inv_axe_10"
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
             }
           ],
           "faction": "both",
@@ -14576,7 +14600,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Large Club",
-              "itemId": 2492,
+              "itemId": 2480,
               "value": "3.8 DPS - Vendor 2H mace",
               "faction": "both",
               "dps": "2.78 DPS",
@@ -14597,7 +14621,7 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 2492,
+          "itemId": 2480,
           "name": "Large Club",
           "icon": "inv_torch_unlit",
           "weaponType": "Two-handed mace",
@@ -14682,7 +14706,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -14757,7 +14781,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 14,
               "reqLevel": 8,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Trogg Scepter",
@@ -14880,7 +14904,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+3 Str, +3 Spi",
-              "icon": "inv_hammer_23"
+              "icon": "inv_mace_01"
             },
             {
               "name": "Ironforge Greathammer",
@@ -14907,7 +14931,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_18",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -14985,7 +15009,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "",
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
@@ -15052,7 +15076,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Segmented Spider Leg",
-              "itemId": 271102,
+              "itemId": 271203,
               "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
               "faction": "both",
               "dps": "17.5 DPS",
@@ -15062,11 +15086,11 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             },
             {
               "name": "Scepter of the Abandoned",
-              "itemId": 271103,
+              "itemId": 271216,
               "value": "14.0 DPS - Ruins of Lordaeron: The Abandoned",
               "faction": "both",
               "dps": "9.62 DPS",
@@ -15076,7 +15100,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_mace_01"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15143,7 +15167,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Coldspire Staff",
-              "itemId": 271105,
+              "itemId": 271215,
               "value": "16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath'mael",
               "faction": "both",
               "dps": "15.14 DPS",
@@ -15153,7 +15177,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+7 Int, +5 Spi",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Staff of Westfall",
@@ -15470,7 +15494,7 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             }
           ],
           "faction": "both",
@@ -15519,7 +15543,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Healer's Staff",
@@ -15547,7 +15571,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Dendweller's Hammer",
@@ -15640,7 +15664,7 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_20"
             }
           ],
           "faction": "both",
@@ -15661,7 +15685,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 279841,
           "name": "Defender of Dalaran",
-          "icon": "inv_hammer_04",
+          "icon": "inv_hammer_20",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "31.2 DPS",
@@ -15692,7 +15716,7 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_10"
             },
             {
               "name": "Spine of the Devourer",
@@ -15910,7 +15934,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+15 Int, +10 Spi",
-              "icon": "inv_wand_04"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Rock Pulverizer",
@@ -15954,9 +15978,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "36–40",
-          "itemId": 7726,
+          "itemId": 7723,
           "name": "Mograine's Might",
-          "icon": "inv_shield_05",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "38.9 DPS",
@@ -16012,9 +16036,9 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "41–46",
-          "itemId": 17780,
+          "itemId": 17766,
           "name": "Princess Theradras' Scepter",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.40",
           "dps": "47.1 DPS",
@@ -16048,7 +16072,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 46,
               "reqLevel": 40,
               "stats": "",
-              "icon": "inv_pick_01"
+              "icon": "inv_misc_bag_10"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -16089,7 +16113,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_09",
+          "icon": "inv_hammer_08",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -16111,7 +16135,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 53,
               "reqLevel": 48,
               "stats": "+14 Critical Strike Rating, +60 Spell Power",
-              "icon": "inv_staff_18"
+              "icon": "inv_staff_08"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -16125,7 +16149,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 51,
               "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_05"
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -16138,7 +16162,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "53–60",
           "itemId": 943,
           "name": "Warden Staff",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.40",
           "dps": "38.3 DPS",
@@ -16172,7 +16196,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_hammer_04"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -16184,7 +16208,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -16239,7 +16263,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 286743,
           "name": "Riptear's Spare Arm",
-          "icon": "spell_shadow_fingerofdeath",
+          "icon": "inv_wand_01",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "9.41 DPS",
@@ -16266,7 +16290,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 5,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_01"
             },
             {
               "name": "Wisesight Wand",
@@ -16435,7 +16459,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–25",
           "itemId": 279847,
           "name": "Unstable Power Core",
-          "icon": "inv_staff_06",
+          "icon": "inv_wand_02",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "29.71 DPS",
@@ -16462,7 +16486,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_02"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -16525,7 +16549,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 43,
               "reqLevel": 28,
               "stats": "",
-              "icon": "inv_wand_03"
+              "icon": "inv_wand_07"
             },
             {
               "name": "Greater Mystic Wand",
@@ -16547,7 +16571,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–36",
           "itemId": 270084,
           "name": "Master Hunter's Wand",
-          "icon": "inv_wand_03",
+          "icon": "inv_wand_07",
           "weaponType": "Wand",
           "speed": "1.50",
           "dps": "34.67 DPS",
@@ -16832,7 +16856,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 286743,
           "name": "Riptear's Spare Arm",
-          "icon": "spell_shadow_fingerofdeath",
+          "icon": "inv_wand_01",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "9.41 DPS",
@@ -16859,7 +16883,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 5,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_01"
             },
             {
               "name": "Wisesight Wand",
@@ -17028,7 +17052,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–25",
           "itemId": 279847,
           "name": "Unstable Power Core",
-          "icon": "inv_staff_06",
+          "icon": "inv_wand_02",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "29.71 DPS",
@@ -17055,7 +17079,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_02"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -17118,7 +17142,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 43,
               "reqLevel": 28,
               "stats": "",
-              "icon": "inv_wand_03"
+              "icon": "inv_wand_07"
             },
             {
               "name": "Greater Mystic Wand",
@@ -17140,7 +17164,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–36",
           "itemId": 270084,
           "name": "Master Hunter's Wand",
-          "icon": "inv_wand_03",
+          "icon": "inv_wand_07",
           "weaponType": "Wand",
           "speed": "1.50",
           "dps": "34.67 DPS",
@@ -17425,7 +17449,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 286743,
           "name": "Riptear's Spare Arm",
-          "icon": "spell_shadow_fingerofdeath",
+          "icon": "inv_wand_01",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "9.41 DPS",
@@ -17452,7 +17476,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 5,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_01"
             },
             {
               "name": "Wisesight Wand",
@@ -17621,7 +17645,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–25",
           "itemId": 279847,
           "name": "Unstable Power Core",
-          "icon": "inv_staff_06",
+          "icon": "inv_wand_02",
           "weaponType": "Wand",
           "speed": "1.70",
           "dps": "29.71 DPS",
@@ -17648,7 +17672,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_wand_02"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -17711,7 +17735,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 43,
               "reqLevel": 28,
               "stats": "",
-              "icon": "inv_wand_03"
+              "icon": "inv_wand_07"
             },
             {
               "name": "Greater Mystic Wand",
@@ -17733,7 +17757,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–36",
           "itemId": 270084,
           "name": "Master Hunter's Wand",
-          "icon": "inv_wand_03",
+          "icon": "inv_wand_07",
           "weaponType": "Wand",
           "speed": "1.50",
           "dps": "34.67 DPS",
@@ -18030,7 +18054,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -18042,7 +18066,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -18164,7 +18188,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18283,7 +18307,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18295,7 +18319,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -18315,7 +18339,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -18323,7 +18347,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18368,7 +18392,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18397,7 +18421,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18442,7 +18466,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18454,7 +18478,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -18568,7 +18592,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -18580,7 +18604,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -18702,7 +18726,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18821,7 +18845,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18833,7 +18857,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -18853,7 +18877,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -18861,7 +18885,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18906,7 +18930,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -18935,7 +18959,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18980,7 +19004,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -18992,7 +19016,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -19106,7 +19130,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -19118,7 +19142,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -19240,7 +19264,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -19359,7 +19383,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -19371,7 +19395,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -19391,7 +19415,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -19399,7 +19423,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -19444,7 +19468,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -19473,7 +19497,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -19518,7 +19542,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -19530,7 +19554,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -19644,7 +19668,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -19656,7 +19680,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -19778,7 +19802,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -19897,7 +19921,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -19909,7 +19933,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -19929,7 +19953,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -19937,7 +19961,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -19982,7 +20006,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -20011,7 +20035,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20056,7 +20080,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20068,7 +20092,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -20182,7 +20206,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -20194,7 +20218,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -20316,7 +20340,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -20435,7 +20459,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20447,7 +20471,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -20467,7 +20491,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -20475,7 +20499,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -20520,7 +20544,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -20549,7 +20573,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20594,7 +20618,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20606,7 +20630,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -20720,7 +20744,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_jewelry_talisman_08"
             },
             {
               "name": "Disciple's Stein",
@@ -20732,7 +20756,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_drink_04"
             }
           ]
         },
@@ -20854,7 +20878,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "26–29",
           "itemId": 273027,
           "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
+          "icon": "inv_misc_orb_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -20973,7 +20997,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271934,
+              "itemId": 271935,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -20985,7 +21009,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
+              "itemId": 272090,
               "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
@@ -21005,7 +21029,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 37,
               "reqLevel": 32,
               "stats": "",
-              "icon": "inv_misc_questionmark"
+              "icon": "inv_misc_orb_01"
             }
           ]
         },
@@ -21013,7 +21037,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "40–44",
           "itemId": 277260,
           "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
+          "icon": "inv_lantern_01",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -21058,7 +21082,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–52",
           "itemId": 249455,
           "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
+          "icon": "inv_misc_orb_blue",
           "weaponType": "Held In Off-hand",
           "speed": "2.80",
           "dps": "",
@@ -21087,7 +21111,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271933,
+              "itemId": 271935,
               "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -21132,7 +21156,7 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Insurgent's Manifesto",
-              "itemId": 271932,
+              "itemId": 271935,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "both",
               "weaponType": "Held in Off-hand",
@@ -21144,7 +21168,7 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
+              "itemId": 272090,
               "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
               "faction": "horde",
               "weaponType": "Held in Off-hand",
