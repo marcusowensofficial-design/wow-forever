@@ -70,7 +70,7 @@
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
-            "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
+            "value": "11.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 1 - Crafted by Enchanters (Skill 10)",
             "faction": "both",
             "dps": "11.33 DPS",
             "speed": "1.50",
@@ -92,7 +92,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Nightscreech drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Nightscreech drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -114,8 +114,10 @@
         ],
         "lines": [
           "Binds when picked up",
-          "Ranged",
-          "(9.41 damage per second)"
+          "Ranged\tWand",
+          "11 - 21 Damage\tSpeed 1.70",
+          "(9.41 damage per second)",
+          "Requires Level 6"
         ]
       },
       {
@@ -140,7 +142,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Matriarch / drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Matriarch / drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -162,7 +164,7 @@
           {
             "name": "Windbough Wand",
             "itemId": 263430,
-            "value": "7.19 DPS, 1.60s - Boughs in the Wind quest",
+            "value": "7.19 DPS, 1.60s - +1 Intellect - Boughs in the Wind quest",
             "faction": "alliance",
             "dps": "7.19 DPS",
             "speed": "1.60",
@@ -210,7 +212,7 @@
           {
             "name": "Moongazer's Wand",
             "itemId": 284193,
-            "value": "14.41 DPS, 1.70s - Lady Moongazer drop",
+            "value": "14.41 DPS, 1.70s - Equip: Increases intellect by 5 at night. - Lady Moongazer drop",
             "faction": "both",
             "dps": "14.41 DPS",
             "speed": "1.70",
@@ -232,7 +234,7 @@
           {
             "name": "Whelpfire Wand",
             "itemId": 281925,
-            "value": "15.26 DPS, 1.90s - Snarlflare in Redridge",
+            "value": "15.26 DPS, 1.90s - Equip: Increases damage done by Fire spells and effects by up to 3. - Snarlflare in Redridge",
             "faction": "both",
             "dps": "15.26 DPS",
             "speed": "1.90",
@@ -244,12 +246,10 @@
             "icon": "inv_wand_11",
             "lines": [
               "Binds when equipped",
-              "Ranged",
+              "Ranged\tWand",
+              "20 - 38 Damage\tSpeed 1.90",
               "(15.26 damage per second)",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Requires Level 15",
-              "Equip: Increases damage done by Fire spells and effects by up to 3."
+              "Requires Level 15"
             ],
             "source": "Snarlflare in Redridge"
           }
@@ -290,7 +290,16 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Blackbone Wand",
@@ -301,12 +310,21 @@
             "dps": "15.3 DPS",
             "speed": "1.50",
             "icon": "inv_wand_06",
-            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
+            "stats": "+3 Intellect",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "41 - 78 Damage\tSpeed 1.60",
+              "(37.19 damage per second)",
+              "+3 Intellect",
+              "Requires Level 15"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -328,7 +346,7 @@
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
-            "value": "17.5 DPS, 1.30s - Continue using if unavailable",
+            "value": "17.50 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 2 - Continue using if unavailable",
             "faction": "both",
             "dps": "17.50 DPS",
             "speed": "1.80",
@@ -350,7 +368,7 @@
           {
             "name": "Cookie's Stirring Rod",
             "itemId": 5198,
-            "value": "11.2 DPS - Arcane Wand from Cookie in The Deadmines",
+            "value": "11.2 DPS, 1.30s - Equip: Increases your Cooking speed by 25%. - Arcane Wand from Cookie in The Deadmines",
             "faction": "both",
             "dps": "11.2 DPS",
             "quality": "q3",
@@ -362,24 +380,20 @@
             "speed": "1.30",
             "lines": [
               "Binds when picked up",
-              "Ranged",
+              "Ranged\tWand",
+              "20 - 38 Damage\tSpeed 1.30",
               "(22.31 damage per second)",
-              "Equip: Increases your Cooking speed by 25%.",
-              "Equip: Increases your Cooking speed by 25%.",
-              "Requires Level 17",
-              "Equip: Increases your Cooking speed by 25%."
+              "Requires Level 17"
             ],
             "source": "Arcane Wand from Cookie in The Deadmines"
           }
         ],
         "lines": [
           "Binds when equipped",
-          "Ranged",
+          "Ranged\tWand",
+          "20 - 38 Damage\tSpeed 1.90",
           "(15.26 damage per second)",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Requires Level 15",
-          "Equip: Increases damage done by Fire spells and effects by up to 3."
+          "Requires Level 15"
         ]
       },
       {
@@ -410,12 +424,21 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
-            "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
+            "value": "25.38 DPS, 1.30s - +4 Intellect - Crafted by Enchanters (Skill 155)",
             "faction": "both",
             "dps": "25.38 DPS",
             "speed": "1.30",
@@ -437,7 +460,7 @@
           {
             "name": "Wand of Mana Concentration",
             "itemId": 273043,
-            "value": "31.18 DPS, 1.70s - Arcanic Enigma in City of Dalaran",
+            "value": "31.18 DPS, 1.70s - +4 Intellect - Arcanic Enigma in City of Dalaran",
             "faction": "both",
             "dps": "31.18 DPS",
             "speed": "1.70",
@@ -459,7 +482,7 @@
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -508,7 +531,7 @@
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
-            "value": "34.67 DPS, 1.50s - Big Game Hunter quest in STV",
+            "value": "34.67 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Big Game Hunter quest in STV",
             "faction": "both",
             "dps": "34.67 DPS",
             "speed": "1.50",
@@ -529,7 +552,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Crafted by Enchanters (Skill 175)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Crafted by Enchanters (Skill 175)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -579,7 +602,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Enchanter crafted (Req lvl 30)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Enchanter crafted (Req lvl 30)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -601,7 +624,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -650,7 +673,7 @@
           {
             "name": "Dudd's Second-Favorite Wand",
             "itemId": 277256,
-            "value": "35.67 DPS, 1.50s - Partial Mystical Notes quest",
+            "value": "35.67 DPS, 1.50s - +5 Intellect - Partial Mystical Notes quest",
             "faction": "both",
             "dps": "35.67 DPS",
             "speed": "1.50",
@@ -672,7 +695,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -723,7 +746,7 @@
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
-            "value": "39.17 DPS, 1.80s - Crafted by Enchanters (Skill 225)",
+            "value": "39.17 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Crafted by Enchanters (Skill 225)",
             "faction": "both",
             "dps": "39.17 DPS",
             "speed": "1.80",
@@ -745,7 +768,7 @@
           {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
-            "value": "45.75 DPS, 2.00s - Crafted by Enchanters (Req lvl 49)",
+            "value": "45.75 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 8 - Crafted by Enchanters (Req lvl 49)",
             "faction": "both",
             "dps": "45.75 DPS",
             "speed": "2.00",
@@ -795,7 +818,7 @@
           {
             "name": "Wail of Death",
             "itemId": 281600,
-            "value": "54.17 DPS, 1.80s - Rare World Drop (Req lvl 56)",
+            "value": "54.17 DPS, 1.80s - +6 Stamina, +4 Spirit - Rare World Drop (Req lvl 56)",
             "faction": "both",
             "dps": "54.17 DPS",
             "speed": "1.80",
@@ -825,7 +848,15 @@
             "speed": "1.60",
             "stats": "+16 Frost Spell Damage",
             "icon": "inv_wand_09",
-            "value": "Alterac Valley Quest Reward"
+            "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.70",
+              "(85.29 damage per second)",
+              "+7 Intellect",
+              "Requires Level 60"
+            ]
           }
         ],
         "lines": [
@@ -858,7 +889,7 @@
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
-            "value": "59.58 DPS, 1.20s - Fast high-DPS wand",
+            "value": "59.58 DPS, 1.20s - +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9 - Fast high — DPS wand",
             "faction": "both",
             "dps": "59.58 DPS",
             "speed": "1.20",
@@ -881,7 +912,7 @@
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
-            "value": "53.33 DPS, 1.50s - Crafted by Enchanters (Skill 285)",
+            "value": "53.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 9 - Crafted by Enchanters (Skill 285)",
             "faction": "both",
             "dps": "53.33 DPS",
             "speed": "1.50",
@@ -903,7 +934,7 @@
           {
             "name": "Torch of Light",
             "itemId": 279246,
-            "value": "76.76 DPS, 1.70s - Best-in-Slot Level 60 Wand",
+            "value": "76.76 DPS, 1.70s - +11 Spirit, Equip: Increases healing done by up to 17 - Best — in — Slot Level 60 Wand",
             "faction": "both",
             "dps": "76.76 DPS",
             "speed": "1.70",
@@ -933,7 +964,14 @@
             "speed": "1.70",
             "stats": "+9 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Dire Maul — Illyanna Ravenoak"
+            "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
+            "lines": [
+              "Binds when equipped",
+              "Ranged\tWeapon",
+              "Speed 1.60",
+              "(58.44 damage per second)",
+              "Requires Level 54"
+            ]
           },
           {
             "name": "Bonecreeper Stylus",
@@ -945,7 +983,16 @@
             "speed": "1.30",
             "stats": "+4 Intellect, +11 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Scholomance — Darkmaster Gandling"
+            "value": "63.5 DPS, 1.30s - +4 Intellect, +11 Spell Power - Darkmaster Gandling",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.90",
+              "(62.63 damage per second)",
+              "+4 Intellect",
+              "+11 Spell Power",
+              "Requires Level 57"
+            ]
           },
           {
             "name": "Stormrager",
@@ -957,7 +1004,16 @@
             "speed": "1.40",
             "stats": "+5 Nature Spell Damage",
             "icon": "inv_wand_02",
-            "value": "Eastern Plaguelands Quest Reward"
+            "value": "58.0 DPS, 1.40s - +5 Nature Spell Damage - Eastern Plaguelands Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "57 - 106 Damage\tSpeed 1.30",
+              "(62.69 damage per second)",
+              "+8 Stamina",
+              "+5 Intellect",
+              "Requires Level 55"
+            ]
           }
         ],
         "lines": [
@@ -1042,7 +1098,7 @@
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
-            "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
+            "value": "11.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 1 - Crafted by Enchanters (Skill 10)",
             "faction": "both",
             "dps": "11.33 DPS",
             "speed": "1.50",
@@ -1064,7 +1120,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Nightscreech drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Nightscreech drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -1086,8 +1142,10 @@
         ],
         "lines": [
           "Binds when picked up",
-          "Ranged",
-          "(9.41 damage per second)"
+          "Ranged\tWand",
+          "11 - 21 Damage\tSpeed 1.70",
+          "(9.41 damage per second)",
+          "Requires Level 6"
         ]
       },
       {
@@ -1112,7 +1170,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Matriarch / drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Matriarch / drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -1134,7 +1192,7 @@
           {
             "name": "Windbough Wand",
             "itemId": 263430,
-            "value": "7.19 DPS, 1.60s - Boughs in the Wind quest",
+            "value": "7.19 DPS, 1.60s - +1 Intellect - Boughs in the Wind quest",
             "faction": "alliance",
             "dps": "7.19 DPS",
             "speed": "1.60",
@@ -1182,7 +1240,7 @@
           {
             "name": "Moongazer's Wand",
             "itemId": 284193,
-            "value": "14.41 DPS, 1.70s - Lady Moongazer drop",
+            "value": "14.41 DPS, 1.70s - Equip: Increases intellect by 5 at night. - Lady Moongazer drop",
             "faction": "both",
             "dps": "14.41 DPS",
             "speed": "1.70",
@@ -1204,7 +1262,7 @@
           {
             "name": "Whelpfire Wand",
             "itemId": 281925,
-            "value": "15.26 DPS, 1.90s - Snarlflare in Redridge",
+            "value": "15.26 DPS, 1.90s - Equip: Increases damage done by Fire spells and effects by up to 3. - Snarlflare in Redridge",
             "faction": "both",
             "dps": "15.26 DPS",
             "speed": "1.90",
@@ -1216,12 +1274,10 @@
             "icon": "inv_wand_11",
             "lines": [
               "Binds when equipped",
-              "Ranged",
+              "Ranged\tWand",
+              "20 - 38 Damage\tSpeed 1.90",
               "(15.26 damage per second)",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Requires Level 15",
-              "Equip: Increases damage done by Fire spells and effects by up to 3."
+              "Requires Level 15"
             ],
             "source": "Snarlflare in Redridge"
           }
@@ -1262,7 +1318,16 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Blackbone Wand",
@@ -1273,12 +1338,21 @@
             "dps": "15.3 DPS",
             "speed": "1.50",
             "icon": "inv_wand_06",
-            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
+            "stats": "+3 Intellect",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "41 - 78 Damage\tSpeed 1.60",
+              "(37.19 damage per second)",
+              "+3 Intellect",
+              "Requires Level 15"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -1300,7 +1374,7 @@
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
-            "value": "17.5 DPS, 1.30s - Continue using if unavailable",
+            "value": "17.50 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 2 - Continue using if unavailable",
             "faction": "both",
             "dps": "17.50 DPS",
             "speed": "1.80",
@@ -1322,12 +1396,10 @@
         ],
         "lines": [
           "Binds when equipped",
-          "Ranged",
+          "Ranged\tWand",
+          "20 - 38 Damage\tSpeed 1.90",
           "(15.26 damage per second)",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Requires Level 15",
-          "Equip: Increases damage done by Fire spells and effects by up to 3."
+          "Requires Level 15"
         ]
       },
       {
@@ -1358,12 +1430,21 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
-            "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
+            "value": "25.38 DPS, 1.30s - +4 Intellect - Crafted by Enchanters (Skill 155)",
             "faction": "both",
             "dps": "25.38 DPS",
             "speed": "1.30",
@@ -1385,7 +1466,7 @@
           {
             "name": "Wand of Mana Concentration",
             "itemId": 273043,
-            "value": "31.18 DPS, 1.70s - Arcanic Enigma in City of Dalaran",
+            "value": "31.18 DPS, 1.70s - +4 Intellect - Arcanic Enigma in City of Dalaran",
             "faction": "both",
             "dps": "31.18 DPS",
             "speed": "1.70",
@@ -1407,7 +1488,7 @@
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -1456,7 +1537,7 @@
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
-            "value": "34.67 DPS, 1.50s - Big Game Hunter quest in STV",
+            "value": "34.67 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Big Game Hunter quest in STV",
             "faction": "both",
             "dps": "34.67 DPS",
             "speed": "1.50",
@@ -1477,7 +1558,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Crafted by Enchanters (Skill 175)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Crafted by Enchanters (Skill 175)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -1527,7 +1608,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Enchanter crafted (Req lvl 30)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Enchanter crafted (Req lvl 30)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -1549,7 +1630,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -1598,7 +1679,7 @@
           {
             "name": "Dudd's Second-Favorite Wand",
             "itemId": 277256,
-            "value": "35.67 DPS, 1.50s - Partial Mystical Notes quest",
+            "value": "35.67 DPS, 1.50s - +5 Intellect - Partial Mystical Notes quest",
             "faction": "both",
             "dps": "35.67 DPS",
             "speed": "1.50",
@@ -1620,7 +1701,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -1671,7 +1752,7 @@
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
-            "value": "39.17 DPS, 1.80s - Crafted by Enchanters (Skill 225)",
+            "value": "39.17 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Crafted by Enchanters (Skill 225)",
             "faction": "both",
             "dps": "39.17 DPS",
             "speed": "1.80",
@@ -1693,7 +1774,7 @@
           {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
-            "value": "45.75 DPS, 2.00s - Crafted by Enchanters (Req lvl 49)",
+            "value": "45.75 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 8 - Crafted by Enchanters (Req lvl 49)",
             "faction": "both",
             "dps": "45.75 DPS",
             "speed": "2.00",
@@ -1743,7 +1824,7 @@
           {
             "name": "Wail of Death",
             "itemId": 281600,
-            "value": "54.17 DPS, 1.80s - Rare World Drop (Req lvl 56)",
+            "value": "54.17 DPS, 1.80s - +6 Stamina, +4 Spirit - Rare World Drop (Req lvl 56)",
             "faction": "both",
             "dps": "54.17 DPS",
             "speed": "1.80",
@@ -1773,7 +1854,15 @@
             "speed": "1.60",
             "stats": "+16 Frost Spell Damage",
             "icon": "inv_wand_09",
-            "value": "Alterac Valley Quest Reward"
+            "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.70",
+              "(85.29 damage per second)",
+              "+7 Intellect",
+              "Requires Level 60"
+            ]
           }
         ],
         "lines": [
@@ -1806,7 +1895,7 @@
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
-            "value": "59.58 DPS, 1.20s - Fast high-DPS wand",
+            "value": "59.58 DPS, 1.20s - +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9 - Fast high — DPS wand",
             "faction": "both",
             "dps": "59.58 DPS",
             "speed": "1.20",
@@ -1829,7 +1918,7 @@
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
-            "value": "53.33 DPS, 1.50s - Crafted by Enchanters (Skill 285)",
+            "value": "53.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 9 - Crafted by Enchanters (Skill 285)",
             "faction": "both",
             "dps": "53.33 DPS",
             "speed": "1.50",
@@ -1851,7 +1940,7 @@
           {
             "name": "Torch of Light",
             "itemId": 279246,
-            "value": "76.76 DPS, 1.70s - Best-in-Slot Level 60 Wand",
+            "value": "76.76 DPS, 1.70s - +11 Spirit, Equip: Increases healing done by up to 17 - Best — in — Slot Level 60 Wand",
             "faction": "both",
             "dps": "76.76 DPS",
             "speed": "1.70",
@@ -1881,7 +1970,14 @@
             "speed": "1.70",
             "stats": "+9 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Dire Maul — Illyanna Ravenoak"
+            "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
+            "lines": [
+              "Binds when equipped",
+              "Ranged\tWeapon",
+              "Speed 1.60",
+              "(58.44 damage per second)",
+              "Requires Level 54"
+            ]
           },
           {
             "name": "Bonecreeper Stylus",
@@ -1893,7 +1989,16 @@
             "speed": "1.30",
             "stats": "+4 Intellect, +11 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Scholomance — Darkmaster Gandling"
+            "value": "63.5 DPS, 1.30s - +4 Intellect, +11 Spell Power - Darkmaster Gandling",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.90",
+              "(62.63 damage per second)",
+              "+4 Intellect",
+              "+11 Spell Power",
+              "Requires Level 57"
+            ]
           },
           {
             "name": "Stormrager",
@@ -1905,7 +2010,16 @@
             "speed": "1.40",
             "stats": "+5 Nature Spell Damage",
             "icon": "inv_wand_02",
-            "value": "Eastern Plaguelands Quest Reward"
+            "value": "58.0 DPS, 1.40s - +5 Nature Spell Damage - Eastern Plaguelands Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "57 - 106 Damage\tSpeed 1.30",
+              "(62.69 damage per second)",
+              "+8 Stamina",
+              "+5 Intellect",
+              "Requires Level 55"
+            ]
           }
         ],
         "lines": [
@@ -1990,7 +2104,7 @@
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
-            "value": "11.3 DPS, 1.50s - Crafted by Enchanters (Skill 10)",
+            "value": "11.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 1 - Crafted by Enchanters (Skill 10)",
             "faction": "both",
             "dps": "11.33 DPS",
             "speed": "1.50",
@@ -2012,7 +2126,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Nightscreech drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Nightscreech drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -2034,8 +2148,10 @@
         ],
         "lines": [
           "Binds when picked up",
-          "Ranged",
-          "(9.41 damage per second)"
+          "Ranged\tWand",
+          "11 - 21 Damage\tSpeed 1.70",
+          "(9.41 damage per second)",
+          "Requires Level 6"
         ]
       },
       {
@@ -2060,7 +2176,7 @@
           {
             "name": "Wisesight Wand",
             "itemId": 286750,
-            "value": "8.82 DPS, 1.70s (+1 Int) - Matriarch / drop",
+            "value": "8.82 DPS, 1.70s - +1 Intellect - Matriarch / drop",
             "faction": "both",
             "dps": "8.82 DPS",
             "speed": "1.70",
@@ -2082,7 +2198,7 @@
           {
             "name": "Windbough Wand",
             "itemId": 263430,
-            "value": "7.19 DPS, 1.60s - Boughs in the Wind quest",
+            "value": "7.19 DPS, 1.60s - +1 Intellect - Boughs in the Wind quest",
             "faction": "alliance",
             "dps": "7.19 DPS",
             "speed": "1.60",
@@ -2130,7 +2246,7 @@
           {
             "name": "Moongazer's Wand",
             "itemId": 284193,
-            "value": "14.41 DPS, 1.70s - Lady Moongazer drop",
+            "value": "14.41 DPS, 1.70s - Equip: Increases intellect by 5 at night. - Lady Moongazer drop",
             "faction": "both",
             "dps": "14.41 DPS",
             "speed": "1.70",
@@ -2152,7 +2268,7 @@
           {
             "name": "Whelpfire Wand",
             "itemId": 281925,
-            "value": "15.26 DPS, 1.90s - Snarlflare in Redridge",
+            "value": "15.26 DPS, 1.90s - Equip: Increases damage done by Fire spells and effects by up to 3. - Snarlflare in Redridge",
             "faction": "both",
             "dps": "15.26 DPS",
             "speed": "1.90",
@@ -2164,12 +2280,10 @@
             "icon": "inv_wand_11",
             "lines": [
               "Binds when equipped",
-              "Ranged",
+              "Ranged\tWand",
+              "20 - 38 Damage\tSpeed 1.90",
               "(15.26 damage per second)",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Equip: Increases damage done by Fire spells and effects by up to 3.",
-              "Requires Level 15",
-              "Equip: Increases damage done by Fire spells and effects by up to 3."
+              "Requires Level 15"
             ],
             "source": "Snarlflare in Redridge"
           }
@@ -2210,7 +2324,16 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Blackbone Wand",
@@ -2221,12 +2344,21 @@
             "dps": "15.3 DPS",
             "speed": "1.50",
             "icon": "inv_wand_06",
-            "value": "Duskwood Vendor (+15.3 DPS Shadow)"
+            "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
+            "stats": "+3 Intellect",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "41 - 78 Damage\tSpeed 1.60",
+              "(37.19 damage per second)",
+              "+3 Intellect",
+              "Requires Level 15"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -2248,7 +2380,7 @@
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
-            "value": "17.5 DPS, 1.30s - Continue using if unavailable",
+            "value": "17.50 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 2 - Continue using if unavailable",
             "faction": "both",
             "dps": "17.50 DPS",
             "speed": "1.80",
@@ -2270,12 +2402,10 @@
         ],
         "lines": [
           "Binds when equipped",
-          "Ranged",
+          "Ranged\tWand",
+          "20 - 38 Damage\tSpeed 1.90",
           "(15.26 damage per second)",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Equip: Increases damage done by Fire spells and effects by up to 3.",
-          "Requires Level 15",
-          "Equip: Increases damage done by Fire spells and effects by up to 3."
+          "Requires Level 15"
         ]
       },
       {
@@ -2306,12 +2436,21 @@
             "dps": "29.0 DPS",
             "speed": "1.50",
             "icon": "inv_wand_01",
-            "value": "Blackfathom Deeps — Blackfathom Villainy Quest (+29 DPS Spike)"
+            "value": "29.0 DPS, 1.50s - +3 Spirit - Blackfathom Villainy Quest (+29 DPS Spike)",
+            "stats": "+3 Spirit",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "30 - 57 Damage\tSpeed 1.50",
+              "(29.00 damage per second)",
+              "+3 Spirit",
+              "Requires Level 18"
+            ]
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
-            "value": "23.2 DPS, 1.40s - Crafted by Enchanters (Skill 155)",
+            "value": "25.38 DPS, 1.30s - +4 Intellect - Crafted by Enchanters (Skill 155)",
             "faction": "both",
             "dps": "25.38 DPS",
             "speed": "1.30",
@@ -2333,7 +2472,7 @@
           {
             "name": "Wand of Mana Concentration",
             "itemId": 273043,
-            "value": "31.18 DPS, 1.70s - Arcanic Enigma in City of Dalaran",
+            "value": "31.18 DPS, 1.70s - +4 Intellect - Arcanic Enigma in City of Dalaran",
             "faction": "both",
             "dps": "31.18 DPS",
             "speed": "1.70",
@@ -2355,7 +2494,7 @@
           {
             "name": "Snapped Branch Wand",
             "itemId": 284574,
-            "value": "21.18 DPS, 1.70s - Level 22 World Drop",
+            "value": "21.18 DPS, 1.70s - +3 Nature Resistance - Level 22 World Drop",
             "faction": "both",
             "dps": "21.18 DPS",
             "speed": "1.70",
@@ -2404,7 +2543,7 @@
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
-            "value": "34.67 DPS, 1.50s - Big Game Hunter quest in STV",
+            "value": "34.67 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Big Game Hunter quest in STV",
             "faction": "both",
             "dps": "34.67 DPS",
             "speed": "1.50",
@@ -2425,7 +2564,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Crafted by Enchanters (Skill 175)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Crafted by Enchanters (Skill 175)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -2475,7 +2614,7 @@
           {
             "name": "Greater Mystic Wand",
             "itemId": 217287,
-            "value": "29.0 DPS, 2.00s - Enchanter crafted (Req lvl 30)",
+            "value": "29.00 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 5 - Enchanter crafted (Req lvl 30)",
             "faction": "both",
             "dps": "29.00 DPS",
             "speed": "2.00",
@@ -2497,7 +2636,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -2546,7 +2685,7 @@
           {
             "name": "Dudd's Second-Favorite Wand",
             "itemId": 277256,
-            "value": "35.67 DPS, 1.50s - Partial Mystical Notes quest",
+            "value": "35.67 DPS, 1.50s - +5 Intellect - Partial Mystical Notes quest",
             "faction": "both",
             "dps": "35.67 DPS",
             "speed": "1.50",
@@ -2568,7 +2707,7 @@
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
-            "value": "34.0 DPS, 1.50s - Crafted by Enchanters (Req lvl 37)",
+            "value": "34.00 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 6 - Crafted by Enchanters (Req lvl 37)",
             "faction": "both",
             "dps": "34.00 DPS",
             "speed": "1.50",
@@ -2619,7 +2758,7 @@
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
-            "value": "39.17 DPS, 1.80s - Crafted by Enchanters (Skill 225)",
+            "value": "39.17 DPS, 1.80s - Equip: Increases damage and healing done by magical spells and effects by up to 7 - Crafted by Enchanters (Skill 225)",
             "faction": "both",
             "dps": "39.17 DPS",
             "speed": "1.80",
@@ -2641,7 +2780,7 @@
           {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
-            "value": "45.75 DPS, 2.00s - Crafted by Enchanters (Req lvl 49)",
+            "value": "45.75 DPS, 2.00s - Equip: Increases damage and healing done by magical spells and effects by up to 8 - Crafted by Enchanters (Req lvl 49)",
             "faction": "both",
             "dps": "45.75 DPS",
             "speed": "2.00",
@@ -2691,7 +2830,7 @@
           {
             "name": "Wail of Death",
             "itemId": 281600,
-            "value": "54.17 DPS, 1.80s - Rare World Drop (Req lvl 56)",
+            "value": "54.17 DPS, 1.80s - +6 Stamina, +4 Spirit - Rare World Drop (Req lvl 56)",
             "faction": "both",
             "dps": "54.17 DPS",
             "speed": "1.80",
@@ -2721,7 +2860,15 @@
             "speed": "1.60",
             "stats": "+16 Frost Spell Damage",
             "icon": "inv_wand_09",
-            "value": "Alterac Valley Quest Reward"
+            "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.70",
+              "(85.29 damage per second)",
+              "+7 Intellect",
+              "Requires Level 60"
+            ]
           }
         ],
         "lines": [
@@ -2754,7 +2901,7 @@
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
-            "value": "59.58 DPS, 1.20s - Fast high-DPS wand",
+            "value": "59.58 DPS, 1.20s - +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9 - Fast high — DPS wand",
             "faction": "both",
             "dps": "59.58 DPS",
             "speed": "1.20",
@@ -2777,7 +2924,7 @@
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
-            "value": "53.33 DPS, 1.50s - Crafted by Enchanters (Skill 285)",
+            "value": "53.33 DPS, 1.50s - Equip: Increases damage and healing done by magical spells and effects by up to 9 - Crafted by Enchanters (Skill 285)",
             "faction": "both",
             "dps": "53.33 DPS",
             "speed": "1.50",
@@ -2799,7 +2946,7 @@
           {
             "name": "Torch of Light",
             "itemId": 279246,
-            "value": "76.76 DPS, 1.70s - Best-in-Slot Level 60 Wand",
+            "value": "76.76 DPS, 1.70s - +11 Spirit, Equip: Increases healing done by up to 17 - Best — in — Slot Level 60 Wand",
             "faction": "both",
             "dps": "76.76 DPS",
             "speed": "1.70",
@@ -2829,7 +2976,14 @@
             "speed": "1.70",
             "stats": "+9 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Dire Maul — Illyanna Ravenoak"
+            "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
+            "lines": [
+              "Binds when equipped",
+              "Ranged\tWeapon",
+              "Speed 1.60",
+              "(58.44 damage per second)",
+              "Requires Level 54"
+            ]
           },
           {
             "name": "Bonecreeper Stylus",
@@ -2841,7 +2995,16 @@
             "speed": "1.30",
             "stats": "+4 Intellect, +11 Spell Power",
             "icon": "inv_wand_05",
-            "value": "Scholomance — Darkmaster Gandling"
+            "value": "63.5 DPS, 1.30s - +4 Intellect, +11 Spell Power - Darkmaster Gandling",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "Speed 1.90",
+              "(62.63 damage per second)",
+              "+4 Intellect",
+              "+11 Spell Power",
+              "Requires Level 57"
+            ]
           },
           {
             "name": "Stormrager",
@@ -2853,7 +3016,16 @@
             "speed": "1.40",
             "stats": "+5 Nature Spell Damage",
             "icon": "inv_wand_02",
-            "value": "Eastern Plaguelands Quest Reward"
+            "value": "58.0 DPS, 1.40s - +5 Nature Spell Damage - Eastern Plaguelands Quest Reward",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWeapon",
+              "57 - 106 Damage\tSpeed 1.30",
+              "(62.69 damage per second)",
+              "+8 Stamina",
+              "+5 Intellect",
+              "Requires Level 55"
+            ]
           }
         ],
         "lines": [

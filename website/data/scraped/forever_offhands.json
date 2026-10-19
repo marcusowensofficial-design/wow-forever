@@ -56,7 +56,7 @@
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "177 Armor, +1 Strength",
             "lines": [
               "Shield",
@@ -122,7 +122,7 @@
         "faction": "both",
         "quality": "q2",
         "iLvl": 10,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Shield",
           "177 Armor",
@@ -558,7 +558,7 @@
             "itemId": 285344,
             "icon": "inv_shield_04",
             "weaponType": "Shield",
-            "value": "642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
+            "value": "2.00s - 642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 29,
@@ -572,7 +572,8 @@
               "+4 Defense",
               "Requires Level 24"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           }
         ]
       },
@@ -942,7 +943,9 @@
             ],
             "source": "Drop / Quest"
           }
-        ]
+        ],
+        "speed": "2.00",
+        "dps": "29.00 DPS"
       },
       {
         "levelBracket": "39–42",
@@ -974,7 +977,7 @@
             "itemId": 213390,
             "icon": "ability_warrior_criticalblock",
             "weaponType": "Shield",
-            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - Whirling Truesilver Gearwall",
+            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — Whirling Truesilver Gearwall",
             "faction": "both",
             "quality": "q4",
             "iLvl": 45,
@@ -2082,7 +2085,7 @@
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "177 Armor, +1 Strength",
             "lines": [
               "Shield",
@@ -2148,7 +2151,7 @@
         "faction": "both",
         "quality": "q2",
         "iLvl": 10,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Shield",
           "177 Armor",
@@ -2584,7 +2587,7 @@
             "itemId": 285344,
             "icon": "inv_shield_04",
             "weaponType": "Shield",
-            "value": "642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
+            "value": "2.00s - 642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 29,
@@ -2598,7 +2601,8 @@
               "+4 Defense",
               "Requires Level 24"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           }
         ]
       },
@@ -2968,7 +2972,9 @@
             ],
             "source": "Drop / Quest"
           }
-        ]
+        ],
+        "speed": "2.00",
+        "dps": "29.00 DPS"
       },
       {
         "levelBracket": "39–42",
@@ -3000,7 +3006,7 @@
             "itemId": 213390,
             "icon": "ability_warrior_criticalblock",
             "weaponType": "Shield",
-            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - Whirling Truesilver Gearwall",
+            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — Whirling Truesilver Gearwall",
             "faction": "both",
             "quality": "q4",
             "iLvl": 45,
@@ -4077,7 +4083,7 @@
             "itemId": 284322,
             "icon": "inv_shield_09",
             "weaponType": "Shield",
-            "value": "207 Armor, +4 Block, +1 Spirit - Watch Commander Zalaphil",
+            "value": "2.00s - 207 Armor, +4 Block, +1 Spirit - Watch Commander Zalaphil",
             "faction": "both",
             "quality": "q2",
             "iLvl": 11,
@@ -4090,7 +4096,8 @@
               "+1 Spirit",
               "Requires Level 6"
             ],
-            "source": "Watch Commander Zalaphil"
+            "source": "Watch Commander Zalaphil",
+            "speed": "2.00"
           },
           {
             "name": "Hunting Buckler",
@@ -4210,7 +4217,7 @@
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "177 Armor, +1 Strength",
             "lines": [
               "Shield",
@@ -5177,7 +5184,8 @@
             ],
             "source": "World Drop Epic / Raid"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "43–46",
@@ -6042,7 +6050,7 @@
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "177 Armor, +1 Strength",
             "lines": [
               "Shield",
@@ -6108,7 +6116,7 @@
         "faction": "both",
         "quality": "q2",
         "iLvl": 10,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Shield",
           "177 Armor",
@@ -6544,7 +6552,7 @@
             "itemId": 285344,
             "icon": "inv_shield_04",
             "weaponType": "Shield",
-            "value": "642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
+            "value": "2.00s - 642 Armor, +13 Block, +6 Strength, +4 Defense - Drop / Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 29,
@@ -6558,7 +6566,8 @@
               "+4 Defense",
               "Requires Level 24"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           }
         ]
       },
@@ -6928,7 +6937,9 @@
             ],
             "source": "Drop / Quest"
           }
-        ]
+        ],
+        "speed": "2.00",
+        "dps": "29.00 DPS"
       },
       {
         "levelBracket": "39–42",
@@ -6960,7 +6971,7 @@
             "itemId": 213390,
             "icon": "ability_warrior_criticalblock",
             "weaponType": "Shield",
-            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - Whirling Truesilver Gearwall",
+            "value": "1760 Armor, +29 Block, +9 Strength, +10 Stamina, Equip: Increases your chance to block attacks with a shield by 1%., Equip: On a successful block the whirling razor-sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. - sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — sharp gears on this shield inflict 5 to 10 physical damage to the attacker and 2 to 10 physical damage to the bearer. — Whirling Truesilver Gearwall",
             "faction": "both",
             "quality": "q4",
             "iLvl": 45,
@@ -8037,7 +8048,7 @@
             "itemId": 284322,
             "icon": "inv_shield_09",
             "weaponType": "Shield",
-            "value": "207 Armor, +4 Block, +1 Spirit - Watch Commander Zalaphil",
+            "value": "2.00s - 207 Armor, +4 Block, +1 Spirit - Watch Commander Zalaphil",
             "faction": "both",
             "quality": "q2",
             "iLvl": 11,
@@ -8050,7 +8061,8 @@
               "+1 Spirit",
               "Requires Level 6"
             ],
-            "source": "Watch Commander Zalaphil"
+            "source": "Watch Commander Zalaphil",
+            "speed": "2.00"
           },
           {
             "name": "Hunting Buckler",
@@ -8170,7 +8182,7 @@
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "177 Armor, +1 Strength",
             "lines": [
               "Shield",
@@ -9137,7 +9149,8 @@
             ],
             "source": "World Drop Epic / Raid"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "43–46",
@@ -9965,7 +9978,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 17,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+1 Spirit",
@@ -9977,32 +9990,40 @@
             "itemId": 15970,
             "icon": "inv_wand_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect - Level 10 Drop",
+            "value": "2.00s - +3 Intellect, +1 Stamina - Level 10 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": "",
+            "stats": "+3 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 10"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 2.00",
+              "+3 Intellect",
+              "+1 Stamina",
+              "Requires Level 5"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Disciple's Stein",
             "itemId": 15932,
             "icon": "inv_drink_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "value": "+2 Intellect, +1 Stamina - Level 7 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 12,
             "reqLevel": 7,
-            "stats": "",
+            "stats": "+2 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 7"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "+2 Intellect",
+              "+1 Stamina",
+              "Requires Level 3"
             ],
             "source": "Drop / Quest"
           },
@@ -10011,7 +10032,7 @@
             "itemId": 7507,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - World drop",
+            "value": "+1 Spirit - World drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
@@ -10111,30 +10132,31 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Mathystra Channeling Orb",
             "itemId": 281291,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +3 Spirit - Darkshore quest",
+            "value": "+3 Stamina, +5 Intellect - Darkshore quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 21,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+3 Stamina, +5 Intellect",
             "lines": [
               "Held In Off-hand",
@@ -10178,7 +10200,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 36,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+11 Arcane Spell Damage"
@@ -10189,15 +10211,15 @@
             "itemId": 1131,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, Shadow Strike Proc - Loch Modan",
+            "value": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%) - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 18,
             "stats": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
             "lines": [
-              "Held In Off-hand",
-              "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
+              "Binds when picked up",
+              "Held In Off-hand\tHeld In Off-hand",
               "Requires Level 18"
             ],
             "source": "The Totem of Infliction"
@@ -10207,7 +10229,7 @@
             "itemId": 284668,
             "icon": "inv_potion_80",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Stamina, +3 Intellect - Barrens quest",
+            "value": "-5 Stamina - 5 Stamina — Barrens quest",
             "faction": "horde",
             "quality": "q2",
             "iLvl": 24,
@@ -10250,11 +10272,11 @@
             "itemId": 281306,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore",
+            "value": "+2 Stamina, +5 Spirit - Darkshore",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 31,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+2 Stamina, +5 Spirit",
             "lines": [
               "Held In Off-hand",
@@ -10268,11 +10290,11 @@
             "itemId": 9513,
             "icon": "inv_staff_21",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +5 Stamina - Gnomeregan",
+            "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 10,
             "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
             "lines": [
               "Held In Off-hand",
@@ -10280,9 +10302,12 @@
               "+1 Spirit",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.90",
+            "dps": "5.34 DPS"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "27–30",
@@ -10313,7 +10338,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands quest",
+            "value": "+7 Intellect - Use, breaks CC — Badlands quest",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -10331,7 +10356,7 @@
             "itemId": 7515,
             "icon": "inv_misc_orb_03",
             "weaponType": "Held In Off-hand",
-            "value": "+3 Intellect, +3 Spirit, +3 Stamina - Mage Class Quest",
+            "value": "2.00s - +3 Intellect, +13 Spell Power - Mage Class Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 40,
@@ -10343,14 +10368,15 @@
               "+13 Spell Power",
               "Requires Level 35"
             ],
-            "source": "Celestial Power"
+            "source": "Celestial Power",
+            "speed": "2.00"
           },
           {
             "name": "Ponderous Orb",
             "itemId": 273052,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +8 Spirit, +11 Spell Power - Dalaran",
+            "value": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11 - Dalaran",
             "faction": "both",
             "quality": "q3",
             "iLvl": 35,
@@ -10394,7 +10420,7 @@
             "itemId": 1992,
             "icon": "inv_misc_bone_orcskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Frost Spell Power, +6 Intellect - Swamp of Sorrows",
+            "value": "+5 Frost Resistance, +5 Shadow Resistance - Swamp of Sorrows",
             "faction": "both",
             "quality": "q3",
             "iLvl": 38,
@@ -10458,7 +10484,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - Razorfen Downs",
+            "value": "+5 Spirit - Razorfen Downs",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -10579,7 +10605,7 @@
             "itemId": 282088,
             "icon": "inv_misc_orb_05",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +14 Fire Spell Power - Burning Steppes",
+            "value": "2.00s - +8 Stamina, Equip: Increases healing done by up to 16 - Burning Steppes",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -10591,14 +10617,15 @@
               "Equip: Increases healing done by up to 16",
               "Requires Level 47"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Shard of the Green Flame",
             "itemId": 18762,
             "icon": "inv_misc_shadowegg",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Fire Spell Power, +8 Intellect - Sunken Temple",
+            "value": "+12 Stamina - Sunken Temple",
             "faction": "both",
             "quality": "q3",
             "iLvl": 54,
@@ -10611,7 +10638,8 @@
             ],
             "source": "Kroshius' Infernal Core"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "47–50",
@@ -10628,7 +10656,7 @@
         "faction": "both",
         "quality": "q3",
         "iLvl": 56,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+21 Spell Power & Healing"
@@ -10697,7 +10725,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -10714,7 +10742,7 @@
             "itemId": 271933,
             "icon": "inv_misc_book_06",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Stamina, +6 Intellect, +5 Spell Power",
+            "value": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5 - Bryanna Embreeze",
             "faction": "both",
             "quality": "q3",
             "iLvl": 53,
@@ -10758,7 +10786,7 @@
             "itemId": 19308,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Fire Spell Power - Alterac Valley (Fire Mage BiS)",
+            "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -10776,7 +10804,7 @@
             "itemId": 19312,
             "icon": "inv_misc_flower_04",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Arcane Spell Power - Alterac Valley (Arcane BiS)",
+            "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -10840,7 +10868,7 @@
             "itemId": 234589,
             "icon": "inv_misc_book_12",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -10861,7 +10889,7 @@
             "itemId": 234563,
             "icon": "inv_misc_book_15",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,
@@ -10927,7 +10955,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 17,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+1 Spirit",
@@ -10939,24 +10967,29 @@
             "itemId": 15970,
             "icon": "inv_wand_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect - Level 10 Drop",
+            "value": "2.00s - +3 Intellect, +1 Stamina - Level 10 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": "",
+            "stats": "+3 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 10"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 2.00",
+              "+3 Intellect",
+              "+1 Stamina",
+              "Requires Level 5"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Arcane Orb",
             "itemId": 7507,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - World drop",
+            "value": "+1 Spirit - World drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
@@ -11040,19 +11073,20 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Eerie Stable Lantern",
@@ -11102,15 +11136,15 @@
             "itemId": 1131,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, Shadow Strike Proc - Loch Modan",
+            "value": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%) - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 18,
             "stats": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
             "lines": [
-              "Held In Off-hand",
-              "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
+              "Binds when picked up",
+              "Held In Off-hand\tHeld In Off-hand",
               "Requires Level 18"
             ],
             "source": "The Totem of Infliction"
@@ -11120,7 +11154,7 @@
             "itemId": 284668,
             "icon": "inv_potion_80",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Stamina, +3 Intellect - Barrens quest",
+            "value": "-5 Stamina - 5 Stamina — Barrens quest",
             "faction": "horde",
             "quality": "q2",
             "iLvl": 24,
@@ -11164,7 +11198,7 @@
             "itemId": 249395,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +13 Healing / Shadow Spell Power - Crafted",
+            "value": "2.00s - +6 Spirit, Equip: Increases healing done by up to 13 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -11176,14 +11210,15 @@
               "Equip: Increases healing done by up to 13",
               "Requires Level 25"
             ],
-            "source": "Orb of Souls"
+            "source": "Orb of Souls",
+            "speed": "2.00"
           },
           {
             "name": "Orb of Mystic Insight",
             "itemId": 249394,
             "icon": "inv_misc_orb_blue",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Intellect, +7 Spell Power - Crafted",
+            "value": "2.00s - +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -11195,9 +11230,11 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 7",
               "Requires Level 25"
             ],
-            "source": "Orb of Mystic Insight"
+            "source": "Orb of Mystic Insight",
+            "speed": "2.00"
           }
-        ]
+        ],
+        "speed": "1.60"
       },
       {
         "levelBracket": "27–30",
@@ -11228,7 +11265,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands quest",
+            "value": "+7 Intellect - Use, breaks CC — Badlands quest",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -11246,7 +11283,7 @@
             "itemId": 273052,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +8 Spirit, +11 Spell Power - Dalaran",
+            "value": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11 - Dalaran",
             "faction": "both",
             "quality": "q3",
             "iLvl": 35,
@@ -11290,7 +11327,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - Razorfen Downs",
+            "value": "+5 Spirit - Razorfen Downs",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -11369,7 +11406,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - RFD",
+            "value": "+5 Spirit - RFD",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -11473,7 +11510,7 @@
             "itemId": 249455,
             "icon": "inv_rod_enchantedadamantite",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +8 Intellect, +10 Spell Power - Crafted",
+            "value": "2.00s - +8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 50,
@@ -11486,14 +11523,15 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 10",
               "Requires Level 45"
             ],
-            "source": "Truesilver Conduit"
+            "source": "Truesilver Conduit",
+            "speed": "2.00"
           },
           {
             "name": "Heart of Smoldar",
             "itemId": 282088,
             "icon": "inv_misc_orb_05",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +14 Fire Spell Power - Burning Steppes",
+            "value": "2.00s - +8 Stamina, Equip: Increases healing done by up to 16 - Burning Steppes",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -11505,7 +11543,8 @@
               "Equip: Increases healing done by up to 16",
               "Requires Level 47"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           }
         ]
       },
@@ -11524,7 +11563,7 @@
         "faction": "both",
         "quality": "q3",
         "iLvl": 56,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+21 Spell Power & Healing"
@@ -11535,7 +11574,7 @@
             "itemId": 10844,
             "icon": "inv_staff_32",
             "weaponType": "Held In Off-hand",
-            "value": "+21 Shadow Spell Power - Sunken Temple: Drakes",
+            "value": "34.71 DPS, 3.40s - +16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown) - Sunken Temple: Drakes",
             "faction": "both",
             "quality": "q3",
             "iLvl": 54,
@@ -11549,7 +11588,9 @@
               "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
               "Requires Level 49"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "3.40",
+            "dps": "34.71 DPS"
           },
           {
             "name": "Drakestone of the Fireflash",
@@ -11598,7 +11639,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -11615,7 +11656,7 @@
             "itemId": 271933,
             "icon": "inv_misc_book_06",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Stamina, +6 Intellect, +5 Spell Power",
+            "value": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5 - Bryanna Embreeze",
             "faction": "both",
             "quality": "q3",
             "iLvl": 53,
@@ -11696,7 +11737,7 @@
             "itemId": 19308,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Fire Spell Power - Alterac Valley (Destro BiS)",
+            "value": "+3 MP5 - Alterac Valley (Destro BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -11739,7 +11780,7 @@
             "itemId": 234563,
             "icon": "inv_misc_book_15",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,
@@ -11760,7 +11801,7 @@
             "itemId": 234589,
             "icon": "inv_misc_book_12",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -11830,7 +11871,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 17,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+1 Spirit",
@@ -11842,24 +11883,29 @@
             "itemId": 15970,
             "icon": "inv_wand_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect - Level 10 Drop",
+            "value": "2.00s - +3 Intellect, +1 Stamina - Level 10 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": "",
+            "stats": "+3 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 10"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 2.00",
+              "+3 Intellect",
+              "+1 Stamina",
+              "Requires Level 5"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Arcane Orb",
             "itemId": 7507,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - World drop",
+            "value": "+1 Spirit - World drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
@@ -11943,19 +11989,20 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Eerie Stable Lantern",
@@ -12005,15 +12052,15 @@
             "itemId": 1131,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, Shadow Strike Proc - Loch Modan",
+            "value": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%) - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 18,
             "stats": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
             "lines": [
-              "Held In Off-hand",
-              "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
+              "Binds when picked up",
+              "Held In Off-hand\tHeld In Off-hand",
               "Requires Level 18"
             ],
             "source": "The Totem of Infliction"
@@ -12023,7 +12070,7 @@
             "itemId": 284668,
             "icon": "inv_potion_80",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Stamina, +3 Intellect - Barrens quest",
+            "value": "-5 Stamina - 5 Stamina — Barrens quest",
             "faction": "horde",
             "quality": "q2",
             "iLvl": 24,
@@ -12067,7 +12114,7 @@
             "itemId": 249395,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +13 Healing / Shadow Spell Power - Crafted",
+            "value": "2.00s - +6 Spirit, Equip: Increases healing done by up to 13 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -12079,14 +12126,15 @@
               "Equip: Increases healing done by up to 13",
               "Requires Level 25"
             ],
-            "source": "Orb of Souls"
+            "source": "Orb of Souls",
+            "speed": "2.00"
           },
           {
             "name": "Orb of Mystic Insight",
             "itemId": 249394,
             "icon": "inv_misc_orb_blue",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Intellect, +7 Spell Power - Crafted",
+            "value": "2.00s - +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -12098,9 +12146,11 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 7",
               "Requires Level 25"
             ],
-            "source": "Orb of Mystic Insight"
+            "source": "Orb of Mystic Insight",
+            "speed": "2.00"
           }
-        ]
+        ],
+        "speed": "1.60"
       },
       {
         "levelBracket": "27–30",
@@ -12131,7 +12181,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands quest",
+            "value": "+7 Intellect - Use, breaks CC — Badlands quest",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -12149,7 +12199,7 @@
             "itemId": 273052,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +8 Spirit, +11 Spell Power - Dalaran",
+            "value": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11 - Dalaran",
             "faction": "both",
             "quality": "q3",
             "iLvl": 35,
@@ -12193,7 +12243,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - Razorfen Downs",
+            "value": "+5 Spirit - Razorfen Downs",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -12272,7 +12322,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - RFD",
+            "value": "+5 Spirit - RFD",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -12376,7 +12426,7 @@
             "itemId": 249455,
             "icon": "inv_rod_enchantedadamantite",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +8 Intellect, +10 Spell Power - Crafted",
+            "value": "2.00s - +8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 50,
@@ -12389,14 +12439,15 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 10",
               "Requires Level 45"
             ],
-            "source": "Truesilver Conduit"
+            "source": "Truesilver Conduit",
+            "speed": "2.00"
           },
           {
             "name": "Heart of Smoldar",
             "itemId": 282088,
             "icon": "inv_misc_orb_05",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +14 Fire Spell Power - Burning Steppes",
+            "value": "2.00s - +8 Stamina, Equip: Increases healing done by up to 16 - Burning Steppes",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -12408,7 +12459,8 @@
               "Equip: Increases healing done by up to 16",
               "Requires Level 47"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           }
         ]
       },
@@ -12427,7 +12479,7 @@
         "faction": "both",
         "quality": "q3",
         "iLvl": 56,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+21 Spell Power & Healing"
@@ -12438,7 +12490,7 @@
             "itemId": 10844,
             "icon": "inv_staff_32",
             "weaponType": "Held In Off-hand",
-            "value": "+21 Shadow Spell Power - Sunken Temple: Drakes",
+            "value": "34.71 DPS, 3.40s - +16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown) - Sunken Temple: Drakes",
             "faction": "both",
             "quality": "q3",
             "iLvl": 54,
@@ -12452,7 +12504,9 @@
               "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
               "Requires Level 49"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "3.40",
+            "dps": "34.71 DPS"
           },
           {
             "name": "Drakestone of the Fireflash",
@@ -12501,7 +12555,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -12518,7 +12572,7 @@
             "itemId": 271933,
             "icon": "inv_misc_book_06",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Stamina, +6 Intellect, +5 Spell Power",
+            "value": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5 - Bryanna Embreeze",
             "faction": "both",
             "quality": "q3",
             "iLvl": 53,
@@ -12599,7 +12653,7 @@
             "itemId": 19308,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Fire Spell Power - Alterac Valley (Destro BiS)",
+            "value": "+3 MP5 - Alterac Valley (Destro BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -12642,7 +12696,7 @@
             "itemId": 234563,
             "icon": "inv_misc_book_15",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,
@@ -12663,7 +12717,7 @@
             "itemId": 234589,
             "icon": "inv_misc_book_12",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -12732,11 +12786,11 @@
             "itemId": 279898,
             "icon": "inv_misc_book_07",
             "weaponType": "Held In Off-hand",
-            "value": "+1 Spirit, +3 Healing - Loch Modan",
+            "value": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3 - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 17,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
             "lines": [
               "Held In Off-hand",
@@ -12807,15 +12861,18 @@
             "itemId": 15932,
             "icon": "inv_drink_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "value": "+2 Intellect, +1 Stamina - Level 7 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 12,
             "reqLevel": 7,
-            "stats": "",
+            "stats": "+2 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 7"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "+2 Intellect",
+              "+1 Stamina",
+              "Requires Level 3"
             ],
             "source": "Drop / Quest"
           }
@@ -12850,30 +12907,31 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Mathystra Channeling Orb",
             "itemId": 281291,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +3 Spirit - Darkshore quest",
+            "value": "+3 Stamina, +5 Intellect - Darkshore quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 21,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+3 Stamina, +5 Intellect",
             "lines": [
               "Held In Off-hand",
@@ -12912,7 +12970,7 @@
             "itemId": 2943,
             "icon": "inv_misc_orb_03",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +4 Intellect, +9 Healing - Wetlands",
+            "value": "+9 Healing, +4 Spell Power - Wetlands",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 31,
@@ -12931,7 +12989,7 @@
             "itemId": 249395,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +13 Healing - Crafted",
+            "value": "2.00s - +6 Spirit, Equip: Increases healing done by up to 13 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -12943,7 +13001,8 @@
               "Equip: Increases healing done by up to 13",
               "Requires Level 25"
             ],
-            "source": "Orb of Souls"
+            "source": "Orb of Souls",
+            "speed": "2.00"
           }
         ]
       },
@@ -12976,11 +13035,11 @@
             "itemId": 276898,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+9 Spirit, +50 Armor, +9 Healing - Past Due quest",
+            "value": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 - Past Due quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 38,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
             "lines": [
               "Held In Off-hand",
@@ -12995,7 +13054,7 @@
             "itemId": 273027,
             "icon": "spell_nature_crystalball",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +4 Stamina, +8 Healing - Wetlands",
+            "value": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8 - Wetlands",
             "faction": "both",
             "quality": "q3",
             "iLvl": 31,
@@ -13015,7 +13074,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands",
+            "value": "+7 Intellect - Use, breaks CC — Badlands",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -13059,7 +13118,7 @@
             "itemId": 7685,
             "icon": "inv_misc_orb_02",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Healing & Spell Power - SM Library",
+            "value": "Equip: Increases damage and healing done by magical spells and effects by up to 14 - SM Library",
             "faction": "both",
             "quality": "q3",
             "iLvl": 37,
@@ -13077,7 +13136,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Spell Power - RFD",
+            "value": "+5 Spirit - RFD",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -13120,7 +13179,7 @@
             "itemId": 277259,
             "icon": "inv_potion_19",
             "weaponType": "Held In Off-hand",
-            "value": "+12 Stamina, +5 Spirit, +16 Healing",
+            "value": "+12 Stamina, +5 Spirit - Drop / Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 45,
@@ -13139,7 +13198,7 @@
             "itemId": 271805,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +7 Spirit, +10 Healing - Maraudon",
+            "value": "+2 Stamina, +4 Intellect, +7 Spirit - Maraudon",
             "faction": "horde",
             "quality": "q3",
             "iLvl": 42,
@@ -13154,7 +13213,8 @@
             ],
             "source": "Khan Jehn"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "45–52",
@@ -13185,7 +13245,7 @@
             "itemId": 249455,
             "icon": "inv_rod_enchantedadamantite",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +8 Intellect, +10 Healing - Crafted",
+            "value": "2.00s - +8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 50,
@@ -13198,18 +13258,19 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 10",
               "Requires Level 45"
             ],
-            "source": "Truesilver Conduit"
+            "source": "Truesilver Conduit",
+            "speed": "2.00"
           },
           {
             "name": "Spirit of Aquementas",
             "itemId": 11904,
             "icon": "inv_ore_arcanite_02",
             "weaponType": "Held In Off-hand",
-            "value": "+21 Healing & Spell Power - Un'Goro Linken quest",
+            "value": "Equip: Increases damage and healing done by magical spells and effects by up to 21 - Un'Goro Linken quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 56,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
             "lines": [
               "Held In Off-hand",
@@ -13217,7 +13278,8 @@
             ],
             "source": "It's Dangerous to Go Alone"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "53–58",
@@ -13248,7 +13310,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -13341,7 +13403,7 @@
             "itemId": 234590,
             "icon": "inv_misc_book_13",
             "weaponType": "Held In Off-hand",
-            "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
+            "value": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -13362,7 +13424,7 @@
             "itemId": 234564,
             "icon": "inv_misc_book_14",
             "weaponType": "Held In Off-hand",
-            "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
+            "value": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,
@@ -13410,7 +13472,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 17,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+1 Spirit",
@@ -13422,32 +13484,40 @@
             "itemId": 15970,
             "icon": "inv_wand_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect - Level 10 Drop",
+            "value": "2.00s - +3 Intellect, +1 Stamina - Level 10 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": "",
+            "stats": "+3 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 10"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 2.00",
+              "+3 Intellect",
+              "+1 Stamina",
+              "Requires Level 5"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Disciple's Stein",
             "itemId": 15932,
             "icon": "inv_drink_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "value": "+2 Intellect, +1 Stamina - Level 7 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 12,
             "reqLevel": 7,
-            "stats": "",
+            "stats": "+2 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 7"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "+2 Intellect",
+              "+1 Stamina",
+              "Requires Level 3"
             ],
             "source": "Drop / Quest"
           },
@@ -13456,7 +13526,7 @@
             "itemId": 7507,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - World drop",
+            "value": "+1 Spirit - World drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
@@ -13556,30 +13626,31 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Mathystra Channeling Orb",
             "itemId": 281291,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +3 Spirit - Darkshore quest",
+            "value": "+3 Stamina, +5 Intellect - Darkshore quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 21,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+3 Stamina, +5 Intellect",
             "lines": [
               "Held In Off-hand",
@@ -13623,7 +13694,7 @@
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 36,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+11 Arcane Spell Damage"
@@ -13634,15 +13705,15 @@
             "itemId": 1131,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, Shadow Strike Proc - Loch Modan",
+            "value": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%) - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 18,
             "stats": "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
             "lines": [
-              "Held In Off-hand",
-              "Equip: When struck in combat has a 1% chance of inflicting 75 to 125 Shadow damage to the attacker. (Proc chance: 1%)",
+              "Binds when picked up",
+              "Held In Off-hand\tHeld In Off-hand",
               "Requires Level 18"
             ],
             "source": "The Totem of Infliction"
@@ -13652,7 +13723,7 @@
             "itemId": 284668,
             "icon": "inv_potion_80",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Stamina, +3 Intellect - Barrens quest",
+            "value": "-5 Stamina - 5 Stamina — Barrens quest",
             "faction": "horde",
             "quality": "q2",
             "iLvl": 24,
@@ -13695,11 +13766,11 @@
             "itemId": 281306,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore",
+            "value": "+2 Stamina, +5 Spirit - Darkshore",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 31,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+2 Stamina, +5 Spirit",
             "lines": [
               "Held In Off-hand",
@@ -13713,11 +13784,11 @@
             "itemId": 9513,
             "icon": "inv_staff_21",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +5 Stamina - Gnomeregan",
+            "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
             "faction": "both",
             "quality": "q2",
             "iLvl": 10,
-            "reqLevel": null,
+            "reqLevel": 10,
             "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
             "lines": [
               "Held In Off-hand",
@@ -13725,9 +13796,12 @@
               "+1 Spirit",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.90",
+            "dps": "5.34 DPS"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "27–30",
@@ -13758,7 +13832,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands quest",
+            "value": "+7 Intellect - Use, breaks CC — Badlands quest",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -13776,7 +13850,7 @@
             "itemId": 7515,
             "icon": "inv_misc_orb_03",
             "weaponType": "Held In Off-hand",
-            "value": "+3 Intellect, +3 Spirit, +3 Stamina - Mage Class Quest",
+            "value": "2.00s - +3 Intellect, +13 Spell Power - Mage Class Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 40,
@@ -13788,14 +13862,15 @@
               "+13 Spell Power",
               "Requires Level 35"
             ],
-            "source": "Celestial Power"
+            "source": "Celestial Power",
+            "speed": "2.00"
           },
           {
             "name": "Ponderous Orb",
             "itemId": 273052,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +8 Spirit, +11 Spell Power - Dalaran",
+            "value": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11 - Dalaran",
             "faction": "both",
             "quality": "q3",
             "iLvl": 35,
@@ -13839,7 +13914,7 @@
             "itemId": 1992,
             "icon": "inv_misc_bone_orcskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Frost Spell Power, +6 Intellect - Swamp of Sorrows",
+            "value": "+5 Frost Resistance, +5 Shadow Resistance - Swamp of Sorrows",
             "faction": "both",
             "quality": "q3",
             "iLvl": 38,
@@ -13903,7 +13978,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Fire Spell Power - Razorfen Downs",
+            "value": "+5 Spirit - Razorfen Downs",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -14024,7 +14099,7 @@
             "itemId": 282088,
             "icon": "inv_misc_orb_05",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +14 Fire Spell Power - Burning Steppes",
+            "value": "2.00s - +8 Stamina, Equip: Increases healing done by up to 16 - Burning Steppes",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -14036,14 +14111,15 @@
               "Equip: Increases healing done by up to 16",
               "Requires Level 47"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "2.00"
           },
           {
             "name": "Shard of the Green Flame",
             "itemId": 18762,
             "icon": "inv_misc_shadowegg",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Fire Spell Power, +8 Intellect - Sunken Temple",
+            "value": "+12 Stamina - Sunken Temple",
             "faction": "both",
             "quality": "q3",
             "iLvl": 54,
@@ -14056,7 +14132,8 @@
             ],
             "source": "Kroshius' Infernal Core"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "47–50",
@@ -14073,7 +14150,7 @@
         "faction": "both",
         "quality": "q3",
         "iLvl": 56,
-        "reqLevel": null,
+        "reqLevel": 1,
         "lines": [
           "Held In Off-hand",
           "+21 Spell Power & Healing"
@@ -14142,7 +14219,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -14159,7 +14236,7 @@
             "itemId": 271933,
             "icon": "inv_misc_book_06",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Stamina, +6 Intellect, +5 Spell Power",
+            "value": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5 - Bryanna Embreeze",
             "faction": "both",
             "quality": "q3",
             "iLvl": 53,
@@ -14203,7 +14280,7 @@
             "itemId": 19308,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Fire Spell Power - Alterac Valley (Fire Mage BiS)",
+            "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -14221,7 +14298,7 @@
             "itemId": 19312,
             "icon": "inv_misc_flower_04",
             "weaponType": "Held In Off-hand",
-            "value": "+34 Arcane Spell Power - Alterac Valley (Arcane BiS)",
+            "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
             "faction": "both",
             "quality": "q4",
             "iLvl": 60,
@@ -14285,7 +14362,7 @@
             "itemId": 234589,
             "icon": "inv_misc_book_12",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -14306,7 +14383,7 @@
             "itemId": 234563,
             "icon": "inv_misc_book_15",
             "weaponType": "Held In Off-hand",
-            "value": "+24 Stamina, +13 Intellect, +25 Spell Power - PvP Rank 14",
+            "value": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,
@@ -14375,11 +14452,11 @@
             "itemId": 279898,
             "icon": "inv_misc_book_07",
             "weaponType": "Held In Off-hand",
-            "value": "+1 Spirit, +3 Healing - Loch Modan",
+            "value": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3 - Loch Modan",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 17,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
             "lines": [
               "Held In Off-hand",
@@ -14450,15 +14527,18 @@
             "itemId": 15932,
             "icon": "inv_drink_03",
             "weaponType": "Held In Off-hand",
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "value": "+2 Intellect, +1 Stamina - Level 7 Drop",
             "faction": "both",
             "quality": "q2",
             "iLvl": 12,
             "reqLevel": 7,
-            "stats": "",
+            "stats": "+2 Intellect, +1 Stamina",
             "lines": [
-              "Held In Off-hand",
-              "Requires Level 7"
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "+2 Intellect",
+              "+1 Stamina",
+              "Requires Level 3"
             ],
             "source": "Drop / Quest"
           }
@@ -14493,30 +14573,31 @@
             "itemId": 2879,
             "icon": "inv_wand_04",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "value": "1.60s - Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6. - Ashenvale quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
             "stats": "Equip: Increases damage done by Fire spells and effects by up to 6., Equip: Increases damage done by Frost spells and effects by up to 6.",
             "lines": [
-              "Held In Off-hand",
-              "Equip: Increases damage done by Fire spells and effects by up to 6.",
-              "Equip: Increases damage done by Frost spells and effects by up to 6.",
+              "Binds when equipped",
+              "Held In Off-hand\tHeld In Off-hand",
+              "Speed 1.60",
               "Requires Level 17"
             ],
-            "source": "Drop / Quest"
+            "source": "Drop / Quest",
+            "speed": "1.60"
           },
           {
             "name": "Mathystra Channeling Orb",
             "itemId": 281291,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +3 Spirit - Darkshore quest",
+            "value": "+3 Stamina, +5 Intellect - Darkshore quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 21,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+3 Stamina, +5 Intellect",
             "lines": [
               "Held In Off-hand",
@@ -14555,7 +14636,7 @@
             "itemId": 2943,
             "icon": "inv_misc_orb_03",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +4 Intellect, +9 Healing - Wetlands",
+            "value": "+9 Healing, +4 Spell Power - Wetlands",
             "faction": "alliance",
             "quality": "q2",
             "iLvl": 31,
@@ -14574,7 +14655,7 @@
             "itemId": 249395,
             "icon": "inv_misc_orb_04",
             "weaponType": "Held In Off-hand",
-            "value": "+6 Spirit, +13 Healing - Crafted",
+            "value": "2.00s - +6 Spirit, Equip: Increases healing done by up to 13 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 30,
@@ -14586,7 +14667,8 @@
               "Equip: Increases healing done by up to 13",
               "Requires Level 25"
             ],
-            "source": "Orb of Souls"
+            "source": "Orb of Souls",
+            "speed": "2.00"
           }
         ]
       },
@@ -14619,11 +14701,11 @@
             "itemId": 276898,
             "icon": "inv_misc_book_01",
             "weaponType": "Held In Off-hand",
-            "value": "+9 Spirit, +50 Armor, +9 Healing - Past Due quest",
+            "value": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 - Past Due quest",
             "faction": "alliance",
             "quality": "q3",
             "iLvl": 38,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
             "lines": [
               "Held In Off-hand",
@@ -14638,7 +14720,7 @@
             "itemId": 273027,
             "icon": "spell_nature_crystalball",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +4 Stamina, +8 Healing - Wetlands",
+            "value": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8 - Wetlands",
             "faction": "both",
             "quality": "q3",
             "iLvl": 31,
@@ -14658,7 +14740,7 @@
             "itemId": 4984,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+60% Run Speed On-Use, breaks CC - Badlands",
+            "value": "+7 Intellect - Use, breaks CC — Badlands",
             "faction": "both",
             "quality": "q2",
             "iLvl": 41,
@@ -14702,7 +14784,7 @@
             "itemId": 7685,
             "icon": "inv_misc_orb_02",
             "weaponType": "Held In Off-hand",
-            "value": "+14 Healing & Spell Power - SM Library",
+            "value": "Equip: Increases damage and healing done by magical spells and effects by up to 14 - SM Library",
             "faction": "both",
             "quality": "q3",
             "iLvl": 37,
@@ -14720,7 +14802,7 @@
             "itemId": 10770,
             "icon": "inv_misc_bone_elfskull_01",
             "weaponType": "Held In Off-hand",
-            "value": "+5 Spirit, +14 Spell Power - RFD",
+            "value": "+5 Spirit - RFD",
             "faction": "both",
             "quality": "q3",
             "iLvl": 41,
@@ -14763,7 +14845,7 @@
             "itemId": 277259,
             "icon": "inv_potion_19",
             "weaponType": "Held In Off-hand",
-            "value": "+12 Stamina, +5 Spirit, +16 Healing",
+            "value": "+12 Stamina, +5 Spirit - Drop / Quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 45,
@@ -14782,7 +14864,7 @@
             "itemId": 271805,
             "icon": "inv_misc_orb_01",
             "weaponType": "Held In Off-hand",
-            "value": "+4 Intellect, +7 Spirit, +10 Healing - Maraudon",
+            "value": "+2 Stamina, +4 Intellect, +7 Spirit - Maraudon",
             "faction": "horde",
             "quality": "q3",
             "iLvl": 42,
@@ -14797,7 +14879,8 @@
             ],
             "source": "Khan Jehn"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "45–52",
@@ -14828,7 +14911,7 @@
             "itemId": 249455,
             "icon": "inv_rod_enchantedadamantite",
             "weaponType": "Held In Off-hand",
-            "value": "+8 Stamina, +8 Intellect, +10 Healing - Crafted",
+            "value": "2.00s - +8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10 - Crafted",
             "faction": "both",
             "quality": "q3",
             "iLvl": 50,
@@ -14841,18 +14924,19 @@
               "Equip: Increases damage and healing done by magical spells and effects by up to 10",
               "Requires Level 45"
             ],
-            "source": "Truesilver Conduit"
+            "source": "Truesilver Conduit",
+            "speed": "2.00"
           },
           {
             "name": "Spirit of Aquementas",
             "itemId": 11904,
             "icon": "inv_ore_arcanite_02",
             "weaponType": "Held In Off-hand",
-            "value": "+21 Healing & Spell Power - Un'Goro Linken quest",
+            "value": "Equip: Increases damage and healing done by magical spells and effects by up to 21 - Un'Goro Linken quest",
             "faction": "both",
             "quality": "q3",
             "iLvl": 56,
-            "reqLevel": null,
+            "reqLevel": 1,
             "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
             "lines": [
               "Held In Off-hand",
@@ -14860,7 +14944,8 @@
             ],
             "source": "It's Dangerous to Go Alone"
           }
-        ]
+        ],
+        "speed": "2.00"
       },
       {
         "levelBracket": "53–58",
@@ -14891,7 +14976,7 @@
             "itemId": 16768,
             "icon": "inv_misc_bag_11",
             "weaponType": "Held In Off-hand",
-            "value": "+10 Stamina, On-Use 1000 HP Heal - Timbermaw Hold Friendly",
+            "value": "+10 Stamina - Use 1000 HP Heal — Timbermaw Hold Friendly",
             "faction": "both",
             "quality": "q2",
             "iLvl": 52,
@@ -14984,7 +15069,7 @@
             "itemId": 234590,
             "icon": "inv_misc_book_13",
             "weaponType": "Held In Off-hand",
-            "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
+            "value": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "alliance",
             "quality": "q4",
             "iLvl": 80,
@@ -15005,7 +15090,7 @@
             "itemId": 234564,
             "icon": "inv_misc_book_14",
             "weaponType": "Held In Off-hand",
-            "value": "+23 Stamina, +14 Intellect, +35 Healing - PvP Rank 14",
+            "value": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources. - PvP Rank 14",
             "faction": "horde",
             "quality": "q4",
             "iLvl": 80,

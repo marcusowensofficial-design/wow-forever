@@ -172,10 +172,17 @@
           if (!coll) continue;
           for (const cKey of Object.keys(coll)) {
             const cData = coll[cKey];
-            for (const step of cData.levels || []) {
-              registerItem(step);
-              for (const alt of step.alts || []) {
-                registerItem(alt);
+            const sets = [
+              cData.levels,
+              cData.healingLevels,
+              ...(Object.values(cData.tracksData || {}))
+            ].filter(Boolean);
+            for (const set of sets) {
+              for (const step of set) {
+                registerItem(step);
+                for (const alt of step.alts || []) {
+                  registerItem(alt);
+                }
               }
             }
           }
@@ -392,6 +399,17 @@
           html += `<div class="wow-tip-price" style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.25rem;">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('+') || /Strength|Agility|Stamina|Intellect|Spirit/.test(trimmed)) {
           html += `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
+        } else if (/^Speed\s+[\d.]+/i.test(trimmed)) {
+          const sVal = trimmed.replace(/^Speed\s+/i, '');
+          const dmg = calculateDmgRange(dps, sVal);
+          html += `<div class="wow-tip-dmg-row"><span>${dmg ? escapeHtml(dmg) + ' Damage' : 'Weapon Damage'}</span><span>${escapeHtml(trimmed)}</span></div>`;
+        } else if (/^(Two-Hand|One-Hand|Main Hand|Off Hand|Ranged)$/i.test(trimmed)) {
+          html += `<div class="wow-tip-type-row"><span>${escapeHtml(trimmed)}</span><span>${escapeHtml(weaponType || 'Weapon')}</span></div>`;
+        } else if (weaponType && trimmed.toLowerCase() === weaponType.toLowerCase()) {
+          const slot = getWeaponSlotText(weaponType);
+          html += `<div class="wow-tip-type-row"><span>${escapeHtml(slot)}</span><span>${escapeHtml(trimmed)}</span></div>`;
+        } else if (/mana per 5 sec/i.test(trimmed)) {
+          html += formatStatLine(trimmed);
         } else {
           html += `<div class="wow-tip-generic" style="color: #cbd5e1;">${escapeHtml(trimmed)}</div>`;
         }
