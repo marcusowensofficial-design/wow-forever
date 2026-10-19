@@ -20,7 +20,12 @@
         "iLvl": 17,
         "reqLevel": 2,
         "stats": "Starter Off-hand",
-        "alts": []
+        "alts": [],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "Requires Level 2"
+        ]
       },
       {
         "levelBracket": "10–16",
@@ -39,7 +44,7 @@
         "quality": "q2",
         "iLvl": 17,
         "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
         "alts": [
           {
             "name": "Tear of Grief",
@@ -51,7 +56,13 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
+            "icon": "inv_potion_17",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "-3 Spirit"
+            ]
           },
           {
             "name": "Disciple's Stein",
@@ -63,8 +74,19 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_drink_03"
+            "icon": "inv_drink_03",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+1 Spirit",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 3"
         ]
       },
       {
@@ -84,7 +106,7 @@
         "quality": "q3",
         "iLvl": 22,
         "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
         "alts": [
           {
             "name": "Expended Apothecary Vial",
@@ -96,7 +118,13 @@
             "iLvl": 25,
             "reqLevel": 19,
             "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
+            "icon": "inv_potion_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Intellect",
+              "+3 Spirit"
+            ]
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -108,7 +136,13 @@
             "iLvl": 21,
             "reqLevel": 17,
             "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
+            "icon": "inv_misc_orb_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Stamina",
+              "+5 Intellect"
+            ]
           },
           {
             "name": "Defective Samophlange",
@@ -120,8 +154,23 @@
             "iLvl": 25,
             "reqLevel": 20,
             "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
+            "icon": "inv_gizmo_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "+5 Spirit",
+              "Requires Level 20"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+3 Stamina",
+          "Requires Level 17",
+          "Equip: Increases healing done by up to 10",
+          "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
         ]
       },
       {
@@ -152,8 +201,14 @@
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases healing done by up to 12",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 21",
+              "Equip: Increases healing done by up to 12"
+            ]
           },
           {
             "name": "Orb of Mystic Insight",
@@ -164,8 +219,15 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
+            "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_misc_orb_blue",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Intellect",
+              "Requires Level 25",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Orb of Souls",
@@ -176,9 +238,22 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_misc_orb_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Spirit",
+              "Requires Level 25",
+              "Equip: Increases healing done by up to 13"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+5 Spirit"
         ]
       },
       {
@@ -198,7 +273,7 @@
         "quality": "q3",
         "iLvl": 31,
         "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Arcane Infused Rod",
@@ -209,8 +284,13 @@
             "quality": "q2",
             "iLvl": 36,
             "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11."
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -221,8 +301,16 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -233,9 +321,25 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+4 Stamina",
+          "+4 Intellect",
+          "Requires Level 26",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -255,7 +359,7 @@
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
         "alts": [
           {
             "name": "Salve and Salvation",
@@ -266,8 +370,15 @@
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
+            "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+            "icon": "inv_misc_book_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+9 Spirit",
+              "+50 Armor",
+              "Equip: Increases healing done by up to 9"
+            ]
           },
           {
             "name": "Heart of Alterac",
@@ -279,8 +390,23 @@
             "iLvl": 39,
             "reqLevel": 34,
             "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+7 Stamina",
+              "+5 Intellect",
+              "Requires Level 34"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Intellect",
+          "+8 Spirit",
+          "Requires Level 30",
+          "Equip: Increases healing done by up to 11"
         ]
       },
       {
@@ -311,8 +437,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -323,8 +457,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -335,9 +477,23 @@
             "quality": "q3",
             "iLvl": 37,
             "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+            "icon": "inv_misc_orb_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 32",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+4 Intellect",
+          "+7 Spirit",
+          "Requires Level 35"
         ]
       },
       {
@@ -357,7 +513,7 @@
         "quality": "q3",
         "iLvl": 45,
         "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
+        "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
         "alts": [
           {
             "name": "Fermented Restoration Potion",
@@ -369,7 +525,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
+            "icon": "inv_potion_19",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Spirit",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Spirit of Aquementas",
@@ -380,9 +543,21 @@
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+            "icon": "inv_ore_arcanite_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+12 Stamina",
+          "Requires Level 40",
+          "Equip: Increases damage done by Fire spells and effects by up to 7."
         ]
       },
       {
@@ -402,7 +577,7 @@
         "quality": "q3",
         "iLvl": 50,
         "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+        "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
         "alts": [
           {
             "name": "Twisting Essence Jar",
@@ -413,8 +588,16 @@
             "quality": "q3",
             "iLvl": 50,
             "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
+            "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+            "icon": "inv_10_misc_dragonorb_color1",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+8 Spirit",
+              "Requires Level 45",
+              "Equip: Increases healing done by up to 19"
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -425,8 +608,16 @@
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+14 Stamina",
+              "+6 Intellect",
+              "Requires Level 48",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Heart of Smoldar",
@@ -437,9 +628,24 @@
             "quality": "q2",
             "iLvl": 52,
             "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
+            "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "Requires Level 47",
+              "Equip: Increases healing done by up to 16"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+8 Stamina",
+          "+8 Intellect",
+          "Requires Level 45",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 10"
         ]
       },
       {
@@ -459,7 +665,7 @@
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+        "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
         "alts": [
           {
             "name": "Insurgent's Manifesto",
@@ -470,8 +676,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -482,8 +696,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -494,8 +716,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_15",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -506,8 +737,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -518,8 +758,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_14",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -530,9 +779,26 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_13",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+10 Stamina",
+          "+10 Spirit",
+          "Requires Level 53",
+          "Equip: Increases healing done by up to 22"
         ]
       }
     ]
@@ -558,7 +824,12 @@
         "iLvl": 17,
         "reqLevel": 2,
         "stats": "Starter Off-hand",
-        "alts": []
+        "alts": [],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "Requires Level 2"
+        ]
       },
       {
         "levelBracket": "10–16",
@@ -577,7 +848,7 @@
         "quality": "q2",
         "iLvl": 17,
         "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
         "alts": [
           {
             "name": "Tear of Grief",
@@ -589,7 +860,13 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
+            "icon": "inv_potion_17",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "-3 Spirit"
+            ]
           },
           {
             "name": "Disciple's Stein",
@@ -601,8 +878,19 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_drink_03"
+            "icon": "inv_drink_03",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+1 Spirit",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 3"
         ]
       },
       {
@@ -622,7 +910,7 @@
         "quality": "q3",
         "iLvl": 22,
         "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
         "alts": [
           {
             "name": "Expended Apothecary Vial",
@@ -634,7 +922,13 @@
             "iLvl": 25,
             "reqLevel": 19,
             "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
+            "icon": "inv_potion_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Intellect",
+              "+3 Spirit"
+            ]
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -646,7 +940,13 @@
             "iLvl": 21,
             "reqLevel": 17,
             "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
+            "icon": "inv_misc_orb_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Stamina",
+              "+5 Intellect"
+            ]
           },
           {
             "name": "Defective Samophlange",
@@ -658,8 +958,23 @@
             "iLvl": 25,
             "reqLevel": 20,
             "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
+            "icon": "inv_gizmo_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "+5 Spirit",
+              "Requires Level 20"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+3 Stamina",
+          "Requires Level 17",
+          "Equip: Increases healing done by up to 10",
+          "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
         ]
       },
       {
@@ -690,8 +1005,14 @@
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases healing done by up to 12",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 21",
+              "Equip: Increases healing done by up to 12"
+            ]
           },
           {
             "name": "Orb of Mystic Insight",
@@ -702,8 +1023,15 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
+            "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_misc_orb_blue",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Intellect",
+              "Requires Level 25",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Orb of Souls",
@@ -714,9 +1042,22 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_misc_orb_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Spirit",
+              "Requires Level 25",
+              "Equip: Increases healing done by up to 13"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+5 Spirit"
         ]
       },
       {
@@ -736,7 +1077,7 @@
         "quality": "q3",
         "iLvl": 31,
         "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Arcane Infused Rod",
@@ -747,8 +1088,13 @@
             "quality": "q2",
             "iLvl": 36,
             "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11."
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -759,8 +1105,16 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -771,9 +1125,25 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+4 Stamina",
+          "+4 Intellect",
+          "Requires Level 26",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -793,7 +1163,7 @@
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
         "alts": [
           {
             "name": "Salve and Salvation",
@@ -804,8 +1174,15 @@
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
+            "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+            "icon": "inv_misc_book_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+9 Spirit",
+              "+50 Armor",
+              "Equip: Increases healing done by up to 9"
+            ]
           },
           {
             "name": "Heart of Alterac",
@@ -817,8 +1194,23 @@
             "iLvl": 39,
             "reqLevel": 34,
             "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+7 Stamina",
+              "+5 Intellect",
+              "Requires Level 34"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Intellect",
+          "+8 Spirit",
+          "Requires Level 30",
+          "Equip: Increases healing done by up to 11"
         ]
       },
       {
@@ -849,8 +1241,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -861,8 +1261,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -873,9 +1281,23 @@
             "quality": "q3",
             "iLvl": 37,
             "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+            "icon": "inv_misc_orb_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 32",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+4 Intellect",
+          "+7 Spirit",
+          "Requires Level 35"
         ]
       },
       {
@@ -895,7 +1317,7 @@
         "quality": "q3",
         "iLvl": 45,
         "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
+        "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
         "alts": [
           {
             "name": "Fermented Restoration Potion",
@@ -907,7 +1329,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
+            "icon": "inv_potion_19",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Spirit",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Spirit of Aquementas",
@@ -918,9 +1347,21 @@
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+            "icon": "inv_ore_arcanite_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+12 Stamina",
+          "Requires Level 40",
+          "Equip: Increases damage done by Fire spells and effects by up to 7."
         ]
       },
       {
@@ -940,7 +1381,7 @@
         "quality": "q3",
         "iLvl": 50,
         "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+        "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
         "alts": [
           {
             "name": "Twisting Essence Jar",
@@ -951,8 +1392,16 @@
             "quality": "q3",
             "iLvl": 50,
             "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
+            "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+            "icon": "inv_10_misc_dragonorb_color1",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+8 Spirit",
+              "Requires Level 45",
+              "Equip: Increases healing done by up to 19"
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -963,8 +1412,16 @@
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+14 Stamina",
+              "+6 Intellect",
+              "Requires Level 48",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Heart of Smoldar",
@@ -975,9 +1432,24 @@
             "quality": "q2",
             "iLvl": 52,
             "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
+            "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "Requires Level 47",
+              "Equip: Increases healing done by up to 16"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+8 Stamina",
+          "+8 Intellect",
+          "Requires Level 45",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 10"
         ]
       },
       {
@@ -997,7 +1469,7 @@
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+        "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
         "alts": [
           {
             "name": "Insurgent's Manifesto",
@@ -1008,8 +1480,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1020,8 +1500,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -1032,8 +1520,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_15",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -1044,8 +1541,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -1056,8 +1562,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_14",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -1068,8 +1583,221 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_13",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+10 Stamina",
+          "+10 Spirit",
+          "Requires Level 53",
+          "Equip: Increases healing done by up to 22"
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": "dps",
+        "name": "🔮 Off-Hands (Shadow & Damage)"
+      },
+      {
+        "id": "healer",
+        "name": "💚 Healing Off-Hands (Holy & Discipline Focus)"
+      }
+    ],
+    "healingLevels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Captain Grayson quest reward in Westfall. Early spirit stat-stick."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_drink_06",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–24",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_gem_pearl_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "Equip: Increases healing done by up to 9 and damage done by up to 4.",
+        "source": {
+          "kind": "quest",
+          "title": "The Eye of Paleth (Wetlands Quest)",
+          "detail": "Excavating the Wetlands quest chain. First off-hand with dedicated +Healing."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+6 Spirit, +13 Healing / +4 Spell Dmg - Enchanting craftable",
+            "faction": "both",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 18,
+            "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
+            "icon": "inv_misc_gem_pearl_04",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "25–34",
+        "itemId": 276898,
+        "name": "Salve and Salvation",
+        "icon": "inv_misc_book_09",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 and damage done by up to 3.",
+        "source": {
+          "kind": "quest",
+          "title": "Past Due (Scarlet Monastery Library Quest)",
+          "detail": "Turn-in inside SM Library for Alliance. Excellent spirit and healing boost."
+        },
+        "faction": "alliance",
+        "quality": "q3",
+        "iLvl": 34,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Ponderous Orb",
+            "itemId": 273052,
+            "value": "+8 Spirit, +2 Intellect, +11 Healing / +4 Spell Dmg - Shade of Archmage (Dalaran)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
+            "icon": "inv_misc_gem_pearl_04",
+            "weaponType": "Held in Off-hand"
+          },
+          {
+            "name": "Raptor's Gaze",
+            "itemId": 271788,
+            "value": "+4 Intellect, +4 Stamina, +8 Spell Dmg & Healing - Shadetooth (Excavation Site)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
+            "icon": "inv_misc_gem_pearl_02",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "35–45",
+        "itemId": 9393,
+        "name": "Beacon of Hope",
+        "icon": "inv_misc_lantern_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "Equip: Increases healing done by up to 14 and damage done by up to 8.",
+        "source": {
+          "kind": "drop",
+          "title": "Digmaster Shovelphlange / Uldaman",
+          "detail": "Rare dungeon treasure lantern. Focused healing output."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 38,
+        "reqLevel": 33,
+        "alts": []
+      },
+      {
+        "levelBracket": "46–54",
+        "itemId": 11262,
+        "name": "Orb of Lorica",
+        "icon": "inv_misc_gem_pearl_05",
+        "weaponType": "Held in Off-hand",
+        "stats": "+10 Intellect, Equip: Increases healing done by up to 12 and damage done by up to 6.",
+        "source": {
+          "kind": "drop",
+          "title": "High-level World Drop / Sunken Temple",
+          "detail": "Pure intellect and healing orb for late leveling."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 44,
+        "reqLevel": 34,
+        "alts": []
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 19312,
+        "name": "Lei of the Lifegiver",
+        "icon": "inv_jewelry_necklace_16",
+        "weaponType": "Held in Off-hand",
+        "stats": "+11 Stamina, Equip: Increases healing done by up to 25 and damage done by up to 12. Equip: Restores 5 Mana per 5 sec.",
+        "source": {
+          "kind": "pvp",
+          "title": "Alterac Valley Exalted Reputation Vendor",
+          "detail": "The premier pre-raid healing off-hand in Classic. Incredible +25 Healing and 5 MP5."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Grand Marshal's Tome of Restoration",
+            "itemId": 234590,
+            "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Officer's Lounge",
+            "faction": "alliance",
+            "quality": "q4",
+            "iLvl": 80,
+            "reqLevel": 60,
+            "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+            "icon": "inv_misc_book_09",
+            "weaponType": "Held in Off-hand"
+          },
+          {
+            "name": "High Warlord's Tome of Mending",
+            "itemId": 234564,
+            "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Champion's Hall",
+            "faction": "horde",
+            "quality": "q4",
+            "iLvl": 80,
+            "reqLevel": 60,
+            "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+            "icon": "inv_misc_book_09",
+            "weaponType": "Held in Off-hand"
           }
         ]
       }
@@ -1096,7 +1824,12 @@
         "iLvl": 17,
         "reqLevel": 2,
         "stats": "Starter Off-hand",
-        "alts": []
+        "alts": [],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "Requires Level 2"
+        ]
       },
       {
         "levelBracket": "10–16",
@@ -1115,7 +1848,7 @@
         "quality": "q2",
         "iLvl": 17,
         "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
         "alts": [
           {
             "name": "Tear of Grief",
@@ -1127,7 +1860,13 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
+            "icon": "inv_potion_17",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "-3 Spirit"
+            ]
           },
           {
             "name": "Disciple's Stein",
@@ -1139,8 +1878,19 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_drink_03"
+            "icon": "inv_drink_03",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+1 Spirit",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 3"
         ]
       },
       {
@@ -1160,7 +1910,7 @@
         "quality": "q3",
         "iLvl": 22,
         "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
         "alts": [
           {
             "name": "Expended Apothecary Vial",
@@ -1172,7 +1922,13 @@
             "iLvl": 25,
             "reqLevel": 19,
             "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
+            "icon": "inv_potion_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Intellect",
+              "+3 Spirit"
+            ]
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -1184,7 +1940,13 @@
             "iLvl": 21,
             "reqLevel": 17,
             "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
+            "icon": "inv_misc_orb_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Stamina",
+              "+5 Intellect"
+            ]
           },
           {
             "name": "Defective Samophlange",
@@ -1196,8 +1958,23 @@
             "iLvl": 25,
             "reqLevel": 20,
             "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
+            "icon": "inv_gizmo_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "+5 Spirit",
+              "Requires Level 20"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+3 Stamina",
+          "Requires Level 17",
+          "Equip: Increases healing done by up to 10",
+          "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
         ]
       },
       {
@@ -1228,8 +2005,14 @@
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases healing done by up to 12",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 21",
+              "Equip: Increases healing done by up to 12"
+            ]
           },
           {
             "name": "Orb of Mystic Insight",
@@ -1240,8 +2023,15 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
+            "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_misc_orb_blue",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Intellect",
+              "Requires Level 25",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Orb of Souls",
@@ -1252,9 +2042,22 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_misc_orb_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Spirit",
+              "Requires Level 25",
+              "Equip: Increases healing done by up to 13"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+5 Spirit"
         ]
       },
       {
@@ -1274,7 +2077,7 @@
         "quality": "q3",
         "iLvl": 31,
         "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Arcane Infused Rod",
@@ -1285,8 +2088,13 @@
             "quality": "q2",
             "iLvl": 36,
             "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11."
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -1297,8 +2105,16 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1309,9 +2125,25 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+4 Stamina",
+          "+4 Intellect",
+          "Requires Level 26",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -1331,7 +2163,7 @@
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
         "alts": [
           {
             "name": "Salve and Salvation",
@@ -1342,8 +2174,15 @@
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
+            "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+            "icon": "inv_misc_book_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+9 Spirit",
+              "+50 Armor",
+              "Equip: Increases healing done by up to 9"
+            ]
           },
           {
             "name": "Heart of Alterac",
@@ -1355,8 +2194,23 @@
             "iLvl": 39,
             "reqLevel": 34,
             "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+7 Stamina",
+              "+5 Intellect",
+              "Requires Level 34"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Intellect",
+          "+8 Spirit",
+          "Requires Level 30",
+          "Equip: Increases healing done by up to 11"
         ]
       },
       {
@@ -1387,8 +2241,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1399,8 +2261,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -1411,9 +2281,23 @@
             "quality": "q3",
             "iLvl": 37,
             "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+            "icon": "inv_misc_orb_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 32",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+4 Intellect",
+          "+7 Spirit",
+          "Requires Level 35"
         ]
       },
       {
@@ -1433,7 +2317,7 @@
         "quality": "q3",
         "iLvl": 45,
         "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
+        "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
         "alts": [
           {
             "name": "Fermented Restoration Potion",
@@ -1445,7 +2329,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
+            "icon": "inv_potion_19",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Spirit",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Spirit of Aquementas",
@@ -1456,9 +2347,21 @@
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+            "icon": "inv_ore_arcanite_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+12 Stamina",
+          "Requires Level 40",
+          "Equip: Increases damage done by Fire spells and effects by up to 7."
         ]
       },
       {
@@ -1478,7 +2381,7 @@
         "quality": "q3",
         "iLvl": 50,
         "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+        "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
         "alts": [
           {
             "name": "Twisting Essence Jar",
@@ -1489,8 +2392,16 @@
             "quality": "q3",
             "iLvl": 50,
             "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
+            "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+            "icon": "inv_10_misc_dragonorb_color1",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+8 Spirit",
+              "Requires Level 45",
+              "Equip: Increases healing done by up to 19"
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -1501,8 +2412,16 @@
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+14 Stamina",
+              "+6 Intellect",
+              "Requires Level 48",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Heart of Smoldar",
@@ -1513,9 +2432,24 @@
             "quality": "q2",
             "iLvl": 52,
             "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
+            "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "Requires Level 47",
+              "Equip: Increases healing done by up to 16"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+8 Stamina",
+          "+8 Intellect",
+          "Requires Level 45",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 10"
         ]
       },
       {
@@ -1535,7 +2469,7 @@
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+        "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
         "alts": [
           {
             "name": "Insurgent's Manifesto",
@@ -1546,8 +2480,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1558,8 +2500,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -1570,8 +2520,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_15",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -1582,8 +2541,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -1594,8 +2562,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_14",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -1606,9 +2583,26 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_13",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+10 Stamina",
+          "+10 Spirit",
+          "Requires Level 53",
+          "Equip: Increases healing done by up to 22"
         ]
       }
     ]
@@ -1634,7 +2628,12 @@
         "iLvl": 17,
         "reqLevel": 2,
         "stats": "Starter Off-hand",
-        "alts": []
+        "alts": [],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "Requires Level 2"
+        ]
       },
       {
         "levelBracket": "10–16",
@@ -1653,7 +2652,7 @@
         "quality": "q2",
         "iLvl": 17,
         "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
         "alts": [
           {
             "name": "Tear of Grief",
@@ -1665,7 +2664,13 @@
             "iLvl": 16,
             "reqLevel": 11,
             "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
+            "icon": "inv_potion_17",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "-3 Spirit"
+            ]
           },
           {
             "name": "Disciple's Stein",
@@ -1677,8 +2682,19 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "",
-            "icon": "inv_drink_03"
+            "icon": "inv_drink_03",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+1 Spirit",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 3"
         ]
       },
       {
@@ -1698,7 +2714,7 @@
         "quality": "q3",
         "iLvl": 22,
         "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
         "alts": [
           {
             "name": "Expended Apothecary Vial",
@@ -1710,7 +2726,13 @@
             "iLvl": 25,
             "reqLevel": 19,
             "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
+            "icon": "inv_potion_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Intellect",
+              "+3 Spirit"
+            ]
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -1722,7 +2744,13 @@
             "iLvl": 21,
             "reqLevel": 17,
             "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
+            "icon": "inv_misc_orb_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+3 Stamina",
+              "+5 Intellect"
+            ]
           },
           {
             "name": "Defective Samophlange",
@@ -1734,8 +2762,23 @@
             "iLvl": 25,
             "reqLevel": 20,
             "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
+            "icon": "inv_gizmo_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+5 Intellect",
+              "+5 Spirit",
+              "Requires Level 20"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+3 Stamina",
+          "Requires Level 17",
+          "Equip: Increases healing done by up to 10",
+          "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
         ]
       },
       {
@@ -1766,8 +2809,14 @@
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases healing done by up to 12",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 21",
+              "Equip: Increases healing done by up to 12"
+            ]
           },
           {
             "name": "Orb of Mystic Insight",
@@ -1778,8 +2827,15 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
+            "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_misc_orb_blue",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Intellect",
+              "Requires Level 25",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Orb of Souls",
@@ -1790,9 +2846,22 @@
             "quality": "q3",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_misc_orb_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+6 Spirit",
+              "Requires Level 25",
+              "Equip: Increases healing done by up to 13"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+5 Spirit"
         ]
       },
       {
@@ -1812,7 +2881,7 @@
         "quality": "q3",
         "iLvl": 31,
         "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Arcane Infused Rod",
@@ -1823,8 +2892,13 @@
             "quality": "q2",
             "iLvl": 36,
             "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11."
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -1835,8 +2909,16 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1847,9 +2929,25 @@
             "quality": "q3",
             "iLvl": 33,
             "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+4 Intellect",
+              "Requires Level 28",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+4 Stamina",
+          "+4 Intellect",
+          "Requires Level 26",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -1869,7 +2967,7 @@
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
         "alts": [
           {
             "name": "Salve and Salvation",
@@ -1880,8 +2978,15 @@
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
+            "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+            "icon": "inv_misc_book_01",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+9 Spirit",
+              "+50 Armor",
+              "Equip: Increases healing done by up to 9"
+            ]
           },
           {
             "name": "Heart of Alterac",
@@ -1893,8 +2998,23 @@
             "iLvl": 39,
             "reqLevel": 34,
             "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+7 Stamina",
+              "+5 Intellect",
+              "Requires Level 34"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Intellect",
+          "+8 Spirit",
+          "Requires Level 30",
+          "Equip: Increases healing done by up to 11"
         ]
       },
       {
@@ -1925,8 +3045,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1937,8 +3065,16 @@
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Intellect",
+              "Requires Level 38",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            ]
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -1949,9 +3085,23 @@
             "quality": "q3",
             "iLvl": 37,
             "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+            "icon": "inv_misc_orb_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Requires Level 32",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+2 Stamina",
+          "+4 Intellect",
+          "+7 Spirit",
+          "Requires Level 35"
         ]
       },
       {
@@ -1971,7 +3121,7 @@
         "quality": "q3",
         "iLvl": 45,
         "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
+        "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
         "alts": [
           {
             "name": "Fermented Restoration Potion",
@@ -1983,7 +3133,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
+            "icon": "inv_potion_19",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+12 Stamina",
+              "+5 Spirit",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Spirit of Aquementas",
@@ -1994,9 +3151,21 @@
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+            "icon": "inv_ore_arcanite_02",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+12 Stamina",
+          "Requires Level 40",
+          "Equip: Increases damage done by Fire spells and effects by up to 7."
         ]
       },
       {
@@ -2016,7 +3185,7 @@
         "quality": "q3",
         "iLvl": 50,
         "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+        "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
         "alts": [
           {
             "name": "Twisting Essence Jar",
@@ -2027,8 +3196,16 @@
             "quality": "q3",
             "iLvl": 50,
             "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
+            "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+            "icon": "inv_10_misc_dragonorb_color1",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "+8 Spirit",
+              "Requires Level 45",
+              "Equip: Increases healing done by up to 19"
+            ]
           },
           {
             "name": "Insurgent's Manifesto",
@@ -2039,8 +3216,16 @@
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+14 Stamina",
+              "+6 Intellect",
+              "Requires Level 48",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Heart of Smoldar",
@@ -2051,9 +3236,24 @@
             "quality": "q2",
             "iLvl": 52,
             "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
+            "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+            "icon": "inv_misc_orb_05",
+            "lines": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+8 Stamina",
+              "Requires Level 47",
+              "Equip: Increases healing done by up to 16"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+8 Stamina",
+          "+8 Intellect",
+          "Requires Level 45",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 10"
         ]
       },
       {
@@ -2073,7 +3273,7 @@
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+        "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
         "alts": [
           {
             "name": "Insurgent's Manifesto",
@@ -2084,8 +3284,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -2096,8 +3304,16 @@
             "quality": "q3",
             "iLvl": 63,
             "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_misc_book_06",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+17 Stamina",
+              "+7 Intellect",
+              "Requires Level 58",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -2108,8 +3324,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_15",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -2120,8 +3345,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
+            "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_12",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+24 Stamina",
+              "+13 Intellect",
+              "Requires Level 60",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -2132,8 +3366,17 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_14",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -2144,1085 +3387,1826 @@
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+            "icon": "inv_misc_book_13",
+            "lines": [
+              "Binds when picked up",
+              "Held In Off-hand",
+              "+23 Stamina",
+              "+14 Intellect",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 44",
+              "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Held In Off-hand",
+          "+10 Stamina",
+          "+10 Spirit",
+          "Requires Level 53",
+          "Equip: Increases healing done by up to 22"
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": "dps",
+        "name": "🔮 Off-Hands & Idols (Feral & Balance)"
+      },
+      {
+        "id": "healer",
+        "name": "💚 Healing Off-Hands (Restoration Focus)"
+      }
+    ],
+    "healingLevels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Captain Grayson quest reward in Westfall. Early spirit stat-stick."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_drink_06",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–24",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_gem_pearl_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "Equip: Increases healing done by up to 9 and damage done by up to 4.",
+        "source": {
+          "kind": "quest",
+          "title": "The Eye of Paleth (Wetlands Quest)",
+          "detail": "Excavating the Wetlands quest chain. First off-hand with dedicated +Healing."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+6 Spirit, +13 Healing / +4 Spell Dmg - Enchanting craftable",
+            "faction": "both",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 18,
+            "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
+            "icon": "inv_misc_gem_pearl_04",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "25–34",
+        "itemId": 276898,
+        "name": "Salve and Salvation",
+        "icon": "inv_misc_book_09",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 and damage done by up to 3.",
+        "source": {
+          "kind": "quest",
+          "title": "Past Due (Scarlet Monastery Library Quest)",
+          "detail": "Turn-in inside SM Library for Alliance. Excellent spirit and healing boost."
+        },
+        "faction": "alliance",
+        "quality": "q3",
+        "iLvl": 34,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Ponderous Orb",
+            "itemId": 273052,
+            "value": "+8 Spirit, +2 Intellect, +11 Healing / +4 Spell Dmg - Shade of Archmage (Dalaran)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
+            "icon": "inv_misc_gem_pearl_04",
+            "weaponType": "Held in Off-hand"
+          },
+          {
+            "name": "Raptor's Gaze",
+            "itemId": 271788,
+            "value": "+4 Intellect, +4 Stamina, +8 Spell Dmg & Healing - Shadetooth (Excavation Site)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
+            "icon": "inv_misc_gem_pearl_02",
+            "weaponType": "Held in Off-hand"
+          }
+        ]
+      },
+      {
+        "levelBracket": "35–45",
+        "itemId": 9393,
+        "name": "Beacon of Hope",
+        "icon": "inv_misc_lantern_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "Equip: Increases healing done by up to 14 and damage done by up to 8.",
+        "source": {
+          "kind": "drop",
+          "title": "Digmaster Shovelphlange / Uldaman",
+          "detail": "Rare dungeon treasure lantern. Focused healing output."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 38,
+        "reqLevel": 33,
+        "alts": []
+      },
+      {
+        "levelBracket": "46–54",
+        "itemId": 11262,
+        "name": "Orb of Lorica",
+        "icon": "inv_misc_gem_pearl_05",
+        "weaponType": "Held in Off-hand",
+        "stats": "+10 Intellect, Equip: Increases healing done by up to 12 and damage done by up to 6.",
+        "source": {
+          "kind": "drop",
+          "title": "High-level World Drop / Sunken Temple",
+          "detail": "Pure intellect and healing orb for late leveling."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 44,
+        "reqLevel": 34,
+        "alts": []
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 19312,
+        "name": "Lei of the Lifegiver",
+        "icon": "inv_jewelry_necklace_16",
+        "weaponType": "Held in Off-hand",
+        "stats": "+11 Stamina, Equip: Increases healing done by up to 25 and damage done by up to 12. Equip: Restores 5 Mana per 5 sec.",
+        "source": {
+          "kind": "pvp",
+          "title": "Alterac Valley Exalted Reputation Vendor",
+          "detail": "The premier pre-raid healing off-hand in Classic. Incredible +25 Healing and 5 MP5."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Grand Marshal's Tome of Restoration",
+            "itemId": 234590,
+            "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Officer's Lounge",
+            "faction": "alliance",
+            "quality": "q4",
+            "iLvl": 80,
+            "reqLevel": 60,
+            "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+            "icon": "inv_misc_book_09",
+            "weaponType": "Held in Off-hand"
+          },
+          {
+            "name": "High Warlord's Tome of Mending",
+            "itemId": 234564,
+            "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Champion's Hall",
+            "faction": "horde",
+            "quality": "q4",
+            "iLvl": 80,
+            "reqLevel": 60,
+            "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+            "icon": "inv_misc_book_09",
+            "weaponType": "Held in Off-hand"
           }
         ]
       }
     ]
   },
   "shaman": {
-    "role": "Caster",
+    "classId": "shaman",
+    "tracks": [
+      {
+        "id": "dps",
+        "name": "🛡️ Shields (Elemental & Tanking)"
+      },
+      {
+        "id": "healer",
+        "name": "💚 Healing Shields (Restoration & +Healing)"
+      }
+    ],
     "levels": [
       {
-        "levelBracket": "1–9",
-        "itemId": 287090,
-        "name": "Letter Opener",
-        "icon": "inv_weapon_shortblade_20",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "1–10",
+        "itemId": 1166,
+        "name": "Dented Buckler",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "55 Armor, Block 2",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Basic starter off-hand item for early stat-stick pairing."
+          "kind": "vendor",
+          "title": "Starting Armor Vendor",
+          "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
         },
         "faction": "both",
         "quality": "q1",
-        "iLvl": 17,
-        "reqLevel": 2,
-        "stats": "Starter Off-hand",
-        "alts": []
-      },
-      {
-        "levelBracket": "10–16",
-        "itemId": 279898,
-        "name": "Dwarven Tome",
-        "icon": "inv_misc_book_07",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Important Heirlooms quest reward in Loch Modan (Alliance). First true caster spell power off-hand."
-        },
-        "faction": "alliance",
-        "quality": "q2",
-        "iLvl": 17,
-        "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "iLvl": 5,
+        "reqLevel": 1,
         "alts": [
           {
-            "name": "Tear of Grief",
-            "itemId": 5611,
-            "value": "+3 Stamina, +2 Intellect - Horde Quest",
-            "faction": "horde",
-            "weaponType": "Weapon",
-            "quality": "q2",
-            "iLvl": 16,
-            "reqLevel": 11,
-            "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
-          },
-          {
-            "name": "Disciple's Stein",
-            "itemId": 15932,
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "name": "Redbeard Crest",
+            "itemId": 263431,
+            "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
             "faction": "both",
-            "weaponType": "Weapon",
             "quality": "q2",
-            "iLvl": 12,
-            "reqLevel": 7,
-            "stats": "",
-            "icon": "inv_drink_03"
+            "iLvl": 10,
+            "reqLevel": 5,
+            "stats": "+2 Stamina",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "177 Armor",
+              "+1 Strength"
+            ]
           }
+        ],
+        "lines": [
+          "Off Hand",
+          "55 Armor"
         ]
       },
       {
-        "levelBracket": "17–20",
-        "itemId": 273137,
-        "name": "Skum's Bucket",
-        "icon": "inv_misc_1h_bucket_c_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "11–18",
+        "itemId": 13245,
+        "name": "Kresh's Back",
+        "icon": "inv_shield_08",
+        "weaponType": "Shield",
+        "stats": "528 Armor, Equip: Increased Defense +5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool booster for low-level dungeons."
+          "title": "Kresh (Wailing Caverns)",
+          "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 22,
-        "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "iLvl": 23,
+        "reqLevel": 18,
         "alts": [
           {
-            "name": "Expended Apothecary Vial",
-            "itemId": 281294,
-            "value": "+4 Intellect, +3 Stamina - Valuable Vantages quest",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q2",
-            "iLvl": 25,
-            "reqLevel": 19,
-            "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
-          },
-          {
-            "name": "Mathystra Channeling Orb",
-            "itemId": 281291,
-            "value": "+4 Intellect, +3 Spirit - Baron Marinous",
-            "faction": "alliance",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 21,
-            "reqLevel": 17,
-            "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
-          },
-          {
-            "name": "Defective Samophlange",
-            "itemId": 274743,
-            "value": "+4 Stamina, +3 Intellect - Winklespark in Barrens",
+            "name": "Commander's Crest",
+            "itemId": 6320,
+            "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 25,
-            "reqLevel": 20,
-            "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
-          }
-        ]
-      },
-      {
-        "levelBracket": "21–25",
-        "itemId": 281306,
-        "name": "Flamescarred Spellbook",
-        "icon": "inv_misc_book_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Old Habits quest reward (Alliance). Excellent balanced mana recovery off-hand."
-        },
-        "faction": "alliance",
-        "quality": "q2",
-        "iLvl": 31,
-        "reqLevel": 23,
-        "stats": "+5 Intellect, +5 Spirit",
-        "alts": [
-          {
-            "name": "Alliance Outrunner Healing Rod",
-            "itemId": 285348,
-            "value": "+6 Healing, +3 Stamina - Hannah Bladeleaf",
-            "faction": "alliance",
-            "weaponType": "Weapon",
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "+6 Stamina, +3 Strength",
+            "icon": "inv_shield_05",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "585 Armor",
+              "+5 Strength",
+              "+3 Stamina",
+              "Requires Level 21"
+            ]
           },
           {
-            "name": "Orb of Mystic Insight",
-            "itemId": 249394,
-            "value": "+7 Intellect, +5 Spirit - Crafted / Enchanting",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 30,
-            "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
-          },
-          {
-            "name": "Orb of Souls",
-            "itemId": 249395,
-            "value": "+8 Shadow Spell Power, +6 Stamina - Crafted / Enchanting",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 30,
-            "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "name": "Repurposed Rack",
+            "itemId": 271240,
+            "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
+            "faction": "alliance",
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 18,
+            "stats": "+6 Strength",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "528 Armor",
+          "Requires Level 18",
+          "Equip: Increased Defense +5."
         ]
       },
       {
-        "levelBracket": "26–29",
-        "itemId": 273027,
-        "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "19–27",
+        "itemId": 6320,
+        "name": "Commander's Crest",
+        "icon": "inv_shield_05",
+        "weaponType": "Shield",
+        "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Shadetooth in Excavation Site: Wetlands. Invaluable dungeon spell power off-hand."
+          "title": "Commander Springvale (Shadowfang Keep)",
+          "detail": "Iconic blue tower shield with hefty strength and stamina."
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 31,
-        "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "iLvl": 26,
+        "reqLevel": 21,
         "alts": [
           {
-            "name": "Arcane Infused Rod",
-            "itemId": 279838,
-            "value": "+6 Intellect, +5 Stamina - Starving Arcane quest",
-            "faction": "alliance",
-            "weaponType": "Weapon",
-            "quality": "q2",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
-          },
-          {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271935,
-            "value": "+8 Stamina, +4 Intellect, +8 Spell Power",
+            "name": "Electromagnetic Hyper-Shield",
+            "itemId": 9461,
+            "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Finger",
+              "+5 Arcane Resistance",
+              "+5 Nature Resistance",
+              "Requires Level 31"
+            ]
           },
           {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272090,
-            "value": "+8 Stamina, +4 Intellect, +8 Spell Power - Creeg Bothunk",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
+            "name": "Mirror of Rath'mael",
+            "itemId": 271213,
+            "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+            "faction": "both",
             "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "iLvl": 24,
+            "reqLevel": 19,
+            "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "547 Armor",
+              "+5 Strength",
+              "Requires Level 19",
+              "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "585 Armor",
+          "+5 Strength",
+          "+3 Stamina",
+          "Requires Level 21"
+        ]
+      },
+      {
+        "levelBracket": "28–34",
+        "itemId": 273055,
+        "name": "Bonepile Gaze",
+        "icon": "inv_shield_11",
+        "weaponType": "Shield",
+        "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+        "source": {
+          "kind": "drop",
+          "title": "Lyn the Ignored (City of Dalaran)",
+          "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 33,
+        "reqLevel": 28,
+        "alts": [
+          {
+            "name": "Heart of Agamaggan",
+            "itemId": 6694,
+            "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "757 Armor",
+              "+7 Stamina",
+              "Requires Level 30",
+              "Equip: Increases healing done by up to 15"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "718 Armor",
+          "+5 Strength",
+          "+5 Stamina",
+          "Requires Level 28"
+        ]
+      },
+      {
+        "levelBracket": "35–44",
+        "itemId": 7726,
+        "name": "Aegis of the Scarlet Commander",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+        "source": {
+          "kind": "drop",
+          "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+          "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 44,
+        "reqLevel": 39,
+        "alts": [
+          {
+            "name": "Battered Viking Shield",
+            "itemId": 9403,
+            "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 37,
+            "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "1287 Armor",
+              "+10 Spirit",
+              "Requires Level 37",
+              "Equip: Increases healing done by up to 13"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1548 Armor",
+          "+7 Strength",
+          "+8 Stamina",
+          "Requires Level 39",
+          "Equip: Deals 13 to 15 Holy damage every time you block."
+        ]
+      },
+      {
+        "levelBracket": "45–54",
+        "itemId": 11631,
+        "name": "Stoneshell Guard",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+        "source": {
+          "kind": "drop",
+          "title": "Stonevault mobs / Maraudon",
+          "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 52,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Aegis of Stormwind",
+            "itemId": 1203,
+            "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+10 Stamina",
+            "icon": "inv_shield_06",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when equipped",
+              "Off Hand",
+              "1867 Armor",
+              "+6 Strength",
+              "+15 Stamina",
+              "Requires Level 49"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1803 Armor",
+          "+7 Strength",
+          "+9 Stamina",
+          "+100 Armor",
+          "Requires Level 47"
+        ]
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 12602,
+        "name": "Draconian Deflector",
+        "icon": "inv_shield_13",
+        "weaponType": "Shield",
+        "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+        "source": {
+          "kind": "drop",
+          "title": "General Drakkisath (Upper Blackrock Spire)",
+          "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 63,
+        "reqLevel": 58,
+        "alts": [
+          {
+            "name": "The Immovable Object",
+            "itemId": 19321,
+            "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+            "faction": "both",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 60,
+            "stats": "+14 Stamina, Equip: Increases block value by 15.",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2291 Armor",
+              "+14 Stamina",
+              "Requires Level 60"
+            ]
+          },
+          {
+            "name": "Grand Marshal's Aegis",
+            "itemId": 18825,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "alliance",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          },
+          {
+            "name": "High Warlord's Shield Wall",
+            "itemId": 18826,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "horde",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "2153 Armor",
+          "+7 Stamina",
+          "+8 Fire Resistance",
+          "Requires Level 58",
+          "Equip: Increased Defense +10."
+        ]
+      }
+    ],
+    "healingLevels": [
+      {
+        "levelBracket": "1–15",
+        "itemId": 263431,
+        "name": "Redbeard Crest",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "177 Armor, Block 5, +2 Stamina",
+        "source": {
+          "kind": "vendor",
+          "title": "Early Quest / Vendor Shield",
+          "detail": "Early defensive shield to protect while casting heals."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 10,
+        "reqLevel": 5,
+        "alts": []
+      },
+      {
+        "levelBracket": "16–23",
+        "itemId": 271213,
+        "name": "Mirror of Rath'mael",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "460 Armor, Block 12, +5 Stamina, +3 Intellect",
+        "source": {
+          "kind": "drop",
+          "title": "Rath'mael (Ruins of Lordaeron)",
+          "detail": "WoW Forever custom dungeon boss drop. Ideal Holy Paladin and Shaman caster shield."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 24,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Seedcloud Buckler",
+            "itemId": 6630,
+            "value": "547 Armor, Block 14, +5 Intellect, +5 Spells - Verdan the Everliving (WC)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 18,
+            "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
         ]
       },
       {
-        "levelBracket": "30–34",
-        "itemId": 273052,
-        "name": "Ponderous Orb",
-        "icon": "inv_misc_orb_04",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "24–32",
+        "itemId": 6694,
+        "name": "Heart of Agamaggan",
+        "icon": "inv_shield_07",
+        "weaponType": "Shield",
+        "stats": "757 Armor, Block 22, +7 Stamina, Equip: Increases healing done by up to 15 and damage by up to 5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Shade of the Archmage in City of Dalaran. Premier caster off-hand throughout the 30s."
+          "title": "Charlga Razorflank (Razorfen Kraul)",
+          "detail": "Iconic RFK finale shield with dedicated +15 Healing."
         },
         "faction": "both",
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
         "alts": [
           {
-            "name": "Salve and Salvation",
-            "itemId": 276898,
-            "value": "+9 Spirit, +50 Armor - Past Due quest",
-            "faction": "alliance",
-            "weaponType": "Held in Off-hand",
+            "name": "Forcestone Buckler",
+            "itemId": 17508,
+            "value": "1078 Armor, Block 25, +4 Sta, +18 Healing / +6 Spell Dmg - Compendium quest",
+            "faction": "horde",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
+          },
+          {
+            "name": "Energized Stone Circle",
+            "itemId": 9522,
+            "value": "711 Armor, Block 21, +4 Sta, +40 Bonus Armor, +7 Healing / +3 Spell Dmg - Power Stones",
+            "faction": "both",
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
-          },
-          {
-            "name": "Heart of Alterac",
-            "itemId": 283254,
-            "value": "+7 Stamina, +5 Intellect - Stone Fury in Alterac",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q2",
-            "iLvl": 39,
-            "reqLevel": 34,
-            "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
         ]
       },
       {
-        "levelBracket": "35–39",
-        "itemId": 271805,
-        "name": "Thrice-Damned Effigy",
-        "icon": "inv_misc_orb_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "33–44",
+        "itemId": 9403,
+        "name": "Battered Viking Shield",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1287 Armor, Block 27, +10 Spirit, Equip: Increases healing done by up to 8 and damage by up to 5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Khan Jehn in Maraudon (Horde). Elite caster off-hand for mid-level leveling."
+          "title": "Eric The Swift (Uldaman)",
+          "detail": "Rare dungeon drop in Uldaman with +10 Spirit and healing power."
         },
-        "faction": "horde",
+        "faction": "both",
         "quality": "q3",
         "iLvl": 42,
-        "reqLevel": 35,
-        "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
+        "reqLevel": 37,
         "alts": [
           {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271934,
-            "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+            "name": "Aegis of the Scarlet Commander",
+            "itemId": 7726,
+            "value": "1548 Armor, Block 29, +8 Str, +7 Sta - SM Cathedral",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q3",
-            "iLvl": 43,
-            "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
-            "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 43,
-            "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "Orb of the Forgotten Seer",
-            "itemId": 7685,
-            "value": "+12 Intellect, +5 Spirit - Scarlet Monastery Library",
-            "faction": "both",
-            "weaponType": "Weapon",
-            "quality": "q3",
-            "iLvl": 37,
-            "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "iLvl": 44,
+            "reqLevel": 39,
+            "stats": "+8 Strength, +7 Stamina",
+            "icon": "inv_shield_06",
+            "weaponType": "Shield"
           }
         ]
       },
       {
-        "levelBracket": "40–44",
-        "itemId": 277260,
-        "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "45–54",
+        "itemId": 14852,
+        "name": "Sunscale Shield",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1663 Armor, Block 34, +8 Intellect, +8 Spirit",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Greater Friend of the Library quest reward. Heavy durability and spell power boost."
+          "title": "High-level World Drop / Dungeon Drop",
+          "detail": "Solid high-intellect and spirit healer shield before endgame."
         },
         "faction": "both",
-        "quality": "q3",
-        "iLvl": 45,
-        "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
-        "alts": [
-          {
-            "name": "Fermented Restoration Potion",
-            "itemId": 277259,
-            "value": "+12 Stamina, +5 Spirit, +16 Healing",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 45,
-            "reqLevel": 40,
-            "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
-          },
-          {
-            "name": "Spirit of Aquementas",
-            "itemId": 11904,
-            "value": "+20 Spell Power - Un'Goro Crater quest chain",
-            "faction": "both",
-            "weaponType": "Weapon",
-            "quality": "q3",
-            "iLvl": 56,
-            "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
-          }
-        ]
+        "quality": "q2",
+        "iLvl": 54,
+        "reqLevel": 49,
+        "alts": []
       },
       {
-        "levelBracket": "45–52",
-        "itemId": 249455,
-        "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "55–60",
+        "itemId": 235473,
+        "name": "Grand Marshal's Barricade",
+        "icon": "inv_shield_08",
+        "weaponType": "Shield",
+        "stats": "3000 Armor, Block 55, +15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage done by up to 24.",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Crafted by Enchanters / Tradeskills. Reliable high spell power off-hand leading into late game."
+          "kind": "pvp",
+          "title": "PvP Rank 14 Officer's Lounge (Alliance)",
+          "detail": "Highest armor caster/healer shield in the game."
         },
-        "faction": "both",
-        "quality": "q3",
-        "iLvl": 50,
-        "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+        "faction": "alliance",
+        "quality": "q4",
+        "iLvl": 80,
+        "reqLevel": 60,
         "alts": [
           {
-            "name": "Twisting Essence Jar",
-            "itemId": 249456,
-            "value": "+8 Stamina, +8 Spirit, +18 Healing",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 50,
-            "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
-          },
-          {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271933,
-            "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 53,
-            "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "Heart of Smoldar",
-            "itemId": 282088,
-            "value": "+8 Stamina, +14 Fire Spell Power",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q2",
-            "iLvl": 52,
-            "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
-          }
-        ]
-      },
-      {
-        "levelBracket": "53–60",
-        "itemId": 274417,
-        "name": "Barkskin Baubles",
-        "icon": "inv_misc_bag_10_black",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Dala Fairmaw. Outstanding survivability and caster throughput for level 53-60."
-        },
-        "faction": "both",
-        "quality": "q3",
-        "iLvl": 58,
-        "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
-        "alts": [
-          {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271932,
-            "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 63,
-            "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
-            "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
+            "name": "High Warlord's Barricade",
+            "itemId": 235474,
+            "value": "3000 Armor, Block 55, +15 Sta, +15 Int, +20 Healing / +24 Spell Dmg - PvP Rank 14",
             "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 63,
-            "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "High Warlord's Tome of Destruction",
-            "itemId": 234563,
-            "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
             "quality": "q4",
             "iLvl": 80,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
+            "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield"
           },
           {
-            "name": "Grand Marshal's Tome of Power",
-            "itemId": 234589,
-            "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-            "faction": "alliance",
-            "weaponType": "Held in Off-hand",
+            "name": "Wormscale Blocker",
+            "itemId": 21610,
+            "value": "3035 Armor, Block 56, +14 Sta, +14 Int, +23 Healing / +12 Spell Dmg - AQ40 Ouro",
+            "faction": "both",
             "quality": "q4",
-            "iLvl": 80,
+            "iLvl": 81,
             "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
-          },
-          {
-            "name": "High Warlord's Tome of Mending",
-            "itemId": 234564,
-            "value": "+23 Stamina, +14 Intellect, +35 Healing",
-            "faction": "horde",
-            "weaponType": "Weapon",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
-          },
-          {
-            "name": "Grand Marshal's Tome of Restoration",
-            "itemId": 234590,
-            "value": "+23 Stamina, +14 Intellect, +35 Healing",
-            "faction": "alliance",
-            "weaponType": "Weapon",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
+            "icon": "inv_shield_11",
+            "weaponType": "Shield"
           }
         ]
       }
     ]
   },
   "paladin": {
-    "role": "Caster",
+    "classId": "paladin",
+    "tracks": [
+      {
+        "id": "dps",
+        "name": "🛡️ Tanking Shields (Protection & Leveling)"
+      },
+      {
+        "id": "healer",
+        "name": "💚 Healing Shields (Holy & +Healing Focus)"
+      }
+    ],
     "levels": [
       {
-        "levelBracket": "1–9",
-        "itemId": 287090,
-        "name": "Letter Opener",
-        "icon": "inv_weapon_shortblade_20",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "1–10",
+        "itemId": 1166,
+        "name": "Dented Buckler",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "55 Armor, Block 2",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Basic starter off-hand item for early stat-stick pairing."
+          "kind": "vendor",
+          "title": "Starting Armor Vendor",
+          "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
         },
         "faction": "both",
         "quality": "q1",
-        "iLvl": 17,
-        "reqLevel": 2,
-        "stats": "Starter Off-hand",
-        "alts": []
-      },
-      {
-        "levelBracket": "10–16",
-        "itemId": 279898,
-        "name": "Dwarven Tome",
-        "icon": "inv_misc_book_07",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Important Heirlooms quest reward in Loch Modan (Alliance). First true caster spell power off-hand."
-        },
-        "faction": "alliance",
-        "quality": "q2",
-        "iLvl": 17,
-        "reqLevel": 10,
-        "stats": "+1 Spirit, +3 Spell Power & Healing",
+        "iLvl": 5,
+        "reqLevel": 1,
         "alts": [
           {
-            "name": "Tear of Grief",
-            "itemId": 5611,
-            "value": "+3 Stamina, +2 Intellect - Horde Quest",
-            "faction": "horde",
-            "weaponType": "Weapon",
-            "quality": "q2",
-            "iLvl": 16,
-            "reqLevel": 11,
-            "stats": "+5 Intellect",
-            "icon": "inv_potion_17"
-          },
-          {
-            "name": "Disciple's Stein",
-            "itemId": 15932,
-            "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+            "name": "Redbeard Crest",
+            "itemId": 263431,
+            "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
             "faction": "both",
-            "weaponType": "Weapon",
             "quality": "q2",
-            "iLvl": 12,
-            "reqLevel": 7,
-            "stats": "",
-            "icon": "inv_drink_03"
+            "iLvl": 10,
+            "reqLevel": 5,
+            "stats": "+2 Stamina",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "177 Armor",
+              "+1 Strength"
+            ]
           }
+        ],
+        "lines": [
+          "Off Hand",
+          "55 Armor"
         ]
       },
       {
-        "levelBracket": "17–20",
-        "itemId": 273137,
-        "name": "Skum's Bucket",
-        "icon": "inv_misc_1h_bucket_c_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "11–18",
+        "itemId": 13245,
+        "name": "Kresh's Back",
+        "icon": "inv_shield_08",
+        "weaponType": "Shield",
+        "stats": "528 Armor, Equip: Increased Defense +5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool booster for low-level dungeons."
+          "title": "Kresh (Wailing Caverns)",
+          "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 22,
-        "reqLevel": 17,
-        "stats": "+5 Intellect, +3 Stamina",
+        "iLvl": 23,
+        "reqLevel": 18,
         "alts": [
           {
-            "name": "Expended Apothecary Vial",
-            "itemId": 281294,
-            "value": "+4 Intellect, +3 Stamina - Valuable Vantages quest",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q2",
-            "iLvl": 25,
-            "reqLevel": 19,
-            "stats": "+3 Intellect, +3 Spirit",
-            "icon": "inv_potion_12"
-          },
-          {
-            "name": "Mathystra Channeling Orb",
-            "itemId": 281291,
-            "value": "+4 Intellect, +3 Spirit - Baron Marinous",
-            "faction": "alliance",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 21,
-            "reqLevel": 17,
-            "stats": "+3 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_01"
-          },
-          {
-            "name": "Defective Samophlange",
-            "itemId": 274743,
-            "value": "+4 Stamina, +3 Intellect - Winklespark in Barrens",
+            "name": "Commander's Crest",
+            "itemId": 6320,
+            "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 25,
-            "reqLevel": 20,
-            "stats": "+5 Intellect, +5 Spirit",
-            "icon": "inv_gizmo_06"
-          }
-        ]
-      },
-      {
-        "levelBracket": "21–25",
-        "itemId": 281306,
-        "name": "Flamescarred Spellbook",
-        "icon": "inv_misc_book_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Old Habits quest reward (Alliance). Excellent balanced mana recovery off-hand."
-        },
-        "faction": "alliance",
-        "quality": "q2",
-        "iLvl": 31,
-        "reqLevel": 23,
-        "stats": "+5 Intellect, +5 Spirit",
-        "alts": [
-          {
-            "name": "Alliance Outrunner Healing Rod",
-            "itemId": 285348,
-            "value": "+6 Healing, +3 Stamina - Hannah Bladeleaf",
-            "faction": "alliance",
-            "weaponType": "Weapon",
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "+8 Healing, +4 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "+6 Stamina, +3 Strength",
+            "icon": "inv_shield_05",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "585 Armor",
+              "+5 Strength",
+              "+3 Stamina",
+              "Requires Level 21"
+            ]
           },
           {
-            "name": "Orb of Mystic Insight",
-            "itemId": 249394,
-            "value": "+7 Intellect, +5 Spirit - Crafted / Enchanting",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 30,
-            "reqLevel": 25,
-            "stats": "+6 Intellect",
-            "icon": "inv_misc_orb_blue"
-          },
-          {
-            "name": "Orb of Souls",
-            "itemId": 249395,
-            "value": "+8 Shadow Spell Power, +6 Stamina - Crafted / Enchanting",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 30,
-            "reqLevel": 25,
-            "stats": "+6 Spirit",
-            "icon": "inv_misc_orb_04"
+            "name": "Repurposed Rack",
+            "itemId": 271240,
+            "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
+            "faction": "alliance",
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 18,
+            "stats": "+6 Strength",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "528 Armor",
+          "Requires Level 18",
+          "Equip: Increased Defense +5."
         ]
       },
       {
-        "levelBracket": "26–29",
-        "itemId": 273027,
-        "name": "Raptor's Gaze",
-        "icon": "spell_nature_crystalball",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "19–27",
+        "itemId": 6320,
+        "name": "Commander's Crest",
+        "icon": "inv_shield_05",
+        "weaponType": "Shield",
+        "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Shadetooth in Excavation Site: Wetlands. Invaluable dungeon spell power off-hand."
+          "title": "Commander Springvale (Shadowfang Keep)",
+          "detail": "Iconic blue tower shield with hefty strength and stamina."
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 31,
-        "reqLevel": 26,
-        "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+        "iLvl": 26,
+        "reqLevel": 21,
         "alts": [
           {
-            "name": "Arcane Infused Rod",
-            "itemId": 279838,
-            "value": "+6 Intellect, +5 Stamina - Starving Arcane quest",
-            "faction": "alliance",
-            "weaponType": "Weapon",
-            "quality": "q2",
-            "iLvl": 36,
-            "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_wand_04"
-          },
-          {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271935,
-            "value": "+8 Stamina, +4 Intellect, +8 Spell Power",
+            "name": "Electromagnetic Hyper-Shield",
+            "itemId": 9461,
+            "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Finger",
+              "+5 Arcane Resistance",
+              "+5 Nature Resistance",
+              "Requires Level 31"
+            ]
           },
           {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272090,
-            "value": "+8 Stamina, +4 Intellect, +8 Spell Power - Creeg Bothunk",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
+            "name": "Mirror of Rath'mael",
+            "itemId": 271213,
+            "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+            "faction": "both",
             "quality": "q3",
-            "iLvl": 33,
-            "reqLevel": 28,
-            "stats": "+8 Stamina, +4 Intellect",
-            "icon": "inv_misc_book_06"
+            "iLvl": 24,
+            "reqLevel": 19,
+            "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "547 Armor",
+              "+5 Strength",
+              "Requires Level 19",
+              "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "585 Armor",
+          "+5 Strength",
+          "+3 Stamina",
+          "Requires Level 21"
+        ]
+      },
+      {
+        "levelBracket": "28–34",
+        "itemId": 273055,
+        "name": "Bonepile Gaze",
+        "icon": "inv_shield_11",
+        "weaponType": "Shield",
+        "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+        "source": {
+          "kind": "drop",
+          "title": "Lyn the Ignored (City of Dalaran)",
+          "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 33,
+        "reqLevel": 28,
+        "alts": [
+          {
+            "name": "Heart of Agamaggan",
+            "itemId": 6694,
+            "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "757 Armor",
+              "+7 Stamina",
+              "Requires Level 30",
+              "Equip: Increases healing done by up to 15"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "718 Armor",
+          "+5 Strength",
+          "+5 Stamina",
+          "Requires Level 28"
+        ]
+      },
+      {
+        "levelBracket": "35–44",
+        "itemId": 7726,
+        "name": "Aegis of the Scarlet Commander",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+        "source": {
+          "kind": "drop",
+          "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+          "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 44,
+        "reqLevel": 39,
+        "alts": [
+          {
+            "name": "Battered Viking Shield",
+            "itemId": 9403,
+            "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 37,
+            "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "1287 Armor",
+              "+10 Spirit",
+              "Requires Level 37",
+              "Equip: Increases healing done by up to 13"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1548 Armor",
+          "+7 Strength",
+          "+8 Stamina",
+          "Requires Level 39",
+          "Equip: Deals 13 to 15 Holy damage every time you block."
+        ]
+      },
+      {
+        "levelBracket": "45–54",
+        "itemId": 11631,
+        "name": "Stoneshell Guard",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+        "source": {
+          "kind": "drop",
+          "title": "Stonevault mobs / Maraudon",
+          "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 52,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Aegis of Stormwind",
+            "itemId": 1203,
+            "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+10 Stamina",
+            "icon": "inv_shield_06",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when equipped",
+              "Off Hand",
+              "1867 Armor",
+              "+6 Strength",
+              "+15 Stamina",
+              "Requires Level 49"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1803 Armor",
+          "+7 Strength",
+          "+9 Stamina",
+          "+100 Armor",
+          "Requires Level 47"
+        ]
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 12602,
+        "name": "Draconian Deflector",
+        "icon": "inv_shield_13",
+        "weaponType": "Shield",
+        "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+        "source": {
+          "kind": "drop",
+          "title": "General Drakkisath (Upper Blackrock Spire)",
+          "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 63,
+        "reqLevel": 58,
+        "alts": [
+          {
+            "name": "The Immovable Object",
+            "itemId": 19321,
+            "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+            "faction": "both",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 60,
+            "stats": "+14 Stamina, Equip: Increases block value by 15.",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2291 Armor",
+              "+14 Stamina",
+              "Requires Level 60"
+            ]
+          },
+          {
+            "name": "Grand Marshal's Aegis",
+            "itemId": 18825,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "alliance",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          },
+          {
+            "name": "High Warlord's Shield Wall",
+            "itemId": 18826,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "horde",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "2153 Armor",
+          "+7 Stamina",
+          "+8 Fire Resistance",
+          "Requires Level 58",
+          "Equip: Increased Defense +10."
+        ]
+      }
+    ],
+    "healingLevels": [
+      {
+        "levelBracket": "1–15",
+        "itemId": 263431,
+        "name": "Redbeard Crest",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "177 Armor, Block 5, +2 Stamina",
+        "source": {
+          "kind": "vendor",
+          "title": "Early Quest / Vendor Shield",
+          "detail": "Early defensive shield to protect while casting heals."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 10,
+        "reqLevel": 5,
+        "alts": []
+      },
+      {
+        "levelBracket": "16–23",
+        "itemId": 271213,
+        "name": "Mirror of Rath'mael",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "460 Armor, Block 12, +5 Stamina, +3 Intellect",
+        "source": {
+          "kind": "drop",
+          "title": "Rath'mael (Ruins of Lordaeron)",
+          "detail": "WoW Forever custom dungeon boss drop. Ideal Holy Paladin and Shaman caster shield."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 24,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Seedcloud Buckler",
+            "itemId": 6630,
+            "value": "547 Armor, Block 14, +5 Intellect, +5 Spells - Verdan the Everliving (WC)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 18,
+            "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
         ]
       },
       {
-        "levelBracket": "30–34",
-        "itemId": 273052,
-        "name": "Ponderous Orb",
-        "icon": "inv_misc_orb_04",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "24–32",
+        "itemId": 6694,
+        "name": "Heart of Agamaggan",
+        "icon": "inv_shield_07",
+        "weaponType": "Shield",
+        "stats": "757 Armor, Block 22, +7 Stamina, Equip: Increases healing done by up to 15 and damage by up to 5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Shade of the Archmage in City of Dalaran. Premier caster off-hand throughout the 30s."
+          "title": "Charlga Razorflank (Razorfen Kraul)",
+          "detail": "Iconic RFK finale shield with dedicated +15 Healing."
         },
         "faction": "both",
         "quality": "q3",
         "iLvl": 35,
         "reqLevel": 30,
-        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
         "alts": [
           {
-            "name": "Salve and Salvation",
-            "itemId": 276898,
-            "value": "+9 Spirit, +50 Armor - Past Due quest",
-            "faction": "alliance",
-            "weaponType": "Held in Off-hand",
+            "name": "Forcestone Buckler",
+            "itemId": 17508,
+            "value": "1078 Armor, Block 25, +4 Sta, +18 Healing / +6 Spell Dmg - Compendium quest",
+            "faction": "horde",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
+          },
+          {
+            "name": "Energized Stone Circle",
+            "itemId": 9522,
+            "value": "711 Armor, Block 21, +4 Sta, +40 Bonus Armor, +7 Healing / +3 Spell Dmg - Power Stones",
+            "faction": "both",
             "quality": "q3",
             "iLvl": 38,
             "reqLevel": 30,
-            "stats": "+9 Spirit, +50 Armor",
-            "icon": "inv_misc_book_01"
-          },
-          {
-            "name": "Heart of Alterac",
-            "itemId": 283254,
-            "value": "+7 Stamina, +5 Intellect - Stone Fury in Alterac",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q2",
-            "iLvl": 39,
-            "reqLevel": 34,
-            "stats": "+7 Stamina, +5 Intellect",
-            "icon": "inv_misc_orb_05"
+            "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
         ]
       },
       {
-        "levelBracket": "35–39",
-        "itemId": 271805,
-        "name": "Thrice-Damned Effigy",
-        "icon": "inv_misc_orb_01",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "33–44",
+        "itemId": 9403,
+        "name": "Battered Viking Shield",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1287 Armor, Block 27, +10 Spirit, Equip: Increases healing done by up to 8 and damage by up to 5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Khan Jehn in Maraudon (Horde). Elite caster off-hand for mid-level leveling."
+          "title": "Eric The Swift (Uldaman)",
+          "detail": "Rare dungeon drop in Uldaman with +10 Spirit and healing power."
         },
-        "faction": "horde",
+        "faction": "both",
         "quality": "q3",
         "iLvl": 42,
-        "reqLevel": 35,
-        "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
+        "reqLevel": 37,
         "alts": [
           {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271934,
-            "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+            "name": "Aegis of the Scarlet Commander",
+            "itemId": 7726,
+            "value": "1548 Armor, Block 29, +8 Str, +7 Sta - SM Cathedral",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q3",
-            "iLvl": 43,
-            "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
-          },
+            "iLvl": 44,
+            "reqLevel": 39,
+            "stats": "+8 Strength, +7 Stamina",
+            "icon": "inv_shield_06",
+            "weaponType": "Shield"
+          }
+        ]
+      },
+      {
+        "levelBracket": "45–54",
+        "itemId": 14852,
+        "name": "Sunscale Shield",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1663 Armor, Block 34, +8 Intellect, +8 Spirit",
+        "source": {
+          "kind": "drop",
+          "title": "High-level World Drop / Dungeon Drop",
+          "detail": "Solid high-intellect and spirit healer shield before endgame."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 54,
+        "reqLevel": 49,
+        "alts": []
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 235473,
+        "name": "Grand Marshal's Barricade",
+        "icon": "inv_shield_08",
+        "weaponType": "Shield",
+        "stats": "3000 Armor, Block 55, +15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage done by up to 24.",
+        "source": {
+          "kind": "pvp",
+          "title": "PvP Rank 14 Officer's Lounge (Alliance)",
+          "detail": "Highest armor caster/healer shield in the game."
+        },
+        "faction": "alliance",
+        "quality": "q4",
+        "iLvl": 80,
+        "reqLevel": 60,
+        "alts": [
           {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272089,
-            "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+            "name": "High Warlord's Barricade",
+            "itemId": 235474,
+            "value": "3000 Armor, Block 55, +15 Sta, +15 Int, +20 Healing / +24 Spell Dmg - PvP Rank 14",
             "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 43,
-            "reqLevel": 38,
-            "stats": "+12 Stamina, +5 Intellect",
-            "icon": "inv_misc_book_06"
+            "quality": "q4",
+            "iLvl": 80,
+            "reqLevel": 60,
+            "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield"
           },
           {
-            "name": "Orb of the Forgotten Seer",
-            "itemId": 7685,
-            "value": "+12 Intellect, +5 Spirit - Scarlet Monastery Library",
+            "name": "Wormscale Blocker",
+            "itemId": 21610,
+            "value": "3035 Armor, Block 56, +14 Sta, +14 Int, +23 Healing / +12 Spell Dmg - AQ40 Ouro",
             "faction": "both",
-            "weaponType": "Weapon",
-            "quality": "q3",
-            "iLvl": 37,
-            "reqLevel": 32,
-            "stats": "+14 Spell Power",
-            "icon": "inv_misc_orb_02"
+            "quality": "q4",
+            "iLvl": 81,
+            "reqLevel": 60,
+            "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
+            "icon": "inv_shield_11",
+            "weaponType": "Shield"
           }
         ]
-      },
+      }
+    ]
+  },
+  "warrior": {
+    "classId": "warrior",
+    "tracks": [
       {
-        "levelBracket": "40–44",
-        "itemId": 277260,
-        "name": "Researcher's Night Light",
-        "icon": "inv_torch_lit",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "id": "primary",
+        "name": "🛡️ Shield Progression (Protection & Tanking)"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–10",
+        "itemId": 1166,
+        "name": "Dented Buckler",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "55 Armor, Block 2",
         "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Greater Friend of the Library quest reward. Heavy durability and spell power boost."
+          "kind": "vendor",
+          "title": "Starting Armor Vendor",
+          "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
         },
         "faction": "both",
-        "quality": "q3",
-        "iLvl": 45,
-        "reqLevel": 40,
-        "stats": "+12 Stamina, +12 Spell Power",
+        "quality": "q1",
+        "iLvl": 5,
+        "reqLevel": 1,
         "alts": [
           {
-            "name": "Fermented Restoration Potion",
-            "itemId": 277259,
-            "value": "+12 Stamina, +5 Spirit, +16 Healing",
+            "name": "Redbeard Crest",
+            "itemId": 263431,
+            "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 45,
-            "reqLevel": 40,
-            "stats": "+12 Stamina, +5 Spirit",
-            "icon": "inv_potion_19"
-          },
-          {
-            "name": "Spirit of Aquementas",
-            "itemId": 11904,
-            "value": "+20 Spell Power - Un'Goro Crater quest chain",
-            "faction": "both",
-            "weaponType": "Weapon",
-            "quality": "q3",
-            "iLvl": 56,
-            "reqLevel": 47,
-            "stats": "+21 Spell Power",
-            "icon": "inv_ore_arcanite_02"
-          }
-        ]
-      },
-      {
-        "levelBracket": "45–52",
-        "itemId": 249455,
-        "name": "Truesilver Conduit",
-        "icon": "inv_rod_enchantedadamantite",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
-        "source": {
-          "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Crafted by Enchanters / Tradeskills. Reliable high spell power off-hand leading into late game."
-        },
-        "faction": "both",
-        "quality": "q3",
-        "iLvl": 50,
-        "reqLevel": 45,
-        "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
-        "alts": [
-          {
-            "name": "Twisting Essence Jar",
-            "itemId": 249456,
-            "value": "+8 Stamina, +8 Spirit, +18 Healing",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 50,
-            "reqLevel": 45,
-            "stats": "+8 Stamina, +8 Spirit",
-            "icon": "inv_10_misc_dragonorb_color1"
-          },
-          {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271933,
-            "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 53,
-            "reqLevel": 48,
-            "stats": "+14 Stamina, +6 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "Heart of Smoldar",
-            "itemId": 282088,
-            "value": "+8 Stamina, +14 Fire Spell Power",
-            "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q2",
-            "iLvl": 52,
-            "reqLevel": 47,
-            "stats": "+8 Stamina",
-            "icon": "inv_misc_orb_05"
+            "iLvl": 10,
+            "reqLevel": 5,
+            "stats": "+2 Stamina",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "177 Armor",
+              "+1 Strength"
+            ]
           }
+        ],
+        "lines": [
+          "Off Hand",
+          "55 Armor"
         ]
       },
       {
-        "levelBracket": "53–60",
-        "itemId": 274417,
-        "name": "Barkskin Baubles",
-        "icon": "inv_misc_bag_10_black",
-        "weaponType": "Held In Off-hand",
-        "speed": "2.80",
-        "dps": "",
+        "levelBracket": "11–18",
+        "itemId": 13245,
+        "name": "Kresh's Back",
+        "icon": "inv_shield_08",
+        "weaponType": "Shield",
+        "stats": "528 Armor, Equip: Increased Defense +5.",
         "source": {
           "kind": "drop",
-          "title": "World Drop / Quest",
-          "detail": "Dropped by Dala Fairmaw. Outstanding survivability and caster throughput for level 53-60."
+          "title": "Kresh (Wailing Caverns)",
+          "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 58,
-        "reqLevel": 53,
-        "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+        "iLvl": 23,
+        "reqLevel": 18,
         "alts": [
           {
-            "name": "Insurgent's Manifesto",
-            "itemId": 271932,
-            "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
+            "name": "Commander's Crest",
+            "itemId": 6320,
+            "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
             "faction": "both",
-            "weaponType": "Held in Off-hand",
             "quality": "q3",
-            "iLvl": 63,
-            "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+6 Stamina, +3 Strength",
+            "icon": "inv_shield_05",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "585 Armor",
+              "+5 Strength",
+              "+3 Stamina",
+              "Requires Level 21"
+            ]
           },
           {
-            "name": "Tome of the Darkspear Prophecy",
-            "itemId": 272087,
-            "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q3",
-            "iLvl": 63,
-            "reqLevel": 58,
-            "stats": "+17 Stamina, +7 Intellect",
-            "icon": "inv_misc_book_06"
-          },
-          {
-            "name": "High Warlord's Tome of Destruction",
-            "itemId": 234563,
-            "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-            "faction": "horde",
-            "weaponType": "Held in Off-hand",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_15"
-          },
-          {
-            "name": "Grand Marshal's Tome of Power",
-            "itemId": 234589,
-            "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
+            "name": "Repurposed Rack",
+            "itemId": 271240,
+            "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
             "faction": "alliance",
-            "weaponType": "Held in Off-hand",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+24 Stamina, +13 Intellect",
-            "icon": "inv_misc_book_12"
-          },
-          {
-            "name": "High Warlord's Tome of Mending",
-            "itemId": 234564,
-            "value": "+23 Stamina, +14 Intellect, +35 Healing",
-            "faction": "horde",
-            "weaponType": "Weapon",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_14"
-          },
-          {
-            "name": "Grand Marshal's Tome of Restoration",
-            "itemId": 234590,
-            "value": "+23 Stamina, +14 Intellect, +35 Healing",
-            "faction": "alliance",
-            "weaponType": "Weapon",
-            "quality": "q4",
-            "iLvl": 80,
-            "reqLevel": 60,
-            "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-            "icon": "inv_misc_book_13"
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 18,
+            "stats": "+6 Strength",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield"
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "528 Armor",
+          "Requires Level 18",
+          "Equip: Increased Defense +5."
+        ]
+      },
+      {
+        "levelBracket": "19–27",
+        "itemId": 6320,
+        "name": "Commander's Crest",
+        "icon": "inv_shield_05",
+        "weaponType": "Shield",
+        "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
+        "source": {
+          "kind": "drop",
+          "title": "Commander Springvale (Shadowfang Keep)",
+          "detail": "Iconic blue tower shield with hefty strength and stamina."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 26,
+        "reqLevel": 21,
+        "alts": [
+          {
+            "name": "Electromagnetic Hyper-Shield",
+            "itemId": 9461,
+            "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Finger",
+              "+5 Arcane Resistance",
+              "+5 Nature Resistance",
+              "Requires Level 31"
+            ]
+          },
+          {
+            "name": "Mirror of Rath'mael",
+            "itemId": 271213,
+            "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 19,
+            "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "547 Armor",
+              "+5 Strength",
+              "Requires Level 19",
+              "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "585 Armor",
+          "+5 Strength",
+          "+3 Stamina",
+          "Requires Level 21"
+        ]
+      },
+      {
+        "levelBracket": "28–34",
+        "itemId": 273055,
+        "name": "Bonepile Gaze",
+        "icon": "inv_shield_11",
+        "weaponType": "Shield",
+        "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+        "source": {
+          "kind": "drop",
+          "title": "Lyn the Ignored (City of Dalaran)",
+          "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 33,
+        "reqLevel": 28,
+        "alts": [
+          {
+            "name": "Heart of Agamaggan",
+            "itemId": 6694,
+            "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+            "icon": "inv_shield_07",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "757 Armor",
+              "+7 Stamina",
+              "Requires Level 30",
+              "Equip: Increases healing done by up to 15"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "718 Armor",
+          "+5 Strength",
+          "+5 Stamina",
+          "Requires Level 28"
+        ]
+      },
+      {
+        "levelBracket": "35–44",
+        "itemId": 7726,
+        "name": "Aegis of the Scarlet Commander",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+        "source": {
+          "kind": "drop",
+          "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+          "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 44,
+        "reqLevel": 39,
+        "alts": [
+          {
+            "name": "Battered Viking Shield",
+            "itemId": 9403,
+            "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 37,
+            "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+            "icon": "inv_shield_04",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "1287 Armor",
+              "+10 Spirit",
+              "Requires Level 37",
+              "Equip: Increases healing done by up to 13"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1548 Armor",
+          "+7 Strength",
+          "+8 Stamina",
+          "Requires Level 39",
+          "Equip: Deals 13 to 15 Holy damage every time you block."
+        ]
+      },
+      {
+        "levelBracket": "45–54",
+        "itemId": 11631,
+        "name": "Stoneshell Guard",
+        "icon": "inv_shield_04",
+        "weaponType": "Shield",
+        "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+        "source": {
+          "kind": "drop",
+          "title": "Stonevault mobs / Maraudon",
+          "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 52,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Aegis of Stormwind",
+            "itemId": 1203,
+            "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+            "faction": "both",
+            "quality": "q3",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+10 Stamina",
+            "icon": "inv_shield_06",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when equipped",
+              "Off Hand",
+              "1867 Armor",
+              "+6 Strength",
+              "+15 Stamina",
+              "Requires Level 49"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "1803 Armor",
+          "+7 Strength",
+          "+9 Stamina",
+          "+100 Armor",
+          "Requires Level 47"
+        ]
+      },
+      {
+        "levelBracket": "55–60",
+        "itemId": 12602,
+        "name": "Draconian Deflector",
+        "icon": "inv_shield_13",
+        "weaponType": "Shield",
+        "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+        "source": {
+          "kind": "drop",
+          "title": "General Drakkisath (Upper Blackrock Spire)",
+          "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 63,
+        "reqLevel": 58,
+        "alts": [
+          {
+            "name": "The Immovable Object",
+            "itemId": 19321,
+            "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+            "faction": "both",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 60,
+            "stats": "+14 Stamina, Equip: Increases block value by 15.",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2291 Armor",
+              "+14 Stamina",
+              "Requires Level 60"
+            ]
+          },
+          {
+            "name": "Grand Marshal's Aegis",
+            "itemId": 18825,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "alliance",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          },
+          {
+            "name": "High Warlord's Shield Wall",
+            "itemId": 18826,
+            "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+            "faction": "horde",
+            "quality": "q4",
+            "iLvl": 78,
+            "reqLevel": 60,
+            "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+            "icon": "inv_shield_08",
+            "weaponType": "Shield",
+            "lines": [
+              "Binds when picked up",
+              "Off Hand",
+              "2929 Armor",
+              "+10 Strength",
+              "+23 Stamina",
+              "Requires Level 60",
+              "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+            ]
+          }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Off Hand",
+          "2153 Armor",
+          "+7 Stamina",
+          "+8 Fire Resistance",
+          "Requires Level 58",
+          "Equip: Increased Defense +10."
         ]
       }
     ]

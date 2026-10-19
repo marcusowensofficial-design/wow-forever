@@ -17,11 +17,13 @@ console.log('--- STRICT AUDIT OF WEAPON PROFICIENCIES & CONSISTENCY ---');
 let errors = 0;
 
 for (const [cls, cData] of Object.entries(d)) {
-  cData.levels.forEach(lvl => {
-    const itemsToCheck = [
-      { name: lvl.name, value: `${lvl.weaponType || ''} ${lvl.source?.detail || ''}`, isPrimary: true },
-      ...(lvl.alts || []).map(alt => ({ name: alt.name, value: `${alt.weaponType || ''} ${alt.value || ''}`, isPrimary: false }))
-    ];
+  const allLevelSets = [cData.levels, cData.healingLevels].filter(Boolean);
+  allLevelSets.forEach(levelList => {
+    levelList.forEach(lvl => {
+      const itemsToCheck = [
+        { name: lvl.name, value: `${lvl.weaponType || ''} ${lvl.source?.detail || ''}`, isPrimary: true },
+        ...(lvl.alts || []).map(alt => ({ name: alt.name, value: `${alt.weaponType || ''} ${alt.value || ''}`, isPrimary: false }))
+      ];
 
     itemsToCheck.forEach(item => {
       const aName = item.name.toLowerCase();
@@ -98,6 +100,7 @@ for (const [cls, cData] of Object.entries(d)) {
         }
       }
     });
+  });
   });
 }
 

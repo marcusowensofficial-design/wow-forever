@@ -5676,6 +5676,51 @@ input:checked + .toggle-slider:before {
   font-weight: 600;
 }
 
+.progression-track-btn.track-btn-healer {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.progression-track-btn.track-btn-healer:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.6);
+  color: #bbf7d0;
+}
+
+.progression-track-btn.track-btn-healer.active {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: #22c55e;
+  color: #86efac;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.35);
+}
+
+.progression-header-badge.healer-header-badge {
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #86efac;
+}
+
+.stat-pill.healing-highlight-pill {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #86efac;
+  font-weight: 600;
+}
+
+.alt-tag.alt-healing-tag {
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.alt-tag.alt-healing-tag:hover {
+  border-color: rgba(34, 197, 94, 0.7);
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.alt-healer-icon {
+  margin-right: 2px;
+  font-size: 0.85em;
+}
+
 .weapon-timeline-container {
   display: flex;
   flex-direction: column;

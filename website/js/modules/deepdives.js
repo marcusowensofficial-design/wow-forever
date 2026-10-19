@@ -86,6 +86,7 @@ function initClassDeepDives() {
   }
 
   function renderDeepDiveContent() {
+    window.selectedDeepDiveClassId = selectedDeepDiveClassId;
     if (window.WOW_DEEPDIVES_PROGRESSION?.hideWeaponTooltip) {
       window.WOW_DEEPDIVES_PROGRESSION.hideWeaponTooltip();
     }

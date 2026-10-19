@@ -33,8 +33,18 @@
             "iLvl": 6,
             "reqLevel": 4,
             "stats": "",
-            "icon": "inv_wand_05"
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(4.17 damage per second)"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(4.00 damage per second)"
         ]
       },
       {
@@ -67,8 +77,15 @@
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "+1 Spell Power",
-            "icon": "inv_staff_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(11.33 damage per second)",
+              "Requires Level 5",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+            ]
           },
           {
             "name": "Wisesight Wand",
@@ -82,8 +99,20 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(9.41 damage per second)"
         ]
       },
       {
@@ -117,7 +146,14 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           },
           {
             "name": "Windbough Wand",
@@ -131,8 +167,20 @@
             "iLvl": 10,
             "reqLevel": 10,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_1h_skybornec60_b_01"
+            "icon": "inv_wand_1h_skybornec60_b_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(7.19 damage per second)",
+              "+1 Intellect"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(18.53 damage per second)",
+          "+3 Fire Resistance"
         ]
       },
       {
@@ -152,7 +200,7 @@
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": "Arcane Damage (20–37)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
         "alts": [
           {
             "name": "Moongazer's Wand",
@@ -165,8 +213,15 @@
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "",
-            "icon": "inv_staff_06"
+            "stats": "Equip: Increases intellect by 5 at night.",
+            "icon": "inv_staff_06",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(14.41 damage per second)",
+              "Requires Level 14",
+              "Equip: Increases intellect by 5 at night."
+            ]
           },
           {
             "name": "Whelpfire Wand",
@@ -179,9 +234,23 @@
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
-            "stats": "",
-            "icon": "inv_wand_11"
+            "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+            "icon": "inv_wand_11",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(15.26 damage per second)",
+              "Requires Level 15",
+              "Equip: Increases damage done by Fire spells and effects by up to 3."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(17.50 damage per second)",
+          "Requires Level 13",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 2"
         ]
       },
       {
@@ -201,7 +270,7 @@
         "quality": "q2",
         "iLvl": 20,
         "reqLevel": 15,
-        "stats": "Fire Damage (24–45)",
+        "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
             "name": "Snapped Branch Wand",
@@ -215,7 +284,14 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           },
           {
             "name": "Greater Magic Wand",
@@ -228,9 +304,44 @@
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "+2 Spell Power",
-            "icon": "inv_staff_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_staff_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(17.50 damage per second)",
+              "Requires Level 13",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
+          },
+          {
+            "name": "Cookie's Stirring Rod",
+            "itemId": 5198,
+            "value": "11.2 DPS - Arcane Wand from Cookie in The Deadmines",
+            "faction": "both",
+            "dps": "11.2 DPS",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "Equip: Increases your Cooking speed by 25%.",
+            "icon": "inv_wand_02",
+            "weaponType": "Wand",
+            "speed": "1.30",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(22.31 damage per second)",
+              "Requires Level 17",
+              "Equip: Increases your Cooking speed by 25%."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(15.26 damage per second)",
+          "Requires Level 15",
+          "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
       },
       {
@@ -247,7 +358,7 @@
           "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
         },
         "faction": "horde",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 36,
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
@@ -264,7 +375,14 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "+4 Intellect",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(25.38 damage per second)",
+              "+4 Intellect",
+              "Requires Level 26"
+            ]
           },
           {
             "name": "Wand of Mana Concentration",
@@ -278,7 +396,14 @@
             "iLvl": 32,
             "reqLevel": 27,
             "stats": "+4 Intellect",
-            "icon": "inv_wand_06"
+            "icon": "inv_wand_06",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(31.18 damage per second)",
+              "+4 Intellect",
+              "Requires Level 27"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
@@ -292,8 +417,21 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(29.71 damage per second)",
+          "+4 Stamina"
         ]
       },
       {
@@ -326,8 +464,14 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(34.67 damage per second)",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Greater Mystic Wand",
@@ -340,9 +484,23 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(31.18 damage per second)",
+          "+4 Intellect",
+          "Requires Level 27"
         ]
       },
       {
@@ -359,10 +517,10 @@
           "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 43,
         "reqLevel": 28,
-        "stats": "Nature Damage (44–82)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
         "alts": [
           {
             "name": "Greater Mystic Wand",
@@ -375,8 +533,15 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -389,9 +554,22 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(34.67 damage per second)",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 7"
         ]
       },
       {
@@ -411,7 +589,7 @@
         "quality": "q3",
         "iLvl": 44,
         "reqLevel": 39,
-        "stats": "Shadow Damage (55–102)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
         "alts": [
           {
             "name": "Dudd's Second-Favorite Wand",
@@ -425,7 +603,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+5 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(35.67 damage per second)",
+              "+5 Intellect",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -438,9 +623,24 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(41.47 damage per second)",
+          "Requires Level 39",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
         ]
       },
       {
@@ -460,7 +660,7 @@
         "quality": "q3",
         "iLvl": 48,
         "reqLevel": 43,
-        "stats": "Arcane Damage (68–125)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
         "alts": [
           {
             "name": "Dreambough Wand",
@@ -473,8 +673,15 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(39.17 damage per second)",
+              "Requires Level 43",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Lesser Eternal Wand",
@@ -487,9 +694,23 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "+8 Spell Power",
-            "icon": "inv_wand_05"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(45.75 damage per second)",
+              "Requires Level 49",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(45.53 damage per second)",
+          "Requires Level 43",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 4"
         ]
       },
       {
@@ -506,10 +727,10 @@
           "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 54,
         "reqLevel": 49,
-        "stats": "Arcane Damage (73–137)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Wail of Death",
@@ -523,8 +744,23 @@
             "iLvl": 61,
             "reqLevel": 56,
             "stats": "+6 Stamina, +4 Spirit",
-            "icon": "inv_wand_12"
+            "icon": "inv_wand_12",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(54.17 damage per second)",
+              "+6 Stamina",
+              "+4 Spirit",
+              "Requires Level 56"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(45.75 damage per second)",
+          "Requires Level 49",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -541,7 +777,7 @@
           "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 61,
         "reqLevel": 56,
         "stats": "Shadow Damage (85–159)",
@@ -557,8 +793,16 @@
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+7 Intellect",
-            "icon": "inv_wand_07"
+            "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(59.58 damage per second)",
+              "+7 Intellect",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Greater Eternal Wand",
@@ -571,8 +815,15 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+9 Spell Power",
-            "icon": "inv_wand_14"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_14",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(53.33 damage per second)",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Torch of Light",
@@ -585,9 +836,25 @@
             "quality": "q4",
             "iLvl": 65,
             "reqLevel": 60,
-            "stats": "+11 Spirit",
-            "icon": "inv_torch_lit"
+            "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+            "icon": "inv_torch_lit",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(76.76 damage per second)",
+              "+11 Spirit",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 17"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(54.17 damage per second)",
+          "+6 Stamina",
+          "+4 Spirit",
+          "Requires Level 56"
         ]
       }
     ]
@@ -626,8 +893,18 @@
             "iLvl": 6,
             "reqLevel": 4,
             "stats": "",
-            "icon": "inv_wand_05"
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(4.17 damage per second)"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(4.00 damage per second)"
         ]
       },
       {
@@ -660,8 +937,15 @@
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "+1 Spell Power",
-            "icon": "inv_staff_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(11.33 damage per second)",
+              "Requires Level 5",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+            ]
           },
           {
             "name": "Wisesight Wand",
@@ -675,8 +959,20 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(9.41 damage per second)"
         ]
       },
       {
@@ -710,7 +1006,14 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           },
           {
             "name": "Windbough Wand",
@@ -724,8 +1027,20 @@
             "iLvl": 10,
             "reqLevel": 10,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_1h_skybornec60_b_01"
+            "icon": "inv_wand_1h_skybornec60_b_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(7.19 damage per second)",
+              "+1 Intellect"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(18.53 damage per second)",
+          "+3 Fire Resistance"
         ]
       },
       {
@@ -745,7 +1060,7 @@
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": "Arcane Damage (20–37)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
         "alts": [
           {
             "name": "Moongazer's Wand",
@@ -758,8 +1073,15 @@
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "",
-            "icon": "inv_staff_06"
+            "stats": "Equip: Increases intellect by 5 at night.",
+            "icon": "inv_staff_06",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(14.41 damage per second)",
+              "Requires Level 14",
+              "Equip: Increases intellect by 5 at night."
+            ]
           },
           {
             "name": "Whelpfire Wand",
@@ -772,9 +1094,23 @@
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
-            "stats": "",
-            "icon": "inv_wand_11"
+            "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+            "icon": "inv_wand_11",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(15.26 damage per second)",
+              "Requires Level 15",
+              "Equip: Increases damage done by Fire spells and effects by up to 3."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(17.50 damage per second)",
+          "Requires Level 13",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 2"
         ]
       },
       {
@@ -794,7 +1130,7 @@
         "quality": "q2",
         "iLvl": 20,
         "reqLevel": 15,
-        "stats": "Fire Damage (24–45)",
+        "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
             "name": "Snapped Branch Wand",
@@ -808,7 +1144,14 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           },
           {
             "name": "Greater Magic Wand",
@@ -821,9 +1164,23 @@
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "+2 Spell Power",
-            "icon": "inv_staff_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_staff_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(17.50 damage per second)",
+              "Requires Level 13",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(15.26 damage per second)",
+          "Requires Level 15",
+          "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
       },
       {
@@ -840,7 +1197,7 @@
           "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
         },
         "faction": "horde",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 36,
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
@@ -857,7 +1214,14 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "+4 Intellect",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(25.38 damage per second)",
+              "+4 Intellect",
+              "Requires Level 26"
+            ]
           },
           {
             "name": "Wand of Mana Concentration",
@@ -871,7 +1235,14 @@
             "iLvl": 32,
             "reqLevel": 27,
             "stats": "+4 Intellect",
-            "icon": "inv_wand_06"
+            "icon": "inv_wand_06",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(31.18 damage per second)",
+              "+4 Intellect",
+              "Requires Level 27"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
@@ -885,8 +1256,21 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(29.71 damage per second)",
+          "+4 Stamina"
         ]
       },
       {
@@ -919,8 +1303,14 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(34.67 damage per second)",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Greater Mystic Wand",
@@ -933,9 +1323,23 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(31.18 damage per second)",
+          "+4 Intellect",
+          "Requires Level 27"
         ]
       },
       {
@@ -952,10 +1356,10 @@
           "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 43,
         "reqLevel": 28,
-        "stats": "Nature Damage (44–82)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
         "alts": [
           {
             "name": "Greater Mystic Wand",
@@ -968,8 +1372,15 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -982,9 +1393,22 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(34.67 damage per second)",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 7"
         ]
       },
       {
@@ -1004,7 +1428,7 @@
         "quality": "q3",
         "iLvl": 44,
         "reqLevel": 39,
-        "stats": "Shadow Damage (55–102)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
         "alts": [
           {
             "name": "Dudd's Second-Favorite Wand",
@@ -1018,7 +1442,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+5 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(35.67 damage per second)",
+              "+5 Intellect",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -1031,9 +1462,24 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(41.47 damage per second)",
+          "Requires Level 39",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
         ]
       },
       {
@@ -1053,7 +1499,7 @@
         "quality": "q3",
         "iLvl": 48,
         "reqLevel": 43,
-        "stats": "Arcane Damage (68–125)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
         "alts": [
           {
             "name": "Dreambough Wand",
@@ -1066,8 +1512,15 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(39.17 damage per second)",
+              "Requires Level 43",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Lesser Eternal Wand",
@@ -1080,9 +1533,23 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "+8 Spell Power",
-            "icon": "inv_wand_05"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(45.75 damage per second)",
+              "Requires Level 49",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(45.53 damage per second)",
+          "Requires Level 43",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 4"
         ]
       },
       {
@@ -1099,10 +1566,10 @@
           "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 54,
         "reqLevel": 49,
-        "stats": "Arcane Damage (73–137)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Wail of Death",
@@ -1116,8 +1583,23 @@
             "iLvl": 61,
             "reqLevel": 56,
             "stats": "+6 Stamina, +4 Spirit",
-            "icon": "inv_wand_12"
+            "icon": "inv_wand_12",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(54.17 damage per second)",
+              "+6 Stamina",
+              "+4 Spirit",
+              "Requires Level 56"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(45.75 damage per second)",
+          "Requires Level 49",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -1134,7 +1616,7 @@
           "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 61,
         "reqLevel": 56,
         "stats": "Shadow Damage (85–159)",
@@ -1150,8 +1632,16 @@
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+7 Intellect",
-            "icon": "inv_wand_07"
+            "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(59.58 damage per second)",
+              "+7 Intellect",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Greater Eternal Wand",
@@ -1164,8 +1654,15 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+9 Spell Power",
-            "icon": "inv_wand_14"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_14",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(53.33 damage per second)",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Torch of Light",
@@ -1178,9 +1675,25 @@
             "quality": "q4",
             "iLvl": 65,
             "reqLevel": 60,
-            "stats": "+11 Spirit",
-            "icon": "inv_torch_lit"
+            "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+            "icon": "inv_torch_lit",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(76.76 damage per second)",
+              "+11 Spirit",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 17"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(54.17 damage per second)",
+          "+6 Stamina",
+          "+4 Spirit",
+          "Requires Level 56"
         ]
       }
     ]
@@ -1219,8 +1732,18 @@
             "iLvl": 6,
             "reqLevel": 4,
             "stats": "",
-            "icon": "inv_wand_05"
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(4.17 damage per second)"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(4.00 damage per second)"
         ]
       },
       {
@@ -1253,8 +1776,15 @@
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "+1 Spell Power",
-            "icon": "inv_staff_02"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(11.33 damage per second)",
+              "Requires Level 5",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+            ]
           },
           {
             "name": "Wisesight Wand",
@@ -1268,8 +1798,20 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(9.41 damage per second)"
         ]
       },
       {
@@ -1303,7 +1845,14 @@
             "iLvl": 12,
             "reqLevel": 7,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(8.82 damage per second)",
+              "+1 Intellect",
+              "Requires Level 7"
+            ]
           },
           {
             "name": "Windbough Wand",
@@ -1317,8 +1866,20 @@
             "iLvl": 10,
             "reqLevel": 10,
             "stats": "+1 Intellect",
-            "icon": "inv_wand_1h_skybornec60_b_01"
+            "icon": "inv_wand_1h_skybornec60_b_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(7.19 damage per second)",
+              "+1 Intellect"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(18.53 damage per second)",
+          "+3 Fire Resistance"
         ]
       },
       {
@@ -1338,7 +1899,7 @@
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": "Arcane Damage (20–37)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
         "alts": [
           {
             "name": "Moongazer's Wand",
@@ -1351,8 +1912,15 @@
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "",
-            "icon": "inv_staff_06"
+            "stats": "Equip: Increases intellect by 5 at night.",
+            "icon": "inv_staff_06",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(14.41 damage per second)",
+              "Requires Level 14",
+              "Equip: Increases intellect by 5 at night."
+            ]
           },
           {
             "name": "Whelpfire Wand",
@@ -1365,9 +1933,23 @@
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
-            "stats": "",
-            "icon": "inv_wand_11"
+            "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+            "icon": "inv_wand_11",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(15.26 damage per second)",
+              "Requires Level 15",
+              "Equip: Increases damage done by Fire spells and effects by up to 3."
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(17.50 damage per second)",
+          "Requires Level 13",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 2"
         ]
       },
       {
@@ -1387,7 +1969,7 @@
         "quality": "q2",
         "iLvl": 20,
         "reqLevel": 15,
-        "stats": "Fire Damage (24–45)",
+        "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
         "alts": [
           {
             "name": "Snapped Branch Wand",
@@ -1401,7 +1983,14 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           },
           {
             "name": "Greater Magic Wand",
@@ -1414,9 +2003,23 @@
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "+2 Spell Power",
-            "icon": "inv_staff_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "icon": "inv_staff_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(17.50 damage per second)",
+              "Requires Level 13",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(15.26 damage per second)",
+          "Requires Level 15",
+          "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
       },
       {
@@ -1433,7 +2036,7 @@
           "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
         },
         "faction": "horde",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 36,
         "reqLevel": 24,
         "stats": "Arcane Damage (40–74)",
@@ -1450,7 +2053,14 @@
             "iLvl": 31,
             "reqLevel": 26,
             "stats": "+4 Intellect",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(25.38 damage per second)",
+              "+4 Intellect",
+              "Requires Level 26"
+            ]
           },
           {
             "name": "Wand of Mana Concentration",
@@ -1464,7 +2074,14 @@
             "iLvl": 32,
             "reqLevel": 27,
             "stats": "+4 Intellect",
-            "icon": "inv_wand_06"
+            "icon": "inv_wand_06",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(31.18 damage per second)",
+              "+4 Intellect",
+              "Requires Level 27"
+            ]
           },
           {
             "name": "Snapped Branch Wand",
@@ -1478,8 +2095,21 @@
             "iLvl": 27,
             "reqLevel": 22,
             "stats": "+3 Nature Resistance",
-            "icon": "inv_staff_02"
+            "icon": "inv_staff_02",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(21.18 damage per second)",
+              "+3 Nature Resistance",
+              "Requires Level 22"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(29.71 damage per second)",
+          "+4 Stamina"
         ]
       },
       {
@@ -1512,8 +2142,14 @@
             "quality": "q2",
             "iLvl": 43,
             "reqLevel": 28,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(34.67 damage per second)",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Greater Mystic Wand",
@@ -1526,9 +2162,23 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(31.18 damage per second)",
+          "+4 Intellect",
+          "Requires Level 27"
         ]
       },
       {
@@ -1545,10 +2195,10 @@
           "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 43,
         "reqLevel": 28,
-        "stats": "Nature Damage (44–82)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
         "alts": [
           {
             "name": "Greater Mystic Wand",
@@ -1561,8 +2211,15 @@
             "quality": "q2",
             "iLvl": 35,
             "reqLevel": 30,
-            "stats": "+5 Spell Power",
-            "icon": "inv_wand_07"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(29.00 damage per second)",
+              "Requires Level 30",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -1575,9 +2232,22 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(34.67 damage per second)",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 7"
         ]
       },
       {
@@ -1597,7 +2267,7 @@
         "quality": "q3",
         "iLvl": 44,
         "reqLevel": 39,
-        "stats": "Shadow Damage (55–102)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
         "alts": [
           {
             "name": "Dudd's Second-Favorite Wand",
@@ -1611,7 +2281,14 @@
             "iLvl": 45,
             "reqLevel": 40,
             "stats": "+5 Intellect",
-            "icon": "inv_wand_01"
+            "icon": "inv_wand_01",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(35.67 damage per second)",
+              "+5 Intellect",
+              "Requires Level 40"
+            ]
           },
           {
             "name": "Twisted Nether Wand",
@@ -1624,9 +2301,24 @@
             "quality": "q2",
             "iLvl": 42,
             "reqLevel": 37,
-            "stats": "+6 Spell Power",
-            "icon": "inv_wand_03"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "icon": "inv_wand_03",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(34.00 damage per second)",
+              "Requires Level 37",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(41.47 damage per second)",
+          "Requires Level 39",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
         ]
       },
       {
@@ -1646,7 +2338,7 @@
         "quality": "q3",
         "iLvl": 48,
         "reqLevel": 43,
-        "stats": "Arcane Damage (68–125)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
         "alts": [
           {
             "name": "Dreambough Wand",
@@ -1659,8 +2351,15 @@
             "quality": "q2",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": "+7 Spell Power",
-            "icon": "inv_wand_04"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+            "icon": "inv_wand_04",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(39.17 damage per second)",
+              "Requires Level 43",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+            ]
           },
           {
             "name": "Lesser Eternal Wand",
@@ -1673,9 +2372,23 @@
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "+8 Spell Power",
-            "icon": "inv_wand_05"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+            "icon": "inv_wand_05",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(45.75 damage per second)",
+              "Requires Level 49",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when picked up",
+          "Ranged",
+          "(45.53 damage per second)",
+          "Requires Level 43",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 4"
         ]
       },
       {
@@ -1692,10 +2405,10 @@
           "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 54,
         "reqLevel": 49,
-        "stats": "Arcane Damage (73–137)",
+        "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
         "alts": [
           {
             "name": "Wail of Death",
@@ -1709,8 +2422,23 @@
             "iLvl": 61,
             "reqLevel": 56,
             "stats": "+6 Stamina, +4 Spirit",
-            "icon": "inv_wand_12"
+            "icon": "inv_wand_12",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(54.17 damage per second)",
+              "+6 Stamina",
+              "+4 Spirit",
+              "Requires Level 56"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(45.75 damage per second)",
+          "Requires Level 49",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 8"
         ]
       },
       {
@@ -1727,7 +2455,7 @@
           "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
         },
         "faction": "both",
-        "quality": "q3",
+        "quality": "q2",
         "iLvl": 61,
         "reqLevel": 56,
         "stats": "Shadow Damage (85–159)",
@@ -1743,8 +2471,16 @@
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+7 Intellect",
-            "icon": "inv_wand_07"
+            "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_07",
+            "lines": [
+              "Binds when picked up",
+              "Ranged",
+              "(59.58 damage per second)",
+              "+7 Intellect",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Greater Eternal Wand",
@@ -1757,8 +2493,15 @@
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+9 Spell Power",
-            "icon": "inv_wand_14"
+            "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+            "icon": "inv_wand_14",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(53.33 damage per second)",
+              "Requires Level 55",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+            ]
           },
           {
             "name": "Torch of Light",
@@ -1771,9 +2514,25 @@
             "quality": "q4",
             "iLvl": 65,
             "reqLevel": 60,
-            "stats": "+11 Spirit",
-            "icon": "inv_torch_lit"
+            "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+            "icon": "inv_torch_lit",
+            "lines": [
+              "Binds when equipped",
+              "Ranged",
+              "(76.76 damage per second)",
+              "+11 Spirit",
+              "Requires Level 60",
+              "Equip: Increases healing done by up to 17"
+            ]
           }
+        ],
+        "lines": [
+          "Binds when equipped",
+          "Ranged",
+          "(54.17 damage per second)",
+          "+6 Stamina",
+          "+4 Spirit",
+          "Requires Level 56"
         ]
       }
     ]

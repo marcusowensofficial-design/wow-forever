@@ -9171,24 +9171,25 @@ const WOW_BIS_DATA = {
               {
                 "rank": 4,
                 "quality": "q3",
-                "itemId": "273827",
-                "tipId": "273827",
-                "name": "Debt Collector",
+                "itemId": "6504",
+                "tipId": "6504",
+                "name": "Wingblade",
                 "icon": "inv_sword_24.jpg",
                 "side": "both",
-                "source": "The Stockade - Bazil Thredd",
+                "source": "Quest: Leaders of the Fang",
                 "sourceDetails": [
-                  "Dropped by Bazil Thredd in The Stockade"
+                  "Reward from Leaders of the Fang in Wailing Caverns (+5 Agility, +2 Stamina)"
                 ],
-                "stats": "Equip: +34 Attack Power.",
-                "ilvl": 31,
+                "stats": "+5 Agility, +2 Stamina",
+                "ilvl": 24,
                 "lines": [
                   "Binds when picked up",
                   "One-Hand\tSword",
-                  "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
-                  "Requires Level 26",
-                  "Equip: +34 Attack Power."
+                  "25 - 47 Damage\tSpeed 2.20",
+                  "(16.36 damage per second)",
+                  "+5 Agility",
+                  "+2 Stamina",
+                  "Requires Level 19"
                 ],
                 "mats": ""
               }
@@ -43445,21 +43446,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -48974,21 +48974,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -130263,7 +130262,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -130317,21 +130318,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -130343,9 +130343,9 @@ const WOW_BIS_DATA = {
                 "name": "Coldflame Saber",
                 "icon": "inv_sword_05.jpg",
                 "side": "both",
-                "source": "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21",
+                "source": "Quest: Scroll of the Saber & Blade of Silverlaine",
                 "sourceDetails": [
-                  "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21"
+                  "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
                 ],
                 "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                 "ilvl": 29,
@@ -130354,12 +130354,12 @@ const WOW_BIS_DATA = {
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "17 - 32 Damage\tSpeed 2.00",
-                  "(12.3 damage per second)",
+                  "(12.25 damage per second)",
                   "+7 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                   "Classes: Mage",
-                  "Requires Level 21"
+                  "Requires Level 21",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
                 ],
                 "mats": ""
               },
@@ -135537,7 +135537,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -135591,9 +135593,9 @@ const WOW_BIS_DATA = {
                 "name": "Coldflame Saber",
                 "icon": "inv_sword_05.jpg",
                 "side": "both",
-                "source": "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21",
+                "source": "Quest: Scroll of the Saber & Blade of Silverlaine",
                 "sourceDetails": [
-                  "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21"
+                  "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
                 ],
                 "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                 "ilvl": 29,
@@ -135602,12 +135604,12 @@ const WOW_BIS_DATA = {
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "17 - 32 Damage\tSpeed 2.00",
-                  "(12.3 damage per second)",
+                  "(12.25 damage per second)",
                   "+7 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                   "Classes: Mage",
-                  "Requires Level 21"
+                  "Requires Level 21",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
                 ],
                 "mats": ""
               },
@@ -135619,21 +135621,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -140784,7 +140785,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -140838,21 +140841,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -140864,9 +140866,9 @@ const WOW_BIS_DATA = {
                 "name": "Coldflame Saber",
                 "icon": "inv_sword_05.jpg",
                 "side": "both",
-                "source": "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21",
+                "source": "Quest: Scroll of the Saber & Blade of Silverlaine",
                 "sourceDetails": [
-                  "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21"
+                  "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
                 ],
                 "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                 "ilvl": 29,
@@ -140875,12 +140877,12 @@ const WOW_BIS_DATA = {
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "17 - 32 Damage\tSpeed 2.00",
-                  "(12.3 damage per second)",
+                  "(12.25 damage per second)",
                   "+7 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                   "Classes: Mage",
-                  "Requires Level 21"
+                  "Requires Level 21",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
                 ],
                 "mats": ""
               },
@@ -146064,7 +146066,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -146118,9 +146122,9 @@ const WOW_BIS_DATA = {
                 "name": "Coldflame Saber",
                 "icon": "inv_sword_05.jpg",
                 "side": "both",
-                "source": "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21",
+                "source": "Quest: Scroll of the Saber & Blade of Silverlaine",
                 "sourceDetails": [
-                  "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21"
+                  "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
                 ],
                 "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                 "ilvl": 29,
@@ -146129,12 +146133,12 @@ const WOW_BIS_DATA = {
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "17 - 32 Damage\tSpeed 2.00",
-                  "(12.3 damage per second)",
+                  "(12.25 damage per second)",
                   "+7 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                   "Classes: Mage",
-                  "Requires Level 21"
+                  "Requires Level 21",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
                 ],
                 "mats": ""
               },
@@ -146146,21 +146150,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -151318,7 +151321,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -151372,21 +151377,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -151398,9 +151402,9 @@ const WOW_BIS_DATA = {
                 "name": "Coldflame Saber",
                 "icon": "inv_sword_05.jpg",
                 "side": "both",
-                "source": "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21",
+                "source": "Quest: Scroll of the Saber & Blade of Silverlaine",
                 "sourceDetails": [
-                  "The Blade of Silverlaine, imbued with the Scroll of the Saber Mages only, made at 20, worn from 21"
+                  "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
                 ],
                 "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                 "ilvl": 29,
@@ -151409,12 +151413,12 @@ const WOW_BIS_DATA = {
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "17 - 32 Damage\tSpeed 2.00",
-                  "(12.3 damage per second)",
+                  "(12.25 damage per second)",
                   "+7 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
                   "Classes: Mage",
-                  "Requires Level 21"
+                  "Requires Level 21",
+                  "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                  "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
                 ],
                 "mats": ""
               },
@@ -156463,7 +156467,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -156517,21 +156523,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },
@@ -161754,7 +161759,9 @@ const WOW_BIS_DATA = {
               {
                 "rank": 3,
                 "quality": "q3",
-                "itemId": "276631", "tipId": "276631", "name": "Coldflame Saber",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",
@@ -161808,21 +161815,20 @@ const WOW_BIS_DATA = {
                 "name": "Debt Collector",
                 "icon": "inv_sword_24.jpg",
                 "side": "alliance",
-                "source": "Bazil Thredd, The Stockade",
+                "source": "The Stockade - Bazil Thredd",
                 "sourceDetails": [
-                  "Bazil Thredd, The Stockade"
+                  "Dropped by Bazil Thredd in The Stockade (Alliance Only)"
                 ],
                 "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "ilvl": 31,
-                "armor": 0,
                 "lines": [
                   "Binds when picked up",
                   "Main Hand\tSword",
                   "21 - 39 Damage\tSpeed 2.30",
-                  "(13.0 damage per second)",
+                  "(13.04 damage per second)",
+                  "Requires Level 26",
                   "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                  "Requires Level 26"
+                  "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
                 ],
                 "mats": ""
               },

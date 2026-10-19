@@ -3424,11 +3424,17 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "1.8 DPS",
               "quality": "q1",
-              "iLvl": 6,
+              "iLvl": 3,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "speed": "1.90",
+              "lines": [
+                "One-Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             },
             {
               "name": "Worn Shortsword",
@@ -3436,19 +3442,31 @@ if (typeof window !== 'undefined') {
               "value": "1.7 DPS - Starter 1H sword",
               "faction": "both",
               "dps": "1.7 DPS",
-              "quality": "q2",
-              "iLvl": 6,
+              "quality": "q1",
+              "iLvl": 2,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "speed": "1.90",
+              "lines": [
+                "Main Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             }
           ],
           "faction": "both",
-          "quality": "q1",
-          "iLvl": 9,
-          "reqLevel": 4,
-          "stats": ""
+          "quality": "q0",
+          "iLvl": 12,
+          "reqLevel": 7,
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "12 - 18 Damage\tSpeed 3.00",
+            "(5.00 damage per second)",
+            "Requires Level 7"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -3473,10 +3491,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             },
             {
               "name": "Copper Axe",
@@ -3490,14 +3513,26 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_axe_23"
+              "icon": "inv_axe_23",
+              "lines": [
+                "One-Hand",
+                "6 - 12 Damage\tSpeed 2.40",
+                "(3.75 damage per second)",
+                "Requires Level 4"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 9,
           "reqLevel": 4,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "10 - 16 Damage\tSpeed 2.60",
+            "(5.00 damage per second)",
+            "Requires Level 4"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -3524,8 +3559,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 8,
-              "stats": "",
-              "icon": "inv_throwingaxe_02"
+              "stats": "+3 Stamina",
+              "icon": "inv_throwingaxe_02",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.50",
+                "(9.00 damage per second)",
+                "+3 Stamina",
+                "Requires Level 8"
+              ]
             },
             {
               "name": "Rough Boomstick",
@@ -3539,7 +3582,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_02"
+              "icon": "inv_weapon_rifle_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "6 - 13 Damage\tSpeed 2.30",
+                "(4.13 damage per second)",
+                "+1 Stamina",
+                "Requires Level 5"
+              ]
             },
             {
               "name": "Goblin Smasher",
@@ -3552,15 +3603,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": "",
-              "icon": "inv_hammer_15"
+              "stats": "+2 Strength",
+              "icon": "inv_hammer_15",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "20 - 31 Damage\tSpeed 3.10",
+                "(8.23 damage per second)",
+                "+2 Strength"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 11,
           "reqLevel": 6,
-          "stats": "+1 Strength, +1 Stamina"
+          "stats": "+1 Strength, +1 Stamina",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "20 - 31 Damage\tSpeed 3.30",
+            "(7.73 damage per second)",
+            "+1 Strength",
+            "+1 Stamina",
+            "Requires Level 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -3588,7 +3655,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 13,
               "reqLevel": 8,
               "stats": "+3 Strength",
-              "icon": "inv_axe_04"
+              "icon": "inv_axe_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "26 - 40 Damage\tSpeed 3.70",
+                "(8.92 damage per second)",
+                "+3 Strength",
+                "Requires Level 8"
+              ]
             },
             {
               "name": "Copper Battle Axe",
@@ -3601,8 +3676,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 8,
-              "stats": "",
-              "icon": "inv_throwingaxe_02"
+              "stats": "+3 Stamina",
+              "icon": "inv_throwingaxe_02",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.50",
+                "(9.00 damage per second)",
+                "+3 Stamina",
+                "Requires Level 8"
+              ]
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -3611,10 +3694,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Riptear's Cleaver",
@@ -3627,8 +3718,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_throwingaxe_02"
+              "stats": "+3 Strength",
+              "icon": "inv_throwingaxe_02",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "23 - 36 Damage\tSpeed 3.30",
+                "(8.94 damage per second)",
+                "+3 Strength"
+              ]
             },
             {
               "name": "Bonecracker",
@@ -3641,8 +3739,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_mace_04"
+              "stats": "+3 Strength",
+              "icon": "inv_mace_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "23 - 35 Damage\tSpeed 3.20",
+                "(9.06 damage per second)",
+                "+3 Strength"
+              ]
             },
             {
               "name": "Helm Splitter",
@@ -3656,14 +3761,29 @@ if (typeof window !== 'undefined') {
               "iLvl": 13,
               "reqLevel": 8,
               "stats": "+1 Strength",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "11 - 22 Damage\tSpeed 2.40",
+                "(6.88 damage per second)",
+                "+1 Strength",
+                "Requires Level 8"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+2 Strength",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "18 - 27 Damage\tSpeed 2.70",
+            "(8.33 damage per second)",
+            "+2 Strength"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -3690,8 +3810,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Hammerbone",
@@ -3705,7 +3832,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 10,
               "stats": "+7 Strength, +10 Spirit",
-              "icon": "inv_hammer_15"
+              "icon": "inv_hammer_15",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "55 - 84 Damage\tSpeed 3.40",
+                "(20.44 damage per second)",
+                "+7 Strength",
+                "+10 Spirit"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -3717,15 +3852,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -3741,8 +3876,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 17,
               "reqLevel": 12,
-              "stats": "",
-              "icon": "inv_throwingaxe_01"
+              "stats": "+1 Strength, +1 Stamina",
+              "icon": "inv_throwingaxe_01",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "15 - 28 Damage\tSpeed 2.50",
+                "(8.60 damage per second)",
+                "+1 Strength",
+                "+1 Stamina",
+                "Requires Level 12"
+              ]
             },
             {
               "name": "Thun'grim's Axe",
@@ -3755,8 +3899,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "",
-              "icon": "inv_axe_01"
+              "stats": "+1 Stamina",
+              "icon": "inv_axe_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "14 - 28 Damage\tSpeed 2.70",
+                "(7.78 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Thun'grim's Sword",
@@ -3766,18 +3917,31 @@ if (typeof window !== 'undefined') {
               "dps": "7.8 DPS",
               "speed": "2.60",
               "quality": "q2",
-              "iLvl": 14,
+              "iLvl": 15,
               "reqLevel": 8,
-              "stats": "",
+              "stats": "+1 Stamina",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "11 - 21 Damage\tSpeed 2.10",
+                "(7.62 damage per second)",
+                "+1 Stamina"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 15,
           "reqLevel": 10,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "Requires Level 10"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -3799,11 +3963,18 @@ if (typeof window !== 'undefined') {
               "value": "10.5 DPS - Vendor 2H Axe",
               "faction": "both",
               "dps": "10.5 DPS",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 10,
+              "quality": "q1",
+              "iLvl": 36,
+              "reqLevel": 31,
               "stats": "",
-              "icon": "inv_axe_02"
+              "icon": "inv_axe_02",
+              "speed": "2.30",
+              "lines": [
+                "Main Hand",
+                "28 - 53 Damage\tSpeed 2.30",
+                "(17.61 damage per second)",
+                "Requires Level 31"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -3815,15 +3986,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -3840,7 +4011,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_06"
+              "icon": "inv_axe_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "42 - 64 Damage\tSpeed 3.30",
+                "(16.06 damage per second)",
+                "+6 Stamina",
+                "+6 Spirit"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -3853,15 +4032,30 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": "+4 Strength"
+          "stats": "+4 Strength",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "28 - 43 Damage\tSpeed 3.30",
+            "(10.76 damage per second)",
+            "+4 Strength",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -3889,7 +4083,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+5 Str, +2 Sta",
-              "icon": "inv_axe_05"
+              "icon": "inv_axe_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "20 - 39 Damage\tSpeed 2.40",
+                "(12.29 damage per second)",
+                "+4 Strength",
+                "Requires Level 13"
+              ]
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -3902,8 +4104,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Stamina",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "33 - 50 Damage\tSpeed 3.30",
+                "(12.58 damage per second)",
+                "+6 Stamina",
+                "Requires Level 14"
+              ]
             },
             {
               "name": "Axe of Orgrimmar",
@@ -3917,7 +4127,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_06"
+              "icon": "inv_axe_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "42 - 64 Damage\tSpeed 3.30",
+                "(16.06 damage per second)",
+                "+6 Stamina",
+                "+6 Spirit"
+              ]
             },
             {
               "name": "Bone Knuckles",
@@ -3930,15 +4148,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "ability_whirlwind"
+              "stats": "Equip: +6 Attack Power., Equip: +6 Attack Power against Beasts.",
+              "icon": "ability_whirlwind",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 2.00",
+                "(12.25 damage per second)",
+                "Requires Level 13",
+                "Equip: +6 Attack Power.",
+                "Equip: +6 Attack Power against Beasts."
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 9,
-          "stats": ""
+          "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "39 - 60 Damage\tSpeed 3.10",
+            "(15.97 damage per second)",
+            "Chance on hit: Blasts a target for 42 Fire damage."
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -3965,8 +4199,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 16,
-              "stats": "",
-              "icon": "inv_sword_23"
+              "stats": "+6 Stamina, Equip: +4 Attack Power., Equip: +6 Attack Power against Undead.",
+              "icon": "inv_sword_23",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "40 - 60 Damage\tSpeed 3.30",
+                "(15.15 damage per second)",
+                "+6 Stamina",
+                "Equip: +4 Attack Power.",
+                "Equip: +6 Attack Power against Undead."
+              ]
             },
             {
               "name": "Meathook Slicer",
@@ -3979,15 +4222,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_02"
+              "stats": "+5 Stamina",
+              "icon": "inv_weapon_shortblade_02",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "17 - 32 Damage\tSpeed 1.80",
+                "(13.61 damage per second)",
+                "+5 Stamina",
+                "Requires Level 15"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 21,
           "reqLevel": 16,
-          "stats": "+8 Stamina, +8 Spell Power"
+          "stats": "+8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "47 - 71 Damage\tSpeed 3.20",
+            "(18.44 damage per second)",
+            "+8 Stamina",
+            "Requires Level 16",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -4014,8 +4274,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_hammer_09"
+              "stats": "+11 Strength, +4 Agility",
+              "icon": "inv_hammer_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
+                "+11 Strength",
+                "+4 Agility",
+                "Requires Level 18"
+              ]
             },
             {
               "name": "Haunting Blade",
@@ -4027,14 +4296,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed sword",
               "quality": "q3",
               "iLvl": 27,
-              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "68 - 102 Damage\tSpeed 3.80",
-                "(22.4 damage per second)",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 22"
+                "(22.37 damage per second)",
+                "Requires Level 22",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
               "icon": "inv_sword_27"
@@ -4050,8 +4319,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "",
-              "icon": "inv_sword_01"
+              "stats": "+5 Spirit",
+              "icon": "inv_sword_01",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "26 - 50 Damage\tSpeed 2.60",
+                "(14.62 damage per second)",
+                "+5 Spirit",
+                "Requires Level 17"
+              ]
             },
             {
               "name": "Sword of the Fallen",
@@ -4064,15 +4341,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Strength, +9 Intellect",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
+                "+6 Strength",
+                "+9 Intellect",
+                "Requires Level 18"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 21,
           "reqLevel": 16,
-          "stats": "+7 Str, +4 Sta"
+          "stats": "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "52 - 79 Damage\tSpeed 3.60",
+            "(18.19 damage per second)",
+            "Requires Level 16",
+            "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -4100,7 +4394,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
+              "icon": "inv_hammer_18",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 71 Damage\tSpeed 3.50",
+                "(16.86 damage per second)",
+                "+6 Strength",
+                "+6 Stamina",
+                "Requires Level 20"
+              ]
             },
             {
               "name": "Taskmaster Axe",
@@ -4112,16 +4415,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed axe",
               "quality": "q3",
               "iLvl": 23,
-              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15 for all magical spells and effects.",
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 45",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tAxe",
+                "Two-Hand",
                 "31 - 48 Damage\tSpeed 2.70",
-                "(14.6 damage per second)",
+                "(14.63 damage per second)",
                 "+8 Stamina",
                 "+8 Spirit",
-                "Equip: Increases healing done by up to 45 and damage done by up to 15 for all magical spells and effects.",
-                "Requires Level 18"
+                "Requires Level 18",
+                "Equip: Increases healing done by up to 45"
               ],
               "reqLevel": 18,
               "icon": "inv_throwingaxe_06"
@@ -4131,7 +4434,16 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 15,
-          "stats": "+8 Str, +5 Sta"
+          "stats": "+8 Strength, +4 Stamina, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "49 - 74 Damage\tSpeed 3.00",
+            "(20.50 damage per second)",
+            "+8 Strength",
+            "+4 Stamina",
+            "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+          ]
         },
         {
           "levelBracket": "21–22",
@@ -4158,8 +4470,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 20,
-              "stats": "+9 Stamina, +10 Intellect",
-              "icon": "inv_sword_25"
+              "stats": "+9 Stamina, +10 Intellect, Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
+              "icon": "inv_sword_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "69 - 105 Damage\tSpeed 3.40",
+                "(25.59 damage per second)",
+                "+9 Stamina",
+                "+10 Intellect",
+                "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen."
+              ]
             },
             {
               "name": "The Skyblade",
@@ -4172,8 +4493,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "+10 Strength, +8 Stamina",
-              "icon": "inv_sword_20"
+              "stats": "+10 Strength, +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "56 - 105 Damage\tSpeed 3.60",
+                "(22.36 damage per second)",
+                "+10 Strength",
+                "+8 Stamina",
+                "Requires Level 22",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Strike of the Hydra",
@@ -4186,8 +4517,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": "",
-              "icon": "inv_sword_42"
+              "stats": "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec.",
+              "icon": "inv_sword_42",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.61 damage per second)",
+                "Requires Level 26",
+                "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
+              ]
             },
             {
               "name": "Taurenbane's Family Cleaver",
@@ -4202,12 +4541,12 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tAxe",
+                "Two-Hand",
                 "62 - 94 Damage\tSpeed 3.40",
-                "(22.9 damage per second)",
+                "(22.94 damage per second)",
                 "+9 Stamina",
-                "Equip: +32 Attack Power against Humanoids.",
-                "Requires Level 23"
+                "Requires Level 23",
+                "Equip: +32 Attack Power against Humanoids."
               ],
               "reqLevel": 23,
               "icon": "inv_axe_04"
@@ -4224,7 +4563,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+10 Strength",
-              "icon": "inv_axe_21"
+              "icon": "inv_axe_21",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 3.30",
+                "(18.33 damage per second)",
+                "+10 Strength",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -4237,15 +4584,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+5 Agility, Equip: +6 Attack Power.",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "25 - 47 Damage\tSpeed 2.10",
+                "(17.14 damage per second)",
+                "+5 Agility",
+                "Requires Level 22",
+                "Equip: +6 Attack Power."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 27,
           "reqLevel": 22,
-          "stats": "+10 Str, +4 Agi"
+          "stats": "+8 Strength, Equip: Increases healing done by up to 24",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "59 - 89 Damage\tSpeed 3.30",
+            "(22.42 damage per second)",
+            "+8 Strength",
+            "Requires Level 22",
+            "Equip: Increases healing done by up to 24"
+          ]
         },
         {
           "levelBracket": "23–24",
@@ -4273,7 +4638,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 32,
               "reqLevel": 24,
               "stats": "+12 Stamina, +12 Spirit",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 3.30",
+                "(26.67 damage per second)",
+                "+12 Stamina",
+                "+12 Spirit"
+              ]
             },
             {
               "name": "Strike of the Hydra",
@@ -4286,8 +4659,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": "",
-              "icon": "inv_sword_42"
+              "stats": "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec.",
+              "icon": "inv_sword_42",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.61 damage per second)",
+                "Requires Level 26",
+                "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
+              ]
             },
             {
               "name": "Heavy Mithril Axe",
@@ -4298,10 +4679,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.40",
               "weaponType": "Two-handed sword",
               "quality": "q2",
-              "iLvl": 40,
-              "reqLevel": 35,
+              "iLvl": 42,
+              "reqLevel": 37,
               "stats": "+14 Critical Strike Rating",
-              "icon": "inv_sword_05"
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "45 - 85 Damage\tSpeed 2.70",
+                "(24.07 damage per second)",
+                "+7 Stamina",
+                "Requires Level 37"
+              ]
             },
             {
               "name": "The Skyblade",
@@ -4314,8 +4703,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+10 Strength, +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "56 - 105 Damage\tSpeed 3.60",
+                "(22.36 damage per second)",
+                "+10 Strength",
+                "+8 Stamina",
+                "Requires Level 22",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
           ],
           "faction": "both",
@@ -4324,12 +4723,12 @@ if (typeof window !== 'undefined') {
           "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tAxe",
+            "Two-Hand",
             "62 - 94 Damage\tSpeed 3.40",
-            "(22.9 damage per second)",
+            "(22.94 damage per second)",
             "+9 Stamina",
-            "Equip: +32 Attack Power against Humanoids.",
-            "Requires Level 23"
+            "Requires Level 23",
+            "Equip: +32 Attack Power against Humanoids."
           ],
           "reqLevel": 23
         },
@@ -4359,7 +4758,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.21 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ]
             },
             {
               "name": "Trusty Sword",
@@ -4374,9 +4782,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +12 Spirit",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "70 - 106 Damage\tSpeed 3.30",
-                "(26.7 damage per second)",
+                "(26.67 damage per second)",
                 "+12 Stamina",
                 "+12 Spirit"
               ],
@@ -4396,9 +4804,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +100 Armor",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "67 - 102 Damage\tSpeed 3.30",
-                "(25.6 damage per second)",
+                "(25.61 damage per second)",
                 "+12 Stamina",
                 "+100 Armor",
                 "Requires Level 26"
@@ -4416,15 +4824,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed mace",
               "quality": "q2",
               "iLvl": 31,
-              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "43 - 66 Damage\tSpeed 3.50",
-                "(15.6 damage per second)",
+                "(15.57 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
               "icon": "inv_hammer_07"
@@ -4441,7 +4849,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 25,
               "stats": "+3 Agility, +8 Stamina",
-              "icon": "inv_sword_07"
+              "icon": "inv_sword_07",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "38 - 72 Damage\tSpeed 2.30",
+                "(23.91 damage per second)",
+                "+3 Agility",
+                "+8 Stamina"
+              ]
             }
           ],
           "faction": "both",
@@ -4450,9 +4866,9 @@ if (typeof window !== 'undefined') {
           "stats": "+60 Armor, Equip: +32 Attack Power.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "73 - 110 Damage\tSpeed 3.30",
-            "(27.7 damage per second)",
+            "(27.73 damage per second)",
             "+60 Armor",
             "Equip: +32 Attack Power."
           ],
@@ -4482,17 +4898,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Polearm",
               "quality": "q3",
               "iLvl": 34,
-              "stats": "+10 Agility, +9 Nature Resistance, Equip: +10 Hit Rating",
+              "stats": "+10 Agility, +9 Nature Resistance, Equip: Improves your chance to hit by 1.0%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tPolearm",
+                "Two-Hand",
                 "69 - 104 Damage\tSpeed 3.00",
-                "(28.8 damage per second)",
+                "(28.83 damage per second)",
                 "+10 Agility",
                 "+9 Nature Resistance",
                 "Requires Level 29",
-                "Equip: +10 Hit Rating",
-                "Sell Price: 1g 2s 92c"
+                "Equip: Improves your chance to hit by 1.0%."
               ],
               "reqLevel": 29,
               "icon": "inv_spear_08"
@@ -4510,22 +4925,60 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 3.30",
-                "(31.2 damage per second)",
+                "(31.21 damage per second)",
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
               ],
               "reqLevel": 24,
               "icon": "inv_hammer_20"
+            },
+            {
+              "name": "Ironwood Destroyer",
+              "itemId": 271770,
+              "value": "22.5 DPS - 2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "22.5 DPS",
+              "quality": "q1",
+              "iLvl": 1,
+              "reqLevel": 28,
+              "stats": "Use: Use to sketch a location on the Shapers Terrace map.",
+              "icon": "inv_mace_05",
+              "weaponType": "Two-Handed Mace",
+              "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map."
+              ]
+            },
+            {
+              "name": "Hornbeam Heft",
+              "itemId": 271772,
+              "value": "16.8 DPS - 1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "16.8 DPS",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Strength, +4 Agility",
+              "icon": "inv_axe_02",
+              "weaponType": "One-Handed Axe"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
           "reqLevel": 28,
-          "stats": "+11 Str, +8 Sta"
+          "stats": "1080 armor, Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "78 - 117 Damage\tSpeed 3.50",
+            "(27.86 damage per second)",
+            "1080 armor",
+            "Requires Level 28",
+            "Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)"
+          ]
         },
         {
           "levelBracket": "29–30",
@@ -4554,12 +5007,11 @@ if (typeof window !== 'undefined') {
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "97 - 146 Damage\tSpeed 3.40",
-                "(35.7 damage per second)",
+                "(35.74 damage per second)",
                 "+16 Strength",
-                "+15 Stamina",
-                "Classes: Warrior"
+                "+15 Stamina"
               ],
               "reqLevel": 30,
               "icon": "inv_hammer_08"
@@ -4577,12 +5029,11 @@ if (typeof window !== 'undefined') {
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 2.90",
-                "(35.5 damage per second)",
+                "(35.52 damage per second)",
                 "+16 Strength",
-                "+15 Stamina",
-                "Classes: Warrior"
+                "+15 Stamina"
               ],
               "reqLevel": 30,
               "icon": "inv_sword_15"
@@ -4600,9 +5051,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Strength, +8 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "88 - 132 Damage\tSpeed 3.80",
-                "(28.9 damage per second)",
+                "(28.95 damage per second)",
                 "+12 Strength",
                 "+8 Stamina"
               ],
@@ -4619,14 +5070,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed sword",
               "quality": "q2",
               "iLvl": 43,
-              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "62 - 94 Damage\tSpeed 2.40",
-                "(32.5 damage per second)",
+                "(32.50 damage per second)",
                 "+12 Strength",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
               ],
               "reqLevel": 28,
               "icon": "inv_sword_42"
@@ -4644,9 +5095,9 @@ if (typeof window !== 'undefined') {
               "stats": "+15 Strength, +8 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tAxe",
+                "Two-Hand",
                 "88 - 132 Damage\tSpeed 3.80",
-                "(28.9 damage per second)",
+                "(28.95 damage per second)",
                 "+15 Strength",
                 "+8 Stamina",
                 "Requires Level 29"
@@ -4664,14 +5115,14 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "91 - 137 Damage\tSpeed 3.20",
-                "(35.6 damage per second)",
-                "+12 Intellect",
+                "(35.63 damage per second)",
                 "+15 Stamina",
+                "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
@@ -4694,7 +5145,15 @@ if (typeof window !== 'undefined') {
                 "kind": "quest",
                 "title": "In the Name of the Light",
                 "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "105 - 159 Damage\tSpeed 3.40",
+                "(38.82 damage per second)",
+                "+20 Strength",
+                "+10 Stamina"
+              ]
             }
           ],
           "faction": "both",
@@ -4703,12 +5162,11 @@ if (typeof window !== 'undefined') {
           "stats": "+16 Strength, +15 Stamina",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tAxe",
+            "Two-Hand",
             "102 - 154 Damage\tSpeed 3.60",
-            "(35.6 damage per second)",
+            "(35.56 damage per second)",
             "+16 Strength",
-            "+15 Stamina",
-            "Classes: Warrior"
+            "+15 Stamina"
           ],
           "reqLevel": 30
         },
@@ -4739,12 +5197,11 @@ if (typeof window !== 'undefined') {
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tAxe",
+                "Two-Hand",
                 "102 - 154 Damage\tSpeed 3.60",
-                "(35.6 damage per second)",
+                "(35.56 damage per second)",
                 "+16 Strength",
-                "+15 Stamina",
-                "Classes: Warrior"
+                "+15 Stamina"
               ],
               "reqLevel": 30,
               "icon": "inv_axe_12"
@@ -4762,15 +5219,13 @@ if (typeof window !== 'undefined') {
               "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
               "lines": [
                 "Binds when picked up",
-                "Unique",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "46 - 70 Damage\tSpeed 2.00",
-                "(29 damage per second)",
+                "(29.00 damage per second)",
                 "+16 Strength",
                 "+5 Agility",
-                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-                "3 Charges",
-                "Requires Level 29"
+                "Requires Level 29",
+                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
               ],
               "reqLevel": 29,
               "icon": "inv_mace_14"
@@ -4786,8 +5241,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "",
-              "icon": "inv_hammer_04"
+              "stats": "+5 Strength",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "+5 Strength",
+                "Requires Level 25"
+              ]
             },
             {
               "name": "Abandoned Ferocity",
@@ -4801,7 +5264,17 @@ if (typeof window !== 'undefined') {
               "iLvl": 42,
               "reqLevel": 35,
               "stats": "+10 Strength, +4 Agility, +12 Stamina",
-              "icon": "inv_axe_17"
+              "icon": "inv_axe_17",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "95 - 143 Damage\tSpeed 3.20",
+                "(37.19 damage per second)",
+                "+10 Strength",
+                "+4 Agility",
+                "+12 Stamina",
+                "Requires Level 35"
+              ]
             },
             {
               "name": "Scavenged Magram Armament",
@@ -4814,8 +5287,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+5 Agility, +14 Stamina",
-              "icon": "inv_spear_05"
+              "stats": "+5 Agility, +14 Stamina, Equip: +12 Attack Power.",
+              "icon": "inv_spear_05",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "89 - 134 Damage\tSpeed 3.00",
+                "(37.17 damage per second)",
+                "+5 Agility",
+                "+14 Stamina",
+                "Requires Level 35",
+                "Equip: +12 Attack Power."
+              ]
             }
           ],
           "faction": "both",
@@ -4824,9 +5307,9 @@ if (typeof window !== 'undefined') {
           "stats": "+15 Strength, +8 Stamina",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tAxe",
+            "Two-Hand",
             "88 - 132 Damage\tSpeed 3.80",
-            "(28.9 damage per second)",
+            "(28.95 damage per second)",
             "+15 Strength",
             "+8 Stamina",
             "Requires Level 29"
@@ -4859,7 +5342,17 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 39,
               "stats": "+16 Str, +17 Sta",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "105 - 159 Damage\tSpeed 3.40",
+                "(38.82 damage per second)",
+                "+8 Strength",
+                "+14 Stamina",
+                "+16 Intellect",
+                "Requires Level 39"
+              ]
             },
             {
               "name": "Bonebiter",
@@ -4872,8 +5365,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": "",
-              "icon": "inv_misc_bowl_01"
+              "stats": "+20 Strength, +10 Stamina",
+              "icon": "inv_misc_bowl_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "105 - 159 Damage\tSpeed 3.40",
+                "(38.82 damage per second)",
+                "+20 Strength",
+                "+10 Stamina"
+              ]
             },
             {
               "name": "Sword of Serenity",
@@ -4887,7 +5388,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +4 Spi",
-              "icon": "inv_sword_05"
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "46 - 86 Damage\tSpeed 2.20",
+                "(30.00 damage per second)",
+                "+9 Stamina",
+                "+4 Spirit"
+              ]
             },
             {
               "name": "Sword of Omen",
@@ -4907,7 +5416,15 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 42,
           "reqLevel": 37,
-          "stats": ""
+          "stats": "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "104 - 157 Damage\tSpeed 3.50",
+            "(37.29 damage per second)",
+            "Requires Level 37",
+            "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
+          ]
         },
         {
           "levelBracket": "41–44",
@@ -4948,7 +5465,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 41,
               "reqLevel": 36,
               "stats": "+20 Strength, +8 Stamina",
-              "icon": "inv_sword_01"
+              "icon": "inv_sword_01",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "117 - 176 Damage\tSpeed 4.00",
+                "(36.63 damage per second)",
+                "+20 Strength",
+                "+8 Stamina",
+                "Requires Level 36"
+              ]
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -4961,15 +5487,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_hammer_16"
+              "stats": "+19 Strength, Equip: Increases damage done by magical spells and effects by up to 21",
+              "icon": "inv_hammer_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "123 - 185 Damage\tSpeed 3.60",
+                "(42.78 damage per second)",
+                "+19 Strength",
+                "Requires Level 44",
+                "Equip: Increases damage done by magical spells and effects by up to 21"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 43,
-          "stats": "+10 Hit Rating"
+          "stats": "+23 Strength, Equip: Improves your chance to hit by 1.0%.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "127 - 191 Damage\tSpeed 3.80",
+            "(41.84 damage per second)",
+            "+23 Strength",
+            "Requires Level 43",
+            "Equip: Improves your chance to hit by 1.0%."
+          ]
         },
         {
           "levelBracket": "45–50",
@@ -4996,8 +5540,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "",
-              "icon": "inv_hammer_08"
+              "stats": "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100.",
+              "icon": "inv_hammer_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "126 - 190 Damage\tSpeed 3.40",
+                "(46.47 damage per second)",
+                "Requires Level 49",
+                "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
+              ]
             },
             {
               "name": "Warmonger",
@@ -5010,15 +5562,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+3% Hit",
-              "icon": "inv_sword_04"
+              "stats": "+3 Strength, Equip: Improves your chance to hit by 3.0%.",
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "108 - 162 Damage\tSpeed 3.00",
+                "(45.00 damage per second)",
+                "+3 Strength",
+                "Requires Level 47",
+                "Equip: Improves your chance to hit by 3.0%."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 48,
-          "stats": "+14 Str, +1% Crit"
+          "stats": "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "117 - 176 Damage\tSpeed 3.20",
+            "(45.78 damage per second)",
+            "Requires Level 48",
+            "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
+          ]
         },
         {
           "levelBracket": "51–54",
@@ -5058,15 +5627,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_04"
+              "stats": "+4 Arcane Resistance, Equip: Increases your chance to Parry an attack by 1.4%., Equip: Improves your chance to hit by 2.0%.",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "135 - 203 Damage\tSpeed 3.50",
+                "(48.29 damage per second)",
+                "+4 Arcane Resistance",
+                "Requires Level 51",
+                "Equip: Increases your chance to Parry an attack by 1.4%.",
+                "Equip: Improves your chance to hit by 2.0%."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 55,
           "reqLevel": 50,
-          "stats": ""
+          "stats": "Chance on hit: Stuns target for 8 sec.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "140 - 211 Damage\tSpeed 3.70",
+            "(47.43 damage per second)",
+            "Requires Level 50",
+            "Chance on hit: Stuns target for 8 sec."
+          ]
         },
         {
           "levelBracket": "55–60",
@@ -5119,8 +5706,19 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_hammer_09"
+              "stats": "+18 Strength, +17 Stamina, Equip: Improves your chance to get a critical strike by 2.0%., Chance on hit: Stuns target for 1 sec.",
+              "icon": "inv_hammer_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "152 - 255 Damage\tSpeed 3.60",
+                "(56.53 damage per second)",
+                "+18 Strength",
+                "+17 Stamina",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Chance on hit: Stuns target for 1 sec."
+              ]
             },
             {
               "name": "Dreadforge Retaliator",
@@ -5145,15 +5743,35 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 59,
               "reqLevel": 54,
-              "stats": "",
-              "icon": "inv_axe_69"
+              "stats": "+17 Strength, +18 Stamina, +10 Frost Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 13",
+              "icon": "inv_axe_69",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "145 - 219 Damage\tSpeed 3.60",
+                "(50.56 damage per second)",
+                "+17 Strength",
+                "+18 Stamina",
+                "+10 Frost Resistance",
+                "Requires Level 54",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 13"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 63,
           "reqLevel": 58,
-          "stats": "+62 AP, slow 3.80s Mortal Strikes"
+          "stats": "+13 Stamina, Equip: +62 Attack Power.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "153 - 256 Damage\tSpeed 3.80",
+            "(53.82 damage per second)",
+            "+13 Stamina",
+            "Requires Level 58",
+            "Equip: +62 Attack Power."
+          ]
         }
       ]
     },
@@ -5161,8 +5779,12 @@ if (typeof window !== 'undefined') {
       "classId": "paladin",
       "tracks": [
         {
-          "id": "primary",
-          "name": "Two-Handed Path (Retribution / Leveling)"
+          "id": "dps",
+          "name": "⚔️ DPS Track (Retribution Path (Two-Handed Swords & Maces))"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healer Track (Restoration & Holy +Healing Focus)"
         }
       ],
       "levels": [
@@ -5187,11 +5809,17 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "1.8 DPS",
               "quality": "q1",
-              "iLvl": 6,
+              "iLvl": 3,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "speed": "1.90",
+              "lines": [
+                "One-Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             },
             {
               "name": "Worn Shortsword",
@@ -5199,19 +5827,31 @@ if (typeof window !== 'undefined') {
               "value": "1.7 DPS - Starter sword",
               "faction": "both",
               "dps": "1.7 DPS",
-              "quality": "q2",
-              "iLvl": 6,
+              "quality": "q1",
+              "iLvl": 2,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "speed": "1.90",
+              "lines": [
+                "Main Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             }
           ],
           "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 6,
+          "quality": "q1",
+          "iLvl": 5,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "6 - 9 Damage\tSpeed 2.90",
+            "(2.59 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -5236,10 +5876,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             },
             {
               "name": "Copper Shortsword",
@@ -5253,14 +5898,28 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 4,
               "stats": "+1 Strength",
-              "icon": "inv_sword_26"
+              "icon": "inv_sword_26",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "9 - 18 Damage\tSpeed 2.50",
+                "(5.40 damage per second)",
+                "+1 Strength",
+                "Requires Level 4"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 9,
           "reqLevel": 4,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "10 - 16 Damage\tSpeed 2.60",
+            "(5.00 damage per second)",
+            "Requires Level 4"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -5285,10 +5944,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             },
             {
               "name": "Copper Mace",
@@ -5302,14 +5966,29 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_mace_01"
+              "icon": "inv_mace_01",
+              "lines": [
+                "One-Hand",
+                "7 - 13 Damage\tSpeed 2.60",
+                "(3.85 damage per second)",
+                "Requires Level 4"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 11,
           "reqLevel": 6,
-          "stats": "+1 Strength, +1 Stamina"
+          "stats": "+1 Strength, +1 Stamina",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "20 - 31 Damage\tSpeed 3.30",
+            "(7.73 damage per second)",
+            "+1 Strength",
+            "+1 Stamina",
+            "Requires Level 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -5337,7 +6016,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_mace_02"
+              "icon": "inv_mace_02",
+              "lines": [
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.50",
+                "(9.00 damage per second)",
+                "Requires Level 10"
+              ]
             },
             {
               "name": "Copper Claymore",
@@ -5351,14 +6036,30 @@ if (typeof window !== 'undefined') {
               "iLvl": 11,
               "reqLevel": 6,
               "stats": "+1 Strength, +1 Stamina",
-              "icon": "inv_sword_21"
+              "icon": "inv_sword_21",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "20 - 31 Damage\tSpeed 3.30",
+                "(7.73 damage per second)",
+                "+1 Strength",
+                "+1 Stamina",
+                "Requires Level 6"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+2 Strength",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "18 - 27 Damage\tSpeed 2.70",
+            "(8.33 damage per second)",
+            "+2 Strength"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -5385,8 +6086,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -5398,15 +6106,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -5422,15 +6130,29 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Stamina",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "33 - 50 Damage\tSpeed 3.30",
+                "(12.58 damage per second)",
+                "+6 Stamina",
+                "Requires Level 14"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 15,
           "reqLevel": 10,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "Requires Level 10"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -5458,7 +6180,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_mace_02"
+              "icon": "inv_mace_02",
+              "lines": [
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.50",
+                "(9.00 damage per second)",
+                "Requires Level 10"
+              ]
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -5471,8 +6199,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Stamina",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "33 - 50 Damage\tSpeed 3.30",
+                "(12.58 damage per second)",
+                "+6 Stamina",
+                "Requires Level 14"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -5485,15 +6221,30 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": "+4 Strength"
+          "stats": "+4 Strength",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "28 - 43 Damage\tSpeed 3.30",
+            "(10.76 damage per second)",
+            "+4 Strength",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -5520,8 +6271,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Stamina",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "33 - 50 Damage\tSpeed 3.30",
+                "(12.58 damage per second)",
+                "+6 Stamina",
+                "Requires Level 14"
+              ]
             },
             {
               "name": "Bronze Mace",
@@ -5535,14 +6294,28 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "+3 Stamina",
-              "icon": "inv_mace_08"
+              "icon": "inv_mace_08",
+              "lines": [
+                "One-Hand",
+                "20 - 38 Damage\tSpeed 2.60",
+                "(11.15 damage per second)",
+                "+3 Stamina",
+                "Requires Level 17"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 9,
-          "stats": ""
+          "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "39 - 60 Damage\tSpeed 3.10",
+            "(15.97 damage per second)",
+            "Chance on hit: Blasts a target for 42 Fire damage."
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -5568,14 +6341,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed sword",
               "quality": "q3",
               "iLvl": 27,
-              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "68 - 102 Damage\tSpeed 3.80",
-                "(22.4 damage per second)",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 22"
+                "(22.37 damage per second)",
+                "Requires Level 22",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
               "icon": "inv_sword_27"
@@ -5591,15 +6364,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 16,
-              "stats": "",
-              "icon": "inv_sword_23"
+              "stats": "+6 Stamina, Equip: +4 Attack Power., Equip: +6 Attack Power against Undead.",
+              "icon": "inv_sword_23",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "40 - 60 Damage\tSpeed 3.30",
+                "(15.15 damage per second)",
+                "+6 Stamina",
+                "Equip: +4 Attack Power.",
+                "Equip: +6 Attack Power against Undead."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 21,
           "reqLevel": 16,
-          "stats": "+11 Str"
+          "stats": "+8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "47 - 71 Damage\tSpeed 3.20",
+            "(18.44 damage per second)",
+            "+8 Stamina",
+            "Requires Level 16",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -5625,14 +6416,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed sword",
               "quality": "q3",
               "iLvl": 27,
-              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "68 - 102 Damage\tSpeed 3.80",
-                "(22.4 damage per second)",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 22"
+                "(22.37 damage per second)",
+                "Requires Level 22",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
               "icon": "inv_sword_27"
@@ -5649,7 +6440,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
+              "icon": "inv_hammer_18",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 71 Damage\tSpeed 3.50",
+                "(16.86 damage per second)",
+                "+6 Strength",
+                "+6 Stamina",
+                "Requires Level 20"
+              ]
             },
             {
               "name": "Sword of the Fallen",
@@ -5662,15 +6462,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_sword_14"
+              "stats": "+6 Strength, +9 Intellect",
+              "icon": "inv_sword_14",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
+                "+6 Strength",
+                "+9 Intellect",
+                "Requires Level 18"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 23,
           "reqLevel": 18,
-          "stats": "+11 Str, +4 Agi, slow 3.50s"
+          "stats": "+11 Str, +4 Agi, slow 3.50s",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "55 - 83 Damage\tSpeed 3.50",
+            "(19.71 damage per second)",
+            "+11 Strength",
+            "+4 Agility",
+            "Requires Level 18"
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -5698,7 +6516,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
+              "icon": "inv_hammer_18",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 71 Damage\tSpeed 3.50",
+                "(16.86 damage per second)",
+                "+6 Strength",
+                "+6 Stamina",
+                "Requires Level 20"
+              ]
             },
             {
               "name": "Bronze Greatsword",
@@ -5711,15 +6538,34 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+6 Stamina, +7 Spell Power",
-              "icon": "inv_sword_20"
+              "stats": "+6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 72 Damage\tSpeed 3.40",
+                "(17.50 damage per second)",
+                "+6 Stamina",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 20,
-          "stats": "+6 Str, +12 Sta, +7 Int, +6 Spi"
+          "stats": "+5 Stamina, +6 Intellect, +10 Spirit, Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "65 - 99 Damage\tSpeed 3.20",
+            "(25.63 damage per second)",
+            "+5 Stamina",
+            "+6 Intellect",
+            "+10 Spirit",
+            "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals."
+          ]
         },
         {
           "levelBracket": "21–24",
@@ -5746,8 +6592,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": "",
-              "icon": "inv_sword_42"
+              "stats": "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec.",
+              "icon": "inv_sword_42",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.61 damage per second)",
+                "Requires Level 26",
+                "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
+              ]
             },
             {
               "name": "Solid Iron Maul",
@@ -5759,15 +6613,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed mace",
               "quality": "q2",
               "iLvl": 31,
-              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "43 - 66 Damage\tSpeed 3.50",
-                "(15.6 damage per second)",
+                "(15.57 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
               "icon": "inv_hammer_07"
@@ -5783,15 +6637,35 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+10 Strength, +8 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "56 - 105 Damage\tSpeed 3.60",
+                "(22.36 damage per second)",
+                "+10 Strength",
+                "+8 Stamina",
+                "Requires Level 22",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 20,
-          "stats": "+5 Stamina, +10 Spirit"
+          "stats": "+5 Stamina, +6 Intellect, +10 Spirit, Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "65 - 99 Damage\tSpeed 3.20",
+            "(25.63 damage per second)",
+            "+5 Stamina",
+            "+6 Intellect",
+            "+10 Spirit",
+            "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals."
+          ]
         },
         {
           "levelBracket": "25–28",
@@ -5820,9 +6694,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +12 Spirit",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "70 - 106 Damage\tSpeed 3.30",
-                "(26.7 damage per second)",
+                "(26.67 damage per second)",
                 "+12 Stamina",
                 "+12 Spirit"
               ],
@@ -5842,9 +6716,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +100 Armor",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "67 - 102 Damage\tSpeed 3.30",
-                "(25.6 damage per second)",
+                "(25.61 damage per second)",
                 "+12 Stamina",
                 "+100 Armor",
                 "Requires Level 26"
@@ -5863,8 +6737,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+5 Stamina",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "21 - 39 Damage\tSpeed 1.80",
+                "(16.67 damage per second)",
+                "+5 Stamina",
+                "Requires Level 27"
+              ]
             },
             {
               "name": "Defender of Dalaran",
@@ -5879,9 +6761,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 3.30",
-                "(31.2 damage per second)",
+                "(31.21 damage per second)",
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
@@ -5896,9 +6778,9 @@ if (typeof window !== 'undefined') {
           "stats": "+60 Armor, Equip: +32 Attack Power.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "73 - 110 Damage\tSpeed 3.30",
-            "(27.7 damage per second)",
+            "(27.73 damage per second)",
             "+60 Armor",
             "Equip: +32 Attack Power."
           ],
@@ -5931,9 +6813,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 3.30",
-                "(31.2 damage per second)",
+                "(31.21 damage per second)",
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
@@ -5954,9 +6836,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Strength, +8 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "88 - 132 Damage\tSpeed 3.80",
-                "(28.9 damage per second)",
+                "(28.95 damage per second)",
                 "+12 Strength",
                 "+8 Stamina"
               ],
@@ -5973,14 +6855,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed sword",
               "quality": "q2",
               "iLvl": 43,
-              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tSword",
+                "Two-Hand",
                 "62 - 94 Damage\tSpeed 2.40",
-                "(32.5 damage per second)",
+                "(32.50 damage per second)",
                 "+12 Strength",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
               ],
               "reqLevel": 28,
               "icon": "inv_sword_42"
@@ -5995,33 +6877,48 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "91 - 137 Damage\tSpeed 3.20",
-                "(35.6 damage per second)",
-                "+12 Intellect",
+                "(35.63 damage per second)",
                 "+15 Stamina",
+                "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
               "icon": "inv_mace_42"
+            },
+            {
+              "name": "Ironwood Destroyer",
+              "itemId": 271770,
+              "value": "22.5 DPS - 2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "22.5 DPS",
+              "quality": "q1",
+              "iLvl": 1,
+              "reqLevel": 28,
+              "stats": "Use: Use to sketch a location on the Shapers Terrace map.",
+              "icon": "inv_mace_05",
+              "weaponType": "Two-Handed Mace",
+              "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map."
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 31,
-          "stats": "+10 Int, +9 Sta, 3x dmg to Wolves/Worgen",
+          "stats": "+9 Stamina, +10 Intellect, Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tSword",
+            "Two-Hand",
             "69 - 105 Damage\tSpeed 3.40",
-            "(25.6 damage per second)",
-            "+10 Intellect",
+            "(25.59 damage per second)",
             "+9 Stamina",
-            "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
-            "Classes: Paladin"
+            "+10 Intellect",
+            "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen."
           ],
           "reqLevel": 20
         },
@@ -6043,13 +6940,19 @@ if (typeof window !== 'undefined') {
               "name": "Cobalt Crusher",
               "itemId": 6741,
               "weaponType": "Two-handed mace",
-              "quality": "q3",
-              "iLvl": 37,
+              "quality": "q1",
+              "iLvl": 29,
               "reqLevel": 32,
               "dps": "27.4 DPS",
               "speed": "3.40",
               "stats": "+11 Strength, +10 Stamina",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "45 - 68 Damage\tSpeed 3.10",
+                "(18.23 damage per second)"
+              ]
             },
             {
               "name": "Moonsteel Broadsword",
@@ -6062,8 +6965,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 31,
-              "stats": "+4 Strength, +12 Spell Power",
-              "icon": "inv_sword_25"
+              "stats": "+4 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 12",
+              "icon": "inv_sword_25",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "69 - 104 Damage\tSpeed 3.50",
+                "(24.71 damage per second)",
+                "+4 Strength",
+                "Requires Level 31",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 12"
+              ]
             },
             {
               "name": "Silver Spade",
@@ -6078,9 +6990,9 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Stamina, +15 Spirit",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "89 - 134 Damage\tSpeed 3.70",
-                "(30.1 damage per second)",
+                "(30.14 damage per second)",
                 "+4 Stamina",
                 "+15 Spirit"
               ],
@@ -6094,15 +7006,13 @@ if (typeof window !== 'undefined') {
           "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
           "lines": [
             "Binds when picked up",
-            "Unique",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "46 - 70 Damage\tSpeed 2.00",
-            "(29 damage per second)",
+            "(29.00 damage per second)",
             "+16 Strength",
             "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "3 Charges",
-            "Requires Level 29"
+            "Requires Level 29",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
           ],
           "reqLevel": 29
         },
@@ -6132,7 +7042,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +15 Spi",
-              "icon": "inv_sword_05"
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "46 - 86 Damage\tSpeed 2.20",
+                "(30.00 damage per second)",
+                "+9 Stamina",
+                "+4 Spirit"
+              ]
             },
             {
               "name": "Archeus",
@@ -6145,15 +7063,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 28,
-              "stats": "",
-              "icon": "inv_sword_08"
+              "stats": "Chance on hit: Blasts a target for 85 Arcane damage.",
+              "icon": "inv_sword_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "63 - 95 Damage\tSpeed 3.30",
+                "(23.94 damage per second)",
+                "Chance on hit: Blasts a target for 85 Arcane damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
-          "stats": "+16 Str, +17 Sta"
+          "stats": "+16 Str, +17 Sta",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "105 - 159 Damage\tSpeed 3.40",
+            "(38.82 damage per second)",
+            "+8 Strength",
+            "+14 Stamina",
+            "+16 Intellect",
+            "Requires Level 39"
+          ]
         },
         {
           "levelBracket": "41–45",
@@ -6181,7 +7116,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 41,
               "reqLevel": 36,
               "stats": "+20 Strength, +8 Stamina",
-              "icon": "inv_sword_01"
+              "icon": "inv_sword_01",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "117 - 176 Damage\tSpeed 4.00",
+                "(36.63 damage per second)",
+                "+20 Strength",
+                "+8 Stamina",
+                "Requires Level 36"
+              ]
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -6189,11 +7133,21 @@ if (typeof window !== 'undefined') {
               "value": "40.3 DPS - World Drop",
               "faction": "both",
               "dps": "40.3 DPS",
-              "quality": "q3",
-              "iLvl": 46,
-              "reqLevel": 40,
-              "stats": "",
-              "icon": "inv_misc_bag_10"
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+2 Stamina, +4 Spirit",
+              "icon": "inv_misc_bag_10",
+              "speed": "3.00",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "27 - 41 Damage\tSpeed 3.00",
+                "(11.33 damage per second)",
+                "+2 Stamina",
+                "+4 Spirit",
+                "Requires Level 12"
+              ]
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -6206,8 +7160,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_hammer_16"
+              "stats": "+19 Strength, Equip: Increases damage done by magical spells and effects by up to 21",
+              "icon": "inv_hammer_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "123 - 185 Damage\tSpeed 3.60",
+                "(42.78 damage per second)",
+                "+19 Strength",
+                "Requires Level 44",
+                "Equip: Increases damage done by magical spells and effects by up to 21"
+              ]
             }
           ],
           "faction": "both",
@@ -6237,11 +7200,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "44.6 DPS",
               "quality": "q3",
-              "iLvl": 51,
-              "reqLevel": 45,
+              "iLvl": 49,
+              "reqLevel": 44,
               "stats": "+12 Str, +12 Sta",
               "icon": "inv_sword_33",
-              "weaponType": "Two-Handed Sword"
+              "weaponType": "Two-Handed Sword",
+              "speed": "3.30",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "112 - 169 Damage\tSpeed 3.30",
+                "(42.58 damage per second)",
+                "+10 Strength",
+                "+24 Stamina",
+                "Requires Level 44"
+              ]
             },
             {
               "name": "Warmonger",
@@ -6254,15 +7227,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+3% Hit",
-              "icon": "inv_sword_04"
+              "stats": "+3 Strength, Equip: Improves your chance to hit by 3.0%.",
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "108 - 162 Damage\tSpeed 3.00",
+                "(45.00 damage per second)",
+                "+3 Strength",
+                "Requires Level 47",
+                "Equip: Improves your chance to hit by 3.0%."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 54,
           "reqLevel": 49,
-          "stats": "+11 Str, +10 Sta"
+          "stats": "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "126 - 190 Damage\tSpeed 3.40",
+            "(46.47 damage per second)",
+            "Requires Level 49",
+            "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
+          ]
         },
         {
           "levelBracket": "51–55",
@@ -6302,15 +7292,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_04"
+              "stats": "+4 Arcane Resistance, Equip: Increases your chance to Parry an attack by 1.4%., Equip: Improves your chance to hit by 2.0%.",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "135 - 203 Damage\tSpeed 3.50",
+                "(48.29 damage per second)",
+                "+4 Arcane Resistance",
+                "Requires Level 51",
+                "Equip: Increases your chance to Parry an attack by 1.4%.",
+                "Equip: Improves your chance to hit by 2.0%."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 55,
           "reqLevel": 50,
-          "stats": ""
+          "stats": "Chance on hit: Stuns target for 8 sec.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "140 - 211 Damage\tSpeed 3.70",
+            "(47.43 damage per second)",
+            "Requires Level 50",
+            "Chance on hit: Stuns target for 8 sec."
+          ]
         },
         {
           "levelBracket": "56–60",
@@ -6350,8 +7358,19 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_hammer_09"
+              "stats": "+18 Strength, +17 Stamina, Equip: Improves your chance to get a critical strike by 2.0%., Chance on hit: Stuns target for 1 sec.",
+              "icon": "inv_hammer_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "152 - 255 Damage\tSpeed 3.60",
+                "(56.53 damage per second)",
+                "+18 Strength",
+                "+17 Stamina",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Chance on hit: Stuns target for 1 sec."
+              ]
             },
             {
               "name": "Dreadforge Retaliator",
@@ -6371,6 +7390,463 @@ if (typeof window !== 'undefined') {
           "iLvl": 61,
           "reqLevel": 55,
           "stats": "+12 Str, +21 Sta"
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–6",
+          "itemId": 2493,
+          "name": "Wooden Mallet",
+          "icon": "inv_hammer_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.00",
+          "dps": "1.8 DPS",
+          "stats": "+1 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Starting weapon or purchase from weapon merchants in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "alts": [
+            {
+              "name": "Club",
+              "itemId": 2130,
+              "value": "+1 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 4,
+              "reqLevel": 1,
+              "stats": "+1 Spirit",
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "7–12",
+          "itemId": 2493,
+          "name": "Wooden Mallet",
+          "icon": "inv_hammer_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.00",
+          "dps": "2.5 DPS",
+          "stats": "+2 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Low-level Weapon Vendor",
+            "detail": "Purchased from starter merchants in Goldshire or Kharanos."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 9,
+          "reqLevel": 6,
+          "alts": [
+            {
+              "name": "Heavy Copper Maul",
+              "itemId": 3489,
+              "value": "+2 Strength, +2 Stamina - Early Blacksmithing 2H Mace",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 11,
+              "reqLevel": 6,
+              "stats": "+2 Strength, +2 Stamina",
+              "icon": "inv_hammer_04",
+              "weaponType": "Two-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–17",
+          "itemId": 271207,
+          "name": "Scepter of the Abandoned",
+          "icon": "inv_mace_01",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.20",
+          "dps": "14.0 DPS",
+          "stats": "+4 Stamina, +4 Intellect",
+          "source": {
+            "kind": "drop",
+            "title": "The Abandoned (Ruins of Lordaeron)",
+            "detail": "WoW Forever custom dungeon boss drop. Superb early intellect mace."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 18,
+          "reqLevel": 14,
+          "alts": [
+            {
+              "name": "Trogg Scepter",
+              "itemId": 272996,
+              "value": "+4 Spirit, +33 Healing / +11 Spell Dmg - Oggleflint (Ragefire Chasm)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Smite's Mighty Hammer",
+              "itemId": 5195,
+              "value": "+11 Strength, +4 Agility - Mr. Smite (The Deadmines)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+11 Strength, +4 Agility",
+              "icon": "inv_hammer_04",
+              "weaponType": "Two-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "18–21",
+          "itemId": 6641,
+          "name": "Haunting Blade",
+          "icon": "inv_sword_26",
+          "weaponType": "Two-Handed Sword",
+          "speed": "3.00",
+          "dps": "18.2 DPS",
+          "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Lordaeron Captain (Ruins of Lordaeron)",
+            "detail": "Drops from Lordaeron Captain in Ruins of Lordaeron or SFK. Direct +33 Healing 2H blade."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Verigan's Fist",
+              "itemId": 6953,
+              "value": "+6 Strength, +6 Stamina, +12 Intellect - Paladin Class Quest",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 20,
+              "stats": "+6 Strength, +6 Stamina, +12 Intellect",
+              "icon": "inv_hammer_04",
+              "weaponType": "Two-Handed Mace"
+            },
+            {
+              "name": "Scepter of the Abandoned",
+              "itemId": 271207,
+              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 14,
+              "stats": "+4 Stamina, +4 Intellect",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "22–25",
+          "itemId": 6641,
+          "name": "Haunting Blade",
+          "icon": "inv_sword_26",
+          "weaponType": "Two-Handed Sword",
+          "speed": "3.00",
+          "dps": "18.2 DPS",
+          "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Lordaeron Captain (Ruins of Lordaeron)",
+            "detail": "Iconic blue 2H sword with +33 Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Scepter of the Abandoned",
+              "itemId": 271207,
+              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 14,
+              "stats": "+4 Stamina, +4 Intellect",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "26–29",
+          "itemId": 9457,
+          "name": "Royal Diplomatic Scepter",
+          "icon": "inv_mace_01",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.10",
+          "dps": "22.4 DPS",
+          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+          "source": {
+            "kind": "drop",
+            "title": "Dark Iron Ambassador (Gnomeregan)",
+            "detail": "Rare boss in Gnomeregan crypt tunnels. Best 1H leveling healing scepter in early midgame."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +12 HP5, +28 Shadow Dmg - Death Speaker Jargba (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Manual Crowd Pummeler",
+              "itemId": 9449,
+              "value": "25.6 DPS - Crowd Pummeler 9-60 (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+16 Strength, +5 Agility",
+              "icon": "inv_mace_04",
+              "weaponType": "Two-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "30–34",
+          "itemId": 9457,
+          "name": "Royal Diplomatic Scepter",
+          "icon": "inv_mace_01",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.10",
+          "dps": "22.4 DPS",
+          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+          "source": {
+            "kind": "drop",
+            "title": "Dark Iron Ambassador (Gnomeregan)",
+            "detail": "Prime 1H healing scepter. Enormous +75 Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Black Menace",
+              "itemId": 6802,
+              "value": "+50 Healing / +16 Spell Dmg - In the Name of the Light quest",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–39",
+          "itemId": 7721,
+          "name": "Hand of Righteousness",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "25.2 DPS",
+          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+          "source": {
+            "kind": "drop",
+            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+            "detail": "Iconic Scarlet Cathedral boss drop. Massive +94 Healing power spike for 1H healers."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Black Menace",
+              "itemId": 6802,
+              "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Galgann's Firehammer",
+              "itemId": 9415,
+              "value": "+8 Intellect, +6 Spirit - Galgann Firehammer (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "40–44",
+          "itemId": 7721,
+          "name": "Hand of Righteousness",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "25.2 DPS",
+          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+          "source": {
+            "kind": "drop",
+            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+            "detail": "Whitemane's scepter carries Holy Paladins through the 40s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "The Shoveler",
+              "itemId": 9481,
+              "value": "+5 Intellect, +5 Spirit - Digmaster Shovelphlange (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_mace_07",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–49",
+          "itemId": 17743,
+          "name": "Princess Theradras' Scepter",
+          "icon": "inv_mace_04",
+          "weaponType": "Two-Handed Mace",
+          "speed": "3.40",
+          "dps": "41.8 DPS",
+          "stats": "+14 Strength, +13 Stamina",
+          "source": {
+            "kind": "drop",
+            "title": "Princess Theradras (Maraudon)",
+            "detail": "Iconic Theradras drop for heavy stats and emergency melee damage."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "alts": [
+            {
+              "name": "Hand of Righteousness",
+              "itemId": 7721,
+              "value": "+94 Healing / +31 Spell Dmg - Whitemane (SM Cath)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "50–54",
+          "itemId": 11923,
+          "name": "Hammer of the Grace",
+          "icon": "inv_mace_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.50",
+          "dps": "36.2 DPS",
+          "stats": "+6 Spirit, Equip: Increases healing done by up to 31 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Chest of The Seven (Blackrock Depths)",
+            "detail": "Chest reward from The Seven challenge in BRD. Premier pre-raid 1H healing mace."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 57,
+          "reqLevel": 52,
+          "alts": []
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 21410,
+          "name": "Gavel of Infinite Wisdom",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "35.8 DPS",
+          "stats": "+14 Intellect, +8 Spirit, Equip: Increases healing done by up to 184 and damage done by up to 61.",
+          "source": {
+            "kind": "drop",
+            "title": "General Rajaxx / AQ20 Tokens",
+            "detail": "Temple of Ahn'Qiraj / Ruins of Ahn'Qiraj premier healing mace."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 70,
+          "reqLevel": 60,
+          "alts": [
+            {
+              "name": "Scepter of the False Prophet",
+              "itemId": 21839,
+              "value": "+210 Healing / +70 Spell Dmg, +19 Int, +10 Spi - C'Thun (Temple of Ahn'Qiraj)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 84,
+              "reqLevel": 60,
+              "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Grand Marshal's Warhammer",
+              "itemId": 23454,
+              "value": "+199 Healing / +66 Spell Dmg - PvP Rank 14 Officer's Lounge",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Simone's Cultivating Hammer",
+              "itemId": 22380,
+              "value": "+139 Healing / +46 Spell Dmg - High level world drop / quest",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "Equip: Increases healing done by up to 139 and damage done by up to 46.",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
         }
       ]
     },
@@ -6409,14 +7885,25 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_weapon_bow_11"
+              "icon": "inv_weapon_bow_11",
+              "lines": [
+                "Ranged",
+                "3 - 7 Damage\tSpeed 2.10",
+                "(2.38 damage per second)",
+                "Requires Level 3"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 6,
+          "iLvl": 4,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "2 - 5 Damage\tSpeed 2.00",
+            "(1.75 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -6444,7 +7931,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_02"
+              "icon": "inv_weapon_rifle_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "6 - 13 Damage\tSpeed 2.30",
+                "(4.13 damage per second)",
+                "+1 Stamina",
+                "Requires Level 5"
+              ]
             },
             {
               "name": "Kolkar Bow",
@@ -6458,14 +7953,26 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_weapon_bow_12"
+              "icon": "inv_weapon_bow_12",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "5 - 10 Damage\tSpeed 2.80",
+                "(2.68 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "3 - 7 Damage\tSpeed 2.10",
+            "(2.38 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -6493,7 +8000,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_weapon_bow_11"
+              "icon": "inv_weapon_bow_11",
+              "lines": [
+                "Ranged",
+                "3 - 7 Damage\tSpeed 2.10",
+                "(2.38 damage per second)",
+                "Requires Level 3"
+              ]
             },
             {
               "name": "Kolkar Bow",
@@ -6507,14 +8020,28 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_weapon_bow_12"
+              "icon": "inv_weapon_bow_12",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "5 - 10 Damage\tSpeed 2.80",
+                "(2.68 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 10,
           "reqLevel": 5,
-          "stats": "+1 Stamina"
+          "stats": "+1 Stamina",
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "6 - 13 Damage\tSpeed 2.30",
+            "(4.13 damage per second)",
+            "+1 Stamina",
+            "Requires Level 5"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -6542,7 +8069,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_03"
+              "icon": "inv_weapon_bow_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "9 - 17 Damage\tSpeed 2.60",
+                "(5.00 damage per second)",
+                "+1 Agility",
+                "Requires Level 7"
+              ]
             },
             {
               "name": "Snarlsnout Shooter",
@@ -6556,7 +8091,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Strength",
-              "icon": "inv_weapon_rifle_05"
+              "icon": "inv_weapon_rifle_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "8 - 17 Damage\tSpeed 2.50",
+                "(5.00 damage per second)",
+                "+1 Strength",
+                "Requires Level 7"
+              ]
             },
             {
               "name": "Reinforced Bow",
@@ -6567,10 +8110,16 @@ if (typeof window !== 'undefined') {
               "speed": "2.60",
               "weaponType": "Bow",
               "quality": "q1",
-              "iLvl": 16,
-              "reqLevel": 11,
+              "iLvl": 21,
+              "reqLevel": 16,
               "stats": "",
-              "icon": "inv_weapon_bow_01"
+              "icon": "inv_weapon_bow_01",
+              "lines": [
+                "Ranged",
+                "11 - 22 Damage\tSpeed 2.20",
+                "(7.50 damage per second)",
+                "Requires Level 16"
+              ]
             },
             {
               "name": "Skorn's Rifle",
@@ -6584,14 +8133,28 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_rifle_01"
+              "icon": "inv_weapon_rifle_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "6 - 13 Damage\tSpeed 1.90",
+                "(5.00 damage per second)",
+                "+1 Agility"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 14,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+1 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "8 - 16 Damage\tSpeed 2.10",
+            "(5.71 damage per second)",
+            "+1 Agility"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -6619,7 +8182,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 10,
               "stats": "+1 Strength, +1 Stamina",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "9 - 18 Damage\tSpeed 2.80",
+                "(4.82 damage per second)",
+                "+1 Strength",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Calibrated Blunderbuss",
@@ -6633,7 +8204,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+3 Stamina",
-              "icon": "inv_weapon_rifle_01"
+              "icon": "inv_weapon_rifle_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 29 Damage\tSpeed 2.30",
+                "(9.57 damage per second)",
+                "+3 Stamina"
+              ]
             },
             {
               "name": "Fine Shortbow",
@@ -6647,7 +8225,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_05"
+              "icon": "inv_weapon_bow_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "7 - 14 Damage\tSpeed 1.70",
+                "(6.18 damage per second)",
+                "+1 Agility",
+                "Requires Level 11"
+              ]
             },
             {
               "name": "Rough Boomstick",
@@ -6661,7 +8247,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 5,
               "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_02"
+              "icon": "inv_weapon_rifle_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "6 - 13 Damage\tSpeed 2.30",
+                "(4.13 damage per second)",
+                "+1 Stamina",
+                "Requires Level 5"
+              ]
             },
             {
               "name": "Orcish Battle Bow",
@@ -6675,7 +8269,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 14,
               "reqLevel": 9,
               "stats": "+1 Strength",
-              "icon": "inv_weapon_bow_08"
+              "icon": "inv_weapon_bow_08",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "7 - 14 Damage\tSpeed 1.90",
+                "(5.53 damage per second)",
+                "+1 Strength"
+              ]
             },
             {
               "name": "Snarlsnout Shooter",
@@ -6688,15 +8289,29 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_weapon_rifle_05"
+              "stats": "+1 Strength",
+              "icon": "inv_weapon_rifle_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "8 - 17 Damage\tSpeed 2.50",
+                "(5.00 damage per second)",
+                "+1 Strength",
+                "Requires Level 7"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 21,
-          "reqLevel": 16,
-          "stats": ""
+          "iLvl": 25,
+          "reqLevel": 20,
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "15 - 29 Damage\tSpeed 2.40",
+            "(9.17 damage per second)",
+            "Requires Level 20"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -6720,11 +8335,17 @@ if (typeof window !== 'undefined') {
               "dps": "6.72 DPS",
               "speed": "3.20",
               "weaponType": "Staff",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 7,
+              "quality": "q1",
+              "iLvl": 14,
+              "reqLevel": 9,
               "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "icon": "inv_staff_16",
+              "lines": [
+                "Ranged",
+                "7 - 14 Damage\tSpeed 2.10",
+                "(5.00 damage per second)",
+                "Requires Level 9"
+              ]
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6738,7 +8359,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "15 - 28 Damage\tSpeed 2.60",
+                "(8.27 damage per second)",
+                "+2 Agility",
+                "Requires Level 16"
+              ]
             },
             {
               "name": "Orcish Battle Bow",
@@ -6752,7 +8381,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 14,
               "reqLevel": 9,
               "stats": "+1 Strength",
-              "icon": "inv_weapon_bow_08"
+              "icon": "inv_weapon_bow_08",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "7 - 14 Damage\tSpeed 1.90",
+                "(5.53 damage per second)",
+                "+1 Strength"
+              ]
             },
             {
               "name": "Bristlebark Bow",
@@ -6765,15 +8401,29 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_weapon_bow_03"
+              "stats": "+1 Agility",
+              "icon": "inv_weapon_bow_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "9 - 17 Damage\tSpeed 2.60",
+                "(5.00 damage per second)",
+                "+1 Agility",
+                "Requires Level 7"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 25,
-          "reqLevel": 20,
-          "stats": ""
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "10 - 20 Damage\tSpeed 2.60",
+            "(5.77 damage per second)",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -6800,8 +8450,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_crossbow_02"
+              "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
+              "icon": "inv_weapon_crossbow_02",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 23 Damage\tSpeed 2.00",
+                "(9.50 damage per second)",
+                "Requires Level 13",
+                "Chance on hit: Wounds the target for 14 Physical damage."
+              ]
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6815,7 +8473,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "15 - 28 Damage\tSpeed 2.60",
+                "(8.27 damage per second)",
+                "+2 Agility",
+                "Requires Level 16"
+              ]
             },
             {
               "name": "Laminated Recurve Bow",
@@ -6826,10 +8492,16 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "weaponType": "Bow",
               "quality": "q1",
-              "iLvl": 25,
-              "reqLevel": 20,
+              "iLvl": 16,
+              "reqLevel": 11,
               "stats": "",
-              "icon": "inv_weapon_bow_01"
+              "icon": "inv_weapon_bow_01",
+              "lines": [
+                "Ranged",
+                "10 - 20 Damage\tSpeed 2.60",
+                "(5.77 damage per second)",
+                "Requires Level 11"
+              ]
             },
             {
               "name": "Walton's Second-Favorite Gun",
@@ -6843,14 +8515,28 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 14,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_05"
+              "icon": "inv_weapon_rifle_05",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "12 - 23 Damage\tSpeed 2.20",
+                "(7.95 damage per second)",
+                "+2 Agility"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 9,
-          "stats": ""
+          "stats": "+3 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "15 - 29 Damage\tSpeed 2.30",
+            "(9.57 damage per second)",
+            "+3 Stamina"
+          ]
         },
         {
           "levelBracket": "15–18",
@@ -6878,7 +8564,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+3 Spirit",
-              "icon": "inv_weapon_rifle_01"
+              "icon": "inv_weapon_rifle_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "12 - 23 Damage\tSpeed 1.80",
+                "(9.72 damage per second)",
+                "+3 Spirit",
+                "Requires Level 19"
+              ]
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6892,7 +8586,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "15 - 28 Damage\tSpeed 2.60",
+                "(8.27 damage per second)",
+                "+2 Agility",
+                "Requires Level 16"
+              ]
             },
             {
               "name": "Barbaric Crossbow",
@@ -6905,15 +8607,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_crossbow_02"
+              "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
+              "icon": "inv_weapon_crossbow_02",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 23 Damage\tSpeed 2.00",
+                "(9.50 damage per second)",
+                "Requires Level 13",
+                "Chance on hit: Wounds the target for 14 Physical damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 19,
-          "stats": ""
+          "stats": "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "20 - 38 Damage\tSpeed 2.40",
+            "(12.08 damage per second)",
+            "Requires Level 19",
+            "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -6941,7 +8659,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 26,
               "reqLevel": 21,
               "stats": "+3 Stamina",
-              "icon": "inv_weapon_rifle_07"
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "19 - 37 Damage\tSpeed 2.70",
+                "(10.37 damage per second)",
+                "+3 Stamina",
+                "Requires Level 21"
+              ]
             },
             {
               "name": "Reinforced Bow",
@@ -6952,17 +8678,31 @@ if (typeof window !== 'undefined') {
               "speed": "2.60",
               "weaponType": "Bow",
               "quality": "q1",
-              "iLvl": 16,
-              "reqLevel": 11,
+              "iLvl": 21,
+              "reqLevel": 16,
               "stats": "",
-              "icon": "inv_weapon_bow_01"
+              "icon": "inv_weapon_bow_01",
+              "lines": [
+                "Ranged",
+                "11 - 22 Damage\tSpeed 2.20",
+                "(7.50 damage per second)",
+                "Requires Level 16"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 19,
-          "stats": ""
+          "stats": "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "20 - 38 Damage\tSpeed 2.40",
+            "(12.08 damage per second)",
+            "Requires Level 19",
+            "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
+          ]
         },
         {
           "levelBracket": "21–22",
@@ -6990,7 +8730,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 28,
               "reqLevel": 23,
               "stats": "+2 Agility, +4 Stamina",
-              "icon": "inv_weapon_bow_03"
+              "icon": "inv_weapon_bow_03",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "21 - 40 Damage\tSpeed 2.20",
+                "(13.86 damage per second)",
+                "+2 Agility",
+                "+4 Stamina",
+                "Requires Level 23"
+              ]
             },
             {
               "name": "Alliance Outrunner Bow",
@@ -7004,7 +8753,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+4 Agility, +3 Spirit",
-              "icon": "inv_weapon_bow_05"
+              "icon": "inv_weapon_bow_05",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "22 - 42 Damage\tSpeed 2.40",
+                "(13.33 damage per second)",
+                "+4 Agility",
+                "+3 Spirit",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Moonsight Rifle",
@@ -7017,15 +8775,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+3 Hit",
-              "icon": "inv_weapon_rifle_06"
+              "stats": "Equip: Improves your chance to hit by 0.3%.",
+              "icon": "inv_weapon_rifle_06",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "14 - 26 Damage\tSpeed 1.70",
+                "(11.76 damage per second)",
+                "Requires Level 24",
+                "Equip: Improves your chance to hit by 0.3%."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 27,
           "reqLevel": 22,
-          "stats": ""
+          "stats": "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "22 - 42 Damage\tSpeed 2.40",
+            "(13.33 damage per second)",
+            "Requires Level 22",
+            "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec."
+          ]
         },
         {
           "levelBracket": "23–24",
@@ -7048,12 +8822,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.2 DPS",
               "speed": "2.70",
-              "quality": "q3",
-              "iLvl": 28,
-              "reqLevel": 22,
+              "quality": "q1",
+              "iLvl": 26,
+              "reqLevel": 21,
               "stats": "",
               "icon": "spell_nature_polymorph",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "lines": [
+                "Ranged",
+                "18 - 34 Damage\tSpeed 2.70",
+                "(9.63 damage per second)",
+                "Requires Level 21"
+              ]
             },
             {
               "name": "Concealed Hand Crossbow",
@@ -7067,7 +8847,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_weapon_crossbow_02"
+              "icon": "inv_weapon_crossbow_02",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "24 - 37 Damage\tSpeed 2.00",
+                "(15.25 damage per second)",
+                "Requires Level 26"
+              ]
             }
           ],
           "faction": "both",
@@ -7076,9 +8863,9 @@ if (typeof window !== 'undefined') {
           "stats": "+2 Agility, +4 Stamina",
           "lines": [
             "Binds when picked up",
-            "Ranged\tBow",
+            "Ranged",
             "21 - 40 Damage\tSpeed 2.20",
-            "(13.9 damage per second)",
+            "(13.86 damage per second)",
             "+2 Agility",
             "+4 Stamina",
             "Requires Level 23"
@@ -7111,7 +8898,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 33,
               "reqLevel": 28,
               "stats": "+6 Agility",
-              "icon": "inv_musket_02"
+              "icon": "inv_musket_02",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "29 - 54 Damage\tSpeed 2.50",
+                "(16.60 damage per second)",
+                "+6 Agility",
+                "Requires Level 28"
+              ]
             },
             {
               "name": "Dun Garok Rifle",
@@ -7125,7 +8920,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 30,
               "reqLevel": 25,
               "stats": "+3 Agility, +3 Spirit",
-              "icon": "inv_weapon_rifle_03"
+              "icon": "inv_weapon_rifle_03",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "27 - 50 Damage\tSpeed 2.60",
+                "(14.81 damage per second)",
+                "+3 Agility",
+                "+3 Spirit",
+                "Requires Level 25"
+              ]
             },
             {
               "name": "Concealed Hand Crossbow",
@@ -7139,7 +8943,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_weapon_crossbow_02"
+              "icon": "inv_weapon_crossbow_02",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "24 - 37 Damage\tSpeed 2.00",
+                "(15.25 damage per second)",
+                "Requires Level 26"
+              ]
             },
             {
               "name": "Fallenroot Longbow",
@@ -7154,9 +8965,9 @@ if (typeof window !== 'undefined') {
               "stats": "+2 Agility, +4 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tBow",
+                "Ranged",
                 "21 - 40 Damage\tSpeed 2.20",
-                "(13.9 damage per second)",
+                "(13.86 damage per second)",
                 "+2 Agility",
                 "+4 Stamina",
                 "Requires Level 23"
@@ -7168,16 +8979,15 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 31,
-          "stats": "Equip: +8 Attack Power, Equip: +9 Attack Power Vs Humanoids",
+          "stats": "Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids.",
           "lines": [
             "Binds when picked up",
-            "Ranged\tCrossbow",
+            "Ranged",
             "28 - 43 Damage\tSpeed 2.30",
-            "(15.4 damage per second)",
+            "(15.43 damage per second)",
             "Requires Level 26",
-            "Equip: +8 Attack Power",
-            "Equip: +9 Attack Power Vs Humanoids",
-            "Sell Price: 45s 74c"
+            "Equip: +8 Attack Power.",
+            "Equip: +9 Attack Power against Humanoids."
           ],
           "reqLevel": 26
         },
@@ -7205,16 +9015,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Crossbow",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "Equip: +8 Attack Power, Equip: +9 Attack Power Vs Humanoids",
+              "stats": "Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids.",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tCrossbow",
+                "Ranged",
                 "28 - 43 Damage\tSpeed 2.30",
-                "(15.4 damage per second)",
+                "(15.43 damage per second)",
                 "Requires Level 26",
-                "Equip: +8 Attack Power",
-                "Equip: +9 Attack Power Vs Humanoids",
-                "Sell Price: 45s 74c"
+                "Equip: +8 Attack Power.",
+                "Equip: +9 Attack Power against Humanoids."
               ],
               "reqLevel": 26,
               "icon": "inv_weapon_crossbow_06"
@@ -7232,11 +9041,11 @@ if (typeof window !== 'undefined') {
               "stats": "Equip: +12 Attack Power.",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "36 - 68 Damage\tSpeed 2.90",
-                "(17.9 damage per second)",
-                "Equip: +12 Attack Power.",
-                "Requires Level 30"
+                "(17.93 damage per second)",
+                "Requires Level 30",
+                "Equip: +12 Attack Power."
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_rifle_02"
@@ -7248,9 +9057,9 @@ if (typeof window !== 'undefined') {
           "stats": "+6 Agility",
           "lines": [
             "Binds when picked up",
-            "Ranged\tGun",
+            "Ranged",
             "29 - 54 Damage\tSpeed 2.50",
-            "(16.6 damage per second)",
+            "(16.60 damage per second)",
             "+6 Agility",
             "Requires Level 28"
           ],
@@ -7283,9 +9092,9 @@ if (typeof window !== 'undefined') {
               "stats": "+6 Agility",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tBow",
+                "Ranged",
                 "32 - 61 Damage\tSpeed 2.40",
-                "(19.4 damage per second)",
+                "(19.38 damage per second)",
                 "+6 Agility"
               ],
               "reqLevel": 28,
@@ -7304,9 +9113,9 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Agility, +4 Spirit",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "36 - 68 Damage\tSpeed 2.80",
-                "(18.6 damage per second)",
+                "(18.57 damage per second)",
                 "+4 Agility",
                 "+4 Spirit"
               ],
@@ -7326,13 +9135,12 @@ if (typeof window !== 'undefined') {
               "stats": "+3 Stamina, Equip: +9 Attack Power.",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "35 - 66 Damage\tSpeed 2.80",
-                "(18.0 damage per second)",
+                "(18.04 damage per second)",
                 "+3 Stamina",
-                "Equip: +9 Attack Power.",
                 "Requires Level 30",
-                "Requires Booty Bay - Honored"
+                "Equip: +9 Attack Power."
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_rifle_02"
@@ -7350,11 +9158,11 @@ if (typeof window !== 'undefined') {
               "stats": "Equip: +12 Attack Power.",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "36 - 68 Damage\tSpeed 2.90",
-                "(17.9 damage per second)",
-                "Equip: +12 Attack Power.",
-                "Requires Level 30"
+                "(17.93 damage per second)",
+                "Requires Level 30",
+                "Equip: +12 Attack Power."
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_rifle_02"
@@ -7366,9 +9174,9 @@ if (typeof window !== 'undefined') {
           "stats": "+4 Strength, +4 Agility",
           "lines": [
             "Binds when picked up",
-            "Ranged\tGun",
+            "Ranged",
             "35 - 66 Damage\tSpeed 2.60",
-            "(19.4 damage per second)",
+            "(19.42 damage per second)",
             "+4 Strength",
             "+4 Agility"
           ],
@@ -7401,9 +9209,9 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Strength, +4 Agility",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "35 - 66 Damage\tSpeed 2.60",
-                "(19.4 damage per second)",
+                "(19.42 damage per second)",
                 "+4 Strength",
                 "+4 Agility"
               ],
@@ -7423,9 +9231,9 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Agility, +4 Intellect",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tCrossbow",
+                "Ranged",
                 "35 - 54 Damage\tSpeed 2.80",
-                "(15.9 damage per second)",
+                "(15.89 damage per second)",
                 "+4 Agility",
                 "+4 Intellect",
                 "Requires Level 27"
@@ -7439,19 +9247,37 @@ if (typeof window !== 'undefined') {
               "value": "17.9 DPS - Engineering (175)",
               "faction": "both",
               "dps": "17.9 DPS",
-              "quality": "q3",
-              "iLvl": 36,
-              "reqLevel": 30,
-              "stats": "",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+5 Agility",
               "icon": "inv_weapon_rifle_07",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "36 - 68 Damage\tSpeed 2.90",
+                "(17.93 damage per second)",
+                "+5 Agility",
+                "Requires Level 36"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": ""
+          "stats": "Equip: +8 Attack Power., Chance on hit: Launch a magic severing bolt at the target, dealing 36 Physical damage and interrupting the spell being cast for 5 sec.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "40 - 60 Damage\tSpeed 2.40",
+            "(20.83 damage per second)",
+            "Requires Level 34",
+            "Equip: +8 Attack Power.",
+            "Chance on hit: Launch a magic severing bolt at the target, dealing 36 Physical damage and interrupting the spell being cast for 5 sec."
+          ]
         },
         {
           "levelBracket": "35–38",
@@ -7480,9 +9306,9 @@ if (typeof window !== 'undefined') {
               "stats": "+6 Stamina",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tGun",
+                "Ranged",
                 "26 - 50 Damage\tSpeed 2.30",
-                "(16.5 damage per second)",
+                "(16.52 damage per second)",
                 "+6 Stamina",
                 "Requires Level 28"
               ],
@@ -7500,15 +9326,16 @@ if (typeof window !== 'undefined') {
               "stats": "+3 Agility, +4 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "30 - 56 Damage\tSpeed 2.80",
-                "(15.4 damage per second)",
+                "(15.36 damage per second)",
                 "+3 Agility",
                 "+4 Stamina"
               ],
               "reqLevel": 34,
               "icon": "inv_weapon_rifle_04",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "speed": "2.80"
             },
             {
               "name": "Mithril Blunderbuss",
@@ -7516,12 +9343,21 @@ if (typeof window !== 'undefined') {
               "value": "17.9 DPS - Engineering (175)",
               "faction": "both",
               "dps": "17.9 DPS",
-              "quality": "q3",
-              "iLvl": 40,
-              "reqLevel": 34,
-              "stats": "",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+5 Agility",
               "icon": "inv_weapon_rifle_07",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "36 - 68 Damage\tSpeed 2.90",
+                "(17.93 damage per second)",
+                "+5 Agility",
+                "Requires Level 36"
+              ]
             },
             {
               "name": "Siegebreaker's Blaster",
@@ -7534,8 +9370,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "",
-              "icon": "inv_weapon_rifle_04"
+              "stats": "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec.",
+              "icon": "inv_weapon_rifle_04",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "40 - 76 Damage\tSpeed 2.60",
+                "(22.31 damage per second)",
+                "Requires Level 37",
+                "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec."
+              ]
             }
           ],
           "faction": "both",
@@ -7544,9 +9388,9 @@ if (typeof window !== 'undefined') {
           "stats": "+4 Strength, +4 Agility",
           "lines": [
             "Binds when picked up",
-            "Ranged\tGun",
+            "Ranged",
             "35 - 66 Damage\tSpeed 2.60",
-            "(19.4 damage per second)",
+            "(19.42 damage per second)",
             "+4 Strength",
             "+4 Agility"
           ],
@@ -7577,15 +9421,16 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Agility, +3 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tGun",
+                "Ranged",
                 "23 - 43 Damage\tSpeed 1.90",
-                "(17.4 damage per second)",
+                "(17.37 damage per second)",
                 "+4 Agility",
                 "+3 Intellect"
               ],
               "reqLevel": 38,
               "icon": "inv_weapon_rifle_02",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "speed": "1.90"
             },
             {
               "name": "Ironweaver",
@@ -7600,12 +9445,12 @@ if (typeof window !== 'undefined') {
               "stats": "+4 Stamina, Equip: Increased Defense +3.",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tGun",
+                "Ranged",
                 "31 - 59 Damage\tSpeed 2.60",
-                "(17.3 damage per second)",
+                "(17.31 damage per second)",
                 "+4 Stamina",
-                "Equip: Increased Defense +3.",
-                "Requires Level 29"
+                "Requires Level 29",
+                "Equip: Increased Defense +3."
               ],
               "reqLevel": 29,
               "icon": "inv_weapon_rifle_08"
@@ -7621,15 +9466,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 45,
               "reqLevel": 40,
-              "stats": "",
-              "icon": "inv_weapon_bow_01"
+              "stats": "+7 Agility, +3 Stamina",
+              "icon": "inv_weapon_bow_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "46 - 87 Damage\tSpeed 2.80",
+                "(23.75 damage per second)",
+                "+7 Agility",
+                "+3 Stamina",
+                "Requires Level 40"
+              ]
             }
           ],
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 44,
-          "reqLevel": 38,
-          "stats": "+6 Agi"
+          "reqLevel": 39,
+          "stats": "+6 Agi",
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "41 - 76 Damage\tSpeed 2.90",
+            "(20.17 damage per second)",
+            "Requires Level 39"
+          ]
         },
         {
           "levelBracket": "43–46",
@@ -7669,15 +9530,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "",
-              "icon": "inv_weapon_crossbow_04"
+              "stats": "+7 Agility",
+              "icon": "inv_weapon_crossbow_04",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "34 - 51 Damage\tSpeed 2.00",
+                "(21.25 damage per second)",
+                "+7 Agility",
+                "Requires Level 35"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": ""
+          "stats": "+7 Agility, +3 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "46 - 87 Damage\tSpeed 2.80",
+            "(23.75 damage per second)",
+            "+7 Agility",
+            "+3 Stamina",
+            "Requires Level 40"
+          ]
         },
         {
           "levelBracket": "47–52",
@@ -7700,12 +9578,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.0 DPS",
               "speed": "2.50",
-              "quality": "q3",
+              "quality": "q2",
               "iLvl": 52,
-              "reqLevel": 46,
+              "reqLevel": 47,
               "stats": "",
               "icon": "inv_weapon_rifle_04",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "42 - 79 Damage\tSpeed 2.50",
+                "(24.20 damage per second)",
+                "Requires Level 47"
+              ]
             },
             {
               "name": "Dark Iron Rifle",
@@ -7718,15 +9603,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 55,
               "reqLevel": 50,
-              "stats": "",
-              "icon": "inv_weapon_rifle_08"
+              "stats": "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage.",
+              "icon": "inv_weapon_rifle_08",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "53 - 100 Damage\tSpeed 2.70",
+                "(28.33 damage per second)",
+                "Requires Level 50",
+                "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 52,
-          "reqLevel": 46,
-          "stats": "+8 Agi, heavy Aimed Shot burst"
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+8 Agi, heavy Aimed Shot burst",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "48 - 89 Damage\tSpeed 2.50",
+            "(27.40 damage per second)",
+            "+5 Arcane Resistance",
+            "Requires Level 48"
+          ]
         },
         {
           "levelBracket": "53–60",
@@ -7767,7 +9668,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 56,
               "stats": "+9 Stamina",
-              "icon": "inv_weapon_rifle_03"
+              "icon": "inv_weapon_rifle_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "65 - 122 Damage\tSpeed 3.00",
+                "(31.17 damage per second)",
+                "+9 Stamina",
+                "Requires Level 56"
+              ]
             },
             {
               "name": "Core Marksman Rifle",
@@ -7780,8 +9689,16 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+10 Hit Rating",
-              "icon": "inv_weapon_rifle_05"
+              "stats": "Equip: Improves your chance to hit by 1.0%.",
+              "icon": "inv_weapon_rifle_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "64 - 120 Damage\tSpeed 2.50",
+                "(36.80 damage per second)",
+                "Requires Level 60",
+                "Equip: Improves your chance to hit by 1.0%."
+              ]
             },
             {
               "name": "Reaver's Repeater",
@@ -7794,15 +9711,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": "",
-              "icon": "inv_weapon_rifle_07"
+              "stats": "+5 Stamina",
+              "icon": "inv_weapon_rifle_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "51 - 95 Damage\tSpeed 2.70",
+                "(27.04 damage per second)",
+                "+5 Stamina",
+                "Requires Level 53"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 59,
           "reqLevel": 54,
-          "stats": "+3 Hit"
+          "stats": "+3 Agility, Equip: Improves your chance to hit by 0.9%.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "77 - 117 Damage\tSpeed 3.20",
+            "(30.31 damage per second)",
+            "+3 Agility",
+            "Requires Level 54",
+            "Equip: Improves your chance to hit by 0.9%."
+          ]
         }
       ]
     },
@@ -7838,10 +9772,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.50",
               "weaponType": "Dagger",
               "quality": "q1",
-              "iLvl": 8,
+              "iLvl": 4,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "One-Hand",
+                "1 - 3 Damage\tSpeed 1.40",
+                "(1.43 damage per second)"
+              ]
             },
             {
               "name": "Worn Shortsword",
@@ -7849,19 +9788,30 @@ if (typeof window !== 'undefined') {
               "value": "1.7 DPS - Starter sword",
               "faction": "both",
               "dps": "1.7 DPS",
-              "quality": "q2",
-              "iLvl": 6,
+              "quality": "q1",
+              "iLvl": 2,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "speed": "1.90",
+              "lines": [
+                "Main Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 6,
+          "iLvl": 2,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "One-Hand",
+            "1 - 2 Damage\tSpeed 1.60",
+            "(0.94 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -7885,11 +9835,18 @@ if (typeof window !== 'undefined') {
               "dps": "2.5 DPS",
               "speed": "1.70",
               "weaponType": "Dagger",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
+              "quality": "q2",
+              "iLvl": 11,
+              "reqLevel": 6,
               "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "6 - 13 Damage\tSpeed 1.60",
+                "(5.94 damage per second)",
+                "Requires Level 6"
+              ]
             },
             {
               "name": "Copper Shortsword",
@@ -7903,7 +9860,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 4,
               "stats": "+1 Strength",
-              "icon": "inv_sword_26"
+              "icon": "inv_sword_26",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "9 - 18 Damage\tSpeed 2.50",
+                "(5.40 damage per second)",
+                "+1 Strength",
+                "Requires Level 4"
+              ]
             },
             {
               "name": "Forsaken Shortsword",
@@ -7912,19 +9877,30 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "3.0 DPS",
               "speed": "2.10",
-              "quality": "q2",
-              "iLvl": 8,
+              "quality": "q1",
+              "iLvl": 5,
               "reqLevel": 2,
               "stats": "",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "3 - 6 Damage\tSpeed 2.10",
+                "(2.14 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 8,
+          "iLvl": 4,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "One-Hand",
+            "1 - 3 Damage\tSpeed 1.40",
+            "(1.43 damage per second)"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -7952,7 +9928,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 4,
               "stats": "+1 Strength",
-              "icon": "inv_sword_26"
+              "icon": "inv_sword_26",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "9 - 18 Damage\tSpeed 2.50",
+                "(5.40 damage per second)",
+                "+1 Strength",
+                "Requires Level 4"
+              ]
             },
             {
               "name": "Stiletto",
@@ -7966,7 +9950,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_throwingaxe_03"
+              "icon": "inv_throwingaxe_03",
+              "lines": [
+                "One-Hand",
+                "3 - 7 Damage\tSpeed 1.50",
+                "(3.33 damage per second)",
+                "Requires Level 3"
+              ]
             },
             {
               "name": "Forsaken Shortsword",
@@ -7974,19 +9964,34 @@ if (typeof window !== 'undefined') {
               "value": "3.0 DPS - Tirisfal Quest: The Scarlet Crusade",
               "faction": "horde",
               "dps": "3.0 DPS",
-              "quality": "q2",
-              "iLvl": 10,
+              "quality": "q1",
+              "iLvl": 5,
               "reqLevel": 4,
               "stats": "",
               "icon": "inv_sword_04",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "speed": "2.10",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "3 - 6 Damage\tSpeed 2.10",
+                "(2.14 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 11,
           "reqLevel": 6,
-          "stats": "+1 Agility"
+          "stats": "+1 Agility",
+          "lines": [
+            "Binds when equipped",
+            "One-Hand",
+            "7 - 13 Damage\tSpeed 1.70",
+            "(5.88 damage per second)",
+            "+1 Agility",
+            "Requires Level 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -8014,7 +10019,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 10,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_shortblade_14"
+              "icon": "inv_weapon_shortblade_14",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "10 - 20 Damage\tSpeed 2.40",
+                "(6.25 damage per second)",
+                "+1 Agility"
+              ]
             },
             {
               "name": "Helm Splitter",
@@ -8028,7 +10040,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 13,
               "reqLevel": 8,
               "stats": "+1 Strength",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "11 - 22 Damage\tSpeed 2.40",
+                "(6.88 damage per second)",
+                "+1 Strength",
+                "Requires Level 8"
+              ]
             },
             {
               "name": "Scrappy Dagger",
@@ -8036,11 +10056,20 @@ if (typeof window !== 'undefined') {
               "value": "5.5 DPS - Early quest",
               "faction": "both",
               "dps": "5.5 DPS",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "quality": "q4",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "stats": "695 Armor, +14 Intellect, +33 Spirit, Equip: Increases healing done by up to 40",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when equipped",
+                "Chest",
+                "695 Armor",
+                "+14 Intellect",
+                "+33 Spirit",
+                "Requires Level 56",
+                "Equip: Increases healing done by up to 40"
+              ]
             },
             {
               "name": "Stiletto",
@@ -8054,14 +10083,27 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_throwingaxe_03"
+              "icon": "inv_throwingaxe_03",
+              "lines": [
+                "One-Hand",
+                "3 - 7 Damage\tSpeed 1.50",
+                "(3.33 damage per second)",
+                "Requires Level 3"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 6,
-          "stats": ""
+          "stats": "+1 Agility",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "9 - 17 Damage\tSpeed 2.00",
+            "(6.50 damage per second)",
+            "+1 Agility"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -8088,8 +10130,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+4 Agility",
-              "icon": "inv_wand_06"
+              "stats": "+4 Agility, Equip: Increases the chance your Pick Pocket and Distract abilities are successful by 1%",
+              "icon": "inv_wand_06",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "17 - 32 Damage\tSpeed 1.70",
+                "(14.41 damage per second)",
+                "+4 Agility",
+                "Requires Level 17",
+                "Equip: Increases the chance your Pick Pocket and Distract abilities are successful by 1%"
+              ]
             },
             {
               "name": "Cutlass",
@@ -8103,7 +10154,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_mace_11"
+              "icon": "inv_mace_11",
+              "lines": [
+                "One-Hand",
+                "10 - 20 Damage\tSpeed 2.20",
+                "(6.82 damage per second)",
+                "Requires Level 10"
+              ]
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -8116,15 +10173,29 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 10,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_14"
+              "stats": "+1 Agility",
+              "icon": "inv_weapon_shortblade_14",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "10 - 20 Damage\tSpeed 2.40",
+                "(6.25 damage per second)",
+                "+1 Agility"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 13,
           "reqLevel": 10,
-          "stats": "+2 Agi"
+          "stats": "+2 Agi",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "9 - 18 Damage\tSpeed 2.00",
+            "(6.75 damage per second)",
+            "+2 Agility"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -8152,7 +10223,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 15,
               "reqLevel": 10,
               "stats": "",
-              "icon": "inv_mace_11"
+              "icon": "inv_mace_11",
+              "lines": [
+                "One-Hand",
+                "10 - 20 Damage\tSpeed 2.20",
+                "(6.82 damage per second)",
+                "Requires Level 10"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -8164,15 +10241,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -8184,19 +10261,31 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.5 DPS",
               "speed": "2.20",
-              "quality": "q2",
-              "iLvl": 16,
+              "quality": "q1",
+              "iLvl": 11,
               "reqLevel": 10,
               "stats": "",
               "icon": "inv_sword_15",
-              "weaponType": "One-Handed Sword"
+              "weaponType": "One-Handed Sword",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 2.10",
+                "(5.00 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "One-Hand",
+            "7 - 13 Damage\tSpeed 1.40",
+            "(7.14 damage per second)",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -8224,7 +10313,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 19,
               "reqLevel": 14,
               "stats": "",
-              "icon": "inv_sword_12"
+              "icon": "inv_sword_12",
+              "lines": [
+                "One-Hand",
+                "7 - 15 Damage\tSpeed 1.30",
+                "(8.46 damage per second)",
+                "Requires Level 14"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -8237,8 +10332,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Bone Knuckles",
@@ -8251,8 +10354,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "ability_whirlwind"
+              "stats": "Equip: +6 Attack Power., Equip: +6 Attack Power against Beasts.",
+              "icon": "ability_whirlwind",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 2.00",
+                "(12.25 damage per second)",
+                "Requires Level 13",
+                "Equip: +6 Attack Power.",
+                "Equip: +6 Attack Power against Beasts."
+              ]
             },
             {
               "name": "Searing Dagger",
@@ -8265,15 +10377,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_03"
+              "stats": "+4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)",
+              "icon": "inv_weapon_shortblade_03",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 17 Damage\tSpeed 1.60",
+                "(8.13 damage per second)",
+                "+4 Spirit",
+                "Requires Level 13",
+                "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+2 Agi, +2 Fire SP"
+          "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand",
+            "9 - 18 Damage\tSpeed 1.70",
+            "(7.94 damage per second)",
+            "+4 Intellect",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -8301,7 +10431,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 22,
               "reqLevel": 17,
               "stats": "+5 Spirit",
-              "icon": "inv_sword_16"
+              "icon": "inv_sword_16",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "26 - 50 Damage\tSpeed 2.60",
+                "(14.62 damage per second)",
+                "+5 Spirit",
+                "Requires Level 17"
+              ]
             },
             {
               "name": "Plaguefang",
@@ -8314,8 +10452,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 16,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_54"
+              "stats": "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
+              "icon": "inv_weapon_shortblade_54",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "18 - 34 Damage\tSpeed 2.10",
+                "(12.38 damage per second)",
+                "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
+              ]
             },
             {
               "name": "Tail Spike",
@@ -8329,7 +10474,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "+3 Strength, +3 Agility",
-              "icon": "inv_weapon_shortblade_10"
+              "icon": "inv_weapon_shortblade_10",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "17 - 33 Damage\tSpeed 1.80",
+                "(13.89 damage per second)",
+                "+3 Strength",
+                "+3 Agility",
+                "Requires Level 16"
+              ]
             },
             {
               "name": "Big Bronze Knife",
@@ -8342,8 +10496,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_04"
+              "stats": "+3 Stamina",
+              "icon": "inv_weapon_shortblade_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "13 - 25 Damage\tSpeed 1.90",
+                "(10.00 damage per second)",
+                "+3 Stamina",
+                "Requires Level 15"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -8356,15 +10518,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "+3 Agi, +2 Sta"
+          "stats": "+3 Agi, +2 Sta",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "17 - 32 Damage\tSpeed 1.80",
+            "(13.61 damage per second)",
+            "+5 Stamina",
+            "Requires Level 15"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -8391,8 +10569,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "",
-              "icon": "inv_sword_04"
+              "stats": "Equip: +12 Attack Power.",
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "Requires Level 19",
+                "Equip: +12 Attack Power."
+              ]
             },
             {
               "name": "Pearl-handled Dagger",
@@ -8405,8 +10591,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+2 Agility, +2 Stamina",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "13 - 26 Damage\tSpeed 1.70",
+                "(11.47 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
+                "Requires Level 18"
+              ]
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -8419,15 +10614,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_24"
+              "stats": "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
+              "icon": "inv_weapon_shortblade_24",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "18 - 35 Damage\tSpeed 1.70",
+                "(15.59 damage per second)",
+                "Requires Level 19",
+                "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+4 Str, +3 Sta"
+          "stats": "+4 Str, +3 Sta",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "26 - 50 Damage\tSpeed 2.60",
+            "(14.62 damage per second)",
+            "+5 Spirit",
+            "Requires Level 17"
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -8454,8 +10665,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "",
-              "icon": "inv_sword_04"
+              "stats": "Equip: +12 Attack Power.",
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "Requires Level 19",
+                "Equip: +12 Attack Power."
+              ]
             },
             {
               "name": "Wingblade",
@@ -8468,15 +10687,30 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 10,
-              "stats": "",
-              "icon": "inv_sword_16"
+              "stats": "+5 Agility, +2 Stamina",
+              "icon": "inv_sword_16",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "24 - 45 Damage\tSpeed 2.20",
+                "(15.68 damage per second)",
+                "+5 Agility",
+                "+2 Stamina"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 24,
           "reqLevel": 16,
-          "stats": "+4 Agi, +3 Sta"
+          "stats": "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "18 - 34 Damage\tSpeed 2.10",
+            "(12.38 damage per second)",
+            "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
+          ]
         },
         {
           "levelBracket": "21–22",
@@ -8505,9 +10739,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Agility, +2 Stamina",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
-                "(20.6 damage per second)",
+                "(20.59 damage per second)",
                 "+7 Agility",
                 "+2 Stamina"
               ],
@@ -8526,7 +10760,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+3 Agility",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "21 - 40 Damage\tSpeed 2.50",
+                "(12.20 damage per second)",
+                "+3 Agility",
+                "Requires Level 19"
+              ]
             },
             {
               "name": "Blade of Silverlaine",
@@ -8539,8 +10781,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_sword_05"
+              "stats": "+6 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 28",
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 33 Damage\tSpeed 2.30",
+                "(10.87 damage per second)",
+                "+6 Shadow Resistance",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
+              ]
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -8553,15 +10804,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+5 Agility, Equip: +6 Attack Power.",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "25 - 47 Damage\tSpeed 2.10",
+                "(17.14 damage per second)",
+                "+5 Agility",
+                "Requires Level 22",
+                "Equip: +6 Attack Power."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 25,
           "reqLevel": 20,
-          "stats": ""
+          "stats": "+4 Agility",
+          "lines": [
+            "Binds when equipped",
+            "One-Hand",
+            "16 - 30 Damage\tSpeed 1.80",
+            "(12.78 damage per second)",
+            "+4 Agility",
+            "Requires Level 20"
+          ]
         },
         {
           "levelBracket": "23–24",
@@ -8589,7 +10857,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 25,
               "stats": "+3 Agility, +8 Stamina",
-              "icon": "inv_sword_07"
+              "icon": "inv_sword_07",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "38 - 72 Damage\tSpeed 2.30",
+                "(23.91 damage per second)",
+                "+3 Agility",
+                "+8 Stamina"
+              ]
             },
             {
               "name": "Serrated Raptor Claw",
@@ -8602,8 +10878,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+3 Agility",
-              "icon": "inv_weapon_shortblade_16"
+              "stats": "+3 Agility, Equip: +6 Attack Power.",
+              "icon": "inv_weapon_shortblade_16",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "19 - 36 Damage\tSpeed 1.60",
+                "(17.19 damage per second)",
+                "+3 Agility",
+                "Equip: +6 Attack Power."
+              ]
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -8617,7 +10901,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 32,
               "reqLevel": 24,
               "stats": "+7 Agility, +2 Stamina",
-              "icon": "inv_weapon_shortblade_01"
+              "icon": "inv_weapon_shortblade_01",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.59 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ]
             },
             {
               "name": "Odo's Claw",
@@ -8630,8 +10922,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+2 Strength, +3 Stamina",
-              "icon": "inv_misc_monsterclaw_04"
+              "stats": "+2 Strength, +3 Stamina, Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec.",
+              "icon": "inv_misc_monsterclaw_04",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "28 - 52 Damage\tSpeed 2.40",
+                "(16.67 damage per second)",
+                "+2 Strength",
+                "+3 Stamina",
+                "Requires Level 21",
+                "Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec."
+              ]
             },
             {
               "name": "Iridescent Hammer",
@@ -8644,15 +10946,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "",
-              "icon": "inv_hammer_05"
+              "stats": "+3 Strength, +3 Stamina",
+              "icon": "inv_hammer_05",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "24 - 46 Damage\tSpeed 2.40",
+                "(14.58 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
+                "Requires Level 23"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 28,
           "reqLevel": 23,
-          "stats": "+3 Fire Resistance"
+          "stats": "+3 Fire Resistance, Chance on hit: Blasts a target for 42 Fire damage.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "22 - 42 Damage\tSpeed 1.80",
+            "(17.78 damage per second)",
+            "+3 Fire Resistance",
+            "Requires Level 23",
+            "Chance on hit: Blasts a target for 42 Fire damage."
+          ]
         },
         {
           "levelBracket": "25–26",
@@ -8681,9 +11001,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Agility, +2 Stamina",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
-                "(20.6 damage per second)",
+                "(20.59 damage per second)",
                 "+7 Agility",
                 "+2 Stamina"
               ],
@@ -8701,8 +11021,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_16"
+              "stats": "+3 Agility, Equip: +6 Attack Power.",
+              "icon": "inv_weapon_shortblade_16",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "19 - 36 Damage\tSpeed 1.60",
+                "(17.19 damage per second)",
+                "+3 Agility",
+                "Equip: +6 Attack Power."
+              ]
             },
             {
               "name": "Iron Fists",
@@ -8715,8 +11043,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": "",
-              "icon": "inv_gauntlets_11"
+              "stats": "+5 Agility",
+              "icon": "inv_gauntlets_11",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "27 - 51 Damage\tSpeed 2.40",
+                "(16.25 damage per second)",
+                "+5 Agility",
+                "Requires Level 26"
+              ]
             }
           ],
           "faction": "both",
@@ -8725,12 +11061,11 @@ if (typeof window !== 'undefined') {
           "stats": "+3 Agility, +8 Stamina",
           "lines": [
             "Binds when picked up",
-            "One-Hand\tSword",
+            "One-Hand",
             "38 - 72 Damage\tSpeed 2.30",
-            "(23.9 damage per second)",
+            "(23.91 damage per second)",
             "+3 Agility",
-            "+8 Stamina",
-            "Classes: Rogue"
+            "+8 Stamina"
           ],
           "reqLevel": 25
         },
@@ -8759,8 +11094,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina",
-              "icon": "inv_sword_23"
+              "stats": "+6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_sword_23",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "39 - 73 Damage\tSpeed 2.50",
+                "(22.40 damage per second)",
+                "+6 Stamina",
+                "Requires Level 29",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Toxic Revenger",
@@ -8775,12 +11119,11 @@ if (typeof window !== 'undefined') {
               "stats": "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "lines": [
                 "Binds when picked up",
-                "Unique-Equipped",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "27 - 51 Damage\tSpeed 1.90",
-                "(20.5 damage per second)",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
-                "Requires Level 27"
+                "(20.53 damage per second)",
+                "Requires Level 27",
+                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
               ],
               "reqLevel": 27,
               "icon": "inv_weapon_shortblade_02"
@@ -8796,24 +11139,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": "",
-              "icon": "inv_sword_20"
+              "stats": "+5 Stamina",
+              "icon": "inv_sword_20",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "21 - 39 Damage\tSpeed 1.80",
+                "(16.67 damage per second)",
+                "+5 Stamina",
+                "Requires Level 27"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
-          "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+          "stats": "+5 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
           "lines": [
             "Binds when picked up",
-            "Main Hand\tDagger",
+            "Main Hand",
             "16 - 30 Damage\tSpeed 1.60",
-            "(14.4 damage per second)",
+            "(14.38 damage per second)",
             "+5 Stamina",
             "Requires Level 28",
-            "Equip: +8 Health Regeneration",
-            "Equip: +36 Spell Power",
-            "Sell Price: 73s 79c"
+            "Equip: Increases damage and healing done by magical spells and effects by up to 36"
           ],
           "reqLevel": 28
         },
@@ -8841,16 +11190,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q3",
               "iLvl": 35,
-              "stats": "+6 Stamina, +4 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40.",
+              "stats": "+6 Stamina, +4 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "16 - 30 Damage\tSpeed 1.50",
-                "(15.3 damage per second)",
+                "(15.33 damage per second)",
                 "+6 Stamina",
                 "+4 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 40.",
-                "Requires Level 30"
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
               ],
               "reqLevel": 30,
               "icon": "inv_misc_bone_06"
@@ -8868,9 +11217,9 @@ if (typeof window !== 'undefined') {
               "stats": "+5 Intellect, +6 Spirit",
               "lines": [
                 "Binds when equipped",
-                "One-Hand\tSword",
+                "One-Hand",
                 "43 - 81 Damage\tSpeed 2.80",
-                "(22.1 damage per second)",
+                "(22.14 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
                 "Requires Level 29"
@@ -8888,14 +11237,14 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects., Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
+              "stats": "+5 Stamina, Equip: Increases healing done by up to 86, Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tFist Weapon",
+                "Main Hand",
                 "30 - 57 Damage\tSpeed 2.40",
-                "(18.1 damage per second)",
+                "(18.13 damage per second)",
                 "+5 Stamina",
-                "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 86",
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
               "reqLevel": 30,
@@ -8911,14 +11260,14 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46., Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46, Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tFist Weapon",
+                "Main Hand",
                 "28 - 52 Damage\tSpeed 2.20",
-                "(18.2 damage per second)",
+                "(18.18 damage per second)",
                 "+6 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
               "reqLevel": 30,
@@ -8933,23 +11282,31 @@ if (typeof window !== 'undefined') {
               "value": "20.3 DPS, 2.10s - RFK Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 28,
-              "stats": "",
-              "icon": "inv_misc_monsterclaw_02"
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+5 Stamina, +6 Spirit, Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs.",
+              "icon": "inv_misc_monsterclaw_02",
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Stamina",
+                "+6 Spirit",
+                "Requires Level 30",
+                "Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 32,
-          "stats": "+8 Attack Power",
+          "stats": "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
           "lines": [
             "Binds when picked up",
-            "One-Hand\tDagger",
+            "One-Hand",
             "24 - 46 Damage\tSpeed 1.70",
-            "(20.6 damage per second)",
-            "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
-            "Requires Level 27"
+            "(20.59 damage per second)",
+            "Requires Level 27",
+            "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
           ],
           "reqLevel": 27
         },
@@ -8980,9 +11337,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Strength",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tMace",
+                "One-Hand",
                 "38 - 72 Damage\tSpeed 2.40",
-                "(22.9 damage per second)",
+                "(22.92 damage per second)",
                 "+7 Strength",
                 "Requires Level 30"
               ],
@@ -9002,12 +11359,12 @@ if (typeof window !== 'undefined') {
               "stats": "Equip: +12 Attack Power., Equip: +15 Attack Power against Humanoids.",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tFist Weapon",
+                "One-Hand",
                 "24 - 46 Damage\tSpeed 1.60",
-                "(21.9 damage per second)",
+                "(21.88 damage per second)",
+                "Requires Level 29",
                 "Equip: +12 Attack Power.",
-                "Equip: +15 Attack Power against Humanoids.",
-                "Requires Level 29"
+                "Equip: +15 Attack Power against Humanoids."
               ],
               "reqLevel": 29,
               "icon": "inv_gauntlets_11"
@@ -9019,9 +11376,9 @@ if (typeof window !== 'undefined') {
           "stats": "+4 Strength, +5 Stamina",
           "lines": [
             "Binds when picked up",
-            "Main Hand\tSword",
+            "Main Hand",
             "37 - 69 Damage\tSpeed 2.30",
-            "(23.0 damage per second)",
+            "(23.04 damage per second)",
             "+4 Strength",
             "+5 Stamina"
           ],
@@ -9051,13 +11408,17 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed sword",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "",
+              "stats": "+5 Agility, +4 Stamina",
               "lines": [
-                "Binds when picked up",
-                "Main hand\tOne-Hand",
-                "Requires Level 25"
+                "Binds when equipped",
+                "Main Hand",
+                "38 - 72 Damage\tSpeed 2.80",
+                "(19.64 damage per second)",
+                "+5 Agility",
+                "+4 Stamina",
+                "Requires Level 26"
               ],
-              "reqLevel": 25,
+              "reqLevel": 26,
               "icon": "inv_sword_18"
             },
             {
@@ -9073,9 +11434,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Agility",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "29 - 54 Damage\tSpeed 1.80",
-                "(23.1 damage per second)",
+                "(23.06 damage per second)",
                 "+7 Agility"
               ],
               "reqLevel": 30,
@@ -9087,12 +11448,21 @@ if (typeof window !== 'undefined') {
               "value": "26.5 DPS - Blacksmithing (170)",
               "faction": "both",
               "dps": "26.5 DPS",
-              "quality": "q3",
-              "iLvl": 40,
-              "reqLevel": 34,
-              "stats": "",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "Equip: +14 Attack Power.",
               "icon": "inv_weapon_shortblade_05",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "speed": "1.70",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "27 - 51 Damage\tSpeed 1.70",
+                "(22.94 damage per second)",
+                "Requires Level 36",
+                "Equip: +14 Attack Power."
+              ]
             },
             {
               "name": "Sword of Omen",
@@ -9119,14 +11489,29 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 34,
               "stats": "+9 Sta, +4 Spi",
-              "icon": "inv_sword_05"
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "46 - 86 Damage\tSpeed 2.20",
+                "(30.00 damage per second)",
+                "+9 Stamina",
+                "+4 Spirit"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 34,
-          "stats": "+7 Agi, +3 Str"
+          "stats": "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "31 - 58 Damage\tSpeed 1.50",
+            "(29.67 damage per second)",
+            "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage."
+          ]
         },
         {
           "levelBracket": "39–44",
@@ -9153,8 +11538,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+3 Frost Resistance",
-              "icon": "inv_sword_34"
+              "stats": "+3 Frost Resistance, Chance on hit: Launches a bolt of frost at the enemy causing 34 to 50 Frost damage and slowing movement speed by 50% for 5 sec.",
+              "icon": "inv_sword_34",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "30 - 57 Damage\tSpeed 1.50",
+                "(29.00 damage per second)",
+                "+3 Frost Resistance",
+                "Requires Level 38",
+                "Chance on hit: Launches a bolt of frost at the enemy causing 34 to 50 Frost damage and slowing movement speed by 50% for 5 sec."
+              ]
             },
             {
               "name": "Vanquisher's Sword",
@@ -9167,8 +11561,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+22 Attack Power",
-              "icon": "inv_sword_07"
+              "stats": "Equip: +22 Attack Power.",
+              "icon": "inv_sword_07",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "46 - 86 Damage\tSpeed 2.20",
+                "(30.00 damage per second)",
+                "Equip: +22 Attack Power."
+              ]
             },
             {
               "name": "Sword of Omen",
@@ -9193,15 +11594,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": "",
-              "icon": "inv_sword_05"
+              "stats": "+9 Stamina, +4 Spirit",
+              "icon": "inv_sword_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "46 - 86 Damage\tSpeed 2.20",
+                "(30.00 damage per second)",
+                "+9 Stamina",
+                "+4 Spirit"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 43,
-          "stats": "+10 Attack Power"
+          "stats": "Equip: Movement can generate Static Electricity., Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "40 - 76 Damage\tSpeed 1.80",
+            "(32.22 damage per second)",
+            "Requires Level 43",
+            "Equip: Movement can generate Static Electricity.",
+            "Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies."
+          ]
         },
         {
           "levelBracket": "45–50",
@@ -9228,8 +11646,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 40,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+11 Stamina, Chance on hit: Heals wielder of 42 damage.",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "40 - 75 Damage\tSpeed 1.60",
+                "(35.94 damage per second)",
+                "+11 Stamina",
+                "Chance on hit: Heals wielder of 42 damage."
+              ]
             },
             {
               "name": "Electro-Lantern",
@@ -9254,7 +11680,14 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 45,
-          "stats": ""
+          "stats": "Chance on hit: Grants an extra attack on your next swing.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "66 - 124 Damage\tSpeed 2.70",
+            "(35.19 damage per second)",
+            "Chance on hit: Grants an extra attack on your next swing."
+          ]
         },
         {
           "levelBracket": "51–56",
@@ -9281,8 +11714,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 57,
               "reqLevel": 52,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_01"
+              "stats": "+6 Agility, Equip: +16 Attack Power.",
+              "icon": "inv_weapon_shortblade_01",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "42 - 80 Damage\tSpeed 1.80",
+                "(33.89 damage per second)",
+                "+6 Agility",
+                "Requires Level 52",
+                "Equip: +16 Attack Power."
+              ]
             },
             {
               "name": "Julie's Dagger",
@@ -9295,8 +11737,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 55,
               "reqLevel": 50,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_07"
+              "stats": "Chance on hit: Heals wielder of 78 damage over 12 sec.",
+              "icon": "inv_weapon_shortblade_07",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "33 - 62 Damage\tSpeed 1.30",
+                "(36.54 damage per second)",
+                "Requires Level 50",
+                "Chance on hit: Heals wielder of 78 damage over 12 sec."
+              ]
             },
             {
               "name": "Dal'Rend's Sacred Charge",
@@ -9316,7 +11766,14 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 45,
-          "stats": ""
+          "stats": "Chance on hit: Grants an extra attack on your next swing.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand",
+            "66 - 124 Damage\tSpeed 2.70",
+            "(35.19 damage per second)",
+            "Chance on hit: Grants an extra attack on your next swing."
+          ]
         },
         {
           "levelBracket": "57–60",
@@ -9357,7 +11814,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "+9 Str, +9 Agi",
-              "icon": "inv_sword_39"
+              "icon": "inv_sword_39",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "50 - 94 Damage\tSpeed 1.80",
+                "(40.00 damage per second)",
+                "+9 Strength",
+                "+9 Agility"
+              ]
             },
             {
               "name": "Dal'Rend's Tribal Guardian",
@@ -9382,15 +11847,34 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 62,
               "reqLevel": 57,
-              "stats": "",
-              "icon": "inv_sword_12"
+              "stats": "+11 Strength, +4 Agility, +5 Stamina",
+              "icon": "inv_sword_12",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "77 - 143 Damage\tSpeed 2.70",
+                "(40.74 damage per second)",
+                "+11 Strength",
+                "+4 Agility",
+                "+5 Stamina",
+                "Requires Level 57"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 63,
           "reqLevel": 58,
-          "stats": "+4 Str, +9 Agi, +1% Crit"
+          "stats": "+4 Agility, Equip: Improves your chance to get a critical strike by 1.0%.",
+          "lines": [
+            "Binds when equipped",
+            "One-Hand",
+            "55 - 102 Damage\tSpeed 1.90",
+            "(41.32 damage per second)",
+            "+4 Agility",
+            "Requires Level 58",
+            "Equip: Improves your chance to get a critical strike by 1.0%."
+          ]
         }
       ]
     },
@@ -9398,8 +11882,12 @@ if (typeof window !== 'undefined') {
       "classId": "shaman",
       "tracks": [
         {
-          "id": "primary",
-          "name": "Enhancement & Elemental (Two-Hand & Staves)"
+          "id": "dps",
+          "name": "⚔️ DPS Track (Enhancement & Elemental (Two-Hand & Staves))"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healer Track (Restoration & Holy +Healing Focus)"
         }
       ],
       "levels": [
@@ -9424,11 +11912,17 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "1.8 DPS",
               "quality": "q1",
-              "iLvl": 6,
+              "iLvl": 3,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "speed": "1.90",
+              "lines": [
+                "One-Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             },
             {
               "name": "Crude Battle Axe",
@@ -9438,18 +11932,29 @@ if (typeof window !== 'undefined') {
               "dps": "3.8 DPS",
               "speed": "3.20",
               "weaponType": "Two-handed axe",
-              "quality": "q2",
-              "iLvl": 6,
-              "reqLevel": 1,
+              "quality": "q0",
+              "iLvl": 12,
+              "reqLevel": 7,
               "stats": "",
-              "icon": "inv_throwingaxe_03"
+              "icon": "inv_throwingaxe_03",
+              "lines": [
+                "Two-Hand",
+                "12 - 18 Damage\tSpeed 3.00",
+                "(5.00 damage per second)",
+                "Requires Level 7"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 4,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "5 - 8 Damage\tSpeed 3.20",
+            "(2.03 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -9477,7 +11982,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_hammer_16"
+              "icon": "inv_hammer_16",
+              "lines": [
+                "Two-Hand",
+                "10 - 16 Damage\tSpeed 2.60",
+                "(5.00 damage per second)",
+                "Requires Level 4"
+              ]
             },
             {
               "name": "Copper Axe",
@@ -9491,14 +12002,26 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_axe_23"
+              "icon": "inv_axe_23",
+              "lines": [
+                "One-Hand",
+                "6 - 12 Damage\tSpeed 2.40",
+                "(3.75 damage per second)",
+                "Requires Level 4"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "8 - 13 Damage\tSpeed 2.50",
+            "(4.20 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -9526,7 +12049,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_mace_01"
+              "icon": "inv_mace_01",
+              "lines": [
+                "One-Hand",
+                "7 - 13 Damage\tSpeed 2.60",
+                "(3.85 damage per second)",
+                "Requires Level 4"
+              ]
             },
             {
               "name": "Large Club",
@@ -9537,10 +12066,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             },
             {
               "name": "Goblin Smasher",
@@ -9553,15 +12087,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": "",
-              "icon": "inv_hammer_15"
+              "stats": "+2 Strength",
+              "icon": "inv_hammer_15",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "20 - 31 Damage\tSpeed 3.10",
+                "(8.23 damage per second)",
+                "+2 Strength"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 13,
           "reqLevel": 8,
-          "stats": ""
+          "stats": "+3 Stamina",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "+3 Stamina",
+            "Requires Level 8"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -9584,10 +12133,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Large Club",
@@ -9598,10 +12155,15 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             },
             {
               "name": "Makeshift Stormcaller",
@@ -9614,8 +12176,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_staff_14"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "15 - 23 Damage\tSpeed 3.30",
+                "(5.76 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Bonecracker",
@@ -9628,15 +12198,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_mace_04"
+              "stats": "+3 Strength",
+              "icon": "inv_mace_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "23 - 35 Damage\tSpeed 3.20",
+                "(9.06 damage per second)",
+                "+3 Strength"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 13,
           "reqLevel": 8,
-          "stats": ""
+          "stats": "+3 Stamina",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "+3 Stamina",
+            "Requires Level 8"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -9662,15 +12247,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -9686,8 +12271,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 17,
               "reqLevel": 12,
-              "stats": "",
-              "icon": "inv_throwingaxe_01"
+              "stats": "+1 Strength, +1 Stamina",
+              "icon": "inv_throwingaxe_01",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "15 - 28 Damage\tSpeed 2.50",
+                "(8.60 damage per second)",
+                "+1 Strength",
+                "+1 Stamina",
+                "Requires Level 12"
+              ]
             },
             {
               "name": "Thun'grim's Axe",
@@ -9700,15 +12294,28 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "",
-              "icon": "inv_axe_01"
+              "stats": "+1 Stamina",
+              "icon": "inv_axe_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "14 - 28 Damage\tSpeed 2.70",
+                "(7.78 damage per second)",
+                "+1 Stamina"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 15,
           "reqLevel": 10,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "Requires Level 10"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -9734,15 +12341,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -9753,11 +12360,18 @@ if (typeof window !== 'undefined') {
               "value": "10.5 DPS - Vendor 2H axe",
               "faction": "both",
               "dps": "10.5 DPS",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 10,
+              "quality": "q1",
+              "iLvl": 36,
+              "reqLevel": 31,
               "stats": "",
-              "icon": "inv_axe_02"
+              "icon": "inv_axe_02",
+              "speed": "2.30",
+              "lines": [
+                "Main Hand",
+                "28 - 53 Damage\tSpeed 2.30",
+                "(17.61 damage per second)",
+                "Requires Level 31"
+              ]
             },
             {
               "name": "Axe of Orgrimmar",
@@ -9771,7 +12385,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+6 Sta, +6 Spi",
-              "icon": "inv_axe_06"
+              "icon": "inv_axe_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "42 - 64 Damage\tSpeed 3.30",
+                "(16.06 damage per second)",
+                "+6 Stamina",
+                "+6 Spirit"
+              ]
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -9785,42 +12407,67 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+3 Str, +3 Spi",
-              "icon": "inv_mace_01"
+              "icon": "inv_mace_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "25 - 47 Damage\tSpeed 2.90",
+                "(12.41 damage per second)",
+                "+3 Strength",
+                "+3 Spirit"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": "+4 Strength"
+          "stats": "+4 Strength",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "28 - 43 Damage\tSpeed 3.30",
+            "(10.76 damage per second)",
+            "+4 Strength",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
-          "itemId": 270228,
-          "name": "Golemheart Stave",
-          "icon": "inv_staff_10",
+          "itemId": 15444,
+          "name": "Staff of Orgrimmar",
+          "icon": "inv_staff_goldfeathered_01",
           "weaponType": "Staff",
-          "speed": "2.60",
-          "dps": "14.2 DPS",
+          "speed": "3.30",
+          "dps": "11.8 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Plunder",
-            "detail": "Hall of Thanes dungeon (+5 Int, +4 Spirit)"
+            "kind": "quest",
+            "title": "Hidden Enemies",
+            "detail": "Ragefire Chasm quest from Thrall (+6 Int, +6 Agi, +18 Spell Damage) — Horde BiS Caster Staff until Crescent Staff"
           },
           "alts": [
             {
-              "name": "Staff of Orgrimmar",
-              "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-              "faction": "horde",
-              "dps": "11.82 DPS",
-              "speed": "3.30",
+              "name": "Golemheart Stave",
+              "itemId": 270228,
+              "value": "14.2 DPS, 2.60s - Plunder",
+              "faction": "both",
+              "dps": "14.2 DPS",
+              "speed": "2.60",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+9 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "30 - 46 Damage\tSpeed 3.20",
+                "(11.88 damage per second)",
+                "+9 Fire Resistance",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Durgen's Crescent Axe",
@@ -9834,7 +12481,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 13,
               "stats": "+5 Str, +2 Sta",
-              "icon": "inv_axe_05"
+              "icon": "inv_axe_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "20 - 39 Damage\tSpeed 2.40",
+                "(12.29 damage per second)",
+                "+4 Strength",
+                "Requires Level 13"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -9847,8 +12502,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9861,8 +12523,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Fang of Magmatus",
@@ -9875,8 +12545,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 18 Damage\tSpeed 1.70",
+                "(7.94 damage per second)",
+                "+4 Intellect",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Bone Knuckles",
@@ -9889,30 +12568,70 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "ability_whirlwind"
+              "stats": "Equip: +6 Attack Power., Equip: +6 Attack Power against Beasts.",
+              "icon": "ability_whirlwind",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 2.00",
+                "(12.25 damage per second)",
+                "Requires Level 13",
+                "Equip: +6 Attack Power.",
+                "Equip: +6 Attack Power against Beasts."
+              ]
             }
           ],
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+5 Int, +4 Spirit"
+          "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "31 - 47 Damage\tSpeed 3.30",
+            "(11.82 damage per second)",
+            "+6 Agility",
+            "+6 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271217,
-          "name": "Corpse Chopper",
-          "icon": "inv_axe_09",
-          "weaponType": "Two-handed axe",
-          "speed": "3.20",
-          "dps": "17.4 DPS",
+          "itemId": 15444,
+          "name": "Staff of Orgrimmar",
+          "icon": "inv_staff_goldfeathered_01",
+          "weaponType": "Staff",
+          "speed": "3.30",
+          "dps": "11.8 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Bjork",
-            "detail": "Ruins of Lordaeron, levels 15–20 (+7 Str, +4 Sta)"
+            "kind": "quest",
+            "title": "Hidden Enemies",
+            "detail": "Ragefire Chasm quest from Thrall (+6 Int, +6 Agi, +18 Spell Damage) — Horde BiS Caster Staff until Crescent Staff"
           },
           "alts": [
+            {
+              "name": "Corpse Chopper",
+              "itemId": 271217,
+              "value": "17.4 DPS, 3.20s - Bjork",
+              "faction": "both",
+              "dps": "17.4 DPS",
+              "speed": "3.20",
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
+              "icon": "inv_axe_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "52 - 79 Damage\tSpeed 3.60",
+                "(18.19 damage per second)",
+                "Requires Level 16",
+                "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
+              ]
+            },
             {
               "name": "Gnarled Necromancer's Staff",
               "itemId": 251534,
@@ -9924,8 +12643,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "+10 Spirit",
-              "icon": "inv_staff_16"
+              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.80",
+                "(15.18 damage per second)",
+                "+10 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Clear Crystal Rod",
@@ -9938,22 +12666,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 15,
-              "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
-              "icon": "inv_wand_07"
-            },
-            {
-              "name": "Staff of Orgrimmar",
-              "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-              "faction": "horde",
-              "dps": "11.82 DPS",
-              "speed": "3.30",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "+4 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.10",
+                "(10.16 damage per second)",
+                "+4 Stamina",
+                "+5 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             },
             {
               "name": "Scepter of the Abandoned",
@@ -9966,8 +12689,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+4 Sta, +4 Int",
-              "icon": "inv_mace_01"
+              "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+              "icon": "inv_mace_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 33 Damage\tSpeed 2.60",
+                "(9.62 damage per second)",
+                "+5 Shadow Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+              ]
             },
             {
               "name": "Segmented Spider Leg",
@@ -9981,7 +12713,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "50 - 76 Damage\tSpeed 3.60",
+                "(17.50 damage per second)",
+                "+9 Agility",
+                "+5 Spirit",
+                "Requires Level 15"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9994,8 +12735,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "The Stitcher",
@@ -10008,43 +12757,69 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_mace_08"
+              "stats": "+3 Stamina, Equip: Increases healing done by up to 30",
+              "icon": "inv_mace_08",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.13 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases healing done by up to 30"
+              ]
             }
           ],
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
-          "iLvl": 21,
-          "reqLevel": 16,
-          "stats": "+7 Str, +4 Sta"
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "31 - 47 Damage\tSpeed 3.30",
+            "(11.82 damage per second)",
+            "+6 Agility",
+            "+6 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "17–18",
-          "itemId": 251533,
-          "name": "Forsaken Greataxe",
-          "icon": "inv_axe_24",
-          "weaponType": "Two-handed axe",
-          "speed": "3.40",
-          "dps": "20.5 DPS",
+          "itemId": 15444,
+          "name": "Staff of Orgrimmar",
+          "icon": "inv_staff_goldfeathered_01",
+          "weaponType": "Staff",
+          "speed": "3.30",
+          "dps": "11.8 DPS",
           "source": {
             "kind": "quest",
-            "title": "The Wrath of Rath'mael",
-            "detail": "Ruins of Lordaeron dungeon quest (+8 Str, +5 Sta)"
+            "title": "Hidden Enemies",
+            "detail": "Ragefire Chasm quest from Thrall (+6 Int, +6 Agi, +18 Spell Damage) — Horde BiS Caster Staff until Crescent Staff"
           },
           "alts": [
             {
-              "name": "Staff of Orgrimmar",
-              "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-              "faction": "horde",
-              "dps": "11.82 DPS",
-              "speed": "3.30",
-              "weaponType": "Staff",
+              "name": "Forsaken Greataxe",
+              "itemId": 251533,
+              "value": "20.5 DPS, 3.40s - The Wrath of Rath'mael",
+              "faction": "both",
+              "dps": "20.5 DPS",
+              "speed": "3.40",
+              "weaponType": "Two-handed axe",
               "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+8 Strength, +4 Stamina, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_axe_24",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "49 - 74 Damage\tSpeed 3.00",
+                "(20.50 damage per second)",
+                "+8 Strength",
+                "+4 Stamina",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Coldspire Staff",
@@ -10057,8 +12832,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+7 Int, +5 Spi",
-              "icon": "inv_staff_08"
+              "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 66 Damage\tSpeed 3.60",
+                "(15.14 damage per second)",
+                "+13 Frost Resistance",
+                "Requires Level 19",
+                "Equip: Increases damage done by Frost spells and effects by up to 32."
+              ]
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -10071,8 +12855,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "",
-              "icon": "inv_hammer_09"
+              "stats": "+11 Strength, +4 Agility",
+              "icon": "inv_hammer_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
+                "+11 Strength",
+                "+4 Agility",
+                "Requires Level 18"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10085,15 +12878,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
-          "faction": "both",
+          "faction": "horde",
           "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 15,
-          "stats": "+8 Str, +5 Sta"
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "31 - 47 Damage\tSpeed 3.30",
+            "(11.82 damage per second)",
+            "+6 Agility",
+            "+6 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -10112,16 +12922,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Bronze Warhammer",
@@ -10135,7 +12954,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
+              "icon": "inv_hammer_18",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 71 Damage\tSpeed 3.50",
+                "(16.86 damage per second)",
+                "+6 Strength",
+                "+6 Stamina",
+                "Requires Level 20"
+              ]
             },
             {
               "name": "Bronze Battle Axe",
@@ -10149,7 +12977,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+10 Strength",
-              "icon": "inv_axe_21"
+              "icon": "inv_axe_21",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 3.30",
+                "(18.33 damage per second)",
+                "+10 Strength",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10162,23 +12998,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "horde",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "35 - 53 Damage\tSpeed 2.90",
-            "(15.2 damage per second)",
+            "(15.17 damage per second)",
             "+7 Agility",
             "+7 Stamina",
             "+7 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 26."
+            "Equip: Increases damage and healing done by magical spells and effects by up to 26"
           ],
           "reqLevel": 10
         },
@@ -10208,7 +13052,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+10 Strength",
-              "icon": "inv_axe_21"
+              "icon": "inv_axe_21",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 3.30",
+                "(18.33 damage per second)",
+                "+10 Strength",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Iridescent Hammer",
@@ -10221,15 +13073,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "",
-              "icon": "inv_hammer_05"
+              "stats": "+3 Strength, +3 Stamina",
+              "icon": "inv_hammer_05",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "24 - 46 Damage\tSpeed 2.40",
+                "(14.58 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
+                "Requires Level 23"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 27,
           "reqLevel": 22,
-          "stats": "+10 Str, +4 Agi"
+          "stats": "+8 Strength, Equip: Increases healing done by up to 24",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "59 - 89 Damage\tSpeed 3.30",
+            "(22.42 damage per second)",
+            "+8 Strength",
+            "Requires Level 22",
+            "Equip: Increases healing done by up to 24"
+          ]
         },
         {
           "levelBracket": "23–24",
@@ -10255,17 +13125,17 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 26,
-              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "stats": "+4 Stamina, +3 Intellect, +12 Spirit, Equip: Increases healing done by up to 52",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "33 - 50 Damage\tSpeed 2.60",
-                "(16.0 damage per second)",
-                "+3 Intellect",
+                "(15.96 damage per second)",
                 "+4 Stamina",
+                "+3 Intellect",
                 "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
               "icon": "inv_staff_32"
@@ -10281,8 +13151,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi",
-              "icon": "inv_staff_06"
+              "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 2.80",
+                "(17.68 damage per second)",
+                "+11 Spirit",
+                "Requires Level 24",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+                "Equip: Reduces the hit chance of Sleep effects against you by 5%."
+              ]
             }
           ],
           "faction": "both",
@@ -10291,12 +13171,12 @@ if (typeof window !== 'undefined') {
           "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tAxe",
+            "Two-Hand",
             "62 - 94 Damage\tSpeed 3.40",
-            "(22.9 damage per second)",
+            "(22.94 damage per second)",
             "+9 Stamina",
-            "Equip: +32 Attack Power against Humanoids.",
-            "Requires Level 23"
+            "Requires Level 23",
+            "Equip: +32 Attack Power against Humanoids."
           ],
           "reqLevel": 23
         },
@@ -10325,8 +13205,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+12 Stamina",
-              "icon": "inv_staff_10"
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.77 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67"
+              ]
             },
             {
               "name": "Striking Staff",
@@ -10340,7 +13228,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_28",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.29 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ]
             },
             {
               "name": "Solid Iron Maul",
@@ -10352,15 +13249,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed mace",
               "quality": "q2",
               "iLvl": 31,
-              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "43 - 66 Damage\tSpeed 3.50",
-                "(15.6 damage per second)",
+                "(15.57 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
               "icon": "inv_hammer_07"
@@ -10376,8 +13273,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "",
-              "icon": "inv_hammer_04"
+              "stats": "+5 Strength",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "+5 Strength",
+                "Requires Level 25"
+              ]
             },
             {
               "name": "Dendweller's Hammer",
@@ -10392,9 +13297,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +100 Armor",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "67 - 102 Damage\tSpeed 3.30",
-                "(25.6 damage per second)",
+                "(25.61 damage per second)",
                 "+12 Stamina",
                 "+100 Armor",
                 "Requires Level 26"
@@ -10415,9 +13320,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 3.30",
-                "(31.2 damage per second)",
+                "(31.21 damage per second)",
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
@@ -10432,9 +13337,9 @@ if (typeof window !== 'undefined') {
           "stats": "+60 Armor, Equip: +32 Attack Power.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "73 - 110 Damage\tSpeed 3.30",
-            "(27.7 damage per second)",
+            "(27.73 damage per second)",
             "+60 Armor",
             "Equip: +32 Attack Power."
           ],
@@ -10465,8 +13370,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+68 Healing",
-              "icon": "inv_mace_07"
+              "stats": "Equip: Increases healing done by magical spells and effects by up to 68, Equip: Increases damage done by Shadow spells and effects by up to 28.",
+              "icon": "inv_mace_07",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "28 - 52 Damage\tSpeed 2.80",
+                "(14.29 damage per second)",
+                "Requires Level 28",
+                "Equip: Increases healing done by magical spells and effects by up to 68",
+                "Equip: Increases damage done by Shadow spells and effects by up to 28."
+              ]
             },
             {
               "name": "Striking Staff",
@@ -10481,9 +13395,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
+                "(31.29 damage per second)",
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
@@ -10501,25 +13415,62 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "43 - 65 Damage\tSpeed 2.60",
-                "(20.8 damage per second)",
+                "(20.77 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
-                "Equip: Restores 5 Mana per 5 sec."
+                "Equip: Increases healing done by up to 67"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_10"
+            },
+            {
+              "name": "Ironwood Destroyer",
+              "itemId": 271770,
+              "value": "22.5 DPS - 2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "22.5 DPS",
+              "quality": "q1",
+              "iLvl": 1,
+              "reqLevel": 28,
+              "stats": "Use: Use to sketch a location on the Shapers Terrace map.",
+              "icon": "inv_mace_05",
+              "weaponType": "Two-Handed Mace",
+              "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map."
+              ]
+            },
+            {
+              "name": "Hornbeam Heft",
+              "itemId": 271772,
+              "value": "16.8 DPS - 1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "16.8 DPS",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Strength, +4 Agility",
+              "icon": "inv_axe_02",
+              "weaponType": "One-Handed Axe"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
           "reqLevel": 28,
-          "stats": "+11 Str, +8 Sta"
+          "stats": "1080 armor, Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "78 - 117 Damage\tSpeed 3.50",
+            "(27.86 damage per second)",
+            "1080 armor",
+            "Requires Level 28",
+            "Equip: When damaged, has a chance to grant you 1080 armor for 12 sec. (Proc chance: 33%, 1m cooldown)"
+          ]
         },
         {
           "levelBracket": "29–30",
@@ -10546,8 +13497,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 2.30",
+                "(26.30 damage per second)",
+                "+8 Intellect",
+                "+15 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Wind Spirit Staff",
@@ -10560,8 +13520,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
-              "icon": "inv_staff_01"
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "56 - 85 Damage\tSpeed 3.30",
+                "(21.36 damage per second)",
+                "+6 Stamina",
+                "+16 Spirit",
+                "Requires Level 29",
+                "Equip: Increases healing done by up to 71"
+              ]
             },
             {
               "name": "Lightning's Grasp",
@@ -10573,14 +13543,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Fist Weapon",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46., Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46, Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tFist Weapon",
+                "Main Hand",
                 "28 - 52 Damage\tSpeed 2.20",
-                "(18.2 damage per second)",
+                "(18.18 damage per second)",
                 "+6 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
               "reqLevel": 30,
@@ -10596,14 +13566,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Fist Weapon",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects., Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
+              "stats": "+5 Stamina, Equip: Increases healing done by up to 86, Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tFist Weapon",
+                "Main Hand",
                 "30 - 57 Damage\tSpeed 2.40",
-                "(18.1 damage per second)",
+                "(18.13 damage per second)",
                 "+5 Stamina",
-                "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 86",
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
               "reqLevel": 30,
@@ -10622,9 +13592,9 @@ if (typeof window !== 'undefined') {
               "stats": "+15 Strength, +8 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tAxe",
+                "Two-Hand",
                 "88 - 132 Damage\tSpeed 3.80",
-                "(28.9 damage per second)",
+                "(28.95 damage per second)",
                 "+15 Strength",
                 "+8 Stamina",
                 "Requires Level 29"
@@ -10645,9 +13615,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
+                "(31.29 damage per second)",
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
@@ -10659,14 +13629,14 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 40,
-          "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+          "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "91 - 137 Damage\tSpeed 3.20",
-            "(35.6 damage per second)",
-            "+12 Intellect",
+            "(35.63 damage per second)",
             "+15 Stamina",
+            "+12 Intellect",
             "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
           ],
           "reqLevel": 30
@@ -10696,8 +13666,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
-              "icon": "inv_staff_08"
+              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "66 - 100 Damage\tSpeed 3.00",
+                "(27.67 damage per second)",
+                "+16 Stamina",
+                "+12 Intellect",
+                "+6 Spirit",
+                "Requires Level 35",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Rage of the Storm",
@@ -10709,14 +13690,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed mace",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "91 - 137 Damage\tSpeed 3.20",
-                "(35.6 damage per second)",
-                "+12 Intellect",
+                "(35.63 damage per second)",
                 "+15 Stamina",
+                "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
@@ -10735,15 +13716,13 @@ if (typeof window !== 'undefined') {
               "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
               "lines": [
                 "Binds when picked up",
-                "Unique",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "46 - 70 Damage\tSpeed 2.00",
-                "(29 damage per second)",
+                "(29.00 damage per second)",
                 "+16 Strength",
                 "+5 Agility",
-                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-                "3 Charges",
-                "Requires Level 29"
+                "Requires Level 29",
+                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
               ],
               "reqLevel": 29,
               "icon": "inv_mace_14"
@@ -10759,8 +13738,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": "",
-              "icon": "inv_throwingaxe_05"
+              "stats": "+11 Strength, +7 Stamina",
+              "icon": "inv_throwingaxe_05",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "71 - 108 Damage\tSpeed 3.50",
+                "(25.57 damage per second)",
+                "+11 Strength",
+                "+7 Stamina",
+                "Requires Level 32"
+              ]
             }
           ],
           "faction": "both",
@@ -10769,9 +13757,9 @@ if (typeof window !== 'undefined') {
           "stats": "+15 Strength, +8 Stamina",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tAxe",
+            "Two-Hand",
             "88 - 132 Damage\tSpeed 3.80",
-            "(28.9 damage per second)",
+            "(28.95 damage per second)",
             "+15 Strength",
             "+8 Stamina",
             "Requires Level 29"
@@ -10804,7 +13792,17 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 39,
               "stats": "+8 Strength, +14 Stamina, +16 Intellect",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "105 - 159 Damage\tSpeed 3.40",
+                "(38.82 damage per second)",
+                "+8 Strength",
+                "+14 Stamina",
+                "+16 Intellect",
+                "Requires Level 39"
+              ]
             },
             {
               "name": "Illusionary Rod",
@@ -10817,15 +13815,35 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+15 Int, +10 Spi",
-              "icon": "inv_staff_08"
+              "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 105 Damage\tSpeed 3.40",
+                "(25.74 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
+                "+7 Spirit",
+                "Requires Level 34",
+                "Equip: Improves your chance to get a critical strike by 1.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 42,
           "reqLevel": 37,
-          "stats": ""
+          "stats": "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "104 - 157 Damage\tSpeed 3.50",
+            "(37.29 damage per second)",
+            "Requires Level 37",
+            "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
+          ]
         },
         {
           "levelBracket": "41–46",
@@ -10852,8 +13870,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
-              "icon": "inv_staff_11"
+              "stats": "+4 Stamina, +17 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "65 - 99 Damage\tSpeed 3.10",
+                "(26.45 damage per second)",
+                "+4 Stamina",
+                "+17 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Strength of the Treant",
@@ -10866,8 +13893,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 50,
               "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
-              "icon": "inv_staff_25"
+              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "85 - 128 Damage\tSpeed 3.70",
+                "(28.78 damage per second)",
+                "+7 Stamina",
+                "+18 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 42"
+              ]
             },
             {
               "name": "Princess Theradras' Scepter",
@@ -10880,8 +13916,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "",
-              "icon": "inv_hammer_08"
+              "stats": "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100.",
+              "icon": "inv_hammer_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "126 - 190 Damage\tSpeed 3.40",
+                "(46.47 damage per second)",
+                "Requires Level 49",
+                "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
+              ]
             },
             {
               "name": "Executioner's Cleaver",
@@ -10894,8 +13938,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Hit Rating",
-              "icon": "inv_axe_04"
+              "stats": "+23 Strength, Equip: Improves your chance to hit by 1.0%.",
+              "icon": "inv_axe_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "127 - 191 Damage\tSpeed 3.80",
+                "(41.84 damage per second)",
+                "+23 Strength",
+                "Requires Level 43",
+                "Equip: Improves your chance to hit by 1.0%."
+              ]
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -10908,8 +13961,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_hammer_16"
+              "stats": "+19 Strength, Equip: Increases damage done by magical spells and effects by up to 21",
+              "icon": "inv_hammer_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "123 - 185 Damage\tSpeed 3.60",
+                "(42.78 damage per second)",
+                "+19 Strength",
+                "Requires Level 44",
+                "Equip: Increases damage done by magical spells and effects by up to 21"
+              ]
             },
             {
               "name": "Staff of Lore",
@@ -10922,15 +13984,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
-              "icon": "inv_staff_27"
+              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
+              "icon": "inv_staff_27",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "68 - 103 Damage\tSpeed 3.10",
+                "(27.58 damage per second)",
+                "+5 Intellect",
+                "+18 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 48,
-          "stats": "+14 Str, +1% Crit"
+          "stats": "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "117 - 176 Damage\tSpeed 3.20",
+            "(45.78 damage per second)",
+            "Requires Level 48",
+            "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
+          ]
         },
         {
           "levelBracket": "47–52",
@@ -10957,8 +14036,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 45,
-              "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "Equip: Increases healing done by up to 112",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "103 - 156 Damage\tSpeed 3.80",
+                "(34.08 damage per second)",
+                "Equip: Increases healing done by up to 112"
+              ]
             },
             {
               "name": "Dreadforge Retaliator",
@@ -10984,8 +14070,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_04"
+              "stats": "+4 Arcane Resistance, Equip: Increases your chance to Parry an attack by 1.4%., Equip: Improves your chance to hit by 2.0%.",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "135 - 203 Damage\tSpeed 3.50",
+                "(48.29 damage per second)",
+                "+4 Arcane Resistance",
+                "Requires Level 51",
+                "Equip: Increases your chance to Parry an attack by 1.4%.",
+                "Equip: Improves your chance to hit by 2.0%."
+              ]
             },
             {
               "name": "Spire of Hakkar",
@@ -10998,15 +14094,34 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
-              "icon": "inv_staff_32"
+              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
+              "icon": "inv_staff_32",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.40",
+                "(34.71 damage per second)",
+                "+16 Stamina",
+                "+16 Spirit",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
+                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 55,
           "reqLevel": 50,
-          "stats": ""
+          "stats": "Chance on hit: Stuns target for 8 sec.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "140 - 211 Damage\tSpeed 3.70",
+            "(47.43 damage per second)",
+            "Requires Level 50",
+            "Chance on hit: Stuns target for 8 sec."
+          ]
         },
         {
           "levelBracket": "53–60",
@@ -11033,8 +14148,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+20 Stamina, +15 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 2.50",
+                "(35.20 damage per second)",
+                "+20 Stamina",
+                "+15 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -11047,8 +14171,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 62,
               "reqLevel": 58,
-              "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "+11 Stamina, +22 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.74 damage per second)",
+                "+11 Stamina",
+                "+22 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "The Unstoppable Force",
@@ -11061,8 +14194,19 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
-              "icon": "inv_hammer_09"
+              "stats": "+18 Strength, +17 Stamina, Equip: Improves your chance to get a critical strike by 2.0%., Chance on hit: Stuns target for 1 sec.",
+              "icon": "inv_hammer_09",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "152 - 255 Damage\tSpeed 3.60",
+                "(56.53 damage per second)",
+                "+18 Strength",
+                "+17 Stamina",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Chance on hit: Stuns target for 1 sec."
+              ]
             },
             {
               "name": "Wisepaw Totem",
@@ -11075,8 +14219,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": "",
-              "icon": "inv_staff_51"
+              "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
+              "icon": "inv_staff_51",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.20",
+                "(36.88 damage per second)",
+                "+19 Stamina",
+                "+23 Intellect",
+                "Requires Level 53",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 66"
+              ]
             },
             {
               "name": "Fist of the Damned",
@@ -11085,11 +14239,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "39.4 DPS",
               "quality": "q3",
-              "iLvl": 58,
-              "reqLevel": 52,
-              "stats": "",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "Equip: Increased Defense +2., Chance on hit: Steals 56 life from target enemy.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "speed": "1.90",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "47 - 89 Damage\tSpeed 1.90",
+                "(35.79 damage per second)",
+                "Requires Level 49",
+                "Equip: Increased Defense +2.",
+                "Chance on hit: Steals 56 life from target enemy."
+              ]
             },
             {
               "name": "Icesworn Decapitator",
@@ -11102,8 +14266,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 59,
               "reqLevel": 54,
-              "stats": "",
-              "icon": "inv_axe_69"
+              "stats": "+17 Strength, +18 Stamina, +10 Frost Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 13",
+              "icon": "inv_axe_69",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "145 - 219 Damage\tSpeed 3.60",
+                "(50.56 damage per second)",
+                "+17 Strength",
+                "+18 Stamina",
+                "+10 Frost Resistance",
+                "Requires Level 54",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 13"
+              ]
             },
             {
               "name": "Ironbark Staff",
@@ -11116,15 +14291,590 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
-              "icon": "inv_wand_04"
+              "stats": "+18 Stamina, +15 Intellect, +120 Armor, Equip: Improves your chance to get a critical strike by 2.0%., Equip: Increases damage and healing done by magical spells and effects by up to 88",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "114 - 172 Damage\tSpeed 3.40",
+                "(42.06 damage per second)",
+                "+18 Stamina",
+                "+15 Intellect",
+                "+120 Armor",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 88"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 63,
           "reqLevel": 58,
-          "stats": ""
+          "stats": "+13 Stamina, Equip: +62 Attack Power.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "153 - 256 Damage\tSpeed 3.80",
+            "(53.82 damage per second)",
+            "+13 Stamina",
+            "Requires Level 58",
+            "Equip: +62 Attack Power."
+          ]
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–6",
+          "itemId": 2493,
+          "name": "Wooden Mallet",
+          "icon": "inv_hammer_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.00",
+          "dps": "1.8 DPS",
+          "stats": "+1 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Starting weapon or purchase from weapon merchants in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "alts": [
+            {
+              "name": "Club",
+              "itemId": 2130,
+              "value": "+1 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 4,
+              "reqLevel": 1,
+              "stats": "+1 Spirit",
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "7–12",
+          "itemId": 2077,
+          "name": "Militia Quarterstaff",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.60",
+          "dps": "4.8 DPS",
+          "stats": "+2 Intellect, +2 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Low-level Weapon Vendor",
+            "detail": "Purchased from weapon merchants in Goldshire, Kharanos, Bloodhoof, or Brill."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 11,
+          "reqLevel": 7,
+          "alts": [
+            {
+              "name": "Wooden Mallet",
+              "itemId": 2493,
+              "value": "+2 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 6,
+              "stats": "+2 Spirit",
+              "icon": "inv_hammer_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Apprentice's Spellstaff",
+              "itemId": 4835,
+              "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": "+3 Spirit, +2 Intellect",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–17",
+          "itemId": 271198,
+          "name": "Golemheart Stave",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "14.2 DPS",
+          "stats": "+5 Intellect, +4 Spirit",
+          "source": {
+            "kind": "drop",
+            "title": "Plunder (Hall of Thanes)",
+            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 13,
+          "alts": [
+            {
+              "name": "Trogg Scepter",
+              "itemId": 272996,
+              "value": "+4 Spirit, +33 Healing / +11 Spell Dmg - Oggleflint (Ragefire Chasm)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Scepter of the Abandoned",
+              "itemId": 271207,
+              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 14,
+              "stats": "+4 Stamina, +4 Intellect",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Staff of the Dor'Danil",
+              "itemId": 6543,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+4 Intellect, +4 Spirit",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "18–21",
+          "itemId": 6631,
+          "name": "Living Root",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "15.4 DPS",
+          "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
+          "source": {
+            "kind": "drop",
+            "title": "Verdan the Everliving (Wailing Caverns)",
+            "detail": "Verdan boss drop in WC. Healer favorite with +45 Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Living Root",
+              "itemId": 6631,
+              "value": "+45 Healing / +15 Spell Dmg, +7 Spirit - Verdan the Everliving (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 18,
+              "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+7 Spirit, +7 Intellect, +7 Stamina - Leaders of the Fang quest (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 15,
+              "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Coldspire Staff",
+              "itemId": 271212,
+              "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "22–25",
+          "itemId": 3415,
+          "name": "Staff of the Friar",
+          "icon": "inv_staff_13",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "15.4 DPS",
+          "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+          "source": {
+            "kind": "drop",
+            "title": "Trash mobs (Blackfathom Deeps)",
+            "detail": "Iconic world/dungeon rare drop with huge +12 Spirit and +52 Healing power."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "alts": [
+            {
+              "name": "Odo's Ley Staff",
+              "itemId": 6318,
+              "value": "+5 Stamina, +12 Spirit, +52 Healing / +17 Spell Dmg - Odo the Blindwatcher (SFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+              "icon": "inv_staff_12",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "itemId": 1155,
+              "value": "+11 Intellect, +10 Spirit - Twilight Lord Kelris (Blackfathom Deeps)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "26–29",
+          "itemId": 271767,
+          "name": "Healer's Staff",
+          "icon": "inv_staff_10",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "20.5 DPS",
+          "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22. Equip: Restores 5 Mana per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Prehistoric Prism / Lost Relic Carry (Excavation Site: Wetlands)",
+            "detail": "WoW Forever custom dungeon quest reward. Outstanding +67 Healing and 5 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 24,
+          "alts": [
+            {
+              "name": "Royal Diplomatic Scepter",
+              "itemId": 9457,
+              "value": "+3 Sta, +7 Spirit, +75 Healing / +25 Spell Dmg - Dark Iron Ambassador (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +12 HP5, +28 Shadow Dmg - Death Speaker Jargba (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Wind Spirit Staff",
+              "itemId": 6689,
+              "value": "+6 Sta, +16 Spirit, +71 Healing / +23 Spell Dmg - Earthcaller Halmgar (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "30–34",
+          "itemId": 280605,
+          "name": "Tidebringer's Claw",
+          "icon": "inv_weapon_shortblade_05",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.10",
+          "dps": "22.4 DPS",
+          "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28. Equip: Increases healing spell critical strike chance by 2%.",
+          "source": {
+            "kind": "quest",
+            "title": "The Tempest's Weapons (Shaman Class Quest)",
+            "detail": "Level 30 Shaman quest finale. Unrivaled +86 Healing and +2% Heal Crit."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Royal Diplomatic Scepter",
+              "itemId": 9457,
+              "value": "+3 Sta, +7 Spirit, +75 Healing / +25 Spell Dmg - Dark Iron Ambassador (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Illusionary Rod",
+              "itemId": 7713,
+              "value": "+15 Intellect, +10 Spirit, +7 Stamina - Arcanist Doan (SM Library)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–39",
+          "itemId": 7721,
+          "name": "Hand of Righteousness",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "25.2 DPS",
+          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+          "source": {
+            "kind": "drop",
+            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+            "detail": "Iconic Scarlet Cathedral boss drop. Massive +94 Healing power spike for 1H healers."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Black Menace",
+              "itemId": 6802,
+              "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Galgann's Firehammer",
+              "itemId": 9415,
+              "value": "+8 Intellect, +6 Spirit - Galgann Firehammer (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "40–44",
+          "itemId": 18082,
+          "name": "Zum'rah's Vexing Cane",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "3.10",
+          "dps": "31.5 DPS",
+          "stats": "+10 Intellect, +10 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 21.",
+          "source": {
+            "kind": "drop",
+            "title": "Witch Doctor Zum'rah (Zul'Farrak)",
+            "detail": "Drops from Zum'rah in Zul'Farrak graveyard. Reliable high-stamina healer staff."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "alts": [
+            {
+              "name": "The Shoveler",
+              "itemId": 9481,
+              "value": "+5 Intellect, +5 Spirit - Digmaster Shovelphlange (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_mace_07",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–49",
+          "itemId": 17743,
+          "name": "Resurgence Rod",
+          "icon": "inv_staff_04",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "44.7 DPS",
+          "stats": "Equip: Increases healing done by up to 112 and damage done by up to 37. Equip: Restores 11 Mana and 11 Health per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Corruption of Earth and Seed (Maraudon)",
+            "detail": "Maraudon dungeon quest reward from Keeper Margol. Massive +112 Healing and 11 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Charstone Dirk",
+              "itemId": 17710,
+              "value": "+116 Healing / +38 Spell Dmg - Maraudon trash drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
+              "icon": "inv_knife_01",
+              "weaponType": "Dagger"
+            },
+            {
+              "name": "Spire of Hakkar",
+              "itemId": 10844,
+              "value": "+16 Spirit, +14 Intellect, +18 Spell Dmg/Healing - Avatar of Hakkar (Sunken Temple)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "50–54",
+          "itemId": 11923,
+          "name": "Hammer of the Grace",
+          "icon": "inv_mace_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.50",
+          "dps": "36.2 DPS",
+          "stats": "+6 Spirit, Equip: Increases healing done by up to 31 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Chest of The Seven (Blackrock Depths)",
+            "detail": "Chest reward from The Seven challenge in BRD. Premier pre-raid 1H healing mace."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 57,
+          "reqLevel": 52,
+          "alts": [
+            {
+              "name": "Guiding Stave of Wisdom",
+              "itemId": 11932,
+              "value": "+12 Intellect, +28 Healing - Emperor Dagran Thaurissan (BRD)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 23464,
+          "name": "High Warlord's Battle Mace",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "41.2 DPS",
+          "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
+          "source": {
+            "kind": "pvp",
+            "title": "PvP Rank 14 Champion's Hall (Horde)",
+            "detail": "Highest PvP healing weapon for Horde Restoration Shamans."
+          },
+          "faction": "horde",
+          "quality": "q4",
+          "iLvl": 78,
+          "reqLevel": 60,
+          "alts": [
+            {
+              "name": "Scepter of the False Prophet",
+              "itemId": 21839,
+              "value": "+210 Healing / +70 Spell Dmg, +19 Int, +10 Spi - C'Thun (Temple of Ahn'Qiraj)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 84,
+              "reqLevel": 60,
+              "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Gavel of Infinite Wisdom",
+              "itemId": 21410,
+              "value": "+184 Healing / +61 Spell Dmg - AQ20",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 70,
+              "reqLevel": 60,
+              "stats": "+14 Intellect, +8 Spirit, Equip: Increases healing done by up to 184 and damage done by up to 61.",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Blessed Qiraji Augur Staff",
+              "itemId": 21275,
+              "value": "+203 Healing / +67 Spell Dmg - Imperial Qiraji Regalia (AQ40)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 79,
+              "reqLevel": 60,
+              "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
         }
       ]
     },
@@ -11163,14 +14913,26 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "lines": [
+                "Two-Hand",
+                "8 - 13 Damage\tSpeed 2.50",
+                "(4.20 damage per second)",
+                "Requires Level 3"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 4,
+          "iLvl": 5,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "6 - 9 Damage\tSpeed 2.80",
+            "(2.68 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -11190,7 +14952,13 @@ if (typeof window !== 'undefined') {
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "8 - 13 Damage\tSpeed 2.50",
+            "(4.20 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -11208,9 +14976,17 @@ if (typeof window !== 'undefined') {
           "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 11,
+          "iLvl": 13,
           "reqLevel": 6,
-          "stats": "+2 Intellect"
+          "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "17 - 26 Damage\tSpeed 3.20",
+            "(6.72 damage per second)",
+            "+3 Stamina",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -11233,10 +15009,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Darkwood Staff",
@@ -11249,8 +15033,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "17 - 26 Damage\tSpeed 3.20",
+                "(6.72 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Makeshift Stormcaller",
@@ -11263,15 +15055,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": "+2 Intellect",
-              "icon": "inv_staff_14"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "15 - 23 Damage\tSpeed 3.30",
+                "(5.76 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "11 - 17 Damage\tSpeed 2.20",
+            "(6.36 damage per second)",
+            "+2 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -11298,8 +15106,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 10,
-              "stats": "+1 Intellect, +1 Spirit, +2 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "12 - 19 Damage\tSpeed 2.90",
+                "(5.34 damage per second)",
+                "+1 Intellect",
+                "+1 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             },
             {
               "name": "Ley Staff",
@@ -11312,15 +15129,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 10,
-              "stats": "+1 Intellect, +1 Spirit, +2 Spell Power",
-              "icon": "inv_staff_21"
+              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_staff_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "12 - 19 Damage\tSpeed 2.90",
+                "(5.34 damage per second)",
+                "+1 Intellect",
+                "+1 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 10,
-          "stats": "+2 Intellect, +2 Spirit"
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "lines": [
+            "Binds when picked up",
+            "Chest",
+            "48 Armor",
+            "+4 Stamina",
+            "+11 Intellect",
+            "Requires Level 26",
+            "Equip: Increases healing done by up to 20"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -11343,11 +15178,16 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.6 DPS",
               "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 10,
+              "iLvl": 26,
+              "reqLevel": 21,
               "stats": "",
               "icon": "inv_staff_11",
-              "weaponType": "Held In Off-hand"
+              "weaponType": "Held In Off-hand",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 21"
+              ]
             },
             {
               "name": "Cauldron Stirrer",
@@ -11360,15 +15200,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "18 - 28 Damage\tSpeed 3.10",
+                "(7.42 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 17,
+          "iLvl": 14,
           "reqLevel": 12,
-          "stats": "+3 Intellect, +3 Spirit"
+          "stats": "+2 Stamina, +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "16 - 24 Damage\tSpeed 2.80",
+            "(7.14 damage per second)",
+            "+2 Stamina",
+            "+2 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -11387,16 +15244,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Fang of Magmatus",
@@ -11409,8 +15275,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi, +2 Fire SP",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 18 Damage\tSpeed 1.70",
+                "(7.94 damage per second)",
+                "+4 Intellect",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -11423,8 +15298,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Searing Dagger",
@@ -11437,15 +15320,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_03"
+              "stats": "+4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)",
+              "icon": "inv_weapon_shortblade_03",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 17 Damage\tSpeed 1.60",
+                "(8.13 damage per second)",
+                "+4 Spirit",
+                "Requires Level 13",
+                "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+5 Int, +4 Spirit"
+          "stats": "+9 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "30 - 46 Damage\tSpeed 3.20",
+            "(11.88 damage per second)",
+            "+9 Fire Resistance",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -11472,8 +15373,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "+10 Spirit",
-              "icon": "inv_staff_16"
+              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.80",
+                "(15.18 damage per second)",
+                "+10 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Clear Crystal Rod",
@@ -11486,22 +15396,40 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 15,
-              "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "+4 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.10",
+                "(10.16 damage per second)",
+                "+4 Stamina",
+                "+5 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Segmented Spider Leg",
@@ -11515,7 +15443,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "50 - 76 Damage\tSpeed 3.60",
+                "(17.50 damage per second)",
+                "+9 Agility",
+                "+5 Spirit",
+                "Requires Level 15"
+              ]
             },
             {
               "name": "Meathook Slicer",
@@ -11528,15 +15465,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_02"
+              "stats": "+5 Stamina",
+              "icon": "inv_weapon_shortblade_02",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "17 - 32 Damage\tSpeed 1.80",
+                "(13.61 damage per second)",
+                "+5 Stamina",
+                "Requires Level 15"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+5 Int, +5 Spi"
+          "stats": "+8 Stamina, +8 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "34 - 51 Damage\tSpeed 3.00",
+            "(14.17 damage per second)",
+            "+8 Stamina",
+            "+8 Fire Resistance",
+            "Requires Level 17",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -11555,16 +15510,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -11576,15 +15540,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+5 Int, +11 Spi",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -11601,15 +15565,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "",
-              "icon": "inv_sword_01"
+              "stats": "+5 Spirit",
+              "icon": "inv_sword_01",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "26 - 50 Damage\tSpeed 2.60",
+                "(14.62 damage per second)",
+                "+5 Spirit",
+                "Requires Level 17"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 19,
-          "stats": "+7 Int, +5 Spi, +6 Frost Spell Dmg"
+          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "43 - 66 Damage\tSpeed 3.60",
+            "(15.14 damage per second)",
+            "+13 Frost Resistance",
+            "Requires Level 19",
+            "Equip: Increases damage done by Frost spells and effects by up to 32."
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -11636,27 +15617,46 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 10,
-              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
               "icon": "inv_staff_04",
               "source": {
                 "kind": "quest",
                 "title": "Leaders of the Fang",
                 "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "35 - 53 Damage\tSpeed 2.90",
+                "(15.17 damage per second)",
+                "+7 Agility",
+                "+7 Stamina",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Odo's Ley Staff",
@@ -11668,16 +15668,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 26,
-              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "37 - 56 Damage\tSpeed 2.90",
-                "(16.0 damage per second)",
+                "(16.03 damage per second)",
                 "+5 Stamina",
                 "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
               "icon": "inv_staff_27"
@@ -11692,16 +15692,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 30,
-              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+11 Stamina, +11 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "32 - 49 Damage\tSpeed 2.20",
-                "(18.4 damage per second)",
-                "+11 Intellect",
+                "(18.41 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Requires Level 25"
+                "+11 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
               "icon": "inv_staff_19"
@@ -11717,22 +15717,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
-              "icon": "inv_wand_04"
+              "stats": "+6 Stamina, +5 Intellect, +8 Shadow Resistance, Equip: Increases damage done by Shadow spells and effects by up to 27.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "40 - 61 Damage\tSpeed 3.60",
+                "(14.03 damage per second)",
+                "+6 Stamina",
+                "+5 Intellect",
+                "+8 Shadow Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage done by Shadow spells and effects by up to 27."
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+5 Int, +11 Spi",
+          "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "36 - 55 Damage\tSpeed 3.00",
-            "(15.2 damage per second)",
+            "(15.17 damage per second)",
             "+5 Intellect",
             "+6 Spirit",
-            "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+            "Equip: Increases healing done by up to 48",
             "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
           ],
           "reqLevel": 14
@@ -11748,7 +15759,7 @@ if (typeof window !== 'undefined') {
           "source": {
             "kind": "quest",
             "title": "Scroll of the Saber & Blade of Silverlaine",
-            "detail": "Custom WoW Forever Mage class quest weapon (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets, Req Level 21)"
+            "detail": "Mage class quest: Imbue Blade of Silverlaine with Scroll of the Saber (+7 Int, +32 Spell Power, 98 Fire dmg on frozen targets)"
           },
           "alts": [
             {
@@ -11762,8 +15773,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi",
-              "icon": "inv_staff_06"
+              "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 2.80",
+                "(17.68 damage per second)",
+                "+11 Spirit",
+                "Requires Level 24",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+                "Equip: Reduces the hit chance of Sleep effects against you by 5%."
+              ]
             },
             {
               "name": "Meteor Shard",
@@ -11776,8 +15797,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "+3 Fire Resistance",
-              "icon": "inv_weapon_shortblade_25"
+              "stats": "+3 Fire Resistance, Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_weapon_shortblade_25",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "22 - 42 Damage\tSpeed 1.80",
+                "(17.78 damage per second)",
+                "+3 Fire Resistance",
+                "Requires Level 23",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -11790,41 +15820,74 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_staff_11"
+              "stats": "+9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "32 - 49 Damage\tSpeed 2.50",
+                "(16.20 damage per second)",
+                "+9 Stamina",
+                "+9 Spirit",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
-          "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+          "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
           "lines": [
             "Binds when picked up",
-            "Main Hand\tSword",
+            "Main Hand",
             "17 - 32 Damage\tSpeed 2.00",
-            "(12.3 damage per second)",
+            "(12.25 damage per second)",
             "+7 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-            "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
-            "Classes: Mage",
-            "Requires Level 21"
+            "Requires Level 21",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+            "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
           ],
           "reqLevel": 21
         },
         {
           "levelBracket": "25–26",
-          "itemId": 276631,
-          "name": "Coldflame Saber",
-          "icon": "inv_sword_05",
-          "weaponType": "One-handed sword",
-          "speed": "2.00",
-          "dps": "12.25 DPS",
+          "itemId": 1155,
+          "name": "Rod of the Sleepwalker",
+          "icon": "inv_staff_06",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "17.7 DPS",
           "source": {
             "kind": "quest",
             "title": "Blackfathom Villainy",
-            "detail": "BFD quest reward (29.0 DPS melts level 20–35 mobs)"
+            "detail": "BFD quest reward (+11 Int, +10 Spirit caster staff)"
           },
           "alts": [
+            {
+              "name": "Coldflame Saber",
+              "itemId": 276631,
+              "value": "12.3 DPS, 2.00s, +7 Int, +32 SP, 98 Fire Proc - Mage Quest",
+              "faction": "both",
+              "dps": "12.25 DPS",
+              "speed": "2.00",
+              "weaponType": "Main Hand Sword",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 21,
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 2.00",
+                "(12.25 damage per second)",
+                "+7 Intellect",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+                "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
+              ],
+              "icon": "inv_sword_05"
+            },
             {
               "name": "Healer's Staff",
               "itemId": 271767,
@@ -11836,8 +15899,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+12 Stamina",
-              "icon": "inv_staff_10"
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.77 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67"
+              ]
             },
             {
               "name": "Striking Staff",
@@ -11851,7 +15922,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_28",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.29 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ]
             },
             {
               "name": "Death Prophet Spine",
@@ -11863,16 +15943,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "42 - 64 Damage\tSpeed 2.80",
-                "(18.9 damage per second)",
+                "(18.93 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Restores 5 Mana per 5 sec.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 26,
               "icon": "inv_staff_17"
@@ -11880,22 +15959,22 @@ if (typeof window !== 'undefined') {
             {
               "name": "Debt Collector",
               "itemId": 273827,
-              "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd",
-              "faction": "both",
+              "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd (Alliance)",
+              "faction": "alliance",
               "dps": "13.04 DPS",
               "speed": "2.30",
               "weaponType": "One-handed sword",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34, Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tSword",
+                "Main Hand",
                 "21 - 39 Damage\tSpeed 2.30",
-                "(13.0 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                "Requires Level 26"
+                "(13.04 damage per second)",
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
               "icon": "inv_sword_24"
@@ -11910,15 +15989,15 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
@@ -11927,16 +16006,18 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
-          "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+          "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "30 - 57 Shadow Damage\tSpeed 1.50",
-            "(29.0 damage per second)",
-            "+3 Spirit",
-            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+            "Two-Hand",
+            "39 - 60 Damage\tSpeed 2.80",
+            "(17.68 damage per second)",
+            "+11 Spirit",
+            "Requires Level 24",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+            "Equip: Reduces the hit chance of Sleep effects against you by 5%."
           ],
-          "reqLevel": 21
+          "reqLevel": 24
         },
         {
           "levelBracket": "27–28",
@@ -11962,17 +16043,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "stats": "+5 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "16 - 30 Damage\tSpeed 1.60",
-                "(14.4 damage per second)",
+                "(14.38 damage per second)",
                 "+5 Stamina",
                 "Requires Level 28",
-                "Equip: +8 Health Regeneration",
-                "Equip: +36 Spell Power",
-                "Sell Price: 73s 79c"
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
@@ -11981,17 +16060,15 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
-          "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "59 - 90 Damage\tSpeed 3.60",
-            "(20.7 damage per second)",
+            "(20.69 damage per second)",
             "+14 Stamina",
             "Requires Level 28",
-            "Equip: +3 Spell Penetration",
-            "Equip: +36 Spell Power",
-            "Sell Price: 85s 58c"
+            "Equip: Increases damage and healing done by magical spells and effects by up to 36"
           ],
           "reqLevel": 28
         },
@@ -12020,8 +16097,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 2.30",
+                "(26.30 damage per second)",
+                "+8 Intellect",
+                "+15 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Wind Spirit Staff",
@@ -12034,8 +16120,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
-              "icon": "inv_staff_01"
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "56 - 85 Damage\tSpeed 3.30",
+                "(21.36 damage per second)",
+                "+6 Stamina",
+                "+16 Spirit",
+                "Requires Level 29",
+                "Equip: Increases healing done by up to 71"
+              ]
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -12047,15 +16143,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
@@ -12070,14 +16166,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q2",
               "iLvl": 41,
-              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "20 - 38 Damage\tSpeed 1.90",
-                "(15.3 damage per second)",
+                "(15.26 damage per second)",
                 "+7 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_shortblade_15"
@@ -12089,9 +16185,9 @@ if (typeof window !== 'undefined') {
           "stats": "+9 Strength, +6 Stamina, +14 Intellect",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "77 - 117 Damage\tSpeed 3.10",
-            "(31.3 damage per second)",
+            "(31.29 damage per second)",
             "+9 Strength",
             "+6 Stamina",
             "+14 Intellect"
@@ -12123,8 +16219,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+8 Intellect, +46 Spell Power",
-              "icon": "inv_staff_14"
+              "stats": "+8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "63 - 96 Damage\tSpeed 3.00",
+                "(26.50 damage per second)",
+                "+8 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 46"
+              ]
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -12137,8 +16241,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
-              "icon": "inv_staff_08"
+              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "66 - 100 Damage\tSpeed 3.00",
+                "(27.67 damage per second)",
+                "+16 Stamina",
+                "+12 Intellect",
+                "+6 Spirit",
+                "Requires Level 35",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Hypnotic Blade",
@@ -12151,8 +16266,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+9 SP, +8 Int",
-              "icon": "inv_weapon_shortblade_07"
+              "stats": "+8 Intellect, +3 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 44",
+              "icon": "inv_weapon_shortblade_07",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 1.40",
+                "(17.50 damage per second)",
+                "+8 Intellect",
+                "+3 Spirit",
+                "Requires Level 34",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+              ]
             },
             {
               "name": "Narpas Sword",
@@ -12165,13 +16290,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 34,
-              "stats": "+48 Spell Power, +10 Hit Rating",
+              "stats": "Equip: Improves your chance to hit by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 48",
               "icon": "inv_weapon_shortblade_79",
               "source": {
                 "kind": "dungeon",
                 "title": "Dungeon Drop",
                 "detail": "Specialized caster 1H sword for Mages."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "26 - 50 Damage\tSpeed 2.00",
+                "(19.00 damage per second)",
+                "Requires Level 34",
+                "Equip: Improves your chance to hit by 1.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Staff of Jordan",
@@ -12184,15 +16318,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+15 Int, +10 Spi"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "36–40",
@@ -12219,15 +16376,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "41–46",
@@ -12254,8 +16434,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
-              "icon": "inv_staff_11"
+              "stats": "+4 Stamina, +17 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "65 - 99 Damage\tSpeed 3.10",
+                "(26.45 damage per second)",
+                "+4 Stamina",
+                "+17 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Strength of the Treant",
@@ -12268,8 +16457,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 50,
               "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
-              "icon": "inv_staff_25"
+              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "85 - 128 Damage\tSpeed 3.70",
+                "(28.78 damage per second)",
+                "+7 Stamina",
+                "+18 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 42"
+              ]
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -12282,8 +16480,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_01"
+              "stats": "+10 Stamina, +10 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54, Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 101 Damage\tSpeed 2.70",
+                "(31.11 damage per second)",
+                "+10 Stamina",
+                "+10 Intellect",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54",
+                "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
+              ]
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -12296,8 +16505,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_staff_17"
+              "stats": "+19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56",
+              "icon": "inv_staff_17",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "76 - 114 Damage\tSpeed 3.00",
+                "(31.67 damage per second)",
+                "+19 Intellect",
+                "+19 Spirit",
+                "Requires Level 44",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 56"
+              ]
             },
             {
               "name": "Staff of Lore",
@@ -12310,15 +16529,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
-              "icon": "inv_staff_27"
+              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
+              "icon": "inv_staff_27",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "68 - 103 Damage\tSpeed 3.10",
+                "(27.58 damage per second)",
+                "+5 Intellect",
+                "+18 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 40,
-          "stats": "+16 Int, +10 Spi"
+          "stats": "+9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "67 - 101 Damage\tSpeed 2.70",
+            "(31.11 damage per second)",
+            "+9 Stamina",
+            "+23 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+          ]
         },
         {
           "levelBracket": "47–52",
@@ -12345,8 +16582,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 45,
-              "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "Equip: Increases healing done by up to 112",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "103 - 156 Damage\tSpeed 3.80",
+                "(34.08 damage per second)",
+                "Equip: Increases healing done by up to 112"
+              ]
             },
             {
               "name": "Spire of the Stoneshaper",
@@ -12371,15 +16615,39 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
-              "icon": "inv_staff_32"
+              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
+              "icon": "inv_staff_32",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.40",
+                "(34.71 damage per second)",
+                "+16 Stamina",
+                "+16 Spirit",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
+                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 48,
-          "stats": "+12 Int, +20 Spi"
+          "stats": "+10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "79 - 119 Damage\tSpeed 2.90",
+            "(34.14 damage per second)",
+            "+10 Stamina",
+            "+12 Intellect",
+            "+10 Fire Resistance",
+            "Requires Level 48",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 60",
+            "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
+          ]
         },
         {
           "levelBracket": "53–60",
@@ -12406,8 +16674,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+20 Stamina, +15 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 2.50",
+                "(35.20 damage per second)",
+                "+20 Stamina",
+                "+15 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -12420,8 +16697,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 62,
               "reqLevel": 58,
-              "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "+11 Stamina, +22 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.74 damage per second)",
+                "+11 Stamina",
+                "+22 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -12459,15 +16745,37 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
-              "icon": "inv_wand_04"
+              "stats": "+18 Stamina, +15 Intellect, +120 Armor, Equip: Improves your chance to get a critical strike by 2.0%., Equip: Increases damage and healing done by magical spells and effects by up to 88",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "114 - 172 Damage\tSpeed 3.40",
+                "(42.06 damage per second)",
+                "+18 Stamina",
+                "+15 Intellect",
+                "+120 Armor",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 88"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": ""
+          "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "94 - 142 Damage\tSpeed 3.20",
+            "(36.88 damage per second)",
+            "+19 Stamina",
+            "+23 Intellect",
+            "Requires Level 53",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 66"
+          ]
         }
       ]
     },
@@ -12506,14 +16814,26 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "lines": [
+                "Two-Hand",
+                "8 - 13 Damage\tSpeed 2.50",
+                "(4.20 damage per second)",
+                "Requires Level 3"
+              ]
             }
           ],
           "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 6,
+          "quality": "q1",
+          "iLvl": 5,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "6 - 9 Damage\tSpeed 2.80",
+            "(2.68 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -12533,7 +16853,13 @@ if (typeof window !== 'undefined') {
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "8 - 13 Damage\tSpeed 2.50",
+            "(4.20 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -12551,9 +16877,17 @@ if (typeof window !== 'undefined') {
           "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 11,
+          "iLvl": 13,
           "reqLevel": 6,
-          "stats": "+2 Stamina, +1 Intellect"
+          "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "17 - 26 Damage\tSpeed 3.20",
+            "(6.72 damage per second)",
+            "+3 Stamina",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -12576,10 +16910,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Darkwood Staff",
@@ -12592,8 +16934,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "17 - 26 Damage\tSpeed 3.20",
+                "(6.72 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Makeshift Stormcaller",
@@ -12606,15 +16956,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": "+2 Intellect",
-              "icon": "inv_staff_14"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "15 - 23 Damage\tSpeed 3.30",
+                "(5.76 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "11 - 17 Damage\tSpeed 2.20",
+            "(6.36 damage per second)",
+            "+2 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -12631,10 +16997,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 10,
-          "stats": "+2 Intellect, +2 Spirit"
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "lines": [
+            "Binds when picked up",
+            "Chest",
+            "48 Armor",
+            "+4 Stamina",
+            "+11 Intellect",
+            "Requires Level 26",
+            "Equip: Increases healing done by up to 20"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -12657,18 +17032,31 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.6 DPS",
               "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 10,
+              "iLvl": 26,
+              "reqLevel": 21,
               "stats": "",
               "icon": "inv_staff_11",
-              "weaponType": "Held In Off-hand"
+              "weaponType": "Held In Off-hand",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 21"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 16,
+          "iLvl": 15,
           "reqLevel": 11,
-          "stats": "+3 Stamina, +2 Intellect"
+          "stats": "+4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "18 - 28 Damage\tSpeed 3.10",
+            "(7.42 damage per second)",
+            "+4 Stamina",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -12687,16 +17075,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Fang of Magmatus",
@@ -12709,8 +17106,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi, +2 Fire SP",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 18 Damage\tSpeed 1.70",
+                "(7.94 damage per second)",
+                "+4 Intellect",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -12723,8 +17129,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Searing Dagger",
@@ -12737,15 +17151,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_03"
+              "stats": "+4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)",
+              "icon": "inv_weapon_shortblade_03",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 17 Damage\tSpeed 1.60",
+                "(8.13 damage per second)",
+                "+4 Spirit",
+                "Requires Level 13",
+                "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+5 Int, +4 Spirit"
+          "stats": "+9 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "30 - 46 Damage\tSpeed 3.20",
+            "(11.88 damage per second)",
+            "+9 Fire Resistance",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -12772,8 +17204,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "+10 Spirit",
-              "icon": "inv_staff_16"
+              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.80",
+                "(15.18 damage per second)",
+                "+10 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Clear Crystal Rod",
@@ -12786,22 +17227,40 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 15,
-              "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "+4 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.10",
+                "(10.16 damage per second)",
+                "+4 Stamina",
+                "+5 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Emberstone Staff",
@@ -12814,8 +17273,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+5 Int, +5 Spi",
-              "icon": "inv_staff_13"
+              "stats": "+8 Stamina, +8 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 3.00",
+                "(14.17 damage per second)",
+                "+8 Stamina",
+                "+8 Fire Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+              ]
             },
             {
               "name": "Meathook Slicer",
@@ -12828,15 +17297,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_02"
+              "stats": "+5 Stamina",
+              "icon": "inv_weapon_shortblade_02",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "17 - 32 Damage\tSpeed 1.80",
+                "(13.61 damage per second)",
+                "+5 Stamina",
+                "Requires Level 15"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "+5 Int, +4 Sta"
+          "stats": "+5 Int, +4 Sta",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "50 - 76 Damage\tSpeed 3.60",
+            "(17.50 damage per second)",
+            "+9 Agility",
+            "+5 Spirit",
+            "Requires Level 15"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -12855,16 +17341,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -12876,15 +17371,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+5 Int, +11 Spi",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -12901,8 +17396,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "",
-              "icon": "inv_sword_01"
+              "stats": "+5 Spirit",
+              "icon": "inv_sword_01",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "26 - 50 Damage\tSpeed 2.60",
+                "(14.62 damage per second)",
+                "+5 Spirit",
+                "Requires Level 17"
+              ]
             },
             {
               "name": "Witching Stave",
@@ -12915,15 +17418,35 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
-              "icon": "inv_wand_04"
+              "stats": "+6 Stamina, +5 Intellect, +8 Shadow Resistance, Equip: Increases damage done by Shadow spells and effects by up to 27.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "40 - 61 Damage\tSpeed 3.60",
+                "(14.03 damage per second)",
+                "+6 Stamina",
+                "+5 Intellect",
+                "+8 Shadow Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage done by Shadow spells and effects by up to 27."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 19,
-          "stats": "+7 Int, +5 Spi, +6 Frost Dmg"
+          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "43 - 66 Damage\tSpeed 3.60",
+            "(15.14 damage per second)",
+            "+13 Frost Resistance",
+            "Requires Level 19",
+            "Equip: Increases damage done by Frost spells and effects by up to 32."
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -12950,27 +17473,46 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 10,
-              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
               "icon": "inv_staff_04",
               "source": {
                 "kind": "quest",
                 "title": "Leaders of the Fang",
                 "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "35 - 53 Damage\tSpeed 2.90",
+                "(15.17 damage per second)",
+                "+7 Agility",
+                "+7 Stamina",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -12982,15 +17524,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -13006,16 +17548,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 30,
-              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+11 Stamina, +11 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "32 - 49 Damage\tSpeed 2.20",
-                "(18.4 damage per second)",
-                "+11 Intellect",
+                "(18.41 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Requires Level 25"
+                "+11 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
               "icon": "inv_staff_19"
@@ -13031,28 +17573,37 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+34 Fire/Shadow Spell Power, +14 Stamina",
+              "stats": "+14 Stamina, Equip: Increases damage done by Fire spells and effects by up to 34., Equip: Increases damage done by Shadow spells and effects by up to 34.",
               "icon": "inv_staff_09",
               "source": {
                 "kind": "quest",
                 "title": "The Staff of Soran'ruk",
                 "detail": "Warlock level 20 class quest reward from BFD / Shadowfang Keep."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "36 - 55 Damage\tSpeed 2.90",
+                "(15.69 damage per second)",
+                "+14 Stamina",
+                "Equip: Increases damage done by Fire spells and effects by up to 34.",
+                "Equip: Increases damage done by Shadow spells and effects by up to 34."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 26,
-          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "37 - 56 Damage\tSpeed 2.90",
-            "(16.0 damage per second)",
+            "(16.03 damage per second)",
             "+5 Stamina",
             "+12 Spirit",
-            "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-            "Requires Level 21"
+            "Requires Level 21",
+            "Equip: Increases healing done by up to 52"
           ],
           "reqLevel": 21
         },
@@ -13081,8 +17632,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi",
-              "icon": "inv_staff_06"
+              "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 2.80",
+                "(17.68 damage per second)",
+                "+11 Spirit",
+                "Requires Level 24",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+                "Equip: Reduces the hit chance of Sleep effects against you by 5%."
+              ]
             },
             {
               "name": "Meteor Shard",
@@ -13095,8 +17656,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "+3 Fire Resistance",
-              "icon": "inv_weapon_shortblade_25"
+              "stats": "+3 Fire Resistance, Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_weapon_shortblade_25",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "22 - 42 Damage\tSpeed 1.80",
+                "(17.78 damage per second)",
+                "+3 Fire Resistance",
+                "Requires Level 23",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -13109,23 +17679,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_staff_11"
+              "stats": "+9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "32 - 49 Damage\tSpeed 2.50",
+                "(16.20 damage per second)",
+                "+9 Stamina",
+                "+9 Spirit",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 25,
-          "stats": "+34 Fire/Shadow Spell Power, +14 Stamina",
+          "stats": "+14 Stamina, Equip: Increases damage done by Fire spells and effects by up to 34., Equip: Increases damage done by Shadow spells and effects by up to 34.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "36 - 55 Damage\tSpeed 2.90",
-            "(15.7 damage per second)",
+            "(15.69 damage per second)",
             "+14 Stamina",
             "Equip: Increases damage done by Fire spells and effects by up to 34.",
-            "Equip: Increases damage done by Shadow spells and effects by up to 34.",
-            "Classes: Warlock"
+            "Equip: Increases damage done by Shadow spells and effects by up to 34."
           ],
           "reqLevel": 20
         },
@@ -13154,8 +17733,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+12 Stamina",
-              "icon": "inv_staff_10"
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.77 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67"
+              ]
             },
             {
               "name": "Striking Staff",
@@ -13169,27 +17756,36 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_28",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.29 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ]
             },
             {
               "name": "Debt Collector",
               "itemId": 273827,
-              "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd",
-              "faction": "both",
+              "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd (Alliance)",
+              "faction": "alliance",
               "dps": "13.04 DPS",
               "speed": "2.30",
               "weaponType": "One-handed sword",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34, Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tSword",
+                "Main Hand",
                 "21 - 39 Damage\tSpeed 2.30",
-                "(13.0 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                "Requires Level 26"
+                "(13.04 damage per second)",
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
               "icon": "inv_sword_24"
@@ -13204,33 +17800,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 30,
-          "stats": "+6 Intellect, +6 Stamina",
+          "quality": "q3",
+          "iLvl": 31,
+          "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "30 - 57 Shadow Damage\tSpeed 1.50",
-            "(29.0 damage per second)",
-            "+3 Spirit",
-            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+            "Two-Hand",
+            "42 - 64 Damage\tSpeed 2.80",
+            "(18.93 damage per second)",
+            "+11 Stamina",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 34"
           ],
-          "reqLevel": 25
+          "reqLevel": 26
         },
         {
           "levelBracket": "27–28",
@@ -13256,17 +17853,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "stats": "+5 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "16 - 30 Damage\tSpeed 1.60",
-                "(14.4 damage per second)",
+                "(14.38 damage per second)",
                 "+5 Stamina",
                 "Requires Level 28",
-                "Equip: +8 Health Regeneration",
-                "Equip: +36 Spell Power",
-                "Sell Price: 73s 79c"
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
@@ -13275,17 +17870,15 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
-          "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "59 - 90 Damage\tSpeed 3.60",
-            "(20.7 damage per second)",
+            "(20.69 damage per second)",
             "+14 Stamina",
             "Requires Level 28",
-            "Equip: +3 Spell Penetration",
-            "Equip: +36 Spell Power",
-            "Sell Price: 85s 58c"
+            "Equip: Increases damage and healing done by magical spells and effects by up to 36"
           ],
           "reqLevel": 28
         },
@@ -13314,8 +17907,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 2.30",
+                "(26.30 damage per second)",
+                "+8 Intellect",
+                "+15 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Wind Spirit Staff",
@@ -13328,8 +17930,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
-              "icon": "inv_staff_01"
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "56 - 85 Damage\tSpeed 3.30",
+                "(21.36 damage per second)",
+                "+6 Stamina",
+                "+16 Spirit",
+                "Requires Level 29",
+                "Equip: Increases healing done by up to 71"
+              ]
             },
             {
               "name": "Mindslicer",
@@ -13341,14 +17953,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q2",
               "iLvl": 41,
-              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "20 - 38 Damage\tSpeed 1.90",
-                "(15.3 damage per second)",
+                "(15.26 damage per second)",
                 "+7 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_shortblade_15"
@@ -13356,22 +17968,22 @@ if (typeof window !== 'undefined') {
             {
               "name": "Debt Collector",
               "itemId": 273827,
-              "value": "13.0 DPS, 2.30s, +34 SP - Stockade: Bazil Thredd",
-              "faction": "both",
+              "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd (Alliance)",
+              "faction": "alliance",
               "dps": "13.04 DPS",
               "speed": "2.30",
               "weaponType": "One-handed sword",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34, Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tSword",
+                "Main Hand",
                 "21 - 39 Damage\tSpeed 2.30",
-                "(13.0 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
-                "Requires Level 26"
+                "(13.04 damage per second)",
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
               "icon": "inv_sword_24"
@@ -13379,14 +17991,16 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 35,
-          "stats": "+10 Stamina, +9 Intellect",
+          "iLvl": 32,
+          "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "35 - 66 Arcane Damage\tSpeed 1.70",
-            "(29.7 damage per second)",
-            "+4 Stamina"
+            "Two-Hand",
+            "54 - 81 Damage\tSpeed 3.40",
+            "(19.85 damage per second)",
+            "+11 Intellect",
+            "+13 Spirit",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 36"
           ],
           "reqLevel": 30
         },
@@ -13415,8 +18029,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
-              "icon": "inv_staff_08"
+              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "66 - 100 Damage\tSpeed 3.00",
+                "(27.67 damage per second)",
+                "+16 Stamina",
+                "+12 Intellect",
+                "+6 Spirit",
+                "Requires Level 35",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Hypnotic Blade",
@@ -13429,8 +18054,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+9 SP, +8 Int",
-              "icon": "inv_weapon_shortblade_07"
+              "stats": "+8 Intellect, +3 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 44",
+              "icon": "inv_weapon_shortblade_07",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 1.40",
+                "(17.50 damage per second)",
+                "+8 Intellect",
+                "+3 Spirit",
+                "Requires Level 34",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+              ]
             },
             {
               "name": "Staff of Jordan",
@@ -13443,15 +18078,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+15 Int, +10 Spi"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "36–40",
@@ -13478,15 +18136,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "41–46",
@@ -13513,8 +18194,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
-              "icon": "inv_staff_11"
+              "stats": "+4 Stamina, +17 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "65 - 99 Damage\tSpeed 3.10",
+                "(26.45 damage per second)",
+                "+4 Stamina",
+                "+17 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Strength of the Treant",
@@ -13527,8 +18217,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 50,
               "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
-              "icon": "inv_staff_25"
+              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "85 - 128 Damage\tSpeed 3.70",
+                "(28.78 damage per second)",
+                "+7 Stamina",
+                "+18 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 42"
+              ]
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -13541,8 +18240,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_01"
+              "stats": "+10 Stamina, +10 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54, Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 101 Damage\tSpeed 2.70",
+                "(31.11 damage per second)",
+                "+10 Stamina",
+                "+10 Intellect",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54",
+                "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
+              ]
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -13555,8 +18265,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_staff_17"
+              "stats": "+19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56",
+              "icon": "inv_staff_17",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "76 - 114 Damage\tSpeed 3.00",
+                "(31.67 damage per second)",
+                "+19 Intellect",
+                "+19 Spirit",
+                "Requires Level 44",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 56"
+              ]
             },
             {
               "name": "Staff of Lore",
@@ -13569,15 +18289,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
-              "icon": "inv_staff_27"
+              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
+              "icon": "inv_staff_27",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "68 - 103 Damage\tSpeed 3.10",
+                "(27.58 damage per second)",
+                "+5 Intellect",
+                "+18 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 40,
-          "stats": "+16 Int, +10 Spi"
+          "stats": "+9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "67 - 101 Damage\tSpeed 2.70",
+            "(31.11 damage per second)",
+            "+9 Stamina",
+            "+23 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+          ]
         },
         {
           "levelBracket": "47–50",
@@ -13604,8 +18342,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 45,
-              "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "Equip: Increases healing done by up to 112",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "103 - 156 Damage\tSpeed 3.80",
+                "(34.08 damage per second)",
+                "Equip: Increases healing done by up to 112"
+              ]
             },
             {
               "name": "Kindling Stave",
@@ -13618,8 +18363,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Critical Strike Rating, +60 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "79 - 119 Damage\tSpeed 2.90",
+                "(34.14 damage per second)",
+                "+10 Stamina",
+                "+12 Intellect",
+                "+10 Fire Resistance",
+                "Requires Level 48",
+                "Equip: Improves your chance to get a critical strike by 1.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60",
+                "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
+              ]
             },
             {
               "name": "Spire of Hakkar",
@@ -13632,15 +18390,36 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
-              "icon": "inv_staff_32"
+              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
+              "icon": "inv_staff_32",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.40",
+                "(34.71 damage per second)",
+                "+16 Stamina",
+                "+16 Spirit",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
+                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 52,
           "reqLevel": 50,
-          "stats": "+73 Shadow Spell Power, +19 Stamina, +16 Intellect, +10 Hit Rating"
+          "stats": "+19 Stamina, +16 Intellect, Equip: Improves your chance to hit by 1.0%., Equip: Increases damage done by Shadow spells and effects by up to 73.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "88 - 133 Damage\tSpeed 3.30",
+            "(33.48 damage per second)",
+            "+19 Stamina",
+            "+16 Intellect",
+            "Equip: Improves your chance to hit by 1.0%.",
+            "Equip: Increases damage done by Shadow spells and effects by up to 73."
+          ]
         },
         {
           "levelBracket": "51–60",
@@ -13667,8 +18446,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+20 Stamina, +15 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 2.50",
+                "(35.20 damage per second)",
+                "+20 Stamina",
+                "+15 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -13681,8 +18469,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 62,
               "reqLevel": 58,
-              "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "+11 Stamina, +22 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.74 damage per second)",
+                "+11 Stamina",
+                "+22 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Wisepaw Totem",
@@ -13695,8 +18492,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": "",
-              "icon": "inv_staff_51"
+              "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
+              "icon": "inv_staff_51",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.20",
+                "(36.88 damage per second)",
+                "+19 Stamina",
+                "+23 Intellect",
+                "Requires Level 53",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 66"
+              ]
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -13734,15 +18541,37 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
-              "icon": "inv_wand_04"
+              "stats": "+18 Stamina, +15 Intellect, +120 Armor, Equip: Improves your chance to get a critical strike by 2.0%., Equip: Increases damage and healing done by magical spells and effects by up to 88",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "114 - 172 Damage\tSpeed 3.40",
+                "(42.06 damage per second)",
+                "+18 Stamina",
+                "+15 Intellect",
+                "+120 Armor",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 88"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 52,
           "reqLevel": 50,
-          "stats": "+19 Stamina, +16 Intellect, +10 Hit Rating, +73 Shadow Spell Power"
+          "stats": "+19 Stamina, +16 Intellect, Equip: Improves your chance to hit by 1.0%., Equip: Increases damage done by Shadow spells and effects by up to 73.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "88 - 133 Damage\tSpeed 3.30",
+            "(33.48 damage per second)",
+            "+19 Stamina",
+            "+16 Intellect",
+            "Equip: Improves your chance to hit by 1.0%.",
+            "Equip: Increases damage done by Shadow spells and effects by up to 73."
+          ]
         }
       ]
     },
@@ -13750,8 +18579,12 @@ if (typeof window !== 'undefined') {
       "classId": "priest",
       "tracks": [
         {
-          "id": "primary",
-          "name": "Staves & Maces (Discipline / Holy / Shadow)"
+          "id": "dps",
+          "name": "⚔️ DPS Track (Shadow & Smite (Staves & Daggers))"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healer Track (Restoration & Holy +Healing Focus)"
         }
       ],
       "levels": [
@@ -13771,9 +18604,15 @@ if (typeof window !== 'undefined') {
           "alts": [],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 4,
-          "reqLevel": 1,
-          "stats": ""
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "8 - 13 Damage\tSpeed 2.50",
+            "(4.20 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -13793,7 +18632,13 @@ if (typeof window !== 'undefined') {
           "quality": "q1",
           "iLvl": 8,
           "reqLevel": 3,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "8 - 13 Damage\tSpeed 2.50",
+            "(4.20 damage per second)",
+            "Requires Level 3"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -13811,9 +18656,17 @@ if (typeof window !== 'undefined') {
           "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 11,
+          "iLvl": 13,
           "reqLevel": 6,
-          "stats": "+2 Spirit, +1 Intellect"
+          "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "17 - 26 Damage\tSpeed 3.20",
+            "(6.72 damage per second)",
+            "+3 Stamina",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -13836,10 +18689,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Darkwood Staff",
@@ -13852,8 +18713,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "17 - 26 Damage\tSpeed 3.20",
+                "(6.72 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Makeshift Stormcaller",
@@ -13866,15 +18735,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": "+2 Intellect",
-              "icon": "inv_staff_14"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "15 - 23 Damage\tSpeed 3.30",
+                "(5.76 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "11 - 17 Damage\tSpeed 2.20",
+            "(6.36 damage per second)",
+            "+2 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -13891,10 +18776,19 @@ if (typeof window !== 'undefined') {
           },
           "alts": [],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 10,
-          "stats": "+2 Intellect, +2 Spirit"
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "lines": [
+            "Binds when picked up",
+            "Chest",
+            "48 Armor",
+            "+4 Stamina",
+            "+11 Intellect",
+            "Requires Level 26",
+            "Equip: Increases healing done by up to 20"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -13917,11 +18811,16 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.6 DPS",
               "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 10,
+              "iLvl": 26,
+              "reqLevel": 21,
               "stats": "",
               "icon": "inv_staff_11",
-              "weaponType": "Held In Off-hand"
+              "weaponType": "Held In Off-hand",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 21"
+              ]
             },
             {
               "name": "Cauldron Stirrer",
@@ -13934,15 +18833,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "18 - 28 Damage\tSpeed 3.10",
+                "(7.42 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 17,
-          "reqLevel": 12,
-          "stats": "+2 Spirit, +2 Stamina"
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand",
+            "13 - 26 Damage\tSpeed 2.40",
+            "(8.13 damage per second)",
+            "+4 Spirit",
+            "Requires Level 13",
+            "Equip: Increases healing done by up to 33"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -13961,16 +18877,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -13982,15 +18907,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -14006,15 +18931,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+5 Int, +4 Spirit"
+          "stats": "+9 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "30 - 46 Damage\tSpeed 3.20",
+            "(11.88 damage per second)",
+            "+9 Fire Resistance",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -14041,8 +18983,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "+10 Spirit",
-              "icon": "inv_staff_16"
+              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.80",
+                "(15.18 damage per second)",
+                "+10 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Clear Crystal Rod",
@@ -14055,22 +19006,40 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 15,
-              "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "+4 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.10",
+                "(10.16 damage per second)",
+                "+4 Stamina",
+                "+5 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Segmented Spider Leg",
@@ -14084,7 +19053,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "50 - 76 Damage\tSpeed 3.60",
+                "(17.50 damage per second)",
+                "+9 Agility",
+                "+5 Spirit",
+                "Requires Level 15"
+              ]
             },
             {
               "name": "Emberstone Staff",
@@ -14097,8 +19075,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+8 Stamina, +8 Fire Resistance, +24 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Stamina, +8 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 3.00",
+                "(14.17 damage per second)",
+                "+8 Stamina",
+                "+8 Fire Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -14111,15 +19099,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+4 Sta, +4 Int"
+          "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand",
+            "17 - 33 Damage\tSpeed 2.60",
+            "(9.62 damage per second)",
+            "+5 Shadow Resistance",
+            "Requires Level 17",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -14138,16 +19143,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -14159,15 +19173,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+5 Int, +11 Spi",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -14184,8 +19198,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "+5 Spirit, +9 Nature Resistance, +45 Healing, +15 Spell Damage",
-              "icon": "inv_staff_25"
+              "stats": "+2 Stamina, +5 Spirit, +9 Nature Resistance, Equip: Increases healing done by up to 45",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.90",
+                "(14.66 damage per second)",
+                "+2 Stamina",
+                "+5 Spirit",
+                "+9 Nature Resistance",
+                "Requires Level 18",
+                "Equip: Increases healing done by up to 45"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -14198,8 +19223,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Witching Stave",
@@ -14212,15 +19245,35 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
-              "icon": "inv_wand_04"
+              "stats": "+6 Stamina, +5 Intellect, +8 Shadow Resistance, Equip: Increases damage done by Shadow spells and effects by up to 27.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "40 - 61 Damage\tSpeed 3.60",
+                "(14.03 damage per second)",
+                "+6 Stamina",
+                "+5 Intellect",
+                "+8 Shadow Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage done by Shadow spells and effects by up to 27."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
           "reqLevel": 19,
-          "stats": "+7 Int, +5 Spi, +6 Frost Dmg"
+          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "43 - 66 Damage\tSpeed 3.60",
+            "(15.14 damage per second)",
+            "+13 Frost Resistance",
+            "Requires Level 19",
+            "Equip: Increases damage done by Frost spells and effects by up to 32."
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -14247,27 +19300,46 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 10,
-              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
               "icon": "inv_staff_04",
               "source": {
                 "kind": "quest",
                 "title": "Leaders of the Fang",
                 "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "35 - 53 Damage\tSpeed 2.90",
+                "(15.17 damage per second)",
+                "+7 Agility",
+                "+7 Stamina",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Odo's Ley Staff",
@@ -14279,16 +19351,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 26,
-              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "37 - 56 Damage\tSpeed 2.90",
-                "(16.0 damage per second)",
+                "(16.03 damage per second)",
                 "+5 Stamina",
                 "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
               "icon": "inv_staff_27"
@@ -14303,16 +19375,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 30,
-              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+11 Stamina, +11 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "32 - 49 Damage\tSpeed 2.20",
-                "(18.4 damage per second)",
-                "+11 Intellect",
+                "(18.41 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Requires Level 25"
+                "+11 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
               "icon": "inv_staff_19"
@@ -14328,22 +19400,30 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+5 Int, +11 Spi",
+          "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "36 - 55 Damage\tSpeed 3.00",
-            "(15.2 damage per second)",
+            "(15.17 damage per second)",
             "+5 Intellect",
             "+6 Spirit",
-            "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+            "Equip: Increases healing done by up to 48",
             "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
           ],
           "reqLevel": 14
@@ -14373,21 +19453,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_staff_11"
+              "stats": "+9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "32 - 49 Damage\tSpeed 2.50",
+                "(16.20 damage per second)",
+                "+9 Stamina",
+                "+9 Spirit",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
-          "stats": "+11 Intellect, +10 Spirit",
+          "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "30 - 57 Shadow Damage\tSpeed 1.50",
-            "(29.0 damage per second)",
-            "+3 Spirit",
-            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+            "Two-Hand",
+            "39 - 60 Damage\tSpeed 2.80",
+            "(17.68 damage per second)",
+            "+11 Spirit",
+            "Requires Level 24",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+            "Equip: Reduces the hit chance of Sleep effects against you by 5%."
           ],
           "reqLevel": 24
         },
@@ -14416,8 +19508,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+12 Stamina",
-              "icon": "inv_staff_10"
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.77 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67"
+              ]
             },
             {
               "name": "Striking Staff",
@@ -14431,7 +19531,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_28",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.29 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ]
             },
             {
               "name": "Crested Scepter",
@@ -14443,16 +19552,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 29,
-              "stats": "+2 Intellect, +6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+              "stats": "+6 Stamina, +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32",
               "lines": [
                 "Binds when equipped",
-                "Main Hand\tMace",
+                "Main Hand",
                 "22 - 41 Damage\tSpeed 2.60",
-                "(12.1 damage per second)",
-                "+2 Intellect",
+                "(12.12 damage per second)",
                 "+6 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                "Requires Level 24"
+                "+2 Intellect",
+                "Requires Level 24",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32"
               ],
               "reqLevel": 24,
               "icon": "inv_mace_08"
@@ -14467,33 +19576,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 30,
-          "stats": "+6 Intellect, +6 Spirit",
+          "quality": "q3",
+          "iLvl": 31,
+          "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "30 - 57 Shadow Damage\tSpeed 1.50",
-            "(29.0 damage per second)",
-            "+3 Spirit",
-            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+            "Two-Hand",
+            "42 - 64 Damage\tSpeed 2.80",
+            "(18.93 damage per second)",
+            "+11 Stamina",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 34"
           ],
-          "reqLevel": 25
+          "reqLevel": 26
         },
         {
           "levelBracket": "27–28",
@@ -14520,8 +19630,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+68 Healing",
-              "icon": "inv_mace_07"
+              "stats": "Equip: Increases healing done by magical spells and effects by up to 68, Equip: Increases damage done by Shadow spells and effects by up to 28.",
+              "icon": "inv_mace_07",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "28 - 52 Damage\tSpeed 2.80",
+                "(14.29 damage per second)",
+                "Requires Level 28",
+                "Equip: Increases healing done by magical spells and effects by up to 68",
+                "Equip: Increases damage done by Shadow spells and effects by up to 28."
+              ]
             },
             {
               "name": "Tendonscraper Dagger",
@@ -14533,37 +19652,34 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "stats": "+5 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "16 - 30 Damage\tSpeed 1.60",
-                "(14.4 damage per second)",
+                "(14.38 damage per second)",
                 "+5 Stamina",
                 "Requires Level 28",
-                "Equip: +8 Health Regeneration",
-                "Equip: +36 Spell Power",
-                "Sell Price: 73s 79c"
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
               "icon": "inv_misc_bone_06"
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 32,
-          "stats": "+7 Intellect, +5 Spirit",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
           "lines": [
             "Binds when picked up",
-            "Ranged\tWand",
-            "37 - 69 Arcane Damage\tSpeed 1.70",
-            "(31.2 damage per second)",
-            "+4 Intellect",
-            "Requires Level 27",
-            "Equip: +2 Mana Regeneration",
-            "Sell Price: 47s 22c"
+            "Two-Hand",
+            "59 - 90 Damage\tSpeed 3.60",
+            "(20.69 damage per second)",
+            "+14 Stamina",
+            "Requires Level 28",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 36"
           ],
-          "reqLevel": 27
+          "reqLevel": 28
         },
         {
           "levelBracket": "29–30",
@@ -14590,8 +19706,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 2.30",
+                "(26.30 damage per second)",
+                "+8 Intellect",
+                "+15 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Wind Spirit Staff",
@@ -14604,8 +19729,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
-              "icon": "inv_staff_01"
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "56 - 85 Damage\tSpeed 3.30",
+                "(21.36 damage per second)",
+                "+6 Stamina",
+                "+16 Spirit",
+                "Requires Level 29",
+                "Equip: Increases healing done by up to 71"
+              ]
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -14617,15 +19752,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
@@ -14639,14 +19774,14 @@ if (typeof window !== 'undefined') {
               "speed": "1.90",
               "quality": "q2",
               "iLvl": 40,
-              "stats": "+7 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+              "stats": "+7 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "19 - 37 Damage\tSpeed 1.90",
-                "(14.7 damage per second)",
+                "(14.74 damage per second)",
                 "+7 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 32."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32"
               ],
               "reqLevel": 28,
               "icon": "inv_weapon_shortblade_15",
@@ -14662,14 +19797,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Dagger",
               "quality": "q2",
               "iLvl": 41,
-              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tDagger",
+                "Main Hand",
                 "20 - 38 Damage\tSpeed 1.90",
-                "(15.3 damage per second)",
+                "(15.26 damage per second)",
                 "+7 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
               "icon": "inv_weapon_shortblade_15"
@@ -14678,15 +19813,14 @@ if (typeof window !== 'undefined') {
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
-          "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+          "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "43 - 65 Damage\tSpeed 2.60",
-            "(20.8 damage per second)",
+            "(20.77 damage per second)",
             "+12 Stamina",
-            "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
-            "Equip: Restores 5 Mana per 5 sec."
+            "Equip: Increases healing done by up to 67"
           ],
           "reqLevel": 24
         },
@@ -14715,8 +19849,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
-              "icon": "inv_staff_08"
+              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "66 - 100 Damage\tSpeed 3.00",
+                "(27.67 damage per second)",
+                "+16 Stamina",
+                "+12 Intellect",
+                "+6 Spirit",
+                "Requires Level 35",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Staff of the Friar",
@@ -14728,17 +19873,17 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 26,
-              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "stats": "+4 Stamina, +3 Intellect, +12 Spirit, Equip: Increases healing done by up to 52",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "33 - 50 Damage\tSpeed 2.60",
-                "(16.0 damage per second)",
-                "+3 Intellect",
+                "(15.96 damage per second)",
                 "+4 Stamina",
+                "+3 Intellect",
                 "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
               "icon": "inv_staff_32"
@@ -14754,13 +19899,23 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+44 Spell Power, +8 Intellect, +3 Spirit",
+              "stats": "+8 Intellect, +3 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 44",
               "icon": "inv_weapon_shortblade_07",
               "source": {
                 "kind": "dungeon",
                 "title": "Scarlet Monastery (Library)",
                 "detail": "Dropped by Arcanist Doan in SM Library. Best 1H spell dagger in Phase 2."
-              }
+              },
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 32 Damage\tSpeed 1.40",
+                "(17.50 damage per second)",
+                "+8 Intellect",
+                "+3 Spirit",
+                "Requires Level 34",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+              ]
             },
             {
               "name": "Staff of Jordan",
@@ -14773,15 +19928,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+15 Int, +10 Spi"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "36–40",
@@ -14808,8 +19986,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+7 Stamina, +8 Spirit, +94 Healing, +31 Spell Damage",
-              "icon": "inv_hammer_02"
+              "stats": "+7 Stamina, +8 Spirit, Equip: Increases healing done by up to 94",
+              "icon": "inv_hammer_02",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "37 - 70 Damage\tSpeed 2.70",
+                "(19.81 damage per second)",
+                "+7 Stamina",
+                "+8 Spirit",
+                "Requires Level 39",
+                "Equip: Increases healing done by up to 94"
+              ]
             },
             {
               "name": "Staff of Jordan",
@@ -14822,15 +20010,38 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
           "reqLevel": 34,
-          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
+          "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "70 - 105 Damage\tSpeed 3.40",
+            "(25.74 damage per second)",
+            "+10 Stamina",
+            "+6 Intellect",
+            "+7 Spirit",
+            "Requires Level 34",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+          ]
         },
         {
           "levelBracket": "41–46",
@@ -14857,8 +20068,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
-              "icon": "inv_staff_11"
+              "stats": "+4 Stamina, +17 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "65 - 99 Damage\tSpeed 3.10",
+                "(26.45 damage per second)",
+                "+4 Stamina",
+                "+17 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Strength of the Treant",
@@ -14871,8 +20091,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 50,
               "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
-              "icon": "inv_staff_25"
+              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "85 - 128 Damage\tSpeed 3.70",
+                "(28.78 damage per second)",
+                "+7 Stamina",
+                "+18 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 42"
+              ]
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -14885,8 +20114,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP",
-              "icon": "inv_staff_01"
+              "stats": "+10 Stamina, +10 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54, Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 101 Damage\tSpeed 2.70",
+                "(31.11 damage per second)",
+                "+10 Stamina",
+                "+10 Intellect",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54",
+                "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
+              ]
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -14899,8 +20139,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_staff_17"
+              "stats": "+19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56",
+              "icon": "inv_staff_17",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "76 - 114 Damage\tSpeed 3.00",
+                "(31.67 damage per second)",
+                "+19 Intellect",
+                "+19 Spirit",
+                "Requires Level 44",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 56"
+              ]
             },
             {
               "name": "Staff of Lore",
@@ -14913,15 +20163,33 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
-              "icon": "inv_staff_27"
+              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
+              "icon": "inv_staff_27",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "68 - 103 Damage\tSpeed 3.10",
+                "(27.58 damage per second)",
+                "+5 Intellect",
+                "+18 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 40,
-          "stats": "+16 Int, +10 Spi"
+          "stats": "+9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "67 - 101 Damage\tSpeed 2.70",
+            "(31.11 damage per second)",
+            "+9 Stamina",
+            "+23 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+          ]
         },
         {
           "levelBracket": "47–52",
@@ -14948,8 +20216,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 45,
-              "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "Equip: Increases healing done by up to 112",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "103 - 156 Damage\tSpeed 3.80",
+                "(34.08 damage per second)",
+                "Equip: Increases healing done by up to 112"
+              ]
             },
             {
               "name": "Spire of the Stoneshaper",
@@ -14974,15 +20249,39 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
-              "icon": "inv_staff_32"
+              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
+              "icon": "inv_staff_32",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.40",
+                "(34.71 damage per second)",
+                "+16 Stamina",
+                "+16 Spirit",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
+                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 53,
           "reqLevel": 48,
-          "stats": "+12 Int, +20 Spi"
+          "stats": "+10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "79 - 119 Damage\tSpeed 2.90",
+            "(34.14 damage per second)",
+            "+10 Stamina",
+            "+12 Intellect",
+            "+10 Fire Resistance",
+            "Requires Level 48",
+            "Equip: Improves your chance to get a critical strike by 1.0%.",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 60",
+            "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
+          ]
         },
         {
           "levelBracket": "53–60",
@@ -15009,8 +20308,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+20 Stamina, +15 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 2.50",
+                "(35.20 damage per second)",
+                "+20 Stamina",
+                "+15 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -15023,8 +20331,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 62,
               "reqLevel": 58,
-              "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "+11 Stamina, +22 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.74 damage per second)",
+                "+11 Stamina",
+                "+22 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Benediction",
@@ -15037,8 +20354,22 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 75,
               "reqLevel": 60,
-              "stats": "+31 Int, +12 Sta, +12 Spi, +106 Healing",
-              "icon": "inv_staff_30"
+              "stats": "+10 Stamina, +31 Intellect, +12 Spirit, +20 Shadow Resistance, Equip: Increases healing done by up to 195, Use: Calls forth Anathema. (30 Min Cooldown), Equip: Increases the critical effect chance of your Holy spells by 2%.",
+              "icon": "inv_staff_30",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "89 - 155 Damage\tSpeed 3.00",
+                "(40.67 damage per second)",
+                "+10 Stamina",
+                "+31 Intellect",
+                "+12 Spirit",
+                "+20 Shadow Resistance",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 195",
+                "Use: Calls forth Anathema. (30 Min Cooldown)",
+                "Equip: Increases the critical effect chance of your Holy spells by 2%."
+              ]
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -15063,15 +20394,591 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
-              "icon": "inv_wand_04"
+              "stats": "+18 Stamina, +15 Intellect, +120 Armor, Equip: Improves your chance to get a critical strike by 2.0%., Equip: Increases damage and healing done by magical spells and effects by up to 88",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "114 - 172 Damage\tSpeed 3.40",
+                "(42.06 damage per second)",
+                "+18 Stamina",
+                "+15 Intellect",
+                "+120 Armor",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 88"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": ""
+          "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "94 - 142 Damage\tSpeed 3.20",
+            "(36.88 damage per second)",
+            "+19 Stamina",
+            "+23 Intellect",
+            "Requires Level 53",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 66"
+          ]
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–6",
+          "itemId": 2495,
+          "name": "Acolyte's Staff",
+          "icon": "inv_staff_02",
+          "weaponType": "Staff",
+          "speed": "2.20",
+          "dps": "2.0 DPS",
+          "stats": "+1 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Starting weapon or purchase from weapon merchants in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "alts": [
+            {
+              "name": "Club",
+              "itemId": 2130,
+              "value": "+1 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 4,
+              "reqLevel": 1,
+              "stats": "+1 Spirit",
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "7–12",
+          "itemId": 2077,
+          "name": "Militia Quarterstaff",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.60",
+          "dps": "4.8 DPS",
+          "stats": "+2 Intellect, +2 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Low-level Weapon Vendor",
+            "detail": "Purchased from weapon merchants in Goldshire, Kharanos, Bloodhoof, or Brill."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 11,
+          "reqLevel": 7,
+          "alts": [
+            {
+              "name": "Wooden Mallet",
+              "itemId": 2493,
+              "value": "+2 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 6,
+              "stats": "+2 Spirit",
+              "icon": "inv_hammer_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Apprentice's Spellstaff",
+              "itemId": 4835,
+              "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": "+3 Spirit, +2 Intellect",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–17",
+          "itemId": 271198,
+          "name": "Golemheart Stave",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "14.2 DPS",
+          "stats": "+5 Intellect, +4 Spirit",
+          "source": {
+            "kind": "drop",
+            "title": "Plunder (Hall of Thanes)",
+            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 13,
+          "alts": [
+            {
+              "name": "Trogg Scepter",
+              "itemId": 272996,
+              "value": "+4 Spirit, +33 Healing / +11 Spell Dmg - Oggleflint (Ragefire Chasm)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Scepter of the Abandoned",
+              "itemId": 271207,
+              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 14,
+              "stats": "+4 Stamina, +4 Intellect",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Staff of the Dor'Danil",
+              "itemId": 6543,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+4 Intellect, +4 Spirit",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "18–21",
+          "itemId": 2042,
+          "name": "Staff of Westfall",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "15.4 DPS",
+          "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16.",
+          "source": {
+            "kind": "quest",
+            "title": "The Defias Brotherhood (Alliance)",
+            "detail": "Deadmines quest finale. Massive 48 Healing power spike."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Living Root",
+              "itemId": 6631,
+              "value": "+45 Healing / +15 Spell Dmg, +7 Spirit - Verdan the Everliving (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 18,
+              "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+7 Spirit, +7 Intellect, +7 Stamina - Leaders of the Fang quest (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 15,
+              "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Coldspire Staff",
+              "itemId": 271212,
+              "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "22–25",
+          "itemId": 3415,
+          "name": "Staff of the Friar",
+          "icon": "inv_staff_13",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "15.4 DPS",
+          "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+          "source": {
+            "kind": "drop",
+            "title": "Trash mobs (Blackfathom Deeps)",
+            "detail": "Iconic world/dungeon rare drop with huge +12 Spirit and +52 Healing power."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "alts": [
+            {
+              "name": "Odo's Ley Staff",
+              "itemId": 6318,
+              "value": "+5 Stamina, +12 Spirit, +52 Healing / +17 Spell Dmg - Odo the Blindwatcher (SFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+              "icon": "inv_staff_12",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "itemId": 1155,
+              "value": "+11 Intellect, +10 Spirit - Twilight Lord Kelris (Blackfathom Deeps)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "26–29",
+          "itemId": 271767,
+          "name": "Healer's Staff",
+          "icon": "inv_staff_10",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "20.5 DPS",
+          "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22. Equip: Restores 5 Mana per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Prehistoric Prism / Lost Relic Carry (Excavation Site: Wetlands)",
+            "detail": "WoW Forever custom dungeon quest reward. Outstanding +67 Healing and 5 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 24,
+          "alts": [
+            {
+              "name": "Royal Diplomatic Scepter",
+              "itemId": 9457,
+              "value": "+3 Sta, +7 Spirit, +75 Healing / +25 Spell Dmg - Dark Iron Ambassador (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +12 HP5, +28 Shadow Dmg - Death Speaker Jargba (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Wind Spirit Staff",
+              "itemId": 6689,
+              "value": "+6 Sta, +16 Spirit, +71 Healing / +23 Spell Dmg - Earthcaller Halmgar (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "30–34",
+          "itemId": 9457,
+          "name": "Royal Diplomatic Scepter",
+          "icon": "inv_mace_01",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.10",
+          "dps": "22.4 DPS",
+          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+          "source": {
+            "kind": "drop",
+            "title": "Dark Iron Ambassador (Gnomeregan)",
+            "detail": "Rare boss in Gnomeregan crypt tunnels. Best 1H leveling healing scepter in early midgame."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Illusionary Rod",
+              "itemId": 7713,
+              "value": "+15 Intellect, +10 Spirit, +7 Stamina - Arcanist Doan (SM Library)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–39",
+          "itemId": 7721,
+          "name": "Hand of Righteousness",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "25.2 DPS",
+          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+          "source": {
+            "kind": "drop",
+            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+            "detail": "Iconic Scarlet Cathedral boss drop. Massive +94 Healing power spike for 1H healers."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Black Menace",
+              "itemId": 6802,
+              "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Galgann's Firehammer",
+              "itemId": 9415,
+              "value": "+8 Intellect, +6 Spirit - Galgann Firehammer (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "40–44",
+          "itemId": 18082,
+          "name": "Zum'rah's Vexing Cane",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "3.10",
+          "dps": "31.5 DPS",
+          "stats": "+10 Intellect, +10 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 21.",
+          "source": {
+            "kind": "drop",
+            "title": "Witch Doctor Zum'rah (Zul'Farrak)",
+            "detail": "Drops from Zum'rah in Zul'Farrak graveyard. Reliable high-stamina healer staff."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "alts": [
+            {
+              "name": "The Shoveler",
+              "itemId": 9481,
+              "value": "+5 Intellect, +5 Spirit - Digmaster Shovelphlange (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_mace_07",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–49",
+          "itemId": 17743,
+          "name": "Resurgence Rod",
+          "icon": "inv_staff_04",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "44.7 DPS",
+          "stats": "Equip: Increases healing done by up to 112 and damage done by up to 37. Equip: Restores 11 Mana and 11 Health per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Corruption of Earth and Seed (Maraudon)",
+            "detail": "Maraudon dungeon quest reward from Keeper Margol. Massive +112 Healing and 11 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Charstone Dirk",
+              "itemId": 17710,
+              "value": "+116 Healing / +38 Spell Dmg - Maraudon trash drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
+              "icon": "inv_knife_01",
+              "weaponType": "Dagger"
+            },
+            {
+              "name": "Spire of Hakkar",
+              "itemId": 10844,
+              "value": "+16 Spirit, +14 Intellect, +18 Spell Dmg/Healing - Avatar of Hakkar (Sunken Temple)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "50–54",
+          "itemId": 11923,
+          "name": "Hammer of the Grace",
+          "icon": "inv_mace_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.50",
+          "dps": "36.2 DPS",
+          "stats": "+6 Spirit, Equip: Increases healing done by up to 31 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Chest of The Seven (Blackrock Depths)",
+            "detail": "Chest reward from The Seven challenge in BRD. Premier pre-raid 1H healing mace."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 57,
+          "reqLevel": 52,
+          "alts": [
+            {
+              "name": "Guiding Stave of Wisdom",
+              "itemId": 11932,
+              "value": "+12 Intellect, +28 Healing - Emperor Dagran Thaurissan (BRD)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 18608,
+          "name": "Benediction",
+          "icon": "inv_staff_30",
+          "weaponType": "Staff",
+          "speed": "3.00",
+          "dps": "40.7 DPS",
+          "stats": "+10 Stamina, +12 Intellect, +31 Spirit, Equip: Increases healing done by up to 195 and damage done by up to 65. Equip: Restores 6 Mana per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "The Balance of Light and Shadow (Priest Epic Quest)",
+            "detail": "The defining Priest healing staff in World of Warcraft history."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 75,
+          "reqLevel": 60,
+          "alts": [
+            {
+              "name": "Scepter of the False Prophet",
+              "itemId": 21839,
+              "value": "+210 Healing / +70 Spell Dmg, +19 Int, +10 Spi - C'Thun (Temple of Ahn'Qiraj)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 84,
+              "reqLevel": 60,
+              "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Grand Marshal's Warhammer",
+              "itemId": 23454,
+              "value": "+199 Healing / +66 Spell Dmg - PvP Rank 14 Officer's Lounge",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Blessed Qiraji Augur Staff",
+              "itemId": 21275,
+              "value": "+203 Healing / +67 Spell Dmg - Imperial Qiraji Regalia (AQ40)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 79,
+              "reqLevel": 60,
+              "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Atiesh, Greatstaff of the Guardian",
+              "itemId": 22631,
+              "value": "+242 Healing / +120 Spell Power, +28 Int, +28 Spi - Naxxramas 40 splinter quest",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 90,
+              "reqLevel": 60,
+              "stats": "+28 Intellect, +28 Spirit, Equip: Increases healing done by up to 242 and damage done by up to 120.",
+              "icon": "inv_staff_30",
+              "weaponType": "Staff"
+            }
+          ]
         }
       ]
     },
@@ -15079,8 +20986,12 @@ if (typeof window !== 'undefined') {
       "classId": "druid",
       "tracks": [
         {
-          "id": "primary",
-          "name": "Feral & Balance (Staves & Two-Handed Maces)"
+          "id": "dps",
+          "name": "⚔️ DPS Track (Feral & Balance (Staves & Two-Handed Maces))"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healer Track (Restoration & Holy +Healing Focus)"
         }
       ],
       "levels": [
@@ -15105,18 +21016,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "1.8 DPS",
               "quality": "q1",
-              "iLvl": 6,
+              "iLvl": 3,
               "reqLevel": 1,
               "stats": "",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "speed": "1.90",
+              "lines": [
+                "One-Hand",
+                "1 - 3 Damage\tSpeed 1.90",
+                "(1.05 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 4,
           "reqLevel": 1,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "5 - 8 Damage\tSpeed 3.20",
+            "(2.03 damage per second)"
+          ]
         },
         {
           "levelBracket": "3–4",
@@ -15144,7 +21066,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "lines": [
+                "Two-Hand",
+                "8 - 13 Damage\tSpeed 2.50",
+                "(4.20 damage per second)",
+                "Requires Level 3"
+              ]
             },
             {
               "name": "Large Club",
@@ -15155,17 +21083,28 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "weaponType": "One-handed mace",
               "quality": "q1",
-              "iLvl": 7,
+              "iLvl": 3,
               "reqLevel": 2,
               "stats": "",
-              "icon": "inv_torch_unlit"
+              "icon": "inv_torch_unlit",
+              "lines": [
+                "Two-Hand",
+                "4 - 6 Damage\tSpeed 3.20",
+                "(1.56 damage per second)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 9,
           "reqLevel": 4,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "10 - 16 Damage\tSpeed 2.60",
+            "(5.00 damage per second)",
+            "Requires Level 4"
+          ]
         },
         {
           "levelBracket": "5–6",
@@ -15193,7 +21132,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 9,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_mace_01"
+              "icon": "inv_mace_01",
+              "lines": [
+                "One-Hand",
+                "7 - 13 Damage\tSpeed 2.60",
+                "(3.85 damage per second)",
+                "Requires Level 4"
+              ]
             },
             {
               "name": "Walking Stick",
@@ -15207,7 +21152,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 8,
               "reqLevel": 3,
               "stats": "",
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "lines": [
+                "Two-Hand",
+                "8 - 13 Damage\tSpeed 2.50",
+                "(4.20 damage per second)",
+                "Requires Level 3"
+              ]
             },
             {
               "name": "Goblin Smasher",
@@ -15220,15 +21171,27 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": "",
-              "icon": "inv_hammer_15"
+              "stats": "+2 Strength",
+              "icon": "inv_hammer_15",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "20 - 31 Damage\tSpeed 3.10",
+                "(8.23 damage per second)",
+                "+2 Strength"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 7,
+          "iLvl": 3,
           "reqLevel": 2,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "4 - 6 Damage\tSpeed 3.20",
+            "(1.56 damage per second)"
+          ]
         },
         {
           "levelBracket": "7–8",
@@ -15251,10 +21214,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "8.5 DPS",
               "quality": "q2",
-              "iLvl": 12,
+              "iLvl": 14,
               "reqLevel": 6,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -15267,8 +21238,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 1,
-              "stats": "",
-              "icon": "inv_staff_18"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_18",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "11 - 17 Damage\tSpeed 2.20",
+                "(6.36 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Bonecracker",
@@ -15281,8 +21260,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_mace_04"
+              "stats": "+3 Strength",
+              "icon": "inv_mace_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "23 - 35 Damage\tSpeed 3.20",
+                "(9.06 damage per second)",
+                "+3 Strength"
+              ]
             },
             {
               "name": "Darkwood Staff",
@@ -15295,8 +21281,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16"
+              "stats": "+3 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "17 - 26 Damage\tSpeed 3.20",
+                "(6.72 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Makeshift Stormcaller",
@@ -15309,15 +21303,31 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": "+2 Intellect",
-              "icon": "inv_staff_14"
+              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_staff_14",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "15 - 23 Damage\tSpeed 3.30",
+                "(5.76 damage per second)",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             }
           ],
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 10,
           "reqLevel": 4,
-          "stats": "+2 Spell Power"
+          "stats": "+1 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "11 - 17 Damage\tSpeed 2.60",
+            "(5.38 damage per second)",
+            "+1 Stamina",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+          ]
         },
         {
           "levelBracket": "9–10",
@@ -15342,8 +21352,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": "",
-              "icon": "inv_staff_08"
+              "stats": "+1 Stamina",
+              "icon": "inv_staff_08",
+              "speed": "1.50",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "7 - 14 Damage\tSpeed 1.50",
+                "(7.00 damage per second)",
+                "+1 Stamina"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -15355,15 +21373,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -15379,8 +21397,16 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "18 - 28 Damage\tSpeed 3.10",
+                "(7.42 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -15393,15 +21419,28 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q1",
           "iLvl": 15,
           "reqLevel": 10,
-          "stats": ""
+          "stats": "",
+          "lines": [
+            "Two-Hand",
+            "25 - 38 Damage\tSpeed 3.50",
+            "(9.00 damage per second)",
+            "Requires Level 10"
+          ]
         },
         {
           "levelBracket": "11–12",
@@ -15428,8 +21467,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 12,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+2 Stamina, +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "16 - 24 Damage\tSpeed 2.80",
+                "(7.14 damage per second)",
+                "+2 Stamina",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Trogg Scepter",
@@ -15441,15 +21489,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 18,
-              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33",
               "lines": [
                 "Binds when picked up",
-                "Main Hand\tMace",
+                "Main Hand",
                 "13 - 26 Damage\tSpeed 2.40",
-                "(8.1 damage per second)",
+                "(8.13 damage per second)",
                 "+4 Spirit",
-                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-                "Requires Level 13"
+                "Requires Level 13",
+                "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
               "icon": "inv_misc_bone_10"
@@ -15466,7 +21514,15 @@ if (typeof window !== 'undefined') {
               "iLvl": 18,
               "reqLevel": 9,
               "stats": "+3 Str, +3 Spi",
-              "icon": "inv_mace_01"
+              "icon": "inv_mace_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "25 - 47 Damage\tSpeed 2.90",
+                "(12.41 damage per second)",
+                "+3 Strength",
+                "+3 Spirit"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -15479,15 +21535,30 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 16,
           "reqLevel": 11,
-          "stats": "+4 Strength"
+          "stats": "+4 Strength",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "28 - 43 Damage\tSpeed 3.30",
+            "(10.76 damage per second)",
+            "+4 Strength",
+            "Requires Level 11"
+          ]
         },
         {
           "levelBracket": "13–14",
@@ -15506,16 +21577,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Ironforge Greathammer",
@@ -15528,8 +21608,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "",
-              "icon": "inv_hammer_21"
+              "stats": "Chance on hit: Blasts a target for 42 Fire damage.",
+              "icon": "inv_hammer_21",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "39 - 60 Damage\tSpeed 3.10",
+                "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage."
+              ]
             },
             {
               "name": "Oakthrush Staff",
@@ -15542,8 +21629,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 12,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+2 Stamina, +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "16 - 24 Damage\tSpeed 2.80",
+                "(7.14 damage per second)",
+                "+2 Stamina",
+                "+2 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15556,8 +21652,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "Fang of Magmatus",
@@ -15570,15 +21674,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "9 - 18 Damage\tSpeed 1.70",
+                "(7.94 damage per second)",
+                "+4 Intellect",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 18,
           "reqLevel": 13,
-          "stats": "+5 Int, +4 Spirit"
+          "stats": "+9 Fire Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "30 - 46 Damage\tSpeed 3.20",
+            "(11.88 damage per second)",
+            "+9 Fire Resistance",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+          ]
         },
         {
           "levelBracket": "15–16",
@@ -15605,8 +21727,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "+10 Spirit",
-              "icon": "inv_staff_16"
+              "stats": "+10 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 26, Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
+              "icon": "inv_staff_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "34 - 51 Damage\tSpeed 2.80",
+                "(15.18 damage per second)",
+                "+10 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 26",
+                "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
+              ]
             },
             {
               "name": "Clear Crystal Rod",
@@ -15619,22 +21750,40 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 15,
-              "stats": "+4 Stamina, +5 Intellect, +14 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "+4 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "25 - 38 Damage\tSpeed 3.10",
+                "(10.16 damage per second)",
+                "+4 Stamina",
+                "+5 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Segmented Spider Leg",
@@ -15648,7 +21797,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 20,
               "reqLevel": 15,
               "stats": "+5 Int, +4 Sta",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "50 - 76 Damage\tSpeed 3.60",
+                "(17.50 damage per second)",
+                "+9 Agility",
+                "+5 Spirit",
+                "Requires Level 15"
+              ]
             },
             {
               "name": "Scepter of the Abandoned",
@@ -15661,8 +21819,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "",
-              "icon": "inv_mace_01"
+              "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+              "icon": "inv_mace_01",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "17 - 33 Damage\tSpeed 2.60",
+                "(9.62 damage per second)",
+                "+5 Shadow Resistance",
+                "Requires Level 17",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+              ]
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15675,8 +21842,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             },
             {
               "name": "The Stitcher",
@@ -15689,15 +21864,34 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_mace_08"
+              "stats": "+3 Stamina, Equip: Increases healing done by up to 30",
+              "icon": "inv_mace_08",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.13 damage per second)",
+                "+3 Stamina",
+                "Equip: Increases healing done by up to 30"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 23,
           "reqLevel": 18,
-          "stats": "+5 Spi, +5 Sta, Root on hit"
+          "stats": "+2 Stamina, +5 Spirit, +9 Nature Resistance, Equip: Increases healing done by up to 45",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "34 - 51 Damage\tSpeed 2.90",
+            "(14.66 damage per second)",
+            "+2 Stamina",
+            "+5 Spirit",
+            "+9 Nature Resistance",
+            "Requires Level 18",
+            "Equip: Increases healing done by up to 45"
+          ]
         },
         {
           "levelBracket": "17–18",
@@ -15716,16 +21910,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Coldspire Staff",
@@ -15738,8 +21941,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+7 Int, +5 Spi",
-              "icon": "inv_staff_08"
+              "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 66 Damage\tSpeed 3.60",
+                "(15.14 damage per second)",
+                "+13 Frost Resistance",
+                "Requires Level 19",
+                "Equip: Increases damage done by Frost spells and effects by up to 32."
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -15751,15 +21963,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -15776,15 +21988,32 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 23,
           "reqLevel": 18,
-          "stats": "+11 Str, +4 Agi"
+          "stats": "+11 Str, +4 Agi",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "55 - 83 Damage\tSpeed 3.50",
+            "(19.71 damage per second)",
+            "+11 Strength",
+            "+4 Agility",
+            "Requires Level 18"
+          ]
         },
         {
           "levelBracket": "19–20",
@@ -15803,16 +22032,25 @@ if (typeof window !== 'undefined') {
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
-              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)",
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde BiS)",
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 18,
-              "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
-              "icon": "inv_staff_goldfeathered_01"
+              "reqLevel": 13,
+              "stats": "+6 Agility, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 18",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "31 - 47 Damage\tSpeed 3.30",
+                "(11.82 damage per second)",
+                "+6 Agility",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 18"
+              ]
             },
             {
               "name": "Bronze Warhammer",
@@ -15826,7 +22064,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina",
-              "icon": "inv_hammer_18"
+              "icon": "inv_hammer_18",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "47 - 71 Damage\tSpeed 3.50",
+                "(16.86 damage per second)",
+                "+6 Strength",
+                "+6 Stamina",
+                "Requires Level 20"
+              ]
             },
             {
               "name": "Staff of Westfall",
@@ -15838,15 +22085,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 24,
-              "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48, Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "36 - 55 Damage\tSpeed 3.00",
-                "(15.2 damage per second)",
+                "(15.17 damage per second)",
                 "+5 Intellect",
                 "+6 Spirit",
-                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
@@ -15863,23 +22110,31 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
-              "icon": "inv_weapon_shortblade_05"
+              "stats": "+4 Stamina, Equip: Increases healing done by up to 33",
+              "icon": "inv_weapon_shortblade_05",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand",
+                "8 - 16 Damage\tSpeed 1.50",
+                "(8.00 damage per second)",
+                "+4 Stamina",
+                "Equip: Increases healing done by up to 33"
+              ]
             }
           ],
           "faction": "horde",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "35 - 53 Damage\tSpeed 2.90",
-            "(15.2 damage per second)",
+            "(15.17 damage per second)",
             "+7 Agility",
             "+7 Stamina",
             "+7 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 26."
+            "Equip: Increases damage and healing done by magical spells and effects by up to 26"
           ],
           "reqLevel": 10
         },
@@ -15907,16 +22162,16 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 30,
-              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "stats": "+11 Stamina, +11 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "32 - 49 Damage\tSpeed 2.20",
-                "(18.4 damage per second)",
-                "+11 Intellect",
+                "(18.41 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Requires Level 25"
+                "+11 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
               "icon": "inv_staff_19"
@@ -15934,9 +22189,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Agility, +2 Stamina",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
-                "(20.6 damage per second)",
+                "(20.59 damage per second)",
                 "+7 Agility",
                 "+2 Stamina"
               ],
@@ -15954,23 +22209,33 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "",
-              "icon": "inv_staff_11"
+              "stats": "+9 Stamina, +9 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 28",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "32 - 49 Damage\tSpeed 2.50",
+                "(16.20 damage per second)",
+                "+9 Stamina",
+                "+9 Spirit",
+                "Requires Level 21",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 28"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 26,
-          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tStaff",
+            "Two-Hand",
             "37 - 56 Damage\tSpeed 2.90",
-            "(16.0 damage per second)",
+            "(16.03 damage per second)",
             "+5 Stamina",
             "+12 Spirit",
-            "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-            "Requires Level 21"
+            "Requires Level 21",
+            "Equip: Increases healing done by up to 52"
           ],
           "reqLevel": 21
         },
@@ -15998,17 +22263,17 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 26,
-              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "stats": "+4 Stamina, +3 Intellect, +12 Spirit, Equip: Increases healing done by up to 52",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "33 - 50 Damage\tSpeed 2.60",
-                "(16.0 damage per second)",
-                "+3 Intellect",
+                "(15.96 damage per second)",
                 "+4 Stamina",
+                "+3 Intellect",
                 "+12 Spirit",
-                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
-                "Requires Level 21"
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
               "icon": "inv_staff_32"
@@ -16026,9 +22291,9 @@ if (typeof window !== 'undefined') {
               "stats": "+7 Agility, +2 Stamina",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tDagger",
+                "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
-                "(20.6 damage per second)",
+                "(20.59 damage per second)",
                 "+7 Agility",
                 "+2 Stamina"
               ],
@@ -16048,9 +22313,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
+                "(31.29 damage per second)",
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
@@ -16063,7 +22328,17 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 29,
           "reqLevel": 24,
-          "stats": "+11 Int, +10 Spi"
+          "stats": "+11 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32, Equip: Reduces the hit chance of Sleep effects against you by 5%.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "39 - 60 Damage\tSpeed 2.80",
+            "(17.68 damage per second)",
+            "+11 Spirit",
+            "Requires Level 24",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 32",
+            "Equip: Reduces the hit chance of Sleep effects against you by 5%."
+          ]
         },
         {
           "levelBracket": "25–26",
@@ -16090,8 +22365,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": "+12 Stamina",
-              "icon": "inv_staff_10"
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.77 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67"
+              ]
             },
             {
               "name": "Striking Staff",
@@ -16105,7 +22388,16 @@ if (typeof window !== 'undefined') {
               "iLvl": 36,
               "reqLevel": 24,
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "icon": "inv_staff_28"
+              "icon": "inv_staff_28",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.29 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ]
             },
             {
               "name": "Dendweller's Hammer",
@@ -16120,9 +22412,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +100 Armor",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "67 - 102 Damage\tSpeed 3.30",
-                "(25.6 damage per second)",
+                "(25.61 damage per second)",
                 "+12 Stamina",
                 "+100 Armor",
                 "Requires Level 26"
@@ -16140,15 +22432,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Two-handed mace",
               "quality": "q2",
               "iLvl": 31,
-              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24",
               "lines": [
                 "Binds when equipped",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "43 - 66 Damage\tSpeed 3.50",
-                "(15.6 damage per second)",
+                "(15.57 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
               "icon": "inv_hammer_07"
@@ -16163,16 +22455,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 31,
-              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "42 - 64 Damage\tSpeed 2.80",
-                "(18.9 damage per second)",
+                "(18.93 damage per second)",
                 "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Restores 5 Mana per 5 sec.",
-                "Requires Level 26"
+                "Requires Level 26",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 26,
               "icon": "inv_staff_17"
@@ -16190,9 +22481,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +13 Stamina, +9 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "82 - 124 Damage\tSpeed 3.30",
-                "(31.2 damage per second)",
+                "(31.21 damage per second)",
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
@@ -16207,9 +22498,9 @@ if (typeof window !== 'undefined') {
           "stats": "+60 Armor, Equip: +32 Attack Power.",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "73 - 110 Damage\tSpeed 3.30",
-            "(27.7 damage per second)",
+            "(27.73 damage per second)",
             "+60 Armor",
             "Equip: +32 Attack Power."
           ],
@@ -16242,9 +22533,9 @@ if (typeof window !== 'undefined') {
               "stats": "+9 Strength, +6 Stamina, +14 Intellect",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
+                "(31.29 damage per second)",
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
@@ -16262,17 +22553,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+              "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "59 - 90 Damage\tSpeed 3.60",
-                "(20.7 damage per second)",
+                "(20.69 damage per second)",
                 "+14 Stamina",
                 "Requires Level 28",
-                "Equip: +3 Spell Penetration",
-                "Equip: +36 Spell Power",
-                "Sell Price: 85s 58c"
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
               "icon": "inv_staff_07"
@@ -16287,20 +22576,35 @@ if (typeof window !== 'undefined') {
               "weaponType": "Polearm",
               "quality": "q3",
               "iLvl": 34,
-              "stats": "+10 Agility, +9 Nature Resistance, Equip: +10 Hit Rating",
+              "stats": "+10 Agility, +9 Nature Resistance, Equip: Improves your chance to hit by 1.0%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tPolearm",
+                "Two-Hand",
                 "69 - 104 Damage\tSpeed 3.00",
-                "(28.8 damage per second)",
+                "(28.83 damage per second)",
                 "+10 Agility",
                 "+9 Nature Resistance",
                 "Requires Level 29",
-                "Equip: +10 Hit Rating",
-                "Sell Price: 1g 2s 92c"
+                "Equip: Improves your chance to hit by 1.0%."
               ],
               "reqLevel": 29,
               "icon": "inv_spear_08"
+            },
+            {
+              "name": "Ironwood Destroyer",
+              "itemId": 271770,
+              "value": "22.5 DPS - 2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)",
+              "faction": "both",
+              "dps": "22.5 DPS",
+              "quality": "q1",
+              "iLvl": 1,
+              "reqLevel": 28,
+              "stats": "Use: Use to sketch a location on the Shapers Terrace map.",
+              "icon": "inv_mace_05",
+              "weaponType": "Two-Handed Mace",
+              "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map."
+              ]
             }
           ],
           "faction": "both",
@@ -16309,9 +22613,9 @@ if (typeof window !== 'undefined') {
           "stats": "+9 Strength, +13 Stamina, +9 Intellect",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "82 - 124 Damage\tSpeed 3.30",
-            "(31.2 damage per second)",
+            "(31.21 damage per second)",
             "+9 Strength",
             "+13 Stamina",
             "+9 Intellect"
@@ -16343,8 +22647,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 29,
-              "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
-              "icon": "inv_staff_01"
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71",
+              "icon": "inv_staff_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "56 - 85 Damage\tSpeed 3.30",
+                "(21.36 damage per second)",
+                "+6 Stamina",
+                "+16 Spirit",
+                "Requires Level 29",
+                "Equip: Increases healing done by up to 71"
+              ]
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -16357,8 +22671,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 30,
-              "stats": "+8 Intellect, +15 Spirit, +38 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+8 Intellect, +15 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "48 - 73 Damage\tSpeed 2.30",
+                "(26.30 damage per second)",
+                "+8 Intellect",
+                "+15 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Healer's Staff",
@@ -16370,15 +22693,14 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "43 - 65 Damage\tSpeed 2.60",
-                "(20.8 damage per second)",
+                "(20.77 damage per second)",
                 "+12 Stamina",
-                "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
-                "Equip: Restores 5 Mana per 5 sec."
+                "Equip: Increases healing done by up to 67"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_10"
@@ -16396,9 +22718,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Strength, +8 Stamina",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "88 - 132 Damage\tSpeed 3.80",
-                "(28.9 damage per second)",
+                "(28.95 damage per second)",
                 "+12 Strength",
                 "+8 Stamina"
               ],
@@ -16415,15 +22737,15 @@ if (typeof window !== 'undefined') {
               "weaponType": "Staff",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tStaff",
+                "Two-Hand",
                 "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
+                "(19.85 damage per second)",
                 "+11 Intellect",
                 "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
               "icon": "inv_staff_08"
@@ -16438,14 +22760,14 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "quality": "q3",
               "iLvl": 40,
-              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "stats": "+15 Stamina, +12 Intellect, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "91 - 137 Damage\tSpeed 3.20",
-                "(35.6 damage per second)",
-                "+12 Intellect",
+                "(35.63 damage per second)",
                 "+15 Stamina",
+                "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
@@ -16458,15 +22780,13 @@ if (typeof window !== 'undefined') {
           "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
           "lines": [
             "Binds when picked up",
-            "Unique",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "46 - 70 Damage\tSpeed 2.00",
-            "(29 damage per second)",
+            "(29.00 damage per second)",
             "+16 Strength",
             "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "3 Charges",
-            "Requires Level 29"
+            "Requires Level 29",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
           ],
           "reqLevel": 29
         },
@@ -16495,8 +22815,19 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 35,
-              "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
-              "icon": "inv_staff_08"
+              "stats": "+16 Stamina, +12 Intellect, +6 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 48",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "66 - 100 Damage\tSpeed 3.00",
+                "(27.67 damage per second)",
+                "+16 Stamina",
+                "+12 Intellect",
+                "+6 Spirit",
+                "Requires Level 35",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 48"
+              ]
             },
             {
               "name": "Illusionary Rod",
@@ -16509,8 +22840,20 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+15 Int, +10 Spi",
-              "icon": "inv_staff_08"
+              "stats": "+10 Stamina, +6 Intellect, +7 Spirit, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 44",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 105 Damage\tSpeed 3.40",
+                "(25.74 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
+                "+7 Spirit",
+                "Requires Level 34",
+                "Equip: Improves your chance to get a critical strike by 1.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 44"
+              ]
             },
             {
               "name": "Rock Pulverizer",
@@ -16525,9 +22868,9 @@ if (typeof window !== 'undefined') {
               "stats": "Equip: +34 Attack Power.",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "92 - 139 Damage\tSpeed 3.70",
-                "(31.2 damage per second)",
+                "(31.22 damage per second)",
                 "Equip: +34 Attack Power."
               ],
               "reqLevel": 30,
@@ -16540,15 +22883,13 @@ if (typeof window !== 'undefined') {
           "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
           "lines": [
             "Binds when picked up",
-            "Unique",
-            "Two-Hand\tMace",
+            "Two-Hand",
             "46 - 70 Damage\tSpeed 2.00",
-            "(29 damage per second)",
+            "(29.00 damage per second)",
             "+16 Strength",
             "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "3 Charges",
-            "Requires Level 29"
+            "Requires Level 29",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
           ],
           "reqLevel": 29
         },
@@ -16577,8 +22918,19 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power",
-              "icon": "inv_staff_13"
+              "stats": "+20 Intellect, +10 Spirit, Equip: Improves your chance to hit by 1.5%., Equip: Increases damage and healing done by magical spells and effects by up to 60",
+              "icon": "inv_staff_13",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "88 - 133 Damage\tSpeed 3.70",
+                "(29.86 damage per second)",
+                "+20 Intellect",
+                "+10 Spirit",
+                "Requires Level 35",
+                "Equip: Improves your chance to hit by 1.5%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60"
+              ]
             },
             {
               "name": "Dendweller's Hammer",
@@ -16593,9 +22945,9 @@ if (typeof window !== 'undefined') {
               "stats": "+12 Stamina, +100 Armor",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tMace",
+                "Two-Hand",
                 "67 - 102 Damage\tSpeed 3.30",
-                "(25.6 damage per second)",
+                "(25.61 damage per second)",
                 "+12 Stamina",
                 "+100 Armor",
                 "Requires Level 26"
@@ -16608,7 +22960,17 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
-          "stats": "+16 Str, +17 Sta"
+          "stats": "+16 Str, +17 Sta",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "105 - 159 Damage\tSpeed 3.40",
+            "(38.82 damage per second)",
+            "+8 Strength",
+            "+14 Stamina",
+            "+16 Intellect",
+            "Requires Level 39"
+          ]
         },
         {
           "levelBracket": "41–46",
@@ -16635,8 +22997,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": "+4 Stamina, +17 Spirit, +38 Spell Power",
-              "icon": "inv_staff_11"
+              "stats": "+4 Stamina, +17 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 38",
+              "icon": "inv_staff_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "65 - 99 Damage\tSpeed 3.10",
+                "(26.45 damage per second)",
+                "+4 Stamina",
+                "+17 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+              ]
             },
             {
               "name": "Strength of the Treant",
@@ -16649,8 +23020,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 50,
               "reqLevel": 40,
-              "stats": "+7 Stamina, +18 Intellect, +42 Spell Power",
-              "icon": "inv_staff_25"
+              "stats": "+7 Stamina, +18 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 42",
+              "icon": "inv_staff_25",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "85 - 128 Damage\tSpeed 3.70",
+                "(28.78 damage per second)",
+                "+7 Stamina",
+                "+18 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 42"
+              ]
             },
             {
               "name": "Spellshifter Rod",
@@ -16663,8 +23043,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 40,
-              "stats": "+9 Stamina, +23 Intellect, +54 Spell Power",
-              "icon": "inv_wand_11"
+              "stats": "+9 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_wand_11",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "67 - 101 Damage\tSpeed 2.70",
+                "(31.11 damage per second)",
+                "+9 Stamina",
+                "+23 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -16672,11 +23061,21 @@ if (typeof window !== 'undefined') {
               "value": "40.3 DPS - World Drop",
               "faction": "both",
               "dps": "40.3 DPS",
-              "quality": "q3",
-              "iLvl": 46,
-              "reqLevel": 40,
-              "stats": "",
-              "icon": "inv_misc_bag_10"
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+2 Stamina, +4 Spirit",
+              "icon": "inv_misc_bag_10",
+              "speed": "3.00",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "27 - 41 Damage\tSpeed 3.00",
+                "(11.33 damage per second)",
+                "+2 Stamina",
+                "+4 Spirit",
+                "Requires Level 12"
+              ]
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -16689,8 +23088,17 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_hammer_16"
+              "stats": "+19 Strength, Equip: Increases damage done by magical spells and effects by up to 21",
+              "icon": "inv_hammer_16",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "123 - 185 Damage\tSpeed 3.60",
+                "(42.78 damage per second)",
+                "+19 Strength",
+                "Requires Level 44",
+                "Equip: Increases damage done by magical spells and effects by up to 21"
+              ]
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -16703,8 +23111,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "",
-              "icon": "inv_staff_17"
+              "stats": "+19 Intellect, +19 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 56",
+              "icon": "inv_staff_17",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "76 - 114 Damage\tSpeed 3.00",
+                "(31.67 damage per second)",
+                "+19 Intellect",
+                "+19 Spirit",
+                "Requires Level 44",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 56"
+              ]
             },
             {
               "name": "Staff of Lore",
@@ -16717,15 +23135,32 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+5 Intellect, +18 Spirit, +40 Spell Power",
-              "icon": "inv_staff_27"
+              "stats": "+5 Intellect, +18 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40",
+              "icon": "inv_staff_27",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "68 - 103 Damage\tSpeed 3.10",
+                "(27.58 damage per second)",
+                "+5 Intellect",
+                "+18 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 54,
           "reqLevel": 49,
-          "stats": "+11 Str, +10 Sta"
+          "stats": "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand",
+            "126 - 190 Damage\tSpeed 3.40",
+            "(46.47 damage per second)",
+            "Requires Level 49",
+            "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
+          ]
         },
         {
           "levelBracket": "47–52",
@@ -16752,8 +23187,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 45,
-              "stats": "+112 Healing, +37 Spell Damage, +11 MP5",
-              "icon": "inv_staff_goldfeathered_01"
+              "stats": "Equip: Increases healing done by up to 112",
+              "icon": "inv_staff_goldfeathered_01",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "103 - 156 Damage\tSpeed 3.80",
+                "(34.08 damage per second)",
+                "Equip: Increases healing done by up to 112"
+              ]
             },
             {
               "name": "Kindling Stave",
@@ -16766,8 +23208,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Critical Strike Rating, +60 Spell Power",
-              "icon": "inv_staff_08"
+              "stats": "+10 Stamina, +12 Intellect, +10 Fire Resistance, Equip: Improves your chance to get a critical strike by 1.0%., Equip: Increases damage and healing done by magical spells and effects by up to 60, Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)",
+              "icon": "inv_staff_08",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "79 - 119 Damage\tSpeed 2.90",
+                "(34.14 damage per second)",
+                "+10 Stamina",
+                "+12 Intellect",
+                "+10 Fire Resistance",
+                "Requires Level 48",
+                "Equip: Improves your chance to get a critical strike by 1.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 60",
+                "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
+              ]
             },
             {
               "name": "Enchanted Battlehammer",
@@ -16780,8 +23235,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
-              "icon": "inv_hammer_04"
+              "stats": "+4 Arcane Resistance, Equip: Increases your chance to Parry an attack by 1.4%., Equip: Improves your chance to hit by 2.0%.",
+              "icon": "inv_hammer_04",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand",
+                "135 - 203 Damage\tSpeed 3.50",
+                "(48.29 damage per second)",
+                "+4 Arcane Resistance",
+                "Requires Level 51",
+                "Equip: Increases your chance to Parry an attack by 1.4%.",
+                "Equip: Improves your chance to hit by 2.0%."
+              ]
             },
             {
               "name": "Spire of Hakkar",
@@ -16794,15 +23259,34 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
-              "icon": "inv_staff_32"
+              "stats": "+16 Stamina, +16 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 62, Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)",
+              "icon": "inv_staff_32",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.40",
+                "(34.71 damage per second)",
+                "+16 Stamina",
+                "+16 Spirit",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 62",
+                "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
+              ]
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 55,
           "reqLevel": 50,
-          "stats": ""
+          "stats": "Chance on hit: Stuns target for 8 sec.",
+          "lines": [
+            "Binds when equipped",
+            "Two-Hand",
+            "140 - 211 Damage\tSpeed 3.70",
+            "(47.43 damage per second)",
+            "Requires Level 50",
+            "Chance on hit: Stuns target for 8 sec."
+          ]
         },
         {
           "levelBracket": "53–60",
@@ -16829,8 +23313,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+20 Stamina, +15 Intellect, +54 Spell Power",
-              "icon": "inv_staff_10"
+              "stats": "+20 Stamina, +15 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_10",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "70 - 106 Damage\tSpeed 2.50",
+                "(35.20 damage per second)",
+                "+20 Stamina",
+                "+15 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -16843,8 +23336,17 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 62,
               "reqLevel": 58,
-              "stats": "+11 Stamina, +22 Intellect, +54 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "+11 Stamina, +22 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 54",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.74 damage per second)",
+                "+11 Stamina",
+                "+22 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 54"
+              ]
             },
             {
               "name": "Wisepaw Totem",
@@ -16857,8 +23359,18 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": "",
-              "icon": "inv_staff_51"
+              "stats": "+19 Stamina, +23 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 66",
+              "icon": "inv_staff_51",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "94 - 142 Damage\tSpeed 3.20",
+                "(36.88 damage per second)",
+                "+19 Stamina",
+                "+23 Intellect",
+                "Requires Level 53",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 66"
+              ]
             },
             {
               "name": "Hammer of the Grand Crusader",
@@ -16895,8 +23407,20 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Stamina, +15 Intellect, +88 Spell Power, +28 Crit",
-              "icon": "inv_wand_04"
+              "stats": "+18 Stamina, +15 Intellect, +120 Armor, Equip: Improves your chance to get a critical strike by 2.0%., Equip: Increases damage and healing done by magical spells and effects by up to 88",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand",
+                "114 - 172 Damage\tSpeed 3.40",
+                "(42.06 damage per second)",
+                "+18 Stamina",
+                "+15 Intellect",
+                "+120 Armor",
+                "Requires Level 55",
+                "Equip: Improves your chance to get a critical strike by 2.0%.",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 88"
+              ]
             }
           ],
           "faction": "both",
@@ -16904,6 +23428,548 @@ if (typeof window !== 'undefined') {
           "iLvl": 58,
           "reqLevel": 52,
           "stats": "+260 Armor, +10 Defense"
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–6",
+          "itemId": 2132,
+          "name": "Short Staff",
+          "icon": "inv_staff_02",
+          "weaponType": "Staff",
+          "speed": "2.20",
+          "dps": "2.0 DPS",
+          "stats": "+1 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Starting weapon or purchase from weapon merchants in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "alts": [
+            {
+              "name": "Club",
+              "itemId": 2130,
+              "value": "+1 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 4,
+              "reqLevel": 1,
+              "stats": "+1 Spirit",
+              "icon": "inv_axe_10",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "7–12",
+          "itemId": 2077,
+          "name": "Militia Quarterstaff",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.60",
+          "dps": "4.8 DPS",
+          "stats": "+2 Intellect, +2 Spirit",
+          "source": {
+            "kind": "vendor",
+            "title": "Low-level Weapon Vendor",
+            "detail": "Purchased from weapon merchants in Goldshire, Kharanos, Bloodhoof, or Brill."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 11,
+          "reqLevel": 7,
+          "alts": [
+            {
+              "name": "Wooden Mallet",
+              "itemId": 2493,
+              "value": "+2 Spirit - Starter vendor mace",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 6,
+              "stats": "+2 Spirit",
+              "icon": "inv_hammer_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Apprentice's Spellstaff",
+              "itemId": 4835,
+              "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": "+3 Spirit, +2 Intellect",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–17",
+          "itemId": 271198,
+          "name": "Golemheart Stave",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "14.2 DPS",
+          "stats": "+5 Intellect, +4 Spirit",
+          "source": {
+            "kind": "drop",
+            "title": "Plunder (Hall of Thanes)",
+            "detail": "Drops from Plunder inside the Hall of Thanes (Beneath Ironforge). Prime early healer mana-pool staff."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 13,
+          "alts": [
+            {
+              "name": "Trogg Scepter",
+              "itemId": 272996,
+              "value": "+4 Spirit, +33 Healing / +11 Spell Dmg - Oggleflint (Ragefire Chasm)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Scepter of the Abandoned",
+              "itemId": 271207,
+              "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 14,
+              "stats": "+4 Stamina, +4 Intellect",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Staff of the Dor'Danil",
+              "itemId": 6543,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+4 Intellect, +4 Spirit",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "18–21",
+          "itemId": 6631,
+          "name": "Living Root",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "15.4 DPS",
+          "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
+          "source": {
+            "kind": "drop",
+            "title": "Verdan the Everliving (Wailing Caverns)",
+            "detail": "Verdan boss drop in WC. Healer favorite with +45 Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Living Root",
+              "itemId": 6631,
+              "value": "+45 Healing / +15 Spell Dmg, +7 Spirit - Verdan the Everliving (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 18,
+              "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+7 Spirit, +7 Intellect, +7 Stamina - Leaders of the Fang quest (Wailing Caverns)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 15,
+              "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Coldspire Staff",
+              "itemId": 271212,
+              "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "22–25",
+          "itemId": 3415,
+          "name": "Staff of the Friar",
+          "icon": "inv_staff_13",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "15.4 DPS",
+          "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+          "source": {
+            "kind": "drop",
+            "title": "Trash mobs (Blackfathom Deeps)",
+            "detail": "Iconic world/dungeon rare drop with huge +12 Spirit and +52 Healing power."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "alts": [
+            {
+              "name": "Odo's Ley Staff",
+              "itemId": 6318,
+              "value": "+5 Stamina, +12 Spirit, +52 Healing / +17 Spell Dmg - Odo the Blindwatcher (SFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
+              "icon": "inv_staff_12",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Rod of the Sleepwalker",
+              "itemId": 1155,
+              "value": "+11 Intellect, +10 Spirit - Twilight Lord Kelris (Blackfathom Deeps)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "26–29",
+          "itemId": 271767,
+          "name": "Healer's Staff",
+          "icon": "inv_staff_10",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "20.5 DPS",
+          "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22. Equip: Restores 5 Mana per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Prehistoric Prism / Lost Relic Carry (Excavation Site: Wetlands)",
+            "detail": "WoW Forever custom dungeon quest reward. Outstanding +67 Healing and 5 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 24,
+          "alts": [
+            {
+              "name": "Royal Diplomatic Scepter",
+              "itemId": 9457,
+              "value": "+3 Sta, +7 Spirit, +75 Healing / +25 Spell Dmg - Dark Iron Ambassador (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+              "icon": "inv_mace_01",
+              "weaponType": "Main Hand Mace"
+            },
+            {
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +12 HP5, +28 Shadow Dmg - Death Speaker Jargba (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Wind Spirit Staff",
+              "itemId": 6689,
+              "value": "+6 Sta, +16 Spirit, +71 Healing / +23 Spell Dmg - Earthcaller Halmgar (Razorfen Kraul)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "30–34",
+          "itemId": 9457,
+          "name": "Royal Diplomatic Scepter",
+          "icon": "inv_mace_01",
+          "weaponType": "Main Hand Mace",
+          "speed": "2.10",
+          "dps": "22.4 DPS",
+          "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
+          "source": {
+            "kind": "drop",
+            "title": "Dark Iron Ambassador (Gnomeregan)",
+            "detail": "Rare boss in Gnomeregan crypt tunnels. Best 1H leveling healing scepter in early midgame."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Illusionary Rod",
+              "itemId": 7713,
+              "value": "+15 Intellect, +10 Spirit, +7 Stamina - Arcanist Doan (SM Library)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
+              "icon": "inv_staff_02",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–39",
+          "itemId": 7721,
+          "name": "Hand of Righteousness",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "25.2 DPS",
+          "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
+          "source": {
+            "kind": "drop",
+            "title": "High Inquisitor Whitemane (Scarlet Monastery Cathedral)",
+            "detail": "Iconic Scarlet Cathedral boss drop. Massive +94 Healing power spike for 1H healers."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Black Menace",
+              "itemId": 6802,
+              "value": "+50 Healing / +16 Spell Dmg - SM Quest (In the Name of the Light)",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Galgann's Firehammer",
+              "itemId": 9415,
+              "value": "+8 Intellect, +6 Spirit - Galgann Firehammer (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_mace_08",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "40–44",
+          "itemId": 18082,
+          "name": "Zum'rah's Vexing Cane",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "3.10",
+          "dps": "31.5 DPS",
+          "stats": "+10 Intellect, +10 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 21.",
+          "source": {
+            "kind": "drop",
+            "title": "Witch Doctor Zum'rah (Zul'Farrak)",
+            "detail": "Drops from Zum'rah in Zul'Farrak graveyard. Reliable high-stamina healer staff."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "alts": [
+            {
+              "name": "The Shoveler",
+              "itemId": 9481,
+              "value": "+5 Intellect, +5 Spirit - Digmaster Shovelphlange (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_mace_07",
+              "weaponType": "One-Handed Mace"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–49",
+          "itemId": 17743,
+          "name": "Resurgence Rod",
+          "icon": "inv_staff_04",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "44.7 DPS",
+          "stats": "Equip: Increases healing done by up to 112 and damage done by up to 37. Equip: Restores 11 Mana and 11 Health per 5 sec.",
+          "source": {
+            "kind": "quest",
+            "title": "Corruption of Earth and Seed (Maraudon)",
+            "detail": "Maraudon dungeon quest reward from Keeper Margol. Massive +112 Healing and 11 MP5."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Charstone Dirk",
+              "itemId": 17710,
+              "value": "+116 Healing / +38 Spell Dmg - Maraudon trash drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
+              "icon": "inv_knife_01",
+              "weaponType": "Dagger"
+            },
+            {
+              "name": "Spire of Hakkar",
+              "itemId": 10844,
+              "value": "+16 Spirit, +14 Intellect, +18 Spell Dmg/Healing - Avatar of Hakkar (Sunken Temple)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "50–54",
+          "itemId": 11923,
+          "name": "Hammer of the Grace",
+          "icon": "inv_mace_01",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.50",
+          "dps": "36.2 DPS",
+          "stats": "+6 Spirit, Equip: Increases healing done by up to 31 and damage done by up to 11.",
+          "source": {
+            "kind": "drop",
+            "title": "Chest of The Seven (Blackrock Depths)",
+            "detail": "Chest reward from The Seven challenge in BRD. Premier pre-raid 1H healing mace."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 57,
+          "reqLevel": 52,
+          "alts": [
+            {
+              "name": "Guiding Stave of Wisdom",
+              "itemId": 11932,
+              "value": "+12 Intellect, +28 Healing - Emperor Dagran Thaurissan (BRD)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            }
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 21410,
+          "name": "Gavel of Infinite Wisdom",
+          "icon": "inv_mace_08",
+          "weaponType": "One-Handed Mace",
+          "speed": "2.60",
+          "dps": "35.8 DPS",
+          "stats": "+14 Intellect, +8 Spirit, Equip: Increases healing done by up to 184 and damage done by up to 61.",
+          "source": {
+            "kind": "drop",
+            "title": "General Rajaxx / AQ20 Tokens",
+            "detail": "Temple of Ahn'Qiraj / Ruins of Ahn'Qiraj premier healing mace."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 70,
+          "reqLevel": 60,
+          "alts": [
+            {
+              "name": "Scepter of the False Prophet",
+              "itemId": 21839,
+              "value": "+210 Healing / +70 Spell Dmg, +19 Int, +10 Spi - C'Thun (Temple of Ahn'Qiraj)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 84,
+              "reqLevel": 60,
+              "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
+              "icon": "inv_mace_01",
+              "weaponType": "One-Handed Mace"
+            },
+            {
+              "name": "Blessed Qiraji Augur Staff",
+              "itemId": 21275,
+              "value": "+203 Healing / +67 Spell Dmg - Imperial Qiraji Regalia (AQ40)",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 79,
+              "reqLevel": 60,
+              "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
+              "icon": "inv_staff_08",
+              "weaponType": "Staff"
+            },
+            {
+              "name": "Atiesh, Greatstaff of the Guardian",
+              "itemId": 22631,
+              "value": "+242 Healing / +120 Spell Power, +28 Int, +28 Spi - Naxxramas 40 splinter quest",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 90,
+              "reqLevel": 60,
+              "stats": "+28 Intellect, +28 Spirit, Equip: Increases healing done by up to 242 and damage done by up to 120.",
+              "icon": "inv_staff_30",
+              "weaponType": "Staff"
+            }
+          ]
         }
       ]
     }
@@ -16943,8 +24009,18 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_wand_05"
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(4.17 damage per second)"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(4.00 damage per second)"
           ]
         },
         {
@@ -16977,8 +24053,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 5,
-              "stats": "+1 Spell Power",
-              "icon": "inv_staff_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(11.33 damage per second)",
+                "Requires Level 5",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+              ]
             },
             {
               "name": "Wisesight Wand",
@@ -16992,8 +24075,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(9.41 damage per second)"
           ]
         },
         {
@@ -17027,7 +24122,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             },
             {
               "name": "Windbough Wand",
@@ -17041,8 +24143,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 10,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_1h_skybornec60_b_01"
+              "icon": "inv_wand_1h_skybornec60_b_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(7.19 damage per second)",
+                "+1 Intellect"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(18.53 damage per second)",
+            "+3 Fire Resistance"
           ]
         },
         {
@@ -17062,7 +24176,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 23,
           "reqLevel": 13,
-          "stats": "Arcane Damage (20–37)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
           "alts": [
             {
               "name": "Moongazer's Wand",
@@ -17075,8 +24189,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_staff_06"
+              "stats": "Equip: Increases intellect by 5 at night.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(14.41 damage per second)",
+                "Requires Level 14",
+                "Equip: Increases intellect by 5 at night."
+              ]
             },
             {
               "name": "Whelpfire Wand",
@@ -17089,9 +24210,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_wand_11"
+              "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+              "icon": "inv_wand_11",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(15.26 damage per second)",
+                "Requires Level 15",
+                "Equip: Increases damage done by Fire spells and effects by up to 3."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(17.50 damage per second)",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 2"
           ]
         },
         {
@@ -17111,7 +24246,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "Fire Damage (24–45)",
+          "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
               "name": "Snapped Branch Wand",
@@ -17125,7 +24260,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Greater Magic Wand",
@@ -17138,9 +24280,44 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 13,
-              "stats": "+2 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(17.50 damage per second)",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
+            },
+            {
+              "name": "Cookie's Stirring Rod",
+              "itemId": 5198,
+              "value": "11.2 DPS - Arcane Wand from Cookie in The Deadmines",
+              "faction": "both",
+              "dps": "11.2 DPS",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "Equip: Increases your Cooking speed by 25%.",
+              "icon": "inv_wand_02",
+              "weaponType": "Wand",
+              "speed": "1.30",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(22.31 damage per second)",
+                "Requires Level 17",
+                "Equip: Increases your Cooking speed by 25%."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(15.26 damage per second)",
+            "Requires Level 15",
+            "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
         },
         {
@@ -17157,7 +24334,7 @@ if (typeof window !== 'undefined') {
             "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
           },
           "faction": "horde",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 36,
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
@@ -17174,7 +24351,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "+4 Intellect",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(25.38 damage per second)",
+                "+4 Intellect",
+                "Requires Level 26"
+              ]
             },
             {
               "name": "Wand of Mana Concentration",
@@ -17188,7 +24372,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 32,
               "reqLevel": 27,
               "stats": "+4 Intellect",
-              "icon": "inv_wand_06"
+              "icon": "inv_wand_06",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(31.18 damage per second)",
+                "+4 Intellect",
+                "Requires Level 27"
+              ]
             },
             {
               "name": "Snapped Branch Wand",
@@ -17202,8 +24393,21 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(29.71 damage per second)",
+            "+4 Stamina"
           ]
         },
         {
@@ -17236,8 +24440,14 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 43,
               "reqLevel": 28,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(34.67 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Greater Mystic Wand",
@@ -17250,9 +24460,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(31.18 damage per second)",
+            "+4 Intellect",
+            "Requires Level 27"
           ]
         },
         {
@@ -17269,10 +24493,10 @@ if (typeof window !== 'undefined') {
             "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 43,
           "reqLevel": 28,
-          "stats": "Nature Damage (44–82)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
           "alts": [
             {
               "name": "Greater Mystic Wand",
@@ -17285,8 +24509,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -17299,9 +24530,22 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(34.67 damage per second)",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 7"
           ]
         },
         {
@@ -17321,7 +24565,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
-          "stats": "Shadow Damage (55–102)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
           "alts": [
             {
               "name": "Dudd's Second-Favorite Wand",
@@ -17335,7 +24579,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+5 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(35.67 damage per second)",
+                "+5 Intellect",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -17348,9 +24599,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(41.47 damage per second)",
+            "Requires Level 39",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
           ]
         },
         {
@@ -17370,7 +24636,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 43,
-          "stats": "Arcane Damage (68–125)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
           "alts": [
             {
               "name": "Dreambough Wand",
@@ -17383,8 +24649,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(39.17 damage per second)",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Lesser Eternal Wand",
@@ -17397,9 +24670,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+8 Spell Power",
-              "icon": "inv_wand_05"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(45.75 damage per second)",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(45.53 damage per second)",
+            "Requires Level 43",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
           ]
         },
         {
@@ -17416,10 +24703,10 @@ if (typeof window !== 'undefined') {
             "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 54,
           "reqLevel": 49,
-          "stats": "Arcane Damage (73–137)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Wail of Death",
@@ -17433,8 +24720,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 56,
               "stats": "+6 Stamina, +4 Spirit",
-              "icon": "inv_wand_12"
+              "icon": "inv_wand_12",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(54.17 damage per second)",
+                "+6 Stamina",
+                "+4 Spirit",
+                "Requires Level 56"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(45.75 damage per second)",
+            "Requires Level 49",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -17451,7 +24753,7 @@ if (typeof window !== 'undefined') {
             "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 61,
           "reqLevel": 56,
           "stats": "Shadow Damage (85–159)",
@@ -17467,8 +24769,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+7 Intellect",
-              "icon": "inv_wand_07"
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(59.58 damage per second)",
+                "+7 Intellect",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Greater Eternal Wand",
@@ -17481,8 +24791,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+9 Spell Power",
-              "icon": "inv_wand_14"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_14",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(53.33 damage per second)",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Torch of Light",
@@ -17495,9 +24812,25 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+11 Spirit",
-              "icon": "inv_torch_lit"
+              "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+              "icon": "inv_torch_lit",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(76.76 damage per second)",
+                "+11 Spirit",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 17"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(54.17 damage per second)",
+            "+6 Stamina",
+            "+4 Spirit",
+            "Requires Level 56"
           ]
         }
       ]
@@ -17536,8 +24869,18 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_wand_05"
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(4.17 damage per second)"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(4.00 damage per second)"
           ]
         },
         {
@@ -17570,8 +24913,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 5,
-              "stats": "+1 Spell Power",
-              "icon": "inv_staff_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(11.33 damage per second)",
+                "Requires Level 5",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+              ]
             },
             {
               "name": "Wisesight Wand",
@@ -17585,8 +24935,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(9.41 damage per second)"
           ]
         },
         {
@@ -17620,7 +24982,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             },
             {
               "name": "Windbough Wand",
@@ -17634,8 +25003,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 10,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_1h_skybornec60_b_01"
+              "icon": "inv_wand_1h_skybornec60_b_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(7.19 damage per second)",
+                "+1 Intellect"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(18.53 damage per second)",
+            "+3 Fire Resistance"
           ]
         },
         {
@@ -17655,7 +25036,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 23,
           "reqLevel": 13,
-          "stats": "Arcane Damage (20–37)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
           "alts": [
             {
               "name": "Moongazer's Wand",
@@ -17668,8 +25049,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_staff_06"
+              "stats": "Equip: Increases intellect by 5 at night.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(14.41 damage per second)",
+                "Requires Level 14",
+                "Equip: Increases intellect by 5 at night."
+              ]
             },
             {
               "name": "Whelpfire Wand",
@@ -17682,9 +25070,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_wand_11"
+              "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+              "icon": "inv_wand_11",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(15.26 damage per second)",
+                "Requires Level 15",
+                "Equip: Increases damage done by Fire spells and effects by up to 3."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(17.50 damage per second)",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 2"
           ]
         },
         {
@@ -17704,7 +25106,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "Fire Damage (24–45)",
+          "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
               "name": "Snapped Branch Wand",
@@ -17718,7 +25120,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Greater Magic Wand",
@@ -17731,9 +25140,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 13,
-              "stats": "+2 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(17.50 damage per second)",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(15.26 damage per second)",
+            "Requires Level 15",
+            "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
         },
         {
@@ -17750,7 +25173,7 @@ if (typeof window !== 'undefined') {
             "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
           },
           "faction": "horde",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 36,
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
@@ -17767,7 +25190,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "+4 Intellect",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(25.38 damage per second)",
+                "+4 Intellect",
+                "Requires Level 26"
+              ]
             },
             {
               "name": "Wand of Mana Concentration",
@@ -17781,7 +25211,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 32,
               "reqLevel": 27,
               "stats": "+4 Intellect",
-              "icon": "inv_wand_06"
+              "icon": "inv_wand_06",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(31.18 damage per second)",
+                "+4 Intellect",
+                "Requires Level 27"
+              ]
             },
             {
               "name": "Snapped Branch Wand",
@@ -17795,8 +25232,21 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(29.71 damage per second)",
+            "+4 Stamina"
           ]
         },
         {
@@ -17829,8 +25279,14 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 43,
               "reqLevel": 28,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(34.67 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Greater Mystic Wand",
@@ -17843,9 +25299,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(31.18 damage per second)",
+            "+4 Intellect",
+            "Requires Level 27"
           ]
         },
         {
@@ -17862,10 +25332,10 @@ if (typeof window !== 'undefined') {
             "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 43,
           "reqLevel": 28,
-          "stats": "Nature Damage (44–82)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
           "alts": [
             {
               "name": "Greater Mystic Wand",
@@ -17878,8 +25348,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -17892,9 +25369,22 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(34.67 damage per second)",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 7"
           ]
         },
         {
@@ -17914,7 +25404,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
-          "stats": "Shadow Damage (55–102)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
           "alts": [
             {
               "name": "Dudd's Second-Favorite Wand",
@@ -17928,7 +25418,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+5 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(35.67 damage per second)",
+                "+5 Intellect",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -17941,9 +25438,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(41.47 damage per second)",
+            "Requires Level 39",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
           ]
         },
         {
@@ -17963,7 +25475,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 43,
-          "stats": "Arcane Damage (68–125)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
           "alts": [
             {
               "name": "Dreambough Wand",
@@ -17976,8 +25488,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(39.17 damage per second)",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Lesser Eternal Wand",
@@ -17990,9 +25509,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+8 Spell Power",
-              "icon": "inv_wand_05"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(45.75 damage per second)",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(45.53 damage per second)",
+            "Requires Level 43",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
           ]
         },
         {
@@ -18009,10 +25542,10 @@ if (typeof window !== 'undefined') {
             "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 54,
           "reqLevel": 49,
-          "stats": "Arcane Damage (73–137)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Wail of Death",
@@ -18026,8 +25559,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 56,
               "stats": "+6 Stamina, +4 Spirit",
-              "icon": "inv_wand_12"
+              "icon": "inv_wand_12",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(54.17 damage per second)",
+                "+6 Stamina",
+                "+4 Spirit",
+                "Requires Level 56"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(45.75 damage per second)",
+            "Requires Level 49",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -18044,7 +25592,7 @@ if (typeof window !== 'undefined') {
             "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 61,
           "reqLevel": 56,
           "stats": "Shadow Damage (85–159)",
@@ -18060,8 +25608,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+7 Intellect",
-              "icon": "inv_wand_07"
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(59.58 damage per second)",
+                "+7 Intellect",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Greater Eternal Wand",
@@ -18074,8 +25630,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+9 Spell Power",
-              "icon": "inv_wand_14"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_14",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(53.33 damage per second)",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Torch of Light",
@@ -18088,9 +25651,25 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+11 Spirit",
-              "icon": "inv_torch_lit"
+              "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+              "icon": "inv_torch_lit",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(76.76 damage per second)",
+                "+11 Spirit",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 17"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(54.17 damage per second)",
+            "+6 Stamina",
+            "+4 Spirit",
+            "Requires Level 56"
           ]
         }
       ]
@@ -18129,8 +25708,18 @@ if (typeof window !== 'undefined') {
               "iLvl": 6,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_wand_05"
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(4.17 damage per second)"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(4.00 damage per second)"
           ]
         },
         {
@@ -18163,8 +25752,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 5,
-              "stats": "+1 Spell Power",
-              "icon": "inv_staff_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 1",
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(11.33 damage per second)",
+                "Requires Level 5",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 1"
+              ]
             },
             {
               "name": "Wisesight Wand",
@@ -18178,8 +25774,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(9.41 damage per second)"
           ]
         },
         {
@@ -18213,7 +25821,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(8.82 damage per second)",
+                "+1 Intellect",
+                "Requires Level 7"
+              ]
             },
             {
               "name": "Windbough Wand",
@@ -18227,8 +25842,20 @@ if (typeof window !== 'undefined') {
               "iLvl": 10,
               "reqLevel": 10,
               "stats": "+1 Intellect",
-              "icon": "inv_wand_1h_skybornec60_b_01"
+              "icon": "inv_wand_1h_skybornec60_b_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(7.19 damage per second)",
+                "+1 Intellect"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(18.53 damage per second)",
+            "+3 Fire Resistance"
           ]
         },
         {
@@ -18248,7 +25875,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 23,
           "reqLevel": 13,
-          "stats": "Arcane Damage (20–37)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
           "alts": [
             {
               "name": "Moongazer's Wand",
@@ -18261,8 +25888,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": "",
-              "icon": "inv_staff_06"
+              "stats": "Equip: Increases intellect by 5 at night.",
+              "icon": "inv_staff_06",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(14.41 damage per second)",
+                "Requires Level 14",
+                "Equip: Increases intellect by 5 at night."
+              ]
             },
             {
               "name": "Whelpfire Wand",
@@ -18275,9 +25909,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "",
-              "icon": "inv_wand_11"
+              "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
+              "icon": "inv_wand_11",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(15.26 damage per second)",
+                "Requires Level 15",
+                "Equip: Increases damage done by Fire spells and effects by up to 3."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(17.50 damage per second)",
+            "Requires Level 13",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 2"
           ]
         },
         {
@@ -18297,7 +25945,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 20,
           "reqLevel": 15,
-          "stats": "Fire Damage (24–45)",
+          "stats": "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "alts": [
             {
               "name": "Snapped Branch Wand",
@@ -18311,7 +25959,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             },
             {
               "name": "Greater Magic Wand",
@@ -18324,9 +25979,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 13,
-              "stats": "+2 Spell Power",
-              "icon": "inv_staff_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_staff_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(17.50 damage per second)",
+                "Requires Level 13",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(15.26 damage per second)",
+            "Requires Level 15",
+            "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
         },
         {
@@ -18343,7 +26012,7 @@ if (typeof window !== 'undefined') {
             "detail": "Source of Power quest reward in City of Dalaran (Horde). Huge 29.7 DPS spike."
           },
           "faction": "horde",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 36,
           "reqLevel": 24,
           "stats": "Arcane Damage (40–74)",
@@ -18360,7 +26029,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "+4 Intellect",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(25.38 damage per second)",
+                "+4 Intellect",
+                "Requires Level 26"
+              ]
             },
             {
               "name": "Wand of Mana Concentration",
@@ -18374,7 +26050,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 32,
               "reqLevel": 27,
               "stats": "+4 Intellect",
-              "icon": "inv_wand_06"
+              "icon": "inv_wand_06",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(31.18 damage per second)",
+                "+4 Intellect",
+                "Requires Level 27"
+              ]
             },
             {
               "name": "Snapped Branch Wand",
@@ -18388,8 +26071,21 @@ if (typeof window !== 'undefined') {
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+3 Nature Resistance",
-              "icon": "inv_staff_02"
+              "icon": "inv_staff_02",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(21.18 damage per second)",
+                "+3 Nature Resistance",
+                "Requires Level 22"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(29.71 damage per second)",
+            "+4 Stamina"
           ]
         },
         {
@@ -18422,8 +26118,14 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 43,
               "reqLevel": 28,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(34.67 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Greater Mystic Wand",
@@ -18436,9 +26138,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(31.18 damage per second)",
+            "+4 Intellect",
+            "Requires Level 27"
           ]
         },
         {
@@ -18455,10 +26171,10 @@ if (typeof window !== 'undefined') {
             "detail": "Big Game Hunter quest reward in Stranglethorn Vale. Exceptional 34.7 DPS at level 28+."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 43,
           "reqLevel": 28,
-          "stats": "Nature Damage (44–82)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
           "alts": [
             {
               "name": "Greater Mystic Wand",
@@ -18471,8 +26187,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 30,
-              "stats": "+5 Spell Power",
-              "icon": "inv_wand_07"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(29.00 damage per second)",
+                "Requires Level 30",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -18485,9 +26208,22 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(34.67 damage per second)",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 7"
           ]
         },
         {
@@ -18507,7 +26243,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 44,
           "reqLevel": 39,
-          "stats": "Shadow Damage (55–102)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6, Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)",
           "alts": [
             {
               "name": "Dudd's Second-Favorite Wand",
@@ -18521,7 +26257,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+5 Intellect",
-              "icon": "inv_wand_01"
+              "icon": "inv_wand_01",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(35.67 damage per second)",
+                "+5 Intellect",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Twisted Nether Wand",
@@ -18534,9 +26277,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": "+6 Spell Power",
-              "icon": "inv_wand_03"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+              "icon": "inv_wand_03",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(34.00 damage per second)",
+                "Requires Level 37",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(41.47 damage per second)",
+            "Requires Level 39",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 6",
+            "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24. (10ms cooldown)"
           ]
         },
         {
@@ -18556,7 +26314,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 48,
           "reqLevel": 43,
-          "stats": "Arcane Damage (68–125)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 4",
           "alts": [
             {
               "name": "Dreambough Wand",
@@ -18569,8 +26327,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+7 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(39.17 damage per second)",
+                "Requires Level 43",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Lesser Eternal Wand",
@@ -18583,9 +26348,23 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": "+8 Spell Power",
-              "icon": "inv_wand_05"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_wand_05",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(45.75 damage per second)",
+                "Requires Level 49",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "(45.53 damage per second)",
+            "Requires Level 43",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
           ]
         },
         {
@@ -18602,10 +26381,10 @@ if (typeof window !== 'undefined') {
             "detail": "Crafted by Enchanters (Skill 260). High consistency, easily acquired pre-raid."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 54,
           "reqLevel": 49,
-          "stats": "Arcane Damage (73–137)",
+          "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Wail of Death",
@@ -18619,8 +26398,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 56,
               "stats": "+6 Stamina, +4 Spirit",
-              "icon": "inv_wand_12"
+              "icon": "inv_wand_12",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(54.17 damage per second)",
+                "+6 Stamina",
+                "+4 Spirit",
+                "Requires Level 56"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(45.75 damage per second)",
+            "Requires Level 49",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -18637,7 +26431,7 @@ if (typeof window !== 'undefined') {
             "detail": "Level 56 Rare Wand. Outstanding finisher wand before entering Level 60 raid content."
           },
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 61,
           "reqLevel": 56,
           "stats": "Shadow Damage (85–159)",
@@ -18653,8 +26447,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+7 Intellect",
-              "icon": "inv_wand_07"
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_07",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "(59.58 damage per second)",
+                "+7 Intellect",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Greater Eternal Wand",
@@ -18667,8 +26469,15 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+9 Spell Power",
-              "icon": "inv_wand_14"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+              "icon": "inv_wand_14",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(53.33 damage per second)",
+                "Requires Level 55",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 9"
+              ]
             },
             {
               "name": "Torch of Light",
@@ -18681,9 +26490,25 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+11 Spirit",
-              "icon": "inv_torch_lit"
+              "stats": "+11 Spirit, Equip: Increases healing done by up to 17",
+              "icon": "inv_torch_lit",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "(76.76 damage per second)",
+                "+11 Spirit",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 17"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "(54.17 damage per second)",
+            "+6 Stamina",
+            "+4 Spirit",
+            "Requires Level 56"
           ]
         }
       ]
@@ -18711,7 +26536,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 17,
           "reqLevel": 2,
           "stats": "Starter Off-hand",
-          "alts": []
+          "alts": [],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "Requires Level 2"
+          ]
         },
         {
           "levelBracket": "10–16",
@@ -18730,7 +26560,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 17,
           "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
           "alts": [
             {
               "name": "Tear of Grief",
@@ -18742,7 +26572,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
+              "icon": "inv_potion_17",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "-3 Spirit"
+              ]
             },
             {
               "name": "Disciple's Stein",
@@ -18754,8 +26590,19 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_drink_03"
+              "icon": "inv_drink_03",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+1 Spirit",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 3"
           ]
         },
         {
@@ -18775,7 +26622,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
           "alts": [
             {
               "name": "Expended Apothecary Vial",
@@ -18787,7 +26634,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 19,
               "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
+              "icon": "inv_potion_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Intellect",
+                "+3 Spirit"
+              ]
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -18799,7 +26652,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 17,
               "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
+              "icon": "inv_misc_orb_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Stamina",
+                "+5 Intellect"
+              ]
             },
             {
               "name": "Defective Samophlange",
@@ -18811,8 +26670,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
+              "icon": "inv_gizmo_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "+5 Spirit",
+                "Requires Level 20"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+3 Stamina",
+            "Requires Level 17",
+            "Equip: Increases healing done by up to 10",
+            "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
           ]
         },
         {
@@ -18843,8 +26717,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases healing done by up to 12",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 12"
+              ]
             },
             {
               "name": "Orb of Mystic Insight",
@@ -18855,8 +26735,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_misc_orb_blue",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Orb of Souls",
@@ -18867,9 +26754,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_misc_orb_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Spirit",
+                "Requires Level 25",
+                "Equip: Increases healing done by up to 13"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+5 Spirit"
           ]
         },
         {
@@ -18889,7 +26789,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Arcane Infused Rod",
@@ -18900,8 +26800,13 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11."
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -18912,8 +26817,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -18924,9 +26837,25 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+4 Stamina",
+            "+4 Intellect",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -18946,7 +26875,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
           "alts": [
             {
               "name": "Salve and Salvation",
@@ -18957,8 +26886,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
+              "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+              "icon": "inv_misc_book_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+9 Spirit",
+                "+50 Armor",
+                "Equip: Increases healing done by up to 9"
+              ]
             },
             {
               "name": "Heart of Alterac",
@@ -18970,8 +26906,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+7 Stamina",
+                "+5 Intellect",
+                "Requires Level 34"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Intellect",
+            "+8 Spirit",
+            "Requires Level 30",
+            "Equip: Increases healing done by up to 11"
           ]
         },
         {
@@ -19002,8 +26953,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -19014,8 +26973,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -19026,9 +26993,23 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_misc_orb_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 32",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+4 Intellect",
+            "+7 Spirit",
+            "Requires Level 35"
           ]
         },
         {
@@ -19048,7 +27029,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
           "alts": [
             {
               "name": "Fermented Restoration Potion",
@@ -19060,7 +27041,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
+              "icon": "inv_potion_19",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Spirit",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Spirit of Aquementas",
@@ -19071,9 +27059,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+              "icon": "inv_ore_arcanite_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+12 Stamina",
+            "Requires Level 40",
+            "Equip: Increases damage done by Fire spells and effects by up to 7."
           ]
         },
         {
@@ -19093,7 +27093,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 50,
           "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
           "alts": [
             {
               "name": "Twisting Essence Jar",
@@ -19104,8 +27104,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 50,
               "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+              "icon": "inv_10_misc_dragonorb_color1",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+8 Spirit",
+                "Requires Level 45",
+                "Equip: Increases healing done by up to 19"
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -19116,8 +27124,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+14 Stamina",
+                "+6 Intellect",
+                "Requires Level 48",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Heart of Smoldar",
@@ -19128,9 +27144,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
+              "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "Requires Level 47",
+                "Equip: Increases healing done by up to 16"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+8 Stamina",
+            "+8 Intellect",
+            "Requires Level 45",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 10"
           ]
         },
         {
@@ -19150,7 +27181,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+          "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
           "alts": [
             {
               "name": "Insurgent's Manifesto",
@@ -19161,8 +27192,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -19173,8 +27212,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -19185,8 +27232,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_15",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -19197,8 +27253,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -19209,8 +27274,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_14",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -19221,9 +27295,26 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_13",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+10 Stamina",
+            "+10 Spirit",
+            "Requires Level 53",
+            "Equip: Increases healing done by up to 22"
           ]
         }
       ]
@@ -19249,7 +27340,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 17,
           "reqLevel": 2,
           "stats": "Starter Off-hand",
-          "alts": []
+          "alts": [],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "Requires Level 2"
+          ]
         },
         {
           "levelBracket": "10–16",
@@ -19268,7 +27364,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 17,
           "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
           "alts": [
             {
               "name": "Tear of Grief",
@@ -19280,7 +27376,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
+              "icon": "inv_potion_17",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "-3 Spirit"
+              ]
             },
             {
               "name": "Disciple's Stein",
@@ -19292,8 +27394,19 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_drink_03"
+              "icon": "inv_drink_03",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+1 Spirit",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 3"
           ]
         },
         {
@@ -19313,7 +27426,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
           "alts": [
             {
               "name": "Expended Apothecary Vial",
@@ -19325,7 +27438,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 19,
               "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
+              "icon": "inv_potion_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Intellect",
+                "+3 Spirit"
+              ]
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -19337,7 +27456,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 17,
               "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
+              "icon": "inv_misc_orb_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Stamina",
+                "+5 Intellect"
+              ]
             },
             {
               "name": "Defective Samophlange",
@@ -19349,8 +27474,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
+              "icon": "inv_gizmo_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "+5 Spirit",
+                "Requires Level 20"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+3 Stamina",
+            "Requires Level 17",
+            "Equip: Increases healing done by up to 10",
+            "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
           ]
         },
         {
@@ -19381,8 +27521,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases healing done by up to 12",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 12"
+              ]
             },
             {
               "name": "Orb of Mystic Insight",
@@ -19393,8 +27539,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_misc_orb_blue",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Orb of Souls",
@@ -19405,9 +27558,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_misc_orb_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Spirit",
+                "Requires Level 25",
+                "Equip: Increases healing done by up to 13"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+5 Spirit"
           ]
         },
         {
@@ -19427,7 +27593,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Arcane Infused Rod",
@@ -19438,8 +27604,13 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11."
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -19450,8 +27621,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -19462,9 +27641,25 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+4 Stamina",
+            "+4 Intellect",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -19484,7 +27679,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
           "alts": [
             {
               "name": "Salve and Salvation",
@@ -19495,8 +27690,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
+              "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+              "icon": "inv_misc_book_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+9 Spirit",
+                "+50 Armor",
+                "Equip: Increases healing done by up to 9"
+              ]
             },
             {
               "name": "Heart of Alterac",
@@ -19508,8 +27710,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+7 Stamina",
+                "+5 Intellect",
+                "Requires Level 34"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Intellect",
+            "+8 Spirit",
+            "Requires Level 30",
+            "Equip: Increases healing done by up to 11"
           ]
         },
         {
@@ -19540,8 +27757,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -19552,8 +27777,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -19564,9 +27797,23 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_misc_orb_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 32",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+4 Intellect",
+            "+7 Spirit",
+            "Requires Level 35"
           ]
         },
         {
@@ -19586,7 +27833,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
           "alts": [
             {
               "name": "Fermented Restoration Potion",
@@ -19598,7 +27845,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
+              "icon": "inv_potion_19",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Spirit",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Spirit of Aquementas",
@@ -19609,9 +27863,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+              "icon": "inv_ore_arcanite_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+12 Stamina",
+            "Requires Level 40",
+            "Equip: Increases damage done by Fire spells and effects by up to 7."
           ]
         },
         {
@@ -19631,7 +27897,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 50,
           "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
           "alts": [
             {
               "name": "Twisting Essence Jar",
@@ -19642,8 +27908,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 50,
               "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+              "icon": "inv_10_misc_dragonorb_color1",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+8 Spirit",
+                "Requires Level 45",
+                "Equip: Increases healing done by up to 19"
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -19654,8 +27928,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+14 Stamina",
+                "+6 Intellect",
+                "Requires Level 48",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Heart of Smoldar",
@@ -19666,9 +27948,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
+              "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "Requires Level 47",
+                "Equip: Increases healing done by up to 16"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+8 Stamina",
+            "+8 Intellect",
+            "Requires Level 45",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 10"
           ]
         },
         {
@@ -19688,7 +27985,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+          "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
           "alts": [
             {
               "name": "Insurgent's Manifesto",
@@ -19699,8 +27996,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -19711,8 +28016,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -19723,8 +28036,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_15",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -19735,8 +28057,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -19747,8 +28078,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_14",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -19759,8 +28099,221 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_13",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+10 Stamina",
+            "+10 Spirit",
+            "Requires Level 53",
+            "Equip: Increases healing done by up to 22"
+          ]
+        }
+      ],
+      "tracks": [
+        {
+          "id": "dps",
+          "name": "🔮 Off-Hands (Shadow & Damage)"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healing Off-Hands (Holy & Discipline Focus)"
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Captain Grayson quest reward in Westfall. Early spirit stat-stick."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_drink_06",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–24",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_gem_pearl_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "Equip: Increases healing done by up to 9 and damage done by up to 4.",
+          "source": {
+            "kind": "quest",
+            "title": "The Eye of Paleth (Wetlands Quest)",
+            "detail": "Excavating the Wetlands quest chain. First off-hand with dedicated +Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+6 Spirit, +13 Healing / +4 Spell Dmg - Enchanting craftable",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 18,
+              "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
+              "icon": "inv_misc_gem_pearl_04",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "25–34",
+          "itemId": 276898,
+          "name": "Salve and Salvation",
+          "icon": "inv_misc_book_09",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 and damage done by up to 3.",
+          "source": {
+            "kind": "quest",
+            "title": "Past Due (Scarlet Monastery Library Quest)",
+            "detail": "Turn-in inside SM Library for Alliance. Excellent spirit and healing boost."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 34,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Ponderous Orb",
+              "itemId": 273052,
+              "value": "+8 Spirit, +2 Intellect, +11 Healing / +4 Spell Dmg - Shade of Archmage (Dalaran)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
+              "icon": "inv_misc_gem_pearl_04",
+              "weaponType": "Held in Off-hand"
+            },
+            {
+              "name": "Raptor's Gaze",
+              "itemId": 271788,
+              "value": "+4 Intellect, +4 Stamina, +8 Spell Dmg & Healing - Shadetooth (Excavation Site)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
+              "icon": "inv_misc_gem_pearl_02",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–45",
+          "itemId": 9393,
+          "name": "Beacon of Hope",
+          "icon": "inv_misc_lantern_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "Equip: Increases healing done by up to 14 and damage done by up to 8.",
+          "source": {
+            "kind": "drop",
+            "title": "Digmaster Shovelphlange / Uldaman",
+            "detail": "Rare dungeon treasure lantern. Focused healing output."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 38,
+          "reqLevel": 33,
+          "alts": []
+        },
+        {
+          "levelBracket": "46–54",
+          "itemId": 11262,
+          "name": "Orb of Lorica",
+          "icon": "inv_misc_gem_pearl_05",
+          "weaponType": "Held in Off-hand",
+          "stats": "+10 Intellect, Equip: Increases healing done by up to 12 and damage done by up to 6.",
+          "source": {
+            "kind": "drop",
+            "title": "High-level World Drop / Sunken Temple",
+            "detail": "Pure intellect and healing orb for late leveling."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 34,
+          "alts": []
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 19312,
+          "name": "Lei of the Lifegiver",
+          "icon": "inv_jewelry_necklace_16",
+          "weaponType": "Held in Off-hand",
+          "stats": "+11 Stamina, Equip: Increases healing done by up to 25 and damage done by up to 12. Equip: Restores 5 Mana per 5 sec.",
+          "source": {
+            "kind": "pvp",
+            "title": "Alterac Valley Exalted Reputation Vendor",
+            "detail": "The premier pre-raid healing off-hand in Classic. Incredible +25 Healing and 5 MP5."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Grand Marshal's Tome of Restoration",
+              "itemId": 234590,
+              "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Officer's Lounge",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 80,
+              "reqLevel": 60,
+              "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+              "icon": "inv_misc_book_09",
+              "weaponType": "Held in Off-hand"
+            },
+            {
+              "name": "High Warlord's Tome of Mending",
+              "itemId": 234564,
+              "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Champion's Hall",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 80,
+              "reqLevel": 60,
+              "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+              "icon": "inv_misc_book_09",
+              "weaponType": "Held in Off-hand"
             }
           ]
         }
@@ -19787,7 +28340,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 17,
           "reqLevel": 2,
           "stats": "Starter Off-hand",
-          "alts": []
+          "alts": [],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "Requires Level 2"
+          ]
         },
         {
           "levelBracket": "10–16",
@@ -19806,7 +28364,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 17,
           "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
           "alts": [
             {
               "name": "Tear of Grief",
@@ -19818,7 +28376,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
+              "icon": "inv_potion_17",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "-3 Spirit"
+              ]
             },
             {
               "name": "Disciple's Stein",
@@ -19830,8 +28394,19 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_drink_03"
+              "icon": "inv_drink_03",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+1 Spirit",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 3"
           ]
         },
         {
@@ -19851,7 +28426,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
           "alts": [
             {
               "name": "Expended Apothecary Vial",
@@ -19863,7 +28438,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 19,
               "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
+              "icon": "inv_potion_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Intellect",
+                "+3 Spirit"
+              ]
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -19875,7 +28456,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 17,
               "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
+              "icon": "inv_misc_orb_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Stamina",
+                "+5 Intellect"
+              ]
             },
             {
               "name": "Defective Samophlange",
@@ -19887,8 +28474,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
+              "icon": "inv_gizmo_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "+5 Spirit",
+                "Requires Level 20"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+3 Stamina",
+            "Requires Level 17",
+            "Equip: Increases healing done by up to 10",
+            "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
           ]
         },
         {
@@ -19919,8 +28521,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases healing done by up to 12",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 12"
+              ]
             },
             {
               "name": "Orb of Mystic Insight",
@@ -19931,8 +28539,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_misc_orb_blue",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Orb of Souls",
@@ -19943,9 +28558,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_misc_orb_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Spirit",
+                "Requires Level 25",
+                "Equip: Increases healing done by up to 13"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+5 Spirit"
           ]
         },
         {
@@ -19965,7 +28593,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Arcane Infused Rod",
@@ -19976,8 +28604,13 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11."
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -19988,8 +28621,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20000,9 +28641,25 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+4 Stamina",
+            "+4 Intellect",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -20022,7 +28679,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
           "alts": [
             {
               "name": "Salve and Salvation",
@@ -20033,8 +28690,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
+              "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+              "icon": "inv_misc_book_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+9 Spirit",
+                "+50 Armor",
+                "Equip: Increases healing done by up to 9"
+              ]
             },
             {
               "name": "Heart of Alterac",
@@ -20046,8 +28710,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+7 Stamina",
+                "+5 Intellect",
+                "Requires Level 34"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Intellect",
+            "+8 Spirit",
+            "Requires Level 30",
+            "Equip: Increases healing done by up to 11"
           ]
         },
         {
@@ -20078,8 +28757,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20090,8 +28777,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -20102,9 +28797,23 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_misc_orb_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 32",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+4 Intellect",
+            "+7 Spirit",
+            "Requires Level 35"
           ]
         },
         {
@@ -20124,7 +28833,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
           "alts": [
             {
               "name": "Fermented Restoration Potion",
@@ -20136,7 +28845,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
+              "icon": "inv_potion_19",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Spirit",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Spirit of Aquementas",
@@ -20147,9 +28863,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+              "icon": "inv_ore_arcanite_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+12 Stamina",
+            "Requires Level 40",
+            "Equip: Increases damage done by Fire spells and effects by up to 7."
           ]
         },
         {
@@ -20169,7 +28897,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 50,
           "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
           "alts": [
             {
               "name": "Twisting Essence Jar",
@@ -20180,8 +28908,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 50,
               "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+              "icon": "inv_10_misc_dragonorb_color1",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+8 Spirit",
+                "Requires Level 45",
+                "Equip: Increases healing done by up to 19"
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -20192,8 +28928,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+14 Stamina",
+                "+6 Intellect",
+                "Requires Level 48",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Heart of Smoldar",
@@ -20204,9 +28948,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
+              "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "Requires Level 47",
+                "Equip: Increases healing done by up to 16"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+8 Stamina",
+            "+8 Intellect",
+            "Requires Level 45",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 10"
           ]
         },
         {
@@ -20226,7 +28985,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+          "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
           "alts": [
             {
               "name": "Insurgent's Manifesto",
@@ -20237,8 +28996,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20249,8 +29016,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -20261,8 +29036,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_15",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -20273,8 +29057,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -20285,8 +29078,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_14",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -20297,9 +29099,26 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_13",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+10 Stamina",
+            "+10 Spirit",
+            "Requires Level 53",
+            "Equip: Increases healing done by up to 22"
           ]
         }
       ]
@@ -20325,7 +29144,12 @@ if (typeof window !== 'undefined') {
           "iLvl": 17,
           "reqLevel": 2,
           "stats": "Starter Off-hand",
-          "alts": []
+          "alts": [],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "Requires Level 2"
+          ]
         },
         {
           "levelBracket": "10–16",
@@ -20344,7 +29168,7 @@ if (typeof window !== 'undefined') {
           "quality": "q2",
           "iLvl": 17,
           "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "stats": "+1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 3",
           "alts": [
             {
               "name": "Tear of Grief",
@@ -20356,7 +29180,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
+              "icon": "inv_potion_17",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "-3 Spirit"
+              ]
             },
             {
               "name": "Disciple's Stein",
@@ -20368,8 +29198,19 @@ if (typeof window !== 'undefined') {
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "",
-              "icon": "inv_drink_03"
+              "icon": "inv_drink_03",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "Requires Level 7"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+1 Spirit",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 3"
           ]
         },
         {
@@ -20389,7 +29230,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 22,
           "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "stats": "+3 Stamina, Equip: Increases healing done by up to 10, Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
           "alts": [
             {
               "name": "Expended Apothecary Vial",
@@ -20401,7 +29242,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 19,
               "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
+              "icon": "inv_potion_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Intellect",
+                "+3 Spirit"
+              ]
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -20413,7 +29260,13 @@ if (typeof window !== 'undefined') {
               "iLvl": 21,
               "reqLevel": 17,
               "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
+              "icon": "inv_misc_orb_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+3 Stamina",
+                "+5 Intellect"
+              ]
             },
             {
               "name": "Defective Samophlange",
@@ -20425,8 +29278,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 25,
               "reqLevel": 20,
               "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
+              "icon": "inv_gizmo_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+5 Intellect",
+                "+5 Spirit",
+                "Requires Level 20"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+3 Stamina",
+            "Requires Level 17",
+            "Equip: Increases healing done by up to 10",
+            "Use: Restores 835 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)"
           ]
         },
         {
@@ -20457,8 +29325,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases healing done by up to 12",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 21",
+                "Equip: Increases healing done by up to 12"
+              ]
             },
             {
               "name": "Orb of Mystic Insight",
@@ -20469,8 +29343,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7",
+              "icon": "inv_misc_orb_blue",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Intellect",
+                "Requires Level 25",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7"
+              ]
             },
             {
               "name": "Orb of Souls",
@@ -20481,9 +29362,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "stats": "+6 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_misc_orb_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+6 Spirit",
+                "Requires Level 25",
+                "Equip: Increases healing done by up to 13"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+5 Spirit"
           ]
         },
         {
@@ -20503,7 +29397,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 31,
           "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "stats": "+4 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
           "alts": [
             {
               "name": "Arcane Infused Rod",
@@ -20514,8 +29408,13 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
+              "stats": "Equip: Increases damage done by Arcane spells and effects by up to 11.",
+              "icon": "inv_wand_04",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11."
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -20526,8 +29425,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20538,9 +29445,25 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+8 Stamina, +4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+4 Intellect",
+                "Requires Level 28",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+4 Stamina",
+            "+4 Intellect",
+            "Requires Level 26",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 8"
           ]
         },
         {
@@ -20560,7 +29483,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "stats": "+2 Intellect, +8 Spirit, Equip: Increases healing done by up to 11",
           "alts": [
             {
               "name": "Salve and Salvation",
@@ -20571,8 +29494,15 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
+              "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9",
+              "icon": "inv_misc_book_01",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+9 Spirit",
+                "+50 Armor",
+                "Equip: Increases healing done by up to 9"
+              ]
             },
             {
               "name": "Heart of Alterac",
@@ -20584,8 +29514,23 @@ if (typeof window !== 'undefined') {
               "iLvl": 39,
               "reqLevel": 34,
               "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+7 Stamina",
+                "+5 Intellect",
+                "Requires Level 34"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Intellect",
+            "+8 Spirit",
+            "Requires Level 30",
+            "Equip: Increases healing done by up to 11"
           ]
         },
         {
@@ -20616,8 +29561,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20628,8 +29581,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+12 Stamina, +5 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Intellect",
+                "Requires Level 38",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+              ]
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -20640,9 +29601,23 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+              "icon": "inv_misc_orb_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Requires Level 32",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+2 Stamina",
+            "+4 Intellect",
+            "+7 Spirit",
+            "Requires Level 35"
           ]
         },
         {
@@ -20662,7 +29637,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 45,
           "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "stats": "+12 Stamina, Equip: Increases damage done by Fire spells and effects by up to 7.",
           "alts": [
             {
               "name": "Fermented Restoration Potion",
@@ -20674,7 +29649,14 @@ if (typeof window !== 'undefined') {
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
+              "icon": "inv_potion_19",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+12 Stamina",
+                "+5 Spirit",
+                "Requires Level 40"
+              ]
             },
             {
               "name": "Spirit of Aquementas",
@@ -20685,9 +29667,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+              "icon": "inv_ore_arcanite_02",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 21"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+12 Stamina",
+            "Requires Level 40",
+            "Equip: Increases damage done by Fire spells and effects by up to 7."
           ]
         },
         {
@@ -20707,7 +29701,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 50,
           "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "stats": "+8 Stamina, +8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 10",
           "alts": [
             {
               "name": "Twisting Essence Jar",
@@ -20718,8 +29712,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 50,
               "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 19",
+              "icon": "inv_10_misc_dragonorb_color1",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "+8 Spirit",
+                "Requires Level 45",
+                "Equip: Increases healing done by up to 19"
+              ]
             },
             {
               "name": "Insurgent's Manifesto",
@@ -20730,8 +29732,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+14 Stamina, +6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+14 Stamina",
+                "+6 Intellect",
+                "Requires Level 48",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 5"
+              ]
             },
             {
               "name": "Heart of Smoldar",
@@ -20742,9 +29752,24 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
+              "stats": "+8 Stamina, Equip: Increases healing done by up to 16",
+              "icon": "inv_misc_orb_05",
+              "lines": [
+                "Binds when equipped",
+                "Held In Off-hand",
+                "+8 Stamina",
+                "Requires Level 47",
+                "Equip: Increases healing done by up to 16"
+              ]
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+8 Stamina",
+            "+8 Intellect",
+            "Requires Level 45",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 10"
           ]
         },
         {
@@ -20764,7 +29789,7 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 58,
           "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+          "stats": "+10 Stamina, +10 Spirit, Equip: Increases healing done by up to 22",
           "alts": [
             {
               "name": "Insurgent's Manifesto",
@@ -20775,8 +29800,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -20787,8 +29820,16 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 63,
               "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "stats": "+17 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 8",
+              "icon": "inv_misc_book_06",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+17 Stamina",
+                "+7 Intellect",
+                "Requires Level 58",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 8"
+              ]
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -20799,8 +29840,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_15",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -20811,8 +29861,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
+              "stats": "+24 Stamina, +13 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 25, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_12",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+24 Stamina",
+                "+13 Intellect",
+                "Requires Level 60",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 25",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -20823,8 +29882,17 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_14",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -20835,1085 +29903,1826 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "stats": "+23 Stamina, +14 Intellect, Equip: Increases healing done by up to 44, Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources.",
+              "icon": "inv_misc_book_13",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+23 Stamina",
+                "+14 Intellect",
+                "Requires Level 60",
+                "Equip: Increases healing done by up to 44",
+                "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Held In Off-hand",
+            "+10 Stamina",
+            "+10 Spirit",
+            "Requires Level 53",
+            "Equip: Increases healing done by up to 22"
+          ]
+        }
+      ],
+      "tracks": [
+        {
+          "id": "dps",
+          "name": "🔮 Off-Hands & Idols (Feral & Balance)"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healing Off-Hands (Restoration Focus)"
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Captain Grayson quest reward in Westfall. Early spirit stat-stick."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_drink_06",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–24",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_gem_pearl_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "Equip: Increases healing done by up to 9 and damage done by up to 4.",
+          "source": {
+            "kind": "quest",
+            "title": "The Eye of Paleth (Wetlands Quest)",
+            "detail": "Excavating the Wetlands quest chain. First off-hand with dedicated +Healing."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+6 Spirit, +13 Healing / +4 Spell Dmg - Enchanting craftable",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 18,
+              "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
+              "icon": "inv_misc_gem_pearl_04",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "25–34",
+          "itemId": 276898,
+          "name": "Salve and Salvation",
+          "icon": "inv_misc_book_09",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 and damage done by up to 3.",
+          "source": {
+            "kind": "quest",
+            "title": "Past Due (Scarlet Monastery Library Quest)",
+            "detail": "Turn-in inside SM Library for Alliance. Excellent spirit and healing boost."
+          },
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 34,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Ponderous Orb",
+              "itemId": 273052,
+              "value": "+8 Spirit, +2 Intellect, +11 Healing / +4 Spell Dmg - Shade of Archmage (Dalaran)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
+              "icon": "inv_misc_gem_pearl_04",
+              "weaponType": "Held in Off-hand"
+            },
+            {
+              "name": "Raptor's Gaze",
+              "itemId": 271788,
+              "value": "+4 Intellect, +4 Stamina, +8 Spell Dmg & Healing - Shadetooth (Excavation Site)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
+              "icon": "inv_misc_gem_pearl_02",
+              "weaponType": "Held in Off-hand"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–45",
+          "itemId": 9393,
+          "name": "Beacon of Hope",
+          "icon": "inv_misc_lantern_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "Equip: Increases healing done by up to 14 and damage done by up to 8.",
+          "source": {
+            "kind": "drop",
+            "title": "Digmaster Shovelphlange / Uldaman",
+            "detail": "Rare dungeon treasure lantern. Focused healing output."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 38,
+          "reqLevel": 33,
+          "alts": []
+        },
+        {
+          "levelBracket": "46–54",
+          "itemId": 11262,
+          "name": "Orb of Lorica",
+          "icon": "inv_misc_gem_pearl_05",
+          "weaponType": "Held in Off-hand",
+          "stats": "+10 Intellect, Equip: Increases healing done by up to 12 and damage done by up to 6.",
+          "source": {
+            "kind": "drop",
+            "title": "High-level World Drop / Sunken Temple",
+            "detail": "Pure intellect and healing orb for late leveling."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 34,
+          "alts": []
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 19312,
+          "name": "Lei of the Lifegiver",
+          "icon": "inv_jewelry_necklace_16",
+          "weaponType": "Held in Off-hand",
+          "stats": "+11 Stamina, Equip: Increases healing done by up to 25 and damage done by up to 12. Equip: Restores 5 Mana per 5 sec.",
+          "source": {
+            "kind": "pvp",
+            "title": "Alterac Valley Exalted Reputation Vendor",
+            "detail": "The premier pre-raid healing off-hand in Classic. Incredible +25 Healing and 5 MP5."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Grand Marshal's Tome of Restoration",
+              "itemId": 234590,
+              "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Officer's Lounge",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 80,
+              "reqLevel": 60,
+              "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+              "icon": "inv_misc_book_09",
+              "weaponType": "Held in Off-hand"
+            },
+            {
+              "name": "High Warlord's Tome of Mending",
+              "itemId": 234564,
+              "value": "+29 Healing / +15 Spell Dmg - PvP Rank 14 Champion's Hall",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 80,
+              "reqLevel": 60,
+              "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
+              "icon": "inv_misc_book_09",
+              "weaponType": "Held in Off-hand"
             }
           ]
         }
       ]
     },
     "shaman": {
-      "role": "Caster",
+      "classId": "shaman",
+      "tracks": [
+        {
+          "id": "dps",
+          "name": "🛡️ Shields (Elemental & Tanking)"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healing Shields (Restoration & +Healing)"
+        }
+      ],
       "levels": [
         {
-          "levelBracket": "1–9",
-          "itemId": 287090,
-          "name": "Letter Opener",
-          "icon": "inv_weapon_shortblade_20",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "1–10",
+          "itemId": 1166,
+          "name": "Dented Buckler",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "55 Armor, Block 2",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Basic starter off-hand item for early stat-stick pairing."
+            "kind": "vendor",
+            "title": "Starting Armor Vendor",
+            "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
           },
           "faction": "both",
           "quality": "q1",
-          "iLvl": 17,
-          "reqLevel": 2,
-          "stats": "Starter Off-hand",
-          "alts": []
-        },
-        {
-          "levelBracket": "10–16",
-          "itemId": 279898,
-          "name": "Dwarven Tome",
-          "icon": "inv_misc_book_07",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Important Heirlooms quest reward in Loch Modan (Alliance). First true caster spell power off-hand."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 17,
-          "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "iLvl": 5,
+          "reqLevel": 1,
           "alts": [
             {
-              "name": "Tear of Grief",
-              "itemId": 5611,
-              "value": "+3 Stamina, +2 Intellect - Horde Quest",
-              "faction": "horde",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 11,
-              "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
-            },
-            {
-              "name": "Disciple's Stein",
-              "itemId": 15932,
-              "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+              "name": "Redbeard Crest",
+              "itemId": 263431,
+              "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
               "faction": "both",
-              "weaponType": "Weapon",
               "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_drink_03"
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "+2 Stamina",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "177 Armor",
+                "+1 Strength"
+              ]
             }
+          ],
+          "lines": [
+            "Off Hand",
+            "55 Armor"
           ]
         },
         {
-          "levelBracket": "17–20",
-          "itemId": 273137,
-          "name": "Skum's Bucket",
-          "icon": "inv_misc_1h_bucket_c_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "11–18",
+          "itemId": 13245,
+          "name": "Kresh's Back",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "stats": "528 Armor, Equip: Increased Defense +5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool booster for low-level dungeons."
+            "title": "Kresh (Wailing Caverns)",
+            "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "iLvl": 23,
+          "reqLevel": 18,
           "alts": [
             {
-              "name": "Expended Apothecary Vial",
-              "itemId": 281294,
-              "value": "+4 Intellect, +3 Stamina - Valuable Vantages quest",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 25,
-              "reqLevel": 19,
-              "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
-            },
-            {
-              "name": "Mathystra Channeling Orb",
-              "itemId": 281291,
-              "value": "+4 Intellect, +3 Spirit - Baron Marinous",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 17,
-              "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
-            },
-            {
-              "name": "Defective Samophlange",
-              "itemId": 274743,
-              "value": "+4 Stamina, +3 Intellect - Winklespark in Barrens",
+              "name": "Commander's Crest",
+              "itemId": 6320,
+              "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 25,
-              "reqLevel": 20,
-              "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
-            }
-          ]
-        },
-        {
-          "levelBracket": "21–25",
-          "itemId": 281306,
-          "name": "Flamescarred Spellbook",
-          "icon": "inv_misc_book_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Old Habits quest reward (Alliance). Excellent balanced mana recovery off-hand."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 31,
-          "reqLevel": 23,
-          "stats": "+5 Intellect, +5 Spirit",
-          "alts": [
-            {
-              "name": "Alliance Outrunner Healing Rod",
-              "itemId": 285348,
-              "value": "+6 Healing, +3 Stamina - Hannah Bladeleaf",
-              "faction": "alliance",
-              "weaponType": "Weapon",
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "+6 Stamina, +3 Strength",
+              "icon": "inv_shield_05",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "585 Armor",
+                "+5 Strength",
+                "+3 Stamina",
+                "Requires Level 21"
+              ]
             },
             {
-              "name": "Orb of Mystic Insight",
-              "itemId": 249394,
-              "value": "+7 Intellect, +5 Spirit - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
-            },
-            {
-              "name": "Orb of Souls",
-              "itemId": 249395,
-              "value": "+8 Shadow Spell Power, +6 Stamina - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "name": "Repurposed Rack",
+              "itemId": 271240,
+              "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+6 Strength",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "528 Armor",
+            "Requires Level 18",
+            "Equip: Increased Defense +5."
           ]
         },
         {
-          "levelBracket": "26–29",
-          "itemId": 273027,
-          "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "19–27",
+          "itemId": 6320,
+          "name": "Commander's Crest",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shadetooth in Excavation Site: Wetlands. Invaluable dungeon spell power off-hand."
+            "title": "Commander Springvale (Shadowfang Keep)",
+            "detail": "Iconic blue tower shield with hefty strength and stamina."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "iLvl": 26,
+          "reqLevel": 21,
           "alts": [
             {
-              "name": "Arcane Infused Rod",
-              "itemId": 279838,
-              "value": "+6 Intellect, +5 Stamina - Starving Arcane quest",
-              "faction": "alliance",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 36,
-              "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power",
+              "name": "Electromagnetic Hyper-Shield",
+              "itemId": 9461,
+              "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Arcane Resistance",
+                "+5 Nature Resistance",
+                "Requires Level 31"
+              ]
             },
             {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272090,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power - Creeg Bothunk",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
+              "name": "Mirror of Rath'mael",
+              "itemId": 271213,
+              "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
               "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "547 Armor",
+                "+5 Strength",
+                "Requires Level 19",
+                "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "585 Armor",
+            "+5 Strength",
+            "+3 Stamina",
+            "Requires Level 21"
+          ]
+        },
+        {
+          "levelBracket": "28–34",
+          "itemId": 273055,
+          "name": "Bonepile Gaze",
+          "icon": "inv_shield_11",
+          "weaponType": "Shield",
+          "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+          "source": {
+            "kind": "drop",
+            "title": "Lyn the Ignored (City of Dalaran)",
+            "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 28,
+          "alts": [
+            {
+              "name": "Heart of Agamaggan",
+              "itemId": 6694,
+              "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "757 Armor",
+                "+7 Stamina",
+                "Requires Level 30",
+                "Equip: Increases healing done by up to 15"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "718 Armor",
+            "+5 Strength",
+            "+5 Stamina",
+            "Requires Level 28"
+          ]
+        },
+        {
+          "levelBracket": "35–44",
+          "itemId": 7726,
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+          "source": {
+            "kind": "drop",
+            "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+            "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Battered Viking Shield",
+              "itemId": 9403,
+              "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "1287 Armor",
+                "+10 Spirit",
+                "Requires Level 37",
+                "Equip: Increases healing done by up to 13"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1548 Armor",
+            "+7 Strength",
+            "+8 Stamina",
+            "Requires Level 39",
+            "Equip: Deals 13 to 15 Holy damage every time you block."
+          ]
+        },
+        {
+          "levelBracket": "45–54",
+          "itemId": 11631,
+          "name": "Stoneshell Guard",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+          "source": {
+            "kind": "drop",
+            "title": "Stonevault mobs / Maraudon",
+            "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Aegis of Stormwind",
+              "itemId": 1203,
+              "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+10 Stamina",
+              "icon": "inv_shield_06",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when equipped",
+                "Off Hand",
+                "1867 Armor",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1803 Armor",
+            "+7 Strength",
+            "+9 Stamina",
+            "+100 Armor",
+            "Requires Level 47"
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 12602,
+          "name": "Draconian Deflector",
+          "icon": "inv_shield_13",
+          "weaponType": "Shield",
+          "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+          "source": {
+            "kind": "drop",
+            "title": "General Drakkisath (Upper Blackrock Spire)",
+            "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "alts": [
+            {
+              "name": "The Immovable Object",
+              "itemId": 19321,
+              "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 60,
+              "stats": "+14 Stamina, Equip: Increases block value by 15.",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2291 Armor",
+                "+14 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Aegis",
+              "itemId": 18825,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            },
+            {
+              "name": "High Warlord's Shield Wall",
+              "itemId": 18826,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "2153 Armor",
+            "+7 Stamina",
+            "+8 Fire Resistance",
+            "Requires Level 58",
+            "Equip: Increased Defense +10."
+          ]
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–15",
+          "itemId": 263431,
+          "name": "Redbeard Crest",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "177 Armor, Block 5, +2 Stamina",
+          "source": {
+            "kind": "vendor",
+            "title": "Early Quest / Vendor Shield",
+            "detail": "Early defensive shield to protect while casting heals."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 5,
+          "alts": []
+        },
+        {
+          "levelBracket": "16–23",
+          "itemId": 271213,
+          "name": "Mirror of Rath'mael",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "460 Armor, Block 12, +5 Stamina, +3 Intellect",
+          "source": {
+            "kind": "drop",
+            "title": "Rath'mael (Ruins of Lordaeron)",
+            "detail": "WoW Forever custom dungeon boss drop. Ideal Holy Paladin and Shaman caster shield."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 24,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Seedcloud Buckler",
+              "itemId": 6630,
+              "value": "547 Armor, Block 14, +5 Intellect, +5 Spells - Verdan the Everliving (WC)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 18,
+              "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
           ]
         },
         {
-          "levelBracket": "30–34",
-          "itemId": 273052,
-          "name": "Ponderous Orb",
-          "icon": "inv_misc_orb_04",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "24–32",
+          "itemId": 6694,
+          "name": "Heart of Agamaggan",
+          "icon": "inv_shield_07",
+          "weaponType": "Shield",
+          "stats": "757 Armor, Block 22, +7 Stamina, Equip: Increases healing done by up to 15 and damage by up to 5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shade of the Archmage in City of Dalaran. Premier caster off-hand throughout the 30s."
+            "title": "Charlga Razorflank (Razorfen Kraul)",
+            "detail": "Iconic RFK finale shield with dedicated +15 Healing."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
           "alts": [
             {
-              "name": "Salve and Salvation",
-              "itemId": 276898,
-              "value": "+9 Spirit, +50 Armor - Past Due quest",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
+              "name": "Forcestone Buckler",
+              "itemId": 17508,
+              "value": "1078 Armor, Block 25, +4 Sta, +18 Healing / +6 Spell Dmg - Compendium quest",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
+            },
+            {
+              "name": "Energized Stone Circle",
+              "itemId": 9522,
+              "value": "711 Armor, Block 21, +4 Sta, +40 Bonus Armor, +7 Healing / +3 Spell Dmg - Power Stones",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
-            },
-            {
-              "name": "Heart of Alterac",
-              "itemId": 283254,
-              "value": "+7 Stamina, +5 Intellect - Stone Fury in Alterac",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
           ]
         },
         {
-          "levelBracket": "35–39",
-          "itemId": 271805,
-          "name": "Thrice-Damned Effigy",
-          "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "33–44",
+          "itemId": 9403,
+          "name": "Battered Viking Shield",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1287 Armor, Block 27, +10 Spirit, Equip: Increases healing done by up to 8 and damage by up to 5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Khan Jehn in Maraudon (Horde). Elite caster off-hand for mid-level leveling."
+            "title": "Eric The Swift (Uldaman)",
+            "detail": "Rare dungeon drop in Uldaman with +10 Spirit and healing power."
           },
-          "faction": "horde",
+          "faction": "both",
           "quality": "q3",
           "iLvl": 42,
-          "reqLevel": 35,
-          "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
+          "reqLevel": 37,
           "alts": [
             {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271934,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+              "name": "Aegis of the Scarlet Commander",
+              "itemId": 7726,
+              "value": "1548 Armor, Block 29, +8 Str, +7 Sta - SM Cathedral",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Orb of the Forgotten Seer",
-              "itemId": 7685,
-              "value": "+12 Intellect, +5 Spirit - Scarlet Monastery Library",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 37,
-              "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "+8 Strength, +7 Stamina",
+              "icon": "inv_shield_06",
+              "weaponType": "Shield"
             }
           ]
         },
         {
-          "levelBracket": "40–44",
-          "itemId": 277260,
-          "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "45–54",
+          "itemId": 14852,
+          "name": "Sunscale Shield",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1663 Armor, Block 34, +8 Intellect, +8 Spirit",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Greater Friend of the Library quest reward. Heavy durability and spell power boost."
+            "title": "High-level World Drop / Dungeon Drop",
+            "detail": "Solid high-intellect and spirit healer shield before endgame."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 45,
-          "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
-          "alts": [
-            {
-              "name": "Fermented Restoration Potion",
-              "itemId": 277259,
-              "value": "+12 Stamina, +5 Spirit, +16 Healing",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
-            },
-            {
-              "name": "Spirit of Aquementas",
-              "itemId": 11904,
-              "value": "+20 Spell Power - Un'Goro Crater quest chain",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
-            }
-          ]
+          "quality": "q2",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "alts": []
         },
         {
-          "levelBracket": "45–52",
-          "itemId": 249455,
-          "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "55–60",
+          "itemId": 235473,
+          "name": "Grand Marshal's Barricade",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "stats": "3000 Armor, Block 55, +15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage done by up to 24.",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Crafted by Enchanters / Tradeskills. Reliable high spell power off-hand leading into late game."
+            "kind": "pvp",
+            "title": "PvP Rank 14 Officer's Lounge (Alliance)",
+            "detail": "Highest armor caster/healer shield in the game."
           },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 50,
-          "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
+          "faction": "alliance",
+          "quality": "q4",
+          "iLvl": 80,
+          "reqLevel": 60,
           "alts": [
             {
-              "name": "Twisting Essence Jar",
-              "itemId": 249456,
-              "value": "+8 Stamina, +8 Spirit, +18 Healing",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271933,
-              "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Heart of Smoldar",
-              "itemId": 282088,
-              "value": "+8 Stamina, +14 Fire Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
-            }
-          ]
-        },
-        {
-          "levelBracket": "53–60",
-          "itemId": 274417,
-          "name": "Barkskin Baubles",
-          "icon": "inv_misc_bag_10_black",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Dala Fairmaw. Outstanding survivability and caster throughput for level 53-60."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 58,
-          "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
-          "alts": [
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271932,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
+              "name": "High Warlord's Barricade",
+              "itemId": 235474,
+              "value": "3000 Armor, Block 55, +15 Sta, +15 Int, +20 Healing / +24 Spell Dmg - PvP Rank 14",
               "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "High Warlord's Tome of Destruction",
-              "itemId": 234563,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
               "quality": "q4",
               "iLvl": 80,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
+              "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield"
             },
             {
-              "name": "Grand Marshal's Tome of Power",
-              "itemId": 234589,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
+              "name": "Wormscale Blocker",
+              "itemId": 21610,
+              "value": "3035 Armor, Block 56, +14 Sta, +14 Int, +23 Healing / +12 Spell Dmg - AQ40 Ouro",
+              "faction": "both",
               "quality": "q4",
-              "iLvl": 80,
+              "iLvl": 81,
               "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
-            },
-            {
-              "name": "High Warlord's Tome of Mending",
-              "itemId": 234564,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "horde",
-              "weaponType": "Weapon",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
-            },
-            {
-              "name": "Grand Marshal's Tome of Restoration",
-              "itemId": 234590,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "alliance",
-              "weaponType": "Weapon",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
+              "icon": "inv_shield_11",
+              "weaponType": "Shield"
             }
           ]
         }
       ]
     },
     "paladin": {
-      "role": "Caster",
+      "classId": "paladin",
+      "tracks": [
+        {
+          "id": "dps",
+          "name": "🛡️ Tanking Shields (Protection & Leveling)"
+        },
+        {
+          "id": "healer",
+          "name": "💚 Healing Shields (Holy & +Healing Focus)"
+        }
+      ],
       "levels": [
         {
-          "levelBracket": "1–9",
-          "itemId": 287090,
-          "name": "Letter Opener",
-          "icon": "inv_weapon_shortblade_20",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "1–10",
+          "itemId": 1166,
+          "name": "Dented Buckler",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "55 Armor, Block 2",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Basic starter off-hand item for early stat-stick pairing."
+            "kind": "vendor",
+            "title": "Starting Armor Vendor",
+            "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
           },
           "faction": "both",
           "quality": "q1",
-          "iLvl": 17,
-          "reqLevel": 2,
-          "stats": "Starter Off-hand",
-          "alts": []
-        },
-        {
-          "levelBracket": "10–16",
-          "itemId": 279898,
-          "name": "Dwarven Tome",
-          "icon": "inv_misc_book_07",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Important Heirlooms quest reward in Loch Modan (Alliance). First true caster spell power off-hand."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 17,
-          "reqLevel": 10,
-          "stats": "+1 Spirit, +3 Spell Power & Healing",
+          "iLvl": 5,
+          "reqLevel": 1,
           "alts": [
             {
-              "name": "Tear of Grief",
-              "itemId": 5611,
-              "value": "+3 Stamina, +2 Intellect - Horde Quest",
-              "faction": "horde",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 11,
-              "stats": "+5 Intellect",
-              "icon": "inv_potion_17"
-            },
-            {
-              "name": "Disciple's Stein",
-              "itemId": 15932,
-              "value": "+2 Intellect, +1 Spirit - Level 7 Drop",
+              "name": "Redbeard Crest",
+              "itemId": 263431,
+              "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
               "faction": "both",
-              "weaponType": "Weapon",
               "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": "",
-              "icon": "inv_drink_03"
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "+2 Stamina",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "177 Armor",
+                "+1 Strength"
+              ]
             }
+          ],
+          "lines": [
+            "Off Hand",
+            "55 Armor"
           ]
         },
         {
-          "levelBracket": "17–20",
-          "itemId": 273137,
-          "name": "Skum's Bucket",
-          "icon": "inv_misc_1h_bucket_c_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "11–18",
+          "itemId": 13245,
+          "name": "Kresh's Back",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "stats": "528 Armor, Equip: Increased Defense +5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Skum in Wailing Caverns. Superb mana pool booster for low-level dungeons."
+            "title": "Kresh (Wailing Caverns)",
+            "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "stats": "+5 Intellect, +3 Stamina",
+          "iLvl": 23,
+          "reqLevel": 18,
           "alts": [
             {
-              "name": "Expended Apothecary Vial",
-              "itemId": 281294,
-              "value": "+4 Intellect, +3 Stamina - Valuable Vantages quest",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 25,
-              "reqLevel": 19,
-              "stats": "+3 Intellect, +3 Spirit",
-              "icon": "inv_potion_12"
-            },
-            {
-              "name": "Mathystra Channeling Orb",
-              "itemId": 281291,
-              "value": "+4 Intellect, +3 Spirit - Baron Marinous",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 21,
-              "reqLevel": 17,
-              "stats": "+3 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_01"
-            },
-            {
-              "name": "Defective Samophlange",
-              "itemId": 274743,
-              "value": "+4 Stamina, +3 Intellect - Winklespark in Barrens",
+              "name": "Commander's Crest",
+              "itemId": 6320,
+              "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 25,
-              "reqLevel": 20,
-              "stats": "+5 Intellect, +5 Spirit",
-              "icon": "inv_gizmo_06"
-            }
-          ]
-        },
-        {
-          "levelBracket": "21–25",
-          "itemId": 281306,
-          "name": "Flamescarred Spellbook",
-          "icon": "inv_misc_book_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Old Habits quest reward (Alliance). Excellent balanced mana recovery off-hand."
-          },
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 31,
-          "reqLevel": 23,
-          "stats": "+5 Intellect, +5 Spirit",
-          "alts": [
-            {
-              "name": "Alliance Outrunner Healing Rod",
-              "itemId": 285348,
-              "value": "+6 Healing, +3 Stamina - Hannah Bladeleaf",
-              "faction": "alliance",
-              "weaponType": "Weapon",
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+8 Healing, +4 Spell Power",
-              "icon": "inv_wand_04"
+              "stats": "+6 Stamina, +3 Strength",
+              "icon": "inv_shield_05",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "585 Armor",
+                "+5 Strength",
+                "+3 Stamina",
+                "Requires Level 21"
+              ]
             },
             {
-              "name": "Orb of Mystic Insight",
-              "itemId": 249394,
-              "value": "+7 Intellect, +5 Spirit - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Intellect",
-              "icon": "inv_misc_orb_blue"
-            },
-            {
-              "name": "Orb of Souls",
-              "itemId": 249395,
-              "value": "+8 Shadow Spell Power, +6 Stamina - Crafted / Enchanting",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 30,
-              "reqLevel": 25,
-              "stats": "+6 Spirit",
-              "icon": "inv_misc_orb_04"
+              "name": "Repurposed Rack",
+              "itemId": 271240,
+              "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+6 Strength",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "528 Armor",
+            "Requires Level 18",
+            "Equip: Increased Defense +5."
           ]
         },
         {
-          "levelBracket": "26–29",
-          "itemId": 273027,
-          "name": "Raptor's Gaze",
-          "icon": "spell_nature_crystalball",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "19–27",
+          "itemId": 6320,
+          "name": "Commander's Crest",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shadetooth in Excavation Site: Wetlands. Invaluable dungeon spell power off-hand."
+            "title": "Commander Springvale (Shadowfang Keep)",
+            "detail": "Iconic blue tower shield with hefty strength and stamina."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "+4 Stamina, +4 Intellect, +8 Spell Power",
+          "iLvl": 26,
+          "reqLevel": 21,
           "alts": [
             {
-              "name": "Arcane Infused Rod",
-              "itemId": 279838,
-              "value": "+6 Intellect, +5 Stamina - Starving Arcane quest",
-              "faction": "alliance",
-              "weaponType": "Weapon",
-              "quality": "q2",
-              "iLvl": 36,
-              "reqLevel": 24,
-              "stats": "",
-              "icon": "inv_wand_04"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271935,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power",
+              "name": "Electromagnetic Hyper-Shield",
+              "itemId": 9461,
+              "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Arcane Resistance",
+                "+5 Nature Resistance",
+                "Requires Level 31"
+              ]
             },
             {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272090,
-              "value": "+8 Stamina, +4 Intellect, +8 Spell Power - Creeg Bothunk",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
+              "name": "Mirror of Rath'mael",
+              "itemId": 271213,
+              "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
               "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "+8 Stamina, +4 Intellect",
-              "icon": "inv_misc_book_06"
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "547 Armor",
+                "+5 Strength",
+                "Requires Level 19",
+                "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "585 Armor",
+            "+5 Strength",
+            "+3 Stamina",
+            "Requires Level 21"
+          ]
+        },
+        {
+          "levelBracket": "28–34",
+          "itemId": 273055,
+          "name": "Bonepile Gaze",
+          "icon": "inv_shield_11",
+          "weaponType": "Shield",
+          "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+          "source": {
+            "kind": "drop",
+            "title": "Lyn the Ignored (City of Dalaran)",
+            "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 28,
+          "alts": [
+            {
+              "name": "Heart of Agamaggan",
+              "itemId": 6694,
+              "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "757 Armor",
+                "+7 Stamina",
+                "Requires Level 30",
+                "Equip: Increases healing done by up to 15"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "718 Armor",
+            "+5 Strength",
+            "+5 Stamina",
+            "Requires Level 28"
+          ]
+        },
+        {
+          "levelBracket": "35–44",
+          "itemId": 7726,
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+          "source": {
+            "kind": "drop",
+            "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+            "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Battered Viking Shield",
+              "itemId": 9403,
+              "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "1287 Armor",
+                "+10 Spirit",
+                "Requires Level 37",
+                "Equip: Increases healing done by up to 13"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1548 Armor",
+            "+7 Strength",
+            "+8 Stamina",
+            "Requires Level 39",
+            "Equip: Deals 13 to 15 Holy damage every time you block."
+          ]
+        },
+        {
+          "levelBracket": "45–54",
+          "itemId": 11631,
+          "name": "Stoneshell Guard",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+          "source": {
+            "kind": "drop",
+            "title": "Stonevault mobs / Maraudon",
+            "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Aegis of Stormwind",
+              "itemId": 1203,
+              "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+10 Stamina",
+              "icon": "inv_shield_06",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when equipped",
+                "Off Hand",
+                "1867 Armor",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1803 Armor",
+            "+7 Strength",
+            "+9 Stamina",
+            "+100 Armor",
+            "Requires Level 47"
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 12602,
+          "name": "Draconian Deflector",
+          "icon": "inv_shield_13",
+          "weaponType": "Shield",
+          "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+          "source": {
+            "kind": "drop",
+            "title": "General Drakkisath (Upper Blackrock Spire)",
+            "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "alts": [
+            {
+              "name": "The Immovable Object",
+              "itemId": 19321,
+              "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 60,
+              "stats": "+14 Stamina, Equip: Increases block value by 15.",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2291 Armor",
+                "+14 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Aegis",
+              "itemId": 18825,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            },
+            {
+              "name": "High Warlord's Shield Wall",
+              "itemId": 18826,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "2153 Armor",
+            "+7 Stamina",
+            "+8 Fire Resistance",
+            "Requires Level 58",
+            "Equip: Increased Defense +10."
+          ]
+        }
+      ],
+      "healingLevels": [
+        {
+          "levelBracket": "1–15",
+          "itemId": 263431,
+          "name": "Redbeard Crest",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "177 Armor, Block 5, +2 Stamina",
+          "source": {
+            "kind": "vendor",
+            "title": "Early Quest / Vendor Shield",
+            "detail": "Early defensive shield to protect while casting heals."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 5,
+          "alts": []
+        },
+        {
+          "levelBracket": "16–23",
+          "itemId": 271213,
+          "name": "Mirror of Rath'mael",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "460 Armor, Block 12, +5 Stamina, +3 Intellect",
+          "source": {
+            "kind": "drop",
+            "title": "Rath'mael (Ruins of Lordaeron)",
+            "detail": "WoW Forever custom dungeon boss drop. Ideal Holy Paladin and Shaman caster shield."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 24,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Seedcloud Buckler",
+              "itemId": 6630,
+              "value": "547 Armor, Block 14, +5 Intellect, +5 Spells - Verdan the Everliving (WC)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 18,
+              "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
           ]
         },
         {
-          "levelBracket": "30–34",
-          "itemId": 273052,
-          "name": "Ponderous Orb",
-          "icon": "inv_misc_orb_04",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "24–32",
+          "itemId": 6694,
+          "name": "Heart of Agamaggan",
+          "icon": "inv_shield_07",
+          "weaponType": "Shield",
+          "stats": "757 Armor, Block 22, +7 Stamina, Equip: Increases healing done by up to 15 and damage by up to 5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Shade of the Archmage in City of Dalaran. Premier caster off-hand throughout the 30s."
+            "title": "Charlga Razorflank (Razorfen Kraul)",
+            "detail": "Iconic RFK finale shield with dedicated +15 Healing."
           },
           "faction": "both",
           "quality": "q3",
           "iLvl": 35,
           "reqLevel": 30,
-          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
           "alts": [
             {
-              "name": "Salve and Salvation",
-              "itemId": 276898,
-              "value": "+9 Spirit, +50 Armor - Past Due quest",
-              "faction": "alliance",
-              "weaponType": "Held in Off-hand",
+              "name": "Forcestone Buckler",
+              "itemId": 17508,
+              "value": "1078 Armor, Block 25, +4 Sta, +18 Healing / +6 Spell Dmg - Compendium quest",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
+            },
+            {
+              "name": "Energized Stone Circle",
+              "itemId": 9522,
+              "value": "711 Armor, Block 21, +4 Sta, +40 Bonus Armor, +7 Healing / +3 Spell Dmg - Power Stones",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 38,
               "reqLevel": 30,
-              "stats": "+9 Spirit, +50 Armor",
-              "icon": "inv_misc_book_01"
-            },
-            {
-              "name": "Heart of Alterac",
-              "itemId": 283254,
-              "value": "+7 Stamina, +5 Intellect - Stone Fury in Alterac",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q2",
-              "iLvl": 39,
-              "reqLevel": 34,
-              "stats": "+7 Stamina, +5 Intellect",
-              "icon": "inv_misc_orb_05"
+              "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
           ]
         },
         {
-          "levelBracket": "35–39",
-          "itemId": 271805,
-          "name": "Thrice-Damned Effigy",
-          "icon": "inv_misc_orb_01",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "33–44",
+          "itemId": 9403,
+          "name": "Battered Viking Shield",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1287 Armor, Block 27, +10 Spirit, Equip: Increases healing done by up to 8 and damage by up to 5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Khan Jehn in Maraudon (Horde). Elite caster off-hand for mid-level leveling."
+            "title": "Eric The Swift (Uldaman)",
+            "detail": "Rare dungeon drop in Uldaman with +10 Spirit and healing power."
           },
-          "faction": "horde",
+          "faction": "both",
           "quality": "q3",
           "iLvl": 42,
-          "reqLevel": 35,
-          "stats": "+4 Intellect, +7 Spirit, +2 Stamina, +10 Spell Power",
+          "reqLevel": 37,
           "alts": [
             {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271934,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+              "name": "Aegis of the Scarlet Commander",
+              "itemId": 7726,
+              "value": "1548 Armor, Block 29, +8 Str, +7 Sta - SM Cathedral",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
-            },
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "+8 Strength, +7 Stamina",
+              "icon": "inv_shield_06",
+              "weaponType": "Shield"
+            }
+          ]
+        },
+        {
+          "levelBracket": "45–54",
+          "itemId": 14852,
+          "name": "Sunscale Shield",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1663 Armor, Block 34, +8 Intellect, +8 Spirit",
+          "source": {
+            "kind": "drop",
+            "title": "High-level World Drop / Dungeon Drop",
+            "detail": "Solid high-intellect and spirit healer shield before endgame."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "alts": []
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 235473,
+          "name": "Grand Marshal's Barricade",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "stats": "3000 Armor, Block 55, +15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage done by up to 24.",
+          "source": {
+            "kind": "pvp",
+            "title": "PvP Rank 14 Officer's Lounge (Alliance)",
+            "detail": "Highest armor caster/healer shield in the game."
+          },
+          "faction": "alliance",
+          "quality": "q4",
+          "iLvl": 80,
+          "reqLevel": 60,
+          "alts": [
             {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272089,
-              "value": "+12 Stamina, +5 Intellect, +12 Spell Power",
+              "name": "High Warlord's Barricade",
+              "itemId": 235474,
+              "value": "3000 Armor, Block 55, +15 Sta, +15 Int, +20 Healing / +24 Spell Dmg - PvP Rank 14",
               "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 43,
-              "reqLevel": 38,
-              "stats": "+12 Stamina, +5 Intellect",
-              "icon": "inv_misc_book_06"
+              "quality": "q4",
+              "iLvl": 80,
+              "reqLevel": 60,
+              "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield"
             },
             {
-              "name": "Orb of the Forgotten Seer",
-              "itemId": 7685,
-              "value": "+12 Intellect, +5 Spirit - Scarlet Monastery Library",
+              "name": "Wormscale Blocker",
+              "itemId": 21610,
+              "value": "3035 Armor, Block 56, +14 Sta, +14 Int, +23 Healing / +12 Spell Dmg - AQ40 Ouro",
               "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 37,
-              "reqLevel": 32,
-              "stats": "+14 Spell Power",
-              "icon": "inv_misc_orb_02"
+              "quality": "q4",
+              "iLvl": 81,
+              "reqLevel": 60,
+              "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
+              "icon": "inv_shield_11",
+              "weaponType": "Shield"
             }
           ]
-        },
+        }
+      ]
+    },
+    "warrior": {
+      "classId": "warrior",
+      "tracks": [
         {
-          "levelBracket": "40–44",
-          "itemId": 277260,
-          "name": "Researcher's Night Light",
-          "icon": "inv_torch_lit",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "id": "primary",
+          "name": "🛡️ Shield Progression (Protection & Tanking)"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–10",
+          "itemId": 1166,
+          "name": "Dented Buckler",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "55 Armor, Block 2",
           "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Greater Friend of the Library quest reward. Heavy durability and spell power boost."
+            "kind": "vendor",
+            "title": "Starting Armor Vendor",
+            "detail": "Purchased in starting zones (Northshire, Coldridge, Camp Narache, Sen'jin)."
           },
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 45,
-          "reqLevel": 40,
-          "stats": "+12 Stamina, +12 Spell Power",
+          "quality": "q1",
+          "iLvl": 5,
+          "reqLevel": 1,
           "alts": [
             {
-              "name": "Fermented Restoration Potion",
-              "itemId": 277259,
-              "value": "+12 Stamina, +5 Spirit, +16 Healing",
+              "name": "Redbeard Crest",
+              "itemId": 263431,
+              "value": "177 Armor, Block 5, +2 Sta - Early quest shield",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 45,
-              "reqLevel": 40,
-              "stats": "+12 Stamina, +5 Spirit",
-              "icon": "inv_potion_19"
-            },
-            {
-              "name": "Spirit of Aquementas",
-              "itemId": 11904,
-              "value": "+20 Spell Power - Un'Goro Crater quest chain",
-              "faction": "both",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": 47,
-              "stats": "+21 Spell Power",
-              "icon": "inv_ore_arcanite_02"
-            }
-          ]
-        },
-        {
-          "levelBracket": "45–52",
-          "itemId": 249455,
-          "name": "Truesilver Conduit",
-          "icon": "inv_rod_enchantedadamantite",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
-          "source": {
-            "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Crafted by Enchanters / Tradeskills. Reliable high spell power off-hand leading into late game."
-          },
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 50,
-          "reqLevel": 45,
-          "stats": "+8 Stamina, +8 Intellect, +14 Spell Power",
-          "alts": [
-            {
-              "name": "Twisting Essence Jar",
-              "itemId": 249456,
-              "value": "+8 Stamina, +8 Spirit, +18 Healing",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 50,
-              "reqLevel": 45,
-              "stats": "+8 Stamina, +8 Spirit",
-              "icon": "inv_10_misc_dragonorb_color1"
-            },
-            {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271933,
-              "value": "+14 Stamina, +6 Intellect, +14 Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 53,
-              "reqLevel": 48,
-              "stats": "+14 Stamina, +6 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "Heart of Smoldar",
-              "itemId": 282088,
-              "value": "+8 Stamina, +14 Fire Spell Power",
-              "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q2",
-              "iLvl": 52,
-              "reqLevel": 47,
-              "stats": "+8 Stamina",
-              "icon": "inv_misc_orb_05"
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "+2 Stamina",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "177 Armor",
+                "+1 Strength"
+              ]
             }
+          ],
+          "lines": [
+            "Off Hand",
+            "55 Armor"
           ]
         },
         {
-          "levelBracket": "53–60",
-          "itemId": 274417,
-          "name": "Barkskin Baubles",
-          "icon": "inv_misc_bag_10_black",
-          "weaponType": "Held In Off-hand",
-          "speed": "2.80",
-          "dps": "",
+          "levelBracket": "11–18",
+          "itemId": 13245,
+          "name": "Kresh's Back",
+          "icon": "inv_shield_08",
+          "weaponType": "Shield",
+          "stats": "528 Armor, Equip: Increased Defense +5.",
           "source": {
             "kind": "drop",
-            "title": "World Drop / Quest",
-            "detail": "Dropped by Dala Fairmaw. Outstanding survivability and caster throughput for level 53-60."
+            "title": "Kresh (Wailing Caverns)",
+            "detail": "Drops from giant snapping turtle Kresh in Wailing Caverns. Excellent armor spike."
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 58,
-          "reqLevel": 53,
-          "stats": "+10 Stamina, +10 Spirit, +18 Healing / Spell Power",
+          "iLvl": 23,
+          "reqLevel": 18,
           "alts": [
             {
-              "name": "Insurgent's Manifesto",
-              "itemId": 271932,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
+              "name": "Commander's Crest",
+              "itemId": 6320,
+              "value": "585 Armor, Block 16, +6 Sta, +3 Str - Commander Springvale (Shadowfang Keep)",
               "faction": "both",
-              "weaponType": "Held in Off-hand",
               "quality": "q3",
-              "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+6 Stamina, +3 Strength",
+              "icon": "inv_shield_05",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "585 Armor",
+                "+5 Strength",
+                "+3 Stamina",
+                "Requires Level 21"
+              ]
             },
             {
-              "name": "Tome of the Darkspear Prophecy",
-              "itemId": 272087,
-              "value": "+17 Stamina, +7 Intellect, +16 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q3",
-              "iLvl": 63,
-              "reqLevel": 58,
-              "stats": "+17 Stamina, +7 Intellect",
-              "icon": "inv_misc_book_06"
-            },
-            {
-              "name": "High Warlord's Tome of Destruction",
-              "itemId": 234563,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
-              "faction": "horde",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_15"
-            },
-            {
-              "name": "Grand Marshal's Tome of Power",
-              "itemId": 234589,
-              "value": "+24 Stamina, +13 Intellect, +23 Spell Power",
+              "name": "Repurposed Rack",
+              "itemId": 271240,
+              "value": "490 Armor, +6 Strength, +7 Spell Power - Hamhock (The Stockade)",
               "faction": "alliance",
-              "weaponType": "Held in Off-hand",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+24 Stamina, +13 Intellect",
-              "icon": "inv_misc_book_12"
-            },
-            {
-              "name": "High Warlord's Tome of Mending",
-              "itemId": 234564,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "horde",
-              "weaponType": "Weapon",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_14"
-            },
-            {
-              "name": "Grand Marshal's Tome of Restoration",
-              "itemId": 234590,
-              "value": "+23 Stamina, +14 Intellect, +35 Healing",
-              "faction": "alliance",
-              "weaponType": "Weapon",
-              "quality": "q4",
-              "iLvl": 80,
-              "reqLevel": 60,
-              "stats": "+23 Stamina, +14 Intellect, +29 Healing, +15 Spell Power",
-              "icon": "inv_misc_book_13"
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+6 Strength",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield"
             }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "528 Armor",
+            "Requires Level 18",
+            "Equip: Increased Defense +5."
+          ]
+        },
+        {
+          "levelBracket": "19–27",
+          "itemId": 6320,
+          "name": "Commander's Crest",
+          "icon": "inv_shield_05",
+          "weaponType": "Shield",
+          "stats": "585 Armor, Block 16, +6 Stamina, +3 Strength",
+          "source": {
+            "kind": "drop",
+            "title": "Commander Springvale (Shadowfang Keep)",
+            "detail": "Iconic blue tower shield with hefty strength and stamina."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "alts": [
+            {
+              "name": "Electromagnetic Hyper-Shield",
+              "itemId": 9461,
+              "value": "820 Armor, Block 21, +5 Sta, 5% on block shocks attackers - Thermaplugg (Gnomeregan)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "+5 Stamina, Equip: 5% chance on block to shock attacker for 35 Nature damage.",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Arcane Resistance",
+                "+5 Nature Resistance",
+                "Requires Level 31"
+              ]
+            },
+            {
+              "name": "Mirror of Rath'mael",
+              "itemId": 271213,
+              "value": "460 Armor, Block 12, +5 Sta, +3 Int - Rath'mael (Ruins of Lordaeron)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "547 Armor, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "547 Armor",
+                "+5 Strength",
+                "Requires Level 19",
+                "Equip: Increases your chance to Block attacks with a shield by 1.0%."
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "585 Armor",
+            "+5 Strength",
+            "+3 Stamina",
+            "Requires Level 21"
+          ]
+        },
+        {
+          "levelBracket": "28–34",
+          "itemId": 273055,
+          "name": "Bonepile Gaze",
+          "icon": "inv_shield_11",
+          "weaponType": "Shield",
+          "stats": "718 Armor, Block 24, +6 Stamina, +4 Strength",
+          "source": {
+            "kind": "drop",
+            "title": "Lyn the Ignored (City of Dalaran)",
+            "detail": "WoW Forever custom dungeon drop beneath Dalaran sewers. Prime tanking block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 28,
+          "alts": [
+            {
+              "name": "Heart of Agamaggan",
+              "itemId": 6694,
+              "value": "757 Armor, Block 22, +7 Sta, +15 Healing / +5 Spell Dmg - Charlga Razorflank (RFK)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "757 Armor, +7 Stamina, Equip: Increases healing done by up to 15",
+              "icon": "inv_shield_07",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "757 Armor",
+                "+7 Stamina",
+                "Requires Level 30",
+                "Equip: Increases healing done by up to 15"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "718 Armor",
+            "+5 Strength",
+            "+5 Stamina",
+            "Requires Level 28"
+          ]
+        },
+        {
+          "levelBracket": "35–44",
+          "itemId": 7726,
+          "name": "Aegis of the Scarlet Commander",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "1548 Armor, +7 Strength, +8 Stamina, Equip: Deals 13 to 15 Holy damage every time you block.",
+          "source": {
+            "kind": "drop",
+            "title": "Scarlet Commander Mograine (Scarlet Monastery Cathedral)",
+            "detail": "The gold-standard mid-game tanking shield in Classic WoW. Incredible 1548 Armor."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "alts": [
+            {
+              "name": "Battered Viking Shield",
+              "itemId": 9403,
+              "value": "1287 Armor, Block 27, +10 Spirit, +8 Healing / +5 Spell Dmg - Eric The Swift (Uldaman)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+              "icon": "inv_shield_04",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "1287 Armor",
+                "+10 Spirit",
+                "Requires Level 37",
+                "Equip: Increases healing done by up to 13"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1548 Armor",
+            "+7 Strength",
+            "+8 Stamina",
+            "Requires Level 39",
+            "Equip: Deals 13 to 15 Holy damage every time you block."
+          ]
+        },
+        {
+          "levelBracket": "45–54",
+          "itemId": 11631,
+          "name": "Stoneshell Guard",
+          "icon": "inv_shield_04",
+          "weaponType": "Shield",
+          "stats": "1803 Armor, Block 35, +7 Strength, +6 Stamina",
+          "source": {
+            "kind": "drop",
+            "title": "Stonevault mobs / Maraudon",
+            "detail": "Substantial 1800+ Armor bulwark with defense block rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Aegis of Stormwind",
+              "itemId": 1203,
+              "value": "1867 Armor, Block 36, +10 Stamina - World drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+10 Stamina",
+              "icon": "inv_shield_06",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when equipped",
+                "Off Hand",
+                "1867 Armor",
+                "+6 Strength",
+                "+15 Stamina",
+                "Requires Level 49"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "1803 Armor",
+            "+7 Strength",
+            "+9 Stamina",
+            "+100 Armor",
+            "Requires Level 47"
+          ]
+        },
+        {
+          "levelBracket": "55–60",
+          "itemId": 12602,
+          "name": "Draconian Deflector",
+          "icon": "inv_shield_13",
+          "weaponType": "Shield",
+          "stats": "2153 Armor, +7 Stamina, +8 Fire Resistance, Equip: Increased Defense +10.",
+          "source": {
+            "kind": "drop",
+            "title": "General Drakkisath (Upper Blackrock Spire)",
+            "detail": "The premier pre-raid tanking shield. 2153 Armor and +10 Defense Rating."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "alts": [
+            {
+              "name": "The Immovable Object",
+              "itemId": 19321,
+              "value": "2291 Armor, Block 44, +14 Stamina, +15 Block - Alterac Valley Exalted",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 60,
+              "stats": "+14 Stamina, Equip: Increases block value by 15.",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2291 Armor",
+                "+14 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Aegis",
+              "itemId": 18825,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            },
+            {
+              "name": "High Warlord's Shield Wall",
+              "itemId": 18826,
+              "value": "2929 Armor, Block 54, +20 Stamina - PvP Rank 14",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "2929 Armor, +10 Strength, +23 Stamina, Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)",
+              "icon": "inv_shield_08",
+              "weaponType": "Shield",
+              "lines": [
+                "Binds when picked up",
+                "Off Hand",
+                "2929 Armor",
+                "+10 Strength",
+                "+23 Stamina",
+                "Requires Level 60",
+                "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
+              ]
+            }
+          ],
+          "lines": [
+            "Binds when picked up",
+            "Off Hand",
+            "2153 Armor",
+            "+7 Stamina",
+            "+8 Fire Resistance",
+            "Requires Level 58",
+            "Equip: Increased Defense +10."
           ]
         }
       ]

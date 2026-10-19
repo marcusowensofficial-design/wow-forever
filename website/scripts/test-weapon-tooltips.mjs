@@ -73,6 +73,7 @@ if (!mod || typeof mod.renderProgressionSubtab !== 'function') {
 
 // 4. Test Mage weapons HTML
 const mageHtml = mod.renderProgressionSubtab('weapons', { id: 'mage', name: 'MAGE' });
+const mageWandsHtml = mod.renderProgressionSubtab('wands', { id: 'mage', name: 'MAGE' });
 
 if (!mageHtml.includes('data-weapon-target="true"')) {
   throw new Error('Missing data-weapon-target attribute in weapon HTML');
@@ -80,13 +81,13 @@ if (!mageHtml.includes('data-weapon-target="true"')) {
 if (!mageHtml.includes('data-wowhead="domain=forever&item=273040"')) {
   throw new Error('Missing data-wowhead attribute for Spine of the Devourer (273040)');
 }
-if (!mageHtml.includes('data-wowhead="domain=forever&item=273043"')) {
-  throw new Error('Missing data-wowhead attribute for Wand of Mana Concentration (273043)');
+if (!mageWandsHtml.includes('data-wowhead="domain=forever&item=273043"')) {
+  throw new Error('Missing data-wowhead attribute for Wand of Mana Concentration (273043) in wands tab');
 }
-if (!mageHtml.includes('data-wowhead="domain=forever&item=273053"')) {
-  throw new Error('Missing data-wowhead attribute for Tendonscraper Dagger (273053)');
+if (!mageHtml.includes('data-wowhead="domain=forever&item=276631"')) {
+  throw new Error('Missing data-wowhead attribute for Coldflame Saber (276631)');
 }
-console.log('✓ Mage weapon card HTML renders valid data-weapon-target and data-wowhead links for Spine and alts');
+console.log('✓ Mage weapon card HTML renders valid data-weapon-target and data-wowhead links for Spine, Coldflame, and Wand');
 
 // 5. Test all 9 classes have weapon progression with data-weapon-target
 const classes = ['warrior', 'paladin', 'hunter', 'rogue', 'priest', 'shaman', 'mage', 'warlock', 'druid'];
@@ -246,7 +247,79 @@ if (westfallHtml.includes('><div class="wow-tip-stat" style="color: #fff;">Westf
 }
 console.log('✓ Staff of Westfall equip sentence with internal commas remains intact without fragmenting');
 
-// 11. Test tooltip dismissal on subtab switch and hideWeaponTooltip
+// 11. Test Coldflame Saber authentic stats and procs
+const cfsTarget = {
+  getAttribute: (attr) => {
+    const map = {
+      'data-item-name': 'Coldflame Saber',
+      'data-item-id': '276631',
+      'data-quality': 'q3',
+      'data-weapon-type': 'Main Hand Sword',
+      'data-faction': 'both'
+    };
+    return map[attr] || '';
+  }
+};
+currentTestTarget = cfsTarget;
+mouseEnterHandler({ clientX: 100, clientY: 100 });
+const cfsHtml = mockElement.innerHTML;
+if (!cfsHtml.includes('Coldflame Saber')) throw new Error('Coldflame Saber tooltip missing name');
+if (!cfsHtml.includes('+7 Intellect')) throw new Error('Coldflame Saber missing +7 Intellect');
+if (!cfsHtml.includes('Increases damage and healing done by magical spells and effects by up to 32')) {
+  throw new Error('Coldflame Saber missing 32 spell damage equip line');
+}
+if (!cfsHtml.includes('Melee attacks deal 98 additional Fire damage against Frozen targets')) {
+  throw new Error('Coldflame Saber missing 98 Fire damage frozen target proc');
+}
+if (cfsHtml.includes('Tinkerer Gizlock') || cfsHtml.includes('22.5 damage per second')) {
+  throw new Error('Coldflame Saber erroneously contains Tinkerer Gizlock stats');
+}
+console.log('✓ Coldflame Saber tooltip correctly renders authentic Mage class quest stats and 98 Fire proc');
+
+// 12. Test Debt Collector authentic equip stats and Alliance exclusivity
+const dcTarget = {
+  getAttribute: (attr) => {
+    const map = {
+      'data-item-name': 'Debt Collector',
+      'data-item-id': '273827',
+      'data-quality': 'q3',
+      'data-weapon-type': 'One-handed sword',
+      'data-faction': 'alliance'
+    };
+    return map[attr] || '';
+  }
+};
+currentTestTarget = dcTarget;
+mouseEnterHandler({ clientX: 100, clientY: 100 });
+const dcHtml = mockElement.innerHTML;
+if (!dcHtml.includes('Debt Collector')) throw new Error('Debt Collector tooltip missing name');
+if (!dcHtml.includes('Increases damage and healing done by magical spells and effects by up to 34')) {
+  throw new Error('Debt Collector missing 34 spell power equip line');
+}
+if (!dcHtml.includes('Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted')) {
+  throw new Error('Debt Collector missing spell resist health/mana regen equip line');
+}
+if (dcHtml.includes('Attack Power')) {
+  throw new Error('Debt Collector erroneously contains Attack Power in tooltip');
+}
+if (!dcHtml.includes('Alliance Exclusive')) {
+  throw new Error('Debt Collector missing Alliance Exclusive indicator in tooltip');
+}
+console.log('✓ Debt Collector tooltip correctly renders dual equip procs, spell power, and Alliance Exclusive tag');
+
+// 13. Test Staff of Orgrimmar promotion for Horde
+mod.setWeaponFaction('horde');
+const hordeMageHtml = mod.renderProgressionSubtab('weapons', { id: 'mage', name: 'MAGE' });
+if (!hordeMageHtml.includes('Staff of Orgrimmar')) {
+  throw new Error('Staff of Orgrimmar missing from Horde Mage progression');
+}
+const shamanProgHtml = mod.renderProgressionSubtab('weapons', { id: 'shaman', name: 'SHAMAN' });
+if (!shamanProgHtml.includes('Staff of Orgrimmar')) {
+  throw new Error('Staff of Orgrimmar missing from Shaman progression');
+}
+console.log('✓ Staff of Orgrimmar correctly promoted as BiS for Horde casters and Shaman in brackets 13-18');
+
+// 14. Test tooltip dismissal on subtab switch and hideWeaponTooltip
 mod.hideWeaponTooltip();
 if (!tooltipHidden) {
   throw new Error('hideWeaponTooltip failed to set hidden attribute on tooltip');

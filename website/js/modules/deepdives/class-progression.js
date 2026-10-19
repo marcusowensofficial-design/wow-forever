@@ -138,7 +138,45 @@
     if (!weaponLookupCache) {
       weaponLookupCache = { byId: new Map(), byName: new Map() };
 
-      // 1. Populate from WOW_BIS_DATA
+      const registerItem = (it) => {
+        if (!it) return;
+        if (it.itemId) {
+          const ex = weaponLookupCache.byId.get(String(it.itemId));
+          if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+            weaponLookupCache.byId.set(String(it.itemId), it);
+          }
+        }
+        if (it.name) {
+          const k = it.name.toLowerCase().trim();
+          const ex = weaponLookupCache.byName.get(k);
+          if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+            weaponLookupCache.byName.set(k, it);
+          }
+        }
+      };
+
+      // 1. Prioritize WOW_PROGRESSION_DATA (curated leveling items with full lines and custom stats)
+      if (window.WOW_PROGRESSION_DATA) {
+        const collections = [
+          window.WOW_PROGRESSION_DATA.weapons,
+          window.WOW_PROGRESSION_DATA.wands,
+          window.WOW_PROGRESSION_DATA.offhands
+        ];
+        for (const coll of collections) {
+          if (!coll) continue;
+          for (const cKey of Object.keys(coll)) {
+            const cData = coll[cKey];
+            for (const step of cData.levels || []) {
+              registerItem(step);
+              for (const alt of step.alts || []) {
+                registerItem(alt);
+              }
+            }
+          }
+        }
+      }
+
+      // 2. Supplement remaining items from WOW_BIS_DATA
       if (window.WOW_BIS_DATA) {
         const classes = window.WOW_BIS_DATA.classes || [];
         for (const cls of classes) {
@@ -147,56 +185,7 @@
           for (const sp of cd.specs || []) {
             for (const sl of sp.slots || []) {
               for (const it of sl.items || []) {
-                if (it.itemId) {
-                  const ex = weaponLookupCache.byId.get(String(it.itemId));
-                  if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
-                    weaponLookupCache.byId.set(String(it.itemId), it);
-                  }
-                }
-                if (it.name) {
-                  const k = it.name.toLowerCase().trim();
-                  const ex = weaponLookupCache.byName.get(k);
-                  if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
-                    weaponLookupCache.byName.set(k, it);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      // 2. Populate from WOW_PROGRESSION_DATA.weapons
-      if (window.WOW_PROGRESSION_DATA?.weapons) {
-        for (const cKey of Object.keys(window.WOW_PROGRESSION_DATA.weapons)) {
-          const cData = window.WOW_PROGRESSION_DATA.weapons[cKey];
-          for (const step of cData.levels || []) {
-            if (step.itemId) {
-              const ex = weaponLookupCache.byId.get(String(step.itemId));
-              if (!ex || (!ex.lines && step.lines) || (!ex.stats && step.stats)) {
-                weaponLookupCache.byId.set(String(step.itemId), step);
-              }
-            }
-            if (step.name) {
-              const k = step.name.toLowerCase().trim();
-              const ex = weaponLookupCache.byName.get(k);
-              if (!ex || (!ex.lines && step.lines) || (!ex.stats && step.stats)) {
-                weaponLookupCache.byName.set(k, step);
-              }
-            }
-            for (const alt of step.alts || []) {
-              if (alt.itemId) {
-                const ex = weaponLookupCache.byId.get(String(alt.itemId));
-                if (!ex || (!ex.lines && alt.lines) || (!ex.stats && alt.stats)) {
-                  weaponLookupCache.byId.set(String(alt.itemId), alt);
-                }
-              }
-              if (alt.name) {
-                const k = alt.name.toLowerCase().trim();
-                const ex = weaponLookupCache.byName.get(k);
-                if (!ex || (!ex.lines && alt.lines) || (!ex.stats && alt.stats)) {
-                  weaponLookupCache.byName.set(k, alt);
-                }
+                registerItem(it);
               }
             }
           }
@@ -459,6 +448,9 @@
     }
 
     const currentTrack = activeWeaponTrack[`${classId}_${datasetKey}`] || data.tracks?.[0]?.id || 'primary';
+    const activeLevelList = (currentTrack === 'healer' && data.healingLevels)
+      ? data.healingLevels
+      : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
     // Faction restrictions for faction-exclusive classes
     const isPaladin = classId === 'paladin';
@@ -469,43 +461,72 @@
 
     // Build timeline items with faction awareness
     let displayedCount = 0;
-    const stepCards = data.levels.map((step, idx) => {
+    const stepCards = activeLevelList.map((step, idx) => {
       let displayStep = { ...step };
       let displayAlts = (step.alts || []).slice();
 
       if (effectiveFaction !== 'all') {
         const stepFaction = step.faction || 'both';
+        let matchIdx = -1;
+
         if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
           // If primary does not match active faction, look for a matching alt to promote:
           // 1. Prefer alt matching effectiveFaction
           // 2. Fallback to neutral alt available to both factions
-          let matchIdx = displayAlts.findIndex(a => a.faction === effectiveFaction);
+          matchIdx = displayAlts.findIndex(a => a.faction === effectiveFaction);
           if (matchIdx === -1) {
             matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === 'both');
           }
+        } else if (effectiveFaction === 'horde') {
+          // For Horde: promote Staff of Orgrimmar (Horde BiS Caster Staff) over neutral staves in brackets 13-18
+          matchIdx = displayAlts.findIndex(a => a.faction === 'horde' && (a.itemId === 15444 || a.name === 'Staff of Orgrimmar'));
+        }
 
-          if (matchIdx !== -1) {
-            const altMatch = displayAlts[matchIdx];
-            const valStr = altMatch.value || '';
-            const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
-            const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
+        if (matchIdx !== -1) {
+          const altMatch = displayAlts[matchIdx];
+          const valStr = altMatch.value || '';
+          const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
+          const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
 
-            displayStep = {
-              ...step,
-              itemId: altMatch.itemId || null,
-              name: altMatch.name,
-              icon: altMatch.icon || step.icon,
-              weaponType: altMatch.weaponType || step.weaponType,
-              speed: spdMatch || altMatch.speed || step.speed,
-              dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
-              stats: altMatch.stats || step.stats,
-              source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
-              faction: altMatch.faction || effectiveFaction
-            };
-            displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
-          } else {
-            return '';
+          const demotedStep = {
+            name: step.name,
+            itemId: step.itemId,
+            icon: step.icon,
+            weaponType: step.weaponType,
+            speed: step.speed,
+            dps: step.dps,
+            stats: step.stats,
+            lines: step.lines,
+            source: step.source,
+            faction: step.faction || 'both',
+            quality: step.quality,
+            iLvl: step.iLvl,
+            reqLevel: step.reqLevel,
+            value: `${step.dps || ''}, ${step.speed ? step.speed + 's' : ''} - ${step.source?.title || ''}`
+          };
+
+          displayStep = {
+            ...step,
+            itemId: altMatch.itemId || null,
+            name: altMatch.name,
+            icon: altMatch.icon || step.icon,
+            weaponType: altMatch.weaponType || step.weaponType,
+            speed: spdMatch || altMatch.speed || step.speed,
+            dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
+            stats: altMatch.stats || step.stats,
+            lines: altMatch.lines || null,
+            source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
+            faction: altMatch.faction || effectiveFaction,
+            quality: altMatch.quality || step.quality,
+            iLvl: altMatch.iLvl || step.iLvl,
+            reqLevel: altMatch.reqLevel || step.reqLevel
+          };
+          displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
+          if (stepFaction === 'both') {
+            displayAlts.push(demotedStep);
           }
+        } else if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
+          return '';
         }
         // Filter alts to only show active faction or both
         displayAlts = displayAlts.filter(alt => {
@@ -561,7 +582,10 @@
                 <div class="weapon-stats-row">
                   ${displayStep.speed ? `<span class="stat-pill">Speed: ${escapeHtml(displayStep.speed)}</span>` : ''}
                   ${displayStep.dps ? `<span class="stat-pill dps-pill">DPS: ${escapeHtml(displayStep.dps)}</span>` : ''}
-                  ${displayStep.stats ? `<span class="stat-pill stats-pill">${escapeHtml(displayStep.stats)}</span>` : ''}
+                  ${displayStep.stats ? (() => {
+                    const isHeal = /healing\s+(?:done\s+by\s+(?:up\s+to\s+)?)?(\d+)/i.test(displayStep.stats);
+                    return `<span class="stat-pill stats-pill ${isHeal ? 'healing-highlight-pill' : ''}" title="${isHeal ? 'Optimal Healing item (Healing > Spell Damage)' : ''}">${isHeal ? '💚 ' : ''}${escapeHtml(displayStep.stats)}</span>`;
+                  })() : ''}
                 </div>
               </div>
             </div>
@@ -584,8 +608,10 @@
                       : altFaction === 'horde'
                       ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️</span>`
                       : '';
+                    const altStats = alt.stats || alt.value || '';
+                    const isAltHeal = /healing\s+(?:done\s+by\s+(?:up\s+to\s+)?)?(\d+)/i.test(altStats);
                     return `
-                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''}"
+                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''} ${isAltHeal ? 'alt-healing-tag' : ''}"
                             data-weapon-target="true"
                             data-item-name="${escapeHtml(alt.name)}"
                             data-item-id="${alt.itemId || ''}"
@@ -599,6 +625,7 @@
                             data-alt-val="${escapeHtml(alt.value || '')}"
                             data-faction="${escapeHtml(altFaction)}">
                         ${altBadge}
+                        ${isAltHeal ? '<span class="alt-healer-icon" title="Optimal for Healers">💚</span> ' : ''}
                         ${altUrl ? `
                           <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link" data-wowhead="domain=forever&item=${alt.itemId || ''}">
                             ${escapeHtml(alt.name)}
@@ -625,7 +652,7 @@
             <h3><span>${cfg.icon}</span> ${escapeHtml(cfg.title)}</h3>
             <p>${escapeHtml(cfg.desc)}</p>
           </div>
-          <div class="progression-header-badge">${displayedCount} Progression Steps</div>
+          <div class="progression-header-badge ${currentTrack === 'healer' ? 'healer-header-badge' : ''}">${currentTrack === 'healer' ? '💚 ' : ''}${displayedCount} Progression Steps</div>
         </div>
 
         <!-- Controls Bar with Faction Filter & Track Selection -->
@@ -644,10 +671,10 @@
           </div>
 
           ${data.tracks && data.tracks.length > 1 ? `
-            <div class="progression-track-tabs">
-              <span class="track-tab-label">Track:</span>
+            <div class="progression-track-tabs role-pill-box">
+              <span class="track-tab-label">Role:</span>
               ${data.tracks.map(tr => `
-                <button type="button" class="progression-track-btn ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}" data-key="${datasetKey}">
+                <button type="button" class="progression-track-btn ${tr.id === 'healer' ? 'track-btn-healer' : 'track-btn-dps'} ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}" data-key="${datasetKey}" data-class="${classId}">
                   ${escapeHtml(tr.name)}
                 </button>
               `).join('')}
@@ -904,7 +931,7 @@
         hideWeaponTooltip();
         const track = btn.getAttribute('data-track');
         const key = btn.getAttribute('data-key') || 'weapons';
-        const cId = window.selectedDeepDiveClassId || 'hunter';
+        const cId = btn.getAttribute('data-class') || window.selectedDeepDiveClassId || 'hunter';
         activeWeaponTrack[`${cId}_${key}`] = track;
         window.renderDeepDiveContent?.();
       });
@@ -996,7 +1023,10 @@
     renderWands,
     renderOffhands,
     setupEventListeners,
-    hideWeaponTooltip
+    hideWeaponTooltip,
+    setWeaponFaction: (f) => { activeWeaponFaction = f; },
+    setWandFaction: (f) => { activeWandFaction = f; },
+    setOffhandFaction: (f) => { activeOffhandFaction = f; }
   };
 
 })();
