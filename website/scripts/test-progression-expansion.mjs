@@ -214,7 +214,8 @@ const dataminedWeapons = [
 for (const wName of dataminedWeapons) {
   let found = false;
   for (const cls of expectedClasses) {
-    for (const lvl of progData.weapons[cls].levels) {
+    const levelsList = [...(progData.weapons[cls]?.levels || []), ...(progData.wands?.[cls]?.levels || [])];
+    for (const lvl of levelsList) {
       if (lvl.name === wName || (lvl.alts || []).some(a => a.name === wName)) {
         found = true;
         break;

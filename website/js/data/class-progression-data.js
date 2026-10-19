@@ -9,34 +9,6 @@ if (typeof window !== 'undefined') {
   "macros": {
     "hunter": [
       {
-        "id": "hunter-secret-1",
-        "title": "The Unbroken 1-Tap 'Feign Death + Freeze Trap'",
-        "desc": "Commands pet to passive to break combat, halts auto-shots, casts Feign Death, and arms Freezing Trap at the cursor in one motion.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Freezing Trap\n/petpassive\n/stopattack\n/cast Feign Death\n/cast [@cursor] Freezing Trap"
-      },
-      {
-        "id": "hunter-secret-2",
-        "title": "The Clipless Auto-Shot Stutter-Step Engine",
-        "desc": "Forces the client to keep your Auto Shot swing timer synchronized, preventing Aimed Shot or Multi-Shot spam from canceling your white hits.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Aimed Shot\n/cast !Auto Shot\n/cast Aimed Shot"
-      },
-      {
-        "id": "hunter-secret-3",
-        "title": "Mouseover Scatter Shot Peeler",
-        "desc": "Disorients an approaching enemy melee or casting add under your cursor without dropping focus on your marked primary target.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Scatter Shot\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Scatter Shot"
-      },
-      {
-        "id": "hunter-secret-4",
-        "title": "Instant Pet Dash & Bite Micro-Anchor",
-        "desc": "Commands your pet to sprint and bite your mouseover target instantly without waiting for the server's pet AI polling tick.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Dash\n/petattack [@mouseover,harm,nodead][]\n/cast Dash\n/cast Dive\n/cast Bite"
-      },
-      {
         "id": "hunter-macro-1",
         "title": "Mark and send pet",
         "desc": "Mark your target and send your pet at it with one button.",
@@ -431,34 +403,6 @@ if (typeof window !== 'undefined') {
     ],
     "shaman": [
       {
-        "id": "shaman-secret-1",
-        "title": "Target-of-Target Boss Purge Engine",
-        "desc": "Strips shields, HoTs, and Bloodlusts off the boss through the tank without losing healing frames.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Purge\n/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][harm,nodead] Purge"
-      },
-      {
-        "id": "shaman-secret-2",
-        "title": "Instant Cast-Abort Wind Shear",
-        "desc": "Immediately cancels any long Healing Wave or Lightning Bolt cast to land an instant kick within 0.1s.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Wind Shear\n/stopcasting\n/cast [@focus,harm,nodead][@mouseover,harm,nodead][] Wind Shear"
-      },
-      {
-        "id": "shaman-secret-3",
-        "title": "Elemental Mastery Instant Chain Lightning Nuke",
-        "desc": "Triggers 100% crit chance, 0 mana cost, and instant cast time for an unstoppable triple-hit burst.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Chain Lightning\n/stopcasting\n/cast Elemental Mastery\n/cast Chain Lightning"
-      },
-      {
-        "id": "shaman-secret-4",
-        "title": "Ghost Wolf Anti-Snare Emergency Cleanse",
-        "desc": "Breaks movement slows and transitions into Ghost Wolf form in the same server tick.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Ghost Wolf\n/cancelaura [stance:1] Ghost Wolf\n/cast !Ghost Wolf"
-      },
-      {
         "id": "shaman-macro-1",
         "title": "Immediate mouseover Earth Shock",
         "desc": "Cancel your current cast to shock an enemy under your cursor while keeping your main target.",
@@ -831,34 +775,6 @@ if (typeof window !== 'undefined') {
       }
     ],
     "mage": [
-      {
-        "id": "mage-secret-1",
-        "title": "Zero-Latency Reticle-Skip Blizzard / Flamestrike",
-        "desc": "Bypasses the green circle targeting reticle completely, casting the AoE directly beneath your hardware mouse cursor with 0ms delay.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Blizzard\n/stopcasting\n/cast [@cursor] Blizzard"
-      },
-      {
-        "id": "mage-secret-2",
-        "title": "Double-Tap Safe Ice Block with Alt-Cancel",
-        "desc": "The '!' prefix prevents accidental double-clicking from canceling Ice Block, while Alt-tap provides instant voluntary aura removal.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Ice Block\n/stopcasting\n/cast !Ice Block\n/cancelaura [mod:alt] Ice Block"
-      },
-      {
-        "id": "mage-secret-3",
-        "title": "Omni-Interrupt Mouseover & Focus Counterspell",
-        "desc": "Aborts your current cast and kicks the priority target under your mouse cursor or focus frame without deselecting your DPS target.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Counterspell\n/stopcasting\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Counterspell"
-      },
-      {
-        "id": "mage-secret-4",
-        "title": "Arcane Power + Presence of Mind Instant Pyroblast",
-        "desc": "Stacks off-GCD Arcane Power, triggers instant-cast Presence of Mind, and launches a max-rank Pyroblast in 0.0 seconds.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Pyroblast\n/cast Arcane Power\n/cast Presence of Mind\n/cast Pyroblast"
-      },
       {
         "id": "mage-macro-1",
         "title": "Counterspell without waiting on your cast",
@@ -1247,41 +1163,6 @@ if (typeof window !== 'undefined') {
     ],
     "paladin": [
       {
-        "id": "paladin-secret-1",
-        "title": "Zero-Threat-Drop Divine Shield Bleed Wipe",
-        "desc": "Clears 100% mortal strikes, bleeds, and stacking dungeon debuffs and immediately cancels the bubble before boss threat shifts.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Divine Shield\n/cast Divine Shield\n/cancelaura Divine Shield"
-      },
-      {
-        "id": "paladin-secret-2",
-        "title": "Swing-Preserving Judgement Weave",
-        "desc": "Ensures casting Judgement never pauses your auto-attack swing timer or disrupts the 0.4s seal twist window.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Judgement\n/cast Judgement\n/startattack"
-      },
-      {
-        "id": "paladin-secret-3",
-        "title": "Target-of-Target Cleanse & Blessing of Freedom",
-        "desc": "Cleanses debuffs and roots off whatever ally the enemy boss is targeting without changing your active target.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Cleanse\n/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Cleanse"
-      },
-      {
-        "id": "paladin-secret-4",
-        "title": "Divine Favor + Holy Shock Guaranteed Crit Burst",
-        "desc": "Combines off-GCD 100% spell crit with Holy Shock for instant tank clutch saves or high-burst offensive executes.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Holy Shock\n/cast Divine Favor\n/cast [@mouseover,exists][] Holy Shock"
-      },
-      {
-        "id": "paladin-secret-5",
-        "title": "Blessing of Protection Self-Cancel for Melee",
-        "desc": "Allows Warriors and Rogues who receive Blessing of Protection to dump mortal debuffs and immediately resume auto-attacking.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip\n/cancelaura Blessing of Protection"
-      },
-      {
         "id": "paladin-macro-1",
         "title": "Holy Strike and auto attack",
         "desc": "Use Forever’s baseline strike without leaving auto attack off.",
@@ -1655,34 +1536,6 @@ if (typeof window !== 'undefined') {
     ],
     "warrior": [
       {
-        "id": "warrior-secret-1",
-        "title": "Zero-Loss Stance & Shield Swap Interrupter",
-        "desc": "Equips 1H + Shield and shifts to Defensive Stance if in Battle/Berserker stance, or immediately fires Shield Bash if already in Defensive Stance without dropping swing timer.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip [stance:2] Shield Bash; [stance:1/3] Pummel\n/equipslot [nostance:2] 16 YourOneHandWeaponName\n/equipslot [nostance:2] 17 YourShieldName\n/cast [stance:1/3] Defensive Stance; Shield Bash\n/startattack"
-      },
-      {
-        "id": "warrior-secret-2",
-        "title": "Overpower Stance-Dance Reflex",
-        "desc": "Instantly switches to Battle Stance upon a dodge proc and executes Overpower without resetting your auto-attack swing buffer.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Overpower\n/cast [nostance:1] Battle Stance\n/cast Overpower\n/startattack"
-      },
-      {
-        "id": "warrior-secret-3",
-        "title": "Heroic Strike & Cleave Rage De-Coupler",
-        "desc": "Prevents rage starvation during incoming spike damage by allowing Alt-tap cancellation of the queued next-hit Heroic Strike.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Heroic Strike\n/cast Heroic Strike\n/stopcasting [mod:alt]\n/startattack"
-      },
-      {
-        "id": "warrior-secret-4",
-        "title": "Universal Charge & Intercept Mobility Matrix",
-        "desc": "Charges if out of combat (auto-shifting to Battle Stance), or shifts to Berserker Stance and Intercepts mid-combat in a single key.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip [combat] Intercept; Charge\n/cast [nocombat,nostance:1] Battle Stance; [nocombat] Charge\n/cast [combat,nostance:3] Berserker Stance; [combat] Intercept\n/startattack"
-      },
-      {
         "id": "warrior-macro-1",
         "title": "Charge and start attacking",
         "desc": "Get off your mount, start swinging and Charge in one press.",
@@ -2041,34 +1894,6 @@ if (typeof window !== 'undefined') {
       }
     ],
     "warlock": [
-      {
-        "id": "warlock-secret-1",
-        "title": "Clipless Shard Drain Soul Harvester",
-        "desc": "Protects channel ticks and uses low-mana Rank 1 for effortless Soul Shard farming without wasting mana.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Drain Soul\n/stopcasting\n/cast [nochanneling:Drain Soul] Drain Soul(Rank 1)"
-      },
-      {
-        "id": "warlock-secret-2",
-        "title": "Mouseover Felhunter Spell Lock (Pet Remains on Primary Target)",
-        "desc": "Fires your Felhunter's interrupt at a priority caster under your mouse cursor while your pet continues meleeing its primary target.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Spell Lock\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Spell Lock"
-      },
-      {
-        "id": "warlock-secret-3",
-        "title": "Target-of-Target Death Coil Peeler",
-        "desc": "Instantly fires Death Coil at whatever enemy is attacking your party healer without requiring manual targeting.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Death Coil\n/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][] Death Coil"
-      },
-      {
-        "id": "warlock-secret-4",
-        "title": "All-in-One Multi-Curse Modifier Hub",
-        "desc": "Normal tap = Curse of Agony; Shift = Curse of the Elements; Alt = Curse of Tongues.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip\n/cast [mod:shift] Curse of the Elements; [mod:alt] Curse of Tongues; Curse of Agony"
-      },
       {
         "id": "warlock-macro-1",
         "title": "Mouseover Fear",
@@ -2442,34 +2267,6 @@ if (typeof window !== 'undefined') {
       }
     ],
     "priest": [
-      {
-        "id": "priest-secret-1",
-        "title": "The Clipless Mind Flay Tick-Preserver",
-        "desc": "Locks out button spam while Mind Flay is channeling, ensuring you never clip the third and final damage/slow tick early.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Mind Flay\n/cast [nochanneling:Mind Flay] Mind Flay"
-      },
-      {
-        "id": "priest-secret-2",
-        "title": "Target-of-Target Offensive Dispel & Dotting",
-        "desc": "Keeps your healing target focused on the friendly tank while dispelling enemy buffs or dotting whatever the tank is fighting.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Dispel Magic\n/cast [@mouseover,harm,nodead][@targettarget,harm,nodead][harm,nodead] Dispel Magic"
-      },
-      {
-        "id": "priest-secret-3",
-        "title": "Night Elf Shadowmeld + Drink Stealth Reset",
-        "desc": "Drops combat, enters stealth, and begins drinking mana water without breaking Shadowmeld.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Morning Glory Dew\n/cast !Shadowmeld\n/use Morning Glory Dew"
-      },
-      {
-        "id": "priest-secret-4",
-        "title": "Emergency Desperate Prayer & Healthstone Panic Matrix",
-        "desc": "Instant clutch survival macro combining racial instant heal, highest-tier healthstone, and Inner Fire re-application.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Desperate Prayer\n/use Master Healthstone\n/cast Desperate Prayer\n/cast [nostance] Inner Fire"
-      },
       {
         "id": "priest-macro-1",
         "title": "Mouseover Dispel Magic",
@@ -2858,34 +2655,6 @@ if (typeof window !== 'undefined') {
     ],
     "druid": [
       {
-        "id": "druid-secret-1",
-        "title": "The Immortal 'Tick-Aligned' Powershifting Engine",
-        "desc": "Cancels any active form and re-enters Cat Form in the exact same server tick to break movement impairing effects and gain 40 Furor Energy instantly.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Cat Form\n/cancelaura [stance:1] Bear Form; [stance:2] Aquatic Form; [stance:4] Travel Form\n/cast !Cat Form"
-      },
-      {
-        "id": "druid-secret-2",
-        "title": "Omni-Form Feral Charge Gap-Closer",
-        "desc": "Automatically shifts into Dire Bear Form if in caster or cat form, then fires Feral Charge in one fluid sequence.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Feral Charge - Bear\n/cast [nostance:1] Dire Bear Form\n/cast Feral Charge - Bear"
-      },
-      {
-        "id": "druid-secret-3",
-        "title": "Smart Travel, Aquatic & Mount Selector",
-        "desc": "Intelligently casts Aquatic Form if swimming, Cat Form if indoors, Travel Form if in combat outdoors, or summons your mount if out of combat.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip\n/cast [swimming] Aquatic Form; [indoors] Cat Form; [combat,outdoors] Travel Form; [outdoors] Swift Mistsaber; Travel Form"
-      },
-      {
-        "id": "druid-secret-4",
-        "title": "Nature's Swiftness Swift-Shift Healer Save",
-        "desc": "Immediately cancels cast, triggers Nature's Swiftness, and lands an instant max-rank Healing Touch on your mouseover or target-of-target ally.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Nature's Swiftness\n/stopcasting\n/cast Nature's Swiftness\n/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Healing Touch"
-      },
-      {
         "id": "druid-macro-1",
         "title": "Mouseover Rebirth",
         "desc": "Resurrect a dead friendly mouseover, or your selected dead ally.",
@@ -3258,41 +3027,6 @@ if (typeof window !== 'undefined') {
       }
     ],
     "rogue": [
-      {
-        "id": "rogue-secret-1",
-        "title": "The 'Greedy Ghost' Instant Pickpocket + Cheap Shot",
-        "desc": "Exploits off-GCD Pick Pocket during the opening hardware frame to loot the humanoid's pocket table the exact millisecond before Cheap Shot stun lands.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Cheap Shot\n/targetenemy [noexists]\n/cast Pick Pocket\n/cast Cheap Shot"
-      },
-      {
-        "id": "rogue-secret-2",
-        "title": "The Anti-Auto-Attack Vanish Buffer",
-        "desc": "Flushes queued auto-attack white swings immediately prior to casting Vanish, eliminating 99% of accidental instant stealth breaks.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Vanish\n/stopattack\n/cancelaura Attack\n/cast Vanish"
-      },
-      {
-        "id": "rogue-secret-3",
-        "title": "High-Frequency Stealth Hunter & Sap Radar",
-        "desc": "Spam while stealthed. Instantly targets hostile enemy players within 20 yards and casts Sap before they render on your screen.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Sap\n/cleartarget\n/targetenemyplayer [harm][nodead]\n/cast [exists] Sap"
-      },
-      {
-        "id": "rogue-secret-4",
-        "title": "Gouge & First Aid Combat Triage",
-        "desc": "Stops auto-attacks immediately so CC does not break, Gouges the enemy, and begins channeling heavy bandages on yourself.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Gouge\n/cast Gouge\n/stopattack\n/use [@player] Heavy Silk Bandage"
-      },
-      {
-        "id": "rogue-secret-5",
-        "title": "Mouseover Blind Peeler",
-        "desc": "Blinds an approaching enemy add or healer under your mouse cursor without losing your active target or dropping combo points.",
-        "category": "Secret Mechanics",
-        "code": "#showtooltip Blind\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Blind"
-      },
       {
         "id": "rogue-macro-1",
         "title": "Mouseover Kick",
@@ -8126,40 +7860,18 @@ if (typeof window !== 'undefined') {
       ],
       "levels": [
         {
-          "levelBracket": "1–2",
-          "itemId": 2505,
           "name": "Polished Shortbow",
+          "itemId": 2505,
           "icon": "inv_weapon_bow_02",
           "weaponType": "Bow",
-          "speed": "1.80",
-          "dps": "1.8 DPS",
+          "speed": "2.00",
+          "dps": "1.75 DPS",
           "source": {
             "kind": "vendor",
             "title": "Bow Vendor",
-            "detail": "Purchased in starting areas"
+            "detail": "Purchased from starter bow and weapon merchants"
           },
-          "alts": [
-            {
-              "name": "Hornwood Recurve Bow",
-              "itemId": 2506,
-              "value": "2.4 DPS - Starter vendor",
-              "faction": "both",
-              "dps": "2.38 DPS",
-              "speed": "2.10",
-              "weaponType": "Bow",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
-              "stats": "",
-              "icon": "inv_weapon_bow_11",
-              "lines": [
-                "Ranged",
-                "3 - 7 Damage\tSpeed 2.10",
-                "(2.38 damage per second)",
-                "Requires Level 3"
-              ]
-            }
-          ],
+          "value": "1.75 DPS, 2.00s - Bow Vendor",
           "faction": "both",
           "quality": "q1",
           "iLvl": 4,
@@ -8169,65 +7881,318 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "2 - 5 Damage\tSpeed 2.00",
             "(1.75 damage per second)"
-          ]
-        },
-        {
-          "levelBracket": "3–4",
-          "itemId": 2506,
-          "name": "Hornwood Recurve Bow",
-          "icon": "inv_weapon_bow_11",
-          "weaponType": "Bow",
-          "speed": "2.00",
-          "dps": "2.4 DPS",
-          "source": {
-            "kind": "vendor",
-            "title": "Weapon Vendor",
-            "detail": "Sold by town weapon vendors"
-          },
+          ],
+          "levelBracket": "1–2",
           "alts": [
             {
-              "name": "Rough Boomstick",
-              "itemId": 4362,
-              "value": "4.1 DPS, 2.30s - Crafted Engineering (30)",
-              "faction": "both",
-              "dps": "4.13 DPS",
+              "name": "Worn Shortbow",
+              "itemId": 2504,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
               "speed": "2.30",
-              "weaponType": "Gun",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 5,
-              "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_02",
+              "dps": "1.52 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Starter Bow",
+                "detail": "Night Elf, Orc, and Troll starter ranged weapon"
+              },
+              "value": "1.52 DPS, 2.30s - Starter Bow",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 2,
+              "reqLevel": 1,
+              "stats": "",
               "lines": [
-                "Binds when equipped",
                 "Ranged",
-                "6 - 13 Damage\tSpeed 2.30",
-                "(4.13 damage per second)",
-                "+1 Stamina",
-                "Requires Level 5"
+                "2 - 5 Damage\tSpeed 2.30",
+                "(1.52 damage per second)"
               ]
             },
             {
-              "name": "Kolkar Bow",
-              "itemId": 286729,
-              "value": "2.7 DPS, 2.80s - Durotar Quest: Lost in the Shadows",
-              "faction": "horde",
-              "dps": "2.68 DPS",
-              "speed": "2.80",
-              "weaponType": "Bow",
+              "name": "Solid Blunderbuss",
+              "itemId": 2510,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.20",
+              "dps": "2.05 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Dwarf Starter Gun",
+                "detail": "Dwarf hunter starter firearm in Coldridge Valley"
+              },
+              "value": "2.05 DPS, 2.20s - Dwarf Starter Gun",
+              "faction": "both",
               "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 4,
+              "iLvl": 3,
+              "reqLevel": 1,
               "stats": "",
-              "icon": "inv_weapon_bow_12",
+              "lines": [
+                "Ranged",
+                "3 - 6 Damage\tSpeed 2.20",
+                "(2.05 damage per second)"
+              ]
+            },
+            {
+              "name": "Old Blunderbuss",
+              "itemId": 2508,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "1.52 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Starter Blunderbuss",
+                "detail": "Sold by starter general goods and weapon vendors"
+              },
+              "value": "1.52 DPS, 2.30s - Starter Blunderbuss",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 2,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "2 - 5 Damage\tSpeed 2.30",
+                "(1.52 damage per second)"
+              ]
+            },
+            {
+              "name": "Anvilmar Musket",
+              "itemId": 12446,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "2.22 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.22 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "2.22 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "stats": "",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
-                "5 - 10 Damage\tSpeed 2.80",
-                "(2.68 damage per second)"
+                "4 - 8 Damage\tSpeed 2.70",
+                "(2.22 damage per second)"
+              ]
+            },
+            {
+              "name": "Light Hunting Rifle",
+              "itemId": 12448,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "2.11 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.11 DPS, 1.90s - Leveling Drop / Vendor"
+              },
+              "value": "2.11 DPS, 1.90s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "2 - 6 Damage\tSpeed 1.90",
+                "(2.11 damage per second)"
+              ]
+            },
+            {
+              "name": "Primitive Bow",
+              "itemId": 12449,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "2.22 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.22 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "2.22 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "4 - 8 Damage\tSpeed 2.70",
+                "(2.22 damage per second)"
+              ]
+            },
+            {
+              "name": "Thistlewood Bow",
+              "itemId": 12447,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "2.17 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.17 DPS, 2.30s - Leveling Drop / Vendor"
+              },
+              "value": "2.17 DPS, 2.30s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "3 - 7 Damage\tSpeed 2.30",
+                "(2.17 damage per second)"
+              ]
+            },
+            {
+              "name": "Cadet's Bow",
+              "itemId": 8179,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
+              "speed": "2.00",
+              "dps": "2.25 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.25 DPS, 2.00s - Leveling Drop / Vendor"
+              },
+              "value": "2.25 DPS, 2.00s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "3 - 6 Damage\tSpeed 2.00",
+                "(2.25 damage per second)"
+              ]
+            },
+            {
+              "name": "Pellet Rifle",
+              "itemId": 8182,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "2.50 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.50 DPS, 2.60s - Leveling Drop / Vendor"
+              },
+              "value": "2.50 DPS, 2.60s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "4 - 9 Damage\tSpeed 2.60",
+                "(2.50 damage per second)",
+                "Requires Level 2"
+              ]
+            },
+            {
+              "name": "Refined Shortbow",
+              "itemId": 273879,
+              "icon": "inv_weapon_bow_15",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "2.08 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Foul Matriarch",
+                "detail": "2.08 DPS, 2.40s - Foul Matriarch"
+              },
+              "value": "2.08 DPS, 2.40s - Foul Matriarch",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 5,
+              "reqLevel": 2,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(2.08 damage per second)",
+                "Requires Level 2"
+              ]
+            },
+            {
+              "name": "Restored Bow",
+              "itemId": 281732,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "1.92 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "1.92 DPS, 2.60s - Leveling Drop / Vendor"
+              },
+              "value": "1.92 DPS, 2.60s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 1,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(1.92 damage per second)"
+              ]
+            },
+            {
+              "name": "Durability Bow",
+              "itemId": 14394,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "1.11 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "1.11 DPS, 1.80s - Leveling Drop / Vendor"
+              },
+              "value": "1.11 DPS, 1.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 1,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "1 - 3 Damage\tSpeed 1.80",
+                "(1.11 damage per second)"
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Hornwood Recurve Bow",
+          "itemId": 2506,
+          "icon": "inv_weapon_bow_11",
+          "weaponType": "Bow",
+          "speed": "2.10",
+          "dps": "2.38 DPS",
+          "source": {
+            "kind": "vendor",
+            "title": "Bow Vendor",
+            "detail": "Early town bow vendor upgrade (2.38 DPS)"
+          },
+          "value": "2.38 DPS, 2.10s - Bow Vendor",
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
@@ -8238,63 +8203,176 @@ if (typeof window !== 'undefined') {
             "3 - 7 Damage\tSpeed 2.10",
             "(2.38 damage per second)",
             "Requires Level 3"
-          ]
-        },
-        {
-          "levelBracket": "5–6",
-          "itemId": 4362,
-          "name": "Rough Boomstick",
-          "icon": "inv_weapon_rifle_02",
-          "weaponType": "Gun",
-          "speed": "2.30",
-          "dps": "4.1 DPS",
-          "source": {
-            "kind": "craft",
-            "title": "Engineering (30)",
-            "detail": "Crafted gun, substantial auto-shot increase"
-          },
+          ],
+          "levelBracket": "3–4",
           "alts": [
             {
-              "name": "Hornwood Recurve Bow",
-              "itemId": 2506,
-              "value": "2.4 DPS - Vendor fallback",
-              "faction": "both",
-              "dps": "2.38 DPS",
-              "speed": "2.10",
+              "name": "Blackwood Recurve Bow",
+              "itemId": 4763,
+              "icon": "inv_weapon_bow_12",
               "weaponType": "Bow",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
+              "speed": "2.70",
+              "dps": "3.89 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Darkshore: Bashal'Aran",
+                "detail": "Early Alliance quest recurve bow"
+              },
+              "value": "3.89 DPS, 2.70s - Darkshore: Bashal'Aran",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 9,
+              "reqLevel": 4,
               "stats": "",
-              "icon": "inv_weapon_bow_11",
               "lines": [
+                "Binds when equipped",
                 "Ranged",
-                "3 - 7 Damage\tSpeed 2.10",
-                "(2.38 damage per second)",
-                "Requires Level 3"
+                "7 - 14 Damage\tSpeed 2.70",
+                "(3.89 damage per second)",
+                "Requires Level 4"
               ]
             },
             {
               "name": "Kolkar Bow",
               "itemId": 286729,
-              "value": "2.7 DPS - Durotar Quest: Lost in the Shadows",
-              "faction": "horde",
-              "dps": "2.68 DPS",
-              "speed": "2.80",
+              "icon": "inv_weapon_bow_12",
               "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "2.68 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Durotar: Lost in the Shadows",
+                "detail": "Horde quest recurve bow from Sen'jin Village"
+              },
+              "value": "2.68 DPS, 2.80s - Durotar: Lost in the Shadows",
+              "faction": "horde",
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 4,
               "stats": "",
-              "icon": "inv_weapon_bow_12",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
                 "5 - 10 Damage\tSpeed 2.80",
-                "(2.68 damage per second)"
+                "(2.68 damage per second)",
+                "Requires Level 4"
+              ]
+            },
+            {
+              "name": "Ashwood Bow",
+              "itemId": 5596,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.10",
+              "dps": "3.81 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Crown of the Earth",
+                "detail": "3.81 DPS, 2.10s - Crown of the Earth"
+              },
+              "value": "3.81 DPS, 2.10s - Crown of the Earth",
+              "faction": "alliance",
+              "quality": "q1",
+              "iLvl": 11,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "5 - 11 Damage\tSpeed 2.10",
+                "(3.81 damage per second)"
+              ]
+            },
+            {
+              "name": "Light Crossbow",
+              "itemId": 15807,
+              "icon": "inv_weapon_crossbow_02",
+              "weaponType": "Crossbow",
+              "speed": "2.50",
+              "dps": "2.60 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.60 DPS, 2.50s - Leveling Drop / Vendor"
+              },
+              "value": "2.60 DPS, 2.50s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.50",
+                "(2.60 damage per second)",
+                "Requires Level 3"
+              ]
+            },
+            {
+              "name": "Hunting Rifle",
+              "itemId": 8181,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "2.96 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.96 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "2.96 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "5 - 11 Damage\tSpeed 2.70",
+                "(2.96 damage per second)",
+                "Requires Level 4"
+              ]
+            },
+            {
+              "name": "Ornate Blunderbuss",
+              "itemId": 2509,
+              "icon": "inv_weapon_rifle_02",
+              "weaponType": "Gun",
+              "speed": "2.20",
+              "dps": "2.95 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "2.95 DPS, 2.20s - Leveling Drop / Vendor"
+              },
+              "value": "2.95 DPS, 2.20s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "4 - 9 Damage\tSpeed 2.20",
+                "(2.95 damage per second)",
+                "Requires Level 4"
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Rough Boomstick",
+          "itemId": 4362,
+          "icon": "inv_weapon_rifle_03",
+          "weaponType": "Gun",
+          "speed": "2.30",
+          "dps": "4.13 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Engineering (30)",
+            "detail": "Early craftable copper boomstick, solid auto-shot speed"
+          },
+          "value": "4.13 DPS, 2.30s - +1 Stamina - Engineering (30)",
           "faction": "both",
           "quality": "q2",
           "iLvl": 10,
@@ -8307,57 +8385,185 @@ if (typeof window !== 'undefined') {
             "(4.13 damage per second)",
             "+1 Stamina",
             "Requires Level 5"
-          ]
-        },
-        {
-          "levelBracket": "7–8",
-          "itemId": 276685,
-          "name": "Militia Bow",
-          "icon": "inv_weapon_bow_02",
-          "weaponType": "Bow",
-          "speed": "2.10",
-          "dps": "5.7 DPS",
-          "source": {
-            "kind": "quest",
-            "title": "Rare Books / Kobold Camp",
-            "detail": "Early quest reward in starting zones"
-          },
+          ],
+          "levelBracket": "5–6",
           "alts": [
             {
-              "name": "Bristlebark Bow",
-              "itemId": 286748,
-              "value": "5.00 DPS, 2.60s (+1 Agi) - Uncommon Bow",
-              "faction": "both",
-              "dps": "5.00 DPS",
-              "speed": "2.60",
+              "name": "Bow of Hours",
+              "itemId": 263404,
+              "icon": "inv_bow_1h_skybornec60_b_01",
               "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "5.22 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Catching Wind",
+                "detail": "5.22 DPS, 2.30s - +1 Agility - Catching Wind"
+              },
+              "value": "5.22 DPS, 2.30s - +1 Agility - Catching Wind",
+              "faction": "alliance",
               "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
+              "iLvl": 13,
+              "reqLevel": 5,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_03",
               "lines": [
-                "Binds when equipped",
                 "Ranged",
-                "9 - 17 Damage\tSpeed 2.60",
-                "(5.00 damage per second)",
-                "+1 Agility",
-                "Requires Level 7"
+                "Speed 2.30",
+                "(5.22 damage per second)",
+                "Requires Level 5"
               ]
             },
             {
+              "name": "Hunting Bow",
+              "itemId": 8180,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "4.62 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "4.62 DPS, 2.60s - Equip: +3 Attack Power against Beasts. - Leveling Drop / Vendor"
+              },
+              "value": "4.62 DPS, 2.60s - Equip: +3 Attack Power against Beasts. - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 11,
+              "reqLevel": 6,
+              "stats": "Equip: +3 Attack Power against Beasts.",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "8 - 16 Damage\tSpeed 2.60",
+                "(4.62 damage per second)",
+                "Equip: +3 Attack Power against Beasts.",
+                "Requires Level 6"
+              ]
+            },
+            {
+              "name": "Windswept Shortbow",
+              "itemId": 273877,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "3.41 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Among the Faithful",
+                "detail": "3.41 DPS, 2.20s - Among the Faithful"
+              },
+              "value": "3.41 DPS, 2.20s - Among the Faithful",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.20",
+                "(3.41 damage per second)",
+                "Requires Level 5"
+              ]
+            },
+            {
+              "name": "Hornwood Recurve Bow",
+              "itemId": 2506,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "2.10",
+              "dps": "2.38 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Bow Vendor",
+                "detail": "Early town bow vendor upgrade (2.38 DPS)"
+              },
+              "value": "2.38 DPS, 2.10s - Bow Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "3 - 7 Damage\tSpeed 2.10",
+                "(2.38 damage per second)",
+                "Requires Level 3"
+              ]
+            },
+            {
+              "name": "Kolkar Bow",
+              "itemId": 286729,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "2.68 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Durotar: Lost in the Shadows",
+                "detail": "Horde quest recurve bow from Sen'jin Village"
+              },
+              "value": "2.68 DPS, 2.80s - Durotar: Lost in the Shadows",
+              "faction": "horde",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 4,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "5 - 10 Damage\tSpeed 2.80",
+                "(2.68 damage per second)",
+                "Requires Level 4"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bristlebark Bow",
+          "itemId": 286748,
+          "icon": "inv_weapon_bow_03",
+          "weaponType": "Bow",
+          "speed": "2.60",
+          "dps": "5.00 DPS",
+          "source": {
+            "kind": "drop",
+            "title": "Bristlebark / Barrens Rare",
+            "detail": "Uncommon bow drop (+1 Agility) in Barrens & Darkshore"
+          },
+          "value": "5.00 DPS, 2.60s - +1 Agility - Bristlebark / Barrens Rare",
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 7,
+          "stats": "+1 Agility",
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "9 - 17 Damage\tSpeed 2.60",
+            "(5.00 damage per second)",
+            "+1 Agility",
+            "Requires Level 7"
+          ],
+          "levelBracket": "7–8",
+          "alts": [
+            {
               "name": "Snarlsnout Shooter",
               "itemId": 286753,
-              "value": "5.00 DPS, 2.50s (+1 Str) - Uncommon Gun",
-              "faction": "both",
-              "dps": "5.00 DPS",
-              "speed": "2.50",
+              "icon": "inv_weapon_rifle_05",
               "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Snarlsnout Shooter",
+                "detail": "Uncommon gun drop (+1 Strength) in early zones"
+              },
+              "value": "5.00 DPS, 2.50s - +1 Strength - Snarlsnout Shooter",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Strength",
-              "icon": "inv_weapon_rifle_05",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8368,18 +8574,150 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
+              "name": "Militia Bow",
+              "itemId": 276685,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.10",
+              "dps": "5.71 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Elwynn Forest: Rare Books",
+                "detail": "Alliance starter quest reward in Northshire/Goldshire"
+              },
+              "value": "5.71 DPS, 2.10s - +1 Agility - Elwynn Forest: Rare Books",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 1,
+              "stats": "+1 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "8 - 16 Damage\tSpeed 2.10",
+                "(5.71 damage per second)",
+                "+1 Agility"
+              ]
+            },
+            {
+              "name": "Compact Shotgun",
+              "itemId": 4577,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.00",
+              "dps": "5.25 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "5.25 DPS, 2.00s - +1 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "5.25 DPS, 2.00s - +1 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": "+1 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.00",
+                "(5.25 damage per second)",
+                "Requires Level 8"
+              ]
+            },
+            {
+              "name": "Harvester's Pestslayer",
+              "itemId": 276695,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "6.04 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Westfall: The Forgotten Heirloom",
+                "detail": "Westfall harvest watcher quest bow"
+              },
+              "value": "6.04 DPS, 2.40s - +1 Agility, +1 Stamina - Westfall: The Forgotten Heirloom",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 8,
+              "stats": "+1 Agility, +1 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(6.04 damage per second)",
+                "Requires Level 8"
+              ]
+            },
+            {
+              "name": "Hickory Shortbow",
+              "itemId": 4931,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
+              "speed": "2.00",
+              "dps": "3.75 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Securing the Lines",
+                "detail": "3.75 DPS, 2.00s - Securing the Lines"
+              },
+              "value": "3.75 DPS, 2.00s - Securing the Lines",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 11,
+              "reqLevel": 7,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "5 - 10 Damage\tSpeed 2.00",
+                "(3.75 damage per second)",
+                "Requires Level 7"
+              ]
+            },
+            {
+              "name": "Junior's Hunting Bow",
+              "itemId": 276686,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "1.70",
+              "dps": "3.53 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Bounty on Murlocs",
+                "detail": "3.53 DPS, 1.70s - Bounty on Murlocs"
+              },
+              "value": "3.53 DPS, 1.70s - Bounty on Murlocs",
+              "faction": "alliance",
+              "quality": "q1",
+              "iLvl": 10,
+              "reqLevel": 7,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 1.70",
+                "(3.53 damage per second)",
+                "Requires Level 7"
+              ]
+            },
+            {
               "name": "Reinforced Bow",
               "itemId": 3026,
-              "value": "4.4 DPS, 2.20s - Vendor bow",
-              "faction": "both",
-              "dps": "5.77 DPS",
-              "speed": "2.60",
+              "icon": "inv_weapon_bow_02",
               "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "7.50 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.50 DPS, 2.20s - Leveling Drop / Vendor"
+              },
+              "value": "7.50 DPS, 2.20s - Leveling Drop / Vendor",
+              "faction": "both",
               "quality": "q1",
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "",
-              "icon": "inv_weapon_bow_01",
               "lines": [
                 "Ranged",
                 "11 - 22 Damage\tSpeed 2.20",
@@ -8390,108 +8728,233 @@ if (typeof window !== 'undefined') {
             {
               "name": "Skorn's Rifle",
               "itemId": 3079,
-              "value": "5.0 DPS, 1.90s - Mulgore Quest: The Demon Scarred Cloak",
-              "faction": "horde",
-              "dps": "5 DPS",
-              "speed": "1.90",
+              "icon": "inv_weapon_rifle_01",
               "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "The Demon Scarred Cloak",
+                "detail": "5.00 DPS, 1.90s - +1 Agility - The Demon Scarred Cloak"
+              },
+              "value": "5.00 DPS, 1.90s - +1 Agility - The Demon Scarred Cloak",
+              "faction": "horde",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_rifle_01",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
                 "6 - 13 Damage\tSpeed 1.90",
                 "(5.00 damage per second)",
-                "+1 Agility"
+                "+1 Agility",
+                "Requires Level 6"
               ]
             }
-          ],
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 14,
-          "reqLevel": 1,
-          "stats": "+1 Agility",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "8 - 16 Damage\tSpeed 2.10",
-            "(5.71 damage per second)",
-            "+1 Agility"
           ]
         },
         {
-          "levelBracket": "9–10",
-          "itemId": 3027,
-          "name": "Heavy Recurve Bow",
-          "icon": "inv_weapon_bow_02",
+          "name": "Orcish Battle Bow",
+          "itemId": 5346,
+          "icon": "inv_weapon_bow_08",
           "weaponType": "Bow",
-          "speed": "2.20",
-          "dps": "6.7 DPS",
+          "speed": "1.90",
+          "dps": "5.53 DPS",
           "source": {
-            "kind": "vendor",
-            "title": "Bow Vendor",
-            "detail": "Sold in Stormwind, Ironforge, Orgrimmar, and Thunder Bluff"
+            "kind": "quest",
+            "title": "Durotar: Centaur Bracers",
+            "detail": "Horde early quest bow (+1 Strength) from Sen'jin Village"
           },
+          "value": "5.53 DPS, 1.90s - +1 Strength - Durotar: Centaur Bracers",
+          "faction": "horde",
+          "quality": "q2",
+          "iLvl": 14,
+          "reqLevel": 9,
+          "stats": "+1 Strength",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "7 - 14 Damage\tSpeed 1.90",
+            "(5.53 damage per second)",
+            "+1 Strength",
+            "Requires Level 9"
+          ],
+          "levelBracket": "9–10",
           "alts": [
+            {
+              "name": "Calibrated Blunderbuss",
+              "itemId": 279894,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "9.57 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Old Ironforge Incursion",
+                "detail": "Hall of Thanes dungeon quest reward (+3 Stamina)"
+              },
+              "value": "9.57 DPS, 2.30s - +3 Stamina - Old Ironforge Incursion",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+3 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 29 Damage\tSpeed 2.30",
+                "(9.57 damage per second)",
+                "+3 Stamina",
+                "Requires Level 9"
+              ]
+            },
+            {
+              "name": "Hunter's Boomstick",
+              "itemId": 2511,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.10",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Dun Morogh: A Hunter's Boast",
+                "detail": "Alliance hunter quest reward from Dun Morogh"
+              },
+              "value": "5.00 DPS, 2.10s - Dun Morogh: A Hunter's Boast",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "7 - 14 Damage\tSpeed 2.10",
+                "(5.00 damage per second)",
+                "Requires Level 9"
+              ]
+            },
+            {
+              "name": "Heavy Shortbow",
+              "itemId": 3036,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "2.50",
+              "dps": "6.00 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "6.00 DPS, 2.50s - +1 Strength - Leveling Drop / Vendor"
+              },
+              "value": "6.00 DPS, 2.50s - +1 Strength - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+1 Strength",
+              "lines": [
+                "Ranged",
+                "Speed 2.50",
+                "(6.00 damage per second)",
+                "Requires Level 10"
+              ]
+            },
             {
               "name": "Misplaced Shooter",
               "itemId": 277255,
-              "value": "4.82 DPS, 2.80s (+1 Str, +1 Sta) - Leonid's Letter",
-              "faction": "horde",
-              "dps": "4.82 DPS",
-              "speed": "2.80",
+              "icon": "inv_weapon_rifle_07",
               "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "4.82 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Leonid's Letter",
+                "detail": "Horde quest blunderbuss (+1 Str, +1 Sta) in Silverpine"
+              },
+              "value": "4.82 DPS, 2.80s - +1 Strength, +1 Stamina - Leonid's Letter",
+              "faction": "horde",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 10,
               "stats": "+1 Strength, +1 Stamina",
-              "icon": "inv_weapon_rifle_07",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
                 "9 - 18 Damage\tSpeed 2.80",
                 "(4.82 damage per second)",
                 "+1 Strength",
-                "+1 Stamina"
+                "+1 Stamina",
+                "Requires Level 10"
               ]
             },
             {
-              "name": "Calibrated Blunderbuss",
-              "itemId": 279894,
-              "value": "9.57 DPS, 2.30s (+3 Sta) - Old Ironforge Incursion",
-              "faction": "alliance",
-              "dps": "9.57 DPS",
-              "speed": "2.30",
-              "weaponType": "Gun",
-              "quality": "q3",
-              "iLvl": 18,
+              "name": "Zephrali Bow",
+              "itemId": 277110,
+              "icon": "inv_bow_1h_skybornec60_b_01",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "4.82 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Falfaan Halfwind",
+                "detail": "4.82 DPS, 2.80s - Falfaan Halfwind"
+              },
+              "value": "4.82 DPS, 2.80s - Falfaan Halfwind",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 14,
               "reqLevel": 9,
-              "stats": "+3 Stamina",
-              "icon": "inv_weapon_rifle_01",
+              "stats": "",
               "lines": [
-                "Binds when picked up",
                 "Ranged",
-                "15 - 29 Damage\tSpeed 2.30",
-                "(9.57 damage per second)",
-                "+3 Stamina"
+                "Speed 2.80",
+                "(4.82 damage per second)",
+                "Requires Level 9"
+              ]
+            },
+            {
+              "name": "Zephrali Crossbow",
+              "itemId": 277111,
+              "icon": "inv_bow_2h_skybornec60_b_01",
+              "weaponType": "Crossbow",
+              "speed": "2.80",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Falfaan Halfwind",
+                "detail": "5.00 DPS, 2.80s - Falfaan Halfwind"
+              },
+              "value": "5.00 DPS, 2.80s - Falfaan Halfwind",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(5.00 damage per second)",
+                "Requires Level 9"
               ]
             },
             {
               "name": "Fine Shortbow",
               "itemId": 11303,
-              "value": "6.2 DPS - Fast 1.70s swing",
-              "faction": "both",
-              "dps": "6.18 DPS",
-              "speed": "1.70",
+              "icon": "inv_weapon_bow_07",
               "weaponType": "Bow",
+              "speed": "1.70",
+              "dps": "6.18 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "6.18 DPS, 1.70s - +1 Agility - Leveling Drop / Vendor"
+              },
+              "value": "6.18 DPS, 1.70s - +1 Agility - Leveling Drop / Vendor",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 11,
               "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_05",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8502,61 +8965,23 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Rough Boomstick",
-              "itemId": 4362,
-              "value": "4.1 DPS - Engineering (30)",
-              "faction": "both",
-              "dps": "4.13 DPS",
-              "speed": "2.30",
-              "weaponType": "Gun",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 5,
-              "stats": "+1 Stamina",
-              "icon": "inv_weapon_rifle_02",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "6 - 13 Damage\tSpeed 2.30",
-                "(4.13 damage per second)",
-                "+1 Stamina",
-                "Requires Level 5"
-              ]
-            },
-            {
-              "name": "Orcish Battle Bow",
-              "itemId": 5346,
-              "value": "5.5 DPS, 1.90s - Durotar Quest: Centaur Bracers",
-              "faction": "horde",
-              "dps": "5.53 DPS",
-              "speed": "1.90",
-              "weaponType": "Bow",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 9,
-              "stats": "+1 Strength",
-              "icon": "inv_weapon_bow_08",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "7 - 14 Damage\tSpeed 1.90",
-                "(5.53 damage per second)",
-                "+1 Strength"
-              ]
-            },
-            {
               "name": "Snarlsnout Shooter",
               "itemId": 286753,
-              "value": "5.0 DPS, 2.50s - Barrens Rare",
-              "faction": "both",
-              "dps": "5 DPS",
-              "speed": "2.50",
+              "icon": "inv_weapon_rifle_05",
               "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Snarlsnout Shooter",
+                "detail": "Uncommon gun drop (+1 Strength) in early zones"
+              },
+              "value": "5.00 DPS, 2.50s - +1 Strength - Snarlsnout Shooter",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
               "stats": "+1 Strength",
-              "icon": "inv_weapon_rifle_05",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8565,120 +8990,49 @@ if (typeof window !== 'undefined') {
                 "+1 Strength",
                 "Requires Level 7"
               ]
+            },
+            {
+              "name": "Skorn's Rifle",
+              "itemId": 3079,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "The Demon Scarred Cloak",
+                "detail": "5.00 DPS, 1.90s - +1 Agility - The Demon Scarred Cloak"
+              },
+              "value": "5.00 DPS, 1.90s - +1 Agility - The Demon Scarred Cloak",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": "+1 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "6 - 13 Damage\tSpeed 1.90",
+                "(5.00 damage per second)",
+                "+1 Agility",
+                "Requires Level 6"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q1",
-          "iLvl": 25,
-          "reqLevel": 20,
-          "stats": "",
-          "lines": [
-            "Ranged",
-            "15 - 29 Damage\tSpeed 2.40",
-            "(9.17 damage per second)",
-            "Requires Level 20"
           ]
         },
         {
-          "levelBracket": "11–12",
-          "itemId": 2507,
           "name": "Laminated Recurve Bow",
+          "itemId": 2507,
           "icon": "inv_weapon_bow_01",
           "weaponType": "Bow",
-          "speed": "2.30",
-          "dps": "7.8 DPS",
+          "speed": "2.60",
+          "dps": "5.77 DPS",
           "source": {
             "kind": "vendor",
             "title": "Bow Vendor",
             "detail": "Sold in Redridge, Loch Modan, Crossroads, and Auberdine"
           },
-          "alts": [
-            {
-              "name": "Hunter's Boomstick",
-              "itemId": 2511,
-              "value": "8.5 DPS, 2.10s - Dun Morogh quest reward",
-              "faction": "alliance",
-              "dps": "6.72 DPS",
-              "speed": "3.20",
-              "weaponType": "Staff",
-              "quality": "q1",
-              "iLvl": 14,
-              "reqLevel": 9,
-              "stats": "+6 Spell Power",
-              "icon": "inv_staff_16",
-              "lines": [
-                "Ranged",
-                "7 - 14 Damage\tSpeed 2.10",
-                "(5.00 damage per second)",
-                "Requires Level 9"
-              ]
-            },
-            {
-              "name": "Deadly Blunderbuss",
-              "itemId": 4369,
-              "value": "8.3 DPS, 2.60s - Engineering (105)",
-              "faction": "both",
-              "dps": "8.27 DPS",
-              "speed": "2.60",
-              "weaponType": "Gun",
-              "quality": "q2",
-              "iLvl": 21,
-              "reqLevel": 16,
-              "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "15 - 28 Damage\tSpeed 2.60",
-                "(8.27 damage per second)",
-                "+2 Agility",
-                "Requires Level 16"
-              ]
-            },
-            {
-              "name": "Orcish Battle Bow",
-              "itemId": 5346,
-              "value": "5.5 DPS - Durotar Quest: Centaur Bracers",
-              "faction": "horde",
-              "dps": "5.53 DPS",
-              "speed": "1.90",
-              "weaponType": "Bow",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 9,
-              "stats": "+1 Strength",
-              "icon": "inv_weapon_bow_08",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "7 - 14 Damage\tSpeed 1.90",
-                "(5.53 damage per second)",
-                "+1 Strength"
-              ]
-            },
-            {
-              "name": "Bristlebark Bow",
-              "itemId": 286748,
-              "value": "5.0 DPS, 2.60s - Barrens Drop",
-              "faction": "both",
-              "dps": "5 DPS",
-              "speed": "2.60",
-              "weaponType": "Bow",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": "+1 Agility",
-              "icon": "inv_weapon_bow_03",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "9 - 17 Damage\tSpeed 2.60",
-                "(5.00 damage per second)",
-                "+1 Agility",
-                "Requires Level 7"
-              ]
-            }
-          ],
+          "value": "5.77 DPS, 2.60s - Bow Vendor",
           "faction": "both",
           "quality": "q1",
           "iLvl": 16,
@@ -8689,57 +9043,150 @@ if (typeof window !== 'undefined') {
             "10 - 20 Damage\tSpeed 2.60",
             "(5.77 damage per second)",
             "Requires Level 11"
-          ]
-        },
-        {
-          "levelBracket": "13–14",
-          "itemId": 279894,
-          "name": "Calibrated Blunderbuss",
-          "icon": "inv_weapon_rifle_01",
-          "weaponType": "Gun",
-          "speed": "2.40",
-          "dps": "9.6 DPS",
-          "source": {
-            "kind": "quest",
-            "title": "Old Ironforge Incursion",
-            "detail": "Hall of Thanes dungeon quest reward"
-          },
+          ],
+          "levelBracket": "11–12",
           "alts": [
             {
-              "name": "Barbaric Crossbow",
-              "itemId": 272999,
-              "value": "9.50 DPS, 2.00s - Oggleflint in Ragefire Chasm",
-              "faction": "both",
-              "dps": "9.50 DPS",
-              "speed": "2.00",
-              "weaponType": "Weapon",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 13,
-              "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
-              "icon": "inv_weapon_crossbow_02",
+              "name": "Daryl's Hunting Rifle",
+              "itemId": 2904,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "6.40 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Hillsbrad: Syndicate Assassins",
+                "detail": "Syndicate hunting rifle reward in Hillsbrad Foothills"
+              },
+              "value": "6.40 DPS, 2.50s - +1 Strength - Hillsbrad: Syndicate Assassins",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+1 Strength",
               "lines": [
-                "Binds when picked up",
                 "Ranged",
-                "15 - 23 Damage\tSpeed 2.00",
-                "(9.50 damage per second)",
-                "Requires Level 13",
-                "Chance on hit: Wounds the target for 14 Physical damage."
+                "Speed 2.50",
+                "(6.40 damage per second)",
+                "Requires Level 11"
+              ]
+            },
+            {
+              "name": "Daryl's Hunting Bow",
+              "itemId": 2903,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "5.87 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Hillsbrad: Syndicate Assassins",
+                "detail": "Syndicate hunting bow reward in Hillsbrad Foothills"
+              },
+              "value": "5.87 DPS, 2.30s - +1 Agility - Hillsbrad: Syndicate Assassins",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 11,
+              "stats": "+1 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.30",
+                "(5.87 damage per second)",
+                "Requires Level 11"
+              ]
+            },
+            {
+              "name": "Captain Sander's Lucky Shooter",
+              "itemId": 276694,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "5.87 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Captain Sander's Hidden Treasure",
+                "detail": "Westfall treasure map reward (+1 Strength)"
+              },
+              "value": "5.87 DPS, 2.30s - +1 Strength - Captain Sander's Hidden Treasure",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 1,
+              "stats": "+1 Strength",
+              "lines": [
+                "Ranged",
+                "Speed 2.30",
+                "(5.87 damage per second)"
+              ]
+            },
+            {
+              "name": "Privateer's Ornate Pistol",
+              "itemId": 202256,
+              "icon": "inv_weapon_rifle_10",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "5.00 DPS, 1.90s - +0 Agility - Leveling Drop / Vendor"
+              },
+              "value": "5.00 DPS, 1.90s - +0 Agility - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 1,
+              "stats": "+0 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(5.00 damage per second)"
+              ]
+            },
+            {
+              "name": "Hunter's Boomstick",
+              "itemId": 2511,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.10",
+              "dps": "5.00 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Dun Morogh: A Hunter's Boast",
+                "detail": "Alliance hunter quest reward from Dun Morogh"
+              },
+              "value": "5.00 DPS, 2.10s - Dun Morogh: A Hunter's Boast",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "7 - 14 Damage\tSpeed 2.10",
+                "(5.00 damage per second)",
+                "Requires Level 9"
               ]
             },
             {
               "name": "Deadly Blunderbuss",
               "itemId": 4369,
-              "value": "8.3 DPS, 2.60s - Engineering (105)",
-              "faction": "both",
-              "dps": "8.27 DPS",
-              "speed": "2.60",
+              "icon": "inv_weapon_rifle_07",
               "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "8.27 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (105)",
+                "detail": "Crafted bronze blunderbuss (+2 Agility), huge upgrade"
+              },
+              "value": "8.27 DPS, 2.60s - +2 Agility - Engineering (105)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8748,89 +9195,266 @@ if (typeof window !== 'undefined') {
                 "+2 Agility",
                 "Requires Level 16"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Barbaric Crossbow",
+          "itemId": 272999,
+          "icon": "inv_weapon_crossbow_02",
+          "weaponType": "Crossbow",
+          "speed": "2.00",
+          "dps": "9.50 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Oggleflint in Ragefire Chasm",
+            "detail": "Rare dungeon drop crossbow in RFC (9.50 DPS)"
+          },
+          "value": "9.50 DPS, 2.00s - Chance on hit: Wounds the target for 14 Physical damage. - Oggleflint in Ragefire Chasm",
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "15 - 23 Damage\tSpeed 2.00",
+            "(9.50 damage per second)",
+            "Requires Level 13",
+            "Chance on hit: Wounds the target for 14 Physical damage."
+          ],
+          "levelBracket": "13–14",
+          "alts": [
             {
-              "name": "Laminated Recurve Bow",
-              "itemId": 2507,
-              "value": "7.8 DPS - Town vendor fallback",
-              "faction": "both",
-              "dps": "9.17 DPS",
-              "speed": "2.40",
-              "weaponType": "Bow",
-              "quality": "q1",
-              "iLvl": 16,
-              "reqLevel": 11,
-              "stats": "",
-              "icon": "inv_weapon_bow_01",
+              "name": "Privateer Musket",
+              "itemId": 5309,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "7.83 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Deadmines Drop",
+                "detail": "Privateer firearm drop from Defias pirates"
+              },
+              "value": "7.83 DPS, 2.30s - +2 Agility - Deadmines Drop",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 13,
+              "stats": "+2 Agility",
               "lines": [
                 "Ranged",
-                "10 - 20 Damage\tSpeed 2.60",
-                "(5.77 damage per second)",
-                "Requires Level 11"
+                "Speed 2.30",
+                "(7.83 damage per second)",
+                "Requires Level 13"
               ]
             },
             {
               "name": "Walton's Second-Favorite Gun",
               "itemId": 269742,
-              "value": "7.95 DPS, 2.20s (+2 Agi) - Unwelcome Guests",
-              "faction": "horde",
-              "dps": "7.95 DPS",
-              "speed": "2.20",
+              "icon": "inv_weapon_rifle_05",
               "weaponType": "Gun",
+              "speed": "2.20",
+              "dps": "7.95 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Barrens: Unwelcome Guests",
+                "detail": "Horde quest reward from Taurajo (+2 Agility)"
+              },
+              "value": "7.95 DPS, 2.20s - +2 Agility - Barrens: Unwelcome Guests",
+              "faction": "horde",
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 14,
               "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_05",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
                 "12 - 23 Damage\tSpeed 2.20",
                 "(7.95 damage per second)",
-                "+2 Agility"
+                "+2 Agility",
+                "Requires Level 14"
+              ]
+            },
+            {
+              "name": "Fine Longbow",
+              "itemId": 11304,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "7.41 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.41 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "7.41 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.70",
+                "(7.41 damage per second)",
+                "Requires Level 14"
+              ]
+            },
+            {
+              "name": "Hunter's Muzzle Loader",
+              "itemId": 3040,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "1.80",
+              "dps": "7.50 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.50 DPS, 1.80s - Leveling Drop / Vendor"
+              },
+              "value": "7.50 DPS, 1.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(7.50 damage per second)",
+                "Requires Level 14"
+              ]
+            },
+            {
+              "name": "Calibrated Blunderbuss",
+              "itemId": 279894,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "9.57 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Old Ironforge Incursion",
+                "detail": "Hall of Thanes dungeon quest reward (+3 Stamina)"
+              },
+              "value": "9.57 DPS, 2.30s - +3 Stamina - Old Ironforge Incursion",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+3 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 29 Damage\tSpeed 2.30",
+                "(9.57 damage per second)",
+                "+3 Stamina",
+                "Requires Level 9"
+              ]
+            },
+            {
+              "name": "Deadly Blunderbuss",
+              "itemId": 4369,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "8.27 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (105)",
+                "detail": "Crafted bronze blunderbuss (+2 Agility), huge upgrade"
+              },
+              "value": "8.27 DPS, 2.60s - +2 Agility - Engineering (105)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+2 Agility",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "15 - 28 Damage\tSpeed 2.60",
+                "(8.27 damage per second)",
+                "+2 Agility",
+                "Requires Level 16"
               ]
             }
-          ],
-          "faction": "alliance",
-          "quality": "q3",
-          "iLvl": 18,
-          "reqLevel": 9,
-          "stats": "+3 Stamina",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "15 - 29 Damage\tSpeed 2.30",
-            "(9.57 damage per second)",
-            "+3 Stamina"
           ]
         },
         {
-          "levelBracket": "15–18",
-          "itemId": 6469,
-          "name": "Venomstrike",
-          "icon": "inv_weapon_bow_10",
-          "weaponType": "Bow",
-          "speed": "2.40",
-          "dps": "12.1 DPS",
+          "name": "Deadly Blunderbuss",
+          "itemId": 4369,
+          "icon": "inv_weapon_rifle_07",
+          "weaponType": "Gun",
+          "speed": "2.60",
+          "dps": "8.27 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Lord Serpentis",
-            "detail": "Wailing Caverns (Poison bolt proc)"
+            "kind": "craft",
+            "title": "Engineering (105)",
+            "detail": "Crafted bronze blunderbuss (+2 Agility), huge upgrade"
           },
+          "value": "8.27 DPS, 2.60s - +2 Agility - Engineering (105)",
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": "+2 Agility",
+          "lines": [
+            "Binds when equipped",
+            "Ranged",
+            "15 - 28 Damage\tSpeed 2.60",
+            "(8.27 damage per second)",
+            "+2 Agility",
+            "Requires Level 16"
+          ],
+          "levelBracket": "15–18",
           "alts": [
+            {
+              "name": "Lil Timmy's Peashooter",
+              "itemId": 13136,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "10.96 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Stormwind: Lil Timmy's Peashooter",
+                "detail": "Rare wandering vendor boy in Stormwind (+2 Agility)"
+              },
+              "value": "10.96 DPS, 2.60s - +4 Agility - Stormwind: Lil Timmy's Peashooter",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+4 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(10.96 damage per second)",
+                "Requires Level 16"
+              ]
+            },
             {
               "name": "Lovingly Crafted Boomstick",
               "itemId": 4372,
-              "value": "9.7 DPS, 1.80s - Engineering (120)",
-              "faction": "both",
-              "dps": "9.72 DPS",
-              "speed": "1.80",
+              "icon": "inv_weapon_rifle_07",
               "weaponType": "Gun",
+              "speed": "1.80",
+              "dps": "9.72 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (120)",
+                "detail": "Fast 1.90s shotgun, excellent for fast shot weaving"
+              },
+              "value": "9.72 DPS, 1.80s - +3 Spirit - Engineering (120)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+3 Spirit",
-              "icon": "inv_weapon_rifle_01",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8841,91 +9465,23 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Deadly Blunderbuss",
-              "itemId": 4369,
-              "value": "8.3 DPS - Engineering (105)",
-              "faction": "both",
-              "dps": "8.27 DPS",
-              "speed": "2.60",
-              "weaponType": "Gun",
-              "quality": "q2",
-              "iLvl": 21,
-              "reqLevel": 16,
-              "stats": "+2 Agility",
-              "icon": "inv_weapon_rifle_07",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "15 - 28 Damage\tSpeed 2.60",
-                "(8.27 damage per second)",
-                "+2 Agility",
-                "Requires Level 16"
-              ]
-            },
-            {
-              "name": "Barbaric Crossbow",
-              "itemId": 272999,
-              "weaponType": "Crossbow",
-              "speed": "2.00",
-              "dps": "9.5 DPS",
-              "value": "9.5 DPS, 2.00s - RFC Drop",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 13,
-              "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
-              "icon": "inv_weapon_crossbow_02",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "15 - 23 Damage\tSpeed 2.00",
-                "(9.50 damage per second)",
-                "Requires Level 13",
-                "Chance on hit: Wounds the target for 14 Physical damage."
-              ]
-            }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 19,
-          "stats": "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "20 - 38 Damage\tSpeed 2.40",
-            "(12.08 damage per second)",
-            "Requires Level 19",
-            "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
-          ]
-        },
-        {
-          "levelBracket": "19–20",
-          "itemId": 6469,
-          "name": "Venomstrike",
-          "icon": "inv_weapon_bow_10",
-          "weaponType": "Bow",
-          "speed": "2.40",
-          "dps": "12.1 DPS",
-          "source": {
-            "kind": "dungeon",
-            "title": "Lord Serpentis",
-            "detail": "Remains top-tier through level 22"
-          },
-          "alts": [
-            {
               "name": "Silver-plated Shotgun",
               "itemId": 4379,
-              "value": "10.4 DPS, 2.40s - Engineering (125)",
-              "faction": "both",
-              "dps": "10.37 DPS",
-              "speed": "2.70",
+              "icon": "inv_weapon_rifle_07",
               "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "10.37 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (125)",
+                "detail": "High single-hit shotgun with 2.70s swing timer"
+              },
+              "value": "10.37 DPS, 2.70s - +3 Stamina - Engineering (125)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 26,
               "reqLevel": 21,
               "stats": "+3 Stamina",
-              "icon": "inv_weapon_rifle_07",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -8936,26 +9492,222 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Reinforced Bow",
-              "itemId": 3026,
-              "value": "4.4 DPS - Vendor fallback",
-              "faction": "both",
-              "dps": "5.77 DPS",
-              "speed": "2.60",
+              "name": "Outrider's Bow",
+              "itemId": 20437,
+              "icon": "inv_weapon_bow_06",
               "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "11.67 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Warsong Outriders (Friendly)",
+                "detail": "Horde WSG Friendly reputation bow (+2 Agi, +2 Sta)"
+              },
+              "value": "11.67 DPS, 2.40s - +2 Agility, +3 Stamina - Warsong Outriders (Friendly)",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+2 Agility, +3 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(11.67 damage per second)",
+                "Requires Level 18"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 20438,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "11.67 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Silverwing Sentinels (Friendly)",
+                "detail": "Alliance WSG Friendly reputation bow (+2 Agi, +2 Sta)"
+              },
+              "value": "11.67 DPS, 2.40s - +2 Agility, +3 Stamina - Silverwing Sentinels (Friendly)",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+2 Agility, +3 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(11.67 damage per second)",
+                "Requires Level 18"
+              ]
+            },
+            {
+              "name": "Light Bow",
+              "itemId": 4576,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "1.70",
+              "dps": "7.94 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.94 DPS, 1.70s - +2 Agility - Leveling Drop / Vendor"
+              },
+              "value": "7.94 DPS, 1.70s - +2 Agility - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+2 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 1.70",
+                "(7.94 damage per second)",
+                "Requires Level 16"
+              ]
+            },
+            {
+              "name": "Owlsight Rifle",
+              "itemId": 15205,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "7.88 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "The Sleeper Has Awakened",
+                "detail": "7.88 DPS, 2.60s - +2 Agility - The Sleeper Has Awakened"
+              },
+              "value": "7.88 DPS, 2.60s - +2 Agility - The Sleeper Has Awakened",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 17,
+              "stats": "+2 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(7.88 damage per second)",
+                "Requires Level 17"
+              ]
+            },
+            {
+              "name": "Fine Light Crossbow",
+              "itemId": 15808,
+              "icon": "inv_weapon_crossbow_02",
+              "weaponType": "Crossbow",
+              "speed": "2.70",
+              "dps": "7.41 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.41 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "7.41 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
               "quality": "q1",
               "iLvl": 21,
               "reqLevel": 16,
               "stats": "",
-              "icon": "inv_weapon_bow_01",
               "lines": [
                 "Ranged",
-                "11 - 22 Damage\tSpeed 2.20",
-                "(7.50 damage per second)",
+                "Speed 2.70",
+                "(7.41 damage per second)",
                 "Requires Level 16"
               ]
+            },
+            {
+              "name": "Large Bore Blunderbuss",
+              "itemId": 3023,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "7.40 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "7.40 DPS, 2.50s - Leveling Drop / Vendor"
+              },
+              "value": "7.40 DPS, 2.50s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "13 - 24 Damage\tSpeed 2.50",
+                "(7.40 damage per second)",
+                "Requires Level 16"
+              ]
+            },
+            {
+              "name": "Short Ash Bow",
+              "itemId": 3039,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "1.90",
+              "dps": "9.21 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "9.21 DPS, 1.90s - +2 Spirit - Leveling Drop / Vendor"
+              },
+              "value": "9.21 DPS, 1.90s - +2 Spirit - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": "+2 Spirit",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(9.21 damage per second)",
+                "Requires Level 18"
+              ]
+            },
+            {
+              "name": "Barbaric Crossbow",
+              "itemId": 272999,
+              "icon": "inv_weapon_crossbow_02",
+              "weaponType": "Crossbow",
+              "speed": "2.00",
+              "dps": "9.50 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Oggleflint in Ragefire Chasm",
+                "detail": "Rare dungeon drop crossbow in RFC (9.50 DPS)"
+              },
+              "value": "9.50 DPS, 2.00s - Chance on hit: Wounds the target for 14 Physical damage. - Oggleflint in Ragefire Chasm",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "Chance on hit: Wounds the target for 14 Physical damage.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "15 - 23 Damage\tSpeed 2.00",
+                "(9.50 damage per second)",
+                "Requires Level 13",
+                "Chance on hit: Wounds the target for 14 Physical damage."
+              ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Venomstrike",
+          "itemId": 6469,
+          "icon": "inv_weapon_bow_10",
+          "weaponType": "Bow",
+          "speed": "2.40",
+          "dps": "12.08 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Lord Serpentis (Wailing Caverns)",
+            "detail": "Iconic dungeon bow with Chance on hit: 31-45 Nature damage"
+          },
+          "value": "12.08 DPS, 2.40s - Chance on hit: Venom Shot the target for 23 to 33 Nature damage. - Lord Serpentis (Wailing Caverns)",
           "faction": "both",
           "quality": "q3",
           "iLvl": 24,
@@ -8968,35 +9720,261 @@ if (typeof window !== 'undefined') {
             "(12.08 damage per second)",
             "Requires Level 19",
             "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
+          ],
+          "levelBracket": "19–20",
+          "alts": [
+            {
+              "name": "Ranger Bow",
+              "itemId": 3021,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "12.59 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Ranger Bow",
+                "detail": "World drop recurve bow (+3 Agility)"
+              },
+              "value": "12.59 DPS, 2.70s - +1 Agility - Ranger Bow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+1 Agility",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "23 - 45 Damage\tSpeed 2.70",
+                "(12.59 damage per second)",
+                "+1 Agility",
+                "Requires Level 20"
+              ]
+            },
+            {
+              "name": "Bow of Plunder",
+              "itemId": 3742,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "11.35 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Dangerous!",
+                "detail": "11.35 DPS, 2.60s - +2 Agility, +2 Stamina - Dangerous!"
+              },
+              "value": "11.35 DPS, 2.60s - +2 Agility, +2 Stamina - Dangerous!",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 19,
+              "stats": "+2 Agility, +2 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(11.35 damage per second)",
+                "Requires Level 19"
+              ]
+            },
+            {
+              "name": "Cliffrunner's Aim",
+              "itemId": 6739,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "11.96 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Stonetalon: Cliffrunner's Aim",
+                "detail": "Horde quest reward bow (+2 Agility) in Stonetalon Mountains"
+              },
+              "value": "11.96 DPS, 2.30s - +2 Agility, +2 Intellect - Stonetalon: Cliffrunner's Aim",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 20,
+              "stats": "+2 Agility, +2 Intellect",
+              "lines": [
+                "Ranged",
+                "Speed 2.30",
+                "(11.96 damage per second)",
+                "Requires Level 20"
+              ]
+            },
+            {
+              "name": "Dwarven Fishing Pole",
+              "itemId": 3567,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "7.37 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Murloc Poachers",
+                "detail": "7.37 DPS, 1.90s - +2 Strength - Murloc Poachers"
+              },
+              "value": "7.37 DPS, 1.90s - +2 Strength - Murloc Poachers",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 20,
+              "stats": "+2 Strength",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(7.37 damage per second)",
+                "Requires Level 20"
+              ]
+            },
+            {
+              "name": "Heavy Recurve Bow",
+              "itemId": 3027,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "9.17 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "9.17 DPS, 2.40s - Leveling Drop / Vendor"
+              },
+              "value": "9.17 DPS, 2.40s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "15 - 29 Damage\tSpeed 2.40",
+                "(9.17 damage per second)",
+                "Requires Level 20"
+              ]
+            },
+            {
+              "name": "Silver-plated Shotgun",
+              "itemId": 4379,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "10.37 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (125)",
+                "detail": "High single-hit shotgun with 2.70s swing timer"
+              },
+              "value": "10.37 DPS, 2.70s - +3 Stamina - Engineering (125)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+3 Stamina",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "19 - 37 Damage\tSpeed 2.70",
+                "(10.37 damage per second)",
+                "+3 Stamina",
+                "Requires Level 21"
+              ]
+            }
           ]
         },
         {
-          "levelBracket": "21–22",
-          "itemId": 3078,
-          "name": "Naga Heartpiercer",
-          "icon": "inv_weapon_bow_04",
-          "weaponType": "Bow",
-          "speed": "2.40",
-          "dps": "13.3 DPS",
+          "name": "Double-barreled Shotgun",
+          "itemId": 2098,
+          "icon": "inv_weapon_rifle_08",
+          "weaponType": "Gun",
+          "speed": "2.30",
+          "dps": "13.26 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Lady Sarevess",
-            "detail": "Blackfathom Deeps"
+            "kind": "drop",
+            "title": "Double-barreled Shotgun",
+            "detail": "Rare world drop shotgun (+4 Agility, 14.17 DPS)"
           },
+          "value": "13.26 DPS, 2.30s - +3 Strength, +3 Agility - Double-barreled Shotgun",
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "stats": "+3 Strength, +3 Agility",
+          "lines": [
+            "Ranged",
+            "Speed 2.30",
+            "(13.26 damage per second)",
+            "Requires Level 22"
+          ],
+          "levelBracket": "21–22",
           "alts": [
+            {
+              "name": "Naga Heartpiercer",
+              "itemId": 3078,
+              "icon": "inv_weapon_bow_04",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "13.33 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Ashenvale: The Zoram Strand",
+                "detail": "Ashenvale naga hunting quest bow (+3 Agility)"
+              },
+              "value": "13.33 DPS, 2.40s - Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec. - Ashenvale: The Zoram Strand",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "22 - 42 Damage\tSpeed 2.40",
+                "(13.33 damage per second)",
+                "Requires Level 22",
+                "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec."
+              ]
+            },
+            {
+              "name": "Raptor's End",
+              "itemId": 3493,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.90",
+              "dps": "12.07 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Wetlands: The Rethban Ore",
+                "detail": "Alliance Wetlands quest bow (+4 Agility)"
+              },
+              "value": "12.07 DPS, 2.90s - +2 Agility, +2 Stamina - Wetlands: The Rethban Ore",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 30,
+              "reqLevel": 22,
+              "stats": "+2 Agility, +2 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(12.07 damage per second)",
+                "Requires Level 22"
+              ]
+            },
             {
               "name": "Fallenroot Longbow",
               "itemId": 273843,
-              "value": "13.86 DPS, 2.20s - Lorgus Jett in BFD",
-              "faction": "both",
-              "dps": "13.86 DPS",
-              "speed": "2.20",
+              "icon": "inv_weapon_bow_03",
               "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "13.86 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Lorgus Jett in BFD",
+                "detail": "Blackfathom Deeps boss drop bow (13.86 DPS)"
+              },
+              "value": "13.86 DPS, 2.20s - +2 Agility, +4 Stamina - Lorgus Jett in BFD",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 23,
               "stats": "+2 Agility, +4 Stamina",
-              "icon": "inv_weapon_bow_03",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9010,16 +9988,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Alliance Outrunner Bow",
               "itemId": 285347,
-              "value": "13.33 DPS, 2.40s - Outrunner Quest",
-              "faction": "alliance",
-              "dps": "13.33 DPS",
-              "speed": "2.40",
+              "icon": "inv_weapon_bow_05",
               "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "13.33 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Alliance Outrunner Bow",
+                "detail": "Alliance Outrunner quest reward (13.33 DPS)"
+              },
+              "value": "13.33 DPS, 2.40s - +4 Agility, +3 Spirit - Alliance Outrunner Bow",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
               "stats": "+4 Agility, +3 Spirit",
-              "icon": "inv_weapon_bow_05",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9031,18 +10014,73 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
+              "name": "Steelarrow Crossbow",
+              "itemId": 6315,
+              "icon": "inv_weapon_crossbow_01",
+              "weaponType": "Crossbow",
+              "speed": "3.40",
+              "dps": "10.88 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Dark Iron Rifleman",
+                "detail": "10.88 DPS, 3.40s - +3 Agility - Dark Iron Rifleman"
+              },
+              "value": "10.88 DPS, 3.40s - +3 Agility - Dark Iron Rifleman",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "+3 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 3.40",
+                "(10.88 damage per second)",
+                "Requires Level 22"
+              ]
+            },
+            {
+              "name": "Precision Bow",
+              "itemId": 8183,
+              "icon": "inv_weapon_bow_04",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "10.96 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "10.96 DPS, 2.60s - +3 Hit - Leveling Drop / Vendor"
+              },
+              "value": "10.96 DPS, 2.60s - +3 Hit - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "+3 Hit",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(10.96 damage per second)",
+                "Requires Level 22"
+              ]
+            },
+            {
               "name": "Moonsight Rifle",
               "itemId": 4383,
-              "value": "13.8 DPS, 2.40s, +3 Hit - Engineering (145)",
-              "faction": "both",
-              "dps": "11.76 DPS",
-              "speed": "1.70",
+              "icon": "inv_weapon_rifle_06",
               "weaponType": "Gun",
+              "speed": "1.70",
+              "dps": "11.76 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (145)",
+                "detail": "Solid bronze rifle with built-in optic sight"
+              },
+              "value": "11.76 DPS, 1.70s - Equip: Improves your chance to hit by 0.3%. - Engineering (145)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 29,
               "reqLevel": 24,
               "stats": "Equip: Improves your chance to hit by 0.3%.",
-              "icon": "inv_weapon_rifle_06",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9052,48 +10090,80 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 0.3%."
               ]
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 27,
-          "reqLevel": 22,
-          "stats": "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "22 - 42 Damage\tSpeed 2.40",
-            "(13.33 damage per second)",
-            "Requires Level 22",
-            "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec."
           ]
         },
         {
-          "levelBracket": "23–24",
-          "itemId": 273843,
-          "name": "Fallenroot Longbow",
-          "icon": "inv_weapon_bow_03",
-          "weaponType": "Bow",
-          "speed": "2.20",
-          "dps": "13.9 DPS",
+          "name": "Hi-Tech Supergun",
+          "itemId": 9487,
+          "icon": "inv_weapon_rifle_06",
+          "weaponType": "Gun",
+          "speed": "2.30",
+          "dps": "14.35 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Lorgus Jett",
-            "detail": "Blackfathom Deeps (+2 Agi, +4 Sta)"
+            "title": "Tinkerer Gizlock in Gnomeregan",
+            "detail": "High-tech dungeon rifle (+6 Sta, +3 Agi)"
           },
+          "value": "14.35 DPS, 2.30s - Tinkerer Gizlock in Gnomeregan",
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "Speed 2.30",
+            "(14.35 damage per second)",
+            "Requires Level 24"
+          ],
+          "levelBracket": "23–24",
           "alts": [
+            {
+              "name": "Fallenroot Longbow",
+              "itemId": 273843,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "13.86 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Lorgus Jett in BFD",
+                "detail": "Blackfathom Deeps boss drop bow (13.86 DPS)"
+              },
+              "value": "13.86 DPS, 2.20s - +2 Agility, +4 Stamina - Lorgus Jett in BFD",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+2 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "21 - 40 Damage\tSpeed 2.20",
+                "(13.86 damage per second)",
+                "+2 Agility",
+                "+4 Stamina",
+                "Requires Level 23"
+              ]
+            },
             {
               "name": "BKP 2700 \"Enforcer\"",
               "itemId": 3024,
-              "value": "14.2 DPS, 2.70s - Engineering (155)",
-              "faction": "both",
-              "dps": "14.2 DPS",
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
               "speed": "2.70",
+              "dps": "9.63 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "BKP 2700 \"Enforcer\"",
+                "detail": "Heavy world drop blunderbuss (+3 Agility)"
+              },
+              "value": "9.63 DPS, 2.70s - BKP 2700 \"Enforcer\"",
+              "faction": "both",
               "quality": "q1",
               "iLvl": 26,
               "reqLevel": 21,
               "stats": "",
-              "icon": "spell_nature_polymorph",
-              "weaponType": "Gun",
               "lines": [
                 "Ranged",
                 "18 - 34 Damage\tSpeed 2.70",
@@ -9104,16 +10174,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Concealed Hand Crossbow",
               "itemId": 273829,
-              "value": "15.3 DPS - The Stockade: Bazil Thredd",
-              "faction": "both",
-              "dps": "15.25 DPS",
-              "speed": "2.00",
+              "icon": "inv_weapon_crossbow_02",
               "weaponType": "Crossbow",
+              "speed": "2.00",
+              "dps": "15.25 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Bazil Thredd",
+                "detail": "15.25 DPS, 2.00s - Bazil Thredd"
+              },
+              "value": "15.25 DPS, 2.00s - Bazil Thredd",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_weapon_crossbow_02",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9121,50 +10196,155 @@ if (typeof window !== 'undefined') {
                 "(15.25 damage per second)",
                 "Requires Level 26"
               ]
+            },
+            {
+              "name": "Long Battle Bow",
+              "itemId": 15284,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "11.82 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "11.82 DPS, 2.20s - +3 Strength - Leveling Drop / Vendor"
+              },
+              "value": "11.82 DPS, 2.20s - +3 Strength - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+3 Strength",
+              "lines": [
+                "Ranged",
+                "Speed 2.20",
+                "(11.82 damage per second)",
+                "Requires Level 24"
+              ]
+            },
+            {
+              "name": "Ghastly Bow",
+              "itemId": 281264,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "11.79 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "11.79 DPS, 2.80s - +2 Agility, +2 Spirit - Leveling Drop / Vendor"
+              },
+              "value": "11.79 DPS, 2.80s - +2 Agility, +2 Spirit - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 1,
+              "stats": "+2 Agility, +2 Spirit",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(11.79 damage per second)"
+              ]
+            },
+            {
+              "name": "Moonsight Rifle",
+              "itemId": 217314,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "1.70",
+              "dps": "10.88 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Scramble",
+                "detail": "10.88 DPS, 1.70s - Scramble"
+              },
+              "value": "10.88 DPS, 1.70s - Scramble",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 23,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 1.70",
+                "(10.88 damage per second)",
+                "Requires Level 23"
+              ]
+            },
+            {
+              "name": "Precision Bow",
+              "itemId": 217315,
+              "icon": "inv_weapon_bow_04",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "10.96 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Scramble",
+                "detail": "10.96 DPS, 2.60s - Improves your chance to hit by 0.3%. - Scramble"
+              },
+              "value": "10.96 DPS, 2.60s - Improves your chance to hit by 0.3%. - Scramble",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 23,
+              "stats": "Improves your chance to hit by 0.3%.",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(10.96 damage per second)",
+                "Requires Level 23"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 28,
-          "stats": "+2 Agility, +4 Stamina",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "21 - 40 Damage\tSpeed 2.20",
-            "(13.86 damage per second)",
-            "+2 Agility",
-            "+4 Stamina",
-            "Requires Level 23"
-          ],
-          "reqLevel": 23
+          ]
         },
         {
-          "levelBracket": "25–26",
-          "itemId": 273033,
           "name": "Gravespike Repeater",
+          "itemId": 273033,
           "icon": "inv_weapon_crossbow_06",
           "weaponType": "Crossbow",
           "speed": "2.30",
-          "dps": "15.4 DPS",
+          "dps": "15.43 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Atrexis the Grave Knight",
-            "detail": "City of Dalaran dungeon (+8 AP, +9 AP vs Humanoids)"
+            "title": "Atrexis in City of Dalaran",
+            "detail": "City of Dalaran dungeon boss drop crossbow (15.43 DPS)"
           },
+          "value": "15.43 DPS, 2.30s - Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids. - Atrexis in City of Dalaran",
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 26,
+          "stats": "Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "28 - 43 Damage\tSpeed 2.30",
+            "(15.43 damage per second)",
+            "Requires Level 26",
+            "Equip: +8 Attack Power.",
+            "Equip: +9 Attack Power against Humanoids."
+          ],
+          "levelBracket": "25–26",
           "alts": [
             {
               "name": "Golemsight Long Gun",
               "itemId": 273029,
-              "value": "16.60 DPS, 2.50s (+6 Agi) - Relic Guardian in Excavation Site",
-              "faction": "both",
-              "dps": "16.60 DPS",
-              "speed": "2.50",
+              "icon": "inv_musket_02",
               "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "16.60 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Relic Guardian in Excavation Site",
+                "detail": "Excavation Site dungeon drop rifle (+6 Agility, 16.60 DPS)"
+              },
+              "value": "16.60 DPS, 2.50s - +6 Agility - Relic Guardian in Excavation Site",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 33,
               "reqLevel": 28,
               "stats": "+6 Agility",
-              "icon": "inv_musket_02",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9177,16 +10357,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Dun Garok Rifle",
               "itemId": 282710,
-              "value": "14.81 DPS, 2.60s (+3 Agi, +3 Spi) - Hillsbrad",
-              "faction": "both",
-              "dps": "14.81 DPS",
-              "speed": "2.60",
+              "icon": "inv_weapon_rifle_03",
               "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "14.81 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Dun Garok Rifle",
+                "detail": "Ironforge dwarf rifle (+3 Agi, +3 Spi) in Hillsbrad"
+              },
+              "value": "14.81 DPS, 2.60s - +3 Agility, +3 Spirit - Dun Garok Rifle",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
               "stats": "+3 Agility, +3 Spirit",
-              "icon": "inv_weapon_rifle_03",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9198,18 +10383,123 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
+              "name": "Lunaris Bow",
+              "itemId": 5817,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "12.22 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Answered Questions",
+                "detail": "12.22 DPS, 2.70s - +2 Agility, +2 Stamina - Answered Questions"
+              },
+              "value": "12.22 DPS, 2.70s - +2 Agility, +2 Stamina - Answered Questions",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+2 Agility, +2 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.70",
+                "(12.22 damage per second)",
+                "Requires Level 25"
+              ]
+            },
+            {
+              "name": "\"Mage-Eye\" Blunderbuss",
+              "itemId": 3041,
+              "icon": "inv_weapon_rifle_05",
+              "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "12.50 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "12.50 DPS, 2.80s - +4 Agility - Leveling Drop / Vendor"
+              },
+              "value": "12.50 DPS, 2.80s - +4 Agility - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "+4 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(12.50 damage per second)",
+                "Requires Level 26"
+              ]
+            },
+            {
+              "name": "Outrider's Bow",
+              "itemId": 212585,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "14.58 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Kelm Hargunth",
+                "detail": "14.58 DPS, 2.40s - Kelm Hargunth"
+              },
+              "value": "14.58 DPS, 2.40s - Kelm Hargunth",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(14.58 damage per second)",
+                "Requires Level 25"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 212581,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "14.58 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Illiyana Moonblaze",
+                "detail": "14.58 DPS, 2.40s - Illiyana Moonblaze"
+              },
+              "value": "14.58 DPS, 2.40s - Illiyana Moonblaze",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(14.58 damage per second)",
+                "Requires Level 25"
+              ]
+            },
+            {
               "name": "Concealed Hand Crossbow",
               "itemId": 273829,
-              "value": "15.3 DPS - The Stockade: Bazil Thredd",
-              "faction": "both",
-              "dps": "15.25 DPS",
-              "speed": "2.00",
+              "icon": "inv_weapon_crossbow_02",
               "weaponType": "Crossbow",
+              "speed": "2.00",
+              "dps": "15.25 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Bazil Thredd",
+                "detail": "15.25 DPS, 2.00s - Bazil Thredd"
+              },
+              "value": "15.25 DPS, 2.00s - Bazil Thredd",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
               "stats": "",
-              "icon": "inv_weapon_crossbow_02",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9217,109 +10507,26 @@ if (typeof window !== 'undefined') {
                 "(15.25 damage per second)",
                 "Requires Level 26"
               ]
-            },
-            {
-              "name": "Fallenroot Longbow",
-              "itemId": 273843,
-              "value": "13.9 DPS - Blackfathom Deeps",
-              "faction": "both",
-              "dps": "13.86 DPS",
-              "speed": "2.20",
-              "weaponType": "Bow",
-              "quality": "q3",
-              "iLvl": 28,
-              "stats": "+2 Agility, +4 Stamina",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "21 - 40 Damage\tSpeed 2.20",
-                "(13.86 damage per second)",
-                "+2 Agility",
-                "+4 Stamina",
-                "Requires Level 23"
-              ],
-              "reqLevel": 23,
-              "icon": "inv_weapon_bow_03"
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 31,
-          "stats": "Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids.",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "28 - 43 Damage\tSpeed 2.30",
-            "(15.43 damage per second)",
-            "Requires Level 26",
-            "Equip: +8 Attack Power.",
-            "Equip: +9 Attack Power against Humanoids."
-          ],
-          "reqLevel": 26
+          ]
         },
         {
-          "levelBracket": "27–28",
-          "itemId": 273029,
           "name": "Golemsight Long Gun",
+          "itemId": 273029,
           "icon": "inv_musket_02",
           "weaponType": "Gun",
           "speed": "2.50",
-          "dps": "16.6 DPS",
+          "dps": "16.60 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Relic Guardian",
-            "detail": "Excavation Site: Wetlands (+6 Agility, Req Level 28)"
+            "title": "Relic Guardian in Excavation Site",
+            "detail": "Excavation Site dungeon drop rifle (+6 Agility, 16.60 DPS)"
           },
-          "alts": [
-            {
-              "name": "Gravespike Repeater",
-              "itemId": 273033,
-              "value": "15.4 DPS, 2.30s - City of Dalaran: Atrexis",
-              "faction": "both",
-              "dps": "15.43 DPS",
-              "speed": "2.30",
-              "weaponType": "Crossbow",
-              "quality": "q3",
-              "iLvl": 31,
-              "stats": "Equip: +8 Attack Power., Equip: +9 Attack Power against Humanoids.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "28 - 43 Damage\tSpeed 2.30",
-                "(15.43 damage per second)",
-                "Requires Level 26",
-                "Equip: +8 Attack Power.",
-                "Equip: +9 Attack Power against Humanoids."
-              ],
-              "reqLevel": 26,
-              "icon": "inv_weapon_crossbow_06"
-            },
-            {
-              "name": "Glass Shooter",
-              "itemId": 9456,
-              "value": "18.5 DPS, 2.90s - Gnomeregan: Dark Iron Ambassador",
-              "faction": "both",
-              "dps": "17.93 DPS",
-              "speed": "2.90",
-              "weaponType": "Gun",
-              "quality": "q3",
-              "iLvl": 35,
-              "stats": "Equip: +12 Attack Power.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "36 - 68 Damage\tSpeed 2.90",
-                "(17.93 damage per second)",
-                "Requires Level 30",
-                "Equip: +12 Attack Power."
-              ],
-              "reqLevel": 30,
-              "icon": "inv_weapon_rifle_02"
-            }
-          ],
+          "value": "16.60 DPS, 2.50s - +6 Agility - Relic Guardian in Excavation Site",
           "faction": "both",
           "quality": "q3",
           "iLvl": 33,
+          "reqLevel": 28,
           "stats": "+6 Agility",
           "lines": [
             "Binds when picked up",
@@ -9329,53 +10536,285 @@ if (typeof window !== 'undefined') {
             "+6 Agility",
             "Requires Level 28"
           ],
-          "reqLevel": 28
+          "levelBracket": "27–28",
+          "alts": [
+            {
+              "name": "Harpyclaw Short Bow",
+              "itemId": 13019,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "16.11 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Harpyclaw Short Bow",
+                "detail": "Rare world drop shortbow (+4 Agility)"
+              },
+              "value": "16.11 DPS, 1.80s - +4 Intellect - Harpyclaw Short Bow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "+4 Intellect",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(16.11 damage per second)",
+                "Requires Level 27"
+              ]
+            },
+            {
+              "name": "Glass Shooter",
+              "itemId": 9456,
+              "icon": "inv_weapon_rifle_02",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "17.93 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Dark Iron Ambassador in Gnomeregan",
+                "detail": "Rare Gnomeregan boss drop (+5 Agi, +3 Sta)"
+              },
+              "value": "17.93 DPS, 2.90s - Equip: +12 Attack Power. - Dark Iron Ambassador in Gnomeregan",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "Equip: +12 Attack Power.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "36 - 68 Damage\tSpeed 2.90",
+                "(17.93 damage per second)",
+                "Requires Level 30",
+                "Equip: +12 Attack Power."
+              ]
+            },
+            {
+              "name": "Outrider's Bow",
+              "itemId": 19561,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "16.67 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Kelm Hargunth",
+                "detail": "16.67 DPS, 2.40s - +2 Agility, +5 Stamina - Kelm Hargunth"
+              },
+              "value": "16.67 DPS, 2.40s - +2 Agility, +5 Stamina - Kelm Hargunth",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+2 Agility, +5 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(16.67 damage per second)",
+                "Requires Level 28"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 19565,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "16.67 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Illiyana Moonblaze",
+                "detail": "16.67 DPS, 2.40s - +2 Agility, +5 Stamina - Illiyana Moonblaze"
+              },
+              "value": "16.67 DPS, 2.40s - +2 Agility, +5 Stamina - Illiyana Moonblaze",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+2 Agility, +5 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.40",
+                "(16.67 damage per second)",
+                "Requires Level 28"
+              ]
+            },
+            {
+              "name": "Archer's Longbow",
+              "itemId": 15285,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "12.88 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "12.88 DPS, 2.60s - Leveling Drop / Vendor"
+              },
+              "value": "12.88 DPS, 2.60s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.60",
+                "(12.88 damage per second)",
+                "Requires Level 27"
+              ]
+            },
+            {
+              "name": "Sturdy Recurve",
+              "itemId": 11306,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "12.95 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "12.95 DPS, 2.20s - +4 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "12.95 DPS, 2.20s - +4 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.20",
+                "(12.95 damage per second)",
+                "Requires Level 27"
+              ]
+            },
+            {
+              "name": "BKP \"Sparrow\" Smallbore",
+              "itemId": 3042,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "1.70",
+              "dps": "13.24 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "13.24 DPS, 1.70s - +4 Agility - Leveling Drop / Vendor"
+              },
+              "value": "13.24 DPS, 1.70s - +4 Agility - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+4 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 1.70",
+                "(13.24 damage per second)",
+                "Requires Level 28"
+              ]
+            },
+            {
+              "name": "Nail Spitter",
+              "itemId": 17042,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "16.05 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "An Unholy Alliance",
+                "detail": "16.05 DPS, 1.90s - +3 Strength, +4 Stamina - An Unholy Alliance"
+              },
+              "value": "16.05 DPS, 1.90s - +3 Strength, +4 Stamina - An Unholy Alliance",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 28,
+              "stats": "+3 Strength, +4 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(16.05 damage per second)",
+                "Requires Level 28"
+              ]
+            }
+          ]
         },
         {
-          "levelBracket": "29–30",
-          "itemId": 17687,
           "name": "Master Hunter's Rifle",
-          "icon": "inv_weapon_rifle_06",
+          "itemId": 17687,
+          "icon": "inv_weapon_rifle_05",
           "weaponType": "Gun",
           "speed": "2.60",
-          "dps": "20.9 DPS",
+          "dps": "19.42 DPS",
           "source": {
             "kind": "quest",
-            "title": "Big Game Hunter",
-            "detail": "Stranglethorn Vale Nesingwary chain reward (+14 RAP)"
+            "title": "STV: Big Game Hunter (King Bangalash)",
+            "detail": "Level 30 BiS Master Hunter Rifle (+8 Agility, 19.38 DPS)"
           },
+          "value": "19.42 DPS, 2.60s - +4 Strength, +4 Agility - STV: Big Game Hunter (King Bangalash)",
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 43,
+          "reqLevel": 28,
+          "stats": "+4 Strength, +4 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "35 - 66 Damage\tSpeed 2.60",
+            "(19.42 damage per second)",
+            "+4 Strength",
+            "+4 Agility",
+            "Requires Level 28"
+          ],
+          "levelBracket": "29–30",
           "alts": [
             {
               "name": "Master Hunter's Bow",
               "itemId": 17686,
-              "value": "20.9 DPS - Bow reward choice from Big Game Hunter",
-              "faction": "both",
-              "dps": "19.38 DPS",
-              "speed": "2.40",
+              "icon": "inv_weapon_bow_11",
               "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "19.38 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "STV: Big Game Hunter (King Bangalash)",
+                "detail": "Level 30 BiS Master Hunter Bow (+8 Agility, 19.38 DPS)"
+              },
+              "value": "19.38 DPS, 2.40s - +6 Agility - STV: Big Game Hunter (King Bangalash)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 43,
+              "reqLevel": 28,
               "stats": "+6 Agility",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
                 "32 - 61 Damage\tSpeed 2.40",
                 "(19.38 damage per second)",
-                "+6 Agility"
-              ],
-              "reqLevel": 28,
-              "icon": "inv_weapon_bow_04"
+                "+6 Agility",
+                "Requires Level 28"
+              ]
             },
             {
               "name": "Quilboar Blaster",
               "itemId": 274084,
-              "value": "18.6 DPS, 2.80s, +4 Agi, +4 Spi - RFK Quest: The Crone of the Kraul",
-              "faction": "both",
-              "dps": "18.57 DPS",
-              "speed": "2.80",
+              "icon": "inv_weapon_rifle_05",
               "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "18.57 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "The Crone of the Kraul (RFK)",
+                "detail": "Alliance Razorfen Kraul quest reward rifle (+7 Agility)"
+              },
+              "value": "18.57 DPS, 2.80s - +4 Agility, +4 Spirit - The Crone of the Kraul (RFK)",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 36,
+              "reqLevel": 29,
               "stats": "+4 Agility, +4 Spirit",
               "lines": [
                 "Binds when picked up",
@@ -9383,21 +10822,27 @@ if (typeof window !== 'undefined') {
                 "36 - 68 Damage\tSpeed 2.80",
                 "(18.57 damage per second)",
                 "+4 Agility",
-                "+4 Spirit"
-              ],
-              "reqLevel": 29,
-              "icon": "inv_weapon_rifle_05"
+                "+4 Spirit",
+                "Requires Level 29"
+              ]
             },
             {
               "name": "Booty Bay Bruiser's Buckshot",
               "itemId": 274748,
-              "value": "18.0 DPS, 2.80s, +3 Sta, +9 AP - Booty Bay Honored vendor gun",
-              "faction": "both",
-              "dps": "18.04 DPS",
-              "speed": "2.80",
+              "icon": "inv_weapon_rifle_02",
               "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "18.04 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Booty Bay Honored Vendor",
+                "detail": "Booty Bay reputation shotgun (+6 Agility, 18.50 DPS)"
+              },
+              "value": "18.04 DPS, 2.80s - +3 Stamina, Equip: +9 Attack Power. - Booty Bay Honored Vendor",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 35,
+              "reqLevel": 30,
               "stats": "+3 Stamina, Equip: +9 Attack Power.",
               "lines": [
                 "Binds when picked up",
@@ -9407,20 +10852,50 @@ if (typeof window !== 'undefined') {
                 "+3 Stamina",
                 "Requires Level 30",
                 "Equip: +9 Attack Power."
-              ],
-              "reqLevel": 30,
-              "icon": "inv_weapon_rifle_02"
+              ]
+            },
+            {
+              "name": "Nightstalker Bow",
+              "itemId": 6696,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "1.70",
+              "dps": "17.06 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Nightstalker Bow",
+                "detail": "World drop rare bow (+5 Agi, +3 Sta, 18.15 DPS)"
+              },
+              "value": "17.06 DPS, 1.70s - +3 Agility - Nightstalker Bow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+3 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 1.70",
+                "(17.06 damage per second)",
+                "Requires Level 29"
+              ]
             },
             {
               "name": "Glass Shooter",
               "itemId": 9456,
-              "value": "18.5 DPS - Gnomeregan: Dark Iron Ambassador",
-              "faction": "both",
-              "dps": "17.93 DPS",
-              "speed": "2.90",
+              "icon": "inv_weapon_rifle_02",
               "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "17.93 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Dark Iron Ambassador in Gnomeregan",
+                "detail": "Rare Gnomeregan boss drop (+5 Agi, +3 Sta)"
+              },
+              "value": "17.93 DPS, 2.90s - Equip: +12 Attack Power. - Dark Iron Ambassador in Gnomeregan",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 35,
+              "reqLevel": 30,
               "stats": "Equip: +12 Attack Power.",
               "lines": [
                 "Binds when picked up",
@@ -9429,107 +10904,198 @@ if (typeof window !== 'undefined') {
                 "(17.93 damage per second)",
                 "Requires Level 30",
                 "Equip: +12 Attack Power."
-              ],
+              ]
+            },
+            {
+              "name": "Ravenwood Bow",
+              "itemId": 4474,
+              "icon": "inv_weapon_bow_10",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "13.86 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Fenros",
+                "detail": "13.86 DPS, 2.20s - +3 Agility, +3 Intellect - Fenros"
+              },
+              "value": "13.86 DPS, 2.20s - +3 Agility, +3 Intellect - Fenros",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+3 Agility, +3 Intellect",
+              "lines": [
+                "Ranged",
+                "Speed 2.20",
+                "(13.86 damage per second)",
+                "Requires Level 29"
+              ]
+            },
+            {
+              "name": "Whipwood Recurve Bow",
+              "itemId": 3037,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "13.61 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "13.61 DPS, 1.80s - +4 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "13.61 DPS, 1.80s - +4 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(13.61 damage per second)",
+                "Requires Level 29"
+              ]
+            },
+            {
+              "name": "Heavy Crossbow",
+              "itemId": 15809,
+              "icon": "inv_weapon_crossbow_03",
+              "weaponType": "Crossbow",
+              "speed": "2.80",
+              "dps": "13.04 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "13.04 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "13.04 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(13.04 damage per second)",
+                "Requires Level 29"
+              ]
+            },
+            {
+              "name": "Longbow",
+              "itemId": 3028,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "13.04 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "13.04 DPS, 2.30s - Leveling Drop / Vendor"
+              },
+              "value": "13.04 DPS, 2.30s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "21 - 39 Damage\tSpeed 2.30",
+                "(13.04 damage per second)",
+                "Requires Level 29"
+              ]
+            },
+            {
+              "name": "Dense Shortbow",
+              "itemId": 11305,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "1.90",
+              "dps": "14.21 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "14.21 DPS, 1.90s - Leveling Drop / Vendor"
+              },
+              "value": "14.21 DPS, 1.90s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 35,
               "reqLevel": 30,
-              "icon": "inv_weapon_rifle_02"
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(14.21 damage per second)",
+                "Requires Level 30"
+              ]
+            },
+            {
+              "name": "Flash Rifle",
+              "itemId": 4086,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "1.80",
+              "dps": "15.28 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Pearl Diving",
+                "detail": "15.28 DPS, 1.80s - +4 Strength, +3 Stamina - Pearl Diving"
+              },
+              "value": "15.28 DPS, 1.80s - +4 Strength, +3 Stamina - Pearl Diving",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 37,
+              "reqLevel": 30,
+              "stats": "+4 Strength, +3 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(15.28 damage per second)",
+                "Requires Level 30"
+              ]
+            },
+            {
+              "name": "Long Redwood Bow",
+              "itemId": 15286,
+              "icon": "inv_weapon_bow_10",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "14.29 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "14.29 DPS, 2.80s - +4 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "14.29 DPS, 2.80s - +4 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(14.29 damage per second)",
+                "Requires Level 30"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q2",
-          "iLvl": 43,
-          "stats": "+4 Strength, +4 Agility",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "35 - 66 Damage\tSpeed 2.60",
-            "(19.42 damage per second)",
-            "+4 Strength",
-            "+4 Agility"
-          ],
-          "reqLevel": 28
+          ]
         },
         {
-          "levelBracket": "31–34",
-          "itemId": 274293,
           "name": "Spellsever Crossbow",
+          "itemId": 274293,
           "icon": "inv_weapon_crossbow_07",
           "weaponType": "Crossbow",
           "speed": "2.40",
-          "dps": "20.8 DPS",
+          "dps": "20.83 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Arcanist Doan",
-            "detail": "Scarlet Monastery Library"
+            "title": "Spellsever Crossbow",
+            "detail": "Custom Forever dungeon drop (+7 Agi, +4 Sta, 20.40 DPS)"
           },
-          "alts": [
-            {
-              "name": "Master Hunter's Rifle",
-              "itemId": 17687,
-              "value": "20.9 DPS - Big Game Hunter quest gun",
-              "faction": "both",
-              "dps": "19.42 DPS",
-              "speed": "2.60",
-              "weaponType": "Gun",
-              "quality": "q2",
-              "iLvl": 43,
-              "stats": "+4 Strength, +4 Agility",
-              "lines": [
-                "Binds when picked up",
-                "Ranged",
-                "35 - 66 Damage\tSpeed 2.60",
-                "(19.42 damage per second)",
-                "+4 Strength",
-                "+4 Agility"
-              ],
-              "reqLevel": 28,
-              "icon": "inv_weapon_rifle_06"
-            },
-            {
-              "name": "Crystalpine Stinger",
-              "itemId": 13037,
-              "value": "21.0 DPS, 2.60s - World drop BoE bow",
-              "faction": "both",
-              "dps": "15.89 DPS",
-              "speed": "2.80",
-              "weaponType": "Crossbow",
-              "quality": "q3",
-              "iLvl": 32,
-              "stats": "+4 Agility, +4 Intellect",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "35 - 54 Damage\tSpeed 2.80",
-                "(15.89 damage per second)",
-                "+4 Agility",
-                "+4 Intellect",
-                "Requires Level 27"
-              ],
-              "reqLevel": 27,
-              "icon": "inv_weapon_crossbow_04"
-            },
-            {
-              "name": "Mithril Blunderbuss",
-              "itemId": 10508,
-              "value": "17.9 DPS - Engineering (175)",
-              "faction": "both",
-              "dps": "17.9 DPS",
-              "quality": "q2",
-              "iLvl": 41,
-              "reqLevel": 36,
-              "stats": "+5 Agility",
-              "icon": "inv_weapon_rifle_07",
-              "weaponType": "Gun",
-              "speed": "2.90",
-              "lines": [
-                "Binds when equipped",
-                "Ranged",
-                "36 - 68 Damage\tSpeed 2.90",
-                "(17.93 damage per second)",
-                "+5 Agility",
-                "Requires Level 36"
-              ]
-            }
-          ],
+          "value": "20.83 DPS, 2.40s - Equip: +8 Attack Power., Chance on hit: Launch a magic severing bolt at the target, dealing 36 Physical damage and interrupting the spell being cast for 5 sec. - Spellsever Crossbow",
           "faction": "both",
           "quality": "q3",
           "iLvl": 39,
@@ -9543,79 +11109,130 @@ if (typeof window !== 'undefined') {
             "Requires Level 34",
             "Equip: +8 Attack Power.",
             "Chance on hit: Launch a magic severing bolt at the target, dealing 36 Physical damage and interrupting the spell being cast for 5 sec."
-          ]
-        },
-        {
-          "levelBracket": "35–38",
-          "itemId": 17687,
-          "name": "Master Hunter's Rifle",
-          "icon": "inv_weapon_rifle_06",
-          "weaponType": "Gun",
-          "speed": "2.60",
-          "dps": "20.9 DPS",
-          "source": {
-            "kind": "quest",
-            "title": "Big Game Hunter",
-            "detail": "Outstanding weapon coefficient carries through 40"
-          },
+          ],
+          "levelBracket": "31–34",
           "alts": [
             {
-              "name": "Chesterfall Musket",
-              "itemId": 7729,
-              "value": "20.9 DPS, 2.50s - SM Graveyard rare trash drop",
+              "name": "Skystriker Bow",
+              "itemId": 13020,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "2.10",
+              "dps": "20.71 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Skystriker Bow",
+                "detail": "World drop recurve bow (+6 Agi, +3 Sta, 21.05 DPS)"
+              },
+              "value": "20.71 DPS, 2.10s - +5 Agility, +5 Intellect - Skystriker Bow",
               "faction": "both",
-              "dps": "16.52 DPS",
-              "speed": "2.30",
-              "weaponType": "Gun",
               "quality": "q3",
-              "iLvl": 33,
-              "stats": "+6 Stamina",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+5 Agility, +5 Intellect",
+              "lines": [
+                "Ranged",
+                "Speed 2.10",
+                "(20.71 damage per second)",
+                "Requires Level 34"
+              ]
+            },
+            {
+              "name": "Crystalpine Stinger",
+              "itemId": 13037,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "2.80",
+              "dps": "15.89 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Crystalpine Stinger",
+                "detail": "Rare world drop crossbow (+5 Agi, +4 Sta, 19.82 DPS)"
+              },
+              "value": "15.89 DPS, 2.80s - +4 Agility, +4 Intellect - Crystalpine Stinger",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "+4 Agility, +4 Intellect",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
-                "26 - 50 Damage\tSpeed 2.30",
-                "(16.52 damage per second)",
-                "+6 Stamina",
-                "Requires Level 28"
-              ],
-              "reqLevel": 28,
-              "icon": "inv_weapon_rifle_06"
+                "35 - 54 Damage\tSpeed 2.80",
+                "(15.89 damage per second)",
+                "+4 Agility",
+                "+4 Intellect",
+                "Requires Level 27"
+              ]
             },
             {
-              "name": "Blasting Hackbut",
-              "itemId": 6798,
-              "value": "21.0 DPS - Horde Quest: Questioning Reethe",
-              "faction": "horde",
-              "dps": "21.0 DPS",
+              "name": "Explosive Shotgun",
+              "itemId": 8188,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.10",
+              "dps": "15.24 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Explosive Shotgun",
+                "detail": "World drop shotgun with explosive percussion (18.57 DPS)"
+              },
+              "value": "15.24 DPS, 2.10s - +5 Strength - Explosive Shotgun",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 37,
-              "stats": "+3 Agility, +4 Stamina",
+              "reqLevel": 32,
+              "stats": "+5 Strength",
               "lines": [
-                "Binds when picked up",
                 "Ranged",
-                "30 - 56 Damage\tSpeed 2.80",
-                "(15.36 damage per second)",
-                "+3 Agility",
-                "+4 Stamina"
-              ],
-              "reqLevel": 34,
+                "Speed 2.10",
+                "(15.24 damage per second)",
+                "Requires Level 32"
+              ]
+            },
+            {
+              "name": "Sidegunner Shottie",
+              "itemId": 15691,
               "icon": "inv_weapon_rifle_04",
               "weaponType": "Gun",
-              "speed": "2.80"
+              "speed": "2.90",
+              "dps": "16.03 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Sidegunner Shottie",
+                "detail": "World drop high-impact shotgun (18.80 DPS)"
+              },
+              "value": "16.03 DPS, 2.90s - +3 Strength, +3 Agility - Sidegunner Shottie",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 32,
+              "stats": "+3 Strength, +3 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(16.03 damage per second)",
+                "Requires Level 32"
+              ]
             },
             {
               "name": "Mithril Blunderbuss",
               "itemId": 10508,
-              "value": "17.9 DPS - Engineering (175)",
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "17.93 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (175)",
+                "detail": "Heavy mithril blunderbuss (18.89 DPS, 2.70s)"
+              },
+              "value": "17.93 DPS, 2.90s - +5 Agility - Engineering (175)",
               "faction": "both",
-              "dps": "17.9 DPS",
               "quality": "q2",
               "iLvl": 41,
               "reqLevel": 36,
               "stats": "+5 Agility",
-              "icon": "inv_weapon_rifle_07",
-              "weaponType": "Gun",
-              "speed": "2.90",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9626,18 +11243,292 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
+              "name": "BKP 42 \"Ultra\"",
+              "itemId": 3025,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.10",
+              "dps": "13.81 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "13.81 DPS, 2.10s - Leveling Drop / Vendor"
+              },
+              "value": "13.81 DPS, 2.10s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q1",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "20 - 38 Damage\tSpeed 2.10",
+                "(13.81 damage per second)",
+                "Requires Level 31"
+              ]
+            },
+            {
+              "name": "Smoothbore Gun",
+              "itemId": 15322,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "16.60 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "16.60 DPS, 2.50s - +5 Spirit - Leveling Drop / Vendor"
+              },
+              "value": "16.60 DPS, 2.50s - +5 Spirit - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+5 Spirit",
+              "lines": [
+                "Ranged",
+                "Speed 2.50",
+                "(16.60 damage per second)",
+                "Requires Level 34"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bow of Searing Arrows",
+          "itemId": 2825,
+          "icon": "inv_weapon_bow_09",
+          "weaponType": "Bow",
+          "speed": "2.70",
+          "dps": "25.00 DPS",
+          "source": {
+            "kind": "drop",
+            "title": "Bow of Searing Arrows",
+            "detail": "World Drop Epic Bow (28.33 DPS, Chance on hit: 60 Fire dmg)"
+          },
+          "value": "25.00 DPS, 2.70s - Bow of Searing Arrows",
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 42,
+          "reqLevel": 37,
+          "stats": "",
+          "lines": [
+            "Ranged",
+            "Speed 2.70",
+            "(25.00 damage per second)",
+            "Requires Level 37"
+          ],
+          "levelBracket": "35–38",
+          "alts": [
+            {
+              "name": "Monolithic Bow",
+              "itemId": 9426,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "21.85 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Ironaya in Uldaman",
+                "detail": "Titan watcher boss drop bow (+7 Agi, +4 Sta, 23.46 DPS)"
+              },
+              "value": "21.85 DPS, 2.70s - +6 Strength, +3 Agility - Ironaya in Uldaman",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+6 Strength, +3 Agility",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "41 - 77 Damage\tSpeed 2.70",
+                "(21.85 damage per second)",
+                "+6 Strength",
+                "+3 Agility",
+                "Requires Level 36"
+              ]
+            },
+            {
+              "name": "The Silencer",
+              "itemId": 13138,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "22.32 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "The Silencer",
+                "detail": "World drop rare rifle with Chance on hit: Silence target"
+              },
+              "value": "22.32 DPS, 2.80s - Equip: +14 Attack Power. - The Silencer",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": "Equip: +14 Attack Power.",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "43 - 82 Damage\tSpeed 2.80",
+                "(22.32 damage per second)",
+                "Equip: +14 Attack Power.",
+                "Requires Level 37"
+              ]
+            },
+            {
+              "name": "Baelog's Shortbow",
+              "itemId": 9400,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "22.61 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Baelog in Uldaman",
+                "detail": "Dwarf boss drop shortbow (+7 Agility, 23.68 DPS)"
+              },
+              "value": "22.61 DPS, 2.30s - +5 Strength, +5 Stamina - Baelog in Uldaman",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+5 Strength, +5 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.30",
+                "(22.61 damage per second)",
+                "Requires Level 38"
+              ]
+            },
+            {
+              "name": "Chesterfall Musket",
+              "itemId": 7729,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "16.52 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Rare Dungeon / World Drop",
+                "detail": "16.52 DPS, 2.30s - +6 Stamina - Rare World Drop"
+              },
+              "value": "16.52 DPS, 2.30s - +6 Stamina - Rare World Drop",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "26 - 50 Damage\tSpeed 2.30",
+                "(16.52 damage per second)",
+                "+6 Stamina",
+                "Requires Level 28"
+              ]
+            },
+            {
+              "name": "Blasting Hackbut",
+              "itemId": 6798,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "2.80",
+              "dps": "15.36 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Questioning Reethe",
+                "detail": "15.36 DPS, 2.80s - +3 Agility, +4 Stamina - Questioning Reethe"
+              },
+              "value": "15.36 DPS, 2.80s - +3 Agility, +4 Stamina - Questioning Reethe",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 37,
+              "reqLevel": 30,
+              "stats": "+3 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "30 - 56 Damage\tSpeed 2.80",
+                "(15.36 damage per second)",
+                "+3 Agility",
+                "+4 Stamina",
+                "Requires Level 30"
+              ]
+            },
+            {
+              "name": "Outrider's Bow",
+              "itemId": 19560,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "22.71 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Kelm Hargunth",
+                "detail": "22.71 DPS, 2.40s - +3 Agility, +6 Stamina - Kelm Hargunth"
+              },
+              "value": "22.71 DPS, 2.40s - +3 Agility, +6 Stamina - Kelm Hargunth",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+3 Agility, +6 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "38 - 71 Damage\tSpeed 2.40",
+                "(22.71 damage per second)",
+                "+3 Agility",
+                "+6 Stamina",
+                "Requires Level 38"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 19564,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "22.71 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Illiyana Moonblaze",
+                "detail": "22.71 DPS, 2.40s - +3 Agility, +6 Stamina - Illiyana Moonblaze"
+              },
+              "value": "22.71 DPS, 2.40s - +3 Agility, +6 Stamina - Illiyana Moonblaze",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+3 Agility, +6 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "38 - 71 Damage\tSpeed 2.40",
+                "(22.71 damage per second)",
+                "+3 Agility",
+                "+6 Stamina",
+                "Requires Level 38"
+              ]
+            },
+            {
               "name": "Siegebreaker's Blaster",
               "itemId": 282561,
+              "icon": "inv_weapon_rifle_04",
               "weaponType": "Gun",
               "speed": "2.60",
-              "dps": "22.3 DPS",
-              "value": "22.3 DPS, 2.60s - Custom Gun Drop",
+              "dps": "22.31 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Rare Dungeon / World Drop",
+                "detail": "22.31 DPS, 2.60s - Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec. - Rare World Drop"
+              },
+              "value": "22.31 DPS, 2.60s - Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec. - Rare World Drop",
               "faction": "both",
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 37,
               "stats": "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec.",
-              "icon": "inv_weapon_rifle_04",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9646,44 +11537,158 @@ if (typeof window !== 'undefined') {
                 "Requires Level 37",
                 "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec."
               ]
+            },
+            {
+              "name": "Trueshot Bow",
+              "itemId": 4087,
+              "icon": "inv_weapon_bow_10",
+              "weaponType": "Bow",
+              "speed": "1.90",
+              "dps": "18.16 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "18.16 DPS, 1.90s - Leveling Drop / Vendor"
+              },
+              "value": "18.16 DPS, 1.90s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "24 - 45 Damage\tSpeed 1.90",
+                "(18.16 damage per second)",
+                "Requires Level 36"
+              ]
+            },
+            {
+              "name": "Orc Bone Bow",
+              "itemId": 275052,
+              "icon": "inv_misc_bone_10",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "18.04 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "18.04 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "18.04 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(18.04 damage per second)"
+              ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Galgann's Fireblaster",
+          "itemId": 9412,
+          "icon": "inv_weapon_rifle_07",
+          "weaponType": "Gun",
+          "speed": "2.60",
+          "dps": "24.62 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Galgann Firehammer in Uldaman",
+            "detail": "Uldaman boss drop firearm (+9 Agility, Chance on hit: 80 Fire dmg)"
+          },
+          "value": "24.62 DPS, 2.60s - Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage. - Galgann Firehammer in Uldaman",
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 43,
-          "stats": "+4 Strength, +4 Agility",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "stats": "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
           "lines": [
             "Binds when picked up",
             "Ranged",
-            "35 - 66 Damage\tSpeed 2.60",
-            "(19.42 damage per second)",
-            "+4 Strength",
-            "+4 Agility"
+            "44 - 84 Damage\tSpeed 2.60",
+            "(24.62 damage per second)",
+            "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
+            "Requires Level 42"
           ],
-          "reqLevel": 28
-        },
-        {
           "levelBracket": "39–42",
-          "itemId": 10510,
-          "name": "Mithril Heavy-bore Rifle",
-          "icon": "inv_weapon_rifle_07",
-          "weaponType": "Gun",
-          "speed": "2.90",
-          "dps": "23.4 DPS",
-          "source": {
-            "kind": "craft",
-            "title": "Engineering (200)",
-            "detail": "High top-end damage for Aimed Shot (+6 Agi)"
-          },
           "alts": [
+            {
+              "name": "Needle Threader",
+              "itemId": 13021,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.00",
+              "dps": "24.50 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Needle Threader",
+                "detail": "World drop precision longbow (+8 Agi, +4 Sta, 27.08 DPS)"
+              },
+              "value": "24.50 DPS, 2.00s - +6 Stamina, +4 Spirit - Needle Threader",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+6 Stamina, +4 Spirit",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "34 - 64 Damage\tSpeed 2.00",
+                "(24.50 damage per second)",
+                "+6 Stamina",
+                "+4 Spirit",
+                "Requires Level 42"
+              ]
+            },
+            {
+              "name": "Mithril Heavy-bore Rifle",
+              "itemId": 10510,
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "20.17 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (200)",
+                "detail": "Heavy mithril rifle (23.46 DPS, 2.60s)"
+              },
+              "value": "20.17 DPS, 2.90s - Engineering (200)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "41 - 76 Damage\tSpeed 2.90",
+                "(20.17 damage per second)",
+                "Requires Level 39"
+              ]
+            },
             {
               "name": "Shrapnel Blaster",
               "itemId": 4127,
-              "value": "22.8 DPS - Alliance Quest: Colonel Kurzen",
+              "icon": "inv_weapon_rifle_02",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "17.37 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "STV: Colonel Kurzen",
+                "detail": "Alliance quest blunderbuss reward from Rebel Camp"
+              },
+              "value": "17.37 DPS, 1.90s - +4 Agility, +3 Intellect - STV: Colonel Kurzen",
               "faction": "alliance",
-              "dps": "22.8 DPS",
               "quality": "q2",
               "iLvl": 40,
+              "reqLevel": 30,
               "stats": "+4 Agility, +3 Intellect",
               "lines": [
                 "Binds when picked up",
@@ -9691,23 +11696,27 @@ if (typeof window !== 'undefined') {
                 "23 - 43 Damage\tSpeed 1.90",
                 "(17.37 damage per second)",
                 "+4 Agility",
-                "+3 Intellect"
-              ],
-              "reqLevel": 38,
-              "icon": "inv_weapon_rifle_02",
-              "weaponType": "Gun",
-              "speed": "1.90"
+                "+3 Intellect",
+                "Requires Level 30"
+              ]
             },
             {
               "name": "Ironweaver",
               "itemId": 13137,
-              "value": "23.2 DPS - World drop BoE crossbow",
-              "faction": "both",
-              "dps": "17.31 DPS",
-              "speed": "2.60",
+              "icon": "inv_weapon_rifle_08",
               "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "17.31 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Ironweaver",
+                "detail": "World drop rare gun with Chance on hit: Ensnaring net"
+              },
+              "value": "17.31 DPS, 2.60s - +4 Stamina, Equip: Increased Defense +3. - Ironweaver",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 34,
+              "reqLevel": 29,
               "stats": "+4 Stamina, Equip: Increased Defense +3.",
               "lines": [
                 "Binds when equipped",
@@ -9717,23 +11726,26 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Requires Level 29",
                 "Equip: Increased Defense +3."
-              ],
-              "reqLevel": 29,
-              "icon": "inv_weapon_rifle_08"
+              ]
             },
             {
               "name": "Truthseeker's Bow",
               "itemId": 277254,
+              "icon": "inv_weapon_bow_01",
               "weaponType": "Bow",
               "speed": "2.80",
-              "dps": "23.8 DPS",
-              "value": "23.8 DPS, 2.80s - Tanaris Quest",
+              "dps": "23.75 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Truthseeker's Bow",
+                "detail": "Custom Forever quest longbow (23.50 DPS)"
+              },
+              "value": "23.75 DPS, 2.80s - +7 Agility, +3 Stamina - Truthseeker's Bow",
               "faction": "both",
               "quality": "q3",
               "iLvl": 45,
               "reqLevel": 40,
               "stats": "+7 Agility, +3 Stamina",
-              "icon": "inv_weapon_bow_01",
               "lines": [
                 "Binds when picked up",
                 "Ranged",
@@ -9743,61 +11755,185 @@ if (typeof window !== 'undefined') {
                 "+3 Stamina",
                 "Requires Level 40"
               ]
+            },
+            {
+              "name": "Sniper Rifle",
+              "itemId": 3430,
+              "icon": "inv_weapon_rifle_05",
+              "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "20.17 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "20.17 DPS, 3.00s - Leveling Drop / Vendor"
+              },
+              "value": "20.17 DPS, 3.00s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 3.00",
+                "(20.17 damage per second)",
+                "Requires Level 39"
+              ]
+            },
+            {
+              "name": "Crusader Bow",
+              "itemId": 15287,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.20",
+              "dps": "20.91 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "20.91 DPS, 2.20s - Leveling Drop / Vendor"
+              },
+              "value": "20.91 DPS, 2.20s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "32 - 60 Damage\tSpeed 2.20",
+                "(20.91 damage per second)",
+                "Requires Level 40"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q2",
-          "iLvl": 44,
-          "reqLevel": 39,
-          "stats": "+6 Agi",
-          "lines": [
-            "Binds when equipped",
-            "Ranged",
-            "41 - 76 Damage\tSpeed 2.90",
-            "(20.17 damage per second)",
-            "Requires Level 39"
           ]
         },
         {
-          "levelBracket": "43–46",
-          "itemId": 277254,
-          "name": "Truthseeker's Bow",
-          "icon": "inv_weapon_bow_01",
-          "weaponType": "Bow",
-          "speed": "2.50",
-          "dps": "23.8 DPS",
+          "name": "Precisely Calibrated Boomstick",
+          "itemId": 2100,
+          "icon": "inv_weapon_rifle_06",
+          "weaponType": "Gun",
+          "speed": "1.50",
+          "dps": "28.00 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Greater Friend of the Library",
-            "detail": "Custom WoW Forever Library completion reward"
+            "kind": "drop",
+            "title": "Precisely Calibrated Boomstick",
+            "detail": "World Drop Epic Gun (+14 Agility, 33.33 DPS)"
           },
+          "value": "28.00 DPS, 1.50s - +14 Agility - Precisely Calibrated Boomstick",
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 48,
+          "reqLevel": 43,
+          "stats": "+14 Agility",
+          "lines": [
+            "Ranged",
+            "Speed 1.50",
+            "(28.00 damage per second)",
+            "Requires Level 43"
+          ],
+          "levelBracket": "43–46",
           "alts": [
             {
-              "name": "Gryphonwing Bow",
-              "itemId": 10633,
-              "value": "24.5 DPS, 2.60s - Hinterlands quest reward",
+              "name": "Verdant Keeper's Aim",
+              "itemId": 17753,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "27.32 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "Maraudon: Corruption of Earth and Seed",
+                "detail": "Princess Theradras quest bow (Chance on hit: 100 Nature dmg)"
+              },
+              "value": "27.32 DPS, 2.80s - Maraudon: Corruption of Earth and Seed",
               "faction": "both",
-              "dps": "24.5 DPS",
-              "speed": "2.60",
               "quality": "q3",
-              "iLvl": 48,
-              "reqLevel": 42,
+              "iLvl": 53,
+              "reqLevel": 45,
               "stats": "",
-              "icon": "inv_weapon_bow_07"
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(27.32 damage per second)",
+                "Requires Level 45"
+              ]
             },
             {
-              "name": "Riphook",
-              "itemId": 13038,
-              "value": "25.0 DPS - World drop BoE bow",
-              "faction": "both",
-              "dps": "21.25 DPS",
-              "speed": "2.00",
+              "name": "Skull Splitting Crossbow",
+              "itemId": 13039,
+              "icon": "inv_weapon_crossbow_04",
               "weaponType": "Crossbow",
+              "speed": "2.60",
+              "dps": "25.19 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Skull Splitting Crossbow",
+                "detail": "World drop heavy crossbow (+8 Agi, +5 Sta, 27.88 DPS)"
+              },
+              "value": "25.19 DPS, 2.60s - +3 Strength, Equip: +14 Attack Power. - Skull Splitting Crossbow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+3 Strength, Equip: +14 Attack Power.",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "52 - 79 Damage\tSpeed 2.60",
+                "(25.19 damage per second)",
+                "+3 Strength",
+                "Equip: +14 Attack Power.",
+                "Requires Level 43"
+              ]
+            },
+            {
+              "name": "Guttbuster",
+              "itemId": 13139,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "26.11 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Guttbuster",
+                "detail": "World drop rare gun with Chance on hit: Deep bleed 120 dmg"
+              },
+              "value": "26.11 DPS, 2.70s - +3 Strength, +8 Agility - Guttbuster",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "stats": "+3 Strength, +8 Agility",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "49 - 92 Damage\tSpeed 2.70",
+                "(26.11 damage per second)",
+                "+3 Strength",
+                "+8 Agility",
+                "Requires Level 45"
+              ]
+            },
+            {
+              "name": "Swiftwind",
+              "itemId": 13038,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "2.00",
+              "dps": "21.25 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Rare Dungeon / World Drop",
+                "detail": "21.25 DPS, 2.00s - +7 Agility - Rare World Drop"
+              },
+              "value": "21.25 DPS, 2.00s - +7 Agility - Rare World Drop",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 35,
               "stats": "+7 Agility",
-              "icon": "inv_weapon_crossbow_04",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9806,50 +11942,403 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "Requires Level 35"
               ]
+            },
+            {
+              "name": "Percussion Shotgun",
+              "itemId": 15323,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "23.26 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Percussion Shotgun",
+                "detail": "World drop heavy shotgun (25.50 DPS, 2.80s)"
+              },
+              "value": "23.26 DPS, 2.30s - Percussion Shotgun",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 50,
+              "reqLevel": 45,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "37 - 70 Damage\tSpeed 2.30",
+                "(23.26 damage per second)",
+                "Requires Level 45"
+              ]
+            },
+            {
+              "name": "Ricochet Blunderbuss",
+              "itemId": 4089,
+              "icon": "inv_weapon_rifle_03",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "22.39 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "22.39 DPS, 2.30s - Leveling Drop / Vendor"
+              },
+              "value": "22.39 DPS, 2.30s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "36 - 67 Damage\tSpeed 2.30",
+                "(22.39 damage per second)",
+                "Requires Level 43"
+              ]
+            },
+            {
+              "name": "Massive Longbow",
+              "itemId": 11307,
+              "icon": "inv_weapon_bow_01",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "21.96 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "21.96 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "21.96 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "43 - 80 Damage\tSpeed 2.80",
+                "(21.96 damage per second)",
+                "Requires Level 42"
+              ]
+            },
+            {
+              "name": "Sylvan Shortbow",
+              "itemId": 11308,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.00",
+              "dps": "22.75 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "22.75 DPS, 2.00s - +6 Nature Resistance - Leveling Drop / Vendor"
+              },
+              "value": "22.75 DPS, 2.00s - +6 Nature Resistance - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": "+6 Nature Resistance",
+              "lines": [
+                "Ranged",
+                "Speed 2.00",
+                "(22.75 damage per second)",
+                "Requires Level 44"
+              ]
+            },
+            {
+              "name": "Harpy Needler",
+              "itemId": 15291,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "23.70 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "23.70 DPS, 2.70s - Leveling Drop / Vendor"
+              },
+              "value": "23.70 DPS, 2.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 51,
+              "reqLevel": 46,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "44 - 84 Damage\tSpeed 2.70",
+                "(23.70 damage per second)",
+                "Requires Level 46"
+              ]
+            },
+            {
+              "name": "Highland Bow",
+              "itemId": 19114,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.50",
+              "dps": "23.60 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Return to Primal Torntusk",
+                "detail": "23.60 DPS, 2.50s - +5 Agility, +4 Stamina - Return to Primal Torntusk"
+              },
+              "value": "23.60 DPS, 2.50s - +5 Agility, +4 Stamina - Return to Primal Torntusk",
+              "faction": "horde",
+              "quality": "q2",
+              "iLvl": 51,
+              "reqLevel": 46,
+              "stats": "+5 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "41 - 77 Damage\tSpeed 2.50",
+                "(23.60 damage per second)",
+                "+5 Agility",
+                "+4 Stamina",
+                "Requires Level 46"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 45,
-          "reqLevel": 40,
-          "stats": "+7 Agility, +3 Stamina",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "46 - 87 Damage\tSpeed 2.80",
-            "(23.75 damage per second)",
-            "+7 Agility",
-            "+3 Stamina",
-            "Requires Level 40"
           ]
         },
         {
-          "levelBracket": "47–52",
-          "itemId": 17717,
-          "name": "Megashot Rifle",
-          "icon": "inv_weapon_rifle_05",
-          "weaponType": "Gun",
-          "speed": "2.90",
-          "dps": "27.4 DPS",
+          "name": "Bloodseeker",
+          "itemId": 19107,
+          "icon": "inv_weapon_crossbow_07",
+          "weaponType": "Crossbow",
+          "speed": "3.30",
+          "dps": "32.27 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Tinkerer Gizlock",
-            "detail": "Maraudon (+8 Agi, heavy Aimed Shot burst)"
+            "kind": "quest",
+            "title": "Alterac Valley: Korrak the Bloodrager",
+            "detail": "Alterac Valley quest crossbow (+8 Str, +7 Agi, 35.15 DPS)"
           },
+          "value": "32.27 DPS, 3.30s - +8 Strength, +7 Agility - Alterac Valley: Korrak the Bloodrager",
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 51,
+          "stats": "+8 Strength, +7 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged",
+            "85 - 128 Damage\tSpeed 3.30",
+            "(32.27 damage per second)",
+            "+8 Strength",
+            "+7 Agility",
+            "Requires Level 51"
+          ],
+          "levelBracket": "47–52",
           "alts": [
+            {
+              "name": "Houndmaster's Bow",
+              "itemId": 11628,
+              "icon": "inv_weapon_bow_04",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "27.22 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Houndmaster Grebmar (BRD)",
+                "detail": "Blackrock Depths boss drop bow (+7 Agility, 30.68 DPS)"
+              },
+              "value": "27.22 DPS, 1.80s - +3 Strength - Houndmaster Grebmar (BRD)",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+3 Strength",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(27.22 damage per second)",
+                "Requires Level 48"
+              ]
+            },
+            {
+              "name": "Heartseeking Crossbow",
+              "itemId": 13040,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "3.10",
+              "dps": "28.87 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Heartseeking Crossbow",
+                "detail": "World drop sniper crossbow (+9 Agi, +4 Sta, 33.91 DPS)"
+              },
+              "value": "28.87 DPS, 3.10s - +9 Agility, +4 Stamina, Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage. - Heartseeking Crossbow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "+9 Agility, +4 Stamina, Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage.",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "71 - 108 Damage\tSpeed 3.10",
+                "(28.87 damage per second)",
+                "+9 Agility",
+                "+4 Stamina",
+                "Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage.",
+                "Requires Level 51"
+              ]
+            },
+            {
+              "name": "Gryphonwing Long Bow",
+              "itemId": 13022,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "28.33 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Gryphonwing Long Bow",
+                "detail": "World drop rare longbow (+8 Agi, +5 Sta, 32.50 DPS)"
+              },
+              "value": "28.33 DPS, 2.70s - +8 Agility, +4 Stamina - Gryphonwing Long Bow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "stats": "+8 Agility, +4 Stamina",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "53 - 100 Damage\tSpeed 2.70",
+                "(28.33 damage per second)",
+                "+8 Agility",
+                "+4 Stamina",
+                "Requires Level 50"
+              ]
+            },
+            {
+              "name": "Farmer Dalson's Shotgun",
+              "itemId": 13474,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "1.90",
+              "dps": "25.79 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "WPL: Locked Away (Farmer Dalson)",
+                "detail": "Western Plaguelands outhouse quest shotgun (29.50 DPS)"
+              },
+              "value": "25.79 DPS, 1.90s - +8 Stamina - WPL: Locked Away (Farmer Dalson)",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 56,
+              "reqLevel": 52,
+              "stats": "+8 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.90",
+                "(25.79 damage per second)",
+                "Requires Level 52"
+              ]
+            },
+            {
+              "name": "Outrider's Bow",
+              "itemId": 19559,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "27.50 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Kelm Hargunth",
+                "detail": "27.50 DPS, 2.40s - +3 Agility, +8 Stamina - Kelm Hargunth"
+              },
+              "value": "27.50 DPS, 2.40s - +3 Agility, +8 Stamina - Kelm Hargunth",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+3 Agility, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "46 - 86 Damage\tSpeed 2.40",
+                "(27.50 damage per second)",
+                "+3 Agility",
+                "+8 Stamina",
+                "Requires Level 48"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 19563,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "27.50 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Illiyana Moonblaze",
+                "detail": "27.50 DPS, 2.40s - +3 Agility, +8 Stamina - Illiyana Moonblaze"
+              },
+              "value": "27.50 DPS, 2.40s - +3 Agility, +8 Stamina - Illiyana Moonblaze",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+3 Agility, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "46 - 86 Damage\tSpeed 2.40",
+                "(27.50 damage per second)",
+                "+3 Agility",
+                "+8 Stamina",
+                "Requires Level 48"
+              ]
+            },
+            {
+              "name": "Megashot Rifle",
+              "itemId": 17717,
+              "icon": "inv_weapon_rifle_05",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "27.40 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Tinkerer Gizlock",
+                "detail": "27.40 DPS, 2.50s - +5 Arcane Resistance - Tinkerer Gizlock"
+              },
+              "value": "27.40 DPS, 2.50s - +5 Arcane Resistance - Tinkerer Gizlock",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+5 Arcane Resistance",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "48 - 89 Damage\tSpeed 2.50",
+                "(27.40 damage per second)",
+                "+5 Arcane Resistance",
+                "Requires Level 48"
+              ]
+            },
             {
               "name": "Thorium Rifle",
               "itemId": 15995,
-              "value": "28.0 DPS, 2.50s, +17 RAP - Engineering (235)",
-              "faction": "both",
-              "dps": "28.0 DPS",
+              "icon": "inv_weapon_rifle_07",
+              "weaponType": "Gun",
               "speed": "2.50",
+              "dps": "24.20 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (260)",
+                "detail": "Thorium crafted firearm (28.57 DPS, 2.80s)"
+              },
+              "value": "24.20 DPS, 2.50s - Engineering (260)",
+              "faction": "both",
               "quality": "q2",
               "iLvl": 52,
               "reqLevel": 47,
               "stats": "",
-              "icon": "inv_weapon_rifle_04",
-              "weaponType": "Gun",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9861,16 +12350,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Dark Iron Rifle",
               "itemId": 16004,
-              "value": "29.5 DPS - Engineering (255)",
-              "faction": "both",
-              "dps": "28.33 DPS",
-              "speed": "2.70",
+              "icon": "inv_weapon_rifle_08",
               "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "28.33 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (275)",
+                "detail": "Dark Iron precision rifle (30.00 DPS, 2.60s)"
+              },
+              "value": "28.33 DPS, 2.70s - Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage. - Engineering (275)",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 55,
               "reqLevel": 50,
               "stats": "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage.",
-              "icon": "inv_weapon_rifle_08",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9879,62 +12373,388 @@ if (typeof window !== 'undefined') {
                 "Requires Level 50",
                 "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage."
               ]
+            },
+            {
+              "name": "Burnside Rifle",
+              "itemId": 15324,
+              "icon": "inv_weapon_rifle_01",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "26.00 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "26.00 DPS, 2.50s - Leveling Drop / Vendor"
+              },
+              "value": "26.00 DPS, 2.50s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "45 - 85 Damage\tSpeed 2.50",
+                "(26.00 damage per second)",
+                "Requires Level 51"
+              ]
+            },
+            {
+              "name": "Thornflinger",
+              "itemId": 16622,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "26.61 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Wildkin of Elune",
+                "detail": "26.61 DPS, 2.80s - +8 Agility - Wildkin of Elune"
+              },
+              "value": "26.61 DPS, 2.80s - +8 Agility - Wildkin of Elune",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "stats": "+8 Agility",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(26.61 damage per second)",
+                "Requires Level 52"
+              ]
+            },
+            {
+              "name": "Quillfire Bow",
+              "itemId": 15295,
+              "icon": "inv_weapon_bow_10",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "25.65 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "25.65 DPS, 2.30s - Leveling Drop / Vendor"
+              },
+              "value": "25.65 DPS, 2.30s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "41 - 77 Damage\tSpeed 2.30",
+                "(25.65 damage per second)",
+                "Requires Level 50"
+              ]
+            },
+            {
+              "name": "Siege Bow",
+              "itemId": 15294,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "24.64 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "24.64 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "24.64 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "48 - 90 Damage\tSpeed 2.80",
+                "(24.64 damage per second)",
+                "Requires Level 48"
+              ]
+            },
+            {
+              "name": "Berdun's Trusty Rifle",
+              "itemId": 259891,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "22.33 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "22.33 DPS, 3.00s - Leveling Drop / Vendor"
+              },
+              "value": "22.33 DPS, 3.00s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 3.00",
+                "(22.33 damage per second)"
+              ]
+            },
+            {
+              "name": "Bloodstained Longbow",
+              "itemId": 270107,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "23.33 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "23.33 DPS, 2.70s - +6 Agility, +2 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "23.33 DPS, 2.70s - +6 Agility, +2 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 50,
+              "reqLevel": 1,
+              "stats": "+6 Agility, +2 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.70",
+                "(23.33 damage per second)"
+              ]
+            },
+            {
+              "name": "Youngster's First Bow",
+              "itemId": 276902,
+              "icon": "inv_weapon_bow_05",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "25.18 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "25.18 DPS, 2.80s - +5 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "25.18 DPS, 2.80s - +5 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 1,
+              "stats": "+5 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(25.18 damage per second)"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 53,
-          "reqLevel": 48,
-          "stats": "+8 Agi, heavy Aimed Shot burst",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "48 - 89 Damage\tSpeed 2.50",
-            "(27.40 damage per second)",
-            "+5 Arcane Resistance",
-            "Requires Level 48"
           ]
         },
         {
-          "levelBracket": "53–60",
-          "itemId": 12651,
-          "name": "Blackcrow",
-          "icon": "inv_weapon_crossbow_04",
-          "weaponType": "Crossbow",
-          "speed": "3.20",
-          "dps": "30.3 DPS",
+          "name": "Rhok'delar, Longbow of the Ancient Keepers",
+          "itemId": 18713,
+          "icon": "inv_weapon_bow_01",
+          "weaponType": "Bow",
+          "speed": "2.90",
+          "dps": "43.97 DPS",
           "source": {
-            "kind": "dungeon",
-            "title": "Shadow Hunter Vosh'gajin",
-            "detail": "Lower Blackrock Spire (+3 Hit)"
+            "kind": "quest",
+            "title": "Hunter Epic: Ancient Petrified Leaf",
+            "detail": "Iconic Hunter Quest Weapon (+17 Ranged AP, +1% Crit, 44.05 DPS)"
           },
+          "value": "43.97 DPS, 2.90s - +14 Crit - Hunter Epic: Ancient Petrified Leaf",
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 75,
+          "reqLevel": 60,
+          "stats": "+14 Crit",
+          "lines": [
+            "Ranged",
+            "Speed 2.90",
+            "(43.97 damage per second)",
+            "Requires Level 60"
+          ],
+          "levelBracket": "53–60",
           "alts": [
             {
-              "name": "Ancient Bone Bow",
-              "itemId": 18680,
-              "value": "31.4 DPS, 2.80s, +11 Agi - Scholomance: Rattlegore",
+              "name": "Blackcrow",
+              "itemId": 12651,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "3.20",
+              "dps": "30.31 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Shadow Hunter Vosh'gajin (LBRS)",
+                "detail": "Lower Blackrock Spire crossbow (+3 Agi, +1% Crossbow Hit)"
+              },
+              "value": "30.31 DPS, 3.20s - +3 Agility, Equip: Improves your chance to hit by 0.9%. - Shadow Hunter Vosh'gajin (LBRS)",
               "faction": "both",
-              "dps": "31.4 DPS",
-              "speed": "2.80",
+              "quality": "q3",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "stats": "+3 Agility, Equip: Improves your chance to hit by 0.9%.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "77 - 117 Damage\tSpeed 3.20",
+                "(30.31 damage per second)",
+                "+3 Agility",
+                "Requires Level 54",
+                "Equip: Improves your chance to hit by 0.9%."
+              ]
+            },
+            {
+              "name": "Gorewood Bow",
+              "itemId": 16996,
+              "icon": "inv_weapon_bow_04",
+              "weaponType": "Bow",
+              "speed": "2.50",
+              "dps": "31.80 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "EPL: Order Must Be Restored / In Dreams",
+                "detail": "Eastern Plaguelands epic quest bow (+2 Agi, +9 Sta, 36.67 DPS)"
+              },
+              "value": "31.80 DPS, 2.50s - +2 Strength, +3 Agility, +9 Stamina - EPL: Order Must Be Restored / In Dreams",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 56,
+              "stats": "+2 Strength, +3 Agility, +9 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "55 - 104 Damage\tSpeed 2.50",
+                "(31.80 damage per second)",
+                "+2 Strength",
+                "+3 Agility",
+                "+9 Stamina",
+                "Requires Level 56"
+              ]
+            },
+            {
+              "name": "The Purifier",
+              "itemId": 22656,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "33.83 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "The Purifier",
+                "detail": "World Drop Epic Gun (+8 Agi, Chance on hit: 100 Holy dmg)"
+              },
+              "value": "33.83 DPS, 3.00s - +14 Crit - The Purifier",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+14 Crit",
+              "lines": [
+                "Ranged",
+                "Speed 3.00",
+                "(33.83 damage per second)",
+                "Requires Level 55"
+              ]
+            },
+            {
+              "name": "Shell Launcher Shotgun",
+              "itemId": 13146,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.30",
+              "dps": "29.78 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Shell Launcher Shotgun",
+                "detail": "World drop rare shotgun (34.81 DPS, 2.70s)"
+              },
+              "value": "29.78 DPS, 2.30s - Shell Launcher Shotgun",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 58,
-              "reqLevel": 52,
-              "stats": "+11 Agi",
-              "icon": "inv_weapon_bow_08"
+              "reqLevel": 53,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.30",
+                "(29.78 damage per second)",
+                "Requires Level 53"
+              ]
+            },
+            {
+              "name": "Eaglehorn Long Bow",
+              "itemId": 13023,
+              "icon": "inv_weapon_bow_11",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "32.22 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Eaglehorn Long Bow",
+                "detail": "World drop rare longbow (+10 Agi, +5 Sta, 38.33 DPS)"
+              },
+              "value": "32.22 DPS, 1.80s - +10 Agility, +4 Stamina - Eaglehorn Long Bow",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+10 Agility, +4 Stamina",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "40 - 76 Damage\tSpeed 1.80",
+                "(32.22 damage per second)",
+                "+10 Agility",
+                "+4 Stamina",
+                "Requires Level 58"
+              ]
+            },
+            {
+              "name": "Smokey's Explosive Launcher",
+              "itemId": 16992,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.70",
+              "dps": "27.78 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "EPL: When Smokey Sings, I Get Violent",
+                "detail": "Smokey's explosive gun reward in Eastern Plaguelands"
+              },
+              "value": "27.78 DPS, 2.70s - +8 Fire Resistance - EPL: When Smokey Sings, I Get Violent",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 54,
+              "stats": "+8 Fire Resistance",
+              "lines": [
+                "Ranged",
+                "Speed 2.70",
+                "(27.78 damage per second)",
+                "Requires Level 54"
+              ]
             },
             {
               "name": "Flawless Arcanite Rifle",
               "itemId": 16007,
-              "value": "31.0 DPS, +10 RAP - Engineering (275)",
-              "faction": "both",
-              "dps": "31.17 DPS",
-              "speed": "3.00",
+              "icon": "inv_weapon_rifle_03",
               "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "31.17 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (275)",
+                "detail": "Crafted Arcanite rifle (36.67 DPS, 3.00s)"
+              },
+              "value": "31.17 DPS, 3.00s - +9 Stamina - Engineering (275)",
+              "faction": "both",
               "quality": "q3",
               "iLvl": 61,
               "reqLevel": 56,
               "stats": "+9 Stamina",
-              "icon": "inv_weapon_rifle_03",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9947,16 +12767,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Core Marksman Rifle",
               "itemId": 18282,
-              "value": "35.0 DPS - Molten Core",
-              "faction": "both",
-              "dps": "36.8 DPS",
-              "speed": "2.50",
+              "icon": "inv_weapon_rifle_05",
               "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "36.80 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Engineering (300) / Molten Core",
+                "detail": "Molten Core schematic rifle (41.54 DPS, 2.60s)"
+              },
+              "value": "36.80 DPS, 2.50s - Equip: Improves your chance to hit by 1.0%. - Engineering (300) / Molten Core",
+              "faction": "both",
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
               "stats": "Equip: Improves your chance to hit by 1.0%.",
-              "icon": "inv_weapon_rifle_05",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9969,16 +12794,21 @@ if (typeof window !== 'undefined') {
             {
               "name": "Reaver's Repeater",
               "itemId": 282029,
+              "icon": "inv_weapon_rifle_07",
               "weaponType": "Gun",
               "speed": "2.70",
-              "dps": "27.0 DPS",
-              "value": "27.0 DPS, 2.70s - Custom Gun Drop",
+              "dps": "27.04 DPS",
+              "source": {
+                "kind": "dungeon",
+                "title": "Reaver's Repeater",
+                "detail": "Custom Forever dungeon drop firearm (37.50 DPS)"
+              },
+              "value": "27.04 DPS, 2.70s - +5 Stamina - Reaver's Repeater",
               "faction": "both",
               "quality": "q2",
               "iLvl": 58,
               "reqLevel": 53,
               "stats": "+5 Stamina",
-              "icon": "inv_weapon_rifle_07",
               "lines": [
                 "Binds when equipped",
                 "Ranged",
@@ -9987,21 +12817,732 @@ if (typeof window !== 'undefined') {
                 "+5 Stamina",
                 "Requires Level 53"
               ]
+            },
+            {
+              "name": "Fahrad's Reloading Repeater",
+              "itemId": 22347,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "3.20",
+              "dps": "33.28 DPS",
+              "source": {
+                "kind": "quest",
+                "title": "LBRS: Doomrigger's Clasp",
+                "detail": "Lower Blackrock Spire quest crossbow (40.50 DPS)"
+              },
+              "value": "33.28 DPS, 3.20s - +4 Agility, +10 Hit - LBRS: Doomrigger's Clasp",
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+4 Agility, +10 Hit",
+              "lines": [
+                "Ranged",
+                "Speed 3.20",
+                "(33.28 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Outrider's Bow",
+              "itemId": 19558,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "32.29 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Kelm Hargunth",
+                "detail": "32.29 DPS, 2.40s - +4 Agility, +10 Stamina - Kelm Hargunth"
+              },
+              "value": "32.29 DPS, 2.40s - +4 Agility, +10 Stamina - Kelm Hargunth",
+              "faction": "horde",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+4 Agility, +10 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "54 - 101 Damage\tSpeed 2.40",
+                "(32.29 damage per second)",
+                "+4 Agility",
+                "+10 Stamina",
+                "Requires Level 58"
+              ]
+            },
+            {
+              "name": "Outrunner's Bow",
+              "itemId": 19562,
+              "icon": "inv_weapon_bow_02",
+              "weaponType": "Bow",
+              "speed": "2.40",
+              "dps": "32.29 DPS",
+              "source": {
+                "kind": "drop",
+                "title": "Illiyana Moonblaze",
+                "detail": "32.29 DPS, 2.40s - +4 Agility, +10 Stamina - Illiyana Moonblaze"
+              },
+              "value": "32.29 DPS, 2.40s - +4 Agility, +10 Stamina - Illiyana Moonblaze",
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "+4 Agility, +10 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "54 - 101 Damage\tSpeed 2.40",
+                "(32.29 damage per second)",
+                "+4 Agility",
+                "+10 Stamina",
+                "Requires Level 58"
+              ]
+            },
+            {
+              "name": "Blessed Qiraji Musket",
+              "itemId": 21272,
+              "icon": "inv_weapon_rifle_11",
+              "weaponType": "Gun",
+              "speed": "2.60",
+              "dps": "47.31 DPS",
+              "source": {
+                "kind": "raid",
+                "title": "Blessed Qiraji Musket",
+                "detail": "Temple of Ahn'Qiraj quest rifle (42.50 DPS, 2.60s)"
+              },
+              "value": "47.31 DPS, 2.60s - +10 Stamina - Blessed Qiraji Musket",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 79,
+              "reqLevel": 60,
+              "stats": "+10 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Unique",
+                "Ranged",
+                "86 - 160 Damage\tSpeed 2.60",
+                "(47.31 damage per second)",
+                "+10 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Hand Cannon",
+              "itemId": 18855,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "46.38 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Grand Marshal's Hand Cannon",
+                "detail": "Alliance Rank 14 High Warlord Firearm (43.85 DPS, 2.60s)"
+              },
+              "value": "46.38 DPS, 2.90s - +7 Stamina - Grand Marshal's Hand Cannon",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "107 - 162 Damage\tSpeed 2.90",
+                "(46.38 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "High Warlord's Street Sweeper",
+              "itemId": 18860,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "46.38 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "High Warlord's Street Sweeper",
+                "detail": "Horde Rank 14 High Warlord Shotgun (43.85 DPS, 2.60s)"
+              },
+              "value": "46.38 DPS, 2.90s - +7 Stamina - High Warlord's Street Sweeper",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "107 - 162 Damage\tSpeed 2.90",
+                "(46.38 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Bullseye",
+              "itemId": 18833,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "46.11 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Grand Marshal's Bullseye",
+                "detail": "Alliance Rank 14 High Warlord Bow (43.85 DPS, 2.60s)"
+              },
+              "value": "46.11 DPS, 1.80s - +7 Stamina - Grand Marshal's Bullseye",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "66 - 100 Damage\tSpeed 1.80",
+                "(46.11 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "High Warlord's Recurve",
+              "itemId": 18835,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "46.11 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "High Warlord's Recurve",
+                "detail": "Horde Rank 14 High Warlord Bow (43.85 DPS, 2.60s)"
+              },
+              "value": "46.11 DPS, 1.80s - +7 Stamina - High Warlord's Recurve",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "66 - 100 Damage\tSpeed 1.80",
+                "(46.11 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Grand Marshal's Repeater",
+              "itemId": 18836,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "2.90",
+              "dps": "46.38 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Grand Marshal's Repeater",
+                "detail": "Alliance Rank 14 High Warlord Crossbow (43.85 DPS, 2.60s)"
+              },
+              "value": "46.38 DPS, 2.90s - +7 Stamina - Grand Marshal's Repeater",
+              "faction": "alliance",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "107 - 162 Damage\tSpeed 2.90",
+                "(46.38 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "High Warlord's Crossbow",
+              "itemId": 18837,
+              "icon": "inv_weapon_crossbow_10",
+              "weaponType": "Crossbow",
+              "speed": "2.90",
+              "dps": "46.38 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "High Warlord's Crossbow",
+                "detail": "Horde Rank 14 High Warlord Crossbow (43.85 DPS, 2.60s)"
+              },
+              "value": "46.38 DPS, 2.90s - +7 Stamina - High Warlord's Crossbow",
+              "faction": "horde",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+7 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "107 - 162 Damage\tSpeed 2.90",
+                "(46.38 damage per second)",
+                "+7 Stamina",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Huhuran's Stinger",
+              "itemId": 21616,
+              "icon": "inv_weapon_bow_14",
+              "weaponType": "Bow",
+              "speed": "2.70",
+              "dps": "46.30 DPS",
+              "source": {
+                "kind": "raid",
+                "title": "Princess Huhuran in AQ40",
+                "detail": "Temple of Ahn'Qiraj raid bow (+18 Agility, 43.89 DPS)"
+              },
+              "value": "46.30 DPS, 2.70s - +18 Agility - Princess Huhuran in AQ40",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 78,
+              "reqLevel": 60,
+              "stats": "+18 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "87 - 163 Damage\tSpeed 2.70",
+                "(46.30 damage per second)",
+                "+18 Agility",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Larvae of the Great Worm",
+              "itemId": 23557,
+              "icon": "inv_weapon_rifle_10",
+              "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "49.17 DPS",
+              "source": {
+                "kind": "raid",
+                "title": "Ouro in AQ40",
+                "detail": "Temple of Ahn'Qiraj raid firearm (+18 Ranged AP, 45.38 DPS)"
+              },
+              "value": "49.17 DPS, 3.00s - +14 Crit - Ouro in AQ40",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 81,
+              "reqLevel": 60,
+              "stats": "+14 Crit",
+              "lines": [
+                "Ranged",
+                "Speed 3.00",
+                "(49.17 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Hyper Deluxe Sniper Rifle Mk XVII",
+              "itemId": 279273,
+              "icon": "inv_weapon_rifle_05",
+              "weaponType": "Gun",
+              "speed": "2.50",
+              "dps": "36.80 DPS",
+              "source": {
+                "kind": "craft",
+                "title": "Hyper Deluxe Sniper Rifle Mk XVII",
+                "detail": "Custom Forever Engineering masterpiece rifle (42.00 DPS)"
+              },
+              "value": "36.80 DPS, 2.50s - +8 Stamina, +6 Spirit - Hyper Deluxe Sniper Rifle Mk XVII",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+8 Stamina, +6 Spirit",
+              "lines": [
+                "Ranged",
+                "Speed 2.50",
+                "(36.80 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier Grand Marshal's Hand Cannon",
+              "itemId": 272846,
+              "icon": "inv_weapon_rifle_08",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "36.90 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier Grand Marshal's Hand Cannon",
+                "detail": "Premier Alliance Rank 14 Firearm (42.00 DPS)"
+              },
+              "value": "36.90 DPS, 2.90s - +6 Stamina - Premier Grand Marshal's Hand Cannon",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(36.90 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier High Warlord's Street Sweeper",
+              "itemId": 272599,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "2.90",
+              "dps": "36.90 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier High Warlord's Street Sweeper",
+                "detail": "Premier Horde Rank 14 Shotgun (42.00 DPS)"
+              },
+              "value": "36.90 DPS, 2.90s - +6 Stamina - Premier High Warlord's Street Sweeper",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(36.90 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier Grand Marshal's Bullseye",
+              "itemId": 272841,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "36.94 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier Grand Marshal's Bullseye",
+                "detail": "Premier Alliance Rank 14 Bow (42.00 DPS)"
+              },
+              "value": "36.94 DPS, 1.80s - +6 Stamina - Premier Grand Marshal's Bullseye",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(36.94 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier High Warlord's Recurve",
+              "itemId": 272594,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "1.80",
+              "dps": "36.94 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier High Warlord's Recurve",
+                "detail": "Premier Horde Rank 14 Bow (42.00 DPS)"
+              },
+              "value": "36.94 DPS, 1.80s - +6 Stamina - Premier High Warlord's Recurve",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 1.80",
+                "(36.94 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier Grand Marshal's Repeater",
+              "itemId": 272842,
+              "icon": "inv_weapon_crossbow_04",
+              "weaponType": "Crossbow",
+              "speed": "2.90",
+              "dps": "36.90 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier Grand Marshal's Repeater",
+                "detail": "Premier Alliance Rank 14 Crossbow (42.00 DPS)"
+              },
+              "value": "36.90 DPS, 2.90s - +6 Stamina - Premier Grand Marshal's Repeater",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(36.90 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Premier High Warlord's Crossbow",
+              "itemId": 272595,
+              "icon": "inv_weapon_crossbow_10",
+              "weaponType": "Crossbow",
+              "speed": "2.90",
+              "dps": "36.90 DPS",
+              "source": {
+                "kind": "pvp",
+                "title": "Premier High Warlord's Crossbow",
+                "detail": "Premier Horde Rank 14 Crossbow (42.00 DPS)"
+              },
+              "value": "36.90 DPS, 2.90s - +6 Stamina - Premier High Warlord's Crossbow",
+              "faction": "both",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.90",
+                "(36.90 damage per second)",
+                "Requires Level 60"
+              ]
+            },
+            {
+              "name": "Deadwood Boomstick",
+              "itemId": 275296,
+              "icon": "inv_weapon_rifle_04",
+              "weaponType": "Gun",
+              "speed": "3.00",
+              "dps": "26.83 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "26.83 DPS, 3.00s - +6 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "26.83 DPS, 3.00s - +6 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 58,
+              "reqLevel": 1,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 3.00",
+                "(26.83 damage per second)"
+              ]
+            },
+            {
+              "name": "Cremation Longbow",
+              "itemId": 275441,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "26.61 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "26.61 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "26.61 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(26.61 damage per second)"
+              ]
+            },
+            {
+              "name": "Blunderflame Bone Bow",
+              "itemId": 275439,
+              "icon": "inv_weapon_bow_08",
+              "weaponType": "Bow",
+              "speed": "2.80",
+              "dps": "26.61 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "26.61 DPS, 2.80s - Leveling Drop / Vendor"
+              },
+              "value": "26.61 DPS, 2.80s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 1,
+              "stats": "",
+              "lines": [
+                "Ranged",
+                "Speed 2.80",
+                "(26.61 damage per second)"
+              ]
+            },
+            {
+              "name": "Abigail's Hope",
+              "itemId": 276332,
+              "icon": "inv_weapon_crossbow_07",
+              "weaponType": "Crossbow",
+              "speed": "2.70",
+              "dps": "26.48 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "26.48 DPS, 2.70s - +5 Strength, +6 Stamina - Leveling Drop / Vendor"
+              },
+              "value": "26.48 DPS, 2.70s - +5 Strength, +6 Stamina - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 1,
+              "stats": "+5 Strength, +6 Stamina",
+              "lines": [
+                "Ranged",
+                "Speed 2.70",
+                "(26.48 damage per second)"
+              ]
+            },
+            {
+              "name": "Sandstrider's Mark",
+              "itemId": 20646,
+              "icon": "inv_weapon_bow_03",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "27.39 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Wanted - Deathclasp, Terror of the Sands",
+                "detail": "27.39 DPS, 2.30s - +8 Stamina - Wanted - Deathclasp, Terror of the Sands"
+              },
+              "value": "27.39 DPS, 2.30s - +8 Stamina - Wanted - Deathclasp, Terror of the Sands",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "stats": "+8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged",
+                "44 - 82 Damage\tSpeed 2.30",
+                "(27.39 damage per second)",
+                "+8 Stamina",
+                "Requires Level 54"
+              ]
+            },
+            {
+              "name": "Sharpshooter Harquebus",
+              "itemId": 15325,
+              "icon": "inv_weapon_rifle_06",
+              "weaponType": "Gun",
+              "speed": "2.20",
+              "dps": "27.95 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "27.95 DPS, 2.20s - Leveling Drop / Vendor"
+              },
+              "value": "27.95 DPS, 2.20s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "43 - 80 Damage\tSpeed 2.20",
+                "(27.95 damage per second)",
+                "Requires Level 55"
+              ]
+            },
+            {
+              "name": "Blasthorn Bow",
+              "itemId": 15288,
+              "icon": "inv_weapon_bow_07",
+              "weaponType": "Bow",
+              "speed": "2.60",
+              "dps": "28.27 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "28.27 DPS, 2.60s - Leveling Drop / Vendor"
+              },
+              "value": "28.27 DPS, 2.60s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "51 - 96 Damage\tSpeed 2.60",
+                "(28.27 damage per second)",
+                "Requires Level 56"
+              ]
+            },
+            {
+              "name": "Hawkeye Bow",
+              "itemId": 15296,
+              "icon": "inv_weapon_bow_12",
+              "weaponType": "Bow",
+              "speed": "1.70",
+              "dps": "29.41 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "29.41 DPS, 1.70s - Leveling Drop / Vendor"
+              },
+              "value": "29.41 DPS, 1.70s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 63,
+              "reqLevel": 58,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "35 - 65 Damage\tSpeed 1.70",
+                "(29.41 damage per second)",
+                "Requires Level 58"
+              ]
+            },
+            {
+              "name": "Archstrike Bow",
+              "itemId": 15289,
+              "icon": "inv_weapon_bow_06",
+              "weaponType": "Bow",
+              "speed": "2.30",
+              "dps": "30.22 DPS",
+              "source": {
+                "kind": "vendor",
+                "title": "Leveling Drop / Vendor",
+                "detail": "30.22 DPS, 2.30s - Leveling Drop / Vendor"
+              },
+              "value": "30.22 DPS, 2.30s - Leveling Drop / Vendor",
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": "",
+              "lines": [
+                "Binds when equipped",
+                "Ranged",
+                "48 - 91 Damage\tSpeed 2.30",
+                "(30.22 damage per second)",
+                "Requires Level 60"
+              ]
             }
-          ],
-          "faction": "both",
-          "quality": "q3",
-          "iLvl": 59,
-          "reqLevel": 54,
-          "stats": "+3 Agility, Equip: Improves your chance to hit by 0.9%.",
-          "lines": [
-            "Binds when picked up",
-            "Ranged",
-            "77 - 117 Damage\tSpeed 3.20",
-            "(30.31 damage per second)",
-            "+3 Agility",
-            "Requires Level 54",
-            "Equip: Improves your chance to hit by 0.9%."
           ]
         }
       ]

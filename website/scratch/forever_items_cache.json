@@ -1970,6 +1970,26 @@
       "Requires Level 3"
     ]
   },
+  "2504": {
+    "id": 2504,
+    "name": "Worn Shortbow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 2,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.30",
+    "dps": "1.52 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "2 - 5 Damage\tSpeed 2.30",
+      "(1.52 damage per second)"
+    ]
+  },
   "2505": {
     "id": 2505,
     "name": "Polished Shortbow",
@@ -2032,6 +2052,67 @@
       "Requires Level 11"
     ]
   },
+  "2508": {
+    "id": 2508,
+    "name": "Old Blunderbuss",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 2,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.30",
+    "dps": "1.52 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "2 - 5 Damage\tSpeed 2.30",
+      "(1.52 damage per second)"
+    ]
+  },
+  "2509": {
+    "id": 2509,
+    "name": "Ornate Blunderbuss",
+    "icon": "inv_weapon_rifle_02",
+    "iLvl": 9,
+    "quality": "q1",
+    "reqLevel": 4,
+    "speed": "2.20",
+    "dps": "2.95 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "4 - 9 Damage\tSpeed 2.20",
+      "(2.95 damage per second)",
+      "Requires Level 4"
+    ]
+  },
+  "2510": {
+    "id": 2510,
+    "name": "Solid Blunderbuss",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 3,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.20",
+    "dps": "2.05 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "3 - 6 Damage\tSpeed 2.20",
+      "(2.05 damage per second)"
+    ]
+  },
   "2511": {
     "id": 2511,
     "name": "Hunter's Boomstick",
@@ -2041,7 +2122,7 @@
     "reqLevel": 9,
     "speed": "2.10",
     "dps": "5.00 DPS",
-    "weaponType": "Ranged",
+    "weaponType": "Gun",
     "inventorySlot": "Ranged",
     "stats": "",
     "equips": [],
@@ -2133,6 +2214,216 @@
     "subclassName": "Dagger",
     "side": "both",
     "sourcemore": null
+  },
+  "2773": {
+    "id": 2773,
+    "name": "Cracked Shortbow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 8,
+    "quality": "q0",
+    "reqLevel": 3,
+    "speed": "2.30",
+    "dps": "1.96 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "3 - 6 Damage\tSpeed 2.30",
+      "(1.96 damage per second)",
+      "Requires Level 3"
+    ]
+  },
+  "2774": {
+    "id": 2774,
+    "name": "Rust-covered Blunderbuss",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 7,
+    "quality": "q0",
+    "reqLevel": 2,
+    "speed": "2.40",
+    "dps": "1.88 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "3 - 6 Damage\tSpeed 2.40",
+      "(1.88 damage per second)",
+      "Requires Level 2"
+    ]
+  },
+  "2777": {
+    "id": 2777,
+    "name": "Feeble Shortbow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 13,
+    "quality": "q0",
+    "reqLevel": 8,
+    "speed": "1.80",
+    "dps": "3.33 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "4 - 8 Damage\tSpeed 1.80",
+      "(3.33 damage per second)",
+      "Requires Level 8"
+    ]
+  },
+  "2778": {
+    "id": 2778,
+    "name": "Cheap Blunderbuss",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 13,
+    "quality": "q0",
+    "reqLevel": 8,
+    "speed": "2.20",
+    "dps": "3.18 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "5 - 9 Damage\tSpeed 2.20",
+      "(3.18 damage per second)",
+      "Requires Level 8"
+    ]
+  },
+  "2780": {
+    "id": 2780,
+    "name": "Light Hunting Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 19,
+    "quality": "q0",
+    "reqLevel": 14,
+    "speed": "1.70",
+    "dps": "4.41 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "5 - 10 Damage\tSpeed 1.70",
+      "(4.41 damage per second)",
+      "Requires Level 14"
+    ]
+  },
+  "2781": {
+    "id": 2781,
+    "name": "Dirty Blunderbuss",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 18,
+    "quality": "q0",
+    "reqLevel": 13,
+    "speed": "2.20",
+    "dps": "4.09 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "6 - 12 Damage\tSpeed 2.20",
+      "(4.09 damage per second)",
+      "Requires Level 13"
+    ]
+  },
+  "2782": {
+    "id": 2782,
+    "name": "Mishandled Recurve Bow",
+    "icon": "inv_weapon_bow_03",
+    "iLvl": 24,
+    "quality": "q0",
+    "reqLevel": 19,
+    "speed": "2.40",
+    "dps": "5.63 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "9 - 18 Damage\tSpeed 2.40",
+      "(5.63 damage per second)",
+      "Requires Level 19"
+    ]
+  },
+  "2783": {
+    "id": 2783,
+    "name": "Shoddy Blunderbuss",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 22,
+    "quality": "q0",
+    "reqLevel": 17,
+    "speed": "2.10",
+    "dps": "5.00 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "7 - 14 Damage\tSpeed 2.10",
+      "(5.00 damage per second)",
+      "Requires Level 17"
+    ]
+  },
+  "2785": {
+    "id": 2785,
+    "name": "Stiff Recurve Bow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 28,
+    "quality": "q0",
+    "reqLevel": 23,
+    "speed": "2.80",
+    "dps": "6.79 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "13 - 25 Damage\tSpeed 2.80",
+      "(6.79 damage per second)",
+      "Requires Level 23"
+    ]
+  },
+  "2786": {
+    "id": 2786,
+    "name": "Oiled Blunderbuss",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 29,
+    "quality": "q0",
+    "reqLevel": 24,
+    "speed": "2.00",
+    "dps": "7.00 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "9 - 19 Damage\tSpeed 2.00",
+      "(7.00 damage per second)",
+      "Requires Level 24"
+    ]
   },
   "2801": {
     "id": 2801,
@@ -2608,6 +2899,52 @@
       }
     ]
   },
+  "3021": {
+    "id": 3021,
+    "name": "Ranger Bow",
+    "icon": "inv_weapon_bow_11",
+    "iLvl": 25,
+    "quality": "q3",
+    "reqLevel": 20,
+    "speed": "2.70",
+    "dps": "12.59 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+1 Agility",
+    "equips": [],
+    "baseStats": [
+      "+1 Agility"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "23 - 45 Damage\tSpeed 2.70",
+      "(12.59 damage per second)",
+      "+1 Agility",
+      "Requires Level 20"
+    ]
+  },
+  "3023": {
+    "id": 3023,
+    "name": "Large Bore Blunderbuss",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 21,
+    "quality": "q1",
+    "reqLevel": 16,
+    "speed": "2.50",
+    "dps": "7.40 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "13 - 24 Damage\tSpeed 2.50",
+      "(7.40 damage per second)",
+      "Requires Level 16"
+    ]
+  },
   "3024": {
     "id": 3024,
     "name": "BKP 2700 \"Enforcer\"",
@@ -2627,6 +2964,27 @@
       "18 - 34 Damage\tSpeed 2.70",
       "(9.63 damage per second)",
       "Requires Level 21"
+    ]
+  },
+  "3025": {
+    "id": 3025,
+    "name": "BKP 42 \"Ultra\"",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 36,
+    "quality": "q1",
+    "reqLevel": 31,
+    "speed": "2.10",
+    "dps": "13.81 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "20 - 38 Damage\tSpeed 2.10",
+      "(13.81 damage per second)",
+      "Requires Level 31"
     ]
   },
   "3026": {
@@ -2669,6 +3027,27 @@
       "15 - 29 Damage\tSpeed 2.40",
       "(9.17 damage per second)",
       "Requires Level 20"
+    ]
+  },
+  "3028": {
+    "id": 3028,
+    "name": "Longbow",
+    "icon": "inv_weapon_bow_07",
+    "iLvl": 34,
+    "quality": "q1",
+    "reqLevel": 29,
+    "speed": "2.30",
+    "dps": "13.04 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "21 - 39 Damage\tSpeed 2.30",
+      "(13.04 damage per second)",
+      "Requires Level 29"
     ]
   },
   "3036": {
@@ -3921,6 +4300,48 @@
       }
     ]
   },
+  "3778": {
+    "id": 3778,
+    "name": "Taut Compound Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 31,
+    "quality": "q0",
+    "reqLevel": 26,
+    "speed": "2.50",
+    "dps": "7.60 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "13 - 25 Damage\tSpeed 2.50",
+      "(7.60 damage per second)",
+      "Requires Level 26"
+    ]
+  },
+  "3780": {
+    "id": 3780,
+    "name": "Long-barreled Musket",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 33,
+    "quality": "q0",
+    "reqLevel": 28,
+    "speed": "2.60",
+    "dps": "7.88 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "14 - 27 Damage\tSpeed 2.60",
+      "(7.88 damage per second)",
+      "Requires Level 28"
+    ]
+  },
   "3848": {
     "id": 3848,
     "name": "Big Bronze Knife",
@@ -4176,6 +4597,48 @@
       }
     ]
   },
+  "4025": {
+    "id": 4025,
+    "name": "Balanced Long Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 45,
+    "quality": "q0",
+    "reqLevel": 40,
+    "speed": "1.80",
+    "dps": "12.22 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "15 - 29 Damage\tSpeed 1.80",
+      "(12.22 damage per second)",
+      "Requires Level 40"
+    ]
+  },
+  "4026": {
+    "id": 4026,
+    "name": "Sentinel Musket",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 43,
+    "quality": "q0",
+    "reqLevel": 38,
+    "speed": "2.80",
+    "dps": "11.61 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "22 - 43 Damage\tSpeed 2.80",
+      "(11.61 damage per second)",
+      "Requires Level 38"
+    ]
+  },
   "4086": {
     "id": 4086,
     "name": "Flash Rifle",
@@ -4200,6 +4663,50 @@
       }
     ]
   },
+  "4087": {
+    "id": 4087,
+    "name": "Trueshot Bow",
+    "icon": "inv_weapon_bow_10",
+    "iLvl": 41,
+    "quality": "q2",
+    "reqLevel": 36,
+    "speed": "1.90",
+    "dps": "18.16 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "24 - 45 Damage\tSpeed 1.90",
+      "(18.16 damage per second)",
+      "Requires Level 36"
+    ]
+  },
+  "4089": {
+    "id": 4089,
+    "name": "Ricochet Blunderbuss",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 48,
+    "quality": "q2",
+    "reqLevel": 43,
+    "speed": "2.30",
+    "dps": "22.39 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "36 - 67 Damage\tSpeed 2.30",
+      "(22.39 damage per second)",
+      "Requires Level 43"
+    ]
+  },
   "4090": {
     "id": 4090,
     "name": "Mug O' Hurt",
@@ -4215,6 +4722,48 @@
     "subclassName": "One-handed mace",
     "side": "both",
     "sourcemore": null
+  },
+  "4110": {
+    "id": 4110,
+    "name": "Master Hunter's Bow",
+    "icon": "inv_weapon_bow_11",
+    "iLvl": 45,
+    "quality": "q2",
+    "reqLevel": null,
+    "speed": "2.40",
+    "dps": "20.83 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "35 - 65 Damage\tSpeed 2.40",
+      "(20.83 damage per second)"
+    ]
+  },
+  "4111": {
+    "id": 4111,
+    "name": "Master Hunter's Rifle",
+    "icon": "inv_weapon_rifle_05",
+    "iLvl": 45,
+    "quality": "q2",
+    "reqLevel": null,
+    "speed": "2.60",
+    "dps": "20.58 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "37 - 70 Damage\tSpeed 2.60",
+      "(20.58 damage per second)"
+    ]
   },
   "4122": {
     "id": 4122,
@@ -4818,6 +5367,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "4763": {
+    "id": 4763,
+    "name": "Blackwood Recurve Bow",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 9,
+    "quality": "q2",
+    "reqLevel": 4,
+    "speed": "2.70",
+    "dps": "3.89 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "7 - 14 Damage\tSpeed 2.70",
+      "(3.89 damage per second)",
+      "Requires Level 4"
+    ]
+  },
   "4840": {
     "id": 4840,
     "name": "Long Bayonet",
@@ -4864,6 +5435,27 @@
         "t": 5,
         "ti": 792
       }
+    ]
+  },
+  "4931": {
+    "id": 4931,
+    "name": "Hickory Shortbow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 11,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.00",
+    "dps": "3.75 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "5 - 10 Damage\tSpeed 2.00",
+      "(3.75 damage per second)"
     ]
   },
   "4932": {
@@ -6516,6 +7108,27 @@
         "t": 5,
         "ti": 935
       }
+    ]
+  },
+  "5596": {
+    "id": 5596,
+    "name": "Ashwood Bow",
+    "icon": "inv_weapon_bow_01",
+    "iLvl": 11,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.10",
+    "dps": "3.81 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "5 - 11 Damage\tSpeed 2.10",
+      "(3.81 damage per second)"
     ]
   },
   "5604": {
@@ -9921,6 +10534,93 @@
       }
     ]
   },
+  "8179": {
+    "id": 8179,
+    "name": "Cadet's Bow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 6,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.00",
+    "dps": "2.25 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "3 - 6 Damage\tSpeed 2.00",
+      "(2.25 damage per second)"
+    ]
+  },
+  "8180": {
+    "id": 8180,
+    "name": "Hunting Bow",
+    "icon": "inv_weapon_bow_03",
+    "iLvl": 11,
+    "quality": "q2",
+    "reqLevel": 6,
+    "speed": "2.60",
+    "dps": "4.62 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "Equip: +3 Attack Power against Beasts.",
+    "equips": [
+      "Equip: +3 Attack Power against Beasts."
+    ],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "8 - 16 Damage\tSpeed 2.60",
+      "(4.62 damage per second)",
+      "Equip: +3 Attack Power against Beasts.",
+      "Requires Level 6"
+    ]
+  },
+  "8181": {
+    "id": 8181,
+    "name": "Hunting Rifle",
+    "icon": "inv_weapon_rifle_04",
+    "iLvl": 9,
+    "quality": "q1",
+    "reqLevel": 4,
+    "speed": "2.70",
+    "dps": "2.96 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "5 - 11 Damage\tSpeed 2.70",
+      "(2.96 damage per second)",
+      "Requires Level 4"
+    ]
+  },
+  "8182": {
+    "id": 8182,
+    "name": "Pellet Rifle",
+    "icon": "inv_weapon_rifle_04",
+    "iLvl": 7,
+    "quality": "q1",
+    "reqLevel": 2,
+    "speed": "2.60",
+    "dps": "2.50 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "4 - 9 Damage\tSpeed 2.60",
+      "(2.50 damage per second)",
+      "Requires Level 2"
+    ]
+  },
   "8183": {
     "id": 8183,
     "name": "Precision Bow",
@@ -10308,6 +11008,31 @@
       "Equip: Increases healing done by up to 13"
     ]
   },
+  "9412": {
+    "id": 9412,
+    "name": "Galgann's Fireblaster",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 47,
+    "quality": "q3",
+    "reqLevel": 42,
+    "speed": "2.60",
+    "dps": "24.62 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
+    "equips": [
+      "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage."
+    ],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "44 - 84 Damage\tSpeed 2.60",
+      "(24.62 damage per second)",
+      "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
+      "Requires Level 42"
+    ]
+  },
   "9419": {
     "id": 9419,
     "name": "Galgann's Firehammer",
@@ -10330,6 +11055,33 @@
         "ti": 7291,
         "z": 1337
       }
+    ]
+  },
+  "9426": {
+    "id": 9426,
+    "name": "Monolithic Bow",
+    "icon": "inv_weapon_bow_01",
+    "iLvl": 41,
+    "quality": "q3",
+    "reqLevel": 36,
+    "speed": "2.70",
+    "dps": "21.85 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+6 Strength, +3 Agility",
+    "equips": [],
+    "baseStats": [
+      "+6 Strength",
+      "+3 Agility"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "41 - 77 Damage\tSpeed 2.70",
+      "(21.85 damage per second)",
+      "+6 Strength",
+      "+3 Agility",
+      "Requires Level 36"
     ]
   },
   "9446": {
@@ -11885,6 +12637,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "11307": {
+    "id": 11307,
+    "name": "Massive Longbow",
+    "icon": "inv_weapon_bow_01",
+    "iLvl": 47,
+    "quality": "q2",
+    "reqLevel": 42,
+    "speed": "2.80",
+    "dps": "21.96 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "43 - 80 Damage\tSpeed 2.80",
+      "(21.96 damage per second)",
+      "Requires Level 42"
+    ]
+  },
   "11308": {
     "id": 11308,
     "name": "Sylvan Shortbow",
@@ -12493,6 +13267,90 @@
         "t": 5,
         "ti": 14
       }
+    ]
+  },
+  "12446": {
+    "id": 12446,
+    "name": "Anvilmar Musket",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 5,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.70",
+    "dps": "2.22 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "4 - 8 Damage\tSpeed 2.70",
+      "(2.22 damage per second)"
+    ]
+  },
+  "12447": {
+    "id": 12447,
+    "name": "Thistlewood Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 5,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.30",
+    "dps": "2.17 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "3 - 7 Damage\tSpeed 2.30",
+      "(2.17 damage per second)"
+    ]
+  },
+  "12448": {
+    "id": 12448,
+    "name": "Light Hunting Rifle",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 5,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "1.90",
+    "dps": "2.11 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "2 - 6 Damage\tSpeed 1.90",
+      "(2.11 damage per second)"
+    ]
+  },
+  "12449": {
+    "id": 12449,
+    "name": "Primitive Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 5,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "2.70",
+    "dps": "2.22 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "4 - 8 Damage\tSpeed 2.70",
+      "(2.22 damage per second)"
     ]
   },
   "12584": {
@@ -13108,6 +13966,87 @@
     "side": "both",
     "sourcemore": null
   },
+  "13021": {
+    "id": 13021,
+    "name": "Needle Threader",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 47,
+    "quality": "q3",
+    "reqLevel": 42,
+    "speed": "2.00",
+    "dps": "24.50 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+6 Stamina, +4 Spirit",
+    "equips": [],
+    "baseStats": [
+      "+6 Stamina",
+      "+4 Spirit"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "34 - 64 Damage\tSpeed 2.00",
+      "(24.50 damage per second)",
+      "+6 Stamina",
+      "+4 Spirit",
+      "Requires Level 42"
+    ]
+  },
+  "13022": {
+    "id": 13022,
+    "name": "Gryphonwing Long Bow",
+    "icon": "inv_weapon_bow_11",
+    "iLvl": 55,
+    "quality": "q3",
+    "reqLevel": 50,
+    "speed": "2.70",
+    "dps": "28.33 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+8 Agility, +4 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+8 Agility",
+      "+4 Stamina"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "53 - 100 Damage\tSpeed 2.70",
+      "(28.33 damage per second)",
+      "+8 Agility",
+      "+4 Stamina",
+      "Requires Level 50"
+    ]
+  },
+  "13023": {
+    "id": 13023,
+    "name": "Eaglehorn Long Bow",
+    "icon": "inv_weapon_bow_11",
+    "iLvl": 63,
+    "quality": "q3",
+    "reqLevel": 58,
+    "speed": "1.80",
+    "dps": "32.22 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+10 Agility, +4 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+10 Agility",
+      "+4 Stamina"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "40 - 76 Damage\tSpeed 1.80",
+      "(32.22 damage per second)",
+      "+10 Agility",
+      "+4 Stamina",
+      "Requires Level 58"
+    ]
+  },
   "13033": {
     "id": 13033,
     "name": "Zealot Blade",
@@ -13201,6 +14140,64 @@
       "(21.25 damage per second)",
       "+7 Agility",
       "Requires Level 35"
+    ]
+  },
+  "13039": {
+    "id": 13039,
+    "name": "Skull Splitting Crossbow",
+    "icon": "inv_weapon_crossbow_04",
+    "iLvl": 48,
+    "quality": "q3",
+    "reqLevel": 43,
+    "speed": "2.60",
+    "dps": "25.19 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Strength, Equip: +14 Attack Power.",
+    "equips": [
+      "Equip: +14 Attack Power."
+    ],
+    "baseStats": [
+      "+3 Strength"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "52 - 79 Damage\tSpeed 2.60",
+      "(25.19 damage per second)",
+      "+3 Strength",
+      "Equip: +14 Attack Power.",
+      "Requires Level 43"
+    ]
+  },
+  "13040": {
+    "id": 13040,
+    "name": "Heartseeking Crossbow",
+    "icon": "inv_weapon_crossbow_04",
+    "iLvl": 56,
+    "quality": "q3",
+    "reqLevel": 51,
+    "speed": "3.10",
+    "dps": "28.87 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+9 Agility, +4 Stamina, Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage.",
+    "equips": [
+      "Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage."
+    ],
+    "baseStats": [
+      "+9 Agility",
+      "+4 Stamina"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "71 - 108 Damage\tSpeed 3.10",
+      "(28.87 damage per second)",
+      "+9 Agility",
+      "+4 Stamina",
+      "Equip: Chance to strike your ranged target with a Shadowbolt for 13 to 19 Shadow damage.",
+      "Requires Level 51"
     ]
   },
   "13041": {
@@ -13430,6 +14427,58 @@
       "Equip: Increased Defense +3."
     ]
   },
+  "13138": {
+    "id": 13138,
+    "name": "The Silencer",
+    "icon": "inv_weapon_rifle_08",
+    "iLvl": 42,
+    "quality": "q3",
+    "reqLevel": 37,
+    "speed": "2.80",
+    "dps": "22.32 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "Equip: +14 Attack Power.",
+    "equips": [
+      "Equip: +14 Attack Power."
+    ],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "43 - 82 Damage\tSpeed 2.80",
+      "(22.32 damage per second)",
+      "Equip: +14 Attack Power.",
+      "Requires Level 37"
+    ]
+  },
+  "13139": {
+    "id": 13139,
+    "name": "Guttbuster",
+    "icon": "inv_weapon_rifle_08",
+    "iLvl": 50,
+    "quality": "q3",
+    "reqLevel": 45,
+    "speed": "2.70",
+    "dps": "26.11 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Strength, +8 Agility",
+    "equips": [],
+    "baseStats": [
+      "+3 Strength",
+      "+8 Agility"
+    ],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "49 - 92 Damage\tSpeed 2.70",
+      "(26.11 damage per second)",
+      "+3 Strength",
+      "+8 Agility",
+      "Requires Level 45"
+    ]
+  },
   "13146": {
     "id": 13146,
     "name": "Shell Launcher Shotgun",
@@ -13494,6 +14543,48 @@
         "t": 5,
         "ti": 5060
       }
+    ]
+  },
+  "13824": {
+    "id": 13824,
+    "name": "Recurve Long Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 55,
+    "quality": "q0",
+    "reqLevel": 45,
+    "speed": "2.50",
+    "dps": "15.20 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "26 - 50 Damage\tSpeed 2.50",
+      "(15.20 damage per second)",
+      "Requires Level 45"
+    ]
+  },
+  "13825": {
+    "id": 13825,
+    "name": "Primed Musket",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 57,
+    "quality": "q0",
+    "reqLevel": 52,
+    "speed": "1.80",
+    "dps": "15.83 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "20 - 37 Damage\tSpeed 1.80",
+      "(15.83 damage per second)",
+      "Requires Level 52"
     ]
   },
   "13914": {
@@ -13622,6 +14713,26 @@
         "ti": 11518,
         "z": 2437
       }
+    ]
+  },
+  "14394": {
+    "id": 14394,
+    "name": "Durability Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 1,
+    "quality": "q1",
+    "reqLevel": null,
+    "speed": "1.80",
+    "dps": "1.11 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Ranged",
+      "1 - 3 Damage\tSpeed 1.80",
+      "(1.11 damage per second)"
     ]
   },
   "15105": {
@@ -13797,6 +14908,160 @@
     "side": "both",
     "sourcemore": null
   },
+  "15287": {
+    "id": 15287,
+    "name": "Crusader Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 45,
+    "quality": "q2",
+    "reqLevel": 40,
+    "speed": "2.20",
+    "dps": "20.91 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "32 - 60 Damage\tSpeed 2.20",
+      "(20.91 damage per second)",
+      "Requires Level 40"
+    ]
+  },
+  "15288": {
+    "id": 15288,
+    "name": "Blasthorn Bow",
+    "icon": "inv_weapon_bow_07",
+    "iLvl": 61,
+    "quality": "q2",
+    "reqLevel": 56,
+    "speed": "2.60",
+    "dps": "28.27 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "51 - 96 Damage\tSpeed 2.60",
+      "(28.27 damage per second)",
+      "Requires Level 56"
+    ]
+  },
+  "15289": {
+    "id": 15289,
+    "name": "Archstrike Bow",
+    "icon": "inv_weapon_bow_06",
+    "iLvl": 65,
+    "quality": "q2",
+    "reqLevel": 60,
+    "speed": "2.30",
+    "dps": "30.22 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "48 - 91 Damage\tSpeed 2.30",
+      "(30.22 damage per second)",
+      "Requires Level 60"
+    ]
+  },
+  "15291": {
+    "id": 15291,
+    "name": "Harpy Needler",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 51,
+    "quality": "q2",
+    "reqLevel": 46,
+    "speed": "2.70",
+    "dps": "23.70 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "44 - 84 Damage\tSpeed 2.70",
+      "(23.70 damage per second)",
+      "Requires Level 46"
+    ]
+  },
+  "15294": {
+    "id": 15294,
+    "name": "Siege Bow",
+    "icon": "inv_weapon_bow_07",
+    "iLvl": 53,
+    "quality": "q2",
+    "reqLevel": 48,
+    "speed": "2.80",
+    "dps": "24.64 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "48 - 90 Damage\tSpeed 2.80",
+      "(24.64 damage per second)",
+      "Requires Level 48"
+    ]
+  },
+  "15295": {
+    "id": 15295,
+    "name": "Quillfire Bow",
+    "icon": "inv_weapon_bow_10",
+    "iLvl": 55,
+    "quality": "q2",
+    "reqLevel": 50,
+    "speed": "2.30",
+    "dps": "25.65 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "41 - 77 Damage\tSpeed 2.30",
+      "(25.65 damage per second)",
+      "Requires Level 50"
+    ]
+  },
+  "15296": {
+    "id": 15296,
+    "name": "Hawkeye Bow",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 63,
+    "quality": "q2",
+    "reqLevel": 58,
+    "speed": "1.70",
+    "dps": "29.41 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "35 - 65 Damage\tSpeed 1.70",
+      "(29.41 damage per second)",
+      "Requires Level 58"
+    ]
+  },
   "15322": {
     "id": 15322,
     "name": "Smoothbore Gun",
@@ -13812,6 +15077,72 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "15323": {
+    "id": 15323,
+    "name": "Percussion Shotgun",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 50,
+    "quality": "q2",
+    "reqLevel": 45,
+    "speed": "2.30",
+    "dps": "23.26 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "37 - 70 Damage\tSpeed 2.30",
+      "(23.26 damage per second)",
+      "Requires Level 45"
+    ]
+  },
+  "15324": {
+    "id": 15324,
+    "name": "Burnside Rifle",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 56,
+    "quality": "q2",
+    "reqLevel": 51,
+    "speed": "2.50",
+    "dps": "26.00 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "45 - 85 Damage\tSpeed 2.50",
+      "(26.00 damage per second)",
+      "Requires Level 51"
+    ]
+  },
+  "15325": {
+    "id": 15325,
+    "name": "Sharpshooter Harquebus",
+    "icon": "inv_weapon_rifle_06",
+    "iLvl": 60,
+    "quality": "q2",
+    "reqLevel": 55,
+    "speed": "2.20",
+    "dps": "27.95 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "",
+    "equips": [],
+    "baseStats": [],
+    "lines": [
+      "Binds when equipped",
+      "Ranged",
+      "43 - 80 Damage\tSpeed 2.20",
+      "(27.95 damage per second)",
+      "Requires Level 55"
+    ]
   },
   "15326": {
     "id": 15326,
@@ -14972,6 +16303,34 @@
       }
     ]
   },
+  "16996": {
+    "id": 16996,
+    "name": "Gorewood Bow",
+    "icon": "inv_weapon_bow_04",
+    "iLvl": 62,
+    "quality": "q3",
+    "reqLevel": null,
+    "speed": "2.50",
+    "dps": "31.80 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+2 Strength, +3 Agility, +9 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+2 Strength",
+      "+3 Agility",
+      "+9 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "55 - 104 Damage\tSpeed 2.50",
+      "(31.80 damage per second)",
+      "+2 Strength",
+      "+3 Agility",
+      "+9 Stamina"
+    ]
+  },
   "17003": {
     "id": 17003,
     "name": "Skullstone Hammer",
@@ -15864,6 +17223,106 @@
       }
     ]
   },
+  "18833": {
+    "id": 18833,
+    "name": "Grand Marshal's Bullseye",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "1.80",
+    "dps": "46.11 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "66 - 100 Damage\tSpeed 1.80",
+      "(46.11 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
+    ]
+  },
+  "18835": {
+    "id": 18835,
+    "name": "High Warlord's Recurve",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "1.80",
+    "dps": "46.11 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "66 - 100 Damage\tSpeed 1.80",
+      "(46.11 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
+    ]
+  },
+  "18836": {
+    "id": 18836,
+    "name": "Grand Marshal's Repeater",
+    "icon": "inv_weapon_crossbow_04",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.90",
+    "dps": "46.38 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "107 - 162 Damage\tSpeed 2.90",
+      "(46.38 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
+    ]
+  },
+  "18837": {
+    "id": 18837,
+    "name": "High Warlord's Crossbow",
+    "icon": "inv_weapon_crossbow_10",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.90",
+    "dps": "46.38 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "107 - 162 Damage\tSpeed 2.90",
+      "(46.38 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
+    ]
+  },
   "18838": {
     "id": 18838,
     "name": "Grand Marshal's Dirk",
@@ -15994,6 +17453,56 @@
         "t": 1,
         "ti": 14581
       }
+    ]
+  },
+  "18855": {
+    "id": 18855,
+    "name": "Grand Marshal's Hand Cannon",
+    "icon": "inv_weapon_rifle_08",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.90",
+    "dps": "46.38 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "107 - 162 Damage\tSpeed 2.90",
+      "(46.38 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
+    ]
+  },
+  "18860": {
+    "id": 18860,
+    "name": "High Warlord's Street Sweeper",
+    "icon": "inv_weapon_rifle_06",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.90",
+    "dps": "46.38 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+7 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+7 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "107 - 162 Damage\tSpeed 2.90",
+      "(46.38 damage per second)",
+      "+7 Stamina",
+      "Requires Level 60"
     ]
   },
   "18865": {
@@ -16297,6 +17806,58 @@
     "subclassName": "Staff",
     "side": "alliance",
     "sourcemore": null
+  },
+  "19107": {
+    "id": 19107,
+    "name": "Bloodseeker",
+    "icon": "inv_weapon_crossbow_07",
+    "iLvl": 63,
+    "quality": "q3",
+    "reqLevel": null,
+    "speed": "3.30",
+    "dps": "32.27 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+8 Strength, +7 Agility",
+    "equips": [],
+    "baseStats": [
+      "+8 Strength",
+      "+7 Agility"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "85 - 128 Damage\tSpeed 3.30",
+      "(32.27 damage per second)",
+      "+8 Strength",
+      "+7 Agility"
+    ]
+  },
+  "19114": {
+    "id": 19114,
+    "name": "Highland Bow",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 51,
+    "quality": "q2",
+    "reqLevel": null,
+    "speed": "2.50",
+    "dps": "23.60 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+5 Agility, +4 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+5 Agility",
+      "+4 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "41 - 77 Damage\tSpeed 2.50",
+      "(23.60 damage per second)",
+      "+5 Agility",
+      "+4 Stamina"
+    ]
   },
   "19115": {
     "id": 19115,
@@ -16638,6 +18199,87 @@
     "side": "both",
     "sourcemore": null
   },
+  "19558": {
+    "id": 19558,
+    "name": "Outrider's Bow",
+    "icon": "inv_weapon_bow_06",
+    "iLvl": 63,
+    "quality": "q3",
+    "reqLevel": 58,
+    "speed": "2.40",
+    "dps": "32.29 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+4 Agility, +10 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+4 Agility",
+      "+10 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "54 - 101 Damage\tSpeed 2.40",
+      "(32.29 damage per second)",
+      "+4 Agility",
+      "+10 Stamina",
+      "Requires Level 58"
+    ]
+  },
+  "19559": {
+    "id": 19559,
+    "name": "Outrider's Bow",
+    "icon": "inv_weapon_bow_06",
+    "iLvl": 53,
+    "quality": "q3",
+    "reqLevel": 48,
+    "speed": "2.40",
+    "dps": "27.50 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Agility, +8 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+3 Agility",
+      "+8 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "46 - 86 Damage\tSpeed 2.40",
+      "(27.50 damage per second)",
+      "+3 Agility",
+      "+8 Stamina",
+      "Requires Level 48"
+    ]
+  },
+  "19560": {
+    "id": 19560,
+    "name": "Outrider's Bow",
+    "icon": "inv_weapon_bow_06",
+    "iLvl": 43,
+    "quality": "q3",
+    "reqLevel": 38,
+    "speed": "2.40",
+    "dps": "22.71 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Agility, +6 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+3 Agility",
+      "+6 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "38 - 71 Damage\tSpeed 2.40",
+      "(22.71 damage per second)",
+      "+3 Agility",
+      "+6 Stamina",
+      "Requires Level 38"
+    ]
+  },
   "19561": {
     "id": 19561,
     "name": "Outrider's Bow",
@@ -16659,6 +18301,87 @@
         "ti": 14754,
         "z": 17
       }
+    ]
+  },
+  "19562": {
+    "id": 19562,
+    "name": "Outrunner's Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 63,
+    "quality": "q3",
+    "reqLevel": 58,
+    "speed": "2.40",
+    "dps": "32.29 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+4 Agility, +10 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+4 Agility",
+      "+10 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "54 - 101 Damage\tSpeed 2.40",
+      "(32.29 damage per second)",
+      "+4 Agility",
+      "+10 Stamina",
+      "Requires Level 58"
+    ]
+  },
+  "19563": {
+    "id": 19563,
+    "name": "Outrunner's Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 53,
+    "quality": "q3",
+    "reqLevel": 48,
+    "speed": "2.40",
+    "dps": "27.50 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Agility, +8 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+3 Agility",
+      "+8 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "46 - 86 Damage\tSpeed 2.40",
+      "(27.50 damage per second)",
+      "+3 Agility",
+      "+8 Stamina",
+      "Requires Level 48"
+    ]
+  },
+  "19564": {
+    "id": 19564,
+    "name": "Outrunner's Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 43,
+    "quality": "q3",
+    "reqLevel": 38,
+    "speed": "2.40",
+    "dps": "22.71 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+3 Agility, +6 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+3 Agility",
+      "+6 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "38 - 71 Damage\tSpeed 2.40",
+      "(22.71 damage per second)",
+      "+3 Agility",
+      "+6 Stamina",
+      "Requires Level 38"
     ]
   },
   "19565": {
@@ -16982,6 +18705,30 @@
     "side": "both",
     "sourcemore": null
   },
+  "20646": {
+    "id": 20646,
+    "name": "Sandstrider's Mark",
+    "icon": "inv_weapon_bow_03",
+    "iLvl": 59,
+    "quality": "q2",
+    "reqLevel": null,
+    "speed": "2.30",
+    "dps": "27.39 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+8 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+8 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "44 - 82 Damage\tSpeed 2.30",
+      "(27.39 damage per second)",
+      "+8 Stamina"
+    ]
+  },
   "20647": {
     "id": 20647,
     "name": "Black Crystal Dagger",
@@ -17209,6 +18956,32 @@
         "t": 5,
         "ti": 8790
       }
+    ]
+  },
+  "21272": {
+    "id": 21272,
+    "name": "Blessed Qiraji Musket",
+    "icon": "inv_weapon_rifle_11",
+    "iLvl": 79,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.60",
+    "dps": "47.31 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+10 Stamina",
+    "equips": [],
+    "baseStats": [
+      "+10 Stamina"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Unique",
+      "Ranged",
+      "86 - 160 Damage\tSpeed 2.60",
+      "(47.31 damage per second)",
+      "+10 Stamina",
+      "Requires Level 60"
     ]
   },
   "21273": {
@@ -17569,6 +19342,31 @@
         "ti": 15276,
         "z": 3428
       }
+    ]
+  },
+  "21616": {
+    "id": 21616,
+    "name": "Huhuran's Stinger",
+    "icon": "inv_weapon_bow_14",
+    "iLvl": 78,
+    "quality": "q4",
+    "reqLevel": 60,
+    "speed": "2.70",
+    "dps": "46.30 DPS",
+    "weaponType": "Ranged",
+    "inventorySlot": "Ranged",
+    "stats": "+18 Agility",
+    "equips": [],
+    "baseStats": [
+      "+18 Agility"
+    ],
+    "lines": [
+      "Binds when picked up",
+      "Ranged",
+      "87 - 163 Damage\tSpeed 2.70",
+      "(46.30 damage per second)",
+      "+18 Agility",
+      "Requires Level 60"
     ]
   },
   "21622": {
