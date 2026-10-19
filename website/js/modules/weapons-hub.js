@@ -23,10 +23,6 @@
       cats.push({ id: 'offhands', label: 'Shields', icon: '🛡️' });
     } else if (classId === 'druid') {
       cats.push({ id: 'offhands', label: 'Off-Hand & Idols', icon: '🔮' });
-    } else if (classId === 'rogue') {
-      cats.push({ id: 'offhands', label: 'Off-Hand Weapons', icon: '🗡️' });
-    } else if (classId === 'hunter') {
-      cats.push({ id: 'offhands', label: 'Melee Stat-Sticks', icon: '⚔️' });
     } else if (['priest', 'mage', 'warlock'].includes(classId)) {
       cats.push({ id: 'offhands', label: 'Off-Hands', icon: '🔮' });
     }

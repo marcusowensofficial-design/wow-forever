@@ -5615,6 +5615,72 @@ input:checked + .toggle-slider:before {
   box-shadow: 0 0 10px rgba(239, 68, 68, 0.25);
 }
 
+.source-filter-toggle,
+.slot-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.source-chip,
+.slot-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+}
+
+.source-chip:hover,
+.slot-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.source-chip.active,
+.slot-chip.active {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  font-weight: 600;
+}
+
+.source-chip.source-dungeon.active {
+  background: rgba(168, 85, 247, 0.22);
+  border-color: #a855f7;
+  color: #c084fc;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.25);
+}
+
+.source-chip.source-quest.active {
+  background: rgba(234, 179, 8, 0.22);
+  border-color: #eab308;
+  color: #fde047;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.25);
+}
+
+.source-chip.source-vendor.active {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: #22c55e;
+  color: #86efac;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.25);
+}
+
+.source-chip.source-world.active {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  color: #7dd3fc;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
 .item-faction-badge {
   font-size: 0.7rem;
   font-weight: 600;

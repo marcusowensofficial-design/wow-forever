@@ -14,8 +14,12 @@
   let activeSpellSearchQuery = '';
   let activeWeaponTrack = {};
   let activeWeaponFaction = 'all'; // 'all' | 'alliance' | 'horde'
+  let activeWeaponSource = 'all'; // 'all' | 'dungeon' | 'quest' | 'vendor-craft' | 'world'
+  let activeWeaponSlot = 'all'; // 'all' | 'one-hand' | 'main-hand' | 'two-hand' | 'ranged'
   let activeWandFaction = 'all';
+  let activeWandSource = 'all';
   let activeOffhandFaction = 'all';
+  let activeOffhandSource = 'all';
   let activeMacroCategory = 'all';
   let activeMacroSearchQuery = '';
 
@@ -554,6 +558,75 @@
     }
   }
 
+  // Source & Slot Filter Helpers
+  function itemMatchesSource(item, filter) {
+    if (!filter || filter === 'all') return true;
+    const kind = item?.source?.kind || '';
+    if (filter === 'dungeon') {
+      if (kind === 'dungeon') return true;
+      const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
+      return /dungeon|boss|instance|ragefire|wailing caverns|deadmines|shadowfang|blackfathom|stockade|gnomeregan|razorfen|scarlet monastery|monastery|armory|cathedral|graveyard|library|uldaman|zul'farrak|maraudon|sunken temple|atal'hakkar|blackrock depths|scholomance|stratholme|dire maul|ruins of lordaeron|excavation site|hall of thanes|city of dalaran|\brfc\b|\bsfk\b|\bbfd\b|\brfk\b|\brfd\b|\bsm\b|\bzf\b|\bst\b|\bbrd\b|\bdm\b|rhahk'zor|sneed|smite|cookie|greenskin|vancleef|kresh|pythas|serpentis|skum|verdan|springvale|odo|arugal|butcher|gelihast|serra'kis|aku'mai|kelris|deepfury|ironknuckle|thermaplugg|fallout|electrocutioner|pummeler|grubbis|ramtusk|jargba|agathelos|halmgar|blind hunter|vishas|thalnos|azshir|doan|loksey|herod|mograine|whitemane|mordresh|glutton|amnennar|archaedas|grimlok|ironaya|galgann|antu'sul|zum'rah|sandscalp|gahz'rilla|noxxion|gizlock|theradras|hakkar|eranikus|morphaz|angerforge|flamelash|grebmar|loregrain|ironfoe|spazzring|taragaman|jergosh|bazzalan|krastinov|hydrospawn|polkelt/i.test(text);
+    }
+    if (filter === 'quest') {
+      if (kind === 'quest') return true;
+      const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
+      return /quest|reward|wanted:|chain\b|turn-in|task:|contract|return to|in the name of|the fate of|hidden enemies|leaders of the fang|test of|battle of|assault on/i.test(text);
+    }
+    if (filter === 'vendor-craft') {
+      if (kind === 'vendor' || kind === 'craft' || kind === 'pvp') return true;
+      const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
+      return /vendor|purchased|sold by|blacksmithing|engineering|leatherworking|tailoring|crafted|crafting|merchant|provisioner|supply officer|sergeant|officer|starter/i.test(text);
+    }
+    if (filter === 'world') {
+      if (kind === 'world' || kind === 'drop' || kind === 'rare' || kind === 'raid') return true;
+      const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
+      return /world drop|zone drop|rare drop|rare spawn|chest|leveling drop/i.test(text);
+    }
+    return true;
+  }
+
+  function itemMatchesSlot(item, filter) {
+    if (!filter || filter === 'all') return true;
+    const type = (item?.weaponType || '').toLowerCase();
+    const slot = (item?.inventorySlot || '').toLowerCase();
+    const linesStr = Array.isArray(item?.lines) ? item.lines.join(' ').toLowerCase() : '';
+
+    const isTwoHand = type.includes('two-hand') || type.includes('2h') || type.includes('staff') || type.includes('polearm') || slot.includes('two-hand') || linesStr.includes('two-hand');
+    const isRanged = type.includes('bow') || type.includes('gun') || type.includes('crossbow') || type.includes('wand') || type.includes('ranged') || linesStr.includes('ranged') || slot.includes('ranged');
+    const isMainHandOnly = slot.includes('main hand') || linesStr.includes('main hand') || type.includes('main hand');
+    const isOffHandOnly = slot.includes('off hand') || linesStr.includes('off hand') || type.includes('off hand') || type.includes('shield') || type.includes('held in off-hand');
+
+    if (filter === 'one-hand') {
+      // One-hand weapons that can be equipped in the off-hand (dual wield viable):
+      // Must exclude two-hand, ranged, main-hand only, and off-hand only/shields
+      if (isTwoHand || isRanged || isMainHandOnly || isOffHandOnly) return false;
+      return type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
+    }
+    if (filter === 'main-hand') {
+      // Any weapon equippable in main-hand (Main Hand only OR One-Hand; excluding two-hand, ranged, off-hand only)
+      if (isTwoHand || isRanged || isOffHandOnly) return false;
+      return isMainHandOnly || type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
+    }
+    if (filter === 'two-hand') {
+      return isTwoHand;
+    }
+    if (filter === 'ranged') {
+      return isRanged;
+    }
+    return true;
+  }
+
+  function itemMatchesAll(item, faction, source, slot) {
+    if (!item) return false;
+    if (faction !== 'all') {
+      const f = item.faction || 'both';
+      if (f !== 'both' && f !== faction) return false;
+    }
+    if (!itemMatchesSource(item, source)) return false;
+    if (!itemMatchesSlot(item, slot)) return false;
+    return true;
+  }
+
   // 2. Generic Item Timeline Renderer (Weapons, Wands, Off-Hands)
   function renderItemTimeline(classId, datasetKey, cfg) {
     const data = window.WOW_PROGRESSION_DATA?.[datasetKey]?.[classId];
@@ -574,86 +647,98 @@
     const isShaman = classId === 'shaman';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
+    const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
+    let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
+    if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
+    if (!['hunter', 'warrior', 'rogue'].includes(classId) && effectiveSlot === 'ranged') effectiveSlot = 'all';
 
-    // Build timeline items with faction awareness
+    // Build timeline items with faction, source, and slot awareness
     let displayedCount = 0;
     const stepCards = activeLevelList.map((step, idx) => {
       let displayStep = { ...step };
       let displayAlts = (step.alts || []).slice();
 
-      if (effectiveFaction !== 'all') {
-        const stepFaction = step.faction || 'both';
-        let matchIdx = -1;
+      const primaryMatches = itemMatchesAll(displayStep, effectiveFaction, effectiveSource, effectiveSlot);
 
-        if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
-          // If primary does not match active faction, look for a matching alt to promote:
-          // 1. Prefer alt matching effectiveFaction
-          // 2. Fallback to neutral alt available to both factions
-          matchIdx = displayAlts.findIndex(a => a.faction === effectiveFaction);
-          if (matchIdx === -1) {
-            matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === 'both');
-          }
-        } else if (effectiveFaction === 'horde') {
-          // For Horde: promote Staff of Orgrimmar (Horde BiS Caster Staff) over neutral staves in brackets 13-18
-          matchIdx = displayAlts.findIndex(a => a.faction === 'horde' && (a.itemId === 15444 || a.name === 'Staff of Orgrimmar'));
-        }
-
-        if (matchIdx !== -1) {
-          const altMatch = displayAlts[matchIdx];
-          const valStr = altMatch.value || '';
-          const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
-          const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
-
-          const demotedStep = {
-            name: step.name,
-            itemId: step.itemId,
-            icon: step.icon,
-            weaponType: step.weaponType,
-            speed: step.speed,
-            dps: step.dps,
-            stats: step.stats,
-            armor: step.armor,
-            block: step.block,
-            lines: step.lines,
-            source: step.source,
-            faction: step.faction || 'both',
-            quality: step.quality,
-            iLvl: step.iLvl,
-            reqLevel: step.reqLevel,
-            value: `${step.dps || ''}, ${step.speed ? step.speed + 's' : ''} - ${step.source?.title || ''}`
-          };
-
-          displayStep = {
-            ...step,
-            itemId: altMatch.itemId || null,
-            name: altMatch.name,
-            icon: altMatch.icon || step.icon,
-            weaponType: altMatch.weaponType || step.weaponType,
-            speed: spdMatch || altMatch.speed || step.speed,
-            dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
-            stats: altMatch.stats || step.stats,
-            armor: altMatch.armor || step.armor,
-            block: altMatch.block || step.block,
-            lines: altMatch.lines || null,
-            source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
-            faction: altMatch.faction || effectiveFaction,
-            quality: altMatch.quality || step.quality,
-            iLvl: altMatch.iLvl || step.iLvl,
-            reqLevel: altMatch.reqLevel || step.reqLevel
-          };
-          displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
-          if (stepFaction === 'both') {
-            displayAlts.push(demotedStep);
-          }
-        } else if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
-          return '';
-        }
-        // Filter alts to only show active faction or both
-        displayAlts = displayAlts.filter(alt => {
-          const f = alt.faction || 'both';
-          return f === 'both' || f === effectiveFaction;
-        });
+      // Check for Horde BiS promotion (Staff of Orgrimmar in brackets 13-18)
+      let hordeBisIdx = -1;
+      if (effectiveFaction === 'horde' && (effectiveSource === 'all' || effectiveSource === 'quest') && (effectiveSlot === 'all' || effectiveSlot === 'two-hand')) {
+        hordeBisIdx = displayAlts.findIndex(a => a.faction === 'horde' && (a.itemId === 15444 || a.name === 'Staff of Orgrimmar'));
       }
+
+      let matchIdx = -1;
+      if (hordeBisIdx !== -1) {
+        matchIdx = hordeBisIdx;
+      } else if (!primaryMatches) {
+        if (effectiveFaction !== 'all') {
+          matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === effectiveFaction && itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot));
+        }
+        if (matchIdx === -1) {
+          matchIdx = displayAlts.findIndex(a => itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot));
+        }
+      }
+
+      if (matchIdx !== -1) {
+        const altMatch = displayAlts[matchIdx];
+        const valStr = altMatch.value || '';
+        const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
+        const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
+
+        const demotedStep = {
+          name: step.name,
+          itemId: step.itemId,
+          icon: step.icon,
+          weaponType: step.weaponType,
+          speed: step.speed,
+          dps: step.dps,
+          stats: step.stats,
+          armor: step.armor,
+          block: step.block,
+          lines: step.lines,
+          source: step.source,
+          faction: step.faction || 'both',
+          quality: step.quality,
+          iLvl: step.iLvl,
+          reqLevel: step.reqLevel,
+          value: `${step.dps || ''}, ${step.speed ? step.speed + 's' : ''} - ${step.source?.title || ''}`
+        };
+
+        const altSourceObj = (typeof altMatch.source === 'object' && altMatch.source !== null)
+          ? altMatch.source
+          : {
+              kind: itemMatchesSource(altMatch, 'dungeon') ? 'dungeon' : (itemMatchesSource(altMatch, 'vendor-craft') ? 'vendor' : 'quest'),
+              title: typeof altMatch.source === 'string' ? altMatch.source : (altMatch.name || 'Leveling Item'),
+              detail: typeof altMatch.value === 'string' ? altMatch.value : 'Leveling Drop / Reward'
+            };
+
+        displayStep = {
+          ...step,
+          itemId: altMatch.itemId || null,
+          name: altMatch.name,
+          icon: altMatch.icon || step.icon,
+          weaponType: altMatch.weaponType || step.weaponType,
+          speed: spdMatch || altMatch.speed || step.speed,
+          dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
+          stats: altMatch.stats || step.stats,
+          armor: altMatch.armor || step.armor,
+          block: altMatch.block || step.block,
+          lines: altMatch.lines || null,
+          source: altSourceObj,
+          faction: altMatch.faction || effectiveFaction,
+          quality: altMatch.quality || step.quality,
+          iLvl: altMatch.iLvl || step.iLvl,
+          reqLevel: altMatch.reqLevel || step.reqLevel
+        };
+        displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
+        if (primaryMatches) {
+          displayAlts.push(demotedStep);
+        }
+      } else if (!primaryMatches) {
+        return '';
+      }
+
+      // Filter alts to only show items that match all active filters
+      displayAlts = displayAlts.filter(alt => itemMatchesAll(alt, effectiveFaction, effectiveSource, effectiveSlot));
 
       displayedCount++;
       const sourceKindClass = `source-${displayStep.source?.kind || 'drop'}`;
@@ -779,7 +864,7 @@
           <div class="progression-header-badge ${currentTrack === 'healer' ? 'healer-header-badge' : ''}">${currentTrack === 'healer' ? '💚 ' : ''}${displayedCount} Progression Steps</div>
         </div>
 
-        <!-- Controls Bar with Faction Filter & Track Selection -->
+        <!-- Controls Bar with Faction, Source, Slot Filter & Track Selection -->
         <div class="progression-controls-bar weapon-controls-bar">
           <div class="faction-filter-toggle" id="${cfg.filterId}">
             <span class="filter-toggle-label">Faction:</span>
@@ -793,6 +878,50 @@
               <span class="faction-icon">${FACTION_ICONS.horde}</span> Horde
             </button>
           </div>
+
+          <div class="source-filter-toggle" id="${cfg.sourceFilterId || 'weapon-source-toggle'}">
+            <span class="filter-toggle-label">Source:</span>
+            <button type="button" class="source-chip ${effectiveSource === 'all' ? 'active' : ''}" data-source="all">
+              All Sources
+            </button>
+            <button type="button" class="source-chip source-dungeon ${effectiveSource === 'dungeon' ? 'active' : ''}" data-source="dungeon">
+              🏰 Dungeon Bosses
+            </button>
+            <button type="button" class="source-chip source-quest ${effectiveSource === 'quest' ? 'active' : ''}" data-source="quest">
+              📜 Quests
+            </button>
+            <button type="button" class="source-chip source-vendor ${effectiveSource === 'vendor-craft' ? 'active' : ''}" data-source="vendor-craft">
+              🔨 Vendor &amp; Craft
+            </button>
+            <button type="button" class="source-chip source-world ${effectiveSource === 'world' ? 'active' : ''}" data-source="world">
+              🌍 World &amp; Rares
+            </button>
+          </div>
+
+          ${datasetKey === 'weapons' ? `
+            <div class="slot-filter-toggle" id="weapon-slot-toggle">
+              <span class="filter-toggle-label">Slot:</span>
+              <button type="button" class="slot-chip ${effectiveSlot === 'all' ? 'active' : ''}" data-slot="all">
+                All Slots
+              </button>
+              <button type="button" class="slot-chip ${effectiveSlot === 'one-hand' ? 'active' : ''}" data-slot="one-hand" title="Equippable in Off-Hand (Dual Wield)">
+                🗡️ One-Hand
+              </button>
+              <button type="button" class="slot-chip ${effectiveSlot === 'main-hand' ? 'active' : ''}" data-slot="main-hand">
+                ⚔️ Main Hand
+              </button>
+              ${classId !== 'rogue' ? `
+                <button type="button" class="slot-chip ${effectiveSlot === 'two-hand' ? 'active' : ''}" data-slot="two-hand">
+                  Two-Hand
+                </button>
+              ` : ''}
+              ${['hunter', 'warrior', 'rogue'].includes(classId) ? `
+                <button type="button" class="slot-chip ${effectiveSlot === 'ranged' ? 'active' : ''}" data-slot="ranged">
+                  🏹 Ranged
+                </button>
+              ` : ''}
+            </div>
+          ` : ''}
 
           ${data.tracks && data.tracks.length > 1 ? `
             <div class="progression-track-tabs role-pill-box">
@@ -810,7 +939,7 @@
         <div class="weapon-timeline-container">
           ${stepCards || `
             <div class="progression-empty-state">
-              <p>No items found matching the selected faction filter.</p>
+              <p>No items found matching the selected filters.</p>
             </div>
           `}
         </div>
@@ -826,7 +955,10 @@
       desc: 'Optimal weapon progression every 2–4 levels: exact quest rewards, dungeon boss drops, vendor purchases, and craftable spikes.',
       emptyMsg: '⚠️ No weapon progression roadmap recorded for this class yet.',
       filterId: 'weapon-faction-toggle',
-      getFaction: () => activeWeaponFaction
+      sourceFilterId: 'weapon-source-toggle',
+      getFaction: () => activeWeaponFaction,
+      getSource: () => activeWeaponSource,
+      getSlot: () => activeWeaponSlot
     });
   }
 
@@ -838,7 +970,9 @@
       desc: 'Dedicated wand progression for spellcasters: optimal wand spikes every bracket, fast shoot speeds, quest rewards, and high-DPS crafting.',
       emptyMsg: '⚠️ No wand progression recorded for this class in current Beta Build.',
       filterId: 'wand-faction-toggle',
-      getFaction: () => activeWandFaction
+      sourceFilterId: 'wand-source-toggle',
+      getFaction: () => activeWandFaction,
+      getSource: () => activeWandSource
     });
   }
 
@@ -864,15 +998,25 @@
       icon = '🔮';
       desc = 'Held-in-off-hand tomes, furbolg pouches, and class idols for leveling Feral, Balance, and Restoration Druids.';
     } else if (isRogue) {
-      title = 'Level 1 to 60 Rogue Off-Hand Weapon Upgrade Path';
-      icon = '🗡️';
-      desc = 'Optimal fast off-hand daggers and swords for Combat & Subtlety: poison application speed, stats, and key dungeon drops.';
-      emptyMsg = '⚠️ No rogue off-hand progression recorded for this class in current Beta Build.';
+      return `
+        <div class="progression-empty-state">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🗡️</div>
+          <p><strong>Rogues dual-wield One-Hand weapons in their off-hand!</strong></p>
+          <p style="color: var(--text-secondary, #9da3af); max-width: 540px; margin: 8px auto 0;">
+            Use the <strong>Weapon Path</strong> tab with the <strong>🗡️ One-Hand</strong> slot filter to view all fast off-hand daggers and swords optimized for poison application and energy efficiency.
+          </p>
+        </div>
+      `;
     } else if (isHunter) {
-      title = 'Level 1 to 60 Hunter Melee & Stat-Stick Progression';
-      icon = '⚔️';
-      desc = 'Optimal two-handed polearms, staves, and dual-wield Agility weapons: critical stats, melee weaving, and Wing Clip utility.';
-      emptyMsg = '⚠️ No hunter melee progression recorded for this class in current Beta Build.';
+      return `
+        <div class="progression-empty-state">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🏹</div>
+          <p><strong>Hunters equip ranged weapons and two-handed stat-sticks!</strong></p>
+          <p style="color: var(--text-secondary, #9da3af); max-width: 540px; margin: 8px auto 0;">
+            Use the <strong>Weapon Path</strong> tab with the <strong>Two-Hand</strong> or <strong>🏹 Ranged</strong> slot filter to view your optimal leveling firepower.
+          </p>
+        </div>
+      `;
     }
 
     return renderItemTimeline(classId, 'offhands', {
@@ -881,7 +1025,9 @@
       desc,
       emptyMsg,
       filterId: 'offhand-faction-toggle',
-      getFaction: () => activeOffhandFaction
+      sourceFilterId: 'offhand-source-toggle',
+      getFaction: () => activeOffhandFaction,
+      getSource: () => activeOffhandSource
     });
   }
 
@@ -1084,6 +1230,38 @@
       });
     });
 
+    root.querySelectorAll('#weapon-source-toggle .source-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeWeaponSource = btn.getAttribute('data-source') || 'all';
+        triggerUpdate();
+      });
+    });
+
+    root.querySelectorAll('#wand-source-toggle .source-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeWandSource = btn.getAttribute('data-source') || 'all';
+        triggerUpdate();
+      });
+    });
+
+    root.querySelectorAll('#offhand-source-toggle .source-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeOffhandSource = btn.getAttribute('data-source') || 'all';
+        triggerUpdate();
+      });
+    });
+
+    root.querySelectorAll('#weapon-slot-toggle .slot-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeWeaponSlot = btn.getAttribute('data-slot') || 'all';
+        triggerUpdate();
+      });
+    });
+
     root.querySelectorAll('.progression-track-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
@@ -1183,8 +1361,12 @@
     setupEventListeners,
     hideWeaponTooltip,
     setWeaponFaction: (f) => { activeWeaponFaction = f; },
+    setWeaponSource: (s) => { activeWeaponSource = s; },
+    setWeaponSlot: (s) => { activeWeaponSlot = s; },
     setWandFaction: (f) => { activeWandFaction = f; },
-    setOffhandFaction: (f) => { activeOffhandFaction = f; }
+    setWandSource: (s) => { activeWandSource = s; },
+    setOffhandFaction: (f) => { activeOffhandFaction = f; },
+    setOffhandSource: (s) => { activeOffhandSource = s; }
   };
 
 })();

@@ -1401,32 +1401,20 @@
     "name": "Butcher's Cleaver",
     "icon": "inv_axe_23",
     "iLvl": 25,
-    "reqLevel": 20,
     "quality": "q3",
+    "reqLevel": 20,
     "speed": "1.70",
     "dps": "16.18 DPS",
-    "dmgmin": 19,
-    "dmgmax": 36,
+    "weaponType": "One-Handed Axe",
     "stats": "+5 Strength, +2 Agility",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t1H Axe",
+      "One-Hand\tOne-Handed Axe",
       "19 - 36 Damage\tSpeed 1.70",
       "(16.18 damage per second)",
       "+5 Strength",
       "+2 Agility",
       "Requires Level 20"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Axe",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Razorclaw the Butcher",
-        "t": 1,
-        "ti": 3886,
-        "z": 209
-      }
     ]
   },
   "1300": {
@@ -2718,6 +2706,27 @@
       {
         "z": 491
       }
+    ]
+  },
+  "1977": {
+    "id": 1977,
+    "name": "Ironknuckle",
+    "icon": "inv_gauntlets_04",
+    "iLvl": 26,
+    "quality": "q2",
+    "reqLevel": 21,
+    "speed": "1.70",
+    "dps": "15.00 DPS",
+    "weaponType": "Fist Weapon",
+    "stats": "+4 Strength, +3 Agility",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "19 - 36 Damage\tSpeed 1.70",
+      "(15.00 damage per second)",
+      "+4 Strength",
+      "+3 Agility",
+      "Requires Level 21"
     ]
   },
   "1979": {
@@ -4086,89 +4095,86 @@
       }
     ]
   },
+  "2270": {
+    "id": 2270,
+    "name": "Spikethorn Dirk",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 17,
+    "quality": "q2",
+    "reqLevel": 12,
+    "speed": "1.60",
+    "dps": "7.50 DPS",
+    "weaponType": "Dagger",
+    "stats": "6 - 18 Damage",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "6 - 18 Damage\tSpeed 1.60",
+      "(7.50 damage per second)",
+      "Requires Level 12"
+    ]
+  },
   "2271": {
     "id": 2271,
-    "name": "Staff of the Blessed Seer",
-    "icon": "inv_staff_31",
-    "iLvl": 25,
-    "reqLevel": 20,
-    "quality": "q3",
-    "speed": "3.00",
-    "dps": "15.67 DPS",
-    "dmgmin": 37,
-    "dmgmax": 57,
-    "stats": "+9 Stamina, +10 Spirit, +28 Spell Power",
+    "name": "Chanting Staff",
+    "icon": "inv_staff_13",
+    "iLvl": 18,
+    "quality": "q2",
+    "reqLevel": 13,
+    "speed": "2.80",
+    "dps": "5.18 DPS",
+    "weaponType": "Staff",
+    "stats": "+1 Intellect, +2 Spirit",
     "lines": [
-      "Binds when equipped",
+      "Binds when picked up",
       "Two-Hand\tStaff",
-      "37 - 57 Damage\tSpeed 3.00",
-      "(15.67 damage per second)",
-      "+9 Stamina",
-      "+10 Spirit",
-      "+28 Spell Power",
-      "Requires Level 20"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": null
+      "11 - 18 Damage\tSpeed 2.80",
+      "(5.18 damage per second)",
+      "+1 Intellect",
+      "+2 Spirit",
+      "Requires Level 13"
+    ]
   },
   "2280": {
     "id": 2280,
     "name": "Kam's Walking Stick",
     "icon": "inv_staff_06",
-    "iLvl": 29,
-    "reqLevel": 24,
-    "quality": "q3",
+    "iLvl": 26,
+    "quality": "q2",
+    "reqLevel": 21,
     "speed": "2.80",
-    "dps": "17.68 DPS",
-    "dmgmin": 39,
-    "dmgmax": 60,
-    "stats": "+10 Agility, +3 Intellect, +32 Spell Power",
+    "dps": "18.39 DPS",
+    "weaponType": "Staff",
+    "stats": "+7 Intellect, +4 Spirit",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "39 - 60 Damage\tSpeed 2.80",
-      "(17.68 damage per second)",
-      "+10 Agility",
-      "+3 Intellect",
-      "+32 Spell Power",
-      "Requires Level 24"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "dd": -1,
-        "n": "Kam Deepfury",
-        "t": 1,
-        "ti": 1666,
-        "z": 717
-      }
+      "39 - 64 Damage\tSpeed 2.80",
+      "(18.39 damage per second)",
+      "+7 Intellect",
+      "+4 Spirit",
+      "Requires Level 21"
     ]
   },
   "2299": {
     "id": 2299,
-    "name": "Burning War Axe",
-    "icon": "inv_axe_02",
-    "iLvl": 33,
-    "reqLevel": 12,
+    "name": "Meteor Shard",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 29,
     "quality": "q3",
-    "speed": "3.60",
-    "dps": "2.2 DPS",
-    "dmgmin": 5,
-    "dmgmax": 11,
-    "stats": "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
+    "reqLevel": 24,
+    "speed": "1.80",
+    "dps": "17.78 DPS",
+    "weaponType": "Dagger",
+    "stats": "Chance on hit: Hurls a fiery ball that inflicts 35 Fire damage",
     "lines": [
-      "Binds when equipped",
-      "Two-Hand\tAxe",
-      "5 - 11 Damage\tSpeed 3.60",
-      "(2.2 damage per second)",
-      "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
-      "Requires Level 12"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Axe",
-    "sourcemore": null
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "23 - 44 Damage\tSpeed 1.80",
+      "(17.78 damage per second)",
+      "Chance on hit: Hurls a fiery ball that inflicts 35 Fire damage",
+      "Requires Level 24"
+    ]
   },
   "2362": {
     "id": 2362,
@@ -10782,63 +10788,43 @@
   "5187": {
     "id": 5187,
     "name": "Rhahk'Zor's Hammer",
-    "icon": "inv_hammer_09",
+    "icon": "inv_mace_01",
     "iLvl": 21,
-    "reqLevel": 16,
     "quality": "q3",
+    "reqLevel": 16,
     "speed": "3.20",
     "dps": "18.44 DPS",
-    "dmgmin": 47,
-    "dmgmax": 71,
-    "stats": "+8 Stamina, +8 Spell Power",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+8 Strength, +3 Stamina",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed mace",
+      "Two-Hand\tTwo-Handed Mace",
       "47 - 71 Damage\tSpeed 3.20",
       "(18.44 damage per second)",
-      "+8 Stamina",
-      "+8 Spell Power",
+      "+8 Strength",
+      "+3 Stamina",
       "Requires Level 16"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed mace",
-    "sourcemore": [
-      {
-        "n": "Rhahk'Zor",
-        "t": 1,
-        "ti": 644,
-        "z": 1581
-      }
     ]
   },
   "5191": {
     "id": 5191,
-    "name": "Cruel Barb",
-    "icon": "inv_sword_24",
-    "iLvl": 24,
-    "reqLevel": 19,
-    "quality": "q3",
-    "speed": "2.80",
-    "dps": "15.54 DPS",
-    "dmgmin": 30,
-    "dmgmax": 57,
-    "stats": "",
+    "name": "Gilded Buckler",
+    "icon": "inv_shield_05",
+    "iLvl": 20,
+    "quality": "q2",
+    "reqLevel": 15,
+    "weaponType": "Shield",
+    "armor": 358,
+    "block": 11,
+    "stats": "+3 Stamina, +1 Spirit",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t2H Mace",
-      "30 - 57 Damage\tSpeed 2.80",
-      "(15.54 damage per second)",
-      "Requires Level 19"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "2H Mace",
-    "sourcemore": [
-      {
-        "n": "Edwin VanCleef",
-        "t": 1,
-        "ti": 639,
-        "z": 1581
-      }
+      "Off Hand\tShield",
+      "358 Armor",
+      "11 Block",
+      "+3 Stamina",
+      "+1 Spirit",
+      "Requires Level 15"
     ]
   },
   "5192": {
@@ -10874,185 +10860,126 @@
   },
   "5193": {
     "id": 5193,
-    "name": "Cape of the Brotherhood",
-    "icon": "inv_misc_cape_08",
-    "iLvl": 24,
-    "reqLevel": 19,
-    "quality": "q3",
-    "speed": "2.80",
-    "dps": "NaN DPS",
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+5 Agility, +3 Stamina, +21 Armor",
+    "name": "Buzz Saw",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 19,
+    "quality": "q2",
+    "reqLevel": 14,
+    "speed": "1.40",
+    "dps": "11.79 DPS",
+    "weaponType": "Dagger",
+    "stats": "+3 Agility, +1 Stamina",
     "lines": [
       "Binds when picked up",
-      "Back\t1H Sword",
-      "Speed 2.80",
-      "(NaN damage per second)",
-      "+5 Agility",
-      "+3 Stamina",
-      "+21 Armor",
-      "Requires Level 19"
-    ],
-    "inventorySlot": "Back",
-    "subclassName": "1H Sword",
-    "sourcemore": [
-      {
-        "n": "Edwin VanCleef",
-        "t": 1,
-        "ti": 639,
-        "z": 1581
-      }
+      "One-Hand\tDagger",
+      "11 - 22 Damage\tSpeed 1.40",
+      "(11.79 damage per second)",
+      "+3 Agility",
+      "+1 Stamina",
+      "Requires Level 14"
     ]
   },
   "5194": {
     "id": 5194,
     "name": "Taskmaster Axe",
-    "icon": "inv_throwingaxe_06",
-    "iLvl": 23,
-    "reqLevel": 18,
-    "quality": "q3",
-    "speed": "2.70",
-    "dps": "14.63 DPS",
-    "dmgmin": 31,
-    "dmgmax": 48,
-    "stats": "+8 Stamina, +8 Spirit, +45 Healing, +15 Spell Damage",
+    "icon": "inv_axe_11",
+    "iLvl": 19,
+    "quality": "q2",
+    "reqLevel": 14,
+    "speed": "2.00",
+    "dps": "12.00 DPS",
+    "weaponType": "One-Handed Axe",
+    "stats": "+1 Strength, +4 Stamina",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed axe",
-      "31 - 48 Damage\tSpeed 2.70",
-      "(14.63 damage per second)",
-      "+8 Stamina",
-      "+8 Spirit",
-      "+45 Healing",
-      "+15 Spell Damage",
-      "Requires Level 18"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed axe",
-    "sourcemore": [
-      {
-        "n": "Sneed",
-        "t": 1,
-        "ti": 643,
-        "z": 1581
-      }
+      "One-Hand\tOne-Handed Axe",
+      "19 - 36 Damage\tSpeed 2.00",
+      "(12.00 damage per second)",
+      "+1 Strength",
+      "+4 Stamina",
+      "Requires Level 14"
     ]
   },
   "5195": {
     "id": 5195,
-    "name": "Gold-flecked Gloves",
-    "icon": "inv_gauntlets_23",
+    "name": "Cookie's Tenderizer",
+    "icon": "inv_mace_08",
     "iLvl": 22,
+    "quality": "q2",
     "reqLevel": 17,
-    "quality": "q3",
-    "speed": "2.40",
-    "dps": "NaN DPS",
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+7 Strength, +25 Armor",
+    "speed": "2.70",
+    "dps": "13.70 DPS",
+    "weaponType": "One-Handed Mace",
+    "stats": "+3 Strength, +3 Stamina",
     "lines": [
       "Binds when picked up",
-      "Hands\t1H Mace",
-      "Speed 2.40",
-      "(NaN damage per second)",
-      "+7 Strength",
-      "+25 Armor",
+      "One-Hand\tOne-Handed Mace",
+      "30 - 56 Damage\tSpeed 2.70",
+      "(13.70 damage per second)",
+      "+3 Strength",
+      "+3 Stamina",
       "Requires Level 17"
-    ],
-    "inventorySlot": "Hands",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "n": "Sneed",
-        "t": 1,
-        "ti": 643,
-        "z": 1581
-      }
     ]
   },
   "5196": {
     "id": 5196,
-    "name": "Smite's Reaver",
-    "icon": "inv_axe_22",
-    "iLvl": 21,
-    "reqLevel": 17,
+    "name": "Smite's Mighty Hammer",
+    "icon": "inv_hammer_08",
+    "iLvl": 23,
     "quality": "q3",
-    "speed": "1.90",
-    "dps": "13.95 DPS",
-    "stats": "+3 Strength, +3 Spirit",
-    "inventorySlot": "One-Hand",
-    "subclass": 0,
-    "subclassName": "Weapon",
-    "side": "both",
-    "sourcemore": [
-      {
-        "n": "Mr. Smite",
-        "t": 1,
-        "ti": 646,
-        "z": 1581
-      }
+    "reqLevel": 18,
+    "speed": "3.50",
+    "dps": "20.00 DPS",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+11 Strength, +4 Agility",
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tTwo-Handed Mace",
+      "56 - 84 Damage\tSpeed 3.50",
+      "(20.00 damage per second)",
+      "+11 Strength",
+      "+4 Agility",
+      "Requires Level 18"
     ]
   },
   "5197": {
     "id": 5197,
-    "name": "Cookie's Tenderizer",
-    "icon": "inv_fabric_silk_02",
-    "iLvl": 21,
-    "reqLevel": 16,
-    "quality": "q3",
-    "speed": "2.80",
-    "dps": "13.93 DPS",
-    "dmgmin": 27,
-    "dmgmax": 51,
-    "stats": "+4 Spirit",
+    "name": "Thief's Blade",
+    "icon": "inv_sword_27",
+    "iLvl": 22,
+    "quality": "q2",
+    "reqLevel": 17,
+    "speed": "2.20",
+    "dps": "13.64 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "+4 Agility, +2 Stamina",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t1H Mace",
-      "27 - 51 Damage\tSpeed 2.80",
-      "(13.93 damage per second)",
-      "+4 Spirit",
-      "Requires Level 16"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "n": "Cookie",
-        "t": 1,
-        "ti": 645,
-        "z": 1581
-      }
+      "One-Hand\tOne-Handed Sword",
+      "23 - 44 Damage\tSpeed 2.20",
+      "(13.64 damage per second)",
+      "+4 Agility",
+      "+2 Stamina",
+      "Requires Level 17"
     ]
   },
   "5198": {
     "id": 5198,
     "name": "Cookie's Stirring Rod",
-    "icon": "inv_staff_02",
+    "icon": "inv_wand_02",
     "iLvl": 22,
-    "reqLevel": 17,
     "quality": "q3",
+    "reqLevel": 17,
     "speed": "1.30",
-    "dps": "22.31 DPS",
-    "dmgmin": 20,
-    "dmgmax": 38,
-    "stats": "",
+    "dps": "15.77 DPS",
+    "weaponType": "Wand",
+    "stats": "14 - 27 Arcane Damage",
     "lines": [
       "Binds when picked up",
       "Ranged\tWand",
-      "20 - 38 Damage\tSpeed 1.30",
-      "(22.31 damage per second)",
+      "14 - 27 Arcane Damage\tSpeed 1.30",
+      "(15.77 damage per second)",
       "Requires Level 17"
-    ],
-    "inventorySlot": "Ranged",
-    "subclassName": "Wand",
-    "sourcemore": [
-      {
-        "n": "Cookie",
-        "t": 1,
-        "ti": 645,
-        "z": 1581
-      }
     ]
   },
   "5200": {
@@ -11091,32 +11018,42 @@
     "id": 5201,
     "name": "Emberstone Staff",
     "icon": "inv_staff_13",
-    "iLvl": 22,
-    "reqLevel": 17,
+    "iLvl": 23,
     "quality": "q3",
+    "reqLevel": 18,
     "speed": "3.00",
-    "dps": "14.17 DPS",
-    "dmgmin": 34,
-    "dmgmax": 51,
-    "stats": "+8 Stamina, +24 Spell Power",
+    "dps": "19.67 DPS",
+    "weaponType": "Staff",
+    "stats": "+5 Intellect, +5 Spirit, +8 Stamina",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "34 - 51 Damage\tSpeed 3.00",
-      "(14.17 damage per second)",
+      "47 - 71 Damage\tSpeed 3.00",
+      "(19.67 damage per second)",
+      "+5 Intellect",
+      "+5 Spirit",
       "+8 Stamina",
-      "+24 Spell Power",
-      "Requires Level 17"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "n": "Captain Greenskin",
-        "t": 1,
-        "ti": 647,
-        "z": 1581
-      }
+      "Requires Level 18"
+    ]
+  },
+  "5202": {
+    "id": 5202,
+    "name": "Cruel Barb",
+    "icon": "inv_sword_23",
+    "iLvl": 24,
+    "quality": "q3",
+    "reqLevel": 19,
+    "speed": "2.80",
+    "dps": "16.96 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "+12 Attack Power",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Sword",
+      "30 - 56 Damage\tSpeed 2.80",
+      "(16.96 damage per second)",
+      "Equip: +12 Attack Power",
+      "Requires Level 19"
     ]
   },
   "5207": {
@@ -13488,34 +13425,20 @@
     "name": "Odo's Ley Staff",
     "icon": "inv_staff_27",
     "iLvl": 26,
-    "reqLevel": 21,
     "quality": "q3",
+    "reqLevel": 21,
     "speed": "2.90",
-    "dps": "16.03 DPS",
-    "dmgmin": 37,
-    "dmgmax": 56,
-    "stats": "+5 Stamina, +12 Spirit, +52 Healing, +17 Spell Damage",
+    "dps": "21.72 DPS",
+    "weaponType": "Staff",
+    "stats": "+8 Spirit, +5 Stamina",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "37 - 56 Damage\tSpeed 2.90",
-      "(16.03 damage per second)",
+      "50 - 76 Damage\tSpeed 2.90",
+      "(21.72 damage per second)",
+      "+8 Spirit",
       "+5 Stamina",
-      "+12 Spirit",
-      "+52 Healing",
-      "+17 Spell Damage",
       "Requires Level 21"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Odo the Blindwatcher",
-        "t": 1,
-        "ti": 4279,
-        "z": 209
-      }
     ]
   },
   "6320": {
@@ -13523,31 +13446,20 @@
     "name": "Commander's Crest",
     "icon": "inv_shield_03",
     "iLvl": 26,
-    "reqLevel": 21,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+5 Strength, +3 Stamina, +585 Armor",
+    "reqLevel": 21,
+    "weaponType": "Shield",
+    "armor": 582,
+    "block": 17,
+    "stats": "+6 Stamina, +3 Spirit",
     "lines": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "+5 Strength",
-      "+3 Stamina",
-      "+585 Armor",
+      "582 Armor",
+      "17 Block",
+      "+6 Stamina",
+      "+3 Spirit",
       "Requires Level 21"
-    ],
-    "inventorySlot": "Off Hand",
-    "subclassName": "Shield",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Commander Springvale",
-        "t": 1,
-        "ti": 4278,
-        "z": 209
-      }
     ]
   },
   "6323": {
@@ -13856,30 +13768,19 @@
     "name": "Venomstrike",
     "icon": "inv_weapon_bow_10",
     "iLvl": 24,
-    "reqLevel": 19,
     "quality": "q3",
+    "reqLevel": 19,
     "speed": "2.40",
-    "dps": "12.08 DPS",
-    "dmgmin": 20,
-    "dmgmax": 38,
-    "stats": "",
+    "dps": "9.58 DPS",
+    "weaponType": "Bow",
+    "stats": "Chance on hit: Shoots a poison bolt for 31 to 45 Nature damage",
     "lines": [
       "Binds when picked up",
       "Ranged\tBow",
-      "20 - 38 Damage\tSpeed 2.40",
-      "(12.08 damage per second)",
+      "14 - 32 Damage\tSpeed 2.40",
+      "(9.58 damage per second)",
+      "Chance on hit: Shoots a poison bolt for 31 to 45 Nature damage",
       "Requires Level 19"
-    ],
-    "inventorySlot": "Ranged",
-    "subclassName": "Bow",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Lord Serpentis",
-        "t": 1,
-        "ti": 3673,
-        "z": 718
-      }
     ]
   },
   "6472": {
@@ -13974,6 +13875,26 @@
         "t": 5,
         "ti": 914
       }
+    ]
+  },
+  "6533": {
+    "id": 6533,
+    "name": "Stinging Viper",
+    "icon": "inv_mace_01",
+    "iLvl": 24,
+    "quality": "q3",
+    "reqLevel": 19,
+    "speed": "2.80",
+    "dps": "14.29 DPS",
+    "weaponType": "One-Handed Mace",
+    "stats": "Chance on hit: Poisons target for 35 Nature damage over 15 sec",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Mace",
+      "30 - 57 Damage\tSpeed 2.80",
+      "(14.29 damage per second)",
+      "Chance on hit: Poisons target for 35 Nature damage over 15 sec",
+      "Requires Level 19"
     ]
   },
   "6543": {
@@ -14102,99 +14023,63 @@
     "id": 6630,
     "name": "Seedcloud Buckler",
     "icon": "inv_shield_10",
-    "iLvl": 24,
-    "reqLevel": 19,
+    "iLvl": 25,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+5 Intellect, +547 Armor, +5 Spell Power",
+    "reqLevel": 20,
+    "weaponType": "Shield",
+    "armor": 560,
+    "block": 16,
+    "stats": "+5 Stamina, +3 Spirit",
     "lines": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "+5 Intellect",
-      "+547 Armor",
-      "+5 Spell Power",
-      "Requires Level 19"
-    ],
-    "inventorySlot": "Off Hand",
-    "subclassName": "Shield",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Verdan the Everliving",
-        "t": 1,
-        "ti": 5775,
-        "z": 718
-      }
+      "560 Armor",
+      "16 Block",
+      "+5 Stamina",
+      "+3 Spirit",
+      "Requires Level 20"
     ]
   },
   "6631": {
     "id": 6631,
     "name": "Living Root",
     "icon": "inv_staff_25",
-    "iLvl": 23,
-    "reqLevel": 18,
+    "iLvl": 25,
     "quality": "q3",
+    "reqLevel": 20,
     "speed": "2.90",
-    "dps": "14.66 DPS",
-    "dmgmin": 34,
-    "dmgmax": 51,
-    "stats": "+2 Stamina, +5 Spirit, +45 Healing, +15 Spell Damage",
+    "dps": "21.21 DPS",
+    "weaponType": "Staff",
+    "stats": "+5 Strength, +12 Stamina",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "34 - 51 Damage\tSpeed 2.90",
-      "(14.66 damage per second)",
-      "+2 Stamina",
-      "+5 Spirit",
-      "+45 Healing",
-      "+15 Spell Damage",
-      "Requires Level 18"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Verdan the Everliving",
-        "t": 1,
-        "ti": 5775,
-        "z": 718
-      }
+      "49 - 74 Damage\tSpeed 2.90",
+      "(21.21 damage per second)",
+      "+5 Strength",
+      "+12 Stamina",
+      "Requires Level 20"
     ]
   },
   "6633": {
     "id": 6633,
-    "name": "Butcher's Slicer",
-    "icon": "inv_sword_16",
-    "iLvl": 23,
-    "reqLevel": 18,
-    "quality": "q3",
-    "speed": "2.90",
-    "dps": "15.00 DPS",
-    "dmgmin": 30,
-    "dmgmax": 57,
-    "stats": "+3 Stamina",
+    "name": "Tail Spike",
+    "icon": "inv_misc_monsterfang_01",
+    "iLvl": 22,
+    "quality": "q2",
+    "reqLevel": 17,
+    "speed": "1.70",
+    "dps": "12.94 DPS",
+    "weaponType": "Dagger",
+    "stats": "+2 Agility, +2 Stamina",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t1H Sword",
-      "30 - 57 Damage\tSpeed 2.90",
-      "(15.00 damage per second)",
-      "+3 Stamina",
-      "Requires Level 18"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Sword",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Razorclaw the Butcher",
-        "t": 1,
-        "ti": 3886,
-        "z": 209
-      }
+      "One-Hand\tDagger",
+      "15 - 29 Damage\tSpeed 1.70",
+      "(12.94 damage per second)",
+      "+2 Agility",
+      "+2 Stamina",
+      "Requires Level 17"
     ]
   },
   "6641": {
@@ -14389,65 +14274,42 @@
     "name": "Corpsemaker",
     "icon": "inv_weapon_halbard_01",
     "iLvl": 34,
-    "reqLevel": 29,
     "quality": "q3",
+    "reqLevel": 29,
     "speed": "3.80",
     "dps": "28.95 DPS",
-    "dmgmin": 88,
-    "dmgmax": 132,
+    "weaponType": "Two-Handed Axe",
     "stats": "+15 Strength, +8 Stamina",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed axe",
+      "Two-Hand\tTwo-Handed Axe",
       "88 - 132 Damage\tSpeed 3.80",
       "(28.95 damage per second)",
       "+15 Strength",
       "+8 Stamina",
       "Requires Level 29"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed axe",
-    "sourcemore": [
-      {
-        "n": "Overlord Ramtusk",
-        "t": 1,
-        "ti": 4420,
-        "z": 491
-      }
     ]
   },
   "6688": {
     "id": 6688,
-    "name": "Whisperwind Headdress",
-    "icon": "inv_helmet_17",
-    "iLvl": 34,
-    "reqLevel": 29,
+    "name": "Death Speaker Scepter",
+    "icon": "inv_mace_01",
+    "iLvl": 32,
     "quality": "q3",
-    "speed": "2.20",
-    "dps": "NaN DPS",
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+11 Stamina, +11 Spirit, +89 Armor, +7 Spell Power",
+    "reqLevel": 27,
+    "speed": "2.40",
+    "dps": "18.33 DPS",
+    "weaponType": "One-Handed Mace",
+    "stats": "+5 Intellect, +3 Spirit, +3 Stamina",
     "lines": [
       "Binds when picked up",
-      "Head\t1H Mace",
-      "Speed 2.20",
-      "(NaN damage per second)",
-      "+11 Stamina",
-      "+11 Spirit",
-      "+89 Armor",
-      "+7 Spell Power",
-      "Requires Level 29"
-    ],
-    "inventorySlot": "Head",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "n": "Earthcaller Halmgar",
-        "t": 1,
-        "ti": 4842,
-        "z": 491
-      }
+      "One-Hand\tOne-Handed Mace",
+      "33 - 62 Damage\tSpeed 2.40",
+      "(18.33 damage per second)",
+      "+5 Intellect",
+      "+3 Spirit",
+      "+3 Stamina",
+      "Requires Level 27"
     ]
   },
   "6689": {
@@ -14455,66 +14317,41 @@
     "name": "Wind Spirit Staff",
     "icon": "inv_staff_01",
     "iLvl": 34,
-    "reqLevel": 29,
     "quality": "q3",
+    "reqLevel": 29,
     "speed": "3.30",
-    "dps": "21.36 DPS",
-    "dmgmin": 56,
-    "dmgmax": 85,
-    "stats": "+6 Stamina, +16 Spirit, +71 Healing, +23 Spell Damage",
+    "dps": "26.67 DPS",
+    "weaponType": "Staff",
+    "stats": "+11 Spirit, +6 Stamina",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "56 - 85 Damage\tSpeed 3.30",
-      "(21.36 damage per second)",
+      "66 - 110 Damage\tSpeed 3.30",
+      "(26.67 damage per second)",
+      "+11 Spirit",
       "+6 Stamina",
-      "+16 Spirit",
-      "+71 Healing",
-      "+23 Spell Damage",
       "Requires Level 29"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "n": "Earthcaller Halmgar",
-        "t": 1,
-        "ti": 4842,
-        "z": 491
-      }
     ]
   },
   "6691": {
     "id": 6691,
     "name": "Swinetusk Shank",
     "icon": "inv_misc_bone_06",
-    "iLvl": 35,
-    "reqLevel": 30,
+    "iLvl": 36,
     "quality": "q3",
+    "reqLevel": 31,
     "speed": "1.50",
-    "dps": "15.33 DPS",
-    "dmgmin": 16,
-    "dmgmax": 30,
-    "stats": "+6 Stamina, +4 Spirit, +40 Spell Power",
+    "dps": "23.00 DPS",
+    "weaponType": "Dagger",
+    "stats": "+6 Strength, +4 Agility",
     "lines": [
       "Binds when picked up",
-      "Main Hand\tDagger",
-      "16 - 30 Damage\tSpeed 1.50",
-      "(15.33 damage per second)",
-      "+6 Stamina",
-      "+4 Spirit",
-      "+40 Spell Power",
-      "Requires Level 30"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "Dagger",
-    "sourcemore": [
-      {
-        "n": "Agathelos the Raging",
-        "t": 1,
-        "ti": 4422,
-        "z": 491
-      }
+      "One-Hand\tDagger",
+      "26 - 49 Damage\tSpeed 1.50",
+      "(23.00 damage per second)",
+      "+6 Strength",
+      "+4 Agility",
+      "Requires Level 31"
     ]
   },
   "6692": {
@@ -15174,62 +15011,61 @@
     "name": "Bite of Serra'kis",
     "icon": "inv_misc_monsterfang_01",
     "iLvl": 28,
-    "reqLevel": 23,
     "quality": "q3",
+    "reqLevel": 23,
     "speed": "1.30",
     "dps": "17.69 DPS",
-    "dmgmin": 16,
-    "dmgmax": 30,
-    "stats": "",
+    "weaponType": "Dagger",
+    "stats": "Chance on hit: Poisons target for 40 Nature damage over 10 sec",
     "lines": [
       "Binds when picked up",
       "One-Hand\tDagger",
-      "16 - 30 Damage\tSpeed 1.30",
+      "17 - 32 Damage\tSpeed 1.30",
       "(17.69 damage per second)",
+      "Chance on hit: Poisons target for 40 Nature damage over 10 sec",
       "Requires Level 23"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Dagger",
-    "sourcemore": [
-      {
-        "n": "Old Serra'kis",
-        "t": 1,
-        "ti": 4830,
-        "z": 719
-      }
     ]
   },
   "6905": {
     "id": 6905,
     "name": "Reef Axe",
     "icon": "inv_weapon_halberd_06",
-    "iLvl": 27,
-    "reqLevel": 22,
-    "quality": "q3",
+    "iLvl": 25,
+    "quality": "q2",
+    "reqLevel": 20,
     "speed": "3.30",
-    "dps": "22.42 DPS",
-    "dmgmin": 59,
-    "dmgmax": 89,
-    "stats": "+8 Strength, +16 Healing, +8 Spell Power",
+    "dps": "18.33 DPS",
+    "weaponType": "Two-Handed Axe",
+    "stats": "+7 Strength, +3 Agility",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed axe",
-      "59 - 89 Damage\tSpeed 3.30",
-      "(22.42 damage per second)",
-      "+8 Strength",
-      "+16 Healing",
-      "+8 Spell Power",
+      "Two-Hand\tTwo-Handed Axe",
+      "46 - 75 Damage\tSpeed 3.30",
+      "(18.33 damage per second)",
+      "+7 Strength",
+      "+3 Agility",
+      "Requires Level 20"
+    ]
+  },
+  "6907": {
+    "id": 6907,
+    "name": "Tortoise Armor",
+    "icon": "inv_shield_06",
+    "iLvl": 27,
+    "quality": "q3",
+    "reqLevel": 22,
+    "weaponType": "Shield",
+    "armor": 605,
+    "block": 18,
+    "stats": "+7 Stamina, +2 Strength",
+    "lines": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "605 Armor",
+      "18 Block",
+      "+7 Stamina",
+      "+2 Strength",
       "Requires Level 22"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed axe",
-    "sourcemore": [
-      {
-        "n": "Gelihast",
-        "t": 1,
-        "ti": 6243,
-        "z": 719
-      }
     ]
   },
   "6909": {
@@ -15237,29 +15073,19 @@
     "name": "Strike of the Hydra",
     "icon": "inv_sword_42",
     "iLvl": 31,
-    "reqLevel": 26,
     "quality": "q3",
+    "reqLevel": 26,
     "speed": "3.30",
     "dps": "25.61 DPS",
-    "dmgmin": 67,
-    "dmgmax": 102,
-    "stats": "",
+    "weaponType": "Two-Handed Sword",
+    "stats": "Chance on hit: Corrosive acid hits target for 140 Nature damage over 30 sec",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed sword",
-      "67 - 102 Damage\tSpeed 3.30",
+      "Two-Hand\tTwo-Handed Sword",
+      "63 - 106 Damage\tSpeed 3.30",
       "(25.61 damage per second)",
+      "Chance on hit: Corrosive acid hits target for 140 Nature damage over 30 sec",
       "Requires Level 26"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed sword",
-    "sourcemore": [
-      {
-        "n": "Aku'mai",
-        "t": 1,
-        "ti": 4829,
-        "z": 719
-      }
     ]
   },
   "6953": {
@@ -16624,60 +16450,40 @@
   "7683": {
     "id": 7683,
     "name": "Bloody Brass Knuckles",
-    "icon": "inv_gauntlets_11",
+    "icon": "inv_gauntlets_04",
     "iLvl": 34,
-    "reqLevel": 29,
     "quality": "q3",
+    "reqLevel": 29,
     "speed": "1.60",
     "dps": "21.88 DPS",
-    "dmgmin": 24,
-    "dmgmax": 46,
-    "stats": "",
+    "weaponType": "Fist Weapon",
+    "stats": "+8 Strength, +3 Stamina",
     "lines": [
       "Binds when picked up",
       "One-Hand\tFist Weapon",
       "24 - 46 Damage\tSpeed 1.60",
       "(21.88 damage per second)",
+      "+8 Strength",
+      "+3 Stamina",
       "Requires Level 29"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Fist Weapon",
-    "sourcemore": [
-      {
-        "n": "Interrogator Vishas",
-        "t": 1,
-        "ti": 3983,
-        "z": 796
-      }
     ]
   },
   "7685": {
     "id": 7685,
     "name": "Orb of the Forgotten Seer",
     "icon": "inv_misc_orb_02",
-    "iLvl": 37,
-    "reqLevel": 32,
+    "iLvl": 36,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+14 Spell Power",
+    "reqLevel": 31,
+    "weaponType": "Held in Off-hand",
+    "stats": "+12 Intellect, +5 Spirit, +6 Spell Power",
     "lines": [
       "Binds when picked up",
-      "Held In Off-hand\tHeld In Off-hand",
-      "+14 Spell Power",
-      "Requires Level 32"
-    ],
-    "inventorySlot": "Held In Off-hand",
-    "subclassName": "Held In Off-hand",
-    "sourcemore": [
-      {
-        "n": "Bloodmage Thalnos",
-        "t": 1,
-        "ti": 4543,
-        "z": 796
-      }
+      "Held In Off-hand",
+      "+12 Intellect",
+      "+5 Spirit",
+      "Equip: Increases spell damage and healing by up to 6",
+      "Requires Level 31"
     ]
   },
   "7687": {
@@ -16747,23 +16553,20 @@
     "id": 7708,
     "name": "Necrotic Wand",
     "icon": "inv_wand_04",
-    "iLvl": 35,
-    "reqLevel": 30,
+    "iLvl": 36,
     "quality": "q3",
+    "reqLevel": 31,
     "speed": "1.40",
     "dps": "33.21 DPS",
-    "stats": "+6 Healing, +3 Spell Power",
-    "inventorySlot": "Ranged",
-    "subclass": 19,
-    "subclassName": "Wand",
-    "side": "both",
-    "sourcemore": [
-      {
-        "n": "Azshir the Sleepless",
-        "t": 1,
-        "ti": 6490,
-        "z": 796
-      }
+    "weaponType": "Wand",
+    "stats": "35 - 65 Shadow Damage, +6 Healing, +3 Spell Power",
+    "lines": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "35 - 65 Shadow Damage\tSpeed 1.40",
+      "(33.21 damage per second)",
+      "Equip: Increases healing done by up to 6 and damage by up to 3",
+      "Requires Level 31"
     ]
   },
   "7710": {
@@ -16790,6 +16593,28 @@
     "inventorySlot": "Two-Hand",
     "subclassName": "Staff",
     "sourcemore": null
+  },
+  "7711": {
+    "id": 7711,
+    "name": "Hypnotic Blade",
+    "icon": "inv_sword_33",
+    "iLvl": 39,
+    "quality": "q3",
+    "reqLevel": 34,
+    "speed": "1.40",
+    "dps": "26.79 DPS",
+    "weaponType": "Dagger",
+    "stats": "+8 Intellect, +3 Spirit, +9 Spell Power",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "28 - 53 Damage\tSpeed 1.40",
+      "(26.79 damage per second)",
+      "+8 Intellect",
+      "+3 Spirit",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 9",
+      "Requires Level 34"
+    ]
   },
   "7713": {
     "id": 7713,
@@ -16865,29 +16690,19 @@
     "name": "Ravager",
     "icon": "inv_weapon_halberd_05",
     "iLvl": 42,
-    "reqLevel": 37,
     "quality": "q3",
+    "reqLevel": 37,
     "speed": "3.50",
     "dps": "37.29 DPS",
-    "dmgmin": 104,
-    "dmgmax": 157,
-    "stats": "",
+    "weaponType": "Two-Handed Axe",
+    "stats": "Chance on hit: You whirl around in a bladed tempest for 9 sec",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed axe",
+      "Two-Hand\tTwo-Handed Axe",
       "104 - 157 Damage\tSpeed 3.50",
       "(37.29 damage per second)",
+      "Chance on hit: You whirl around 3 targets for 9 sec",
       "Requires Level 37"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed axe",
-    "sourcemore": [
-      {
-        "n": "Herod",
-        "t": 1,
-        "ti": 3975,
-        "z": 796
-      }
     ]
   },
   "7721": {
@@ -16895,34 +16710,21 @@
     "name": "Hand of Righteousness",
     "icon": "inv_hammer_02",
     "iLvl": 44,
-    "reqLevel": 39,
     "quality": "q3",
+    "reqLevel": 39,
     "speed": "2.70",
-    "dps": "19.81 DPS",
-    "dmgmin": 37,
-    "dmgmax": 70,
-    "stats": "+7 Stamina, +8 Spirit, +94 Healing, +31 Spell Damage",
+    "dps": "29.81 DPS",
+    "weaponType": "One-Handed Mace",
+    "stats": "+8 Intellect, +4 Spirit, +14 Healing",
     "lines": [
       "Binds when picked up",
-      "Main Hand\t1H Mace",
-      "37 - 70 Damage\tSpeed 2.70",
-      "(19.81 damage per second)",
-      "+7 Stamina",
-      "+8 Spirit",
-      "+94 Healing",
-      "+31 Spell Damage",
+      "Main Hand\tOne-Handed Mace",
+      "61 - 100 Damage\tSpeed 2.70",
+      "(29.81 damage per second)",
+      "+8 Intellect",
+      "+4 Spirit",
+      "Equip: Increases healing done by spells and effects by up to 14",
       "Requires Level 39"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "High Inquisitor Whitemane",
-        "t": 1,
-        "ti": 3977,
-        "z": 796
-      }
     ]
   },
   "7723": {
@@ -16930,32 +16732,20 @@
     "name": "Mograine's Might",
     "icon": "inv_mace_13",
     "iLvl": 44,
-    "reqLevel": 39,
     "quality": "q3",
-    "speed": "3.40",
-    "dps": "38.82 DPS",
-    "dmgmin": 105,
-    "dmgmax": 159,
-    "stats": "+8 Strength, +14 Stamina, +16 Intellect",
+    "reqLevel": 39,
+    "speed": "2.80",
+    "dps": "38.93 DPS",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+17 Strength, +16 Stamina",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed mace",
-      "105 - 159 Damage\tSpeed 3.40",
-      "(38.82 damage per second)",
-      "+8 Strength",
-      "+14 Stamina",
-      "+16 Intellect",
+      "Two-Hand\tTwo-Handed Mace",
+      "82 - 136 Damage\tSpeed 2.80",
+      "(38.93 damage per second)",
+      "+17 Strength",
+      "+16 Stamina",
       "Requires Level 39"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed mace",
-    "sourcemore": [
-      {
-        "n": "Scarlet Commander Mograine",
-        "t": 1,
-        "ti": 3976,
-        "z": 796
-      }
     ]
   },
   "7726": {
@@ -16963,30 +16753,20 @@
     "name": "Aegis of the Scarlet Commander",
     "icon": "inv_shield_05",
     "iLvl": 44,
-    "reqLevel": 39,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+7 Strength, +8 Stamina, +1548 Armor",
+    "reqLevel": 39,
+    "weaponType": "Shield",
+    "armor": 1056,
+    "block": 29,
+    "stats": "+8 Strength, +7 Stamina",
     "lines": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "+7 Strength",
-      "+8 Stamina",
-      "+1548 Armor",
+      "1056 Armor",
+      "29 Block",
+      "+8 Strength",
+      "+7 Stamina",
       "Requires Level 39"
-    ],
-    "inventorySlot": "Off Hand",
-    "subclassName": "Shield",
-    "sourcemore": [
-      {
-        "n": "Scarlet Commander Mograine",
-        "t": 1,
-        "ti": 3976,
-        "z": 796
-      }
     ]
   },
   "7729": {
@@ -17139,28 +16919,25 @@
   },
   "7752": {
     "id": 7752,
-    "name": "Dreamslayer",
-    "icon": "inv_hammer_17",
-    "iLvl": 33,
-    "reqLevel": 28,
+    "name": "Illusionary Rod",
+    "icon": "inv_staff_13",
+    "iLvl": 39,
     "quality": "q3",
-    "speed": "2.10",
-    "dps": "21.43 DPS",
-    "dmgmin": 31,
-    "dmgmax": 59,
-    "stats": "+7 Strength, +3 Spirit",
+    "reqLevel": 34,
+    "speed": "2.90",
+    "dps": "29.14 DPS",
+    "weaponType": "Staff",
+    "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
     "lines": [
-      "Binds when equipped",
-      "Main Hand\t1H Mace",
-      "31 - 59 Damage\tSpeed 2.10",
-      "(21.43 damage per second)",
-      "+7 Strength",
-      "+3 Spirit",
-      "Requires Level 28"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": null
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "67 - 102 Damage\tSpeed 2.90",
+      "(29.14 damage per second)",
+      "+15 Intellect",
+      "+10 Spirit",
+      "+7 Stamina",
+      "Requires Level 34"
+    ]
   },
   "7753": {
     "id": 7753,
@@ -18256,24 +18033,20 @@
     "id": 9379,
     "name": "Sang'thraze the Deflector",
     "icon": "inv_sword_45",
-    "iLvl": 50,
-    "reqLevel": 45,
+    "iLvl": 49,
     "quality": "q3",
+    "reqLevel": 44,
     "speed": "1.70",
-    "dps": "33.24 DPS",
-    "stats": "",
-    "inventorySlot": "One-Hand",
-    "subclass": 7,
-    "subclassName": "One-handed sword",
-    "side": "both",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Antu'sul",
-        "t": 1,
-        "ti": 8127,
-        "z": 1176
-      }
+    "dps": "29.12 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "Chance on hit: Absorbs 120 damage and increases defense by 35 for 10 sec",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Sword",
+      "37 - 70 Damage\tSpeed 1.70",
+      "(29.12 damage per second)",
+      "Chance on hit: Absorbs 120 damage and increases defense by 35",
+      "Requires Level 44"
     ]
   },
   "9380": {
@@ -18617,66 +18390,42 @@
     "name": "The Rockpounder",
     "icon": "inv_hammer_12",
     "iLvl": 49,
-    "reqLevel": 44,
     "quality": "q3",
+    "reqLevel": 44,
     "speed": "3.70",
     "dps": "42.70 DPS",
-    "dmgmin": 126,
-    "dmgmax": 190,
-    "stats": "+5 Strength",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+5 Strength, +11 Stamina, +2% Crit",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tWeapon",
+      "Two-Hand\tTwo-Handed Mace",
       "126 - 190 Damage\tSpeed 3.70",
       "(42.70 damage per second)",
       "+5 Strength",
+      "+11 Stamina",
+      "Equip: Improves your chance to get a critical strike by 2%",
       "Requires Level 44"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Weapon",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Archaedas",
-        "t": 1,
-        "ti": 2748,
-        "z": 1337
-      }
     ]
   },
   "9415": {
     "id": 9415,
-    "name": "Grimlok's Tribal Vestments",
-    "icon": "inv_shirt_05",
+    "name": "Galgann's Fireblaster",
+    "icon": "inv_weapon_rifle_07",
     "iLvl": 47,
-    "reqLevel": 42,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+10 Stamina, +5 Intellect, +14 Spirit, +68 Armor, +19 Healing, +10 Spell Power",
+    "reqLevel": 42,
+    "speed": "2.60",
+    "dps": "24.62 DPS",
+    "weaponType": "Gun",
+    "stats": "+5 Agility, +3 Stamina",
     "lines": [
       "Binds when picked up",
-      "Chest\tOne-Handed Mace",
-      "+10 Stamina",
-      "+5 Intellect",
-      "+14 Spirit",
-      "+68 Armor",
-      "+19 Healing",
-      "+10 Spell Power",
+      "Ranged\tGun",
+      "51 - 96 Damage\tSpeed 2.60",
+      "(24.62 damage per second)",
+      "+5 Agility",
+      "+3 Stamina",
       "Requires Level 42"
-    ],
-    "inventorySlot": "Chest",
-    "subclassName": "One-Handed Mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Grimlok",
-        "t": 1,
-        "ti": 4854,
-        "z": 1337
-      }
     ]
   },
   "9416": {
@@ -18684,33 +18433,41 @@
     "name": "Grimlok's Charge",
     "icon": "inv_spear_08",
     "iLvl": 47,
-    "reqLevel": 42,
     "quality": "q3",
+    "reqLevel": 42,
     "speed": "2.70",
     "dps": "40.93 DPS",
-    "dmgmin": 88,
-    "dmgmax": 133,
-    "stats": "+10 Strength, +15 Agility, +15 Stamina",
+    "weaponType": "Polearm",
+    "stats": "+15 Agility, +10 Strength, +10 Stamina",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tPolearm",
-      "88 - 133 Damage\tSpeed 2.70",
+      "86 - 130 Damage\tSpeed 2.70",
       "(40.93 damage per second)",
-      "+10 Strength",
       "+15 Agility",
-      "+15 Stamina",
+      "+10 Strength",
+      "+10 Stamina",
       "Requires Level 42"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Polearm",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Grimlok",
-        "t": 1,
-        "ti": 4854,
-        "z": 1337
-      }
+    ]
+  },
+  "9418": {
+    "id": 9418,
+    "name": "Stoneslayer",
+    "icon": "inv_sword_47",
+    "iLvl": 49,
+    "quality": "q3",
+    "reqLevel": 44,
+    "speed": "3.90",
+    "dps": "42.69 DPS",
+    "weaponType": "Two-Handed Sword",
+    "stats": "Chance on hit: Reduces enemy armor by 100",
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tTwo-Handed Sword",
+      "131 - 197 Damage\tSpeed 3.90",
+      "(42.69 damage per second)",
+      "Chance on hit: Reduces enemy armor by 100",
+      "Requires Level 44"
     ]
   },
   "9419": {
@@ -18788,59 +18545,67 @@
     "side": "both",
     "sourcemore": null
   },
+  "9445": {
+    "id": 9445,
+    "name": "Grubbis Paws",
+    "icon": "inv_gauntlets_17",
+    "iLvl": 30,
+    "quality": "q3",
+    "reqLevel": 25,
+    "speed": "1.60",
+    "dps": "18.13 DPS",
+    "weaponType": "Fist Weapon",
+    "stats": "+7 Strength, +3 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "22 - 42 Damage\tSpeed 1.60",
+      "(18.13 damage per second)",
+      "+7 Strength",
+      "+3 Stamina",
+      "Requires Level 25"
+    ]
+  },
   "9446": {
     "id": 9446,
     "name": "Electrocutioner Leg",
     "icon": "inv_sword_30",
     "iLvl": 34,
-    "reqLevel": 29,
     "quality": "q3",
-    "speed": "2.60",
-    "dps": "10.4 DPS",
-    "dmgmin": 20,
-    "dmgmax": 34,
-    "stats": "+9 [Agility or Strength], +17 Stamina, Equip: Your melee attacks have a chance to blast the target for 141 Nature damage.",
+    "reqLevel": 29,
+    "speed": "1.70",
+    "dps": "22.06 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "Chance on hit: Shocks target for 20 to 30 Nature damage",
     "lines": [
       "Binds when picked up",
-      "One-Hand\tSword",
-      "20 - 34 Damage\tSpeed 2.60",
-      "(10.4 damage per second)",
-      "+9 [Agility or Strength]",
-      "+17 Stamina",
-      "Equip: Your melee attacks have a chance to blast the target for 141 Nature damage.",
+      "One-Hand\tOne-Handed Sword",
+      "28 - 53 Damage\tSpeed 1.70",
+      "(22.06 damage per second)",
+      "Chance on hit: Shocks target for 20 to 30 Nature damage",
       "Requires Level 29"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Sword",
-    "sourcemore": null
+    ]
   },
   "9449": {
     "id": 9449,
     "name": "Manual Crowd Pummeler",
     "icon": "inv_mace_14",
     "iLvl": 34,
-    "reqLevel": 29,
     "quality": "q3",
+    "reqLevel": 29,
     "speed": "2.00",
     "dps": "29.00 DPS",
-    "dmgmin": 46,
-    "dmgmax": 70,
-    "stats": "+16 Strength, +5 Agility",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+16 Strength, +5 Agility, Use: +50% attack speed for 30 sec",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed mace",
+      "Two-Hand\tTwo-Handed Mace",
       "46 - 70 Damage\tSpeed 2.00",
       "(29.00 damage per second)",
       "+16 Strength",
       "+5 Agility",
+      "Use: Increases attack speed by 50% for 30 sec (3 Charges)",
       "Requires Level 29"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed mace",
-    "sourcemore": [
-      {
-        "z": 721
-      }
     ]
   },
   "9452": {
@@ -19042,24 +18807,22 @@
     "id": 9459,
     "name": "Thermaplugg's Left Arm",
     "icon": "inv_axe_03",
-    "iLvl": 36,
-    "reqLevel": 31,
+    "iLvl": 37,
     "quality": "q3",
+    "reqLevel": 32,
     "speed": "2.70",
-    "dps": "31.30 DPS",
+    "dps": "32.59 DPS",
+    "weaponType": "Two-Handed Axe",
     "stats": "+17 Strength, +5 Stamina, +4 Intellect",
-    "inventorySlot": "Two-Hand",
-    "subclass": 1,
-    "subclassName": "Weapon",
-    "side": "both",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Mekgineer Thermaplugg",
-        "t": 1,
-        "ti": 7800,
-        "z": 721
-      }
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tTwo-Handed Axe",
+      "66 - 110 Damage\tSpeed 2.70",
+      "(32.59 damage per second)",
+      "+17 Strength",
+      "+5 Stamina",
+      "+4 Intellect",
+      "Requires Level 32"
     ]
   },
   "9461": {
@@ -19276,29 +19039,21 @@
     "id": 9488,
     "name": "Oscillating Power Hammer",
     "icon": "inv_hammer_08",
-    "iLvl": 28,
-    "reqLevel": 23,
+    "iLvl": 33,
     "quality": "q3",
+    "reqLevel": 28,
     "speed": "2.00",
     "dps": "17.50 DPS",
-    "dmgmin": 24,
-    "dmgmax": 46,
-    "stats": "+5 Strength, +1 Stamina",
+    "weaponType": "One-Handed Mace",
+    "stats": "+6 Strength, +3 Stamina",
     "lines": [
-      "Binds when equipped",
-      "One-Hand\t1H Mace",
-      "24 - 46 Damage\tSpeed 2.00",
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Mace",
+      "26 - 49 Damage\tSpeed 2.00",
       "(17.50 damage per second)",
-      "+5 Strength",
-      "+1 Stamina",
-      "Requires Level 23"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "z": 721
-      }
+      "+6 Strength",
+      "+3 Stamina",
+      "Requires Level 28"
     ]
   },
   "9489": {
@@ -20809,30 +20564,20 @@
     "id": 10761,
     "name": "Coldrage Dagger",
     "icon": "inv_sword_34",
-    "iLvl": 43,
-    "reqLevel": 38,
+    "iLvl": 44,
     "quality": "q3",
+    "reqLevel": 39,
     "speed": "1.50",
-    "dps": "29.00 DPS",
-    "dmgmin": 30,
-    "dmgmax": 57,
-    "stats": "",
+    "dps": "29.67 DPS",
+    "weaponType": "Dagger",
+    "stats": "Chance on hit: Frostbolt hits target for 40 to 60 Frost damage and slows by 50%",
     "lines": [
       "Binds when picked up",
       "One-Hand\tDagger",
-      "30 - 57 Damage\tSpeed 1.50",
-      "(29.00 damage per second)",
-      "Requires Level 38"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Dagger",
-    "sourcemore": [
-      {
-        "n": "Amnennar the Coldbringer",
-        "t": 1,
-        "ti": 7358,
-        "z": 722
-      }
+      "33 - 62 Damage\tSpeed 1.50",
+      "(29.67 damage per second)",
+      "Chance on hit: Frostbolt hits target for 40 to 60 Frost damage",
+      "Requires Level 39"
     ]
   },
   "10767": {
@@ -20870,52 +20615,59 @@
     "id": 10770,
     "name": "Mordresh's Lifeless Skull",
     "icon": "inv_misc_bone_elfskull_01",
-    "iLvl": 41,
-    "reqLevel": 36,
+    "iLvl": 42,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+5 Spirit",
+    "reqLevel": 37,
+    "weaponType": "Held in Off-hand",
+    "stats": "+7 Intellect, +7 Stamina, +14 Spell Power",
     "lines": [
       "Binds when picked up",
-      "Held In Off-hand\tHeld In Off-hand",
-      "+5 Spirit",
-      "Requires Level 36"
-    ],
-    "inventorySlot": "Held In Off-hand",
-    "subclassName": "Held In Off-hand",
-    "sourcemore": [
-      {
-        "n": "Mordresh Fire Eye",
-        "t": 1,
-        "ti": 7357,
-        "z": 722
-      }
+      "Held In Off-hand",
+      "+7 Intellect",
+      "+7 Stamina",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 14",
+      "Requires Level 37"
     ]
   },
   "10772": {
     "id": 10772,
     "name": "Glutton's Cleaver",
     "icon": "inv_axe_23",
-    "iLvl": 42,
-    "reqLevel": 37,
-    "quality": "q3",
+    "iLvl": 45,
+    "quality": "q2",
+    "reqLevel": 40,
     "speed": "2.00",
-    "dps": "28.75 DPS",
-    "stats": "",
-    "inventorySlot": "One-Hand",
-    "subclass": 0,
-    "subclassName": "Weapon",
-    "side": "both",
-    "sourcemore": [
-      {
-        "n": "Glutton",
-        "t": 1,
-        "ti": 8567,
-        "z": 722
-      }
+    "dps": "23.00 DPS",
+    "weaponType": "One-Handed Axe",
+    "stats": "+10 Strength, +4 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Axe",
+      "33 - 59 Damage\tSpeed 2.00",
+      "(23.00 damage per second)",
+      "+10 Strength",
+      "+4 Stamina",
+      "Requires Level 40"
+    ]
+  },
+  "10787": {
+    "id": 10787,
+    "name": "Gahz'rilla Fang",
+    "icon": "inv_sword_33",
+    "iLvl": 47,
+    "quality": "q3",
+    "reqLevel": 42,
+    "speed": "1.80",
+    "dps": "32.22 DPS",
+    "weaponType": "Dagger",
+    "stats": "Chance on hit: Blasts target for 55 to 85 Frost damage and slows by 50%",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "42 - 79 Damage\tSpeed 1.80",
+      "(32.22 damage per second)",
+      "Chance on hit: Blasts target for 55 to 85 Frost damage",
+      "Requires Level 42"
     ]
   },
   "10797": {
@@ -20923,27 +20675,19 @@
     "name": "Firebreather",
     "icon": "inv_sword_09",
     "iLvl": 53,
-    "reqLevel": 48,
     "quality": "q3",
+    "reqLevel": 48,
     "speed": "2.20",
     "dps": "35.23 DPS",
-    "dmgmin": 54,
-    "dmgmax": 101,
-    "stats": "",
+    "weaponType": "One-Handed Sword",
+    "stats": "Chance on hit: Blasts target with Fireball for 70 Fire damage and 9 over 6 sec",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t1H Mace",
+      "One-Hand\tOne-Handed Sword",
       "54 - 101 Damage\tSpeed 2.20",
       "(35.23 damage per second)",
+      "Chance on hit: Blasts target with Fireball for 70 Fire damage",
       "Requires Level 48"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "z": 1477
-      }
     ]
   },
   "10799": {
@@ -21141,29 +20885,41 @@
     "name": "Spire of Hakkar",
     "icon": "inv_staff_32",
     "iLvl": 54,
-    "reqLevel": 49,
     "quality": "q3",
+    "reqLevel": 49,
     "speed": "3.40",
-    "dps": "34.71 DPS",
-    "dmgmin": 94,
-    "dmgmax": 142,
-    "stats": "+16 Stamina, +16 Spirit, +62 Spell Power",
+    "dps": "46.47 DPS",
+    "weaponType": "Staff",
+    "stats": "+16 Spirit, +15 Intellect, +18 Spell Power",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "94 - 142 Damage\tSpeed 3.40",
-      "(34.71 damage per second)",
-      "+16 Stamina",
+      "126 - 190 Damage\tSpeed 3.40",
+      "(46.47 damage per second)",
       "+16 Spirit",
-      "+62 Spell Power",
+      "+15 Intellect",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 18",
       "Requires Level 49"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "z": 1477
-      }
+    ]
+  },
+  "10847": {
+    "id": 10847,
+    "name": "Dragon's Call",
+    "icon": "inv_sword_38",
+    "iLvl": 57,
+    "quality": "q4",
+    "reqLevel": 52,
+    "speed": "2.50",
+    "dps": "41.40 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "Chance on hit: Calls forth an Emerald Dragon Whelp to protect you in battle",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Sword",
+      "72 - 135 Damage\tSpeed 2.50",
+      "(41.40 damage per second)",
+      "Chance on hit: Calls forth an Emerald Dragon Whelp to protect you in battle",
+      "Requires Level 52"
     ]
   },
   "11086": {
@@ -21171,27 +20927,20 @@
     "name": "Jang'thraze the Protector",
     "icon": "inv_sword_43",
     "iLvl": 50,
-    "reqLevel": 45,
     "quality": "q3",
-    "speed": "2.60",
-    "dps": "10.2 DPS",
-    "dmgmin": 18,
-    "dmgmax": 35,
-    "stats": "+9 Strength, +17 Stamina, Use: Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze., Equip: Your melee attacks have a chance to grant a shield, absorbing (2251 + 348) Physical damage. Lasts 20 sec.",
+    "reqLevel": 45,
+    "speed": "1.90",
+    "dps": "33.42 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "Chance on hit: Slows enemy target and reduces attack power",
     "lines": [
       "Binds when picked up",
-      "One-Hand\tSword",
-      "18 - 35 Damage\tSpeed 2.60",
-      "(10.2 damage per second)",
-      "+9 Strength",
-      "+17 Stamina",
-      "Use: Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
-      "Equip: Your melee attacks have a chance to grant a shield, absorbing (2251 + 348) Physical damage. Lasts 20 sec.",
+      "One-Hand\tOne-Handed Sword",
+      "47 - 88 Damage\tSpeed 1.90",
+      "(33.42 damage per second)",
+      "Chance on hit: Slows enemy target and reduces attack power",
       "Requires Level 45"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Sword",
-    "sourcemore": null
+    ]
   },
   "11120": {
     "id": 11120,
@@ -21688,32 +21437,21 @@
     "id": 11628,
     "name": "Houndmaster's Bow",
     "icon": "inv_weapon_bow_04",
-    "iLvl": 53,
-    "reqLevel": 48,
+    "iLvl": 54,
     "quality": "q3",
+    "reqLevel": 49,
     "speed": "1.80",
     "dps": "27.22 DPS",
-    "dmgmin": 34,
-    "dmgmax": 64,
-    "stats": "+3 Strength",
+    "weaponType": "Bow",
+    "stats": "+4 Agility, +5 Stamina",
     "lines": [
       "Binds when picked up",
       "Ranged\tBow",
-      "34 - 64 Damage\tSpeed 1.80",
+      "37 - 69 Damage\tSpeed 1.80",
       "(27.22 damage per second)",
-      "+3 Strength",
-      "Requires Level 48"
-    ],
-    "inventorySlot": "Ranged",
-    "subclassName": "Bow",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Houndmaster Grebmar",
-        "t": 1,
-        "ti": 9319,
-        "z": 1584
-      }
+      "+4 Agility",
+      "+5 Stamina",
+      "Requires Level 49"
     ]
   },
   "11631": {
@@ -21753,55 +21491,40 @@
     "name": "Ironfoe",
     "icon": "spell_frost_frostbrand",
     "iLvl": 60,
-    "reqLevel": 55,
     "quality": "q4",
+    "reqLevel": 55,
     "speed": "2.40",
     "dps": "43.54 DPS",
-    "dmgmin": 73,
-    "dmgmax": 136,
-    "stats": "",
+    "weaponType": "One-Handed Mace",
+    "stats": "Chance on hit: Grants 2 extra attacks on your next swing",
     "lines": [
       "Binds when picked up",
-      "Main Hand\t1H Mace",
+      "Main Hand\tOne-Handed Mace",
       "73 - 136 Damage\tSpeed 2.40",
       "(43.54 damage per second)",
+      "Chance on hit: Grants 2 extra attacks on your next swing",
       "Requires Level 55"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "dd": -1,
-        "n": "Emperor Dagran Thaurissan",
-        "t": 1,
-        "ti": 9019,
-        "z": 1584
-      }
     ]
   },
   "11748": {
     "id": 11748,
     "name": "Pyric Caduceus",
     "icon": "inv_staff_13",
-    "iLvl": 53,
-    "reqLevel": 48,
+    "iLvl": 55,
     "quality": "q3",
+    "reqLevel": 50,
     "speed": "1.80",
     "dps": "52.50 DPS",
-    "stats": "+3 Spirit",
-    "inventorySlot": "Ranged",
-    "subclass": 19,
-    "subclassName": "Wand",
-    "side": "both",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Pyromancer Loregrain",
-        "t": 1,
-        "ti": 9024,
-        "z": 1584
-      }
+    "weaponType": "Wand",
+    "stats": "67 - 122 Fire Damage, +3 Spirit, +6 Fire Spell Damage",
+    "lines": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "67 - 122 Fire Damage\tSpeed 1.80",
+      "(52.50 damage per second)",
+      "+3 Spirit",
+      "Equip: Increases damage done by Fire spells and effects by up to 6",
+      "Requires Level 50"
     ]
   },
   "11750": {
@@ -21902,6 +21625,68 @@
         "ti": 9016,
         "z": 1584
       }
+    ]
+  },
+  "11809": {
+    "id": 11809,
+    "name": "Flame Wrath",
+    "icon": "inv_spear_01",
+    "iLvl": 56,
+    "quality": "q3",
+    "reqLevel": 51,
+    "speed": "3.30",
+    "dps": "48.18 DPS",
+    "weaponType": "Polearm",
+    "stats": "Chance on hit: Sends a fiery blast at up to 3 nearby enemies for 100 Fire damage",
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "118 - 198 Damage\tSpeed 3.30",
+      "(48.18 damage per second)",
+      "Chance on hit: Sends a fiery blast at up to 3 nearby enemies for 100 Fire damage",
+      "Requires Level 51"
+    ]
+  },
+  "11816": {
+    "id": 11816,
+    "name": "Angerforge's Battle Axe",
+    "icon": "inv_weapon_halberd_06",
+    "iLvl": 56,
+    "quality": "q3",
+    "reqLevel": 51,
+    "speed": "2.60",
+    "dps": "48.08 DPS",
+    "weaponType": "Two-Handed Axe",
+    "stats": "+22 Strength, +12 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tTwo-Handed Axe",
+      "95 - 155 Damage\tSpeed 2.60",
+      "(48.08 damage per second)",
+      "+22 Strength",
+      "+12 Stamina",
+      "Requires Level 51"
+    ]
+  },
+  "11817": {
+    "id": 11817,
+    "name": "Lord General's Sword",
+    "icon": "inv_sword_25",
+    "iLvl": 56,
+    "quality": "q3",
+    "reqLevel": 51,
+    "speed": "2.60",
+    "dps": "36.92 DPS",
+    "weaponType": "One-Handed Sword",
+    "stats": "+11 Strength, +5 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "Main Hand\tOne-Handed Sword",
+      "70 - 122 Damage\tSpeed 2.60",
+      "(36.92 damage per second)",
+      "+11 Strength",
+      "+5 Stamina",
+      "Requires Level 51"
     ]
   },
   "11854": {
@@ -22239,37 +22024,65 @@
       }
     ]
   },
+  "11920": {
+    "id": 11920,
+    "name": "Wraith Scythe",
+    "icon": "inv_axe_13",
+    "iLvl": 57,
+    "quality": "q3",
+    "reqLevel": 52,
+    "speed": "2.20",
+    "dps": "37.05 DPS",
+    "weaponType": "One-Handed Axe",
+    "stats": "+9 Strength, +7 Agility, +5 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Axe",
+      "59 - 104 Damage\tSpeed 2.20",
+      "(37.05 damage per second)",
+      "+9 Strength",
+      "+7 Agility",
+      "+5 Stamina",
+      "Requires Level 52"
+    ]
+  },
   "11923": {
     "id": 11923,
     "name": "The Hammer of Grace",
     "icon": "inv_hammer_07",
     "iLvl": 57,
-    "reqLevel": 52,
     "quality": "q3",
+    "reqLevel": 52,
     "speed": "2.70",
     "dps": "37.59 DPS",
-    "dmgmin": 71,
-    "dmgmax": 132,
-    "stats": "+31 Healing",
+    "weaponType": "One-Handed Mace",
+    "stats": "+10 Intellect, +31 Healing",
     "lines": [
       "Binds when picked up",
-      "Main Hand\t1H Mace",
-      "71 - 132 Damage\tSpeed 2.70",
+      "Main Hand\tOne-Handed Mace",
+      "74 - 129 Damage\tSpeed 2.70",
       "(37.59 damage per second)",
-      "+31 Healing",
+      "+10 Intellect",
+      "Equip: Increases healing done by spells and effects by up to 31",
       "Requires Level 52"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "1H Mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "dd": -1,
-        "n": "Chest of The Seven",
-        "t": 2,
-        "ti": 169243,
-        "z": 1584
-      }
+    ]
+  },
+  "11928": {
+    "id": 11928,
+    "name": "Thaurissan's Royal Scepter",
+    "icon": "inv_mace_13",
+    "iLvl": 60,
+    "quality": "q3",
+    "reqLevel": 55,
+    "weaponType": "Held in Off-hand",
+    "stats": "+10 Intellect, +10 Spirit, +12 Spell Power",
+    "lines": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+10 Intellect",
+      "+10 Spirit",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 12",
+      "Requires Level 55"
     ]
   },
   "11931": {
@@ -23195,6 +23008,26 @@
         "t": 6,
         "ti": 16990
       }
+    ]
+  },
+  "12791": {
+    "id": 12791,
+    "name": "Barman Shanker",
+    "icon": "inv_drink_10",
+    "iLvl": 55,
+    "quality": "q3",
+    "reqLevel": 50,
+    "speed": "2.00",
+    "dps": "36.50 DPS",
+    "weaponType": "Dagger",
+    "stats": "Chance on hit: Causes target to bleed for 100 damage over 30 sec",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "51 - 95 Damage\tSpeed 2.00",
+      "(36.50 damage per second)",
+      "Chance on hit: Causes target to bleed for 100 damage over 30 sec",
+      "Requires Level 50"
     ]
   },
   "12792": {
@@ -24983,31 +24816,22 @@
   "13245": {
     "id": 13245,
     "name": "Kresh's Back",
-    "icon": "inv_shield_18",
-    "iLvl": 23,
-    "reqLevel": 18,
+    "icon": "inv_shield_08",
+    "iLvl": 20,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+528 Armor",
+    "reqLevel": 15,
+    "weaponType": "Shield",
+    "armor": 468,
+    "block": 14,
+    "stats": "+4 Stamina, +2 Spirit",
     "lines": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "+528 Armor",
-      "Requires Level 18"
-    ],
-    "inventorySlot": "Off Hand",
-    "subclassName": "Shield",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Kresh",
-        "t": 1,
-        "ti": 3653,
-        "z": 718
-      }
+      "468 Armor",
+      "14 Block",
+      "+4 Stamina",
+      "+2 Spirit",
+      "Requires Level 15"
     ]
   },
   "13254": {
@@ -25083,6 +24907,28 @@
         "ti": 10439,
         "z": 2017
       }
+    ]
+  },
+  "13385": {
+    "id": 13385,
+    "name": "Tome of Knowledge",
+    "icon": "inv_misc_book_07",
+    "iLvl": 61,
+    "quality": "q4",
+    "reqLevel": 56,
+    "weaponType": "Held in Off-hand",
+    "armor": 30,
+    "stats": "+8 Strength, +8 Agility, +8 Stamina, +8 Intellect, +8 Spirit",
+    "lines": [
+      "Binds when equipped",
+      "Held In Off-hand",
+      "30 Armor",
+      "+8 Strength",
+      "+8 Agility",
+      "+8 Stamina",
+      "+8 Intellect",
+      "+8 Spirit",
+      "Requires Level 56"
     ]
   },
   "13474": {
@@ -25466,6 +25312,24 @@
       }
     ]
   },
+  "13951": {
+    "id": 13951,
+    "name": "Krastinov's Bag of Horrors",
+    "icon": "inv_misc_bag_10_blue",
+    "iLvl": 61,
+    "quality": "q3",
+    "reqLevel": 56,
+    "weaponType": "Held in Off-hand",
+    "stats": "+8 Stamina, +11 Intellect, +14 Spirit",
+    "lines": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+8 Stamina",
+      "+11 Intellect",
+      "+14 Spirit",
+      "Requires Level 56"
+    ]
+  },
   "13968": {
     "id": 13968,
     "name": "Eye of the Beast",
@@ -25528,38 +25392,33 @@
   "14145": {
     "id": 14145,
     "name": "Cursed Felblade",
-    "icon": "inv_weapon_shortblade_12",
+    "icon": "inv_sword_23",
     "iLvl": 18,
-    "reqLevel": 13,
     "quality": "q3",
-    "speed": "2.60",
-    "dps": "10.4 DPS",
-    "dmgmin": 20,
-    "dmgmax": 34,
+    "reqLevel": 13,
+    "speed": "2.30",
+    "dps": "12.17 DPS",
+    "weaponType": "One-Handed Sword",
     "stats": "Chance on hit: Reduces target enemy's attack power by 39 for 30 sec.",
     "lines": [
       "Binds when picked up",
-      "One-Hand\tSword",
-      "20 - 34 Damage\tSpeed 2.60",
-      "(10.4 damage per second)",
+      "One-Hand\tOne-Handed Sword",
+      "19 - 37 Damage\tSpeed 2.30",
+      "(12.17 damage per second)",
       "Chance on hit: Reduces target enemy's attack power by 39 for 30 sec.",
       "Requires Level 13"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Sword",
-    "sourcemore": null
+    ]
   },
   "14151": {
     "id": 14151,
     "name": "Chanting Blade",
-    "icon": "inv_weapon_shortblade_25",
+    "icon": "inv_weapon_shortblade_05",
     "iLvl": 18,
+    "quality": "q2",
     "reqLevel": 13,
-    "quality": "q3",
     "speed": "1.50",
     "dps": "12.00 DPS",
-    "dmgmin": 12,
-    "dmgmax": 24,
+    "weaponType": "Dagger",
     "stats": "+2 Agility, +3 Stamina",
     "lines": [
       "Binds when picked up",
@@ -25569,16 +25428,6 @@
       "+2 Agility",
       "+3 Stamina",
       "Requires Level 13"
-    ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Dagger",
-    "sourcemore": [
-      {
-        "n": "Jergosh the Invoker",
-        "t": 1,
-        "ti": 11518,
-        "z": 2437
-      }
     ]
   },
   "14393": {
@@ -30085,32 +29934,21 @@
     "name": "Gizlock's Hypertech Buckler",
     "icon": "inv_shield_10",
     "iLvl": 53,
-    "reqLevel": 48,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+5 Stamina, +10 Intellect, +1835 Armor, +4 MP5",
+    "reqLevel": 48,
+    "weaponType": "Shield",
+    "armor": 1482,
+    "block": 39,
+    "stats": "+11 Stamina, +5 Intellect, +5 Spirit",
     "lines": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "+5 Stamina",
-      "+10 Intellect",
-      "+1835 Armor",
-      "+4 MP5",
+      "1482 Armor",
+      "39 Block",
+      "+11 Stamina",
+      "+5 Intellect",
+      "+5 Spirit",
       "Requires Level 48"
-    ],
-    "inventorySlot": "Off Hand",
-    "subclassName": "Shield",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Tinkerer Gizlock",
-        "t": 1,
-        "ti": 13601,
-        "z": 2100
-      }
     ]
   },
   "17719": {
@@ -30118,23 +29956,20 @@
     "name": "Inventor's Focal Sword",
     "icon": "inv_sword_14",
     "iLvl": 53,
-    "reqLevel": 48,
     "quality": "q3",
+    "reqLevel": 48,
     "speed": "2.20",
-    "dps": "23.41 DPS",
+    "dps": "35.23 DPS",
+    "weaponType": "One-Handed Sword",
     "stats": "+60 Spell Power, +14 Crit",
-    "inventorySlot": "Main Hand",
-    "subclass": 7,
-    "subclassName": "One-handed sword",
-    "side": "both",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Tinkerer Gizlock",
-        "t": 1,
-        "ti": 13601,
-        "z": 2100
-      }
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Sword",
+      "54 - 101 Damage\tSpeed 2.20",
+      "(35.23 damage per second)",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 60",
+      "Equip: Improves your chance to get a critical strike with spells by 1%",
+      "Requires Level 48"
     ]
   },
   "17730": {
@@ -30262,23 +30097,20 @@
     "name": "Noxious Shooter",
     "icon": "inv_wand_04",
     "iLvl": 51,
-    "reqLevel": 46,
     "quality": "q3",
+    "reqLevel": 46,
     "speed": "1.60",
     "dps": "50.00 DPS",
-    "stats": "+5 Stamina, +5 Spell Power",
-    "inventorySlot": "Ranged",
-    "subclass": 19,
-    "subclassName": "Wand",
-    "side": "both",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Noxxion",
-        "t": 1,
-        "ti": 13282,
-        "z": 2100
-      }
+    "weaponType": "Wand",
+    "stats": "57 - 107 Nature Damage, +5 Stamina, +5 Spell Power",
+    "lines": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "57 - 107 Nature Damage\tSpeed 1.60",
+      "(50.00 damage per second)",
+      "+5 Stamina",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+      "Requires Level 46"
     ]
   },
   "17753": {
@@ -30310,30 +30142,41 @@
     "name": "Princess Theradras' Scepter",
     "icon": "inv_hammer_10",
     "iLvl": 54,
-    "reqLevel": 49,
     "quality": "q3",
+    "reqLevel": 49,
     "speed": "3.40",
     "dps": "46.47 DPS",
-    "dmgmin": 126,
-    "dmgmax": 190,
-    "stats": "",
+    "weaponType": "Two-Handed Mace",
+    "stats": "+17 Strength, +11 Stamina, +10 Agility",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed mace",
+      "Two-Hand\tTwo-Handed Mace",
       "126 - 190 Damage\tSpeed 3.40",
       "(46.47 damage per second)",
+      "+17 Strength",
+      "+11 Stamina",
+      "+10 Agility",
       "Requires Level 49"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed mace",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Princess Theradras",
-        "t": 1,
-        "ti": 12201,
-        "z": 2100
-      }
+    ]
+  },
+  "17780": {
+    "id": 17780,
+    "name": "Blade of Eternal Darkness",
+    "icon": "inv_sword_09",
+    "iLvl": 54,
+    "quality": "q4",
+    "reqLevel": 49,
+    "speed": "1.50",
+    "dps": "34.67 DPS",
+    "weaponType": "Dagger",
+    "stats": "Equip: Chance on spell cast to deal 100 Shadow damage and restore 100 mana",
+    "lines": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "39 - 73 Damage\tSpeed 1.50",
+      "(34.67 damage per second)",
+      "Equip: Chance on spell cast to deal 100 Shadow damage to target and restore 100 mana to you",
+      "Requires Level 49"
     ]
   },
   "17943": {
@@ -30364,34 +30207,22 @@
     "id": 18082,
     "name": "Zum'rah's Vexing Cane",
     "icon": "inv_staff_10",
-    "iLvl": 48,
-    "reqLevel": 43,
+    "iLvl": 47,
     "quality": "q3",
+    "reqLevel": 42,
     "speed": "2.70",
-    "dps": "31.11 DPS",
-    "dmgmin": 67,
-    "dmgmax": 101,
-    "stats": "+10 Stamina, +10 Intellect, +54 Spell Power",
+    "dps": "40.93 DPS",
+    "weaponType": "Staff",
+    "stats": "+10 Intellect, +10 Stamina, +21 Spell Power",
     "lines": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "67 - 101 Damage\tSpeed 2.70",
-      "(31.11 damage per second)",
-      "+10 Stamina",
+      "86 - 130 Damage\tSpeed 2.70",
+      "(40.93 damage per second)",
       "+10 Intellect",
-      "+54 Spell Power",
-      "Requires Level 43"
-    ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Witch Doctor Zum'rah",
-        "t": 1,
-        "ti": 7271,
-        "z": 1176
-      }
+      "+10 Stamina",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 21",
+      "Requires Level 42"
     ]
   },
   "18168": {
@@ -30462,30 +30293,19 @@
   },
   "18338": {
     "id": 18338,
-    "name": "Wand of Arcane Potency",
-    "icon": "inv_wand_02",
+    "name": "Tome of the Lost",
+    "icon": "inv_misc_book_06",
     "iLvl": 59,
-    "reqLevel": 54,
     "quality": "q3",
-    "speed": "1.60",
-    "dps": "58.44 DPS",
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "",
+    "reqLevel": 54,
+    "weaponType": "Held in Off-hand",
+    "stats": "+17 Intellect, +7 Spirit",
     "lines": [
-      "Binds when equipped",
-      "Ranged\tWeapon",
-      "Speed 1.60",
-      "(58.44 damage per second)",
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+17 Intellect",
+      "+7 Spirit",
       "Requires Level 54"
-    ],
-    "inventorySlot": "Ranged",
-    "subclassName": "Weapon",
-    "sourcemore": [
-      {
-        "dd": -1,
-        "z": 2557
-      }
     ]
   },
   "18348": {
@@ -42680,6 +42500,28 @@
       "Use: Use to sketch a location on the Shapers Terrace map."
     ]
   },
+  "271772": {
+    "id": 271772,
+    "name": "Hornbeam Heft",
+    "icon": "inv_axe_02",
+    "iLvl": 33,
+    "quality": "q3",
+    "reqLevel": 28,
+    "speed": "2.40",
+    "dps": "16.88 DPS",
+    "weaponType": "One-Handed Axe",
+    "inventorySlot": "One-Hand",
+    "stats": "+6 Strength, +4 Agility",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tOne-Handed Axe",
+      "31 - 50 Damage\tSpeed 2.40",
+      "(16.88 damage per second)",
+      "+6 Strength",
+      "+4 Agility",
+      "Requires Level 28"
+    ]
+  },
   "271794": {
     "id": 271794,
     "name": "Centaur Spear",
@@ -45033,33 +44875,22 @@
   "273003": {
     "id": 273003,
     "name": "Searing Dagger",
-    "icon": "inv_weapon_shortblade_03",
-    "iLvl": 18,
-    "reqLevel": 13,
-    "quality": "q3",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 17,
+    "quality": "q2",
+    "reqLevel": 12,
     "speed": "1.60",
     "dps": "8.13 DPS",
-    "dmgmin": 9,
-    "dmgmax": 17,
-    "stats": "+4 Spirit",
+    "weaponType": "Dagger",
+    "stats": "+4 Spirit, Equip: Harmful spell casts sear the target for 7 Fire damage.",
     "lines": [
       "Binds when picked up",
-      "Main Hand\tDagger",
-      "9 - 17 Damage\tSpeed 1.60",
+      "One-Hand\tDagger",
+      "8 - 18 Damage\tSpeed 1.60",
       "(8.13 damage per second)",
       "+4 Spirit",
-      "Requires Level 13"
-    ],
-    "inventorySlot": "Main Hand",
-    "subclassName": "Dagger",
-    "sourcemore": [
-      {
-        "dd": -1,
-        "n": "Bazzalan",
-        "t": 1,
-        "ti": 11519,
-        "z": 2437
-      }
+      "Equip: Harmful spell casts sear the target for 7 Fire damage.",
+      "Requires Level 12"
     ]
   },
   "273027": {

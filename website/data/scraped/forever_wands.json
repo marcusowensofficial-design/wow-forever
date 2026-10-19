@@ -39,7 +39,11 @@
               "Ranged",
               "(4.17 damage per second)"
             ],
-            "source": "A Magical Affront quest (Alliance)"
+            "source": {
+              "kind": "quest",
+              "title": "A Magical Affront quest (Alliance)",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -87,7 +91,11 @@
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
             ],
-            "source": "Crafted by Enchanters (Skill 10)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 10)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wisesight Wand",
@@ -109,7 +117,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Nightscreech drop"
+            "source": {
+              "kind": "world",
+              "title": "Nightscreech drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -159,7 +171,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Matriarch / drop"
+            "source": {
+              "kind": "world",
+              "title": "Matriarch / drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Windbough Wand",
@@ -180,7 +196,11 @@
               "(7.19 damage per second)",
               "+1 Intellect"
             ],
-            "source": "Boughs in the Wind quest"
+            "source": {
+              "kind": "quest",
+              "title": "Boughs in the Wind",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -229,7 +249,11 @@
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
             ],
-            "source": "Lady Moongazer drop"
+            "source": {
+              "kind": "world",
+              "title": "Lady Moongazer drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Whelpfire Wand",
@@ -251,7 +275,11 @@
               "(15.26 damage per second)",
               "Requires Level 15"
             ],
-            "source": "Snarlflare in Redridge"
+            "source": {
+              "kind": "world",
+              "title": "Snarlflare in Redridge",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -299,7 +327,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Blackbone Wand",
@@ -319,7 +352,12 @@
               "(37.19 damage per second)",
               "+3 Intellect",
               "Requires Level 15"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Mage's Wand",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -341,7 +379,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Greater Magic Wand",
@@ -363,7 +405,11 @@
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
             ],
-            "source": "Continue using if unavailable"
+            "source": {
+              "kind": "craft",
+              "title": "Continue using if unavailable",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Cookie's Stirring Rod",
@@ -385,7 +431,11 @@
               "(22.31 damage per second)",
               "Requires Level 17"
             ],
-            "source": "Arcane Wand from Cookie in The Deadmines"
+            "source": {
+              "kind": "dungeon",
+              "title": "Cookie",
+              "detail": "The Deadmines"
+            }
           }
         ],
         "lines": [
@@ -433,7 +483,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Lesser Mystic Wand",
@@ -455,7 +510,11 @@
               "+4 Intellect",
               "Requires Level 26"
             ],
-            "source": "Crafted by Enchanters (Skill 155)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 155)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wand of Mana Concentration",
@@ -477,7 +536,11 @@
               "+4 Intellect",
               "Requires Level 27"
             ],
-            "source": "Arcanic Enigma in City of Dalaran"
+            "source": {
+              "kind": "world",
+              "title": "Arcanic Enigma in City of Dalaran",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -499,7 +562,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -547,7 +614,11 @@
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Big Game Hunter quest in STV"
+            "source": {
+              "kind": "quest",
+              "title": "Big Game Hunter",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Greater Mystic Wand",
@@ -569,7 +640,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Crafted by Enchanters (Skill 175)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 175)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -619,7 +694,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Enchanter crafted (Req lvl 30)"
+            "source": {
+              "kind": "craft",
+              "title": "Enchanter crafted (Req lvl 30)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -641,7 +720,38 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
+          },
+          {
+            "name": "Necrotic Wand",
+            "itemId": 7708,
+            "value": "33.2 DPS, 1.40s, +6 Heal, +3 SP - Scarlet Monastery GY: Azshir the Sleepless",
+            "faction": "both",
+            "dps": "33.21 DPS",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "35 - 65 Shadow Damage, +6 Healing, +3 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.40",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "35 - 65 Shadow Damage\tSpeed 1.40",
+              "(33.21 damage per second)",
+              "Equip: Increases healing done by up to 6 and damage by up to 3",
+              "Requires Level 31"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Azshir the Sleepless",
+              "detail": "Scarlet Monastery (Graveyard)"
+            }
           }
         ],
         "lines": [
@@ -690,7 +800,11 @@
               "+5 Intellect",
               "Requires Level 40"
             ],
-            "source": "Partial Mystical Notes quest"
+            "source": {
+              "kind": "quest",
+              "title": "Partial Mystical Notes",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -712,7 +826,11 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -763,7 +881,11 @@
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Crafted by Enchanters (Skill 225)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 225)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Lesser Eternal Wand",
@@ -785,7 +907,11 @@
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
             ],
-            "source": "Crafted by Enchanters (Req lvl 49)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 49)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -836,7 +962,11 @@
               "+4 Spirit",
               "Requires Level 56"
             ],
-            "source": "Rare World Drop (Req lvl 56)"
+            "source": {
+              "kind": "world",
+              "title": "Rare World Drop (Req lvl 56)",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Wand of Biting Cold",
@@ -856,7 +986,68 @@
               "(85.29 damage per second)",
               "+7 Intellect",
               "Requires Level 60"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
+          },
+          {
+            "name": "Noxious Shooter",
+            "itemId": 17745,
+            "value": "50.0 DPS, 1.60s, +5 Sta, +5 SP - Maraudon: Noxxion",
+            "faction": "both",
+            "dps": "50.00 DPS",
+            "quality": "q3",
+            "iLvl": 51,
+            "reqLevel": 46,
+            "stats": "57 - 107 Nature Damage, +5 Stamina, +5 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.60",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "57 - 107 Nature Damage\tSpeed 1.60",
+              "(50.00 damage per second)",
+              "+5 Stamina",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "Requires Level 46"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Noxxion",
+              "detail": "Maraudon"
+            }
+          },
+          {
+            "name": "Pyric Caduceus",
+            "itemId": 11748,
+            "value": "52.5 DPS, 1.80s, +3 Spi, +6 Fire SP - Blackrock Depths: Pyromancer Loregrain",
+            "faction": "both",
+            "dps": "52.50 DPS",
+            "quality": "q3",
+            "iLvl": 55,
+            "reqLevel": 50,
+            "stats": "67 - 122 Fire Damage, +3 Spirit, +6 Fire Spell Damage",
+            "icon": "inv_staff_13",
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "67 - 122 Fire Damage\tSpeed 1.80",
+              "(52.50 damage per second)",
+              "+3 Spirit",
+              "Equip: Increases damage done by Fire spells and effects by up to 6",
+              "Requires Level 50"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Pyromancer Loregrain",
+              "detail": "Blackrock Depths"
+            }
           }
         ],
         "lines": [
@@ -907,7 +1098,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Fast high — DPS wand"
+            "source": {
+              "kind": "craft",
+              "title": "Fast high — DPS wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Greater Eternal Wand",
@@ -929,7 +1124,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Crafted by Enchanters (Skill 285)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 285)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Torch of Light",
@@ -952,7 +1151,11 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
             ],
-            "source": "Best — in — Slot Level 60 Wand"
+            "source": {
+              "kind": "craft",
+              "title": "Best — in — Slot Level 60 Wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Crimson Shocker",
@@ -971,7 +1174,12 @@
               "Speed 1.60",
               "(58.44 damage per second)",
               "Requires Level 54"
-            ]
+            ],
+            "source": {
+              "kind": "world",
+              "title": "Leveling Item",
+              "detail": "World Drop / Quest"
+            }
           },
           {
             "name": "Bonecreeper Stylus",
@@ -992,7 +1200,12 @@
               "+4 Intellect",
               "+11 Spell Power",
               "Requires Level 57"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Darkmaster Gandling",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Stormrager",
@@ -1013,7 +1226,12 @@
               "+8 Stamina",
               "+5 Intellect",
               "Requires Level 55"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -1067,7 +1285,11 @@
               "Ranged",
               "(4.17 damage per second)"
             ],
-            "source": "A Magical Affront quest (Alliance)"
+            "source": {
+              "kind": "quest",
+              "title": "A Magical Affront quest (Alliance)",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -1115,7 +1337,11 @@
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
             ],
-            "source": "Crafted by Enchanters (Skill 10)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 10)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wisesight Wand",
@@ -1137,7 +1363,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Nightscreech drop"
+            "source": {
+              "kind": "world",
+              "title": "Nightscreech drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -1187,7 +1417,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Matriarch / drop"
+            "source": {
+              "kind": "world",
+              "title": "Matriarch / drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Windbough Wand",
@@ -1208,7 +1442,11 @@
               "(7.19 damage per second)",
               "+1 Intellect"
             ],
-            "source": "Boughs in the Wind quest"
+            "source": {
+              "kind": "quest",
+              "title": "Boughs in the Wind",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -1257,7 +1495,11 @@
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
             ],
-            "source": "Lady Moongazer drop"
+            "source": {
+              "kind": "world",
+              "title": "Lady Moongazer drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Whelpfire Wand",
@@ -1279,7 +1521,11 @@
               "(15.26 damage per second)",
               "Requires Level 15"
             ],
-            "source": "Snarlflare in Redridge"
+            "source": {
+              "kind": "world",
+              "title": "Snarlflare in Redridge",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -1327,7 +1573,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Blackbone Wand",
@@ -1347,7 +1598,12 @@
               "(37.19 damage per second)",
               "+3 Intellect",
               "Requires Level 15"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Mage's Wand",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -1369,7 +1625,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Greater Magic Wand",
@@ -1391,7 +1651,37 @@
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
             ],
-            "source": "Continue using if unavailable"
+            "source": {
+              "kind": "craft",
+              "title": "Continue using if unavailable",
+              "detail": "Profession Craft"
+            }
+          },
+          {
+            "name": "Cookie's Stirring Rod",
+            "itemId": 5198,
+            "value": "15.8 DPS, 1.30s - The Deadmines: Cookie",
+            "faction": "both",
+            "dps": "15.77 DPS",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "14 - 27 Arcane Damage",
+            "icon": "inv_wand_02",
+            "weaponType": "Wand",
+            "speed": "1.30",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "14 - 27 Arcane Damage\tSpeed 1.30",
+              "(15.77 damage per second)",
+              "Requires Level 17"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Cookie",
+              "detail": "The Deadmines"
+            }
           }
         ],
         "lines": [
@@ -1439,7 +1729,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Lesser Mystic Wand",
@@ -1461,7 +1756,11 @@
               "+4 Intellect",
               "Requires Level 26"
             ],
-            "source": "Crafted by Enchanters (Skill 155)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 155)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wand of Mana Concentration",
@@ -1483,7 +1782,11 @@
               "+4 Intellect",
               "Requires Level 27"
             ],
-            "source": "Arcanic Enigma in City of Dalaran"
+            "source": {
+              "kind": "world",
+              "title": "Arcanic Enigma in City of Dalaran",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -1505,7 +1808,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -1553,7 +1860,11 @@
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Big Game Hunter quest in STV"
+            "source": {
+              "kind": "quest",
+              "title": "Big Game Hunter",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Greater Mystic Wand",
@@ -1575,7 +1886,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Crafted by Enchanters (Skill 175)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 175)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -1625,7 +1940,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Enchanter crafted (Req lvl 30)"
+            "source": {
+              "kind": "craft",
+              "title": "Enchanter crafted (Req lvl 30)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -1647,7 +1966,38 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
+          },
+          {
+            "name": "Necrotic Wand",
+            "itemId": 7708,
+            "value": "33.2 DPS, 1.40s, +6 Heal, +3 SP - Scarlet Monastery GY: Azshir the Sleepless",
+            "faction": "both",
+            "dps": "33.21 DPS",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "35 - 65 Shadow Damage, +6 Healing, +3 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.40",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "35 - 65 Shadow Damage\tSpeed 1.40",
+              "(33.21 damage per second)",
+              "Equip: Increases healing done by up to 6 and damage by up to 3",
+              "Requires Level 31"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Azshir the Sleepless",
+              "detail": "Scarlet Monastery (Graveyard)"
+            }
           }
         ],
         "lines": [
@@ -1696,7 +2046,11 @@
               "+5 Intellect",
               "Requires Level 40"
             ],
-            "source": "Partial Mystical Notes quest"
+            "source": {
+              "kind": "quest",
+              "title": "Partial Mystical Notes",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -1718,7 +2072,11 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -1769,7 +2127,11 @@
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Crafted by Enchanters (Skill 225)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 225)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Lesser Eternal Wand",
@@ -1791,7 +2153,11 @@
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
             ],
-            "source": "Crafted by Enchanters (Req lvl 49)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 49)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -1842,7 +2208,11 @@
               "+4 Spirit",
               "Requires Level 56"
             ],
-            "source": "Rare World Drop (Req lvl 56)"
+            "source": {
+              "kind": "world",
+              "title": "Rare World Drop (Req lvl 56)",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Wand of Biting Cold",
@@ -1862,7 +2232,68 @@
               "(85.29 damage per second)",
               "+7 Intellect",
               "Requires Level 60"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
+          },
+          {
+            "name": "Noxious Shooter",
+            "itemId": 17745,
+            "value": "50.0 DPS, 1.60s, +5 Sta, +5 SP - Maraudon: Noxxion",
+            "faction": "both",
+            "dps": "50.00 DPS",
+            "quality": "q3",
+            "iLvl": 51,
+            "reqLevel": 46,
+            "stats": "57 - 107 Nature Damage, +5 Stamina, +5 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.60",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "57 - 107 Nature Damage\tSpeed 1.60",
+              "(50.00 damage per second)",
+              "+5 Stamina",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "Requires Level 46"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Noxxion",
+              "detail": "Maraudon"
+            }
+          },
+          {
+            "name": "Pyric Caduceus",
+            "itemId": 11748,
+            "value": "52.5 DPS, 1.80s, +3 Spi, +6 Fire SP - Blackrock Depths: Pyromancer Loregrain",
+            "faction": "both",
+            "dps": "52.50 DPS",
+            "quality": "q3",
+            "iLvl": 55,
+            "reqLevel": 50,
+            "stats": "67 - 122 Fire Damage, +3 Spirit, +6 Fire Spell Damage",
+            "icon": "inv_staff_13",
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "67 - 122 Fire Damage\tSpeed 1.80",
+              "(52.50 damage per second)",
+              "+3 Spirit",
+              "Equip: Increases damage done by Fire spells and effects by up to 6",
+              "Requires Level 50"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Pyromancer Loregrain",
+              "detail": "Blackrock Depths"
+            }
           }
         ],
         "lines": [
@@ -1913,7 +2344,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Fast high — DPS wand"
+            "source": {
+              "kind": "craft",
+              "title": "Fast high — DPS wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Greater Eternal Wand",
@@ -1935,7 +2370,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Crafted by Enchanters (Skill 285)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 285)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Torch of Light",
@@ -1958,7 +2397,11 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
             ],
-            "source": "Best — in — Slot Level 60 Wand"
+            "source": {
+              "kind": "craft",
+              "title": "Best — in — Slot Level 60 Wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Crimson Shocker",
@@ -1977,7 +2420,12 @@
               "Speed 1.60",
               "(58.44 damage per second)",
               "Requires Level 54"
-            ]
+            ],
+            "source": {
+              "kind": "world",
+              "title": "Leveling Item",
+              "detail": "World Drop / Quest"
+            }
           },
           {
             "name": "Bonecreeper Stylus",
@@ -1998,7 +2446,12 @@
               "+4 Intellect",
               "+11 Spell Power",
               "Requires Level 57"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Darkmaster Gandling",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Stormrager",
@@ -2019,7 +2472,12 @@
               "+8 Stamina",
               "+5 Intellect",
               "Requires Level 55"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -2073,7 +2531,11 @@
               "Ranged",
               "(4.17 damage per second)"
             ],
-            "source": "A Magical Affront quest (Alliance)"
+            "source": {
+              "kind": "quest",
+              "title": "A Magical Affront quest (Alliance)",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -2121,7 +2583,11 @@
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
             ],
-            "source": "Crafted by Enchanters (Skill 10)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 10)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wisesight Wand",
@@ -2143,7 +2609,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Nightscreech drop"
+            "source": {
+              "kind": "world",
+              "title": "Nightscreech drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -2193,7 +2663,11 @@
               "+1 Intellect",
               "Requires Level 7"
             ],
-            "source": "Matriarch / drop"
+            "source": {
+              "kind": "world",
+              "title": "Matriarch / drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Windbough Wand",
@@ -2214,7 +2688,11 @@
               "(7.19 damage per second)",
               "+1 Intellect"
             ],
-            "source": "Boughs in the Wind quest"
+            "source": {
+              "kind": "quest",
+              "title": "Boughs in the Wind",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
@@ -2263,7 +2741,11 @@
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
             ],
-            "source": "Lady Moongazer drop"
+            "source": {
+              "kind": "world",
+              "title": "Lady Moongazer drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Whelpfire Wand",
@@ -2285,7 +2767,11 @@
               "(15.26 damage per second)",
               "Requires Level 15"
             ],
-            "source": "Snarlflare in Redridge"
+            "source": {
+              "kind": "world",
+              "title": "Snarlflare in Redridge",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -2333,7 +2819,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Blackbone Wand",
@@ -2353,7 +2844,12 @@
               "(37.19 damage per second)",
               "+3 Intellect",
               "Requires Level 15"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Mage's Wand",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -2375,7 +2871,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Greater Magic Wand",
@@ -2397,7 +2897,37 @@
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
             ],
-            "source": "Continue using if unavailable"
+            "source": {
+              "kind": "craft",
+              "title": "Continue using if unavailable",
+              "detail": "Profession Craft"
+            }
+          },
+          {
+            "name": "Cookie's Stirring Rod",
+            "itemId": 5198,
+            "value": "15.8 DPS, 1.30s - The Deadmines: Cookie",
+            "faction": "both",
+            "dps": "15.77 DPS",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "14 - 27 Arcane Damage",
+            "icon": "inv_wand_02",
+            "weaponType": "Wand",
+            "speed": "1.30",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "14 - 27 Arcane Damage\tSpeed 1.30",
+              "(15.77 damage per second)",
+              "Requires Level 17"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Cookie",
+              "detail": "The Deadmines"
+            }
           }
         ],
         "lines": [
@@ -2445,7 +2975,12 @@
               "(29.00 damage per second)",
               "+3 Spirit",
               "Requires Level 18"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Dungeon Boss",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Lesser Mystic Wand",
@@ -2467,7 +3002,11 @@
               "+4 Intellect",
               "Requires Level 26"
             ],
-            "source": "Crafted by Enchanters (Skill 155)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 155)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Wand of Mana Concentration",
@@ -2489,7 +3028,11 @@
               "+4 Intellect",
               "Requires Level 27"
             ],
-            "source": "Arcanic Enigma in City of Dalaran"
+            "source": {
+              "kind": "world",
+              "title": "Arcanic Enigma in City of Dalaran",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Snapped Branch Wand",
@@ -2511,7 +3054,11 @@
               "+3 Nature Resistance",
               "Requires Level 22"
             ],
-            "source": "Level 22 World Drop"
+            "source": {
+              "kind": "world",
+              "title": "Level 22 World Drop",
+              "detail": "Zone Drop / Rare Mob"
+            }
           }
         ],
         "lines": [
@@ -2559,7 +3106,11 @@
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Big Game Hunter quest in STV"
+            "source": {
+              "kind": "quest",
+              "title": "Big Game Hunter",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Greater Mystic Wand",
@@ -2581,7 +3132,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Crafted by Enchanters (Skill 175)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 175)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -2631,7 +3186,11 @@
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
             ],
-            "source": "Enchanter crafted (Req lvl 30)"
+            "source": {
+              "kind": "craft",
+              "title": "Enchanter crafted (Req lvl 30)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -2653,7 +3212,38 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
+          },
+          {
+            "name": "Necrotic Wand",
+            "itemId": 7708,
+            "value": "33.2 DPS, 1.40s, +6 Heal, +3 SP - Scarlet Monastery GY: Azshir the Sleepless",
+            "faction": "both",
+            "dps": "33.21 DPS",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 31,
+            "stats": "35 - 65 Shadow Damage, +6 Healing, +3 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.40",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "35 - 65 Shadow Damage\tSpeed 1.40",
+              "(33.21 damage per second)",
+              "Equip: Increases healing done by up to 6 and damage by up to 3",
+              "Requires Level 31"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Azshir the Sleepless",
+              "detail": "Scarlet Monastery (Graveyard)"
+            }
           }
         ],
         "lines": [
@@ -2702,7 +3292,11 @@
               "+5 Intellect",
               "Requires Level 40"
             ],
-            "source": "Partial Mystical Notes quest"
+            "source": {
+              "kind": "quest",
+              "title": "Partial Mystical Notes",
+              "detail": "Leveling Quest Reward"
+            }
           },
           {
             "name": "Twisted Nether Wand",
@@ -2724,7 +3318,11 @@
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
             ],
-            "source": "Crafted by Enchanters (Req lvl 37)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 37)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -2775,7 +3373,11 @@
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
             ],
-            "source": "Crafted by Enchanters (Skill 225)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 225)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Lesser Eternal Wand",
@@ -2797,7 +3399,11 @@
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
             ],
-            "source": "Crafted by Enchanters (Req lvl 49)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Req lvl 49)",
+              "detail": "Profession Craft"
+            }
           }
         ],
         "lines": [
@@ -2848,7 +3454,11 @@
               "+4 Spirit",
               "Requires Level 56"
             ],
-            "source": "Rare World Drop (Req lvl 56)"
+            "source": {
+              "kind": "world",
+              "title": "Rare World Drop (Req lvl 56)",
+              "detail": "Zone Drop / Rare Mob"
+            }
           },
           {
             "name": "Wand of Biting Cold",
@@ -2868,7 +3478,68 @@
               "(85.29 damage per second)",
               "+7 Intellect",
               "Requires Level 60"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
+          },
+          {
+            "name": "Noxious Shooter",
+            "itemId": 17745,
+            "value": "50.0 DPS, 1.60s, +5 Sta, +5 SP - Maraudon: Noxxion",
+            "faction": "both",
+            "dps": "50.00 DPS",
+            "quality": "q3",
+            "iLvl": 51,
+            "reqLevel": 46,
+            "stats": "57 - 107 Nature Damage, +5 Stamina, +5 Spell Power",
+            "icon": "inv_wand_04",
+            "weaponType": "Wand",
+            "speed": "1.60",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "57 - 107 Nature Damage\tSpeed 1.60",
+              "(50.00 damage per second)",
+              "+5 Stamina",
+              "Equip: Increases damage and healing done by magical spells and effects by up to 5",
+              "Requires Level 46"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Noxxion",
+              "detail": "Maraudon"
+            }
+          },
+          {
+            "name": "Pyric Caduceus",
+            "itemId": 11748,
+            "value": "52.5 DPS, 1.80s, +3 Spi, +6 Fire SP - Blackrock Depths: Pyromancer Loregrain",
+            "faction": "both",
+            "dps": "52.50 DPS",
+            "quality": "q3",
+            "iLvl": 55,
+            "reqLevel": 50,
+            "stats": "67 - 122 Fire Damage, +3 Spirit, +6 Fire Spell Damage",
+            "icon": "inv_staff_13",
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "lines": [
+              "Binds when picked up",
+              "Ranged\tWand",
+              "67 - 122 Fire Damage\tSpeed 1.80",
+              "(52.50 damage per second)",
+              "+3 Spirit",
+              "Equip: Increases damage done by Fire spells and effects by up to 6",
+              "Requires Level 50"
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Pyromancer Loregrain",
+              "detail": "Blackrock Depths"
+            }
           }
         ],
         "lines": [
@@ -2919,7 +3590,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Fast high — DPS wand"
+            "source": {
+              "kind": "craft",
+              "title": "Fast high — DPS wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Greater Eternal Wand",
@@ -2941,7 +3616,11 @@
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
             ],
-            "source": "Crafted by Enchanters (Skill 285)"
+            "source": {
+              "kind": "craft",
+              "title": "Crafted by Enchanters (Skill 285)",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Torch of Light",
@@ -2964,7 +3643,11 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
             ],
-            "source": "Best — in — Slot Level 60 Wand"
+            "source": {
+              "kind": "craft",
+              "title": "Best — in — Slot Level 60 Wand",
+              "detail": "Profession Craft"
+            }
           },
           {
             "name": "Crimson Shocker",
@@ -2983,7 +3666,12 @@
               "Speed 1.60",
               "(58.44 damage per second)",
               "Requires Level 54"
-            ]
+            ],
+            "source": {
+              "kind": "world",
+              "title": "Leveling Item",
+              "detail": "World Drop / Quest"
+            }
           },
           {
             "name": "Bonecreeper Stylus",
@@ -3004,7 +3692,12 @@
               "+4 Intellect",
               "+11 Spell Power",
               "Requires Level 57"
-            ]
+            ],
+            "source": {
+              "kind": "dungeon",
+              "title": "Darkmaster Gandling",
+              "detail": "Dungeon Boss Drop"
+            }
           },
           {
             "name": "Stormrager",
@@ -3025,7 +3718,12 @@
               "+8 Stamina",
               "+5 Intellect",
               "Requires Level 55"
-            ]
+            ],
+            "source": {
+              "kind": "quest",
+              "title": "Quest Reward",
+              "detail": "Leveling Quest Reward"
+            }
           }
         ],
         "lines": [
