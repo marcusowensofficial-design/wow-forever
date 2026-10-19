@@ -149,10 +149,8 @@ for (const cls of expectedClasses) {
   const cData = progData.weapons[cls];
   const total = cData.levels.length;
   for (const f of factions) {
-    const isPaladin = cls === 'paladin';
     const isShaman = cls === 'shaman';
     let eff = f;
-    if (isPaladin && eff === 'horde') eff = 'alliance';
     if (isShaman && eff === 'alliance') eff = 'horde';
 
     let count = 0;
@@ -229,15 +227,15 @@ for (const wName of dataminedWeapons) {
 }
 console.log(`✓ All ${dataminedWeapons.length} checked Wowhead Forever datamined leveling weapons verified in dataset`);
 
-// 11. Test Faction-Exclusive Class Button Protection
+// 11. Test Faction Filter Configurations (Paladin supports Undead Horde; Shaman Horde-exclusive)
 const paladinHtml = mod.renderProgressionSubtab('weapons', { id: 'paladin', name: 'PALADIN' });
-if (!paladinHtml.includes('disabled') || !paladinHtml.includes('Paladins are exclusive to the Alliance')) {
-  throw new Error('Paladin weapons UI failed to disable invalid Horde faction filter button');
+if (paladinHtml.includes('disabled') && paladinHtml.includes('Paladins are exclusive to the Alliance')) {
+  throw new Error('Paladin weapons UI erroneously disabled Horde faction filter button (Undead Paladins exist in Forever)');
 }
 const shamanHtml = mod.renderProgressionSubtab('weapons', { id: 'shaman', name: 'SHAMAN' });
 if (!shamanHtml.includes('disabled') || !shamanHtml.includes('Shamans are exclusive to the Horde')) {
   throw new Error('Shaman weapons UI failed to disable invalid Alliance faction filter button');
 }
-console.log('✓ Faction-exclusive classes (Paladin/Shaman) correctly disable opposing faction filters');
+console.log('✓ Faction filters correctly configured (Paladin supports Horde Undead; Shaman Horde-exclusive)');
 
 console.log('\n✓ ALL CLASS PROGRESSION INTEGRITY CHECKS PASSED PERFECTLY!\n');

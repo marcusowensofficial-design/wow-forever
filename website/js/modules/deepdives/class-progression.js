@@ -552,11 +552,9 @@
       ? data.healingLevels
       : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
-    // Faction restrictions for faction-exclusive classes
-    const isPaladin = classId === 'paladin';
+    // Faction restrictions for faction-exclusive classes (Shamans are Horde-exclusive; Paladins support Alliance and Undead Horde)
     const isShaman = classId === 'shaman';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
-    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
 
     // Build timeline items with faction awareness
@@ -773,7 +771,7 @@
             <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance items"'}>
               <span class="faction-icon">${FACTION_ICONS.alliance}</span> Alliance
             </button>
-            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde items"'}>
+            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" aria-label="Filter to Horde items">
               <span class="faction-icon">${FACTION_ICONS.horde}</span> Horde
             </button>
           </div>

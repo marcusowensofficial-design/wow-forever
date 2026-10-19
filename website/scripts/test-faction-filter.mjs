@@ -15,10 +15,8 @@ for (const [cls, cData] of Object.entries(progData)) {
   console.log(`\n=== Class: ${cls} (Total steps: ${totalSteps}) ===`);
 
   for (const f of factions) {
-    const isPaladin = cls === 'paladin';
     const isShaman = cls === 'shaman';
     let effectiveFaction = f;
-    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
 
     const visibleSteps = [];
