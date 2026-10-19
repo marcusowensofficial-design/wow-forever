@@ -19,6 +19,11 @@
   let activeMacroCategory = 'all';
   let activeMacroSearchQuery = '';
 
+  const FACTION_ICONS = {
+    alliance: `<img src="images/icons/faction-alliance.jpg" class="progression-faction-crest" alt="Alliance" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" />`,
+    horde: `<img src="images/icons/faction-horde.jpg" class="progression-faction-crest" alt="Horde" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" />`
+  };
+
   function getIconUrl(icon) {
     const clean = (icon || 'inv_misc_questionmark').replace(/\.(jpg|png|webp)$/i, '');
     return `https://wow.zamimg.com/images/wow/icons/medium/${clean}.jpg`;
@@ -540,9 +545,9 @@
       const wowheadUrl = displayStep.itemId ? `https://www.wowhead.com/forever/item=${displayStep.itemId}` : '#';
       const primaryFaction = displayStep.faction || 'both';
       const factionBadgeHtml = primaryFaction === 'alliance'
-        ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">🦁 Alliance</span>`
+        ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">${FACTION_ICONS.alliance} Alliance</span>`
         : primaryFaction === 'horde'
-        ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️ Horde</span>`
+        ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde} Horde</span>`
         : '';
 
       return `
@@ -604,9 +609,9 @@
                     const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
                     const altFaction = alt.faction || 'both';
                     const altBadge = altFaction === 'alliance'
-                      ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">🦁</span>`
+                      ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">${FACTION_ICONS.alliance}</span>`
                       : altFaction === 'horde'
-                      ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️</span>`
+                      ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde}</span>`
                       : '';
                     const altStats = alt.stats || alt.value || '';
                     const isAltHeal = /healing\s+(?:done\s+by\s+(?:up\s+to\s+)?)?(\d+)/i.test(altStats);
@@ -663,10 +668,10 @@
               <span class="faction-icon">🌐</span> All
             </button>
             <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance items"'}>
-              <span class="faction-icon">🦁</span> Alliance
+              <span class="faction-icon">${FACTION_ICONS.alliance}</span> Alliance
             </button>
             <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde items"'}>
-              <span class="faction-icon">⚔️</span> Horde
+              <span class="faction-icon">${FACTION_ICONS.horde}</span> Horde
             </button>
           </div>
 
@@ -873,72 +878,81 @@
   }
 
   // Setup Event Listeners
-  function setupEventListeners() {
+  function setupEventListeners(scope = document, onUpdate = null) {
+    const root = scope || document;
+    const triggerUpdate = () => {
+      if (typeof onUpdate === 'function') {
+        onUpdate();
+      } else {
+        window.renderDeepDiveContent?.();
+      }
+    };
+
     // 1. Spellbook filters
-    document.querySelectorAll('#spellbook-tier-chips .progression-chip').forEach(btn => {
+    root.querySelectorAll('#spellbook-tier-chips .progression-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         activeSpellFilterLevel = btn.getAttribute('data-tier');
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
-    const spellSearchInput = document.getElementById('spellbook-search-input');
+    const spellSearchInput = root.querySelector ? root.querySelector('#spellbook-search-input') : document.getElementById('spellbook-search-input');
     if (spellSearchInput) {
       spellSearchInput.addEventListener('input', (e) => {
         hideWeaponTooltip();
         activeSpellSearchQuery = e.target.value;
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     }
 
-    const clearSpellSearch = document.getElementById('btn-clear-spell-search');
+    const clearSpellSearch = root.querySelector ? root.querySelector('#btn-clear-spell-search') : document.getElementById('btn-clear-spell-search');
     if (clearSpellSearch) {
       clearSpellSearch.addEventListener('click', () => {
         hideWeaponTooltip();
         activeSpellSearchQuery = '';
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     }
 
     // 2. Weapon & Item controls (Faction filter & Track buttons)
-    document.querySelectorAll('#weapon-faction-toggle .faction-chip').forEach(btn => {
+    root.querySelectorAll('#weapon-faction-toggle .faction-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         activeWeaponFaction = btn.getAttribute('data-faction') || 'all';
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
-    document.querySelectorAll('#wand-faction-toggle .faction-chip').forEach(btn => {
+    root.querySelectorAll('#wand-faction-toggle .faction-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         activeWandFaction = btn.getAttribute('data-faction') || 'all';
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
-    document.querySelectorAll('#offhand-faction-toggle .faction-chip').forEach(btn => {
+    root.querySelectorAll('#offhand-faction-toggle .faction-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         activeOffhandFaction = btn.getAttribute('data-faction') || 'all';
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
-    document.querySelectorAll('.progression-track-btn').forEach(btn => {
+    root.querySelectorAll('.progression-track-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         const track = btn.getAttribute('data-track');
         const key = btn.getAttribute('data-key') || 'weapons';
         const cId = btn.getAttribute('data-class') || window.selectedDeepDiveClassId || 'hunter';
         activeWeaponTrack[`${cId}_${key}`] = track;
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
     // Weapon progression rich mouseover tooltips
-    document.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
+    root.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
       el.addEventListener('mouseenter', (e) => showWeaponTooltip(e, el));
       el.addEventListener('mousemove', (e) => moveWeaponTooltip(e));
       el.addEventListener('mouseleave', hideWeaponTooltip);
@@ -954,32 +968,32 @@
     }
 
     // 3. Macro category filters & copy button
-    document.querySelectorAll('#macro-category-chips .progression-chip').forEach(btn => {
+    root.querySelectorAll('#macro-category-chips .progression-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         activeMacroCategory = btn.getAttribute('data-cat');
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     });
 
-    const macroSearchInput = document.getElementById('macro-search-input');
+    const macroSearchInput = root.querySelector ? root.querySelector('#macro-search-input') : document.getElementById('macro-search-input');
     if (macroSearchInput) {
       macroSearchInput.addEventListener('input', (e) => {
         activeMacroSearchQuery = e.target.value;
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     }
 
-    const clearMacroSearch = document.getElementById('btn-clear-macro-search');
+    const clearMacroSearch = root.querySelector ? root.querySelector('#btn-clear-macro-search') : document.getElementById('btn-clear-macro-search');
     if (clearMacroSearch) {
       clearMacroSearch.addEventListener('click', () => {
         activeMacroSearchQuery = '';
-        window.renderDeepDiveContent?.();
+        triggerUpdate();
       });
     }
 
     // Copy macro action
-    document.querySelectorAll('.btn-copy-macro').forEach(btn => {
+    root.querySelectorAll('.btn-copy-macro').forEach(btn => {
       btn.addEventListener('click', async () => {
         const code = btn.getAttribute('data-code');
         if (code) {
@@ -1001,7 +1015,7 @@
     });
 
     // 4. Milestone persistent checkboxes
-    document.querySelectorAll('.milestone-checkbox').forEach(cb => {
+    root.querySelectorAll('.milestone-checkbox').forEach(cb => {
       const key = cb.getAttribute('data-milestone-key');
       const saved = localStorage.getItem(`wow_milestone_${key}`);
       if (saved === '1') cb.checked = true;

@@ -120,6 +120,13 @@ function initNavigation() {
             window.TalentTreeModule.renderStandalone('talents-standalone-mount', 'warrior');
           }
         }
+      } else if (targetTab === 'weapons') {
+        if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.init === 'function') {
+          const mount = document.getElementById('weapons-hub-mount');
+          if (!mount || !mount.hasChildNodes() || mount.children.length === 0) {
+            window.WOW_WEAPONS_HUB.init();
+          }
+        }
       }
 
       if (!isRestoringHistoryState) {
@@ -222,6 +229,10 @@ function initNavigation() {
       } else if (tabName === 'bis') {
         if (typeof window.handleBiSHashRouting === 'function') {
           window.handleBiSHashRouting();
+        }
+      } else if (tabName === 'weapons') {
+        if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.selectClass === 'function') {
+          window.WOW_WEAPONS_HUB.selectClass(subRoute || 'warrior', subSubRoute || null, { noPushState: true });
         }
       } else if (subRoute) {
         const safeSubSelector = window.CSS && CSS.escape ? CSS.escape(subRoute) : subRoute;

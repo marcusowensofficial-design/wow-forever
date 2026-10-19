@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Interactive Class & Race Planner
   if (typeof initClassRacePlanner === 'function') initClassRacePlanner();
 
-  // 6. Class Deep Dives
+  // 6. Class Deep Dives & Weapons Hub
   if (typeof initClassDeepDives === 'function') initClassDeepDives();
+  if (typeof initWeaponsHub === 'function') initWeaponsHub();
 
   // 7. Interactive Beta Tools & Reverse-Engineered Features
   if (typeof initBiSLists === 'function') initBiSLists();

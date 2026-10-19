@@ -302,6 +302,19 @@
               <span class="nav-tile-label">Class Deep<br>Dives</span>
             </button>
 
+            <button type="button" class="nav-tab-btn" data-tab="weapons" title="Level 1 to 60 Weapon Progression">
+              <span class="nav-tile-icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.5 17.5 3 6V3h3l11.5 11.5" stroke="#cbd5e1" fill="rgba(255,255,255,0.06)"/>
+                  <path d="m13 19 6 2 2-6-3.5-3.5" fill="url(#icon-steel-glow)" stroke="#fef08a"/>
+                  <path d="m16 8 5-5M3 21l5-5" stroke="#f59e0b" stroke-width="2"/>
+                  <circle cx="4" cy="20" r="1.5" fill="#fef08a"/>
+                  <circle cx="20" cy="4" r="1.5" fill="#fef08a"/>
+                </svg>
+              </span>
+              <span class="nav-tile-label">Weapon<br>Paths</span>
+            </button>
+
             <button type="button" class="nav-tab-btn" data-tab="changes" title="What's Changed from Vanilla / Classic">
               <span class="nav-tile-icon">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -1738,6 +1751,38 @@
       <!-- Main Deep Dive Content Area -->
       <div id="deepdive-content-container" class="deepdive-content-container">
         <!-- Dynamically populated by js/app.js -->
+      </div>
+    </section>
+
+    <!-- TAB: 1–60 WEAPON PROGRESSION HUB -->
+    <section id="tab-weapons" class="tab-content" aria-label="1–60 Weapon Upgrade Paths">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>⚔️</span> Level 1 to 60 Weapon Upgrade Paths</h2>
+          <p class="section-subtext">Comprehensive leveling weapon progression from Level 1 to 60 across all 9 classes. Explore optimal quest rewards, dungeon boss drops, vendor purchases, and craftable weapon spikes. Synchronized 1:1 with Class Deep Dives.</p>
+        </div>
+        <div class="deepdive-source-pill">
+          <span>🎯 Level 1–60 Progression Hub</span>
+        </div>
+      </div>
+
+      <!-- Class Selector Chips Bar -->
+      <div class="weapons-class-selector-wrapper">
+        <div id="weapons-class-chips" class="selector-chips-row">
+          <!-- Dynamically populated by weapons-hub.js -->
+        </div>
+      </div>
+
+      <!-- Category Selector Chips Bar (Weapons / Wands / Shields / Off-Hands) -->
+      <div class="weapons-category-bar" id="weapons-category-container" style="display: none;">
+        <div id="weapons-category-chips" class="weapons-category-chips-row">
+          <!-- Dynamically populated when class has multiple progression types -->
+        </div>
+      </div>
+
+      <!-- Main Weapon Progression Mount Container -->
+      <div id="weapons-hub-mount" class="weapons-hub-mount">
+        <!-- Rendered via window.WOW_DEEPDIVES_PROGRESSION.renderProgressionSubtab() -->
       </div>
     </section>
 
@@ -3812,6 +3857,7 @@
   <script defer src="js/modules/deepdives/deepdives-builds.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/class-progression.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/weapons-hub.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/tierlist.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/downranking.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis/bis-modal.js?v=1.60.1-70425"></script>
