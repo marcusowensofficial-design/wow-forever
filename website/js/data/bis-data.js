@@ -2,10 +2,9 @@
  * World of Warcraft: Forever - Beta BiS (Best in Slot) Master Dataset
  * Level 30 Phase 2 Beta Cap • Build 1.60.1.70425 (October 15, 2026)
  * 
- * Contains FULL comprehensive BiS data extracted from Beta Build 70425 across ALL 9 Classes & 38 Specs:
+ * Contains FULL comprehensive BiS data extracted from Beta Build 70425 across ALL 9 Classes & Specs:
  * - Equipment paper-doll slots (Head, Neck, Shoulder, Back, Chest, Wrist, Hands, Waist, Legs, Feet, Fingers, Trinkets, Weapons, Ranged/Relic)
- * - Complete item rankings (#1, #2, #3, #4, #5, #6, #7...) with exact drop sources (Dalaran, ES4, RFK, BFD, Stockade, Gnomeregan, SM Graveyard, Crafting, Quests, World Drops)
- * - Faction-specific availability (Alliance vs Horde drops & quest differences)
+ * - Complete item rankings with exact drop sources (Dalaran, ES4, RFK, Gnomeregan, BFD, SFK, Deadmines)
  * - Stat budgets, enchant recommendations, and Level 30 talent specs (+5 points from 'Talented' Legacy Perk)
  * - Pre-fight consumables (Elixirs, Potions, Foods, Scrolls, Ammo, Campfire buffs)
  */
@@ -14,9 +13,9 @@ const WOW_BIS_METADATA = {
   "version": "1.60.1.70425",
   "title": "Level 30 Pre-Raid & Dungeon BiS (Beta Build 1.60.1.70425)",
   "phase": "Beta Phase 2 (Level 30 Cap • Final Week)",
-  "lastUpdated": "October 15, 2026",
+  "lastUpdated": "October 18, 2026",
   "sourceNotice": "Curated directly from Beta Build 70425 discovering logs, itemcache, and Official Game Tables.",
-  "totalSpecs": 38,
+  "totalSpecs": 39,
   "totalClasses": 9
 };
 
@@ -4509,6 +4508,4763 @@ const WOW_BIS_DATA = {
                   "(28.9 damage per second)",
                   "+12 Strength",
                   "+8 Stamina"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "ranged",
+            "slotName": "Ranged",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q2",
+                "itemId": "17687",
+                "tipId": "17687",
+                "name": "Master Hunter's Rifle",
+                "icon": "inv_weapon_rifle_05.jpg",
+                "side": "both",
+                "source": "Quest: Big Game Hunter level 43 in Classic, from level 28 Big Game Hunter, after Nesingwary&#x27;s three Mastery chains, Stranglethorn Vale King Bangalash is a level 43 elite: very hard at level 30",
+                "sourceDetails": [
+                  "Quest: Big Game Hunter level 43 in Classic, from level 28 Big Game Hunter, after Nesingwary&#x27;s three Mastery chains, Stranglethorn Vale King Bangalash is a level 43 elite: very hard at level 30"
+                ],
+                "stats": "+4 Strength, +4 Agility",
+                "ilvl": 43,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Ranged\tGun",
+                  "35 - 66 Damage\tSpeed 2.60",
+                  "(19.4 damage per second)",
+                  "+4 Strength",
+                  "+4 Agility"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "287068",
+                "tipId": "287068",
+                "name": "Excavated Dagger",
+                "icon": "inv_weapon_shortblade_19.jpg",
+                "side": "both",
+                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
+                "sourceDetails": [
+                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
+                ],
+                "stats": "+4 Strength, +4 Agility",
+                "ilvl": 33,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Thrown",
+                  "Damage set by hand\tSpeed 1.80",
+                  "+4 Strength",
+                  "+4 Agility",
+                  "Requires Level 28",
+                  "Sell Price: 53s 81c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "273033",
+                "tipId": "273033",
+                "name": "Gravespike Repeater",
+                "icon": "inv_weapon_crossbow_06.jpg",
+                "side": "both",
+                "source": "Atrexis the Grave Knight, City of Dalaran",
+                "sourceDetails": [
+                  "Atrexis the Grave Knight, City of Dalaran"
+                ],
+                "stats": "Equip: +8 Attack Power, Equip: +9 Attack Power Vs Humanoids",
+                "ilvl": 31,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Ranged\tCrossbow",
+                  "28 - 43 Damage\tSpeed 2.30",
+                  "(15.4 damage per second)",
+                  "Requires Level 26",
+                  "Equip: +8 Attack Power",
+                  "Equip: +9 Attack Power Vs Humanoids",
+                  "Sell Price: 45s 74c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "9456",
+                "tipId": "9456",
+                "name": "Glass Shooter",
+                "icon": "inv_weapon_rifle_02.jpg",
+                "side": "both",
+                "source": "Dark Iron Ambassador, Gnomeregan 32.46% in Classic",
+                "sourceDetails": [
+                  "Dark Iron Ambassador, Gnomeregan 32.46% in Classic"
+                ],
+                "stats": "Equip: +12 Attack Power.",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Ranged\tGun",
+                  "36 - 68 Damage\tSpeed 2.90",
+                  "(17.9 damage per second)",
+                  "Equip: +12 Attack Power.",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q3",
+                "itemId": "2098",
+                "tipId": "2098",
+                "name": "Double-barreled Shotgun",
+                "icon": "inv_weapon_rifle_08.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+3 Strength, +3 Agility",
+                "ilvl": 27,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Ranged\tGun",
+                  "21 - 40 Damage\tSpeed 2.30",
+                  "(13.3 damage per second)",
+                  "+3 Strength",
+                  "+3 Agility",
+                  "Requires Level 22"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "274748",
+                "tipId": "274748",
+                "name": "Booty Bay Bruiser's Buckshot",
+                "icon": "inv_weapon_rifle_02.jpg",
+                "side": "both",
+                "source": "Sold by Gezzy Gunkgear in Booty Bay At Honored with Booty Bay",
+                "sourceDetails": [
+                  "Sold by Gezzy Gunkgear in Booty Bay At Honored with Booty Bay"
+                ],
+                "stats": "+3 Stamina, Equip: +9 Attack Power.",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Ranged\tGun",
+                  "35 - 66 Damage\tSpeed 2.80",
+                  "(18.0 damage per second)",
+                  "+3 Stamina",
+                  "Equip: +9 Attack Power.",
+                  "Requires Level 30",
+                  "Requires Booty Bay - Honored"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 7,
+                "quality": "q3",
+                "itemId": "273029",
+                "tipId": "273029",
+                "name": "Golemsight Long Gun",
+                "icon": "inv_musket_02.jpg",
+                "side": "both",
+                "source": "Relic Guardian, Excavation Site: Wetlands",
+                "sourceDetails": [
+                  "Relic Guardian, Excavation Site: Wetlands"
+                ],
+                "stats": "",
+                "ilvl": null,
+                "armor": null,
+                "lines": [
+                  "Binds when picked up",
+                  "Ranged\tGun",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              }
+            ]
+          }
+        ],
+        "enchants": [
+          {
+            "slot": "Neck",
+            "effect": "Enchanted: Strength +5",
+            "source": "Enchant Necklace - Strength (Enchanting 210) F ormula sold by Alynsia in Redridge Mountains and Beneris in The Barrens for 120 Merchant’s Favor .",
+            "materials": "4 4 10 4 4",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Back",
+            "effect": "Enchanted: Agility +3",
+            "source": "Enchant Cloak - Minor Agility (Enchanting 110) F ormula sold by Dalria in Ashenvale and Kulwia in Stonetalon Mountains .",
+            "materials": "",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Chest",
+            "effect": "Enchanted: All Stats +2",
+            "source": "Enchant Chest - Lesser Stats (Enchanting 200) T aught by the trainer .",
+            "materials": "",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Wrist",
+            "effect": "Enchanted: Strength +5",
+            "source": "Enchant Bracer - Strength (Enchanting 180) T aught by the trainer .",
+            "materials": "",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Hands",
+            "effect": "Enchanted: Strength +7",
+            "source": "Enchant Gloves - Strength (Enchanting 225) T aught by the trainer .",
+            "materials": "2",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Legs",
+            "effect": "Enchanted: Attack Power +6 and Armor +24",
+            "source": "Forceful Heavy Armor Kit (Leatherworking 135) P attern sold by Saenorion in Darnassus and Mahu in Thunder Bluff .",
+            "materials": "2 2",
+            "icon": "inv_misc_armorkit_16.jpg"
+          },
+          {
+            "slot": "Feet",
+            "effect": "Enchanted: Agility +4",
+            "source": "Enchant Boots - Lesser Agility (Enchanting 160) T aught by the trainer .",
+            "materials": "",
+            "icon": "trade_engraving.jpg"
+          },
+          {
+            "slot": "Two-hand weapon",
+            "effect": "Enchanted: Weapon Damage +6",
+            "source": "Enchant 2H Weapon - Impact (Enchanting 200) T aught by the trainer .",
+            "materials": "2",
+            "icon": "trade_engraving.jpg"
+          }
+        ],
+        "consumables": [
+          {
+            "category": "Elixir",
+            "name": "Elixir of Ogre Strength",
+            "itemId": "3391",
+            "effect": "Use: Increases Strength by 8 for 1 hr.",
+            "source": "Alchemy (150)",
+            "materials": "",
+            "icon": "inv_potion_57.jpg"
+          },
+          {
+            "category": "Food",
+            "name": "Bear Brisket",
+            "itemId": "250074",
+            "effect": "Use: Restores 162 health over 27 sec. Must remain seated while eating. If you spend at least 10 sec eating, you will become well fed and gain 10 Strength for 15 min. Additionally, experience gained from kills is increased by 5%.",
+            "source": "Cooking (175) Recipe drops from Ashenvale Bear, Ashenvale",
+            "materials": "2 3",
+            "icon": "inv_misc_food_47.jpg"
+          },
+          {
+            "category": "Scroll",
+            "name": "Scroll of Strength",
+            "itemId": "954",
+            "effect": "Use: Increases the target's Strength by 5 for 30 min.",
+            "source": "Sold by Adair Gilroy, Stormwind City Alliance, a few at a time, in Classic Sold by Salazar Bloch, Undercity Horde, a few at a time, in Classic",
+            "materials": "",
+            "icon": "inv_scroll_02.jpg"
+          },
+          {
+            "category": "On the weapon",
+            "name": "Solid Sharpening Stone",
+            "itemId": "7964",
+            "effect": "Use: Increase sharp weapon damage by 6 for 30 minutes.",
+            "source": "Blacksmithing",
+            "materials": "",
+            "icon": "inv_stone_sharpeningstone_04.jpg"
+          },
+          {
+            "category": "On the weapon",
+            "name": "Solid Weightstone",
+            "itemId": "7965",
+            "effect": "Use: Increase the damage of a blunt weapon by 6 for 30 minutes.",
+            "source": "Blacksmithing",
+            "materials": "",
+            "icon": "inv_stone_weightstone_04.jpg"
+          },
+          {
+            "category": "Potion",
+            "name": "Frenzy Potion",
+            "itemId": "250940",
+            "effect": "Use: Increases Attack Power by 28 for 30 sec.",
+            "source": "Alchemy (140)",
+            "materials": "2 2",
+            "icon": "inv_potiond_3.jpg"
+          },
+          {
+            "category": "Potion",
+            "name": "Greater Healing Potion",
+            "itemId": "1710",
+            "effect": "Use: Restores 455 to 585 health.",
+            "source": "First Aid (155) Manual: nobody has found it in the beta yet",
+            "materials": "3",
+            "icon": "inv_potion_52.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fury",
+        "name": "Fury PvE (Dual-Wield)",
+        "role": "Melee DPS",
+        "icon": "ability_warrior_innerrage.jpg",
+        "description": "Premier Level 30 dual-wield physical DPS build utilizing Flurry, Enrage, and Blood Craze with fast off-hands and hard-hitting main hands.",
+        "talents": {
+          "points": "26 Points (Lvl 30 + Talented)",
+          "summary": "26 points: 21 from level 30, 5 from Talented",
+          "buildUrl": "/talents/warrior?b=3030521312231--&l=30&tl=5"
+        },
+        "statSummary": {
+          "alliance": {
+            "hp": "1334",
+            "mana": null,
+            "armor": "1263",
+            "str": "174",
+            "agi": "128",
+            "sta": "114",
+            "int": "26",
+            "spi": "33",
+            "ap": "+58",
+            "hit": null,
+            "crit": null,
+            "sp": null,
+            "shadowRes": "+5",
+            "natureRes": null,
+            "fireRes": null,
+            "frostRes": null,
+            "arcaneRes": null
+          },
+          "horde": {
+            "hp": "1354",
+            "mana": null,
+            "armor": "1185",
+            "str": "170",
+            "agi": "126",
+            "sta": "116",
+            "int": "23",
+            "spi": "35",
+            "ap": "+74",
+            "hit": null,
+            "crit": null,
+            "sp": null,
+            "shadowRes": "+5",
+            "natureRes": null,
+            "fireRes": null,
+            "frostRes": null,
+            "arcaneRes": null
+          }
+        },
+        "doll": {
+          "alliance": {
+            "head": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "7413",
+              "tipId": "741312727",
+              "name": "Infiltrator Cap of the Tiger",
+              "icon": "inv_helmet_15.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+              "sourceDetails": [
+                "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+              ],
+              "stats": "+9 Strength, +9 Agility",
+              "ilvl": 33,
+              "armor": 80,
+              "lines": [
+                "Binds when equipped",
+                "Head\tLeather",
+                "80 Armor",
+                "+9 Strength",
+                "+9 Agility",
+                "Requires Level 28",
+                "Sell Price: 21s 57c"
+              ],
+              "mats": ""
+            },
+            "neck": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "7731",
+              "tipId": "7731",
+              "name": "Ghostshard Talisman",
+              "icon": "inv_jewelry_necklace_06.jpg",
+              "side": "both",
+              "source": "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic",
+              "sourceDetails": [
+                "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic"
+              ],
+              "stats": "+9 Stamina, Equip: +14 Attack Power., Equip: +12 Attack Power against Undead.",
+              "ilvl": 35,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Neck",
+                "+9 Stamina",
+                "Equip: +14 Attack Power.",
+                "Equip: +12 Attack Power against Undead.",
+                "Requires Level 30"
+              ],
+              "mats": ""
+            },
+            "shoulder": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "2278",
+              "tipId": "2278",
+              "name": "Forest Tracker Epaulets",
+              "icon": "inv_shoulder_18.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house",
+              "sourceDetails": [
+                "World drop, sold at the auction house"
+              ],
+              "stats": "+5 Strength, +11 Agility",
+              "ilvl": 31,
+              "armor": 78,
+              "lines": [
+                "Binds when equipped",
+                "Shoulder\tLeather",
+                "78 Armor",
+                "+5 Strength",
+                "+11 Agility",
+                "Requires Level 26"
+              ],
+              "mats": ""
+            },
+            "back": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "14593",
+              "tipId": "14593",
+              "name": "Hawkeye's Cloak",
+              "icon": "inv_misc_cape_03.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house",
+              "sourceDetails": [
+                "World drop, sold at the auction house"
+              ],
+              "stats": "+3 Strength, +7 Agility",
+              "ilvl": 35,
+              "armor": 23,
+              "lines": [
+                "Binds when equipped",
+                "Back",
+                "23 Armor",
+                "+3 Strength",
+                "+7 Agility",
+                "Requires Level 30"
+              ],
+              "mats": ""
+            },
+            "chest": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "1488",
+              "tipId": "1488",
+              "name": "Avenger's Armor",
+              "icon": "inv_chest_chain.jpg",
+              "side": "both",
+              "source": "Trash mobs, Razorfen Kraul 0.03% in Classic",
+              "sourceDetails": [
+                "Trash mobs, Razorfen Kraul 0.03% in Classic"
+              ],
+              "stats": "+15 Strength, +6 Stamina",
+              "ilvl": 31,
+              "armor": 221,
+              "lines": [
+                "Binds when equipped",
+                "Chest\tMail",
+                "221 Armor",
+                "+15 Strength",
+                "+6 Stamina",
+                "Requires Level 26"
+              ],
+              "mats": ""
+            },
+            "wrist": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "9428",
+              "tipId": "942813018",
+              "name": "Unearthed Bands of the Tiger",
+              "icon": "inv_bracer_06.jpg",
+              "side": "both",
+              "source": "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name",
+              "sourceDetails": [
+                "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name"
+              ],
+              "stats": "+6 Strength, +6 Agility, Equip: +8 Attack Power",
+              "ilvl": 35,
+              "armor": 49,
+              "lines": [
+                "Binds when equipped",
+                "Wrist\tLeather",
+                "49 Armor",
+                "+6 Strength",
+                "+6 Agility",
+                "Requires Level 30",
+                "Equip: +8 Attack Power",
+                "Sell Price: 21s 87c"
+              ],
+              "mats": ""
+            },
+            "hands": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "4107",
+              "tipId": "4107",
+              "name": "Tiger Hunter Gloves",
+              "icon": "inv_gauntlets_04.jpg",
+              "side": "both",
+              "source": "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group",
+              "sourceDetails": [
+                "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group"
+              ],
+              "stats": "+7 Strength, +8 Agility",
+              "ilvl": 37,
+              "armor": 65,
+              "lines": [
+                "Binds when picked up",
+                "Hands\tLeather",
+                "65 Armor",
+                "+7 Strength",
+                "+8 Agility"
+              ],
+              "mats": ""
+            },
+            "waist": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "250556",
+              "tipId": "250556",
+              "name": "Officer's Belt",
+              "icon": "inv_belt_20.jpg",
+              "side": "both",
+              "source": "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150",
+              "sourceDetails": [
+                "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150"
+              ],
+              "stats": "+10 Strength, +6 Agility, +7 Stamina",
+              "ilvl": 35,
+              "armor": 132,
+              "lines": [
+                "Binds when picked up",
+                "Waist\tMail",
+                "132 Armor",
+                "+10 Strength",
+                "+6 Agility",
+                "+7 Stamina",
+                "Requires Level 30"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"3575\"><img src=\"/icon/inv_ingot_iron.jpg\" alt=\"Iron Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"3486\"><img src=\"/icon/inv_stone_grindingstone_03.jpg\" alt=\"Heavy Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1529\"><img src=\"/icon/inv_misc_gem_stone_01.jpg\" alt=\"Jade\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251408\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Officer&#x27;s Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+            },
+            "legs": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "250523",
+              "tipId": "250523",
+              "name": "Veteran's Silvered Chain Leggings",
+              "icon": "inv_pants_mail_05.jpg",
+              "side": "both",
+              "source": "Blacksmithing (125) Only its maker can wear it",
+              "sourceDetails": [
+                "Blacksmithing (125) Only its maker can wear it"
+              ],
+              "stats": "+11 Strength, +7 Agility, +8 Stamina",
+              "ilvl": 30,
+              "armor": 191,
+              "lines": [
+                "Binds when picked up",
+                "Legs\tMail",
+                "191 Armor",
+                "+11 Strength",
+                "+7 Agility",
+                "+8 Stamina",
+                "Requires Level 25"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>20</b></span><span class=\"bis-mat\" data-tip=\"3478\"><img src=\"/icon/inv_stone_grindingstone_02.jpg\" alt=\"Coarse Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251375\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Veteran&#x27;s Silvered Chain Leggings\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+            },
+            "feet": {
+              "rank": 2,
+              "quality": "q2",
+              "itemId": "4464",
+              "tipId": "4464",
+              "name": "Trouncing Boots",
+              "icon": "inv_boots_01.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house",
+              "sourceDetails": [
+                "World drop, sold at the auction house"
+              ],
+              "stats": "+7 Strength, +7 Agility",
+              "ilvl": 34,
+              "armor": 144,
+              "lines": [
+                "Binds when equipped",
+                "Feet\tMail",
+                "144 Armor",
+                "+7 Strength",
+                "+7 Agility",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "finger": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "trinket": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "273840",
+              "tipId": "273840",
+              "name": "Cursed Murloc Eye",
+              "icon": "spell_shadow_evileye.jpg",
+              "side": "both",
+              "source": "Gelihast, Blackfathom Deeps",
+              "sourceDetails": [
+                "Gelihast, Blackfathom Deeps"
+              ],
+              "stats": "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+              "ilvl": 29,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Unique-Equipped",
+                "Trinket",
+                "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                "Requires Level 24"
+              ],
+              "mats": ""
+            },
+            "mainHand": {
+              "name": "Cruel Barb",
+              "itemId": "5191",
+              "icon": "inv_sword_04.jpg"
+            },
+            "offHand": {
+              "name": "Pearl-handled Dagger",
+              "itemId": "5540",
+              "icon": "inv_weapon_shortblade_05.jpg"
+            },
+            "ranged": {
+              "name": "Master Hunter's Rifle",
+              "quality": "q2",
+              "icon": "inv_weapon_rifle_05.jpg",
+              "enchant": "",
+              "tipId": ""
+            },
+            "finger1": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "finger2": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "trinket1": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "273840",
+              "tipId": "273840",
+              "name": "Cursed Murloc Eye",
+              "icon": "spell_shadow_evileye.jpg",
+              "side": "both",
+              "source": "Gelihast, Blackfathom Deeps",
+              "sourceDetails": [
+                "Gelihast, Blackfathom Deeps"
+              ],
+              "stats": "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+              "ilvl": 29,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Unique-Equipped",
+                "Trinket",
+                "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                "Requires Level 24"
+              ],
+              "mats": ""
+            },
+            "trinket2": {
+              "rank": 2,
+              "quality": "q2",
+              "itemId": "4381",
+              "tipId": "4381",
+              "name": "Minor Recombobulator",
+              "icon": "inv_gizmo_07.jpg",
+              "side": "both",
+              "source": "Engineering (140)",
+              "sourceDetails": [
+                "Engineering (140)"
+              ],
+              "stats": "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+              "ilvl": 28,
+              "armor": 0,
+              "lines": [
+                "Unique-Equipped",
+                "Trinket",
+                "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+                "Requires Engineering (140)"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"4371\"><img src=\"/icon/inv_gizmo_pipe_01.jpg\" alt=\"Bronze Tube\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"4375\"><img src=\"/icon/inv_gizmo_02.jpg\" alt=\"Whirring Bronze Gizmo\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"2319\"><img src=\"/icon/inv_misc_leatherscrap_05.jpg\" alt=\"Medium Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1206\"><img src=\"/icon/inv_misc_gem_emerald_02.jpg\" alt=\"Moss Agate\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"14639\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Schematic: Minor Recombobulator\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span>"
+            },
+            "twoHand": null
+          },
+          "horde": {
+            "head": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "7413",
+              "tipId": "741312727",
+              "name": "Infiltrator Cap of the Tiger",
+              "icon": "inv_helmet_15.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+              "sourceDetails": [
+                "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+              ],
+              "stats": "+9 Strength, +9 Agility",
+              "ilvl": 33,
+              "armor": 80,
+              "lines": [
+                "Binds when equipped",
+                "Head\tLeather",
+                "80 Armor",
+                "+9 Strength",
+                "+9 Agility",
+                "Requires Level 28",
+                "Sell Price: 21s 57c"
+              ],
+              "mats": ""
+            },
+            "neck": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "7731",
+              "tipId": "7731",
+              "name": "Ghostshard Talisman",
+              "icon": "inv_jewelry_necklace_06.jpg",
+              "side": "both",
+              "source": "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic",
+              "sourceDetails": [
+                "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic"
+              ],
+              "stats": "+9 Stamina, Equip: +14 Attack Power., Equip: +12 Attack Power against Undead.",
+              "ilvl": 35,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Neck",
+                "+9 Stamina",
+                "Equip: +14 Attack Power.",
+                "Equip: +12 Attack Power against Undead.",
+                "Requires Level 30"
+              ],
+              "mats": ""
+            },
+            "shoulder": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "2278",
+              "tipId": "2278",
+              "name": "Forest Tracker Epaulets",
+              "icon": "inv_shoulder_18.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house",
+              "sourceDetails": [
+                "World drop, sold at the auction house"
+              ],
+              "stats": "+5 Strength, +11 Agility",
+              "ilvl": 31,
+              "armor": 78,
+              "lines": [
+                "Binds when equipped",
+                "Shoulder\tLeather",
+                "78 Armor",
+                "+5 Strength",
+                "+11 Agility",
+                "Requires Level 26"
+              ],
+              "mats": ""
+            },
+            "back": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "14593",
+              "tipId": "14593",
+              "name": "Hawkeye's Cloak",
+              "icon": "inv_misc_cape_03.jpg",
+              "side": "both",
+              "source": "World drop, sold at the auction house",
+              "sourceDetails": [
+                "World drop, sold at the auction house"
+              ],
+              "stats": "+3 Strength, +7 Agility",
+              "ilvl": 35,
+              "armor": 23,
+              "lines": [
+                "Binds when equipped",
+                "Back",
+                "23 Armor",
+                "+3 Strength",
+                "+7 Agility",
+                "Requires Level 30"
+              ],
+              "mats": ""
+            },
+            "chest": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "1488",
+              "tipId": "1488",
+              "name": "Avenger's Armor",
+              "icon": "inv_chest_chain.jpg",
+              "side": "both",
+              "source": "Trash mobs, Razorfen Kraul 0.03% in Classic",
+              "sourceDetails": [
+                "Trash mobs, Razorfen Kraul 0.03% in Classic"
+              ],
+              "stats": "+15 Strength, +6 Stamina",
+              "ilvl": 31,
+              "armor": 221,
+              "lines": [
+                "Binds when equipped",
+                "Chest\tMail",
+                "221 Armor",
+                "+15 Strength",
+                "+6 Stamina",
+                "Requires Level 26"
+              ],
+              "mats": ""
+            },
+            "wrist": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "9428",
+              "tipId": "942813018",
+              "name": "Unearthed Bands of the Tiger",
+              "icon": "inv_bracer_06.jpg",
+              "side": "both",
+              "source": "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name",
+              "sourceDetails": [
+                "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name"
+              ],
+              "stats": "+6 Strength, +6 Agility, Equip: +8 Attack Power",
+              "ilvl": 35,
+              "armor": 49,
+              "lines": [
+                "Binds when equipped",
+                "Wrist\tLeather",
+                "49 Armor",
+                "+6 Strength",
+                "+6 Agility",
+                "Requires Level 30",
+                "Equip: +8 Attack Power",
+                "Sell Price: 21s 87c"
+              ],
+              "mats": ""
+            },
+            "hands": {
+              "rank": 1,
+              "quality": "q2",
+              "itemId": "4107",
+              "tipId": "4107",
+              "name": "Tiger Hunter Gloves",
+              "icon": "inv_gauntlets_04.jpg",
+              "side": "both",
+              "source": "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group",
+              "sourceDetails": [
+                "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group"
+              ],
+              "stats": "+7 Strength, +8 Agility",
+              "ilvl": 37,
+              "armor": 65,
+              "lines": [
+                "Binds when picked up",
+                "Hands\tLeather",
+                "65 Armor",
+                "+7 Strength",
+                "+8 Agility"
+              ],
+              "mats": ""
+            },
+            "waist": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "250556",
+              "tipId": "250556",
+              "name": "Officer's Belt",
+              "icon": "inv_belt_20.jpg",
+              "side": "both",
+              "source": "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150",
+              "sourceDetails": [
+                "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150"
+              ],
+              "stats": "+10 Strength, +6 Agility, +7 Stamina",
+              "ilvl": 35,
+              "armor": 132,
+              "lines": [
+                "Binds when picked up",
+                "Waist\tMail",
+                "132 Armor",
+                "+10 Strength",
+                "+6 Agility",
+                "+7 Stamina",
+                "Requires Level 30"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"3575\"><img src=\"/icon/inv_ingot_iron.jpg\" alt=\"Iron Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"3486\"><img src=\"/icon/inv_stone_grindingstone_03.jpg\" alt=\"Heavy Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1529\"><img src=\"/icon/inv_misc_gem_stone_01.jpg\" alt=\"Jade\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251408\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Officer&#x27;s Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+            },
+            "legs": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "250523",
+              "tipId": "250523",
+              "name": "Veteran's Silvered Chain Leggings",
+              "icon": "inv_pants_mail_05.jpg",
+              "side": "both",
+              "source": "Blacksmithing (125) Only its maker can wear it",
+              "sourceDetails": [
+                "Blacksmithing (125) Only its maker can wear it"
+              ],
+              "stats": "+11 Strength, +7 Agility, +8 Stamina",
+              "ilvl": 30,
+              "armor": 191,
+              "lines": [
+                "Binds when picked up",
+                "Legs\tMail",
+                "191 Armor",
+                "+11 Strength",
+                "+7 Agility",
+                "+8 Stamina",
+                "Requires Level 25"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>20</b></span><span class=\"bis-mat\" data-tip=\"3478\"><img src=\"/icon/inv_stone_grindingstone_02.jpg\" alt=\"Coarse Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251375\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Veteran&#x27;s Silvered Chain Leggings\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+            },
+            "feet": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "284403",
+              "tipId": "284403",
+              "name": "Shapeshifting Sentinel's Strides",
+              "icon": "inv_boots_chain_08.jpg",
+              "side": "horde",
+              "source": "A rare of northern Stonetalon Mountains, near the night elves Horde only: both rares serve Darnassus",
+              "sourceDetails": [
+                "A rare of northern Stonetalon Mountains, near the night elves Horde only: both rares serve Darnassus"
+              ],
+              "stats": "+8 Agility, Equip: +16 Attack Power.",
+              "ilvl": 29,
+              "armor": 70,
+              "lines": [
+                "Binds when picked up",
+                "Feet\tLeather",
+                "70 Armor",
+                "+8 Agility",
+                "Equip: +16 Attack Power.",
+                "Requires Level 24"
+              ],
+              "mats": ""
+            },
+            "finger": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "trinket": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "273840",
+              "tipId": "273840",
+              "name": "Cursed Murloc Eye",
+              "icon": "spell_shadow_evileye.jpg",
+              "side": "both",
+              "source": "Gelihast, Blackfathom Deeps",
+              "sourceDetails": [
+                "Gelihast, Blackfathom Deeps"
+              ],
+              "stats": "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+              "ilvl": 29,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Unique-Equipped",
+                "Trinket",
+                "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                "Requires Level 24"
+              ],
+              "mats": ""
+            },
+            "mainHand": {
+              "name": "Cruel Barb",
+              "itemId": "5191",
+              "icon": "inv_sword_04.jpg"
+            },
+            "offHand": {
+              "name": "Pearl-handled Dagger",
+              "itemId": "5540",
+              "icon": "inv_weapon_shortblade_05.jpg"
+            },
+            "ranged": {
+              "name": "Master Hunter's Rifle",
+              "quality": "q2",
+              "icon": "inv_weapon_rifle_05.jpg",
+              "enchant": "",
+              "tipId": ""
+            },
+            "finger1": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "finger2": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "285190",
+              "tipId": "285190",
+              "name": "Wyvern Heart Band",
+              "icon": "inv_jewelry_ring_25.jpg",
+              "side": "both",
+              "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+              "sourceDetails": [
+                "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+              ],
+              "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+              "ilvl": 34,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Finger",
+                "+5 Agility",
+                "+5 Stamina",
+                "Equip: +15 Attack Power.",
+                "Requires Level 29"
+              ],
+              "mats": ""
+            },
+            "trinket1": {
+              "rank": 1,
+              "quality": "q3",
+              "itemId": "273840",
+              "tipId": "273840",
+              "name": "Cursed Murloc Eye",
+              "icon": "spell_shadow_evileye.jpg",
+              "side": "both",
+              "source": "Gelihast, Blackfathom Deeps",
+              "sourceDetails": [
+                "Gelihast, Blackfathom Deeps"
+              ],
+              "stats": "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+              "ilvl": 29,
+              "armor": 0,
+              "lines": [
+                "Binds when picked up",
+                "Unique-Equipped",
+                "Trinket",
+                "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                "Requires Level 24"
+              ],
+              "mats": ""
+            },
+            "trinket2": {
+              "rank": 2,
+              "quality": "q2",
+              "itemId": "4381",
+              "tipId": "4381",
+              "name": "Minor Recombobulator",
+              "icon": "inv_gizmo_07.jpg",
+              "side": "both",
+              "source": "Engineering (140)",
+              "sourceDetails": [
+                "Engineering (140)"
+              ],
+              "stats": "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+              "ilvl": 28,
+              "armor": 0,
+              "lines": [
+                "Unique-Equipped",
+                "Trinket",
+                "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+                "Requires Engineering (140)"
+              ],
+              "mats": "<span class=\"bis-mat\" data-tip=\"4371\"><img src=\"/icon/inv_gizmo_pipe_01.jpg\" alt=\"Bronze Tube\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"4375\"><img src=\"/icon/inv_gizmo_02.jpg\" alt=\"Whirring Bronze Gizmo\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"2319\"><img src=\"/icon/inv_misc_leatherscrap_05.jpg\" alt=\"Medium Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1206\"><img src=\"/icon/inv_misc_gem_emerald_02.jpg\" alt=\"Moss Agate\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"14639\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Schematic: Minor Recombobulator\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span>"
+            },
+            "twoHand": null
+          }
+        },
+        "gear": {
+          "head": {
+            "name": "Infiltrator Cap of the Tiger",
+            "quality": "q2",
+            "icon": "inv_helmet_15.jpg",
+            "stats": "+9 Strength, +9 Agility",
+            "enchant": "",
+            "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+            "itemId": "7413",
+            "tipId": "741312727",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Tusken Helm",
+                "quality": "q3",
+                "icon": "inv_helmet_09.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Overlord Ramtusk, Razorfen Kraul 62.39% in Classic",
+                "sourceDetails": [
+                  "Overlord Ramtusk, Razorfen Kraul 62.39% in Classic"
+                ],
+                "itemId": "6686",
+                "tipId": "6686",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Veteran's Chain Helm",
+                "quality": "q3",
+                "icon": "inv_helmet_39.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Blacksmithing Only its maker can wear it Plans: nobody has found it in the beta yet",
+                "sourceDetails": [
+                  "Blacksmithing Only its maker can wear it Plans: nobody has found it in the beta yet"
+                ],
+                "itemId": "250498",
+                "tipId": "250498",
+                "mats": "8 2 6"
+              },
+              {
+                "rank": 4,
+                "name": "Defender's Leather Helm",
+                "quality": "q3",
+                "icon": "inv_helmet_33.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Twilight Lord Kelris, Blackfathom Deeps Old Serra'kis, Blackfathom Deeps Aku'mai, Blackfathom Deeps Lorgus Jett, Blackfathom Deeps Kam Deepfury, The Stockade Bazil Thredd, The Stockade Aggem Thorncurse, Razorfen Kraul Agathelos the Raging, Razorfen Kraul Charlga Razorflank, Razorfen Kraul Earthcaller Halmgar, Razorfen Kraul Interrogator Vishas, Scarlet Monastery Graveyard Bloodmage Thalnos, Scarlet Monastery Graveyard",
+                "sourceDetails": [
+                  "Twilight Lord Kelris, Blackfathom Deeps",
+                  "Old Serra'kis, Blackfathom Deeps",
+                  "Aku'mai, Blackfathom Deeps",
+                  "Lorgus Jett, Blackfathom Deeps",
+                  "Kam Deepfury, The Stockade",
+                  "Bazil Thredd, The Stockade",
+                  "Aggem Thorncurse, Razorfen Kraul",
+                  "Agathelos the Raging, Razorfen Kraul",
+                  "Charlga Razorflank, Razorfen Kraul",
+                  "Earthcaller Halmgar, Razorfen Kraul",
+                  "Interrogator Vishas, Scarlet Monastery Graveyard",
+                  "Bloodmage Thalnos, Scarlet Monastery Graveyard"
+                ],
+                "itemId": "252455",
+                "tipId": "252455",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Slayer's Skullcap",
+                "quality": "q2",
+                "icon": "inv_helmet_59.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "14753",
+                "tipId": "14753",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Veteran's Silvered Chain Helm",
+                "quality": "q3",
+                "icon": "inv_helmet_39.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Blacksmithing (95) Only its maker can wear it",
+                "sourceDetails": [
+                  "Blacksmithing (95) Only its maker can wear it"
+                ],
+                "itemId": "250528",
+                "tipId": "250528",
+                "mats": "15 6 4 4 6"
+              }
+            ]
+          },
+          "neck": {
+            "name": "Ghostshard Talisman",
+            "quality": "q3",
+            "icon": "inv_jewelry_necklace_06.jpg",
+            "stats": "",
+            "enchant": "Strength +5",
+            "source": "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic",
+            "itemId": "7731",
+            "tipId": "7731",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Cerulean Talisman of the Tiger",
+                "quality": "q2",
+                "icon": "inv_jewelry_necklace_01.jpg",
+                "stats": "+5 Strength, +5 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "12019",
+                "tipId": "1201912727",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Kaleidoscope Chain",
+                "quality": "q3",
+                "icon": "inv_jewelry_amulet_07.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "13084",
+                "tipId": "13084",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Archmagister's Faceted Pendant",
+                "quality": "q3",
+                "icon": "inv_misc_necklacea8.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Shade of the Archmage, City of Dalaran",
+                "sourceDetails": [
+                  "Shade of the Archmage, City of Dalaran"
+                ],
+                "itemId": "273049",
+                "tipId": "273049",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Thermaplugg Medal of Honor",
+                "quality": "q3",
+                "icon": "inv_jewelry_amulet_03.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Crowd Pummeler 9-60, Gnomeregan",
+                "sourceDetails": [
+                  "Crowd Pummeler 9-60, Gnomeregan"
+                ],
+                "itemId": "274068",
+                "tipId": "274068",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Mark of the Pack Leader",
+                "quality": "q3",
+                "icon": "inv_jewelry_necklace_04.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Humar the Pridelord, the rare black lion of the Barrens Reported, not checked",
+                "sourceDetails": [
+                  "Humar the Pridelord, the rare black lion of the Barrens Reported, not checked"
+                ],
+                "itemId": "285331",
+                "tipId": "285331",
+                "mats": ""
+              }
+            ]
+          },
+          "shoulder": {
+            "name": "Forest Tracker Epaulets",
+            "quality": "q3",
+            "icon": "inv_shoulder_18.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "World drop, sold at the auction house",
+            "itemId": "2278",
+            "tipId": "2278",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Cutthroat's Mantle of the Tiger",
+                "quality": "q2",
+                "icon": "inv_shoulder_11.jpg",
+                "stats": "+7 Strength, +7 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "15140",
+                "tipId": "1514012727",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Wrangling Spaulders",
+                "quality": "q2",
+                "icon": "inv_shoulder_14.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Kodo Roundup level 34 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Kodo Roundup level 34 in Classic, from level 30"
+                ],
+                "itemId": "15698",
+                "tipId": "15698",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Barbaric Shoulders",
+                "quality": "q2",
+                "icon": "inv_shoulder_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Leatherworking",
+                "sourceDetails": [
+                  "Leatherworking"
+                ],
+                "itemId": "5964",
+                "tipId": "5964",
+                "mats": "8 2"
+              },
+              {
+                "rank": 5,
+                "name": "Sanguine Pauldrons",
+                "quality": "q2",
+                "icon": "inv_shoulder_29.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: The Karnitol Shipwreck Alliance, level 39 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: The Karnitol Shipwreck Alliance, level 39 in Classic, from level 30"
+                ],
+                "itemId": "6792",
+                "tipId": "6792",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Brigand's Pauldrons",
+                "quality": "q2",
+                "icon": "inv_shoulder_03.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Taretha's Gift Horde, level 40 in Classic, from level 29",
+                "sourceDetails": [
+                  "Quest: Taretha's Gift Horde, level 40 in Classic, from level 29"
+                ],
+                "itemId": "3765",
+                "tipId": "3765",
+                "mats": ""
+              }
+            ]
+          },
+          "back": {
+            "name": "Hawkeye's Cloak",
+            "quality": "q2",
+            "icon": "inv_misc_cape_03.jpg",
+            "stats": "",
+            "enchant": "Agility +3",
+            "source": "World drop, sold at the auction house",
+            "itemId": "14593",
+            "tipId": "14593",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Twilight Cape of the Tiger",
+                "quality": "q2",
+                "icon": "inv_misc_cape_13.jpg",
+                "stats": "+5 Strength, +5 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 41 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 41 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "7436",
+                "tipId": "743612727",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Crocolisk Skin Gaiter",
+                "quality": "q3",
+                "icon": "inv_misc_monsterscales_02.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "A quest of the Excavation Site, in the Wetlands Which quest is not known yet",
+                "sourceDetails": [
+                  "A quest of the Excavation Site, in the Wetlands Which quest is not known yet"
+                ],
+                "itemId": "271720",
+                "tipId": "271720",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Yeti Fur Cloak",
+                "quality": "q2",
+                "icon": "inv_misc_cape_04.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Bartolo's Yeti Fur Cloak Alliance, level 34 in Classic, from level 29",
+                "sourceDetails": [
+                  "Quest: Bartolo's Yeti Fur Cloak Alliance, level 34 in Classic, from level 29"
+                ],
+                "itemId": "2805",
+                "tipId": "2805",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Dragonmaw Battle Shroud",
+                "quality": "q2",
+                "icon": "inv_misc_cape_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
+                "sourceDetails": [
+                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
+                ],
+                "itemId": "282658",
+                "tipId": "282658",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Drape of Shifting Energy",
+                "quality": "q3",
+                "icon": "inv_misc_cape_18.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Arcanic Enigma, City of Dalaran",
+                "sourceDetails": [
+                  "Arcanic Enigma, City of Dalaran"
+                ],
+                "itemId": "273045",
+                "tipId": "273045",
+                "mats": ""
+              }
+            ]
+          },
+          "chest": {
+            "name": "Avenger's Armor",
+            "quality": "q3",
+            "icon": "inv_chest_chain.jpg",
+            "stats": "",
+            "enchant": "All Stats +2",
+            "source": "Trash mobs, Razorfen Kraul 0.03% in Classic",
+            "itemId": "1488",
+            "tipId": "1488",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Infiltrator Armor of the Tiger",
+                "quality": "q2",
+                "icon": "inv_chest_leather_03.jpg",
+                "stats": "+9 Strength, +9 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "7407",
+                "tipId": "740712727",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Veteran's Silvered Chain Shirt",
+                "quality": "q3",
+                "icon": "inv_chest_chain_07.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Blacksmithing (110) Only its maker can wear it",
+                "sourceDetails": [
+                  "Blacksmithing (110) Only its maker can wear it"
+                ],
+                "itemId": "250518",
+                "tipId": "250518",
+                "mats": "20 6 5 6 8"
+              },
+              {
+                "rank": 4,
+                "name": "Shining Silver Breastplate",
+                "quality": "q3",
+                "icon": "inv_chest_plate15.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Blacksmithing",
+                "sourceDetails": [
+                  "Blacksmithing"
+                ],
+                "itemId": "2870",
+                "tipId": "2870",
+                "mats": "20 2 2 2 4"
+              },
+              {
+                "rank": 5,
+                "name": "Slayer's Surcoat",
+                "quality": "q2",
+                "icon": "inv_chest_chain_07.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "14751",
+                "tipId": "14751",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Mana-Warped Chain Shirt",
+                "quality": "q3",
+                "icon": "inv_chest_chain_04.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Arcane Anomaly, City of Dalaran",
+                "sourceDetails": [
+                  "Arcane Anomaly, City of Dalaran"
+                ],
+                "itemId": "273035",
+                "tipId": "273035",
+                "mats": ""
+              }
+            ]
+          },
+          "wrist": {
+            "name": "Unearthed Bands of the Tiger",
+            "quality": "q3",
+            "icon": "inv_bracer_06.jpg",
+            "stats": "+6 Strength, +6 Agility, Equip: +8 Attack Power",
+            "enchant": "Strength +5",
+            "source": "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name",
+            "itemId": "9428",
+            "tipId": "942813018",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Arathi Armbands",
+                "quality": "q2",
+                "icon": "inv_bracer_09.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Wanted! Otto and Falconcrest, Refuge Pointe, Arathi Highlands Two elites of level 38 and 40: take a strong group",
+                "sourceDetails": [
+                  "Wanted! Otto and Falconcrest, Refuge Pointe, Arathi Highlands Two elites of level 38 and 40: take a strong group"
+                ],
+                "itemId": "270080",
+                "tipId": "270080",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Hawkeye's Bracers",
+                "quality": "q2",
+                "icon": "inv_bracer_04.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "14590",
+                "tipId": "14590",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Yorgen Bracers",
+                "quality": "q3",
+                "icon": "inv_bracer_02.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "13012",
+                "tipId": "13012",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Stromgarde Bracers",
+                "quality": "q2",
+                "icon": "inv_bracer_12.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Wanted! Marez Cowl Alliance, from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Wanted! Marez Cowl Alliance, from level 30, reported, not checked"
+                ],
+                "itemId": "270068",
+                "tipId": "270068",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Pugilist Bracers",
+                "quality": "q3",
+                "icon": "inv_bracer_03.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Trash mobs, Razorfen Kraul 0.04% in Classic",
+                "sourceDetails": [
+                  "Trash mobs, Razorfen Kraul 0.04% in Classic"
+                ],
+                "itemId": "4438",
+                "tipId": "4438",
+                "mats": ""
+              }
+            ]
+          },
+          "hands": {
+            "name": "Tiger Hunter Gloves",
+            "quality": "q2",
+            "icon": "inv_gauntlets_04.jpg",
+            "stats": "",
+            "enchant": "Strength +7",
+            "source": "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin'Dall is level 37: take a group",
+            "itemId": "4107",
+            "tipId": "4107",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Archer's Gloves of the Tiger",
+                "quality": "q2",
+                "icon": "inv_gauntlets_22.jpg",
+                "stats": "+7 Strength, +7 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "9861",
+                "tipId": "986112727",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Shepherd's Gloves",
+                "quality": "q2",
+                "icon": "inv_gauntlets_21.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Costly Menace Alliance, level 34 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Costly Menace Alliance, level 34 in Classic, from level 30"
+                ],
+                "itemId": "3754",
+                "tipId": "3754",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Insignia Gloves",
+                "quality": "q2",
+                "icon": "inv_gauntlets_21.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "6408",
+                "tipId": "6408",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Gauntlets of Ogre Strength",
+                "quality": "q2",
+                "icon": "inv_gauntlets_04.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Boulderfist ogres, Arathi Highlands About once in eighty kills, or at the auction house",
+                "sourceDetails": [
+                  "Boulderfist ogres, Arathi Highlands About once in eighty kills, or at the auction house"
+                ],
+                "itemId": "3341",
+                "tipId": "3341",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Mail Combat Gauntlets",
+                "quality": "q2",
+                "icon": "inv_gauntlets_25.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "4075",
+                "tipId": "4075",
+                "mats": ""
+              }
+            ]
+          },
+          "waist": {
+            "name": "Officer's Belt",
+            "quality": "q3",
+            "icon": "inv_belt_20.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150",
+            "itemId": "250556",
+            "tipId": "250556",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Prowler's Leather Belt",
+                "quality": "q3",
+                "icon": "inv_belt_43.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep"
+                ],
+                "itemId": "252459",
+                "tipId": "252459",
+                "mats": "8 2"
+              },
+              {
+                "rank": 3,
+                "name": "Skulker's Leather Belt",
+                "quality": "q3",
+                "icon": "inv_belt_37b.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep"
+                ],
+                "itemId": "252520",
+                "tipId": "252520",
+                "mats": "8 2"
+              },
+              {
+                "rank": 4,
+                "name": "Girdle of Golem Strength",
+                "quality": "q3",
+                "icon": "inv_belt_27.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "9405",
+                "tipId": "9405",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Gizmo Girdle of the Tiger",
+                "quality": "q2",
+                "icon": "inv_belt_06.jpg",
+                "stats": "+7 Strength, +7 Agility",
+                "side": "both",
+                "source": "Engineering (175) Only its maker can wear it Requires Anarchist's Workbench. Nobody has found its blueprint in the beta yet Random suffix, one of 36 The game picks it when the item drops",
+                "sourceDetails": [
+                  "Engineering (175) Only its maker can wear it Requires Anarchist's Workbench. Nobody has found its blueprint in the beta yet",
+                  "Random suffix, one of 36 The game picks it when the item drops"
+                ],
+                "itemId": "280307",
+                "tipId": "28030712727",
+                "mats": "2 4"
+              },
+              {
+                "rank": 6,
+                "name": "Warden's Leather Belt",
+                "quality": "q3",
+                "icon": "inv_belt_06.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep"
+                ],
+                "itemId": "252460",
+                "tipId": "252460",
+                "mats": "8 2"
+              }
+            ]
+          },
+          "legs": {
+            "name": "Veteran's Silvered Chain Leggings",
+            "quality": "q3",
+            "icon": "inv_pants_mail_05.jpg",
+            "stats": "",
+            "enchant": "Attack Power +6 and Armor +24",
+            "source": "Blacksmithing (125) Only its maker can wear it",
+            "itemId": "250523",
+            "tipId": "250523",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Triprunner Dungarees",
+                "quality": "q3",
+                "icon": "inv_pants_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Rig Wars Horde, level 35 in Classic, from level 25 Quest: The Grand Betrayal Alliance, level 35 in Classic, from level 25 The last quest of Gnomeregan, for either faction Take a group for Mekgineer Thermaplugg (level 34)",
+                "sourceDetails": [
+                  "Quest: Rig Wars Horde, level 35 in Classic, from level 25",
+                  "Quest: The Grand Betrayal Alliance, level 35 in Classic, from level 25",
+                  "The last quest of Gnomeregan, for either faction Take a group for Mekgineer Thermaplugg (level 34)"
+                ],
+                "itemId": "9624",
+                "tipId": "9624",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Infiltrator Pants of the Tiger",
+                "quality": "q2",
+                "icon": "inv_pants_07.jpg",
+                "stats": "+9 Strength, +9 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "7414",
+                "tipId": "741412727",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Stromgarde Operative Pants",
+                "quality": "q2",
+                "icon": "inv_pants_07.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Stromgarde Badges Alliance, from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Stromgarde Badges Alliance, from level 30, reported, not checked"
+                ],
+                "itemId": "270057",
+                "tipId": "270057",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Pelt Pants",
+                "quality": "q2",
+                "icon": "inv_pants_09.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Alliance quest Packaged Pristine Pelts, level 31 Kristy Grant, Thalanaar, from level 27",
+                "sourceDetails": [
+                  "Alliance quest Packaged Pristine Pelts, level 31 Kristy Grant, Thalanaar, from level 27"
+                ],
+                "itemId": "281295",
+                "tipId": "281295",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Brawler's Leather Legguards",
+                "quality": "q3",
+                "icon": "inv_pants_leather_19.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Leatherworking (125) Only its maker can wear it Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep",
+                "sourceDetails": [
+                  "Leatherworking (125) Only its maker can wear it Requires Tanning Rack. Its blueprint drops rarely from Razorclaw the Butcher, Shadowfang Keep"
+                ],
+                "itemId": "252516",
+                "tipId": "252516",
+                "mats": "12 4 8 3 8"
+              }
+            ]
+          },
+          "feet": {
+            "name": "Shapeshifting Sentinel's Strides",
+            "quality": "q3",
+            "icon": "inv_boots_chain_08.jpg",
+            "stats": "",
+            "enchant": "Agility +4",
+            "source": "A rare of northern Stonetalon Mountains, near the night elves Horde only: both rares serve Darnassus",
+            "itemId": "284403",
+            "tipId": "284403",
+            "allianceBis": {
+              "name": "Trouncing Boots",
+              "quality": "q2",
+              "icon": "inv_boots_01.jpg",
+              "stats": "",
+              "source": "World drop, sold at the auction house"
+            },
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Trouncing Boots",
+                "quality": "q2",
+                "icon": "inv_boots_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "4464",
+                "tipId": "4464",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Phalanx Boots of the Tiger",
+                "quality": "q2",
+                "icon": "inv_boots_01.jpg",
+                "stats": "+7 Strength, +7 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 32 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 32 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "7417",
+                "tipId": "741712727",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Manascale Treads",
+                "quality": "q3",
+                "icon": "inv_boots_chain_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Mana Devourer, City of Dalaran",
+                "sourceDetails": [
+                  "Mana Devourer, City of Dalaran"
+                ],
+                "itemId": "273042",
+                "tipId": "273042",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Darkspear Boots",
+                "quality": "q2",
+                "icon": "inv_boots_01.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Split Bone Necklace Horde, level 42 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Split Bone Necklace Horde, level 42 in Classic, from level 30"
+                ],
+                "itemId": "4136",
+                "tipId": "4136",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Feet of the Lynx",
+                "quality": "q3",
+                "icon": "inv_boots_wolf.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "1121",
+                "tipId": "1121",
+                "mats": ""
+              }
+            ]
+          },
+          "finger1": {
+            "name": "Wyvern Heart Band",
+            "quality": "q3",
+            "icon": "inv_jewelry_ring_25.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+            "itemId": "285190",
+            "tipId": "285190",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Ironspine's Eye",
+                "quality": "q3",
+                "icon": "inv_jewelry_ring_04.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Ironspine, Scarlet Monastery Graveyard 41.99% in Classic",
+                "sourceDetails": [
+                  "Ironspine, Scarlet Monastery Graveyard 41.99% in Classic"
+                ],
+                "itemId": "7686",
+                "tipId": "7686",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Thunderbrow Ring",
+                "quality": "q3",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "13097",
+                "tipId": "13097",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Band of Allegiance",
+                "quality": "q3",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Service to the Horde Horde, level 45 in Classic, from level 30 A chain of six Horde quests from Swamplight Manor, Dustwallow Marsh Take a group for the Muckshells (level 39 to 44)",
+                "sourceDetails": [
+                  "Quest: Service to the Horde Horde, level 45 in Classic, from level 30",
+                  "A chain of six Horde quests from Swamplight Manor, Dustwallow Marsh Take a group for the Muckshells (level 39 to 44)"
+                ],
+                "itemId": "18585",
+                "tipId": "18585",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Spinel Ring of the Tiger",
+                "quality": "q2",
+                "icon": "inv_jewelry_ring_11.jpg",
+                "stats": "+5 Strength, +5 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
+                ],
+                "itemId": "11970",
+                "tipId": "1197012727",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Swamp Ring",
+                "quality": "q2",
+                "icon": "inv_jewelry_ring_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Jarl Needs a Blade from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Jarl Needs a Blade from level 30, reported, not checked"
+                ],
+                "itemId": "270052",
+                "tipId": "270052",
+                "mats": ""
+              }
+            ]
+          },
+          "finger2": {
+            "name": "Ironspine's Eye",
+            "quality": "q3",
+            "icon": "inv_jewelry_ring_04.jpg",
+            "stats": "",
+            "source": "Ironspine, Scarlet Monastery Graveyard 41.99% in Classic",
+            "itemId": "7686",
+            "alts": [
+              {
+                "rank": 3,
+                "name": "Thunderbrow Ring",
+                "quality": "q3",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "itemId": "13097"
+              },
+              {
+                "rank": 4,
+                "name": "Band of Allegiance",
+                "quality": "q3",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Service to the Horde Horde, level 45 in Classic, from level 30 A chain of six Horde quests from Swamplight Manor, Dustwallow Marsh Take a group for the Muckshells (level 39 to 44)",
+                "itemId": "18585"
+              },
+              {
+                "rank": 5,
+                "name": "Spinel Ring of the Tiger",
+                "quality": "q2",
+                "icon": "inv_jewelry_ring_11.jpg",
+                "stats": "+5 Strength, +5 Agility",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
+                "itemId": "11970"
+              },
+              {
+                "rank": 6,
+                "name": "Swamp Ring",
+                "quality": "q2",
+                "icon": "inv_jewelry_ring_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Jarl Needs a Blade from level 30, reported, not checked",
+                "itemId": "270052"
+              }
+            ]
+          },
+          "trinket1": {
+            "name": "Minor Recombobulator",
+            "quality": "q2",
+            "icon": "inv_gizmo_07.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "Engineering (140)",
+            "itemId": "4381",
+            "tipId": "4381",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Dog Whistle",
+                "quality": "q3",
+                "icon": "ability_hunter_beastcall.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Houndmaster Loksey, Scarlet Monastery Library 25.25% in Classic",
+                "sourceDetails": [
+                  "Houndmaster Loksey, Scarlet Monastery Library 25.25% in Classic"
+                ],
+                "itemId": "3456",
+                "tipId": "3456",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Mechanical Dragonling",
+                "quality": "q1",
+                "icon": "inv_misc_head_dragon_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Engineering (200)",
+                "sourceDetails": [
+                  "Engineering (200)"
+                ],
+                "itemId": "4396",
+                "tipId": "4396",
+                "mats": "4 4 2"
+              },
+              {
+                "rank": 4,
+                "name": "Satchel of Potions",
+                "quality": "q2",
+                "icon": "inv_misc_bag_08.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Changing Tastes Excavation Site: Wetlands, Horde, from level 24",
+                "sourceDetails": [
+                  "Quest: Changing Tastes Excavation Site: Wetlands, Horde, from level 24"
+                ],
+                "itemId": "280766",
+                "tipId": "280766",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Roogug's Severed Head",
+                "quality": "q3",
+                "icon": "inv_misc_head_quillboar_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Roogug, Razorfen Kraul",
+                "sourceDetails": [
+                  "Roogug, Razorfen Kraul"
+                ],
+                "itemId": "274152",
+                "tipId": "274152",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Lookie's Spyglass",
+                "quality": "q3",
+                "icon": "inv_misc_spyglass_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Cookie, The Deadmines",
+                "sourceDetails": [
+                  "Cookie, The Deadmines"
+                ],
+                "itemId": "273298",
+                "tipId": "273298",
+                "mats": ""
+              }
+            ]
+          },
+          "trinket2": {
+            "name": "Dog Whistle",
+            "quality": "q3",
+            "icon": "ability_hunter_beastcall.jpg",
+            "stats": "",
+            "source": "Houndmaster Loksey, Scarlet Monastery Library 25.25% in Classic",
+            "itemId": "3456",
+            "alts": [
+              {
+                "rank": 3,
+                "name": "Mechanical Dragonling",
+                "quality": "q1",
+                "icon": "inv_misc_head_dragon_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Engineering (200)",
+                "itemId": "4396"
+              },
+              {
+                "rank": 4,
+                "name": "Satchel of Potions",
+                "quality": "q2",
+                "icon": "inv_misc_bag_08.jpg",
+                "stats": "",
+                "side": "horde",
+                "source": "Quest: Changing Tastes Excavation Site: Wetlands, Horde, from level 24",
+                "itemId": "280766"
+              },
+              {
+                "rank": 5,
+                "name": "Roogug's Severed Head",
+                "quality": "q3",
+                "icon": "inv_misc_head_quillboar_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Roogug, Razorfen Kraul",
+                "itemId": "274152"
+              },
+              {
+                "rank": 6,
+                "name": "Lookie's Spyglass",
+                "quality": "q3",
+                "icon": "inv_misc_spyglass_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Cookie, The Deadmines",
+                "itemId": "273298"
+              }
+            ]
+          },
+          "twoHand": {
+            "name": "Whirlwind Axe",
+            "quality": "q3",
+            "icon": "inv_axe_12.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "Quest: Whirlwind Weapon level 40 in Classic, from level 30",
+            "itemId": "6975",
+            "tipId": "6975",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Whirlwind Warhammer",
+                "quality": "q3",
+                "icon": "inv_hammer_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Whirlwind Weapon level 40 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Whirlwind Weapon level 40 in Classic, from level 30"
+                ],
+                "itemId": "6976",
+                "tipId": "6976",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Whirlwind Sword",
+                "quality": "q3",
+                "icon": "inv_sword_15.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Quest: Whirlwind Weapon level 40 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Whirlwind Weapon level 40 in Classic, from level 30"
+                ],
+                "itemId": "6977",
+                "tipId": "6977",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Rock Pulverizer",
+                "quality": "q2",
+                "icon": "inv_hammer_17.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Murdaloc Alliance, level 42 in Classic, from level 30 Three quests from Ironforge to the Badlands Take a group: Murdaloc is level 42",
+                "sourceDetails": [
+                  "Quest: Murdaloc Alliance, level 42 in Classic, from level 30",
+                  "Three quests from Ironforge to the Badlands Take a group: Murdaloc is level 42"
+                ],
+                "itemId": "4983",
+                "tipId": "4983",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Corpsemaker",
+                "quality": "q3",
+                "icon": "inv_weapon_halbard_01.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Overlord Ramtusk, Razorfen Kraul 33.83% in Classic",
+                "sourceDetails": [
+                  "Overlord Ramtusk, Razorfen Kraul 33.83% in Classic"
+                ],
+                "itemId": "6687",
+                "tipId": "6687",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Dark Hearted Hammer",
+                "quality": "q2",
+                "icon": "inv_hammer_16.jpg",
+                "stats": "",
+                "side": "alliance",
+                "source": "Quest: Colonel Kurzen Alliance, from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Colonel Kurzen Alliance, from level 30, reported, not checked"
+                ],
+                "itemId": "270071",
+                "tipId": "270071",
+                "mats": ""
+              }
+            ]
+          },
+          "ranged": {
+            "name": "Master Hunter's Rifle",
+            "quality": "q2",
+            "icon": "inv_weapon_rifle_05.jpg",
+            "stats": "",
+            "enchant": "",
+            "source": "Quest: Big Game Hunter level 43 in Classic, from level 28 Big Game Hunter, after Nesingwary's three Mastery chains, Stranglethorn Vale King Bangalash is a level 43 elite: very hard at level 30",
+            "itemId": "17687",
+            "tipId": "17687",
+            "allianceBis": null,
+            "hordeBis": null,
+            "alts": [
+              {
+                "rank": 2,
+                "name": "Gravespike Repeater",
+                "quality": "q3",
+                "icon": "inv_weapon_crossbow_06.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Atrexis the Grave Knight, City of Dalaran",
+                "sourceDetails": [
+                  "Atrexis the Grave Knight, City of Dalaran"
+                ],
+                "itemId": "273033",
+                "tipId": "273033",
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "name": "Glass Shooter",
+                "quality": "q3",
+                "icon": "inv_weapon_rifle_02.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Dark Iron Ambassador, Gnomeregan 32.46% in Classic",
+                "sourceDetails": [
+                  "Dark Iron Ambassador, Gnomeregan 32.46% in Classic"
+                ],
+                "itemId": "9456",
+                "tipId": "9456",
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "name": "Double-barreled Shotgun",
+                "quality": "q3",
+                "icon": "inv_weapon_rifle_08.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "itemId": "2098",
+                "tipId": "2098",
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "name": "Booty Bay Bruiser's Buckshot",
+                "quality": "q3",
+                "icon": "inv_weapon_rifle_02.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Sold by Gezzy Gunkgear in Booty Bay At Honored with Booty Bay",
+                "sourceDetails": [
+                  "Sold by Gezzy Gunkgear in Booty Bay At Honored with Booty Bay"
+                ],
+                "itemId": "274748",
+                "tipId": "274748",
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "name": "Golemsight Long Gun",
+                "quality": "q3",
+                "icon": "inv_musket_02.jpg",
+                "stats": "",
+                "side": "both",
+                "source": "Relic Guardian, Excavation Site: Wetlands",
+                "sourceDetails": [
+                  "Relic Guardian, Excavation Site: Wetlands"
+                ],
+                "itemId": "273029",
+                "tipId": "273029",
+                "mats": ""
+              }
+            ]
+          }
+        },
+        "slots": [
+          {
+            "slotId": "head",
+            "slotName": "Head",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q2",
+                "itemId": "7413",
+                "tipId": "741312727",
+                "name": "Infiltrator Cap of the Tiger",
+                "icon": "inv_helmet_15.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+9 Strength, +9 Agility",
+                "ilvl": 33,
+                "armor": 80,
+                "lines": [
+                  "Binds when equipped",
+                  "Head\tLeather",
+                  "80 Armor",
+                  "+9 Strength",
+                  "+9 Agility",
+                  "Requires Level 28",
+                  "Sell Price: 21s 57c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "6686",
+                "tipId": "6686",
+                "name": "Tusken Helm",
+                "icon": "inv_helmet_09.jpg",
+                "side": "both",
+                "source": "Overlord Ramtusk, Razorfen Kraul 62.39% in Classic",
+                "sourceDetails": [
+                  "Overlord Ramtusk, Razorfen Kraul 62.39% in Classic"
+                ],
+                "stats": "+13 Strength, +120 Armor",
+                "ilvl": 34,
+                "armor": 308,
+                "lines": [
+                  "Binds when picked up",
+                  "Head\tMail",
+                  "188 Armor",
+                  "+13 Strength",
+                  "+120 Armor",
+                  "Requires Level 29"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "252455",
+                "tipId": "252455",
+                "name": "Defender's Leather Helm",
+                "icon": "inv_helmet_33.jpg",
+                "side": "both",
+                "source": "Gelihast, Blackfathom Deeps Twilight Lord Kelris, Blackfathom Deeps Old Serra&#x27;kis, Blackfathom Deeps Aku&#x27;mai, Blackfathom Deeps Lorgus Jett, Blackfathom Deeps Kam Deepfury, The Stockade Hamhock, The Stockade Bazil Thredd, The Stockade Aggem Thorncurse, Razorfen Kraul Agathelos the Raging, Razorfen Kraul Charlga Razorflank, Razorfen Kraul Earthcaller Halmgar, Razorfen Kraul Interrogator Vishas, Scarlet Monastery Graveyard Bloodmage Thalnos, Scarlet Monastery Graveyard",
+                "sourceDetails": [
+                  "Gelihast, Blackfathom Deeps Twilight Lord Kelris, Blackfathom Deeps Old Serra&#x27;kis, Blackfathom Deeps Aku&#x27;mai, Blackfathom Deeps Lorgus Jett, Blackfathom Deeps Kam Deepfury, The Stockade Hamhock, The Stockade Bazil Thredd, The Stockade Aggem Thorncurse, Razorfen Kraul Agathelos the Raging, Razorfen Kraul Charlga Razorflank, Razorfen Kraul Earthcaller Halmgar, Razorfen Kraul Interrogator Vishas, Scarlet Monastery Graveyard Bloodmage Thalnos, Scarlet Monastery Graveyard"
+                ],
+                "stats": "+12 Strength, +13 Stamina",
+                "ilvl": 30,
+                "armor": 84,
+                "lines": [
+                  "Binds when picked up",
+                  "Head\tLeather",
+                  "84 Armor",
+                  "+12 Strength",
+                  "+13 Stamina",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q2",
+                "itemId": "14753",
+                "tipId": "14753",
+                "name": "Slayer's Skullcap",
+                "icon": "inv_helmet_59.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+9 Strength, +3 Agility, +7 Stamina",
+                "ilvl": 33,
+                "armor": 168,
+                "lines": [
+                  "Binds when equipped",
+                  "Head\tMail",
+                  "168 Armor",
+                  "+9 Strength",
+                  "+3 Agility",
+                  "+7 Stamina",
+                  "Requires Level 28"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q3",
+                "itemId": "250528",
+                "tipId": "250528",
+                "name": "Veteran's Silvered Chain Helm",
+                "icon": "inv_helmet_39.jpg",
+                "side": "both",
+                "source": "Blacksmithing (95) Only its maker can wear it",
+                "sourceDetails": [
+                  "Blacksmithing (95) Only its maker can wear it"
+                ],
+                "stats": "+10 Strength, +9 Stamina",
+                "ilvl": 25,
+                "armor": 163,
+                "lines": [
+                  "Binds when picked up",
+                  "Head\tMail",
+                  "163 Armor",
+                  "+10 Strength",
+                  "+9 Stamina",
+                  "Requires Level 20"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>15</b></span><span class=\"bis-mat\" data-tip=\"3478\"><img src=\"/icon/inv_stone_grindingstone_02.jpg\" alt=\"Coarse Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>4</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>4</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251380\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Veteran&#x27;s Silvered Chain Helm\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 6,
+                "quality": "q2",
+                "itemId": "277040",
+                "tipId": "277040",
+                "name": "Cloudy Skyforged Helm",
+                "icon": "inv_helm_mail_skybornec60_b_01.jpg",
+                "side": "both",
+                "source": "Blacksmithing (175) Plans sold by Sutara Plainstalker, Mulgore (Horde). Requires Earthen Ring - Friendly",
+                "sourceDetails": [
+                  "Blacksmithing (175) Plans sold by Sutara Plainstalker, Mulgore (Horde). Requires Earthen Ring - Friendly"
+                ],
+                "stats": "+9 Strength, +9 Stamina",
+                "ilvl": 35,
+                "armor": 173,
+                "lines": [
+                  "Binds when equipped",
+                  "Head\tMail",
+                  "173 Armor",
+                  "+9 Strength",
+                  "+9 Stamina",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"3575\"><img src=\"/icon/inv_ingot_iron.jpg\" alt=\"Iron Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>18</b></span><span class=\"bis-mat\" data-tip=\"3486\"><img src=\"/icon/inv_stone_grindingstone_03.jpg\" alt=\"Heavy Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>5</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"276976\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Plans: Cloudy Skyforged Helm\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span>"
+              },
+              {
+                "rank": 7,
+                "quality": "q3",
+                "itemId": "250498",
+                "tipId": "250498",
+                "name": "Veteran's Chain Helm",
+                "icon": "inv_helmet_39.jpg",
+                "side": "both",
+                "source": "Blacksmithing Only its maker can wear it Plans: nobody has found it in the beta yet",
+                "sourceDetails": [
+                  "Blacksmithing Only its maker can wear it Plans: nobody has found it in the beta yet"
+                ],
+                "stats": "",
+                "ilvl": null,
+                "armor": null,
+                "lines": [
+                  "Binds when picked up",
+                  "Head\tMail",
+                  "Requires Level 25"
+                ],
+                "mats": "8 2 6"
+              }
+            ]
+          },
+          {
+            "slotId": "neck",
+            "slotName": "Neck",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "7731",
+                "tipId": "7731",
+                "name": "Ghostshard Talisman",
+                "icon": "inv_jewelry_necklace_06.jpg",
+                "side": "both",
+                "source": "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic",
+                "sourceDetails": [
+                  "Azshir the Sleepless, Scarlet Monastery Graveyard 33.93% in Classic"
+                ],
+                "stats": "+9 Stamina, Equip: +14 Attack Power., Equip: +12 Attack Power against Undead.",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Neck",
+                  "+9 Stamina",
+                  "Equip: +14 Attack Power.",
+                  "Equip: +12 Attack Power against Undead.",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "286984",
+                "tipId": "286984",
+                "name": "Mark of the Marsh",
+                "icon": "inv_jewelry_necklace_09.jpg",
+                "side": "both",
+                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
+                "sourceDetails": [
+                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
+                ],
+                "stats": "+8 Agility, +5 Strength",
+                "ilvl": 33,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Neck",
+                  "+8 Agility",
+                  "+5 Strength",
+                  "Requires Level 28",
+                  "Sell Price: 28s 83c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "12019",
+                "tipId": "1201912727",
+                "name": "Cerulean Talisman of the Tiger",
+                "icon": "inv_jewelry_necklace_01.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+5 Strength, +5 Agility",
+                "ilvl": 32,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Neck",
+                  "+5 Strength",
+                  "+5 Agility",
+                  "Requires Level 27",
+                  "Sell Price: 42s 20c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "13084",
+                "tipId": "13084",
+                "name": "Kaleidoscope Chain",
+                "icon": "inv_jewelry_amulet_07.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+4 Strength, +4 Agility, +4 Stamina, +4 Intellect, +4 Spirit",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Neck",
+                  "+4 Strength",
+                  "+4 Agility",
+                  "+4 Stamina",
+                  "+4 Intellect",
+                  "+4 Spirit",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q3",
+                "itemId": "273049",
+                "tipId": "273049",
+                "name": "Archmagister's Faceted Pendant",
+                "icon": "inv_misc_necklacea8.jpg",
+                "side": "both",
+                "source": "Shade of the Archmage, City of Dalaran",
+                "sourceDetails": [
+                  "Shade of the Archmage, City of Dalaran"
+                ],
+                "stats": "+6 Intellect, Equip: +12 Attack Power, Use: Increase experience gained from slaying Undead by 10% for 5 min.",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Neck",
+                  "+6 Intellect",
+                  "Requires Level 30",
+                  "Equip: +12 Attack Power",
+                  "Use: Increase experience gained from slaying Undead by 10% for 5 min.",
+                  "Sell Price: 35s 20c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "274068",
+                "tipId": "274068",
+                "name": "Thermaplugg Medal of Honor",
+                "icon": "inv_jewelry_amulet_03.jpg",
+                "side": "both",
+                "source": "Crowd Pummeler 9-60, Gnomeregan",
+                "sourceDetails": [
+                  "Crowd Pummeler 9-60, Gnomeregan"
+                ],
+                "stats": "+6 Stamina, +6 Spirit, Equip: +10 Attack Power.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Neck",
+                  "+6 Stamina",
+                  "+6 Spirit",
+                  "Equip: +10 Attack Power.",
+                  "Requires Level 29",
+                  "\"Azeroth's Best Pummeler\""
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 7,
+                "quality": "q3",
+                "itemId": "285331",
+                "tipId": "285331",
+                "name": "Mark of the Pack Leader",
+                "icon": "inv_jewelry_necklace_04.jpg",
+                "side": "both",
+                "source": "Humar the Pridelord, the rare black lion of the Barrens Reported, not checked",
+                "sourceDetails": [
+                  "Humar the Pridelord, the rare black lion of the Barrens Reported, not checked"
+                ],
+                "stats": "",
+                "ilvl": null,
+                "armor": null,
+                "lines": [
+                  "Binds when picked up",
+                  "Neck\tNeck",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "shoulder",
+            "slotName": "Shoulder",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "2278",
+                "tipId": "2278",
+                "name": "Forest Tracker Epaulets",
+                "icon": "inv_shoulder_18.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+5 Strength, +11 Agility",
+                "ilvl": 31,
+                "armor": 78,
+                "lines": [
+                  "Binds when equipped",
+                  "Shoulder\tLeather",
+                  "78 Armor",
+                  "+5 Strength",
+                  "+11 Agility",
+                  "Requires Level 26"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "15140",
+                "tipId": "1514012727",
+                "name": "Cutthroat's Mantle of the Tiger",
+                "icon": "inv_shoulder_11.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+7 Strength, +7 Agility",
+                "ilvl": 34,
+                "armor": 75,
+                "lines": [
+                  "Binds when equipped",
+                  "Shoulder\tLeather",
+                  "75 Armor",
+                  "+7 Strength",
+                  "+7 Agility",
+                  "Requires Level 29",
+                  "Sell Price: 25s 29c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "15698",
+                "tipId": "15698",
+                "name": "Wrangling Spaulders",
+                "icon": "inv_shoulder_14.jpg",
+                "side": "both",
+                "source": "Quest: Kodo Roundup level 34 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Kodo Roundup level 34 in Classic, from level 30"
+                ],
+                "stats": "+8 Strength, +2 Agility, +6 Stamina",
+                "ilvl": 38,
+                "armor": 167,
+                "lines": [
+                  "Binds when picked up",
+                  "Shoulder\tMail",
+                  "167 Armor",
+                  "+8 Strength",
+                  "+2 Agility",
+                  "+6 Stamina"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q2",
+                "itemId": "5964",
+                "tipId": "5964",
+                "name": "Barbaric Shoulders",
+                "icon": "inv_shoulder_08.jpg",
+                "side": "both",
+                "source": "Leatherworking",
+                "sourceDetails": [
+                  "Leatherworking"
+                ],
+                "stats": "+5 Strength, +5 Agility, +6 Stamina",
+                "ilvl": 35,
+                "armor": 76,
+                "lines": [
+                  "Binds when equipped",
+                  "Shoulder\tLeather",
+                  "76 Armor",
+                  "+5 Strength",
+                  "+5 Agility",
+                  "+6 Stamina",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4234\"><img src=\"/icon/inv_misc_leatherscrap_07.jpg\" alt=\"Heavy Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"4236\"><img src=\"/icon/inv_misc_pelt_wolf_02.jpg\" alt=\"Cured Heavy Hide\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"2321\"><img src=\"/icon/inv_fabric_wool_02.jpg\" alt=\"Fine Thread\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span>"
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "6792",
+                "tipId": "6792",
+                "name": "Sanguine Pauldrons",
+                "icon": "inv_shoulder_29.jpg",
+                "side": "alliance",
+                "source": "Quest: The Karnitol Shipwreck Alliance, level 39 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: The Karnitol Shipwreck Alliance, level 39 in Classic, from level 30"
+                ],
+                "stats": "+8 Strength, +8 Spirit",
+                "ilvl": 40,
+                "armor": 173,
+                "lines": [
+                  "Binds when picked up",
+                  "Shoulder\tMail",
+                  "173 Armor",
+                  "+8 Strength",
+                  "+8 Spirit"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q2",
+                "itemId": "3765",
+                "tipId": "3765",
+                "name": "Brigand's Pauldrons",
+                "icon": "inv_shoulder_03.jpg",
+                "side": "horde",
+                "source": "Quest: Taretha&#x27;s Gift Horde, level 40 in Classic, from level 29",
+                "sourceDetails": [
+                  "Quest: Taretha&#x27;s Gift Horde, level 40 in Classic, from level 29"
+                ],
+                "stats": "+8 Strength, +8 Stamina",
+                "ilvl": 40,
+                "armor": 173,
+                "lines": [
+                  "Binds when picked up",
+                  "Shoulder\tMail",
+                  "173 Armor",
+                  "+8 Strength",
+                  "+8 Stamina"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "back",
+            "slotName": "Back",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q2",
+                "itemId": "14593",
+                "tipId": "14593",
+                "name": "Hawkeye's Cloak",
+                "icon": "inv_misc_cape_03.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+3 Strength, +7 Agility",
+                "ilvl": 35,
+                "armor": 23,
+                "lines": [
+                  "Binds when equipped",
+                  "Back",
+                  "23 Armor",
+                  "+3 Strength",
+                  "+7 Agility",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "7436",
+                "tipId": "743612727",
+                "name": "Twilight Cape of the Tiger",
+                "icon": "inv_misc_cape_13.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 41 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 41 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+5 Strength, +5 Agility",
+                "ilvl": 35,
+                "armor": 23,
+                "lines": [
+                  "Binds when equipped",
+                  "Back\tCloth",
+                  "23 Armor",
+                  "+5 Strength",
+                  "+5 Agility",
+                  "Requires Level 30",
+                  "Sell Price: 21s 11c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "271720",
+                "tipId": "271720",
+                "name": "Crocolisk Skin Gaiter",
+                "icon": "inv_misc_monsterscales_02.jpg",
+                "side": "both",
+                "source": "A quest of the Excavation Site, in the Wetlands Which quest is not known yet",
+                "sourceDetails": [
+                  "A quest of the Excavation Site, in the Wetlands Which quest is not known yet"
+                ],
+                "stats": "+5 Strength, +4 Agility, +5 Stamina",
+                "ilvl": 30,
+                "armor": 24,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique",
+                  "Back",
+                  "24 Armor",
+                  "+5 Strength",
+                  "+4 Agility",
+                  "+5 Stamina",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q2",
+                "itemId": "2805",
+                "tipId": "2805",
+                "name": "Yeti Fur Cloak",
+                "icon": "inv_misc_cape_04.jpg",
+                "side": "alliance",
+                "source": "Quest: Bartolo&#x27;s Yeti Fur Cloak Alliance, level 34 in Classic, from level 29",
+                "sourceDetails": [
+                  "Quest: Bartolo&#x27;s Yeti Fur Cloak Alliance, level 34 in Classic, from level 29"
+                ],
+                "stats": "+3 Strength, +6 Agility",
+                "ilvl": 34,
+                "armor": 23,
+                "lines": [
+                  "Binds when picked up",
+                  "Back",
+                  "23 Armor",
+                  "+3 Strength",
+                  "+6 Agility"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "282658",
+                "tipId": "282658",
+                "name": "Dragonmaw Battle Shroud",
+                "icon": "inv_misc_cape_08.jpg",
+                "side": "both",
+                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
+                "sourceDetails": [
+                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
+                ],
+                "stats": "+7 Strength, +1 Spirit",
+                "ilvl": 32,
+                "armor": 22,
+                "lines": [
+                  "Binds when equipped",
+                  "Back",
+                  "22 Armor",
+                  "+7 Strength",
+                  "+1 Spirit",
+                  "Requires Level 27"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "273045",
+                "tipId": "273045",
+                "name": "Drape of Shifting Energy",
+                "icon": "inv_misc_cape_18.jpg",
+                "side": "both",
+                "source": "Arcanic Enigma, City of Dalaran",
+                "sourceDetails": [
+                  "Arcanic Enigma, City of Dalaran"
+                ],
+                "stats": "+7 Spirit, Equip: +12 Attack Power",
+                "ilvl": 32,
+                "armor": 24,
+                "lines": [
+                  "Binds when picked up",
+                  "Back\tCloth",
+                  "24 Armor",
+                  "+7 Spirit",
+                  "Requires Level 27",
+                  "Equip: +12 Attack Power",
+                  "Sell Price: 19s 55c"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "chest",
+            "slotName": "Chest",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "1488",
+                "tipId": "1488",
+                "name": "Avenger's Armor",
+                "icon": "inv_chest_chain.jpg",
+                "side": "both",
+                "source": "Trash mobs, Razorfen Kraul 0.03% in Classic",
+                "sourceDetails": [
+                  "Trash mobs, Razorfen Kraul 0.03% in Classic"
+                ],
+                "stats": "+15 Strength, +6 Stamina",
+                "ilvl": 31,
+                "armor": 221,
+                "lines": [
+                  "Binds when equipped",
+                  "Chest\tMail",
+                  "221 Armor",
+                  "+15 Strength",
+                  "+6 Stamina",
+                  "Requires Level 26"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "7407",
+                "tipId": "740712727",
+                "name": "Infiltrator Armor of the Tiger",
+                "icon": "inv_chest_leather_03.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+9 Strength, +9 Agility",
+                "ilvl": 35,
+                "armor": 102,
+                "lines": [
+                  "Binds when equipped",
+                  "Chest\tLeather",
+                  "102 Armor",
+                  "+9 Strength",
+                  "+9 Agility",
+                  "Requires Level 30",
+                  "Sell Price: 36s 66c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "250518",
+                "tipId": "250518",
+                "name": "Veteran's Silvered Chain Shirt",
+                "icon": "inv_chest_chain_07.jpg",
+                "side": "both",
+                "source": "Blacksmithing (110) Only its maker can wear it",
+                "sourceDetails": [
+                  "Blacksmithing (110) Only its maker can wear it"
+                ],
+                "stats": "+10 Strength, +6 Agility, +7 Stamina",
+                "ilvl": 27,
+                "armor": 208,
+                "lines": [
+                  "Binds when picked up",
+                  "Chest\tMail",
+                  "208 Armor",
+                  "+10 Strength",
+                  "+6 Agility",
+                  "+7 Stamina",
+                  "Requires Level 22"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>20</b></span><span class=\"bis-mat\" data-tip=\"3478\"><img src=\"/icon/inv_stone_grindingstone_02.jpg\" alt=\"Coarse Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>5</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251370\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Veteran&#x27;s Silvered Chain Shirt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "2870",
+                "tipId": "2870",
+                "name": "Shining Silver Breastplate",
+                "icon": "inv_chest_plate15.jpg",
+                "side": "both",
+                "source": "Blacksmithing",
+                "sourceDetails": [
+                  "Blacksmithing"
+                ],
+                "stats": "+14 Strength, +6 Stamina",
+                "ilvl": 29,
+                "armor": 214,
+                "lines": [
+                  "Binds when equipped",
+                  "Chest\tMail",
+                  "214 Armor",
+                  "+14 Strength",
+                  "+6 Stamina",
+                  "Requires Level 24"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>20</b></span><span class=\"bis-mat\" data-tip=\"1206\"><img src=\"/icon/inv_misc_gem_emerald_02.jpg\" alt=\"Moss Agate\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1705\"><img src=\"/icon/inv_misc_gem_crystal_01.jpg\" alt=\"Lesser Moonstone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"5500\"><img src=\"/icon/inv_misc_gem_pearl_02.jpg\" alt=\"Iridescent Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>4</b></span>"
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "14751",
+                "tipId": "14751",
+                "name": "Slayer's Surcoat",
+                "icon": "inv_chest_chain_07.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+10 Strength, +3 Agility, +5 Stamina",
+                "ilvl": 33,
+                "armor": 207,
+                "lines": [
+                  "Binds when equipped",
+                  "Chest\tMail",
+                  "207 Armor",
+                  "+10 Strength",
+                  "+3 Agility",
+                  "+5 Stamina",
+                  "Requires Level 28"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "273035",
+                "tipId": "273035",
+                "name": "Mana-Warped Chain Shirt",
+                "icon": "inv_chest_chain_04.jpg",
+                "side": "both",
+                "source": "Arcane Anomaly, City of Dalaran",
+                "sourceDetails": [
+                  "Arcane Anomaly, City of Dalaran"
+                ],
+                "stats": "+8 Stamina, +12 Strength, Equip: +3 Mana Regeneration",
+                "ilvl": 32,
+                "armor": 225,
+                "lines": [
+                  "Binds when picked up",
+                  "Chest\tMail",
+                  "225 Armor",
+                  "+8 Stamina",
+                  "+12 Strength",
+                  "Requires Level 27",
+                  "Equip: +3 Mana Regeneration",
+                  "Sell Price: 40s 54c"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "wrist",
+            "slotName": "Wrist",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "9428",
+                "tipId": "942813018",
+                "name": "Unearthed Bands of the Tiger",
+                "icon": "inv_bracer_06.jpg",
+                "side": "both",
+                "source": "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name",
+                "sourceDetails": [
+                  "Trash mobs, Uldaman Random suffix, one of 35 Search the auction house for the full name"
+                ],
+                "stats": "+6 Strength, +6 Agility, Equip: +8 Attack Power",
+                "ilvl": 35,
+                "armor": 49,
+                "lines": [
+                  "Binds when equipped",
+                  "Wrist\tLeather",
+                  "49 Armor",
+                  "+6 Strength",
+                  "+6 Agility",
+                  "Requires Level 30",
+                  "Equip: +8 Attack Power",
+                  "Sell Price: 21s 87c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "270080",
+                "tipId": "270080",
+                "name": "Arathi Armbands",
+                "icon": "inv_bracer_09.jpg",
+                "side": "alliance",
+                "source": "Wanted! Otto and Falconcrest, Refuge Pointe, Arathi Highlands Two elites of level 38 and 40: take a strong group",
+                "sourceDetails": [
+                  "Wanted! Otto and Falconcrest, Refuge Pointe, Arathi Highlands Two elites of level 38 and 40: take a strong group"
+                ],
+                "stats": "+7 Strength, +5 Agility",
+                "ilvl": 40,
+                "armor": 48,
+                "lines": [
+                  "Binds when picked up",
+                  "Wrist\tLeather",
+                  "48 Armor",
+                  "+7 Strength",
+                  "+5 Agility"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "14590",
+                "tipId": "14590",
+                "name": "Hawkeye's Bracers",
+                "icon": "inv_bracer_04.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+4 Strength, +6 Agility",
+                "ilvl": 35,
+                "armor": 44,
+                "lines": [
+                  "Binds when equipped",
+                  "Wrist\tLeather",
+                  "44 Armor",
+                  "+4 Strength",
+                  "+6 Agility",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "13012",
+                "tipId": "13012",
+                "name": "Yorgen Bracers",
+                "icon": "inv_bracer_02.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+6 Strength, +3 Agility, +3 Stamina",
+                "ilvl": 27,
+                "armor": 91,
+                "lines": [
+                  "Binds when equipped",
+                  "Wrist\tMail",
+                  "91 Armor",
+                  "+6 Strength",
+                  "+3 Agility",
+                  "+3 Stamina",
+                  "Requires Level 22"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "270068",
+                "tipId": "270068",
+                "name": "Stromgarde Bracers",
+                "icon": "inv_bracer_12.jpg",
+                "side": "alliance",
+                "source": "Quest: Wanted! Marez Cowl Alliance, from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Wanted! Marez Cowl Alliance, from level 30, reported, not checked"
+                ],
+                "stats": "+8 Strength, +3 Stamina",
+                "ilvl": 39,
+                "armor": 99,
+                "lines": [
+                  "Binds when picked up",
+                  "Wrist\tMail",
+                  "99 Armor",
+                  "+8 Strength",
+                  "+3 Stamina"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "4438",
+                "tipId": "4438",
+                "name": "Pugilist Bracers",
+                "icon": "inv_bracer_03.jpg",
+                "side": "both",
+                "source": "Trash mobs, Razorfen Kraul 0.04% in Classic",
+                "sourceDetails": [
+                  "Trash mobs, Razorfen Kraul 0.04% in Classic"
+                ],
+                "stats": "+8 Strength, +3 Stamina",
+                "ilvl": 30,
+                "armor": 95,
+                "lines": [
+                  "Binds when equipped",
+                  "Wrist\tMail",
+                  "95 Armor",
+                  "+8 Strength",
+                  "+3 Stamina",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "hands",
+            "slotName": "Hands",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q2",
+                "itemId": "4107",
+                "tipId": "4107",
+                "name": "Tiger Hunter Gloves",
+                "icon": "inv_gauntlets_04.jpg",
+                "side": "both",
+                "source": "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group",
+                "sourceDetails": [
+                  "Quest: Tiger Mastery level 37 in Classic, from level 28 Four Tiger Mastery quests, Stranglethorn Vale Sin&#x27;Dall is level 37: take a group"
+                ],
+                "stats": "+7 Strength, +8 Agility",
+                "ilvl": 37,
+                "armor": 65,
+                "lines": [
+                  "Binds when picked up",
+                  "Hands\tLeather",
+                  "65 Armor",
+                  "+7 Strength",
+                  "+8 Agility"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "286992",
+                "tipId": "286992",
+                "name": "Construct's Grips",
+                "icon": "inv_gauntlets_04.jpg",
+                "side": "both",
+                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
+                "sourceDetails": [
+                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
+                ],
+                "stats": "+12 Strength, +4 Stamina",
+                "ilvl": 33,
+                "armor": 142,
+                "lines": [
+                  "Binds when equipped",
+                  "Hands\tMail",
+                  "142 Armor",
+                  "+12 Strength",
+                  "+4 Stamina",
+                  "Requires Level 28",
+                  "Sell Price: 22s 25c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "9861",
+                "tipId": "986112727",
+                "name": "Archer's Gloves of the Tiger",
+                "icon": "inv_gauntlets_22.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+7 Strength, +7 Agility",
+                "ilvl": 35,
+                "armor": 63,
+                "lines": [
+                  "Binds when equipped",
+                  "Hands\tLeather",
+                  "63 Armor",
+                  "+7 Strength",
+                  "+7 Agility",
+                  "Requires Level 30",
+                  "Sell Price: 17s 53c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q2",
+                "itemId": "3754",
+                "tipId": "3754",
+                "name": "Shepherd's Gloves",
+                "icon": "inv_gauntlets_21.jpg",
+                "side": "alliance",
+                "source": "Quest: Costly Menace Alliance, level 34 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Costly Menace Alliance, level 34 in Classic, from level 30"
+                ],
+                "stats": "+7 Strength, +6 Agility",
+                "ilvl": 33,
+                "armor": 61,
+                "lines": [
+                  "Binds when picked up",
+                  "Hands\tLeather",
+                  "61 Armor",
+                  "+7 Strength",
+                  "+6 Agility"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "6408",
+                "tipId": "6408",
+                "name": "Insignia Gloves",
+                "icon": "inv_gauntlets_21.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+7 Strength, +6 Agility",
+                "ilvl": 34,
+                "armor": 62,
+                "lines": [
+                  "Binds when equipped",
+                  "Hands\tLeather",
+                  "62 Armor",
+                  "+7 Strength",
+                  "+6 Agility",
+                  "Requires Level 29"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q2",
+                "itemId": "3341",
+                "tipId": "3341",
+                "name": "Gauntlets of Ogre Strength",
+                "icon": "inv_gauntlets_04.jpg",
+                "side": "both",
+                "source": "Boulderfist ogres, Arathi Highlands About once in eighty kills, or at the auction house",
+                "sourceDetails": [
+                  "Boulderfist ogres, Arathi Highlands About once in eighty kills, or at the auction house"
+                ],
+                "stats": "+3 Strength, Equip: +16 Attack Power.",
+                "ilvl": 32,
+                "armor": 128,
+                "lines": [
+                  "Binds when equipped",
+                  "Hands\tMail",
+                  "128 Armor",
+                  "+3 Strength",
+                  "Equip: +16 Attack Power.",
+                  "Requires Level 27"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 7,
+                "quality": "q2",
+                "itemId": "4075",
+                "tipId": "4075",
+                "name": "Mail Combat Gauntlets",
+                "icon": "inv_gauntlets_25.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "",
+                "ilvl": null,
+                "armor": null,
+                "lines": [
+                  "Binds when equipped",
+                  "Hands\tMail",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "waist",
+            "slotName": "Waist",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "250556",
+                "tipId": "250556",
+                "name": "Officer's Belt",
+                "icon": "inv_belt_20.jpg",
+                "side": "both",
+                "source": "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150",
+                "sourceDetails": [
+                  "Blacksmithing (150) Only its maker can wear it Plans: not needed, blacksmithing trainers teach the recipe at 150"
+                ],
+                "stats": "+10 Strength, +6 Agility, +7 Stamina",
+                "ilvl": 35,
+                "armor": 132,
+                "lines": [
+                  "Binds when picked up",
+                  "Waist\tMail",
+                  "132 Armor",
+                  "+10 Strength",
+                  "+6 Agility",
+                  "+7 Stamina",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"3575\"><img src=\"/icon/inv_ingot_iron.jpg\" alt=\"Iron Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"3486\"><img src=\"/icon/inv_stone_grindingstone_03.jpg\" alt=\"Heavy Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1529\"><img src=\"/icon/inv_misc_gem_stone_01.jpg\" alt=\"Jade\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251408\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Officer&#x27;s Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "252459",
+                "tipId": "252459",
+                "name": "Prowler's Leather Belt",
+                "icon": "inv_belt_43.jpg",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge"
+                ],
+                "stats": "+9 Strength, +6 Agility, +6 Stamina, +4 Intellect",
+                "ilvl": 35,
+                "armor": 63,
+                "lines": [
+                  "Binds when picked up",
+                  "Waist\tLeather",
+                  "63 Armor",
+                  "+9 Strength",
+                  "+6 Agility",
+                  "+6 Stamina",
+                  "+4 Intellect",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4234\"><img src=\"/icon/inv_misc_leatherscrap_07.jpg\" alt=\"Heavy Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"4233\"><img src=\"/icon/inv_misc_pelt_bear_02.jpg\" alt=\"Cured Medium Hide\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1529\"><img src=\"/icon/inv_misc_gem_stone_01.jpg\" alt=\"Jade\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"252826\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Pattern: Prowler&#x27;s Leather Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "252520",
+                "tipId": "252520",
+                "name": "Skulker's Leather Belt",
+                "icon": "inv_belt_37b.jpg",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge"
+                ],
+                "stats": "+6 Strength, +9 Agility, +6 Stamina, +4 Spirit",
+                "ilvl": 35,
+                "armor": 63,
+                "lines": [
+                  "Binds when picked up",
+                  "Waist\tLeather",
+                  "63 Armor",
+                  "+6 Strength",
+                  "+9 Agility",
+                  "+6 Stamina",
+                  "+4 Spirit",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4234\"><img src=\"/icon/inv_misc_leatherscrap_07.jpg\" alt=\"Heavy Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"4233\"><img src=\"/icon/inv_misc_pelt_bear_02.jpg\" alt=\"Cured Medium Hide\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"3182\"><img src=\"/icon/spell_nature_web.jpg\" alt=\"Spider&#x27;s Silk\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"252827\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Pattern: Skulker&#x27;s Leather Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "9405",
+                "tipId": "9405",
+                "name": "Girdle of Golem Strength",
+                "icon": "inv_belt_27.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+12 Strength, Equip: Increased Defense +3.",
+                "ilvl": 33,
+                "armor": 128,
+                "lines": [
+                  "Binds when equipped",
+                  "Waist\tMail",
+                  "128 Armor",
+                  "+12 Strength",
+                  "Equip: Increased Defense +3.",
+                  "Requires Level 28"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "280307",
+                "tipId": "28030712727",
+                "name": "Gizmo Girdle of the Tiger",
+                "icon": "inv_belt_06.jpg",
+                "side": "both",
+                "source": "Engineering (175) Only its maker can wear it Requires Anarchist&#x27;s Workbench. Nobody has found its blueprint in the beta yet Random suffix, one of 36 The game picks it when the item drops",
+                "sourceDetails": [
+                  "Engineering (175) Only its maker can wear it Requires Anarchist&#x27;s Workbench. Nobody has found its blueprint in the beta yet Random suffix, one of 36 The game picks it when the item drops"
+                ],
+                "stats": "+7 Strength, +7 Agility",
+                "ilvl": 35,
+                "armor": 57,
+                "lines": [
+                  "Binds when picked up",
+                  "Waist\tLeather",
+                  "57 Armor",
+                  "+7 Strength",
+                  "+7 Agility",
+                  "Requires Level 30",
+                  "Requires Engineering (175)",
+                  "Sell Price: 18s 2c"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4375\"><img src=\"/icon/inv_gizmo_02.jpg\" alt=\"Whirring Bronze Gizmo\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"4382\"><img src=\"/icon/inv_gizmo_bronzeframework_01.jpg\" alt=\"Bronze Framework\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"2319\"><img src=\"/icon/inv_misc_leatherscrap_05.jpg\" alt=\"Medium Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>4</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"280322\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Schematic: Gizmo Girdle\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span>"
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "252460",
+                "tipId": "252460",
+                "name": "Warden's Leather Belt",
+                "icon": "inv_belt_06.jpg",
+                "side": "both",
+                "source": "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge",
+                "sourceDetails": [
+                  "Leatherworking (150) Only its maker can wear it Pattern: not needed, leatherworking trainers teach the recipe at 150 Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge"
+                ],
+                "stats": "+6 Strength, +6 Agility, +9 Stamina, +38 Armor",
+                "ilvl": 35,
+                "armor": 101,
+                "lines": [
+                  "Binds when picked up",
+                  "Waist\tLeather",
+                  "63 Armor",
+                  "+6 Strength",
+                  "+6 Agility",
+                  "+9 Stamina",
+                  "+38 Armor",
+                  "Requires Level 30"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4234\"><img src=\"/icon/inv_misc_leatherscrap_07.jpg\" alt=\"Heavy Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"4233\"><img src=\"/icon/inv_misc_pelt_bear_02.jpg\" alt=\"Cured Medium Hide\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"7067\"><img src=\"/icon/inv_ore_iron_01.jpg\" alt=\"Elemental Earth\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"252829\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Pattern: Warden&#x27;s Leather Belt\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              }
+            ]
+          },
+          {
+            "slotId": "legs",
+            "slotName": "Legs",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "250523",
+                "tipId": "250523",
+                "name": "Veteran's Silvered Chain Leggings",
+                "icon": "inv_pants_mail_05.jpg",
+                "side": "both",
+                "source": "Blacksmithing (125) Only its maker can wear it",
+                "sourceDetails": [
+                  "Blacksmithing (125) Only its maker can wear it"
+                ],
+                "stats": "+11 Strength, +7 Agility, +8 Stamina",
+                "ilvl": 30,
+                "armor": 191,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tMail",
+                  "191 Armor",
+                  "+11 Strength",
+                  "+7 Agility",
+                  "+8 Stamina",
+                  "Requires Level 25"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"2841\"><img src=\"/icon/inv_ingot_bronze.jpg\" alt=\"Bronze Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>20</b></span><span class=\"bis-mat\" data-tip=\"3478\"><img src=\"/icon/inv_stone_grindingstone_02.jpg\" alt=\"Coarse Grinding Stone\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"2842\"><img src=\"/icon/inv_ingot_01.jpg\" alt=\"Silver Bar\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>6</b></span><span class=\"bis-mat\" data-tip=\"5498\"><img src=\"/icon/inv_misc_gem_pearl_03.jpg\" alt=\"Small Lustrous Pearl\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"251375\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Plans: Veteran&#x27;s Silvered Chain Leggings\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "9624",
+                "tipId": "9624",
+                "name": "Triprunner Dungarees",
+                "icon": "inv_pants_08.jpg",
+                "side": "both",
+                "source": "Quest: Rig Wars Horde, level 35 in Classic, from level 25 Quest: The Grand Betrayal Alliance, level 35 in Classic, from level 25 The last quest of Gnomeregan, for either faction Take a group for Mekgineer Thermaplugg (level 34)",
+                "sourceDetails": [
+                  "Quest: Rig Wars Horde, level 35 in Classic, from level 25 Quest: The Grand Betrayal Alliance, level 35 in Classic, from level 25 The last quest of Gnomeregan, for either faction Take a group for Mekgineer Thermaplugg (level 34)"
+                ],
+                "stats": "+3 Strength, +18 Agility, +6 Stamina",
+                "ilvl": 37,
+                "armor": 101,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tLeather",
+                  "101 Armor",
+                  "+3 Strength",
+                  "+18 Agility",
+                  "+6 Stamina"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "7414",
+                "tipId": "741412727",
+                "name": "Infiltrator Pants of the Tiger",
+                "icon": "inv_pants_07.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 36 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+9 Strength, +9 Agility",
+                "ilvl": 34,
+                "armor": 87,
+                "lines": [
+                  "Binds when equipped",
+                  "Legs\tLeather",
+                  "87 Armor",
+                  "+9 Strength",
+                  "+9 Agility",
+                  "Requires Level 29",
+                  "Sell Price: 31s 75c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q2",
+                "itemId": "270057",
+                "tipId": "270057",
+                "name": "Stromgarde Operative Pants",
+                "icon": "inv_pants_07.jpg",
+                "side": "alliance",
+                "source": "Quest: Stromgarde Badges Alliance, from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Stromgarde Badges Alliance, from level 30, reported, not checked"
+                ],
+                "stats": "+8 Strength, +9 Agility, +6 Stamina",
+                "ilvl": 37,
+                "armor": 92,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tLeather",
+                  "92 Armor",
+                  "+8 Strength",
+                  "+9 Agility",
+                  "+6 Stamina"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q3",
+                "itemId": "252516",
+                "tipId": "252516",
+                "name": "Brawler's Leather Legguards",
+                "icon": "inv_pants_leather_19.jpg",
+                "side": "both",
+                "source": "Leatherworking (125) Only its maker can wear it Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge",
+                "sourceDetails": [
+                  "Leatherworking (125) Only its maker can wear it Requires Tanning Rack. Happy Camper sells its blueprint for 15s, just outside Ironforge"
+                ],
+                "stats": "+7 Strength, +9 Agility, +7 Stamina, +6 Spirit",
+                "ilvl": 30,
+                "armor": 90,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tLeather",
+                  "90 Armor",
+                  "+7 Strength",
+                  "+9 Agility",
+                  "+7 Stamina",
+                  "+6 Spirit",
+                  "Requires Level 25"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"2319\"><img src=\"/icon/inv_misc_leatherscrap_05.jpg\" alt=\"Medium Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>12</b></span><span class=\"bis-mat\" data-tip=\"4233\"><img src=\"/icon/inv_misc_pelt_bear_02.jpg\" alt=\"Cured Medium Hide\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>4</b></span><span class=\"bis-mat\" data-tip=\"249427\"><img src=\"/icon/item_pristinehide.jpg\" alt=\"Pristine Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat\" data-tip=\"2321\"><img src=\"/icon/inv_fabric_wool_02.jpg\" alt=\"Fine Thread\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>3</b></span><span class=\"bis-mat\" data-tip=\"1210\"><img src=\"/icon/inv_misc_gem_amethyst_01.jpg\" alt=\"Shadowgem\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>8</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"252820\"><img src=\"/icon/inv_scroll_06.jpg\" alt=\"Pattern: Brawler&#x27;s Leather Legguards\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
+              },
+              {
+                "rank": 6,
+                "quality": "q2",
+                "itemId": "270074",
+                "tipId": "270074",
+                "name": "Doomcaller's Pants",
+                "icon": "inv_pants_14.jpg",
+                "side": "both",
+                "source": "Quest: Solution to Doom from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Solution to Doom from level 30, reported, not checked"
+                ],
+                "stats": "+13 Strength, +9 Intellect",
+                "ilvl": 42,
+                "armor": 101,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tLeather",
+                  "101 Armor",
+                  "+13 Strength",
+                  "+9 Intellect"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 7,
+                "quality": "q2",
+                "itemId": "281295",
+                "tipId": "281295",
+                "name": "Pelt Pants",
+                "icon": "inv_pants_09.jpg",
+                "side": "alliance",
+                "source": "Alliance quest Packaged Pristine Pelts, level 31 Kristy Grant, Thalanaar, from level 27",
+                "sourceDetails": [
+                  "Alliance quest Packaged Pristine Pelts, level 31 Kristy Grant, Thalanaar, from level 27"
+                ],
+                "stats": "",
+                "ilvl": null,
+                "armor": null,
+                "lines": [
+                  "Binds when picked up",
+                  "Legs\tLeather",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "feet",
+            "slotName": "Feet",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "284403",
+                "tipId": "284403",
+                "name": "Shapeshifting Sentinel's Strides",
+                "icon": "inv_boots_chain_08.jpg",
+                "side": "horde",
+                "source": "A rare of northern Stonetalon Mountains, near the night elves Horde only: both rares serve Darnassus",
+                "sourceDetails": [
+                  "A rare of northern Stonetalon Mountains, near the night elves Horde only: both rares serve Darnassus"
+                ],
+                "stats": "+8 Agility, Equip: +16 Attack Power.",
+                "ilvl": 29,
+                "armor": 70,
+                "lines": [
+                  "Binds when picked up",
+                  "Feet\tLeather",
+                  "70 Armor",
+                  "+8 Agility",
+                  "Equip: +16 Attack Power.",
+                  "Requires Level 24"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "4464",
+                "tipId": "4464",
+                "name": "Trouncing Boots",
+                "icon": "inv_boots_01.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+7 Strength, +7 Agility",
+                "ilvl": 34,
+                "armor": 144,
+                "lines": [
+                  "Binds when equipped",
+                  "Feet\tMail",
+                  "144 Armor",
+                  "+7 Strength",
+                  "+7 Agility",
+                  "Requires Level 29"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q2",
+                "itemId": "7417",
+                "tipId": "741712727",
+                "name": "Phalanx Boots of the Tiger",
+                "icon": "inv_boots_01.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 32 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 32 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+7 Strength, +7 Agility",
+                "ilvl": 34,
+                "armor": 144,
+                "lines": [
+                  "Binds when equipped",
+                  "Feet\tMail",
+                  "144 Armor",
+                  "+7 Strength",
+                  "+7 Agility",
+                  "Requires Level 29",
+                  "Sell Price: 29s 3c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "273042",
+                "tipId": "273042",
+                "name": "Manascale Treads",
+                "icon": "inv_boots_chain_08.jpg",
+                "side": "both",
+                "source": "Mana Devourer, City of Dalaran",
+                "sourceDetails": [
+                  "Mana Devourer, City of Dalaran"
+                ],
+                "stats": "+7 Strength, +7 Intellect, Equip: +7 Critical Strike Rating",
+                "ilvl": 33,
+                "armor": 157,
+                "lines": [
+                  "Binds when picked up",
+                  "Feet\tMail",
+                  "157 Armor",
+                  "+7 Strength",
+                  "+7 Intellect",
+                  "Requires Level 28",
+                  "Equip: +7 Critical Strike Rating",
+                  "Sell Price: 31s 18c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "4136",
+                "tipId": "4136",
+                "name": "Darkspear Boots",
+                "icon": "inv_boots_01.jpg",
+                "side": "horde",
+                "source": "Quest: Split Bone Necklace Horde, level 42 in Classic, from level 30",
+                "sourceDetails": [
+                  "Quest: Split Bone Necklace Horde, level 42 in Classic, from level 30"
+                ],
+                "stats": "+9 Strength, +8 Spirit",
+                "ilvl": 42,
+                "armor": 164,
+                "lines": [
+                  "Binds when picked up",
+                  "Feet\tMail",
+                  "164 Armor",
+                  "+9 Strength",
+                  "+8 Spirit"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "1121",
+                "tipId": "1121",
+                "name": "Feet of the Lynx",
+                "icon": "inv_boots_wolf.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+3 Strength, +8 Agility",
+                "ilvl": 24,
+                "armor": 63,
+                "lines": [
+                  "Binds when equipped",
+                  "Feet\tLeather",
+                  "63 Armor",
+                  "+3 Strength",
+                  "+8 Agility",
+                  "Requires Level 19"
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "finger",
+            "slotName": "Finger",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "285190",
+                "tipId": "285190",
+                "name": "Wyvern Heart Band",
+                "icon": "inv_jewelry_ring_25.jpg",
+                "side": "both",
+                "source": "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked",
+                "sourceDetails": [
+                  "Heartrazor, the rare wyvern of Thousand Needles Reported, not checked"
+                ],
+                "stats": "+5 Agility, +5 Stamina, Equip: +15 Attack Power.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Finger",
+                  "+5 Agility",
+                  "+5 Stamina",
+                  "Equip: +15 Attack Power.",
+                  "Requires Level 29"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "7686",
+                "tipId": "7686",
+                "name": "Ironspine's Eye",
+                "icon": "inv_jewelry_ring_04.jpg",
+                "side": "both",
+                "source": "Ironspine, Scarlet Monastery Graveyard 41.99% in Classic",
+                "sourceDetails": [
+                  "Ironspine, Scarlet Monastery Graveyard 41.99% in Classic"
+                ],
+                "stats": "+4 Strength, +9 Agility",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique-Equipped",
+                  "Finger",
+                  "+4 Strength",
+                  "+9 Agility",
+                  "Requires Level 30"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "13097",
+                "tipId": "13097",
+                "name": "Thunderbrow Ring",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house",
+                "sourceDetails": [
+                  "World drop, sold at the auction house"
+                ],
+                "stats": "+8 Strength, +3 Agility",
+                "ilvl": 29,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Unique",
+                  "Finger",
+                  "+8 Strength",
+                  "+3 Agility",
+                  "Requires Level 24"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "18585",
+                "tipId": "18585",
+                "name": "Band of Allegiance",
+                "icon": "inv_jewelry_ring_09.jpg",
+                "side": "horde",
+                "source": "Quest: Service to the Horde Horde, level 45 in Classic, from level 30 A chain of six Horde quests from Swamplight Manor, Dustwallow Marsh Take a group for the Muckshells (level 39 to 44)",
+                "sourceDetails": [
+                  "Quest: Service to the Horde Horde, level 45 in Classic, from level 30 A chain of six Horde quests from Swamplight Manor, Dustwallow Marsh Take a group for the Muckshells (level 39 to 44)"
+                ],
+                "stats": "+9 Strength, +4 Stamina",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Finger",
+                  "+9 Strength",
+                  "+4 Stamina"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "11970",
+                "tipId": "1197012727",
+                "name": "Spinel Ring of the Tiger",
+                "icon": "inv_jewelry_ring_11.jpg",
+                "side": "both",
+                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
+                "sourceDetails": [
+                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
+                ],
+                "stats": "+5 Strength, +5 Agility",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Finger",
+                  "+5 Strength",
+                  "+5 Agility",
+                  "Requires Level 29",
+                  "Sell Price: 17s 10c"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q2",
+                "itemId": "270052",
+                "tipId": "270052",
+                "name": "Swamp Ring",
+                "icon": "inv_jewelry_ring_08.jpg",
+                "side": "both",
+                "source": "Quest: Jarl Needs a Blade from level 30, reported, not checked",
+                "sourceDetails": [
+                  "Quest: Jarl Needs a Blade from level 30, reported, not checked"
+                ],
+                "stats": "+2 Agility, Equip: +14 Attack Power.",
+                "ilvl": 35,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Finger",
+                  "+2 Agility",
+                  "Equip: +14 Attack Power."
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "trinket",
+            "slotName": "Trinket",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "273840",
+                "tipId": "273840",
+                "name": "Cursed Murloc Eye",
+                "icon": "spell_shadow_evileye.jpg",
+                "side": "both",
+                "source": "Gelihast, Blackfathom Deeps",
+                "sourceDetails": [
+                  "Gelihast, Blackfathom Deeps"
+                ],
+                "stats": "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                "ilvl": 29,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique-Equipped",
+                  "Trinket",
+                  "Equip: Spells and attacks deal 2 Shadow damage. Deals 4 times as much damage to Murlocs.",
+                  "Requires Level 24"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q2",
+                "itemId": "4381",
+                "tipId": "4381",
+                "name": "Minor Recombobulator",
+                "icon": "inv_gizmo_07.jpg",
+                "side": "both",
+                "source": "Engineering (140)",
+                "sourceDetails": [
+                  "Engineering (140)"
+                ],
+                "stats": "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+                "ilvl": 28,
+                "armor": 0,
+                "lines": [
+                  "Unique-Equipped",
+                  "Trinket",
+                  "Use: Dispels Polymorph effects on a friendly target.  Also restores 202 to 338 Health and 96 to 160 Mana. (5 Min Cooldown)",
+                  "Requires Engineering (140)"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4371\"><img src=\"/icon/inv_gizmo_pipe_01.jpg\" alt=\"Bronze Tube\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"4375\"><img src=\"/icon/inv_gizmo_02.jpg\" alt=\"Whirring Bronze Gizmo\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"2319\"><img src=\"/icon/inv_misc_leatherscrap_05.jpg\" alt=\"Medium Leather\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"1206\"><img src=\"/icon/inv_misc_gem_emerald_02.jpg\" alt=\"Moss Agate\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"14639\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Schematic: Minor Recombobulator\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span>"
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "3456",
+                "tipId": "3456",
+                "name": "Dog Whistle",
+                "icon": "ability_hunter_beastcall.jpg",
+                "side": "both",
+                "source": "Houndmaster Loksey, Scarlet Monastery Library 25.25% in Classic",
+                "sourceDetails": [
+                  "Houndmaster Loksey, Scarlet Monastery Library 25.25% in Classic"
+                ],
+                "stats": "+5 Shadow Resistance, Use: Summons a tracking hound that will protect you for 3 min. (10 Min Cooldown)",
+                "ilvl": 30,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique-Equipped",
+                  "Trinket",
+                  "+5 Shadow Resistance",
+                  "Use: Summons a tracking hound that will protect you for 3 min. (10 Min Cooldown)",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q1",
+                "itemId": "4396",
+                "tipId": "4396",
+                "name": "Mechanical Dragonling",
+                "icon": "inv_misc_head_dragon_01.jpg",
+                "side": "both",
+                "source": "Engineering (200)",
+                "sourceDetails": [
+                  "Engineering (200)"
+                ],
+                "stats": "Use: Activates your Mechanical Dragonling to fight for you for 1 min. (1 Hr Cooldown)",
+                "ilvl": 40,
+                "armor": 0,
+                "lines": [
+                  "Binds when equipped",
+                  "Unique-Equipped",
+                  "Trinket",
+                  "Use: Activates your Mechanical Dragonling to fight for you for 1 min. (1 Hr Cooldown)",
+                  "Requires Level 30",
+                  "Requires Engineering (200)"
+                ],
+                "mats": "<span class=\"bis-mat\" data-tip=\"4382\"><img src=\"/icon/inv_gizmo_bronzeframework_01.jpg\" alt=\"Bronze Framework\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat\" data-tip=\"4387\"><img src=\"/icon/inv_spear_05.jpg\" alt=\"Iron Strut\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>4</b></span><span class=\"bis-mat\" data-tip=\"4389\"><img src=\"/icon/inv_misc_pocketwatch_02.jpg\" alt=\"Gyrochronatom\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>4</b></span><span class=\"bis-mat\" data-tip=\"3864\"><img src=\"/icon/inv_misc_gem_opal_02.jpg\" alt=\"Citrine\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"7191\"><img src=\"/icon/inv_misc_gear_03.jpg\" alt=\"Fused Wiring\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"13311\"><img src=\"/icon/inv_scroll_03.jpg\" alt=\"Schematic: Mechanical Dragonling\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/></span>"
+              },
+              {
+                "rank": 5,
+                "quality": "q2",
+                "itemId": "280766",
+                "tipId": "280766",
+                "name": "Satchel of Potions",
+                "icon": "inv_misc_bag_08.jpg",
+                "side": "horde",
+                "source": "Quest: Changing Tastes Excavation Site: Wetlands, Horde, from level 24",
+                "sourceDetails": [
+                  "Quest: Changing Tastes Excavation Site: Wetlands, Horde, from level 24"
+                ],
+                "stats": "Use: Reach into the bag and hope for the best. (10 Min Cooldown)",
+                "ilvl": 33,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Trinket",
+                  "Use: Reach into the bag and hope for the best. (10 Min Cooldown)",
+                  "\"Not every potion is meant for consumption.\""
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 6,
+                "quality": "q3",
+                "itemId": "274152",
+                "tipId": "274152",
+                "name": "Roogug's Severed Head",
+                "icon": "inv_misc_head_quillboar_01.jpg",
+                "side": "both",
+                "source": "Roogug, Razorfen Kraul",
+                "sourceDetails": [
+                  "Roogug, Razorfen Kraul"
+                ],
+                "stats": "+6 Spirit, Use: Raise the severed head of Roogug, Horrifying and Silencing all Swine within 15 yds for 5 sec. (5 Min Cooldown)",
+                "ilvl": 30,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique-Equipped",
+                  "Trinket",
+                  "+6 Spirit",
+                  "Use: Raise the severed head of Roogug, Horrifying and Silencing all Swine within 15 yds for 5 sec. (5 Min Cooldown)",
+                  "Requires Level 25"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 7,
+                "quality": "q3",
+                "itemId": "273298",
+                "tipId": "273298",
+                "name": "Lookie's Spyglass",
+                "icon": "inv_misc_spyglass_01.jpg",
+                "side": "both",
+                "source": "Cookie, The Deadmines",
+                "sourceDetails": [
+                  "Cookie, The Deadmines"
+                ],
+                "stats": "+1 Spirit, Use: Allows you to look far into the distance.",
+                "ilvl": 23,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique-Equipped",
+                  "Trinket",
+                  "+1 Spirit",
+                  "Use: Allows you to look far into the distance.",
+                  "Requires Level 18",
+                  "\"Mmmrrgglumg Cookie grgl mrg mllgrgrm. -Lookie, Former Ship Lookout\""
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "mainHand",
+            "slotName": "Main hand",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q3",
+                "itemId": "5191",
+                "tipId": "5191",
+                "name": "Cruel Barb",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "The Deadmines - Edwin VanCleef",
+                "sourceDetails": [
+                  "Dropped by Edwin VanCleef in The Deadmines"
+                ],
+                "stats": "Equip: +12 Attack Power.",
+                "ilvl": 24,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "30 - 57 Damage\tSpeed 2.80",
+                  "(15.5 damage per second)",
+                  "Requires Level 19",
+                  "Equip: +12 Attack Power."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "271218",
+                "tipId": "271218",
+                "name": "Vileblood Scimitar",
+                "icon": "inv_sword_01.jpg",
+                "side": "both",
+                "source": "Ruins of Lordaeron - Viktor the Vile",
+                "sourceDetails": [
+                  "Dropped by Viktor the Vile in Ruins of Lordaeron"
+                ],
+                "stats": "+4 Strength, +3 Stamina",
+                "ilvl": 22,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "25 - 47 Damage\tSpeed 2.60",
+                  "(14.6 damage per second)",
+                  "+4 Strength",
+                  "+3 Stamina",
+                  "Requires Level 17"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "6220",
+                "tipId": "6220",
+                "name": "Meteor Shard",
+                "icon": "inv_weapon_shortblade_25.jpg",
+                "side": "both",
+                "source": "Shadowfang Keep - Archmage Arugal",
+                "sourceDetails": [
+                  "Dropped by Archmage Arugal in SFK"
+                ],
+                "stats": "+3 Fire Resistance, Chance on Hit: Hurl fireball for 35 Fire dmg",
+                "ilvl": 28,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tDagger",
+                  "23 - 43 Damage\tSpeed 1.80",
+                  "(17.8 damage per second)",
+                  "Requires Level 23"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
+                "quality": "q3",
+                "itemId": "273827",
+                "tipId": "273827",
+                "name": "Debt Collector",
+                "icon": "inv_sword_24.jpg",
+                "side": "both",
+                "source": "The Stockade - Bazil Thredd",
+                "sourceDetails": [
+                  "Dropped by Bazil Thredd in The Stockade"
+                ],
+                "stats": "Equip: +34 Attack Power.",
+                "ilvl": 31,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "21 - 39 Damage\tSpeed 2.30",
+                  "(13.0 damage per second)",
+                  "Requires Level 26",
+                  "Equip: +34 Attack Power."
+                ],
+                "mats": ""
+              }
+            ]
+          },
+          {
+            "slotId": "offHand",
+            "slotName": "Off hand",
+            "items": [
+              {
+                "rank": 1,
+                "quality": "q2",
+                "itemId": "5540",
+                "tipId": "5540",
+                "name": "Pearl-handled Dagger",
+                "icon": "inv_weapon_shortblade_05.jpg",
+                "side": "both",
+                "source": "Blackfathom Deeps - Gelihast",
+                "sourceDetails": [
+                  "Fast 1.70s off-hand dagger for maximum Flurry procs"
+                ],
+                "stats": "11.5 DPS, 1.70s",
+                "ilvl": 23,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tDagger",
+                  "14 - 27 Damage\tSpeed 1.70",
+                  "(11.5 damage per second)",
+                  "Requires Level 18"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
+                "quality": "q3",
+                "itemId": "5191",
+                "tipId": "5191",
+                "name": "Cruel Barb",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "The Deadmines - Edwin VanCleef",
+                "sourceDetails": [
+                  "Dropped by Edwin VanCleef in The Deadmines"
+                ],
+                "stats": "Equip: +12 Attack Power.",
+                "ilvl": 24,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "30 - 57 Damage\tSpeed 2.80",
+                  "(15.5 damage per second)",
+                  "Requires Level 19",
+                  "Equip: +12 Attack Power."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 3,
+                "quality": "q3",
+                "itemId": "6220",
+                "tipId": "6220",
+                "name": "Meteor Shard",
+                "icon": "inv_weapon_shortblade_25.jpg",
+                "side": "both",
+                "source": "Shadowfang Keep - Archmage Arugal",
+                "sourceDetails": [
+                  "Dropped by Archmage Arugal in SFK"
+                ],
+                "stats": "+3 Fire Resistance",
+                "ilvl": 28,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tDagger",
+                  "23 - 43 Damage\tSpeed 1.80",
+                  "(17.8 damage per second)",
+                  "Requires Level 23"
                 ],
                 "mats": ""
               }
@@ -125534,6 +130290,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -125558,7 +130340,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -125584,7 +130366,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q3",
                 "itemId": "276631",
                 "tipId": "276631",
@@ -125612,7 +130394,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -130784,6 +135566,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -130808,7 +135616,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "276631",
                 "tipId": "276631",
@@ -130836,7 +135644,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -130862,7 +135670,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -136007,6 +140815,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -136031,7 +140865,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -136057,7 +140891,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q3",
                 "itemId": "276631",
                 "tipId": "276631",
@@ -136085,7 +140919,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -141263,6 +146097,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -141287,7 +146147,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "276631",
                 "tipId": "276631",
@@ -141315,7 +146175,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -141341,7 +146201,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -146493,6 +151353,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -146517,7 +151403,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -146543,7 +151429,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q3",
                 "itemId": "276631",
                 "tipId": "276631",
@@ -146571,7 +151457,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -151614,6 +156500,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -151638,7 +156550,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -151664,7 +156576,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -151689,7 +156601,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q3",
                 "itemId": "2567",
                 "tipId": "2567",
@@ -156881,6 +161793,32 @@ const WOW_BIS_DATA = {
               },
               {
                 "rank": 3,
+                "quality": "q3",
+                "itemId": "9459",
+                "tipId": "9459",
+                "name": "Inventor's Focal Sword",
+                "icon": "inv_sword_04.jpg",
+                "side": "both",
+                "source": "Gnomeregan - Tinkerer Gizlock",
+                "sourceDetails": [
+                  "Dropped by Tinkerer Gizlock in Gnomeregan (+1% Spell Critical Strike)"
+                ],
+                "stats": "+6 Intellect, Equip: Improves your chance to get a critical strike with spells by 1%.",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "One-Hand\tSword",
+                  "39 - 60 Damage\tSpeed 2.20",
+                  "(22.5 damage per second)",
+                  "+6 Intellect",
+                  "Requires Level 29",
+                  "Equip: Improves your chance to get a critical strike with spells by 1%."
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 4,
                 "quality": "q2",
                 "itemId": "270069",
                 "tipId": "270069",
@@ -156905,7 +161843,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "273827",
                 "tipId": "273827",
@@ -156931,7 +161869,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 5,
+                "rank": 6,
                 "quality": "q2",
                 "itemId": "270070",
                 "tipId": "270070",
@@ -156956,7 +161894,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 6,
+                "rank": 7,
                 "quality": "q3",
                 "itemId": "2567",
                 "tipId": "2567",
@@ -161910,6 +166848,35 @@ const WOW_BIS_DATA = {
             "items": [
               {
                 "rank": 1,
+                "quality": "q3",
+                "itemId": "9449",
+                "tipId": "9449",
+                "name": "Manual Crowd Pummeler",
+                "icon": "inv_mace_14.jpg",
+                "side": "both",
+                "source": "Crowd Pummeler 9-60, Gnomeregan 32.62% in Classic",
+                "sourceDetails": [
+                  "Crowd Pummeler 9-60, Gnomeregan 32.62% in Classic"
+                ],
+                "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+                "ilvl": 34,
+                "armor": 0,
+                "lines": [
+                  "Binds when picked up",
+                  "Unique",
+                  "Two-Hand\tMace",
+                  "46 - 70 Damage\tSpeed 2.00",
+                  "(29 damage per second)",
+                  "+16 Strength",
+                  "+5 Agility",
+                  "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+                  "3 Charges",
+                  "Requires Level 29"
+                ],
+                "mats": ""
+              },
+              {
+                "rank": 2,
                 "quality": "q2",
                 "itemId": "4983",
                 "tipId": "4983",
@@ -161933,7 +166900,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 2,
+                "rank": 3,
                 "quality": "q3",
                 "itemId": "13045",
                 "tipId": "13045",
@@ -161960,7 +166927,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 3,
+                "rank": 4,
                 "quality": "q3",
                 "itemId": "279844",
                 "tipId": "279844",
@@ -161986,7 +166953,7 @@ const WOW_BIS_DATA = {
                 "mats": ""
               },
               {
-                "rank": 4,
+                "rank": 5,
                 "quality": "q3",
                 "itemId": "279841",
                 "tipId": "279841",
@@ -162008,35 +166975,6 @@ const WOW_BIS_DATA = {
                   "+9 Strength",
                   "+13 Stamina",
                   "+9 Intellect"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 5,
-                "quality": "q3",
-                "itemId": "9449",
-                "tipId": "9449",
-                "name": "Manual Crowd Pummeler",
-                "icon": "inv_mace_14.jpg",
-                "side": "both",
-                "source": "Crowd Pummeler 9-60, Gnomeregan 32.62% in Classic",
-                "sourceDetails": [
-                  "Crowd Pummeler 9-60, Gnomeregan 32.62% in Classic"
-                ],
-                "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-                "ilvl": 34,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Unique",
-                  "Two-Hand\tMace",
-                  "46 - 70 Damage\tSpeed 2.00",
-                  "(29 damage per second)",
-                  "+16 Strength",
-                  "+5 Agility",
-                  "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-                  "3 Charges",
-                  "Requires Level 29"
                 ],
                 "mats": ""
               },
@@ -162224,157 +167162,6 @@ const WOW_BIS_DATA = {
                   "+4 Stamina"
                 ],
                 "mats": ""
-              }
-            ]
-          },
-          {
-            "slotId": "held",
-            "slotName": "Off hand: held item",
-            "items": [
-              {
-                "rank": 1,
-                "quality": "q2",
-                "itemId": "7609",
-                "tipId": "760912727",
-                "name": "Elder's Amber Stave of the Tiger",
-                "icon": "inv_staff_07.jpg",
-                "side": "both",
-                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-                "sourceDetails": [
-                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
-                ],
-                "stats": "+5 Strength, +5 Agility",
-                "ilvl": 35,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+5 Strength",
-                  "+5 Agility",
-                  "Requires Level 30",
-                  "Sell Price: 42s 10c"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 2,
-                "quality": "q2",
-                "itemId": "11855",
-                "tipId": "11855",
-                "name": "Tork Wrench",
-                "icon": "inv_misc_wrench_01.jpg",
-                "side": "horde",
-                "source": "Quest: Samophlange Manual Horde, level 19 in Classic, from level 10",
-                "sourceDetails": [
-                  "Quest: Samophlange Manual Horde, level 19 in Classic, from level 10"
-                ],
-                "stats": "+2 Strength, +2 Intellect",
-                "ilvl": 19,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+2 Strength",
-                  "+2 Intellect"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 3,
-                "quality": "q2",
-                "itemId": "15962",
-                "tipId": "15962",
-                "name": "Satyr's Rod",
-                "icon": "inv_staff_08.jpg",
-                "side": "both",
-                "source": "World drop, sold at the auction house",
-                "sourceDetails": [
-                  "World drop, sold at the auction house"
-                ],
-                "stats": "+1 Agility, +6 Intellect, +2 Spirit",
-                "ilvl": 33,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+1 Agility",
-                  "+6 Intellect",
-                  "+2 Spirit",
-                  "Requires Level 28"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 4,
-                "quality": "q3",
-                "itemId": "2565",
-                "tipId": "2565",
-                "name": "Rod of Molten Fire",
-                "icon": "inv_spear_01.jpg",
-                "side": "both",
-                "source": "World drop, sold at the auction house",
-                "sourceDetails": [
-                  "World drop, sold at the auction house"
-                ],
-                "stats": "+6 Fire Resistance, Equip: Increases damage done by Fire spells and effects by up to 13.",
-                "ilvl": 35,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+6 Fire Resistance",
-                  "Equip: Increases damage done by Fire spells and effects by up to 13.",
-                  "Requires Level 30"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 5,
-                "quality": "q3",
-                "itemId": "249394",
-                "tipId": "249394",
-                "name": "Orb of Mystic Insight",
-                "icon": "inv_misc_orb_blue.jpg",
-                "side": "both",
-                "source": "Enchanting (140) Only its maker can wear it",
-                "sourceDetails": [
-                  "Enchanting (140) Only its maker can wear it"
-                ],
-                "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 7.",
-                "ilvl": 30,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+6 Intellect",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
-                  "Requires Level 25"
-                ],
-                "mats": "<span class=\"bis-mat\" data-tip=\"10978\"><img src=\"/icon/inv_enchant_shardglimmeringsmall.jpg\" alt=\"Small Glimmering Shard\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"11082\"><img src=\"/icon/inv_enchant_essenceastrallarge.jpg\" alt=\"Greater Astral Essence\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"10940\"><img src=\"/icon/inv_enchant_duststrange.jpg\" alt=\"Strange Dust\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>5</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"249484\"><img src=\"/icon/inv_misc_note_01.jpg\" alt=\"Formula: Orb of Mystic Insight\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
-              },
-              {
-                "rank": 6,
-                "quality": "q3",
-                "itemId": "249395",
-                "tipId": "249395",
-                "name": "Orb of Souls",
-                "icon": "inv_misc_orb_04.jpg",
-                "side": "both",
-                "source": "Enchanting (140) Only its maker can wear it",
-                "sourceDetails": [
-                  "Enchanting (140) Only its maker can wear it"
-                ],
-                "stats": "+6 Spirit, Equip: Increases healing done by up to 13 and damage done by up to 4 for all magical spells and effects.",
-                "ilvl": 30,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+6 Spirit",
-                  "Equip: Increases healing done by up to 13 and damage done by up to 4 for all magical spells and effects.",
-                  "Requires Level 25"
-                ],
-                "mats": "<span class=\"bis-mat\" data-tip=\"10978\"><img src=\"/icon/inv_enchant_shardglimmeringsmall.jpg\" alt=\"Small Glimmering Shard\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"11082\"><img src=\"/icon/inv_enchant_essenceastrallarge.jpg\" alt=\"Greater Astral Essence\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq2\"/><b>2</b></span><span class=\"bis-mat\" data-tip=\"11083\"><img src=\"/icon/inv_enchant_dustsoul.jpg\" alt=\"Soul Dust\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq1\"/><b>2</b></span><span class=\"bis-mat bis-mat-recipe\" data-tip=\"249485\"><img src=\"/icon/inv_misc_note_01.jpg\" alt=\"Formula: Orb of Souls\" width=\"28\" height=\"28\" loading=\"lazy\" class=\"bis-icon bq3\"/></span>"
               }
             ]
           },
@@ -167212,156 +171999,6 @@ const WOW_BIS_DATA = {
                   "Equip: +12 Attack Power.",
                   "Equip: +15 Attack Power against Humanoids.",
                   "Requires Level 29"
-                ],
-                "mats": ""
-              }
-            ]
-          },
-          {
-            "slotId": "held",
-            "slotName": "Off hand: held item",
-            "items": [
-              {
-                "rank": 1,
-                "quality": "q2",
-                "itemId": "7609",
-                "tipId": "760912731",
-                "name": "Elder's Amber Stave of Stamina",
-                "icon": "inv_staff_07.jpg",
-                "side": "both",
-                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-                "sourceDetails": [
-                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
-                ],
-                "stats": "+8 Stamina",
-                "ilvl": 35,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+8 Stamina",
-                  "Requires Level 30",
-                  "Sell Price: 42s 10c"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 2,
-                "quality": "q3",
-                "itemId": "276898",
-                "tipId": "276898",
-                "name": "Salve and Salvation",
-                "icon": "inv_misc_book_01.jpg",
-                "side": "alliance",
-                "source": "Quest: Past Due Scarlet Monastery Library, Alliance, from level 30",
-                "sourceDetails": [
-                  "Quest: Past Due Scarlet Monastery Library, Alliance, from level 30"
-                ],
-                "stats": "+9 Spirit, +50 Armor, Equip: Increases healing done by up to 9 and damage done by up to 3 for all magical spells and effects.",
-                "ilvl": 38,
-                "armor": 50,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+9 Spirit",
-                  "+50 Armor",
-                  "Equip: Increases healing done by up to 9 and damage done by up to 3 for all magical spells and effects."
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 3,
-                "quality": "q3",
-                "itemId": "273027",
-                "tipId": "273027",
-                "name": "Raptor's Gaze",
-                "icon": "spell_nature_crystalball.jpg",
-                "side": "both",
-                "source": "Shadetooth, Excavation Site: Wetlands",
-                "sourceDetails": [
-                  "Shadetooth, Excavation Site: Wetlands"
-                ],
-                "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8.",
-                "ilvl": 31,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+4 Intellect",
-                  "+4 Stamina",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 8.",
-                  "Requires Level 26"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 4,
-                "quality": "q2",
-                "itemId": "281318",
-                "tipId": "281318",
-                "name": "Bouquet of Auberdine Flowers",
-                "icon": "inv_misc_flower_02.jpg",
-                "side": "both",
-                "source": "Quest: Bloom of the Heavens from level 22, reported, not checked",
-                "sourceDetails": [
-                  "Quest: Bloom of the Heavens from level 22, reported, not checked"
-                ],
-                "stats": "+4 Intellect, +4 Stamina",
-                "ilvl": 29,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+4 Intellect",
-                  "+4 Stamina"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 5,
-                "quality": "q2",
-                "itemId": "285192",
-                "tipId": "285192",
-                "name": "Kobold Firestarter",
-                "icon": "inv_torch_lit.jpg",
-                "side": "both",
-                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
-                "sourceDetails": [
-                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
-                ],
-                "stats": "+4 Stamina, Equip: Increases damage done by Fire spells and effects by up to 6.",
-                "ilvl": 30,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+4 Stamina",
-                  "Equip: Increases damage done by Fire spells and effects by up to 6.",
-                  "Requires Level 25"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 6,
-                "quality": "q3",
-                "itemId": "6341",
-                "tipId": "6341",
-                "name": "Eerie Stable Lantern",
-                "icon": "inv_misc_lantern_01.jpg",
-                "side": "both",
-                "source": "Fel Steed / Shadow Charger, Shadowfang Keep 6.24% in Classic Trash mobs, Shadowfang Keep 7.79% in Classic",
-                "sourceDetails": [
-                  "Fel Steed / Shadow Charger, Shadowfang Keep 6.24% in Classic Trash mobs, Shadowfang Keep 7.79% in Classic"
-                ],
-                "stats": "+4 Stamina, +4 Shadow Resistance",
-                "ilvl": 21,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+4 Stamina",
-                  "+4 Shadow Resistance",
-                  "Requires Level 19"
                 ],
                 "mats": ""
               }
@@ -172381,155 +177018,6 @@ const WOW_BIS_DATA = {
                   "(20.5 damage per second)",
                   "+3 Strength",
                   "+4 Stamina"
-                ],
-                "mats": ""
-              }
-            ]
-          },
-          {
-            "slotId": "held",
-            "slotName": "Off hand: held item",
-            "items": [
-              {
-                "rank": 1,
-                "quality": "q2",
-                "itemId": "7609",
-                "tipId": "760912722",
-                "name": "Elder's Amber Stave of the Bear",
-                "icon": "inv_staff_07.jpg",
-                "side": "both",
-                "source": "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name",
-                "sourceDetails": [
-                  "World drop, sold at the auction house It drops with one of 35 random suffixes, each with its own stats: search for the full name"
-                ],
-                "stats": "+5 Strength, +5 Stamina",
-                "ilvl": 35,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+5 Strength",
-                  "+5 Stamina",
-                  "Requires Level 30",
-                  "Sell Price: 42s 10c"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 2,
-                "quality": "q3",
-                "itemId": "16887",
-                "tipId": "16887",
-                "name": "Witch's Finger",
-                "icon": "inv_wand_12.jpg",
-                "side": "horde",
-                "source": "Quest: Baron Aquanis Horde, level 30 in Classic, from level 21",
-                "sourceDetails": [
-                  "Quest: Baron Aquanis Horde, level 30 in Classic, from level 21"
-                ],
-                "stats": "+8 Intellect, +4 Stamina",
-                "ilvl": 32,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+8 Intellect",
-                  "+4 Stamina"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 3,
-                "quality": "q3",
-                "itemId": "273027",
-                "tipId": "273027",
-                "name": "Raptor's Gaze",
-                "icon": "spell_nature_crystalball.jpg",
-                "side": "both",
-                "source": "Shadetooth, Excavation Site: Wetlands",
-                "sourceDetails": [
-                  "Shadetooth, Excavation Site: Wetlands"
-                ],
-                "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 8.",
-                "ilvl": 31,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+4 Intellect",
-                  "+4 Stamina",
-                  "Equip: Increases damage and healing done by magical spells and effects by up to 8.",
-                  "Requires Level 26"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 4,
-                "quality": "q2",
-                "itemId": "281318",
-                "tipId": "281318",
-                "name": "Bouquet of Auberdine Flowers",
-                "icon": "inv_misc_flower_02.jpg",
-                "side": "both",
-                "source": "Quest: Bloom of the Heavens from level 22, reported, not checked",
-                "sourceDetails": [
-                  "Quest: Bloom of the Heavens from level 22, reported, not checked"
-                ],
-                "stats": "+4 Intellect, +4 Stamina",
-                "ilvl": 29,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+4 Intellect",
-                  "+4 Stamina"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 5,
-                "quality": "q3",
-                "itemId": "281291",
-                "tipId": "281291",
-                "name": "Mathystra Channeling Orb",
-                "icon": "inv_misc_orb_01.jpg",
-                "side": "alliance",
-                "source": "Quest: Baron Marinous Alliance, from level 17, reported, not checked",
-                "sourceDetails": [
-                  "Quest: Baron Marinous Alliance, from level 17, reported, not checked"
-                ],
-                "stats": "+5 Intellect, +3 Stamina",
-                "ilvl": 21,
-                "armor": 0,
-                "lines": [
-                  "Binds when picked up",
-                  "Held In Off-hand",
-                  "+5 Intellect",
-                  "+3 Stamina"
-                ],
-                "mats": ""
-              },
-              {
-                "rank": 6,
-                "quality": "q2",
-                "itemId": "285192",
-                "tipId": "285192",
-                "name": "Kobold Firestarter",
-                "icon": "inv_torch_lit.jpg",
-                "side": "both",
-                "source": "Where it comes from is not known yet Nothing places it yet: tell us if you know",
-                "sourceDetails": [
-                  "Where it comes from is not known yet Nothing places it yet: tell us if you know"
-                ],
-                "stats": "+4 Stamina, Equip: Increases damage done by Fire spells and effects by up to 6.",
-                "ilvl": 30,
-                "armor": 0,
-                "lines": [
-                  "Binds when equipped",
-                  "Held In Off-hand",
-                  "+4 Stamina",
-                  "Equip: Increases damage done by Fire spells and effects by up to 6.",
-                  "Requires Level 25"
                 ],
                 "mats": ""
               }
@@ -193427,3 +197915,7 @@ const WOW_BIS_DATA = {
     ]
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.WOW_BIS_DATA = WOW_BIS_DATA;
+}

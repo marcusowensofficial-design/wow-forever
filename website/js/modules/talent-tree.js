@@ -708,21 +708,6 @@
       };
     });
 
-    const toggleSpecBtn = content.querySelector('#btn-toggle-spec-build');
-    if (toggleSpecBtn) {
-      toggleSpecBtn.onclick = () => {
-        hideTalentTooltip();
-        state.isBlankSlate = false;
-        const recBuild = getRecommendedBuildForClass(state.classId, state.specId);
-        if (recBuild) {
-          state.points = Object.assign({}, recBuild.points);
-          state.specName = recBuild.specName;
-        } else {
-          state.points = Object.assign({}, state.recommendedPoints);
-        }
-        renderModalBody();
-      };
-    }
 
     // 1d. Theorycrafting Cap Selector Buttons
     content.querySelectorAll('.bis-cap-btn').forEach(btn => {
@@ -761,14 +746,6 @@
     }
 
     // 4. Reset & Clear Buttons
-    const resetSpecBtn = content.querySelector('#btn-reset-spec-talents');
-    if (resetSpecBtn) {
-      resetSpecBtn.onclick = () => {
-        hideTalentTooltip();
-        state.points = Object.assign({}, state.originalPoints);
-        renderModalBody();
-      };
-    }
 
     const clearAllBtn = content.querySelector('#btn-clear-all-talents');
     if (clearAllBtn) {
