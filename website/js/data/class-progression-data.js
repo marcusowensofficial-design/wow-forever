@@ -9,6 +9,34 @@ if (typeof window !== 'undefined') {
   "macros": {
     "hunter": [
       {
+        "id": "hunter-secret-1",
+        "title": "The Unbroken 1-Tap 'Feign Death + Freeze Trap'",
+        "desc": "Commands pet to passive to break combat, halts auto-shots, casts Feign Death, and arms Freezing Trap at the cursor in one motion.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Freezing Trap\n/petpassive\n/stopattack\n/cast Feign Death\n/cast [@cursor] Freezing Trap"
+      },
+      {
+        "id": "hunter-secret-2",
+        "title": "The Clipless Auto-Shot Stutter-Step Engine",
+        "desc": "Forces the client to keep your Auto Shot swing timer synchronized, preventing Aimed Shot or Multi-Shot spam from canceling your white hits.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Aimed Shot\n/cast !Auto Shot\n/cast Aimed Shot"
+      },
+      {
+        "id": "hunter-secret-3",
+        "title": "Mouseover Scatter Shot Peeler",
+        "desc": "Disorients an approaching enemy melee or casting add under your cursor without dropping focus on your marked primary target.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Scatter Shot\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Scatter Shot"
+      },
+      {
+        "id": "hunter-secret-4",
+        "title": "Instant Pet Dash & Bite Micro-Anchor",
+        "desc": "Commands your pet to sprint and bite your mouseover target instantly without waiting for the server's pet AI polling tick.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Dash\n/petattack [@mouseover,harm,nodead][]\n/cast Dash\n/cast Dive\n/cast Bite"
+      },
+      {
         "id": "hunter-macro-1",
         "title": "Mark and send pet",
         "desc": "Mark your target and send your pet at it with one button.",
@@ -403,6 +431,34 @@ if (typeof window !== 'undefined') {
     ],
     "shaman": [
       {
+        "id": "shaman-secret-1",
+        "title": "Target-of-Target Boss Purge Engine",
+        "desc": "Strips shields, HoTs, and Bloodlusts off the boss through the tank without losing healing frames.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Purge\n/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][harm,nodead] Purge"
+      },
+      {
+        "id": "shaman-secret-2",
+        "title": "Instant Cast-Abort Wind Shear",
+        "desc": "Immediately cancels any long Healing Wave or Lightning Bolt cast to land an instant kick within 0.1s.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Wind Shear\n/stopcasting\n/cast [@focus,harm,nodead][@mouseover,harm,nodead][] Wind Shear"
+      },
+      {
+        "id": "shaman-secret-3",
+        "title": "Elemental Mastery Instant Chain Lightning Nuke",
+        "desc": "Triggers 100% crit chance, 0 mana cost, and instant cast time for an unstoppable triple-hit burst.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Chain Lightning\n/stopcasting\n/cast Elemental Mastery\n/cast Chain Lightning"
+      },
+      {
+        "id": "shaman-secret-4",
+        "title": "Ghost Wolf Anti-Snare Emergency Cleanse",
+        "desc": "Breaks movement slows and transitions into Ghost Wolf form in the same server tick.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Ghost Wolf\n/cancelaura [stance:1] Ghost Wolf\n/cast !Ghost Wolf"
+      },
+      {
         "id": "shaman-macro-1",
         "title": "Immediate mouseover Earth Shock",
         "desc": "Cancel your current cast to shock an enemy under your cursor while keeping your main target.",
@@ -775,6 +831,34 @@ if (typeof window !== 'undefined') {
       }
     ],
     "mage": [
+      {
+        "id": "mage-secret-1",
+        "title": "Zero-Latency Reticle-Skip Blizzard / Flamestrike",
+        "desc": "Bypasses the green circle targeting reticle completely, casting the AoE directly beneath your hardware mouse cursor with 0ms delay.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Blizzard\n/stopcasting\n/cast [@cursor] Blizzard"
+      },
+      {
+        "id": "mage-secret-2",
+        "title": "Double-Tap Safe Ice Block with Alt-Cancel",
+        "desc": "The '!' prefix prevents accidental double-clicking from canceling Ice Block, while Alt-tap provides instant voluntary aura removal.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Ice Block\n/stopcasting\n/cast !Ice Block\n/cancelaura [mod:alt] Ice Block"
+      },
+      {
+        "id": "mage-secret-3",
+        "title": "Omni-Interrupt Mouseover & Focus Counterspell",
+        "desc": "Aborts your current cast and kicks the priority target under your mouse cursor or focus frame without deselecting your DPS target.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Counterspell\n/stopcasting\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Counterspell"
+      },
+      {
+        "id": "mage-secret-4",
+        "title": "Arcane Power + Presence of Mind Instant Pyroblast",
+        "desc": "Stacks off-GCD Arcane Power, triggers instant-cast Presence of Mind, and launches a max-rank Pyroblast in 0.0 seconds.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Pyroblast\n/cast Arcane Power\n/cast Presence of Mind\n/cast Pyroblast"
+      },
       {
         "id": "mage-macro-1",
         "title": "Counterspell without waiting on your cast",
@@ -1163,6 +1247,41 @@ if (typeof window !== 'undefined') {
     ],
     "paladin": [
       {
+        "id": "paladin-secret-1",
+        "title": "Zero-Threat-Drop Divine Shield Bleed Wipe",
+        "desc": "Clears 100% mortal strikes, bleeds, and stacking dungeon debuffs and immediately cancels the bubble before boss threat shifts.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Divine Shield\n/cast Divine Shield\n/cancelaura Divine Shield"
+      },
+      {
+        "id": "paladin-secret-2",
+        "title": "Swing-Preserving Judgement Weave",
+        "desc": "Ensures casting Judgement never pauses your auto-attack swing timer or disrupts the 0.4s seal twist window.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Judgement\n/cast Judgement\n/startattack"
+      },
+      {
+        "id": "paladin-secret-3",
+        "title": "Target-of-Target Cleanse & Blessing of Freedom",
+        "desc": "Cleanses debuffs and roots off whatever ally the enemy boss is targeting without changing your active target.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Cleanse\n/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Cleanse"
+      },
+      {
+        "id": "paladin-secret-4",
+        "title": "Divine Favor + Holy Shock Guaranteed Crit Burst",
+        "desc": "Combines off-GCD 100% spell crit with Holy Shock for instant tank clutch saves or high-burst offensive executes.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Holy Shock\n/cast Divine Favor\n/cast [@mouseover,exists][] Holy Shock"
+      },
+      {
+        "id": "paladin-secret-5",
+        "title": "Blessing of Protection Self-Cancel for Melee",
+        "desc": "Allows Warriors and Rogues who receive Blessing of Protection to dump mortal debuffs and immediately resume auto-attacking.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip\n/cancelaura Blessing of Protection"
+      },
+      {
         "id": "paladin-macro-1",
         "title": "Holy Strike and auto attack",
         "desc": "Use Forever’s baseline strike without leaving auto attack off.",
@@ -1536,6 +1655,34 @@ if (typeof window !== 'undefined') {
     ],
     "warrior": [
       {
+        "id": "warrior-secret-1",
+        "title": "Zero-Loss Stance & Shield Swap Interrupter",
+        "desc": "Equips 1H + Shield and shifts to Defensive Stance if in Battle/Berserker stance, or immediately fires Shield Bash if already in Defensive Stance without dropping swing timer.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip [stance:2] Shield Bash; [stance:1/3] Pummel\n/equipslot [nostance:2] 16 YourOneHandWeaponName\n/equipslot [nostance:2] 17 YourShieldName\n/cast [stance:1/3] Defensive Stance; Shield Bash\n/startattack"
+      },
+      {
+        "id": "warrior-secret-2",
+        "title": "Overpower Stance-Dance Reflex",
+        "desc": "Instantly switches to Battle Stance upon a dodge proc and executes Overpower without resetting your auto-attack swing buffer.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Overpower\n/cast [nostance:1] Battle Stance\n/cast Overpower\n/startattack"
+      },
+      {
+        "id": "warrior-secret-3",
+        "title": "Heroic Strike & Cleave Rage De-Coupler",
+        "desc": "Prevents rage starvation during incoming spike damage by allowing Alt-tap cancellation of the queued next-hit Heroic Strike.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Heroic Strike\n/cast Heroic Strike\n/stopcasting [mod:alt]\n/startattack"
+      },
+      {
+        "id": "warrior-secret-4",
+        "title": "Universal Charge & Intercept Mobility Matrix",
+        "desc": "Charges if out of combat (auto-shifting to Battle Stance), or shifts to Berserker Stance and Intercepts mid-combat in a single key.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip [combat] Intercept; Charge\n/cast [nocombat,nostance:1] Battle Stance; [nocombat] Charge\n/cast [combat,nostance:3] Berserker Stance; [combat] Intercept\n/startattack"
+      },
+      {
         "id": "warrior-macro-1",
         "title": "Charge and start attacking",
         "desc": "Get off your mount, start swinging and Charge in one press.",
@@ -1894,6 +2041,34 @@ if (typeof window !== 'undefined') {
       }
     ],
     "warlock": [
+      {
+        "id": "warlock-secret-1",
+        "title": "Clipless Shard Drain Soul Harvester",
+        "desc": "Protects channel ticks and uses low-mana Rank 1 for effortless Soul Shard farming without wasting mana.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Drain Soul\n/stopcasting\n/cast [nochanneling:Drain Soul] Drain Soul(Rank 1)"
+      },
+      {
+        "id": "warlock-secret-2",
+        "title": "Mouseover Felhunter Spell Lock (Pet Remains on Primary Target)",
+        "desc": "Fires your Felhunter's interrupt at a priority caster under your mouse cursor while your pet continues meleeing its primary target.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Spell Lock\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Spell Lock"
+      },
+      {
+        "id": "warlock-secret-3",
+        "title": "Target-of-Target Death Coil Peeler",
+        "desc": "Instantly fires Death Coil at whatever enemy is attacking your party healer without requiring manual targeting.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Death Coil\n/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][] Death Coil"
+      },
+      {
+        "id": "warlock-secret-4",
+        "title": "All-in-One Multi-Curse Modifier Hub",
+        "desc": "Normal tap = Curse of Agony; Shift = Curse of the Elements; Alt = Curse of Tongues.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip\n/cast [mod:shift] Curse of the Elements; [mod:alt] Curse of Tongues; Curse of Agony"
+      },
       {
         "id": "warlock-macro-1",
         "title": "Mouseover Fear",
@@ -2267,6 +2442,34 @@ if (typeof window !== 'undefined') {
       }
     ],
     "priest": [
+      {
+        "id": "priest-secret-1",
+        "title": "The Clipless Mind Flay Tick-Preserver",
+        "desc": "Locks out button spam while Mind Flay is channeling, ensuring you never clip the third and final damage/slow tick early.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Mind Flay\n/cast [nochanneling:Mind Flay] Mind Flay"
+      },
+      {
+        "id": "priest-secret-2",
+        "title": "Target-of-Target Offensive Dispel & Dotting",
+        "desc": "Keeps your healing target focused on the friendly tank while dispelling enemy buffs or dotting whatever the tank is fighting.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Dispel Magic\n/cast [@mouseover,harm,nodead][@targettarget,harm,nodead][harm,nodead] Dispel Magic"
+      },
+      {
+        "id": "priest-secret-3",
+        "title": "Night Elf Shadowmeld + Drink Stealth Reset",
+        "desc": "Drops combat, enters stealth, and begins drinking mana water without breaking Shadowmeld.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Morning Glory Dew\n/cast !Shadowmeld\n/use Morning Glory Dew"
+      },
+      {
+        "id": "priest-secret-4",
+        "title": "Emergency Desperate Prayer & Healthstone Panic Matrix",
+        "desc": "Instant clutch survival macro combining racial instant heal, highest-tier healthstone, and Inner Fire re-application.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Desperate Prayer\n/use Master Healthstone\n/cast Desperate Prayer\n/cast [nostance] Inner Fire"
+      },
       {
         "id": "priest-macro-1",
         "title": "Mouseover Dispel Magic",
@@ -2655,6 +2858,34 @@ if (typeof window !== 'undefined') {
     ],
     "druid": [
       {
+        "id": "druid-secret-1",
+        "title": "The Immortal 'Tick-Aligned' Powershifting Engine",
+        "desc": "Cancels any active form and re-enters Cat Form in the exact same server tick to break movement impairing effects and gain 40 Furor Energy instantly.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Cat Form\n/cancelaura [stance:1] Bear Form; [stance:2] Aquatic Form; [stance:4] Travel Form\n/cast !Cat Form"
+      },
+      {
+        "id": "druid-secret-2",
+        "title": "Omni-Form Feral Charge Gap-Closer",
+        "desc": "Automatically shifts into Dire Bear Form if in caster or cat form, then fires Feral Charge in one fluid sequence.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Feral Charge - Bear\n/cast [nostance:1] Dire Bear Form\n/cast Feral Charge - Bear"
+      },
+      {
+        "id": "druid-secret-3",
+        "title": "Smart Travel, Aquatic & Mount Selector",
+        "desc": "Intelligently casts Aquatic Form if swimming, Cat Form if indoors, Travel Form if in combat outdoors, or summons your mount if out of combat.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip\n/cast [swimming] Aquatic Form; [indoors] Cat Form; [combat,outdoors] Travel Form; [outdoors] Swift Mistsaber; Travel Form"
+      },
+      {
+        "id": "druid-secret-4",
+        "title": "Nature's Swiftness Swift-Shift Healer Save",
+        "desc": "Immediately cancels cast, triggers Nature's Swiftness, and lands an instant max-rank Healing Touch on your mouseover or target-of-target ally.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Nature's Swiftness\n/stopcasting\n/cast Nature's Swiftness\n/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Healing Touch"
+      },
+      {
         "id": "druid-macro-1",
         "title": "Mouseover Rebirth",
         "desc": "Resurrect a dead friendly mouseover, or your selected dead ally.",
@@ -3027,6 +3258,41 @@ if (typeof window !== 'undefined') {
       }
     ],
     "rogue": [
+      {
+        "id": "rogue-secret-1",
+        "title": "The 'Greedy Ghost' Instant Pickpocket + Cheap Shot",
+        "desc": "Exploits off-GCD Pick Pocket during the opening hardware frame to loot the humanoid's pocket table the exact millisecond before Cheap Shot stun lands.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Cheap Shot\n/targetenemy [noexists]\n/cast Pick Pocket\n/cast Cheap Shot"
+      },
+      {
+        "id": "rogue-secret-2",
+        "title": "The Anti-Auto-Attack Vanish Buffer",
+        "desc": "Flushes queued auto-attack white swings immediately prior to casting Vanish, eliminating 99% of accidental instant stealth breaks.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Vanish\n/stopattack\n/cancelaura Attack\n/cast Vanish"
+      },
+      {
+        "id": "rogue-secret-3",
+        "title": "High-Frequency Stealth Hunter & Sap Radar",
+        "desc": "Spam while stealthed. Instantly targets hostile enemy players within 20 yards and casts Sap before they render on your screen.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Sap\n/cleartarget\n/targetenemyplayer [harm][nodead]\n/cast [exists] Sap"
+      },
+      {
+        "id": "rogue-secret-4",
+        "title": "Gouge & First Aid Combat Triage",
+        "desc": "Stops auto-attacks immediately so CC does not break, Gouges the enemy, and begins channeling heavy bandages on yourself.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Gouge\n/cast Gouge\n/stopattack\n/use [@player] Heavy Silk Bandage"
+      },
+      {
+        "id": "rogue-secret-5",
+        "title": "Mouseover Blind Peeler",
+        "desc": "Blinds an approaching enemy add or healer under your mouse cursor without losing your active target or dropping combo points.",
+        "category": "Secret Mechanics",
+        "code": "#showtooltip Blind\n/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Blind"
+      },
       {
         "id": "rogue-macro-1",
         "title": "Mouseover Kick",
@@ -15161,7 +15427,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 15397,
           "name": "Oakthrush Staff",
-          "icon": "inv_jewelry_ring_01",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "9.6 DPS",

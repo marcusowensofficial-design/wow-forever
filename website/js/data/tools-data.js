@@ -3002,6 +3002,409 @@ In Phase 2 Beta of WoW Forever, grinding dungeon mobs repeatedly for experience 
 4. **Level 29:** Clear Excavation Site 4 in Wetlands for weapons and high-armor pre-BiS.
 5. **Level 30:** Tackle City of Dalaran (Underbelly) for top-tier caster and melee dungeon loot!`
     }
+,
+    {
+      id: "guide-secret-class-macros",
+      title: "The Forbidden Macro Codex: Secret Engine Mechanics & Elite Macros for Every Class",
+      category: "Classes & Specs",
+      source: "Forever Engine Mechanics · Camelot 12.0 / Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_09.jpg",
+      summary: "Master compendium of hidden client-engine exploits, hardware batching tricks, zero-loss stance dancing, and elite macros for all 9 classes in WoW Forever.",
+      content: `### The Mechanics Mortals Miss: How the WoW Engine Really Evaluates Macros
+
+Most players believe macros are just convenient keybind abbreviations. In the modern Camelot (12.0) engine running Classic+ rulesets, macros are micro-scripts executed sequentially during a single hardware input frame event. Understanding how the client batches these lines unlocks capabilities that separate standard players from elite gladiators and top-tier raiders:
+
+💡 **The Golden Rules of Engine Optimization:**
+1. **The '!' Toggle Suppression Prefix:** Prepended to togglable spells (like stealth, auto-shot, or ice block), \`!\` instructs the engine to verify activation without ever toggling the state off if pressed repeatedly.
+2. **The Swing-Timer Buffer Problem:** The #1 reason Vanish or Feign Death fails is that a queued melee or ranged white swing fires 20–50ms *after* entering stealth. Issuing \`/stopattack\` immediately before the defensive clears the hardware swing buffer.
+3. **Hardware Cursor Injection (@cursor):** Skips the client round-trip targeting reticle for area-of-effect spells (Blizzard, Freezing Trap, Rain of Fire), dropping the ability at the hardware mouse pointer with 0ms latency.
+4. **Channel Tick Preservation ([nochanneling]):** Eliminates the devastating 20–33% DPS loss caused by spamming channeled spells (Mind Flay, Drain Soul, Arcane Missiles) before their final damage ticks land.
+5. **Target-of-Target Anchor ([@targettarget]):** Allows healers and hybrid casters to interrupt, dispel, or DPS the boss through the tank without ever deselecting friendly raid frames.
+6. **Zero-GCD Aura Stripping (/cancelaura):** Instantly drops immunities, shields, or stances to eliminate threat lockout or burst-delay windows.
+
+---
+
+### 1. Warrior: Zero-Loss Stance Dancing & Swing Decoupling
+
+#### A. Zero-Loss Stance & Shield Swap Interrupter
+Equips a 1H weapon and Shield and switches to Defensive Stance if in Battle/Berserker stance, or immediately fires Shield Bash if already in Defensive Stance.
+\`\`\`
+#showtooltip [stance:2] Shield Bash; [stance:1/3] Pummel
+/equipslot [nostance:2] 16 YourOneHandWeaponName
+/equipslot [nostance:2] 17 YourShieldName
+/cast [stance:1/3] Defensive Stance; Shield Bash
+/startattack
+\`\`\`
+
+#### B. Overpower Stance-Dance Reflex
+Instantly switches to Battle Stance upon a dodge proc and executes Overpower without resetting your auto-attack swing timer.
+\`\`\`
+#showtooltip Overpower
+/cast [nostance:1] Battle Stance
+/cast Overpower
+/startattack
+\`\`\`
+
+#### C. Heroic Strike & Cleave Rage De-Coupler
+Avoids starving yourself of rage when incoming damage spikes by allowing you to cancel a queued Heroic Strike with Alt.
+\`\`\`
+#showtooltip Heroic Strike
+/cast Heroic Strike
+/stopcasting [mod:alt]
+/startattack
+\`\`\`
+
+#### D. Universal Charge & Intercept Mobility Matrix
+Charges if out of combat (shifting to Battle Stance automatically), or switches to Berserker Stance and Intercepts mid-combat.
+\`\`\`
+#showtooltip [combat] Intercept; Charge
+/cast [nocombat,nostance:1] Battle Stance; [nocombat] Charge
+/cast [combat,nostance:3] Berserker Stance; [combat] Intercept
+/startattack
+\`\`\`
+
+---
+
+### 2. Rogue: The Frame-Perfect Pickpocket & Swing-Buffer Vanish
+
+#### A. The 'Greedy Ghost' Instant Pickpocket + Cheap Shot
+Exploits the fact that Pick Pocket is off the global cooldown with no animation, looting the humanoid target in the exact millisecond before the stun registers.
+\`\`\`
+#showtooltip Cheap Shot
+/targetenemy [noexists]
+/cast Pick Pocket
+/cast Cheap Shot
+\`\`\`
+
+#### B. The Anti-Auto-Attack Vanish Buffer
+Guarantees Vanish sticks by flushing all buffered white-swings before activating stealth.
+\`\`\`
+#showtooltip Vanish
+/stopattack
+/cancelaura Attack
+/cast Vanish
+\`\`\`
+
+#### C. The High-Frequency Stealth Hunter & Sap Radar
+Spam this key while stealthed. It automatically targets any enemy player within 20 yards and casts Sap before they render on your screen.
+\`\`\`
+#showtooltip Sap
+/cleartarget
+/targetenemyplayer [harm][nodead]
+/cast [exists] Sap
+\`\`\`
+
+#### D. Gouge & First Aid Combat Triage
+Immediately halts melee swings to prevent breaking CC, Gouges the enemy, and begins channeling heavy bandages on yourself.
+\`\`\`
+#showtooltip Gouge
+/cast Gouge
+/stopattack
+/use [@player] Heavy Silk Bandage
+\`\`\`
+
+#### E. Mouseover Blind Peeler
+Neutralizes approaching adds or enemy healers without losing your current combo-point target.
+\`\`\`
+#showtooltip Blind
+/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Blind
+\`\`\`
+
+---
+
+### 3. Mage: Reticle-Skipping & Hypothermia Guard
+
+#### A. Zero-Latency Reticle-Skip Blizzard / Flamestrike
+Bypasses the green circle targeting reticle completely, landing the AoE directly beneath your mouse cursor instantly.
+\`\`\`
+#showtooltip Blizzard
+/stopcasting
+/cast [@cursor] Blizzard
+\`\`\`
+
+#### B. Double-Tap Safe Ice Block with Alt-Cancel
+Prevents accidental double-clicking from immediately deactivating your immunity, while allowing voluntary cancellation with Alt.
+\`\`\`
+#showtooltip Ice Block
+/stopcasting
+/cast !Ice Block
+/cancelaura [mod:alt] Ice Block
+\`\`\`
+
+#### C. Omni-Interrupt Mouseover & Focus Counterspell
+Aborts your current fireball or frostbolt cast and interrupts the priority target under your mouse or focus frame without losing your DPS target.
+\`\`\`
+#showtooltip Counterspell
+/stopcasting
+/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Counterspell
+\`\`\`
+
+#### D. Arcane Power + Presence of Mind Instant Pyroblast
+Fires off-GCD Arcane Power, triggers instant-cast Presence of Mind, and launches a Pyroblast in 0.0 seconds.
+\`\`\`
+#showtooltip Pyroblast
+/cast Arcane Power
+/cast Presence of Mind
+/cast Pyroblast
+\`\`\`
+
+---
+
+### 4. Hunter: The 1-Tap Trap Batch & Clipless Auto-Shot
+
+#### A. The Unbroken 1-Tap 'Feign Death + Freeze Trap'
+Forces your pet to passive to break threat, cancels queued shots, drops combat with Feign Death, and arms Freezing Trap at your cursor in one motion.
+\`\`\`
+#showtooltip Freezing Trap
+/petpassive
+/stopattack
+/cast Feign Death
+/cast [@cursor] Freezing Trap
+\`\`\`
+
+#### B. The Clipless Auto-Shot Stutter-Step Engine
+Prevents spamming Aimed Shot or Multi-Shot from canceling your auto-shot cadence.
+\`\`\`
+#showtooltip Aimed Shot
+/cast !Auto Shot
+/cast Aimed Shot
+\`\`\`
+
+#### C. Mouseover Scatter Shot Peeler
+Disorients an approaching enemy melee or casting add without dropping focus on your marked target.
+\`\`\`
+#showtooltip Scatter Shot
+/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Scatter Shot
+\`\`\`
+
+#### D. Instant Pet Dash & Bite Micro-Anchor
+Commands your pet to sprint and bite your mouseover target instantly without waiting for the server's pet AI polling tick.
+\`\`\`
+#showtooltip Dash
+/petattack [@mouseover,harm,nodead][]
+/cast Dash
+/cast Dive
+/cast Bite
+\`\`\`
+
+---
+
+### 5. Priest: Tick-Preserving Channels & Tank-Anchored Dispels
+
+#### A. The Clipless Mind Flay Tick-Preserver
+Locks out button spam while Mind Flay is channeling, ensuring you never clip the third and final damage tick early.
+\`\`\`
+#showtooltip Mind Flay
+/cast [nochanneling:Mind Flay] Mind Flay
+\`\`\`
+
+#### B. Target-of-Target Offensive Dispel & Dotting
+Keeps your healing target focused on the friendly tank while dispelling enemy buffs or applying Shadow Word: Pain to whatever the tank is fighting.
+\`\`\`
+#showtooltip Dispel Magic
+/cast [@mouseover,harm,nodead][@targettarget,harm,nodead][harm,nodead] Dispel Magic
+\`\`\`
+
+#### C. Night Elf Shadowmeld + Drink Stealth Reset
+Drops combat, enters stealth, and begins drinking mana water without breaking Shadowmeld.
+\`\`\`
+#showtooltip Morning Glory Dew
+/cast !Shadowmeld
+/use Morning Glory Dew
+\`\`\`
+
+#### D. Emergency Desperate Prayer & Healthstone Panic Matrix
+Instant clutch survival macro combining racial instant heal, highest-tier healthstone, and Inner Fire re-application.
+\`\`\`
+#showtooltip Desperate Prayer
+/use Master Healthstone
+/cast Desperate Prayer
+/cast [nostance] Inner Fire
+\`\`\`
+
+---
+
+### 6. Paladin: Bubble-Taunt Bleed Cleansing & Seal Weaving
+
+#### A. Zero-Threat-Drop Divine Shield Bleed Wipe
+Clears 100% mortal strikes, bleeds, and stacking dungeon debuffs and immediately cancels the bubble before boss threat shifts to your raid.
+\`\`\`
+#showtooltip Divine Shield
+/cast Divine Shield
+/cancelaura Divine Shield
+\`\`\`
+
+#### B. Swing-Preserving Judgement Weave
+Ensures casting Judgement never pauses your auto-attack swing timer or disrupts the 0.4s seal twist window.
+\`\`\`
+#showtooltip Judgement
+/cast Judgement
+/startattack
+\`\`\`
+
+#### C. Target-of-Target Cleanse & Blessing of Freedom
+Cleanses debuffs and roots off whatever ally the enemy boss is currently targeting without changing your active target.
+\`\`\`
+#showtooltip Cleanse
+/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Cleanse
+\`\`\`
+
+#### D. Divine Favor + Holy Shock Guaranteed Crit Burst
+Combines off-GCD 100% spell crit with Holy Shock for instant tank clutch saves or high-burst offensive executes.
+\`\`\`
+#showtooltip Holy Shock
+/cast Divine Favor
+/cast [@mouseover,exists][] Holy Shock
+\`\`\`
+
+#### E. Blessing of Protection Self-Cancel for Melee Warriors
+Allows Warriors and Rogues who receive Blessing of Protection to dump mortal debuffs and immediately resume auto-attacking.
+\`\`\`
+#showtooltip
+/cancelaura Blessing of Protection
+\`\`\`
+
+---
+
+### 7. Warlock: Shard Farming Automation & Pet Anchor Kicks
+
+#### A. Clipless Shard Drain Soul Harvester
+Protects channel ticks and uses low-mana Rank 1 for effortless Soul Shard farming without wasting mana.
+\`\`\`
+#showtooltip Drain Soul
+/stopcasting
+/cast [nochanneling:Drain Soul] Drain Soul(Rank 1)
+\`\`\`
+
+#### B. Mouseover Felhunter Spell Lock (Pet Remains on Primary Target)
+Fires your Felhunter's interrupt at a priority caster under your mouse cursor while your pet continues meleeing and building threat on its primary target.
+\`\`\`
+#showtooltip Spell Lock
+/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Spell Lock
+\`\`\`
+
+#### C. Target-of-Target Death Coil Peeler
+Instantly fires Death Coil at whatever enemy is attacking your party healer without requiring manual targeting.
+\`\`\`
+#showtooltip Death Coil
+/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][] Death Coil
+\`\`\`
+
+#### D. All-in-One Multi-Curse Modifier Hub
+Normal tap = Curse of Agony; Shift = Curse of the Elements; Alt = Curse of Tongues.
+\`\`\`
+#showtooltip
+/cast [mod:shift] Curse of the Elements; [mod:alt] Curse of Tongues; Curse of Agony
+\`\`\`
+
+---
+
+### 8. Shaman: Tank-Anchor Purging & Cast-Abort Wind Shear
+
+#### A. Target-of-Target Boss Purge Engine
+Strips shields, HoTs, and Bloodlusts off the boss through the tank without losing healing frames.
+\`\`\`
+#showtooltip Purge
+/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][harm,nodead] Purge
+\`\`\`
+
+#### B. Instant Cast-Abort Wind Shear
+Immediately cancels any long Healing Wave or Lightning Bolt cast to land an instant kick within 0.1s.
+\`\`\`
+#showtooltip Wind Shear
+/stopcasting
+/cast [@focus,harm,nodead][@mouseover,harm,nodead][] Wind Shear
+\`\`\`
+
+#### C. Elemental Mastery Instant Chain Lightning Nuke
+Triggers 100% crit chance, 0 mana cost, and instant cast time for an unstoppable triple-hit burst.
+\`\`\`
+#showtooltip Chain Lightning
+/stopcasting
+/cast Elemental Mastery
+/cast Chain Lightning
+\`\`\`
+
+#### D. Ghost Wolf Anti-Snare Emergency Cleanse
+Breaks movement slows and transitions into Ghost Wolf form in the same server tick.
+\`\`\`
+#showtooltip Ghost Wolf
+/cancelaura [stance:1] Ghost Wolf
+/cast !Ghost Wolf
+\`\`\`
+
+---
+
+### 9. Druid: Tick-Aligned Powershifting & Swift-Shifting
+
+#### A. The Immortal 'Tick-Aligned' Powershifting Engine
+Cancels any active form and re-enters Cat Form in the exact same server tick to break movement impairing effects and gain 40 Furor Energy instantly.
+\`\`\`
+#showtooltip Cat Form
+/cancelaura [stance:1] Bear Form; [stance:2] Aquatic Form; [stance:4] Travel Form
+/cast !Cat Form
+\`\`\`
+
+#### B. Omni-Form Feral Charge Gap-Closer
+Automatically shifts into Dire Bear Form if in caster or cat form, then fires Feral Charge in one fluid sequence.
+\`\`\`
+#showtooltip Feral Charge - Bear
+/cast [nostance:1] Dire Bear Form
+/cast Feral Charge - Bear
+\`\`\`
+
+#### C. Smart Travel, Aquatic & Mount Selector
+Intelligently casts Aquatic Form if swimming, Cat Form if indoors, Travel Form if in combat outdoors, or summons your mount if out of combat.
+\`\`\`
+#showtooltip
+/cast [swimming] Aquatic Form; [indoors] Cat Form; [combat,outdoors] Travel Form; [outdoors] Swift Mistsaber; Travel Form
+\`\`\`
+
+#### D. Nature's Swiftness Swift-Shift Healer Save
+Immediately cancels cast, triggers Nature's Swiftness, and lands an instant max-rank Healing Touch on your mouseover or target-of-target ally.
+\`\`\`
+#showtooltip Nature's Swiftness
+/stopcasting
+/cast Nature's Swiftness
+/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Healing Touch
+\`\`\`
+
+---
+
+### 10. Universal Meta Engine & CVar Optimizers
+
+#### A. Client Latency Buffer & Camera Zoom Override
+Unclamps camera distance beyond the standard interface slider and tunes the client SpellQueueWindow to match human reaction time (150ms).
+\`\`\`
+/console cameraDistanceMaxZoomFactor 2.6
+/console SpellQueueWindow 150
+/console autoLootDefault 1
+/console floatingCombatTextCombatDamageDirectionalScale 0
+\`\`\`
+
+#### B. Universal Trinket & Racial Burst Stacker
+Fires on-use trinkets (slots 13 and 14) and racial power cooldowns simultaneously without interfering with your main rotational ability.
+\`\`\`
+#showtooltip
+/use 13
+/use 14
+/cast [race:Orc] Blood Fury; [race:Troll] Berserking
+/cast Mortal Strike
+\`\`\`
+
+#### C. Self-Targeted Bandage Lock
+Applies first aid directly to your character without deselecting your hostile target or breaking combat tracking.
+\`\`\`
+#showtooltip Heavy Silk Bandage
+/use [@player] Heavy Silk Bandage
+\`\`\`
+
+#### D. Zero-Taint Raid Marker Radial Key
+Toggles the Skull raid target marker on your mouseover or target with zero UI taint.
+\`\`\`
+/tm 8
+\`\`\``
+    }
   ]
 };
 
