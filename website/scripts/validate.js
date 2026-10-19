@@ -687,6 +687,41 @@ check('Strict legality check on all Level 30 deep dive recommended builds in js/
   }
 });
 
+check('Class weapon progression database coverage and pipeline integrity across all 9 classes', () => {
+  const fwPath = path.join(ROOT, 'data', 'scraped', 'forever_weapons.json');
+  if (!fs.existsSync(fwPath)) throw new Error('Missing forever_weapons.json');
+  const fw = JSON.parse(fs.readFileSync(fwPath, 'utf8'));
+
+  const minCoverage = {
+    warrior: 180,
+    paladin: 180,
+    hunter: 180,
+    rogue: 180,
+    shaman: 180,
+    mage: 150,
+    warlock: 150,
+    priest: 180,
+    druid: 180
+  };
+
+  for (const [cls, minCount] of Object.entries(minCoverage)) {
+    const d = fw[cls];
+    if (!d || !d.levels) throw new Error(`Missing weapon progression for ${cls}`);
+    const uniqueIds = new Set();
+    const allSets = [d.levels, d.healingLevels].filter(Boolean);
+    allSets.forEach(set => {
+      set.forEach(l => {
+        if (l.itemId) uniqueIds.add(l.itemId);
+        (l.alts || []).forEach(a => { if (a.itemId) uniqueIds.add(a.itemId); });
+      });
+    });
+
+    if (uniqueIds.size < minCount) {
+      throw new Error(`Pipeline coverage failure for ${cls}: expected at least ${minCount} unique equippable weapons in progression, found only ${uniqueIds.size}`);
+    }
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

@@ -5,11 +5,11 @@ const d = JSON.parse(fs.readFileSync('data/scraped/forever_weapons.json', 'utf8'
 // Strict Proficiencies Check
 const knownStaffNames = ["staff of orgrimmar", "fallen dragon's scepter", "golemheart stave", "segmented spider leg", "coldspire staff", "living root", "crescent staff", "odo's ley staff", "rod of the sleepwalker", "healer's staff", "striking staff", "spine of the devourer", "illusionary rod", "spellshifter rod", "kindling stave", "wisepaw totem", "benediction", "staff of jordan", "warden staff", "staff of westfall", "oakthrush staff", "apprentice's spellstaff", "staff of the dor'danil", "walking stick", "short staff", "militia quarterstaff", "glimmering staff", "soulstaff", "staff of the friar", "death prophet spine", "staff of soran'ruk", "soul harvester", "rod of the ogre magi", "zum'rah's vexing cane", "gritroot staff", "darkwood staff", "cauldron stirrer", "makeshift stormcaller", "gnarled necromancer's staff", "alliance outrunner staff", "emerald watcher's dreamstaff"];
 
-const knownMaceNames = ["crude battle axe", "wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "black menace", "gul'gash's greathammer"];
+const knownMaceNames = ["crude battle axe", "wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "gul'gash's greathammer"];
 
-const knownAxeNames = ["crude battle axe", "copper battle axe", "thick war axe", "durgen's crescent axe", "corpse chopper", "forsaken greataxe", "reef axe", "taurenbane's family cleaver", "guardian's dualblade", "whirlwind axe", "corpsemaker", "ravager", "executioner's cleaver", "gatorbite axe", "arcanite reaper", "woodchopper", "lumbering ogre axe", "taskmaster axe", "bronze battle axe", "heavy mithril axe", "bonebiter", "massive iron axe", "riptear's cleaver", "thun'grim's axe", "axe of orgrimmar", "icesworn decapitator"];
+const knownAxeNames = ["crude battle axe", "copper battle axe", "thick war axe", "durgen's crescent axe", "corpse chopper", "forsaken greataxe", "reef axe", "taurenbane's family cleaver", "guardian's dualblade", "whirlwind axe", "corpsemaker", "ravager", "executioner's cleaver", "gatorbite axe", "arcanite reaper", "woodchopper", "lumbering ogre axe", "taskmaster axe", "bronze battle axe", "heavy mithril axe", "bonebiter", "massive iron axe", "riptear's cleaver", "thun'grim's axe", "axe of orgrimmar", "icesworn decapitator", "butcher's cleaver"];
 
-const knownSwordNames = ["worn shortsword", "copper claymore", "militia shortblade", "heavy copper broadsword", "haunting blade", "vileblood scimitar", "plaguefang", "strike of the hydra", "trusty sword", "whirlwind sword", "stoneslayer", "blackblade of shahram", "copper shortsword", "bronze greatsword", "wolfsbane", "moonsteel broadsword", "sword of serenity", "blade of the titans", "warmonger", "cutlass", "cruel barb", "wingblade", "deadly bronze poniard", "bronze shortsword", "butcher's cleaver", "meteor shard", "ruby-adorned blade", "city guard's tarnished blade", "sword of hammerfall", "the butcher", "vanquisher's sword", "thrash blade", "mirah's song", "dal'rend's sacred charge", "dal'rend's tribal guardian", "coldflame saber", "debt collector", "witchblade", "master hunter's spellsword", "zealot blade", "sword of omen", "forsaken shortsword", "deathstalker shortsword", "talonstrike", "thun'grim's sword", "heirloom sword", "sword of the fallen", "militia shortsword", "militia sword", "curved scimitar", "wildgore greatsword", "gilded blademaster's greatsword", "monstrous cleaver", "the skyblade", "blade of silverlaine", "alliance outrunner's sword", "blade of senseless slaughter"];
+const knownSwordNames = ["worn shortsword", "copper claymore", "heavy copper broadsword", "haunting blade", "vileblood scimitar", "plaguefang", "strike of the hydra", "trusty sword", "whirlwind sword", "stoneslayer", "blackblade of shahram", "copper shortsword", "bronze greatsword", "wolfsbane", "moonsteel broadsword", "sword of serenity", "blade of the titans", "warmonger", "cutlass", "cruel barb", "wingblade", "deadly bronze poniard", "bronze shortsword", "ruby-adorned blade", "city guard's tarnished blade", "sword of hammerfall", "the butcher", "vanquisher's sword", "thrash blade", "mirah's song", "dal'rend's sacred charge", "dal'rend's tribal guardian", "coldflame saber", "debt collector", "witchblade", "master hunter's spellsword", "zealot blade", "sword of omen", "forsaken shortsword", "deathstalker shortsword", "talonstrike", "thun'grim's sword", "heirloom sword", "sword of the fallen", "militia shortsword", "militia sword", "curved scimitar", "wildgore greatsword", "gilded blademaster's greatsword", "monstrous cleaver", "the skyblade", "blade of silverlaine", "alliance outrunner's sword", "blade of senseless slaughter"];
 
 const knownRangedNames = ["polished shortbow", "hornwood recurve bow", "rough boomstick", "militia bow", "heavy recurve bow", "fine shortbow", "laminated recurve bow", "hunter's boomstick", "deadly blunderbuss", "calibrated blunderbuss", "venomstrike", "lovingly crafted boomstick", "silver-plated shotgun", "reinforced bow", "naga heartpiercer", "moonsight rifle", "fallenroot longbow", "bkp 2700 \"enforcer\"", "concealed hand crossbow", "gravespike repeater", "golemsight long gun", "glass shooter", "master hunter's rifle", "master hunter's bow", "quilboar blaster", "booty bay bruiser's buckshot", "spellsever crossbow", "crystalpine stinger", "mithril blunderbuss", "chesterfall musket", "blasting hackbut", "mithril heavy-bore rifle", "shrapnel blaster", "ironweaver", "truthseeker's bow", "gryphonwing bow", "riphook", "megashot rifle", "thorium rifle", "dark iron rifle", "blackcrow", "ancient bone bow", "flawless arcanite rifle", "core marksman rifle", "kolkar bow", "skorn's rifle", "orcish battle bow", "snarlsnout shooter", "bristlebark bow", "walton's second-favorite gun", "misplaced shooter", "barbaric crossbow", "dun garok rifle", "siegebreaker's blaster", "reaver's repeater", "alliance outrunner bow"];
 
@@ -80,10 +80,10 @@ for (const [cls, cData] of Object.entries(d)) {
         }
       }
 
-      // Druid: NO Swords, NO Axes
+      // Druid: NO Swords, NO Axes (Polearms allowed)
       if (cls === 'druid') {
         const isSword = knownSwordNames.some(sn => aName === sn) || aVal.includes('sword');
-        const isAxe = knownAxeNames.some(an => aName === an) || aVal.includes('axe');
+        const isAxe = (knownAxeNames.some(an => aName === an) || aVal.includes('axe')) && !aVal.includes('polearm') && !aVal.includes('poleaxe');
         if (isSword || isAxe) {
           console.log(`FAIL: Druid cannot equip sword/axe ${label}!`);
           errors++;
@@ -104,4 +104,37 @@ for (const [cls, cData] of Object.entries(d)) {
   });
 }
 
-console.log(`Audit finished with ${errors} errors.`);
+console.log('\n--- STRICT AUDIT OF PROGRESSION COVERAGE ---');
+const minThresholds = {
+  warrior: 180,
+  paladin: 180,
+  hunter: 180,
+  rogue: 180,
+  shaman: 180,
+  mage: 150,
+  warlock: 150,
+  priest: 180,
+  druid: 180
+};
+
+for (const [cls, minCount] of Object.entries(minThresholds)) {
+  const cData = d[cls];
+  const uniqueIds = new Set();
+  const allLevelSets = [cData.levels, cData.healingLevels].filter(Boolean);
+  allLevelSets.forEach(lvlList => {
+    lvlList.forEach(l => {
+      if (l.itemId) uniqueIds.add(l.itemId);
+      (l.alts || []).forEach(a => { if (a.itemId) uniqueIds.add(a.itemId); });
+    });
+  });
+
+  if (uniqueIds.size < minCount) {
+    console.log(`FAIL: ${cls} progression coverage too low! Expected >= ${minCount}, got ${uniqueIds.size}`);
+    errors++;
+  } else {
+    console.log(`✓ ${cls.padEnd(10)}: ${uniqueIds.size} unique weapons (>= ${minCount})`);
+  }
+}
+
+console.log(`\nAudit finished with ${errors} errors.`);
+if (errors > 0) process.exit(1);

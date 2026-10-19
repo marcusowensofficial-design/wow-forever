@@ -34,7 +34,7 @@ for (const [cls, cData] of Object.entries(d)) {
       // Druid
       if (cls === 'druid') {
         if (text.includes('sword')) fail('Druid cannot use Sword');
-        if (text.includes('axe')) fail('Druid cannot use Axe');
+        if (text.includes('axe') && !text.includes('poleaxe') && !text.includes('polearm')) fail('Druid cannot use Axe');
       }
 
       // Shaman
