@@ -1322,6 +1322,7 @@
     getState: () => state,
     loadSavedBuilds: getSavedBuilds,
     saveCurrentBuild,
+    loadSavedBuild,
     deleteSavedBuild,
     renderSavedBuildsMenu: renderSavedBuildsDrawer
   };

@@ -7,7 +7,6 @@
   const core = window.WOW_PROFESSIONS_CORE || {};
   const escapeHtml = core.escapeHtml || window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
   const getIconUrl = core.getIconUrl || ((icon) => "https://wow.zamimg.com/images/wow/icons/medium/" + (icon || "inv_misc_questionmark") + ".jpg");
-  const getSkillClass = core.getSkillClass || (() => "skill-orange");
   const formatWaypointsInHtml = core.formatWaypointsInHtml || (h => h);
 
   function attachTooltipListeners(container, prof) {

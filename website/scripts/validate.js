@@ -778,6 +778,54 @@ check('Progression items canonical database integrity and slot validity', () => 
   }
 });
 
+check('Absence of dead 404 icons across class progression and professions data', () => {
+  const deadIcons = [
+    'inv_weapon_halberd_01',
+    'inv_lantern_01',
+    'inv_knife_01',
+    'inv_misc_firestone_01',
+    'inv_misc_sit',
+    'inv_10_tailoring2_mannequin_bronze',
+    'inv_10_engineering2_tinkeringengine_bronze',
+    'inv_10_herbalism2_herbalistsbasket_bronze',
+    'inv_10_mining2_prospectorspick_bronze',
+    'inv_10_skinning2_flensingknife_bronze',
+    'inv_enchant_essencenetherlesser',
+    'inv_enchant_essenceeternalgreater',
+    'inv_misc_thread_04',
+    'inv_misc_thread_03',
+    'inv_fabric_felcloth_01',
+    'inv_misc_thread_02',
+    'inv_misc_silk_02',
+    'spell_nature_abolishpoison',
+    'inv_misc_powder_solid',
+    'inv_misc_ammo_pouch_01',
+    'inv_misc_birdegg_01',
+    'inv_misc_bag_10_purple',
+    'inv_misc_ammo_pouch_02',
+    'inv_misc_steelpipetooth',
+    'inv_misc_ammo_pouch_03'
+  ];
+
+  const filesToAudit = [
+    path.join(ROOT, 'js', 'data', 'class-progression-data.js'),
+    path.join(ROOT, 'js', 'data', 'professions-reference-data.js'),
+    path.join(ROOT, 'js', 'data', 'professions-data.js'),
+    path.join(ROOT, 'data', 'forever_professions.json'),
+    path.join(ROOT, 'js', 'modules', 'professions.js')
+  ];
+
+  for (const fp of filesToAudit) {
+    if (!fs.existsSync(fp)) continue;
+    const content = fs.readFileSync(fp, 'utf8');
+    for (const icon of deadIcons) {
+      if (content.includes(icon)) {
+        throw new Error(`Found dead 404 icon "${icon}" in ${path.relative(ROOT, fp)}`);
+      }
+    }
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

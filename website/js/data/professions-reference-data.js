@@ -1068,7 +1068,7 @@
           {
             "name": "Fine Thread",
             "count": 1,
-            "icon": "inv_misc_thread_02"
+            "icon": "inv_fabric_wool_02"
           }
         ],
         "desc": "Reliable 8-slot early leveling bag."
@@ -1089,7 +1089,7 @@
           {
             "name": "Heavy Silken Thread",
             "count": 2,
-            "icon": "inv_misc_thread_03"
+            "icon": "inv_fabric_silk_02"
           }
         ],
         "desc": "Durable 10-slot silk backpack."
@@ -1110,7 +1110,7 @@
           {
             "name": "Silken Thread",
             "count": 2,
-            "icon": "inv_misc_thread_03"
+            "icon": "inv_fabric_silk_02"
           }
         ],
         "desc": "12-slot mid-tier bag crafted before the Phase 2 Beta cap."
@@ -1136,7 +1136,7 @@
           {
             "name": "Rune Thread",
             "count": 1,
-            "icon": "inv_misc_thread_04"
+            "icon": "spell_shadow_antimagicshell"
           }
         ],
         "desc": "Standard 14-slot high-capacity bag."
@@ -1157,7 +1157,7 @@
           {
             "name": "Rune Thread",
             "count": 1,
-            "icon": "inv_misc_thread_04"
+            "icon": "spell_shadow_antimagicshell"
           }
         ],
         "desc": "Authentic WoW Forever 18-slot supreme traveler satchel (upgraded from 16 to 18 slots in Classic+!).",
@@ -1189,7 +1189,7 @@
           {
             "name": "Greater Eternal Essence",
             "count": 2,
-            "icon": "inv_enchant_essenceeternalgreater"
+            "icon": "inv_enchant_essenceeternallarge"
           }
         ],
         "desc": "The pinnacle 20-slot epic container."
@@ -1233,7 +1233,7 @@
           {
             "name": "Fine Thread",
             "count": 1,
-            "icon": "inv_misc_thread_02"
+            "icon": "inv_fabric_wool_02"
           }
         ],
         "desc": "WoW Forever Custom: Dedicated 8-slot reagent container."
@@ -1254,7 +1254,7 @@
           {
             "name": "Heavy Silken Thread",
             "count": 1,
-            "icon": "inv_misc_thread_03"
+            "icon": "inv_fabric_silk_02"
           }
         ],
         "desc": "WoW Forever Custom: Dedicated 10-slot reagent container."
@@ -1275,7 +1275,7 @@
           {
             "name": "Silken Thread",
             "count": 1,
-            "icon": "inv_misc_thread_03"
+            "icon": "inv_fabric_silk_02"
           }
         ],
         "desc": "WoW Forever Custom: Dedicated 12-slot reagent container (Phase 2 Beta Cap)."
@@ -1301,7 +1301,7 @@
           {
             "name": "Rune Thread",
             "count": 1,
-            "icon": "inv_misc_thread_04"
+            "icon": "spell_shadow_antimagicshell"
           }
         ],
         "desc": "WoW Forever Custom: Dedicated 14-slot reagent container."
@@ -1322,7 +1322,7 @@
           {
             "name": "Rune Thread",
             "count": 1,
-            "icon": "inv_misc_thread_04"
+            "icon": "spell_shadow_antimagicshell"
           }
         ],
         "desc": "WoW Forever Custom: Massive 18-slot dedicated reagent satchel."
@@ -1343,12 +1343,12 @@
           {
             "name": "Greater Eternal Essence",
             "count": 2,
-            "icon": "inv_enchant_essenceeternalgreater"
+            "icon": "inv_enchant_essenceeternallarge"
           },
           {
             "name": "Rune Thread",
             "count": 1,
-            "icon": "inv_misc_thread_04"
+            "icon": "spell_shadow_antimagicshell"
           }
         ],
         "desc": "WoW Forever Custom: 20-slot epic reagent hauler."
@@ -1393,7 +1393,7 @@
           {
             "name": "Lesser Nether Essence",
             "count": 2,
-            "icon": "inv_enchant_essencenetherlesser"
+            "icon": "inv_enchant_essencenethersmall"
           }
         ],
         "desc": "Warlock Soul Shard container holding up to 24 shards."
@@ -1415,7 +1415,7 @@
           {
             "name": "Shadow Silk",
             "count": 4,
-            "icon": "inv_misc_silk_02"
+            "icon": "spell_nature_web"
           }
         ],
         "desc": "28-slot Soul Shard container."
@@ -1432,7 +1432,7 @@
           {
             "name": "Felcloth",
             "count": 12,
-            "icon": "inv_fabric_felcloth_01"
+            "icon": "inv_fabric_felrag"
           },
           {
             "name": "Mooncloth",
@@ -1442,7 +1442,7 @@
           {
             "name": "Greater Eternal Essence",
             "count": 4,
-            "icon": "inv_enchant_essenceeternalgreater"
+            "icon": "inv_enchant_essenceeternallarge"
           }
         ],
         "desc": "Supreme 32-slot Warlock Soul Shard bag."
@@ -1518,7 +1518,7 @@
           {
             "name": "Living Essence",
             "count": 4,
-            "icon": "spell_nature_abolishpoison"
+            "icon": "spell_nature_abolishmagic"
           }
         ],
         "desc": "Massive 32-slot master gathering herb bag."
@@ -1529,7 +1529,7 @@
         "skill": 150,
         "type": "Enchanting Bag",
         "quality": 2,
-        "icon": "inv_misc_bag_10_purple",
+        "icon": "inv_misc_bag_10_blue",
         "source": "Tailoring Trainer",
         "reagents": [
           {
@@ -1584,7 +1584,7 @@
           {
             "name": "Greater Eternal Essence",
             "count": 4,
-            "icon": "inv_enchant_essenceeternalgreater"
+            "icon": "inv_enchant_essenceeternallarge"
           },
           {
             "name": "Illusion Dust",
@@ -1689,7 +1689,7 @@
         "speed": "+10%",
         "skill": 30,
         "quality": 1,
-        "icon": "inv_misc_ammo_pouch_01",
+        "icon": "inv_misc_ammo_bullet_01",
         "source": "Leatherworking Trainer",
         "reagents": [
           {
@@ -1711,7 +1711,7 @@
         "speed": "+12%",
         "skill": 150,
         "quality": 2,
-        "icon": "inv_misc_ammo_pouch_02",
+        "icon": "inv_misc_bag_09",
         "source": "Leatherworking Trainer",
         "reagents": [
           {
@@ -1733,7 +1733,7 @@
         "speed": "+13%",
         "skill": 225,
         "quality": 2,
-        "icon": "inv_misc_ammo_pouch_03",
+        "icon": "inv_misc_bag_09_black",
         "source": "Pattern: Vendor (Thunder Bluff / Ironforge)",
         "reagents": [
           {
@@ -1791,7 +1791,7 @@
           {
             "name": "Mithril Tube",
             "count": 6,
-            "icon": "inv_misc_steelpipetooth"
+            "icon": "inv_musket_01"
           },
           {
             "name": "Precise Scope",
@@ -1815,7 +1815,7 @@
           {
             "name": "Gnomish Battle Chicken",
             "id": "10725",
-            "icon": "inv_misc_birdegg_01",
+            "icon": "spell_magic_polymorphchicken",
             "effect": "Summons mechanical pet that grants +5% attack speed aura to nearby party members.",
             "quality": 3
           },
@@ -1867,7 +1867,7 @@
           {
             "name": "Solid Blasting Powder",
             "count": 20,
-            "icon": "inv_misc_powder_solid"
+            "icon": "inv_misc_powder_black"
           },
           {
             "name": "Iron Grenade",

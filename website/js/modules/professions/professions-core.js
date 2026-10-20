@@ -79,15 +79,6 @@
   /* ==========================================================================
      EXTENDED SUITE: DATASETS & UTILITIES (BIS, TOMTOM, SPECS, CONTAINERS, CIRCUITS)
      ========================================================================== */
-  const WOW_TRAINERS_DATA = window.WOW_TRAINERS_DATA || [];
-  const CONTAINERS_DATA = window.CONTAINERS_DATA || {};
-  const SPECIALIZATIONS_DATA = window.SPECIALIZATIONS_DATA || {};
-  const PAIRING_WIZARD_DATA = window.PAIRING_WIZARD_DATA || [];
-  const DISENCHANT_BRACKETS_DATA = window.DISENCHANT_BRACKETS_DATA || [];
-  const FISHING_SCHEDULE_DATA = window.FISHING_SCHEDULE_DATA || {};
-  const MINING_CIRCUITS = window.MINING_CIRCUITS || [];
-  const HERBALISM_CIRCUITS = window.HERBALISM_CIRCUITS || [];
-
   let cachedBisMap = null;
   function buildBiSLookupMap() {
     if (cachedBisMap) return cachedBisMap;

@@ -355,7 +355,17 @@
     `).join('');
   }
 
-  function updateTrainerGrid(container) {
+  function setTrainerFilters(newFilters = {}) {
+    if (!newFilters) return;
+    if (typeof newFilters.faction !== 'undefined') trainerFactionFilter = newFilters.faction;
+    if (typeof newFilters.rank !== 'undefined') trainerRankFilter = newFilters.rank;
+    if (typeof newFilters.profession !== 'undefined') trainerProfFilter = newFilters.profession;
+    if (typeof newFilters.zone !== 'undefined') trainerZoneFilter = newFilters.zone;
+    if (typeof newFilters.query !== 'undefined') trainerSearchQuery = newFilters.query;
+  }
+
+  function updateTrainerGrid(container, newFilters = null) {
+    if (newFilters) setTrainerFilters(newFilters);
     const grid = container.querySelector('.trainer-grid');
     if (!grid) return;
     const filtered = filterTrainers();
@@ -1304,6 +1314,7 @@
     renderPairingDetailsCard,
     renderRolePairingWizard,
     filterTrainers,
+    setTrainerFilters,
     renderTrainerCardsHtml,
     updateTrainerGrid,
     renderMasterTrainerDirectory,

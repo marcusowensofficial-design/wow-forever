@@ -10558,7 +10558,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "+3 [Agility or Strength], Equip: Wounds the target for 37 damage.",
-              "icon": "inv_weapon_halberd_01",
+              "icon": "inv_weapon_halberd_04",
               "source": {
                 "kind": "dungeon",
                 "title": "LBRS: Warmaster Voone",
@@ -18131,7 +18131,7 @@ if (typeof window !== 'undefined') {
                 "iLvl": 60,
                 "reqLevel": 54,
                 "stats": "+3 [Agility or Strength], Equip: Wounds the target for 37 damage.",
-                "icon": "inv_weapon_halberd_01",
+                "icon": "inv_weapon_halberd_04",
                 "source": {
                   "kind": "dungeon",
                   "title": "LBRS: Warmaster Voone",
@@ -41264,7 +41264,7 @@ if (typeof window !== 'undefined') {
                 "+2 Intellect"
               ],
               "reqLevel": 44,
-              "icon": "inv_lantern_01",
+              "icon": "inv_misc_lantern_01",
               "source": {
                 "kind": "dungeon",
                 "title": "BRD",
@@ -52427,7 +52427,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
-              "icon": "inv_knife_01",
+              "icon": "inv_weapon_shortblade_14",
               "weaponType": "Dagger",
               "source": {
                 "kind": "dungeon",
@@ -75050,7 +75050,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
-              "icon": "inv_knife_01",
+              "icon": "inv_weapon_shortblade_14",
               "weaponType": "Dagger",
               "source": {
                 "kind": "dungeon",
@@ -86057,7 +86057,7 @@ if (typeof window !== 'undefined') {
               "iLvl": 54,
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
-              "icon": "inv_knife_01",
+              "icon": "inv_weapon_shortblade_14",
               "weaponType": "Dagger",
               "source": {
                 "kind": "dungeon",

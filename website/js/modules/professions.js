@@ -20,28 +20,23 @@
   let filterDungeonOnly = false;
   let filterBlueprintOnly = false;
   let playerSkill = null;
-  let gatheringViewMode = 'routes';
-  let activeMiningTier = 'copper';
-  let activeHerbTier = 'herb_tier1';
-  let activeContainerType = 'all';
   let activeRolePairing = 'tank';
-  let trainerFactionFilter = 'all';
-  let trainerRankFilter = 'all';
-  let trainerProfFilter = 'all';
-  let trainerZoneFilter = 'all';
-  let trainerSearchQuery = '';
-
+  const trainerFilters = {
+    faction: 'all',
+    rank: 'all',
+    profession: 'all',
+    zone: 'all',
+    query: ''
+  };
 
   const core = window.WOW_PROFESSIONS_CORE || {};
   const escapeHtml = core.escapeHtml || window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
   const getIconUrl = core.getIconUrl || ((icon) => "https://wow.zamimg.com/images/wow/icons/medium/" + (icon || "inv_misc_questionmark") + ".jpg");
-  const getPlaceholderIcon = core.getPlaceholderIcon || (() => null);
   const getProfessionPassive = core.getProfessionPassive || (() => null);
   const getSkillClass = core.getSkillClass || (() => "skill-orange");
   const isDungeonRecipe = core.isDungeonRecipe || (() => false);
   const isBlueprintRecipe = core.isBlueprintRecipe || (() => false);
   const getBiSInfo = core.getBiSInfo || (() => null);
-  const buildBiSLookupMap = core.buildBiSLookupMap || (() => new Map());
 
   function attachTooltipListeners(container, prof) {
     if (window.WOW_PROFESSIONS_MODAL && window.WOW_PROFESSIONS_MODAL.attachTooltipListeners) {
@@ -62,7 +57,9 @@
   }
 
   function updateTrainerGrid(container) {
-    if (window.WOW_PROFESSIONS_TABS?.updateTrainerGrid) window.WOW_PROFESSIONS_TABS.updateTrainerGrid(container);
+    if (window.WOW_PROFESSIONS_TABS?.updateTrainerGrid) {
+      window.WOW_PROFESSIONS_TABS.updateTrainerGrid(container, trainerFilters);
+    }
   }
 
   function resolveReagentSource(name, id) {
@@ -405,7 +402,7 @@
 
     const matrixRows = [
       { slug: 'alchemy', name: 'Alchemy', icon: 'trade_alchemy', s20: 'Mana Well', s20Desc: '29 Mana every 5 sec to everyone sitting nearby', s20Icon: 'spell_arcane_manatap', s140: 'Fermenter', s140Desc: 'Makes certain Alchemy reagents, gives Mana Well buff', s140Icon: 'inv_alchemy_90_cauldron', s300: 'Alchemy Laboratory', s300Desc: 'Needed for advanced recipes, gives Mana Well buff', s300Icon: '10prof_portabletable_alchemy01' },
-      { slug: 'blacksmithing', name: 'Blacksmithing', icon: 'trade_blacksmithing', s20: 'Sharpening Wheel', s20Desc: '34 Strength to everyone sitting nearby', s20Icon: 'inv_stone_grindingstone_01', s140: 'Anvil', s140Desc: 'An anvil at camp, gives Sharpening Wheel buff', s140Icon: 'trade_blacksmithing', s300: 'Master Forge', s300Desc: 'Needed for advanced recipes, gives Sharpening Wheel buff', s300Icon: 'inv_misc_firestone_01' },
+      { slug: 'blacksmithing', name: 'Blacksmithing', icon: 'trade_blacksmithing', s20: 'Sharpening Wheel', s20Desc: '34 Strength to everyone sitting nearby', s20Icon: 'inv_stone_grindingstone_01', s140: 'Anvil', s140Desc: 'An anvil at camp, gives Sharpening Wheel buff', s140Icon: 'trade_blacksmithing', s300: 'Master Forge', s300Desc: 'Needed for advanced recipes, gives Sharpening Wheel buff', s300Icon: 'inv_mace_1h_blacksmithing_b_01_black' },
       { slug: 'enchanting', name: 'Enchanting', icon: 'trade_engraving', s20: 'Enchanted Lute', s20Desc: '308 Armor, 13 to all stats and 22 to all resistances', s20Icon: 'inv_10_enchanting2_magicswirl_bronze', s140: 'Arcane Salvager', s140Desc: 'Disenchants more efficiently, gives Enchanted Lute buff', s140Icon: 'inv_misc_gem_sapphire_02', s300: 'Arcane Forge', s300Desc: 'Needed for advanced recipes, gives Enchanted Lute buff', s300Icon: 'inv_enchant_disenchant' },
       { slug: 'engineering', name: 'Engineering', icon: 'trade_engineering', s20: 'Reagent Bot', s20Desc: 'Sells reagents to everyone at camp', s20Icon: 'inv_misc_enggizmos_13', s140: 'Repair Bot', s140Desc: 'Sells reagents and repairs gear', s140Icon: 'inv_gizmo_01', s300: "Anarchist's Workbench", s300Desc: 'Needed for the most advanced Engineering recipes', s300Icon: 'inv_misc_bomb_02' },
       { slug: 'leatherworking', name: 'Leatherworking', icon: 'trade_leatherworking', s20: 'Camp Tent', s20Desc: 'Rested experience up to 5% of a level', s20Icon: 'inv_misc_leatherscrap_01', s140: 'Tanning Rack', s140Desc: 'Makes certain Leatherworking reagents, gives Camp Tent bonus', s140Icon: 'inv_misc_pelt_wolf_ruin_03', s300: 'Sewing Machine', s300Desc: 'Needed for advanced recipes, gives Camp Tent bonus', s300Icon: 'inv_misc_monsterscales_11' },
@@ -633,7 +630,7 @@
     const trSearch = container.querySelector('#trainer-search-input');
     if (trSearch) {
       trSearch.addEventListener('input', debounce((e) => {
-        trainerSearchQuery = e.target.value.trim();
+        trainerFilters.query = e.target.value.trim();
         updateTrainerGrid(container);
       }, 150));
     }
@@ -641,7 +638,7 @@
     const trProf = container.querySelector('#trainer-prof-select');
     if (trProf) {
       trProf.addEventListener('change', (e) => {
-        trainerProfFilter = e.target.value;
+        trainerFilters.profession = e.target.value;
         updateTrainerGrid(container);
       });
     }
@@ -649,7 +646,7 @@
     const trFac = container.querySelector('#trainer-faction-select');
     if (trFac) {
       trFac.addEventListener('change', (e) => {
-        trainerFactionFilter = e.target.value;
+        trainerFilters.faction = e.target.value;
         updateTrainerGrid(container);
       });
     }
@@ -657,7 +654,7 @@
     const trRank = container.querySelector('#trainer-rank-select');
     if (trRank) {
       trRank.addEventListener('change', (e) => {
-        trainerRankFilter = e.target.value;
+        trainerFilters.rank = e.target.value;
         updateTrainerGrid(container);
       });
     }
@@ -665,7 +662,7 @@
     const trZone = container.querySelector('#trainer-zone-select');
     if (trZone) {
       trZone.addEventListener('change', (e) => {
-        trainerZoneFilter = e.target.value;
+        trainerFilters.zone = e.target.value;
         updateTrainerGrid(container);
       });
     }

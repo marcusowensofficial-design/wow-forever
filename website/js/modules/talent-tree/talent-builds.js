@@ -42,13 +42,6 @@
     return false;
   }
 
-  function canRefundPoint(talent) {
-    if (window.WOW_TALENT_CORE && window.WOW_TALENT_CORE.canRefundPoint) {
-      return window.WOW_TALENT_CORE.canRefundPoint(talent);
-    }
-    return false;
-  }
-
   function getRecommendedBuildForClass(classId, preferredSpecId = null) {
     if (window.WOW_TALENT_CORE && window.WOW_TALENT_CORE.getRecommendedBuildForClass) {
       return window.WOW_TALENT_CORE.getRecommendedBuildForClass(classId, preferredSpecId);

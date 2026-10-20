@@ -103974,7 +103974,7 @@
           "num": 3,
           "title": "Sit down for a minute",
           "desc": "Anyone sitting or crafting by the fire for a minute gets the buffs of the objects around it. They last an hour, so you can leave once you have them.",
-          "icon": "inv_misc_sit"
+          "icon": "spell_nature_sleep"
         }
       ],
       "questNote": "Around level 5, the quest 'The Great Outdoors' has you sit at a campfire, then sends you to a cooking trainer to learn the Basic Campfire; the trainer sells the Simple Wood and the Flint and Tinder. Each profession you know then gets a quest, handed in to its trainer, that teaches its first camp object."
@@ -104410,7 +104410,7 @@
         "s300": {
           "id": 279992,
           "name": "Anarchist's Workbench",
-          "icon": "inv_10_engineering2_tinkeringengine_bronze",
+          "icon": "inv_misc_bomb_02",
           "desc": "Needed for the most advanced Engineering recipes.",
           "skill": "Skill 300 Blueprint"
         }
@@ -104429,7 +104429,7 @@
         "s300": {
           "id": 279995,
           "name": "Sewing Machine",
-          "icon": "inv_10_skinning2_flensingknife_bronze",
+          "icon": "inv_misc_monsterscales_11",
           "desc": "Needed for the most advanced Leatherworking recipes; keeps Rested XP buff.",
           "skill": "Skill 300 Blueprint"
         }
@@ -104448,7 +104448,7 @@
         "s300": {
           "id": 279994,
           "name": "Loom",
-          "icon": "inv_10_tailoring2_mannequin_bronze",
+          "icon": "inv_fabric_mageweave_01",
           "desc": "Needed for the most advanced Tailoring recipes; keeps Faction Banner buff.",
           "skill": "Skill 300 Blueprint"
         }
@@ -104467,7 +104467,7 @@
         "s300": {
           "id": 279993,
           "name": "Molten Foundry",
-          "icon": "inv_10_mining2_prospectorspick_bronze",
+          "icon": "inv_ore_thorium_02",
           "desc": "Needed for smelting recipes that require it; keeps Lodestone buff.",
           "skill": "Skill 300 Blueprint"
         }
@@ -104486,7 +104486,7 @@
         "s300": {
           "id": 279989,
           "name": "Seed Hybridizer",
-          "icon": "inv_10_herbalism2_herbalistsbasket_bronze",
+          "icon": "inv_misc_herb_sansamroot",
           "desc": "Multiplies seeds or combines them into rarer tiers; keeps Incense Candle buff.",
           "skill": "Skill 300 Blueprint"
         }
