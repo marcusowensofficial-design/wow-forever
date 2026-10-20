@@ -22,20 +22,20 @@ for (const [cls, cData] of Object.entries(progData)) {
     const visibleSteps = [];
     const brokenAlts = [];
 
-    cData.levels.forEach((step, idx) => {
+    cData.levels.forEach((step, _idx) => {
       let displayStep = { ...step };
-      let displayAlts = (step.alts || []).slice();
+      const alts = (step.alts || []).slice();
 
       if (effectiveFaction !== 'all') {
         const stepFaction = step.faction || 'both';
         if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
-          let matchIdx = displayAlts.findIndex(a => a.faction === effectiveFaction);
+          let matchIdx = alts.findIndex(a => a.faction === effectiveFaction);
           if (matchIdx === -1) {
-            matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === 'both');
+            matchIdx = alts.findIndex(a => (a.faction || 'both') === 'both');
           }
 
           if (matchIdx !== -1) {
-            const altMatch = displayAlts[matchIdx];
+            const altMatch = alts[matchIdx];
             const valStr = altMatch.value || '';
             const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
             const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
@@ -51,7 +51,6 @@ for (const [cls, cData] of Object.entries(progData)) {
               source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
               faction: altMatch.faction || effectiveFaction
             };
-            displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
           } else {
             return;
           }

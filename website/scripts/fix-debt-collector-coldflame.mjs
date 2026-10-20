@@ -83,7 +83,7 @@ bisContent = bisContent.replace(gizlockPattern, () => {
                 "quality": "q3",
                 "itemId": "9459",
                 "tipId": "9459",
-                "name": "Inventor\'s Focal Sword",
+                "name": "Inventor's Focal Sword",
                 "icon": "inv_sword_04.jpg",
                 "side": "both",
                 "source": "Gnomeregan - Tinkerer Gizlock",

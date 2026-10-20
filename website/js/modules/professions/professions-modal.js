@@ -341,7 +341,8 @@
       const name = el.getAttribute('data-recipe-name') || el.textContent.replace(/↗$/, '').trim();
       const stepIdx = parseInt(el.getAttribute('data-step-idx') || '-1', 10);
       const stepObj = (stepIdx >= 0 && prof.leveling?.steps) ? prof.leveling.steps[stepIdx] : null;
-      const resolved = resolveStepCraftedItem(stepObj || { recipeName: name, itemId: el.getAttribute('data-item-id') }, prof);
+      const resolveFn = window.WOW_PROFESSIONS_LEVELING?.resolveStepCraftedItem || (step => ({ recipeObj: step }));
+      const resolved = resolveFn(stepObj || { recipeName: name, itemId: el.getAttribute('data-item-id') }, prof);
       const match = resolved.recipeObj;
       const targetSubtab = resolved.targetSubtab || 'recipes';
 
@@ -1102,7 +1103,7 @@
                 </tr>
               </thead>
               <tbody>
-                ${DISENCHANT_BRACKETS_DATA.map(b => {
+                ${(window.DISENCHANT_BRACKETS_DATA || []).map(b => {
                   const isHighlighted = (cleanLower.includes('strange dust') && (b.ilvl.includes('5–15') || b.ilvl.includes('16–25'))) ||
                     (cleanLower.includes('soul dust') && b.ilvl.includes('26–35')) ||
                     (cleanLower.includes('vision dust') && b.ilvl.includes('36–45')) ||

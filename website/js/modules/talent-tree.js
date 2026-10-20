@@ -208,7 +208,8 @@
     getTreePoints,
     getTotalPoints,
     canAddPoint,
-    canRefundPoint
+    canRefundPoint,
+    renderModalBody: () => renderModalBody()
   };
 
   function parseBuildUrl(classId, buildUrl) {

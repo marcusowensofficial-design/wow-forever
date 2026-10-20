@@ -49,6 +49,19 @@
     return false;
   }
 
+  function getRecommendedBuildForClass(classId, preferredSpecId = null) {
+    if (window.WOW_TALENT_CORE && window.WOW_TALENT_CORE.getRecommendedBuildForClass) {
+      return window.WOW_TALENT_CORE.getRecommendedBuildForClass(classId, preferredSpecId);
+    }
+    return null;
+  }
+
+  function renderModalBody() {
+    if (window.WOW_TALENT_CORE && typeof window.WOW_TALENT_CORE.renderModalBody === 'function') {
+      window.WOW_TALENT_CORE.renderModalBody();
+    }
+  }
+
   const state = new Proxy({}, {
     get(target, prop) {
       const s = window.WOW_TALENT_TREE_STATE || {};

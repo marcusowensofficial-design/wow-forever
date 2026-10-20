@@ -99,7 +99,54 @@ export default [
         initHiddenItemsTracker: 'readonly',
         initUniversalSearch: 'readonly',
         initGuidesHub: 'readonly',
-        initMurlocCounter: 'readonly'
+        initMurlocCounter: 'readonly',
+        initWeaponsHub: 'readonly',
+        WOW_TALENT_ICONS: 'writable',
+        WOW_PROGRESSION_DATA: 'writable',
+        WOW_DEEPDIVES_PROGRESSION: 'writable',
+        // Deep Dive Section Renderers
+        renderBetaBuildsSection: 'readonly',
+        renderCoreRulesSection: 'readonly',
+        renderForensicMatrixSection: 'readonly',
+        renderSurvivalSection: 'readonly',
+        renderMarksmanshipSection: 'readonly',
+        renderBeastMasterySection: 'readonly',
+        renderHunterPetStable: 'readonly',
+        renderHunterPetChangesPage: 'readonly',
+        renderTaurenRacesSection: 'readonly',
+        renderEnhancementSection: 'readonly',
+        renderShamanTankingSection: 'readonly',
+        renderElementalSection: 'readonly',
+        renderRestorationSection: 'readonly',
+        renderDwarfRacesSection: 'readonly',
+        renderArcaneSection: 'readonly',
+        renderFireSection: 'readonly',
+        renderFrostSection: 'readonly',
+        renderOrcMageRacesSection: 'readonly',
+        renderHolyPaladinSection: 'readonly',
+        renderProtectionPaladinSection: 'readonly',
+        renderRetributionPaladinSection: 'readonly',
+        renderUndeadPaladinRacesSection: 'readonly',
+        renderArmsWarriorSection: 'readonly',
+        renderFuryWarriorSection: 'readonly',
+        renderProtectionWarriorSection: 'readonly',
+        renderHumanWarriorRacesSection: 'readonly',
+        renderAfflictionWarlockSection: 'readonly',
+        renderDemonologyWarlockSection: 'readonly',
+        renderDestructionWarlockSection: 'readonly',
+        renderGnomeWarlockRacesSection: 'readonly',
+        renderDisciplinePriestSection: 'readonly',
+        renderHolyPriestSection: 'readonly',
+        renderShadowPriestSection: 'readonly',
+        renderNightElfPriestRacesSection: 'readonly',
+        renderBalanceDruidSection: 'readonly',
+        renderFeralDruidSection: 'readonly',
+        renderRestorationDruidSection: 'readonly',
+        renderSkyElfDruidRacesSection: 'readonly',
+        renderAssassinationRogueSection: 'readonly',
+        renderCombatRogueSection: 'readonly',
+        renderSubtletyRogueSection: 'readonly',
+        renderTrollRogueRacesSection: 'readonly'
       }
     },
     rules: {
@@ -120,6 +167,7 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
+        global: 'readonly',
         process: 'readonly',
         console: 'readonly',
         fetch: 'readonly',
@@ -130,7 +178,36 @@ export default [
     },
     rules: {
       'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
-      'no-undef': 'error'
+      'no-undef': 'error',
+      'no-empty': ['warn', { 'allowEmptyCatch': true }],
+      'no-redeclare': 'off'
+    }
+  },
+  {
+    files: ['scripts/**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'writable',
+        global: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        Buffer: 'readonly'
+      }
+    },
+    rules: {
+      'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      'no-undef': 'error',
+      'no-empty': ['warn', { 'allowEmptyCatch': true }],
+      'no-redeclare': 'off'
     }
   }
 ];

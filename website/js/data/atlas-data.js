@@ -1522,7 +1522,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Plunder",
         "level": 17,
-        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_golem_01.jpg",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterhead_02.jpg",
         "mechanics": "Burrowing trogg warlord holed up in the treasure catacomb.",
         "abilities": [
           {
@@ -1629,7 +1629,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "The Baron",
         "level": 17,
-        "portrait": "https://wow.zamimg.com/images/wow/icons/large/achievement_boss_fleshrender_nokgar.jpg",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/achievement_boss_patchwerk.jpg",
         "mechanics": "Massive stitched abomination guarding the outer courtyard.",
         "abilities": [
           {
@@ -2042,7 +2042,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Relic Guardian",
         "level": 31,
-        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_golem_02.jpg",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_01.jpg",
         "mechanics": "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
         "abilities": [
           {
@@ -2125,7 +2125,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Atrexis the Grave Knight",
         "level": 29,
-        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_deathanddecay.jpg",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathanddecay.jpg",
         "mechanics": "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
         "abilities": [
           {

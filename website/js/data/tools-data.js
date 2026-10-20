@@ -1841,7 +1841,7 @@ When Phase 3 launches, character level will rise to 40+, unlocking **Artisan tra
       title: "Secret Druid Snake Form: Embrace of the Viper Full Guide",
       category: "Classes & Pets",
       source: "ForeverChanges.pro · Wowhead · Classic+",
-      icon: "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_serpent.jpg",
+      icon: "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_windserpent.jpg",
       summary: "How to unlock the custom Druid Snake Form: Wailing Caverns set drops, Dream Venom 1-second stun proc, slithering Prowl, and Barber Shop scales.",
       content: `### Unlocking the Secret Druid Snake Form
 One of the most viral discoveries in WoW Forever is the **Druid Snake Form**, an authentic shape-shifting form with dedicated serpent animations, swimming locomotion, and stealth mechanics.
@@ -2182,7 +2182,7 @@ Blackfathom Deeps (Ashenvale coast) and Wailing Caverns (Northern Barrens) form 
       title: "Shadowfang Keep & The Deadmines: Overhauled Encounters & Pre-BiS",
       category: "Dungeons & Raids",
       source: "Wowhead · Warcraft Tavern · Classic+",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_cannonball_02.jpg",
+      icon: "https://wow.zamimg.com/images/wow/icons/large/inv_ammo_bullet_01.jpg",
       summary: "Commander Springvale unholy shielding, Archmage Arugal teleport skips, Defias Gunpowder logistics, and Edwin VanCleef add management.",
       content: `### The Kings of Vanilla Dungeons Overhauled
 Shadowfang Keep (Silverpine Forest) and The Deadmines (Westfall) have received updated boss tactics and improved itemization in WoW Forever.
@@ -2263,7 +2263,7 @@ Supply Crates represent one of the most lucrative and consistent gold-and-reputa
       title: "Legacy Discovery System & Extra Talent Points (+5 Bonus Blueprint)",
       category: "Exploration & Secrets",
       source: "Wowhead · Classic+ · Method.gg",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_dungeon_classicdungeonchampion.jpg",
+      icon: "https://wow.zamimg.com/images/wow/icons/large/achievement_dungeon_classicdungeonmaster.jpg",
       summary: "How to complete the 65 Legacy Challenges to unlock +2 to +5 additional talent points beyond the level 30 cap before launch.",
       content: `### Shattering the Conventional Talent Ceiling
 In WoW Forever, character progression extends beyond simple monster killing. The **Legacy Discovery System** tracks 65 world challenges that award bonus talent points!

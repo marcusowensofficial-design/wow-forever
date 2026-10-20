@@ -761,7 +761,7 @@ const DUNGEONS_EXPANDED_DATA = {
       {
         name: "Plunder",
         level: 17,
-        portrait: "https://wow.zamimg.com/images/wow/icons/large/inv_golem_01.jpg",
+        portrait: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterhead_02.jpg",
         mechanics: "Burrowing trogg warlord holed up in the treasure catacomb.",
         abilities: [
           { name: "Ground Slam", role: "Melee", type: "Physical Stun", desc: "Slams the stone floor, knocking down adjacent players for 2 sec." }
@@ -818,7 +818,7 @@ const DUNGEONS_EXPANDED_DATA = {
       {
         name: "The Baron",
         level: 17,
-        portrait: "https://wow.zamimg.com/images/wow/icons/large/achievement_boss_fleshrender_nokgar.jpg",
+        portrait: "https://wow.zamimg.com/images/wow/icons/large/achievement_boss_patchwerk.jpg",
         mechanics: "Massive stitched abomination guarding the outer courtyard.",
         abilities: [
           { name: "Cleave", role: "Tank", type: "Physical", desc: "Frontal cleave hitting up to 3 players." },
@@ -1006,7 +1006,7 @@ const DUNGEONS_EXPANDED_DATA = {
       {
         name: "Relic Guardian",
         level: 31,
-        portrait: "https://wow.zamimg.com/images/wow/icons/large/inv_golem_02.jpg",
+        portrait: "https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_01.jpg",
         mechanics: "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
         abilities: [
           { name: "Threat Protocol Reset", role: "Tank / DPS", type: "Threat Wipe", desc: "Drops all threat and snaps to highest DPS. Damage dealers throttle bursts; tank must taunt immediately." }
@@ -1064,7 +1064,7 @@ const DUNGEONS_EXPANDED_DATA = {
       {
         name: "Atrexis the Grave Knight",
         level: 29,
-        portrait: "https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_deathanddecay.jpg",
+        portrait: "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathanddecay.jpg",
         mechanics: "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
         abilities: [
           { name: "Unholy Frenzy", role: "Healer / Shaman / Priest", type: "Magic Dispel", desc: "+75% Attack Speed for 20 sec. Shaman Purge or Priest Dispel Magic immediately!" },

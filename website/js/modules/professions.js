@@ -622,7 +622,8 @@
         });
         const detailsMount = container.querySelector('.pairing-details-card');
         if (detailsMount) {
-          const activePair = PAIRING_WIZARD_DATA.find(p => p.roleId === activeRolePairing) || PAIRING_WIZARD_DATA[0];
+          const pairings = window.PAIRING_WIZARD_DATA || [];
+          const activePair = pairings.find(p => p.roleId === activeRolePairing) || pairings[0];
           detailsMount.outerHTML = renderPairingDetailsCard(activePair);
         }
       });

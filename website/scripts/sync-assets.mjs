@@ -30,8 +30,8 @@ export function syncAssets() {
 
     // Rule: Strict prohibition of foreverchanges.pro/icon/ CDN links
     if (content.includes('foreverchanges.pro/icon/')) {
-      content = content.replace(/https?:\/\/foreverchanges\.pro\/icon\/([a-zA-Z0-9_\-]+)\.(jpg|png|webp)/g, '$1');
-      content = content.replace(/\/icon\/([a-zA-Z0-9_\-]+)\.(jpg|png|webp)/g, '$1');
+      content = content.replace(/https?:\/\/foreverchanges\.pro\/icon\/([a-zA-Z0-9_-]+)\.(jpg|png|webp)/g, '$1');
+      content = content.replace(/\/icon\/([a-zA-Z0-9_-]+)\.(jpg|png|webp)/g, '$1');
       fixedIcons++;
     }
 

@@ -109,6 +109,40 @@ function buildSearchIndex() {
     targetId: 'hidden-items-tracker-container'
   });
 
+  // 1–60 Weapon & Shield Upgrade Paths Hub
+  searchIndex.push({
+    title: '1–60 Weapon & Shield Upgrade Paths',
+    category: 'Progression Hub',
+    icon: '⚔️',
+    desc: 'Level 1 to 60 weapon, wand, and shield leveling upgrade paths across all 9 classes.',
+    tab: 'weapons',
+    targetId: 'tab-weapons'
+  });
+
+  const weaponClasses = [
+    { id: 'warrior', name: 'Warrior', desc: 'Two-Hand, Dual-Wield, and Tanking Shield upgrades from level 1 to 60.' },
+    { id: 'paladin', name: 'Paladin', desc: 'Two-Hand Retribution, One-Hand + Shield Protection and Holy healing paths.' },
+    { id: 'hunter', name: 'Hunter', desc: 'Bows, Guns, Crossbows, and stat-stick melee weapons from level 1 to 60.' },
+    { id: 'rogue', name: 'Rogue', desc: 'Combat Swords and Assassination/Subtlety Daggers weapon upgrade paths.' },
+    { id: 'shaman', name: 'Shaman', desc: 'Two-Hand Enhancement, One-Hand caster weapons, and elemental shields.' },
+    { id: 'mage', name: 'Mage', desc: 'Caster staves, one-hand daggers/swords, wands, and off-hand tomes.' },
+    { id: 'warlock', name: 'Warlock', desc: 'Caster staves, wands, and spell-damage off-hand upgrade tracks.' },
+    { id: 'priest', name: 'Priest', desc: 'Healing and Shadow staves, early wands (Lesser Magic Wand), and off-hands.' },
+    { id: 'druid', name: 'Druid', desc: 'Feral feral-attack-power maces/staves, Resto/Balance staves, and idols.' }
+  ];
+
+  weaponClasses.forEach(wc => {
+    searchIndex.push({
+      title: `${wc.name} 1–60 Weapon Paths`,
+      category: 'Weapon Progression',
+      icon: '⚔️',
+      desc: wc.desc,
+      tab: 'weapons',
+      targetId: 'tab-weapons',
+      weaponClass: wc.id
+    });
+  });
+
   // Companion Addons & All-in-One Suite
   [
     {
@@ -591,6 +625,8 @@ function performSearch(query) {
          ${item.recipeName ? `data-recipe-name="${escapeHtml(item.recipeName)}"` : ''}
          ${item.recipeId ? `data-recipe-id="${item.recipeId}"` : ''}
          ${item.changeClass ? `data-change-class="${item.changeClass}" data-change-id="${item.changeId}"` : ''}
+         ${item.weaponClass ? `data-weapon-class="${item.weaponClass}"` : ''}
+         ${item.weaponCategory ? `data-weapon-category="${item.weaponCategory}"` : ''}
          ${item.petFamily ? `data-pet-family="${escapeHtml(item.petFamily)}"` : ''}
          ${item.petName ? `data-pet-name="${escapeHtml(item.petName)}"` : ''}
          onclick="handleSearchResultClick(this)">
@@ -637,6 +673,8 @@ window.handleSearchResultClick = function(elem) {
   const atlasSub = elem.getAttribute('data-atlas-sub');
   const changeClass = elem.getAttribute('data-change-class');
   const changeId = elem.getAttribute('data-change-id');
+  const weaponClass = elem.getAttribute('data-weapon-class');
+  const weaponCategory = elem.getAttribute('data-weapon-category');
   const petFamily = elem.getAttribute('data-pet-family');
   const petName = elem.getAttribute('data-pet-name');
 
@@ -693,6 +731,13 @@ window.handleSearchResultClick = function(elem) {
       window.WOW_PROFESSIONS.selectProfession(profession, 'recipes', recipeName || '', targetId || (recipeId ? `recipe-${recipeId}` : null));
     } else {
       window.location.hash = `#professions/${profession}/recipes`;
+    }
+  }
+
+  // If weapon progression route
+  if (tab === 'weapons' && (weaponClass || weaponCategory)) {
+    if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.selectClass === 'function') {
+      window.WOW_WEAPONS_HUB.selectClass(weaponClass || 'warrior', weaponCategory || null);
     }
   }
 

@@ -1240,5 +1240,6 @@ function resetCustomBiS() {
   window.exportBiSToJournal = exportBiSToJournal;
   window.equipBiSItem = equipBiSItem;
   window.resetCustomBiS = resetCustomBiS;
+  window.WOW_TALENT_ICONS = WOW_TALENT_ICONS;
 })();
 

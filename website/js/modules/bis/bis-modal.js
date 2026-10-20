@@ -36,7 +36,8 @@
 function getTalentIconUrl(talentName, _treeName, _classId) {
   if (!talentName) return "https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg";
   const key = talentName.toLowerCase().trim();
-  const iconFile = WOW_TALENT_ICONS[key];
+  const iconsDict = (typeof window !== 'undefined' && window.WOW_TALENT_ICONS) ? window.WOW_TALENT_ICONS : {};
+  const iconFile = iconsDict[key];
   if (iconFile) {
     return `https://render.worldofwarcraft.com/us/icons/56/${iconFile}`;
   }

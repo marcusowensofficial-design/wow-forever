@@ -52969,7 +52969,7 @@ window.WOW_CHANGES_DATA = {
       "tree_name": "Shadow Magic",
       "tree_id": "203",
       "tree_index": 2,
-      "icon": "spell_shadow_darkinspiration",
+      "icon": "spell_shadow_requiem",
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {

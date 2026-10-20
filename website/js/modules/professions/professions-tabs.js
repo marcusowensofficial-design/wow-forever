@@ -24,6 +24,7 @@
   let trainerProfFilter = "all";
   let trainerZoneFilter = "all";
   let trainerSearchQuery = "";
+  let searchQuery = "";
 
   function attachTooltipListeners(container, prof) {
     if (window.WOW_PROFESSIONS_MODAL && window.WOW_PROFESSIONS_MODAL.attachTooltipListeners) {
@@ -121,8 +122,8 @@
         e.preventDefault();
         e.stopPropagation();
         const matName = btn.getAttribute('data-reagent-name');
-        if (matName) {
-          openReverseReagentLookup(matName);
+        if (matName && window.WOW_PROFESSIONS_MODAL && window.WOW_PROFESSIONS_MODAL.openReverseReagentLookup) {
+          window.WOW_PROFESSIONS_MODAL.openReverseReagentLookup(matName);
         }
       });
     });
@@ -241,7 +242,9 @@
     container.querySelectorAll('.reagent-chip').forEach(chip => {
       chip.addEventListener('click', () => {
         const name = chip.getAttribute('data-item-name');
-        if (name) openReverseReagentLookup(name);
+        if (name && window.WOW_PROFESSIONS_MODAL && window.WOW_PROFESSIONS_MODAL.openReverseReagentLookup) {
+          window.WOW_PROFESSIONS_MODAL.openReverseReagentLookup(name);
+        }
       });
     });
   }
