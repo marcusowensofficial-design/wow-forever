@@ -3404,6 +3404,187 @@ Toggles the Skull raid target marker on your mouseover or target with zero UI ta
 \`\`\`
 /tm 8
 \`\`\``
+    },
+    {
+      id: "guide-hall-of-thanes",
+      title: "New Dungeon: Hall of the Thanes (Deep Ironforge Catacombs Walkthrough)",
+      category: "Dungeons & Raids",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_head_dwarf_01.jpg",
+      summary: "Explore the ancient royal vault beneath the High Seat in Ironforge: 5 bosses, Great Forge elemental hazards, trogg warlords, and pre-BiS drops.",
+      content: `### Overview: Hall of the Thanes (Deep Ironforge)
+Sealed for three centuries beneath the High Seat in Ironforge, the **Hall of the Thanes** is an ancient ancestral necropolis and Titan-forged vault recently breached during deep excavations below the Great Forge.
+
+| Parameter | Dungeon Profile |
+| Level Range | 13–18 (Optimal party level: 15–17) |
+| Entrance Location | Ironforge (\`38.6, 52.4\`) beneath the High Seat vault archway |
+| Boss Count | 5 Encounters (Faldrim Anvilmar, Magmatus, Plunder, Durgen Dirgehammer, Grom'gar) |
+| Faction Access | Alliance (Direct access via Ironforge); Horde (Sewer siphon breach from Dun Morogh southern ridge) |
+| Key Pre-BiS Loot | *Fang of Magmatus*, *Durgen's Crescent Axe*, *Golemguard Chest*, *Kindlegem Girdle* |
+
+---
+
+### Key Dungeon Mechanics & Trash Routing
+
+1. **Slag Elementals & Lava Runoff:** The first descent navigates the runoff channels directly below the Great Forge. Elementals leave burning patches on death; tanks must steadily kite trash backwards along the stone ramparts.
+2. **Trogg Tunnelers:** Troggs spawn in ambushes from side vents. Keep crowd control (Polymorph / Sap) ready for Trogg Geomancers who cast heavy Earth Shock interrupts.
+3. **Ancestral Wardens:** Spectral dwarven spirits inflict stacking armor reduction. Dispel or pull back to avoid pulling multiple patrols into boss chambers.
+
+---
+
+### Boss Encounters & Tactical Breakdown
+
+#### 1. Faldrim Anvilmar (Level 16 Elite Ghost)
+• **Location:** The Royal Mausoleum at the entrance descent.
+• **Abilities:**
+  - *Spectral Strike:* Heavy physical strike against the main tank; requires active mitigation or early shield block.
+  - *Ancestral Call:* Periodically summons 2 spectral shade adds. Off-tank or DPS should quickly focus them down.
+• **Strategy:** Position Faldrim with his back to the tomb wall. Range and healers stay 15 yards back to avoid spirit tether cleave.
+• **Key Drops:**
+  - **Ephemeral Choker** (Neck: +3 Spirit, +2 Stamina)
+  - **Aetherwisp Bracers** (Cloth Wrist: +3 Intellect, +2 Spirit)
+  - **Spiritwraith Drape** (Cloth Back: +3 Stamina, +2 Agility)
+
+#### 2. Magmatus (Level 17 Elite Fire Elemental)
+• **Location:** The Sub-Forge Lava Siphon basin.
+• **Abilities:**
+  - *Magma Burst:* Pulses fire damage to all players within 10 yards.
+  - *Ignite Ground:* Leaves scorching magma pools on the ground.
+• **Strategy:** Ranged DPS and healers must spread out across the upper stone catwalk. Tank must rotate Magmatus clockwise along the perimeter whenever ground pools spawn.
+• **Key Drops:**
+  - **Kindlegem Girdle** (Mail Waist: +4 Strength, +3 Stamina)
+  - **Flamefist Grips** (Leather Hands: +4 Agility, +3 Stamina)
+  - **Fang of Magmatus** (Main Hand Dagger: 11.8 DPS, Speed 1.60, +2 Agi, +2 Fire Spell Dmg)
+
+#### 3. Plunder (Level 17 Elite Trogg Warlord)
+• **Location:** The Breached Treasure Vault.
+• **Abilities:**
+  - *Ground Slam:* 2-second physical knockdown stun against all adjacent targets.
+  - *Loot Frenzy:* Increases attack speed by 30% below 25% health.
+• **Strategy:** Keep melee on max attack range behind Plunder. Casters save burst cooldowns for sub-25% to burn him during *Loot Frenzy*.
+• **Key Drops:**
+  - **Golemheart Stave** (Staff: 14.2 DPS, +5 Intellect, +4 Spirit)
+  - **Treads of the Protector Golem** (Mail Feet: +4 Strength, +4 Stamina)
+  - **Golemguard Chest** (Mail Chest: +5 Strength, +5 Stamina)
+
+#### 4. Durgen Dirgehammer (Level 18 Elite Dwarf)
+• **Location:** The Vault of the High Thanes (Final Sanctum).
+• **Abilities:**
+  - *Whirlwind Cleave:* Spins violently for 4 seconds, dealing heavy physical damage to all targets within 8 yards.
+  - *Dirge Call:* Curse debuff that reduces armor and amplifies physical damage taken by 25%.
+• **Strategy:** When Durgen starts casting Whirlwind, melee must immediately disengage. Healers must quickly cleanse *Dirge Call* from the tank.
+• **Key Drops:**
+  - **Durgen's Crescent Axe** (Main Hand Axe: 15.5 DPS, Speed 2.40, +5 Strength, +2 Stamina)
+  - **Direhammer Leggings** (Leather Legs: +5 Agility, +4 Stamina)
+  - **Robes of the Disgraced Thane** (Cloth Chest: +6 Intellect, +5 Spirit)
+
+---
+
+### Dungeon Quests & Rewards
+
+| Quest Name | Faction | Level Req | Quest Giver & Coords | Rewards |
+| Secrets of the High Seat | Alliance | 13 | High Explorer Magellas (\`Ironforge 39.2, 53.0\`) | *Thanesmith Band* (Ring: +3 Str, +3 Sta) or *Ring of the Ancient Forge* (+3 Int, +3 Spi) |
+| Extinguishing the Runoff | Alliance | 14 | Master Smith Burninate (\`Ironforge 51.0, 48.2\`) | *Runoff Siphon Wand* (Shadow Wand) + 2,400 XP |
+| Reclaiming Royal Relics | Both | 14 | Relic Cache inside instance | *Anvilmar Medallion* (Trinket: +10 Armor, Equip: +2 All Stats) |`
+    },
+    {
+      id: "guide-ruins-of-lordaeron",
+      title: "New Dungeon: Ruins of Lordaeron (Capital City & Royal Crypts Walkthrough)",
+      category: "Dungeons & Raids",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://wow.zamimg.com/images/wow/icons/medium/spell_shadow_haunting.jpg",
+      summary: "Infiltrate the desecrated upper courtyards and Royal Crypts above Undercity: 7 bosses including The Baron, Bjork, and master necromancer Rath'mael, plus Rotmender set drops.",
+      content: `### Overview: Ruins of Lordaeron (Tirisfal Glades)
+Set throughout the overgrown palace courtyards, shattered cathedral balconies, and desecrated Royal Crypts of Capital City above Undercity, **Ruins of Lordaeron** is a sprawling Level 15–20 dungeon uncovering Scourge necromancers and renegade apothecaries.
+
+| Parameter | Dungeon Profile |
+| Level Range | 15–20 (Optimal party level: 17–19) |
+| Entrance Location | Tirisfal Glades (\`61.4, 65.2\`) inside the overgrown palace courtyard gates |
+| Boss Count | 7 Encounters (The Baron, Witherfang, The Abandoned, Bjork, Rath'mael, Viktor the Vile, Lordaeron Captain) |
+| Faction Access | Horde (Direct surface entrance above Undercity); Alliance (Sewer canal passage leading from Whispering Gardens) |
+| Key Pre-BiS Loot | *Coldspire Staff*, *Mirror of Rath'mael*, *Corpse Chopper*, *Rotmender's Set* |
+
+---
+
+### Key Dungeon Mechanics & Trash Routing
+
+1. **Plagued Stitched Fiends:** Stitched abominations roam the royal gardens. When slain, they release toxic bile that persists for 30 seconds; pull them away from narrow doorways.
+2. **Skeletal Sentinels & Necromancers:** Necromancer acolytes will channel *Raise Dead* if not interrupted. Assign rogue/warrior kick priority to prevent pack numbers from snowballing.
+3. **Crypt Banshees:** Lower catacomb corridors contain spectral banshees casting *Silence* (5-second spell lockout). Healers must stand max distance at corner pillars.
+
+---
+
+### Boss Encounters & Tactical Breakdown
+
+#### 1. The Baron (Level 17 Elite Abomination)
+• **Location:** The Outer Royal Courtyard.
+• **Abilities:**
+  - *Cleave:* Frontal arc physical attack striking up to 3 players.
+  - *Toxic Cloud:* Spawns stationary virulent cloud dealing Nature damage every 2 sec.
+• **Strategy:** Tank face away from group against the broken fountain. Move out of toxic clouds immediately.
+• **Key Drops:**
+  - **Meathook Slicer** (One-Hand Dagger: 13.2 DPS, Speed 1.50, +3 Agility, +2 Stamina)
+  - **Abomination Bones** (Mail Chest: +6 Strength, +4 Stamina)
+  - **Leftover Abomination Skin** (Cloth Chest: +5 Intellect, +4 Spirit)
+
+#### 2. Witherfang (Level 17 Elite Broodmother)
+• **Location:** The Wine Cellar & Overgrown Catacombs.
+• **Abilities:**
+  - *Highly Toxic Strain:* Stacking poison debuff causing heavy damage over time.
+  - *Web Spray:* Immobilizes targets in webs for 3 seconds.
+• **Strategy:** Shamans (Poison Cleansing Totem), Druids (Cure Poison), and Paladins (Purify) must clear stacks promptly.
+• **Key Drops:**
+  - **Atrophic Girdle** (Mail Waist: +4 Strength, +3 Stamina)
+  - **Witherbite Bracers** (Leather Wrist: +3 Agility, +3 Stamina)
+  - **Segmented Spider Leg** (Two-Hand Staff: 14.8 DPS, +5 Intellect, +4 Stamina)
+
+#### 3. The Abandoned (Level 18 Elite Haunting Shade)
+• **Location:** The Lower Crypts beneath the throne room.
+• **Abilities:**
+  - *Scream of Fear:* AoE fear pulse targeting everyone within 15 yards for 4 seconds.
+• **Strategy:** Tank backs into a corner to prevent fear-pathing into neighboring trash packs. Priests should maintain *Fear Ward* or Shamans drop *Tremor Totem*.
+• **Key Drops:**
+  - **Rotmender's Leggings** (Cloth Legs - Set Piece: +6 Intellect, +5 Spirit, +4 Healing)
+  - **Grip of Fear** (Mail Hands: +4 Strength, +4 Stamina)
+  - **Scepter of the Abandoned** (Main Hand Mace: 14.0 DPS, +4 Stamina, +4 Intellect)
+
+#### 4. Bjork (Level 19 Elite Skeletal Warlord)
+• **Location:** The Guard Barracks and Armory.
+• **Abilities:**
+  - *Mortal Strike:* Reduces healing received by 50% for 5 seconds.
+  - *Corpse Chopper Swing:* Devastating two-handed weapon swing with high critical chance.
+• **Strategy:** Healers pre-cast large heals before *Corpse Chopper Swing*. Tank must maintain Demoralizing Shout and Shield Block continuously.
+• **Key Drops:**
+  - **Bonerust Leggings** (Mail Legs: +6 Strength, +5 Stamina)
+  - **Tuskwrap Belt** (Cloth Waist: +4 Intellect, +4 Spirit)
+  - **Corpse Chopper** (Two-Hand Axe: 17.4 DPS, Speed 3.20, +7 Strength, +4 Stamina)
+
+#### 5. Rath'mael (Level 20 Elite Necromancer - Final Boss)
+• **Location:** The Desecrated Throne Room of Lordaeron.
+• **Abilities:**
+  - *Shadow Bolt Volley:* Fires shadow bolts hitting all party members simultaneously.
+  - *Dark Empathy:* Shrouds himself in a dark aura that reflects 20% of incoming spell damage back to attackers.
+• **Strategy:** Coordinate interrupt rotations (Kick / Pummel / Earth Shock / Counterspell) on *Shadow Bolt Volley*. When *Dark Empathy* is active, casters switch to wanding or pause heavy burst.
+• **Key Drops:**
+  - **Mirror of Rath'mael** (Shield: 460 Armor, +5 Stamina, +3 Intellect)
+  - **Rotmender's Treads** (Cloth Feet - Set Piece: +5 Intellect, +4 Spirit, +5 Healing)
+  - **Coldspire Staff** (Two-Hand Staff: 16.8 DPS, +7 Intellect, +5 Spirit, +6 Frost Dmg)
+  - **Blueprint: Fermenter** (Alchemy Camping Blueprint)
+  - **Blueprint: Arcane Salvager** (Enchanting Camping Blueprint)
+
+#### 6. Viktor the Vile & Lordaeron Captain (Optional Rare Encounters)
+• **Viktor the Vile (Lvl 19):** Roaming the Apothecary laboratory. Drops *Vileblood Scimitar* (15.0 DPS) and *Bloodied Chestwraps*.
+• **Lordaeron Captain (Lvl 19 Rare):** Patrolling the upper balcony. Drops *Haunting Blade* (18.2 DPS 2H Sword) and *Phantom Armor* (210 Armor).
+
+---
+
+### Dungeon Quests & Rewards
+
+| Quest Name | Faction | Level Req | Quest Giver & Coords | Rewards |
+| The Wrath of Rath'mael | Horde | 15 | Deathguard Kristof (\`Brill 61.6, 52.8\`) | *Forsaken Greataxe* (2H Axe) or *Gnarled Necromancer's Staff* + 4,600 XP |
+| The New Plague | Horde | 16 | Theodore Griffs (\`Undercity 67.2, 38.0\`) | *Plaguefang* (1H Sword) or *Blight Gloves* (Cloth) + 5,450 XP |
+| Abominable Creatures | Alliance | 16 | Captain Truman (\`inside dungeon entrance\`) | *Monstrous Cleaver* (2H Sword) or *Slain Baron's Signet* (Ring) + 3,900 XP |
+| Crest of Lordaeron | Both | 16 | Sealed Crest Chest (Throne Room) | *Small Sack of Gems* + Royal Lordaeron Signet + 5,800 XP |`
     }
   ]
 };
