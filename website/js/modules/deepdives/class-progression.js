@@ -593,7 +593,6 @@
   function itemMatchesAll(item, faction, source, slot, classId) {
     if (!item) return false;
     const f = item.faction || 'both';
-    if (classId === 'paladin' && f === 'horde') return false;
     if (classId === 'shaman' && f === 'alliance') return false;
     if (faction !== 'all') {
       if (f !== 'both' && f !== faction) return false;
@@ -718,10 +717,8 @@
       : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
     const isShaman = classId === 'shaman';
-    const isPaladin = classId === 'paladin';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
-    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
     let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
@@ -892,10 +889,8 @@
     const { stepCards, displayedCount, currentTrack } = generateTimelineCards(classId, datasetKey, cfg);
 
     const isShaman = classId === 'shaman';
-    const isPaladin = classId === 'paladin';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
-    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
     let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
@@ -921,7 +916,7 @@
             <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance items"'}>
               <span class="faction-icon">${FACTION_ICONS.alliance}</span> Alliance
             </button>
-            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde items"'}>
+            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" aria-label="Filter to Horde items">
               <span class="faction-icon">${FACTION_ICONS.horde}</span> Horde
             </button>
           </div>

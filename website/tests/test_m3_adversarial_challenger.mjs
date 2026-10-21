@@ -275,10 +275,10 @@ collector.describe('Block 2: UI HTML Generation & Progressive Disclosure', () =>
   });
 
   collector.test('Disallowed faction buttons are disabled in rendered controls', () => {
-    // Paladin: Horde button disabled
+    // Paladin: Undead Paladins exist on Horde in WoW Forever; Horde button is enabled and not grayed out
     const paladinHtml = ui.renderWeapons('paladin');
-    expect(paladinHtml).toContain('Paladins are exclusive to the Alliance');
-    expect(paladinHtml).toContain('disabled style="opacity:0.35;cursor:not-allowed;"');
+    expect(paladinHtml).not.toContain('Paladins are exclusive to the Alliance');
+    expect(paladinHtml).toContain('data-faction="horde" aria-label="Filter to Horde items"');
 
     // Shaman: Alliance button disabled
     const shamanHtml = ui.renderWeapons('shaman');
@@ -728,7 +728,6 @@ collector.describe('Block 5: Faction & Source Filtering Logic Guardrails', () =>
   const itemMatchesAll = vm.runInContext(`
     (item, faction, source, slot, classId) => {
       const f = item.faction || 'both';
-      if (classId === 'paladin' && f === 'horde') return false;
       if (classId === 'shaman' && f === 'alliance') return false;
       if (faction !== 'all') {
         if (f !== 'both' && f !== faction) return false;
@@ -737,13 +736,13 @@ collector.describe('Block 5: Faction & Source Filtering Logic Guardrails', () =>
     }
   `, sandbox);
 
-  collector.test('Paladin rejects Horde items regardless of faction filter', () => {
+  collector.test('Paladin accepts Horde and neutral items for Undead Paladins in Forever', () => {
     const hordeItem = { name: 'Axe of the Horde', faction: 'horde' };
     const allyItem = { name: 'Sword of the Alliance', faction: 'alliance' };
     const bothItem = { name: 'Neutral Dagger', faction: 'both' };
 
-    expect(itemMatchesAll(hordeItem, 'all', 'all', 'all', 'paladin')).toBe(false);
-    expect(itemMatchesAll(hordeItem, 'horde', 'all', 'all', 'paladin')).toBe(false);
+    expect(itemMatchesAll(hordeItem, 'all', 'all', 'all', 'paladin')).toBe(true);
+    expect(itemMatchesAll(hordeItem, 'horde', 'all', 'all', 'paladin')).toBe(true);
     expect(itemMatchesAll(allyItem, 'all', 'all', 'all', 'paladin')).toBe(true);
     expect(itemMatchesAll(bothItem, 'all', 'all', 'all', 'paladin')).toBe(true);
   });
