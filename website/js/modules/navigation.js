@@ -17,7 +17,7 @@ function initCountdowns() {
   function update() {
     const now = new Date().getTime();
 
-    // 1. Beta Conclusion Countdown (Oct 21, 2026)
+    // 1. Beta Conclusion Countdown (Oct 23, 2026)
     const diffBetaEnds = Math.max(0, targets.betaEnds - now);
     renderTimerDigits('betaends', diffBetaEnds);
 
@@ -56,17 +56,18 @@ function initCountdowns() {
    ========================================================================== */
 function initBetaDurationTracker() {
   const targets = (typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.countdownTargets) ? WOW_FOREVER_DATA.countdownTargets : {};
+  const totalDays = (typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.metadata?.betaTotalDays) ? WOW_FOREVER_DATA.metadata.betaTotalDays : 37;
   const start = new Date(targets.betaStart || "2026-09-17T10:00:00-07:00").getTime();
-  const end = new Date(targets.betaEnds || "2026-10-21T23:59:59-07:00").getTime();
+  const end = new Date(targets.betaEnds || "2026-10-23T10:00:00-07:00").getTime();
   const now = new Date().getTime();
 
   const totalDuration = end - start;
   const elapsed = Math.max(0, now - start);
   const percent = Math.min(100, Math.round((elapsed / totalDuration) * 100));
 
-  // Clamped days elapsed calculation (strictly 1 to 35)
+  // Clamped days elapsed calculation (strictly 1 to totalDays)
   const isPostBeta = now >= end;
-  const daysElapsed = Math.min(35, Math.max(1, Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1));
+  const daysElapsed = Math.min(totalDays, Math.max(1, Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1));
   const daysRemaining = Math.max(0, Math.ceil((end - now) / (1000 * 60 * 60 * 24)));
 
   const progressFill = document.getElementById('beta-duration-progress-fill');
@@ -80,15 +81,15 @@ function initBetaDurationTracker() {
   if (progressFill) progressFill.style.width = `${percent}%`;
   if (progressText) {
     if (isPostBeta) {
-      progressText.textContent = `Beta Concluded (35 of 35 Days • All 4 Phases Complete • Preparing for Launch)`;
+      progressText.textContent = `Beta Concluded (${totalDays} of ${totalDays} Days • All 4 Phases Complete • Preparing for Launch)`;
     } else {
-      progressText.textContent = `Day ${daysElapsed} of 35 Days (${percent}% elapsed • ${daysRemaining} days remaining)`;
+      progressText.textContent = `Day ${daysElapsed} of ${totalDays} Days (${percent}% elapsed • ${daysRemaining} days remaining)`;
     }
   }
   if (daysBadge) daysBadge.textContent = isPostBeta ? 'Beta Complete' : `${daysRemaining} Days Left`;
-  if (phase2DayBadge) phase2DayBadge.textContent = isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of 35`;
-  if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? 'Beta Complete (35/35)' : `Day ${daysElapsed} of 35`;
-  if (weekStatusText) weekStatusText.textContent = isPostBeta ? 'Completed (5 of 5 Weeks)' : `Week ${currentWeek} of 5`;
+  if (phase2DayBadge) phase2DayBadge.textContent = isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of ${totalDays}`;
+  if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? `Beta Complete (${totalDays}/${totalDays})` : `Day ${daysElapsed} of ${totalDays}`;
+  if (weekStatusText) weekStatusText.textContent = isPostBeta ? 'Completed (5 of 5 Weeks)' : (daysElapsed > 35 ? `Week 5 of 5 (Extended)` : `Week ${currentWeek} of 5`);
 }
 
 /* ==========================================================================

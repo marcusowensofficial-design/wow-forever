@@ -28,7 +28,8 @@ function applySitePhase(forcedPhase = null) {
 
   const start = new Date(targets.betaStart || "2026-09-17T10:00:00-07:00").getTime();
   const elapsed = Math.max(0, now - start);
-  const daysElapsed = Math.min(35, Math.max(1, Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1));
+  const totalDays = (typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.metadata?.betaTotalDays) ? WOW_FOREVER_DATA.metadata.betaTotalDays : 37;
+  const daysElapsed = Math.min(totalDays, Math.max(1, Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1));
 
   // 1. Update elements with data-phase-key
   const phaseElements = document.querySelectorAll('[data-phase-key]');

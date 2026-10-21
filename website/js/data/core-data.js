@@ -10,24 +10,24 @@ const WOW_FOREVER_DATA = {
     "subtitle": "The Living Classic+ Adventure",
     "announcementDate": "September 12, 2026 (BlizzCon 2026)",
     "betaStartDate": "September 17, 2026",
-    "betaEndDate": "October 21, 2026",
-    "betaTotalDays": 35,
+    "betaEndDate": "October 23, 2026 (10:00 AM PDT)",
+    "betaTotalDays": 37,
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 31 of 35)",
+    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Extended through Oct 23 at 10 AM PDT)",
     "clientBuild": "1.60.1.70425",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 17, 2026"
+    "lastUpdated": "October 21, 2026"
   },
   "betaSchedule": {
-    "totalDays": 35,
+    "totalDays": 37,
     "totalWeeks": 5,
     "startDate": "September 17, 2026",
-    "endDate": "October 21, 2026",
+    "endDate": "October 23, 2026 at 10:00 AM PDT",
     "phase1": {
       "title": "Phase 1: Foundations & Level 20 Cap",
       "dates": "September 17 – October 1, 2026",
@@ -36,16 +36,16 @@ const WOW_FOREVER_DATA = {
       "highlights": "Hall of Thanes & Ruins of Lordaeron dungeons, 10-19 Warsong Gulch, Zephras Isle, starting zones, talent tree foundation."
     },
     "phase2": {
-      "title": "Phase 2: Mid-Game & Level 30 Cap",
-      "dates": "October 1 – October 21, 2026",
-      "duration": "21 Days (3 Weeks)",
+      "title": "Phase 2: Mid-Game & Level 30 Cap (Extended!)",
+      "dates": "October 1 – October 23, 2026",
+      "duration": "23 Days (Extended to Oct 23, 10:00 AM PDT)",
       "cap": 30,
-      "highlights": "Level cap increased to 30! Excavation Site 4 (Wetlands), City of Dalaran (Alterac), Ashenvale & Hillsbrad open world PvP, Warsong Gulch 20–29 bracket, Tier 2 Camping (Ironwood & Silk Tents)."
+      "highlights": "Level cap increased to 30! Extended through Oct 23 at 10:00 AM PDT. Excavation Site 4 (Wetlands), City of Dalaran (Alterac), Ashenvale & Hillsbrad open world PvP, Warsong Gulch 20–29 bracket, Tier 2 Camping (Ironwood & Silk Tents)."
     },
     "stressTest": {
       "title": "Open Beta Stress Test (All Battle.net Accounts)",
-      "dates": "October 21, 2026",
-      "duration": "24 Hours (No Invite / Active Sub Required)",
+      "dates": "October 21 – October 22, 2026",
+      "duration": "Extended Window (No Invite / Active Sub Required)",
       "cap": 30,
       "highlights": "Stress testing server infrastructure and dynamic megarealm layering ahead of global launch. Free for all Battle.net accounts without invite or active subscription."
     },
@@ -57,15 +57,15 @@ const WOW_FOREVER_DATA = {
     },
     "wipeAndLaunch": {
       "title": "Server Reset & Launch Preparation",
-      "dates": "October 22 – November 3, 2026",
-      "duration": "14 Days (2 Weeks)",
-      "highlights": "Full server wipe of all beta test characters. Final tuning pass and global deployment prep for November 4 launch."
+      "dates": "October 23 – November 3, 2026",
+      "duration": "12 Days",
+      "highlights": "Full server wipe of all beta test characters upon shutdown on Friday, Oct 23 at 10:00 AM PDT. Final tuning pass and global deployment prep for November 4 launch."
     }
   },
   "countdownTargets": {
     "betaStart": "2026-09-17T10:00:00-07:00",
     "betaPhase2": "2026-10-01T15:00:00-07:00",
-    "betaEnds": "2026-10-21T23:59:59-07:00",
+    "betaEnds": "2026-10-23T10:00:00-07:00",
     "stressTest": "2026-10-21T10:00:00-07:00",
     "nameReservation": "2026-10-27T10:00:00-07:00",
     "globalLaunch": "2026-11-04T15:00:00-08:00",
@@ -74,23 +74,23 @@ const WOW_FOREVER_DATA = {
   "sitePhases": {
     "beta2": {
       "key": "beta2",
-      "topPill": "Beta Phase 2: LIVE NOW • Level 30 Cap Active",
-      "tickerDuration": "35 Days (Sept 17 – Oct 21)",
+      "topPill": "Beta Phase 2: LIVE NOW • Level 30 Cap Active (Extended to Oct 23!)",
+      "tickerDuration": "37 Days (Sept 17 – Oct 23)",
       "heroTitle": "Phase 2: LIVE NOW",
-      "heroBadge": "Day {daysElapsed} of 35",
-      "headline": "Beta Phase 2 Live: The Level 30 Cap Expansion",
-      "subline": "Beta Phase 2 is now fully live across all beta megarealms! The level cap is increased to 30. Testers are now delving into Excavation Site 4 & the City of Dalaran.",
+      "heroBadge": "Day {daysElapsed} of 37",
+      "headline": "Beta Phase 2 Extended: The Level 30 Cap Expansion",
+      "subline": "Beta Phase 2 has been extended through Friday, October 23 at 10:00 AM PDT! Level 30 cap active with Excavation Site 4 & the City of Dalaran.",
       "milestonesTitle": "Beta Phase 2 Milestones",
       "squadBracket": "Beta Phase 2 (Cap 30 - Live Now!)"
     },
     "prelaunch": {
       "key": "prelaunch",
       "topPill": "Beta Concluded • Launch Prep & Polish Underway",
-      "tickerDuration": "Beta Completed (35/35 Days)",
+      "tickerDuration": "Beta Completed (37/37 Days)",
       "heroTitle": "Beta Concluded — Launch Prep",
       "heroBadge": "Launch Countdown",
       "headline": "Closed Beta Concluded: Pre-Launch Readiness Pass",
-      "subline": "The 35-day beta test has concluded with over 250,000 player reports logged. All characters are being reset ahead of the November 4 Global Launch.",
+      "subline": "The 37-day beta test has concluded with over 250,000 player reports logged. All characters are being reset ahead of the November 4 Global Launch.",
       "milestonesTitle": "Pre-Launch Roadmap & Readiness",
       "squadBracket": "Global Launch Bracket (L60 Cap Prep)"
     },
@@ -170,6 +170,69 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-54",
+      "title": "Closed Beta Extended Through Friday, October 23 at 10:00 AM PDT: Blizzard Grants Additional 48 Hours for Testing & Reschedules End-of-Beta Finale",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Executive Producer Holly Longdale & Josh \"Aggrend\" Greenfield",
+      "date": "October 21, 2026 (09:30 AM PDT)",
+      "tag": "Beta Schedule & Extension",
+      "summary": "Blizzard officially extends the WoW: Forever closed beta through Friday, October 23 at 10:00 AM PDT, granting players approximately 34 extra hours of Level 30 cap testing, Hallow's End activities, and rescheduling the 'Twilight of the First Realm' finale.",
+      "content": `Blizzard operations announced this morning that the World of Warcraft: Forever Closed Beta has been officially extended through Friday, October 23, 2026 at 10:00 AM PDT (19:00 CEST):
+• 34-Hour Test Window Extension:
+  - Originally scheduled to conclude at 23:59 PDT on October 21, test realms will remain fully online through Friday, October 23 at 10:00 AM PDT.
+  - The development team cited massive player turnout, rich feedback following Build 1.60.1.70425 talent/racial overhauls, and the desire to give players ample time to experience the Level 30 Hallow's End holiday event and dungeon pre-BiS loops.
+• Rescheduled End-of-Beta Finale — 'Twilight of the First Realm':
+  - The catastrophic end-of-beta world boss invasions (featuring colossal avatars of Ragnaros, Onyxia, and Mal'Ganis attacking Stormwind, Orgrimmar, and Southshore) will now commence Thursday evening, October 22 at 18:00 PDT and persist through the Friday morning shutdown.
+  - Slaying an invading world boss awards the account-wide 'Vanguard of the Living World' commemorative feat of strength on live realms.
+• Character Wipe & Launch Schedule Intact:
+  - Test megarealms will go dark at 10:00 AM PDT on Friday, October 23, initiating the comprehensive database wipe of all beta characters and guild rosters.
+  - Early Character Name Reservation remains firmly locked for Tuesday, October 27 at 10:00 AM PDT, leading directly into the global launch on Wednesday, November 4 at 15:00 PST.
+• Open Stress Testing Extended:
+  - All Battle.net accounts without active beta access or active subscriptions may continue logging into open stress test shards throughout Thursday, October 22.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-beta-extended-to-october-23"
+    },
+    {
+      "id": "news-53",
+      "title": "Hallow's End Phase 2 Telemetry: Shade of the Headless Rider Defeated, 16-Slot Pumpkin Bag Farming & Wickerman Buff Stacking Verified",
+      "source": "Wowhead Seasonal Desk",
+      "sourceType": "wowhead",
+      "author": "Wowhead Playtest Desk",
+      "date": "October 20, 2026",
+      "tag": "World Events & Holidays",
+      "summary": "Over 80,000 players battle the Level 30 Shade of the Headless Rider in Scarlet Monastery Graveyard as testers confirm the +10% XP/Rep Wickerman buff stacks with the Cozy Sleeping Bag for late-beta speed-leveling.",
+      "content": `With Hallow's End fully underway across Beta Phase 2 megarealms, data logs and community trackers highlight high engagement around the final seasonal holiday:
+• Scarlet Monastery Graveyard Headless Rider:
+  - Thousands of 5-man groups have summoned the Level 30 Shade of the Headless Rider inside the courtyard, testing encounter pacing and mob add spawns.
+  - Drops for the 3 rare iLvl 35 signet rings (+8 Stamina, +12 Attack Power / +9 Spell Power) have shown balanced item budgets, and the cosmetic 'Hallowed Pumpkin Lantern' off-hand has become a staple across capital cities.
+• Invocation of the Wickerman Buff Stacking:
+  - Field testing confirms that 'Invocation of the Wickerman' (+25% Stamina/Spirit regen, +10% Experience/Reputation for 2 hours) cleanly stacks with the Cozy Sleeping Bag (+3% per stack up to 4 stacks) and regional Camp Benefits (+5% kill XP).
+  - Leveling players have leveraged this triple-stack synergy to power alt characters from Level 20 to 30 in record time.
+• 16-Slot Pumpkin Bag Rates:
+  - Innkeeper trick-or-treating telemetry indicates an approximate 8.5% drop rate on the coveted 16-slot Pumpkin Bag from hourly treat bags.`,
+      "url": "https://www.wowhead.com/forever/news/hallows-end-phase-2-telemetry-headless-rider-pumpkin-bags"
+    },
+    {
+      "id": "news-52",
+      "title": "Venruki $100,000 Duel Championship Grand Finals: Snutz Crowned Champion in 7-Game Epic, Level 30 Duel Meta Final Review",
+      "source": "Method.gg & Warcraft Tavern",
+      "sourceType": "method",
+      "author": "Venruki & Method Esports Desk",
+      "date": "October 19, 2026",
+      "tag": "Esports & Competitive Meta",
+      "summary": "Snutz captures the inaugural $100,000 WoW Forever Duel Championship with a thrilling 4-3 Grand Finals victory over Mes outside the Gates of Orgrimmar, cementing Affliction Warlock and Arms Warrior atop the Level 30 1v1 pantheon.",
+      "content": `The inaugural $100,000 Level 30 Duel Championship concluded Sunday evening in dramatic fashion before a peak concurrent audience of 98,000 viewers:
+• Championship Grand Finals:
+  - Snutz (Affliction Warlock) defeated Mes (Arms Warrior) 4-3 in a tense Best-of-7 series decided inside the Durotar chalk ring.
+  - Mes pushed Snutz to the brink with Spearing Strike gap-closers and Overpower burst, but Snutz's calculated Drain Life attrition and Curse of Exhaustion kiting sealed game 7 with only 12% health remaining.
+• Key Meta Takeaways from the 64-Player Field:
+  - Build 1.60.1.70425 Racial Overhauls: Alliance gladiators with Human 'Ruthless' (+2% all crit) and Dwarf 'Earth Fury' (+2% crit bonus) accounted for 6 of the Top 8 slots, validating the retirement of legacy weapon specialization racials.
+  - Hybrid Viability: Bean (Feral Druid) took 3rd place, demonstrating that 21-point feral capstones combined with Travel Form powershifting offer unprecedented sustained pressure at Level 30.
+• Broadcast Success:
+  - Tournament organizer Venruki praised the stability of the dedicated duel arena phase, noting zero crashes or latency spikes during all 63 matches.`,
+      "url": "https://www.method.gg/wow-classic/venruki-100k-duel-championship-grand-finals-recap"
+    },
     {
       "id": "news-51",
       "title": "Venruki $100,000 Duel Championship Day 2: Durotar Arena Addition, Final 8 Bracket & 2-Hour High-Value Trade Hold Anti-RMT Safeguards",
