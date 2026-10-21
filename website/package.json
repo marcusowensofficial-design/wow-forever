@@ -13,7 +13,8 @@
     "package:addons": "node scripts/package-addons.js",
     "lint": "npx eslint js/ scripts/",
     "build:data": "node scripts/compile-scraped-data.js",
-    "scrape": "node scripts/scrape-foreverchanges.js"
+    "scrape": "node scripts/scrape-foreverchanges.js",
+    "pipeline:progression": "node scripts/cache-forever-items.mjs && node scripts/build-progression.mjs && node scripts/compile-progression-data.mjs && node scripts/validate.js"
   },
   "keywords": [
     "world-of-warcraft",

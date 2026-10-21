@@ -1,64 +1,131 @@
-# Project: Interactive Multi-Dimensional Progression Stat & Requirement Filter
+# Project: WoW Forever 1–60 Progression Weapons, Wands, Off-Hands & Shields Engine
 
 ## Architecture
-- **Dedicated Filter Module (`js/modules/deepdives/progression-filter.js`)**: Encapsulates filter state, comprehensive tooltip & stat parsing engine (17 dimensions), drawer UI rendering, speed direction operator (`≥`/`≤`) and contextual benchmark popover (`ℹ️`), active filter badge counter, 1-click Reset All Filters button, and multi-criteria logical AND matching.
-- **Rendering & Surface Engine (`js/modules/deepdives/class-progression.js`, `js/modules/weapons-hub.js`)**: Single source of truth for timeline and step rendering (`WOW_DEEPDIVES_PROGRESSION.renderProgressionSubtab`). Integrates filter evaluation into `itemMatchesAll()`, executing alt promotion when primary fails, step hiding when neither matches, and empty state rendering with reset button when zero items match across the timeline.
-- **Script Registration & DOM (`index.html`)**: Registers `progression-filter.js` before `class-progression.js` with versioning `?v=1.60.1-70425`. Enforces unique DOM IDs and accessible `aria-label`s on all controls.
-- **Styling (`css/styles.css`)**: Collapsible drawer styling, responsive multi-column grid, gold accents, benchmark helper popover, counter badge, and reset button.
-- **Validation Engine (`scripts/validate.js`)**: 63+ checks verifying DOM IDs, script sources, input accessibility, and build integrity.
+- **Forensic Scraper & Durable Cache Engine (`scripts/cache-forever-items.mjs`, `scratch/forever_items_cache.json`)**:
+  - Dual-endpoint router: Classic items (<200k) route to `classic.wowhead.com/item={id}&xml`, custom Forever items (>=200k or `envChange.status === 'new'`) route to `www.wowhead.com/forever/item={id}&xml`.
+  - Full-fidelity XML/HTML tooltip parser: Strips nested HTML tags, captures multi-line `Equip:`, `Chance on hit:`, and `Use:` effects without truncation; captures base shield block (`X Block` / `blockamount`), un-prefixed `X Armor`, elemental resistances, and exact Wowhead icon tokens (`https://wow.zamimg.com/images/wow/icons/medium/${icon}.jpg`).
+  - Idempotent incremental caching: Skips items with complete verified data; batches network requests with rate-limiting (12 concurrent, 150ms delay, exponential backoff).
+  - Benchmark self-test suite validating IDs 1168 (Skullflame Shield), 6953 (Verigan's Fist), 6975 (Whirlwind Axe), 11684 (Ironfoe).
+- **Master Progression Gating & Stat Weight Engine (`scripts/build-progression.mjs`, `data/scraped/forever_*.json`)**:
+  - Single-command master ingestion engine replacing fragmented legacy scripts.
+  - Practical effective level bracketing: `effectiveLevel = Math.max(item.reqLevel, quest.reqLevel, dungeon.minEnterLevel, dungeon.practicalGroupLevel, trainerUnlockLevel)`.
+  - Gated dungeon instances: RFC 13, VC 18, WC 18, SFK 22, BFD 24, Stocks 24, Gnome 29, RFK 30, SM GY 30, SM Lib 33, SM Arm 36, SM Cath 39, RFD 38, Ulda 41, ZF 44, Mara 46, ST 50, BRD 52, LBRS/DM/Scholo/Strat 56–58; custom Forever dungeons (Hall of Thanes 14, Ruins of Lordaeron 18, Excavation Site 29, City of Dalaran 31).
+  - Weapon proficiency trainer floors (Polearms level 20, Warrior/Hunter Dual Wield level 20) and strict class equip rules (Paladin 0 axes, Hunter ranged track 0 melee, Shaman 0 swords, Rogue 0 2H/axes, Druid 0 swords/axes).
+  - Human-tuned leveling stat weights for 5 roles: Melee DPS (instant attack weapon damage + slow speed bias), Rogue OH (fast poison speed), Hunter (slow ranged volley damage), Caster DPS (levels 1–30 wand DPS + Spirit 5SR vs levels 31–60 Spell Power/Hit), Healer (Healing Power, MP5, Spirit), Tank (Shield block value/armor, fast 1H HS rage dumping).
+  - Two-tiered catalog ranking: Highlights designated "⭐ Top Pick" hero + top 4–5 alternative upgrades per bracket, fully indexing all 2,592 datamined equippable items in the background alternatives pool.
+- **Compiler & Browser Bundle (`scripts/compile-progression-data.mjs`, `js/data/class-progression-data.js`)**:
+  - Bundles weapons, shields, off-hands, wands, macros, spellbooks into `window.WOW_PROGRESSION_DATA`.
+- **UI Controller & Filter Integration (`js/modules/deepdives/class-progression.js`, `js/modules/deepdives/progression-filter.js`)**:
+  - Highlights "⭐ Top Pick" badge on hero card.
+  - Renders top 4–5 alternatives cleanly on cards with expandable "+N more alternatives" control.
+  - Full multi-criteria filtering across all 17 stat dimensions with 0 NaNs.
+  - Dynamic alt promotion (`⭐ Alt Promoted`) when active filters or faction selection disqualify the hero.
+  - 100% link formatting to `https://www.wowhead.com/forever/item={id}`.
+- **Pre-Commit Verification & Audit Hardening (`scripts/audit-weapons.mjs`, `scripts/validate.js`)**:
+  - Resolves all 43 weapon proficiency failures in `audit-weapons.mjs`.
+  - Extends `validate.js` with Checks 64–68: class weapon proficiencies, dungeon level entry gating, faction tagging completeness, 17 stat parsing without NaN, and forever domain link validation.
 
 ## Feature Inventory
 | # | Feature | Description | Milestone | Source |
 |---|---------|-------------|-----------|--------|
-| 1 | Collapsible Filter Drawer UI | Collapsible "Advanced Stat Filters" drawer above weapon, wand, offhand/shield progression roadmaps | M1 | R1 Survey |
-| 2 | Level & Scaling Filters | Min/Max Required Level range inputs and Min Weapon DPS input | M1 | R1 Survey |
-| 3 | Weapon Swing Speed & Benchmarks | Direction operator dropdown (`≥` slower / `≤` faster), numeric speed input, and `ℹ️` benchmark helper popover | M1 | R1 Survey |
-| 4 | Core Attributes Filter | Min Strength, Agility, Stamina, Intellect, Spirit inputs with numeric threshold matching | M1 | R1 Survey |
-| 5 | Combat & Caster Stats Filter | Min AP (base/ranged/feral), Crit %, Hit %, Spell Damage, Healing, MP5 inputs with accurate regex extraction | M1 | R1 Survey |
-| 6 | Defensive & Shield Stats Filter | Min Armor and Min Block Value (combining base shield block + equip block bonus) | M1 | R1 Survey |
-| 7 | Active Counter & Reset Button | Dynamic active filter count badge and 1-click Reset All Filters button restoring default state | M1 | R1 Survey |
-| 8 | Comprehensive Tooltip & Stat Parser | Robust parsing engine covering all 17 dimensions across steps, alts, lines, stats, and BiS items with zero errors | M1 | R2 Survey |
-| 9 | Multi-Criteria Logical AND Matching | Evaluate all active criteria simultaneously; items must satisfy all active filters to pass | M1 | R3 Survey |
-| 10 | Alt Item Promotion Engine | When primary item fails active filters but an alt matches, promote alt to hero card with `⭐ Alt Promoted` badge | M2 | R3 Survey |
-| 11 | Step Hiding & Empty State | Hide steps where neither primary nor alts match; display accessible empty state with 1-click reset when zero steps match | M2 | R3 Survey |
-| 12 | Chip Filter Coexistence | Seamless coexistence with existing Faction (All/Alliance/Horde), Source, and Slot (1H/MH/2H/Ranged) filters | M2 | R3 Survey |
-| 13 | Dual-Surface Shared Deployment | Enable 1:1 on both Weapons Progression Hub (`#weapons`) and Class Deep Dives (`#deepdives/:class/progression`) | M2 | R4 Survey |
-| 14 | Architecture & Anti-Monolith Compliance | Implement in dedicated `progression-filter.js`; ensure `class-progression.js` remains <= 1,500 lines; pass DOM validation | M2 | R4 Survey |
-| 15 | E2E Testing Suite & Infra | Comprehensive 4-tier test suite in `tests/test_progression_filter_e2e.mjs`, publishing `TEST_INFRA.md` and `TEST_READY.md` | M-TEST | E2E Track |
-| 16 | Full Validation & Adversarial Hardening | Verify 100% pass of `node scripts/validate.js` (63 checks) and E2E suite; Tier 5 adversarial stress testing | M3 | Project Pattern |
+| 1 | Dual Endpoint Routing & XML Fetch | Route <200k items to Classic XML and >=200k/new items to Forever XML | M1 | R1 Survey |
+| 2 | Full-Fidelity Tooltip XML/JSON Parser | Strip nested HTML tags; capture multi-line Equip/Proc/Use effects | M1 | R1 Survey |
+| 3 | Shield Block & Un-prefixed Armor Parsing | Capture base shield block (`X Block`), un-prefixed `X Armor`, elemental resistances | M1 | R1 Survey |
+| 4 | Idempotent Caching & Rate Limiting | Skip verified entries, batch 12 concurrent, token bucket backoff, periodic flush | M1 | R1 Survey / Priority Directive |
+| 5 | Benchmark Item Automated Verification | Exact assertions for Skullflame Shield (1168), Verigan's Fist (6953), Whirlwind Axe (6975), Ironfoe (11684) | M1 | R1 Survey / Priority Directive |
+| 6 | Practical Effective Level Bracketing | `Math.max(reqLevel, questReq, dungeonMin, dungeonPractical, trainerLevel)` | M2 | R2 Survey |
+| 7 | Dungeon Instance Level Floor Gating | Enforce practical floors (VC 18, WC 18, SM 30–39, ZF 44, Mara 46, BRD 52, etc.) | M2 | R2 Survey |
+| 8 | Weapon Trainer & Dual Wield Availability | Gate Polearms to Level 20; gate Dual Wield to Level 20 for Warriors/Hunters | M2 | R2 Survey |
+| 9 | Class Weapon Proficiency Constraints | Paladin 0 axes; Hunter ranged track 0 melee; Shaman 0 swords; Druid 0 swords/axes | M2 | R2 Survey |
+| 10 | Human-Tuned Leveling Stat Weights | Implement 5 role leveling formulas (Melee DPS slow, Rogue OH fast, Hunter slow, Caster 1-30 wand/Spirit vs 31-60 spell, Healer, Tank) | M2 | R3 Survey |
+| 11 | Tiered Catalog Ranking & Full Indexing | Highlight "⭐ Top Pick" + top 4–5 alts; index all 2,592 datamined items into background pool | M2 | R3 Survey |
+| 12 | Single-Command Unified Progression Pipeline | `npm run pipeline:progression` executing cache -> build -> compile -> audit -> validate | M2 | Priority Directive |
+| 13 | Faction Completeness & Source Tagging | 100% faction tagging (`alliance`, `horde`, `both`); canonical sources (`quest`, `dungeon_drop`, `vendor`, `crafted`, `world_drop`) | M3 | R4 Survey |
+| 14 | 17-Stat Filter Parsing & Zero NaN | Progression filter evaluates all 17 dimensions cleanly without producing NaN | M3 | R4 Survey |
+| 15 | Forever Domain Link & CDN Icon Integrity | All links target `https://www.wowhead.com/forever/item={id}`; icons use Zamimg medium CDN | M3 | R4 Survey |
+| 16 | UI Card Enhancement & Progressive Disclosure | Render "⭐ Top Pick" badge, top 5 alts, expandable "+N more alternatives" toggle | M3 | R3 Survey |
+| 17 | Weapon Proficiency Audit Fixes | Fix 43 failures in `scripts/audit-weapons.mjs` (38 Hunter melee, 5 Paladin axes, Truesilver regex) | M4 | R5 Survey |
+| 18 | Pre-Commit Test Suite Expansion | Add Checks 64–68 to `scripts/validate.js` (proficiencies, dungeon gating, faction, 17-stat, links) | M4 | R5 Survey |
+| 19 | Opaque-Box E2E Test Suite | Design 4-tier E2E test suite (Feature, Boundary, Combinations, Real-World) publishing `TEST_READY.md` | M-TEST | E2E Track |
+| 20 | Adversarial Coverage Hardening & Verification | Pass 100% E2E tests + Tier 5 adversarial stress testing; Reviewer, Challenger, and Auditor gating | M-FINAL | Project Pattern |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M-TEST | E2E Testing Track | Design 4-tier test suite (`tests/test_progression_filter_e2e.mjs`), `TEST_INFRA.md`, `TEST_READY.md` | none | DONE |
-| M1 | Core Filter Module & Parsing Engine | Implement `js/modules/deepdives/progression-filter.js` (stat parser, state machine, drawer UI, speed benchmarks, styles in `css/styles.css`) | none | DONE |
-| M2 | Dual-Surface Integration & Wiring | Register in `index.html`, wire into `class-progression.js`, verify `#weapons` & `#deepdives` 1:1 parity | M1 | DONE |
-| M3 | Full Validation, E2E Pass & Hardening | Verify `node scripts/validate.js`, run E2E test suite, Reviewer, Challenger, and Forensic Auditor verification | M-TEST, M2 | DONE |
+| M-TEST | E2E Testing Track | Requirement-driven opaque-box test suite (`tests/test_progression_e2e.mjs`), `TEST_INFRA.md`, publish `TEST_READY.md` | none | DONE |
+| M1 | Forensic Scraper & Durable Cache Pipeline | `scripts/cache-forever-items.mjs`, `scratch/forever_items_cache.json`, dual endpoints, full tooltip parser, benchmark test | none | DONE |
+| M2 | Progression Gating, Stat Weights & Single-Command Engine | `scripts/build-progression.mjs`, `package.json`, dungeon/quest/trainer gating, leveling stat weights, indexing all 2,592 items, compilation | M1 | DONE |
+| M3 | UI Integration, Faction Guardrails & Filter Compatibility | `js/modules/deepdives/class-progression.js`, `forever_*.json`, Top Pick badge, top 5 alts + expandable pool, faction completeness, canonical sources | M2 | DONE |
+| M4 | Automated Audit & Pre-Commit Test Suite Hardening | `scripts/audit-weapons.mjs` (0 errors), `scripts/validate.js` Checks 64–68 (0 failures) | M2, M3 | DONE |
+| M-FINAL | 100% E2E Test Pass & Adversarial Hardening | Pass 100% E2E test suite (Tiers 1–4) + Tier 5 adversarial coverage hardening with Challenger/Reviewer/Auditor verification | M-TEST, M4 | PLANNED |
 
 ## Interface Contracts
+### Cache Engine (`scripts/cache-forever-items.mjs` ↔ `scratch/forever_items_cache.json`)
+- Cache entry schema:
+  ```json
+  {
+    "id": 1168,
+    "name": "Skullflame Shield",
+    "icon": "inv_shield_01",
+    "quality": 4,
+    "reqLevel": 54,
+    "effectiveLevel": 54,
+    "armor": 2256,
+    "block": 40,
+    "speed": null,
+    "dps": null,
+    "stats": "2256 Armor, 40 Block, +10 Fire Resistance, +10 Shadow Resistance, Equip: When struck in combat has a 3% chance of stealing 35 life from target enemy., Equip: When struck in combat has a 1% chance of causing a Flame Strike that deals 75 to 125 Fire damage to all enemies around you.",
+    "lines": ["2256 Armor", "40 Block", "+10 Fire Resistance", "+10 Shadow Resistance", "..."],
+    "procs": ["Equip: ...", "Equip: ..."],
+    "resistances": { "fire": 10, "shadow": 10 },
+    "classRestriction": null
+  }
+  ```
 
-### Progression Filter Contract (`progression-filter.js` ↔ `class-progression.js` ↔ `weapons-hub.js`)
-- `window.WOW_PROGRESSION_FILTER` exposes:
-  - `renderDrawerHtml(): string` — renders the collapsible drawer markup with all 17 controls, badge, and reset button.
-  - `setupEventListeners(container, onUpdateCallback)` — binds input events, toggle drawer, speed benchmark popover, and reset actions.
-  - `parseItemStats(item): Object` — extracts normalized numeric stats:
-    `{ reqLevel, iLvl, dps, speed, armor, block, strength, agility, stamina, intellect, spirit, attackPower, crit, hit, spellDamage, healing, mp5 }`.
-  - `itemMatchesFilter(item): boolean` — evaluates item against active filter criteria using logical AND.
-  - `getActiveFilterCount(): number` — returns the count of active filter fields.
-  - `resetFilters(): void` — clears all active filter fields to unconstrained defaults.
-  - `getState(): Object` / `setState(newState): void` — state getters and setters.
-
-### Alt Promotion Contract
-- In `class-progression.js` `renderStepCard(step, ...)`:
-  - Step's primary item evaluated against `itemMatchesAll(step, ...)`.
-  - If primary fails, examine `step.alts`. The first matching alt is promoted to primary hero display (`displayStep = { ...step, ...altMatch, isAltPromoted: true }`).
-  - Hero card displays `⭐ Alt Promoted` badge when `isAltPromoted` is true.
-  - Remaining alts filtered to only include items matching active filters.
-  - If neither primary nor any alts match, step returns `''`.
+### Master Ingestion Engine (`scripts/build-progression.mjs` ↔ `data/scraped/forever_*.json`)
+- `effectiveLevel` calculation:
+  ```javascript
+  effectiveLevel = Math.max(
+    item.reqLevel || 0,
+    item.questReqLevel || 0,
+    dungeonMinEnterLevel || 0,
+    dungeonPracticalLevel || 0,
+    trainerFloorLevel || 0
+  );
+  ```
+- Progression Step Schema:
+  ```json
+  {
+    "levelBracket": "17-18",
+    "name": "Cruel Barb",
+    "itemId": 5191,
+    "icon": "inv_sword_18",
+    "quality": 3,
+    "dps": 17.69,
+    "speed": 2.6,
+    "stats": "+12 Attack Power",
+    "effectiveLevel": 18,
+    "faction": "both",
+    "source": { "kind": "dungeon_drop", "text": "Edwin VanCleef (The Deadmines)" },
+    "alts": [
+      {
+        "name": "Smite's Mighty Hammer",
+        "itemId": 5196,
+        "effectiveLevel": 18,
+        "score": 184.2,
+        "rank": 2,
+        "faction": "both",
+        "source": { "kind": "dungeon_drop", "text": "Mr. Smite (The Deadmines)" }
+      }
+    ],
+    "pool": [ ...all remaining eligible items for bracket... ]
+  }
+  ```
 
 ## Code Layout
 - Exclusive Write Ownership:
-  - M-TEST owns: `tests/test_progression_filter_e2e.mjs`, `TEST_INFRA.md`, `TEST_READY.md`.
-  - M1 owns: `js/modules/deepdives/progression-filter.js`, `css/styles.css` (appends filter drawer CSS).
-  - M2 owns: `index.html` (script tag registration), `js/modules/deepdives/class-progression.js` (filter integration hooks).
-  - M3 owns: Verification and hardening reports.
+  - M-TEST: `TEST_INFRA.md`, `TEST_READY.md`, `tests/test_progression_e2e.mjs`.
+  - M1: `scripts/cache-forever-items.mjs`, `scratch/forever_items_cache.json`.
+  - M2: `scripts/build-progression.mjs`, `scripts/compile-progression-data.mjs`, `package.json`, `data/scraped/forever_weapons.json`, `forever_offhands.json`, `forever_wands.json`.
+  - M3: `js/modules/deepdives/class-progression.js`.
+  - M4: `scripts/audit-weapons.mjs`, `scripts/validate.js`.

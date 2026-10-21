@@ -45,13 +45,8 @@
     }
 
     const levelTiers = [
-      { id: 'all', label: 'All Levels (1–60)' },
-      { id: '1-10', label: 'Levels 1–10', min: 1, max: 10 },
-      { id: '11-20', label: 'Levels 11–20', min: 11, max: 20 },
-      { id: '21-30', label: 'Levels 21–30', min: 21, max: 30 },
-      { id: '31-40', label: 'Levels 31–40', min: 31, max: 40 },
-      { id: '41-50', label: 'Levels 41–50', min: 41, max: 50 },
-      { id: '51-60', label: 'Levels 51–60', min: 51, max: 60 }
+      { id: 'all', label: 'All Levels (1–60)' }, { id: '1-10', label: 'Levels 1–10', min: 1, max: 10 }, { id: '11-20', label: 'Levels 11–20', min: 11, max: 20 },
+      { id: '21-30', label: 'Levels 21–30', min: 21, max: 30 }, { id: '31-40', label: 'Levels 31–40', min: 31, max: 40 }, { id: '41-50', label: 'Levels 41–50', min: 41, max: 50 }, { id: '51-60', label: 'Levels 51–60', min: 51, max: 60 }
     ];
 
     let filteredLevels = data.levels;
@@ -351,6 +346,12 @@
         return trimmed.startsWith('+') || /Strength|Agility|Stamina|Intellect|Spirit|Armor|Spell Damage|Healing|Attack Power|\bAP\b|\bSP\b/i.test(trimmed);
       });
       let statsInjected = false;
+      const injectStats = () => {
+        if (!linesHasStats && !statsInjected && statTokens.length > 0) {
+          statTokens.forEach(st => { html += formatStatLine(st); });
+          statsInjected = true;
+        }
+      };
 
       html += `<div class="wow-tip-lines">`;
       if (armor && !fullItem.lines.some(l => l.includes('Armor'))) {
@@ -375,29 +376,14 @@
           html += `<div class="wow-tip-block" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('(') && trimmed.endsWith(')') && trimmed.toLowerCase().includes('damage per second')) {
           html += `<div class="wow-tip-dps">${escapeHtml(trimmed)}</div>`;
-          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
-            statTokens.forEach(st => {
-              html += formatStatLine(st);
-            });
-            statsInjected = true;
-          }
+          injectStats();
         } else if (trimmed.startsWith('Binds when')) {
           html += `<div class="wow-tip-bind">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Requires Level')) {
-          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
-            statTokens.forEach(st => {
-              html += formatStatLine(st);
-            });
-            statsInjected = true;
-          }
+          injectStats();
           html += `<div class="wow-tip-req" style="color: #fff; font-size: 0.8rem; margin: 0.2rem 0;">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Equip:') || trimmed.startsWith('Chance on hit:') || trimmed.startsWith('Use:')) {
-          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
-            statTokens.forEach(st => {
-              html += formatStatLine(st);
-            });
-            statsInjected = true;
-          }
+          injectStats();
           html += `<div class="wow-tip-equip">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Sell Price:')) {
           html += `<div class="wow-tip-price" style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.25rem;">${escapeHtml(trimmed)}</div>`;
@@ -418,12 +404,7 @@
           html += `<div class="wow-tip-generic" style="color: #cbd5e1;">${escapeHtml(trimmed)}</div>`;
         }
       });
-      if (!linesHasStats && !statsInjected && statTokens.length > 0) {
-        statTokens.forEach(st => {
-          html += formatStatLine(st);
-        });
-        statsInjected = true;
-      }
+      injectStats();
       html += `</div>`;
     } else {
       const isVendorOrCraft = (sourceTitle + ' ' + sourceDetail + ' ' + altVal).toLowerCase();
@@ -563,7 +544,7 @@
     if (!filter || filter === 'all') return true;
     const kind = item?.source?.kind || '';
     if (filter === 'dungeon') {
-      if (kind === 'dungeon') return true;
+      if (kind === 'dungeon' || kind === 'dungeon_drop') return true;
       const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
       return /dungeon|boss|instance|ragefire|wailing caverns|deadmines|shadowfang|blackfathom|stockade|gnomeregan|razorfen|scarlet monastery|monastery|armory|cathedral|graveyard|library|uldaman|zul'farrak|maraudon|sunken temple|atal'hakkar|blackrock depths|scholomance|stratholme|dire maul|ruins of lordaeron|excavation site|hall of thanes|city of dalaran|\brfc\b|\bsfk\b|\bbfd\b|\brfk\b|\brfd\b|\bsm\b|\bzf\b|\bst\b|\bbrd\b|\bdm\b|rhahk'zor|sneed|smite|cookie|greenskin|vancleef|kresh|pythas|serpentis|skum|verdan|springvale|odo|arugal|butcher|gelihast|serra'kis|aku'mai|kelris|deepfury|ironknuckle|thermaplugg|fallout|electrocutioner|pummeler|grubbis|ramtusk|jargba|agathelos|halmgar|blind hunter|vishas|thalnos|azshir|doan|loksey|herod|mograine|whitemane|mordresh|glutton|amnennar|archaedas|grimlok|ironaya|galgann|antu'sul|zum'rah|sandscalp|gahz'rilla|noxxion|gizlock|theradras|hakkar|eranikus|morphaz|angerforge|flamelash|grebmar|loregrain|ironfoe|spazzring|taragaman|jergosh|bazzalan|krastinov|hydrospawn|polkelt/i.test(text);
     }
@@ -573,12 +554,12 @@
       return /quest|reward|wanted:|chain\b|turn-in|task:|contract|return to|in the name of|the fate of|hidden enemies|leaders of the fang|test of|battle of|assault on/i.test(text);
     }
     if (filter === 'vendor-craft') {
-      if (kind === 'vendor' || kind === 'craft' || kind === 'pvp') return true;
+      if (kind === 'vendor' || kind === 'crafted' || kind === 'craft' || kind === 'pvp') return true;
       const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
       return /vendor|purchased|sold by|blacksmithing|engineering|leatherworking|tailoring|crafted|crafting|merchant|provisioner|supply officer|sergeant|officer|starter/i.test(text);
     }
     if (filter === 'world') {
-      if (kind === 'world' || kind === 'drop' || kind === 'rare' || kind === 'raid') return true;
+      if (kind === 'world' || kind === 'world_drop' || kind === 'drop' || kind === 'rare' || kind === 'raid') return true;
       const text = ((item?.source?.title || '') + ' ' + (item?.source?.detail || '') + ' ' + (item?.source || '') + ' ' + (item?.value || '')).toLowerCase();
       return /world drop|zone drop|rare drop|rare spawn|chest|leveling drop/i.test(text);
     }
@@ -597,35 +578,49 @@
     const isOffHandOnly = slot.includes('off hand') || linesStr.includes('off hand') || type.includes('off hand') || type.includes('shield') || type.includes('held in off-hand');
 
     if (filter === 'one-hand') {
-      // One-hand weapons that can be equipped in the off-hand (dual wield viable):
-      // Must exclude two-hand, ranged, main-hand only, and off-hand only/shields
       if (isTwoHand || isRanged || isMainHandOnly || isOffHandOnly) return false;
       return type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
     }
     if (filter === 'main-hand') {
-      // Any weapon equippable in main-hand (Main Hand only OR One-Hand; excluding two-hand, ranged, off-hand only)
       if (isTwoHand || isRanged || isOffHandOnly) return false;
       return isMainHandOnly || type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
     }
-    if (filter === 'two-hand') {
-      return isTwoHand;
-    }
-    if (filter === 'ranged') {
-      return isRanged;
-    }
+    if (filter === 'two-hand') return isTwoHand;
+    if (filter === 'ranged') return isRanged;
     return true;
   }
 
-  function itemMatchesAll(item, faction, source, slot) {
+  function itemMatchesAll(item, faction, source, slot, classId) {
     if (!item) return false;
+    const f = item.faction || 'both';
+    if (classId === 'paladin' && f === 'horde') return false;
+    if (classId === 'shaman' && f === 'alliance') return false;
     if (faction !== 'all') {
-      const f = item.faction || 'both';
       if (f !== 'both' && f !== faction) return false;
     }
     if (!itemMatchesSource(item, source)) return false;
     if (!itemMatchesSlot(item, slot)) return false;
     if (window.WOW_PROGRESSION_FILTER && !window.WOW_PROGRESSION_FILTER.itemMatchesFilter(item)) return false;
     return true;
+  }
+
+  function renderAltTag(alt) {
+    const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
+    const altFaction = alt.faction || 'both';
+    const altBadge = altFaction === 'alliance' ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">${FACTION_ICONS.alliance}</span>` : (altFaction === 'horde' ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde}</span>` : '');
+    const altStats = alt.stats || alt.value || '';
+    const isAltHeal = /healing\s+(?:done\s+by\s+(?:up\s+to\s+)?)?(\d+)/i.test(altStats);
+    return `
+      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''} ${isAltHeal ? 'alt-healing-tag' : ''}"
+            data-weapon-target="true" data-item-name="${escapeHtml(alt.name)}" data-item-id="${alt.itemId || ''}"
+            data-quality="${escapeHtml(alt.quality || '')}" data-ilvl="${alt.iLvl || ''}" data-req-level="${alt.reqLevel || ''}"
+            data-weapon-type="${escapeHtml(alt.weaponType || '')}" data-speed="${escapeHtml(alt.speed || '')}"
+            data-dps="${escapeHtml(alt.dps || '')}" data-stats="${escapeHtml(alt.stats || '')}"
+            data-armor="${alt.armor || ''}" data-block="${alt.block || ''}"
+            data-alt-val="${escapeHtml(alt.value || '')}" data-faction="${escapeHtml(altFaction)}">
+        ${altBadge}${isAltHeal ? '<span class="alt-healer-icon" title="Optimal for Healers">💚</span> ' : ''}${altUrl ? `<a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link" data-wowhead="domain=forever&item=${alt.itemId || ''}">${escapeHtml(alt.name)}</a>` : `<span class="alt-name">${escapeHtml(alt.name)}</span>`}${alt.value ? ` <span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
+      </span>
+    `;
   }
 
   // 2. Generic Item Timeline Renderer (Weapons, Wands, Off-Hands)
@@ -643,8 +638,10 @@
       : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
     const isShaman = classId === 'shaman';
+    const isPaladin = classId === 'paladin';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
+    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
     let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
@@ -652,7 +649,6 @@
 
     let displayedCount = 0;
     const stepCards = activeLevelList.map((step, idx) => {
-      // Bracket Gating: Skip progression step if bracket does not overlap active min/max level filter
       if (step && step.levelBracket && window.WOW_PROGRESSION_FILTER && typeof window.WOW_PROGRESSION_FILTER.bracketMatchesFilter === 'function') {
         if (!window.WOW_PROGRESSION_FILTER.bracketMatchesFilter(step.levelBracket)) {
           return '';
@@ -660,9 +656,20 @@
       }
 
       let displayStep = { ...step };
-      let displayAlts = (step.alts || []).slice();
+      let allAlts = Array.isArray(step.alts) ? step.alts.slice() : [];
+      const poolItems = Array.isArray(step.pool) ? step.pool : (Array.isArray(displayStep.pool) ? displayStep.pool : []);
+      if (poolItems.length > 0) {
+        const existingIds = new Set(allAlts.map(a => a.itemId || a.name));
+        for (const p of poolItems) {
+          if (!existingIds.has(p.itemId || p.name)) {
+            allAlts.push(p);
+            existingIds.add(p.itemId || p.name);
+          }
+        }
+      }
+      let displayAlts = allAlts.slice();
 
-      const primaryMatches = itemMatchesAll(displayStep, effectiveFaction, effectiveSource, effectiveSlot);
+      const primaryMatches = itemMatchesAll(displayStep, effectiveFaction, effectiveSource, effectiveSlot, classId);
 
       // Check for Horde BiS promotion (Staff of Orgrimmar in brackets 13-18)
       let hordeBisIdx = -1;
@@ -670,7 +677,7 @@
         hordeBisIdx = displayAlts.findIndex(a => 
           a.faction === 'horde' && 
           (a.itemId === 15444 || a.name === 'Staff of Orgrimmar') && 
-          itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot)
+          itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot, classId)
         );
       }
 
@@ -679,10 +686,10 @@
         matchIdx = hordeBisIdx;
       } else if (!primaryMatches) {
         if (effectiveFaction !== 'all') {
-          matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === effectiveFaction && itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot));
+          matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === effectiveFaction && itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot, classId));
         }
         if (matchIdx === -1) {
-          matchIdx = displayAlts.findIndex(a => itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot));
+          matchIdx = displayAlts.findIndex(a => itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot, classId));
         }
       }
 
@@ -694,21 +701,10 @@
         const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
 
         const demotedStep = {
-          name: step.name,
-          itemId: step.itemId,
-          icon: step.icon,
-          weaponType: step.weaponType,
-          speed: step.speed,
-          dps: step.dps,
-          stats: step.stats,
-          armor: step.armor,
-          block: step.block,
-          lines: step.lines,
-          source: step.source,
-          faction: step.faction || 'both',
-          quality: step.quality,
-          iLvl: step.iLvl,
-          reqLevel: step.reqLevel,
+          name: step.name, itemId: step.itemId, icon: step.icon, weaponType: step.weaponType,
+          speed: step.speed, dps: step.dps, stats: step.stats, armor: step.armor, block: step.block,
+          lines: step.lines, source: step.source, faction: step.faction || 'both', quality: step.quality,
+          iLvl: step.iLvl, reqLevel: step.reqLevel,
           value: `${step.dps || ''}, ${step.speed ? step.speed + 's' : ''} - ${step.source?.title || ''}`
         };
 
@@ -722,23 +718,13 @@
 
         displayStep = {
           ...step,
-          itemId: altMatch.itemId || null,
-          name: altMatch.name,
-          icon: altMatch.icon || step.icon,
-          weaponType: altMatch.weaponType || step.weaponType,
-          speed: spdMatch || altMatch.speed || step.speed,
-          dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
-          stats: altMatch.stats || step.stats,
-          armor: altMatch.armor || step.armor,
-          block: altMatch.block || step.block,
-          lines: altMatch.lines || null,
-          source: altSourceObj,
-          faction: altMatch.faction || effectiveFaction,
-          quality: altMatch.quality || step.quality,
-          iLvl: altMatch.iLvl || step.iLvl,
-          reqLevel: altMatch.reqLevel || step.reqLevel,
-          isAltPromoted: true,
-          isPromoted: true
+          itemId: altMatch.itemId || null, name: altMatch.name, icon: altMatch.icon || step.icon,
+          weaponType: altMatch.weaponType || step.weaponType, speed: spdMatch || altMatch.speed || step.speed,
+          dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps), stats: altMatch.stats || step.stats,
+          armor: altMatch.armor || step.armor, block: altMatch.block || step.block, lines: altMatch.lines || null,
+          source: altSourceObj, faction: altMatch.faction || effectiveFaction, quality: altMatch.quality || step.quality,
+          iLvl: altMatch.iLvl || step.iLvl, reqLevel: altMatch.reqLevel || step.reqLevel,
+          isAltPromoted: true, isPromoted: true
         };
         displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
         if (primaryMatches) {
@@ -750,10 +736,16 @@
       }
 
       // Filter alts to only show items that match all active filters
-      displayAlts = displayAlts.filter(alt => itemMatchesAll(alt, effectiveFaction, effectiveSource, effectiveSlot));
+      displayAlts = displayAlts.filter(alt => itemMatchesAll(alt, effectiveFaction, effectiveSource, effectiveSlot, classId));
 
       displayedCount++;
-      const sourceKindClass = `source-${displayStep.source?.kind || 'drop'}`;
+      const rawKind = displayStep.source?.kind || 'drop';
+      const canonicalKind = (rawKind === 'dungeon_drop' || rawKind === 'dungeon') ? 'dungeon' : ((rawKind === 'crafted' || rawKind === 'craft' || rawKind === 'vendor') ? 'vendor' : ((rawKind === 'world_drop' || rawKind === 'world') ? 'world' : rawKind));
+      const sourceKindClass = `source-${canonicalKind}`;
+      const displaySourceTag = (rawKind === 'dungeon_drop') ? 'DUNGEON DROP' : ((rawKind === 'world_drop') ? 'WORLD DROP' : rawKind.toUpperCase());
+      let srcTitle = (displayStep.source?.title || 'Unknown Source').replace(/undefined\s*/g, '').trim() || 'Dungeon Boss';
+      let srcDetail = (displayStep.source?.detail || '').replace(/undefined\s*/g, '').replace(/\(\s*\)/g, '').trim();
+
       const wowheadUrl = displayStep.itemId ? `https://www.wowhead.com/forever/item=${displayStep.itemId}` : '#';
       const primaryFaction = displayStep.faction || 'both';
       const factionBadgeHtml = primaryFaction === 'alliance'
@@ -762,9 +754,17 @@
         ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde} Horde</span>`
         : '';
 
-      const promotedBadgeHtml = (isPromoted || displayStep.isAltPromoted || displayStep.isPromoted)
+      const isPromotedBadge = isPromoted || displayStep.isAltPromoted || displayStep.isPromoted;
+      const promotedBadgeHtml = isPromotedBadge
         ? '<span class="item-promoted-badge" title="Promoted alternative matching your active filters">⭐ Alt Promoted</span>'
         : '';
+      const isTopPick = !isPromotedBadge && (displayStep.rank === 1 || displayStep.isTopPick || displayStep.rank === undefined);
+      const topPickBadgeHtml = isTopPick
+        ? '<span class="item-top-pick-badge" title="Highest scoring item for this level bracket">⭐ Top Pick</span>'
+        : '';
+
+      const visibleAlts = displayAlts.slice(0, 5);
+      const overflowAlts = displayAlts.slice(5);
 
       return `
         <div class="weapon-step-card ${primaryFaction !== 'both' ? 'faction-' + primaryFaction : ''}">
@@ -774,22 +774,14 @@
           </div>
 
           <div class="weapon-main-content">
-            <div class="weapon-item-hero"
-                 data-weapon-target="true"
-                 data-item-name="${escapeHtml(displayStep.name)}"
-                 data-item-id="${displayStep.itemId || ''}"
-                 data-quality="${escapeHtml(displayStep.quality || '')}"
-                 data-ilvl="${displayStep.iLvl || ''}"
-                 data-req-level="${displayStep.reqLevel || ''}"
-                 data-weapon-type="${escapeHtml(displayStep.weaponType || '')}"
-                 data-speed="${escapeHtml(displayStep.speed || '')}"
-                 data-dps="${escapeHtml(displayStep.dps || '')}"
-                 data-stats="${escapeHtml(displayStep.stats || '')}"
-                 data-armor="${displayStep.armor || ''}"
-                 data-block="${displayStep.block || ''}"
-                 data-source-title="${escapeHtml(displayStep.source?.title || '')}"
-                 data-source-detail="${escapeHtml(displayStep.source?.detail || '')}"
-                 data-source-kind="${escapeHtml(displayStep.source?.kind || '')}"
+            <div class="weapon-item-hero" data-weapon-target="true"
+                 data-item-name="${escapeHtml(displayStep.name)}" data-item-id="${displayStep.itemId || ''}"
+                 data-quality="${escapeHtml(displayStep.quality || '')}" data-ilvl="${displayStep.iLvl || ''}"
+                 data-req-level="${displayStep.reqLevel || ''}" data-weapon-type="${escapeHtml(displayStep.weaponType || '')}"
+                 data-speed="${escapeHtml(displayStep.speed || '')}" data-dps="${escapeHtml(displayStep.dps || '')}"
+                 data-stats="${escapeHtml(displayStep.stats || '')}" data-armor="${displayStep.armor || ''}"
+                 data-block="${displayStep.block || ''}" data-source-title="${escapeHtml(srcTitle)}"
+                 data-source-detail="${escapeHtml(srcDetail)}" data-source-kind="${escapeHtml(canonicalKind)}"
                  data-faction="${escapeHtml(primaryFaction)}">
               <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-icon-link" data-wowhead="domain=forever&item=${displayStep.itemId || ''}">
                 <img src="${getIconUrl(displayStep.icon)}" alt="${escapeHtml(displayStep.name)}" class="weapon-icon" loading="lazy" />
@@ -801,7 +793,7 @@
                   </a>
                   <span class="weapon-type-badge">${escapeHtml(displayStep.weaponType)}</span>
                   ${factionBadgeHtml}
-                  ${promotedBadgeHtml}
+                  ${promotedBadgeHtml || topPickBadgeHtml}
                 </div>
                 <div class="weapon-stats-row">
                   ${displayStep.speed ? `<span class="stat-pill">Speed: ${escapeHtml(displayStep.speed)}</span>` : ''}
@@ -815,55 +807,23 @@
             </div>
 
             <div class="weapon-source-block ${sourceKindClass}">
-              <span class="source-tag">${escapeHtml((displayStep.source?.kind || 'drop').toUpperCase())}</span>
-              <span class="source-title"><strong>${escapeHtml(displayStep.source?.title || 'Unknown Source')}</strong></span>
-              ${displayStep.source?.detail ? `<span class="source-detail">${escapeHtml(displayStep.source.detail)}</span>` : ''}
+              <span class="source-tag">${escapeHtml(displaySourceTag)}</span>
+              <span class="source-title"><strong>${escapeHtml(srcTitle)}</strong></span>
+              ${srcDetail ? `<span class="source-detail">${escapeHtml(srcDetail)}</span>` : ''}
             </div>
 
             ${displayAlts && displayAlts.length > 0 ? `
               <div class="weapon-alts-block">
                 <span class="alts-label">Alternative Upgrades:</span>
                 <div class="alts-tags">
-                  ${displayAlts.map(alt => {
-                    const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
-                    const altFaction = alt.faction || 'both';
-                    const altBadge = altFaction === 'alliance'
-                      ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">${FACTION_ICONS.alliance}</span>`
-                      : altFaction === 'horde'
-                      ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde}</span>`
-                      : '';
-                    const altStats = alt.stats || alt.value || '';
-                    const isAltHeal = /healing\s+(?:done\s+by\s+(?:up\s+to\s+)?)?(\d+)/i.test(altStats);
-                    return `
-                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''} ${isAltHeal ? 'alt-healing-tag' : ''}"
-                            data-weapon-target="true"
-                            data-item-name="${escapeHtml(alt.name)}"
-                            data-item-id="${alt.itemId || ''}"
-                            data-quality="${escapeHtml(alt.quality || '')}"
-                            data-ilvl="${alt.iLvl || ''}"
-                            data-req-level="${alt.reqLevel || ''}"
-                            data-weapon-type="${escapeHtml(alt.weaponType || '')}"
-                            data-speed="${escapeHtml(alt.speed || '')}"
-                            data-dps="${escapeHtml(alt.dps || '')}"
-                            data-stats="${escapeHtml(alt.stats || '')}"
-                            data-armor="${alt.armor || ''}"
-                            data-block="${alt.block || ''}"
-                            data-alt-val="${escapeHtml(alt.value || '')}"
-                            data-faction="${escapeHtml(altFaction)}">
-                        ${altBadge}
-                        ${isAltHeal ? '<span class="alt-healer-icon" title="Optimal for Healers">💚</span> ' : ''}
-                        ${altUrl ? `
-                          <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link" data-wowhead="domain=forever&item=${alt.itemId || ''}">
-                            ${escapeHtml(alt.name)}
-                          </a>
-                        ` : `
-                          <span class="alt-name">${escapeHtml(alt.name)}</span>
-                        `}
-                        ${alt.value ? `<span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
-                      </span>
-                    `;
-                  }).join('')}
+                  ${visibleAlts.map(renderAltTag).join('')}
                 </div>
+                ${overflowAlts.length > 0 ? `
+                  <button type="button" class="alts-expand-toggle" aria-expanded="false" data-count="${overflowAlts.length}" onclick="const p=this.nextElementSibling;const exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',String(!exp));p.style.display=exp?'none':'flex';this.textContent=exp?'+${overflowAlts.length} more alternatives':'− Show fewer alternatives';">+${overflowAlts.length} more alternatives</button>
+                  <div class="alts-pool-container" data-count="${overflowAlts.length}" style="display: none; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.35rem; padding-top: 0.35rem; border-top: 1px dashed rgba(255, 255, 255, 0.08);">
+                    ${overflowAlts.map(renderAltTag).join('')}
+                  </div>
+                ` : ''}
               </div>
             ` : ''}
           </div>
@@ -888,8 +848,10 @@
     const { stepCards, displayedCount, currentTrack } = generateTimelineCards(classId, datasetKey, cfg);
 
     const isShaman = classId === 'shaman';
+    const isPaladin = classId === 'paladin';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
+    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
     let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
@@ -915,7 +877,7 @@
             <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance items"'}>
               <span class="faction-icon">${FACTION_ICONS.alliance}</span> Alliance
             </button>
-            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" aria-label="Filter to Horde items">
+            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde items"'}>
               <span class="faction-icon">${FACTION_ICONS.horde}</span> Horde
             </button>
           </div>
@@ -1339,6 +1301,18 @@
                 }
               };
             }
+            timelineEl.querySelectorAll('.alts-expand-toggle').forEach(btn => {
+              btn.onclick = (e) => {
+                e.stopPropagation();
+                const container = btn.nextElementSibling;
+                if (!container) return;
+                const isExp = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isExp));
+                container.style.display = isExp ? 'none' : 'flex';
+                const count = btn.getAttribute('data-count') || '';
+                btn.textContent = isExp ? `+${count} more alternatives` : '− Show fewer alternatives';
+              };
+            });
             timelineEl.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
               el.addEventListener('mouseenter', (e) => showWeaponTooltip(e, el));
               el.addEventListener('mousemove', (e) => moveWeaponTooltip(e));
@@ -1357,6 +1331,20 @@
         }
       });
     }
+
+    // Expandable alternatives toggle buttons
+    root.querySelectorAll('.alts-expand-toggle').forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const container = btn.nextElementSibling;
+        if (!container) return;
+        const isExp = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isExp));
+        container.style.display = isExp ? 'none' : 'flex';
+        const count = btn.getAttribute('data-count') || '';
+        btn.textContent = isExp ? `+${count} more alternatives` : '− Show fewer alternatives';
+      };
+    });
 
     // Weapon progression rich mouseover tooltips
     root.querySelectorAll('[data-weapon-target="true"]').forEach(el => {

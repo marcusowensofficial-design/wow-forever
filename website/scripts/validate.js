@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { loadAllData } from '../tests/helpers/loader.js';
 import { parseBuildUrl, validateBuildLegality, getTotalPoints } from '../tests/helpers/talent-engine.js';
@@ -823,6 +824,373 @@ check('Absence of dead 404 icons across class progression and professions data',
         throw new Error(`Found dead 404 icon "${icon}" in ${path.relative(ROOT, fp)}`);
       }
     }
+  }
+});
+
+console.log('\n--- 6. CLASS PROGRESSION & WEAPON GATING AUDIT ---');
+
+const progPath = path.join(ROOT, 'js', 'data', 'class-progression-data.js');
+const filterModulePath = path.join(ROOT, 'js', 'modules', 'deepdives', 'progression-filter.js');
+const progCachePath = path.join(ROOT, 'scratch', 'forever_items_cache.json');
+
+let progBundleContext = null;
+function getProgressionContext() {
+  if (progBundleContext) return progBundleContext;
+  if (!fs.existsSync(progPath)) throw new Error('Missing class-progression-data.js');
+  if (!fs.existsSync(filterModulePath)) throw new Error('Missing progression-filter.js');
+
+  const context = {
+    console,
+    Date,
+    Math,
+    parseInt,
+    parseFloat,
+    String,
+    Number,
+    Boolean,
+    Array,
+    Object,
+    RegExp,
+    Set,
+    Map,
+    escapeHtml: s => String(s ?? ''),
+    document: {
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      getElementById: () => null,
+      querySelector: () => null,
+      querySelectorAll: () => []
+    }
+  };
+  context.window = context;
+  vm.createContext(context);
+
+  const progCode = fs.readFileSync(progPath, 'utf8');
+  vm.runInContext(progCode, context);
+
+  const filterCode = fs.readFileSync(filterModulePath, 'utf8');
+  vm.runInContext(filterCode, context);
+
+  let cache = {};
+  if (fs.existsSync(progCachePath)) {
+    try {
+      cache = JSON.parse(fs.readFileSync(progCachePath, 'utf8'));
+    } catch {
+      cache = {};
+    }
+  }
+
+  progBundleContext = {
+    progressionData: context.window.WOW_PROGRESSION_DATA,
+    progressionFilter: context.window.WOW_PROGRESSION_FILTER,
+    cache
+  };
+  return progBundleContext;
+}
+
+function getAllProgressionItems(progressionData) {
+  const items = [];
+  for (const sec of ['weapons', 'wands', 'offhands']) {
+    for (const [cls, cData] of Object.entries(progressionData[sec] || {})) {
+      const sets = [cData.levels, cData.healingLevels];
+      if (cData.tracksData) sets.push(...Object.values(cData.tracksData));
+      for (const s of sets.filter(Boolean)) {
+        for (const step of s) {
+          items.push({ kind: sec, cls, bracket: step.levelBracket, item: step, isHero: true });
+          for (const alt of (step.alts || [])) {
+            items.push({ kind: sec, cls, bracket: step.levelBracket, item: alt, isHero: false });
+          }
+        }
+      }
+    }
+  }
+  return items;
+}
+
+check('Weapon proficiency and class legality check across progression tracks', () => {
+  const { progressionData, cache } = getProgressionContext();
+  const allItems = getAllProgressionItems(progressionData);
+
+  const knownAxeNames = new Set(["crude battle axe", "copper battle axe", "thick war axe", "durgen's crescent axe", "corpse chopper", "forsaken greataxe", "reef axe", "taurenbane's family cleaver", "guardian's dualblade", "whirlwind axe", "corpsemaker", "ravager", "executioner's cleaver", "gatorbite axe", "arcanite reaper", "woodchopper", "lumbering ogre axe", "taskmaster axe", "bronze battle axe", "heavy mithril axe", "bonebiter", "massive iron axe", "riptear's cleaver", "thun'grim's axe", "axe of orgrimmar", "icesworn decapitator", "butcher's cleaver"]);
+  const knownSwordNames = new Set(["worn shortsword", "copper claymore", "heavy copper broadsword", "haunting blade", "vileblood scimitar", "plaguefang", "strike of the hydra", "trusty sword", "whirlwind sword", "stoneslayer", "blackblade of shahram", "copper shortsword", "bronze greatsword", "wolfsbane", "moonsteel broadsword", "sword of serenity", "blade of the titans", "warmonger", "cutlass", "cruel barb", "wingblade", "deadly bronze poniard", "bronze shortsword", "ruby-adorned blade", "city guard's tarnished blade", "sword of hammerfall", "the butcher", "vanquisher's sword", "thrash blade", "mirah's song", "dal'rend's sacred charge", "dal'rend's tribal guardian", "coldflame saber", "debt collector", "witchblade", "master hunter's spellsword", "zealot blade", "sword of omen", "forsaken shortsword", "deathstalker shortsword", "talonstrike", "thun'grim's sword", "heirloom sword", "sword of the fallen", "militia shortsword", "militia sword", "curved scimitar", "wildgore greatsword", "gilded blademaster's greatsword", "monstrous cleaver", "the skyblade", "blade of silverlaine", "alliance outrunner's sword", "blade of senseless slaughter"]);
+  const knownMaceNames = new Set(["crude battle axe", "wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "gul'gash's greathammer"]);
+
+  const violations = [];
+
+  for (const { kind, cls, item: it } of allItems) {
+    const id = it.itemId || it.id;
+    const name = (it.name || '').toLowerCase();
+    const val = (it.value || '').toLowerCase();
+    const wt = (it.weaponType || '').toLowerCase();
+    const sub = it.subclass;
+
+    // 1. Fishing poles
+    if (sub === 20 || name.includes('fishing pole') || val.includes('fishing pole') || wt.includes('fishing pole')) {
+      violations.push(`${cls} cannot have fishing pole "${it.name}" in combat progression`);
+    }
+
+    // 2. Class restrictions
+    const restriction = it.classRestriction || cache[id]?.classRestriction;
+    if (restriction && !restriction.toLowerCase().includes(cls)) {
+      violations.push(`${cls} has "${it.name}" restricted to "${restriction}"`);
+    }
+
+    // 3. Class-specific proficiencies
+    if (cls === 'rogue') {
+      if (sub === 19 || wt.includes('wand')) {
+        violations.push(`Rogue cannot equip wand "${it.name}"`);
+      }
+      if (knownAxeNames.has(name) || wt.includes('axe') || wt.includes('2h') || wt.includes('two-hand') || wt.includes('staff')) {
+        violations.push(`Rogue cannot equip 2H/axe/staff "${it.name}"`);
+      }
+    }
+
+    if (cls === 'paladin') {
+      if (knownAxeNames.has(name) || wt.includes('axe')) {
+        violations.push(`Paladin cannot equip axe "${it.name}"`);
+      }
+      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
+        violations.push(`Paladin cannot equip fist/thrown "${it.name}"`);
+      }
+    }
+
+    if (cls === 'shaman') {
+      if (knownSwordNames.has(name) || wt.includes('sword')) {
+        violations.push(`Shaman cannot equip sword "${it.name}"`);
+      }
+    }
+
+    if (cls === 'druid') {
+      if (knownSwordNames.has(name) || wt.includes('sword')) {
+        violations.push(`Druid cannot equip sword "${it.name}"`);
+      }
+      if ((knownAxeNames.has(name) || wt.includes('axe')) && !wt.includes('polearm')) {
+        violations.push(`Druid cannot equip axe "${it.name}"`);
+      }
+      if (wt.includes('thrown') || sub === 16) {
+        violations.push(`Druid cannot equip thrown weapon "${it.name}"`);
+      }
+    }
+
+    if (cls === 'priest') {
+      if (knownSwordNames.has(name) || wt.includes('sword')) {
+        violations.push(`Priest cannot equip sword "${it.name}"`);
+      }
+      if (knownAxeNames.has(name) || wt.includes('axe')) {
+        violations.push(`Priest cannot equip axe "${it.name}"`);
+      }
+      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
+        violations.push(`Priest cannot equip fist/thrown "${it.name}"`);
+      }
+      if ((wt.includes('2h') || wt.includes('two-hand')) && (knownMaceNames.has(name) || wt.includes('mace'))) {
+        violations.push(`Priest cannot equip 2H mace "${it.name}"`);
+      }
+    }
+
+    if (cls === 'mage' || cls === 'warlock') {
+      if (knownMaceNames.has(name) || wt.includes('mace')) {
+        violations.push(`${cls} cannot equip mace "${it.name}"`);
+      }
+      if (knownAxeNames.has(name) || wt.includes('axe')) {
+        violations.push(`${cls} cannot equip axe "${it.name}"`);
+      }
+      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
+        violations.push(`${cls} cannot equip fist/thrown "${it.name}"`);
+      }
+    }
+
+    if (cls === 'hunter' && kind === 'weapons') {
+      const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
+      if (!isRanged) {
+        violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
+      }
+    }
+
+    // 4. Level floors
+    if ((wt.includes('polearm') || sub === 6) && it.effectiveLevel < 20) {
+      violations.push(`Polearm "${it.name}" effectiveLevel ${it.effectiveLevel} < 20`);
+    }
+
+    if ((cls === 'warrior' || cls === 'hunter') && it.effectiveLevel < 20) {
+      const isDw = cache[id]?.inventorySlot === 'SecondaryHand' || (it.slot || '').toLowerCase().includes('off hand');
+      if (isDw) {
+        violations.push(`${cls} dual wield item "${it.name}" effectiveLevel ${it.effectiveLevel} < 20`);
+      }
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`Weapon proficiency & class legality violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
+  }
+});
+
+check('Dungeon instance and elite quest progression level gating check', () => {
+  const { progressionData } = getProgressionContext();
+  const allItems = getAllProgressionItems(progressionData);
+
+  function parseBracketMax(bracket) {
+    if (!bracket) return 60;
+    const parts = bracket.split(/[–-]/).map(s => parseInt(s.trim(), 10));
+    return parts[1] || parts[0] || 60;
+  }
+
+  const DUNGEON_GATES = [
+    { dungeon: 'Ragefire Chasm', minBracket: 13, regex: /ragefire chasm|rfc|taragaman|jergosh|bazzalan|maur grimtotem/i },
+    { dungeon: 'The Deadmines', minBracket: 18, regex: /the deadmines|deadmines|rhahk'zor|sneed|smite's|captain greenskin|edwin vancleef|miner johnson|cookie/i },
+    { dungeon: 'Wailing Caverns', minBracket: 18, regex: /wailing caverns|kresh|lord pythas|lord serpentis|skum|verdan|trigore|mutanus/i },
+    { dungeon: 'Shadowfang Keep', minBracket: 22, regex: /shadowfang keep|sfk|commander springvale|blindwatcher|archmage arugal|fenrus/i },
+    { dungeon: 'Blackfathom Deeps', minBracket: 24, regex: /blackfathom deeps|bfd|ghamoo-ra|gelihast|serra'kis|aku'mai|kelris/i },
+    { dungeon: 'The Stockade', minBracket: 24, regex: /stockade|kam deepfury|bruegal ironknuckle|targorr|bazil thredd/i },
+    { dungeon: 'Gnomeregan', minBracket: 29, regex: /gnomeregan|electrocutioner|crowd pummeler|thermaplugg|grubbis/i },
+    { dungeon: 'Razorfen Kraul', minBracket: 30, regex: /razorfen kraul|rfk|ramtusk|jargba|agathelos|charlga razorflank/i },
+    { dungeon: 'SM Graveyard', minBracket: 30, regex: /scarlet monastery \(graveyard\)|sm graveyard|bloodmage thalnos|azshir|interrogator vishas|ironspine/i },
+    { dungeon: 'SM Library', minBracket: 33, regex: /scarlet monastery \(library\)|sm library|arcanist doan|houndmaster loksey/i },
+    { dungeon: 'SM Armory', minBracket: 36, regex: /scarlet monastery \(armory\)|sm armory|herod/i },
+    { dungeon: 'SM Cathedral', minBracket: 39, regex: /scarlet monastery \(cathedral\)|sm cathedral|mograine's might|high inquisitor|whitemane/i },
+    { dungeon: 'Razorfen Downs', minBracket: 38, regex: /razorfen downs|rfd|glutton|mordresh|amnennar|plaguemaw/i },
+    { dungeon: 'Uldaman', minBracket: 41, regex: /uldaman|archaedas|grimlok|ironaya|galgann firehammer|baelog/i },
+    { dungeon: 'Zul\'Farrak', minBracket: 44, regex: /zul'farrak|zf|antu'sul|ukorz sandscalp|zum'rah|gahz'rilla/i },
+    { dungeon: 'Maraudon', minBracket: 46, regex: /maraudon|noxxion|theradras|gizlock|vyletongue|celebras/i },
+    { dungeon: 'Sunken Temple', minBracket: 50, regex: /sunken temple|atal'hakkar|avatar of hakkar|eranikus|morphaz|jammal'an/i },
+    { dungeon: 'Blackrock Depths', minBracket: 52, regex: /blackrock depths|brd|thaurissan|angerforge|flamelash|ironfoe/i },
+    { dungeon: 'Hall of Thanes', minBracket: 14, regex: /hall of thanes|magmatus|durgen dirgehammer/i },
+    { dungeon: 'Ruins of Lordaeron', minBracket: 18, regex: /ruins of lordaeron|the baron|witherfang|viktor the vile/i },
+    { dungeon: 'Excavation Site', minBracket: 29, regex: /excavation site|shadetooth|relic guardian/i },
+    { dungeon: 'City of Dalaran', minBracket: 31, regex: /city of dalaran|atrexis|lyn the ignored|shade of the archmage/i }
+  ];
+
+  const violations = [];
+
+  for (const gate of DUNGEON_GATES) {
+    for (const { bracket, item: it } of allItems) {
+      const bracketMax = parseBracketMax(bracket);
+      const sourceText = [
+        it.name || '',
+        it.value || '',
+        typeof it.source === 'string' ? it.source : (it.source?.title || '') + ' ' + (it.source?.detail || '') + ' ' + (it.source?.text || '')
+      ].join(' ');
+
+      if (gate.regex.test(sourceText)) {
+        if (bracketMax < gate.minBracket) {
+          violations.push(`Dungeon drop "${it.name}" (${gate.dungeon}) in bracket "${bracket}" < min ${gate.minBracket}`);
+        }
+      }
+    }
+  }
+
+  // Elite quest items
+  for (const { bracket, item: it } of allItems) {
+    const bracketMax = parseBracketMax(bracket);
+    const id = Number(it.itemId || it.id);
+
+    // Master Hunter's Spellsword / King Bangalash (270085)
+    if (id === 270085 && bracketMax < 38) {
+      violations.push(`Elite quest item "${it.name}" (King Bangalash) in bracket "${bracket}" < min 38`);
+    }
+
+    // Bonebiter (6807)
+    if (id === 6807 && bracketMax < 38) {
+      violations.push(`Elite quest item "${it.name}" (SM Cathedral) in bracket "${bracket}" < min 38`);
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`Dungeon/quest gating violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
+  }
+});
+
+check('Faction tagging completeness and class faction guardrails check', () => {
+  const { progressionData } = getProgressionContext();
+  const allItems = getAllProgressionItems(progressionData);
+
+  const validFactions = new Set(['alliance', 'horde', 'both']);
+  const violations = [];
+
+  for (const { cls, item: it } of allItems) {
+    if (!it.faction || !validFactions.has(it.faction)) {
+      violations.push(`Item "${it.name}" (${it.itemId || it.id}) has invalid or missing faction: "${it.faction}"`);
+    }
+
+    if (cls === 'paladin' && (it.faction === 'horde' || it.side === 2)) {
+      violations.push(`Paladin progression contains Horde item "${it.name}" (${it.itemId || it.id})`);
+    }
+
+    if (cls === 'shaman' && (it.faction === 'alliance' || it.side === 1)) {
+      violations.push(`Shaman progression contains Alliance item "${it.name}" (${it.itemId || it.id})`);
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`Faction tagging violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
+  }
+});
+
+check('Progression filter 17-stat dimension parsing and zero-NaN integrity', () => {
+  const { progressionData, progressionFilter } = getProgressionContext();
+  const allItems = getAllProgressionItems(progressionData);
+
+  if (!progressionFilter || typeof progressionFilter.parseItemStats !== 'function') {
+    throw new Error('progression-filter.js failed to export parseItemStats');
+  }
+
+  const dimensions = [
+    'reqLevel', 'iLvl', 'dps', 'speed', 'strength', 'agility', 'stamina',
+    'intellect', 'spirit', 'attackPower', 'crit', 'hit', 'spellDamage',
+    'healing', 'mp5', 'armor', 'block'
+  ];
+
+  const violations = [];
+
+  for (const { item: it } of allItems) {
+    const stats = progressionFilter.parseItemStats(it);
+    if (!stats || typeof stats !== 'object') {
+      violations.push(`Failed to parse stats for "${it.name}"`);
+      continue;
+    }
+
+    for (const dim of dimensions) {
+      const val = stats[dim];
+      if (typeof val !== 'number' || Number.isNaN(val)) {
+        violations.push(`Item "${it.name}" produced NaN or non-number for dimension "${dim}": ${val}`);
+      }
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`17-stat parsing violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
+  }
+});
+
+check('Wowhead Forever domain links and Zamimg CDN icon URL formatting check', () => {
+  const { progressionData } = getProgressionContext();
+  const allItems = getAllProgressionItems(progressionData);
+
+  const violations = [];
+
+  for (const { item: it } of allItems) {
+    const id = it.itemId || it.id;
+    if (!id || typeof id !== 'number' || id <= 0) {
+      violations.push(`Item "${it.name}" has invalid numerical id: ${id}`);
+    }
+
+    if (!it.icon || typeof it.icon !== 'string' || !/^[a-z0-9_]+$/i.test(it.icon.replace(/\.(jpg|png)$/i, ''))) {
+      violations.push(`Item "${it.name}" (${id}) has invalid icon token: "${it.icon}"`);
+    }
+
+    const itemUrl = `https://www.wowhead.com/forever/item=${id}`;
+    if (!itemUrl.startsWith('https://www.wowhead.com/forever/item=')) {
+      violations.push(`Item "${it.name}" (${id}) produced non-forever link: ${itemUrl}`);
+    }
+
+    const iconToken = (it.icon || '').replace(/\.(jpg|png)$/i, '').toLowerCase();
+    const iconUrl = `https://wow.zamimg.com/images/wow/icons/medium/${iconToken}.jpg`;
+    if (!iconUrl.startsWith('https://wow.zamimg.com/images/wow/icons/medium/') || !iconUrl.endsWith('.jpg')) {
+      violations.push(`Item "${it.name}" (${id}) produced invalid Zamimg CDN icon URL: ${iconUrl}`);
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`Link and icon formatting violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
   }
 });
 
