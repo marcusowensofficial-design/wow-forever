@@ -14,3 +14,10 @@ As senior developers on this project, adhere strictly to the following architect
 
 ## 3. Strict Pre-Commit Verification
 - Always execute `node scripts/validate.js` after making modifications. All integrity, talent legality, and DOM checks must pass with zero errors.
+
+## 4. Canonical Class & Faction Invariants (WoW Forever Core Rules)
+- **Undead Paladins Exist on Horde**: In WoW Forever, Paladin is a dual-faction class (Alliance: Human, Dwarf; Horde: Undead with Forsaken Charger).
+- **NEVER Gray Out or Block Horde for Paladin**:
+  - The Horde faction filter button in weapon paths, offhands/shields, and deep dives must ALWAYS be enabled, clickable, and interactive when selected.
+  - Progression filtering (`itemMatchesAll`, `generateTimelineCards`, `renderItemTimeline`) must NEVER filter out Horde items or force Paladins to Alliance.
+  - Verification scripts and pre-commit checks must strictly guard against regressions that disable Horde for Paladin.

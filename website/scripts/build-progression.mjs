@@ -897,9 +897,8 @@ export function isItemAllowedForClass(item, classId, trackId = 'primary') {
     if (!rLower.includes(cls)) return false;
   }
 
-  // Paladin: 0 axes (1H or 2H), 0 daggers, 0 staves, 0 ranged/wands, 0 fist, 0 thrown. 100% Alliance only (0 horde items).
+  // Paladin: 0 axes (1H or 2H), 0 daggers, 0 staves, 0 ranged/wands, 0 fist, 0 thrown. Undead Paladins on Horde exist in WoW Forever.
   if (cls === 'paladin') {
-    if (item.faction === 'horde' || item.side === 2) return false;
     if (isAxeWeapon(item)) return false;
     if (isStaffWeapon(item)) return false;
     if (isRangedWeapon(item)) return false;
@@ -995,12 +994,10 @@ export function isOffhandAllowedForClass(item, classId, isShield) {
 
   if (isShield) {
     if (!isShieldItem(item)) return false;
-    if (cls === 'paladin' && (item.faction === 'horde' || item.side === 2)) return false;
     if (cls === 'shaman' && (item.faction === 'alliance' || item.side === 1)) return false;
     return true;
   } else {
     if (isShieldItem(item)) return false;
-    if (cls === 'paladin' && (item.faction === 'horde' || item.side === 2)) return false;
     if (cls === 'shaman' && (item.faction === 'alliance' || item.side === 1)) return false;
     return true;
   }

@@ -831,6 +831,7 @@ console.log('\n--- 6. CLASS PROGRESSION & WEAPON GATING AUDIT ---');
 
 const progPath = path.join(ROOT, 'js', 'data', 'class-progression-data.js');
 const filterModulePath = path.join(ROOT, 'js', 'modules', 'deepdives', 'progression-filter.js');
+const classProgModulePath = path.join(ROOT, 'js', 'modules', 'deepdives', 'class-progression.js');
 const progCachePath = path.join(ROOT, 'scratch', 'forever_items_cache.json');
 
 let progBundleContext = null;
@@ -871,6 +872,11 @@ function getProgressionContext() {
   const filterCode = fs.readFileSync(filterModulePath, 'utf8');
   vm.runInContext(filterCode, context);
 
+  if (fs.existsSync(classProgModulePath)) {
+    const classProgCode = fs.readFileSync(classProgModulePath, 'utf8');
+    vm.runInContext(classProgCode, context);
+  }
+
   let cache = {};
   if (fs.existsSync(progCachePath)) {
     try {
@@ -883,6 +889,7 @@ function getProgressionContext() {
   progBundleContext = {
     progressionData: context.window.WOW_PROGRESSION_DATA,
     progressionFilter: context.window.WOW_PROGRESSION_FILTER,
+    deepdivesProgression: context.window.WOW_DEEPDIVES_PROGRESSION,
     cache
   };
   return progBundleContext;
@@ -1111,10 +1118,6 @@ check('Faction tagging completeness and class faction guardrails check', () => {
       violations.push(`Item "${it.name}" (${it.itemId || it.id}) has invalid or missing faction: "${it.faction}"`);
     }
 
-    if (cls === 'paladin' && (it.faction === 'horde' || it.side === 2)) {
-      violations.push(`Paladin progression contains Horde item "${it.name}" (${it.itemId || it.id})`);
-    }
-
     if (cls === 'shaman' && (it.faction === 'alliance' || it.side === 1)) {
       violations.push(`Shaman progression contains Alliance item "${it.name}" (${it.itemId || it.id})`);
     }
@@ -1192,6 +1195,74 @@ check('Wowhead Forever domain links and Zamimg CDN icon URL formatting check', (
   if (violations.length > 0) {
     throw new Error(`Link and icon formatting violations (${violations.length}):\n  ${violations.slice(0, 10).join('\n  ')}`);
   }
+});
+
+check('Paladin Horde weapon path accessibility and anti-grayout regression check', () => {
+  const { deepdivesProgression } = getProgressionContext();
+  if (!deepdivesProgression || typeof deepdivesProgression.renderProgressionSubtab !== 'function') {
+    throw new Error('WOW_DEEPDIVES_PROGRESSION module failed to load in progression context');
+  }
+
+  // 1. Verify Paladin Weapons rendered controls do NOT gray out or disable Horde button
+  deepdivesProgression.setWeaponFaction('all');
+  const paladinHtml = deepdivesProgression.renderProgressionSubtab('weapons', { id: 'paladin', name: 'Paladin' });
+
+  if (paladinHtml.includes('Paladins are exclusive to the Alliance')) {
+    throw new Error('Regression: Paladin weapon progression displays "Paladins are exclusive to the Alliance"');
+  }
+
+  if (paladinHtml.includes('disabled style="opacity:0.35') && paladinHtml.includes('data-faction="horde"')) {
+    throw new Error('Regression: Paladin weapon progression has grayed-out/disabled Horde faction button');
+  }
+
+  // 2. Verify setting Horde faction actively produces valid progression cards for Undead Paladins
+  deepdivesProgression.setWeaponFaction('horde');
+  const hordeHtml = deepdivesProgression.renderProgressionSubtab('weapons', { id: 'paladin', name: 'Paladin' });
+  const cardCount = (hordeHtml.match(/class="weapon-step-card/g) || []).length;
+  if (cardCount === 0) {
+    throw new Error('Regression: Paladin weapon progression shows 0 cards when filtering by Horde');
+  }
+
+  // 3. Verify Paladin Shields/Offhands also do not disable Horde button
+  deepdivesProgression.setOffhandFaction('horde');
+  const shieldHtml = deepdivesProgression.renderProgressionSubtab('offhands', { id: 'paladin', name: 'Paladin' });
+  if (shieldHtml.includes('Paladins are exclusive to the Alliance')) {
+    throw new Error('Regression: Paladin shield progression displays "Paladins are exclusive to the Alliance"');
+  }
+  const shieldCardCount = (shieldHtml.match(/class="weapon-step-card/g) || []).length;
+  if (shieldCardCount === 0) {
+    throw new Error('Regression: Paladin shield progression shows 0 cards when filtering by Horde');
+  }
+});
+
+check('Slot filter "main-hand" strictly isolates Main Hand items and excludes One-Hand items', () => {
+  const { deepdivesProgression } = getProgressionContext();
+  if (!deepdivesProgression || typeof deepdivesProgression.renderProgressionSubtab !== 'function') {
+    throw new Error('WOW_DEEPDIVES_PROGRESSION module failed to load in progression context');
+  }
+
+  // 1. Logic unit test with explicit tooltip slot lines
+  const flayer = { name: 'OneHand Test Item', lines: ['Binds when picked up', 'One-Hand\t1H Sword', '63 - 118 Damage\tSpeed 2.30'] };
+  const cosh = { name: 'MainHand Test Item', lines: ['Binds when picked up', 'Main Hand\t1H Mace', '8 - 15 Damage\tSpeed 1.90'] };
+
+  deepdivesProgression.setWeaponSource('all');
+  deepdivesProgression.setWeaponFaction('all');
+  deepdivesProgression.setWeaponSlot('main-hand');
+
+  // Verify Shaman main-hand rendering includes Valley Cosh (Main Hand)
+  const shamanHtml = deepdivesProgression.renderProgressionSubtab('weapons', { id: 'shaman', name: 'Shaman' });
+  if (!shamanHtml.includes('Valley Cosh')) {
+    throw new Error('Valley Cosh (Main Hand) missing from Main Hand filtered weapons');
+  }
+
+  // Verify Valley Cosh does NOT appear under one-hand filter
+  deepdivesProgression.setWeaponSlot('one-hand');
+  const shamanOneHandHtml = deepdivesProgression.renderProgressionSubtab('weapons', { id: 'shaman', name: 'Shaman' });
+  if (shamanOneHandHtml.includes('Valley Cosh')) {
+    throw new Error('Regression: Valley Cosh (Main Hand) appeared in One-Hand filtered weapons');
+  }
+
+  deepdivesProgression.setWeaponSlot('all');
 });
 
 

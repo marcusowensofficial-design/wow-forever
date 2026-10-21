@@ -566,24 +566,33 @@
     return true;
   }
 
+  function getItemExplicitSlot(item) {
+    const lines = Array.isArray(item?.lines) ? item.lines : [];
+    for (let i = 0; i < lines.length; i++) {
+      if (/binds\s+when\s+(picked\s+up|equipped)/i.test(lines[i])) {
+        return (lines[i + 1] || '').split('\t')[0].trim().toLowerCase();
+      }
+    }
+    return (item?.inventorySlot || '').trim().toLowerCase() ||
+      (lines.map(l => l.split('\t')[0].trim().toLowerCase()).find(f => ['main hand', 'one-hand', 'two-hand', 'off hand', 'ranged'].includes(f)) || '');
+  }
+
   function itemMatchesSlot(item, filter) {
     if (!filter || filter === 'all') return true;
+    const explicitSlot = getItemExplicitSlot(item);
     const type = (item?.weaponType || '').toLowerCase();
     const slot = (item?.inventorySlot || '').toLowerCase();
     const linesStr = Array.isArray(item?.lines) ? item.lines.join(' ').toLowerCase() : '';
 
-    const isTwoHand = type.includes('two-hand') || type.includes('2h') || type.includes('staff') || type.includes('polearm') || slot.includes('two-hand') || linesStr.includes('two-hand');
-    const isRanged = type.includes('bow') || type.includes('gun') || type.includes('crossbow') || type.includes('wand') || type.includes('ranged') || linesStr.includes('ranged') || slot.includes('ranged');
-    const isMainHandOnly = slot.includes('main hand') || linesStr.includes('main hand') || type.includes('main hand');
-    const isOffHandOnly = slot.includes('off hand') || linesStr.includes('off hand') || type.includes('off hand') || type.includes('shield') || type.includes('held in off-hand');
+    const isTwoHand = explicitSlot === 'two-hand' || type.includes('two-hand') || type.includes('2h') || type.includes('staff') || type.includes('polearm') || slot.includes('two-hand') || linesStr.includes('two-hand');
+    const isRanged = explicitSlot === 'ranged' || type.includes('bow') || type.includes('gun') || type.includes('crossbow') || type.includes('wand') || type.includes('ranged') || linesStr.includes('ranged') || slot.includes('ranged');
+    const isMainHandOnly = explicitSlot === 'main hand' || slot.includes('main hand') || linesStr.includes('main hand') || type.includes('main hand');
+    const isOffHandOnly = explicitSlot === 'off hand' || slot.includes('off hand') || linesStr.includes('off hand') || type.includes('off hand') || type.includes('shield') || type.includes('held in off-hand');
 
+    if (filter === 'main-hand') return !isTwoHand && !isRanged && !isOffHandOnly && explicitSlot !== 'one-hand' && isMainHandOnly;
     if (filter === 'one-hand') {
-      if (isTwoHand || isRanged || isMainHandOnly || isOffHandOnly) return false;
-      return type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
-    }
-    if (filter === 'main-hand') {
-      if (isTwoHand || isRanged || isOffHandOnly) return false;
-      return isMainHandOnly || type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
+      if (isTwoHand || isRanged || isMainHandOnly || isOffHandOnly || explicitSlot === 'main hand') return false;
+      return explicitSlot === 'one-hand' || type.includes('one-hand') || type.includes('1h') || type.includes('dagger') || type.includes('fist') || type.includes('sword') || type.includes('mace') || type.includes('axe') || slot.includes('one-hand') || linesStr.includes('one-hand');
     }
     if (filter === 'two-hand') return isTwoHand;
     if (filter === 'ranged') return isRanged;

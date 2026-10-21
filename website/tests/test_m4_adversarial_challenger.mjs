@@ -319,10 +319,6 @@ function runCheck66(progressionData) {
       violations.push(`Item "${it.name}" (${it.itemId || it.id}) has invalid or missing faction: "${it.faction}"`);
     }
 
-    if (cls === 'paladin' && (it.faction === 'horde' || it.side === 2)) {
-      violations.push(`Paladin progression contains Horde item "${it.name}" (${it.itemId || it.id})`);
-    }
-
     if (cls === 'shaman' && (it.faction === 'alliance' || it.side === 1)) {
       violations.push(`Shaman progression contains Alliance item "${it.name}" (${it.itemId || it.id})`);
     }
@@ -648,16 +644,16 @@ collector.describe('Suite 3: Check 66 Faction Guardrails Adversarial Inversion',
     assertDoesNotThrow(() => runCheck66(baseline.progressionData), 'Baseline Check 66');
   });
 
-  collector.test('3.2 Mutation: Injecting Horde item into Paladin progression triggers Check 66 failure', () => {
+  collector.test('3.2 Paladin progression permits Horde items for Undead Paladins in WoW Forever', () => {
     const mutated = cloneProgressionData(baseline.progressionData);
     mutated.weapons.paladin.levels[0].alts.push({
       id: 99921,
       itemId: 99921,
-      name: 'Adversarial Horde Paladin Maul',
+      name: 'Forsaken Paladin Maul',
       faction: 'horde',
       icon: 'inv_hammer_01'
     });
-    expect(() => runCheck66(mutated)).toThrow(/Paladin progression contains Horde item "Adversarial Horde Paladin Maul"/);
+    assertDoesNotThrow(() => runCheck66(mutated), 'Paladin permits Horde items');
   });
 
   collector.test('3.3 Mutation: Injecting Alliance item into Shaman progression triggers Check 66 failure', () => {
@@ -867,18 +863,18 @@ collector.describe('Suite 6: Subprocess Tamper Proof Against scripts/validate.js
     }
   });
 
-  collector.test('6.3 Subprocess tamper: Injecting Horde item on Paladin triggers Check 66 failure in validate.js', () => {
-    const paladinBlock = '"name": "⚔️ DPS Track (Retribution Path (Two-Handed Swords & Maces))"';
-    const paladinIdx = originalFileContent.indexOf(paladinBlock);
-    if (paladinIdx === -1) {
-      throw new Error('Could not find paladin retribution track marker in class-progression-data.js');
+  collector.test('6.3 Subprocess tamper: Injecting Alliance item on Shaman triggers Check 66 failure in validate.js', () => {
+    const shamanBlock = '"name": "⚔️ DPS Track (Enhancement & Elemental (Two-Hand & Staves))"';
+    const shamanIdx = originalFileContent.indexOf(shamanBlock);
+    if (shamanIdx === -1) {
+      throw new Error('Could not find shaman DPS track marker in class-progression-data.js');
     }
     const factionTarget = '"faction": "both"';
-    const factionIdx = originalFileContent.indexOf(factionTarget, paladinIdx);
-    if (factionIdx === -1 || factionIdx - paladinIdx > 3000) {
-      throw new Error('Could not find faction target within paladin section');
+    const factionIdx = originalFileContent.indexOf(factionTarget, shamanIdx);
+    if (factionIdx === -1 || factionIdx - shamanIdx > 3000) {
+      throw new Error('Could not find faction target within shaman section');
     }
-    const mutatedContent = originalFileContent.slice(0, factionIdx) + '"faction": "horde"' + originalFileContent.slice(factionIdx + factionTarget.length);
+    const mutatedContent = originalFileContent.slice(0, factionIdx) + '"faction": "alliance"' + originalFileContent.slice(factionIdx + factionTarget.length);
 
     try {
       safeWriteFileSync(PROG_PATH, mutatedContent);
@@ -893,7 +889,7 @@ collector.describe('Suite 6: Subprocess Tamper Proof Against scripts/validate.js
       }
       expect(failed).toBe(true);
       expect(errorOutput).toContain('✗ Faction tagging completeness and class faction guardrails check');
-      expect(errorOutput).toContain('Paladin progression contains Horde item "Whisper"');
+      expect(errorOutput).toContain('Shaman progression contains Alliance item "Whisper"');
       expect(errorOutput).toContain('Failures: 1');
     } finally {
       safeWriteFileSync(PROG_PATH, originalFileContent);
