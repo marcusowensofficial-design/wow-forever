@@ -2281,7 +2281,7 @@ In WoW Forever, character progression extends beyond simple monster killing. The
     },
     {
       id: "guide-racials-overhaul",
-      title: "Classic+ Racials & Heritage Traits Overhaul (All 8 Races + Skyborne)",
+      title: "Classic+ Racials & Heritage Traits Overhaul (All 9 Playable Races)",
       category: "Classes & Pets",
       source: "Wowhead · Method.gg · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_character_orc_male.jpg",
