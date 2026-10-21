@@ -428,7 +428,16 @@
     result.totalBlockValue = result.baseBlock + result.blockValueBonus;
     result.block = result.totalBlockValue;
 
-    // 2.6 Default reqLevel to 1 if missing or unstated (starter items)
+    // 2.6 Resolve reqLevel: check levelBracket and iLvl heuristic fallback
+    if (!result.reqLevel || result.reqLevel <= 0) {
+      if (item.levelBracket) {
+        const br = parseBracketRange(item.levelBracket);
+        if (br) result.reqLevel = br.min;
+      }
+    }
+    if (result.iLvl >= 20 && (!result.reqLevel || result.reqLevel <= 1)) {
+      result.reqLevel = Math.max(1, result.iLvl - 5);
+    }
     if (!result.reqLevel || result.reqLevel <= 0) {
       result.reqLevel = 1;
     }
@@ -496,6 +505,43 @@
   }
 
   /**
+   * Parses a bracket string (e.g. "1–2", "21-24", "55–60") into min and max numbers.
+   */
+  function parseBracketRange(bracketStr) {
+    if (!bracketStr || typeof bracketStr !== 'string') return null;
+    const match = bracketStr.match(/(\d+)\s*[-–—]\s*(\d+)/);
+    if (match) {
+      return {
+        min: parseInt(match[1], 10),
+        max: parseInt(match[2], 10)
+      };
+    }
+    const single = bracketStr.match(/(\d+)/);
+    if (single) {
+      const val = parseInt(single[1], 10);
+      return { min: val, max: val };
+    }
+    return null;
+  }
+
+  /**
+   * Checks whether a level bracket overlaps with active minLevel / maxLevel criteria.
+   */
+  function bracketMatchesFilter(bracketStr, customState) {
+    const s = customState || filterState;
+    const range = parseBracketRange(bracketStr);
+    if (!range) return true;
+
+    if (typeof s.minLevel === 'number' && s.minLevel > 1) {
+      if (range.max < s.minLevel) return false;
+    }
+    if (typeof s.maxLevel === 'number' && s.maxLevel < 60) {
+      if (range.min > s.maxLevel) return false;
+    }
+    return true;
+  }
+
+  /**
    * 4. Multi-Criteria Logical AND Matching Engine
    * Evaluates all active filter criteria simultaneously.
    */
@@ -524,6 +570,11 @@
     else if (typeof s.minBlock === 'number' && s.minBlock > 0) hasActive = true;
 
     if (!hasActive) return true;
+
+    // Macro bracket check if item has a levelBracket
+    if (item.levelBracket && !bracketMatchesFilter(item.levelBracket, s)) {
+      return false;
+    }
 
     const stats = parseItemStats(item);
     if (!stats) return false;
@@ -611,6 +662,9 @@
    */
   function filterLevelStep(step, effectiveFaction, effectiveSource, effectiveSlot, itemMatchesAllFn) {
     if (!step) return { isVisible: false };
+    if (step.levelBracket && !bracketMatchesFilter(step.levelBracket)) {
+      return { isVisible: false };
+    }
 
     const checkMatches = (item) => {
       const basicMatch = typeof itemMatchesAllFn === 'function'
@@ -1064,6 +1118,8 @@
     setFilter,
     resetFilters,
     getActiveFilterCount,
+    parseBracketRange,
+    bracketMatchesFilter,
     parseItemStats,
     itemMatchesFilter,
     itemMatchesFilters,

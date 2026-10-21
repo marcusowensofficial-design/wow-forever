@@ -652,6 +652,13 @@
 
     let displayedCount = 0;
     const stepCards = activeLevelList.map((step, idx) => {
+      // Bracket Gating: Skip progression step if bracket does not overlap active min/max level filter
+      if (step && step.levelBracket && window.WOW_PROGRESSION_FILTER && typeof window.WOW_PROGRESSION_FILTER.bracketMatchesFilter === 'function') {
+        if (!window.WOW_PROGRESSION_FILTER.bracketMatchesFilter(step.levelBracket)) {
+          return '';
+        }
+      }
+
       let displayStep = { ...step };
       let displayAlts = (step.alts || []).slice();
 
