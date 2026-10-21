@@ -624,18 +624,17 @@
     }
     if (!itemMatchesSource(item, source)) return false;
     if (!itemMatchesSlot(item, slot)) return false;
+    if (window.WOW_PROGRESSION_FILTER && !window.WOW_PROGRESSION_FILTER.itemMatchesFilter(item)) return false;
     return true;
   }
 
   // 2. Generic Item Timeline Renderer (Weapons, Wands, Off-Hands)
-  function renderItemTimeline(classId, datasetKey, cfg) {
+  let lastTimelineContext = null;
+
+  function generateTimelineCards(classId, datasetKey, cfg) {
     const data = window.WOW_PROGRESSION_DATA?.[datasetKey]?.[classId];
     if (!data || !data.levels || data.levels.length === 0) {
-      return `
-        <div class="progression-empty-state">
-          <p>${escapeHtml(cfg.emptyMsg || '⚠️ No progression roadmap recorded for this class yet.')}</p>
-        </div>
-      `;
+      return { stepCards: '', displayedCount: 0, currentTrack: 'primary' };
     }
 
     const currentTrack = activeWeaponTrack[`${classId}_${datasetKey}`] || data.tracks?.[0]?.id || 'primary';
@@ -643,7 +642,6 @@
       ? data.healingLevels
       : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
-    // Faction restrictions for faction-exclusive classes (Shamans are Horde-exclusive; Paladins support Alliance and Undead Horde)
     const isShaman = classId === 'shaman';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
@@ -652,7 +650,6 @@
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
     if (!['hunter', 'warrior', 'rogue'].includes(classId) && effectiveSlot === 'ranged') effectiveSlot = 'all';
 
-    // Build timeline items with faction, source, and slot awareness
     let displayedCount = 0;
     const stepCards = activeLevelList.map((step, idx) => {
       let displayStep = { ...step };
@@ -663,7 +660,11 @@
       // Check for Horde BiS promotion (Staff of Orgrimmar in brackets 13-18)
       let hordeBisIdx = -1;
       if (effectiveFaction === 'horde' && (effectiveSource === 'all' || effectiveSource === 'quest') && (effectiveSlot === 'all' || effectiveSlot === 'two-hand')) {
-        hordeBisIdx = displayAlts.findIndex(a => a.faction === 'horde' && (a.itemId === 15444 || a.name === 'Staff of Orgrimmar'));
+        hordeBisIdx = displayAlts.findIndex(a => 
+          a.faction === 'horde' && 
+          (a.itemId === 15444 || a.name === 'Staff of Orgrimmar') && 
+          itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot)
+        );
       }
 
       let matchIdx = -1;
@@ -678,6 +679,7 @@
         }
       }
 
+      let isPromoted = false;
       if (matchIdx !== -1) {
         const altMatch = displayAlts[matchIdx];
         const valStr = altMatch.value || '';
@@ -727,12 +729,15 @@
           faction: altMatch.faction || effectiveFaction,
           quality: altMatch.quality || step.quality,
           iLvl: altMatch.iLvl || step.iLvl,
-          reqLevel: altMatch.reqLevel || step.reqLevel
+          reqLevel: altMatch.reqLevel || step.reqLevel,
+          isAltPromoted: true,
+          isPromoted: true
         };
         displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
         if (primaryMatches) {
           displayAlts.push(demotedStep);
         }
+        isPromoted = true;
       } else if (!primaryMatches) {
         return '';
       }
@@ -748,6 +753,10 @@
         ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">${FACTION_ICONS.alliance} Alliance</span>`
         : primaryFaction === 'horde'
         ? `<span class="item-faction-badge faction-horde" title="Horde Only">${FACTION_ICONS.horde} Horde</span>`
+        : '';
+
+      const promotedBadgeHtml = (isPromoted || displayStep.isAltPromoted || displayStep.isPromoted)
+        ? '<span class="item-promoted-badge" title="Promoted alternative matching your active filters">⭐ Alt Promoted</span>'
         : '';
 
       return `
@@ -785,6 +794,7 @@
                   </a>
                   <span class="weapon-type-badge">${escapeHtml(displayStep.weaponType)}</span>
                   ${factionBadgeHtml}
+                  ${promotedBadgeHtml}
                 </div>
                 <div class="weapon-stats-row">
                   ${displayStep.speed ? `<span class="stat-pill">Speed: ${escapeHtml(displayStep.speed)}</span>` : ''}
@@ -853,6 +863,30 @@
         </div>
       `;
     }).filter(Boolean).join('');
+
+    return { stepCards, displayedCount, currentTrack };
+  }
+
+  function renderItemTimeline(classId, datasetKey, cfg) {
+    const data = window.WOW_PROGRESSION_DATA?.[datasetKey]?.[classId];
+    if (!data || !data.levels || data.levels.length === 0) {
+      return `
+        <div class="progression-empty-state">
+          <p>${escapeHtml(cfg.emptyMsg || '⚠️ No progression roadmap recorded for this class yet.')}</p>
+        </div>
+      `;
+    }
+
+    lastTimelineContext = { classId, datasetKey, cfg };
+    const { stepCards, displayedCount, currentTrack } = generateTimelineCards(classId, datasetKey, cfg);
+
+    const isShaman = classId === 'shaman';
+    let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
+    if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
+    const effectiveSource = cfg.getSource ? cfg.getSource() : 'all';
+    let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
+    if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
+    if (!['hunter', 'warrior', 'rogue'].includes(classId) && effectiveSlot === 'ranged') effectiveSlot = 'all';
 
     return `
       <div class="progression-section-wrap">
@@ -935,13 +969,15 @@
           ` : ''}
         </div>
 
+        ${window.WOW_PROGRESSION_FILTER ? window.WOW_PROGRESSION_FILTER.renderDrawerHtml() : ''}
+
         <!-- Timeline Grid -->
         <div class="weapon-timeline-container">
-          ${stepCards || `
+          ${stepCards || (window.WOW_PROGRESSION_FILTER ? window.WOW_PROGRESSION_FILTER.renderEmptyStateHtml() : `
             <div class="progression-empty-state">
               <p>No items found matching the selected filters.</p>
             </div>
-          `}
+          `)}
         </div>
       </div>
     `;
@@ -1272,6 +1308,48 @@
         triggerUpdate();
       });
     });
+
+    // 2.5 Advanced Progression Filter Engine Delegation
+    if (window.WOW_PROGRESSION_FILTER && window.WOW_PROGRESSION_FILTER.setupEventListeners) {
+      window.WOW_PROGRESSION_FILTER.setupEventListeners(root, (isFilterOnly) => {
+        if (isFilterOnly && lastTimelineContext) {
+          const { stepCards, displayedCount, currentTrack } = generateTimelineCards(
+            lastTimelineContext.classId,
+            lastTimelineContext.datasetKey,
+            lastTimelineContext.cfg
+          );
+          const timelineEl = root.querySelector ? root.querySelector('.weapon-timeline-container') : null;
+          if (timelineEl) {
+            timelineEl.innerHTML = stepCards || (window.WOW_PROGRESSION_FILTER.renderEmptyStateHtml ? window.WOW_PROGRESSION_FILTER.renderEmptyStateHtml() : '<div class="progression-empty-state"><p>No items found matching the selected filters.</p></div>');
+            const emptyResetBtn = timelineEl.querySelector('#btn-empty-reset-filters');
+            if (emptyResetBtn) {
+              emptyResetBtn.onclick = () => {
+                const drawerReset = root.querySelector('#btn-reset-advanced-filters');
+                if (drawerReset) drawerReset.click();
+                else {
+                  window.WOW_PROGRESSION_FILTER.resetFilters();
+                  triggerUpdate();
+                }
+              };
+            }
+            timelineEl.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
+              el.addEventListener('mouseenter', (e) => showWeaponTooltip(e, el));
+              el.addEventListener('mousemove', (e) => moveWeaponTooltip(e));
+              el.addEventListener('mouseleave', hideWeaponTooltip);
+            });
+            if (typeof window !== 'undefined' && window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
+              try { window.$WowheadPower.refreshLinks(); } catch {}
+            }
+          }
+          const badgeEl = root.querySelector ? root.querySelector('.progression-header-badge') : null;
+          if (badgeEl) {
+            badgeEl.innerHTML = `${currentTrack === 'healer' ? '💚 ' : ''}${displayedCount} Progression Steps`;
+          }
+        } else {
+          triggerUpdate();
+        }
+      });
+    }
 
     // Weapon progression rich mouseover tooltips
     root.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
