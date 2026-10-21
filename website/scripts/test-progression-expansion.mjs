@@ -96,8 +96,8 @@ for (const cls of expectedClasses) {
 }
 console.log('✓ All 9 classes rendered all 4 progression subtabs with 100% valid HTML without undefined/NaN tokens');
 
-// 5. Test Kris of Orgrimmar in Priest, Shaman, Druid
-for (const cls of ['priest', 'shaman', 'druid']) {
+// 5. Test Kris of Orgrimmar in Caster Classes (Priest, Mage, Warlock)
+for (const cls of ['priest', 'mage', 'warlock']) {
   const hasKris = progData.weapons[cls].levels.some(l => 
     (l.alts || []).some(a => a.name === 'Kris of Orgrimmar') || l.name === 'Kris of Orgrimmar'
   );
@@ -105,7 +105,7 @@ for (const cls of ['priest', 'shaman', 'druid']) {
     throw new Error(`Kris of Orgrimmar missing from ${cls} progression matrix!`);
   }
 }
-console.log('✓ Kris of Orgrimmar successfully integrated in early brackets (13-20) for Priest, Shaman, and Druid');
+console.log('✓ Kris of Orgrimmar successfully integrated in early brackets (13-20) for Priest, Mage, and Warlock');
 
 // 6. Test SM Quest Mirror Pairs (Sword of Omen, Sword of Serenity, Bonebiter)
 const warriorSM = progData.weapons.warrior.levels.find(l => l.levelBracket === '37–40');

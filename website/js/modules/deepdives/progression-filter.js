@@ -1,3 +1,4 @@
+/* global module */
 /**
  * World of Warcraft: Forever - Interactive Progression Stat Filter Engine
  * Phase 3 Build 1.60.1.70425

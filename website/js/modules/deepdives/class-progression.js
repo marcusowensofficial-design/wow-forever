@@ -808,10 +808,9 @@
 
       // Dual-faction top pick resolution when viewing 'all' factions
       let isDualPick = false, alliancePick = null, hordePick = null;
-      const isDualFactionClass = classId !== 'paladin' && classId !== 'shaman';
       const primaryFaction = displayStep.faction || 'both';
 
-      if (effectiveFaction === 'all' && isDualFactionClass && (primaryFaction === 'alliance' || primaryFaction === 'horde')) {
+      if (effectiveFaction === 'all' && (primaryFaction === 'alliance' || primaryFaction === 'horde')) {
         const counterpartFaction = primaryFaction === 'alliance' ? 'horde' : 'alliance';
         let cpIdx = -1;
         if (counterpartFaction === 'horde' && (effectiveSource === 'all' || effectiveSource === 'quest') && (effectiveSlot === 'all' || effectiveSlot === 'two-hand')) {

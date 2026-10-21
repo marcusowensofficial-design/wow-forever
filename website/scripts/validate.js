@@ -398,7 +398,7 @@ check('Site Lifecycle engine module & date boundary transitions', () => {
   // Unit test phase boundary logic
   const targets = {
     betaStart: '2026-09-17T10:00:00-07:00',
-    betaEnds: '2026-10-21T23:59:59-07:00',
+    betaEnds: '2026-10-23T10:00:00-07:00',
     globalLaunch: '2026-11-04T15:00:00-08:00',
     raidUnlock: '2026-12-09T10:00:00-08:00'
   };
@@ -1260,8 +1260,8 @@ check('Slot filter "main-hand" strictly isolates Main Hand items and excludes On
   }
 
   // 1. Logic unit test with explicit tooltip slot lines
-  const flayer = { name: 'OneHand Test Item', lines: ['Binds when picked up', 'One-Hand\t1H Sword', '63 - 118 Damage\tSpeed 2.30'] };
-  const cosh = { name: 'MainHand Test Item', lines: ['Binds when picked up', 'Main Hand\t1H Mace', '8 - 15 Damage\tSpeed 1.90'] };
+  const _flayer = { name: 'OneHand Test Item', lines: ['Binds when picked up', 'One-Hand\t1H Sword', '63 - 118 Damage\tSpeed 2.30'] };
+  const _cosh = { name: 'MainHand Test Item', lines: ['Binds when picked up', 'Main Hand\t1H Mace', '8 - 15 Damage\tSpeed 1.90'] };
 
   deepdivesProgression.setWeaponSource('all');
   deepdivesProgression.setWeaponFaction('all');

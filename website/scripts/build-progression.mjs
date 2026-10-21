@@ -654,10 +654,6 @@ export function parseItem17Stats(item) {
 
 export function detectDungeonFloor(item) {
   if (!item) return null;
-  const id = Number(item.id || item.itemId);
-  if (SPECIFIC_ITEM_GATING[id]?.effectiveLevel) {
-    return { minEnter: 0, practical: SPECIFIC_ITEM_GATING[id].effectiveLevel, code: 'GATED' };
-  }
 
   // Check sourcemore zone IDs
   if (Array.isArray(item.sourcemore)) {
@@ -1008,8 +1004,29 @@ export function isOffhandAllowedForClass(item, classId, isShield) {
 // -----------------------------------------------------------------------------
 
 export function formatCanonicalSource(item, dungeonFloor = null) {
+  const id = Number(item.id || item.itemId);
+
+  // Check specific quest or world drop gating first
+  if (SPECIFIC_ITEM_GATING[id]?.quest) {
+    const qName = SPECIFIC_ITEM_GATING[id].quest;
+    return {
+      kind: 'quest',
+      title: qName,
+      detail: `${qName} (Quest Reward)`,
+      text: qName
+    };
+  }
+  if (SPECIFIC_ITEM_GATING[id]?.worldDrop) {
+    return {
+      kind: 'world_drop',
+      title: 'World Drop',
+      detail: 'World Drop / BoE Epic',
+      text: 'World Drop'
+    };
+  }
+
   const dFloor = dungeonFloor || detectDungeonFloor(item);
-  if (dFloor) {
+  if (dFloor && dFloor.name) {
     const bossName = item.sourcemore?.find(s => BOSS_TO_DUNGEON_MAP[String(s.n || '').toLowerCase().trim()])?.n || item.source?.title || 'Dungeon Boss';
     const zoneName = dFloor.name;
     return {

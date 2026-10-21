@@ -13903,10 +13903,10 @@ if (typeof window !== 'undefined') {
             "Requires Level 30"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "quest",
+            "title": "Whirlwind Weapon",
+            "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+            "text": "Whirlwind Weapon"
           },
           "faction": "both",
           "alts": [
@@ -13923,7 +13923,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 30,
               "score": 514.4,
               "rank": 2,
-              "value": "35.56 DPS, 3.60s, Two-Handed Axe - Dungeon Boss (undefined)",
+              "value": "35.56 DPS, 3.60s, Two-Handed Axe - Whirlwind Weapon",
               "stats": "+15 Strength, +14 Stamina",
               "lines": [
                 "Binds when picked up",
@@ -13935,10 +13935,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Whirlwind Weapon",
+                "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                "text": "Whirlwind Weapon"
               },
               "faction": "both"
             },
@@ -13955,7 +13955,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 30,
               "score": 491.2,
               "rank": 3,
-              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
@@ -13967,10 +13967,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Whirlwind Weapon",
+                "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                "text": "Whirlwind Weapon"
               },
               "faction": "both"
             },
@@ -29765,10 +29765,10 @@ if (typeof window !== 'undefined') {
               "Requires Level 30"
             ],
             "source": {
-              "kind": "dungeon_drop",
-              "title": "Dungeon Boss",
-              "detail": "undefined (Dungeon Drop)",
-              "text": "Dungeon Boss (undefined)"
+              "kind": "quest",
+              "title": "Whirlwind Weapon",
+              "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+              "text": "Whirlwind Weapon"
             },
             "faction": "both",
             "alts": [
@@ -29785,7 +29785,7 @@ if (typeof window !== 'undefined') {
                 "effectiveLevel": 30,
                 "score": 514.4,
                 "rank": 2,
-                "value": "35.56 DPS, 3.60s, Two-Handed Axe - Dungeon Boss (undefined)",
+                "value": "35.56 DPS, 3.60s, Two-Handed Axe - Whirlwind Weapon",
                 "stats": "+15 Strength, +14 Stamina",
                 "lines": [
                   "Binds when picked up",
@@ -29797,10 +29797,10 @@ if (typeof window !== 'undefined') {
                   "Requires Level 30"
                 ],
                 "source": {
-                  "kind": "dungeon_drop",
-                  "title": "Dungeon Boss",
-                  "detail": "undefined (Dungeon Drop)",
-                  "text": "Dungeon Boss (undefined)"
+                  "kind": "quest",
+                  "title": "Whirlwind Weapon",
+                  "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                  "text": "Whirlwind Weapon"
                 },
                 "faction": "both"
               },
@@ -29817,7 +29817,7 @@ if (typeof window !== 'undefined') {
                 "effectiveLevel": 30,
                 "score": 491.2,
                 "rank": 3,
-                "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+                "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
                 "stats": "+16 Strength, +15 Stamina",
                 "lines": [
                   "Binds when picked up",
@@ -29829,10 +29829,10 @@ if (typeof window !== 'undefined') {
                   "Requires Level 30"
                 ],
                 "source": {
-                  "kind": "dungeon_drop",
-                  "title": "Dungeon Boss",
-                  "detail": "undefined (Dungeon Drop)",
-                  "text": "Dungeon Boss (undefined)"
+                  "kind": "quest",
+                  "title": "Whirlwind Weapon",
+                  "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                  "text": "Whirlwind Weapon"
                 },
                 "faction": "both"
               },
@@ -38343,7 +38343,7 @@ if (typeof window !== 'undefined') {
                 "effectiveLevel": 30,
                 "score": 361.7,
                 "rank": 2,
-                "value": "35.74 DPS, 3.40s, Two-Handed Mace - Dungeon Boss (undefined)",
+                "value": "35.74 DPS, 3.40s, Two-Handed Mace - Whirlwind Weapon",
                 "stats": "+16 Strength, +15 Stamina",
                 "lines": [
                   "Binds when picked up",
@@ -38355,10 +38355,10 @@ if (typeof window !== 'undefined') {
                   "Requires Level 30"
                 ],
                 "source": {
-                  "kind": "dungeon_drop",
-                  "title": "Dungeon Boss",
-                  "detail": "undefined (Dungeon Drop)",
-                  "text": "Dungeon Boss (undefined)"
+                  "kind": "quest",
+                  "title": "Whirlwind Weapon",
+                  "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                  "text": "Whirlwind Weapon"
                 },
                 "faction": "both"
               },
@@ -38375,7 +38375,7 @@ if (typeof window !== 'undefined') {
                 "effectiveLevel": 30,
                 "score": 359.7,
                 "rank": 3,
-                "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+                "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
                 "stats": "+16 Strength, +15 Stamina",
                 "lines": [
                   "Binds when picked up",
@@ -38387,10 +38387,10 @@ if (typeof window !== 'undefined') {
                   "Requires Level 30"
                 ],
                 "source": {
-                  "kind": "dungeon_drop",
-                  "title": "Dungeon Boss",
-                  "detail": "undefined (Dungeon Drop)",
-                  "text": "Dungeon Boss (undefined)"
+                  "kind": "quest",
+                  "title": "Whirlwind Weapon",
+                  "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                  "text": "Whirlwind Weapon"
                 },
                 "faction": "both"
               },
@@ -38407,7 +38407,7 @@ if (typeof window !== 'undefined') {
                 "effectiveLevel": 30,
                 "score": 357.4,
                 "rank": 4,
-                "value": "35.56 DPS, 3.60s, Two-Handed Axe - Dungeon Boss (undefined)",
+                "value": "35.56 DPS, 3.60s, Two-Handed Axe - Whirlwind Weapon",
                 "stats": "+15 Strength, +14 Stamina",
                 "lines": [
                   "Binds when picked up",
@@ -38419,10 +38419,10 @@ if (typeof window !== 'undefined') {
                   "Requires Level 30"
                 ],
                 "source": {
-                  "kind": "dungeon_drop",
-                  "title": "Dungeon Boss",
-                  "detail": "undefined (Dungeon Drop)",
-                  "text": "Dungeon Boss (undefined)"
+                  "kind": "quest",
+                  "title": "Whirlwind Weapon",
+                  "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                  "text": "Whirlwind Weapon"
                 },
                 "faction": "both"
               },
@@ -44608,7 +44608,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 20,
               "score": 361.2,
               "rank": 7,
-              "value": "25.63 DPS, 3.20s, Two-Handed Mace - Dungeon Boss (undefined)",
+              "value": "25.63 DPS, 3.20s, Two-Handed Mace - The Test of Righteousness",
               "stats": "+7 Stamina, +6 Intellect, +12 Spirit",
               "lines": [
                 "Binds when picked up",
@@ -44621,10 +44621,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 20"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "The Test of Righteousness",
+                "detail": "The Test of Righteousness (Paladin Quest Reward)",
+                "text": "The Test of Righteousness"
               },
               "faction": "alliance"
             },
@@ -44892,7 +44892,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 20,
               "score": 361.2,
               "rank": 7,
-              "value": "25.63 DPS, 3.20s, Two-Handed Mace - Dungeon Boss (undefined)",
+              "value": "25.63 DPS, 3.20s, Two-Handed Mace - The Test of Righteousness",
               "stats": "+7 Stamina, +6 Intellect, +12 Spirit",
               "lines": [
                 "Binds when picked up",
@@ -44905,10 +44905,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 20"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "The Test of Righteousness",
+                "detail": "The Test of Righteousness (Paladin Quest Reward)",
+                "text": "The Test of Righteousness"
               },
               "faction": "alliance"
             },
@@ -46447,10 +46447,10 @@ if (typeof window !== 'undefined') {
             "Requires Level 30"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "quest",
+            "title": "Whirlwind Weapon",
+            "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+            "text": "Whirlwind Weapon"
           },
           "faction": "both",
           "alts": [
@@ -46467,7 +46467,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 30,
               "score": 491.2,
               "rank": 2,
-              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
@@ -46479,10 +46479,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Whirlwind Weapon",
+                "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                "text": "Whirlwind Weapon"
               },
               "faction": "both"
             },
@@ -48287,7 +48287,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 40,
               "score": 417.6,
               "rank": 12,
-              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Big Game Hunter",
               "stats": "+12 Strength, +14 Spell Power",
               "lines": [
                 "Binds when picked up",
@@ -48299,10 +48299,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Big Game Hunter",
+                "detail": "Big Game Hunter (STV Quest Reward)",
+                "text": "Big Game Hunter"
               },
               "faction": "both"
             },
@@ -48565,7 +48565,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 40,
               "score": 417.6,
               "rank": 12,
-              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Big Game Hunter",
               "stats": "+12 Strength, +14 Spell Power",
               "lines": [
                 "Binds when picked up",
@@ -48577,10 +48577,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Big Game Hunter",
+                "detail": "Big Game Hunter (STV Quest Reward)",
+                "text": "Big Game Hunter"
               },
               "faction": "both"
             },
@@ -52713,7 +52713,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 20,
               "score": 37.2,
               "rank": 3,
-              "value": "25.63 DPS, 3.20s, Two-Handed Mace - Dungeon Boss (undefined)",
+              "value": "25.63 DPS, 3.20s, Two-Handed Mace - The Test of Righteousness",
               "stats": "+7 Stamina, +6 Intellect, +12 Spirit",
               "lines": [
                 "Binds when picked up",
@@ -52726,10 +52726,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 20"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "The Test of Righteousness",
+                "detail": "The Test of Righteousness (Paladin Quest Reward)",
+                "text": "The Test of Righteousness"
               },
               "faction": "alliance"
             },
@@ -54508,7 +54508,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 30,
               "score": 9,
               "rank": 11,
-              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
@@ -54520,10 +54520,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Whirlwind Weapon",
+                "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                "text": "Whirlwind Weapon"
               },
               "faction": "both"
             }
@@ -54669,7 +54669,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 30,
               "score": 9,
               "rank": 11,
-              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "35.52 DPS, 2.90s, Two-Handed Sword - Whirlwind Weapon",
               "stats": "+16 Strength, +15 Stamina",
               "lines": [
                 "Binds when picked up",
@@ -54681,10 +54681,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Whirlwind Weapon",
+                "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+                "text": "Whirlwind Weapon"
               },
               "faction": "both"
             }
@@ -55310,7 +55310,7 @@ if (typeof window !== 'undefined') {
               "effectiveLevel": 40,
               "score": 43.4,
               "rank": 4,
-              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Dungeon Boss (undefined)",
+              "value": "32.50 DPS, 2.40s, Two-Handed Sword - Big Game Hunter",
               "stats": "+12 Strength, +14 Spell Power",
               "lines": [
                 "Binds when picked up",
@@ -55322,10 +55322,10 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28"
               ],
               "source": {
-                "kind": "dungeon_drop",
-                "title": "Dungeon Boss",
-                "detail": "undefined (Dungeon Drop)",
-                "text": "Dungeon Boss (undefined)"
+                "kind": "quest",
+                "title": "Big Game Hunter",
+                "detail": "Big Game Hunter (STV Quest Reward)",
+                "text": "Big Game Hunter"
               },
               "faction": "both"
             },
@@ -57992,7 +57992,7 @@ if (typeof window !== 'undefined') {
                 "source": {
                   "kind": "world_drop",
                   "title": "World Drop",
-                  "detail": "World Drop",
+                  "detail": "World Drop / BoE Epic",
                   "text": "World Drop"
                 },
                 "faction": "both",
@@ -58109,7 +58109,7 @@ if (typeof window !== 'undefined') {
                     "effectiveLevel": 20,
                     "score": 37.2,
                     "rank": 3,
-                    "value": "25.63 DPS, 3.20s, Two-Handed Mace - Dungeon Boss (undefined)",
+                    "value": "25.63 DPS, 3.20s, Two-Handed Mace - The Test of Righteousness",
                     "stats": "+7 Stamina, +6 Intellect, +12 Spirit",
                     "lines": [
                       "Binds when picked up",
@@ -58122,10 +58122,10 @@ if (typeof window !== 'undefined') {
                       "Requires Level 20"
                     ],
                     "source": {
-                      "kind": "dungeon_drop",
-                      "title": "Dungeon Boss",
-                      "detail": "undefined (Dungeon Drop)",
-                      "text": "Dungeon Boss (undefined)"
+                      "kind": "quest",
+                      "title": "The Test of Righteousness",
+                      "detail": "The Test of Righteousness (Paladin Quest Reward)",
+                      "text": "The Test of Righteousness"
                     },
                     "faction": "alliance"
                   },
@@ -104938,10 +104938,10 @@ if (typeof window !== 'undefined') {
             "Requires Level 30"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "quest",
+            "title": "Whirlwind Weapon",
+            "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+            "text": "Whirlwind Weapon"
           },
           "faction": "both",
           "alts": [
@@ -175202,10 +175202,10 @@ if (typeof window !== 'undefined') {
             "Requires Level 30"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "quest",
+            "title": "Whirlwind Weapon",
+            "detail": "Whirlwind Weapon (Warrior Quest Reward)",
+            "text": "Whirlwind Weapon"
           },
           "faction": "both",
           "alts": [
@@ -200989,10 +200989,10 @@ if (typeof window !== 'undefined') {
             "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you. (Proc chance: 1%)"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "world_drop",
+            "title": "World Drop",
+            "detail": "World Drop / BoE Epic",
+            "text": "World Drop"
           },
           "faction": "both",
           "alts": [
@@ -208054,10 +208054,10 @@ if (typeof window !== 'undefined') {
             "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you. (Proc chance: 1%)"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "world_drop",
+            "title": "World Drop",
+            "detail": "World Drop / BoE Epic",
+            "text": "World Drop"
           },
           "faction": "both",
           "alts": [
@@ -220522,10 +220522,10 @@ if (typeof window !== 'undefined') {
             "Equip: When struck in combat has a 1% chance of dealing 75 to 125 Fire damage to all targets around you. (Proc chance: 1%)"
           ],
           "source": {
-            "kind": "dungeon_drop",
-            "title": "Dungeon Boss",
-            "detail": "undefined (Dungeon Drop)",
-            "text": "Dungeon Boss (undefined)"
+            "kind": "world_drop",
+            "title": "World Drop",
+            "detail": "World Drop / BoE Epic",
+            "text": "World Drop"
           },
           "faction": "both",
           "alts": [
