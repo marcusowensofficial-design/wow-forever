@@ -293,6 +293,42 @@ function initNavigation() {
       isRestoringHistoryState = false;
     }
   });
+
+  // Unified Escape key dismissal for all active modal dialogs
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const candidateModals = [
+        document.getElementById('universal-search-modal'),
+        document.getElementById('hunter-pets-master-modal'),
+        document.getElementById('guide-detail-modal'),
+        document.getElementById('bis-talent-modal'),
+        document.getElementById('boss-loot-modal'),
+        document.getElementById('news-modal-backdrop'),
+        document.getElementById('prof-reagent-lookup-modal'),
+        document.getElementById('professions-modal-backdrop')
+      ];
+
+      for (const modal of candidateModals) {
+        if (!modal) continue;
+        const isVisible = !modal.hasAttribute('hidden') &&
+          (modal.classList.contains('is-open') || modal.classList.contains('active') || modal.style.display === 'flex' || modal.style.display === 'block');
+        if (isVisible) {
+          const closeBtn = modal.querySelector('.modal-close-btn, .search-modal-close, #professions-modal-close, #news-modal-close, #boss-loot-close, #bis-talent-modal-close, #guide-modal-close, #hunter-pets-modal-close');
+          if (closeBtn) {
+            closeBtn.click();
+            e.preventDefault();
+            break;
+          } else {
+            modal.setAttribute('hidden', '');
+            modal.classList.remove('is-open', 'active');
+            modal.style.display = 'none';
+            e.preventDefault();
+            break;
+          }
+        }
+      }
+    }
+  });
 }
 
 /* ==========================================================================

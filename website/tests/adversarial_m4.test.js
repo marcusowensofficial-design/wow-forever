@@ -47,6 +47,22 @@ function assertDoesNotThrow(fn, desc) {
   }
 }
 
+function sleepMs(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+}
+
+function safeWriteFileSync(filePath, content, retries = 5) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return;
+    } catch (err) {
+      if (i === retries - 1) throw err;
+      sleepMs(100);
+    }
+  }
+}
+
 // ============================================================================
 // SUITE 1: CHECK 51 (BETA BUILD 1.60.1.70425 & STALE BUILDS REJECTION)
 // ============================================================================
@@ -489,7 +505,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
     const originalContent = fs.readFileSync(toolsDataPath, 'utf8');
     const corruptedContent = originalContent + '\n// Tamper test: Sword Specialization\n';
     try {
-      fs.writeFileSync(toolsDataPath, corruptedContent, 'utf8');
+      safeWriteFileSync(toolsDataPath, corruptedContent);
+      sleepMs(50);
       let failed = false;
       let errorOutput = '';
       try {
@@ -503,7 +520,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
       expect(errorOutput).toContain('Failures: 1');
     } finally {
       // Guaranteed restoration of original file
-      fs.writeFileSync(toolsDataPath, originalContent, 'utf8');
+      safeWriteFileSync(toolsDataPath, originalContent);
+      sleepMs(50);
     }
   });
 
@@ -512,7 +530,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
     const originalContent = fs.readFileSync(indexHtmlPath, 'utf8');
     const corruptedContent = originalContent + '\n<!-- Stale build 71890 tamper test -->\n';
     try {
-      fs.writeFileSync(indexHtmlPath, corruptedContent, 'utf8');
+      safeWriteFileSync(indexHtmlPath, corruptedContent);
+      sleepMs(50);
       let failed = false;
       let errorOutput = '';
       try {
@@ -526,7 +545,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
       expect(errorOutput).toContain('Failures: 1');
     } finally {
       // Guaranteed restoration of original file
-      fs.writeFileSync(indexHtmlPath, originalContent, 'utf8');
+      safeWriteFileSync(indexHtmlPath, originalContent);
+      sleepMs(50);
     }
   });
 
@@ -543,7 +563,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
       '"buildUrl": "/talents/shaman?b=-1500320311051122-&l=30&tl=5"'
     );
     try {
-      fs.writeFileSync(shamanDeepDivePath, corruptedContent, 'utf8');
+      safeWriteFileSync(shamanDeepDivePath, corruptedContent);
+      sleepMs(50);
       let failed = false;
       let errorOutput = '';
       try {
@@ -558,7 +579,8 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
       expect(errorOutput).toContain('Failures: 1');
     } finally {
       // Guaranteed restoration of original file
-      fs.writeFileSync(shamanDeepDivePath, originalContent, 'utf8');
+      safeWriteFileSync(shamanDeepDivePath, originalContent);
+      sleepMs(50);
     }
   });
 });

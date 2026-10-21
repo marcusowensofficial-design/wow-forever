@@ -1,0 +1,26 @@
+{
+  "name": "World of Warcraft: Forever — Classic+ Beta Portal",
+  "short_name": "WoW Forever",
+  "description": "Beta tracking hub, codex, Level 30 BiS equipment planner, talent tree calculator, news wire, and in-game companion addon suite.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "icons": [
+    {
+      "src": "images/branding/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/branding/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/branding/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

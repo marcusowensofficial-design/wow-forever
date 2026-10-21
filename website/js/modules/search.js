@@ -536,9 +536,10 @@ function setupSearchModalEvents() {
     if (e.target === modal) closeModal();
   });
 
-  // Hotkey listener '/' and 'Escape'
+  // Hotkey listener '/' and 'Escape', plus Ctrl+K / Cmd+K
   document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+    if ((e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) ||
+        ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey))) {
       e.preventDefault();
       openModal();
     } else if (e.key === 'Escape' && modal.classList.contains('is-open')) {

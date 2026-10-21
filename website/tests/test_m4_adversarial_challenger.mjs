@@ -131,7 +131,7 @@ function runCheck64(progressionData, cache) {
 
   const violations = [];
 
-  for (const { kind, cls, item: it } of allItems) {
+  for (const { kind, cls, trackId, item: it } of allItems) {
     const id = it.itemId || it.id;
     const name = (it.name || '').toLowerCase();
     const val = (it.value || '').toLowerCase();
@@ -214,9 +214,19 @@ function runCheck64(progressionData, cache) {
     }
 
     if (cls === 'hunter' && kind === 'weapons') {
-      const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
-      if (!isRanged) {
-        violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
+      if (trackId === 'twohand' || trackId === 'melee') {
+        const is2hOrMelee = wt.includes('staff') || wt.includes('polearm') || wt.includes('sword') || wt.includes('axe') || wt.includes('dagger') || wt.includes('fist');
+        if (!is2hOrMelee) {
+          violations.push(`Hunter two-handed track cannot contain non-melee weapon "${it.name}"`);
+        }
+        if (knownMaceNames.has(name) || wt.includes('mace')) {
+          violations.push(`Hunter cannot equip mace "${it.name}"`);
+        }
+      } else {
+        const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
+        if (!isRanged) {
+          violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
+        }
       }
     }
 
@@ -402,13 +412,21 @@ function getAllProgressionItems(progressionData) {
   const items = [];
   for (const sec of ['weapons', 'wands', 'offhands']) {
     for (const [cls, cData] of Object.entries(progressionData[sec] || {})) {
-      const sets = [cData.levels, cData.healingLevels];
-      if (cData.tracksData) sets.push(...Object.values(cData.tracksData));
-      for (const s of sets.filter(Boolean)) {
+      const sets = [
+        { trackId: 'levels', set: cData.levels },
+        { trackId: 'healingLevels', set: cData.healingLevels }
+      ];
+      if (cData.tracksData) {
+        for (const [tid, s] of Object.entries(cData.tracksData)) {
+          sets.push({ trackId: tid, set: s });
+        }
+      }
+      for (const { trackId, set: s } of sets) {
+        if (!s) continue;
         for (const step of s) {
-          items.push({ kind: sec, cls, bracket: step.levelBracket, item: step, isHero: true });
+          items.push({ kind: sec, cls, trackId, bracket: step.levelBracket, item: step, isHero: true });
           for (const alt of (step.alts || [])) {
-            items.push({ kind: sec, cls, bracket: step.levelBracket, item: alt, isHero: false });
+            items.push({ kind: sec, cls, trackId, bracket: step.levelBracket, item: alt, isHero: false });
           }
         }
       }

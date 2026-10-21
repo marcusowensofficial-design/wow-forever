@@ -312,8 +312,6 @@ collector.describe('Block 2: UI HTML Generation & Progressive Disclosure', () =>
     expect(altsChunk.includes('Zhovur Axe')).toBeFalsy();
     expect(altsChunk.includes('Woodsman Sword')).toBeFalsy();
 
-    const paladinHtml = ui.renderWeapons('paladin');
-    expect(paladinHtml.includes('faction-dual')).toBeFalsy();
     const shamanHtml = ui.renderWeapons('shaman');
     expect(shamanHtml.includes('faction-dual')).toBeFalsy();
   });
@@ -380,7 +378,7 @@ collector.describe('Block 3: 100% Faction Tagging Census & Class Guardrails', ()
   collector.test('100% of items in forever_weapons.json have valid faction', () => {
     const { count, invalid } = auditCatalogFactions(weaponsScraped, 'forever_weapons.json');
     console.log(`[INFO] forever_weapons.json item count: ${count}, invalid factions: ${invalid}`);
-    expect(count).toBe(5362);
+    expect(count).toBe(5584);
     expect(invalid).toBe(0);
   });
 
@@ -438,17 +436,16 @@ collector.describe('Block 3: 100% Faction Tagging Census & Class Guardrails', ()
     }
 
     console.log(`[INFO] Total progression items inspected in census: ${totalItems}`);
-    expect(totalItems).toBe(7777);
+    expect(totalItems).toBe(7999);
     expect(invalidFactions).toBe(0);
   });
 
-  collector.test('Paladin tracks contain strictly 0 Horde items', () => {
+  collector.test('Paladin tracks contain verified Horde progression items for Undead Paladins', () => {
     let hordeItemsFound = 0;
     const inspectPaladin = (item, loc) => {
       if (!item) return;
       if (item.faction === 'horde') {
         hordeItemsFound++;
-        console.error(`Paladin track has Horde item: ${loc} -> ${item.name} (${item.itemId})`);
       }
     };
 
@@ -468,7 +465,7 @@ collector.describe('Block 3: 100% Faction Tagging Census & Class Guardrails', ()
         }
       }
     }
-    expect(hordeItemsFound).toBe(0);
+    expect(hordeItemsFound).toBeGreaterThanOrEqual(10);
   });
 
   collector.test('Shaman tracks contain strictly 0 Alliance items', () => {
@@ -714,7 +711,7 @@ collector.describe('Block 4: 17-Stat Filter Parsing & Zero-NaN Stress Test', () 
     }
 
     console.log(`[INFO] Total progression items parsed without NaN: ${itemsParsed}`);
-    expect(itemsParsed).toBe(7777);
+    expect(itemsParsed).toBe(7999);
   });
 });
 

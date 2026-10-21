@@ -1297,9 +1297,11 @@ export function runMasterProgressionEngine() {
     },
     paladin: {
       dpsRole: 'melee_dps',
+      tankRole: 'tank_1h',
       healerRole: 'healer',
       tracks: [
         { id: 'dps', name: '⚔️ DPS Track (Retribution Path (Two-Handed Swords & Maces))' },
+        { id: 'tank', name: '🛡️ Protection & Tanking (1-Handed Swords & Maces)' },
         { id: 'healer', name: '💚 Healer Track (Restoration & Holy +Healing Focus)' }
       ]
     },
@@ -1506,6 +1508,11 @@ export function runMasterProgressionEngine() {
     } else if (cfg.healerRole) {
       updatedClass.levels = processTrackLevels(existingClassData.levels, classId, 'dps', cfg.dpsRole, 14);
       updatedClass.healingLevels = processTrackLevels(existingClassData.healingLevels, classId, 'healer', cfg.healerRole, 10);
+      if (existingClassData.tracksData?.tank && cfg.tankRole) {
+        updatedClass.tracksData = {
+          tank: processTrackLevels(existingClassData.tracksData.tank, classId, 'tank', cfg.tankRole, 12)
+        };
+      }
     } else {
       updatedClass.levels = processTrackLevels(existingClassData.levels, classId, 'primary', cfg.primaryRole, classId === 'hunter' ? 18 : 14);
     }

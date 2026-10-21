@@ -49,4 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initUniversalSearch === 'function') initUniversalSearch();
   if (typeof initGuidesHub === 'function') initGuidesHub();
   if (typeof initMurlocCounter === 'function') initMurlocCounter();
+  if (typeof initAddonHub === 'function') initAddonHub();
 });

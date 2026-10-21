@@ -286,23 +286,34 @@ collector.describe('3. Census for Illegal Class Assignments across All Items', (
     expect(wandsData.rogue).toBe(undefined);
   });
 
-  collector.test('0 Horde items in Paladin progression (weapons and offhands)', () => {
+  collector.test('Paladin progression contains genuine Horde items for Undead Paladins', () => {
     const paladinWeapons = extractAllClassItems(weaponsData.paladin);
     const hordeWeapons = paladinWeapons.filter(({ item }) => item.faction === 'horde' || item.side === 2);
-    expect(hordeWeapons).toEqual([]);
-
-    const paladinOffhands = extractAllClassItems(offhandsData.paladin);
-    const hordeOffhands = paladinOffhands.filter(({ item }) => item.faction === 'horde' || item.side === 2);
-    expect(hordeOffhands).toEqual([]);
+    expect(hordeWeapons.length).toBeGreaterThanOrEqual(1);
 
     // Check bundle
     const bundlePaladinWeapons = extractAllClassItems(bundle.weapons.paladin);
     const bundleHordeWeapons = bundlePaladinWeapons.filter(({ item }) => item.faction === 'horde' || item.side === 2);
-    expect(bundleHordeWeapons).toEqual([]);
+    expect(bundleHordeWeapons.length).toBeGreaterThanOrEqual(1);
+  });
 
-    const bundlePaladinOffhands = extractAllClassItems(bundle.offhands.paladin);
-    const bundleHordeOffhands = bundlePaladinOffhands.filter(({ item }) => item.faction === 'horde' || item.side === 2);
-    expect(bundleHordeOffhands).toEqual([]);
+  collector.test('0 Alliance items in Shaman progression (weapons and offhands)', () => {
+    const shamanWeapons = extractAllClassItems(weaponsData.shaman);
+    const allianceWeapons = shamanWeapons.filter(({ item }) => item.faction === 'alliance' || item.side === 1);
+    expect(allianceWeapons).toEqual([]);
+
+    const shamanOffhands = extractAllClassItems(offhandsData.shaman);
+    const allianceOffhands = shamanOffhands.filter(({ item }) => item.faction === 'alliance' || item.side === 1);
+    expect(allianceOffhands).toEqual([]);
+
+    // Check bundle
+    const bundleShamanWeapons = extractAllClassItems(bundle.weapons.shaman);
+    const bundleAllianceWeapons = bundleShamanWeapons.filter(({ item }) => item.faction === 'alliance' || item.side === 1);
+    expect(bundleAllianceWeapons).toEqual([]);
+
+    const bundleShamanOffhands = extractAllClassItems(bundle.offhands.shaman);
+    const bundleAllianceOffhands = bundleShamanOffhands.filter(({ item }) => item.faction === 'alliance' || item.side === 1);
+    expect(bundleAllianceOffhands).toEqual([]);
   });
 
   collector.test('0 class-restricted items assigned to unauthorized classes across all progression tracks', () => {

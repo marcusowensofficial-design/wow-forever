@@ -1018,7 +1018,7 @@ export function runTier1Tests(collector, oracle, env) {
 
   // Feature 9: Class Weapon Proficiency Constraints
   collector.describe('Tier 1.9: Class Weapon Proficiency Constraints', () => {
-    collector.test('1.9.1 Paladins are strictly forbidden from equipping 1H or 2H axes, and have 0 Horde items in progression', () => {
+    collector.test('1.9.1 Paladins are strictly forbidden from equipping 1H or 2H axes, and have genuine Horde items for Undead Paladins', () => {
       expect(oracle.isClassProficient('paladin', '1H Axe')).toBe(false);
       expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(false);
       expect(oracle.isClassProficient('paladin', 'Two-handed axe')).toBe(false);
@@ -1035,7 +1035,7 @@ export function runTier1Tests(collector, oracle, env) {
       const axes = allPaladinItems.filter(it => (it.weaponType || '').toLowerCase().includes('axe'));
       expect(axes.length).toBe(0);
       const horde = allPaladinItems.filter(it => it.faction === 'horde' || it.side === 2);
-      expect(horde.length).toBe(0);
+      expect(horde.length).toBeGreaterThanOrEqual(1);
       const fistThrown = allPaladinItems.filter(it => (it.weaponType || '').toLowerCase().includes('fist') || (it.weaponType || '').toLowerCase().includes('thrown'));
       expect(fistThrown.length).toBe(0);
     });
@@ -2203,7 +2203,7 @@ export function runTier2Tests(collector, oracle, env) {
       expect(elapsed).toBeLessThanOrEqual(10);
     });
 
-    collector.test('2.18.5 Legal weapon combinations return boolean true (0 rogue wands and 0 paladin horde items in dataset)', () => {
+    collector.test('2.18.5 Legal weapon combinations return boolean true (0 rogue wands and 0 shaman alliance items in dataset)', () => {
       expect(oracle.isClassProficient('warrior', '2H Sword')).toBe(true);
       expect(oracle.isClassProficient('rogue', 'Dagger')).toBe(true);
       expect(oracle.isClassProficient('priest', 'Wand')).toBe(true);
@@ -2216,12 +2216,12 @@ export function runTier2Tests(collector, oracle, env) {
         }
       }
 
-      const paladinData = env.progressionData.weapons?.paladin;
-      for (const s of [paladinData?.levels, paladinData?.healingLevels].filter(Boolean)) {
+      const shamanData = env.progressionData.weapons?.shaman;
+      for (const s of [shamanData?.levels, shamanData?.healingLevels].filter(Boolean)) {
         for (const lvl of s) {
           for (const it of [lvl, ...(lvl.alts || [])]) {
-            expect(it.faction).not.toBe('horde');
-            expect(it.side).not.toBe(2);
+            expect(it.faction).not.toBe('alliance');
+            expect(it.side).not.toBe(1);
           }
         }
       }

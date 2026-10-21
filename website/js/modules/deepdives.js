@@ -573,7 +573,7 @@ function initClassDeepDives() {
     });
 
     if (window.WOW_DEEPDIVES_PROGRESSION && window.WOW_DEEPDIVES_PROGRESSION.setupEventListeners) {
-      window.WOW_DEEPDIVES_PROGRESSION.setupEventListeners();
+      window.WOW_DEEPDIVES_PROGRESSION.setupEventListeners(contentContainer, () => renderDeepDiveContent());
     }
   }
 
