@@ -344,14 +344,14 @@ export function runTier1Tests(collector, data) {
       expect(ss.descriptions[0]).toMatch(/restore 4% of (your )?max(imum)? Mana/i);
     });
 
-    collector.test('1.6.3 Paladin Champion of the Light scales spell damage with up to 30% of Intellect', () => {
+    collector.test('1.6.3 Paladin Champion of the Light scales spell damage with up to 60% of Intellect', () => {
       const paladin = talentsData.paladin;
       const cotl = paladin ? paladin.talents.find(t => t.name === 'Champion of the Light') : null;
       expect(cotl).toBeDefined();
       expect(cotl.row).toBe(6);
       expect(cotl.col).toBe(2);
       expect(cotl.maxRank).toBe(3);
-      expect(cotl.descriptions[2]).toMatch(/30%/);
+      expect(cotl.descriptions[2]).toMatch(/60%/);
     });
 
     collector.test('1.6.4 Hunter Rapid Recuperation provides in-casting mana regen on Serpent Sting / Rapid Killing', () => {

@@ -125689,7 +125689,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/mage?b=--05450030010203012&l=30&tl=5"
+          "buildUrl": "/talents/mage?b=--0535003301003012&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -130826,7 +130826,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/mage?b=--05053030010213012&l=30&tl=5"
+          "buildUrl": "/talents/mage?b=--0505303001213012&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {

@@ -85,9 +85,9 @@ export function runTier2Tests(collector, data) {
       const points = {
         349: 5, // Improved Frostbolt (5/5) -> Row 1 has 5
         351: 5, // Ice Shards (5/5) -> Row 2 has 5
-        355: 3, // Piercing Ice (3/3)
+        356: 3, // Frost Channeling (3/3)
         357: 1, // Ice Lance (1/1)
-        356: 1, // Frost Channeling (1/3) -> Row 3 has 5
+        358: 1, // Improved Blizzard (1/3) -> Row 3 has 5
         360: 1, // Ice Block (1/1)
         361: 3, // Shatter (3/3)
         359: 1, // Arctic Reach (1/2) -> Row 4 has 5

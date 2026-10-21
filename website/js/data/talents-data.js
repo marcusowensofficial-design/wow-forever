@@ -1835,9 +1835,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1311084,
         "req": null,
         "descriptions": [
-          "Increases your spell damage by up to 10% of your Intellect.",
           "Increases your spell damage by up to 20% of your Intellect.",
-          "Increases your spell damage by up to 30% of your Intellect."
+          "Increases your spell damage by up to 40% of your Intellect.",
+          "Increases your spell damage by up to 60% of your Intellect."
         ]
       },
       {
@@ -5909,8 +5909,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 44404,
         "req": null,
         "descriptions": [
-          "Gives your Arcane Blast spell a 20% chance, your Arcane Missiles hits a 20% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
-          "Gives your Arcane Blast spell a 40% chance, your Arcane Missiles hits a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+          "Gives your Arcane Blast spell a 20% chance, your Arcane Missiles hits a 20% chance, and your Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+          "Gives your Arcane Blast spell a 40% chance, your Arcane Missiles hits a 40% chance, and your Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
         ]
       },
       {
@@ -6313,8 +6313,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11189,
         "req": null,
         "descriptions": [
-          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 15%. In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active.",
-          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 30%. In addition, gives your Frost Ward a 20% chance to reflect Frost spells and effects while active."
+          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 15%, and increases the damage absorbed by your Ice Barrier and Frost Ward by 10%. In addition, gives your Frost Ward a 10% chance to negate Frost spells and effects while active.",
+          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 30%, and increases the damage absorbed by your Ice Barrier and Frost Ward by 20%. In addition, gives your Frost Ward a 20% chance to negate Frost spells and effects while active."
         ]
       },
       {
@@ -6346,15 +6346,13 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_ice_magicdamage",
         "row": 1,
         "col": 3,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 29438,
         "req": null,
         "descriptions": [
-          "Improves your chance to hit with Frost and Fire spells by 1%.",
           "Improves your chance to hit with Frost and Fire spells by 2%.",
-          "Improves your chance to hit with Frost and Fire spells by 3%.",
           "Improves your chance to hit with Frost and Fire spells by 4%.",
-          "Improves your chance to hit with Frost and Fire spells by 5%."
+          "Improves your chance to hit with Frost and Fire spells by 6%."
         ]
       },
       {
@@ -6431,24 +6429,6 @@ window.WOW_TALENTS_DATA = {
         ]
       },
       {
-        "id": 355,
-        "tree": 2,
-        "treeId": 9,
-        "name": "Piercing Ice",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt.jpg",
-        "iconName": "spell_frost_frostbolt",
-        "row": 3,
-        "col": 1,
-        "maxRank": 3,
-        "spellId": 11151,
-        "req": null,
-        "descriptions": [
-          "Increases the damage done by your Frost spells by 2%.",
-          "Increases the damage done by your Frost spells by 4%.",
-          "Increases the damage done by your Frost spells by 6%."
-        ]
-      },
-      {
         "id": 356,
         "tree": 2,
         "treeId": 9,
@@ -6456,7 +6436,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_stun.jpg",
         "iconName": "spell_frost_stun",
         "row": 3,
-        "col": 2,
+        "col": 1,
         "maxRank": 3,
         "spellId": 11160,
         "req": null,
@@ -6490,7 +6470,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_icestorm.jpg",
         "iconName": "spell_frost_icestorm",
         "row": 3,
-        "col": 4,
+        "col": 2,
         "maxRank": 3,
         "spellId": 11185,
         "req": null,
@@ -6635,7 +6615,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11426,
         "req": 363,
         "descriptions": [
-          "Instantly shields you, absorbing 448 damage. Lasts 1 min. While the shield holds, your spellcasts will not be interrupted or delayed from taking damage.\n"
+          "Instantly shields you, absorbing 493 damage and increasing your Frost damage by 3% for 1 min (increased by an additional 3% while the shield holds). While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
         ]
       }
     ]

@@ -330,11 +330,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Increases the range of Frostbolt and Blizzard, and expands the radius of Frost Nova and Cone of Cold, giving Frost unmatched battlefield kiting control."
       },
       {
-        "name": "Frostbite & Piercing Ice",
+        "name": "Frostbite & Frost Channeling",
         "type": "Control & Throughput",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Gives Chill effects a 15% chance to freeze the target in place for 5 seconds (Frostbite), increases Frost damage by 6%, reduces Frost spell mana costs by 15%, and lowers Frost threat by 30%."
+        "desc": "Gives Chill effects a 15% chance to freeze the target in place for 5 seconds (Frostbite), reduces Frost spell mana costs by 15%, and lowers Frost threat by 30%."
       }
     ]
   },
@@ -646,20 +646,21 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Frost (Ice Barrier & Cold Snap Shatter)",
           "icon": "❄️",
           "role": "Ranged Frost DPS & Dungeon Shatter Dominance",
-          "buildUrl": "/talents/mage?b=--05450030010203012&l=30&tl=5",
+          "buildUrl": "/talents/mage?b=--0535003301003012&l=30&tl=5",
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/--50500101",
-          "tagline": "Unshakable survivability with Ice Barrier (438 absorb & zero pushback), Cold Snap cooldown reset, 100% Ice Shards crit damage, and unresisted Winter's Chill stacking.",
-          "statPriority": "Frost Spell Power > Spell Hit (to 4%) > Intellect > Spell Crit > Spirit",
+          "tagline": "Unshakable survivability with Ice Barrier (493 absorb & zero pushback), Cold Snap cooldown reset, 100% Ice Shards crit damage, and unresisted Winter's Chill stacking.",
+          "statPriority": "Frost Spell Power > Spell Hit (to 6%) > Intellect > Spell Crit > Spirit",
           "bestWeapon": "Rod of the Sleepwalker (BFD) / Staff of the Blessed Seer / Necromantic Wand",
           "talents": [
             { "name": "Improved Frostbolt", "points": "5/5", "tree": "Frost (Tier 1)", "desc": "Reduces the casting time of your Frostbolt spell by 0.5 sec." },
+            { "name": "Elemental Precision", "points": "3/3", "tree": "Frost (Tier 1)", "desc": "Improves your chance to hit with Frost and Fire spells by 6%." },
             { "name": "Ice Shards", "points": "5/5", "tree": "Frost (Tier 2)", "desc": "Increases the critical strike damage bonus of your Frost spells by 100%." },
             { "name": "Frostbite", "points": "3/3", "tree": "Frost (Tier 2)", "desc": "Gives your Chill effects a 15% chance to freeze the target for 5 sec for instant Shatter procs." },
-            { "name": "Permafrost", "points": "2/2", "tree": "Frost (Tier 2)", "desc": "Increases the duration of your Chill effects by 3 sec and slows target speed by an extra 10%." },
-            { "name": "Piercing Ice", "points": "3/3", "tree": "Frost (Tier 3)", "desc": "Increases the damage dealt by your Frost spells by 6%." },
-            { "name": "Cold Snap", "points": "1/1", "tree": "Frost (Tier 3 Keystone)", "desc": "When activated, this spell finishes the cooldown on all Frost spells you recently cast on an 8-minute cooldown." },
-            { "name": "Frost Channeling", "points": "1/3", "tree": "Frost (Tier 4)", "desc": "Reduces the mana cost of your Frost spells by 5% and reduces threat by 10%." },
-            { "name": "Ice Barrier", "points": "1/1", "tree": "Frost (Tier 5 Keystone)", "desc": "Instantly shields you with a barrier that absorbs 438 damage and prevents spell interruption. Lasts 1 min on a 30s cooldown." }
+            { "name": "Frost Channeling", "points": "3/3", "tree": "Frost (Tier 3)", "desc": "Reduces the mana cost of your Frost spells by 15% and reduces threat by 30%." },
+            { "name": "Ice Lance", "points": "1/1", "tree": "Frost (Tier 3)", "desc": "Deals Frost damage to an enemy target, dealing 200% increased damage to Frozen targets." },
+            { "name": "Shatter", "points": "3/3", "tree": "Frost (Tier 4)", "desc": "Increases the critical strike chance of all your spells against Frozen targets by 50%." },
+            { "name": "Cold Snap", "points": "1/1", "tree": "Frost (Tier 5 Keystone)", "desc": "When activated, this spell finishes the cooldown on all Frost spells you recently cast on an 8-minute cooldown." },
+            { "name": "Fingers of Frost", "points": "2/2", "tree": "Frost (Tier 5)", "desc": "Gives your Chill effects a 15% chance to grant the Fingers of Frost effect, treating your next 2 spells as if the target were Frozen." }
           ],
           "legacyNotes": "Extra Legacy discovery points unlock 5/5 Shatter (+50% critical strike chance against frozen targets) for devastating double-Frostbolt combos.",
           "rotation": [

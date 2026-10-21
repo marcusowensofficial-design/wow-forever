@@ -51,9 +51,9 @@ const WOW_FOREVER_DATA = {
     },
     "nameReservation": {
       "title": "Early Name Reservation & Character Creation",
-      "dates": "October 27, 2026 at 10:00 AM PDT",
-      "duration": "Pre-Launch Window",
-      "highlights": "Reserve up to 2 character names per realm prior to the November 4 launch."
+      "dates": "October 27 – November 3, 2026 (Opens 10:00 AM PDT)",
+      "duration": "7-Day Pre-Launch Window",
+      "highlights": "Reserve up to 3 character names per account across rulesets prior to the November 4 launch."
     },
     "wipeAndLaunch": {
       "title": "Server Reset & Launch Preparation",
@@ -170,6 +170,52 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-56",
+      "title": "Three Launch Raids Revealed for December 9: The Barrow Deeps, Hyjal Summit & Onyxia's Lair Attunement Details",
+      "source": "Warcraft Tavern & Wowhead Raid Desks",
+      "sourceType": "tavern",
+      "author": "Raid Theorycraft & Blizzard Encounters Desk",
+      "date": "October 20, 2026 (21:19 UTC)",
+      "tag": "Raids & Endgame Milestones",
+      "summary": "Blizzard officially reveals the trio of launch-window endgame raids unlocking on December 9: The Barrow Deeps (10-player, 8 bosses), Hyjal Summit (20-player, 13 bosses), and Onyxia's Lair (40-player) with full Drakefire Amulet attunements.",
+      "content": `Blizzard and community data desks have officially unveiled the three launch-window raid instances unlocking on Wednesday, December 9, 2026 across all World of Warcraft: Forever live realms:
+• 1. The Barrow Deeps (10-Player / 8 Bosses):
+  - Situated deep within the subterranean roots of Mount Hyjal, with primary instance portals accessible via Blackmaw Hold and Winterspring barrows.
+  - Lore anchors around the ancient subterranean prison of Illidan Stormrage, featuring 8 encounter chambers, night elf wardens, and twisted shadowsatyr lieutenants.
+• 2. Hyjal Summit (20-Player / 13 Bosses):
+  - Ascends the majestic peaks of Mount Hyjal directly surrounding Nordrassil, the World Tree.
+  - Features 13 expansive raid bosses including demonic commanders of the Archimonde advance guard and primal elemental guardians.
+• 3. Onyxia's Lair (40-Player / Dustwallow Marsh):
+  - Re-tuned with classic high-tier mechanics, strict fire resistance thresholds, and revised Deep Breath threat dynamics.
+  - Requires completing the classic dual-faction Drakefire Amulet attunement questlines across Alliance and Horde.
+• Winter 2026 & Hardcore Launch:
+  - Following the December 9 raid unlock, the official WoW: Forever Hardcore ruleset is scheduled to deploy in late Winter 2026.`,
+      "url": "https://www.warcrafttavern.com/forever/news/three-new-raids-coming-to-world-of-warcraft-forever/"
+    },
+    {
+      "id": "news-55",
+      "title": "October 20 Hotfix Telemetry: Mage Frost Tree Reshuffled (Piercing Ice Removed, Elemental Precision Buffed to 2%/Rank), Paladin Champion of the Light Reverted",
+      "source": "ForeverChanges & Community Theorycraft Desks",
+      "sourceType": "blizzard",
+      "author": "Systems Balance & Datamining Desk",
+      "date": "October 20, 2026",
+      "tag": "Class Balancing & Hotfixes",
+      "summary": "Undocumented hotfixes deployed on October 18-20 adjust class kits: Mage Frost tree removes Piercing Ice with 10% absorb boost on Ice Barrier, Elemental Precision compressed into 3 ranks of 2% hit, and Paladin Champion of the Light restored to 20/40/60% Intellect scaling.",
+      "content": `Community telemetry and forensic client diffs have cataloged live server hotfixes deployed between October 16 and October 20:
+• Mage Frost Specialization Reshuffle:
+  - Piercing Ice Removed: Flat +2/4/6% Frost damage removed from Frost Tier 3.
+  - Elemental Precision Buffed: Compressed from 5 ranks (1% each) to 3 ranks granting 2% spell hit each (up to 6% hit for 3 talent points).
+  - Ice Barrier & Frost Ward Enhanced: Rank 1 Ice Barrier absorb increased to 493 (was 448) and grants +3% Frost damage for 1 min (+3% more while shield holds). Frost Ward absorbs 178 + 10% spell power.
+  - Frost Warding Redesigned: Increases Ice Barrier & Frost Ward absorb by 10/20%, and Frost Ward negates instead of reflecting incoming frost effects.
+  - Frost Channeling (col 1) and Improved Blizzard (col 2) repositioned on Tier 3.
+  - Missile Barrage: Frost Blast added as a valid trigger alongside Fireball, Frostbolt, and Frostfire Bolt.
+• Paladin Champion of the Light Restored:
+  - Champion of the Light restored to 20/40/60% Intellect-to-spell-damage scaling (reverting the temporary 10/20/30% reduction from Build 70425).
+• Priest Holy Fire Tuning:
+  - Holy Fire Rank 1 base damage tuned to 53–65 (was 57–70) for smoother early-game bracket balance.`,
+      "url": "https://foreverchanges.pro/buffs-and-nerfs"
+    },
     {
       "id": "news-54",
       "title": "Closed Beta Extended Through Friday, October 23 at 10:00 AM PDT: Blizzard Grants Additional 48 Hours for Testing & Reschedules End-of-Beta Finale",
