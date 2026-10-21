@@ -720,11 +720,6 @@
       return { stepCards: '', displayedCount: 0, currentTrack: 'primary' };
     }
 
-    const currentTrack = activeWeaponTrack[`${classId}_${datasetKey}`] || data.tracks?.[0]?.id || 'primary';
-    const activeLevelList = (currentTrack === 'healer' && data.healingLevels)
-      ? data.healingLevels
-      : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
-
     const isShaman = classId === 'shaman';
     let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
@@ -732,6 +727,15 @@
     let effectiveSlot = cfg.getSlot ? cfg.getSlot() : 'all';
     if (classId === 'rogue' && effectiveSlot === 'two-hand') effectiveSlot = 'all';
     if (!['hunter', 'warrior', 'rogue'].includes(classId) && effectiveSlot === 'ranged') effectiveSlot = 'all';
+
+    let currentTrack = activeWeaponTrack[`${classId}_${datasetKey}`] || data.tracks?.[0]?.id || 'primary';
+    if (classId === 'hunter' && datasetKey === 'weapons') {
+      if (effectiveSlot === 'two-hand' && currentTrack === 'primary') currentTrack = 'twohand';
+      else if (effectiveSlot === 'ranged' && currentTrack === 'twohand') currentTrack = 'primary';
+    }
+    const activeLevelList = (currentTrack === 'healer' && data.healingLevels)
+      ? data.healingLevels
+      : ((data.tracksData && data.tracksData[currentTrack]) || data.levels);
 
     let displayedCount = 0;
     const stepCards = activeLevelList.map((step, idx) => {
@@ -912,7 +916,7 @@
             <h3><span>${cfg.icon}</span> ${escapeHtml(cfg.title)}</h3>
             <p>${escapeHtml(cfg.desc)}</p>
           </div>
-          <div class="progression-header-badge ${currentTrack === 'healer' ? 'healer-header-badge' : ''}">${currentTrack === 'healer' ? '💚 ' : ''}${displayedCount} Progression Steps</div>
+          <div class="progression-header-badge ${currentTrack === 'healer' ? 'healer-header-badge' : currentTrack === 'tank' ? 'tank-header-badge' : ''}">${currentTrack === 'healer' ? '💚 ' : currentTrack === 'tank' ? '🛡️ ' : ''}${displayedCount} Progression Steps</div>
         </div>
 
         <!-- Controls Bar with Faction, Source, Slot Filter & Track Selection -->
@@ -955,10 +959,10 @@
               <button type="button" class="slot-chip ${effectiveSlot === 'all' ? 'active' : ''}" data-slot="all">
                 All Slots
               </button>
-              <button type="button" class="slot-chip ${effectiveSlot === 'one-hand' ? 'active' : ''}" data-slot="one-hand" title="Equippable in Off-Hand (Dual Wield)">
+              <button type="button" class="slot-chip ${effectiveSlot === 'one-hand' ? 'active' : ''}" data-slot="one-hand" title="${['warrior', 'rogue', 'hunter'].includes(classId) ? 'Equippable in Off-Hand (Dual Wield) or Main Hand' : 'One-Handed Weapons (Main Hand + Shield)'}">
                 🗡️ One-Hand
               </button>
-              <button type="button" class="slot-chip ${effectiveSlot === 'main-hand' ? 'active' : ''}" data-slot="main-hand">
+              <button type="button" class="slot-chip ${effectiveSlot === 'main-hand' ? 'active' : ''}" data-slot="main-hand" title="Main Hand Weapons">
                 ⚔️ Main Hand
               </button>
               ${classId !== 'rogue' ? `
@@ -978,7 +982,7 @@
             <div class="progression-track-tabs role-pill-box">
               <span class="track-tab-label">Role:</span>
               ${data.tracks.map(tr => `
-                <button type="button" class="progression-track-btn ${tr.id === 'healer' ? 'track-btn-healer' : 'track-btn-dps'} ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}" data-key="${datasetKey}" data-class="${classId}">
+                <button type="button" class="progression-track-btn ${tr.id === 'healer' ? 'track-btn-healer' : tr.id === 'tank' ? 'track-btn-tank' : 'track-btn-dps'} ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}" data-key="${datasetKey}" data-class="${classId}">
                   ${escapeHtml(tr.name)}
                 </button>
               `).join('')}
@@ -1372,7 +1376,8 @@
           }
           const badgeEl = root.querySelector ? root.querySelector('.progression-header-badge') : null;
           if (badgeEl) {
-            badgeEl.innerHTML = `${currentTrack === 'healer' ? '💚 ' : ''}${displayedCount} Progression Steps`;
+            badgeEl.className = `progression-header-badge ${currentTrack === 'healer' ? 'healer-header-badge' : currentTrack === 'tank' ? 'tank-header-badge' : ''}`;
+            badgeEl.innerHTML = `${currentTrack === 'healer' ? '💚 ' : currentTrack === 'tank' ? '🛡️ ' : ''}${displayedCount} Progression Steps`;
           }
         } else {
           triggerUpdate();

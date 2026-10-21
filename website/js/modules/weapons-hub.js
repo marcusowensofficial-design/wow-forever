@@ -43,6 +43,13 @@
     if (!pData) return 0;
     countItems(pData.weapons?.[classId]?.levels);
     countItems(pData.weapons?.[classId]?.healingLevels);
+    if (pData.weapons?.[classId]?.tracksData) {
+      Object.entries(pData.weapons[classId].tracksData).forEach(([trackId, arr]) => {
+        if (trackId !== 'primary' && trackId !== 'dps') {
+          countItems(arr);
+        }
+      });
+    }
     countItems(pData.offhands?.[classId]?.levels);
     countItems(pData.offhands?.[classId]?.healingLevels);
     countItems(pData.wands?.[classId]?.levels);

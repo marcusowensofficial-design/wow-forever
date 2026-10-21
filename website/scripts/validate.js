@@ -899,13 +899,21 @@ function getAllProgressionItems(progressionData) {
   const items = [];
   for (const sec of ['weapons', 'wands', 'offhands']) {
     for (const [cls, cData] of Object.entries(progressionData[sec] || {})) {
-      const sets = [cData.levels, cData.healingLevels];
-      if (cData.tracksData) sets.push(...Object.values(cData.tracksData));
-      for (const s of sets.filter(Boolean)) {
+      const sets = [
+        { trackId: 'levels', set: cData.levels },
+        { trackId: 'healingLevels', set: cData.healingLevels }
+      ];
+      if (cData.tracksData) {
+        for (const [tid, s] of Object.entries(cData.tracksData)) {
+          sets.push({ trackId: tid, set: s });
+        }
+      }
+      for (const { trackId, set: s } of sets) {
+        if (!s) continue;
         for (const step of s) {
-          items.push({ kind: sec, cls, bracket: step.levelBracket, item: step, isHero: true });
+          items.push({ kind: sec, cls, trackId, bracket: step.levelBracket, item: step, isHero: true });
           for (const alt of (step.alts || [])) {
-            items.push({ kind: sec, cls, bracket: step.levelBracket, item: alt, isHero: false });
+            items.push({ kind: sec, cls, trackId, bracket: step.levelBracket, item: alt, isHero: false });
           }
         }
       }
@@ -920,11 +928,11 @@ check('Weapon proficiency and class legality check across progression tracks', (
 
   const knownAxeNames = new Set(["crude battle axe", "copper battle axe", "thick war axe", "durgen's crescent axe", "corpse chopper", "forsaken greataxe", "reef axe", "taurenbane's family cleaver", "guardian's dualblade", "whirlwind axe", "corpsemaker", "ravager", "executioner's cleaver", "gatorbite axe", "arcanite reaper", "woodchopper", "lumbering ogre axe", "taskmaster axe", "bronze battle axe", "heavy mithril axe", "bonebiter", "massive iron axe", "riptear's cleaver", "thun'grim's axe", "axe of orgrimmar", "icesworn decapitator", "butcher's cleaver"]);
   const knownSwordNames = new Set(["worn shortsword", "copper claymore", "heavy copper broadsword", "haunting blade", "vileblood scimitar", "plaguefang", "strike of the hydra", "trusty sword", "whirlwind sword", "stoneslayer", "blackblade of shahram", "copper shortsword", "bronze greatsword", "wolfsbane", "moonsteel broadsword", "sword of serenity", "blade of the titans", "warmonger", "cutlass", "cruel barb", "wingblade", "deadly bronze poniard", "bronze shortsword", "ruby-adorned blade", "city guard's tarnished blade", "sword of hammerfall", "the butcher", "vanquisher's sword", "thrash blade", "mirah's song", "dal'rend's sacred charge", "dal'rend's tribal guardian", "coldflame saber", "debt collector", "witchblade", "master hunter's spellsword", "zealot blade", "sword of omen", "forsaken shortsword", "deathstalker shortsword", "talonstrike", "thun'grim's sword", "heirloom sword", "sword of the fallen", "militia shortsword", "militia sword", "curved scimitar", "wildgore greatsword", "gilded blademaster's greatsword", "monstrous cleaver", "the skyblade", "blade of silverlaine", "alliance outrunner's sword", "blade of senseless slaughter"]);
-  const knownMaceNames = new Set(["crude battle axe", "wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "gul'gash's greathammer"]);
+  const knownMaceNames = new Set(["wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "gul'gash's greathammer"]);
 
   const violations = [];
 
-  for (const { kind, cls, item: it } of allItems) {
+  for (const { kind, cls, trackId, item: it } of allItems) {
     const id = it.itemId || it.id;
     const name = (it.name || '').toLowerCase();
     const val = (it.value || '').toLowerCase();
@@ -1007,9 +1015,19 @@ check('Weapon proficiency and class legality check across progression tracks', (
     }
 
     if (cls === 'hunter' && kind === 'weapons') {
-      const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
-      if (!isRanged) {
-        violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
+      if (trackId === 'twohand' || trackId === 'melee') {
+        const is2hOrMelee = wt.includes('staff') || wt.includes('polearm') || wt.includes('sword') || wt.includes('axe') || wt.includes('dagger') || wt.includes('fist');
+        if (!is2hOrMelee) {
+          violations.push(`Hunter two-handed track cannot contain non-melee weapon "${it.name}"`);
+        }
+        if (knownMaceNames.has(name) || wt.includes('mace')) {
+          violations.push(`Hunter cannot equip mace "${it.name}"`);
+        }
+      } else {
+        const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
+        if (!isRanged) {
+          violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
+        }
       }
     }
 

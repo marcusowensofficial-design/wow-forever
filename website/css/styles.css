@@ -5800,6 +5800,30 @@ input:checked + .toggle-slider:before {
   box-shadow: 0 0 12px rgba(34, 197, 94, 0.35);
 }
 
+.progression-track-btn.track-btn-tank {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.progression-track-btn.track-btn-tank:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #bfdbfe;
+}
+
+.progression-track-btn.track-btn-tank.active {
+  background: rgba(59, 130, 246, 0.22);
+  border-color: #3b82f6;
+  color: #93c5fd;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+
+.tank-header-badge {
+  background: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.45) !important;
+  color: #93c5fd !important;
+}
+
 /* Weapons Hub Dedicated Standalone Page */
 .weapons-class-selector-wrapper {
   margin-bottom: 1.25rem;
