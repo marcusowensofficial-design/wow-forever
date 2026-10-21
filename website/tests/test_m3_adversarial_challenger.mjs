@@ -285,6 +285,38 @@ collector.describe('Block 2: UI HTML Generation & Progressive Disclosure', () =>
     expect(shamanHtml).toContain('Shamans are exclusive to the Horde');
     expect(shamanHtml).toContain('disabled style="opacity:0.35;cursor:not-allowed;"');
   });
+
+  collector.test('Dual-faction top picks render stacked with Horde on top when viewing all factions', () => {
+    ui.setWeaponFaction('all');
+    ui.setWeaponSource('all');
+    ui.setWeaponSlot('all');
+    const warriorHtml = ui.renderWeapons('warrior');
+
+    expect(warriorHtml).toContain('faction-dual');
+    expect(warriorHtml).toContain('weapon-hero-divider');
+
+    const card11 = warriorHtml.split('<div class="weapon-step-card').find(c => c.includes('Lvl 11–12'));
+    expect(card11).toBeTruthy();
+    expect(card11).toContain('faction-dual');
+    expect(card11).toContain('weapon-hero-divider');
+
+    const hordePos = card11.indexOf('Zhovur Axe');
+    const dividerPos = card11.indexOf('weapon-hero-divider');
+    const alliancePos = card11.indexOf('Woodsman Sword');
+    const altsPos = card11.indexOf('Alternative Upgrades:');
+
+    expect(hordePos !== -1 && hordePos < dividerPos).toBeTruthy();
+    expect(dividerPos < alliancePos && alliancePos < altsPos).toBeTruthy();
+
+    const altsChunk = card11.slice(altsPos);
+    expect(altsChunk.includes('Zhovur Axe')).toBeFalsy();
+    expect(altsChunk.includes('Woodsman Sword')).toBeFalsy();
+
+    const paladinHtml = ui.renderWeapons('paladin');
+    expect(paladinHtml.includes('faction-dual')).toBeFalsy();
+    const shamanHtml = ui.renderWeapons('shaman');
+    expect(shamanHtml.includes('faction-dual')).toBeFalsy();
+  });
 });
 
 // -----------------------------------------------------------------------------

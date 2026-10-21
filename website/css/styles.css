@@ -5738,6 +5738,11 @@ input:checked + .toggle-slider:before {
   border-left: 3px solid #ef4444;
 }
 
+.weapon-step-card.faction-dual {
+  border-left: 3px solid #ef4444;
+  border-image: linear-gradient(to bottom, #ef4444 50%, #3b82f6 50%) 1;
+}
+
 .alt-tag.alt-faction-alliance {
   border-color: rgba(59, 130, 246, 0.35);
 }
@@ -5925,6 +5930,17 @@ input:checked + .toggle-slider:before {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.weapon-hero-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.weapon-hero-divider {
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  margin: 0.25rem 0;
 }
 
 .weapon-item-hero {
