@@ -1275,38 +1275,107 @@ Hosted on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Ch
     },
     {
       id: "guide-transmog",
-      title: "Classic+ Transmogrification & Wardrobe System",
+      title: "Transmog System, NPCs, Outfits & Situations Master Guide",
       category: "Exploration & Secrets",
-      source: "ForeverChanges.pro · Wowhead · Method.gg",
+      source: "Icy-Veins · ForeverChanges.pro · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_chest_cloth_17.jpg",
-      summary: "Rules, armor-type boundaries, silhouette fidelity, and the competitive Classic Authenticity toggle in WoW Forever.",
-      content: `### Silhouette-Honoring Transmogrification
-WoW Forever introduces a non-intrusive Wardrobe System that preserves the visual gravitas and silhouette recognition of Classic World of Warcraft while letting players customize their appearance.
-
-### The 4 Core Rules of Appearance Customization
-
-#### 1. Strict Armor Type Locks
-• **Cloth** can only transmog into Cloth appearances.
-• **Leather** can only transmog into Leather appearances.
-• **Mail** can only transmog into Mail appearances.
-• **Plate** can only transmog into Plate appearances.
-🔒 You cannot disguise a heavily armored Paladin or Warrior as a robe-wearing Priest!
-
-#### 2. Weapon Silhouette & Swing Cadence Rules
-• **One-Handed Weapons:** 1H Swords, 1H Maces, and 1H Axes can freely cross-transmog with each other, provided your character's class has weapon proficiency.
-• **Daggers and Fists:** Daggers can only transmog to Daggers; Fist weapons can only transmog to Fist weapons (to protect 1.3s/1.4s animation cadences).
-• **Two-Handed Weapons:** 2H Swords, 2H Maces, and 2H Axes can cross-transmog. Polearms and Staves cross-transmog together.
-
-#### 3. Automatic Account-Wide Collection
-• Looting any Bind-on-Pickup or equipping any Bind-on-Equip green, blue, or epic item instantly permanently registers its appearance to your **Account Wardrobe**.
-• Selling or disenchanting the base item afterwards does **not** revoke the collected visual!
+      summary: "Complete Icy-Veins guide to WoW Forever transmogrification: NPC coordinates in Stormwind and Orgrimmar, account-wide unlocks, slot-based system, outfit costs, and dynamic Situations.",
+      content: `### Transmogrification in World of Warcraft: Forever
+Transmogrification allows you to customize the appearance of your equipped armor and weapons without altering your character's stats. Adopted from modern WoW and refined specifically for Classic+, WoW Forever preserves the visual gravitas and silhouette recognition of Classic while introducing an optional, slot-based wardrobe and situational outfit system.
 
 ---
 
-### Competitive "Classic Authenticity Mode"
-⚔️ For competitive integrity in Warsong Gulch, Arathi Basin, and sanctioned duels:
-• Under **Interface Options -> Display -> Wardrobe**, players can toggle **Classic Authenticity Mode**.
-• When toggled ON, all enemy and friendly characters will render strictly in their true, equipped physical armor models, completely disabling visual transmogs on your local screen!`
+### 1. Opting Into the Transmog System
+In World of Warcraft: Forever, participating in the transmogrification system is **entirely optional**:
+
+• **Turned OFF by Default:** All characters start with the system toggled OFF.
+• **Authentic Visual Baseline:** When transmogrification is turned off, you will see the authentic, true equipped gear appearances for both yourself and all other characters in the world.
+• **Enabling Transmog:** You can turn the system ON at any time by speaking with any Transmogrification NPC in major capital cities.
+• **One-Way Visibility:** If you choose to keep transmog turned off locally for Classic visual immersion, you can still transmogrify your own equipment at the NPC. Other players who have the system turned ON will see your transmogged appearance!
+
+---
+
+### 2. Transmogrification NPC Locations
+Visit the dedicated Transmogrification Specialists in capital cities to enable the system and customize your wardrobe:
+
+| Faction | NPC Specialist | Coordinates | Location Description |
+| :--- | :--- | :--- | :--- |
+| **Alliance** | **Fyrenz Vishonar** | \`48.0, 84.5\` | Stormwind City (Mage Quarter, secluded behind the Mage Tower) |
+| **Horde** | **Mon'ye** | \`46.1, 53.9\` | Orgrimmar (Cleft of Shadow, upper second level, right of Barber Shop) |
+
+---
+
+### 3. Obtaining & Collecting Appearances
+You unlock appearances by simply adventuring and looting gear across Azeroth:
+
+• **Binding Unlocks:** Any Bind-on-Pickup or Bind-on-Equip gear permanently registers its visual model to your account collection as soon as it binds to your character.
+• **Shared Dungeon Party Unlocks:** To eliminate ninja-looting for cosmetic appearances, bind-on-pickup Uncommon (Green) and Rare (Blue) dungeon boss drops automatically unlock their appearance for **every eligible party member**—even if you lose the need/greed roll!
+• **Account-Wide Unlocks:** Appearance unlocks are fully account-wide. For example, if your Warlock loots a Bind-on-Pickup Mail item in a dungeon, that appearance is unlocked for all Mail-wearing characters on your account.
+• **Appearance Wardrobe UI:** Press **SHIFT + P** at any time to browse your full catalog of collected helms, shoulders, cloaks, armor, and weapons.
+• **Level 60 Appearance Freedom:** While leveling, appearances follow level equipment prerequisites. Once your character reaches Level 60, all level restrictions on valid collected appearances are permanently removed.
+
+---
+
+### 4. Slot-Based Transmog System
+Unlike early Cataclysm-era transmog, WoW Forever utilizes a modern **slot-based transmogrification architecture**:
+
+• Appearances apply to the **gear slot itself**, rather than the specific item.
+• When you loot an upgrade in a dungeon or raid and equip a new chestpiece, your chosen transmog look remains intact automatically without needing to revisit an NPC or spend extra gold.
+• **Hide Armor Options:** You can freely toggle visibility OFF for your Helm, Cloak, and Shoulders at zero cost.
+
+---
+
+### 5. Silhouette & Armor Type Rules
+To maintain PvP integrity and class recognition, strict armor and weapon type boundaries are enforced:
+
+• **Strict Armor Locks:** Cloth can only transmog into Cloth; Leather into Leather; Mail into Mail; Plate into Plate. You cannot disguise a Plate-wearing Paladin or Warrior as a robe-wearing Priest.
+• **One-Handed Weapons:** 1H Swords, 1H Maces, and 1H Axes can cross-transmog with each other (provided your class has weapon proficiency).
+• **Two-Handed Weapons:** 2H Swords, 2H Maces, and 2H Axes cross-transmog freely. Staves and Polearms cross-transmog together.
+• **Daggers & Fist Weapons:** Daggers can only transmog to Daggers; Fist weapons can only transmog to Fist weapons (preserving strict 1.3s/1.4s swing cadence and attack animations).
+
+---
+
+### 6. Transmogrification Outfits & Gold Costs
+The Wardrobe interface allows you to save complete visual loadouts called **Outfits**. Players start with 2 free outfit slots and can purchase up to 50 slots:
+
+| Outfit Slots | Cost per Slot | Total Investment |
+| :--- | :--- | :--- |
+| **Slots 1–2** | **Free** | 0 Silver |
+| **Slots 3–4** | 10 Silver | 20 Silver |
+| **Slot 5** | 20 Silver | 40 Silver |
+| **Slot 6** | 35 Silver | 75 Silver |
+| **Slot 7** | 50 Silver | 1 Gold 25 Silver |
+| **Slot 8** | 1 Gold | 2 Gold 25 Silver |
+| **Slot 9** | 2 Gold | 4 Gold 25 Silver |
+| **Slot 10** | 3 Gold 50 Silver | 7 Gold 75 Silver |
+| **Slot 11** | 5 Gold | 12 Gold 75 Silver |
+| **Slots 12–16** | 10 Gold each | 62 Gold 75 Silver |
+| **Slots 17–21** | 20 Gold each | 162 Gold 75 Silver |
+| **Slots 22–31** | 35 Gold each | 512 Gold 75 Silver |
+| **Slots 32–41** | 50 Gold each | 1,012 Gold 75 Silver |
+| **Slots 42–51** | 100 Gold each | 2,012 Gold 75 Silver |
+
+---
+
+### 7. Transmog Situations (Contextual Auto-Swapping)
+WoW Forever introduces **Situations**, a reactive appearance feature that automatically switches your active Outfit based on what your character is currently doing:
+
+| Situation Category | Available Dynamic Triggers |
+| :--- | :--- |
+| **Locations** | All Locations, Rest Areas / Capital Cities, Character Select, Open World, Dungeons, Raids, Arenas, Battlegrounds |
+| **Movement** | All Movement, Unmounted (Walking/Running), Swimming, Ground Mount, Flying Mount |
+| **Specializations** | All Specializations, Primary Talent Spec, Secondary Dual-Spec |
+| **Weather** | All Weather, Clear Skies, Rain, Snow, Sandstorm |
+| **Time of Day** | Morning (Dawn), Midday, Evening (Dusk), Night |
+
+*Example:* You can assign a casual town garb outfit to activate automatically in Capital Cities, a heavy plate combat harness in Raids, a hooded cowl during Rain/Snow weather, and your PvP battlegear upon entering Warsong Gulch!
+
+---
+
+### 8. Competitive "Classic Authenticity Mode"
+For sanctioned duels, Warsong Gulch tournaments, and Arathi Basin rated play:
+• Under **Interface Options -> Display -> Wardrobe**, you can toggle **Classic Authenticity Mode**.
+• When active, all characters in your line-of-sight render strictly with their equipped gear models, guaranteeing 100% competitive clarity.`
     },
     {
       id: "guide-pvp-ranks",
