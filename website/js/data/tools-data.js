@@ -3585,6 +3585,291 @@ Set throughout the overgrown palace courtyards, shattered cathedral balconies, a
 | The New Plague | Horde | 16 | Theodore Griffs (\`Undercity 67.2, 38.0\`) | *Plaguefang* (1H Sword) or *Blight Gloves* (Cloth) + 5,450 XP |
 | Abominable Creatures | Alliance | 16 | Captain Truman (\`inside dungeon entrance\`) | *Monstrous Cleaver* (2H Sword) or *Slain Baron's Signet* (Ring) + 3,900 XP |
 | Crest of Lordaeron | Both | 16 | Sealed Crest Chest (Throne Room) | *Small Sack of Gems* + Royal Lordaeron Signet + 5,800 XP |`
+    },
+    {
+      id: "guide-leveling-30-to-60",
+      title: "30–60 Complete Leveling Roadmap: Optimal Zone Routing & New Dungeon Milestones",
+      category: "Leveling & Quests",
+      source: "ForeverChanges.pro · Wowhead · Method.gg",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_level_60.jpg",
+      summary: "The definitive Level 30 to 60 leveling pathway for Alliance and Horde. Integrates WoW Forever's 5 new mid-to-high level dungeons, zone jump timings, flight path prioritization, and quest hubs.",
+      content: `### Overview: The Road from Level 30 to 60 in WoW Forever
+In Vanilla WoW, levels 30 to 50 suffered from disjointed quest deserts and endless running between continents. **World of Warcraft: Forever** resolves this by introducing five brand-new leveling dungeons, re-tuned quest clusters, and seamless continental flight linkages.
+
+| Level Bracket | Primary Recommended Zones | New WoW Forever Dungeon Integration | Key Quests & Milestones |
+| :--- | :--- | :--- | :--- |
+| **30–35** | Shimmering Flats, Northern STV, Desolace | Excavation Site 4 (Wetlands) & Dalaran (Alterac) | Mirage Raceway speedway, Nesingwary Camp |
+| **35–40** | Arathi Highlands, Badlands, Swamp of Sorrows | **The Drowned City** (Level 35–42 / Sunken Coast) | 40-yard mount purchase (90 Gold), Mail/Plate proficiencies |
+| **40–45** | Badlands, Tanaris, Feralas | **Krol'dok Stronghold** (Level 40–46 / Riverglades) | Uldaman quest chain, Gadgetzan desert hub |
+| **45–50** | The Hinterlands, Searing Gorge, Tanaris | Zul'Farrak & Maraudon | Revantusk Village (H) / Aerie Peak (A) elite quests |
+| **48–54** | Felwood, Un'Goro Crater, Azshara | **Timbermaw Hold** (Level 48–54 / Felwood Border) | Timbermaw reputation friendly, Marshal's Refuge |
+| **52–58** | Western Plaguelands, Burning Steppes | **Karazhan Crypts** (Level 52–58 / Deadwind Pass) | Caer Darrow key, Blackrock Depths attunements |
+| **55–60** | Eastern Plaguelands, Winterspring, Silithus | **Stormwind Vault** (Level 58–60 / Stormwind Canal) | Stratholme, Scholomance, Tier 0.5 gear farm |
+
+---
+
+### Phase-by-Phase Zone Progression & Flight Paths
+
+#### 1. Level 30–35: The Desert Speedways & Jungle Fringe
+• **Horde Path:** Thousand Needles (Freewind Post) -> Shimmering Flats (Mirage Raceway) -> Northern Stranglethorn (Grom'gol Base Camp). Complete *Salt Flat Venom* and *Rocket Car Parts* for massive concentrated quest turn-ins.
+• **Alliance Path:** Southshore (Hillsbrad) -> Refuge Pointe (Arathi Highlands) -> Shimmering Flats -> Northern Stranglethorn (Rebel Camp).
+• 💡 **Pro Tip:** Keep your Cozy Sleeping Bag active for the persistent +3% XP aura. Pitch a Linen or Silk Tent whenever camping in Shimmering Flats to double your resting velocity.
+
+#### 2. Level 35–40: Preparing for Your Mount (The 90g Milestone)
+• **Key Milestone:** Level 40 brings your racial mount (90 gold training + mount with faction discount). Track your copper-per-hour velocity using the **ForeverLiquid** HUD.
+• **Zone Route:** Badlands (Kargath / Mirage Raceway breadcrumbs). Run **The Drowned City** (Level 35–42) located along the Sunken Coast of Stranglethorn Vale to earn upgraded rare weapons and +25,000 dungeon quest experience in a single session.
+• **Warrior & Paladin Armor Shift:** At Level 40, immediately train **Plate Armor**. Hunters and Shamans train **Mail Armor**.
+
+#### 3. Level 40–48: The Mid-Game Surge & New Classic+ Dungeons
+• **Riverglades & Krol'dok Stronghold (40–46):** Venture into the new Riverglades frontier. Krol'dok Stronghold features non-linear ogre fortress bastions with high-density rare-drop loot.
+• **Feralas & Hinterlands:** Take the flight to Feathermoon Stronghold / Camp Mojache. The Hinterlands wildkin and troll temples offer the highest XP-per-kill density in the entire game.
+• **Zul'Farrak:** Ensure every party member picks up the *Mallet of Zul'Farrak* from Jintha'Alor in Hinterlands before queueing for Gahz'rilla.
+
+#### 4. Level 48–55: Un'Goro Dinosaurs & Timbermaw Hold
+• **Un'Goro Crater:** Pick up all expedition quests from Marshal's Refuge and Torwa Pathfinder simultaneously. Running the perimeter loop yields 3 complete level-ups in under 4 hours.
+• **Timbermaw Hold (48–54):** Battle through the corrupted furbolg subterranean gates connecting Felwood, Moonglade, and Winterspring. Grants direct access to Timbermaw faction vendor blueprints.
+
+#### 5. Level 55–60: The Plaguelands Crucible & Endgame Pre-Raid BiS
+• **Western & Eastern Plaguelands:** Complete the Caer Darrow attunement, Tirion Fordring's *In Dreams* epic chain, and the Battle of Darrowshire.
+• **Karazhan Crypts (52–58):** Descend into the sinister catacombs beneath Medivh's tower in Deadwind Pass. Avoid the Upside-Down Sinners chambers unless your tank has 3,000+ unbuffed health.
+• **Stormwind Vault (58–60):** The climactic 5-man dungeon breach beneath the capital city sewers. Defeat escaped arcane constructs to claim your definitive Level 60 pre-raid weapons!`
+    },
+    {
+      id: "guide-tier1-raids-attunements",
+      title: "Tier 1 Raids & Attunements Guide: Barrow Deeps (10m), Hyjal Summit (20m) & Onyxia (40m)",
+      category: "Dungeons & Raids",
+      source: "Warcraft Tavern · Method.gg · Blizzard Official",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_fire_incinerate.jpg",
+      summary: "Comprehensive attunement walkthroughs, encounter profiles, entrance coordinates, resistance thresholds, and zero-World-Buff tuning for the December 9 raid unlocks.",
+      content: `### Overview: Tier 1 Raids (Unlocking Wednesday, December 9, 2026)
+World of Warcraft: Forever launches its endgame raid calendar on December 9 with a dynamic trio of raid sizes tailored for different guild rosters: a 10-player tactical raid, a 20-player progression raid, and a 40-player dragon lair.
+
+| Raid Instance | Team Size | Boss Count | Entrance Location | Primary Resistance Threshold | Key Attunement Prerequisite |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **The Barrow Deeps** | 10-Player | 8 Bosses | Mount Hyjal / Blackmaw Hold | **Nature & Shadow (120+)** | *Barrow Warden's Signet* (Moonglade questline) |
+| **Hyjal Summit** | 20-Player | 13 Bosses | Nordrassil Roots (Winterspring portal) | **Fire & Arcane (140+)** | *Fragment of the World Tree* (Timbermaw Exalted) |
+| **Onyxia's Lair** | 40-Player | 1 Boss | Dustwallow Marsh (\`52.8, 76.1\`) | **Fire Resistance (150+ unbuffed)** | **Drakefire Amulet** (Classic epic questline) |
+
+---
+
+### The Strict Zero-World-Buff Invariant
+In WoW Forever, **World Buffs are disabled inside raid instances**:
+• Rallying Cry of the Dragonslayer, Songflower Serenade, Warchief's Blessing, and Darkmoon Faire buffs are automatically purged upon crossing instance portals.
+• Boss encounters are balanced around player gear, consumables (flasks, elixirs, sharpening stones), and personal rotation precision—eliminating the grueling 3-hour pre-raid buff chore.
+
+---
+
+### Detailed Raid Breakdowns & Attunement Pipelines
+
+#### 1. The Barrow Deeps (10-Player / 8 Bosses)
+• **Lore & Environment:** Situated within the subterranean barrows beneath Mount Hyjal where Illidan Stormrage was imprisoned for 10,000 years. Defiled by rogue Night Elf wardens and corrupted shadowsatyr commanders.
+• **Instance Entrance:** Enter via the subterranean caverns of Blackmaw Hold on the Winterspring / Felwood border.
+• **Attunement Questline — "The Slumbering Sentinels":**
+  1. *Keeper of the Grove Call:* Speak with Keeper Remulos in Moonglade (\`36.2, 41.8\`).
+  2. *Subterranean Infiltration:* Recover 4x *Barrow Keystone Shards* from elite furbolg chieftains in Felwood.
+  3. *Trial of the Ancients:* Defeat the corrupt tree ancient in Winterspring to receive the **Barrow Warden's Signet**.
+
+#### 2. Hyjal Summit (20-Player / 13 Bosses)
+• **Lore & Environment:** The burning advance guard of the Burning Legion marches upon the World Tree Nordrassil. Features 13 distinct encounters across the Alliance Base, Horde Encampment, and Night Elf Grove.
+• **Key Mechanics:** Wave-based garrison defenses, infernal drop zones, and heavy fire resistance checks against demonic pit commanders.
+• **Attunement Questline — "Echoes of Eternity":**
+  1. Reach **Honored** standing with the Timbermaw Furbolgs.
+  2. Complete the *Vials of Eternity* investigative breadcrumb across Karazhan Crypts and Scholomance.
+  3. Cleanse the waters of the Moonwell in Moonglade to forge the **Fragment of the World Tree**.
+
+#### 3. Onyxia's Lair (40-Player / Dustwallow Marsh)
+• **Alliance Drakefire Amulet Attunement (Marshal Windsor):**
+  1. *Dragonkin Menace:* Morgan's Vigil, Burning Steppes (Helendis Riverhorn).
+  2. *Blackrock Depths Jailbreak:* Rescue Marshal Windsor from the BRD cell blocks and lead him to the entrance.
+  3. *The Great Masquerade:* Escort Windsor through the gates of Stormwind to unmask Lady Katrana Prestor as the Broodmother Onyxia!
+  4. *Dragon's Eye:* Slay General Drakkisath in Upper Blackrock Spire to obtain the final gem and claim your **Drakefire Amulet**.
+• **Horde Drakefire Amulet Attunement (Rexxar & Occulus):**
+  1. *Warlord's Command:* Highlord Omokk, War Master Voone, and Overlord Wyrmthalak in LBRS.
+  2. *Champion of the Horde:* Search the desolation of Desolace for Rexxar and his bear Misha.
+  3. *Eyes of the Beast:* Travel to the dragon barrows in Dustwallow Marsh and defeat black wyrms to forge the Horde **Drakefire Amulet**.`
+    },
+    {
+      id: "guide-early-name-reservation",
+      title: "Early Name Reservation & Character Creation Guide (Opens Oct 27, 10 AM PDT)",
+      category: "Leveling & Quests",
+      source: "Blizzard Official · Blue Post Operations",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_character_orc_male.jpg",
+      summary: "How to secure your top 3 character names starting Tuesday, October 27 at 10:00 AM PDT across PvP, PvE, RP, and Hardcore rulesets. Includes race/class combos and launch checklist.",
+      content: `### Pre-Launch Timeline: Early Name Reservation Window
+Starting **Tuesday, October 27, 2026 at 10:00 AM PDT (17:00 UTC)**, character creation officially opens across all World of Warcraft: Forever megarealms. Players have a full 7-day window to secure iconic character names and customize appearances ahead of the November 4 Global Launch!
+
+| Parameter | Launch Reservation Rule |
+| :--- | :--- |
+| **Window Dates** | October 27 – November 3, 2026 (7 Full Days) |
+| **Character Cap** | Maximum **3 Characters** reserved per Battle.net Account |
+| **Ruleset Options** | Normal (PvE), PvP, RP-Normal, RP-PvP, Hardcore (Winter 2026) |
+| **Account Requirement** | Active World of Warcraft Subscription or Game Time on Battle.net |
+| **Client Version** | WoW Forever Client Build **1.60.1.70425** (Release Candidate) |
+
+---
+
+### Step-by-Step Character Creation Checklist
+
+1. **Update Your Battle.net Game Client:**
+   - Launch Battle.net Desktop App. Under the Game Version dropdown, select **World of Warcraft: Forever**.
+   - Verify that your client displays version **1.60.1.70425** or higher. Run a scan & repair to ensure texture files are cached.
+2. **Choose Your Realm Ruleset:**
+   - WoW Forever operates on unified regional megarealms with seamless dynamic layering:
+     - **Megarealm - PvP:** Open-world PvP enabled across all contested zones (Hillsbrad, Ashenvale, Stranglethorn).
+     - **Megarealm - Normal (PvE):** Voluntary PvP flag. Open world focuses on cooperative progression.
+     - **Megarealm - RP / RP-PvP:** Immersive roleplaying naming rules and community taverns.
+3. **Lock In Your 3 Characters:**
+   - You can allocate your 3 slots across any ruleset (e.g. 2 on PvP, 1 on Normal).
+   - Once confirmed, that name is permanently reserved to your account worldwide.
+
+---
+
+### New Race & Class Combinations Available at Creation
+
+• **Dual-Faction Paladins & Shamans:**
+  - **Horde Paladins (Undead / Forsaken):** Wield Holy power through sheer willpower as a Forsaken Crusader with the unique Forsaken Charger mount.
+  - **Alliance Shamans (Dwarf):** Communing with the spirits of Ironforge and the Khaz Modan peaks.
+• **The Skyborne (Brand New Race):**
+  - Avian humanoids native to Zephras Isle featuring feathered plumage, taloned agility, and the *Zephyr Glide* passive.
+  - Playable classes: Warrior, Hunter, Rogue, Druid, Mage, Priest.
+• **Human Hunters & Gnome Priests:**
+  - Iconic combinations previously locked in classic iterations are fully unlocked on Day 1.`
+    },
+    {
+      id: "guide-undead-paladin",
+      title: "Horde Undead Paladin (Forsaken Crusader): Lore, Class Quests & Forsaken Charger Guide",
+      category: "Classes & Specs",
+      source: "ForeverChanges.pro · Wowhead · Classic+ Forensics",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_sealofwrath.jpg",
+      summary: "Complete leveling and quest guide for WoW Forever's new Horde Paladin. Covers Forsaken Crusader lore, Brill Church starter quests, Voice of Truth, and the unique Forsaken Charger mount.",
+      content: `### Lore & Origin: The Forsaken Crusaders of Lordaeron
+In World of Warcraft: Forever, the Holy Light is not bound by faction. Before the fall of Capital City, dozens of Knights of the Silver Hand and priests of Lordaeron died defending their homeland. Raised in undeath, their minds shattered and flesh rot, a disciplined order discovered that through **sheer, agonizing willpower**, they could channel the Holy Light through their decaying vessels.
+
+The light burns their rotting nerves with pure agony whenever channeled, yet they wield it as an unyielding blade of retribution.
+
+| Feature | Undead Paladin (Horde) | Human / Dwarf Paladin (Alliance) |
+| :--- | :--- | :--- |
+| **Faction** | Horde (Undercity / Thrall's Horde) | Alliance (Stormwind / Ironforge) |
+| **Racial Traits** | Will of the Forsaken, Cannibalize, Shadow Resistance | Will to Survive, Ruthless, Stoneform |
+| **Level 40 Mount** | **Forsaken Charger** (Skeletal Warhorse with Gilded Barding) | Warhorse |
+| **Level 60 Mount** | **Desecrated Warsteed** (Armored Shadow-Gilt Charger) | Charger |
+| **Class Visuals** | Pale-gold / ash-tinted holy spell effects | Golden yellow holy light |
+
+---
+
+### Starter Quests & Weapon Breadcrumbs (Tirisfal Glades)
+
+#### Level 1–10: The Crypt of the Forgotten Light
+• **Quest Giver:** Father Insubrius inside the ruined chapel of Deathknell (\`31.2, 65.4\`).
+• **First Ability Quest — "The Will to Bleed":** Channel holy energy through your decaying hands to purge mind-broken ghouls. Rewards your first *Libram of Torment*.
+• **Level 12 Weapon Chain — "Hammer of the Fallen Knight":** Travel to the Scarlet Encampment in northern Tirisfal. Slay Scarlet Zealots to recover the consecrated warhammer *Lordaeron Crusader's Maul* (Two-Hand Mace: 11.2 DPS, +2 Strength, +2 Stamina).
+
+#### Level 20: The Forsaken Charger Breadcrumb
+• **Location:** Undercity Apothecarium (\`55.4, 72.8\`).
+• **NPC:** Master Necro-Alchemist Salis.
+• **Objective:** Combine necrotic binding oils with consecrated holy water from the Whispering Gardens to forge the binding bridle for your Level 40 **Forsaken Charger**.
+
+---
+
+### Core Rotational Synergies & Horde Paladin Edge
+
+1. **Voice of Truth (Racial / Spec Perk):**
+   - Grants immunity to silence and spell lockout effects while under the effect of *Aura of Devotion*. Critical against rogues and mages in open-world PvP!
+2. **Seal of the Martyr:**
+   - Melee attacks deal bonus holy damage to your target while dealing 10% of that damage back to you, constantly triggering spiritual mana regeneration.
+3. **Synergy with Horde Totems:**
+   - Paladins pairing with Shaman totems (Windfury Totem + Seal of Command) produces the single highest burst melee DPS ceiling in the game!`
+    },
+    {
+      id: "guide-artisan-professions-300",
+      title: "Artisan Professions (225–300) Masterclass: High-Level Trainers, Quests & Specializations",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Warcraft Tavern · Method.gg",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/trade_blacksmithing.jpg",
+      summary: "Full breakdown of Artisan training (225–300), remote trainer locations, pre-requisite quests, and specialization choices across all 11 primary and secondary tradeskills.",
+      content: `### Overview: Transitioning from Expert (225) to Artisan (300)
+Reaching skill level 225 is only the halfway mark in WoW Forever's trade economy. Advancing into the **Artisan tier (225–300)** requires Character Level 35, visiting remote world trainers hidden deep in high-level zones and dungeons, and completing challenging specialization trials.
+
+| Profession | Artisan Master Trainer Location | Level & Skill Req | Key Specialization Choices |
+| :--- | :--- | :--- | :--- |
+| **Enchanting** | **Annora** (Inside Uldaman Dungeon, Badlands) | Level 35 / Skill 200 | Ring Enchants (+4 All Stats, +12 Spell Power) |
+| **Blacksmithing** | Brikk Keencraft (Booty Bay, Stranglethorn) | Level 35 / Skill 200 | **Armorsmith** vs **Weaponsmith** (Sword/Axe/Hammer) |
+| **Engineering** | Buzzek Bracketswing (Tanaris / Gadgetzan) | Level 30 / Skill 200 | **Gnomish** (Trinkets & Utility) vs **Goblin** (Explosives) |
+| **Leatherworking** | Drakk Stonehand (Hinterlands) / Hahrana (Feralas) | Level 35 / Skill 200 | **Dragonscale** (Mail) / **Elemental** / **Tribal** |
+| **Alchemy** | Kylanna Windwhisper (Feralas) / Rogvar (Swamp) | Level 35 / Skill 200 | Transmutes (Arcanite Bar) & Flask Discovery |
+| **Tailoring** | Timothy Worthington (Dustwallow) / Daryl Stack (Hillsbrad) | Level 35 / Skill 200 | Mooncloth Cleansing, Shadoweave, Spellfire |
+| **Cooking** | Dirk Taggert (Gadgetzan, Tanaris) | Level 35 / Skill 225 | *Clamlette Surprise* quest (12 Giant Clam Meat) |
+| **First Aid** | Trauma Physician (Theramore A / Hammerfall H) | Level 35 / Skill 225 | *Triage* quest (Save 15 wounded soldiers) |
+
+---
+
+### Step-by-Step Walkthrough: Finding Annora in Uldaman (Enchanting)
+Unlike every other profession, **Artisan Enchanting (225–300)** can only be learned from **Annora**, an elusive NPC located inside the Uldaman dungeon instance:
+1. Form a group of Level 38–42 players and enter Uldaman via the Badlands.
+2. Clear down through the subterranean trogg tunnels to the scorpion chambers (/way \`36.6, 31.2\` inside instance).
+3. Clear all surrounding scorpids and burrowers before speaking with Annora. If scorpids agro onto her, she enters combat and cannot train players!
+4. Bring at least **15 Vision Dust**, **4 Greater Nether Essence**, and **20 gold** to purchase your 225–250 recipes immediately.
+
+---
+
+### Major Endgame Specializations & Economic Impact
+
+#### 1. Blacksmithing: Armorsmith vs Weaponsmith
+• **Armorsmith:** Crafts high-defense plate armor, including the *Helm of the Great Chief* and *Breastplate of Bloodthirst*. Indispensable for main raid tanks.
+• **Weaponsmith:** Specializes further into **Master Axesmith** (*Nightfall* spell-debuff axe), **Master Swordsmith** (*Blackguard* 1H agility sword), or **Master Hammersmith** (*The Unstoppable Force*).
+
+#### 2. Engineering: Goblin vs Gnomish
+• **Goblin Engineering:** Focuses on devastating high-damage explosives: *Goblin Sapper Charges* (essential for raid trash and battleground pushes) and *Big Bronze Bombs*.
+• **Gnomish Engineering:** Focuses on eccentric gadgets: *Gnomish Battle Chicken*, *Net-o-Matic*, and *Gnomish Mind Control Cap*.
+
+#### 3. Alchemy Transmutation Cooldowns
+• At skill 275, Alchemists unlock **Transmute: Arcanite Bar** (1x Thorium Bar + 1x Arcane Crystal).
+• In WoW Forever, this transmutation operates on a **48-hour universal cooldown**, making your daily transmute slot worth 10–15 gold in passive daily profit!`
+    },
+    {
+      id: "guide-companion-addons-suite",
+      title: "Official Companion Addon Suite: ForeverPlates, Liquid, Journal & Edit Mode Setup",
+      category: "Exploration & Secrets",
+      source: "WoW Forever Tools & Addon Engineering Team",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_gear_01.jpg",
+      summary: "Installation, optimization, and command manual for the 6 custom WoW Forever addons. Details Camelot 12.0 Interface 16001 compatibility, Edit Mode integration, and /fj import.",
+      content: `### Overview: The Official In-House Addon Suite
+Built specifically for the **Camelot 12.0 engine** (Interface 16001), our 6 companion addons run with **zero UI taint, zero protected frame errors**, and seamless ray-traced alignment. Every addon is available for direct 1-click download from this portal's **Addon Suite** tab.
+
+| Addon Package | Latest Version | Memory Footprint | Primary Functionality | Core Slash Command |
+| :--- | :--- | :--- | :--- | :--- |
+| **ForeverPlates** | v2.1.1 | 598 KB | High-contrast unit nameplates, execute coloring, threat outlines | \`/fp\` or \`/foreverplates\` |
+| **Foreverplatescastbars** | v2.2.1 | 36 KB | Sub-pixel calibrated spell castbars with interrupt immunity shields | \`/fpc\` |
+| **ForeverLiquid** | v1.3.1 | 141 KB | Floating HUD tracking XP/hr, 5/hr dungeon lockouts, Mount Fund ETA | \`/liquid\` or \`/fl\` |
+| **ForeverDungeonJournal** | v1.6.2 | 30.8 MB | Boss abilities, loot tables, sub-pixel maps, and **/fj import** BiS lists | \`/fj\` or \`/journal\` |
+| **ForeverBlessings** | v1.1.0 | 13 KB | Paladin 15-minute blessing grid with 1-click intelligent rebuffing | \`/fb\` or \`/blessings\` |
+| **EchoTwist** | v1.0.0 | 28 KB | Shaman 9-second Windfury / Grace of Air totem twisting visualizer | \`/et\` or \`/echotwist\` |
+
+---
+
+### Step-by-Step Installation Guide
+
+1. **Download the Release Packages:**
+   - Navigate to the **Addon Suite** tab on this website.
+   - Click **Download Complete Addon Suite (.ZIP)** to obtain \`Marcus-WoWForever-Addon-Suite.zip\`, or download individual packages.
+2. **Extract to Your WoW Forever AddOns Folder:**
+   - Locate your installation path:
+     \`C:\\Program Files (x86)\\World of Warcraft\\_forever_\\Interface\\AddOns\\\`
+   - Unzip the folders directly into \`AddOns\\\`. Ensure folders are named cleanly without duplicate subfolders.
+3. **Verify in Game Client:**
+   - At the Character Selection screen, click the **AddOns** button in the lower-left corner.
+   - Check **Load out of date AddOns** and confirm all 6 addons display enabled with green checkmarks.
+
+---
+
+### The Power of \`/fj import\`: Bridging Website BiS to In-Game Journal
+
+Our companion addon **ForeverDungeonJournal** features a built-in import engine that connects directly to this website's gear database:
+1. On this portal, navigate to the **Midway BiS (Level 30)** or **Class Deep Dives** tab.
+2. Select your class and specialization, then click **Export to Journal** (\`/fj import\`).
+3. Copy the generated string to your clipboard.
+4. In-game, open your chat frame and press \`Ctrl+V\` to run the command.
+5. **Instant Result:** Your Dungeon Journal will star, highlight, and track all recommended BiS boss drops across every dungeon instance you enter!`
     }
   ]
 };
