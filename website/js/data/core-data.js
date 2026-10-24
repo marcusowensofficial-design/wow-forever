@@ -171,6 +171,28 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-57",
+      "title": "WoW Forever Closed Beta Concludes with Global Wipe: Blizzard Commences Infrastructure Prep for October 27 Name Reservation",
+      "source": "Blizzard Official & Server Operations",
+      "sourceType": "blizzard",
+      "author": "Josh \"Aggrend\" Greenfield & Realm Operations",
+      "date": "October 23, 2026 (10:00 AM PDT)",
+      "tag": "Beta Concluded & Launch Prep",
+      "summary": "Following 37 days of intensive community playtesting and the climactic 'Twilight of the First Realm' invasion, closed beta realms have officially powered down. A comprehensive database reset is underway ahead of early name reservations on October 27.",
+      "content": `At 10:00 AM PDT on Friday, October 23, 2026, Blizzard operations officially brought down the World of Warcraft: Forever closed beta megarealms, concluding a historic 37-day public playtest across two milestone caps and a high-concurrency open stress test:
+• 250,000+ Player Reports & Telemetry Logged:
+  - Over 250,000 bug reports, balance tickets, and combat log traces were ingested throughout Beta Phase 1 (Level 20 cap) and Phase 2 (Level 30 cap).
+  - Data gathered directly drove the final tuning pass on the Camelot 12.0 ray-tracing pipeline, racial trait adjustments, and modern cooldown UI integration.
+• Comprehensive Character Wipe Underway:
+  - In accordance with launch protocol, all characters, guilds, bank storage, and temporary beta items created during the test window are undergoing a complete server-side database wipe.
+  - No character progress or gold carries over into the live game environment.
+• What Comes Next — Pre-Launch Timeline:
+  - Tuesday, October 27 at 10:00 AM PDT: Early Character Name Reservation and appearance customization opens across all rulesets (PvP, PvE, RP, Hardcore). Players may lock in up to 3 character names per Battle.net account.
+  - Wednesday, November 4 at 15:00 PST: World of Warcraft: Forever officially launches worldwide! Full 1–60 leveling, 29 revamped dungeons, and open-world survival camping unlock globally.
+  - Wednesday, December 9 at 10:00 AM PST: Tier 1 Raids unlock (The Barrow Deeps 10m, Hyjal Summit 20m, and Onyxia's Lair 40m).`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-closed-beta-concludes-launch-prep"
+    },
+    {
       "id": "news-56",
       "title": "Three Launch Raids Revealed for December 9: The Barrow Deeps, Hyjal Summit & Onyxia's Lair Attunement Details",
       "source": "Warcraft Tavern & Wowhead Raid Desks",

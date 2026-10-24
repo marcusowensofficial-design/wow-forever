@@ -1,7 +1,7 @@
 {
-  "name": "World of Warcraft: Forever — Classic+ Beta Portal",
+  "name": "World of Warcraft: Forever — Classic+ Launch Portal",
   "short_name": "WoW Forever",
-  "description": "Beta tracking hub, codex, Level 30 BiS equipment planner, talent tree calculator, news wire, and in-game companion addon suite.",
+  "description": "Launch portal, codex, Midway Level 30 BiS equipment planner, talent tree calculator, news wire, and in-game companion addon suite.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#07090e",

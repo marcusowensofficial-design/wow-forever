@@ -78,9 +78,9 @@ function buildSearchIndex() {
         clsData.specs.forEach(s => {
           searchIndex.push({
             title: `${c.name}: ${s.name} BiS List`,
-            category: 'Beta BiS Gear',
+            category: 'Midway BiS Gear',
             icon: '🛡️',
-            desc: `Level 30 Phase 2 BiS gear • ${s.role}`,
+            desc: `Midway Level 30 progression BiS gear • ${s.role}`,
             tab: 'bis',
             targetId: 'tab-bis',
             bisClass: c.id,
@@ -295,10 +295,10 @@ function buildSearchIndex() {
     targetId: 'tab-tracker'
   });
   searchIndex.push({
-    title: 'Beta Milestones & Character Profile',
+    title: 'Launch Milestones & Character Profile',
     category: 'Progression',
     icon: '📋',
-    desc: 'Track Level 30 Beta Phase 2 milestones and configure personal character profile.',
+    desc: 'Track Launch Day 1–30 rapid progression milestones and configure personal character profile.',
     tab: 'milestones',
     targetId: 'tab-milestones'
   });
@@ -332,7 +332,7 @@ function buildSearchIndex() {
     title: '$100,000 Venruki Level 30 Duel Tournament',
     category: 'Esports & PvP',
     icon: '🏆',
-    desc: 'Durotar Gates closed beta invitational tournament (Oct 17–18).',
+    desc: 'Durotar Gates invitational tournament VOD and forensic duel analysis.',
     tab: 'overview',
     targetId: 'tab-overview'
   });
