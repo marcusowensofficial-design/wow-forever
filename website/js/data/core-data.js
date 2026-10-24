@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 15, 2026 (Beta Build 1.60.1.70425)
+ * Up-to-date as of October 24, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 

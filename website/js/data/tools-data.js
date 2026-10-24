@@ -342,7 +342,7 @@ const WOW_TOOLS_DATA = {
       classicItemsHidden: 5006,
       classicRevealed: 3190,
       sodLeftovers: 5168,
-      lastUpdated: "October 15, 2026"
+      lastUpdated: "October 24, 2026"
     },
     demoItem: {
       id: 273049,

@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Beta BiS (Best in Slot) Master Dataset
- * Level 30 Phase 2 Beta Cap • Build 1.60.1.70425 (October 15, 2026)
+ * Midway Leveling BiS (Level 30 Milestone) • Build 1.60.1.70425 (October 24, 2026)
  * 
  * Contains FULL comprehensive BiS data extracted from Beta Build 70425 across ALL 9 Classes & Specs:
  * - Equipment paper-doll slots (Head, Neck, Shoulder, Back, Chest, Wrist, Hands, Waist, Legs, Feet, Fingers, Trinkets, Weapons, Ranged/Relic)
