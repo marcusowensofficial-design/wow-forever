@@ -67,8 +67,8 @@ function initCodex() {
 
       if (filter === 'beta1') {
         filtered = filtered.filter(d => d.playableNow === true);
-      } else if (filter === 'phase2') {
-        filtered = filtered.filter(d => d.status.includes('Phase 2'));
+      } else if (filter === 'phase2' || filter === 'endgame') {
+        filtered = filtered.filter(d => d.type.includes('Dungeon') && d.playableNow !== true);
       } else if (filter === 'dungeons') {
         filtered = filtered.filter(d => d.type.includes('Dungeon'));
       } else if (filter === 'raids') {

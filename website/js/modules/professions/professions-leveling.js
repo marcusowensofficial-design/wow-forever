@@ -284,8 +284,8 @@
           if (item.type === 'beta-stop') {
             return `
               <div class="leveling-beta-stop-banner">
-                <div class="beta-stop-title">${escapeHtml(item.title)}</div>
-                <p>${escapeHtml(item.text)}</p>
+                <div class="beta-stop-title">ARTISAN TRAINING (SKILL 225–300)</div>
+                <p>Advance past 225 by learning Artisan from your master trainer (Character Level 35 required). Full 225–300 leveling route detailed below.</p>
               </div>
             `;
           }
@@ -674,8 +674,8 @@
           return `
             ${isFirstPost225Group ? `
               <div class="shopping-beta-divider">
-                <h4><span>⏳</span> Reagents for Leveling Past Phase 2 Beta Cap (225 to 300)</h4>
-                <p>Trade goods, looted supplies, and crafted components needed once Artisan training opens post-beta.</p>
+                <h4><span>⚡</span> Artisan Reagents &amp; Components (225 to 300)</h4>
+                <p>Trade goods, looted supplies, and crafted components needed for Artisan progression to 300 at launch.</p>
               </div>
             ` : ''}
             <div class="shopping-group-section">

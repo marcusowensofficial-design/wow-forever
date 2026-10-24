@@ -89,7 +89,7 @@ function renderBiSApp() {
     <!-- Top Metadata Banner -->
     <div class="bis-meta-banner">
       <div class="bis-meta-left">
-        <span class="bis-badge-beta">✨ BETA PHASE 2 • LEVEL 30 CAP</span>
+        <span class="bis-badge-beta">⚡ MIDWAY LEVELING BiS • LEVEL 30 MILESTONE</span>
         <span class="bis-badge-build">Build ${WOW_BIS_METADATA.version}</span>
         <span class="bis-meta-updated">Updated: ${WOW_BIS_METADATA.lastUpdated}</span>
       </div>
@@ -103,6 +103,13 @@ function renderBiSApp() {
             <img src="images/icons/faction-horde.jpg" class="faction-icon" alt="Horde" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Midway Leveling BiS Context Callout -->
+    <div class="bis-leveling-callout" style="background: rgba(14, 116, 144, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px; padding: 0.6rem 1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+      <div style="font-size: 0.86rem; color: #cbd5e1;">
+        <strong style="color: #38bdf8;">⚡ Midway Leveling Power Spike:</strong> Curated Level 25–30 equipment benchmarks (Excavation Site 4, Dalaran, RFK, Gnomeregan) to optimize your 21-point talent capstone dungeon grinding. Level 60 Pre-Raid BiS database launches November 4!
       </div>
     </div>
 

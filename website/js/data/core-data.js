@@ -85,14 +85,14 @@ const WOW_FOREVER_DATA = {
     },
     "prelaunch": {
       "key": "prelaunch",
-      "topPill": "Beta Concluded • Launch Prep & Polish Underway",
+      "topPill": "🛡️ Beta Concluded • Name Reservation Opens Oct 27 • Launch Nov 4",
       "tickerDuration": "Beta Completed (37/37 Days)",
       "heroTitle": "Beta Concluded — Launch Prep",
       "heroBadge": "Launch Countdown",
       "headline": "Closed Beta Concluded: Pre-Launch Readiness Pass",
       "subline": "The 37-day beta test has concluded with over 250,000 player reports logged. All characters are being reset ahead of the November 4 Global Launch.",
-      "milestonesTitle": "Pre-Launch Roadmap & Readiness",
-      "squadBracket": "Global Launch Bracket (L60 Cap Prep)"
+      "milestonesTitle": "Launch Progression Milestones",
+      "squadBracket": "Global Launch Progression (Level 60)"
     },
     "live": {
       "key": "live",
@@ -3373,7 +3373,7 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-8",
-      "text": "Test the Retail In-Game Ping system during a dungeon run",
+      "text": "Utilize the modern in-game ping system for smooth dungeon callouts and target marking",
       "cat": "QoL"
     },
     {
@@ -3383,18 +3383,18 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-10",
-      "text": "Hit the Phase 1 Cap: Level 20! Complete class weapon and ability questlines",
-      "cat": "Milestone"
+      "text": "Hit Level 20! Complete class weapon quests and unlock essential abilities",
+      "cat": "Leveling Milestone"
     },
     {
       "id": "step-11",
-      "text": "Level up in Phase 2: Enter Wetlands and conquer Level 24–30 Dungeon: Excavation Site 4",
-      "cat": "Phase 2 Dungeon"
+      "text": "Enter Wetlands and conquer Level 24–30 Dungeon: Excavation Site 4",
+      "cat": "Dungeons"
     },
     {
       "id": "step-12",
       "text": "Infiltrate Alterac Mountains and defeat Kirin Tor rogues in Level 28–34 Dungeon: City of Dalaran",
-      "cat": "Phase 2 Dungeon"
+      "cat": "Dungeons"
     },
     {
       "id": "step-13",
@@ -3403,8 +3403,8 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-14",
-      "text": "Queue for the newly unlocked Level 20–29 Warsong Gulch battleground bracket",
-      "cat": "Phase 2 PvP"
+      "text": "Queue for the Level 20–29 Warsong Gulch battleground bracket",
+      "cat": "PvP"
     },
     {
       "id": "step-15",
@@ -3413,13 +3413,13 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-16",
-      "text": "Advance primary professions to 225 Expert cap & craft Level 25–30 weapons/armor",
+      "text": "Advance primary professions past 150 & craft Level 25–30 weapons/armor",
       "cat": "Professions"
     },
     {
       "id": "step-17",
-      "text": "Hit the Phase 2 Cap: Level 30! Unlock key 21-point talent capstones",
-      "cat": "Phase 2 Milestone"
+      "text": "Hit the Midway Milestone: Level 30! Unlock key 21-point talent capstones",
+      "cat": "Midway Milestone"
     },
     {
       "id": "step-18",
@@ -3433,7 +3433,7 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-20",
-      "text": "Acquire the Cozy Sleeping Bag in Westfall / Barrens (+3% XP leveling buff) & prep for Hallow's End (Arrives Oct 18)",
+      "text": "Acquire the Cozy Sleeping Bag in Westfall / Barrens (+3% XP leveling buff) to accelerate your road to 60",
       "cat": "World Events & QoL"
     },
     {

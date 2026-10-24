@@ -90,11 +90,11 @@ function renderTierListUI() {
   };
 
   const defaultTitles = {
-    'specs-dps': 'WoW Forever DPS Tier List (Beta Phase 2)',
-    'specs-tanks': 'WoW Forever Tank Tier List (Level 30 Meta)',
+    'specs-dps': 'WoW Forever DPS Tier List (Launch Meta)',
+    'specs-tanks': 'WoW Forever Tank Tier List (Launch Meta)',
     'specs-healers': 'WoW Forever Healer Efficiency Tier List',
     'specs-all': 'WoW Forever All 27 Specs Leveling Tier List',
-    'classes': 'WoW Forever Class Tier List (Phase 2)',
+    'classes': 'WoW Forever Class Tier List (Launch Meta)',
     'races': 'WoW Forever Racial Traits Tier List',
     'combos': 'WoW Forever New Combinations Tier List'
   };
@@ -370,7 +370,7 @@ function exportTierListImage(copyToClipboard) {
   // Subtitle / Date
   ctx.fillStyle = '#94a3b8';
   ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-  ctx.fillText(`World of Warcraft: Forever (Beta Build 1.60.6) • Generated ${new Date().toLocaleDateString()}`, 40, 80);
+  ctx.fillText(`World of Warcraft: Forever (Launch Edition) • Generated ${new Date().toLocaleDateString()}`, 40, 80);
 
   // Draw Tiers
   tiers.forEach((tier, index) => {
