@@ -159,9 +159,14 @@ const WOW_FOREVER_DATA = {
       "icon": "🏆"
     },
     {
-      "name": "Method.gg Itemization Guide",
-      "url": "https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more",
+      "name": "Method.gg: Launch Hub & Guides",
+      "url": "https://www.method.gg/wow-forever",
       "icon": "⚔️"
+    },
+    {
+      "name": "Classic WoW Forever: Guides & Talents",
+      "url": "https://classicwowforever.com/",
+      "icon": "🛡️"
     },
     {
       "name": "Method.gg Racials Breakdown",
@@ -3252,7 +3257,8 @@ const WOW_FOREVER_DATA = {
         "Unrestricted open-world questing and exploration without forced faction PvP flags.",
         "Opt-in PvP enabled via /pvp flag or entering enemy capitals/territories.",
         "Full access to Warsong Gulch, Arathi Basin, and Alterac Valley battlegrounds.",
-        "Guaranteed persistent server population through seamless megarealm sharding."
+        "Guaranteed persistent server population through seamless megarealm sharding.",
+        "First & Last Name (Surname) architecture: Region-wide uniqueness required for full two-word combinations; shared first names supported."
       ]
     },
     {

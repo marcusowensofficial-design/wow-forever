@@ -3777,6 +3777,17 @@ Starting **Tuesday, October 27, 2026 at 10:00 AM PDT (17:00 UTC)**, character cr
 
 ---
 
+### The First & Last Name (Surname) Architecture
+Because WoW Forever utilizes unified regional megarealms (Americas, Europe, Korea, Taiwan) rather than dozens of isolated realms, standard single-word character names would have resulted in immediate naming collisions. To solve this, character creation incorporates a mandatory **First and Last Name system**:
+
+• **Two-Word Format:** Characters are created using a First Name and a Last Name (e.g., *Aiden Lightbringer*, *Morgan Ironforge*, *Vael Thorne*, *Kaelen Sunstrider*).
+• **Region-Wide Uniqueness:** The **full combination** of First Name + Last Name must be unique within your region and ruleset.
+• **Shared First Names Permitted:** Multiple players can share the exact same first name! Two players named *Arthur Pendelton* and *Arthur Stoneguard* can both exist concurrently without conflict.
+• **Display Options:** In your Interface Display settings, you can customize nameplates to show *First and Last Name*, *First Name Only*, or *First Name with Initial*.
+• **RP Ruleset Guidelines:** On the RP Megarealm, names must adhere strictly to fantasy-appropriate naming conventions. Real-world celebrity names, leetspeak, or modern phrases are automatically filtered or flagged for rename.
+
+---
+
 ### Step-by-Step Character Creation Checklist
 
 1. **Update Your Battle.net Game Client:**
@@ -3939,6 +3950,89 @@ Our companion addon **ForeverDungeonJournal** features a built-in import engine 
 3. Copy the generated string to your clipboard.
 4. In-game, open your chat frame and press \`Ctrl+V\` to run the command.
 5. **Instant Result:** Your Dungeon Journal will star, highlight, and track all recommended BiS boss drops across every dungeon instance you enter!`
+    },
+    {
+      id: "guide-combat-mechanics-hit-caps",
+      title: "Combat Mechanics & Unified Hit Caps: Melee, Spell, Taunt Scaling & Debuff Limits",
+      category: "Classes & Specs",
+      source: "Method.gg · Warcraft Tavern · ForeverChanges.pro",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_decisivestrike.jpg",
+      summary: "Deep dive into WoW Forever's combat table overhaul: the single Unified Hit stat, exact hit caps for PvP, dungeon, and raid bosses, taunt scaling, and the 40 debuff slot expansion.",
+      content: `### The Unified Hit System in WoW Forever
+In original Classic, hit chance was fractured across separate melee hit, ranged hit, and spell hit stats—each governed by different combat table calculations, dual-wield miss floors, and a punishing 1% binary spell resist ceiling.
+
+World of Warcraft: Forever streamlines this into a **single, unified Hit Chance stat**. Any piece of gear granting "+1% Hit" increases your physical weapon accuracy, ranged arrow strikes, and magic spell landing chance simultaneously!
+
+---
+
+### Hit Chance Caps Table (PvP, Dungeons & Raids)
+
+| Target Type | Target Relative Level | Physical Special (Yellow) Hit Cap | Spell Hit Cap | Dual-Wield Auto (White) Hit Cap |
+| :--- | :--- | :--- | :--- | :--- |
+| **Player / Same Level** | Level 60 (Even) | **5% Hit** | **4% Hit** | 24% Hit |
+| **Dungeon Mob** | Level 61 (+1) | **5.5% Hit** | **5% Hit** | 24.5% Hit |
+| **Dungeon Boss** | Level 62 (+2) | **6% Hit** | **6% Hit** | 25% Hit |
+| **Raid Boss (Skull)** | **Level 63 (+3)** | **8% Hit** | **17% Hit** | **27% Hit** |
+
+---
+
+### Key Combat Overhauls & Mechanics
+
+#### 1. Special Attacks vs. Auto-Attack Hit Caps
+• **Yellow Damage (Special Abilities):** Rogues' *Sinister Strike*, Warriors' *Bloodthirst* and *Mortal Strike*, Hunters' *Aimed Shot*, and Paladins' *Crusader Strike* only require **8% Hit** against Level 63 raid bosses to guarantee 0% misses.
+• **Dual-Wield White Hits:** Dual-wielding auto-attacks still have a 19% dual-wield miss penalty added on top of the 8% base, meaning full white-hit cap is **27%**. However, stacking beyond 8% hit offers diminishing returns compared to Crit and Attack Power.
+
+#### 2. Taunts & Utility Reliability (Zero Miss Taunts)
+• In Classic, Warrior *Taunt* and Druid *Growl* were treated as magical spells that rolled against a 17% spell-miss rate on raid bosses, causing catastrophic raid wipes when a tank swap missed!
+• In WoW Forever, **Taunt, Growl, and Righteous Defense scale directly with your Unified Hit stat**. A tank equipped with the standard **8% physical hit cap** will **never miss a taunt** on any raid boss!
+
+#### 3. Normalized Glancing Blows & Racial Purge
+• In original Classic, melee physical strikes suffered a 40% glancing blow damage penalty that could only be reduced with +5 weapon skill racials (Human Swords, Orc Axes).
+• In WoW Forever, weapon skill racials have been completely removed.
+• **Fixed Glancing Damage:** Glancing blows against +3 raid bosses now deal a flat, normalized **85% normal damage** across all races and weapon types, eliminating racial weapon locks!
+
+#### 4. Expanded 40-Debuff Slot Boss Limit
+• The archaic 16-debuff limit from Vanilla has been expanded to **40 Debuff Slots** on all dungeon and raid bosses.
+• Affliction Warlocks (*Corruption*, *Siphon Life*), Shadow Priests (*Shadow Word: Pain*), and Feral Druids (*Rip*, *Rake*) can now execute their full rotational kits without fear of pushing off *Sunder Armor*, *Faerie Fire*, or essential raid curses!`
+    },
+    {
+      id: "guide-dual-spec-economics",
+      title: "Dual Specialization & Respec Economics: Level 40 Unlock, Gold Costs & Action Bar Swapping",
+      category: "Classes & Specs",
+      source: "Zockify · Wowhead · Warcraft Tavern",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_magic_lesserinvisibilty.jpg",
+      summary: "Everything you need to know about Dual Spec in WoW Forever: Level 40 trainer unlock, 50 gold investment, keybind/action bar swapping, and the 5 gold respec cap.",
+      content: `### Overview: Dual Talent Specialization
+One of the most transformative quality-of-life additions in World of Warcraft: Forever is the introduction of **Dual Specialization**. It eliminates the crippling economic friction that previously forced hybrid healers and tanks to abandon group content or spend hundreds of gold every week just to farm or PvP.
+
+---
+
+### How to Unlock Dual Specialization
+
+| Parameter | Requirement / Cost |
+| :--- | :--- |
+| **Character Level** | **Level 40** |
+| **Trainer Cost** | **50 Gold** (One-time permanent unlock) |
+| **Vendor Location** | Any Class Trainer in Capital Cities (Stormwind, Ironforge, Orgrimmar, Undercity, Thunder Bluff, Darnassus) |
+| **Secondary Spec Setup** | Granted a clean, unspent 31-point talent tree ready for immediate allocation |
+
+---
+
+### Switching Specs & Action Bar Mechanics
+
+• **5-Second Cast Time:** Switching between your Primary and Secondary Specialization takes a 5-second channeled cast while out of combat.
+• **Independent Action Bars:** Each specialization remembers its own independent action bar assignments, talent builds, and macro placement. Swapping from Protection Warrior to Arms Warrior instantly reorganizes your abilities without needing addon profile reconfiguration!
+• **Independent Equipment Manager Profiles:** In the character screen, you can link each outfit to a specific specialization so your gear and talents swap concurrently.
+• **Combat Invariant:** Specializations cannot be swapped while in active combat, inside an active Mythic/Raid encounter, or while carrying a flag in Warsong Gulch.
+
+---
+
+### Respec Fee Cap: Strictly 5 Gold Maximum
+To encourage continuous talent experimentation throughout leveling and endgame progression:
+• Classic's punishing 50 Gold respec ceiling has been abolished.
+• In WoW Forever, the **maximum talent reset fee is strictly capped at 5 Gold**.
+• Respec fees start at **1 Gold**, scale up by 1 Gold per reset to a maximum of 5 Gold, and decay back toward 1 Gold over time.
+• This ensures that whether you want to test deep Frost vs Arcane Power, or swap between Resto Shaman and Enhancement Shaman, the cost remains accessible and player-friendly!`
     }
   ]
 };
