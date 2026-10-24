@@ -15,13 +15,13 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Extended through Oct 23 at 10 AM PDT)",
+    "currentBetaPhase": "Pre-Launch Window: Closed Beta Concluded (Name Reservation: Oct 27 • Launch: Nov 4)",
     "clientBuild": "1.60.1.70425",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 21, 2026"
+    "lastUpdated": "October 24, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -139,12 +139,12 @@ const WOW_FOREVER_DATA = {
       "icon": "🌐"
     },
     {
-      "name": "Warcraft Tavern: Phase 2 Prep & Pre-BiS",
+      "name": "Warcraft Tavern: Launch Hub & Pre-BiS",
       "url": "https://www.warcrafttavern.com/forever/",
       "icon": "🍺"
     },
     {
-      "name": "Mobalytics: Level 20 Meta & Tier Lists",
+      "name": "Mobalytics: Class Tier Lists & Meta",
       "url": "https://mobalytics.gg/wow-forever",
       "icon": "📊"
     },
@@ -2887,7 +2887,7 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "13 – 18",
       "zone": "Ironforge Depths (Khaz Modan)",
-      "status": "Active in Beta Phase 1 & 2",
+      "status": "Available at Launch (Level 13–18)",
       "playableNow": true,
       "description": "Subterranean crypts beneath the High Seat of Ironforge, breached by troggs, fire elementals, and a disgraced thane.",
       "bosses": [
@@ -2909,7 +2909,7 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "15 – 20",
       "zone": "Tirisfal Glades (Eastern Kingdoms)",
-      "status": "Active in Beta Phase 1 & 2",
+      "status": "Available at Launch (Level 15–20)",
       "playableNow": true,
       "description": "The haunted ruins of Lordaeron's capital city above the Undercity, occupied by Scourge abominations, spiders, and the necromancer Rath'mael.",
       "bosses": [
@@ -2934,7 +2934,7 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "26 – 31",
       "zone": "Wetlands (Eastern Kingdoms)",
-      "status": "Active in Beta Phase 2 (Level 30 Cap)",
+      "status": "Available at Launch (Level 26–31)",
       "playableNow": true,
       "description": "An ancient Titan archaeological dig site above Whelgar's Excavation in the Wetlands marshes, overrun by prehistoric beasts, Dragonmaw vanguards, and awakened Titan sentinels.",
       "bosses": [
@@ -2958,7 +2958,7 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "28 – 33",
       "zone": "Alterac Mountains",
-      "status": "Active in Beta Phase 2 (Level 30 Cap)",
+      "status": "Available at Launch (Level 28–33)",
       "playableNow": true,
       "entrance": "Enter via sewers into the Underbelly, fight through Kirin Tor necromancers, then break out into the open streets of Dalaran.",
       "description": "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies, unstable constructs, and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",

@@ -1353,7 +1353,7 @@ window.WOW_ATLAS_DATA = {
     {
       "name": "Warsong Gulch",
       "players": "10v10",
-      "levels": "20-29 (Active in Beta), 30-39, 40-49, 50-59, 60",
+      "levels": "10-19, 20-29, 30-39, 40-49, 50-59, 60",
       "type": "Capture the Flag"
     },
     {

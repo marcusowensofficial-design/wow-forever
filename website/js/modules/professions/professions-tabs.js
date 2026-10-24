@@ -1182,7 +1182,7 @@
                     <h4 class="fishing-season-name">${escapeHtml(sn.name)}</h4>
                     <span class="fishing-season-dates">${escapeHtml(sn.season)}</span>
                   </div>
-                  ${sn.isActiveNow ? '<span class="season-badge-live">🟢 ACTIVE NOW IN BETA</span>' : '<span class="season-badge-inactive">⚪ MIGRATED</span>'}
+                  ${sn.isActiveNow ? '<span class="season-badge-live">🟢 ACTIVE SEASON</span>' : '<span class="season-badge-inactive">⚪ MIGRATED</span>'}
                 </div>
                 <div class="fishing-season-buff">${escapeHtml(sn.yieldBuff)}</div>
                 <div class="fishing-season-zones">📍 <strong>Best Waters:</strong> ${escapeHtml(sn.bestLocations)}</div>

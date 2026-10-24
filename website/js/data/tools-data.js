@@ -386,7 +386,7 @@ const WOW_TOOLS_DATA = {
       name: "City of Dalaran (Under Siege)",
       levelRange: "28 – 33",
       zone: "Alterac Mountains",
-      status: "Active in Beta Phase 2 (Day 29)",
+      status: "Available at Launch",
       bossCount: 6,
       dropsCount: 28,
       dropsSeen: 28,
@@ -454,7 +454,7 @@ const WOW_TOOLS_DATA = {
       name: "Excavation Site 4",
       levelRange: "26 – 31",
       zone: "Wetlands (Above Whelgar's Excavation)",
-      status: "Active in Beta Phase 2 (Day 29)",
+      status: "Available at Launch",
       bossCount: 6,
       dropsCount: 16,
       dropsSeen: 16,
@@ -519,7 +519,7 @@ const WOW_TOOLS_DATA = {
       name: "Hall of Thanes",
       levelRange: "13 – 18",
       zone: "Beneath Ironforge (Dun Morogh)",
-      status: "Active in Beta Phase 1 & 2",
+      status: "Available at Launch",
       bossCount: 4,
       dropsCount: 13,
       dropsSeen: 13,
@@ -568,7 +568,7 @@ const WOW_TOOLS_DATA = {
       name: "Ruins of Lordaeron",
       levelRange: "15 – 20",
       zone: "Tirisfal Glades (Above Undercity)",
-      status: "Active in Beta Phase 1 & 2",
+      status: "Available at Launch",
       bossCount: 7,
       dropsCount: 25,
       dropsSeen: 22,
@@ -1189,9 +1189,9 @@ In WoW Forever (Build 1.60.1), the ancient library book collection system is acc
       category: "PvP & Tournaments",
       source: "ForeverChanges.pro · Method.gg · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_arena_2v2_7.jpg",
-      summary: "Ruleset, arena boundaries, banned consumables, and class matchup meta for the $100,000 Level 30 Beta Tournament hosted by Venruki.",
+      summary: "Ruleset, arena boundaries, banned consumables, and forensic class matchup breakdown from the $100,000 Level 30 Tournament hosted by Venruki.",
       content: `### The $100,000 Closed Beta Showcase
-Hosted live on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Championship** pits 64 of the highest-ranked North American and European gladiators against one another on the NA Beta Megarealm.
+Hosted on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Championship** pitted 64 of the highest-ranked North American and European gladiators against one another in Durotar, establishing the benchmark 1v1 meta.
 
 ### Tournament Format & Restrictions
 

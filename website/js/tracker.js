@@ -119,7 +119,7 @@ function renderCharacterSheet(char) {
       <div class="char-meta-item"><strong>Race:</strong> ${escapeHtml(char.race)}</div>
       <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;"><img src="${classInfo.imgIcon}" alt="" class="tracker-class-icon" onerror="this.style.display='none'" />${escapeHtml(char.className)}</span></div>
       <div class="char-meta-item"><strong>Specialization:</strong> ${escapeHtml(char.spec)}</div>
-      <div class="char-meta-item"><strong>Target Bracket:</strong> <span data-phase-key="squadBracket">${escapeHtml((typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.sitePhases && typeof window.getSitePhase === 'function') ? (WOW_FOREVER_DATA.sitePhases[window.getSitePhase()]?.squadBracket || 'Beta Phase 2 (Cap 30 — Live Now!)') : 'Beta Phase 2 (Cap 30 — Live Now!)')}</span></div>
+      <div class="char-meta-item"><strong>Target Bracket:</strong> <span data-phase-key="squadBracket">${escapeHtml((typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.sitePhases && typeof window.getSitePhase === 'function') ? (WOW_FOREVER_DATA.sitePhases[window.getSitePhase()]?.squadBracket || 'Global Launch Progression (Level 60)') : 'Global Launch Progression (Level 60)')}</span></div>
       <div class="char-meta-item"><strong>Primary Prof 1:</strong> ${escapeHtml(char.prof1)}</div>
       <div class="char-meta-item"><strong>Primary Prof 2:</strong> ${escapeHtml(char.prof2)}</div>
     </div>
@@ -218,7 +218,7 @@ function initBetaChecklist() {
   const resetBtn = document.getElementById('reset-checklist-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
-      if (confirm('Reset all milestone completion marks for the Beta Phase 2 checklist?')) {
+      if (confirm('Reset all milestone completion marks for the Launch Progression checklist?')) {
         completedSet.clear();
         localStorage.setItem('wow_forever_checklist_completed', JSON.stringify([]));
         renderChecklist();
