@@ -321,7 +321,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Berserking (Flat 10% Attack/Cast Speed)",
             status: "verified",
             statusLabel: "Verified in Beta",
-            desc: "Increases melee attack speed and spellcasting speed by a flat 10% for 10 seconds, without scaling from missing health, providing consistent on-demand burst."
+            desc: "Increases melee attack speed and spellcasting speed by a flat 10% for 15 seconds, without scaling from missing health, providing consistent on-demand burst."
           },
           {
             name: "Cannibalize / Ritual Rest (50% Max HP Heal)",
@@ -348,7 +348,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Troll Rogue",
           faction: "Horde",
           badge: "Tested Demo Race",
-          desc: "Berserking (+10% flat attack speed), 50% HP active regeneration channel, Beast Slaying (+5%), and in-combat health regen."
+          desc: "Berserking (+10% flat attack speed for 15s), 50% HP active regeneration channel, Beast Slaying (+5%), and in-combat health regen."
         },
         {
           race: "Orc Rogue",

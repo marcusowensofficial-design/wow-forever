@@ -522,11 +522,12 @@ export function runTier1Tests(collector, data) {
       expect(eureka.effect).toMatch(/Power Word: Shield|PW:Shield|Shields/i);
     });
 
-    collector.test('1.9.2 Orc Blood Fury grants AP and SP without healing reduction penalty', () => {
+    collector.test('1.9.2 Orc Blood Fury grants AP and SP on a 2-minute cooldown without healing reduction penalty', () => {
       const orc = racesData.find(r => r.id === 'orc');
       const bf = orc ? orc.racials.find(r => r.name === 'Blood Fury') : null;
       expect(bf).toBeDefined();
       expect(bf.effect).toMatch(/10%/);
+      expect(bf.effect).toMatch(/2\s*min/i);
       expect(bf.effect).not.toMatch(/healing reduction|reduces healing/i);
     });
 
@@ -569,18 +570,24 @@ export function runTier1Tests(collector, data) {
       expect(ws.effect).toMatch(/stun/i);
     });
 
-    collector.test('1.9.8 Troll Regeneration provides health regen during combat', () => {
+    collector.test('1.9.8 Troll Berserking grants 10% haste for 15s and Regeneration continues in combat', () => {
       const troll = racesData.find(r => r.id === 'troll');
+      const bz = troll ? troll.racials.find(r => r.name === 'Berserking') : null;
+      expect(bz).toBeDefined();
+      expect(bz.effect).toMatch(/15\s*sec/i);
+      expect(bz.effect).toMatch(/10%/);
+
       const regen = troll ? troll.racials.find(r => r.name === 'Regeneration') : null;
       expect(regen).toBeDefined();
       expect(regen.effect).toMatch(/combat/i);
     });
 
-    collector.test('1.9.9 Undead Touch of the Grave triggers life-draining shadow burst on attacks and spells', () => {
+    collector.test('1.9.9 Undead Touch of the Grave triggers life-draining shadow burst on attacks and spells with 15s ICD', () => {
       const undead = racesData.find(r => r.id === 'undead');
       const totg = undead ? undead.racials.find(r => r.name === 'Touch of the Grave') : null;
       expect(totg).toBeDefined();
       expect(totg.effect).toMatch(/drain|health|Shadow/i);
+      expect(totg.effect).toMatch(/15\s*sec/i);
     });
   });
 

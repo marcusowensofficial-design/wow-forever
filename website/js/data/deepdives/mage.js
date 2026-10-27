@@ -508,7 +508,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "feature": "Orc Blood Fury Buff",
       "category": "Orc Racials",
-      "details": "+10% AP and +10% Spell Power (3 min CD); healing debuff completely removed",
+      "details": "+10% AP and +10% Spell Power (2 min CD); healing debuff completely removed",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"

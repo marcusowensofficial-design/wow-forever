@@ -176,6 +176,33 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-59",
+      "title": "Community Manager Kaivax Shares Additional Racial Updates: Blood Fury Reduced to 2m, Berserking Extended to 15s & Touch of the Grave 15s ICD",
+      "source": "Blizzard Official / Community Manager Blue Post",
+      "sourceType": "blizzard",
+      "author": "Community Manager Kaivax",
+      "date": "October 27, 2026",
+      "tag": "Racial Abilities & Traits",
+      "summary": "Kaivax details follow-up adjustments to racial abilities: Orc Blood Fury cooldown reduced to 2 minutes, Troll Berserking duration buffed to 15 seconds, Undead Touch of the Grave internal cooldown slashed to 15 seconds, and clarification on Skyborne Charged and Attuned raid behavior.",
+      "content": `We’ve updated the previous post in this thread with some additions that were intended to be listed.
+
+Additional updates to Racial Abilities and Talents include:
+
+• Orc:
+  - Blood Fury’s cooldown reduced to 2 minutes (was 3 minutes).
+
+• Troll:
+  - Berserking duration increased to 15 seconds (was 10 seconds).
+
+• Undead:
+  - Touch of the Grave internal cooldown reduced to 15 seconds (was 25 seconds).
+
+• Skyborne Clarification:
+  - Charged persists through death, and is removed upon entering a raid.
+  - Attuned persists through death, and is removed upon entering a raid.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-racial-abilities-and-traits-update-part-2"
+    },
+    {
       "id": "news-58",
       "title": "WoW Forever Racials Overhaul: Community Manager Tuning Pass Prioritizes Racial Identity, Re-adds Orc Command & Introduces Dwarf Artisan's Precision",
       "source": "Blizzard Official / Community Manager Blue Post",
@@ -1868,7 +1895,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "name": "Read Leyline",
         "type": "Active • 15s • 2m CD",
-        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death)."
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death, removed upon entering a raid)."
       },
       {
         "name": "Wind Blessed",
@@ -1890,7 +1917,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "name": "Skysight",
         "type": "Active • 15s",
-        "effect": "Increases movement speed by 15% for 15 sec. Using at an elemental convergence grants Charged for 1 hour, increasing speed bonus to 30% (persists through death)."
+        "effect": "Increases movement speed by 15% for 15 sec. Using at an elemental convergence grants Charged for 1 hour, increasing speed bonus to 30% (persists through death, removed upon entering a raid)."
       },
       {
         "name": "Wind Blessed",
@@ -1912,7 +1939,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "name": "Read Leyline / Skysight",
         "type": "Active (Faction Dependent)",
-        "effect": "Alliance: Read Leyline (50% mana/health regen for 15s; 100% when Attuned) • Horde: Skysight (15% run speed for 15s; 30% when Charged). Both persist through death when empowered."
+        "effect": "Alliance: Read Leyline (50% mana/health regen for 15s; 100% when Attuned) • Horde: Skysight (15% run speed for 15s; 30% when Charged). Both persist through death and are removed upon entering a raid."
       },
       {
         "name": "Wind Blessed",

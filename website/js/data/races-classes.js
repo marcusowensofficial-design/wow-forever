@@ -343,7 +343,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Read Leyline",
         "type": "Active • 15s • 2m CD",
-        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death)."
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death, removed upon entering a raid)."
       },
       {
         "name": "Wind Blessed",
@@ -395,8 +395,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "Blood Fury",
-        "type": "Active • 15s • 3m CD",
-        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec. 3 min cooldown."
+        "type": "Active • 15s • 2m CD",
+        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec. 2 min cooldown."
       },
       {
         "name": "Shatter Curse",
@@ -469,7 +469,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Touch of the Grave",
         "type": "Passive",
-        "effect": "Damaging attacks and spells have a 30% chance (casters) or 20% chance (melee) to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of damage dealt. 25 sec internal cooldown; does not scale with Shadow damage increases or downranking multipliers."
+        "effect": "Damaging attacks and spells have a 30% chance (casters) or 20% chance (melee) to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of damage dealt. 15 sec internal cooldown; does not scale with Shadow damage increases or downranking multipliers."
       }
     ]
   },
@@ -564,8 +564,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "Berserking",
-        "type": "Active • 10s",
-        "effect": "Increases casting and attack speed by 10% for 10 sec."
+        "type": "Active • 15s",
+        "effect": "Increases casting and attack speed by 10% for 15 sec."
       },
       {
         "name": "Rapid Regeneration",
