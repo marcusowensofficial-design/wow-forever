@@ -356,7 +356,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Warlock",
           faction: "Alliance",
           badge: "Dark Scholar",
-          desc: "Will to Survive stun break, Perception stealth detection, and The Human Spirit (+5% Spirit)."
+          desc: "Will to Survive stun break, Perception stealth detection, and The Human Spirit (+10% Spirit)."
         }
       ]
     },

@@ -120,12 +120,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Ruthless",
         "type": "Passive",
-        "effect": "+2% critical strike chance with all spells and attacks."
+        "effect": "+1% critical strike chance with all spells and attacks."
       },
       {
         "name": "The Human Spirit",
         "type": "Passive",
-        "effect": "5% increased Spirit."
+        "effect": "10% increased Spirit."
       }
     ]
   },
@@ -176,9 +176,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "effect": "Track nearby treasure chests. Now also grants a chance to find additional items in most chests."
       },
       {
-        "name": "Earth Fury",
+        "name": "Artisan's Precision",
         "type": "Passive",
-        "effect": "+2% critical strike bonus to damage and healing."
+        "effect": "Increases hit chance with spells and attacks by 1%."
       },
       {
         "name": "Big Game Hunter",
@@ -342,13 +342,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "name": "Read Leyline",
-        "type": "Active • 2m CD",
-        "effect": "2 sec cast, castable while moving, 2 min cooldown. Gain +100% mana, energy, and rage regeneration for at least 30 sec (or 15 min if channeled within 40 yards of an active leyline)."
+        "type": "Active • 15s • 2m CD",
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "3% increased melee, ranged, and spellcasting Haste."
+        "effect": "2% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -404,9 +404,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "effect": "Dispels all Curse and Bane effects and reduces Magical damage taken by 5% for 8 sec. 2 min cooldown."
       },
       {
-        "name": "Savage",
+        "name": "Command",
         "type": "Passive",
-        "effect": "+1% critical strike chance with all spells and abilities."
+        "effect": "Damage dealt by Warlock and Hunter pets increased by 5%."
       },
       {
         "name": "Hardiness",
@@ -513,12 +513,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Plainsrunning",
         "type": "Passive",
-        "effect": "Increases movement speed by up to 40% after running continuously for 10 seconds outdoors, requiring a minimum distance moved per second to maintain. Also grants 3% increased mounted movement speed, which stacks with other mounted speed increases."
+        "effect": "Grants 2% movement speed per stack while running continuously outdoors, up to a maximum increase of 60%. No longer increases mounted movement speed."
       },
       {
         "name": "Endurance",
         "type": "Passive",
-        "effect": "Total Health increased by 5% and critical damage and healing increased by 2%."
+        "effect": "Total Health increased by 5%."
       }
     ]
   },

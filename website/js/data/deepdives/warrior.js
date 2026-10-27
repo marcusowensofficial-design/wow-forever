@@ -342,10 +342,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             desc: "Instantly removes all stun effects on a 3-minute cooldown. Essential PvP anti-CC tool allowing Warriors to break free without PvP trinkets."
           },
           {
-            name: "Ruthless (+2% Crit)",
+            name: "Ruthless (+1% Crit)",
             status: "verified",
             statusLabel: "Verified in Beta",
-            desc: "Grants 2% critical-strike chance to all attacks and spells, maximizing Flurry and Deep Wounds procs."
+            desc: "Grants 1% critical-strike chance to all attacks and spells, maximizing Flurry and Deep Wounds procs."
           },
           {
             name: "Perception (Stealth Detection)",
@@ -354,10 +354,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             desc: "Greatly increases stealth detection for 20 seconds on a 3-minute cooldown. Invaluable against enemy Rogues and Druids opening in PvP."
           },
           {
-            name: "The Human Spirit (+5% Spirit)",
+            name: "The Human Spirit (+10% Spirit)",
             status: "verified",
             statusLabel: "Verified in Beta",
-            desc: "Increases total Spirit by 5%, boosting out-of-combat health regeneration between leveling pulls."
+            desc: "Increases total Spirit by 10%, boosting out-of-combat health regeneration between leveling pulls."
           }
         ]
       },
@@ -366,25 +366,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Warrior",
           faction: "Alliance",
           badge: "Classic Vanguard",
-          desc: "Frontline champions of the Grand Alliance combining Ruthless (+2% crit) and Will to Survive stun breaks."
+          desc: "Frontline champions of the Grand Alliance combining Ruthless (+1% crit) and Will to Survive stun breaks."
         },
         {
           race: "Orc Warrior",
           faction: "Horde",
           badge: "Berserker Juggernaut",
-          desc: "Horde warlords utilizing Blood Fury (+10% AP, no healing penalty in Forever), Savage (+1% crit), and Hardiness (-20% stun duration)."
+          desc: "Horde warlords utilizing Blood Fury (+10% AP, no healing penalty in Forever) and Hardiness (-20% stun duration)."
         },
         {
           race: "Tauren Warrior",
           faction: "Horde",
           badge: "Colossal Wall",
-          desc: "Endurance (+5% base HP), War Stomp (2s AoE stun up to 5 targets), and Plains Running mobility."
+          desc: "Endurance (+5% base HP), War Stomp (2s AoE stun up to 5 targets), and Plainsrunning mobility (up to 60%)."
         },
         {
           race: "Dwarf Warrior",
           faction: "Alliance",
           badge: "Mountain Defender",
-          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Earth Fury (+2% crit bonus)."
+          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Artisan's Precision (+1% hit chance with spells and attacks)."
         }
       ]
     },

@@ -372,11 +372,11 @@ function initClassRacePlanner() {
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6rem; margin-top: 0.4rem;">
             <div style="background: rgba(0, 120, 255, 0.1); border-left: 2px solid #0078FF; padding: 0.4rem 0.6rem; border-radius: 3px;">
               <strong style="color: #60a5fa; font-size: 0.8rem;">High Order (Alliance):</strong>
-              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Read Ley Line</strong> (Arcane mana restore & intellect) + Walk on Air, Wind Blessed, Elemental Insight</div>
+              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Read Leyline</strong> (+50% mana & health regen for 15s; +100% when Attuned) + Walk on Air, Wind Blessed (2%), Elemental Insight</div>
             </div>
             <div style="background: rgba(196, 30, 58, 0.1); border-left: 2px solid #C41E3A; padding: 0.4rem 0.6rem; border-radius: 3px;">
               <strong style="color: #f87171; font-size: 0.8rem;">Windshaper (Horde):</strong>
-              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Skysight</strong> (+10% run speed boost) + Walk on Air, Wind Blessed, Elemental Insight</div>
+              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Skysight</strong> (+15% run speed for 15s; +30% when Charged) + Walk on Air, Wind Blessed (2%), Elemental Insight</div>
             </div>
           </div>
         </div>

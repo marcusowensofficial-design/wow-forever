@@ -774,7 +774,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>⛏️</span> 6. Sodapoppin's Dwarf Shaman Testing & New Faction Races</h3>
-                <p>Stoneform, Earth Fury +2% crit bonus to damage and healing, and Wildhammer Dwarves bringing Windfury to Alliance</p>
+                <p>Stoneform, Artisan's Precision +1% hit chance with spells and attacks, and Wildhammer Dwarves bringing Windfury to Alliance</p>
               </div>
               ${(window.WOW_DEEPDIVES_SPECS?.renderDwarfRacesSection || renderDwarfRacesSection)(cData)}
             </div>
@@ -930,7 +930,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>👑</span> 5. Sodapoppin's Human Warrior Testing & Playable Races</h3>
-                <p>Will to Survive stun break, Ruthless (+2% crit), Perception stealth detection, and cross-faction vanguards</p>
+                <p>Will to Survive stun break, Ruthless (+1% crit), Perception stealth detection, and cross-faction vanguards</p>
               </div>
               ${(window.WOW_DEEPDIVES_SPECS?.renderHumanWarriorRacesSection || renderHumanWarriorRacesSection)(cData)}
             </div>

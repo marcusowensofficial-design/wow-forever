@@ -628,15 +628,15 @@ check('Replacement racials presence and exact 4-racial symmetry across all 9 rac
 
   const replacements = [
     { raceId: 'human', racialName: 'Ruthless' },
-    { raceId: 'dwarf', racialName: 'Earth Fury' },
-    { raceId: 'orc', racialName: 'Savage' },
+    { raceId: 'dwarf', racialName: "Artisan's Precision", altName: "Artisan’s Precision" },
+    { raceId: 'orc', racialName: 'Command' },
     { raceId: 'skyborne', racialName: 'Read Leyline' }
   ];
 
   for (const req of replacements) {
     const race = races.find(r => r.id === req.raceId);
     if (!race) throw new Error(`Missing race ${req.raceId} in allRacesData`);
-    const found = race.racials.find(r => r.name === req.racialName);
+    const found = race.racials.find(r => r.name === req.racialName || (req.altName && r.name === req.altName));
     if (!found) {
       throw new Error(`Missing replacement racial "${req.racialName}" on race ${race.name}`);
     }

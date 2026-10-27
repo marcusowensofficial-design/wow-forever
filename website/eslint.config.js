@@ -101,6 +101,7 @@ export default [
         initGuidesHub: 'readonly',
         initMurlocCounter: 'readonly',
         initWeaponsHub: 'readonly',
+        initAddonHub: 'readonly',
         WOW_TALENT_ICONS: 'writable',
         WOW_PROGRESSION_DATA: 'writable',
         WOW_DEEPDIVES_PROGRESSION: 'writable',

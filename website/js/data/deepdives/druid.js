@@ -334,10 +334,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             desc: "Active racial granting a 10-second directional glide on a 2-minute cooldown. Allows traversal over chasms and high cliffs without fall damage."
           },
           {
-            name: "Wind Blessed (Speed & 1% Haste)",
+            name: "Wind Blessed (+2% Haste)",
             status: "verified",
             statusLabel: "Verified in Beta",
-            desc: "Blessing granting +10% movement and mount speed (lasts 30s normally or 15m after finding an elemental convergence), plus a passive 1% haste to melee, ranged, and spellcasting."
+            desc: "Passive racial granting +2% haste to melee, ranged, and spellcasting."
           },
           {
             name: "Elemental Insight (+5% Elemental Damage)",
@@ -358,7 +358,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Sky Elf (Skyborne) Druid",
           faction: "Neutral (Alliance / Horde)",
           badge: "✦ NEW IN FOREVER",
-          desc: "Avian-infused scholars with Walk on Air (glide), Wind Blessed (+10% speed / +1% haste), and unique feathered shapeshift forms. Can choose either faction."
+          desc: "Avian-infused scholars with Walk on Air (glide), Wind Blessed (+2% haste), and unique feathered shapeshift forms. Can choose either faction."
         },
         {
           race: "Night Elf Druid",
@@ -370,7 +370,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Tauren Druid",
           faction: "Horde",
           badge: "Classic Standard",
-          desc: "Endurance (+5% base HP -> multiplies with Bear Form Stamina, +2% crit dmg/heal), War Stomp (90s CD AoE stun), Plainsrunning (+3% mounted speed), and Cultivation (15m CD)."
+          desc: "Endurance (+5% base HP -> multiplies with Bear Form Stamina), War Stomp (90s CD AoE stun), Plainsrunning (up to +60% outdoor speed ramp), and Cultivation (15m CD)."
         }
       ]
     },

@@ -354,7 +354,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Orc Rogue",
           faction: "Horde",
           badge: "Classic Favorite",
-          desc: "Blood Fury (+10% AP, no healing penalty), Hardiness (-20% stun duration), and Savage synergy with Combat."
+          desc: "Blood Fury (+10% AP, no healing penalty) and Hardiness (-20% stun duration)."
         },
         {
           race: "Undead Rogue",
@@ -366,7 +366,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Rogue",
           faction: "Alliance",
           badge: "Classic Favorite",
-          desc: "Will to Survive (3m stun break), Perception (+stealth detection), Ruthless (+2% crit), and The Human Spirit."
+          desc: "Will to Survive (3m stun break), Perception (+stealth detection), Ruthless (+1% crit), and The Human Spirit (+10% Spirit)."
         },
         {
           race: "Gnome Rogue",
@@ -378,7 +378,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Dwarf Rogue",
           faction: "Alliance",
           badge: "Defensive Utility",
-          desc: "Stoneform (removes bleeds/poisons/diseases, +10% physical DR), Earth Fury (+2% crit bonus), and Find Treasure."
+          desc: "Stoneform (removes bleeds/poisons/diseases, +10% physical DR), Artisan's Precision (+1% hit chance with spells and attacks), and Find Treasure."
         },
         {
           race: "Night Elf Rogue",

@@ -355,13 +355,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Priest",
           faction: "Alliance",
           badge: "Cleric of Stormwind",
-          desc: "The Human Spirit (+5% Spirit -> direct Holy spell power scaling), Will to Survive stun break, and Perception."
+          desc: "The Human Spirit (+10% Spirit -> direct Holy spell power scaling), Will to Survive stun break, and Perception."
         },
         {
           race: "Dwarf Priest",
           faction: "Alliance",
           badge: "Thane of Ironforge",
-          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Earth Fury (+2% crit bonus to damage and healing)."
+          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Artisan's Precision (+1% hit chance with spells and attacks)."
         },
         {
           race: "Undead Priest",

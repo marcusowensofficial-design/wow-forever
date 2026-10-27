@@ -381,13 +381,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Paladin",
           faction: "Alliance",
           badge: "Classic Standard",
-          desc: "Defenders of Stormwind with Ruthless (+2% crit), Perception (stealth detection), and The Human Spirit (+5% Spirit)."
+          desc: "Defenders of Stormwind with Ruthless (+1% crit), Perception (stealth detection), and The Human Spirit (+10% Spirit)."
         },
         {
           race: "Dwarf Paladin",
           faction: "Alliance",
           badge: "Classic Standard",
-          desc: "Khaz Modan crusaders wielding Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Earth Fury (+2% crit bonus to damage and healing)."
+          desc: "Khaz Modan crusaders wielding Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Artisan's Precision (+1% hit chance with spells and attacks)."
         }
       ]
     },

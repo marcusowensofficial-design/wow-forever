@@ -383,10 +383,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "desc": "Instantly removes and grants full immunity to bleed, poison, and disease effects, while also reducing physical damage taken by 10% for 8 seconds. Extraordinary synergy for Shaman tanking and PvP."
         },
         {
-          "name": "Earth Fury",
+          "name": "Artisan's Precision",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Grants +2% critical strike bonus to damage and healing. Synergizes perfectly with Enhancement melee crits and Restoration healing crits!"
+          "desc": "Increases hit chance with spells and attacks by 1%. Provides valuable spell and melee hit consistency for Shaman shocks, totems, and weapon strikes!"
         },
         {
           "name": "Find Treasure",
@@ -539,9 +539,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Dwarf Stoneform + Earth Fury",
+      "feature": "Dwarf Stoneform + Artisan's Precision",
       "category": "Dwarf Racials",
-      "details": "Stoneform 10% phys reduction; Earth Fury +2% crit bonus to damage and healing",
+      "details": "Stoneform 10% phys reduction; Artisan's Precision +1% hit chance with spells and attacks",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"

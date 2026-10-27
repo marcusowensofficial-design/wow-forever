@@ -312,16 +312,16 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "subtitle": "Forensic testing of Tauren racials in the BlizzCon 2026 early access demo",
       "items": [
         {
-          "name": "Plains Running Ramp & Mounted Bonus",
+          "name": "Plains Running Speed Ramp",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Plains Running builds 1% bonus movement speed every 5s while continually moving, up to 30%. Also grants 3% increased mounted movement speed (stacks with other mounted speed increases). Requires moving a minimum distance per second to maintain; stutter-stepping no longer maintains the effect."
+          "desc": "Plains Running grants 2% movement speed per stack while continually moving outdoors, up to a maximum increase of 60%. Mounted movement speed bonus removed. Requires moving a minimum distance per second to maintain; stutter-stepping no longer maintains the effect."
         },
         {
           "name": "Plains Running vs. Aspect of the Cheetah",
           "status": "demo",
           "statusLabel": "🎙️ Sodapoppin Demo Finding",
-          "desc": "The test confirmed Plains Running does NOT stack with Aspect of the Cheetah. Displayed movement speed remained strictly capped at the expected 30% maximum increase."
+          "desc": "The test confirmed Plains Running does NOT stack with Aspect of the Cheetah. Displayed movement speed remained strictly capped at the expected maximum increase."
         },
         {
           "name": "Anti-Exploit: Displacement Verification",
@@ -339,7 +339,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Tauren Endurance",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Grants +5% total Health and 2% increased critical damage and healing (replaces legacy 1% hit chance)."
+          "desc": "Grants +5% total Health (critical damage and hit chance modifiers removed)."
         },
         {
           "name": "Tauren Cultivation",
@@ -354,13 +354,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "race": "Human Hunter",
         "faction": "Alliance",
         "badge": "✦ New in Forever",
-        "desc": "Royal gamekeepers and marksmen of Elwynn Forest and Westfall. Gains Perception (stealth detection), The Human Spirit (+5% Spirit for mana regen), Ruthless (+2% Crit), and Diplomacy (+10% reputation)."
+        "desc": "Royal gamekeepers and marksmen of Elwynn Forest and Westfall. Gains Perception (stealth detection), The Human Spirit (+10% Spirit for mana regen), Ruthless (+1% Crit), and Diplomacy (+10% reputation)."
       },
       {
         "race": "The Skyborne Hunter",
         "faction": "Both Factions",
         "badge": "✦ New Playable Race",
-        "desc": "Wind-guided archers and cloud-falcon tamers from Zephras Isle. Gains Walk on Air (glide), Read Leyline (+100% regen), Wind Blessed (+1% Haste across melee/ranged/spells), and Elemental Insight (+5% damage to Elementals)."
+        "desc": "Wind-guided archers and cloud-falcon tamers from Zephras Isle. Gains Walk on Air (glide), Read Leyline (+50% regen; +100% when Attuned), Wind Blessed (+2% Haste across melee/ranged/spells), and Elemental Insight (+5% damage to Elementals)."
       }
     ]
   },
@@ -430,9 +430,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Plains Running Ramp & Mount Speed",
+      "feature": "Plains Running Speed Ramp",
       "category": "Tauren Racials",
-      "details": "1% speed every 5s to 30% with displacement check; +3% mounted speed (stacks)",
+      "details": "2% speed per stack up to 60% with displacement check; mounted speed removed",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"

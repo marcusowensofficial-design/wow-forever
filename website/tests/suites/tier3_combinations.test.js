@@ -17,10 +17,10 @@ export function runTier3Tests(collector, data) {
   const { talentsData, racesData, changesJson } = data;
 
   // =========================================================================
-  // Combination 1: Human Ruthless (+2% Crit) + Fire Mage Critical Mass (+10% Crit)
+  // Combination 1: Human Ruthless (+1% Crit) + Fire Mage Critical Mass (+10% Crit)
   // =========================================================================
   collector.describe('Tier 3.1: Human Ruthless + Mage Critical Mass Synergy', () => {
-    collector.test('3.1.1 Human Ruthless (+2%) stacks additively with Mage Critical Mass 5/5 (+10%) for +12% Fire crit', () => {
+    collector.test('3.1.1 Human Ruthless (+1%) stacks additively with Mage Critical Mass 5/5 (+10%) for +11% Fire crit', () => {
       const human = racesData.find(r => r.id === 'human');
       const ruthless = human?.racials?.find(r => r.name === 'Ruthless');
       expect(ruthless).toBeDefined();
@@ -31,10 +31,10 @@ export function runTier3Tests(collector, data) {
       expect(cm.maxRank).toBe(5);
 
       // Extract crit percentages
-      const racialCrit = 2; // +2% all spells and attacks
+      const racialCrit = 1; // +1% all spells and attacks (tuned from 2%)
       const talentCrit = 10; // +10% Fire spells (5 ranks * 2%)
       const totalFireCritBonus = racialCrit + talentCrit;
-      expect(totalFireCritBonus).toBe(12);
+      expect(totalFireCritBonus).toBe(11);
     });
 
     collector.test('3.1.2 Human race is eligible to be Mage in races-classes dataset', () => {
@@ -45,27 +45,20 @@ export function runTier3Tests(collector, data) {
   });
 
   // =========================================================================
-  // Combination 2: Dwarf Earth Fury (+2% Crit Bonus) + Shaman Elemental Fury (+100% Crit Bonus)
+  // Combination 2: Dwarf Artisan's Precision (+1% Hit) + Shaman Elemental Fury
   // =========================================================================
-  collector.describe('Tier 3.2: Dwarf Earth Fury + Shaman Elemental Fury Synergy', () => {
-    collector.test('3.2.1 Dwarf Earth Fury (+2% crit bonus) synergizes with Shaman Elemental Fury (+100% crit bonus)', () => {
+  collector.describe('Tier 3.2: Dwarf Artisan\'s Precision + Shaman Elemental Synergy', () => {
+    collector.test('3.2.1 Dwarf Artisan\'s Precision (+1% hit) synergizes with Shaman spells and weapon attacks', () => {
       const dwarf = racesData.find(r => r.id === 'dwarf');
-      const ef = dwarf?.racials?.find(r => r.name === 'Earth Fury');
-      expect(ef).toBeDefined();
+      const ap = dwarf?.racials?.find(r => r.name === "Artisan's Precision");
+      expect(ap).toBeDefined();
+      expect(ap.effect).toMatch(/1%/);
+      expect(ap.effect).toMatch(/hit chance/i);
 
       const shaman = talentsData.shaman?.talents || [];
       const elemFury = shaman.find(t => t.name === 'Elemental Fury');
       expect(elemFury).toBeDefined();
       expect(elemFury.maxRank).toBe(5);
-
-      // In Vanilla spell critical strikes deal 150% base damage (+50% bonus).
-      // Elemental Fury adds +100% to the bonus (reaching 200% damage total).
-      // Earth Fury adds +2% critical bonus to damage and healing.
-      const baseBonus = 50;
-      const talentBonus = 50; // Elemental Fury 5/5 adds +100% of base bonus (+50%)
-      const racialBonus = 2;   // Earth Fury
-      const totalCritMultiplier = 100 + baseBonus + talentBonus + racialBonus;
-      expect(totalCritMultiplier).toBe(202); // 202% total spell critical damage
     });
 
     collector.test('3.2.2 Dwarf race is eligible to be Shaman (Wildhammer clan unlock)', () => {
@@ -76,13 +69,15 @@ export function runTier3Tests(collector, data) {
   });
 
   // =========================================================================
-  // Combination 3: Orc Savage (+1% Crit) + Warlock Destructive Spells
+  // Combination 3: Orc Command (+5% Pet Damage) + Warlock Destructive Spells
   // =========================================================================
-  collector.describe('Tier 3.3: Orc Savage + Warlock Destruction Synergy', () => {
-    collector.test('3.3.1 Orc Savage (+1% crit with all spells) applies to Warlock Destructive spells', () => {
+  collector.describe('Tier 3.3: Orc Command + Warlock Pet & Destruction Synergy', () => {
+    collector.test('3.3.1 Orc Command (+5% pet damage) applies to Warlock pets', () => {
       const orc = racesData.find(r => r.id === 'orc');
-      const savage = orc?.racials?.find(r => r.name === 'Savage');
-      expect(savage).toBeDefined();
+      const cmd = orc?.racials?.find(r => r.name === 'Command');
+      expect(cmd).toBeDefined();
+      expect(cmd.effect).toMatch(/5%/);
+      expect(cmd.effect).toMatch(/pet/i);
 
       const warlock = talentsData.warlock?.talents || [];
       const dr = warlock.find(t => t.name === 'Destructive Reach');
@@ -190,12 +185,11 @@ export function runTier3Tests(collector, data) {
   // Combination 8: Tauren Endurance + Warrior Shield Specialization
   // =========================================================================
   collector.describe('Tier 3.8: Tauren Endurance + Warrior Shield Specialization', () => {
-    collector.test('3.8.1 Tauren Endurance (+5% HP, +2% Crit Dmg/Heal) synergizes with Warrior Shield Specialization (Block & Rage)', () => {
+    collector.test('3.8.1 Tauren Endurance (+5% HP) synergizes with Warrior Shield Specialization (Block & Rage)', () => {
       const tauren = racesData.find(r => r.id === 'tauren');
       const end = tauren?.racials?.find(r => r.name === 'Endurance');
       expect(end).toBeDefined();
       expect(end.effect).toMatch(/5%/);
-      expect(end.effect).toMatch(/2%/);
 
       const warrior = talentsData.warrior?.talents || [];
       const ss = warrior.find(t => t.name === 'Shield Specialization');

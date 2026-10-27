@@ -302,8 +302,8 @@ collector.describe('Suite 5: Check 57 Replacement Racials & 4-Racial Symmetry Mu
 
     const replacements = [
       { raceId: 'human', racialName: 'Ruthless' },
-      { raceId: 'dwarf', racialName: 'Earth Fury' },
-      { raceId: 'orc', racialName: 'Savage' },
+      { raceId: 'dwarf', racialName: "Artisan's Precision" },
+      { raceId: 'orc', racialName: 'Command' },
       { raceId: 'skyborne', racialName: 'Read Leyline' }
     ];
 
@@ -351,20 +351,20 @@ collector.describe('Suite 5: Check 57 Replacement Racials & 4-Racial Symmetry Mu
     expect(() => runCheck57(mutated)).toThrow(/Missing replacement racial "Ruthless" on race Human/);
   });
 
-  collector.test('5.6 Mutation: Removing "Earth Fury" from Dwarf throws error', () => {
+  collector.test('5.6 Mutation: Removing "Artisan\'s Precision" from Dwarf throws error', () => {
     const mutated = JSON.parse(JSON.stringify(productionData.racesData));
     const dwarf = mutated.find(r => r.id === 'dwarf');
-    dwarf.racials = dwarf.racials.filter(r => r.name !== 'Earth Fury');
+    dwarf.racials = dwarf.racials.filter(r => r.name !== "Artisan's Precision");
     dwarf.racials.push({ name: 'Dummy Passive', type: 'Passive' });
-    expect(() => runCheck57(mutated)).toThrow(/Missing replacement racial "Earth Fury" on race Dwarf/);
+    expect(() => runCheck57(mutated)).toThrow(/Missing replacement racial "Artisan's Precision" on race Dwarf/);
   });
 
-  collector.test('5.7 Mutation: Removing "Savage" from Orc throws error', () => {
+  collector.test('5.7 Mutation: Removing "Command" from Orc throws error', () => {
     const mutated = JSON.parse(JSON.stringify(productionData.racesData));
     const orc = mutated.find(r => r.id === 'orc');
-    orc.racials = orc.racials.filter(r => r.name !== 'Savage');
+    orc.racials = orc.racials.filter(r => r.name !== 'Command');
     orc.racials.push({ name: 'Dummy Passive', type: 'Passive' });
-    expect(() => runCheck57(mutated)).toThrow(/Missing replacement racial "Savage" on race Orc/);
+    expect(() => runCheck57(mutated)).toThrow(/Missing replacement racial "Command" on race Orc/);
   });
 
   collector.test('5.8 Mutation: Removing "Read Leyline" from Skyborne throws error', () => {

@@ -2361,15 +2361,15 @@ WoW Forever re-evaluates vanilla racials to eliminate extreme faction imbalances
 ### Racial Abilities Master Breakdown
 
 | Race | Key Active Racial | Signature Passive | Top Class Synergy |
-| **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+5% Spirit), Ruthless (+2% Crit) | Priest, Paladin, Warrior |
-| **Orc** | **Blood Fury:** +10% AP & SP (3m CD) • Shatter Curse | Hardiness (-20% Stun), Savage (+1% Crit) | Warlock, Hunter, Warrior, Mage |
+| **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+10% Spirit), Ruthless (+1% Crit) | Priest, Paladin, Warrior |
+| **Orc** | **Blood Fury:** +10% AP & SP (3m CD) • Shatter Curse | Hardiness (-20% Stun), Command (+5% Pet Dmg) | Warlock, Hunter, Warrior, Mage |
 | **Undead** | **Will of the Forsaken:** Dispels Charm, Fear, Sleep | Cannibalize, Touch of the Grave (Health drain proc) | Mage, Rogue, Priest, Paladin |
 | **Night Elf** | **Shadowmeld:** Gain Stealth while immobile | Quickness (+1% Dodge, +2% Speed - stacks), Wisp Spirit | Druid, Hunter, Rogue |
-| **Dwarf** | **Stoneform:** Dispels Bleed, Poison, Disease; Physical reduction | Earth Fury (+2% Crit Dmg/Heal), Big Game Hunter | Priest, Paladin, Hunter, Warrior |
+| **Dwarf** | **Stoneform:** Dispels Bleed, Poison, Disease; Physical reduction | Artisan's Precision (+1% Hit), Big Game Hunter | Priest, Paladin, Hunter, Warrior |
 | **Gnome** | **Escape Artist:** Snare dispel • Eureka! (+10% Dmg/Heal/PW:S) | Expansive Mind (+5% Resource), Engineering Spec | Mage, Warlock, Rogue, Priest |
-| **Tauren** | **War Stomp:** 2s AoE stun (90s CD) • Cultivation (15m CD) | Endurance (+5% HP, +2% Crit Dmg/Heal), Plainsrunning (+3% Mount Speed) | Shaman, Druid, Warrior |
+| **Tauren** | **War Stomp:** 2s AoE stun (90s CD) • Cultivation (15m CD) | Endurance (+5% HP), Plainsrunning (+2%/stack to +60%) | Shaman, Druid, Warrior |
 | **Troll** | **Berserking:** +10% Attack/Casting speed • Rapid Regen | Beast Slaying (+5% Dmg), Regeneration (+20% Regen) | Hunter, Shaman, Mage, Priest, Warlock |
-| **The Skyborne** | **Walk on Air:** 10s Glide (90s CD) • Read Leyline (Castable moving) | Wind Blessed (+3% Haste), Elemental Insight | Mage, Priest, Hunter, Rogue, Warrior, Shaman |`
+| **The Skyborne** | **Walk on Air:** 10s Glide (90s CD) • Read Leyline / Skysight | Wind Blessed (+2% Haste), Elemental Insight | Mage, Priest, Hunter, Rogue, Warrior, Shaman |`
     },
     {
       id: "guide-dwarf-shaman-totems",

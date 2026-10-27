@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "videoTitle": "WoW Forever Mage Class Deep Dive & Orc Racials",
   "videoUrl": "https://www.youtube.com/watch?v=y2j8C277C_g",
   "sourceAttribution": "Sodapoppin Level-38 Orc Mage BlizzCon Early Access Demo & Closed Beta Forensics",
-  "summary": "WoW Forever delivers transformative evolution to the Mage: the historic arrival of Orc Mages wielding Blood Fury (+10% Spell Power) and Savage (+1% spell crit), the return of Downranking, baseline Comprehend Scroll mechanics, Frostfire Bolt dual-school integration, Arcane Blast stacking loops with free Missile Barrage procs, Hot Streak 3-stack cast-time reductions for 1.5s Pyroblasts, instant Ice Lance with Fingers of Frost shatter combos, and rebalanced uncapped Blizzard AoE farming.",
+  "summary": "WoW Forever delivers transformative evolution to the Mage: the historic arrival of Orc Mages wielding Blood Fury (+10% Spell Power) and Shatter Curse magic mitigation, the return of Downranking, baseline Comprehend Scroll mechanics, Frostfire Bolt dual-school integration, Arcane Blast stacking loops with free Missile Barrage procs, Hot Streak 3-stack cast-time reductions for 1.5s Pyroblasts, instant Ice Lance with Fingers of Frost shatter combos, and rebalanced uncapped Blizzard AoE farming.",
   "subTabs": [
     {
       "id": "overview",
@@ -350,10 +350,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "desc": "Reduces the duration of all stun effects by 20%. Replaces Classic's controversial RNG resist mechanic with a consistent, reliable 20% duration reduction, providing predictable PvP counterplay."
         },
         {
-          "name": "Savage (+1% All Crit)",
+          "name": "Command (+5% Pet Damage)",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Orcs gain +1% critical-strike chance for ALL spells and abilities. Replaces the legacy weapon specialization with an unconditional critical bonus."
+          "desc": "Orcs increase damage dealt by Warlock and Hunter pets by 5% (Command re-added, replacing Savage)."
         },
         {
           "name": "Shatter Curse",
@@ -380,7 +380,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "race": "The Skyborne Mage (High Order)",
         "faction": "Alliance",
         "badge": "✦ NEW IN FOREVER",
-        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Read Leyline (+100% regen, castable while moving), Wind Blessed (+3% casting Haste), and Elemental Insight (+5% damage to Elementals)."
+        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Read Leyline (+50% regen; +100% when Attuned), Wind Blessed (+2% casting Haste), and Elemental Insight (+5% damage to Elementals)."
       }
     ]
   },

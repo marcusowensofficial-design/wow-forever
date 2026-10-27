@@ -457,43 +457,43 @@ export function runTier1Tests(collector, data) {
   // Category 8: Official Replacement Racials (PROJECT.md Feature 14)
   // =========================================================================
   collector.describe('Tier 1.8: Replacement Racials & 4-Racial Symmetry', () => {
-    collector.test('1.8.1 Human has Ruthless passive granting +2% crit to all spells and attacks', () => {
+    collector.test('1.8.1 Human has Ruthless passive granting +1% crit to all spells and attacks', () => {
       const human = racesData.find(r => r.id === 'human');
       expect(human).toBeDefined();
       const ruthless = human.racials.find(r => r.name === 'Ruthless');
       expect(ruthless).toBeDefined();
       expect(ruthless.type).toMatch(/Passive/i);
-      expect(ruthless.effect).toMatch(/2%/);
+      expect(ruthless.effect).toMatch(/1%/);
       expect(ruthless.effect).toMatch(/critical/i);
     });
 
-    collector.test('1.8.2 Dwarf has Earth Fury passive granting +2% critical bonus to damage and healing', () => {
+    collector.test('1.8.2 Dwarf has Artisan\'s Precision passive granting +1% hit chance with spells and attacks', () => {
       const dwarf = racesData.find(r => r.id === 'dwarf');
       expect(dwarf).toBeDefined();
-      const ef = dwarf.racials.find(r => r.name === 'Earth Fury');
-      expect(ef).toBeDefined();
-      expect(ef.type).toMatch(/Passive/i);
-      expect(ef.effect).toMatch(/2%/);
-      expect(ef.effect).toMatch(/critical/i);
+      const ap = dwarf.racials.find(r => r.name === "Artisan's Precision");
+      expect(ap).toBeDefined();
+      expect(ap.type).toMatch(/Passive/i);
+      expect(ap.effect).toMatch(/1%/);
+      expect(ap.effect).toMatch(/hit chance/i);
     });
 
-    collector.test('1.8.3 Orc has Savage passive granting +1% critical strike chance with all spells and abilities', () => {
+    collector.test('1.8.3 Orc has Command passive granting +5% pet damage for Warlocks and Hunters', () => {
       const orc = racesData.find(r => r.id === 'orc');
       expect(orc).toBeDefined();
-      const savage = orc.racials.find(r => r.name === 'Savage');
-      expect(savage).toBeDefined();
-      expect(savage.type).toMatch(/Passive/i);
-      expect(savage.effect).toMatch(/1%/);
-      expect(savage.effect).toMatch(/critical/i);
+      const cmd = orc.racials.find(r => r.name === 'Command');
+      expect(cmd).toBeDefined();
+      expect(cmd.type).toMatch(/Passive/i);
+      expect(cmd.effect).toMatch(/5%/);
+      expect(cmd.effect).toMatch(/pet/i);
     });
 
-    collector.test('1.8.4 Skyborne has Read Leyline active granting +100% regen for 30s / 15m near leyline (2s cast, 2m CD)', () => {
+    collector.test('1.8.4 Skyborne has Read Leyline active granting +50% regen (100% when Attuned) for 15s (2m CD)', () => {
       const skyborne = racesData.find(r => r.id === 'skyborne');
       expect(skyborne).toBeDefined();
       const rl = skyborne.racials.find(r => r.name === 'Read Leyline');
       expect(rl).toBeDefined();
       expect(rl.type).toMatch(/Active/i);
-      expect(rl.effect).toMatch(/100%/);
+      expect(rl.effect).toMatch(/50%/);
       expect(rl.effect).toMatch(/regen/i);
     });
 
@@ -545,20 +545,21 @@ export function runTier1Tests(collector, data) {
       expect(cult.effect).toMatch(/Herbalism/i);
     });
 
-    collector.test('1.9.5 Tauren Endurance increases Health by 5% and Critical Damage/Healing by 2%', () => {
+    collector.test('1.9.5 Tauren Endurance increases Health by 5% (crit and hit modifiers removed)', () => {
       const tauren = racesData.find(r => r.id === 'tauren');
       const end = tauren ? tauren.racials.find(r => r.name === 'Endurance') : null;
       expect(end).toBeDefined();
       expect(end.effect).toMatch(/5%/);
-      expect(end.effect).toMatch(/2%/);
-      expect(end.effect).toMatch(/critical damage and healing/i);
+      expect(end.effect).not.toMatch(/critical/i);
     });
 
-    collector.test('1.9.6 Tauren Plainsrunning provides outdoor speed ramp', () => {
+    collector.test('1.9.6 Tauren Plainsrunning provides outdoor speed ramp up to 60% without mounted bonus', () => {
       const tauren = racesData.find(r => r.id === 'tauren');
       const pr = tauren ? tauren.racials.find(r => r.name === 'Plainsrunning') : null;
       expect(pr).toBeDefined();
-      expect(pr.effect).toMatch(/movement speed|speed/i);
+      expect(pr.effect).toMatch(/60%/);
+      expect(pr.effect).toMatch(/2%/);
+      expect(pr.effect).not.toMatch(/3% increased mounted/i);
     });
 
     collector.test('1.9.7 Tauren War Stomp stuns nearby enemies for 2s up to 5 targets', () => {

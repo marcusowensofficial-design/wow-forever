@@ -176,6 +176,42 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-58",
+      "title": "WoW Forever Racials Overhaul: Community Manager Tuning Pass Prioritizes Racial Identity, Re-adds Orc Command & Introduces Dwarf Artisan's Precision",
+      "source": "Blizzard Official / Community Manager Blue Post",
+      "sourceType": "blizzard",
+      "author": "Community Management & Systems Design",
+      "date": "October 26, 2026",
+      "tag": "Racial Abilities & Traits",
+      "summary": "As WoW Forever approaches launch, a final tuning pass refines racial identities: Human Ruthless tuned to 1% crit and Spirit to 10%, Dwarf adds Artisan's Precision (+1% Hit), Tauren Plainsrunning overhauled to 2%/stack (max 60%), Orc re-adds Command (+5% pet damage), and Skyborne racials retuned.",
+      "content": `As we approach the launch of WoW Forever, we've been reflecting on feedback we've heard on racial abilities and passive traits: Some players have expressed that some of the new racial traits feel too generic, while others have raised concerns that some are objectively stronger than others.
+
+In taking a final pass on these, we've prioritized racial identity, which means that some races will naturally be slightly more effective than others at certain combat roles. In some places where we had replaced role- or class-focused racials with generic ones, we're rolling those changes back. One exception to this is the weapon specialization racials, like humans' Sword Specialization or orcs' Axe Specialization. While those have a strong fantasy component to them, it is not healthy in the long run for future raid and dungeon loot tables to be evaluated through the lens of "required" weapon types.
+
+At the same time, we're doing a tuning pass on some of the remaining passive bonuses to help ensure that they aren't skewing outcomes in a way that limits player preferences.
+
+• Human:
+  - Ruthless now increases critical chance by 1% (was 2%).
+  - Human Spirit now increases Spirit by 10% (was 5%).
+• Dwarf:
+  - Earth Fury (2% increased critical strike damage and healing) removed.
+  - Added: Artisan's Precision - Increases hit chance with spells and attacks by 1%.
+• Tauren:
+  - Plainsrunning now grants 2% movement speed per stack (was 1%), for a total max increase of 60% (was 30%).
+  - Plainsrunning no longer increases mounted movement speed.
+  - Endurance no longer provides any modifiers beyond 5% increased Health (no hit chance or critical damage modifiers).
+• Orc:
+  - Savage removed (1% increased critical strike chance).
+  - Command re-added, increasing Warlock and Hunter pet damage by 5%.
+• Skyborne:
+  - Wind-Blessed Haste bonus reduced to 2% (was 3%).
+  - Read Leyline now increases Mana and Health regeneration by 50% (was 100%), with a 15-second duration. This ability cannot be used while Innervate is active, and will be replaced by Innervate as a more powerful effect.
+  - Using Read Leyline at a Ley Line now also grants "Attuned" for 1 hour. While Attuned, the benefit of Read Leyline is increased to 100% regeneration increase. Attuned persists through death.
+  - Skysight is now a 15% increased movement speed (was 10%), with a 15-second duration.
+  - Using Skysight at an elemental convergence now also grants "Charged" for 1 hour. While Charged, the benefit of Skysight is a 30% movement speed increase. Charged persists through death.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-racial-abilities-and-traits-update"
+    },
+    {
       "id": "news-57",
       "title": "WoW Forever Closed Beta Concludes with Global Wipe: Blizzard Commences Infrastructure Prep for October 27 Name Reservation",
       "source": "Blizzard Official & Server Operations",
@@ -1830,14 +1866,14 @@ const WOW_FOREVER_DATA = {
         "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
-        "name": "Read Ley Line",
-        "type": "Active",
-        "effect": "Sense hidden ley conduits, boosting mana regeneration and spell efficiency (castable while moving, 30s minimum duration)."
+        "name": "Read Leyline",
+        "type": "Active • 15s • 2m CD",
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "3% increased melee, ranged, and spellcasting Haste."
+        "effect": "2% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -1853,13 +1889,13 @@ const WOW_FOREVER_DATA = {
       },
       {
         "name": "Skysight",
-        "type": "Active",
-        "effect": "Receive an Elemental Blessing increasing run speed by 10% (castable while moving)."
+        "type": "Active • 15s",
+        "effect": "Increases movement speed by 15% for 15 sec. Using at an elemental convergence grants Charged for 1 hour, increasing speed bonus to 30% (persists through death)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "3% increased melee, ranged, and spellcasting Haste."
+        "effect": "2% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -1874,14 +1910,14 @@ const WOW_FOREVER_DATA = {
         "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
-        "name": "Read Ley Line / Skysight",
+        "name": "Read Leyline / Skysight",
         "type": "Active (Faction Dependent)",
-        "effect": "Alliance: Read Ley Line (mana/spells) • Horde: Skysight (+10% run speed). Both castable while moving."
+        "effect": "Alliance: Read Leyline (50% mana/health regen for 15s; 100% when Attuned) • Horde: Skysight (15% run speed for 15s; 30% when Charged). Both persist through death when empowered."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "3% increased melee, ranged, and spellcasting Haste."
+        "effect": "2% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
