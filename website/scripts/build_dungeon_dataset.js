@@ -152,6 +152,17 @@ const dungeonsConfig = [
 const scratchDir = 'C:/Users/marco/.gemini/antigravity/brain/36315a22-a155-4a5f-b1d2-7fc209310dbd/scratch';
 const imagesBaseDir = path.join(ROOT, 'images', 'dungeons');
 
+// Load tooltips cache
+const tooltipsCachePath = path.join(ROOT, 'data', 'scraped', 'forever_dungeon_loot_tooltips.json');
+let tooltipsData = {};
+if (fs.existsSync(tooltipsCachePath)) {
+  try {
+    tooltipsData = JSON.parse(fs.readFileSync(tooltipsCachePath, 'utf8'));
+  } catch (e) {
+    console.error('Failed reading tooltips cache:', e.message);
+  }
+}
+
 async function downloadFile(url, destPath) {
   if (fs.existsSync(destPath) && fs.statSync(destPath).size > 0) {
     return;
@@ -477,10 +488,14 @@ Carrying the **Tome of Dalaran** through the Violet Enclave allows your group to
       content += `### Notable Dungeon Drops & Loot Matrix\n\n`;
       lootTables.forEach(lt => {
         content += `#### Drops from ${lt.boss}\n\n`;
-        content += `| Item Slot / Type | Drop Item | Boss |\n`;
-        content += `|---|---|---|\n`;
+        content += `| Item Slot / Type | Drop Item | Boss | Primary Stats / Key Effect |\n`;
+        content += `|---|---|---|---|\n`;
         lt.items.forEach(it => {
-          content += `| ${it.type} | [${it.name}](${it.link}) | ${lt.boss} |\n`;
+          const m = it.link.match(/item=(\d+)/);
+          const itemId = m ? m[1] : '';
+          const tt = tooltipsData[itemId];
+          const statText = tt && tt.statSummary ? tt.statSummary : 'Encounter Drop';
+          content += `| ${it.type} | [${it.name}](${it.link}) | ${lt.boss} | ${statText} |\n`;
         });
         content += `\n`;
       });

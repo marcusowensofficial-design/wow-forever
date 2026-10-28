@@ -310,6 +310,9 @@ function renderMasterDetailReader(mountElem, filteredGuides) {
       }
     });
   });
+
+  // Bind interactive loot tooltips for encounter drops
+  bindGuideItemTooltips(mountElem);
 }
 
 function renderCardsGrid(mountElem, filteredGuides) {
@@ -449,6 +452,9 @@ function setupGuidePageEvents() {
       renderGuidesPage();
     });
   }
+
+  // Dismiss tooltips on page scroll or ESC
+  window.addEventListener('scroll', hideDungeonItemTooltip, { passive: true });
 }
 
 function renderGuidesCards() {
@@ -498,6 +504,80 @@ function setupGuideModalEvents() {
     if (e.target === modal) {
       modal.classList.remove('is-open');
       modal.setAttribute('hidden', '');
+      hideDungeonItemTooltip();
+    }
+  });
+}
+
+function showDungeonItemTooltip(e, itemId) {
+  const tooltip = document.getElementById('wow-item-tooltip');
+  if (!tooltip) return;
+  const item = (typeof window !== 'undefined' && window.WOW_DUNGEON_LOOT_TOOLTIPS) ? window.WOW_DUNGEON_LOOT_TOOLTIPS[itemId] : null;
+  if (!item || !item.htmlTooltip) return;
+
+  tooltip.innerHTML = `
+    <div class="dungeon-loot-tooltip-card">
+      <div class="dungeon-tip-header-row">
+        <img src="https://wow.zamimg.com/images/wow/icons/medium/${escapeHtml(item.icon || 'inv_misc_questionmark')}.jpg" alt="" class="dungeon-tip-icon ${item.quality || 'q2'}" />
+        <div class="dungeon-tip-header-meta">
+          <span class="dungeon-tip-source-tag">Encounter Drop</span>
+          <div class="dungeon-tip-ilvl">Item Level ${item.iLvl} • Phase 2 Beta</div>
+        </div>
+      </div>
+      <div class="dungeon-tip-body">
+        ${item.htmlTooltip}
+      </div>
+    </div>
+  `;
+  tooltip.removeAttribute('hidden');
+  tooltip.style.display = 'block';
+  tooltip.style.opacity = '1';
+  tooltip.style.pointerEvents = 'none';
+  tooltip.style.zIndex = '9999999';
+  positionDungeonItemTooltip(e, tooltip);
+}
+
+function positionDungeonItemTooltip(e, tooltip) {
+  const xOffset = 18;
+  const yOffset = 18;
+  const tipWidth = tooltip.offsetWidth || 340;
+  const tipHeight = tooltip.offsetHeight || 200;
+  let left = e.clientX + xOffset;
+  let top = e.clientY + yOffset;
+
+  if (left + tipWidth > window.innerWidth - 12) {
+    left = Math.max(12, e.clientX - tipWidth - 12);
+  }
+  if (top + tipHeight > window.innerHeight - 12) {
+    top = Math.max(12, e.clientY - tipHeight - 12);
+  }
+
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${top}px`;
+}
+
+function hideDungeonItemTooltip() {
+  const tooltip = document.getElementById('wow-item-tooltip');
+  if (tooltip) {
+    tooltip.setAttribute('hidden', '');
+    tooltip.style.display = 'none';
+    tooltip.style.opacity = '0';
+  }
+}
+
+function bindGuideItemTooltips(mountElem) {
+  if (!mountElem) return;
+  mountElem.querySelectorAll('.guide-item-link').forEach(link => {
+    const itemId = link.getAttribute('data-item-id');
+    if (itemId) {
+      link.addEventListener('mouseenter', (e) => showDungeonItemTooltip(e, itemId));
+      link.addEventListener('mousemove', (e) => {
+        const tooltip = document.getElementById('wow-item-tooltip');
+        if (tooltip && !tooltip.hasAttribute('hidden')) {
+          positionDungeonItemTooltip(e, tooltip);
+        }
+      });
+      link.addEventListener('mouseleave', hideDungeonItemTooltip);
     }
   });
 }
@@ -510,6 +590,18 @@ function formatInlineGuide(str) {
   escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)"']+|#[^\s)"']+|\/[^\s)"']+)\)/g, (match, label, href) => {
     const isExternal = href.startsWith('http');
     const targetRel = isExternal ? ' target="_blank" rel="noopener"' : '';
+
+    // Check if it's an item link
+    const itemMatch = href.match(/item=(\d+)/);
+    if (itemMatch) {
+      const itemId = itemMatch[1];
+      const itemData = (typeof window !== 'undefined' && window.WOW_DUNGEON_LOOT_TOOLTIPS) ? window.WOW_DUNGEON_LOOT_TOOLTIPS[itemId] : null;
+      const qualityClass = itemData ? itemData.quality : 'q2';
+      const iconToken = itemData ? itemData.icon : null;
+      const iconHtml = iconToken ? `<img src="https://wow.zamimg.com/images/wow/icons/small/${escapeHtml(iconToken)}.jpg" alt="" class="guide-item-mini-icon" loading="lazy" />` : '';
+      return `<a href="${href}"${targetRel} class="guide-inline-link guide-item-link ${qualityClass}" data-item-id="${itemId}">${iconHtml}<span>${label}</span></a>`;
+    }
+
     return `<a href="${href}"${targetRel} class="guide-inline-link">${label}</a>`;
   });
   return escaped;
@@ -860,6 +952,8 @@ window.openGuideModal = function(targetGuideId) {
       </div>
     </div>
   `;
+
+  bindGuideItemTooltips(bodyElem);
 
   modal.classList.add('is-open');
   modal.removeAttribute('hidden');
