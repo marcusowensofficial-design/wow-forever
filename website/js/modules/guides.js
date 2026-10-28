@@ -8,6 +8,7 @@ let activeGuideCategory = 'all';
 let activeGuideId = 'guide-sleeping-bag';
 let guideSearchQuery = '';
 let guideViewLayout = 'reader'; // 'reader' | 'cards'
+let activeDungeonSubfilter = 'all'; // 'all' | 'custom' | 'alliance' | 'horde' | 'lvl13-20' | 'lvl21-34'
 
 const GUIDE_CATEGORY_MAP = {
   all: null,
@@ -40,6 +41,8 @@ function updateCategoryPillCounts() {
   const guides = window.WOW_TOOLS_DATA?.guides || [];
   const countAll = document.getElementById('count-cat-all');
   if (countAll) countAll.textContent = guides.length;
+  const statVerified = document.getElementById('stat-verified-guides');
+  if (statVerified) statVerified.textContent = guides.length;
 
   Object.keys(GUIDE_CATEGORY_MAP).forEach(catKey => {
     if (catKey === 'all') return;
@@ -62,7 +65,20 @@ function getFilteredGuides() {
       return false;
     }
 
-    // 2. Search query filter
+    // 2. Dungeon subfilter (active only on Dungeons & Raids category)
+    if (activeGuideCategory === 'dungeons' && activeDungeonSubfilter !== 'all') {
+      const meta = g.dungeonMeta;
+      if (!meta) {
+        return false;
+      }
+      if (activeDungeonSubfilter === 'custom' && meta.type !== 'custom') return false;
+      if (activeDungeonSubfilter === 'alliance' && meta.faction !== 'Alliance' && meta.faction !== 'Both') return false;
+      if (activeDungeonSubfilter === 'horde' && meta.faction !== 'Horde' && meta.faction !== 'Both') return false;
+      if (activeDungeonSubfilter === 'lvl13-20' && meta.levelMin > 20) return false;
+      if (activeDungeonSubfilter === 'lvl21-34' && meta.levelMax < 21) return false;
+    }
+
+    // 3. Search query filter
     if (guideSearchQuery) {
       const q = guideSearchQuery.toLowerCase();
       const inTitle = g.title && g.title.toLowerCase().includes(q);
@@ -76,11 +92,52 @@ function getFilteredGuides() {
   });
 }
 
+function renderDungeonSubfilters() {
+  const container = document.getElementById('guides-dungeon-subfilters');
+  if (!container) return;
+
+  if (activeGuideCategory !== 'dungeons') {
+    container.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+
+  container.style.display = 'flex';
+  const subfilters = [
+    { id: 'all', label: 'All Encounters', icon: '🏰' },
+    { id: 'custom', label: 'Classic+ Custom', icon: '✨' },
+    { id: 'alliance', label: 'Alliance Path', icon: '🦁' },
+    { id: 'horde', label: 'Horde Path', icon: '🐺' },
+    { id: 'lvl13-20', label: 'Levels 13–20', icon: '⚔️' },
+    { id: 'lvl21-34', label: 'Levels 21–34', icon: '🛡️' }
+  ];
+
+  container.innerHTML = subfilters.map(f => `
+    <button type="button" 
+            class="dungeon-subfilter-btn ${activeDungeonSubfilter === f.id ? 'active' : ''}" 
+            data-dungeon-subfilter="${f.id}"
+            role="tab"
+            aria-selected="${activeDungeonSubfilter === f.id}">
+      <span>${f.icon}</span> ${f.label}
+    </button>
+  `).join('');
+
+  container.querySelectorAll('.dungeon-subfilter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeDungeonSubfilter = btn.getAttribute('data-dungeon-subfilter') || 'all';
+      renderDungeonSubfilters();
+      renderGuidesPage();
+    });
+  });
+}
+
 function renderGuidesPage() {
   const readerMount = document.getElementById('guides-reader-mount');
   const cardsMount = document.getElementById('guides-cards-mount');
   const resultsBanner = document.getElementById('guides-results-banner');
   if (!readerMount && !cardsMount) return;
+
+  renderDungeonSubfilters();
 
   const guides = window.WOW_TOOLS_DATA?.guides || [];
   const filtered = getFilteredGuides();
@@ -344,6 +401,7 @@ function setupGuidePageEvents() {
         btn.setAttribute('aria-selected', 'true');
 
         activeGuideCategory = btn.getAttribute('data-guide-category') || 'all';
+        activeDungeonSubfilter = 'all';
         renderGuidesPage();
       });
     });
@@ -668,6 +726,7 @@ window.navigateToGuide = function(targetGuideId, preferredCategory) {
 window.clearGuideSearch = function() {
   guideSearchQuery = '';
   activeGuideCategory = 'all';
+  activeDungeonSubfilter = 'all';
   const searchInput = document.getElementById('guides-search-input');
   if (searchInput) searchInput.value = '';
   const searchClearBtn = document.getElementById('guides-search-clear');

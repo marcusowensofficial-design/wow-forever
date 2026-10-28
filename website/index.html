@@ -934,7 +934,7 @@
           <p class="section-subtext">55 curated gameplay blueprints, 1–60 class masterclasses, leveling routes, raid attunements, dungeon strategies, and economy systems from Wowhead, Warcraft Tavern, Method, and Classic+ playtesting.</p>
         </div>
         <div class="guides-header-stats" style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
-          <span class="guide-stat-chip"><strong>55</strong> Verified Guides</span>
+          <span class="guide-stat-chip"><strong id="stat-verified-guides">61</strong> Verified Guides</span>
           <span class="guide-stat-chip"><strong>1–60</strong> Launch Progression</span>
           <span class="guide-stat-chip"><strong>6</strong> Categories</span>
         </div>
@@ -967,11 +967,14 @@
           </button>
         </div>
 
+        <!-- Dungeon Sub-Filter Bar (Active on Dungeons & Raids Category) -->
+        <div id="guides-dungeon-subfilters" class="dungeon-subfilters-bar" style="display: none;" role="tablist" aria-label="Dungeon Sub-Filters"></div>
+
         <!-- Search Bar and View Mode Switcher -->
         <div class="guides-toolbar-row">
           <div class="guides-search-wrap">
             <span class="guides-search-icon">🔍</span>
-            <input type="text" id="guides-search-input" class="guides-search-field" placeholder="Search 47 guides, tactics, bosses, macros..." aria-label="Search all Classic+ guides" autocomplete="off" />
+            <input type="text" id="guides-search-input" class="guides-search-field" placeholder="Search 61 guides, tactics, bosses, macros..." aria-label="Search all Classic+ guides" autocomplete="off" />
             <button type="button" id="guides-search-clear" class="guides-search-clear-btn" aria-label="Clear search" hidden>✕</button>
           </div>
 
@@ -3812,6 +3815,7 @@
   <script defer src="js/data/core-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/races-classes.js?v=1.60.1-70425"></script>
   <script defer src="js/data/tools-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/dungeons-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/atlas-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/professions-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/professions-reference-data.js?v=1.60.1-70425"></script>

@@ -3943,6 +3943,188 @@
 }
 
 /* ==========================================================================
+   Curated Dungeon Guides - Visual Cards & Media Styling
+   ========================================================================== */
+.dungeon-subfilters-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 0 0.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dungeon-subfilter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.dungeon-subfilter-btn:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #f8fafc;
+}
+
+.dungeon-subfilter-btn.active {
+  background: rgba(212, 175, 55, 0.22);
+  border-color: #d4af37;
+  color: #fbbf24;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.dungeon-images-grid,
+.dungeon-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+  margin: 1.25rem 0;
+}
+
+.dungeon-media-figure {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-sm, 8px);
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dungeon-media-figure:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  transform: translateY(-2px);
+}
+
+.dungeon-media-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.dungeon-media-img.map-img {
+  max-height: 480px;
+  object-fit: contain;
+  background: #090d16;
+}
+
+.dungeon-media-caption {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  background: rgba(11, 15, 25, 0.85);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dungeon-trash-card {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  background: rgba(30, 41, 59, 0.45);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-left: 4px solid #f59e0b;
+  border-radius: var(--radius-sm, 6px);
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dungeon-trash-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dungeon-trash-content {
+  flex: 1;
+}
+
+.dungeon-trash-title {
+  color: #fbbf24;
+  font-size: 0.98rem;
+  margin: 0 0 0.45rem 0;
+  font-weight: 700;
+}
+
+.dungeon-boss-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+.dungeon-boss-portrait {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+  flex-shrink: 0;
+}
+
+.dungeon-boss-content {
+  flex: 1;
+}
+
+.dungeon-boss-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 0.2rem 0.55rem;
+  background: rgba(212, 175, 55, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.dungeon-boss-title {
+  font-size: 1.2rem;
+  color: #f8fafc;
+  margin: 0 0 0.6rem 0;
+  font-weight: 700;
+}
+
+.dungeon-boss-tactics p {
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .dungeon-boss-card,
+  .dungeon-trash-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .dungeon-trash-card .guide-bullet-list {
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
    Interactive Level 13-60 Dungeon Timeline Slider
    ========================================================================== */
 .timeline-control-bar {
