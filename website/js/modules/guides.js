@@ -507,6 +507,11 @@ function formatInlineGuide(str) {
   let escaped = escapeHtml(str);
   escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   escaped = escaped.replace(/`([^`]+)`/g, '<code class="guide-inline-code">$1</code>');
+  escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)"']+|#[^\s)"']+|\/[^\s)"']+)\)/g, (match, label, href) => {
+    const isExternal = href.startsWith('http');
+    const targetRel = isExternal ? ' target="_blank" rel="noopener"' : '';
+    return `<a href="${href}"${targetRel} class="guide-inline-link">${label}</a>`;
+  });
   return escaped;
 }
 

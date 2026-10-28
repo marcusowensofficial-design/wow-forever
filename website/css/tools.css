@@ -3308,6 +3308,20 @@
   font-size: 0.85em;
 }
 
+.guide-inline-link {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted rgba(251, 191, 36, 0.4);
+  transition: all 0.2s ease;
+}
+
+.guide-inline-link:hover {
+  color: #fde047;
+  border-bottom-color: #fde047;
+  text-shadow: 0 0 8px rgba(253, 224, 71, 0.4);
+}
+
 .guide-source-badge {
   background: rgba(56, 189, 248, 0.1);
   border: 1px solid rgba(56, 189, 248, 0.3);
