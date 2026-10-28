@@ -12,18 +12,23 @@ function initCountdowns() {
     phase2: new Date(WOW_FOREVER_DATA.countdownTargets.betaPhase2).getTime(),
     betaEnds: new Date(WOW_FOREVER_DATA.countdownTargets.betaEnds).getTime(),
     nameReservation: new Date(WOW_FOREVER_DATA.countdownTargets.nameReservation || "2026-10-27T10:00:00-07:00").getTime(),
+    nameReservationEnds: new Date(WOW_FOREVER_DATA.countdownTargets.nameReservationEnds || "2026-11-03T10:00:00-08:00").getTime(),
     raids: new Date(WOW_FOREVER_DATA.countdownTargets.raidUnlock).getTime()
   };
 
   function update() {
     const now = new Date().getTime();
 
-    // 1. Pre-Launch / Early Name Reservation Countdown (Oct 27, 2026) or Beta Ends
+    // 1. Pre-Launch / Early Name Reservation Countdown (Oct 27 – Nov 3) or Beta Ends
     const isPostBeta = now >= targets.betaEnds;
     if (isPostBeta && now < targets.nameReservation) {
       const diffNameRes = Math.max(0, targets.nameReservation - now);
       renderTimerDigits('betaends', diffNameRes);
       renderTimerDigits('nameres', diffNameRes);
+    } else if (now >= targets.nameReservation && now < targets.nameReservationEnds) {
+      const diffNameResWindow = Math.max(0, targets.nameReservationEnds - now);
+      renderTimerDigits('betaends', diffNameResWindow);
+      renderTimerDigits('nameres', diffNameResWindow);
     } else {
       const diffBetaEnds = Math.max(0, targets.betaEnds - now);
       renderTimerDigits('betaends', diffBetaEnds);

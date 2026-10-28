@@ -342,7 +342,7 @@ const WOW_TOOLS_DATA = {
       classicItemsHidden: 5006,
       classicRevealed: 3190,
       sodLeftovers: 5168,
-      lastUpdated: "October 24, 2026"
+      lastUpdated: "October 28, 2026"
     },
     demoItem: {
       id: 273049,
@@ -3759,20 +3759,20 @@ In WoW Forever, **World Buffs are disabled inside raid instances**:
     },
     {
       id: "guide-early-name-reservation",
-      title: "Early Name Reservation & Character Creation Guide (Opens Oct 27, 10 AM PDT)",
+      title: "Early Name Reservation & Character Creation Guide (LIVE NOW: Oct 27 – Nov 3)",
       category: "Leveling & Quests",
       source: "Blizzard Official · Blue Post Operations",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_character_orc_male.jpg",
-      summary: "How to secure your top 3 character names starting Tuesday, October 27 at 10:00 AM PDT across PvP, PvE, RP, and Hardcore rulesets. Includes race/class combos and launch checklist.",
+      summary: "How to secure your top 3 character names during the active pre-launch reservation window (Oct 27 – Nov 3) across PvP, PvE, RP, and RP-PvP rulesets. Includes Kaivax naming filter hotfix notes, race/class combos, and launch checklist.",
       content: `### Pre-Launch Timeline: Early Name Reservation Window
-Starting **Tuesday, October 27, 2026 at 10:00 AM PDT (17:00 UTC)**, character creation officially opens across all World of Warcraft: Forever megarealms. Players have a full 7-day window to secure iconic character names and customize appearances ahead of the November 4 Global Launch!
+Early character name reservation is **LIVE NOW** across all World of Warcraft: Forever regional megarealms (running October 27 through November 3, 2026 at 10:00 AM PST). Players with eligible pre-purchase editions have a full 7-day window to secure iconic character names and customize appearances ahead of the November 4 Global Launch!
 
 | Parameter | Launch Reservation Rule |
 | :--- | :--- |
 | **Window Dates** | October 27 – November 3, 2026 (7 Full Days) |
 | **Character Cap** | Maximum **3 Characters** reserved per Battle.net Account |
 | **Ruleset Options** | Normal (PvE), PvP, RP-Normal, RP-PvP, Hardcore (Winter 2026) |
-| **Account Requirement** | Active World of Warcraft Subscription or Game Time on Battle.net |
+| **Account Requirement** | Pre-Purchase of Skyborne Heroic/Epic Pack or Warcraft Forever Collection (Standard Sub unlocks Nov 4) |
 | **Client Version** | WoW Forever Client Build **1.60.1.70425** (Release Candidate) |
 
 ---
@@ -3785,6 +3785,7 @@ Because WoW Forever utilizes unified regional megarealms (Americas, Europe, Kore
 • **Shared First Names Permitted:** Multiple players can share the exact same first name! Two players named *Arthur Pendelton* and *Arthur Stoneguard* can both exist concurrently without conflict.
 • **Display Options:** In your Interface Display settings, you can customize nameplates to show *First and Last Name*, *First Name Only*, or *First Name with Initial*.
 • **RP Ruleset Guidelines:** On the RP Megarealm, names must adhere strictly to fantasy-appropriate naming conventions. Real-world celebrity names, leetspeak, or modern phrases are automatically filtered or flagged for rename.
+• **October 28 Naming Filter Hotfix (Kaivax):** Blizzard deployed a hotfix resolving an issue where valid character names containing the substring 'con' (e.g. *Falcon*, *Bacon*, *Conflag*, *Connor*) triggered erroneous 'restricted name' rejections. Players can now safely claim these names.
 
 ---
 
@@ -3800,6 +3801,7 @@ Because WoW Forever utilizes unified regional megarealms (Americas, Europe, Kore
      - **Megarealm - RP / RP-PvP:** Immersive roleplaying naming rules and community taverns.
 3. **Lock In Your 3 Characters:**
    - You can allocate your 3 slots across any ruleset (e.g. 2 on PvP, 1 on Normal).
+   - On PvP and RP-PvP megaservers, creating your first character locks your account to that faction (Alliance or Horde) on that ruleset.
    - Once confirmed, that name is permanently reserved to your account worldwide.
 
 ---

@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 24, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425)
+ * Up-to-date as of October 28, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -15,13 +15,13 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Pre-Launch Window: Closed Beta Concluded (Name Reservation: Oct 27 • Launch: Nov 4)",
+    "currentBetaPhase": "Pre-Launch Window: Early Name Reservation LIVE NOW (Oct 27 – Nov 3 • Launch: Nov 4)",
     "clientBuild": "1.60.1.70425",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 24, 2026"
+    "lastUpdated": "October 28, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -68,6 +68,7 @@ const WOW_FOREVER_DATA = {
     "betaEnds": "2026-10-23T10:00:00-07:00",
     "stressTest": "2026-10-21T10:00:00-07:00",
     "nameReservation": "2026-10-27T10:00:00-07:00",
+    "nameReservationEnds": "2026-11-03T10:00:00-08:00",
     "globalLaunch": "2026-11-04T15:00:00-08:00",
     "raidUnlock": "2026-12-09T10:00:00-08:00"
   },
@@ -85,12 +86,12 @@ const WOW_FOREVER_DATA = {
     },
     "prelaunch": {
       "key": "prelaunch",
-      "topPill": "🛡️ Beta Concluded • Name Reservation Opens Oct 27 • Launch Nov 4",
+      "topPill": "🛡️ Pre-Launch Active • Name Reservation LIVE NOW (Oct 27 – Nov 3) • Global Launch Nov 4",
       "tickerDuration": "Beta Completed (37/37 Days)",
-      "heroTitle": "Beta Concluded — Launch Prep",
+      "heroTitle": "Pre-Launch Window — Name Reservation Live",
       "heroBadge": "Launch Countdown",
-      "headline": "Closed Beta Concluded: Pre-Launch Readiness Pass",
-      "subline": "The 37-day beta test has concluded with over 250,000 player reports logged. All characters are being reset ahead of the November 4 Global Launch.",
+      "headline": "Early Name Reservation Active: Pre-Launch Readiness Pass",
+      "subline": "Early Name Reservation is live across all regional rulesets through November 3. Lock in up to 3 character names ahead of the November 4 Global Launch.",
       "milestonesTitle": "Launch Progression Milestones",
       "squadBracket": "Global Launch Progression (Level 60)"
     },
@@ -154,6 +155,16 @@ const WOW_FOREVER_DATA = {
       "icon": "⚡"
     },
     {
+      "name": "wow4ever.quest: Beta Database & Quests",
+      "url": "https://wow4ever.quest/",
+      "icon": "🗺️"
+    },
+    {
+      "name": "wowforever.co: Open-Source Tracker",
+      "url": "https://wowforever.co/",
+      "icon": "📡"
+    },
+    {
       "name": "Wowhead Legacy Calculator",
       "url": "https://www.wowhead.com/forever/legacy-calculator",
       "icon": "🏆"
@@ -175,6 +186,67 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-62",
+      "title": "Blizzard Premieres 'Planet Azeroth' Nature Mockumentary Starring Bill Bailey Ahead of Worldwide Launch",
+      "source": "Blizzard Official / Media Spotlight",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "October 28, 2026",
+      "tag": "Media & Community",
+      "summary": "Blizzard releases 'Planet Azeroth', a comedic three-part mockumentary hosted by British comedian Bill Bailey in classic wildlife documentary style, exploring original Azeroth's wildlands, murlocs, and fauna before the November 4 launch.",
+      "content": `Blizzard Entertainment has unveiled *World of Warcraft: Planet Azeroth*, an official three-part comedic wildlife mockumentary created to celebrate the countdown to the November 4 global launch of *World of Warcraft: Forever*.
+
+Narrated by celebrated British comedian and actor Bill Bailey appearing as a bearded Dwarven naturalist, the series adopts the earnest, dramatic tone of classic nature documentaries (such as *Planet Earth*) while exploring the perilous and quirky ecosystems of original 2004-era Azeroth.
+
+**Series Highlights:**
+• **Episode 1: The Grasslands of Elwynn & Durotar** — An intrepid exploration of indigenous kobold packs ("You no take candle"), territorial Defias thieves, and the solitary lifestyle of the Durotar mottled boar.
+• **Episode 2: Beasts of the Barrens & Darkshore** — An observational study of migrating Kodo herds, aggressive Plainstriders, and stealthy Ghostpaw wolves stalking the foggy coasts.
+• **Episode 3: The Depths of Stranglethorn & Wetlands** — Forensic analysis of Murloc tribal vocalizations (*"Aaaaaughibbrgubugbugrguburgle!"*), aggressive crocolisks, and the territorial rivalries of Stranglethorn raptors.
+
+*World of Warcraft: Forever* launches globally on Wednesday, November 4, 2026.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/planet-azeroth-mockumentary-bill-bailey"
+    },
+    {
+      "id": "news-61",
+      "title": "Community Manager Kaivax Deploys Hotfix for Over-Restrictive Name Filter Bug ('con' Substring) & Megaserver Queue Stability",
+      "source": "Blizzard Official / Community Manager Blue Post",
+      "sourceType": "blizzard",
+      "author": "Community Manager Kaivax",
+      "date": "October 28, 2026",
+      "tag": "Hotfixes & Platform Tuning",
+      "summary": "Following opening-day queues, Blizzard deployed regional rolling hotfixes to address an erroneous profanity filter rejection that blocked non-profane names containing 'con' substrings (such as Falcon, Bacon, and Conflag), while optimizing regional megaserver authentication flow.",
+      "content": `We’ve just completed rolling realm restarts and backend hotfixes across all regional WoW Forever megaservers (Americas, Europe, Korea, and Taiwan) to address issues encountered during the first 24 hours of Early Name Reservation.
+
+**Name Reservation Hotfix Details:**
+• **Naming Filter Over-Restriction Fixed:** Resolved an issue with the automated character naming validation engine that erroneously triggered the *"That name is restricted"* error on legitimate, non-profane character names containing the letter string **'c-o-n'** (for example: *Falcon*, *Bacon*, *Conflag*, *Connor*, *Constantine*). Players whose desired names were rejected under this condition can now successfully retry and claim them.
+• **Login Queue & Authentication Pipeline:** Deployed concurrency load balancing across the Battle.net character creation proxy to eliminate transient "No realms available" disconnects during peak evening reservation hours.
+• **RP Ruleset Validation:** Refined roleplaying filter dictionaries to prevent naming collisions while preserving fantasy naming conventions on the Roleplaying and RP-PvP megaservers.
+
+Early Character Name Reservation remains active for all pre-purchase edition holders through Tuesday, November 3, 2026 at 10:00 AM PST.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-name-reservation-hotfixes-october-28"
+    },
+    {
+      "id": "news-60",
+      "title": "Early Character Name Reservation Goes Live Across Regional Megarealms: Rulesets, Faction Locks & 3-Character Cap",
+      "source": "Blizzard Official / Launch Operations",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "October 27, 2026",
+      "tag": "Launch Operations & Megarealms",
+      "summary": "Early name reservation is officially live for Skyborne Heroic/Epic and Collector's Edition pre-orders. Players can reserve up to 3 character names per account across Normal, PvP, RP, and RP-PvP megaservers utilizing the region-wide first-and-last name architecture.",
+      "content": `Early Character Name Reservation for *World of Warcraft: Forever* is now live worldwide! Eligible players who have pre-purchased the *Skyborne Heroic Pack*, *Skyborne Epic Pack*, or the *Warcraft Forever Collection* can log into the client, choose their ruleset, and lock in their names and character appearances ahead of launch.
+
+**Key Reservation Guidelines:**
+• **Reservation Cap:** You may reserve up to **3 character names** total per Battle.net account across all available rulesets.
+• **First and Last Name Architecture:** Character creation requires a First Name and Last Name combination. The full combination is unique region-wide and locks out across all rulesets (Normal, PvP, RP, RP-PvP) within your region.
+• **PvP Faction Restrictions:** In keeping with authentic classic design, players who create a character on a PvP or RP-PvP ruleset are restricted to choosing a single faction (Alliance or Horde) for all characters created on that ruleset.
+• **Ruleset Lock:** Characters cannot be transferred between different rulesets at launch.
+• **Reservation Window:** Live now through Tuesday, November 3, 2026 at 10:00 AM PST (18:00 UTC).
+
+Global Launch officially takes place on Wednesday, November 4, 2026 at 3:00 PM PST.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/early-name-reservation-now-live-wow-forever"
+    },
     {
       "id": "news-59",
       "title": "Community Manager Kaivax Shares Additional Racial Updates: Blood Fury Reduced to 2m, Berserking Extended to 15s & Touch of the Grave 15s ICD",
