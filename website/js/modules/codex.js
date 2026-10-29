@@ -82,6 +82,9 @@ function initCodex() {
   renderZones();
   initClassRacePlanner();
   renderMerchantsFavorPanel();
+  if (typeof window.renderCodexItemDatabase === 'function') {
+    window.renderCodexItemDatabase();
+  }
 }
 
 function renderClassCombos() {
@@ -275,17 +278,44 @@ window.openDungeonLootModal = function(dungeonId) {
     'dungeon-02': 'ruins-of-lordaeron',
     'dungeon-03': 'excavation-site',
     'dungeon-04': 'city-of-dalaran',
+    'dungeon-05': 'drowned-city',
+    'dungeon-06': 'kroldok-stronghold',
+    'dungeon-07': 'alcaz-prison',
+    'dungeon-08': 'blackmaw-hold',
+    'dungeon-09': 'shapers-terrace',
     'hall-of-thanes': 'hall-of-thanes',
     'ruins-of-lordaeron': 'ruins-of-lordaeron',
     'excavation-site': 'excavation-site',
-    'city-of-dalaran': 'city-of-dalaran'
+    'excavation-site-wetlands': 'excavation-site',
+    'city-of-dalaran': 'city-of-dalaran',
+    'c-rfc': 'ragefire-chasm',
+    'c-dm': 'deadmines',
+    'c-wc': 'wailing-caverns',
+    'c-sfk': 'shadowfang-keep',
+    'c-bfd': 'blackfathom-deeps',
+    'c-stocks': 'stormwind-stockade',
+    'c-gnomer': 'gnomeregan',
+    'c-rfk': 'razorfen-kraul',
+    'c-sm': 'scarlet-monastery',
+    'c-rfd': 'razorfen-downs',
+    'c-ulda': 'uldaman',
+    'c-zf': 'zulfarrak',
+    'c-mara': 'maraudon',
+    'c-st': 'sunken-temple',
+    'c-brd': 'blackrock-depths',
+    'c-lbrs': 'blackrock-spire',
+    'c-scholo': 'scholomance',
+    'c-strat': 'stratholme',
+    'c-dm-all': 'dire-maul'
   };
   const expKey = keyMap[dungeonId] || dungeonId;
+  const classicSlug = expKey === 'excavation-site' ? 'excavation-site-wetlands' : expKey;
+  const classicLoot = window.WOW_CLASSIC_DUNGEON_LOOT?.[classicSlug] || window.WOW_CLASSIC_DUNGEON_LOOT?.[dungeonId] || null;
   const expanded = window.WOW_ATLAS_DATA?.expandedDungeons?.[expKey];
   const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId] || (expKey ? window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[expKey] : null);
   const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId || d.id === expKey);
 
-  if (!expanded && !detailed && !general) {
+  if (!expanded && !detailed && !general && !classicLoot) {
     // Fallback for classic dungeons
     body.innerHTML = `
       <div style="padding: 1.5rem; text-align: center;">
@@ -298,11 +328,24 @@ window.openDungeonLootModal = function(dungeonId) {
     return;
   }
 
-  const name = expanded?.name || detailed?.name || general?.name;
-  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange;
-  const zone = expanded?.zone || detailed?.zone || general?.zone;
-  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || 'Main zone entrance.';
-  const bossList = expanded?.bosses || detailed?.bosses || [];
+  const name = expanded?.name || detailed?.name || general?.name || classicLoot?.name || dungeonId;
+  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange || classicLoot?.subtitle || 'Levels 13–60';
+  const zone = expanded?.zone || detailed?.zone || general?.zone || classicLoot?.subtitle || 'Azeroth';
+  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || 'Main instance portal.';
+  const bossList = expanded?.bosses || detailed?.bosses || (classicLoot?.bosses || []).map(b => ({
+    name: b.name,
+    title: `${(b.loot || []).length} Drops`,
+    drops: (b.loot || []).map(it => ({
+      id: it.id,
+      name: it.name,
+      quality: `q${it.q || 3}`,
+      iLvl: it.reqLevel ? `Req ${it.reqLevel}` : '',
+      dropRate: it.dropRate || '',
+      slot: it.slot || '',
+      stats: it.stats || '',
+      bestFor: it.bestFor || []
+    }))
+  }));
   const questList = expanded?.quests || [];
 
   body.innerHTML = `
@@ -427,10 +470,16 @@ window.openDungeonLootModal = function(dungeonId) {
                 <div class="dg-loot-item-card">
                   <div class="dg-loot-item-top">
                     <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
-                    <span class="dg-loot-ilvl">iLvl ${item.iLvl || 30}</span>
+                    ${item.iLvl ? `<span class="dg-loot-ilvl">${String(item.iLvl).startsWith('Req') ? escapeHtml(item.iLvl) : 'iLvl ' + item.iLvl}</span>` : ''}
+                    ${item.dropRate ? `<span class="dg-loot-drop-chance">${escapeHtml(item.dropRate)}</span>` : ''}
                   </div>
-                  <div class="dg-loot-slot">${escapeHtml(item.slot)}</div>
-                  <p class="dg-loot-stats">${escapeHtml(item.stats)}</p>
+                  <div class="dg-loot-slot">${escapeHtml(item.slot || '')}</div>
+                  <p class="dg-loot-stats">${escapeHtml(item.stats || '')}</p>
+                  ${item.bestFor && item.bestFor.length > 0 ? `
+                    <div style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.35rem;">
+                      ${item.bestFor.slice(0, 4).map(bf => `<span style="font-size:0.68rem;padding:0.08rem 0.38rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#93c5fd;font-weight:600;">${escapeHtml(bf.cls.charAt(0).toUpperCase() + bf.cls.slice(1))} · ${escapeHtml(bf.spec)}</span>`).join('')}
+                    </div>
+                  ` : ''}
                 </div>
               `).join('')}
             </div>

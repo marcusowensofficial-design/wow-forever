@@ -874,6 +874,83 @@
 
       <!-- Recipes Grid -->
       <div class="recipe-grid"></div>
+
+      ${prof.slug === 'cooking' && Array.isArray(window.WOW_COOKING_INGREDIENTS) ? `
+        <div style="margin-top:1.75rem;background:rgba(15,23,42,0.75);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.25rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.85rem;">
+            <div>
+              <h3 style="margin:0;color:var(--text-gold);font-size:1.1rem;">🥩 Complete Cooking Ingredient Farm Directory (${window.WOW_COOKING_INGREDIENTS.length} Ingredients)</h3>
+              <p style="margin:0.2rem 0 0;font-size:0.82rem;color:#94a3b8;">Exact mob drop rates, zones, level ranges, and highest-tier dish pairings for every raw cooking ingredient in WoW Forever.</p>
+            </div>
+          </div>
+          <div class="table-responsive-wrapper" style="max-height:520px;overflow-y:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+              <thead>
+                <tr style="border-bottom:2px solid var(--border-subtle);text-align:left;color:var(--text-gold);background:rgba(0,0,0,0.35);position:sticky;top:0;">
+                  <th style="padding:0.55rem;">Ingredient</th>
+                  <th style="padding:0.55rem;">Used In</th>
+                  <th style="padding:0.55rem;">Best Dish Pairing</th>
+                  <th style="padding:0.55rem;">Top Mob Drop Sources (Level · Zone · Drop %)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${window.WOW_COOKING_INGREDIENTS.map(ing => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                    <td style="padding:0.5rem 0.55rem;">
+                      <div style="display:flex;align-items:center;gap:0.5rem;">
+                        <img src="${getIconUrl(ing.icon)}" alt="" width="26" height="26" style="border-radius:4px;" loading="lazy">
+                        <strong style="color:#f8fafc;">${escapeHtml(ing.name)}</strong>
+                      </div>
+                    </td>
+                    <td style="padding:0.5rem 0.55rem;color:#cbd5e1;">${ing.usedIn} dish${ing.usedIn === 1 ? '' : 'es'}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#34d399;font-weight:600;">${ing.bestDish ? `${escapeHtml(ing.bestDish.name)} <small style="color:#94a3b8;">(Skill ${ing.bestDish.skill})</small>` : '—'}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#cbd5e1;line-height:1.4;">
+                      ${(ing.mobs || []).length > 0
+                        ? ing.mobs.slice(0, 3).map(m => `<div><strong>${escapeHtml(m.name)}</strong> <span style="color:#94a3b8;">(Lv ${m.min}${m.max && m.max !== m.min ? '–' + m.max : ''}${m.elite ? ' Elite' : ''} · ${escapeHtml(m.zone)}${m.pct ? ` · <span style="color:#38bdf8;">${m.pct}%</span>` : ''})</span></div>`).join('')
+                        : (ing.fished && ing.fished.length ? `<span style="color:#60a5fa;">🎣 Fished in ${ing.fished.length} zones</span>` : '<span style="color:#64748b;">Vendor / World</span>')}
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : ''}
+
+      ${prof.slug === 'enchanting' && Array.isArray(window.WOW_DISENCHANT_TABLE) ? `
+        <div style="margin-top:1.75rem;background:rgba(15,23,42,0.75);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.25rem;">
+          <div style="margin-bottom:0.85rem;">
+            <h3 style="margin:0;color:var(--text-gold);font-size:1.1rem;">✨ Disenchant Yield &amp; EV Probability Matrix (By Item Level &amp; Rarity)</h3>
+            <p style="margin:0.2rem 0 0;font-size:0.82rem;color:#94a3b8;">Armor pieces have a 75% chance to yield Dust and 20% Essence; Weapons flip those odds (75% Essence, 20% Dust). Use with the ForeverMarket addon to spot guaranteed-profit AH disenchant flips.</p>
+          </div>
+          <div class="table-responsive-wrapper" style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+              <thead>
+                <tr style="border-bottom:2px solid var(--border-subtle);text-align:left;color:var(--text-gold);background:rgba(0,0,0,0.35);">
+                  <th style="padding:0.55rem;">Item Level</th>
+                  <th style="padding:0.55rem;">Req. Skill</th>
+                  <th style="padding:0.55rem;">Rarity</th>
+                  <th style="padding:0.55rem;">Armor Yield (75% Dust / 20% Essence)</th>
+                  <th style="padding:0.55rem;">Weapon Yield (75% Essence / 20% Dust)</th>
+                  <th style="padding:0.55rem;">Shard / Crystal Yield</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${window.WOW_DISENCHANT_TABLE.map(row => `
+                  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                    <td style="padding:0.5rem 0.55rem;font-weight:700;color:#f8fafc;">iLvl ${escapeHtml(row.ilvlRange)}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#fcd34d;font-weight:600;">Skill ${row.reqSkill}</td>
+                    <td style="padding:0.5rem 0.55rem;color:${row.rarity.includes('Epic') ? '#c084fc' : row.rarity.includes('Rare') ? '#60a5fa' : '#4ade80'};font-weight:600;">${escapeHtml(row.rarity)}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#cbd5e1;">${escapeHtml(row.armorYield)}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#cbd5e1;">${escapeHtml(row.weaponYield)}</td>
+                    <td style="padding:0.5rem 0.55rem;color:#38bdf8;font-weight:600;">${escapeHtml(row.shardYield)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : ''}
     `;
 
     updateRecipeGrid(container, prof);

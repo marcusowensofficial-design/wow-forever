@@ -931,7 +931,7 @@
       <div class="section-heading-bar">
         <div>
           <h2><span>📖</span> Classic+ Guides &amp; Field Manuals</h2>
-          <p class="section-subtext">55 curated gameplay blueprints, 1–60 class masterclasses, leveling routes, raid attunements, dungeon strategies, and economy systems from Wowhead, Warcraft Tavern, Method, and Classic+ playtesting.</p>
+          <p class="section-subtext">61 curated gameplay blueprints, 1–60 class masterclasses, leveling routes, raid attunements, dungeon strategies, and economy systems from Wowhead, Warcraft Tavern, Method, and Classic+ playtesting.</p>
         </div>
         <div class="guides-header-stats" style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
           <span class="guide-stat-chip"><strong id="stat-verified-guides">61</strong> Verified Guides</span>
@@ -945,22 +945,22 @@
         <!-- Sub-Tabs Navigation -->
         <div class="guides-subtab-nav" id="guides-category-pills" role="tablist" aria-label="Guide Categories">
           <button type="button" class="guides-subtab-btn active" data-guide-category="all" role="tab" aria-selected="true">
-            <span>🌟</span> All Guides <span class="guides-pill-count" id="count-cat-all">55</span>
+            <span>🌟</span> All Guides <span class="guides-pill-count" id="count-cat-all">61</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="classes" role="tab" aria-selected="false">
-            <span>⚔️</span> Classes &amp; Specs <span class="guides-pill-count" id="count-cat-classes">16</span>
+            <span>⚔️</span> Classes &amp; Specs <span class="guides-pill-count" id="count-cat-classes">20</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="leveling" role="tab" aria-selected="false">
-            <span>⚡</span> Leveling &amp; Quests <span class="guides-pill-count" id="count-cat-leveling">8</span>
+            <span>⚡</span> Leveling &amp; Quests <span class="guides-pill-count" id="count-cat-leveling">10</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="dungeons" role="tab" aria-selected="false">
-            <span>🏰</span> Dungeons &amp; Raids <span class="guides-pill-count" id="count-cat-dungeons">4</span>
+            <span>🏰</span> Dungeons &amp; Raids <span class="guides-pill-count" id="count-cat-dungeons">13</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="professions" role="tab" aria-selected="false">
-            <span>🔨</span> Professions &amp; Gold <span class="guides-pill-count" id="count-cat-professions">8</span>
+            <span>🔨</span> Professions &amp; Gold <span class="guides-pill-count" id="count-cat-professions">9</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="secrets" role="tab" aria-selected="false">
-            <span>🗺️</span> Secrets &amp; Exploration <span class="guides-pill-count" id="count-cat-secrets">5</span>
+            <span>🗺️</span> Secrets &amp; Exploration <span class="guides-pill-count" id="count-cat-secrets">6</span>
           </button>
           <button type="button" class="guides-subtab-btn" data-guide-category="pvp" role="tab" aria-selected="false">
             <span>🏆</span> PvP &amp; Tournaments <span class="guides-pill-count" id="count-cat-pvp">3</span>
@@ -1103,6 +1103,7 @@
         <button class="codex-nav-btn" data-codex="guides">📖 Curated Guides</button>
         <button class="codex-nav-btn" data-codex="commerce">🪙 Merchant's Favor &amp; Crates</button>
         <button class="codex-nav-btn" data-codex="pets">🐾 Hunter Pet Radar</button>
+        <button class="codex-nav-btn" data-codex="database">📚 Item Database (22,363)</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -1393,6 +1394,11 @@
       <!-- Panel 11: Hunter Pet Beast Radar -->
       <div id="codex-pets" class="codex-panel">
         <div id="hunter-pets-mount"></div>
+      </div>
+
+      <!-- Panel 12: Complete Item Database (22,363 Items) -->
+      <div id="codex-database" class="codex-panel">
+        <div id="codex-database-mount"></div>
       </div>
 
     </section>
@@ -3834,12 +3840,16 @@
   <script defer src="js/data/deepdives/rogue.js?v=1.60.1-70425"></script>
   <script defer src="js/data/deepdives/pending.js?v=1.60.1-70425"></script>
   <script defer src="js/data/class-progression-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/item-database-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/gathering-zones-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/market-data.js?v=1.60.1-70425"></script>
 
   <!-- 2. Feature Modules -->
   <script defer src="js/modules/lifecycle.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/hunterpets.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/navigation.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/news.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/codex/codex-database.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/codex.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/legacy.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/camping.js?v=1.60.1-70425"></script>

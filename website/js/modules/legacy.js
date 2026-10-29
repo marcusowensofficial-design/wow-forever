@@ -85,86 +85,116 @@
     }
   };
 
-  // Granular Season 1 Challenges (65 Total Points)
+  // Granular Season 1 Challenges (65 Individual 1-Point Challenges = 65 Total Points)
   const DETAILED_CHALLENGES = [
     {
       id: 'classes',
-      category: 'Class Mastery',
+      category: 'Class Mastery (27 Challenges)',
       icon: '🧙',
       totalPoints: 27,
-      desc: 'Earn 1 point at level 25, 45, and 60 across all 9 classes',
+      desc: 'Earn 1 point at level 25 (Novice), 45 (Experienced), and 60 (Master) across all 9 classes',
       items: [
-        { id: 'c_warrior', label: 'Warrior (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_paladin', label: 'Paladin (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_hunter', label: 'Hunter (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_rogue', label: 'Rogue (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_priest', label: 'Priest (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_shaman', label: 'Shaman (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_mage', label: 'Mage (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_warlock', label: 'Warlock (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_druid', label: 'Druid (L25 / L45 / L60)', pts: 3 }
+        { id: 'c_warrior', label: 'Novice Warrior (Reach Level 25)', pts: 1 },
+        { id: 'c_warrior_45', label: 'Experienced Warrior (Reach Level 45)', pts: 1 },
+        { id: 'c_warrior_60', label: 'Master Warrior (Reach Level 60)', pts: 1 },
+        { id: 'c_paladin', label: 'Novice Paladin (Reach Level 25)', pts: 1 },
+        { id: 'c_paladin_45', label: 'Experienced Paladin (Reach Level 45)', pts: 1 },
+        { id: 'c_paladin_60', label: 'Master Paladin (Reach Level 60)', pts: 1 },
+        { id: 'c_hunter', label: 'Novice Hunter (Reach Level 25)', pts: 1 },
+        { id: 'c_hunter_45', label: 'Experienced Hunter (Reach Level 45)', pts: 1 },
+        { id: 'c_hunter_60', label: 'Master Hunter (Reach Level 60)', pts: 1 },
+        { id: 'c_rogue', label: 'Novice Rogue (Reach Level 25)', pts: 1 },
+        { id: 'c_rogue_45', label: 'Experienced Rogue (Reach Level 45)', pts: 1 },
+        { id: 'c_rogue_60', label: 'Master Rogue (Reach Level 60)', pts: 1 },
+        { id: 'c_priest', label: 'Novice Priest (Reach Level 25)', pts: 1 },
+        { id: 'c_priest_45', label: 'Experienced Priest (Reach Level 45)', pts: 1 },
+        { id: 'c_priest_60', label: 'Master Priest (Reach Level 60)', pts: 1 },
+        { id: 'c_shaman', label: 'Novice Shaman (Reach Level 25)', pts: 1 },
+        { id: 'c_shaman_45', label: 'Experienced Shaman (Reach Level 45)', pts: 1 },
+        { id: 'c_shaman_60', label: 'Master Shaman (Reach Level 60)', pts: 1 },
+        { id: 'c_mage', label: 'Novice Mage (Reach Level 25)', pts: 1 },
+        { id: 'c_mage_45', label: 'Experienced Mage (Reach Level 45)', pts: 1 },
+        { id: 'c_mage_60', label: 'Master Mage (Reach Level 60)', pts: 1 },
+        { id: 'c_warlock', label: 'Novice Warlock (Reach Level 25)', pts: 1 },
+        { id: 'c_warlock_45', label: 'Experienced Warlock (Reach Level 45)', pts: 1 },
+        { id: 'c_warlock_60', label: 'Master Warlock (Reach Level 60)', pts: 1 },
+        { id: 'c_druid', label: 'Novice Druid (Reach Level 25)', pts: 1 },
+        { id: 'c_druid_45', label: 'Experienced Druid (Reach Level 45)', pts: 1 },
+        { id: 'c_druid_60', label: 'Master Druid (Reach Level 60)', pts: 1 }
       ]
     },
     {
       id: 'tradeskills',
-      category: 'Tradeskill Mastery',
+      category: 'Tradeskill Mastery (18 Challenges)',
       icon: '🔨',
       totalPoints: 18,
-      desc: 'Earn 1 point at skill 150, 225, and 300 across crafting professions',
+      desc: 'Earn 1 point at skill 150 (Journeyman), 225 (Expert), and 300 (Artisan) across 6 crafting professions',
       items: [
-        { id: 't_alchemy', label: 'Alchemy (150 / 225 / 300)', pts: 3 },
-        { id: 't_blacksmithing', label: 'Blacksmithing (150 / 225 / 300)', pts: 3 },
-        { id: 't_enchanting', label: 'Enchanting (150 / 225 / 300)', pts: 3 },
-        { id: 't_engineering', label: 'Engineering (150 / 225 / 300)', pts: 3 },
-        { id: 't_leatherworking', label: 'Leatherworking (150 / 225 / 300)', pts: 3 },
-        { id: 't_tailoring', label: 'Tailoring (150 / 225 / 300)', pts: 3 }
+        { id: 't_alchemy_150', label: 'Journeyman Alchemist (Reach 150 Alchemy)', pts: 1 },
+        { id: 't_alchemy_225', label: 'Expert Alchemist (Reach 225 Alchemy)', pts: 1 },
+        { id: 't_alchemy_300', label: 'Artisan Alchemist (Reach 300 Alchemy)', pts: 1 },
+        { id: 't_blacksmithing_150', label: 'Journeyman Blacksmith (Reach 150 Blacksmithing)', pts: 1 },
+        { id: 't_blacksmithing_225', label: 'Expert Blacksmith (Reach 225 Blacksmithing)', pts: 1 },
+        { id: 't_blacksmithing_300', label: 'Artisan Blacksmith (Reach 300 Blacksmithing)', pts: 1 },
+        { id: 't_enchanting_150', label: 'Journeyman Enchanter (Reach 150 Enchanting)', pts: 1 },
+        { id: 't_enchanting_225', label: 'Expert Enchanter (Reach 225 Enchanting)', pts: 1 },
+        { id: 't_enchanting_300', label: 'Artisan Enchanter (Reach 300 Enchanting)', pts: 1 },
+        { id: 't_engineering_150', label: 'Journeyman Engineer (Reach 150 Engineering)', pts: 1 },
+        { id: 't_engineering_225', label: 'Expert Engineer (Reach 225 Engineering)', pts: 1 },
+        { id: 't_engineering_300', label: 'Artisan Engineer (Reach 300 Engineering)', pts: 1 },
+        { id: 't_leatherworking_150', label: 'Journeyman Leatherworker (Reach 150 Leatherworking)', pts: 1 },
+        { id: 't_leatherworking_225', label: 'Expert Leatherworker (Reach 225 Leatherworking)', pts: 1 },
+        { id: 't_leatherworking_300', label: 'Artisan Leatherworker (Reach 300 Leatherworking)', pts: 1 },
+        { id: 't_tailoring_150', label: 'Journeyman Tailor (Reach 150 Tailoring)', pts: 1 },
+        { id: 't_tailoring_225', label: 'Expert Tailor (Reach 225 Tailoring)', pts: 1 },
+        { id: 't_tailoring_300', label: 'Artisan Tailor (Reach 300 Tailoring)', pts: 1 }
       ]
     },
     {
       id: 'pvp',
-      category: 'Player vs. Player',
+      category: 'Player vs. Player (12 Challenges)',
       icon: '⚔️',
       totalPoints: 12,
-      desc: 'Honor Ranks, Battleground Exalted standings & Field of Honor',
+      desc: 'Honor Ranks, Battleground Exalted standings & Field of Honor Journey',
       items: [
-        { id: 'pvp_rank_3', label: 'PvP Rank 3 (Sergeant / Master Sergeant)', pts: 1 },
-        { id: 'pvp_rank_7', label: 'PvP Rank 7 (Blood Guard / Knight-Lieutenant)', pts: 1 },
-        { id: 'pvp_rank_10', label: 'PvP Rank 10 (Champion / Lieutenant Commander)', pts: 1 },
-        { id: 'pvp_rank_13', label: 'PvP Rank 13 (Warlord / Field Marshal)', pts: 1 },
-        { id: 'pvp_rank_14', label: 'PvP Rank 14 (High Warlord / Grand Marshal)', pts: 1 },
-        { id: 'pvp_bg_wsg', label: 'Warsong Gulch Exalted', pts: 1 },
-        { id: 'pvp_bg_ab', label: 'Arathi Basin Exalted', pts: 1 },
-        { id: 'pvp_bg_av', label: 'Alterac Valley Exalted', pts: 1 },
-        { id: 'pvp_bg_darkspear', label: 'Darkspear Islands Exalted', pts: 1 },
-        { id: 'pvp_foh_w4', label: 'Field of Honor: Week 4 Milestone', pts: 1 },
-        { id: 'pvp_foh_w7', label: 'Field of Honor: Week 7 Milestone', pts: 1 },
-        { id: 'pvp_foh_w10', label: 'Field of Honor: Week 10 Milestone', pts: 1 }
+        { id: 'pvp_rank_3', label: 'Rank 3 (Sergeant in PvP Honor System)', pts: 1 },
+        { id: 'pvp_rank_7', label: 'Rank 7 (Knight-Lieutenant / Blood Guard)', pts: 1 },
+        { id: 'pvp_rank_10', label: 'Rank 10 (Commander / Champion)', pts: 1 },
+        { id: 'pvp_rank_13', label: 'Rank 13 (Field Marshal / Warlord)', pts: 1 },
+        { id: 'pvp_rank_14', label: 'Rank 14 (Grand Marshal / High Warlord)', pts: 1 },
+        { id: 'pvp_bg_av', label: 'Master of Alterac Valley (Frostwolf / Stormpike Exalted)', pts: 1 },
+        { id: 'pvp_bg_ab', label: 'Master of Arathi Basin (Defilers / League of Arathor Exalted)', pts: 1 },
+        { id: 'pvp_bg_wsg', label: 'Master of Warsong Gulch (Outriders / Sentinels Exalted)', pts: 1 },
+        { id: 'pvp_bg_darkspear', label: 'Master of Darkspear Islands (Southseas Archipelago Exalted)', pts: 1 },
+        { id: 'pvp_foh_w4', label: 'Field of Honor: Week 4 Journey', pts: 1 },
+        { id: 'pvp_foh_w7', label: 'Field of Honor: Week 7 Journey', pts: 1 },
+        { id: 'pvp_foh_w10', label: 'Field of Honor: Week 10 Journey', pts: 1 }
       ]
     },
     {
       id: 'adventure_world',
-      category: 'World Exploration & Epics',
+      category: 'World Exploration & Epics (2 Challenges)',
       icon: '🧭',
       totalPoints: 2,
-      desc: 'Explore Azeroth, Tier 0.5 Questline, and World Discoveries',
+      desc: 'Explore Azeroth and Tier 0.5 Dungeon Set Questline',
       items: [
-        { id: 'adv_explore', label: 'Explore Azeroth (Cartographer)', pts: 1 },
-        { id: 'adv_t05', label: 'Tier 0.5 Dungeon Set: Lay Lord Valthalak to Rest', pts: 1 }
+        { id: 'adv_explore', label: 'Explorer (Explore Azeroth Achievement)', pts: 1 },
+        { id: 'adv_t05', label: 'Lord Valthalak Laid to Rest (An Earnest Proposition → Saving the Best for Last)', pts: 1 }
       ]
     },
     {
       id: 'dungeons_raids',
-      category: 'Dungeons & Raids',
+      category: 'Dungeons & Raids (6 Challenges)',
       icon: '🏰',
       totalPoints: 6,
-      desc: 'Dungeon Spelunker feats & Season 1 Raid Conqueror titles',
+      desc: 'New Forever Dungeon Spelunker feats & Season 1 Raid Conqueror titles',
       items: [
-        { id: 'dung_novice', label: 'Novice Spelunker (Deadmines, RFC, Wailing Caverns, SFK)', pts: 1 },
-        { id: 'dung_exp', label: 'Experienced Spelunker (SM, RFK, RFD, Gnomer, Uldaman, ZF)', pts: 1 },
-        { id: 'dung_master', label: 'Master Spelunker (BRD, Sunken Temple, LBRS, Stratholme, Scholo)', pts: 1 },
-        { id: 'raid_hyjal', label: 'Conqueror of the Wilds: Mount Hyjal Summit', pts: 1 },
-        { id: 'raid_barrow', label: 'Conqueror of the Deeps: Barrow Deeps', pts: 1 },
-        { id: 'raid_onyxia', label: 'Conqueror of the Lair: Onyxia\'s Lair', pts: 1 }
+        { id: 'dung_novice', label: 'Novice Spelunker (Ruins of Lordaeron & Excavation: Wetlands)', pts: 1 },
+        { id: 'dung_exp', label: 'Experienced Spelunker (City of Dalaran, Drowned City & Krol\'Dok Stronghold)', pts: 1 },
+        { id: 'dung_master', label: 'Master Spelunker (Alcaz Island, Timbermaw Hold & Shaper\'s Terrace)', pts: 1 },
+        { id: 'raid_onyxia', label: 'Conqueror of the Lair: Complete Onyxia\'s Lair', pts: 1 },
+        { id: 'raid_hyjal', label: 'Conqueror of the Wilds: Complete Hyjal Summit', pts: 1 },
+        { id: 'raid_barrow', label: 'Conqueror of the Deeps: Complete Barrow Deeps', pts: 1 }
       ]
     }
   ];
@@ -258,69 +288,69 @@
 
     // Tradeskill Perks
     const overtime = allocations['prof-1'] || 0;
-    if (overtime > 0) bonuses.push({ label: 'Tradeskill Skill-Up Chance', val: `+${overtime * 10}%`, desc: 'On all primary, secondary, and class tradeskills', icon: '⚡' });
+    if (overtime > 0) bonuses.push({ label: 'Tradeskill Skill-Up Chance', val: `+${overtime * 4}%`, desc: 'On all primary, secondary, and class tradeskills', icon: '⚡' });
 
     const harvest = allocations['prof-2'] || 0;
-    if (harvest > 0) bonuses.push({ label: 'Scarce Gathering Yield', val: `+${harvest * 100}%`, desc: 'Extra scarce materials from Mining, Herbalism & Skinning', icon: '🌿' });
+    if (harvest > 0) bonuses.push({ label: 'Scarce Gathering Yield', val: `+${harvest * 20}%`, desc: 'More likely to discover Scarce materials from Mining, Herbalism & Skinning', icon: '🌿' });
 
     const luremaster = allocations['prof-3'] || 0;
-    if (luremaster > 0) bonuses.push({ label: 'Luremaster Fishing', val: `+${luremaster * 50}%`, desc: 'Chance to reel in an extra fish with active Lure', icon: '🎣' });
+    if (luremaster > 0) bonuses.push({ label: 'Luremaster Fishing', val: `+${luremaster * 25}%`, desc: 'Chance to reel in an extra fish with active Lure', icon: '🎣' });
 
     const bonusFavor = allocations['prof-4'] || 0;
-    if (bonusFavor > 0) bonuses.push({ label: 'Merchant\'s Favor Bonus', val: `${bonusFavor * 15}% chance`, desc: 'For 100% increased Merchant\'s Favor on supply crates', icon: '📦' });
+    if (bonusFavor > 0) bonuses.push({ label: 'Merchant\'s Favor Bonus', val: `${bonusFavor * 5}% chance`, desc: 'For 100% increased Merchant\'s Favor on supply crates', icon: '📦' });
 
     const bartering = allocations['prof-5'] || 0;
-    if (bartering > 0) bonuses.push({ label: 'Vendor Price Discount', val: `-${bartering * 10}%`, desc: 'Gold discount on all items from all vendors across Azeroth', icon: '🪙' });
+    if (bartering > 0) bonuses.push({ label: 'Vendor Price Discount', val: `-${bartering * 5}%`, desc: 'Gold discount on all items from all vendors across Azeroth', icon: '🪙' });
 
     const chef = allocations['prof-6'] || 0;
-    if (chef > 0) bonuses.push({ label: 'Master Chef Extra Servings', val: `+${chef * 30}%`, desc: 'Chance to craft bonus meals on all cooking recipes', icon: '🍲' });
+    if (chef > 0) bonuses.push({ label: 'Master Chef Extra Servings', val: `+${chef * 10}%`, desc: 'Chance to craft bonus meals on all cooking recipes', icon: '🍲' });
 
     const study = allocations['prof-7'] || 0;
-    if (study > 0) bonuses.push({ label: 'Dedicated Study', val: '+1 Lowest Skill', desc: 'Auto-boosts lowest tradeskill (or 3 Elemental Essences if 300)', icon: '📖' });
+    if (study > 0) bonuses.push({ label: 'Dedicated Study', val: '+1 Lowest Skill', desc: 'Auto-boosts lowest tradeskill (or 2–4 Elemental Essences if 300)', icon: '📖' });
 
     // Adventure Perks
     const rested = allocations['adv-1'] || 0;
     if (rested > 0) bonuses.push({ label: 'Rested XP Gain & Cap', val: `+${rested * 4}%`, desc: 'Accumulates faster and increases maximum rested cap', icon: '💤' });
 
     const thrill = allocations['adv-2'] || 0;
-    if (thrill > 0) bonuses.push({ label: 'Thrill of Adventure', val: `${thrill * 5}% HP & Mana`, desc: 'Regenerated over 10s upon killing non-trivial open world enemies', icon: '🗡️' });
+    if (thrill > 0) bonuses.push({ label: 'Thrill of Adventure', val: `${thrill * 1}% HP & Mana`, desc: 'Regenerated over 10s upon killing non-trivial open world enemies', icon: '🗡️' });
 
     const fieldMed = allocations['adv-3'] || 0;
-    if (fieldMed > 0) bonuses.push({ label: 'Recently Bandaged Cooldown', val: `-${fieldMed * 10}s`, desc: 'Reduces debuff duration when using bandages in open world', icon: '🩹' });
+    if (fieldMed > 0) bonuses.push({ label: 'Recently Bandaged Cooldown', val: `-${fieldMed * 5}s`, desc: 'Reduces debuff duration when using bandages in open world', icon: '🩹' });
 
     const fieldGuide = allocations['adv-4'] || 0;
-    if (fieldGuide > 0) bonuses.push({ label: 'Camp Feature Cooldown', val: `-${fieldGuide * 25}%`, desc: 'Faster placement cooldown on campsite workstations', icon: '⛺' });
+    if (fieldGuide > 0) bonuses.push({ label: 'Camp Feature Cooldown', val: `-${[0, 8, 17, 25][fieldGuide] || (fieldGuide * 8)}%`, desc: 'Faster placement cooldown on campsite workstations', icon: '⛺' });
 
     const talented = allocations['adv-5'] || 0;
-    if (talented > 0) bonuses.push({ label: 'Talented (Early Talents)', val: `+${talented} Pts (from L5)`, desc: 'Gain talent points from level 5 instead of 10 (+5 points at L30 beta cap!)', icon: '✨', linkTab: 'planner' });
+    if (talented > 0) bonuses.push({ label: 'Talented (Early Talents)', val: `+${talented} Pts (from L${10 - talented})`, desc: 'Gain talent points starting earlier than level 10 (+5 points at L30 beta cap!)', icon: '✨', linkTab: 'planner' });
 
     const highAlert = allocations['adv-6'] || 0;
-    if (highAlert > 0) bonuses.push({ label: 'Stealth Detection Level', val: `+${highAlert * 2} Effective Levels`, desc: 'Enhanced sight against rogues & prowlers in open world', icon: '👁️' });
+    if (highAlert > 0) bonuses.push({ label: 'Stealth Detection Level', val: `+${highAlert * 1} Effective Level${highAlert > 1 ? 's' : ''}`, desc: 'Enhanced sight against rogues & prowlers in open world', icon: '👁️' });
 
     const frequentFlier = allocations['adv-7'] || 0;
     if (frequentFlier > 0) bonuses.push({ label: 'Frequent Flier Flight Paths', val: '50% Off / +20% Speed', desc: 'Flight masters cost half gold and fly 20% faster', icon: '🦅' });
 
     // Resourcefulness Perks
     const gourmand = allocations['res-1'] || 0;
-    if (gourmand > 0) bonuses.push({ label: 'Well Fed Buff Duration', val: `+${gourmand * 100}%`, desc: 'Doubles or quadruples the duration of beneficial food buffs', icon: '🍖' });
+    if (gourmand > 0) bonuses.push({ label: 'Well Fed Buff Duration', val: `+${[0, 33, 67, 100][gourmand] || (gourmand * 33)}%`, desc: 'Extends the duration of beneficial food buffs up to +100%', icon: '🍖' });
 
     const quickDead = allocations['res-2'] || 0;
-    if (quickDead > 0) bonuses.push({ label: 'The Quick and the Dead', val: `+${quickDead * 10}% Ghost Speed`, desc: 'Ghost run speed boost & free abilities for 2 min after resurrection', icon: '👻' });
+    if (quickDead > 0) bonuses.push({ label: 'The Quick and the Dead', val: `+${quickDead * 5}% Ghost Speed`, desc: `Ghost run speed boost & free abilities for ${quickDead} min after resurrection`, icon: '👻' });
 
     const reinforce = allocations['res-3'] || 0;
-    if (reinforce > 0) bonuses.push({ label: 'Death Durability Loss', val: `-${reinforce * 20}%`, desc: 'Significantly lowers armor repair bills after dying', icon: '🛡️' });
+    if (reinforce > 0) bonuses.push({ label: 'Death Durability Loss', val: `-${reinforce * 8}%`, desc: 'Significantly lowers armor repair bills after dying (up to -40%)', icon: '🛡️' });
 
     const diplomat = allocations['res-4'] || 0;
-    if (diplomat > 0) bonuses.push({ label: 'Reputation Gain Bonus', val: `+${diplomat * 10}%`, desc: 'Accelerates all faction reputation grinds across Azeroth', icon: '🤝' });
+    if (diplomat > 0) bonuses.push({ label: 'Reputation Gain Bonus', val: `+${diplomat * 2}%`, desc: 'Accelerates all faction reputation grinds across Azeroth (up to +10%)', icon: '🤝' });
 
     const permanence = allocations['res-5'] || 0;
-    if (permanence > 0) bonuses.push({ label: 'Permanence Buff Extension', val: `+${permanence * 100}% Raid Buffs`, desc: 'Class raid buffs last 100% longer; camp benefits last +50% per rank', icon: '⏳' });
+    if (permanence > 0) bonuses.push({ label: 'Permanence Buff Extension', val: `+${permanence * 50}% Raid & Camp Buffs`, desc: 'Class party/raid buffs and camp resting benefits last +50% longer per rank', icon: '⏳' });
 
     const honor = allocations['res-6'] || 0;
-    if (honor > 0) bonuses.push({ label: 'Honor Points Bonus', val: `+${honor * 10}%`, desc: 'Earn extra PvP honor in battlegrounds and open world skirmishes', icon: '🎖️' });
+    if (honor > 0) bonuses.push({ label: 'Honor Points Bonus', val: `+${honor * 2}%`, desc: 'Earn extra PvP honor in battlegrounds and open world skirmishes (up to +10%)', icon: '🎖️' });
 
     const reagentEcon = allocations['res-7'] || 0;
-    if (reagentEcon > 0) bonuses.push({ label: 'Reagent Economy', val: '0 Vendor Reagents', desc: 'Class spells require no vendor reagents; Tier 1 camp stations free', icon: '🔮' });
+    if (reagentEcon > 0) bonuses.push({ label: 'Reagent Economy', val: '0 Vendor Reagents', desc: 'Class spells no longer require reagents purchaseable from vendors', icon: '🔮' });
 
     return bonuses;
   }

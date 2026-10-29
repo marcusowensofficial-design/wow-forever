@@ -17,6 +17,8 @@
   let gatheringViewMode = "routes";
   let activeMiningTier = "copper";
   let activeHerbTier = "herb_tier1";
+  let activeSpawnZoneSlug = "zephras-isle";
+  let hiddenSpawnNodeIds = new Set();
 
   function attachTooltipListeners(container, prof) {
     if (window.WOW_PROFESSIONS_MODAL && window.WOW_PROFESSIONS_MODAL.attachTooltipListeners) {
@@ -27,10 +29,83 @@
   function getZoneMapUrl(zoneName, isEnlarged = false) {
     const id = getZoneMapIds()[zoneName];
     if (id) {
+      if (id >= 16000) return `images/maps/zones/${id}.webp`;
       const folder = isEnlarged ? 'original' : 'zoom';
       return `https://wow.zamimg.com/images/wow/classic/maps/enus/${folder}/${id}.jpg`;
     }
     return '';
+  }
+
+  function renderSpawnAtlasView(isMining) {
+    const atlas = window.WOW_GATHERING_ZONES_DATA;
+    if (!atlas || !atlas.zones) {
+      return `<div style="padding:2rem;text-align:center;color:#94a3b8;">Gathering zone spawn coordinates loading...</div>`;
+    }
+    const zonesObj = atlas.zones;
+    const z = zonesObj[activeSpawnZoneSlug] || Object.values(zonesObj)[0];
+    if (!z) return '';
+
+    const byCont = { 'Zephras Isle': [], 'Eastern Kingdoms': [], 'Kalimdor': [] };
+    Object.values(zonesObj).forEach(item => {
+      const c = byCont[item.continent] ? item.continent : 'Eastern Kingdoms';
+      byCont[c].push(item);
+    });
+
+    const visibleNodes = (z.nodes || []).filter(n => !hiddenSpawnNodeIds.has(n.id));
+
+    return `
+      <div class="spawn-atlas-panel" style="background:rgba(15,23,42,0.75);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.15rem;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.85rem;margin-bottom:1rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+            <label for="spawn-atlas-zone-sel" style="font-weight:700;color:var(--text-gold);font-size:0.9rem;">Select Zone (44 Total):</label>
+            <select id="spawn-atlas-zone-sel" aria-label="Select zone for gathering spawn map" style="background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:6px;padding:0.45rem 0.75rem;font-size:0.88rem;font-weight:600;">
+              ${Object.entries(byCont).map(([cont, list]) => list.length ? `
+                <optgroup label="${escapeHtml(cont)}">
+                  ${list.map(item => `<option value="${escapeHtml(item.slug)}" ${item.slug === z.slug ? 'selected' : ''}>${escapeHtml(item.name)} (${item.totalSpawns} spawns)</option>`).join('')}
+                </optgroup>
+              ` : '').join('')}
+            </select>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;font-size:0.8rem;color:#cbd5e1;">
+            <span style="background:rgba(34,197,94,0.14);border:1px solid rgba(34,197,94,0.35);color:#86efac;padding:0.2rem 0.55rem;border-radius:6px;">🌿 Herb Skill: <strong>${escapeHtml(z.herbSkill)}</strong></span>
+            <span style="background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.35);color:#fcd34d;padding:0.2rem 0.55rem;border-radius:6px;">⛏️ Mining Skill: <strong>${escapeHtml(z.mineSkill)}</strong></span>
+            <span style="background:rgba(56,189,248,0.14);border:1px solid rgba(56,189,248,0.35);color:#93c5fd;padding:0.2rem 0.55rem;border-radius:6px;">🎣 Fishing: <strong>${escapeHtml(z.fishSkill)}</strong></span>
+            <span style="background:rgba(148,163,184,0.14);color:#e2e8f0;padding:0.2rem 0.55rem;border-radius:6px;">Zone Lv: <strong>${escapeHtml(z.levelRange)}</strong></span>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:260px minmax(0,1fr);gap:1rem;align-items:start;">
+          <!-- Node Toggles Sidebar -->
+          <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.75rem;display:flex;flex-direction:column;gap:0.45rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.25rem;">
+              <strong style="font-size:0.8rem;color:#f8fafc;text-transform:uppercase;letter-spacing:0.05em;">Node Layers (${z.totalSpawns})</strong>
+              <button type="button" id="spawn-atlas-show-all" style="background:none;border:none;color:#38bdf8;font-size:0.75rem;cursor:pointer;padding:0;">Show All</button>
+            </div>
+            ${(z.nodes || []).map(n => {
+              const isOff = hiddenSpawnNodeIds.has(n.id);
+              return `
+                <button type="button" class="spawn-node-toggle-btn" data-node-id="${escapeHtml(n.id)}"
+                        style="display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.4rem 0.55rem;border-radius:6px;border:1px solid ${isOff ? 'rgba(255,255,255,0.06)' : n.color};background:${isOff ? 'rgba(15,23,42,0.4)' : 'rgba(15,23,42,0.9)'};opacity:${isOff ? '0.45' : '1'};cursor:pointer;text-align:left;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:${escapeHtml(n.color)};flex-shrink:0;"></span>
+                  <img src="${getIconUrl(n.icon)}" alt="" width="20" height="20" style="border-radius:4px;flex-shrink:0;" loading="lazy">
+                  <span style="flex:1;font-size:0.8rem;color:#f8fafc;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(n.name)}</span>
+                  <small style="color:#94a3b8;font-size:0.72rem;">Req ${escapeHtml(n.skill)}</small>
+                  <strong style="color:${escapeHtml(n.color)};font-size:0.8rem;">${n.coords.length}</strong>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Map + SVG Pin Overlay -->
+          <div style="position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--border-gold);background:#090d16;">
+            <img src="images/maps/zones/${z.mapId}.webp" alt="${escapeHtml(z.name)} Gathering Spawn Map" style="display:block;width:100%;height:auto;" loading="lazy">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;">
+              ${visibleNodes.map(n => n.coords.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="0.65" fill="${escapeHtml(n.color)}" stroke="#000" stroke-width="0.18"><title>${escapeHtml(n.name)} (${x}, ${y})</title></circle>`).join('')).join('')}
+            </svg>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   function buildSmoothClosedPathAndArrows(points) {
@@ -452,13 +527,16 @@
           <button type="button" class="gathering-toggle-btn ${gatheringViewMode === 'routes' ? 'active' : ''}" data-view="routes">
             <span>🗺️</span> Circuit Routes (${circuits.reduce((acc, c) => acc + c.routes.length, 0)} Routes)
           </button>
+          <button type="button" class="gathering-toggle-btn ${gatheringViewMode === 'spawns' ? 'active' : ''}" data-view="spawns">
+            <span>📍</span> All 44 Zone Spawn Maps (23,684 Spawns)
+          </button>
           <button type="button" class="gathering-toggle-btn ${gatheringViewMode === 'nodes' ? 'active' : ''}" data-view="nodes">
             <span>${isMining ? '⛏️' : '🌿'}</span> Resource Nodes List (${nodes.length})
           </button>
         </div>
       </div>
 
-      ${gatheringViewMode === 'routes' ? `
+      ${gatheringViewMode === 'spawns' ? renderSpawnAtlasView(isMining) : gatheringViewMode === 'routes' ? `
         <!-- Tier Navigation Chips -->
         <div class="prof-category-chips" style="margin-bottom: 1.25rem;">
           ${circuits.map(tier => {
@@ -563,6 +641,30 @@
     container.querySelectorAll('.gathering-toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         gatheringViewMode = btn.getAttribute('data-view');
+        renderNodesTab(container, prof);
+      });
+    });
+
+    const zoneSel = container.querySelector('#spawn-atlas-zone-sel');
+    if (zoneSel) {
+      zoneSel.addEventListener('change', (e) => {
+        activeSpawnZoneSlug = e.target.value;
+        hiddenSpawnNodeIds.clear();
+        renderNodesTab(container, prof);
+      });
+    }
+    const showAllBtn = container.querySelector('#spawn-atlas-show-all');
+    if (showAllBtn) {
+      showAllBtn.addEventListener('click', () => {
+        hiddenSpawnNodeIds.clear();
+        renderNodesTab(container, prof);
+      });
+    }
+    container.querySelectorAll('.spawn-node-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const nid = btn.getAttribute('data-node-id');
+        if (hiddenSpawnNodeIds.has(nid)) hiddenSpawnNodeIds.delete(nid);
+        else hiddenSpawnNodeIds.add(nid);
         renderNodesTab(container, prof);
       });
     });

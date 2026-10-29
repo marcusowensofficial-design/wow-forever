@@ -1655,43 +1655,43 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
             "id": "prof-1",
             "name": "Working Overtime",
             "max": 5,
-            "desc": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 10% per rank."
+            "desc": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4% per rank (up to 20% at 5/5)."
           },
           {
             "id": "prof-2",
             "name": "Bountiful Harvest",
             "max": 5,
-            "desc": "You discover 100% more scarce materials from Mining, Herbalism, and Skinning per rank."
+            "desc": "You are 20% more likely per rank (up to 100% at 5/5) to discover Scarce materials from Mining, Herbalism, and Skinning."
           },
           {
             "id": "prof-3",
             "name": "Luremaster",
             "max": 2,
-            "desc": "While fishing with a Lure active, you have a 50% chance per rank to catch an extra fish."
+            "desc": "While fishing with a Lure active, you have a 25% chance per rank (up to 50% at 2/2) to catch an extra fish."
           },
           {
             "id": "prof-4",
             "name": "Performance Bonus",
             "max": 3,
-            "desc": "You have a 15% chance per rank to receive 100% increased Merchant's Favor when you turn in a crate to the ACA or Durotar Supply."
+            "desc": "You have a 5% chance per rank (up to 15% at 3/3) to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics."
           },
           {
             "id": "prof-5",
             "name": "Bartering",
             "max": 2,
-            "desc": "Reduces the gold price of items from all vendors by 10% per rank."
+            "desc": "Reduces the gold price of items from all vendors by 5% per rank (up to 10% at 2/2)."
           },
           {
             "id": "prof-6",
             "name": "Master Chef",
             "max": 5,
-            "desc": "Your cooking recipes have a 30% chance per rank to create an extra result."
+            "desc": "Your cooking recipes have a 10% chance per rank (up to 50% at 5/5) to create an extra result."
           },
           {
             "id": "prof-7",
             "name": "Dedicated Study",
             "max": 1,
-            "desc": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If all 5 tradeskills are at 300, you will gain 3 of a random Elemental Essence."
+            "desc": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If all 5 tradeskills are at 300, you will gain 2 to 4 of a random Elemental Essence."
           }
         ]
       },
@@ -1706,43 +1706,43 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
             "id": "adv-1",
             "name": "Well Rested",
             "max": 5,
-            "desc": "Your rested experience accumulates 4% faster and your rested experience cap is increased by 4% per rank."
+            "desc": "Your rested experience accumulates 4% faster and your rested experience cap is increased by 4% per rank (up to 20% at 5/5)."
           },
           {
             "id": "adv-2",
             "name": "Thrill of Adventure",
             "max": 5,
-            "desc": "You gain 5% of your maximum Health and Mana over 10 sec each time you deliver the killing blow to a non-trivial enemy (open world only)."
+            "desc": "You gain 1% per rank (up to 5% at 5/5) of your maximum Health and Mana over 10 sec each time you deliver the killing blow to a non-trivial enemy (open world only)."
           },
           {
             "id": "adv-3",
             "name": "Field Medicine",
             "max": 2,
-            "desc": "Reduces the duration of the Recently Bandaged effect by 10 sec per rank when you use a bandage (open world only)."
+            "desc": "Reduces the duration of the Recently Bandaged effect by 5 sec per rank (up to 10 sec at 2/2) when you use a bandage (open world only)."
           },
           {
             "id": "adv-4",
             "name": "Field Guide",
             "max": 3,
-            "desc": "Reduces your cooldown on adding Camp features by 25% per rank."
+            "desc": "Reduces your cooldown on adding Camp features by 8% / 17% / 25% across 3 ranks."
           },
           {
             "id": "adv-5",
             "name": "Talented",
             "max": 5,
-            "desc": "You gain talent points every level starting at level 5 instead of starting at level 10 (still capped at 51 total talent points)."
+            "desc": "You gain talent points every level starting 1 level earlier per rank (down to level 5 at 5/5 instead of level 10, still capped at 51 total talent points)."
           },
           {
             "id": "adv-6",
             "name": "High Alert",
             "max": 2,
-            "desc": "Increases your ability to detect nearby targets with Stealth as if your level were increased by 2 per rank (open world only)."
+            "desc": "Increases your ability to detect nearby targets with Stealth as if your level were increased by 1 per rank (up to +2 at 2/2, open world only)."
           },
           {
             "id": "adv-7",
             "name": "Frequent Flier",
             "max": 1,
-            "desc": "You receive a 50% discount on all flight paths and your flight path mount flies 20% faster."
+            "desc": "You receive a 50% discount on all flight paths, and your flight path mount flies 20% faster."
           }
         ]
       },
@@ -1757,43 +1757,43 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
             "id": "res-1",
             "name": "Gourmand",
             "max": 3,
-            "desc": "Increases the duration of beneficial Well Fed food effects by 100% per rank."
+            "desc": "Increases the duration of beneficial effects from eating food by 33% / 67% / 100% across 3 ranks."
           },
           {
             "id": "res-2",
             "name": "The Quick and the Dead",
             "max": 2,
-            "desc": "Increases movement speed while dead by 10% per rank and your helpful spells/abilities cost no resources for 2 min after being resurrected or until entering combat."
+            "desc": "Increases movement speed while dead by 5% per rank (up to 10% at 2/2) and your helpful spells and abilities cost no resources for 1 min per rank (up to 2 min at 2/2) after being resurrected or until entering combat."
           },
           {
             "id": "res-3",
             "name": "Reinforce",
             "max": 5,
-            "desc": "You take 20% less durability loss when you die per rank."
+            "desc": "You take 8% less durability loss when you die per rank (up to 40% at 5/5)."
           },
           {
             "id": "res-4",
             "name": "Diplomat",
             "max": 5,
-            "desc": "Increases your Reputation gains by 10% per rank."
+            "desc": "Increases your reputation gains by 2% per rank (up to 10% at 5/5)."
           },
           {
             "id": "res-5",
             "name": "Permanence",
             "max": 2,
-            "desc": "Class abilities granting long-duration raid buffs last 100% longer, and camp resting benefits last 50% longer per rank."
+            "desc": "Your class abilities granting long-duration party/raid stat buffs last 50% longer per rank (up to 100% at 2/2), and camp resting benefits last 50% longer per rank (up to 100% at 2/2)."
           },
           {
             "id": "res-6",
             "name": "For Great Honor",
             "max": 5,
-            "desc": "Increases Honor Points gained by 10% per rank."
+            "desc": "Increases Honor Points gained by 2% per rank (up to 10% at 5/5)."
           },
           {
             "id": "res-7",
             "name": "Reagent Economy",
             "max": 1,
-            "desc": "Class abilities no longer require vendor-purchased reagents, and Tier 1 camping features cost no reagents to craft."
+            "desc": "Your class abilities no longer require reagents purchaseable from vendors."
           }
         ]
       }
@@ -1835,12 +1835,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   ],
   "legacyChallenges": [
     {
-      "category": "Classes (24 Points)",
-      "desc": "Earn 1 Legacy Point at levels 25, 45, and 60 on all 8 classes (Druid, Hunter, Mage, Paladin, Priest, Rogue, Shaman, Warlock)."
+      "category": "Classes (27 Points)",
+      "desc": "Earn 1 Legacy Point at levels 25 (Novice), 45 (Experienced), and 60 (Master) on all 9 classes (Druid, Hunter, Mage, Paladin, Priest, Rogue, Shaman, Warlock, Warrior)."
     },
     {
       "category": "Tradeskills (18 Points)",
-      "desc": "Earn 1 Legacy Point at 150, 225, and 300 skill across 6 professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring."
+      "desc": "Earn 1 Legacy Point at 150 (Journeyman), 225 (Expert), and 300 (Artisan) skill across 6 professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring."
     },
     {
       "category": "Player vs. Player (12 Points)",
@@ -1848,15 +1848,15 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "category": "Adventure (2 Points)",
-      "desc": "1 point for Explore Azeroth achievement; 1 point for the Tier 0.5 questline starting with 'An Earnest Proposition' and laying Lord Valthalak to rest."
+      "desc": "1 point for Explorer (Explore Azeroth achievement); 1 point for Lord Valthalak Laid to Rest (Tier 0.5 questline)."
     },
     {
       "category": "Dungeons (3 Points)",
-      "desc": "Novice Spelunker (1 pt for low dungeons), Experienced Spelunker (1 pt for mid dungeons), Master Spelunker (1 pt for high-level dungeons)."
+      "desc": "Novice Spelunker (Ruins of Lordaeron & Excavation: Wetlands), Experienced Spelunker (City of Dalaran, Drowned City & Krol'Dok Stronghold), Master Spelunker (Alcaz Island, Timbermaw Hold & Shaper's Terrace)."
     },
     {
       "category": "Raids (3 Points)",
-      "desc": "Conqueror of the Wilds (Hyjal Summit), Conqueror of the Deeps (Barrow Deeps), Conqueror of the Lair (Onyxia's Lair)."
+      "desc": "Conqueror of the Lair (Onyxia's Lair), Conqueror of the Wilds (Hyjal Summit), Conqueror of the Deeps (Barrow Deeps)."
     }
   ],
   "squadRosterPresets": [

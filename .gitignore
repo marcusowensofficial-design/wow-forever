@@ -23,3 +23,6 @@ fc_bis_cache/
 # Agent logs and scratch
 .agents/
 
+# Private In-House Market Scanner Addon (Local Only)
+addons/ForeverMarket/
+
