@@ -133,7 +133,7 @@ export function runTier4Tests(collector, data) {
     const mage = talentsData.mage?.talents || [];
     const fire = mage.filter(t => t.tree === 1).sort((a, b) => a.row - b.row || a.col - b.col);
 
-    collector.test('4.3.1 Improved Fire Blast (Row 1) and Critical Mass (Row 5, 5 ranks) allocate legally', () => {
+    collector.test('4.3.1 Incineration (Row 1, 5 ranks) and Critical Mass (Row 5, 3 ranks) allocate legally', () => {
       const ifb = fire.find(t => t.name === 'Improved Fire Blast');
       const incin = fire.find(t => t.name === 'Incineration');
       const ignite = fire.find(t => t.name === 'Ignite');
@@ -146,19 +146,20 @@ export function runTier4Tests(collector, data) {
       expect(ifb).toBeDefined();
       expect(incin).toBeDefined();
       expect(cm).toBeDefined();
+      expect(cm.maxRank).toBe(3);
 
       const points = {};
-      // Row 1: 5 points (2 IFB + 3 Incineration)
-      points[ifb.id] = 2;
-      if (incin) points[incin.id] = 3;
+      // Row 1: 5 points (Incineration 5/5)
+      if (incin) points[incin.id] = 5;
 
-      // Row 2: 8 points (Ignite 5/5 + Impact 3/3)
+      // Row 2: 7 points (Ignite 5/5 + Impact 2/3)
       if (ignite) points[ignite.id] = 5;
-      if (impact) points[impact.id] = 3;
+      if (impact) points[impact.id] = 2;
 
-      // Row 3: 4 points (Burning Soul 3/3 + Pyroblast 1/1)
-      if (bs) points[bs.id] = 3;
+      // Row 3: 5 points (Burning Soul 2/3 + Pyroblast 1/1 + Improved Fire Blast 2/2)
+      if (bs) points[bs.id] = 2;
       if (pyro) points[pyro.id] = 1;
+      if (ifb) points[ifb.id] = 2;
 
       // Row 4: 3 points (Improved Scorch 3/3)
       if (scorch) points[scorch.id] = 3;

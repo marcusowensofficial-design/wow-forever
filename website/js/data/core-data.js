@@ -187,6 +187,44 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-63",
+      "title": "Datamined October 28 Build: Mage Talent Tree Overhaul (Accelerant, Precision Hit All Spells, Incineration 5 Ranks, Arcane Focus Removed), Adventurer's Tent & Consumable Rebalances",
+      "source": "ForeverChanges & Community Datamining",
+      "sourceType": "blizzard",
+      "author": "Systems Balance & Theorycraft Desk",
+      "date": "October 28, 2026",
+      "tag": "Class Balancing & Datamining",
+      "summary": "Forensic telemetry from pre-launch client builds reveals substantial Mage talent reworks: Arcane Focus removed with Precision now granting spell hit to all schools, Improved Fireball reworked into Accelerant (cutting Arcane Wrath cast time), Incineration rescaled to 5 ranks, and Adventurer's Tent rested experience aura redesigned.",
+      "content": `Datamined client files and server telemetry from the October 28 pre-launch build reveal sweeping adjustments to Mage specialization trees, camping consumables, and combat utilities ahead of worldwide launch:
+
+• **Mage Talent Specialization Rework:**
+  - **Accelerant (was Improved Fireball):** Reduces cast time of Fireball, Frostfire Bolt, and now also Arcane Wrath by 0.1 to 0.5 sec.
+  - **Precision (was Elemental Precision):** Its 2/4/6% hit chance now covers all spell schools (not only Frost and Fire), unifying spell hit across Arcane, Fire, and Frost.
+  - **Incineration Expanded:** Rescaled to 5 ranks (was 3), granting up to +10% critical strike chance for Fire Blast, Ice Lance, Arcane Blast, and Scorch (was 6%).
+  - **Critical Mass Compressed:** Rescaled to 3 ranks (was 5), granting up to +6% critical strike chance for Fire spells (was 10%).
+  - **Ice Lance Cooldown:** Now carries an 8-second cooldown (deals 200% increased damage to frozen targets).
+  - **Arcane Focus Removed:** Removed from Tier 1 of the Arcane tree (spell hit unified under Precision in the Frost tree).
+  - **Frost Blast Deprecated:** Removed from spellbook trainers (spell remains in client data for legacy compatibility).
+  - **Talent Node Relocations:**
+    • Improved Fire Blast moves from Row 1 Col 1 to Row 3 Col 4.
+    • Arcane Resilience moves from Row 2 Col 4 to Row 1 Col 3.
+    • Improved Channeling moves from Row 1 Col 3 to Row 1 Col 2.
+    • Missile Barrage moves from Row 1 Col 4 to Row 2 Col 4.
+
+• **Item & Consumable Rebalances:**
+  - **Adventurer’s Tent (Item 288185):** Now builds a tent next to a Campfire that raises the Rested experience of you and nearby party members to 20% of a level (10 sec cast, 1 hour cooldown).
+  - **Ultralight Goblin Glider (Item 260825):** Cooldown adjusted to 5 minutes (was 3 minutes).
+  - **Elixir of Wisdom (Item 3383):** Provides +3 Intellect for 30 minutes (was +6 for 1 hour).
+  - **Corrupted Gemstone (Item 277154):** Now requires Level 60.
+
+• **October 28 Hotfix Telemetry:**
+  - Aspect of the Hawk and Trueshot Aura ranged attack power reduced by ~50%.
+  - Blood Fury 2-minute cooldown active in server data.
+  - Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring, and Frostbite share one diminishing returns group.
+  - Paladins retain Righteous Fury at Level 10.`,
+      "url": "https://foreverchanges.pro/patch-notes"
+    },
+    {
       "id": "news-62",
       "title": "Blizzard Premieres 'Planet Azeroth' Nature Mockumentary Starring Bill Bailey Ahead of Worldwide Launch",
       "source": "Blizzard Official / Media Spotlight",

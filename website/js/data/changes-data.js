@@ -12,10 +12,10 @@ window.WOW_CHANGES_DATA = {
       "heroDesc": "Every World of Warcraft: Forever talent and spell change, compared with Classic: 113 new talents, 300 changed talents and 261 changed spells across the nine classes. Pick a class to read its changes.",
       "races": [],
       "stats": {
-        "allChanges": 761,
+        "allChanges": 762,
         "talentsChanged": 299,
         "talentsNew": 116,
-        "talentsRemoved": 81,
+        "talentsRemoved": 82,
         "spellsChanged": 265,
         "spellsTotal": 420,
         "everything": 967
@@ -110,8 +110,8 @@ window.WOW_CHANGES_DATA = {
         }
       ],
       "stats": {
-        "allChanges": 77,
-        "talentsChanged": 37,
+        "allChanges": 78,
+        "talentsChanged": 38,
         "talentsNew": 10,
         "talentsRemoved": 10,
         "spellsChanged": 20,
@@ -259,9 +259,9 @@ window.WOW_CHANGES_DATA = {
       ],
       "stats": {
         "allChanges": 69,
-        "talentsChanged": 38,
+        "talentsChanged": 37,
         "talentsNew": 6,
-        "talentsRemoved": 0,
+        "talentsRemoved": 1,
         "spellsChanged": 25,
         "spellsTotal": 51,
         "everything": 106
@@ -1553,7 +1553,7 @@ window.WOW_CHANGES_DATA = {
       "tree_id": "161",
       "tree_index": 0,
       "icon": "ability_shockwave",
-      "reported_change_kind": "unchanged",
+      "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
         "1": "Gives your Hamstring ability a 5% chance to immobilize the target for 5 sec.",
@@ -1566,8 +1566,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Same as Classic.",
-      "changes": [],
+      "summary": "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite.",
+      "changes": [
+        "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite."
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -9516,7 +9518,7 @@ window.WOW_CHANGES_DATA = {
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+        "1": "Increases the Ranged Attack Power of party or raid members within 45 yds by 15."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
@@ -9524,12 +9526,12 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 7 to tier 4. No longer requires Barrage. Numbers and wording changed.",
+      "summary": "Moved from tier 7 to tier 4. No longer requires Barrage. Gives 15, 22, 30 and 40 ranged attack power by rank instead of 30, 40, 50 and 75.",
       "changes": [
         "Moved from tier 7 to tier 4",
         "No longer requires Barrage",
         "Now covers the whole raid",
-        "Sniper Shot benefits from the Marksmanship talents it missed"
+        "Gives 15, 22, 30 and 40 ranged attack power by rank instead of 30, 40, 50 and 75"
       ],
       "classic": {
         "status": "verified",
@@ -10093,8 +10095,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Triggered traps now root all affected targets for 1 sec at rank 1, instead of a 5% chance to root for 5 sec.",
-      "changes": [],
+      "summary": "Triggered traps root all affected targets for 1-5 sec. Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite.",
+      "changes": [
+        "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite."
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -10285,10 +10289,11 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "3 ranks (Classic: 5). Moved from column 3 to column 4. Rank 3: 20% instead of 12%.",
+      "summary": "3 ranks (Classic: 5). Moved from column 3 to column 4. Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite.",
       "changes": [
         "3 ranks (Classic: 5)",
-        "Moved from column 3 to column 4"
+        "Moved from column 3 to column 4",
+        "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite."
       ],
       "classic": {
         "status": "verified",
@@ -10647,9 +10652,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 5 to tier 4. Numbers and wording changed.",
+      "summary": "Moved from tier 5 to tier 4. Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite.",
       "changes": [
-        "Moved from tier 5 to tier 4"
+        "Moved from tier 5 to tier 4",
+        "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite."
       ],
       "classic": {
         "status": "verified",
@@ -22358,7 +22364,7 @@ window.WOW_CHANGES_DATA = {
       "tree_id": "81",
       "tree_index": 0,
       "icon": "spell_holy_devotion",
-      "reported_change_kind": "modified",
+      "reported_change_kind": "removed",
       "evidence_status": "client_data",
       "rank_texts": {
         "1": "Improves your chance to hit with Arcane spells by 1%.",
@@ -22373,8 +22379,11 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Effect rewritten.",
-      "changes": [],
+      "summary": "Removed from the Arcane tree: it gave 1 to 5% hit chance with Arcane spells. Precision, in the Frost tree, now gives hit chance with all spells.",
+      "changes": [
+        "Removed from the Arcane tree",
+        "Precision in the Frost tree now covers all spells instead"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -22439,9 +22448,9 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Renamed from Improved Arcane Missiles. Numbers and wording changed.",
+      "summary": "Moves from the third to the second column of row 1.",
       "changes": [
-        "Renamed from Improved Arcane Missiles"
+        "Moves from the third to the second column of row 1"
       ],
       "reported_previous_name": "Improved Arcane Missiles",
       "classic": {
@@ -22698,10 +22707,9 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "2 ranks (Classic: 1). Moved from tier 3 to tier 2. 25% instead of 50%.",
+      "summary": "Moves from row 2 to row 1, in the third column.",
       "changes": [
-        "2 ranks (Classic: 1)",
-        "Moved from tier 3 to tier 2"
+        "Moves from row 2 to row 1, in the third column"
       ],
       "classic": {
         "status": "verified",
@@ -23126,10 +23134,9 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved to tier 1 (2 ranks).",
+      "summary": "Moves from row 1 to row 2.",
       "changes": [
-        "Moved to tier 1",
-        "2 ranks (was 1)"
+        "Moves from row 1 to row 2"
       ],
       "classic": {
         "status": "not_listed",
@@ -23435,9 +23442,9 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Renamed from Wake of Fire.",
+      "summary": "Moves from row 1 to row 3, in the fourth column.",
       "changes": [
-        "Renamed from Wake of Fire"
+        "Moves from row 1 to row 3, in the fourth column"
       ],
       "reported_previous_name": "Wake of Fire",
       "classic": {
@@ -23492,19 +23499,20 @@ window.WOW_CHANGES_DATA = {
       "rank_texts": {
         "1": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
         "2": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
-        "3": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
+        "3": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%.",
+        "4": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 8%.",
+        "5": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 10%."
       },
       "estimated_rank_texts": {},
-      "max_rank": 3,
+      "max_rank": 5,
       "discovered_at": "2026-10-08",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Renamed from Incinerate. 3 ranks (Classic: 2). Moved from tier 3 to tier 1. Same numbers, reworded.",
+      "summary": "Has 5 ranks instead of 3: up to 10% more critical strike chance for Fire Blast, Ice Lance, Arcane Blast and Scorch (was 6%).",
       "changes": [
-        "Renamed from Incinerate",
-        "3 ranks (Classic: 2)",
-        "Moved from tier 3 to tier 1"
+        "Has 5 ranks instead of 3",
+        "Up to 10% more critical strike chance for Fire Blast, Ice Lance, Arcane Blast and Scorch (was 6%)"
       ],
       "reported_previous_name": "Incinerate",
       "classic": {
@@ -23546,7 +23554,7 @@ window.WOW_CHANGES_DATA = {
     },
     {
       "id": "calc-mage-fire-improved-fireball",
-      "name": "Improved Fireball",
+      "name": "Accelerant",
       "class": "mage",
       "kind": "talent",
       "tree_name": "Fire",
@@ -23556,11 +23564,11 @@ window.WOW_CHANGES_DATA = {
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.1 sec.",
-        "2": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.2 sec.",
-        "3": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.3 sec.",
-        "4": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.4 sec.",
-        "5": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
+        "1": "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.1 sec.",
+        "2": "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.2 sec.",
+        "3": "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.3 sec.",
+        "4": "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.4 sec.",
+        "5": "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.5 sec."
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
@@ -23568,9 +23576,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 3. Same numbers, reworded.",
+      "summary": "Was Improved Fireball, and now also cuts the cast time of Arcane Wrath by 0.1 to 0.5 sec, as it does for Fireball and Frostfire Bolt.",
       "changes": [
-        "Moved from column 2 to column 3"
+        "Renamed from Improved Fireball to Accelerant",
+        "Now also cuts the cast time of Arcane Wrath by 0.1 to 0.5 sec, as it does for Fireball and Frostfire Bolt"
       ],
       "classic": {
         "status": "verified",
@@ -24237,19 +24246,18 @@ window.WOW_CHANGES_DATA = {
       "rank_texts": {
         "1": "Increases the critical strike chance of your Fire spells by 2%.",
         "2": "Increases the critical strike chance of your Fire spells by 4%.",
-        "3": "Increases the critical strike chance of your Fire spells by 6%.",
-        "4": "Increases the critical strike chance of your Fire spells by 8%.",
-        "5": "Increases the critical strike chance of your Fire spells by 10%."
+        "3": "Increases the critical strike chance of your Fire spells by 6%."
       },
       "estimated_rank_texts": {},
-      "max_rank": 5,
+      "max_rank": 3,
       "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Rescaled to 5 ranks (was 3).",
+      "summary": "Has 3 ranks instead of 5: up to 6% more critical strike chance for Fire spells (was 10%).",
       "changes": [
-        "5 ranks (was 3)"
+        "Has 3 ranks instead of 5",
+        "Up to 6% more critical strike chance for Fire spells (was 10%)"
       ],
       "classic": {
         "status": "verified",
@@ -24610,7 +24618,7 @@ window.WOW_CHANGES_DATA = {
     },
     {
       "id": "calc-mage-frost-elemental-precision",
-      "name": "Elemental Precision",
+      "name": "Precision",
       "class": "mage",
       "kind": "talent",
       "tree_name": "Frost",
@@ -24620,21 +24628,20 @@ window.WOW_CHANGES_DATA = {
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Improves your chance to hit with Frost and Fire spells by 1%.",
-        "2": "Improves your chance to hit with Frost and Fire spells by 2%.",
-        "3": "Improves your chance to hit with Frost and Fire spells by 3%.",
-        "4": "Improves your chance to hit with Frost and Fire spells by 4%.",
-        "5": "Improves your chance to hit with Frost and Fire spells by 5%."
+        "1": "Improves your chance to hit with all spells by 2%.",
+        "2": "Improves your chance to hit with all spells by 4%.",
+        "3": "Improves your chance to hit with all spells by 6%."
       },
       "estimated_rank_texts": {},
-      "max_rank": 5,
+      "max_rank": 3,
       "discovered_at": "2026-10-08",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "5 ranks (Classic: 3). Effect rewritten.",
+      "summary": "Was Elemental Precision: its 2/4/6% hit chance now covers all spells, not only Frost and Fire spells.",
       "changes": [
-        "5 ranks (Classic: 3)"
+        "Renamed from Elemental Precision to Precision",
+        "2/4/6% hit chance now covers all spells, not only Frost and Fire spells"
       ],
       "classic": {
         "status": "verified",
@@ -24886,9 +24893,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 4.",
+      "summary": "Moved from column 2 to column 4. Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite.",
       "changes": [
-        "Moved from column 2 to column 4"
+        "Moved from column 2 to column 4",
+        "Its root now shares one diminishing returns group with the other talent roots: Entrapment, Counterattack, Improved Wing Clip, Improved Hamstring and Frostbite."
       ],
       "classic": {
         "status": "verified",
@@ -25066,7 +25074,7 @@ window.WOW_CHANGES_DATA = {
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+        "1": "Instant, 8 sec cooldown. Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
@@ -25074,9 +25082,10 @@ window.WOW_CHANGES_DATA = {
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Deals 200% increased damage to Frozen targets (was 300%).",
+      "summary": "Deals 200% increased damage to Frozen targets (was 300%). Now has an 8 sec cooldown.",
       "changes": [
-        "Deals 200% increased damage to Frozen targets (was 300%)"
+        "Deals 200% increased damage to Frozen targets (was 300%)",
+        "Now has an 8 sec cooldown"
       ],
       "classic": {
         "status": "not_listed",
@@ -37383,17 +37392,17 @@ window.WOW_CHANGES_DATA = {
       "icon": "spell_nature_ravenform",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 6 differ from Classic. Rank 6: 55 instead of 110.",
+      "summary": "Gives 15, 22, 30, 38 and 47 ranged attack power by rank instead of 20, 35, 50, 70 and 90. Rank 6: 55 instead of 110.",
       "order": 502,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "20 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 20. Only one Aspect can be active at a time.",
-        "2": "35 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 35. Only one Aspect can be active at a time.",
-        "3": "50 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 50. Only one Aspect can be active at a time.",
-        "4": "70 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 70. Only one Aspect can be active at a time.",
-        "5": "90 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 90. Only one Aspect can be active at a time.",
+        "1": "20 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 15. Only one Aspect can be active at a time.",
+        "2": "35 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 22. Only one Aspect can be active at a time.",
+        "3": "50 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 30. Only one Aspect can be active at a time.",
+        "4": "70 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 38. Only one Aspect can be active at a time.",
+        "5": "90 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 47. Only one Aspect can be active at a time.",
         "6": "110 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 55. Only one Aspect can be active at a time.",
-        "7": "120 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 120. Only one Aspect can be active at a time."
+        "7": "120 Mana, Instant. The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 65. Only one Aspect can be active at a time."
       },
       "max_rank": 7,
       "classic": {
@@ -37427,7 +37436,11 @@ window.WOW_CHANGES_DATA = {
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Gives 15, 22, 30, 38 and 47 ranged attack power by rank instead of 20, 35, 50, 70 and 90",
+        "Rank 6: 55 instead of 110"
+      ]
     },
     {
       "id": "spellbook-hunter-arcane-shot",
@@ -47912,7 +47925,7 @@ window.WOW_CHANGES_DATA = {
       "icon": "spell_holy_sealoffury",
       "reported_change_kind": "modified",
       "spellbook_status": "same",
-      "summary": "Holy threat increased to 90% (Classic: 60%).",
+      "summary": "Learned at level 10 (was 16). Increases Holy threat by 90% (Classic: 60%).",
       "order": 605,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -47946,7 +47959,8 @@ window.WOW_CHANGES_DATA = {
       "uncertainties": [],
       "discovered_at": "2026-10-10",
       "changes": [
-        "Holy threat increased to 90% (Classic: 60%)"
+        "Learned at level 10 (was 16)",
+        "Increases Holy threat by 90% (Classic: 60%)"
       ]
     },
     {
@@ -53051,13 +53065,12 @@ window.WOW_CHANGES_DATA = {
       "kind": "spell",
       "tree_name": "Frost",
       "icon": "spell_frost_frostblast",
-      "reported_change_kind": "added",
-      "spellbook_status": "new",
-      "summary": "New spell learned at level 24. Deals damage and slows target movement by 40% (1.5s cast). Serves as Rank 1 Frostbolt replacement and is affected by all Frostbolt talents.",
+      "reported_change_kind": "removed",
+      "spellbook_status": "removed",
+      "summary": "Removed from the spellbook. The spell is technically still in the game but can no longer be trained. Take this change with a grain of salt.",
       "changes": [
-        "New baseline spell learned at level 24",
-        "1.5 second cast time, slows target movement by 40%",
-        "Affected by all talents that affect Frostbolt"
+        "Removed from the spellbook",
+        "The spell is technically still in the game but can no longer be trained"
       ],
       "order": 301,
       "evidence_status": "client_data",

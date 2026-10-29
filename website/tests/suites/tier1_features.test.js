@@ -153,20 +153,20 @@ export function runTier1Tests(collector, data) {
       expect(aw.maxRank).toBe(1);
     });
 
-    collector.test('1.3.2 Missile Barrage moved to Row 1 Col 4 with 2 ranks', () => {
+    collector.test('1.3.2 Missile Barrage moved to Row 2 Col 4 with 2 ranks', () => {
       const mb = arcane.find(t => t.name === 'Missile Barrage');
       expect(mb).toBeDefined();
-      expect(mb.row).toBe(1);
+      expect(mb.row).toBe(2);
       expect(mb.col).toBe(4);
       expect(mb.maxRank).toBe(2);
       expect(mb.descriptions.length).toBe(2);
     });
 
-    collector.test('1.3.3 Wake of Fire renamed to Improved Fire Blast at Row 1 Col 1 with 2 ranks', () => {
+    collector.test('1.3.3 Improved Fire Blast moved to Row 3 Col 4 with 2 ranks', () => {
       const ifb = fire.find(t => t.name === 'Improved Fire Blast');
       expect(ifb).toBeDefined();
-      expect(ifb.row).toBe(1);
-      expect(ifb.col).toBe(1);
+      expect(ifb.row).toBe(3);
+      expect(ifb.col).toBe(4);
       expect(ifb.maxRank).toBe(2);
     });
 
@@ -180,14 +180,14 @@ export function runTier1Tests(collector, data) {
       expect(fp.descriptions[2]).toMatch(/12%/);
     });
 
-    collector.test('1.3.5 Critical Mass rescaled to 5 ranks in Row 5 Col 2 (+10% Fire crit)', () => {
+    collector.test('1.3.5 Critical Mass rescaled to 3 ranks in Row 5 Col 2 (+6% Fire crit)', () => {
       const cm = fire.find(t => t.name === 'Critical Mass');
       expect(cm).toBeDefined();
       expect(cm.row).toBe(5);
       expect(cm.col).toBe(2);
-      expect(cm.maxRank).toBe(5);
-      expect(cm.descriptions.length).toBe(5);
-      expect(cm.descriptions[4]).toMatch(/10%/);
+      expect(cm.maxRank).toBe(3);
+      expect(cm.descriptions.length).toBe(3);
+      expect(cm.descriptions[2]).toMatch(/6%/);
     });
 
     collector.test('1.3.6 Ice Lance deals 200% increased damage to Frozen targets', () => {

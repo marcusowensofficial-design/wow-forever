@@ -325,13 +325,13 @@ export function runTier2Tests(collector, data) {
       expect(res.reason).toMatch(/Already at maxRank/i);
     });
 
-    collector.test('2.4.5 Overspending on 5-rank talent (attempting rank 6/5 on Critical Mass) is blocked', () => {
+    collector.test('2.4.5 Overspending on 3-rank talent (attempting rank 4/3 on Critical Mass) is blocked', () => {
       const mage = talentsData.mage?.talents || [];
       const cm = mage.find(t => t.name === 'Critical Mass');
       expect(cm).toBeDefined();
-      expect(cm.maxRank).toBe(5);
+      expect(cm.maxRank).toBe(3);
 
-      const points = { [cm.id]: 5 };
+      const points = { [cm.id]: 3 };
       const res = canAllocatePoint(mage, points, cm.id, 51);
       expect(res.allowed).toBeFalsy();
       expect(res.reason).toMatch(/Already at maxRank/i);

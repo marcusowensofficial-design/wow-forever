@@ -701,7 +701,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Scatter Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec on an instant cast (30s cooldown)." },
             { "name": "Barrage", "points": "1/3", "tree": "Marksmanship (Tier 4)", "desc": "Increases the damage done by your Multi-Shot and Volley spells by 5%." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+50 Attack Power to all party members) and 3/3 Barrage.",
+          "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+15 to +40 Ranged Attack Power to whole raid) and 3/3 Barrage.",
           "rotation": [
             { "label": "41-Yard Opener", "desc": "Hunter's Mark -> Cast Aimed Shot from maximum 41-yard range -> Serpent Sting." },
             { "label": "Auto-Shot Weaving", "desc": "Clip Auto Shot swing timer with Multi-Shot and Arcane Shot; Mortal Shots adds +30% critical damage." },

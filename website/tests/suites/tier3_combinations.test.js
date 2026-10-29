@@ -20,7 +20,7 @@ export function runTier3Tests(collector, data) {
   // Combination 1: Human Ruthless (+1% Crit) + Fire Mage Critical Mass (+10% Crit)
   // =========================================================================
   collector.describe('Tier 3.1: Human Ruthless + Mage Critical Mass Synergy', () => {
-    collector.test('3.1.1 Human Ruthless (+1%) stacks additively with Mage Critical Mass 5/5 (+10%) for +11% Fire crit', () => {
+    collector.test('3.1.1 Human Ruthless (+1%) stacks additively with Mage Critical Mass 3/3 (+6%) for +7% Fire crit', () => {
       const human = racesData.find(r => r.id === 'human');
       const ruthless = human?.racials?.find(r => r.name === 'Ruthless');
       expect(ruthless).toBeDefined();
@@ -28,13 +28,13 @@ export function runTier3Tests(collector, data) {
       const mage = talentsData.mage?.talents || [];
       const cm = mage.find(t => t.name === 'Critical Mass');
       expect(cm).toBeDefined();
-      expect(cm.maxRank).toBe(5);
+      expect(cm.maxRank).toBe(3);
 
       // Extract crit percentages
       const racialCrit = 1; // +1% all spells and attacks (tuned from 2%)
-      const talentCrit = 10; // +10% Fire spells (5 ranks * 2%)
+      const talentCrit = 6; // +6% Fire spells (3 ranks * 2%)
       const totalFireCritBonus = racialCrit + talentCrit;
-      expect(totalFireCritBonus).toBe(11);
+      expect(totalFireCritBonus).toBe(7);
     });
 
     collector.test('3.1.2 Human race is eligible to be Mage in races-classes dataset', () => {

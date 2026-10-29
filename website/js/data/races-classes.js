@@ -343,7 +343,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Read Leyline",
         "type": "Active • 15s • 2m CD",
-        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death, removed upon entering a raid)."
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (100% while Attuned for 1 hr at a Ley Line; replaced by Innervate). Horde Windshapers learn Skysight: increases movement speed by 15% for 15 sec (30% while Charged for 1 hr at an elemental convergence). Attuned and Charged persist through death and are removed upon entering a raid."
       },
       {
         "name": "Wind Blessed",

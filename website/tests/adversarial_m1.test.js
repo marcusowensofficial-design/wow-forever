@@ -467,34 +467,34 @@ collector.describe('Suite 3: Mage Arcane, Fire & Frost Trees Adversarial Stress-
     expect(aw.req).toBeNull();
   });
 
-  collector.test('3.2 Missile Barrage is positioned at Row 1 Col 4 with 2 ranks and req: null', () => {
+  collector.test('3.2 Missile Barrage is positioned at Row 2 Col 4 with 2 ranks and req: null', () => {
     const mb = arcane.find(t => t.name === 'Missile Barrage');
     expect(mb).toBeDefined();
-    expect(mb.row).toBe(1);
+    expect(mb.row).toBe(2);
     expect(mb.col).toBe(4);
     expect(mb.maxRank).toBe(2);
     expect(mb.req).toBeNull();
   });
 
-  collector.test('3.3 Improved Fire Blast is renamed from Wake of Fire at Row 1 Col 1 with 2 ranks', () => {
+  collector.test('3.3 Improved Fire Blast is positioned at Row 3 Col 4 with 2 ranks', () => {
     const ifb = fire.find(t => t.name === 'Improved Fire Blast');
     const wof = fire.find(t => t.name === 'Wake of Fire');
     expect(ifb).toBeDefined();
     expect(wof === undefined).toBeTruthy();
-    expect(ifb.row).toBe(1);
-    expect(ifb.col).toBe(1);
+    expect(ifb.row).toBe(3);
+    expect(ifb.col).toBe(4);
     expect(ifb.maxRank).toBe(2);
   });
 
-  collector.test('3.4 Critical Mass is rescaled to 5 ranks (2/4/6/8/10% crit) at Row 5 Col 2', () => {
+  collector.test('3.4 Critical Mass is rescaled to 3 ranks (2/4/6% crit) at Row 5 Col 2', () => {
     const cm = fire.find(t => t.name === 'Critical Mass');
     expect(cm).toBeDefined();
     expect(cm.row).toBe(5);
     expect(cm.col).toBe(2);
-    expect(cm.maxRank).toBe(5);
-    expect(cm.descriptions.length).toBe(5);
+    expect(cm.maxRank).toBe(3);
+    expect(cm.descriptions.length).toBe(3);
     expect(cm.descriptions[0]).toMatch(/2%/);
-    expect(cm.descriptions[4]).toMatch(/10%/);
+    expect(cm.descriptions[2]).toMatch(/6%/);
   });
 
   collector.test('3.5 Fire Power is rescaled to 3 ranks (1/2/3% per effect up to 12%) at Row 6 Col 3', () => {
@@ -510,21 +510,23 @@ collector.describe('Suite 3: Mage Arcane, Fire & Frost Trees Adversarial Stress-
   });
 
   collector.test('3.6 Legal 21-point Fire Mage build reaches Critical Mass in Row 5 with 0 errors', () => {
-    const ifb = fire.find(t => t.name === 'Improved Fire Blast'); // R1, 2
-    const ifire = fire.find(t => t.name === 'Improved Fireball'); // R1, 5 -> 7 pts
-    const ignite = fire.find(t => t.name === 'Ignite'); // R2, 5 -> 12 pts
-    const bs = fire.find(t => t.name === 'Burning Soul'); // R3, 3
-    const pyro = fire.find(t => t.name === 'Pyroblast'); // R3, 1 -> 16 pts in R1-R3
+    const incin = fire.find(t => t.name === 'Incineration'); // R1, 5
+    const ignite = fire.find(t => t.name === 'Ignite'); // R2, 5 -> 10 pts
+    const ft = fire.find(t => t.name === 'Flame Throwing'); // R2, 1 -> 11 pts
+    const bs = fire.find(t => t.name === 'Burning Soul'); // R3, 2
+    const pyro = fire.find(t => t.name === 'Pyroblast'); // R3, 1
+    const ifb = fire.find(t => t.name === 'Improved Fire Blast'); // R3, 2 -> 16 pts in R1-R3
     const iscorch = fire.find(t => t.name === 'Improved Scorch'); // R4, 3
     const hu = fire.find(t => t.name === 'Heating Up'); // R4, 1 -> 20 pts in R1-R4
     const cm = fire.find(t => t.name === 'Critical Mass'); // R5, 1 -> 21 pts total
 
     const points = {
-      [ifb.id]: 2,
-      [ifire.id]: 5,
+      [incin.id]: 5,
       [ignite.id]: 5,
-      [bs.id]: 3,
+      [ft.id]: 1,
+      [bs.id]: 2,
       [pyro.id]: 1,
+      [ifb.id]: 2,
       [iscorch.id]: 3,
       [hu.id]: 1,
       [cm.id]: 1

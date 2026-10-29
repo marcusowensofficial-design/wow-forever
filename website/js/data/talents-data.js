@@ -2365,7 +2365,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1299346,
         "req": null,
         "descriptions": [
-          "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+          "Increases the Ranged Attack Power of party or raid members within 45 yds by 15."
         ]
       },
       {
@@ -4466,7 +4466,6 @@ window.WOW_TALENTS_DATA = {
           "Gives you a 80% chance to increase your Spirit by 100% for 15 sec after killing a non-trivial target or when an enemy afflicted by your Vampiric Embrace dies. For the duration, 50% of your Mana regeneration will continue while casting.",
           "Gives you a 100% chance to increase your Spirit by 100% for 15 sec after killing a non-trivial target or when an enemy afflicted by your Vampiric Embrace dies. For the duration, 50% of your Mana regeneration will continue while casting."
         ]
-
       },
       {
         "id": 249,
@@ -5683,26 +5682,6 @@ window.WOW_TALENTS_DATA = {
         ]
       },
       {
-        "id": 314,
-        "tree": 0,
-        "treeId": 7,
-        "name": "Arcane Focus",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devotion.jpg",
-        "iconName": "spell_holy_devotion",
-        "row": 1,
-        "col": 2,
-        "maxRank": 5,
-        "spellId": 11222,
-        "req": null,
-        "descriptions": [
-          "Improves your chance to hit with Arcane spells by 1%.",
-          "Improves your chance to hit with Arcane spells by 2%.",
-          "Improves your chance to hit with Arcane spells by 3%.",
-          "Improves your chance to hit with Arcane spells by 4%.",
-          "Improves your chance to hit with Arcane spells by 5%."
-        ]
-      },
-      {
         "id": 315,
         "tree": 0,
         "treeId": 7,
@@ -5710,7 +5689,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_starfall.jpg",
         "iconName": "spell_nature_starfall",
         "row": 1,
-        "col": 3,
+        "col": 2,
         "maxRank": 5,
         "spellId": 11237,
         "req": null,
@@ -5783,8 +5762,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Arcane Resilience",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_arcane_arcaneresilience.jpg",
         "iconName": "spell_arcane_arcaneresilience",
-        "row": 2,
-        "col": 4,
+        "row": 1,
+        "col": 3,
         "maxRank": 2,
         "spellId": 28574,
         "req": null,
@@ -5903,7 +5882,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Missile Barrage",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_mage_missilebarrage.jpg",
         "iconName": "ability_mage_missilebarrage",
-        "row": 1,
+        "row": 2,
         "col": 4,
         "maxRank": 2,
         "spellId": 44404,
@@ -6006,8 +5985,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Improved Fire Blast",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_lavaspawn.jpg",
         "iconName": "spell_fire_lavaspawn",
-        "row": 1,
-        "col": 1,
+        "row": 3,
+        "col": 4,
         "maxRank": 2,
         "spellId": 11078,
         "req": null,
@@ -6025,20 +6004,22 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_fire_flameshock",
         "row": 1,
         "col": 2,
-        "maxRank": 3,
+        "maxRank": 5,
         "spellId": 18459,
         "req": null,
         "descriptions": [
           "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
           "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
-          "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
+          "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%.",
+          "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 8%.",
+          "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 10%."
         ]
       },
       {
         "id": 333,
         "tree": 1,
         "treeId": 8,
-        "name": "Improved Fireball",
+        "name": "Accelerant",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_flamebolt.jpg",
         "iconName": "spell_fire_flamebolt",
         "row": 1,
@@ -6047,11 +6028,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11069,
         "req": null,
         "descriptions": [
-          "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.1 sec.",
-          "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.2 sec.",
-          "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.3 sec.",
-          "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.4 sec.",
-          "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
+          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.1 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.2 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.3 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.4 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.5 sec."
         ]
       },
       {
@@ -6239,15 +6220,13 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_nature_wispheal",
         "row": 5,
         "col": 2,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 11115,
         "req": null,
         "descriptions": [
           "Increases the critical strike chance of your Fire spells by 2%.",
           "Increases the critical strike chance of your Fire spells by 4%.",
-          "Increases the critical strike chance of your Fire spells by 6%.",
-          "Increases the critical strike chance of your Fire spells by 8%.",
-          "Increases the critical strike chance of your Fire spells by 10%."
+          "Increases the critical strike chance of your Fire spells by 6%."
         ]
       },
       {
@@ -6341,7 +6320,7 @@ window.WOW_TALENTS_DATA = {
         "id": 350,
         "tree": 2,
         "treeId": 9,
-        "name": "Elemental Precision",
+        "name": "Precision",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_ice_magicdamage.jpg",
         "iconName": "spell_ice_magicdamage",
         "row": 1,
@@ -6350,9 +6329,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 29438,
         "req": null,
         "descriptions": [
-          "Improves your chance to hit with Frost and Fire spells by 2%.",
-          "Improves your chance to hit with Frost and Fire spells by 4%.",
-          "Improves your chance to hit with Frost and Fire spells by 6%."
+          "Improves your chance to hit with all spells by 2%.",
+          "Improves your chance to hit with all spells by 4%.",
+          "Improves your chance to hit with all spells by 6%."
         ]
       },
       {
@@ -6459,7 +6438,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1312002,
         "req": null,
         "descriptions": [
-          "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+          "Instant, 8 sec cooldown. Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
         ]
       },
       {

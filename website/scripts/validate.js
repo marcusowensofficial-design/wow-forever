@@ -565,7 +565,7 @@ check('Obsolete weapon racials purge across races-classes.js, tools-data.js, and
 check('Absence of removed talents in active specialization trees in talents-data.js', () => {
   const data = loadAllData(ROOT);
   const talentsData = data.talentsData;
-  const removedTalents = ['Call of Thunder', 'Shadow Affinity', 'Piercing Ice'];
+  const removedTalents = ['Call of Thunder', 'Shadow Affinity', 'Piercing Ice', 'Arcane Focus'];
 
   for (const [cls, cData] of Object.entries(talentsData)) {
     for (const t of cData.talents || []) {
@@ -584,7 +584,8 @@ check('Presence of new talent nodes with valid metadata and rank counts in talen
     { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: null },
     { cls: 'priest', name: 'Dark Inspiration', tree: 2, row: 4, col: 1, maxRank: 5, req: null },
     { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 4, col: 4, maxRank: 2, req: null },
-    { cls: 'mage', name: 'Elemental Precision', tree: 2, row: 1, col: 3, maxRank: 3, req: null }
+    { cls: 'mage', name: 'Precision', tree: 2, row: 1, col: 3, maxRank: 3, req: null },
+    { cls: 'mage', name: 'Accelerant', tree: 1, row: 1, col: 3, maxRank: 5, req: null }
   ];
 
   for (const expected of expectedNodes) {
