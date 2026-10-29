@@ -257,6 +257,7 @@ function setupDungeonModalEvents() {
     modal.classList.remove('is-open');
     modal.classList.remove('open');
     modal.setAttribute('hidden', '');
+    if (typeof window.hideCodexItemTooltip === 'function') window.hideCodexItemTooltip();
   };
 
   if (closeBtn) {
@@ -413,7 +414,7 @@ window.openDungeonLootModal = function(dungeonId) {
               </div>
               <div class="dg-loot-table-grid">
                 ${(boss.drops || []).map(item => `
-                  <div class="dg-loot-item-card">
+                  <div class="dg-loot-item-card" data-item-id="${item.id || ''}" data-item-name="${escapeHtml(item.name || '')}" data-item-quality="${escapeHtml(item.quality || 'q3')}" data-item-ilvl="${escapeHtml(String(item.iLvl || ''))}" data-item-slot="${escapeHtml(item.slot || '')}" data-item-stats="${escapeHtml(item.stats || '')}">
                     <div class="dg-loot-item-top">
                       <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
                       ${item.iLvl ? `<span class="dg-loot-ilvl">iLvl ${item.iLvl}</span>` : ''}
@@ -467,7 +468,7 @@ window.openDungeonLootModal = function(dungeonId) {
             </div>
             <div class="dg-loot-table-grid">
               ${(boss.drops || []).map(item => `
-                <div class="dg-loot-item-card">
+                <div class="dg-loot-item-card" data-item-id="${item.id || ''}" data-item-name="${escapeHtml(item.name || '')}" data-item-quality="${escapeHtml(item.quality || 'q3')}" data-item-ilvl="${escapeHtml(String(item.iLvl || ''))}" data-item-slot="${escapeHtml(item.slot || '')}" data-item-stats="${escapeHtml(item.stats || '')}">
                   <div class="dg-loot-item-top">
                     <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
                     ${item.iLvl ? `<span class="dg-loot-ilvl">${String(item.iLvl).startsWith('Req') ? escapeHtml(item.iLvl) : 'iLvl ' + item.iLvl}</span>` : ''}
@@ -496,6 +497,33 @@ window.openDungeonLootModal = function(dungeonId) {
       </div>
     `}
   `;
+
+  // Bind loot item hover tooltips inside modal
+  body.querySelectorAll('.dg-loot-item-card').forEach(card => {
+    card.addEventListener('mouseenter', (e) => {
+      if (typeof window.showCodexItemTooltipById === 'function') {
+        const id = card.getAttribute('data-item-id');
+        const itemName = card.getAttribute('data-item-name');
+        window.showCodexItemTooltipById(e, id, itemName, {
+          id,
+          name: itemName,
+          quality: card.getAttribute('data-item-quality') || 'q3',
+          iLvl: card.getAttribute('data-item-ilvl') || '',
+          slot: card.getAttribute('data-item-slot') || '',
+          stats: card.getAttribute('data-item-stats') || ''
+        });
+      }
+    });
+    card.addEventListener('mousemove', (e) => {
+      const tooltip = document.getElementById('wow-item-tooltip');
+      if (tooltip && !tooltip.hasAttribute('hidden') && typeof window.positionTooltip === 'function') {
+        window.positionTooltip(e, tooltip);
+      }
+    });
+    card.addEventListener('mouseleave', () => {
+      if (typeof window.hideCodexItemTooltip === 'function') window.hideCodexItemTooltip();
+    });
+  });
 
   // Bind tab switching
   const tabBtns = body.querySelectorAll('.dg-modal-tab-btn');

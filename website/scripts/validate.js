@@ -1285,6 +1285,40 @@ check('Slot filter "main-hand" strictly isolates Main Hand items and excludes On
   deepdivesProgression.setWeaponSlot('all');
 });
 
+check('Guides dataset syntax, category mapping, and sub-tab filtering integrity', () => {
+  const { toolsData } = loadAllData(ROOT);
+  const guides = toolsData?.guides || [];
+  if (guides.length < 60) {
+    throw new Error(`Expected at least 60 merged guides in WOW_TOOLS_DATA.guides, found ${guides.length}`);
+  }
+
+  const validCategoryBuckets = {
+    classes: ['Classes & Pets', 'Classes & Specs'],
+    leveling: ['Leveling & Quests'],
+    dungeons: ['Dungeons & Raids'],
+    professions: ['Economy & Professions'],
+    secrets: ['Exploration & Secrets'],
+    pvp: ['PvP & Tournaments']
+  };
+  const allValidCategories = new Set(Object.values(validCategoryBuckets).flat());
+
+  for (const g of guides) {
+    if (!g.id || !g.title || !g.category || !g.content) {
+      throw new Error(`Guide "${g.id || 'unknown'}" is missing required fields (id, title, category, or content)`);
+    }
+    if (!allValidCategories.has(g.category)) {
+      throw new Error(`Guide "${g.id}" has unmapped category "${g.category}"`);
+    }
+  }
+
+  for (const [subtab, cats] of Object.entries(validCategoryBuckets)) {
+    const matches = guides.filter(g => cats.includes(g.category));
+    if (matches.length === 0) {
+      throw new Error(`Guide sub-tab "${subtab}" matched 0 guides`);
+    }
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

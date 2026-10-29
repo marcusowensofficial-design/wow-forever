@@ -10,7 +10,7 @@ const ROOT = path.resolve(__dirname, '..');
 const dungPath = path.join(ROOT, 'js', 'data', 'dungeons-data.js');
 const dungCode = fs.readFileSync(dungPath, 'utf8');
 
-const itemRegex = /item=(\d+)(?:\/([^"\s\)]+))?/g;
+const itemRegex = /item=(\d+)(?:\/([^"\s)]+))?/g;
 const itemMap = new Map();
 let m;
 while ((m = itemRegex.exec(dungCode)) !== null) {

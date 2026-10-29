@@ -90,6 +90,14 @@ export function loadAllData(rootDir = null) {
 
   const toolsDataPath = path.join(root, 'js', 'data', 'tools-data.js');
   const toolsDataRaw = fs.existsSync(toolsDataPath) ? fs.readFileSync(toolsDataPath, 'utf8') : '';
+  if (toolsDataRaw) {
+    vm.runInContext(toolsDataRaw, context);
+  }
+
+  const dungeonsDataPath = path.join(root, 'js', 'data', 'dungeons-data.js');
+  if (fs.existsSync(dungeonsDataPath)) {
+    vm.runInContext(fs.readFileSync(dungeonsDataPath, 'utf8'), context);
+  }
 
   return {
     root,
@@ -99,6 +107,7 @@ export function loadAllData(rootDir = null) {
     newClassCombos: context.WOW_FOREVER_DATA?.newClassCombos || [],
     talentsData: context.WOW_TALENTS_DATA || {},
     changesData: context.WOW_CHANGES_DATA || {},
+    toolsData: context.WOW_TOOLS_DATA || {},
     changesJson,
     deepdives: context.WOW_FOREVER_DATA?.classDeepDives || {},
     indexHtml,

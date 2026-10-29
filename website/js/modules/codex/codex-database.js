@@ -67,12 +67,19 @@
     const meta = db.meta;
     const n = rows.length;
     const hay = new Array(n);
+    const idToRow = new Map();
+    const nameToRow = new Map();
     const inst = meta.inst || {};
     const src = meta.src || [];
     const kinds = meta.kinds || [];
 
     for (let i = 0; i < n; i++) {
       const r = rows[i];
+      idToRow.set(Number(r[0]), i);
+      if (r[1]) {
+        const lower = String(r[1]).toLowerCase();
+        if (!nameToRow.has(lower)) nameToRow.set(lower, i);
+      }
       const sList = r[13] || [];
       const srcNames = sList.map((k) => {
         const pair = src[k];
@@ -81,9 +88,483 @@
       hay[i] = `${r[1]} ${kinds[r[6]] || ''} ${r[14] || ''} ${srcNames}`.toLowerCase();
     }
 
-    indexCache = { db, rows, meta, n, hay };
+    indexCache = { db, rows, meta, n, hay, idToRow, nameToRow };
     return indexCache;
   }
+
+  const BIND_TEXT = {
+    0: '',
+    1: 'Binds when picked up',
+    2: 'Binds when equipped',
+    3: 'Binds when used',
+    4: 'Quest Item',
+    5: 'Quest Item'
+  };
+
+  let richLookupCache = null;
+
+  function ensureRichLookup() {
+    if (richLookupCache) return richLookupCache;
+    const byId = new Map();
+    const byName = new Map();
+    const cdlById = new Map();
+    const recipeById = new Map();
+    const recipeByName = new Map();
+
+    const registerItem = (it) => {
+      if (!it) return;
+      const id = Number(it.itemId || it.id || it.tipId);
+      if (id > 0) {
+        const ex = byId.get(id);
+        if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+          byId.set(id, it);
+        }
+      }
+      if (it.name) {
+        const k = String(it.name).toLowerCase().trim();
+        const ex = byName.get(k);
+        if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+          byName.set(k, it);
+        }
+      }
+    };
+
+    if (window.WOW_PROGRESSION_DATA) {
+      const colls = [
+        window.WOW_PROGRESSION_DATA.weapons,
+        window.WOW_PROGRESSION_DATA.wands,
+        window.WOW_PROGRESSION_DATA.offhands
+      ];
+      for (const coll of colls) {
+        if (!coll) continue;
+        for (const cKey of Object.keys(coll)) {
+          const cData = coll[cKey];
+          const sets = [
+            cData.levels,
+            cData.healingLevels,
+            ...(Object.values(cData.tracksData || {}))
+          ].filter(Boolean);
+          for (const set of sets) {
+            for (const step of set) {
+              registerItem(step);
+              for (const alt of step.alts || []) registerItem(alt);
+            }
+          }
+        }
+      }
+    }
+
+    if (window.WOW_BIS_DATA) {
+      const classes = window.WOW_BIS_DATA.classes || [];
+      for (const cls of classes) {
+        const cd = window.WOW_BIS_DATA[cls.id];
+        if (!cd) continue;
+        for (const sp of cd.specs || []) {
+          for (const sl of sp.slots || []) {
+            for (const it of sl.items || []) registerItem(it);
+          }
+        }
+      }
+    }
+
+    if (window.WOW_CLASSIC_DUNGEON_LOOT) {
+      for (const dg of Object.values(window.WOW_CLASSIC_DUNGEON_LOOT)) {
+        for (const boss of dg?.bosses || []) {
+          for (const loot of boss?.loot || []) {
+            if (loot?.id && !cdlById.has(Number(loot.id))) {
+              cdlById.set(Number(loot.id), loot);
+            }
+          }
+        }
+      }
+    }
+
+    if (window.WOW_PROFESSIONS_DATA) {
+      for (const prof of Object.values(window.WOW_PROFESSIONS_DATA)) {
+        if (!prof || typeof prof !== 'object') continue;
+        const lists = [prof.recipes, prof.favor?.recipes].filter(Array.isArray);
+        for (const list of lists) {
+          for (const rec of list) {
+            if (!rec) continue;
+            const rid = Number(rec.itemId || rec.id);
+            if (rid > 0 && !recipeById.has(rid)) recipeById.set(rid, rec);
+            if (rec.name) {
+              const rk = String(rec.name).toLowerCase().trim();
+              if (!recipeByName.has(rk)) recipeByName.set(rk, rec);
+            }
+          }
+        }
+      }
+    }
+
+    richLookupCache = { byId, byName, cdlById, recipeById, recipeByName };
+    return richLookupCache;
+  }
+
+  function parseDbStats(statsStr) {
+    const primary = [];
+    const equip = [];
+    let dps = '';
+    if (!statsStr) return { primary, equip, dps };
+
+    const STAT_NAMES = {
+      Str: 'Strength',
+      Agi: 'Agility',
+      Sta: 'Stamina',
+      Int: 'Intellect',
+      Spi: 'Spirit'
+    };
+
+    const tokens = String(statsStr).split(' · ').map((t) => t.trim()).filter(Boolean);
+    for (const tok of tokens) {
+      const dpsMatch = tok.match(/^([\d.]+)\s*dps$/i);
+      if (dpsMatch) {
+        dps = dpsMatch[1];
+        continue;
+      }
+      const primMatch = tok.match(/^\+(\d+)\s+(Str|Agi|Sta|Int|Spi)$/);
+      if (primMatch) {
+        primary.push(`+${primMatch[1]} ${STAT_NAMES[primMatch[2]]}`);
+        continue;
+      }
+      if (/^chance on hit$/i.test(tok)) {
+        equip.push('Chance on hit: Triggers a weapon proc on melee or ranged strike.');
+        continue;
+      }
+      const apMatch = tok.match(/^\+(\d+)\s+AP$/i);
+      if (apMatch) {
+        equip.push(`Equip: +${apMatch[1]} Attack Power.`);
+        continue;
+      }
+      const rapMatch = tok.match(/^\+(\d+)\s+Ranged AP$/i);
+      if (rapMatch) {
+        equip.push(`Equip: +${rapMatch[1]} Ranged Attack Power.`);
+        continue;
+      }
+      const fapMatch = tok.match(/^\+(\d+)\s+Feral AP$/i);
+      if (fapMatch) {
+        equip.push(`Equip: +${fapMatch[1]} Attack Power in Cat, Bear, and Dire Bear forms only.`);
+        continue;
+      }
+      const critMatch = tok.match(/^\+([\d.]+)%\s+Crit$/i);
+      if (critMatch) {
+        equip.push(`Equip: Improves your chance to get a critical strike by ${critMatch[1]}%.`);
+        continue;
+      }
+      const hitMatch = tok.match(/^\+([\d.]+)%\s+Hit$/i);
+      if (hitMatch) {
+        equip.push(`Equip: Improves your chance to hit by ${hitMatch[1]}%.`);
+        continue;
+      }
+      const defMatch = tok.match(/^\+(\d+)\s+Defense$/i);
+      if (defMatch) {
+        equip.push(`Equip: Increased Defense +${defMatch[1]}.`);
+        continue;
+      }
+      const dodgeMatch = tok.match(/^\+([\d.]+)%\s+Dodge$/i);
+      if (dodgeMatch) {
+        equip.push(`Equip: Increases your chance to dodge an attack by ${dodgeMatch[1]}%.`);
+        continue;
+      }
+      const parryMatch = tok.match(/^\+([\d.]+)%\s+Parry$/i);
+      if (parryMatch) {
+        equip.push(`Equip: Increases your chance to parry an attack by ${parryMatch[1]}%.`);
+        continue;
+      }
+      const blockMatch = tok.match(/^\+([\d.]+)%\s+Block$/i);
+      if (blockMatch) {
+        equip.push(`Equip: Increases your chance to block attacks with a shield by ${blockMatch[1]}%.`);
+        continue;
+      }
+      const expMatch = tok.match(/^\+([\d.]+)%\s+Expertise$/i);
+      if (expMatch) {
+        equip.push(`Equip: Increases your expertise by ${expMatch[1]}%.`);
+        continue;
+      }
+      const hasteMatch = tok.match(/^\+([\d.]+)%\s+Haste$/i);
+      if (hasteMatch) {
+        equip.push(`Equip: Increases your attack and casting speed by ${hasteMatch[1]}%.`);
+        continue;
+      }
+      const spMatch = tok.match(/^\+(\d+)\s+Spell$/i);
+      if (spMatch) {
+        equip.push(`Equip: Increases damage and healing done by magical spells and effects by up to ${spMatch[1]}.`);
+        continue;
+      }
+      const healMatch = tok.match(/^\+(\d+)\s+Healing$/i);
+      if (healMatch) {
+        equip.push(`Equip: Increases healing done by spells and effects by up to ${healMatch[1]}.`);
+        continue;
+      }
+      const schoolMatch = tok.match(/^\+(\d+)\s+([A-Za-z]+)\s+spell damage$/i);
+      if (schoolMatch) {
+        equip.push(`Equip: Increases damage done by ${schoolMatch[2]} spells and effects by up to ${schoolMatch[1]}.`);
+        continue;
+      }
+      const mp5Match = tok.match(/^\+(\d+)\s+Mp5$/i);
+      if (mp5Match) {
+        equip.push(`Equip: Restores ${mp5Match[1]} mana per 5 sec.`);
+        continue;
+      }
+      equip.push(`Equip: ${tok}`);
+    }
+
+    return { primary, equip, dps };
+  }
+
+  function buildCodexItemTooltipHtml(rowIdx, fallbackItem = null) {
+    const idx = ensureIndex();
+    const rich = ensureRichLookup();
+    if (!idx && !fallbackItem) return '';
+
+    const r = (idx && rowIdx != null && rowIdx >= 0 && idx.rows[rowIdx]) ? idx.rows[rowIdx] : null;
+    const meta = idx?.meta || {};
+    const db = idx?.db || {};
+
+    const id = r ? r[0] : Number(fallbackItem?.id || 0);
+    const name = r ? r[1] : (fallbackItem?.name || 'Item');
+    const q = r ? Math.min(r[2], 5) : Number(String(fallbackItem?.quality || 'q3').replace(/\D/g, '') || 3);
+    const ilvl = r ? r[3] : (Number(String(fallbackItem?.iLvl || '').replace(/\D/g, '')) || 0);
+    const req = r ? r[4] : 0;
+    const kind = r ? ((meta.kinds && meta.kinds[r[6]]) || 'Item') : (fallbackItem?.slot || 'Equipment');
+    const iconName = r && r[7] >= 0 && meta.icons && meta.icons[r[7]]
+      ? meta.icons[r[7]]
+      : (rich.cdlById.get(id)?.icon || 'inv_misc_questionmark');
+    const bindText = r ? (BIND_TEXT[r[8]] ?? 'Binds when picked up') : 'Binds when picked up';
+    const sell = r ? (r[9] || 0) : 0;
+    const isNew = r ? (r[10] & 1) !== 0 : false;
+    const classMask = r ? (r[4] >= 40 ? r[12] : r[11]) : 511;
+    const sList = r ? (r[13] || []) : [];
+    const rawStats = r ? (r[14] || '') : (fallbackItem?.stats || '');
+
+    const curatedTip = window.WOW_DUNGEON_LOOT_TOOLTIPS?.[id];
+    const richItem = rich.byId.get(id) || (name ? rich.byName.get(String(name).toLowerCase().trim()) : null);
+    const cdlItem = rich.cdlById.get(id);
+    const recipeItem = rich.recipeById.get(id) || (name ? rich.recipeByName.get(String(name).toLowerCase().trim()) : null);
+    const reagentInfo = window.WOW_REAGENT_SOURCES?.[id];
+    const marketEntry = window.WOW_MARKET_SCAN_DATA?.prices?.[id];
+
+    // Drop sources list
+    const dropSources = [];
+    if (sList.length > 0 && meta.src) {
+      const seen = new Set();
+      for (let k = 0; k < sList.length; k++) {
+        const pair = meta.src[sList[k]];
+        if (!pair) continue;
+        const instName = (meta.inst && meta.inst[pair[0]]) || pair[0];
+        const label = `${pair[1]} — ${instName}`;
+        if (!seen.has(label)) {
+          seen.add(label);
+          dropSources.push(label);
+        }
+      }
+    }
+
+    // Header block (icon + item name + badges)
+    let html = `
+      <div style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.45rem;">
+        <img src="https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg"
+             alt="" width="38" height="38"
+             style="border-radius:5px;border:1.5px solid ${Q_COLORS[q]};background:#0f172a;flex-shrink:0;box-shadow:0 0 8px rgba(0,0,0,0.6);"
+             onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg'">
+        <div style="min-width:0;flex:1;">
+          <div style="color:${Q_COLORS[q]};font-weight:700;font-size:0.98rem;line-height:1.25;">${esc(name)}</div>
+          <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-top:0.18rem;">
+            ${ilvl ? `<span style="color:#facc15;font-size:0.76rem;font-weight:600;">Item Level ${ilvl}</span>` : ''}
+            <span style="color:#64748b;font-size:0.72rem;">#${id}</span>
+            ${isNew ? '<span style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.4);padding:0.03rem 0.35rem;border-radius:4px;font-size:0.64rem;font-weight:800;">✦ NEW IN FOREVER</span>' : ''}
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Case 1: Full Blizzard HTML tooltip available in WOW_DUNGEON_LOOT_TOOLTIPS
+    if (curatedTip && curatedTip.htmlTooltip) {
+      html += `<div class="dungeon-tip-body" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.4rem;">${curatedTip.htmlTooltip}</div>`;
+    } else if (richItem && Array.isArray(richItem.lines) && richItem.lines.length > 0) {
+      // Case 2: Rich progression / BiS item with full lines array
+      html += `<div class="wow-tip-lines" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.35rem;">`;
+      for (const rawLine of richItem.lines) {
+        const trimmed = String(rawLine || '').trim();
+        if (!trimmed || trimmed === name || trimmed.startsWith('Item Level')) continue;
+        if (trimmed.includes('\t')) {
+          const [left, right] = trimmed.split('\t');
+          html += `<div class="wow-tip-type-row"><span>${esc(left)}</span><span>${esc(right)}</span></div>`;
+        } else if (trimmed.startsWith('Binds when') || trimmed === 'Quest Item' || trimmed.startsWith('Unique')) {
+          html += `<div class="wow-tip-bind">${esc(trimmed)}</div>`;
+        } else if (trimmed.startsWith('(') && trimmed.toLowerCase().includes('damage per second')) {
+          html += `<div class="wow-tip-dps">${esc(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Equip:') || trimmed.startsWith('Use:') || trimmed.startsWith('Chance on hit:')) {
+          html += `<div class="wow-tip-equip">${esc(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Requires Level')) {
+          html += `<div style="color:#fff;font-size:0.8rem;margin:0.2rem 0;">${esc(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Sell Price:')) {
+          html += `<div style="color:#94a3b8;font-size:0.75rem;margin-top:0.25rem;">${esc(trimmed)}</div>`;
+        } else {
+          html += `<div style="color:#fff;font-size:0.82rem;">${esc(trimmed)}</div>`;
+        }
+      }
+      html += `</div>`;
+    } else {
+      // Case 3: Synthesize complete Classic WoW tooltip from WOW_ITEM_DATABASE row + supplementary datasets
+      html += `<div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.35rem;">`;
+      if (bindText) {
+        html += `<div class="wow-tip-bind">${esc(bindText)}</div>`;
+      }
+
+      if (kind.includes(' · ')) {
+        const [slotPart, subPart] = kind.split(' · ');
+        html += `<div class="wow-tip-type-row"><span>${esc(slotPart)}</span><span style="color:#cbd5e1;">${esc(subPart)}</span></div>`;
+      } else {
+        html += `<div class="wow-tip-type-row"><span>${esc(kind)}</span><span>${esc(Q_NAMES[q] || '')}</span></div>`;
+      }
+
+      const { primary, equip, dps } = parseDbStats(rawStats);
+
+      if (richItem?.armor) {
+        html += `<div style="color:#fff;font-size:0.82rem;">${esc(String(richItem.armor).includes('Armor') ? richItem.armor : `${richItem.armor} Armor`)}</div>`;
+      }
+      if (richItem?.block) {
+        html += `<div style="color:#fff;font-size:0.82rem;">${esc(String(richItem.block).includes('Block') ? richItem.block : `${richItem.block} Block`)}</div>`;
+      }
+
+      if (dps || richItem?.dps) {
+        const finalDps = dps || String(richItem.dps).replace(/\s*dps$/i, '');
+        const spd = richItem?.speed ? parseFloat(richItem.speed) : 0;
+        if (spd > 0) {
+          const avg = parseFloat(finalDps) * spd;
+          const minD = Math.max(1, Math.round(avg * 0.72));
+          const maxD = Math.max(minD + 1, Math.round(avg * 1.28));
+          html += `<div class="wow-tip-dmg-row"><span>${minD} - ${maxD} Damage</span><span>Speed ${spd.toFixed(2)}</span></div>`;
+        }
+        html += `<div class="wow-tip-dps">(${esc(finalDps)} damage per second)</div>`;
+      }
+
+      if (primary.length > 0) {
+        html += `<div class="wow-tip-stats">${primary.map((s) => `<span>${esc(s)}</span>`).join('')}</div>`;
+      }
+
+      // Usable classes if restricted
+      if (classMask > 0 && classMask < 511 && Array.isArray(db.classes)) {
+        const allowed = db.classes.filter((_, cIdx) => (classMask >> cIdx) & 1);
+        if (allowed.length > 0 && allowed.length < db.classes.length) {
+          html += `<div style="color:#cbd5e1;font-size:0.78rem;margin:0.2rem 0;">Classes: ${esc(allowed.join(', '))}</div>`;
+        }
+      }
+
+      if (req && req !== '—' && Number(req) > 0) {
+        html += `<div style="color:#fff;font-size:0.8rem;margin:0.2rem 0;">Requires Level ${esc(req)}</div>`;
+      }
+
+      if (recipeItem?.req) {
+        html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.req)}</div>`;
+      }
+
+      if (equip.length > 0) {
+        for (const eq of equip) {
+          html += `<div class="wow-tip-equip">${esc(eq)}</div>`;
+        }
+      }
+
+      if (recipeItem?.effect && equip.length === 0) {
+        html += `<div class="wow-tip-equip">${esc(recipeItem.effect)}</div>`;
+      }
+
+      if (reagentInfo?.summary) {
+        html += `<div style="color:#cbd5e1;font-size:0.78rem;margin-top:0.25rem;line-height:1.35;">${esc(reagentInfo.summary)}</div>`;
+      }
+
+      if (recipeItem?.reagents && recipeItem.reagents.length > 0) {
+        html += `
+          <div style="margin-top:0.35rem;padding-top:0.3rem;border-top:1px dashed rgba(255,255,255,0.1);">
+            <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:0.2rem;">Reagents:</div>
+            <div style="font-size:0.76rem;color:#e2e8f0;">
+              ${recipeItem.reagents.map((rg) => `${esc(rg.count || 1)}x ${esc(rg.name)}`).join(', ')}
+            </div>
+          </div>
+        `;
+      }
+
+      if (sell > 0) {
+        html += `<div style="color:#94a3b8;font-size:0.76rem;margin-top:0.3rem;">Vendor Sell Price: <strong style="color:#e2e8f0;">${formatCopper(sell)}</strong></div>`;
+      }
+      html += `</div>`;
+    }
+
+    // Best-For Spec Badges (from Classic+ Dungeon Loot table if present)
+    const bestFor = cdlItem?.bestFor || fallbackItem?.bestFor || [];
+    if (bestFor.length > 0) {
+      html += `
+        <div style="margin-top:0.4rem;padding-top:0.35rem;border-top:1px dashed rgba(255,255,255,0.1);">
+          <div style="font-size:0.7rem;color:#94a3b8;margin-bottom:0.22rem;">Recommended Specs:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">
+            ${bestFor.slice(0, 5).map((bf) => `<span style="font-size:0.68rem;padding:0.06rem 0.36rem;border-radius:999px;background:rgba(56,189,248,0.14);border:1px solid rgba(56,189,248,0.32);color:#93c5fd;font-weight:600;">${esc(bf.cls ? bf.cls.charAt(0).toUpperCase() + bf.cls.slice(1) : '')} · ${esc(bf.spec || '')}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Drop sources & Live AH Market Price footer
+    if (dropSources.length > 0 || marketEntry?.minBuyout > 0) {
+      html += `<div class="wow-tip-source">`;
+      if (dropSources.length > 0) {
+        html += `<div style="color:#93c5fd;font-weight:600;">📍 Drops from: ${esc(dropSources.slice(0, 3).join(' • '))}${dropSources.length > 3 ? ` (+${dropSources.length - 3} more)` : ''}</div>`;
+      }
+      if (marketEntry?.minBuyout > 0) {
+        html += `<div style="color:#facc15;margin-top:0.18rem;">🪙 Live Server AH Buyout: <strong>${formatCopper(marketEntry.minBuyout)}</strong></div>`;
+      }
+      html += `</div>`;
+    }
+
+    return html;
+  }
+
+  function showCodexItemTooltip(e, rowIdx, fallbackItem = null) {
+    if (typeof document === 'undefined') return;
+    let tooltip = document.getElementById('wow-item-tooltip');
+    if (!tooltip) {
+      tooltip = document.createElement('div');
+      tooltip.id = 'wow-item-tooltip';
+      tooltip.className = 'wow-floating-tooltip';
+      document.body.appendChild(tooltip);
+    }
+    const html = buildCodexItemTooltipHtml(rowIdx, fallbackItem);
+    if (!html) return;
+    tooltip.innerHTML = html;
+    tooltip.removeAttribute('hidden');
+    tooltip.style.display = 'block';
+    tooltip.style.opacity = '1';
+    tooltip.style.pointerEvents = 'none';
+    tooltip.style.zIndex = '9999999';
+    if (typeof window.positionTooltip === 'function') {
+      window.positionTooltip(e, tooltip);
+    }
+  }
+
+  function hideCodexItemTooltip() {
+    if (typeof document === 'undefined') return;
+    const tooltip = document.getElementById('wow-item-tooltip');
+    if (tooltip) {
+      tooltip.setAttribute('hidden', '');
+      tooltip.style.display = 'none';
+      tooltip.style.opacity = '0';
+    }
+  }
+
+  window.showCodexItemTooltipById = function (e, itemId, itemName = '', fallbackItem = null) {
+    const idx = ensureIndex();
+    let rowIdx = -1;
+    if (idx) {
+      if (itemId && idx.idToRow.has(Number(itemId))) {
+        rowIdx = idx.idToRow.get(Number(itemId));
+      } else if (itemName && idx.nameToRow.has(String(itemName).toLowerCase().trim())) {
+        rowIdx = idx.nameToRow.get(String(itemName).toLowerCase().trim());
+      }
+    }
+    showCodexItemTooltip(e, rowIdx, fallbackItem);
+  };
+  window.hideCodexItemTooltip = hideCodexItemTooltip;
+  window.buildCodexItemTooltipHtml = buildCodexItemTooltipHtml;
 
   function filterAndSort() {
     const idx = ensureIndex();
@@ -228,7 +709,7 @@
       : `<span style="color:#64748b;font-size:0.75rem;">—</span>`;
 
     return `
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.84rem;">
+      <tr class="codex-db-row" data-row-idx="${i}" data-item-id="${id}" style="border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.84rem;">
         <td style="padding:0.55rem 0.65rem;">
           <div style="display:flex;align-items:center;gap:0.65rem;">
             <img src="https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg"
@@ -388,7 +869,7 @@
         <!-- Results Status Bar -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;padding:0 0.25rem;">
           <strong id="codex-db-count" style="color:#f5d061;font-size:0.92rem;">Loading...</strong>
-          <span style="font-size:0.78rem;color:#94a3b8;">💡 Click any item name for full Wowhead Forever tooltip or click a Boss name to open its Dungeon Loot Table.</span>
+          <span style="font-size:0.78rem;color:#94a3b8;">💡 Hover any item for its full tooltip, click the item name to view on Wowhead Forever, or click a Boss name to open its Dungeon Loot Table.</span>
         </div>
 
         <!-- Results Table -->
@@ -414,7 +895,57 @@
       </div>
     `;
 
+    const tbody = mount.querySelector('#codex-db-tbody');
+    if (tbody) {
+      let activeRowIdx = -1;
+
+      tbody.addEventListener('mouseover', (e) => {
+        const tr = e.target.closest('tr[data-row-idx]');
+        if (!tr) {
+          activeRowIdx = -1;
+          hideCodexItemTooltip();
+          return;
+        }
+        const rowIdx = Number(tr.getAttribute('data-row-idx'));
+        if (rowIdx !== activeRowIdx) {
+          activeRowIdx = rowIdx;
+          showCodexItemTooltip(e, rowIdx);
+        }
+      });
+
+      tbody.addEventListener('mousemove', (e) => {
+        const tooltip = document.getElementById('wow-item-tooltip');
+        if (tooltip && !tooltip.hasAttribute('hidden') && typeof window.positionTooltip === 'function') {
+          window.positionTooltip(e, tooltip);
+        }
+      });
+
+      tbody.addEventListener('mouseleave', () => {
+        activeRowIdx = -1;
+        hideCodexItemTooltip();
+      });
+
+      tbody.addEventListener('focusin', (e) => {
+        const tr = e.target.closest('tr[data-row-idx]');
+        if (!tr) return;
+        const rowIdx = Number(tr.getAttribute('data-row-idx'));
+        const rect = e.target.getBoundingClientRect ? e.target.getBoundingClientRect() : { right: 120, top: 120 };
+        showCodexItemTooltip({ clientX: rect.right, clientY: rect.top }, rowIdx);
+      });
+
+      tbody.addEventListener('focusout', () => {
+        hideCodexItemTooltip();
+      });
+
+      tbody.addEventListener('click', (e) => {
+        if (e.target.closest('button')) {
+          hideCodexItemTooltip();
+        }
+      });
+    }
+
     const refresh = () => {
+      hideCodexItemTooltip();
       state.shown = 50;
       filteredIndices = filterAndSort();
       updateTableOnly(mount, false);
