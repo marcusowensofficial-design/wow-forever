@@ -257344,7 +257344,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257403,7 +257403,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257462,7 +257462,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257521,7 +257521,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257580,7 +257580,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257639,7 +257639,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257698,7 +257698,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257757,7 +257757,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {
@@ -257816,7 +257816,7 @@ if (typeof window !== 'undefined') {
           "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
           "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
           "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
-          "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+          "Level 30: 21-point major capstone talent unlocked (Midway Milestone)"
         ]
       },
       {

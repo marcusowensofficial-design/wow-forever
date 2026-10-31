@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 28, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425)
+ * Up-to-date as of October 31, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425 / 70707 Hotfix)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -21,7 +21,7 @@ const WOW_FOREVER_DATA = {
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 30, 2026"
+    "lastUpdated": "October 31, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -186,6 +186,30 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-67",
+      "title": "Final Pre-Launch Systems Sync: Client Build 1.60.1.70707 & Hotfixes, Level 60 Talent Trees, 22,493 Item Database Tooltips & Consumables",
+      "source": "WoW Forever Systems & Datamining",
+      "sourceType": "blizzard",
+      "author": "Marcus Owens & Core Data Desk",
+      "date": "October 31, 2026",
+      "tag": "Launch Readiness & Systems Sync",
+      "summary": "Full synchronization as of October 31, 2026: Talent Calculator defaulted to Level 60 cap (51 points), deep dive rotations synchronized with latest hotfixes, complete 22,493-item database integrated with canonical tooltips and consumable Use effects, and Early Name Reservation entering final 72 hours.",
+      "content": `All core systems, forensic datasets, and player tools have completed final synchronization as of October 31, 2026:
+
+• **Level 60 Talent Engine Default:**
+  - The Interactive Talent Calculator and downranking simulator now initialize at the Level 60 global launch cap (51 points), while retaining full 1–60 interactive adjustment and legacy perk bonuses.
+  - Full synchronization with Client Build 1.60.1.70707 and live server hotfixes: Druid Furor / Heart of the Wild placement, Lacerate, Shifting Power 8s cooldown, Paladin Shieldsworn capstone, and Mage Ice Lance 300% frozen burst.
+
+• **Complete Item Database & Consumables Expansion:**
+  - Expanded Item DB & Market to 22,493 canonical items across all 29 dungeons, world rares, and outdoor gathering nodes.
+  - Added dedicated consumable tooltips with exact Use/Equip effects for all potions, elixirs, flasks, sharpening stones, and scrolls.
+
+• **Pre-Launch Operational Countdown:**
+  - Early Name Reservation enters its final weekend across all regional megarealms (closes Nov 3 at 10:00 AM PST).
+  - Worldwide Global Launch remains locked for Wednesday, November 4 at 3:00 PM PST.`,
+      "url": "https://foreverchanges.pro/patch-notes"
+    },
     {
       "id": "news-66",
       "title": "Massive Talent Tree Overhauls for Druids & Paladins, Pre-Launch Class Tuning in Build 1.60.1.70707 & October 30 Live Hotfix",

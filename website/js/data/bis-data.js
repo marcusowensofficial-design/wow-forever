@@ -12,8 +12,8 @@
 const WOW_BIS_METADATA = {
   "version": "1.60.1.70425",
   "title": "Level 30 Pre-Raid & Dungeon BiS (Beta Build 1.60.1.70425)",
-  "phase": "Beta Phase 2 (Level 30 Cap • Final Week)",
-  "lastUpdated": "October 18, 2026",
+  "phase": "Pre-Launch Window (Midway Level 30 BiS Milestone)",
+  "lastUpdated": "October 31, 2026",
   "sourceNotice": "Curated directly from Beta Build 70425 discovering logs, itemcache, and Official Game Tables.",
   "totalSpecs": 39,
   "totalClasses": 9

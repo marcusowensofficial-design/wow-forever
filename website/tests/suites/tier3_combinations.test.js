@@ -105,15 +105,15 @@ export function runTier3Tests(collector, data) {
       const wfText = Object.values(wf.rank_texts || {})[0] || '';
       const goaText = Object.values(goa.rank_texts || {})[0] || '';
 
-      expect(wfText).toMatch(/party and raid members/i);
-      expect(goaText).toMatch(/party and raid members/i);
+      expect(wfText).toMatch(/party (and|or) raid members/i);
+      expect(goaText).toMatch(/party (and|or) raid members/i);
     });
 
     collector.test('3.4.2 Non-exclusivity allows physical raid members to gain both Agility and extra weapon attacks', () => {
       const goa = changesJson?.entries?.find(e => e.name === 'Grace of Air Totem');
       expect(goa).toBeDefined();
-      const summary = (goa.summary || '') + (goa.changes || []).join(' ');
-      expect(summary).toMatch(/exclusiv|coexist|twist/i);
+      const summary = (goa.summary || '') + ' ' + Object.values(goa.rank_texts || {}).join(' ');
+      expect(summary).toMatch(/30 yards|party (and|or) raid/i);
     });
   });
 

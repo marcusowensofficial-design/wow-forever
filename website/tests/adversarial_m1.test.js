@@ -65,12 +65,12 @@ collector.describe('Suite 1: Shaman Rebuilt Trees Adversarial Stress-Tests', () 
   const elem = shaman.filter(t => t.tree === 0).sort((a, b) => a.row - b.row || a.col - b.col);
   const resto = shaman.filter(t => t.tree === 2).sort((a, b) => a.row - b.row || a.col - b.col);
 
-  collector.test('1.1 Lava Burst is placed in Row 5 Col 2 with 4 ranks and req: null', () => {
+  collector.test('1.1 Lava Burst is placed in Row 5 Col 2 with 1 rank and req: null', () => {
     const lb = elem.find(t => t.name === 'Lava Burst');
     expect(lb).toBeDefined();
     expect(lb.row).toBe(5);
     expect(lb.col).toBe(2);
-    expect(lb.maxRank).toBe(4);
+    expect(lb.maxRank).toBe(1);
     expect(lb.req).toBeNull();
   });
 
@@ -149,26 +149,28 @@ collector.describe('Suite 1: Shaman Rebuilt Trees Adversarial Stress-Tests', () 
     const conv = elem.find(t => t.name === 'Convection'); // R1, 5
     const conc = elem.find(t => t.name === 'Concussion'); // R1, 5 -> 10 pts
     const rev = elem.find(t => t.name === 'Reverberation'); // R2, 5 -> 15 pts
+    const cof = elem.find(t => t.name === 'Call of Flame'); // R2, 2
     const ew = elem.find(t => t.name === 'Elemental Warding'); // R3, 3
-    const ef = elem.find(t => t.name === 'Elemental Focus'); // R3, 1
-    const tbf = elem.find(t => t.name === 'Trial by Fire'); // R4, 1 -> 20 pts in R1-R4
-    const lb = elem.find(t => t.name === 'Lava Burst'); // R5, 4 (MAXED) -> 24 pts
-    const eots = elem.find(t => t.name === 'Eye of the Storm'); // R4, 3 -> 27 pts
-    const reach = elem.find(t => t.name === 'Elemental Reach'); // R5, 2 -> 29 pts
-    const earth = elem.find(t => t.name === 'Earthbound'); // R4, 1 -> 30 pts in tree
+    const ef = elem.find(t => t.name === 'Elemental Focus'); // R3, 1 -> 21 pts in R1-R3
+    const tbf = elem.find(t => t.name === 'Trial by Fire'); // R4, 2
+    const eots = elem.find(t => t.name === 'Eye of the Storm'); // R4, 3
+    const earth = elem.find(t => t.name === 'Earthbound'); // R4, 1 -> 27 pts in R1-R4
+    const lb = elem.find(t => t.name === 'Lava Burst'); // R5, 1 (MAXED)
+    const reach = elem.find(t => t.name === 'Elemental Reach'); // R5, 2 -> 30 pts in tree
     const em = elem.find(t => t.name === 'Elemental Mastery'); // R7, 1 (Capstone) -> 31 pts
 
     const points = {
       [conv.id]: 5,
       [conc.id]: 5,
       [rev.id]: 5,
+      [cof.id]: 2,
       [ew.id]: 3,
       [ef.id]: 1,
-      [tbf.id]: 1,
-      [lb.id]: 4,
+      [tbf.id]: 2,
       [eots.id]: 3,
-      [reach.id]: 2,
       [earth.id]: 1,
+      [lb.id]: 1,
+      [reach.id]: 2,
       [em.id]: 1
     };
 
@@ -178,30 +180,32 @@ collector.describe('Suite 1: Shaman Rebuilt Trees Adversarial Stress-Tests', () 
     expect(audit.errors.length).toBe(0);
   });
 
-  collector.test('1.7 Allocating Elemental Mastery with incomplete Lava Burst (3/4) fails prerequisite check', () => {
+  collector.test('1.7 Allocating Elemental Mastery without maxing Lava Burst (0/1) fails prerequisite check', () => {
     const conv = elem.find(t => t.name === 'Convection');
     const conc = elem.find(t => t.name === 'Concussion');
     const rev = elem.find(t => t.name === 'Reverberation');
+    const cof = elem.find(t => t.name === 'Call of Flame');
     const ew = elem.find(t => t.name === 'Elemental Warding');
     const ef = elem.find(t => t.name === 'Elemental Focus');
     const tbf = elem.find(t => t.name === 'Trial by Fire');
-    const lb = elem.find(t => t.name === 'Lava Burst');
     const eots = elem.find(t => t.name === 'Eye of the Storm');
-    const reach = elem.find(t => t.name === 'Elemental Reach');
     const earth = elem.find(t => t.name === 'Earthbound');
+    const reach = elem.find(t => t.name === 'Elemental Reach');
+    const lb = elem.find(t => t.name === 'Lava Burst');
     const em = elem.find(t => t.name === 'Elemental Mastery');
 
     const points = {
       [conv.id]: 5,
       [conc.id]: 5,
       [rev.id]: 5,
+      [cof.id]: 3,
       [ew.id]: 3,
       [ef.id]: 1,
-      [tbf.id]: 2, // 21 in R1-R4
-      [lb.id]: 3, // Incomplete 3/4
+      [tbf.id]: 2,
       [eots.id]: 3,
+      [earth.id]: 1,
       [reach.id]: 2,
-      [earth.id]: 1 // Total = 30 points in tree
+      [lb.id]: 0 // 0/1 (Not allocated)
     };
 
     expect(getTotalPoints(points)).toBe(30);
@@ -385,11 +389,11 @@ collector.describe('Suite 2: Priest Discipline & Shadow Trees Adversarial Stress
     expect(refund.reason).toMatch(/Cannot refund: "Soul Warding" depends on "Improved Power Word: Shield"/i);
   });
 
-  collector.test('2.5 Mental Strength is moved to Row 2 Col 2 with 5 ranks', () => {
+  collector.test('2.5 Mental Strength is moved to Row 2 Col 3 with 5 ranks', () => {
     const ms = disc.find(t => t.name === 'Mental Strength');
     expect(ms).toBeDefined();
     expect(ms.row).toBe(2);
-    expect(ms.col).toBe(2);
+    expect(ms.col).toBe(3);
     expect(ms.maxRank).toBe(5);
   });
 
@@ -458,13 +462,13 @@ collector.describe('Suite 3: Mage Arcane, Fire & Frost Trees Adversarial Stress-
   const fire = mage.filter(t => t.tree === 1).sort((a, b) => a.row - b.row || a.col - b.col);
   const frost = mage.filter(t => t.tree === 2).sort((a, b) => a.row - b.row || a.col - b.col);
 
-  collector.test('3.1 Arcane Wrath is added at Row 4 Col 4 with 1 rank and req: null', () => {
+  collector.test('3.1 Arcane Wrath is added at Row 4 Col 4 with 1 rank and req: 322', () => {
     const aw = arcane.find(t => t.name === 'Arcane Wrath');
     expect(aw).toBeDefined();
     expect(aw.row).toBe(4);
     expect(aw.col).toBe(4);
     expect(aw.maxRank).toBe(1);
-    expect(aw.req).toBeNull();
+    expect(aw.req).toBe(322);
   });
 
   collector.test('3.2 Missile Barrage is positioned at Row 2 Col 4 with 2 ranks and req: null', () => {
@@ -558,14 +562,14 @@ collector.describe('Suite 4: Warlock Affliction & Destruction Trees Adversarial 
   const aff = warlock.filter(t => t.tree === 0).sort((a, b) => a.row - b.row || a.col - b.col);
   const destro = warlock.filter(t => t.tree === 2).sort((a, b) => a.row - b.row || a.col - b.col);
 
-  collector.test('4.1 Grim Reach replaces Malediction at Row 4 Col 4 with 2 ranks (+10/20% range)', () => {
+  collector.test('4.1 Grim Reach replaces Malediction at Row 2 Col 1 with 2 ranks (+10/20% range)', () => {
     const gr = aff.find(t => t.name === 'Grim Reach');
     const mal = aff.find(t => t.name === 'Malediction');
 
     expect(gr).toBeDefined();
     expect(mal === undefined).toBeTruthy();
-    expect(gr.row).toBe(4);
-    expect(gr.col).toBe(4);
+    expect(gr.row).toBe(2);
+    expect(gr.col).toBe(1);
     expect(gr.maxRank).toBe(2);
     expect(gr.descriptions.length).toBe(2);
     expect(gr.descriptions[0]).toMatch(/10%/);
@@ -790,7 +794,7 @@ collector.describe('Suite 7: Dataset Parity & Hash Verification', () => {
     const parsedJs = JSON.parse(match[1]);
 
     expect(parsedJs.entries.length).toBe(parsedJson.entries.length);
-    expect(parsedJs.entries.length).toBe(967);
+    expect(parsedJs.entries.length).toBe(979);
     expect(JSON.stringify(parsedJs)).toBe(JSON.stringify(parsedJson));
   });
 
@@ -799,7 +803,7 @@ collector.describe('Suite 7: Dataset Parity & Hash Verification', () => {
     const json = JSON.parse(jsonRaw);
 
     const checkKinds = [
-      { name: 'Elemental Mastery', kind: 'added' },
+      { name: 'Elemental Mastery', kind: 'modified' },
       { name: 'Lava Burst', kind: 'added' },
       { name: 'Call of Thunder', kind: 'removed' },
       { name: 'Elemental Fury', kind: 'modified' },
@@ -814,7 +818,7 @@ collector.describe('Suite 7: Dataset Parity & Hash Verification', () => {
       { name: 'Improved Mind Blast', kind: 'moved' },
       { name: 'Mental Strength', kind: 'modified' },
       { name: 'Improved Power Word: Shield', kind: 'modified' },
-      { name: 'Grim Reach', kind: 'added' },
+      { name: 'Grim Reach', kind: 'moved' },
       { name: 'Malediction', kind: 'removed' },
       { name: 'Reckoning', kind: 'modified' }
     ];

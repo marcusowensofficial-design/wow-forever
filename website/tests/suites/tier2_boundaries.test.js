@@ -313,13 +313,13 @@ export function runTier2Tests(collector, data) {
       expect(res.reason).toMatch(/Already at maxRank/i);
     });
 
-    collector.test('2.4.4 Overspending on 4-rank talent (attempting rank 5/4 on Lava Burst) is blocked', () => {
+    collector.test('2.4.4 Overspending on 1-rank talent (attempting rank 2/1 on Lava Burst) is blocked', () => {
       const shaman = talentsData.shaman?.talents || [];
       const lb = shaman.find(t => t.name === 'Lava Burst');
       expect(lb).toBeDefined();
-      expect(lb.maxRank).toBe(4);
+      expect(lb.maxRank).toBe(1);
 
-      const points = { [lb.id]: 4 };
+      const points = { [lb.id]: 1 };
       const res = canAllocatePoint(shaman, points, lb.id, 51);
       expect(res.allowed).toBeFalsy();
       expect(res.reason).toMatch(/Already at maxRank/i);

@@ -7,7 +7,7 @@
 let drState = {
   selectedClass: 'priest',
   selectedSpellId: 'heal',
-  playerLevel: 30,
+  playerLevel: 60,
   bonusPower: 200,
   talentHealPercent: 0,
   talentManaPercent: 0,

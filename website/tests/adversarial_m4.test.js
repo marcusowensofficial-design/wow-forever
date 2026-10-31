@@ -215,9 +215,9 @@ collector.describe('Suite 4: Check 56 New Talent Nodes Presence & Metadata Mutat
   function runCheck56(talentsData) {
     const expectedNodes = [
       { cls: 'shaman', name: 'Elemental Mastery', tree: 0, row: 7, col: 2, maxRank: 1, req: 278 },
-      { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: null },
+      { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: 322 },
       { cls: 'priest', name: 'Dark Inspiration', tree: 2, row: 4, col: 1, maxRank: 5, req: null },
-      { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 4, col: 4, maxRank: 2, req: null }
+      { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 2, col: 1, maxRank: 2, req: null }
     ];
 
     for (const expected of expectedNodes) {
@@ -464,7 +464,7 @@ collector.describe('Suite 6: Check 58 Deep Dive Build Legality & Talent Engine S
 
     const audit = validateBuildLegality(shamanTalents, testPoints, 51);
     expect(audit.valid).toBe(false);
-    expect(audit.errors.some(e => e.includes('Talent "Elemental Mastery" requires maxed "Lava Burst" (0/4)'))).toBeTruthy();
+    expect(audit.errors.some(e => e.includes('Talent "Elemental Mastery" requires maxed "Lava Burst" (0/1)'))).toBeTruthy();
   });
 
   collector.test('6.6 Mutation: Empty buildUrl in deep dive spec triggers Check 58 failure', () => {

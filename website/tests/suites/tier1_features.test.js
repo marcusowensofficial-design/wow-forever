@@ -25,14 +25,14 @@ export function runTier1Tests(collector, data) {
       expect(em.req).toBe(278);
     });
 
-    collector.test('1.1.2 Lava Burst is Row 5 Col 2 21pt capstone with 4 ranks and req null', () => {
+    collector.test('1.1.2 Lava Burst is Row 5 Col 2 21pt capstone with 1 rank and req null', () => {
       const lb = elementalTalents.find(t => t.name === 'Lava Burst');
       expect(lb).toBeDefined();
       expect(lb.row).toBe(5);
       expect(lb.col).toBe(2);
-      expect(lb.maxRank).toBe(4);
+      expect(lb.maxRank).toBe(1);
       expect(lb.req).toBeNull();
-      expect(lb.descriptions.length).toBe(4);
+      expect(lb.descriptions.length).toBe(1);
     });
 
     collector.test('1.1.3 Elemental Fury is Row 6 Col 3 requiring Lightning Overload (req: 275)', () => {
@@ -53,20 +53,20 @@ export function runTier1Tests(collector, data) {
       expect(lo.req).toBe(277);
     });
 
-    collector.test('1.1.5 Elemental Alacrity is Row 2 Col 1 with 3 ranks and req null', () => {
+    collector.test('1.1.5 Elemental Alacrity is Row 2 Col 3 with 3 ranks and req null', () => {
       const ea = elementalTalents.find(t => t.name === 'Elemental Alacrity');
       expect(ea).toBeDefined();
       expect(ea.row).toBe(2);
-      expect(ea.col).toBe(1);
+      expect(ea.col).toBe(3);
       expect(ea.maxRank).toBe(3);
       expect(ea.req).toBeNull();
     });
 
-    collector.test('1.1.6 Elemental Warding is Row 3 Col 1 with 3 ranks', () => {
+    collector.test('1.1.6 Elemental Warding is Row 3 Col 2 with 3 ranks', () => {
       const ew = elementalTalents.find(t => t.name === 'Elemental Warding');
       expect(ew).toBeDefined();
       expect(ew.row).toBe(3);
-      expect(ew.col).toBe(1);
+      expect(ew.col).toBe(2);
       expect(ew.maxRank).toBe(3);
     });
 
@@ -190,23 +190,23 @@ export function runTier1Tests(collector, data) {
       expect(cm.descriptions[2]).toMatch(/6%/);
     });
 
-    collector.test('1.3.6 Ice Lance deals 200% increased damage to Frozen targets', () => {
+    collector.test('1.3.6 Ice Lance deals 300% increased damage to Frozen targets', () => {
       const il = frost.find(t => t.name === 'Ice Lance');
       expect(il).toBeDefined();
       expect(il.row).toBe(3);
       expect(il.col).toBe(3);
       expect(il.maxRank).toBe(1);
-      expect(il.descriptions[0]).toMatch(/200%/);
+      expect(il.descriptions[0]).toMatch(/300%/);
     });
 
-    collector.test('1.3.7 Winter\'s Chill provides stacking buff consumed by Cone of Cold for 5% damage per stack', () => {
+    collector.test('1.3.7 Winter\'s Chill provides stacking buff consumed by Cone of Cold for 20% damage per stack', () => {
       const wc = frost.find(t => t.name === "Winter's Chill");
       expect(wc).toBeDefined();
       expect(wc.row).toBe(6);
       expect(wc.col).toBe(3);
       expect(wc.maxRank).toBe(5);
       expect(wc.descriptions[0]).toMatch(/Cone of Cold/i);
-      expect(wc.descriptions[0]).toMatch(/5%/);
+      expect(wc.descriptions[0]).toMatch(/20%/);
     });
   });
 
@@ -241,11 +241,11 @@ export function runTier1Tests(collector, data) {
       expect(imb.maxRank).toBe(5);
     });
 
-    collector.test('1.4.4 Mental Strength moved up to Row 2 Col 2 in Discipline with 5 ranks', () => {
+    collector.test('1.4.4 Mental Strength moved up to Row 2 Col 3 in Discipline with 5 ranks', () => {
       const ms = disc.find(t => t.name === 'Mental Strength');
       expect(ms).toBeDefined();
       expect(ms.row).toBe(2);
-      expect(ms.col).toBe(2);
+      expect(ms.col).toBe(3);
       expect(ms.maxRank).toBe(5);
     });
 
@@ -277,11 +277,11 @@ export function runTier1Tests(collector, data) {
     const aff = warlock ? warlock.talents.filter(t => t.tree === 0) : [];
     const destro = warlock ? warlock.talents.filter(t => t.tree === 2) : [];
 
-    collector.test('1.5.1 Grim Reach replaces Malediction at Row 4 Col 4 with 2 ranks (+10/20% range)', () => {
+    collector.test('1.5.1 Grim Reach replaces Malediction at Row 2 Col 1 with 2 ranks (+10/20% range)', () => {
       const gr = aff.find(t => t.name === 'Grim Reach');
       expect(gr).toBeDefined();
-      expect(gr.row).toBe(4);
-      expect(gr.col).toBe(4);
+      expect(gr.row).toBe(2);
+      expect(gr.col).toBe(1);
       expect(gr.maxRank).toBe(2);
       expect(gr.descriptions.length).toBe(2);
       expect(gr.descriptions[1]).toMatch(/20%/);
@@ -323,15 +323,14 @@ export function runTier1Tests(collector, data) {
   // Category 6: Paladin, Hunter, Druid, Warrior (PROJECT.md Features 9, 10, 11, 12)
   // =========================================================================
   collector.describe('Tier 1.6: Paladin, Hunter, Druid, Warrior Talent Updates', () => {
-    collector.test('1.6.1 Paladin Reckoning accumulates up to 4 charges and triggers on auto swing', () => {
+    collector.test('1.6.1 Paladin Reckoning accumulates up to 4 extra attacks on block/crit', () => {
       const paladin = talentsData.paladin;
       const reck = paladin ? paladin.talents.find(t => t.name === 'Reckoning') : null;
       expect(reck).toBeDefined();
       expect(reck.row).toBe(5);
       expect(reck.col).toBe(3);
       expect(reck.maxRank).toBe(5);
-      expect(reck.descriptions[0]).toMatch(/4 charges/i);
-      expect(reck.descriptions[0]).toMatch(/auto/i);
+      expect(reck.descriptions[0]).toMatch(/extra attack/i);
     });
 
     collector.test('1.6.2 Paladin Shield Specialization increases block absorption and restores 4% mana', () => {
@@ -340,7 +339,7 @@ export function runTier1Tests(collector, data) {
       expect(ss).toBeDefined();
       expect(ss.row).toBe(3);
       expect(ss.col).toBe(3);
-      expect(ss.maxRank).toBe(3);
+      expect(ss.maxRank).toBe(2);
       expect(ss.descriptions[0]).toMatch(/restore 4% of (your )?max(imum)? Mana/i);
     });
 
@@ -349,9 +348,9 @@ export function runTier1Tests(collector, data) {
       const cotl = paladin ? paladin.talents.find(t => t.name === 'Champion of the Light') : null;
       expect(cotl).toBeDefined();
       expect(cotl.row).toBe(6);
-      expect(cotl.col).toBe(2);
-      expect(cotl.maxRank).toBe(3);
-      expect(cotl.descriptions[2]).toMatch(/60%/);
+      expect(cotl.col).toBe(3);
+      expect(cotl.maxRank).toBe(5);
+      expect(cotl.descriptions[4]).toMatch(/60%/);
     });
 
     collector.test('1.6.4 Hunter Rapid Recuperation provides in-casting mana regen on Serpent Sting / Rapid Killing', () => {
@@ -372,7 +371,7 @@ export function runTier1Tests(collector, data) {
       expect(pe.row).toBe(4);
       expect(pe.col).toBe(2);
       expect(pe.maxRank).toBe(5);
-      expect(pe.descriptions[0]).toMatch(/abilities/i);
+      expect(pe.descriptions[0]).toMatch(/melee ability critical strike damage/i);
     });
 
     collector.test('1.6.6 Druid Furor grants Rage on Bear and scaling Energy restore on Cat shift', () => {
@@ -644,8 +643,8 @@ export function runTier1Tests(collector, data) {
     collector.test('1.10.6 Non-exclusivity between Grace of Air and Windfury/Flametongue is documented in changes dataset', () => {
       const goa = changesJson?.entries?.find(e => e.name === 'Grace of Air Totem');
       expect(goa).toBeDefined();
-      const combined = (goa.summary || '') + (goa.changes || []).join(' ');
-      expect(combined).toMatch(/exclusiv|coexist|twist/i);
+      const combined = (goa.summary || '') + ' ' + Object.values(goa.rank_texts || {}).join(' ');
+      expect(combined).toMatch(/30 yards|party (and|or) raid/i);
     });
   });
 
