@@ -202,7 +202,7 @@
       "name": "Mage",
       "icon": "classicon_mage",
       "heroTitle": "MAGE CHANGES IN WOW FOREVER",
-      "heroDesc": "Arcane adds Arcane Blast and Missile Barrage, Fire adds Heating Up, and Frost adds Ice Lance and Fingers of Frost. Frostfire Bolt is a new trained spell.Every Mage talent and spell change in World of Warcraft: Forever, compared with Classic, with its source.",
+      "heroDesc": "Arcane adds Arcane Blast and Missile Barrage, Fire gains Accelerant and Heating Up, and Frost adds Ice Lance (8s cooldown), Fingers of Frost, and Precision for all schools. Frostfire Bolt is trained baseline.",
       "races": [
         {
           "id": "horde-orc",
@@ -482,7 +482,7 @@
       "name": "Paladin",
       "icon": "classicon_paladin",
       "heroTitle": "PALADIN CHANGES IN WOW FOREVER",
-      "heroDesc": "Every Paladin talent and spell change in World of Warcraft: Forever, compared with Classic, with its source.",
+      "heroDesc": "Paladins gain dual-faction status with Horde Undead Paladins and the Forsaken Charger. Righteous Fury is learned at level 10, Consecration and Blessing of Kings become baseline at level 20, Blessings last 60 minutes, and Holy Strike and Seal of Fury provide active tanking and DPS rotations alongside the new Revoke utility.",
       "races": [
         {
           "id": "horde-undead",

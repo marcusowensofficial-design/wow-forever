@@ -1,5 +1,5 @@
 /**
- * World of Warcraft: Forever - Complete Item Database (22,363 Items)
+ * World of Warcraft: Forever - Complete Item Database (22,493 Items)
  * Interactive search, category/slot/rarity/class/level/dungeon filtering,
  * vendor/AH price display, and boss drop source attribution.
  */
@@ -751,7 +751,8 @@
     countEl.textContent = `${total.toLocaleString('en-US')} item${total === 1 ? '' : 's'} matched`;
 
     if (total === 0) {
-      tbody.innerHTML = `<tr><td colspan="6" style="padding:2rem;text-align:center;color:#94a3b8;">No items match your current filters. Click "Reset Filters" to view all 22,363 items.</td></tr>`;
+      const totalDbItems = (window.WOW_ITEM_DATABASE?.totalItems || 22493).toLocaleString('en-US');
+      tbody.innerHTML = `<tr><td colspan="6" style="padding:2rem;text-align:center;color:#94a3b8;">No items match your current filters. Click "Reset Filters" to view all ${totalDbItems} items.</td></tr>`;
       moreBtn.style.display = 'none';
       return;
     }

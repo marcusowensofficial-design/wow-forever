@@ -199,10 +199,10 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
-    title: 'Complete Item Database (22,363 Items & 28 Dungeon Loot Tables)',
+    title: 'Complete Item Database (22,493 Items & 28 Dungeon Loot Tables)',
     category: 'Database & Loot',
     icon: '📚',
-    desc: 'Search all 22,363 items, 5,863 new Forever items, 4,866 revealed items, and 28 dungeon boss drop tables.',
+    desc: 'Search all 22,493 items, 4,121 new Forever items, and 28 dungeon boss drop tables.',
     tab: 'codex',
     targetId: 'codex-database'
   });
