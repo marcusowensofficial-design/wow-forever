@@ -1,8 +1,9 @@
 /**
- * WoW Forever Beta 1.60.1 (Build 70425) Official Talent Trees Database
+ * WoW Forever Beta 1.60.1 (Build 70425 & 70707 Hotfix Tuning) Official Talent Trees Database
  * 
- * Contains complete 9 classes, 27 specialization trees, and 466 authentic talent nodes
+ * Contains complete 9 classes, 27 specialization trees, and 467 authentic talent nodes
  * with exact 4x7 grid coordinates, rank caps, prerequisite chains, and localized rank descriptions.
+ * Updated as of October 30, 2026.
  */
 window.WOW_TALENTS_DATA = {
   "warrior": {
@@ -986,6 +987,26 @@ window.WOW_TALENTS_DATA = {
     ],
     "talents": [
       {
+        "id": 59,
+        "tree": 0,
+        "treeId": 10,
+        "name": "Spiritual Focus",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_arcane_blink.jpg",
+        "iconName": "spell_arcane_blink",
+        "row": 1,
+        "col": 2,
+        "maxRank": 5,
+        "spellId": 20205,
+        "descriptions": [
+          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 14% chance to not lose casting time when you take damage.",
+          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 28% chance to not lose casting time when you take damage.",
+          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 42% chance to not lose casting time when you take damage.",
+          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 56% chance to not lose casting time when you take damage.",
+          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 70% chance to not lose casting time when you take damage."
+        ],
+        "req": null
+      },
+      {
         "id": 56,
         "tree": 0,
         "treeId": 10,
@@ -993,37 +1014,17 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_golemthunderclap.jpg",
         "iconName": "ability_golemthunderclap",
         "row": 1,
-        "col": 2,
+        "col": 3,
         "maxRank": 5,
         "spellId": 20262,
-        "req": null,
         "descriptions": [
           "Increases your Strength by 2%.",
           "Increases your Strength by 4%.",
           "Increases your Strength by 6%.",
           "Increases your Strength by 8%.",
           "Increases your Strength by 10%."
-        ]
-      },
-      {
-        "id": 57,
-        "tree": 0,
-        "treeId": 10,
-        "name": "Divine Intellect",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
-        "iconName": "spell_nature_sleep",
-        "row": 1,
-        "col": 3,
-        "maxRank": 5,
-        "spellId": 20257,
-        "req": null,
-        "descriptions": [
-          "Increases your total Intellect by 2%.",
-          "Increases your total Intellect by 4%.",
-          "Increases your total Intellect by 6%.",
-          "Increases your total Intellect by 8%.",
-          "Increases your total Intellect by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 58,
@@ -1036,29 +1037,29 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 3,
         "spellId": 20237,
-        "req": null,
         "descriptions": [
           "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 4%.",
           "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 8%.",
           "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 12%."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 59,
+        "id": 63,
         "tree": 0,
         "treeId": 10,
-        "name": "Spiritual Focus",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_arcane_blink.jpg",
-        "iconName": "spell_arcane_blink",
+        "name": "Reverence",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divineillumination.jpg",
+        "iconName": "spell_holy_divineillumination",
         "row": 2,
         "col": 2,
         "maxRank": 2,
-        "spellId": 20205,
-        "req": null,
+        "spellId": 1310899,
         "descriptions": [
-          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 35% chance to not lose casting time when you take damage.",
-          "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 70% chance to not lose casting time when you take damage."
-        ]
+          "Allows 15% of your Mana regeneration to continue while casting.",
+          "Allows 30% of your Mana regeneration to continue while casting."
+        ],
+        "req": null
       },
       {
         "id": 60,
@@ -1069,65 +1070,16 @@ window.WOW_TALENTS_DATA = {
         "iconName": "ability_thunderbolt",
         "row": 2,
         "col": 3,
-        "maxRank": 3,
+        "maxRank": 5,
         "spellId": 20224,
-        "req": null,
         "descriptions": [
-          "Increases the damage done by your Seals and Judgements by 5%.",
-          "Increases the damage done by your Seals and Judgements by 10%.",
+          "Increases the damage done by your Seals and Judgements by 3%.",
+          "Increases the damage done by your Seals and Judgements by 6%.",
+          "Increases the damage done by your Seals and Judgements by 9%.",
+          "Increases the damage done by your Seals and Judgements by 12%.",
           "Increases the damage done by your Seals and Judgements by 15%."
-        ]
-      },
-      {
-        "id": 61,
-        "tree": 0,
-        "treeId": 10,
-        "name": "Unyielding Faith",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_unyieldingfaith.jpg",
-        "iconName": "spell_holy_unyieldingfaith",
-        "row": 2,
-        "col": 4,
-        "maxRank": 2,
-        "spellId": 9453,
-        "req": null,
-        "descriptions": [
-          "Reduces the duration of Fear and Disorient effects on you by 15%.",
-          "Reduces the duration of Fear and Disorient effects on you by 30%."
-        ]
-      },
-      {
-        "id": 62,
-        "tree": 0,
-        "treeId": 10,
-        "name": "Voice of Truth",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_misc_horn_03.jpg",
-        "iconName": "inv_misc_horn_03",
-        "row": 3,
-        "col": 1,
-        "maxRank": 1,
-        "spellId": 1310897,
-        "req": null,
-        "descriptions": [
-          "Grants you immunity to Silence and Interrupt effects for 6 sec."
-        ]
-      },
-      {
-        "id": 63,
-        "tree": 0,
-        "treeId": 10,
-        "name": "Reverence",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divineillumination.jpg",
-        "iconName": "spell_holy_divineillumination",
-        "row": 3,
-        "col": 2,
-        "maxRank": 3,
-        "spellId": 1310899,
-        "req": null,
-        "descriptions": [
-          "Allows 10% of your Mana regeneration to continue while casting.",
-          "Allows 20% of your Mana regeneration to continue while casting.",
-          "Allows 30% of your Mana regeneration to continue while casting."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 64,
@@ -1136,15 +1088,85 @@ window.WOW_TALENTS_DATA = {
         "name": "Purifying Power",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_purifyingpower.jpg",
         "iconName": "spell_holy_purifyingpower",
-        "row": 3,
-        "col": 3,
+        "row": 2,
+        "col": 4,
         "maxRank": 2,
         "spellId": 429144,
-        "req": null,
         "descriptions": [
           "Reduces the mana cost of your Cleanse and Purify spells by 10% and reduces the cooldown of your Exorcism and Holy Wrath spells by 17%.",
           "Reduces the mana cost of your Cleanse and Purify spells by 20% and reduces the cooldown of your Exorcism and Holy Wrath spells by 33%."
-        ]
+        ],
+        "req": null
+      },
+      {
+        "id": 67,
+        "tree": 0,
+        "treeId": 10,
+        "name": "Divine Favor",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_heal.jpg",
+        "iconName": "spell_holy_heal",
+        "row": 3,
+        "col": 1,
+        "maxRank": 1,
+        "spellId": 20216,
+        "descriptions": [
+          "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance."
+        ],
+        "req": null
+      },
+      {
+        "id": 66,
+        "tree": 0,
+        "treeId": 10,
+        "name": "Illumination",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_greaterheal.jpg",
+        "iconName": "spell_holy_greaterheal",
+        "row": 3,
+        "col": 2,
+        "maxRank": 5,
+        "spellId": 20210,
+        "descriptions": [
+          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 50% of the base cost of the spell.",
+          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 40% chance to gain Mana equal to 50% of the base cost of the spell.",
+          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 60% chance to gain Mana equal to 50% of the base cost of the spell.",
+          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 80% chance to gain Mana equal to 50% of the base cost of the spell.",
+          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 100% chance to gain Mana equal to 50% of the base cost of the spell."
+        ],
+        "req": 63
+      },
+      {
+        "id": 92,
+        "tree": 0,
+        "treeId": 10,
+        "name": "Holy Conduit",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devineaegis.jpg",
+        "iconName": "spell_holy_devineaegis",
+        "row": 3,
+        "col": 3,
+        "maxRank": 2,
+        "spellId": 1237268,
+        "descriptions": [
+          "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 20%.",
+          "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 40%."
+        ],
+        "req": null
+      },
+      {
+        "id": 68,
+        "tree": 0,
+        "treeId": 10,
+        "name": "Divine Precision",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_mindsooth.jpg",
+        "iconName": "spell_holy_mindsooth",
+        "row": 4,
+        "col": 1,
+        "maxRank": 2,
+        "spellId": 1310904,
+        "descriptions": [
+          "Improves your chance to hit with Holy spells by 4%, and reduces the duration of Silence effects on you by 10%.",
+          "Improves your chance to hit with Holy spells by 8%, and reduces the duration of Silence effects on you by 20%."
+        ],
+        "req": null
       },
       {
         "id": 65,
@@ -1154,68 +1176,47 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_infusionoflight.jpg",
         "iconName": "ability_paladin_infusionoflight",
         "row": 4,
-        "col": 1,
+        "col": 2,
         "maxRank": 2,
         "spellId": 426065,
-        "req": null,
         "descriptions": [
           "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.",
           "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1.0 sec."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 66,
+        "id": 57,
         "tree": 0,
         "treeId": 10,
-        "name": "Illumination",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_greaterheal.jpg",
-        "iconName": "spell_holy_greaterheal",
-        "row": 4,
-        "col": 2,
-        "maxRank": 5,
-        "spellId": 20210,
-        "req": 63,
-        "descriptions": [
-          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 50% of the base cost of the spell.",
-          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 40% chance to gain Mana equal to 50% of the base cost of the spell.",
-          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 60% chance to gain Mana equal to 50% of the base cost of the spell.",
-          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 80% chance to gain Mana equal to 50% of the base cost of the spell.",
-          "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 100% chance to gain Mana equal to 50% of the base cost of the spell."
-        ]
-      },
-      {
-        "id": 67,
-        "tree": 0,
-        "treeId": 10,
-        "name": "Divine Favor",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_heal.jpg",
-        "iconName": "spell_holy_heal",
+        "name": "Oath of Light",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_greaterblessingoflight.jpg",
+        "iconName": "spell_holy_greaterblessingoflight",
         "row": 4,
         "col": 3,
         "maxRank": 1,
-        "spellId": 20216,
-        "req": null,
+        "spellId": 1328548,
         "descriptions": [
-          "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance."
-        ]
+          "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light on them by up to 0, your Flash of Light by up to 0, and your Holy Shock by up to 0. Only one Oath of Light may be sworn by the Paladin at any one time."
+        ],
+        "req": null
       },
       {
-        "id": 68,
+        "id": 70,
         "tree": 0,
         "treeId": 10,
-        "name": "Divine Precision",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_healingfocus.jpg",
-        "iconName": "spell_holy_healingfocus",
+        "name": "Consecrated Ground",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_innerfire.jpg",
+        "iconName": "spell_holy_innerfire",
         "row": 5,
         "col": 1,
-        "maxRank": 3,
-        "spellId": 1310904,
-        "req": 69,
+        "maxRank": 2,
+        "spellId": 1310905,
         "descriptions": [
-          "Improves your chance to hit with Holy spells by 6%.",
-          "Improves your chance to hit with Holy spells by 12%.",
-          "Improves your chance to hit with Holy spells by 18%."
-        ]
+          "Gives your Holy spells 5% increased damage against the first 4 enemies that enter your Consecration.",
+          "Gives your Holy spells 10% increased damage against the first 4 enemies that enter your Consecration."
+        ],
+        "req": null
       },
       {
         "id": 69,
@@ -1228,27 +1229,27 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 1311606,
-        "req": null,
         "descriptions": [
           "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 70,
+        "id": 61,
         "tree": 0,
         "treeId": 10,
-        "name": "Consecrated Ground",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_innerfire.jpg",
-        "iconName": "spell_holy_innerfire",
+        "name": "Boundless Light",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_sacredcleansing.jpg",
+        "iconName": "ability_paladin_sacredcleansing",
         "row": 5,
         "col": 3,
         "maxRank": 2,
-        "spellId": 1310905,
-        "req": null,
+        "spellId": 1328550,
         "descriptions": [
-          "Gives your Holy spells 5% increased damage against the first 4 enemies that enter your Consecration.",
-          "Gives your Holy spells 10% increased damage against the first 4 enemies that enter your Consecration."
-        ]
+          "Increases the critical strike chance of your Holy Shock spell by 15% when cast on allies not affected by your Oath of Light.",
+          "Increases the critical strike chance of your Holy Shock spell by 30% when cast on allies not affected by your Oath of Light."
+        ],
+        "req": 69
       },
       {
         "id": 71,
@@ -1261,14 +1262,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 5923,
-        "req": null,
         "descriptions": [
-          "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3%, and all other spells by 1%.",
-          "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 6%, and all other spells by 2%.",
-          "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 9%, and all other spells by 3%.",
-          "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 12%, and all other spells by 4%.",
-          "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 15%, and all other spells by 5%."
-        ]
+          "Increases the critical strike healing bonus of your Holy spells by 10%.",
+          "Increases the critical strike healing bonus of your Holy spells by 20%.",
+          "Increases the critical strike healing bonus of your Holy spells by 30%.",
+          "Increases the critical strike healing bonus of your Holy spells by 40%.",
+          "Increases the critical strike healing bonus of your Holy spells by 50%."
+        ],
+        "req": null
       },
       {
         "id": 72,
@@ -1281,30 +1282,30 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 1310911,
-        "req": 69,
         "descriptions": [
-          "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 326 to 344. You may only have one Light's Vigil active per party."
-        ]
+          "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 326 to 344. Only one Vigil per Paladin may be active in each party."
+        ],
+        "req": 69
       },
       {
-        "id": 73,
+        "id": 62,
         "tree": 1,
         "treeId": 11,
-        "name": "Toughness",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devotion.jpg",
-        "iconName": "spell_holy_devotion",
+        "name": "Divine Intellect",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
+        "iconName": "spell_nature_sleep",
         "row": 1,
         "col": 2,
         "maxRank": 5,
-        "spellId": 20143,
-        "req": null,
+        "spellId": 20257,
         "descriptions": [
-          "Increases your armor value from items by 2%.",
-          "Increases your armor value from items by 4%.",
-          "Increases your armor value from items by 6%.",
-          "Increases your armor value from items by 8%.",
-          "Increases your armor value from items by 10%."
-        ]
+          "Increases your total Intellect by 2%.",
+          "Increases your total Intellect by 4%.",
+          "Increases your total Intellect by 6%.",
+          "Increases your total Intellect by 8%.",
+          "Increases your total Intellect by 10%."
+        ],
+        "req": null
       },
       {
         "id": 74,
@@ -1317,14 +1318,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 20127,
-        "req": null,
         "descriptions": [
-          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 4%.  Lasts 10 sec or 5 blocks.",
-          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 8%.  Lasts 10 sec or 5 blocks.",
-          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%.  Lasts 10 sec or 5 blocks.",
-          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 16%.  Lasts 10 sec or 5 blocks.",
-          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%.  Lasts 10 sec or 5 blocks."
-        ]
+          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%. Lasts 10 sec or 5 blocks.",
+          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks.",
+          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 18%. Lasts 10 sec or 5 blocks.",
+          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 24%. Lasts 10 sec or 5 blocks.",
+          "Damaging melee attacks against you have a 10% chance to increase your chance to block by 30%. Lasts 10 sec or 5 blocks."
+        ],
+        "req": null
       },
       {
         "id": 75,
@@ -1336,13 +1337,13 @@ window.WOW_TALENTS_DATA = {
         "row": 2,
         "col": 1,
         "maxRank": 3,
-        "spellId": 20189,
-        "req": null,
+        "spellId": 29438,
         "descriptions": [
           "Improves your chance to hit by 1%.",
           "Improves your chance to hit by 2%.",
           "Improves your chance to hit by 3%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 76,
@@ -1355,65 +1356,62 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 2,
         "spellId": 20174,
-        "req": null,
         "descriptions": [
           "Reduces the cooldown of your Blessing of Protection by 1 min and increases the duration of your Blessing of Freedom by 3 sec.",
           "Reduces the cooldown of your Blessing of Protection by 2 min and increases the duration of your Blessing of Freedom by 6 sec."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 77,
+        "id": 81,
         "tree": 1,
         "treeId": 11,
-        "name": "Anticipation",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_magic_lesserinvisibilty.jpg",
-        "iconName": "spell_magic_lesserinvisibilty",
+        "name": "Sacred Duty",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divineintervention.jpg",
+        "iconName": "spell_holy_divineintervention",
         "row": 2,
         "col": 4,
-        "maxRank": 5,
-        "spellId": 20096,
-        "req": null,
+        "maxRank": 2,
+        "spellId": 1224697,
         "descriptions": [
-          "Increases your Defense Skill by 4.",
-          "Increases your Defense Skill by 8.",
-          "Increases your Defense Skill by 12.",
-          "Increases your Defense Skill by 16.",
-          "Increases your Defense Skill by 20."
-        ]
+          "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec, and reduces the duration of Forbearance by 5 sec.",
+          "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 60 sec, and reduces the duration of Forbearance by 10 sec."
+        ],
+        "req": null
       },
       {
-        "id": 78,
+        "id": 85,
         "tree": 1,
         "treeId": 11,
-        "name": "Improved Seal of Fury",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_righteousnessaura.jpg",
-        "iconName": "spell_holy_righteousnessaura",
+        "name": "Templar's Bulwark",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_shieldofthetemplar.jpg",
+        "iconName": "ability_paladin_shieldofthetemplar",
         "row": 3,
         "col": 1,
         "maxRank": 1,
-        "spellId": 1314103,
-        "req": null,
+        "spellId": 1311015,
         "descriptions": [
-          "When Seal of Fury's shield is fully absorbed, restore 0 Mana, increased by 15% per level the attacker is above you, up to 45%."
-        ]
+          "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active."
+        ],
+        "req": null
       },
       {
-        "id": 79,
+        "id": 84,
         "tree": 1,
         "treeId": 11,
-        "name": "Improved Righteous Fury",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_sealoffury.jpg",
-        "iconName": "spell_holy_sealoffury",
+        "name": "Improved Hammer of Justice",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_sealofmight.jpg",
+        "iconName": "spell_holy_sealofmight",
         "row": 3,
         "col": 2,
         "maxRank": 3,
-        "spellId": 20468,
-        "req": null,
+        "spellId": 20487,
         "descriptions": [
-          "While Righteous Fury is active, all damage taken is reduced by 2%.",
-          "While Righteous Fury is active, all damage taken is reduced by 4%.",
-          "While Righteous Fury is active, all damage taken is reduced by 6%."
-        ]
+          "Decreases the cooldown of your Hammer of Justice spell by 5 sec.",
+          "Decreases the cooldown of your Hammer of Justice spell by 10 sec.",
+          "Decreases the cooldown of your Hammer of Justice spell by 15 sec."
+        ],
+        "req": null
       },
       {
         "id": 80,
@@ -1424,31 +1422,33 @@ window.WOW_TALENTS_DATA = {
         "iconName": "inv_shield_06",
         "row": 3,
         "col": 3,
-        "maxRank": 3,
+        "maxRank": 2,
         "spellId": 20150,
-        "req": 74,
         "descriptions": [
-          "Increases the amount of damage absorbed by your shield by 10%, and gives your blocks a 33% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec.",
-          "Increases the amount of damage absorbed by your shield by 20%, and gives your blocks a 66% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec.",
-          "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec."
-        ]
+          "Increases the amount of damage absorbed by your shield by 15%, and gives your blocks a 50% chance to restore 4% of your maximum Mana. May only occur once every 3 sec.",
+          "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 3 sec."
+        ],
+        "req": 74
       },
       {
-        "id": 81,
+        "id": 73,
         "tree": 1,
         "treeId": 11,
-        "name": "Sacred Duty",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divineintervention.jpg",
-        "iconName": "spell_holy_divineintervention",
+        "name": "Toughness",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devotion.jpg",
+        "iconName": "spell_holy_devotion",
         "row": 3,
         "col": 4,
-        "maxRank": 2,
-        "spellId": 1224697,
-        "req": null,
+        "maxRank": 5,
+        "spellId": 20143,
         "descriptions": [
-          "Increases your total Stamina by 2% and reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec.",
-          "Increases your total Stamina by 4% and reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 60 sec."
-        ]
+          "Increases your armor value from items by 2%.",
+          "Increases your armor value from items by 4%.",
+          "Increases your armor value from items by 6%.",
+          "Increases your armor value from items by 8%.",
+          "Increases your armor value from items by 10%."
+        ],
+        "req": null
       },
       {
         "id": 82,
@@ -1461,62 +1461,81 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 1,
         "spellId": 1310994,
-        "req": 78,
         "descriptions": [
-          "Finishes the remaining cooldown on your Judgement ability and reduces the Mana cost of your next Judgement by 100%."
-        ]
+          "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect. Does not share a cooldown with your Judgement ability."
+        ],
+        "req": 85
       },
       {
-        "id": 83,
+        "id": 79,
         "tree": 1,
         "treeId": 11,
-        "name": "One-Handed Weapon Specialization",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_sword_20.jpg",
-        "iconName": "inv_sword_20",
+        "name": "Improved Righteous Fury",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_sealoffury.jpg",
+        "iconName": "spell_holy_sealoffury",
         "row": 4,
         "col": 2,
         "maxRank": 3,
-        "spellId": 20196,
-        "req": null,
+        "spellId": 20468,
         "descriptions": [
-          "Increases the damage you deal with one-handed melee weapons by 3%.",
-          "Increases the damage you deal with one-handed melee weapons by 7%.",
-          "Increases the damage you deal with one-handed melee weapons by 10%."
-        ]
+          "While Righteous Fury is active, all damage taken is reduced by 3%.",
+          "While Righteous Fury is active, all damage taken is reduced by 6%.",
+          "While Righteous Fury is active, all damage taken is reduced by 9%."
+        ],
+        "req": null
       },
       {
-        "id": 84,
+        "id": 77,
         "tree": 1,
         "treeId": 11,
-        "name": "Improved Hammer of Justice",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_sealofmight.jpg",
-        "iconName": "spell_holy_sealofmight",
+        "name": "Anticipation",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_magic_lesserinvisibilty.jpg",
+        "iconName": "spell_magic_lesserinvisibilty",
         "row": 4,
         "col": 3,
-        "maxRank": 3,
-        "spellId": 20487,
-        "req": null,
+        "maxRank": 5,
+        "spellId": 20096,
         "descriptions": [
-          "Decreases the cooldown of your Hammer of Justice spell by 5 sec.",
-          "Decreases the cooldown of your Hammer of Justice spell by 10 sec.",
-          "Decreases the cooldown of your Hammer of Justice spell by 15 sec."
-        ]
+          "Increases your Defense Skill by 4.",
+          "Increases your Defense Skill by 8.",
+          "Increases your Defense Skill by 12.",
+          "Increases your Defense Skill by 16.",
+          "Increases your Defense Skill by 20."
+        ],
+        "req": null
       },
       {
-        "id": 85,
+        "id": 78,
         "tree": 1,
         "treeId": 11,
-        "name": "Templar's Bulwark",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_shieldofthetemplar.jpg",
-        "iconName": "ability_paladin_shieldofthetemplar",
+        "name": "Stoicism",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_stoicism.jpg",
+        "iconName": "spell_holy_stoicism",
+        "row": 5,
+        "col": 1,
+        "maxRank": 2,
+        "spellId": 1328546,
+        "descriptions": [
+          "Reduces the duration of Stun and Charm effects on you by 10%.",
+          "Reduces the duration of Stun and Charm effects on you by 20%."
+        ],
+        "req": null
+      },
+      {
+        "id": 88,
+        "tree": 1,
+        "treeId": 11,
+        "name": "Holy Shield",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofprotection.jpg",
+        "iconName": "spell_holy_blessingofprotection",
         "row": 5,
         "col": 2,
         "maxRank": 1,
-        "spellId": 1311015,
-        "req": null,
+        "spellId": 20925,
         "descriptions": [
-          "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active."
-        ]
+          "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+        ],
+        "req": null
       },
       {
         "id": 86,
@@ -1529,14 +1548,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 20177,
-        "req": null,
         "descriptions": [
-          "Gives you a 20% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
-          "Gives you a 40% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
-          "Gives you a 60% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
-          "Gives you a 80% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
-          "Gives you a 100% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges."
-        ]
+          "Gives you a 8% chance after Blocking and a 20% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec.",
+          "Gives you a 16% chance after Blocking and a 40% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec.",
+          "Gives you a 24% chance after Blocking and a 60% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec.",
+          "Gives you a 32% chance after Blocking and a 80% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec.",
+          "Gives you a 40% chance after Blocking and a 100% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec."
+        ],
+        "req": null
       },
       {
         "id": 87,
@@ -1547,32 +1566,30 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_holy_improvedresistanceauras",
         "row": 6,
         "col": 3,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 1311034,
-        "req": null,
         "descriptions": [
-          "Increases the threat generated by your Holy Strike ability by 5%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec.",
-          "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 4% for 6 sec.",
-          "Increases the threat generated by your Holy Strike ability by 15%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 6% for 6 sec.",
-          "Increases the threat generated by your Holy Strike ability by 20%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 8% for 6 sec.",
-          "Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 10% for 6 sec."
-        ]
+          "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec.",
+          "Increases the threat generated by your Holy Strike ability by 20%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 4% for 6 sec.",
+          "Increases the threat generated by your Holy Strike ability by 30%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 6% for 6 sec."
+        ],
+        "req": null
       },
       {
-        "id": 88,
+        "id": 83,
         "tree": 1,
         "treeId": 11,
-        "name": "Holy Shield",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofprotection.jpg",
-        "iconName": "spell_holy_blessingofprotection",
+        "name": "Shieldsworn",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_greaterblessingofsanctuary.jpg",
+        "iconName": "spell_holy_greaterblessingofsanctuary",
         "row": 7,
         "col": 2,
         "maxRank": 1,
-        "spellId": 20925,
-        "req": 85,
+        "spellId": 1328544,
         "descriptions": [
-          "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
-        ]
+          "Reduces the cooldown of your Holy Strike ability by 4 sec. Additionally, Holy Strike now strikes with your shield, triggering your active Holy Shield and Shield Specialization talents without consuming their charges or triggering their cooldowns, and allowing you to Block spells for 6 sec."
+        ],
+        "req": 88
       },
       {
         "id": 89,
@@ -1585,14 +1602,14 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 20060,
-        "req": null,
         "descriptions": [
           "Increases your Parry chance by 1%.",
           "Increases your Parry chance by 2%.",
           "Increases your Parry chance by 3%.",
           "Increases your Parry chance by 4%.",
           "Increases your Parry chance by 5%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 90,
@@ -1605,14 +1622,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 20101,
-        "req": null,
         "descriptions": [
           "Reduces the Mana cost of all instant cast spells and abilities by 2%.",
           "Reduces the Mana cost of all instant cast spells and abilities by 4%.",
           "Reduces the Mana cost of all instant cast spells and abilities by 6%.",
           "Reduces the Mana cost of all instant cast spells and abilities by 8%.",
           "Reduces the Mana cost of all instant cast spells and abilities by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 91,
@@ -1625,28 +1642,11 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 2,
         "spellId": 25956,
-        "req": null,
         "descriptions": [
           "Decreases the cooldown of your Judgement ability by 1 sec.",
           "Decreases the cooldown of your Judgement ability by 2 sec."
-        ]
-      },
-      {
-        "id": 92,
-        "tree": 2,
-        "treeId": 12,
-        "name": "Holy Conduit",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devineaegis.jpg",
-        "iconName": "spell_holy_devineaegis",
-        "row": 2,
-        "col": 2,
-        "maxRank": 2,
-        "spellId": 1237268,
-        "req": null,
-        "descriptions": [
-          "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 20%.",
-          "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 40%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 93,
@@ -1656,17 +1656,33 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_retributionaura.jpg",
         "iconName": "spell_holy_retributionaura",
         "row": 2,
-        "col": 3,
-        "maxRank": 5,
+        "col": 2,
+        "maxRank": 3,
         "spellId": 20117,
-        "req": null,
         "descriptions": [
-          "Improves your chance to get a critical strike with melee attacks by 1%.",
-          "Improves your chance to get a critical strike with melee attacks by 2%.",
-          "Improves your chance to get a critical strike with melee attacks by 3%.",
-          "Improves your chance to get a critical strike with melee attacks by 4%.",
-          "Improves your chance to get a critical strike with melee attacks by 5%."
-        ]
+          "Improves your chance to get a critical strike with all spells and attacks by 2%.",
+          "Improves your chance to get a critical strike with all spells and attacks by 4%.",
+          "Improves your chance to get a critical strike with all spells and attacks by 6%."
+        ],
+        "req": null
+      },
+      {
+        "id": 95,
+        "tree": 2,
+        "treeId": 12,
+        "name": "Sanctified Judgement",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_judgementblue.jpg",
+        "iconName": "ability_paladin_judgementblue",
+        "row": 2,
+        "col": 3,
+        "maxRank": 3,
+        "spellId": 1311074,
+        "descriptions": [
+          "Gives your Judgement ability a 33% chance to return 20% of the Mana cost of the judged seal.",
+          "Gives your Judgement ability a 66% chance to return 40% of the Mana cost of the judged seal.",
+          "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal."
+        ],
+        "req": null
       },
       {
         "id": 94,
@@ -1679,33 +1695,32 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 3,
         "spellId": 9452,
-        "req": null,
         "descriptions": [
-          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 68, and increase your Attack Power by 1% for 30 sec.",
-          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 136, and increase your Attack Power by 2% for 30 sec.",
-          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 3% for 30 sec."
-        ]
-      },
-      {
-        "id": 95,
-        "tree": 2,
-        "treeId": 12,
-        "name": "Sanctified Judgement",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_judgementblue.jpg",
-        "iconName": "ability_paladin_judgementblue",
-        "row": 3,
-        "col": 2,
-        "maxRank": 3,
-        "spellId": 1311074,
-        "req": null,
-        "descriptions": [
-          "Gives your Judgement ability a 33% chance to return 20% of the Mana cost of the judged seal. This mana restore generates no threat.",
-          "Gives your Judgement ability a 66% chance to return 40% of the Mana cost of the judged seal. This mana restore generates no threat.",
-          "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal. This mana restore generates no threat."
-        ]
+          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 67 for 30 sec.",
+          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 133 for 30 sec.",
+          "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 200 for 30 sec."
+        ],
+        "req": null
       },
       {
         "id": 96,
+        "tree": 2,
+        "treeId": 12,
+        "name": "Unyielding Faith",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_unyieldingfaith.jpg",
+        "iconName": "spell_holy_unyieldingfaith",
+        "row": 3,
+        "col": 2,
+        "maxRank": 2,
+        "spellId": 9453,
+        "descriptions": [
+          "Reduces the duration of Fear and Disorient effects on you by 15%.",
+          "Reduces the duration of Fear and Disorient effects on you by 30%."
+        ],
+        "req": null
+      },
+      {
+        "id": 97,
         "tree": 2,
         "treeId": 12,
         "name": "Seal of Command",
@@ -1715,13 +1730,13 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 1,
         "spellId": 20375,
-        "req": null,
         "descriptions": [
-          "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\n\nUnleashing this Seal's energy will judge an enemy, instantly causing 69 to 73 Holy damage, 138 to 146 if the target is stunned or incapacitated."
-        ]
+          "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\n\nUnleashing this Seal's energy will judge an enemy, instantly causing 69 to 73 Holy damage, 138 to 146 if the target is stunned or incapacitated."
+        ],
+        "req": null
       },
       {
-        "id": 97,
+        "id": 98,
         "tree": 2,
         "treeId": 12,
         "name": "Pursuit of Justice",
@@ -1731,14 +1746,14 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 26022,
-        "req": null,
         "descriptions": [
-          "Increases movement speed and mounted movement speed by 8%.  This does not stack with other movement speed increasing effects.",
-          "Increases movement speed and mounted movement speed by 15%.  This does not stack with other movement speed increasing effects."
-        ]
+          "Increases movement speed and mounted movement speed by 8%. This does not stack with other movement speed increasing effects.",
+          "Increases movement speed and mounted movement speed by 15%. This does not stack with other movement speed increasing effects."
+        ],
+        "req": null
       },
       {
-        "id": 98,
+        "id": 99,
         "tree": 2,
         "treeId": 12,
         "name": "Eye for an Eye",
@@ -1748,27 +1763,27 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 2,
         "spellId": 9799,
-        "req": null,
         "descriptions": [
           "All critical strikes against you cause 5% of the damage taken to the attacker as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
           "All critical strikes against you cause 10% of the damage taken to the attacker as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 99,
+        "id": 100,
         "tree": 2,
         "treeId": 12,
         "name": "Sacred Arbiter",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_sword_08.jpg",
         "iconName": "inv_sword_08",
         "row": 4,
-        "col": 3,
+        "col": 2,
         "maxRank": 1,
         "spellId": 1311087,
-        "req": null,
         "descriptions": [
           "Increases the damage of your Holy Strike ability by 20% and causes it to refresh all Judgement effects on the target."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 101,
@@ -1777,34 +1792,33 @@ window.WOW_TALENTS_DATA = {
         "name": "Two-Handed Weapon Specialization",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_hammer_04.jpg",
         "iconName": "inv_hammer_04",
-        "row": 5,
-        "col": 1,
+        "row": 4,
+        "col": 4,
         "maxRank": 3,
         "spellId": 20111,
-        "req": null,
         "descriptions": [
-          "Increases the damage you deal with two-handed melee weapons by 2%.",
-          "Increases the damage you deal with two-handed melee weapons by 4%.",
-          "Increases the damage you deal with two-handed melee weapons by 6%."
-        ]
+          "Increases the physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
+          "Increases the physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
+          "Increases the physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
+        ],
+        "req": null
       },
       {
         "id": 102,
         "tree": 2,
         "treeId": 12,
-        "name": "Vengeance",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_racial_avatar.jpg",
-        "iconName": "ability_racial_avatar",
+        "name": "Turn Evil",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_turnundead.jpg",
+        "iconName": "spell_holy_turnundead",
         "row": 5,
-        "col": 2,
-        "maxRank": 3,
-        "spellId": 20049,
-        "req": 95,
+        "col": 1,
+        "maxRank": 2,
+        "spellId": 1328370,
         "descriptions": [
-          "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike.  Stacks up to 3 times.",
-          "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike.  Stacks up to 3 times.",
-          "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike.  Stacks up to 3 times."
-        ]
+          "Reduces the cast time of your Turn Undead spell by 0.5 sec, its cooldown by 5 sec, and allows it to affect Demons.",
+          "Reduces the cast time of your Turn Undead spell by 1.0 sec, its cooldown by 10 sec, and allows it to affect Demons."
+        ],
+        "req": null
       },
       {
         "id": 103,
@@ -1814,64 +1828,67 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_prayerofhealing.jpg",
         "iconName": "spell_holy_prayerofhealing",
         "row": 5,
-        "col": 3,
+        "col": 2,
         "maxRank": 1,
         "spellId": 20066,
-        "req": null,
         "descriptions": [
           "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 104,
+        "tree": 2,
+        "treeId": 12,
+        "name": "Vengeance",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_racial_avatar.jpg",
+        "iconName": "ability_racial_avatar",
+        "row": 5,
+        "col": 3,
+        "maxRank": 3,
+        "spellId": 20049,
+        "descriptions": [
+          "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
+          "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
+          "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times."
+        ],
+        "req": 97
+      },
+      {
+        "id": 105,
         "tree": 2,
         "treeId": 12,
         "name": "Champion of the Light",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_paladin_enlightenedjudgements.jpg",
         "iconName": "ability_paladin_enlightenedjudgements",
         "row": 6,
-        "col": 2,
-        "maxRank": 3,
-        "spellId": 1311084,
-        "req": null,
-        "descriptions": [
-          "Increases your spell damage by up to 20% of your Intellect.",
-          "Increases your spell damage by up to 40% of your Intellect.",
-          "Increases your spell damage by up to 60% of your Intellect."
-        ]
-      },
-      {
-        "id": 105,
-        "tree": 2,
-        "treeId": 12,
-        "name": "Instrument of Law",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divinepurpose.jpg",
-        "iconName": "spell_holy_divinepurpose",
-        "row": 6,
         "col": 3,
-        "maxRank": 2,
-        "spellId": 1311085,
-        "req": null,
+        "maxRank": 5,
+        "spellId": 1311084,
         "descriptions": [
-          "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
-          "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
-        ]
+          "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec.",
+          "Increases your spell damage by up to 24% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.4 sec.",
+          "Increases your spell damage by up to 36% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.6 sec.",
+          "Increases your spell damage by up to 48% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.8 sec.",
+          "Increases your spell damage by up to 60% of your Intellect, and reduces the cast time of your Hammer of Wrath by 1.0 sec."
+        ],
+        "req": null
       },
       {
         "id": 106,
         "tree": 2,
         "treeId": 12,
-        "name": "Twist of Light",
+        "name": "Unsealed Wrath",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessedresillience.jpg",
         "iconName": "spell_holy_blessedresillience",
         "row": 7,
         "col": 2,
         "maxRank": 1,
         "spellId": 1310735,
-        "req": null,
         "descriptions": [
-          "Reduces the Mana cost of your Seal spells by 20%, and when you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal. Your next melee attack applies the replaced Seal's effects, consuming the Echo."
-        ]
+          "Your melee attacks store a copy of your active Seal for 15 sec, stacking up to 3 times. Landing an attack with a different Seal consumes all stacks, giving the stored Seal its normal chance to activate once per stack."
+        ],
+        "req": 103
       }
     ]
   },
@@ -1981,8 +1998,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Pathfinding",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_mount_jungletiger.jpg",
         "iconName": "ability_mount_jungletiger",
-        "row": 2,
-        "col": 3,
+        "row": 3,
+        "col": 1,
         "maxRank": 2,
         "spellId": 19559,
         "req": null,
@@ -1999,7 +2016,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beastsoothe.jpg",
         "iconName": "ability_hunter_beastsoothe",
         "row": 2,
-        "col": 4,
+        "col": 3,
         "maxRank": 2,
         "spellId": 24443,
         "req": null,
@@ -4307,17 +4324,17 @@ window.WOW_TALENTS_DATA = {
       {
         "id": 239,
         "tree": 1,
-        "treeId": 14,
-        "name": "Binding Heal",
+        "treeId": 8,
+        "name": "Holy Binding",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blindingheal.jpg",
         "iconName": "spell_holy_blindingheal",
         "row": 4,
         "col": 4,
         "maxRank": 1,
-        "spellId": 401937,
+        "spellId": 1328569,
         "req": null,
         "descriptions": [
-          "Heals a friendly target and the caster for 236 to 284. Low threat."
+          "Each time you heal a target other than yourself with Flash Heal, you are healed for 50% as much. This healing generates no threat."
         ]
       },
       {
@@ -5764,12 +5781,13 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_arcane_arcaneresilience",
         "row": 1,
         "col": 3,
-        "maxRank": 2,
+        "maxRank": 3,
         "spellId": 28574,
         "req": null,
         "descriptions": [
           "Increases your Armor by an amount equal to 25% of your Intellect.",
-          "Increases your Armor by an amount equal to 50% of your Intellect."
+          "Increases your Armor by an amount equal to 50% of your Intellect.",
+          "Increases your Armor by an amount equal to 75% of your Intellect."
         ]
       },
       {
@@ -5820,7 +5838,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 400574,
         "req": null,
         "descriptions": [
-          "Blasts the target with energy with a 1.5 sec cast. Each time you cast Arcane Blast it grants you 15% of your Intellect as additional Spell Damage, increasing its mana cost as before and stacking up to 4 times. The effect lasts 15 sec from initial application."
+          "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application."
         ]
       },
       {
@@ -6438,7 +6456,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1312002,
         "req": null,
         "descriptions": [
-          "Instant, 8 sec cooldown. Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+          "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
         ]
       },
       {
@@ -6472,8 +6490,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16757,
         "req": null,
         "descriptions": [
-          "Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
-          "Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+          "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+          "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
         ]
       },
       {
@@ -6574,11 +6592,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11180,
         "req": null,
         "descriptions": [
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
         ]
       },
       {
@@ -6594,7 +6612,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11426,
         "req": 363,
         "descriptions": [
-          "Instantly shields you, absorbing 493 damage and increasing your Frost damage by 3% for 1 min (increased by an additional 3% while the shield holds). While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
+          "Shield yourself, absorbing 493 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage."
         ]
       }
     ]
@@ -6727,9 +6745,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 403511,
         "req": null,
         "descriptions": [
-          "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 7%.",
-          "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 13%.",
-          "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 20%."
+          "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 7%.",
+          "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 13%.",
+          "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 20%."
         ]
       },
       {
@@ -7586,14 +7604,14 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 16814,
-        "req": null,
         "descriptions": [
           "Reduces the cast time of your Wrath spell by 0.1 sec and its Mana cost by 10%.",
           "Reduces the cast time of your Wrath spell by 0.2 sec and its Mana cost by 20%.",
           "Reduces the cast time of your Wrath spell by 0.3 sec and its Mana cost by 30%.",
           "Reduces the cast time of your Wrath spell by 0.4 sec and its Mana cost by 40%.",
           "Reduces the cast time of your Wrath spell by 0.5 sec and its Mana cost by 50%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 420,
@@ -7606,14 +7624,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 1223081,
-        "req": null,
         "descriptions": [
-          "Increases the periodic damage and healing done by your spells and abilities by 1%.",
           "Increases the periodic damage and healing done by your spells and abilities by 2%.",
-          "Increases the periodic damage and healing done by your spells and abilities by 3%.",
           "Increases the periodic damage and healing done by your spells and abilities by 4%.",
-          "Increases the periodic damage and healing done by your spells and abilities by 5%."
-        ]
+          "Increases the periodic damage and healing done by your spells and abilities by 6%.",
+          "Increases the periodic damage and healing done by your spells and abilities by 8%.",
+          "Increases the periodic damage and healing done by your spells and abilities by 10%."
+        ],
+        "req": null
       },
       {
         "id": 421,
@@ -7626,12 +7644,12 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 3,
         "spellId": 16845,
-        "req": null,
         "descriptions": [
           "Reduces the Mana cost of your damaging spells by 8%.",
           "Reduces the Mana cost of your damaging spells by 17%.",
           "Reduces the Mana cost of your damaging spells by 25%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 422,
@@ -7644,11 +7662,11 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 2,
         "spellId": 16821,
-        "req": null,
         "descriptions": [
           "Increases the damage and critical strike chance of your Moonfire spell by 5%.",
           "Increases the damage and critical strike chance of your Moonfire spell by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 423,
@@ -7661,11 +7679,11 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 2,
         "spellId": 1223082,
-        "req": null,
         "descriptions": [
           "Increases your critical strike chance with spells and melee attacks by 2%.",
           "Increases your critical strike chance with spells and melee attacks by 4%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 424,
@@ -7678,11 +7696,11 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 16819,
-        "req": null,
         "descriptions": [
           "Increases the range of your offensive Balance spells by 10% and improves your chance to hit by 2%.",
           "Increases the range of your offensive Balance spells by 20% and improves your chance to hit by 4%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 425,
@@ -7695,12 +7713,12 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 3,
         "spellId": 16918,
-        "req": null,
         "descriptions": [
           "Increases the damage done by your Entangling Roots spell by 25%, and its victims can take up to 25% more damage without interrupting the effect.",
           "Increases the damage done by your Entangling Roots spell by 50%, and its victims can take up to 50% more damage without interrupting the effect.",
           "Increases the damage done by your Entangling Roots spell by 75%, and its victims can take up to 75% more damage without interrupting the effect."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 426,
@@ -7713,10 +7731,10 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 1,
         "spellId": 1223083,
-        "req": 423,
         "descriptions": [
           "Increases the duration of your Moonfire and Rejuvenation spells by 3 sec, your Regrowth spell by 6 sec, and your Insect Swarm spell by 2 sec."
-        ]
+        ],
+        "req": 423
       },
       {
         "id": 429,
@@ -7729,10 +7747,10 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 1,
         "spellId": 5570,
-        "req": null,
         "descriptions": [
           "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 428,
@@ -7745,14 +7763,14 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 16909,
-        "req": 422,
         "descriptions": [
           "Increases the critical strike damage bonus of your Arcane and Nature spells by 20%.",
           "Increases the critical strike damage bonus of your Arcane and Nature spells by 40%.",
           "Increases the critical strike damage bonus of your Arcane and Nature spells by 60%.",
           "Increases the critical strike damage bonus of your Arcane and Nature spells by 80%.",
           "Increases the critical strike damage bonus of your Arcane and Nature spells by 100%."
-        ]
+        ],
+        "req": 422
       },
       {
         "id": 430,
@@ -7765,14 +7783,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 16850,
-        "req": null,
         "descriptions": [
-          "Reduces the cast time of Starfire by 0.1 sec and Starfire has a 3% chance to stun its target for 3 sec.\n",
-          "Reduces the cast time of Starfire by 0.2 sec and Starfire has a 6% chance to stun its target for 3 sec.\n",
-          "Reduces the cast time of Starfire by 0.3 sec and Starfire has a 9% chance to stun its target for 3 sec.\n",
-          "Reduces the cast time of Starfire by 0.4 sec and Starfire has a 12% chance to stun its target for 3 sec.\n",
-          "Reduces the cast time of Starfire by 0.5 sec and Starfire has a 15% chance to stun its target for 3 sec.\n"
-        ]
+          "Reduces the cast time of Starfire by 0.1 sec and Starfire has a 3% chance to stun its target for 3 sec.",
+          "Reduces the cast time of Starfire by 0.2 sec and Starfire has a 6% chance to stun its target for 3 sec.",
+          "Reduces the cast time of Starfire by 0.3 sec and Starfire has a 9% chance to stun its target for 3 sec.",
+          "Reduces the cast time of Starfire by 0.4 sec and Starfire has a 12% chance to stun its target for 3 sec.",
+          "Reduces the cast time of Starfire by 0.5 sec and Starfire has a 15% chance to stun its target for 3 sec."
+        ],
+        "req": null
       },
       {
         "id": 431,
@@ -7785,11 +7803,11 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 2,
         "spellId": 17245,
-        "req": null,
         "descriptions": [
           "Increases the maximum number of targets you may have affected by Entangling Roots by 1.",
           "Increases the maximum number of targets you may have affected by Entangling Roots by 2."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 432,
@@ -7802,10 +7820,10 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 16880,
-        "req": null,
         "descriptions": [
           "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 433,
@@ -7818,12 +7836,12 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 3,
         "spellId": 408248,
-        "req": null,
         "descriptions": [
           "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec.",
           "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.33 sec. Stores up to 4 charges. Lasts 15 sec.",
           "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 434,
@@ -7836,14 +7854,14 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 16896,
-        "req": null,
         "descriptions": [
           "Increases the damage done by your Arcane and Nature spells by 2%.",
           "Increases the damage done by your Arcane and Nature spells by 4%.",
           "Increases the damage done by your Arcane and Nature spells by 6%.",
           "Increases the damage done by your Arcane and Nature spells by 8%.",
           "Increases the damage done by your Arcane and Nature spells by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 435,
@@ -7856,10 +7874,10 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 24858,
-        "req": null,
         "descriptions": [
-          "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all raid members within 45 yards have their Spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
-        ]
+          "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+        ],
+        "req": null
       },
       {
         "id": 436,
@@ -7872,34 +7890,34 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 16934,
-        "req": null,
         "descriptions": [
           "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
           "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 2 Rage or Energy.",
           "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 3 Rage or Energy.",
           "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
           "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 437,
+        "id": 456,
         "tree": 1,
         "treeId": 2,
-        "name": "Heart of the Wild",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofagility.jpg",
-        "iconName": "spell_holy_blessingofagility",
+        "name": "Furor",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofstamina.jpg",
+        "iconName": "spell_holy_blessingofstamina",
         "row": 1,
         "col": 3,
         "maxRank": 5,
-        "spellId": 17003,
-        "req": null,
+        "spellId": 17056,
         "descriptions": [
-          "Increases your Intellect by 2%.  In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 2%.",
-          "Increases your Intellect by 4%.  In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 8% and while in Cat Form your Strength is increased by 4%.",
-          "Increases your Intellect by 6%.  In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 12% and while in Cat Form your Strength is increased by 6%.",
-          "Increases your Intellect by 8%.  In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 16% and while in Cat Form your Strength is increased by 8%.",
-          "Increases your Intellect by 10%.  In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 10%."
-        ]
+          "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per second spent outside Bear Form or Dire Bear Form, up to 20 Energy.",
+          "Gives you a 40% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 40% of the Energy you had when last in Cat Form, plus 4 Energy per second spent outside Bear Form or Dire Bear Form, up to 40 Energy.",
+          "Gives you a 60% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 60% of the Energy you had when last in Cat Form, plus 6 Energy per second spent outside Bear Form or Dire Bear Form, up to 60 Energy.",
+          "Gives you a 80% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 80% of the Energy you had when last in Cat Form, plus 8 Energy per second spent outside Bear Form or Dire Bear Form, up to 80 Energy.",
+          "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per second spent outside Bear Form or Dire Bear Form, up to 100 Energy."
+        ],
+        "req": null
       },
       {
         "id": 438,
@@ -7912,11 +7930,11 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 2,
         "spellId": 17002,
-        "req": null,
         "descriptions": [
           "Increases your movement speed while in Cat Form by 15%, and increases your chance to Dodge by 2%.",
           "Increases your movement speed while in Cat Form by 30%, and increases your chance to Dodge by 4%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 439,
@@ -7929,12 +7947,12 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 3,
         "spellId": 16947,
-        "req": null,
         "descriptions": [
           "Increases damage done by your Swipe ability by 10% and reduces the chance enemies have to detect you while Prowling as if you were 1 level higher.",
           "Increases damage done by your Swipe ability by 20% and reduces the chance enemies have to detect you while Prowling as if you were 2 levels higher.",
           "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 440,
@@ -7947,11 +7965,11 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 2,
         "spellId": 16940,
-        "req": null,
         "descriptions": [
           "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec and reduces the cooldown of Bash by 15 sec.",
           "Increases the stun duration of your Bash and Pounce abilities by 1 sec and reduces the cooldown of Bash by 30 sec."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 441,
@@ -7964,12 +7982,12 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 3,
         "spellId": 16929,
-        "req": null,
         "descriptions": [
-          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 1 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
-          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 2 additional base Armor per level and another 1.33 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
-          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 3 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
-        ]
+          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 178 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 179 additional base Armor per level and another 1.33 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+          "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+        ],
+        "req": null
       },
       {
         "id": 445,
@@ -7982,12 +8000,12 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 3,
         "spellId": 16966,
-        "req": null,
         "descriptions": [
           "Reduces the Energy cost of your Shred ability by 6 and reduces the Rage cost of your Lacerate ability by 1.",
           "Reduces the Energy cost of your Shred ability by 12 and reduces the Rage cost of your Lacerate ability by 2.",
           "Reduces the Energy cost of your Shred ability by 18 and reduces the Rage cost of your Lacerate ability by 3."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 442,
@@ -8000,11 +8018,11 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 2,
         "spellId": 16998,
-        "req": null,
         "descriptions": [
           "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 5%.",
           "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 443,
@@ -8017,10 +8035,10 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 1,
         "spellId": 1238122,
-        "req": null,
         "descriptions": [
-          "|CFFFF2020Requires Bear Form, Dire Bear Form|R\nCharge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
-        ]
+          "Requires Bear Form, Dire Bear Form\nCharge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
+        ],
+        "req": null
       },
       {
         "id": 444,
@@ -8033,43 +8051,11 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 16942,
-        "req": null,
         "descriptions": [
           "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 3%.",
           "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 6%."
-        ]
-      },
-      {
-        "id": 451,
-        "tree": 1,
-        "treeId": 2,
-        "name": "Shifting Power",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_druid_displacement.jpg",
-        "iconName": "spell_druid_displacement",
-        "row": 4,
-        "col": 1,
-        "maxRank": 1,
-        "spellId": 1322605,
-        "req": 445,
-        "descriptions": [
-          "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting."
-        ]
-      },
-      {
-        "id": 446,
-        "tree": 1,
-        "treeId": 2,
-        "name": "Primal Bite",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_racial_cannibalize.jpg",
-        "iconName": "ability_racial_cannibalize",
-        "row": 4,
-        "col": 2,
-        "maxRank": 1,
-        "spellId": 407995,
-        "req": 442,
-        "descriptions": [
-          "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 447,
@@ -8079,15 +8065,47 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_pet_cat.jpg",
         "iconName": "ability_hunter_pet_cat",
         "row": 4,
-        "col": 3,
+        "col": 1,
         "maxRank": 3,
         "spellId": 16972,
-        "req": null,
         "descriptions": [
           "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 50% of your level.",
           "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 100% of your level.",
           "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 150% of your level."
-        ]
+        ],
+        "req": null
+      },
+      {
+        "id": 427,
+        "tree": 1,
+        "treeId": 2,
+        "name": "Lacerate",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_druid_lacerate.jpg",
+        "iconName": "ability_druid_lacerate",
+        "row": 4,
+        "col": 2,
+        "maxRank": 1,
+        "spellId": 1328617,
+        "descriptions": [
+          "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target."
+        ],
+        "req": 442
+      },
+      {
+        "id": 437,
+        "tree": 1,
+        "treeId": 2,
+        "name": "Predatory Discipline",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_druid_savagery.jpg",
+        "iconName": "spell_druid_savagery",
+        "row": 4,
+        "col": 3,
+        "maxRank": 1,
+        "spellId": 0,
+        "descriptions": [
+          "Your Ferocious Bite ability no longer converts extra Energy into damage, but still deals extra damage based on your excess Energy."
+        ],
+        "req": null
       },
       {
         "id": 448,
@@ -8100,28 +8118,11 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 16958,
-        "req": 444,
         "descriptions": [
           "Gives you a 50% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 50% chance to add an additional Combo Point.",
           "Gives you a 100% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point."
-        ]
-      },
-      {
-        "id": 473,
-        "tree": 1,
-        "treeId": 2,
-        "name": "Improved Shifting Power",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_aspectmastery.jpg",
-        "iconName": "ability_hunter_aspectmastery",
-        "row": 5,
-        "col": 1,
-        "maxRank": 2,
-        "spellId": 1322670,
-        "req": 451,
-        "descriptions": [
-          "Reduces the cooldown of your Shifting Power spell by 4 sec.",
-          "Reduces the cooldown of your Shifting Power spell by 8 sec."
-        ]
+        ],
+        "req": 444
       },
       {
         "id": 450,
@@ -8134,10 +8135,10 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 17007,
-        "req": null,
         "descriptions": [
-          "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Melee and Ranged critical strike chance of all raid members within 45 yards by 3%."
-        ]
+          "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Critical Strike chance of all party or raid members within 45 yards by 3%."
+        ],
+        "req": null
       },
       {
         "id": 449,
@@ -8150,31 +8151,11 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 1223242,
-        "req": null,
         "descriptions": [
           "Increases the critical strike damage bonus of your melee abilities by 10% and increases your spell healing by 12% of your Intellect.",
           "Increases the critical strike damage bonus of your melee abilities by 20% and increases your spell healing by 25% of your Intellect."
-        ]
-      },
-      {
-        "id": 452,
-        "tree": 1,
-        "treeId": 2,
-        "name": "Natural Reaction",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_bullrush.jpg",
-        "iconName": "ability_bullrush",
-        "row": 6,
-        "col": 1,
-        "maxRank": 5,
-        "spellId": 417051,
-        "req": null,
-        "descriptions": [
-          "Increases your dodge chance by 1%, and gives you a 20% chance to gain 5 Rage each time you dodge.",
-          "Increases your dodge chance by 2%, and gives you a 40% chance to gain 5 Rage each time you dodge.",
-          "Increases your dodge chance by 3%, and gives you a 60% chance to gain 5 Rage each time you dodge.",
-          "Increases your dodge chance by 4%, and gives you a 80% chance to gain 5 Rage each time you dodge.",
-          "Increases your dodge chance by 5%, and gives you a 100% chance to gain 5 Rage each time you dodge."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 453,
@@ -8184,33 +8165,69 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_druid_primalagression.jpg",
         "iconName": "ability_druid_primalagression",
         "row": 6,
-        "col": 3,
+        "col": 1,
         "maxRank": 5,
         "spellId": 1223246,
-        "req": 447,
         "descriptions": [
           "Increases damage done by your melee abilities on Bleeding targets by 2%.",
           "Increases damage done by your melee abilities on Bleeding targets by 4%.",
           "Increases damage done by your melee abilities on Bleeding targets by 6%.",
           "Increases damage done by your melee abilities on Bleeding targets by 8%.",
           "Increases damage done by your melee abilities on Bleeding targets by 10%."
-        ]
+        ],
+        "req": 447
       },
       {
-        "id": 454,
+        "id": 452,
         "tree": 1,
         "treeId": 2,
-        "name": "Berserk",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_druid_berserk.jpg",
-        "iconName": "ability_druid_berserk",
+        "name": "Natural Reaction",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_bullrush.jpg",
+        "iconName": "ability_bullrush",
+        "row": 6,
+        "col": 4,
+        "maxRank": 5,
+        "spellId": 417051,
+        "descriptions": [
+          "Increases your dodge chance by 1%, and gives you a 20% chance to gain 5 Rage each time you dodge.",
+          "Increases your dodge chance by 2%, and gives you a 40% chance to gain 5 Rage each time you dodge.",
+          "Increases your dodge chance by 3%, and gives you a 60% chance to gain 5 Rage each time you dodge.",
+          "Increases your dodge chance by 4%, and gives you a 80% chance to gain 5 Rage each time you dodge.",
+          "Increases your dodge chance by 5%, and gives you a 100% chance to gain 5 Rage each time you dodge."
+        ],
+        "req": null
+      },
+      {
+        "id": 446,
+        "tree": 1,
+        "treeId": 2,
+        "name": "Primal Bite",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_racial_cannibalize.jpg",
+        "iconName": "ability_racial_cannibalize",
         "row": 7,
         "col": 2,
         "maxRank": 1,
-        "spellId": 417141,
-        "req": 450,
+        "spellId": 407995,
         "descriptions": [
-          "|CFFFF2020Requires Cat Form, Bear Form, Dire Bear Form|R\nCauses your Primal Bite ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec."
-        ]
+          "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat."
+        ],
+        "req": 450
+      },
+      {
+        "id": 451,
+        "tree": 1,
+        "treeId": 2,
+        "name": "Shifting Power",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_druid_displacement.jpg",
+        "iconName": "spell_druid_displacement",
+        "row": 7,
+        "col": 3,
+        "maxRank": 1,
+        "spellId": 1322605,
+        "descriptions": [
+          "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting."
+        ],
+        "req": 437
       },
       {
         "id": 455,
@@ -8223,34 +8240,34 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 17063,
-        "req": null,
         "descriptions": [
-          "Gives you a 14% chance to avoid interruption caused by damage while casting Arcane and Nature spells.",
-          "Gives you a 28% chance to avoid interruption caused by damage while casting Arcane and Nature spells.",
-          "Gives you a 42% chance to avoid interruption caused by damage while casting Arcane and Nature spells.",
-          "Gives you a 56% chance to avoid interruption caused by damage while casting Arcane and Nature spells.",
-          "Gives you a 70% chance to avoid interruption caused by damage while casting Arcane and Nature spells."
-        ]
+          "Gives your Arcane and Nature spells a 14% chance to not lose casting time when you take damage.",
+          "Gives your Arcane and Nature spells a 28% chance to not lose casting time when you take damage.",
+          "Gives your Arcane and Nature spells a 42% chance to not lose casting time when you take damage.",
+          "Gives your Arcane and Nature spells a 56% chance to not lose casting time when you take damage.",
+          "Gives your Arcane and Nature spells a 70% chance to not lose casting time when you take damage."
+        ],
+        "req": null
       },
       {
-        "id": 456,
+        "id": 454,
         "tree": 2,
         "treeId": 3,
-        "name": "Furor",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofstamina.jpg",
-        "iconName": "spell_holy_blessingofstamina",
+        "name": "Heart of the Wild",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofagility.jpg",
+        "iconName": "spell_holy_blessingofagility",
         "row": 1,
         "col": 3,
         "maxRank": 5,
-        "spellId": 17056,
-        "req": null,
+        "spellId": 17003,
         "descriptions": [
-          "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per sec spent outside Cat Form, up to 20 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
-          "Gives you a 40% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 40% of the Energy you had when last in Cat Form, plus 4 Energy per sec spent outside Cat Form, up to 40 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
-          "Gives you a 60% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 60% of the Energy you had when last in Cat Form, plus 6 Energy per sec spent outside Cat Form, up to 60 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
-          "Gives you a 80% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 80% of the Energy you had when last in Cat Form, plus 8 Energy per sec spent outside Cat Form, up to 80 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
-          "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per sec spent outside Cat Form, up to 100 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration)."
-        ]
+          "Increases your Intellect by 2%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 2%.",
+          "Increases your Intellect by 4%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 8% and while in Cat Form your Strength is increased by 4%.",
+          "Increases your Intellect by 6%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 12% and while in Cat Form your Strength is increased by 6%.",
+          "Increases your Intellect by 8%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 16% and while in Cat Form your Strength is increased by 8%.",
+          "Increases your Intellect by 10%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 10%."
+        ],
+        "req": null
       },
       {
         "id": 457,
@@ -8263,32 +8280,32 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 5,
         "spellId": 17069,
-        "req": null,
         "descriptions": [
-          "Reduces the cast time of your Healing Touch spell by 0.1 sec and increases all damage you deal by 1%.",
-          "Reduces the cast time of your Healing Touch spell by 0.2 sec and increases all damage you deal by 2%.",
-          "Reduces the cast time of your Healing Touch spell by 0.3 sec and increases all damage you deal by 3%.",
-          "Reduces the cast time of your Healing Touch spell by 0.4 sec and increases all damage you deal by 4%.",
-          "Reduces the cast time of your Healing Touch spell by 0.5 sec and increases all damage you deal by 5%."
-        ]
+          "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.1 sec and increases all damage you deal by 2%.",
+          "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.2 sec and increases all damage you deal by 4%.",
+          "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.3 sec and increases all damage you deal by 6%.",
+          "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.4 sec and increases all damage you deal by 8%.",
+          "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.5 sec and increases all damage you deal by 10%."
+        ],
+        "req": null
       },
       {
-        "id": 458,
+        "id": 460,
         "tree": 2,
         "treeId": 3,
-        "name": "Subtlety",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_eyeoftheowl.jpg",
-        "iconName": "ability_eyeoftheowl",
+        "name": "Reflection",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_windwalkon.jpg",
+        "iconName": "spell_frost_windwalkon",
         "row": 2,
         "col": 2,
         "maxRank": 3,
-        "spellId": 17118,
-        "req": null,
+        "spellId": 17106,
         "descriptions": [
-          "Reduces the threat generated by your Nature and Arcane spells by 10%.",
-          "Reduces the threat generated by your Nature and Arcane spells by 20%.",
-          "Reduces the threat generated by your Nature and Arcane spells by 30%."
-        ]
+          "Allows 17% of your Mana regeneration to continue while casting.",
+          "Allows 33% of your Mana regeneration to continue while casting.",
+          "Allows 50% of your Mana regeneration to continue while casting."
+        ],
+        "req": null
       },
       {
         "id": 459,
@@ -8301,30 +8318,30 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 3,
         "spellId": 16833,
-        "req": null,
         "descriptions": [
           "Reduces the mana cost of all shapeshifting by 10%.",
           "Reduces the mana cost of all shapeshifting by 20%.",
           "Reduces the mana cost of all shapeshifting by 30%."
-        ]
+        ],
+        "req": null
       },
       {
-        "id": 460,
+        "id": 458,
         "tree": 2,
         "treeId": 3,
-        "name": "Reflection",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_windwalkon.jpg",
-        "iconName": "spell_frost_windwalkon",
+        "name": "Subtlety",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_eyeoftheowl.jpg",
+        "iconName": "ability_eyeoftheowl",
         "row": 3,
         "col": 2,
         "maxRank": 3,
-        "spellId": 17106,
-        "req": null,
+        "spellId": 17118,
         "descriptions": [
-          "Allows 17% of your Mana regeneration to continue while casting.",
-          "Allows 33% of your Mana regeneration to continue while casting.",
-          "Allows 50% of your Mana regeneration to continue while casting."
-        ]
+          "Reduces the threat generated by your Nature and Arcane spells by 10%.",
+          "Reduces the threat generated by your Nature and Arcane spells by 20%.",
+          "Reduces the threat generated by your Nature and Arcane spells by 30%."
+        ],
+        "req": null
       },
       {
         "id": 461,
@@ -8337,30 +8354,30 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 17104,
-        "req": null,
         "descriptions": [
           "Increases the effect of all your healing spells by 2%.",
           "Increases the effect of all your healing spells by 4%.",
           "Increases the effect of all your healing spells by 6%.",
           "Increases the effect of all your healing spells by 8%.",
           "Increases the effect of all your healing spells by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 462,
         "tree": 2,
         "treeId": 3,
-        "name": "Gift of the Earthmother",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_spiritarmor.jpg",
-        "iconName": "spell_nature_spiritarmor",
+        "name": "Bloom",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_misc_herb_felblossom.jpg",
+        "iconName": "inv_misc_herb_felblossom",
         "row": 3,
         "col": 4,
         "maxRank": 1,
-        "spellId": 414673,
-        "req": null,
+        "spellId": 1328621,
         "descriptions": [
-          "Reduces the global cooldown by 0.5 seconds on your Rejuvenation, Swiftmend, and Wild Growth spells."
-        ]
+          "When your Rejuvenation or Regrowth spell expires due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit. If either spell expires due to being dispelled, the target is healed for 50% of your Spirit instead."
+        ],
+        "req": null
       },
       {
         "id": 463,
@@ -8373,14 +8390,14 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 5,
         "spellId": 24968,
-        "req": null,
         "descriptions": [
           "Reduces the mana cost of your Healing Touch and Tranquility spells by 2%.",
           "Reduces the mana cost of your Healing Touch and Tranquility spells by 4%.",
           "Reduces the mana cost of your Healing Touch and Tranquility spells by 6%.",
           "Reduces the mana cost of your Healing Touch and Tranquility spells by 8%.",
           "Reduces the mana cost of your Healing Touch and Tranquility spells by 10%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 464,
@@ -8393,12 +8410,12 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 3,
         "spellId": 17111,
-        "req": null,
         "descriptions": [
           "Increases the effect of your Rejuvenation spell by 5%.",
           "Increases the effect of your Rejuvenation spell by 10%.",
           "Increases the effect of your Rejuvenation spell by 15%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 465,
@@ -8411,10 +8428,10 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 1,
         "spellId": 18562,
-        "req": null,
         "descriptions": [
-          "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells."
-        ]
+          "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of the consumed spell."
+        ],
+        "req": null
       },
       {
         "id": 466,
@@ -8427,10 +8444,10 @@ window.WOW_TALENTS_DATA = {
         "col": 1,
         "maxRank": 1,
         "spellId": 17116,
-        "req": 457,
         "descriptions": [
           "When activated, your next Nature spell becomes an instant cast spell."
-        ]
+        ],
+        "req": 457
       },
       {
         "id": 467,
@@ -8443,12 +8460,12 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 3,
         "spellId": 1309631,
-        "req": null,
         "descriptions": [
           "Increases your Spirit by 5%.",
           "Increases your Spirit by 10%.",
           "Increases your Spirit by 15%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 468,
@@ -8461,11 +8478,11 @@ window.WOW_TALENTS_DATA = {
         "col": 4,
         "maxRank": 2,
         "spellId": 17123,
-        "req": null,
         "descriptions": [
           "Reduces threat caused by Tranquility by 50% and its cooldown by 30%.",
           "Reduces threat caused by Tranquility by 100% and its cooldown by 60%."
-        ]
+        ],
+        "req": null
       },
       {
         "id": 469,
@@ -8478,14 +8495,14 @@ window.WOW_TALENTS_DATA = {
         "col": 3,
         "maxRank": 5,
         "spellId": 17074,
-        "req": 464,
         "descriptions": [
           "Increases the critical effect chance of your Regrowth spell by 10%.",
           "Increases the critical effect chance of your Regrowth spell by 20%.",
           "Increases the critical effect chance of your Regrowth spell by 30%.",
           "Increases the critical effect chance of your Regrowth spell by 40%.",
           "Increases the critical effect chance of your Regrowth spell by 50%."
-        ]
+        ],
+        "req": 464
       },
       {
         "id": 470,
@@ -8498,10 +8515,10 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 408120,
-        "req": 467,
         "descriptions": [
-          "Heals the target and their party for 280 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
-        ]
+          "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+        ],
+        "req": 467
       }
     ]
   }

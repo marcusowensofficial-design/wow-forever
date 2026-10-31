@@ -538,15 +538,15 @@ collector.describe('Suite 3: Mage Arcane, Fire & Frost Trees Adversarial Stress-
     expect(audit.errors.length).toBe(0);
   });
 
-  collector.test('3.7 Ice Lance deals 200% against frozen targets and Winter\'s Chill enhances Cone of Cold', () => {
+  collector.test('3.7 Ice Lance deals 300% against frozen targets and Winter\'s Chill enhances Cone of Cold', () => {
     const il = frost.find(t => t.name === 'Ice Lance');
     const wc = frost.find(t => t.name === "Winter's Chill");
 
     expect(il).toBeDefined();
     expect(wc).toBeDefined();
-    expect(il.descriptions[0]).toMatch(/200%/);
+    expect(il.descriptions[0]).toMatch(/300%/);
     expect(wc.descriptions[0]).toMatch(/Cone of Cold/i);
-    expect(wc.descriptions[0]).toMatch(/5%/);
+    expect(wc.descriptions[0]).toMatch(/20%/);
   });
 });
 
@@ -630,7 +630,7 @@ collector.describe('Suite 5: Paladin, Hunter, Druid, Warrior Talents Integrity',
     expect(reck).toBeDefined();
     expect(reck.maxRank).toBe(5);
     for (const d of reck.descriptions) {
-      expect(d).toMatch(/stores up to 4 charges|auto swing/i);
+      expect(d).toMatch(/stores up to 4 (?:charges|extra attacks)|auto swing/i);
     }
   });
 

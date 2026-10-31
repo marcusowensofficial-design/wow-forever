@@ -21,7 +21,7 @@ const WOW_FOREVER_DATA = {
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 28, 2026"
+    "lastUpdated": "October 30, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -186,6 +186,90 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-66",
+      "title": "Massive Talent Tree Overhauls for Druids & Paladins, Pre-Launch Class Tuning in Build 1.60.1.70707 & October 30 Live Hotfix",
+      "source": "Wowhead & ForeverChanges Datamining",
+      "sourceType": "blizzard",
+      "author": "Systems Balance & Theorycraft Desk",
+      "date": "October 30, 2026",
+      "tag": "Class Balancing & Datamining",
+      "summary": "Forensic telemetry and Wowhead's October 30 report reveal sweeping talent redesigns for Druids and Paladins, baseline trainer expansions (Voice of Truth L20, Righteous Fury L10 +33% all threat), and wide class tuning for Mages, Priests, Hunters, Warlocks, and Warriors ahead of launch.",
+      "content": `Massive pre-launch class tuning and talent tree restructuring have arrived in client Build 1.60.1.70707 and the October 30 server hotfix:
+
+• **Druid Massive Talent Tree Overhaul:**
+  - **Feral & Resto Tree Swap:** Furor moved to Feral Row 1 Col 3 (Bear Rage + Cat energy decay scaling), while Heart of the Wild moved to Restoration Row 1 Col 3.
+  - **New Feral Abilities:** Added **Lacerate** at Row 4 Col 2 (bleed stacking up to 5 times for high threat, requires Savage Fury) and **Predatory Discipline** at Row 4 Col 3 (Ferocious Bite no longer converts extra energy into damage, but deals bonus damage based on excess energy).
+  - **Primal Bite & Shifting Power:** Primal Bite moved to Row 7 Col 2 (requires Leader of the Pack; deals 42/62/77 bonus damage). Shifting Power moved to Row 7 Col 3 (requires Predatory Discipline) with cooldown slashed to 8 seconds (was 16s). Berserk and Improved Shifting Power removed.
+  - **Crit Aura Unification:** Moonkin Form and Leader of the Pack now increase **all** Critical Strike chance (melee, ranged, and spell) of party/raid members by 3%.
+  - **Restoration Upgrades:** Added **Bloom** at Row 3 Col 4 (target healed for 100% of your Spirit when Rejuvenation or Regrowth expires, or 50% if dispelled). Naturalist now reduces cast time of both Healing Touch and Wild Growth by up to 0.5 sec, while increasing damage by 2–10%. Wild Growth base heal increased to 336 over 7 sec (3 sec base cast).
+
+• **Paladin Massive Talent Tree Overhaul:**
+  - **Baseline Expansion:** Righteous Fury is now learned at Level 10 and increases all threat by 33% plus 90% additional on Holy attacks. Voice of Truth is now a baseline trainer ability at Level 20.
+  - **Holy Tree Rework:** Spiritual Focus expanded to 5 ranks at Row 1 Col 2 (14/28/42/56/70% pushback protection). Added **Oath of Light** at Row 4 Col 3 (oath buff increasing Holy Light, Flash of Light, and Holy Shock). Added **Boundless Light** at Row 5 Col 3 (+15/30% Holy Shock crit on non-Oath allies). Holy Power reworked to grant +10/20/30/40/50% critical strike healing bonus. Light's Vigil is now friendly-target only (40 yd range).
+  - **Protection Tree Rework:** Redoubt buffed to 6/12/18/24/30% block chance. Sacred Duty reduces Forbearance duration by 5/10 sec. Shield Specialization compressed to 2 ranks (15/30% block value & mana restore). Swift Judgement is now an active 1-min cooldown ability triggering Judgement without consuming seals. Added **Stoicism** at Row 5 Col 1 (-10/20% Stun/Charm duration). Holy Shield moved to Row 5 Col 2. Added new capstone **Shieldsworn** at Row 7 Col 2 (-4s Holy Strike CD, triggers active Holy Shield/Shield Specialization on strike, and enables spell blocking for 6 sec).
+  - **Retribution Tree Rework:** Conviction compressed to 3 ranks at Row 2 Col 2 (+2/4/6% crit on all spells and attacks). Two-Handed Weapon Specialization at Row 4 Col 4 grants +2/4/6% physical damage and reduces all threat by 7/14/20%. Added **Turn Evil** at Row 5 Col 1 (reduces Turn Undead cast/CD and allows it to affect Demons). Champion of the Light expanded to 5 ranks (+60% Int as Spell Damage, -1.0s Hammer of Wrath cast). Renamed capstone to **Unsealed Wrath** (melee attacks cache copies of active seals up to 3 stacks, triggered by swapping seals).
+
+• **Other Class Tuning & Balance:**
+  - **Mage:** Arcane Blast stacks 12% Int as Spell Damage (was 15%), mana cost increase reduced to 100% per stack, duration 18s. Arcane Resilience expanded to 3 ranks (+75% Int as Armor). Ice Barrier increases Frost damage done by 15% (plus 5% while shielded). Winter's Chill increases next Cone of Cold by 20% per stack. Ice Lance deals 300% bonus damage to frozen targets with 8s CD on all ranks.
+  - **Priest:** Shadow Word: Death backlash on non-kill increased to 30% max HP. Binding Heal moved to baseline trainer (level 25). Added **Holy Binding** at Row 4 Col 4 (healing allies with Flash Heal heals you for 50% as much for zero threat). Cure Disease and Abolish Disease now castable in Shadowform.
+  - **Hunter:** Pathfinding moved to Row 3 Col 1; Improved Revive Pet moved to Row 2 Col 3.
+  - **Warlock:** Improved Drains now increases Mana drained by Drain Mana by 7/14/20%.
+  - **Warrior:** Revenge now scales with 22.5% / 25% Attack Power at all ranks.
+  - **Adventurer's Tent:** Reverted in client files to a cosmetic miniature tent.`,
+      "url": "https://www.wowhead.com/forever/news/massive-talent-tree-changes-to-druids-and-paladins-class-tuning-for-wow-forever-383670"
+    },
+    {
+      "id": "news-65",
+      "title": "Over 8.86 Million Characters Created: Blizzard Releases Official WoW: Forever Beta Statistics & Infographic",
+      "source": "Blizzard Official / Wowhead",
+      "sourceType": "blizzard",
+      "author": "Blizzard Community Team",
+      "date": "October 30, 2026",
+      "tag": "Community & Infographics",
+      "summary": "Blizzard publishes final Beta test telemetry: 8,862,354 characters created, 9.96M PvP kills, The Hall of Thanes crowned deadliest dungeon, 612k Forsaken Paladins rolled, and Kobold Miners claim the title of deadliest open-world creature.",
+      "content": `Blizzard Entertainment has published the official *World of Warcraft: Forever* Beta Infographic, revealing extraordinary player participation across the 37-day testing phase ahead of global launch on November 4:
+
+• **Key Beta Telemetry Highlights:**
+  - **Total Characters Created:** **8,862,354** adventurers entered Azeroth during the closed beta and open stress tests.
+  - **Deadliest Dungeon:** **The Hall of Thanes** claimed more player lives than any other instanced encounter in the beta, cementing its status as a punishing new Classic+ five-player experience.
+  - **Total PvP Kills:** **9,959,014** honorable (and dishonorable) kills logged across Battlegrounds and contested territories.
+  - **Top Open World PvP Zone:** **Hillsbrad Foothills** reigned supreme as the primary theater of faction conflict, driven by nonstop skirmishes between Southshore and Tarren Mill.
+  - **Skyborne Race Adoption:** **1,889,084** Skyborne characters created, making the newly revealed winged race one of the most popular character choices in beta testing.
+  - **Forsaken Paladins:** **612,096** Undead Paladins created, confirming massive community engagement with the newly introduced Horde holy warriors.
+  - **Deadliest Creature:** **Kobold Miner** (*"You no take candle!"*) in Elwynn Forest and Jasperlode Mine took down more unwary low-level adventurers than any other mob in Azeroth.
+  - **Duels Fought:** **1,248,125** formal duels contested outside the gates of Orgrimmar and Ironforge.
+  - **Deaths from Falling:** **1,157,204** fatalities caused by gravity, cliffs, and the notorious Undercity elevator boss.
+
+These metrics reflect unprecedented engagement as players finalize their rosters during Early Name Reservation ahead of the global launch on Wednesday, November 4!`,
+      "url": "https://www.wowhead.com/forever/news/over-8-million-characters-were-created-in-the-wow-forever-beta-383669"
+    },
+    {
+      "id": "news-64",
+      "title": "World of Warcraft: Forever Goes Live Globally November 4 at 3:00 PM PST",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "October 29, 2026",
+      "tag": "Launch & Schedule",
+      "summary": "Blizzard confirms simultaneous worldwide launch schedule for World of Warcraft: Forever on Wednesday, November 4, 2026 at 3:00 PM PST (6:00 PM EST / 11:00 PM GMT), with realm layering optimizations and final character reservation reminders.",
+      "content": `Blizzard Entertainment has published the global release schedule for *World of Warcraft: Forever*. The living Classic+ adventure goes live simultaneously worldwide on Wednesday, November 4, 2026:
+
+**Global Launch Times:**
+• Americas (PST): November 4 at 3:00 PM PST
+• Americas (EST): November 4 at 6:00 PM EST
+• Western Europe (GMT/UTC): November 4 at 11:00 PM GMT
+• Central Europe (CET): November 5 at 12:00 AM CET
+• Taiwan / Asia (CST): November 5 at 7:00 AM CST
+• Korea / Japan (KST/JST): November 5 at 8:00 AM KST
+• Australia (AEDT): November 5 at 10:00 AM AEDT
+
+**Pre-Launch Checklist:**
+- Early Name Reservation remains active until launch: ensure you have locked in your 3 character names per account.
+- Addon suites will update to Build 16001 TOC standards on launch day.
+- Tier 1 Raids (Barrow Deeps 10m, Hyjal Summit 20m, and Onyxia's Lair 40m) will unlock 5 weeks after launch on December 9, 2026.`,
+      "url": "https://foreverchanges.pro/patch-notes"
+    },
     {
       "id": "news-63",
       "title": "Datamined October 28 Build: Mage Talent Tree Overhaul (Accelerant, Precision Hit All Spells, Incineration 5 Ranks, Arcane Focus Removed), Adventurer's Tent & Consumable Rebalances",
