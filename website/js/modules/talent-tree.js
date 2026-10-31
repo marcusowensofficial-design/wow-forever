@@ -21,8 +21,8 @@
     classId: 'priest',
     specId: 'pve',
     specName: 'Shadow PvE',
-    maxPoints: 26, // Default Level 30 cap (21 + 5 Talented legacy perk)
-    capMode: 'lvl30_perk', // 'lvl30_perk' (26) | 'lvl30_base' (21) | 'lvl60' (51)
+    maxPoints: 51, // Default Level 60 launch cap
+    capMode: 'lvl60', // 'lvl60' (51) | 'lvl30_perk' (26) | 'lvl30_base' (21)
     viewMode: 'grid', // 'grid' | 'cards'
     showClassicDiff: false, // Highlights +New, ~Mod, ⇄Moved talents vs Classic Era
     cardSearchQuery: '',
@@ -1029,7 +1029,7 @@
 
     state.targetContainerId = containerId;
     state.classId = classId || 'warrior';
-    state.capMode = options.capMode || state.capMode || 'lvl30_perk';
+    state.capMode = options.capMode || state.capMode || 'lvl60';
     state.maxPoints = state.capMode === 'lvl60' ? 51 : (state.capMode === 'lvl30_base' ? 21 : 26);
     state.isBlankSlate = options.blankSlate !== undefined ? !!options.blankSlate : false;
 
@@ -1069,7 +1069,7 @@
     }
     state.classId = options.classId || 'priest';
     state.specId = options.specId || 'custom';
-    state.capMode = options.capMode || 'lvl30_perk';
+    state.capMode = options.capMode || 'lvl60';
     state.maxPoints = options.maxPoints || (state.capMode === 'lvl60' ? 51 : (state.capMode === 'lvl30_base' ? 21 : 26));
     state.buildUrl = options.buildUrl || '';
     state.buildCode = options.buildCode || '';

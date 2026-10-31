@@ -581,9 +581,9 @@ check('Presence of new talent nodes with valid metadata and rank counts in talen
   const talentsData = data.talentsData;
   const expectedNodes = [
     { cls: 'shaman', name: 'Elemental Mastery', tree: 0, row: 7, col: 2, maxRank: 1, req: 278 },
-    { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: null },
+    { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: 322 },
     { cls: 'priest', name: 'Dark Inspiration', tree: 2, row: 4, col: 1, maxRank: 5, req: null },
-    { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 4, col: 4, maxRank: 2, req: null },
+    { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 2, col: 1, maxRank: 2, req: null },
     { cls: 'mage', name: 'Precision', tree: 2, row: 1, col: 3, maxRank: 3, req: null },
     { cls: 'mage', name: 'Accelerant', tree: 1, row: 1, col: 3, maxRank: 5, req: null }
   ];

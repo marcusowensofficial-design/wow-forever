@@ -1,10 +1,9 @@
 /**
- * WoW Forever Beta 1.60.1 (Build 70425 & 70707 Hotfix Tuning) Official Talent Trees Database
- * 
- * Contains complete 9 classes, 27 specialization trees, and 467 authentic talent nodes
- * with exact 4x7 grid coordinates, rank caps, prerequisite chains, and localized rank descriptions.
- * Updated as of October 30, 2026.
+ * World of Warcraft: Forever - Class Talent Trees Dataset
+ * Updated through October 31, 2026 (Client Build 1.60.1.70707 and Launch Realm Hotfix).
+ * Authentic 3-tree Classic+ calculator across all 9 classes (27 specialization trees).
  */
+
 window.WOW_TALENTS_DATA = {
   "warrior": {
     "id": "warrior",
@@ -238,11 +237,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1289682,
         "req": null,
         "descriptions": [
-          "Your Main Hand melee attacks against enemies afflicted by your Rend have a 4% chance to allow the use of your Overpower ability on the target. Lasts 6 sec.",
-          "Your Main Hand melee attacks against enemies afflicted by your Rend have a 8% chance to allow the use of your Overpower ability on the target. Lasts 6 sec.",
-          "Your Main Hand melee attacks against enemies afflicted by your Rend have a 12% chance to allow the use of your Overpower ability on the target. Lasts 6 sec.",
-          "Your Main Hand melee attacks against enemies afflicted by your Rend have a 16% chance to allow the use of your Overpower ability on the target. Lasts 6 sec.",
-          "Your Main Hand melee attacks against enemies afflicted by your Rend have a 20% chance to allow the use of your Overpower ability on the target. Lasts 6 sec."
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 4% chance to allow an activation of Overpower.",
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 8% chance to allow an activation of Overpower.",
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 12% chance to allow an activation of Overpower.",
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 16% chance to allow an activation of Overpower.",
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 20% chance to allow an activation of Overpower."
         ]
       },
       {
@@ -274,11 +273,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1290261,
         "req": null,
         "descriptions": [
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Polearm:|R Increases your\n    critical strike chance by 1%.\n\n    |CFFFFFFFFMace/Staff:|R Your attacks ignore\n    3% of your target's armor.\n\n    |CFFFFFFFFSword:|R Your successful melee \n    attacks have a 1% chance to \n    trigger an extra attack on the \n    target.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Polearm:|R Increases your\n    critical strike chance by 2%.\n\n    |CFFFFFFFFMace/Staff:|R Your attacks ignore\n    6% of your target's armor.\n\n    |CFFFFFFFFSword:|R Your successful melee \n    attacks have a 2% chance to \n    trigger an extra attack on the \n    target.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Polearm:|R Increases your\n    critical strike chance by 3%.\n\n    |CFFFFFFFFMace/Staff:|R Your attacks ignore\n    9% of your target's armor.\n\n    |CFFFFFFFFSword:|R Your successful melee \n    attacks have a 3% chance to \n    trigger an extra attack on the \n    target.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Polearm:|R Increases your\n    critical strike chance by 4%.\n\n    |CFFFFFFFFMace/Staff:|R Your attacks ignore\n    12% of your target's armor.\n\n    |CFFFFFFFFSword:|R Your successful melee \n    attacks have a 4% chance to \n    trigger an extra attack on the \n    target.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Polearm:|R Increases your\n    critical strike chance by 5%.\n\n    |CFFFFFFFFMace/Staff:|R Your attacks ignore\n    15% of your target's armor.\n\n    |CFFFFFFFFSword:|R Your successful melee \n    attacks have a 5% chance to \n    trigger an extra attack on the \n    target."
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Polearm: Increases your\ncritical strike chance by 1%.\n\nMace/Staff: Your attacks ignore\n3% of your target's armor.\n\nSword: Your successful melee\nattacks have a 1% chance to\ntrigger an extra attack on the\ntarget.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Polearm: Increases your\ncritical strike chance by 2%.\n\nMace/Staff: Your attacks ignore\n6% of your target's armor.\n\nSword: Your successful melee\nattacks have a 2% chance to\ntrigger an extra attack on the\ntarget.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Polearm: Increases your\ncritical strike chance by 3%.\n\nMace/Staff: Your attacks ignore\n9% of your target's armor.\n\nSword: Your successful melee\nattacks have a 3% chance to\ntrigger an extra attack on the\ntarget.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Polearm: Increases your\ncritical strike chance by 4%.\n\nMace/Staff: Your attacks ignore\n12% of your target's armor.\n\nSword: Your successful melee\nattacks have a 4% chance to\ntrigger an extra attack on the\ntarget.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Polearm: Increases your\ncritical strike chance by 5%.\n\nMace/Staff: Your attacks ignore\n15% of your target's armor.\n\nSword: Your successful melee\nattacks have a 5% chance to\ntrigger an extra attack on the\ntarget."
         ]
       },
       {
@@ -620,7 +619,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1323967,
         "req": 28,
         "descriptions": [
-          "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health.",
+          "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
           "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
         ]
       },
@@ -2111,7 +2110,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1293241,
         "req": null,
         "descriptions": [
-          "Command a hawk to dive-bomb your targeted enemy, dealing 32 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+          "Command a hawk to dive-bomb your targeted enemy, dealing 34 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
         ]
       },
       {
@@ -2197,7 +2196,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 19574,
         "req": 119,
         "descriptions": [
-          "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+          "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
         ]
       },
       {
@@ -2418,8 +2417,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1223987,
         "req": 129,
         "descriptions": [
-          "Hitting a target with your Serpent Sting ability grants you 25% and consuming Rapid Killing grants you 50% of your Mana regeneration while casting for the next 15 sec.",
-          "Hitting a target with your Serpent Sting ability grants you 50% and consuming Rapid Killing grants you 100% of your Mana regeneration while casting for the next 15 sec."
+          "Afflicting a target with Serpent Sting allows 25% of your Mana Regeneration to continue while casting for 15 sec, increased to 50% when Rapid Killing is consumed.",
+          "Afflicting a target with Serpent Sting allows 50% of your Mana Regeneration to continue while casting for 15 sec, increased to 100% when Rapid Killing is consumed."
         ]
       },
       {
@@ -2453,7 +2452,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 19503,
         "req": null,
         "descriptions": [
-          "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used."
+          "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
         ]
       },
       {
@@ -2688,11 +2687,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310627,
         "req": null,
         "descriptions": [
-          "Increases the critical strike damage of your abilities by 6% and your Off Hand weapon damage by 10%.",
-          "Increases the critical strike damage of your abilities by 12% and your Off Hand weapon damage by 20%.",
-          "Increases the critical strike damage of your abilities by 18% and your Off Hand weapon damage by 30%.",
-          "Increases the critical strike damage of your abilities by 24% and your Off Hand weapon damage by 40%.",
-          "Increases the critical strike damage of your abilities by 30% and your Off Hand weapon damage by 50%."
+          "Increases your melee ability critical strike damage by 6% and your Off Hand weapon damage by 10%.",
+          "Increases your melee ability critical strike damage by 12% and your Off Hand weapon damage by 20%.",
+          "Increases your melee ability critical strike damage by 18% and your Off Hand weapon damage by 30%.",
+          "Increases your melee ability critical strike damage by 24% and your Off Hand weapon damage by 40%.",
+          "Increases your melee ability critical strike damage by 30% and your Off Hand weapon damage by 50%."
         ]
       },
       {
@@ -2724,8 +2723,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 440529,
         "req": null,
         "descriptions": [
-          "Reduces the mana cost of your Trap abilities, melee abilities, and Strider Kick by 30%. In addition, landing a melee or ranged ability critical strike has a 50% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec (not activated by traps).",
-          "Reduces the mana cost of your Trap abilities, melee abilities, and Strider Kick by 60%. In addition, landing a melee or ranged ability critical strike has a 100% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec (not activated by traps)."
+          "Reduces the Mana cost of your Trap and melee abilities by 30%, and grants your melee and ranged ability Critical Strikes a 50% chance to allow 50% of your Mana Regeneration to continue while casting for 30 sec.",
+          "Reduces the Mana cost of your Trap and melee abilities by 60%, and grants your melee and ranged ability Critical Strikes a 100% chance to allow 50% of your Mana Regeneration to continue while casting for 30 sec."
         ]
       },
       {
@@ -2741,8 +2740,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310532,
         "req": null,
         "descriptions": [
-          "Your attacks against targets with Hunter's Mark have a 5% chance to activate your Mongoose Bite for 10 sec.",
-          "Your attacks against targets with Hunter's Mark have a 10% chance to activate your Mongoose Bite for 10 sec."
+          "Grants your melee and ranged attacks against enemies afflicted by Hunter's Mark a 5% chance to allow an activation of Mongoose Bite. Lasts 10 sec.",
+          "Grants your melee and ranged attacks against enemies afflicted by Hunter's Mark a 10% chance to allow an activation of Mongoose Bite. Lasts 10 sec."
         ]
       },
       {
@@ -2977,7 +2976,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14168,
         "req": null,
         "descriptions": [
-          "Reduces the Energy cost of your Expose Armor ability by 5, and refunds 1 Combo Point when cast with 5 Combo Points.",
+          "Reduces the Energy cost of your Expose Armor ability by 5, and refunds 1 Combo Points when cast with 5 Combo Points.",
           "Reduces the Energy cost of your Expose Armor ability by 10, and refunds 2 Combo Points when cast with 5 Combo Points."
         ]
       },
@@ -3140,7 +3139,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310703,
         "req": 170,
         "descriptions": [
-          "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n   1 point  : 9 sec\n   2 points: 12 sec\n   3 points: 15 sec\n   4 points: 18 sec\n   5 points: 21 sec"
+          "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n1 point : 9 sec\n2 points: 12 sec\n3 points: 15 sec\n4 points: 18 sec\n5 points: 21 sec"
         ]
       },
       {
@@ -3282,7 +3281,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14251,
         "req": 178,
         "descriptions": [
-          "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
+          "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec."
         ]
       },
       {
@@ -3384,11 +3383,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 13960,
         "req": null,
         "descriptions": [
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Sword:|R Your successful\n    melee attacks have a 1% chance\n    to trigger an extra attack on the \n    target.\n\n    |CFFFFFFFFDagger/Fist:|R Increases your\n    critical strike chance by 1%.\n\n    |CFFFFFFFFMace:|R Your attacks ignore 3% of\n    your target's armor.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Sword:|R Your successful\n    melee attacks have a 2% chance\n    to trigger an extra attack on the \n    target.\n\n    |CFFFFFFFFDagger/Fist:|R Increases your\n    critical strike chance by 2%.\n\n    |CFFFFFFFFMace:|R Your attacks ignore 6% of\n    your target's armor.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Sword:|R Your successful\n    melee attacks have a 3% chance\n    to trigger an extra attack on the \n    target.\n\n    |CFFFFFFFFDagger/Fist:|R Increases your\n    critical strike chance by 3%.\n\n    |CFFFFFFFFMace:|R Your attacks ignore 9% of\n    your target's armor.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Sword:|R Your successful\n    melee attacks have a 4% chance\n    to trigger an extra attack on the \n    target.\n\n    |CFFFFFFFFDagger/Fist:|R Increases your\n    critical strike chance by 4%.\n\n    |CFFFFFFFFMace:|R Your attacks ignore 12% of\n    your target's armor.",
-          "Gives your melee weapon attacks a benefit depending on the weapon.\n\n    |CFFFFFFFFAxe/Sword:|R Your successful\n    melee attacks have a 5% chance\n    to trigger an extra attack on the \n    target.\n\n    |CFFFFFFFFDagger/Fist:|R Increases your\n    critical strike chance by 5%.\n\n    |CFFFFFFFFMace:|R Your attacks ignore 15% of\n    your target's armor."
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 1% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 1%.\n\nMace: Your attacks ignore 3% of\nyour target's armor.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 2% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 2%.\n\nMace: Your attacks ignore 6% of\nyour target's armor.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 3% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 3%.\n\nMace: Your attacks ignore 9% of\nyour target's armor.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 4% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 4%.\n\nMace: Your attacks ignore 12% of\nyour target's armor.",
+          "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 5% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 5%.\n\nMace: Your attacks ignore 15% of\nyour target's armor."
         ]
       },
       {
@@ -3598,7 +3597,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14278,
         "req": null,
         "descriptions": [
-          "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo point."
+          "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo points."
         ]
       },
       {
@@ -3715,7 +3714,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16511,
         "req": 203,
         "descriptions": [
-          "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point."
+          "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Points."
         ]
       },
       {
@@ -3870,9 +3869,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14523,
         "req": null,
         "descriptions": [
-          "Reduces the threat generated by all your spells by 10% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 5%.\n",
-          "Reduces the threat generated by all your spells by 20% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 10%.\n",
-          "Reduces the threat generated by all your spells by 30% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 15%.\n"
+          "Reduces the threat generated by your spells by 10% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 5%.",
+          "Reduces the threat generated by your spells by 20% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 10%.",
+          "Reduces the threat generated by your spells by 30% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 15%."
         ]
       },
       {
@@ -3883,7 +3882,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_divineillumination.jpg",
         "iconName": "spell_holy_divineillumination",
         "row": 2,
-        "col": 3,
+        "col": 2,
         "maxRank": 3,
         "spellId": 1309957,
         "req": null,
@@ -4006,16 +4005,16 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_enchantarmor.jpg",
         "iconName": "spell_nature_enchantarmor",
         "row": 2,
-        "col": 2,
+        "col": 3,
         "maxRank": 5,
         "spellId": 18551,
         "req": null,
         "descriptions": [
-          "Increases your total Intellect by 3%.",
+          "Increases your total Intellect by 2%.",
+          "Increases your total Intellect by 4%.",
           "Increases your total Intellect by 6%.",
-          "Increases your total Intellect by 9%.",
-          "Increases your total Intellect by 12%.",
-          "Increases your total Intellect by 15%."
+          "Increases your total Intellect by 8%.",
+          "Increases your total Intellect by 10%."
         ]
       },
       {
@@ -4042,7 +4041,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_manaburn.jpg",
         "iconName": "spell_shadow_manaburn",
         "row": 4,
-        "col": 4,
+        "col": 2,
         "maxRank": 2,
         "spellId": 14750,
         "req": null,
@@ -4080,11 +4079,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 425280,
         "req": 222,
         "descriptions": [
-          "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
-          "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
-          "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
-          "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
-          "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
+          "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+          "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+          "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+          "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+          "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
         ]
       },
       {
@@ -4100,9 +4099,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 431622,
         "req": null,
         "descriptions": [
-          "Your non-periodic critical heals create a protective shield on the target, absorbing 5% of the amount healed, up to a maximum shield value. Lasts 12 sec.",
-          "Your non-periodic critical heals create a protective shield on the target, absorbing 10% of the amount healed, up to a maximum shield value. Lasts 12 sec.",
-          "Your non-periodic critical heals create a protective shield on the target, absorbing 15% of the amount healed, up to a maximum shield value. Lasts 12 sec."
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 5% of the amount healed. Shields up to 1200 damage and lasts 12 sec.",
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 10% of the amount healed. Shields up to 1200 damage and lasts 12 sec.",
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 15% of the amount healed. Shields up to 1200 damage and lasts 12 sec."
         ]
       },
       {
@@ -4134,9 +4133,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14913,
         "req": null,
         "descriptions": [
-          "Gives you a 23% chance to avoid interruption caused by damage while casting any spell.",
-          "Gives you a 47% chance to avoid interruption caused by damage while casting any spell.",
-          "Gives you a 70% chance to avoid interruption caused by damage while casting any spell."
+          "Gives your spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -4367,7 +4366,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 20711,
         "req": null,
         "descriptions": [
-          "Upon death, the priest becomes the Spirit of Redemption for 15 sec.  The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects.  While in this form the priest can cast any healing spell free of cost.  When the effect ends, the priest dies."
+          "Upon death, the priest becomes the Spirit of Redemption for 15 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the priest dies."
         ]
       },
       {
@@ -4568,7 +4567,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 15407,
         "req": null,
         "descriptions": [
-          "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec  and slowing their movement speed by 50%."
+          "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec and slowing their movement speed by 50%."
         ]
       },
       {
@@ -4593,19 +4592,19 @@ window.WOW_TALENTS_DATA = {
         "tree": 2,
         "treeId": 15,
         "name": "Dark Inspiration",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_requiem.jpg",
-        "iconName": "spell_shadow_requiem",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_warlock_demonsoul.jpg",
+        "iconName": "spell_warlock_demonsoul",
         "row": 4,
         "col": 1,
         "maxRank": 5,
         "spellId": 15286,
         "req": null,
         "descriptions": [
-          "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 3% for 10 sec.",
-          "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 6% for 10 sec.",
-          "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 9% for 10 sec.",
-          "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 12% for 10 sec.",
-          "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 15% for 10 sec."
+          "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 3% for 10 sec.",
+          "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 6% for 10 sec.",
+          "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 9% for 10 sec.",
+          "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 12% for 10 sec.",
+          "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 15% for 10 sec."
         ]
       },
       {
@@ -4637,9 +4636,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 15257,
         "req": null,
         "descriptions": [
-          "Your Shadow damage spells have a 33% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
-          "Your Shadow damage spells have a 67% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
-          "Your Shadow damage spells have a 100% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times."
+          "Your Shadow damage spells have a 33% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times.",
+          "Your Shadow damage spells have a 67% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times.",
+          "Your Shadow damage spells have a 100% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times."
         ]
       },
       {
@@ -4671,8 +4670,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1309950,
         "req": null,
         "descriptions": [
-          "Reduces the mana cost of your Devouring Plague by 25%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to up to 2 nearby enemies within 5 yds for the remaining duration.\n",
-          "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to up to 2 nearby enemies within 10 yds for the remaining duration.\n"
+          "Reduces the mana cost of your Devouring Plague by 25%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to 2 nearby enemies within 5 yds for the remaining duration.",
+          "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to 2 nearby enemies within 10 yds for the remaining duration."
         ]
       },
       {
@@ -4802,7 +4801,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_spiritarmor.jpg",
         "iconName": "spell_nature_spiritarmor",
         "row": 3,
-        "col": 1,
+        "col": 2,
         "maxRank": 3,
         "spellId": 28996,
         "req": null,
@@ -4840,14 +4839,14 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_immolation.jpg",
         "iconName": "spell_fire_immolation",
         "row": 2,
-        "col": 3,
+        "col": 4,
         "maxRank": 3,
         "spellId": 16038,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, and extends the duration of Flame Shock by 3 seconds.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, and extends the duration of Flame Shock by 6 seconds.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, and extends the duration of Flame Shock by 9 seconds."
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
         ]
       },
       {
@@ -4858,14 +4857,14 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_elementaldevastation.jpg",
         "iconName": "spell_fire_elementaldevastation",
         "row": 2,
-        "col": 4,
+        "col": 1,
         "maxRank": 3,
         "spellId": 30160,
         "req": null,
         "descriptions": [
-          "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 3% for 10 sec.",
-          "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 6% for 10 sec.",
-          "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 9% for 10 sec."
+          "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+          "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 6% for 10 sec.",
+          "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec."
         ]
       },
       {
@@ -4876,12 +4875,12 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_manaburn.jpg",
         "iconName": "spell_shadow_manaburn",
         "row": 3,
-        "col": 2,
+        "col": 1,
         "maxRank": 1,
         "spellId": 16164,
         "req": null,
         "descriptions": [
-          "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
         ]
       },
       {
@@ -4892,7 +4891,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_lightning_lightningbolt01.jpg",
         "iconName": "spell_lightning_lightningbolt01",
         "row": 2,
-        "col": 1,
+        "col": 3,
         "maxRank": 3,
         "spellId": 16578,
         "req": null,
@@ -4915,8 +4914,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16086,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec.",
-          "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec."
+          "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+          "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec."
         ]
       },
       {
@@ -4932,9 +4931,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 29062,
         "req": null,
         "descriptions": [
-          "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 23%.",
-          "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 47%.",
-          "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 70%."
+          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -4950,8 +4949,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 28999,
         "req": null,
         "descriptions": [
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, increases the range of your Flame Shock spell by 8 yards, and reduces the cooldown on Totemic Projection by 10 seconds.",
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, increases the range of your Flame Shock spell by 15 yards, and reduces the cooldown on Totemic Projection by 20 seconds."
+          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards and reduces the cooldown of Totemic Projection by 10 sec.",
+          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards and reduces the cooldown of Totemic Projection by 20 sec."
         ]
       },
       {
@@ -4963,14 +4962,11 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_shaman_lavaburst",
         "row": 5,
         "col": 2,
-        "maxRank": 4,
+        "maxRank": 1,
         "spellId": 408490,
         "req": null,
         "descriptions": [
-          "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
-          "You hurl molten lava at the target, dealing 215 to 275 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
-          "You hurl molten lava at the target, dealing 285 to 365 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
-          "You hurl molten lava at the target, dealing 360 to 460 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+          "You hurl molten lava at the target, dealing 114 to 145 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
         ]
       },
       {
@@ -4986,9 +4982,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 408438,
         "req": 277,
         "descriptions": [
-          "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.\n",
-          "Gives your Lightning Bolt and Chain Lightning spells a 7% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.\n",
-          "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.\n"
+          "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 7% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
         ]
       },
       {
@@ -5508,9 +5504,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16181,
         "req": null,
         "descriptions": [
-          "Gives you a 23% chance to avoid interruption caused by damage while casting any healing spell.",
-          "Gives you a 47% chance to avoid interruption caused by damage while casting any healing spell.",
-          "Gives you a 70% chance to avoid interruption caused by damage while casting any healing spell."
+          "Gives your healing spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your healing spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your healing spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -5526,7 +5522,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 408510,
         "req": null,
         "descriptions": [
-          "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's healing spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds.  Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+          "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
         ]
       },
       {
@@ -5711,11 +5707,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11237,
         "req": null,
         "descriptions": [
-          "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 14% chance while casting Arcane Blast.",
-          "Gives you a 40% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 28% chance while casting Arcane Blast.",
-          "Gives you a 60% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 42% chance while casting Arcane Blast.",
-          "Gives you a 80% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 56% chance while casting Arcane Blast.",
-          "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 70% chance while casting Arcane Blast."
+          "Gives your Arcane Missiles spell a 20% chance and your Arcane Blast and Arcane Wrath spells a 14% chance to not lose casting time when you take damage.",
+          "Gives your Arcane Missiles spell a 40% chance and your Arcane Blast and Arcane Wrath spells a 28% chance to not lose casting time when you take damage.",
+          "Gives your Arcane Missiles spell a 60% chance and your Arcane Blast and Arcane Wrath spells a 42% chance to not lose casting time when you take damage.",
+          "Gives your Arcane Missiles spell a 80% chance and your Arcane Blast and Arcane Wrath spells a 56% chance to not lose casting time when you take damage.",
+          "Gives your Arcane Missiles spell a 100% chance and your Arcane Blast and Arcane Wrath spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -5765,11 +5761,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11213,
         "req": null,
         "descriptions": [
-          "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-          "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-          "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-          "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-          "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
         ]
       },
       {
@@ -5906,8 +5902,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 44404,
         "req": null,
         "descriptions": [
-          "Gives your Arcane Blast spell a 20% chance, your Arcane Missiles hits a 20% chance, and your Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
-          "Gives your Arcane Blast spell a 40% chance, your Arcane Missiles hits a 40% chance, and your Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+          "Gives your Arcane Blast spell a 20% chance, and your Arcane Wrath, Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+          "Gives your Arcane Blast spell a 40% chance, and your Arcane Wrath, Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
         ]
       },
       {
@@ -5915,15 +5911,15 @@ window.WOW_TALENTS_DATA = {
         "tree": 0,
         "treeId": 7,
         "name": "Arcane Wrath",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_arcane_blast.jpg",
-        "iconName": "spell_arcane_blast",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_mage_netherwindpresence.jpg",
+        "iconName": "ability_mage_netherwindpresence",
         "row": 4,
         "col": 4,
         "maxRank": 1,
         "spellId": 44614,
-        "req": null,
+        "req": 322,
         "descriptions": [
-          "A powerful blast of arcane energy with a 3.5 sec cast time that deals base damage increased by bonus spell damage equal to 5% of your maximum Mana."
+          "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana."
         ]
       },
       {
@@ -6046,11 +6042,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11069,
         "req": null,
         "descriptions": [
-          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.1 sec.",
-          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.2 sec.",
-          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.3 sec.",
-          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.4 sec.",
-          "Reduces the casting time of your Fireball, Frostfire Bolt and Arcane Wrath spells by 0.5 sec."
+          "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.1 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.2 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.3 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.4 sec.",
+          "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.5 sec."
         ]
       },
       {
@@ -6165,8 +6161,8 @@ window.WOW_TALENTS_DATA = {
         "tree": 1,
         "treeId": 8,
         "name": "Improved Scorch",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_windsofwoe.jpg",
-        "iconName": "spell_fire_windsofwoe",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_fire_soulburn.jpg",
+        "iconName": "spell_fire_soulburn",
         "row": 4,
         "col": 1,
         "maxRank": 3,
@@ -6208,7 +6204,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 400624,
         "req": 339,
         "descriptions": [
-          "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times."
+          "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times. Fire Blast grants an additional stack every time it deals damage."
         ]
       },
       {
@@ -6276,9 +6272,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11124,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Fire spells by 1% per Fire effect on the target, up to a maximum increase of 12%.",
-          "Increases the damage done by your Fire spells by 2% per Fire effect on the target, up to a maximum increase of 12%.",
-          "Increases the damage done by your Fire spells by 3% per Fire effect on the target, up to a maximum increase of 12%."
+          "Increases the damage done by your Fire spells by 1% per your Fire effects on the target, up to a maximum increase of 4%. Effects which mix multiple schools of magic do not qualify.",
+          "Increases the damage done by your Fire spells by 2% per your Fire effects on the target, up to a maximum increase of 8%. Effects which mix multiple schools of magic do not qualify.",
+          "Increases the damage done by your Fire spells by 3% per your Fire effects on the target, up to a maximum increase of 12%. Effects which mix multiple schools of magic do not qualify."
         ]
       },
       {
@@ -6294,7 +6290,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11129,
         "req": 344,
         "descriptions": [
-          "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells."
+          "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells."
         ]
       },
       {
@@ -6310,8 +6306,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11189,
         "req": null,
         "descriptions": [
-          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 15%, and increases the damage absorbed by your Ice Barrier and Frost Ward by 10%. In addition, gives your Frost Ward a 10% chance to negate Frost spells and effects while active.",
-          "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 30%, and increases the damage absorbed by your Ice Barrier and Frost Ward by 20%. In addition, gives your Frost Ward a 20% chance to negate Frost spells and effects while active."
+          "Increases the Armor and resistances granted by your Frost Armor and Ice Armor spells by 15%, gives your Frost Ward a 10% chance to negate the warded damage spell, and increases the amount absorbed by your Ice Barrier and Frost Ward by 10%.",
+          "Increases the Armor and resistances granted by your Frost Armor and Ice Armor spells by 30%, gives your Frost Ward a 20% chance to negate the warded damage spell, and increases the amount absorbed by your Ice Barrier and Frost Ward by 20%."
         ]
       },
       {
@@ -6327,11 +6323,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11070,
         "req": null,
         "descriptions": [
-          "Reduces the casting time of your Frostbolt spell by 0.1 sec.",
-          "Reduces the casting time of your Frostbolt spell by 0.2 sec.",
-          "Reduces the casting time of your Frostbolt spell by 0.3 sec.",
-          "Reduces the casting time of your Frostbolt spell by 0.4 sec.",
-          "Reduces the casting time of your Frostbolt spell by 0.5 sec."
+          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.1 sec.",
+          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.2 sec.",
+          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.3 sec.",
+          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.4 sec.",
+          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.5 sec."
         ]
       },
       {
@@ -6380,7 +6376,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_wisp.jpg",
         "iconName": "spell_frost_wisp",
         "row": 2,
-        "col": 2,
+        "col": 4,
         "maxRank": 3,
         "spellId": 11175,
         "req": null,
@@ -6415,7 +6411,7 @@ window.WOW_TALENTS_DATA = {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostarmor.jpg",
         "iconName": "spell_frost_frostarmor",
         "row": 2,
-        "col": 4,
+        "col": 2,
         "maxRank": 3,
         "spellId": 11071,
         "req": null,
@@ -6705,8 +6701,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Grim Reach",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_callofbone.jpg",
         "iconName": "spell_shadow_callofbone",
-        "row": 4,
-        "col": 4,
+        "row": 2,
+        "col": 1,
         "maxRank": 2,
         "spellId": 18218,
         "req": null,
@@ -6780,9 +6776,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 17783,
         "req": null,
         "descriptions": [
-          "Gives you a 23% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-          "Gives you a 47% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-          "Gives you a 70% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells."
+          "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -6798,7 +6794,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 18288,
         "req": null,
         "descriptions": [
-          "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%.  Lasts 30 sec."
+          "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec."
         ]
       },
       {
@@ -6869,7 +6865,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 18223,
         "req": 375,
         "descriptions": [
-          "Reduces the target's movement speed by 30% for 12 sec.  Only one Curse per Warlock can be active on any one target."
+          "Reduces the target's movement speed by 30% for 12 sec. Only one Curse per Warlock can be active on any one target."
         ]
       },
       {
@@ -6885,7 +6881,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 18265,
         "req": null,
         "descriptions": [
-          "Transfers 11 health from the target to the caster every 3 sec.  Lasts 30 sec."
+          "Transfers 11 health from the target to the caster every 3 sec. Lasts 30 sec."
         ]
       },
       {
@@ -7118,7 +7114,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 18788,
         "req": null,
         "descriptions": [
-          "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hrs. The effect is canceled if any Demon is summoned.\n\nImp: Increases your Shadow damage by 15%.\n\nVoidwalker: Restores 2% of your total Mana every 4 sec.\n\nSuccubus/Incubus: Increases your Fire damage by 15%.\n\nFelhunter: Restores 3% of your total Health every 4 sec."
+          "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hr. The effect is canceled if any Demon is summoned.\n\nImp: Increases your Shadow damage by 15%.\n\nVoidwalker: Restores 2% of your total Mana every 4 sec.\n\nSuccubus/Incubus: Increases your Fire damage by 15%.\n\nFelhunter: Restores 3% of your total Health every 4 sec."
         ]
       },
       {
@@ -7184,9 +7180,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1293695,
         "req": null,
         "descriptions": [
-          "Your Searing Pain generates 17% less threat and brands the target for 10 sec. Your pet's next 2 attacks against the target deal 65 to 68 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
-          "Your Searing Pain generates 33% less threat and brands the target for 10 sec. Your pet's next 4 attacks against the target deal 65 to 68 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
-          "Your Searing Pain generates 50% less threat and brands the target for 10 sec. Your pet's next 6 attacks against the target deal 65 to 68 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat."
+          "Your Searing Pain generates 17% less threat and brands the target for 10 sec. Your pet's next 2 attacks against the target deal 1 to 1 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
+          "Your Searing Pain generates 33% less threat and brands the target for 10 sec. Your pet's next 4 attacks against the target deal 1 to 1 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
+          "Your Searing Pain generates 50% less threat and brands the target for 10 sec. Your pet's next 6 attacks against the target deal 1 to 1 Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat."
         ]
       },
       {
@@ -7274,7 +7270,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 425464,
         "req": 399,
         "descriptions": [
-          "Your Demonic Sacrifice effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect.\n"
+          "Your Demonic Sacrifice effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect."
         ]
       },
       {
@@ -7425,7 +7421,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 17877,
         "req": null,
         "descriptions": [
-          "Instantly blasts the target for 65 to 74 Shadow damage.  If a non-trivial target dies within 8 sec of being hit with Shadowburn, the caster gains a Soul Shard."
+          "Instantly blasts the target for 65 to 74 Shadow damage. If a non-trivial target dies within 8 sec of being hit with Shadowburn, the caster gains a Soul Shard."
         ]
       },
       {
@@ -7441,9 +7437,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 18135,
         "req": null,
         "descriptions": [
-          "Gives you a 23% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-          "Gives you a 47% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-          "Gives you a 70% chance to resist interruption caused by damage while casting or channeling any Destruction spell."
+          "Gives your Destruction spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your Destruction spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your Destruction spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
