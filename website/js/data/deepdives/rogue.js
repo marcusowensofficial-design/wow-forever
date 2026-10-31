@@ -558,8 +558,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Energy cost of Sinister Strike by 5, allowing attacks at a baseline 40 Energy cost." },
               { name: "Lightning Reflexes", points: "3/5", tree: "Combat (Tier 1)", desc: "Increases your Dodge chance by 3%, aiding solo survivability against dungeon elites." },
-              { name: "Precision", points: "5/5", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 5%, neutralizing miss penalties against +3 level mobs." },
-              { name: "Deflection", points: "1/5", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 1%, triggering Riposte counters if unlocked." }
+              { name: "Precision", points: "3/3", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 3%, neutralizing miss penalties against +3 level mobs." },
+              { name: "Deflection", points: "1/3", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 1%, triggering Riposte counters if unlocked." }
             ],
             legacyNotes: "Extra points obtained through Legacy Discovery unlock Riposte (10 Energy disarm + burst strike) and 5/5 Dual Wield Specialization.",
             rotation: [
@@ -592,7 +592,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Agility > Attack Power > Crit",
             bestWeapon: "Slow High-End Damage Dagger (Meteor Shard / Shadowfang)",
             talents: [
-              { name: "Opportunity", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Increases damage dealt with Backstab, Garrote, and Ambush by 20%." },
+              { name: "Opportunity", points: "2/2", tree: "Subtlety (Tier 1)", desc: "Increases damage dealt with Backstab, Garrote, and Ambush by 20%." },
               { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Sinister Strike Energy cost to 40 for when you cannot get behind targets." },
               { name: "Puncturing Wounds", points: "3/3", tree: "Combat (Tier 2)", desc: "Reduces the Energy cost of Backstab to 41, matching Sinister Strike efficiency!" },
               { name: "Remorseless Attacks", points: "1/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, your next Sinister Strike, Backstab, or Ambush has +20% crit chance." }
@@ -623,8 +623,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Agility > Stamina > Attack Power",
             bestWeapon: "Slow Dagger / Sword with High Top-End",
             talents: [
-              { name: "Master of Deception", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth, letting you pass inches from elites." },
-              { name: "Camouflage", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Increases your movement speed while stealthed by 15% and reduces Stealth cooldown by 2 sec." },
+              { name: "Master of Deception", points: "3/3", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth, letting you pass inches from elites." },
+              { name: "Camouflage", points: "2/5", tree: "Subtlety (Tier 1)", desc: "Increases your movement speed while stealthed by 6% and reduces Stealth cooldown by 2 sec." },
               { name: "Remorseless Attacks", points: "2/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, grants +40% critical strike chance on your next strike." },
               { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of Evasion and Vanish by 45 sec." }
             ],
@@ -662,8 +662,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces the Energy cost of your Sinister Strike ability by 5." },
               { name: "Lightning Reflexes", points: "3/5", tree: "Combat (Tier 1)", desc: "Increases your Dodge chance by 3%." },
-              { name: "Deflection", points: "2/5", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 2%." },
-              { name: "Precision", points: "5/5", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 5%." },
+              { name: "Deflection", points: "2/3", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 2%." },
+              { name: "Precision", points: "3/3", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 3%." },
               { name: "Riposte", points: "1/1", tree: "Combat (Tier 3 Keystone)", desc: "A strike that becomes active after parrying an opponent's attack. Deals 150% weapon damage and disarms the target for 6 sec on a 6s cooldown." },
               { name: "Dual Wield Specialization", points: "5/5", tree: "Combat (Tier 4)", desc: "Increases the damage done by your off-hand weapon by 50%." },
               { name: "Blade Flurry", points: "1/1", tree: "Combat (Tier 5 Keystone)", desc: "Increases attack speed by 20% and causes your attacks to strike an additional nearby opponent for 15 sec on a 2-minute cooldown." },
@@ -735,12 +735,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Agility > Attack Power > Stamina > Crit",
             bestWeapon: "Strike of the Hydra / Outlaw Sabre",
             talents: [
-              { name: "Master of Deception", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth." },
-              { name: "Camouflage", points: "5/5", tree: "Subtlety (Tier 2)", desc: "Increases your speed while stealthed by 15% and reduces Stealth cooldown by 5 sec." },
+              { name: "Master of Deception", points: "3/3", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth." },
+              { name: "Camouflage", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Increases your speed while stealthed by 15% and reduces Stealth cooldown by 5 sec." },
               { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of your Vanish and Blind abilities by 1.5 min and Cloak/Evasion by 45 sec." },
               { name: "Ghostly Strike", points: "1/1", tree: "Subtlety (Tier 3 Keystone)", desc: "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec on a 20s cooldown." },
               { name: "Serrated Blades", points: "3/3", tree: "Subtlety (Tier 4)", desc: "Causes your attacks to ignore up to 300 of your target's armor and increases Rupture damage by 30%." },
-              { name: "Initiative", points: "4/5", tree: "Subtlety (Tier 3)", desc: "Gives you an 60% chance to add an additional combo point to your target when using Ambush, Garrote, or Cheap Shot." },
+              { name: "Initiative", points: "3/3", tree: "Subtlety (Tier 3)", desc: "Gives you a 75% chance to add an additional combo point to your target when using Ambush, Garrote, or Cheap Shot." },
               { name: "Preparation", points: "1/1", tree: "Subtlety (Tier 5 Keystone)", desc: "When activated, this ability immediately finishes the cooldown on your other Rogue abilities on a 10-minute cooldown." }
             ],
             legacyNotes: "Extra Legacy discovery points unlock Hemorrhage (debuff that increases physical damage taken by target) and Premeditation.",

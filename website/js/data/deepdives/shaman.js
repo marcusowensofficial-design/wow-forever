@@ -769,10 +769,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Reduces Mana cost of Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
             { "name": "Concussion", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Increases damage of Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
             { "name": "Reverberation", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Reduces the cooldown of your Shock spells by 1 second (down to a rapid 5-second CD)." },
-            { "name": "Elemental Focus", "points": "1/1", "tree": "Elemental (Tier 3)", "desc": "Spell crits enter a Clearcasting state, reducing the mana cost of your next 2 damage spells by 100%!" },
+            { "name": "Elemental Focus", "points": "1/1", "tree": "Elemental (Tier 3)", "desc": "Spell crits enter a Clearcasting state, reducing the mana cost of your next damage spell by 100%!" },
             { "name": "Elemental Warding", "points": "3/3", "tree": "Elemental (Tier 3)", "desc": "Reduces damage taken from Fire, Frost, and Nature effects by 10%." },
             { "name": "Earthbound", "points": "1/1", "tree": "Elemental (Tier 4)", "desc": "Increases the radius of your Earthbind Totem by 50% and health of your Stoneclaw Totem by 50%." },
-            { "name": "Lava Burst", "points": "1/4", "tree": "Elemental (Tier 5)", "desc": "Hurls molten lava at the target, dealing Fire damage. Always critically strikes against targets afflicted by Flame Shock." }
+            { "name": "Lava Burst", "points": "1/1", "tree": "Elemental (Tier 5)", "desc": "Hurls molten lava at the target, dealing heavy Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage." }
           ],
           "legacyNotes": "Extra Legacy points unlock Elemental Devastation and Lightning Mastery cast time reduction.",
           "rotation": [

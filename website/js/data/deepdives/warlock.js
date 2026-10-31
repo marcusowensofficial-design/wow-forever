@@ -628,7 +628,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             role: "Ranged DoT DPS & Drain Engine",
             buildUrl: "/talents/warlock?b=23521302000201--&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/23521302000201--",
-            tagline: "Instant Corruption, Siphon Life 21-point keystone, 4% Nightfall Shadow Bolt procs, and 20% range increase via Row 4 Grim Reach.",
+            tagline: "Instant Corruption, Siphon Life 21-point keystone, 4% Nightfall Shadow Bolt procs, and 20% range increase via Row 2 Grim Reach.",
             statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Stamina > Intellect",
             bestWeapon: "Spellblade of the Archmage / Necromantic Wand / Cursed Shadow Tome",
             talents: [
@@ -639,7 +639,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Improved Drains", points: "3/3", tree: "Affliction (Tier 2)", desc: "Increases the health drained by your Drain Life spell by 10% and mana drained by Drain Mana by 10%." },
               { name: "Fel Concentration", points: "2/3", tree: "Affliction (Tier 3)", desc: "Gives you a 46% chance to avoid interruption caused by damage while channeling Drain Life, Drain Mana, or Drain Soul." },
               { name: "Nightfall", points: "2/2", tree: "Affliction (Tier 4)", desc: "Gives your Corruption and Drain Life spells a 4% chance to make your next Shadow Bolt instant cast." },
-              { name: "Grim Reach", points: "2/2", tree: "Affliction (Tier 4)", desc: "Increases the range of your Affliction spells by 20%." },
+              { name: "Grim Reach", points: "2/2", tree: "Affliction (Tier 2)", desc: "Increases the range of your Affliction spells by 20%." },
               { name: "Siphon Life", points: "1/1", tree: "Affliction (Tier 5 Keystone)", desc: "Transfers health from the target to the caster every 3 sec for 30 sec." }
             ],
             legacyNotes: "Extra Legacy discovery points unlock Shadow Mastery (+10% Shadow damage), Pandemic, and Amplify Curse.",

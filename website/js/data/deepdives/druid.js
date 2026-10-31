@@ -102,11 +102,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "Shapeshifting costs 445 mana at level 38 with demo gear, requiring thoughtful form management rather than reckless spam shifting."
       },
       {
-        title: "Lacerate Progression Status",
-        status: "demo",
-        statusLabel: "🎙️ Sodapoppin Demo Finding",
+        title: "Lacerate Feral Progression",
+        status: "verified",
+        statusLabel: "✦ Launch Build 1.60.1.70707",
         badge: "Skill Progression",
-        desc: "Lacerate was not available on the level-38 character and could not be tested; expected to become available at level 40 or through later trainer ranks."
+        desc: "Lacerate is confirmed as a Tier 4 Feral Combat talent (Row 4, Col 2 under Savage Fury). Rank 1 is learned via talent, with Rank 2 learned at level 34 from trainers."
       },
       {
         title: "Native Cooldown Manager: Druid Essentials",
@@ -137,11 +137,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Rewards alternating schools: casting Nature spells increases the damage of your next Arcane spell, while casting Arcane spells increases the damage of your next Nature spell!"
         },
         {
-          name: "Moonkin Form (306% Armor & 3% Crit)",
+          name: "Moonkin Form (306% Armor & 3% All Crit)",
           type: "Signature Shapeshift",
           cast: "Instant",
           status: "verified",
-          desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306%, grants +3% Spell Critical Strike chance to all raid members within 45 yards, and grants immunity to Polymorph effects."
+          desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306%, grants +3% Critical Strike chance to all party and raid members within 45 yards (covering spells, melee, and ranged), and grants immunity to Polymorph effects."
         },
         {
           name: "Insect Swarm in Balance Tree",
@@ -186,7 +186,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
 
     feral: {
       title: "Feral: King of the Jungle, Cat Feral Charge & Bear Defense Scaling",
-      tagline: "Leap as a Cat with Feral Charge, execute 100% crit Berserk finishers, and scale Bear armor directly from Defense rating",
+      tagline: "Leap as a Cat with Feral Charge, execute Predatory Discipline excess-energy finishers, and scale Bear armor directly from Defense rating",
       talents: [
         {
           name: "King of the Jungle & Tiger's Fury",
@@ -197,13 +197,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Tiger's Fury increases physical damage by 15% for 6 seconds on a 30s cooldown. King of the Jungle further raises all melee damage against bleeding targets by up to 10%!"
         },
         {
-          name: "Berserk (100% Generator Crit)",
-          type: "Major Feral Cooldown",
-          cast: "Instant",
-          cd: "3 min Cooldown",
-          duration: "15 sec Duration",
+          name: "Predatory Discipline",
+          type: "Feral Finisher Keystone",
+          cast: "Passive",
           status: "verified",
-          desc: "Removes Mangle's cooldown and gives all combo-point-generating abilities (Claw, Rake, Shred) a 100% critical-strike chance for 15 seconds. Does not apply guaranteed crit to Ferocious Bite."
+          desc: "Your Ferocious Bite ability no longer converts extra Energy into damage, preserving energy while still dealing extra bonus damage based on your excess Energy."
         },
         {
           name: "Feral Charge (Cat Form Leap)",
@@ -255,17 +253,17 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
 
     restoration: {
-      title: "Restoration: Wild Growth, Swiftmend & 0.5s GCD Reduction",
-      tagline: "Blanket the party in Wild Growth, burst-heal with non-consuming Swiftmend, and slash HoT global cooldowns by 0.5 seconds",
+      title: "Restoration: Wild Growth, Swiftmend & Bloom Expiration Heals",
+      tagline: "Blanket the party in Wild Growth, burst-heal with non-consuming Swiftmend, and trigger burst heals on HoT expirations via Bloom",
       talents: [
         {
           name: "Wild Growth (Level 40 Party HoT)",
           type: "New Signature AoE HoT",
-          cast: "Instant",
+          cast: "3 sec Cast",
           cd: "6 sec Cooldown",
           duration: "7 sec Duration",
           status: "verified",
-          desc: "Heals the target and up to 4 injured party members within 15 yards over 7 seconds. The amount healed is highest initially and rolls off over time, providing massive emergency group throughput."
+          desc: "Heals the target and up to 4 injured party members within 15 yards over 7 seconds (cast time reduced to 2.5s via Naturalist). The amount healed is highest initially and rolls off over time, providing massive emergency group throughput."
         },
         {
           name: "Swiftmend (Early Placement)",
@@ -276,11 +274,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Moved much earlier in the Restoration tree: instantly heals a friendly target affected by Rejuvenation or Regrowth for burst healing without consuming the underlying HoT effect."
         },
         {
-          name: "0.5s Global Cooldown Reduction",
-          type: "Rotational Acceleration",
+          name: "Bloom (Spirit Expiration Heal)",
+          type: "HoT Expiration Keystone",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces the global cooldown of Rejuvenation, Swiftmend, and Wild Growth by 0.5 seconds (down to 1.0s), enabling lightning-fast multi-target HoT blanketing."
+          desc: "When your Rejuvenation or Regrowth spell expires naturally due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit (or 50% if dispelled)."
         },
         {
           name: "Improved Tranquility (5m CD & Low Threat)",
@@ -465,12 +463,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "0.5s GCD Reduction on HoTs",
+        feature: "Bloom (Spirit Expiration Heal)",
         category: "Restoration",
-        details: "Lowers GCD of Rejuvenation, Swiftmend, and Wild Growth by 0.5 seconds",
-        status: "Verified in Closed Beta",
+        details: "Heals for 100% of Spirit when Rejuvenation or Regrowth expires (50% if dispelled)",
+        status: "Verified in Launch Build",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Build 1.60.1.70707"
       },
       {
         feature: "King of the Jungle & Tiger's Fury",
@@ -481,12 +479,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Berserk (100% Generator Crit)",
+        feature: "Predatory Discipline",
         category: "Feral",
-        details: "Removes Mangle CD and grants 100% crit to combo generators for 15s",
-        status: "Verified in Closed Beta",
+        details: "Ferocious Bite preserves excess Energy while still adding bonus damage",
+        status: "Verified in Launch Build",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Build 1.60.1.70707"
       },
       {
         feature: "Cat Form Feral Charge",
@@ -720,7 +718,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             role: "Ranged Nature & Arcane DPS",
             buildUrl: "/talents/druid?b=50322201140213--&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/505001",
-            tagline: "Signature Moonkin Form (+306% Armor, +3% party spell crit), alternating Eclipse procs, and rapid-fire Starfire nukes.",
+            tagline: "Signature Moonkin Form (+306% Armor, +3% party all-crit), alternating Eclipse procs, and rapid-fire Starfire nukes.",
             statPriority: "Spell Power > Nature / Arcane Damage > Intellect > Spirit",
             bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of the Blessed Seer / Staff of Westfall / Staff of Orgrimmar",
             talents: [

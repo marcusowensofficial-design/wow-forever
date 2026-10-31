@@ -67,11 +67,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "Holy Strike is available as a baseline melee strike dealing 35% weapon damage plus additional Holy damage on an instant cast. Serves as the core active melee button across all three specializations."
       },
       {
-        title: "New Talents: Voice of Truth & Infusion of Light",
+        title: "Baseline Voice of Truth & Infusion of Light",
         status: "exclusive",
         statusLabel: "✦ Forever Exclusive",
-        badge: "Talent Rework",
-        desc: "Beta introduces potent talents: Voice of Truth (complete immunity to Silence and Interrupt mechanics), Reverence (in-combat mana regeneration while casting), Purifying Power (reduced costs/cooldowns for Cleanse/Exorcism), and Infusion of Light (holy crits make next Holy Light fast or instant)."
+        badge: "Spell Progression",
+        desc: "Beta introduces potent capabilities: Voice of Truth (learned baseline at level 20, granting complete immunity to Silence and Interrupt mechanics), Reverence (in-combat mana regeneration while casting), Purifying Power (reduced costs/cooldowns for Cleanse/Exorcism), and Infusion of Light (holy crits make next Holy Light fast or instant)."
       },
       {
         title: "Blessing of Freedom & Kings Mutual Exclusion",
@@ -563,7 +563,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Deflection", points: "3/5", tree: "Retribution (Tier 2)", desc: "Increases your Parry chance by 3%, aiding melee trades." },
               { name: "Seal of Command", points: "1/1", tree: "Retribution (Tier 3)", desc: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of weapon damage." }
             ],
-            legacyNotes: "Extra points obtained through Legacy Discovery unlock 2/2 Pursuit of Justice (8% movement speed) and Conviction (5% melee crit).",
+            legacyNotes: "Extra points obtained through Legacy Discovery unlock 2/2 Pursuit of Justice (8% movement speed) and 3/3 Conviction (+6% all crit).",
             rotation: [
               { label: "Buff & Seal", desc: "Cast Blessing of Might (60m duration) -> Seal of Command." },
               { label: "Rotational Strike", desc: "Holy Strike (baseline instant physical hit dealing Holy dmg) -> Judgement on cooldown." },
@@ -657,7 +657,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             role: "2-Handed Holy Melee DPS & Seal Twister",
             buildUrl: "/talents/paladin?b=--55230201211301&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/--55230201211301",
-            tagline: "Devastating Holy burst with 21-pt Repentance incapacitate, 5/5 Conviction crits, 30% Intellect-to-Spell Damage scaling under Champion of the Light, and 60-minute Blessings.",
+            tagline: "Devastating Holy burst with 21-pt Repentance incapacitate, 3/3 Conviction crits, 30% Intellect-to-Spell Damage scaling under Champion of the Light, and 60-minute Blessings.",
             statPriority: "Strength > Intellect > Attack Power > Melee Crit > Hit",
             bestWeapon: "Corpsemaker (RFK) / Strike of the Hydra (BFD) / Verigan's Fist / Wolfsbane Greatsword",
             talents: [
@@ -666,7 +666,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Deflection", points: "3/5", tree: "Retribution (Tier 2)", desc: "Increases your Parry chance by 3%." },
               { name: "Seal of Command", points: "1/1", tree: "Retribution (Tier 3 Keystone)", desc: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of weapon damage." },
               { name: "Pursuit of Justice", points: "2/2", tree: "Retribution (Tier 3)", desc: "Increases movement and mounted movement speed by 8%." },
-              { name: "Conviction", points: "5/5", tree: "Retribution (Tier 4)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
+              { name: "Conviction", points: "3/3", tree: "Retribution (Tier 2)", desc: "Increases your chance to get a critical strike with all spells and attacks by 6%." },
               { name: "Repentance", points: "1/1", tree: "Retribution (Tier 5 Keystone)", desc: "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Instant cast crowd control on a 1-minute cooldown." },
               { name: "Vengeance", points: "2/5", tree: "Retribution (Tier 5)", desc: "Gives you a 6% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike." }
             ],
@@ -704,9 +704,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Redoubt", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 20% after being struck by a melee or ranged attack." },
               { name: "Precision", points: "3/3", tree: "Protection (Tier 2)", desc: "Increases your chance to hit with melee weapons and spells by 3%." },
               { name: "Guardian's Favor", points: "2/2", tree: "Protection (Tier 2)", desc: "Reduces cooldown of Blessing of Protection by 120s and increases Blessing of Freedom duration by 6s." },
-              { name: "Shield Specialization", points: "3/3", tree: "Protection (Tier 3)", desc: "Increases the amount of damage absorbed by your shield by 30% and gives blocks a 33% chance to restore 4% of your maximum Mana (once every 3 sec)." },
+              { name: "Shield Specialization", points: "2/2", tree: "Protection (Tier 2)", desc: "Increases the amount of damage absorbed by your shield by 30% and gives blocks a 100% chance to restore 4% of your maximum Mana." },
               { name: "Improved Righteous Fury", points: "3/3", tree: "Protection (Tier 3)", desc: "Increases the amount of threat generated by your Righteous Fury spell by 50%." },
-              { name: "One-Handed Weapon Specialization", points: "3/3", tree: "Protection (Tier 4)", desc: "Increases all damage dealt with one-handed melee weapons by 10%." },
+              { name: "Toughness", points: "3/5", tree: "Protection (Tier 3)", desc: "Increases your armor value from items by 6% and reduces the duration of all movement slowing and immobilizing effects by 30%." },
               { name: "Improved Hammer of Justice", points: "1/3", tree: "Protection (Tier 4)", desc: "Decreases the cooldown of your Hammer of Justice spell by 5 sec." },
               { name: "Reckoning", points: "1/5", tree: "Protection (Tier 5)", desc: "Gives you a 20% chance after taking damage to gain an extra weapon swing on your next attack. Stores up to 4 charges and triggers on weapon swing." }
             ],

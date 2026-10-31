@@ -614,7 +614,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "bestWeapon": "High-Spirit / Spell Power Staff (Staff of Orgrimmar / Staff of Westfall / Living Root)",
           "talents": [
             { "name": "Improved Channeling", "points": "5/5", "tree": "Arcane (Tier 1)", "desc": "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles and 70% while casting Arcane Blast." },
-            { "name": "Arcane Resilience", "points": "2/2", "tree": "Arcane (Tier 1)", "desc": "Increases your Armor by an amount equal to 50% of your Intellect." },
+            { "name": "Arcane Resilience", "points": "3/3", "tree": "Arcane (Tier 1)", "desc": "Increases your Armor by an amount equal to 75% of your Intellect." },
             { "name": "Arcane Subtlety", "points": "2/2", "tree": "Arcane (Tier 2)", "desc": "Reduces target magic resistance by 10 and reduces threat caused by Arcane spells by 40%." },
             { "name": "Missile Barrage", "points": "2/2", "tree": "Arcane (Tier 2)", "desc": "Gives your Arcane spells a chance to reduce channeled duration of next Arcane Missiles by 50% and mana cost by 100%." }
           ],
@@ -736,7 +736,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Arcane Impact", "points": "3/3", "tree": "Arcane (Tier 3)", "desc": "Increases the critical strike chance of your Arcane Explosion and Arcane Blast spells by an additional 6%." },
             { "name": "Arcane Blast", "points": "1/1", "tree": "Arcane (Tier 3)", "desc": "Blasts the target with arcane energy, dealing damage and stacking a debuff that increases damage and mana cost." },
             { "name": "Arcane Meditation", "points": "3/3", "tree": "Arcane (Tier 4)", "desc": "Allows 15% of your Mana regeneration to continue while casting." },
-            { "name": "Arcane Wrath", "points": "1/1", "tree": "Arcane (Tier 4)", "desc": "A powerful blast of arcane energy with a 3.5 sec cast time that deals base damage increased by bonus spell damage equal to 5% of your maximum Mana." },
+            { "name": "Arcane Wrath", "points": "1/1", "tree": "Arcane (Tier 4)", "desc": "Fires a blast of arcane energy dealing base damage increased by bonus spell damage equal to 5% of your maximum Mana on an 8 sec cooldown." },
             { "name": "Presence of Mind", "points": "1/1", "tree": "Arcane (Tier 5 Keystone)", "desc": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast on a 3-minute cooldown." }
           ],
           "legacyNotes": "Extra Legacy discovery points unlock Arcane Subtlety (2/2), Arcane Mind (+10% Mana), Arcane Instability (+3% damage/crit), and Arcane Power.",

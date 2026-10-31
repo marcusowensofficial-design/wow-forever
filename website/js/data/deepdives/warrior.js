@@ -558,7 +558,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Improved Rend", points: "3/3", tree: "Arms (Tier 1)", desc: "Increases bleed damage of Rend by 35%. In Forever Beta, Rend ticks can critically strike!" },
               { name: "Deflection", points: "2/5", tree: "Arms (Tier 1)", desc: "Increases your parry chance by 2%, triggering reactive strikes and damage mitigation." },
-              { name: "Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "You retain up to 25 extra rage when changing stances, enabling instant Overpowers and interrupts." },
+              { name: "Improved Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "You retain up to 15 extra rage when changing stances, stacking with baseline 10 Rage for 25 retained Rage." },
               { name: "Deep Wounds", points: "1/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 20% of your melee weapon's average damage." }
             ],
             legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 3/3 Deep Wounds and 2/2 Impale (+20% strike crit damage).",
@@ -667,10 +667,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Improved Rend", points: "3/3", tree: "Arms (Tier 1)", desc: "Increases bleed damage of Rend by 35%. Now instantly deals initial damage on application to secure pull tags!" },
               { name: "Deflection", points: "2/5", tree: "Arms (Tier 1)", desc: "Increases your parry chance by 2%." },
-              { name: "Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "Retain up to 25 extra rage when stance dancing (now stacks with baseline 10 Rage for a massive 35 retained Rage!)." },
+              { name: "Improved Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "Retain up to 15 extra rage when stance dancing (stacks with baseline 10 Rage for a massive 25 retained Rage!)." },
               { name: "Deep Wounds", points: "3/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 60% of your melee weapon's average damage over 12 sec." },
               { name: "Impale", points: "2/2", tree: "Arms (Tier 3)", desc: "Increases the critical strike damage bonus of your weapon abilities by 20%." },
-              { name: "Two-Handed Specialization", points: "5/5", tree: "Arms (Tier 4)", desc: "Increases the physical damage you deal with two-handed melee weapons by 5%." },
+              { name: "Two-Handed Weapon Specialization", points: "3/3", tree: "Arms (Tier 4)", desc: "Increases the physical damage you deal with two-handed melee weapons by 6%." },
               { name: "Sweeping Strikes", points: "1/1", tree: "Arms (Tier 5 Keystone)", desc: "Your next 5 melee attacks strike an additional nearby enemy. Combines with Cleave and Overpower for god-tier dungeon AoE burst!" }
             ],
             legacyNotes: "Extra Legacy discovery points unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Weaponmaster (extra attack swing procs).",

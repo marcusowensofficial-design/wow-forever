@@ -550,8 +550,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Agility > Melee Attack Power > Stamina > Hit",
           "bestWeapon": "Two-Handed Axe/Mace or Dual-Wield (Smite's Mighty Hammer / Cruel Barb)",
           "talents": [
-            { "name": "Monster Slaying", "points": "3/3", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Beasts by 3%." },
-            { "name": "Humanoid Slaying", "points": "2/2", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Humanoids by 3%." },
+            { "name": "Improved Tracking", "points": "5/5", "tree": "Survival (Tier 1)", "desc": "While tracking Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids, or Undead, all damage you deal to the tracked creature type is increased by 5%." },
             { "name": "Savage Strikes", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases critical strike chance of Raptor Strike and Mongoose Bite by 20%." },
             { "name": "Deflection", "points": "1/5", "tree": "Survival (Tier 2)", "desc": "Increases parry chance by 1%, setting up Mongoose Bite and Counterattack procs." }
           ],
@@ -694,8 +693,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "bestWeapon": "Master Hunter's Bow (BFD) / Venomstrike / Excavator's Boomstick",
           "talents": [
             { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the Mana cost of your Shots and Stings by 10%." },
-            { "name": "Lethal Shots", "points": "5/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged critical strike chance by 5%." },
-            { "name": "Aimed Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "Baseline shot granted at trainer; talent rank enhances single-target damage multiplier by 15%." },
+            { "name": "Lethal Attacks", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Increases your ranged critical strike chance by 5%." },
+            { "name": "Careful Aim", "points": "1/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged attack power by an amount equal to 10% of your total Intellect." },
             { "name": "Hawk Eye", "points": "3/3", "tree": "Marksmanship (Tier 3)", "desc": "Increases the range of your ranged weapons by 6 yards (out to 41 yards total!)." },
             { "name": "Mortal Shots", "points": "5/5", "tree": "Marksmanship (Tier 4)", "desc": "Increases the critical strike damage bonus of your ranged weapon abilities by 30%." },
             { "name": "Scatter Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec on an instant cast (30s cooldown)." },

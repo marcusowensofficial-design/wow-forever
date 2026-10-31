@@ -645,7 +645,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             role: "Shadow Ranged DPS & Vampiric Healing Engine",
             buildUrl: "/talents/priest?b=--005522012513&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/--005522012513",
-            tagline: "Passive party healing from Vampiric Embrace, amplified Mind Blast and Shadow Word: Pain crits with Dark Inspiration, and critical-strike Devouring Plague.",
+            tagline: "Passive party healing from Vampiric Embrace, party Spirit boosting with Dark Inspiration, and critical-strike Devouring Plague.",
             statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Spirit > Intellect",
             bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of Orgrimmar (Horde) / Staff of Westfall / Necromantic Wand",
             talents: [
@@ -655,7 +655,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Shadow Reach", points: "2/2", tree: "Shadow (Tier 2)", desc: "Increases the range of your offensive Shadow spells by 20% (36-yard range)." },
               { name: "Mind Flay", points: "1/1", tree: "Shadow (Tier 3 Keystone)", desc: "Assaults the target's mind with Shadow energy, dealing Shadow damage and slowing movement by 50% over 3 sec." },
               { name: "Improved Mind Flay", points: "2/2", tree: "Shadow (Tier 3)", desc: "Increases the periodic damage dealt by your Mind Flay spell by 10% and extends its duration by 1 sec." },
-              { name: "Dark Inspiration", points: "5/5", tree: "Shadow (Tier 4)", desc: "Increases the critical strike chance of your Shadow spells by 5% and reduces mana cost by 10%." },
+              { name: "Dark Inspiration", points: "5/5", tree: "Shadow (Tier 4)", desc: "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 15% for 10 sec." },
               { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts target with Shadow energy, healing all party members for 20% of any single-target Shadow damage you deal for 1 min." },
               { name: "Shadow Weaving", points: "3/3", tree: "Shadow (Tier 4)", desc: "Shadow damage spells have a 100% chance to cause the target to be vulnerable to Shadow damage by 3% for 15 sec (stacks 5 times)." }
             ],
@@ -690,7 +690,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Dalaran Caretaker Gavel / Staff of Orgrimmar / Staff of Westfall",
             talents: [
               { name: "Power in Light", points: "5/5", tree: "Discipline (Tier 1)", desc: "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain." },
-              { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your maximum Mana by 10%." },
+              { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your total Intellect by 10%." },
               { name: "Mental Agility", points: "2/3", tree: "Discipline (Tier 3)", desc: "Reduces the Mana cost of your instant cast spells by 7%." },
               { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3 Keystone)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases critical chance by 25%." },
               { name: "Improved Power Word: Shield", points: "3/3", tree: "Discipline (Tier 3)", desc: "Increases the damage absorbed by your Power Word: Shield by 15%." },

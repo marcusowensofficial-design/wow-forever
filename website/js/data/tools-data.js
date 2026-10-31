@@ -2017,8 +2017,8 @@ Paladins in WoW Forever receive critical quality-of-life adjustments that elevat
 ### Paladin Spec Profiles at Level 30
 
 | Specialization | Role | Top Talent Focus | Signature Utility |
-| **Retribution (0/11/10)** | Burst DPS & PvP Juggernaut | 5/5 Conviction, 1/1 Seal of Command | Blessing of Freedom, Hammer of Justice (5s) |
-| **Holy (21/0/0)** | Infinite Mana Dungeon Healer | 5/5 Divine Intellect, 5/5 Illumination | Flash of Light R1, Cleanse, Lay on Hands |
+| **Retribution (0/11/10)** | Burst DPS & PvP Juggernaut | 3/3 Conviction, 1/1 Seal of Command | Blessing of Freedom, Hammer of Justice (5s) |
+| **Holy (21/0/0)** | Infinite Mana Dungeon Healer | 5/5 Spiritual Focus, 5/5 Illumination | Flash of Light R1, Cleanse, Lay on Hands |
 | **Protection (0/16/5)** | AoE Dungeon Tank | 5/5 Redoubt, 3/3 Precision, Righteous Fury | Righteous Defense (Taunt), Holy Shield prep |
 
 ---
@@ -2029,8 +2029,8 @@ Paladins in WoW Forever receive critical quality-of-life adjustments that elevat
 • **Range:** 30 Yards | **Cooldown:** 10 Seconds | **Cost:** Negligible Mana.
 • **Mechanic:** Taunts up to 3 attacking monsters off an ally onto the Paladin. Completely solves Classic Paladin tanking viability in Excavation Site 4 and City of Dalaran!
 
-#### 2. Voice of Truth (Silence & Interrupt Protection)
-• When casting under aura concentration, reduces silence duration by 50% and grants a 20% Holy Spell Power surge for 6 seconds following any stun dispel.
+#### 2. Voice of Truth (Level 20 Baseline Spell)
+• Learned baseline at level 20 from Paladin trainers. When casting under aura concentration, reduces silence duration by 50% and grants a 20% Holy Spell Power surge for 6 seconds following any stun dispel.
 
 ---
 
@@ -2818,11 +2818,11 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
 • **Defense-to-Armor Conversion:** Every point of Defense rating above defense cap converts directly into bonus Armor, multiplied by Dire Bear Form factor.
 
 #### 3. Balance Moonkin (21/0/0) · Nature & Arcane Weaver
-• **Moonkin Form:** Grants +306% armor, +3% spell crit to all party members, and allows casting Innervate/Gift of the Wild without leaving form.
+• **Moonkin Form:** Grants +306% armor, +3% critical strike chance to all party/raid members (covering spells, melee, and ranged), and allows casting Innervate/Gift of the Wild without leaving form.
 • **Keystones:** 5/5 *Moonglow* (-9% mana cost on Wrath & Starfire), 1/1 *Nature's Grace* (-0.5s casting time on spell crits).
 
 #### 4. Restoration (0/0/21) · Smart Triage
-• **Key Talents:** 1/1 *Swiftmend* (Tier 4), 1/1 *Wild Growth* (smart party HoT), 1/1 *Gift of the Earthmother* (reduces Rejuvenation & Swiftmend GCD by 0.5s down to 1.0s).
+• **Key Talents:** 1/1 *Swiftmend* (Tier 4), 1/1 *Wild Growth* (smart party HoT), 1/1 *Bloom* (heals for 100% of Spirit when Rejuvenation or Regrowth expires).
 
 ---
 
