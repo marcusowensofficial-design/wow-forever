@@ -163,6 +163,9 @@
           for (const sl of sp.slots || []) {
             for (const it of sl.items || []) registerItem(it);
           }
+          for (const c of sp.consumables || []) {
+            registerItem(c);
+          }
         }
       }
     }
@@ -338,6 +341,7 @@
     const rawStats = r ? (r[14] || '') : (fallbackItem?.stats || '');
 
     const curatedTip = window.WOW_DUNGEON_LOOT_TOOLTIPS?.[id];
+    const consumableTip = window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : null);
     const richItem = rich.byId.get(id) || (name ? rich.byName.get(String(name).toLowerCase().trim()) : null);
     const cdlItem = rich.cdlById.get(id);
     const recipeItem = rich.recipeById.get(id) || (name ? rich.recipeByName.get(String(name).toLowerCase().trim()) : null);
@@ -466,7 +470,16 @@
         }
       }
 
-      if (recipeItem?.effect && equip.length === 0) {
+      const itemCat = (r && meta.cats ? meta.cats[r[5]] : '') || '';
+      const isRecipe = itemCat.startsWith('recipe');
+      const isConsumable = itemCat.startsWith('consumable') || ['Potions', 'Elixirs', 'Flasks', 'Scrolls', 'Bandages', 'Consumable'].includes(kind);
+
+      const useEffect = consumableTip || richItem?.effect || (isRecipe || isConsumable ? recipeItem?.effect : null);
+      if (useEffect && equip.length === 0) {
+        const effStr = String(useEffect).trim();
+        const displayEff = (effStr.startsWith('Use:') || effStr.startsWith('Equip:')) ? effStr : `Use: ${effStr}`;
+        html += `<div class="wow-tip-equip" style="color:#4ade80;">${esc(displayEff)}</div>`;
+      } else if (recipeItem?.effect && equip.length === 0) {
         html += `<div class="wow-tip-equip">${esc(recipeItem.effect)}</div>`;
       }
 
@@ -474,7 +487,7 @@
         html += `<div style="color:#cbd5e1;font-size:0.78rem;margin-top:0.25rem;line-height:1.35;">${esc(reagentInfo.summary)}</div>`;
       }
 
-      if (recipeItem?.reagents && recipeItem.reagents.length > 0) {
+      if (isRecipe && recipeItem?.reagents && recipeItem.reagents.length > 0) {
         html += `
           <div style="margin-top:0.35rem;padding-top:0.3rem;border-top:1px dashed rgba(255,255,255,0.1);">
             <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:0.2rem;">Reagents:</div>
@@ -708,6 +721,9 @@
       ? `<span style="display:inline-block;padding:0.12rem 0.45rem;border-radius:4px;font-size:0.72rem;font-weight:700;background:${bind === 'BoE' ? 'rgba(34,197,94,0.16)' : 'rgba(245,158,11,0.16)'};color:${bind === 'BoE' ? '#4ade80' : '#fbbf24'};">${bind}</span>`
       : `<span style="color:#64748b;font-size:0.75rem;">—</span>`;
 
+    const consumableEffect = !stats ? (window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : '')) : '';
+    const cleanConsumableEffect = consumableEffect ? String(consumableEffect).replace(/^Use:\s*/i, '').trim() : '';
+
     return `
       <tr class="codex-db-row" data-row-idx="${i}" data-item-id="${id}" style="border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.84rem;">
         <td style="padding:0.55rem 0.65rem;">
@@ -724,7 +740,7 @@
                 <span style="color:#64748b;font-size:0.72rem;">#${id}</span>
               </div>
               <div style="color:#94a3b8;font-size:0.75rem;">
-                ${esc(kind)}${stats ? ` • <span style="color:#38bdf8;">${esc(stats)}</span>` : ''}
+                ${esc(kind)}${stats ? ` • <span style="color:#38bdf8;">${esc(stats)}</span>` : (cleanConsumableEffect ? ` • <span style="color:#4ade80;">${esc(cleanConsumableEffect)}</span>` : '')}
               </div>
             </div>
           </div>
