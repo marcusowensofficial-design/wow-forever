@@ -199,12 +199,12 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
-    title: 'Complete Item Database (22,493 Items & 28 Dungeon Loot Tables)',
+    title: 'Complete Item Database & Market (22,493 Items & 28 Dungeon Loot Tables)',
     category: 'Database & Loot',
-    icon: '📚',
-    desc: 'Search all 22,493 items, 4,121 new Forever items, and 28 dungeon boss drop tables.',
-    tab: 'codex',
-    targetId: 'codex-database'
+    icon: '📦',
+    desc: 'Search all 22,493 items, 4,121 new Forever items, BoE auction market valuations, and 28 dungeon boss drop tables.',
+    tab: 'database',
+    targetId: 'tab-database'
   });
 
   searchIndex.push({

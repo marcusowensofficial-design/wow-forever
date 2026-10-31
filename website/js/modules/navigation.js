@@ -142,6 +142,13 @@ function initNavigation() {
             window.WOW_WEAPONS_HUB.init();
           }
         }
+      } else if (targetTab === 'database') {
+        const mount = document.getElementById('codex-database-mount');
+        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+          if (typeof window.renderCodexItemDatabase === 'function') {
+            window.renderCodexItemDatabase();
+          }
+        }
       }
 
       if (!isRestoringHistoryState) {
@@ -219,6 +226,8 @@ function initNavigation() {
       tabName = 'legacy';
     } else if (tabName === 'guides' || tabName === 'guide') {
       tabName = 'guides';
+    } else if (['database', 'items', 'item-database', 'market', 'ah'].includes(tabName)) {
+      tabName = 'database';
     }
 
     // Switch tab safely

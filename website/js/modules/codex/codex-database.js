@@ -791,8 +791,16 @@
       <div class="codex-db-wrapper" style="display:flex;flex-direction:column;gap:1.1rem;">
         <div class="section-heading-bar" style="margin-bottom:0.25rem;">
           <div>
-            <h3><span>📚</span> WoW Forever Complete Item Database (${db.totalItems.toLocaleString('en-US')} Items)</h3>
-            <p class="section-subtext">Search every weapon, armor piece, recipe, reagent, and boss drop extracted directly from the Build 1.60.6 game client — including ${db.newInForeverItems.toLocaleString('en-US')} brand-new Classic+ items and ${db.revealedItems.toLocaleString('en-US')} detailed items.</p>
+            <h2><span>📦</span> WoW Forever Item Database &amp; Market (${db.totalItems.toLocaleString('en-US')} Items)</h2>
+            <p class="section-subtext">Search every weapon, armor piece, recipe, reagent, and boss drop extracted directly from the Build 1.60.6 game client — including ${db.newInForeverItems.toLocaleString('en-US')} brand-new Classic+ items, ${db.revealedItems.toLocaleString('en-US')} detailed items, and live BoE auction valuations.</p>
+            <div style="display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem;flex-wrap:wrap;">
+              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);color:#facc15;font-size:0.75rem;font-weight:600;">
+                <span>💰</span> AH Live Pricing Ready (Companion Addon Stream)
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#7dd3fc;font-size:0.75rem;font-weight:600;">
+                <span>🏰</span> 28 Dungeon Boss Drop Tables
+              </span>
+            </div>
           </div>
         </div>
 

@@ -21,6 +21,13 @@ function initCodex() {
           return;
         }
       }
+      if (panelId === 'database') {
+        const dbBtn = document.querySelector('.nav-tab-btn[data-tab="database"]');
+        if (dbBtn) {
+          dbBtn.click();
+          return;
+        }
+      }
       codexNavBtns.forEach(b => b.classList.remove('active'));
       codexPanels.forEach(p => p.classList.remove('active'));
 
@@ -38,6 +45,13 @@ function initCodex() {
         const plannerBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');
         if (plannerBtn) {
           plannerBtn.click();
+          return;
+        }
+      }
+      if (sub === 'database') {
+        const dbBtn = document.querySelector('.nav-tab-btn[data-tab="database"]');
+        if (dbBtn) {
+          dbBtn.click();
           return;
         }
       }
