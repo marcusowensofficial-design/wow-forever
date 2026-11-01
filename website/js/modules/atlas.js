@@ -59,6 +59,10 @@ function setupAtlasSubNav() {
       if (targetSub === 'dungeons' && typeof window.initAtlasDungeons === 'function') {
         window.initAtlasDungeons();
       }
+
+      if (targetSub === 'travel' && typeof window.initAtlasTravel === 'function') {
+        window.initAtlasTravel();
+      }
     });
   });
 }
@@ -70,9 +74,23 @@ function renderRaresRadar() {
   const container = document.getElementById('atlas-rares-grid') || document.getElementById('rares-grid-container');
   const searchInput = document.getElementById('atlas-rare-search') || document.getElementById('rares-search-input');
   const zonePills = document.querySelectorAll('#atlas-zone-filters .atlas-pill');
-  if (!container || !window.WOW_ATLAS_DATA?.rares) return;
+  if (!container || (!window.WOW_ATLAS_DATA?.rares && !window.WOW_WORLD_RARES_DATA)) return;
 
-  const rares = window.WOW_ATLAS_DATA.rares;
+  const rawRares = window.WOW_WORLD_RARES_DATA ? window.WOW_WORLD_RARES_DATA.map(r => ({
+    name: r.name,
+    zone: r.zone,
+    level: r.levelText,
+    coords: r.spawns && r.spawns.length > 0 ? `${r.spawns[0].x}, ${r.spawns[0].y}${r.spawns.length > 1 ? ` (+${r.spawns.length - 1} spots)` : ''}` : '—',
+    firstCoord: r.spawns && r.spawns.length > 0 ? `${r.spawns[0].x} ${r.spawns[0].y}` : '',
+    respawn: r.timerText !== '—' ? r.timerText : '',
+    elite: true,
+    tameable: r.isTameable ? (r.type || 'Beast') : '',
+    lore: `${r.type} rare spawn in ${r.zone} (${r.spawns ? r.spawns.length : 1} confirmed spawn point${r.spawns && r.spawns.length === 1 ? '' : 's'}).`,
+    macro: `/tar ${r.name}`,
+    drops: (r.loot || []).map(l => ({ name: l.name, type: `${l.dropRate}% Drop`, stats: '' }))
+  })) : (window.WOW_ATLAS_DATA?.rares || []);
+
+  const rares = rawRares;
   let activeZone = 'all';
 
   let huntedRares = new Set();
@@ -157,7 +175,7 @@ function renderRaresRadar() {
             <button type="button" class="btn-copy-macro" onclick="copyMacroToClipboard('${escapeHtml(rare.macro)}', this)" title="Copy /target macro to clipboard">
               📋 /target
             </button>
-            <button type="button" class="btn-copy-macro tomtom" onclick="copyMacroToClipboard('/way ${escapeHtml(rare.zone)} ${escapeHtml(rare.coords)} ${escapeHtml(rare.name)}', this)" title="Copy TomTom waypoint macro to clipboard">
+            <button type="button" class="btn-copy-macro tomtom" onclick="copyMacroToClipboard('/way ${escapeHtml(rare.zone)} ${escapeHtml(rare.firstCoord || rare.coords)} ${escapeHtml(rare.name)}', this)" title="Copy TomTom waypoint macro to clipboard">
               📍 /way
             </button>
             <button type="button" class="btn-copy-macro" style="${isHunted ? 'border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.15);' : ''}" onclick="toggleRareHunted('${rare.name.replace(/'/g, "\\'")}')">

@@ -27,6 +27,7 @@
     inst: '',
     onlyNew: false,
     onlyDrops: false,
+    onlySets: false,
     minLvl: 1,
     maxLvl: 60,
     sort: 'new',
@@ -613,6 +614,7 @@
       if (state.bind && b !== state.bind) continue;
       if (state.onlyNew && !(r[10] & 1)) continue;
       if (state.onlyDrops && (!r[13] || r[13].length === 0)) continue;
+      if (state.onlySets && (!window.WOW_GEAR_SETS_ITEM_MAP || !window.WOW_GEAR_SETS_ITEM_MAP[r[0]])) continue;
 
       const req = r[4] || 1;
       if (hasLvlFilter && (req < minL || req > maxL)) continue;
@@ -737,6 +739,7 @@
                 <a href="https://www.wowhead.com/forever/item=${id}" target="_blank" rel="noopener noreferrer"
                    style="color:${Q_COLORS[q]};font-weight:700;text-decoration:none;">${esc(name)}</a>
                 ${isNew ? '<span style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.4);padding:0.05rem 0.38rem;border-radius:4px;font-size:0.66rem;font-weight:800;letter-spacing:0.04em;">NEW IN FOREVER</span>' : ''}
+                ${window.WOW_GEAR_SETS_ITEM_MAP && window.WOW_GEAR_SETS_ITEM_MAP[id] ? `<button type="button" onclick="event.stopPropagation(); window.openGearSetModal(${window.WOW_GEAR_SETS_ITEM_MAP[id].setId})" style="background:rgba(168,85,247,0.18);color:#c084fc;border:1px solid rgba(168,85,247,0.38);padding:0.04rem 0.38rem;border-radius:4px;font-size:0.66rem;font-weight:700;cursor:pointer;" title="View Set Details">Set: ${esc(window.WOW_GEAR_SETS_ITEM_MAP[id].setName)}</button>` : ''}
                 <span style="color:#64748b;font-size:0.72rem;">#${id}</span>
               </div>
               <div style="color:#94a3b8;font-size:0.75rem;">
@@ -875,6 +878,11 @@
                 <input type="checkbox" id="codex-db-drops" aria-label="Only show boss drops" ${state.onlyDrops ? 'checked' : ''}>
                 ⚔️ Boss Drops Only
               </label>
+
+              <label style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#c084fc;font-weight:600;cursor:pointer;">
+                <input type="checkbox" id="codex-db-sets" aria-label="Only show items that belong to gear sets" ${state.onlySets ? 'checked' : ''}>
+                🛡️ Armor Sets Only
+              </label>
             </div>
 
             <div style="display:flex;align-items:center;gap:0.55rem;">
@@ -991,13 +999,14 @@
     mount.querySelector('#codex-db-maxlvl')?.addEventListener('input', (e) => { state.maxLvl = Math.max(1, Math.min(60, Number(e.target.value) || 60)); refresh(); });
     mount.querySelector('#codex-db-new')?.addEventListener('change', (e) => { state.onlyNew = e.target.checked; refresh(); });
     mount.querySelector('#codex-db-drops')?.addEventListener('change', (e) => { state.onlyDrops = e.target.checked; refresh(); });
+    mount.querySelector('#codex-db-sets')?.addEventListener('change', (e) => { state.onlySets = e.target.checked; refresh(); });
     mount.querySelector('#codex-db-sort')?.addEventListener('change', (e) => {
       state.sort = e.target.value;
       state.dir = state.sort === 'name' ? 1 : -1;
       refresh();
     });
     mount.querySelector('#codex-db-reset')?.addEventListener('click', () => {
-      state = { q: '', cat: 'all', cls: -1, minQuality: 0, bind: '', inst: '', onlyNew: false, onlyDrops: false, minLvl: 1, maxLvl: 60, sort: 'new', dir: -1, shown: 50 };
+      state = { q: '', cat: 'all', cls: -1, minQuality: 0, bind: '', inst: '', onlyNew: false, onlyDrops: false, onlySets: false, minLvl: 1, maxLvl: 60, sort: 'new', dir: -1, shown: 50 };
       window.renderCodexItemDatabase();
     });
     mount.querySelector('#codex-db-more')?.addEventListener('click', () => {

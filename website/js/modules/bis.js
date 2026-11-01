@@ -320,7 +320,7 @@ function renderBiSApp() {
           <span class="bis-prep-badge">${currentSpec.enchants ? currentSpec.enchants.length : 0} Enchants</span>
         </div>
         <div class="bis-prep-list">
-          ${renderEnchantsTable(currentSpec.enchants)}
+          ${renderEnchantsTable(currentSpec.enchants, currentClass.name, currentSpec.name)}
         </div>
       </div>
 
@@ -707,7 +707,10 @@ function renderSlotsAlternativesTable(spec) {
 /**
  * Render Recommended Enchants List
  */
-function renderEnchantsTable(enchants) {
+function renderEnchantsTable(enchants, className, specName) {
+  if (typeof window.renderBisEnhancements === 'function' && className && specName) {
+    return window.renderBisEnhancements(className, specName, enchants);
+  }
   if (!enchants || enchants.length === 0) {
     return '<p class="bis-empty-text" style="color: var(--text-muted); font-size: 0.85rem; padding: 1rem;">No recommended enchants listed for this spec.</p>';
   }
@@ -1247,6 +1250,7 @@ function resetCustomBiS() {
   window.exportBiSToJournal = exportBiSToJournal;
   window.equipBiSItem = equipBiSItem;
   window.resetCustomBiS = resetCustomBiS;
+  window.renderCurrentBiSView = renderBiSApp;
   window.WOW_TALENT_ICONS = WOW_TALENT_ICONS;
 })();
 

@@ -8398,3 +8398,33 @@
   gap: 0.5rem;
   padding: 0.35rem 0;
 }
+
+/* ==========================================================================
+   Wave 2 ForeverDB Additions: Armor Sets, Flight Network, BiS Enhancements
+   ========================================================================== */
+.gear-set-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.gear-set-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168, 85, 247, 0.4) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.gear-set-pieces-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.atlas-travel-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.atlas-travel-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}

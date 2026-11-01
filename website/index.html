@@ -1116,6 +1116,7 @@
         <button class="codex-nav-btn" data-codex="commerce">🪙 Merchant's Favor &amp; Crates</button>
         <button class="codex-nav-btn" data-codex="pets">🐾 Hunter Pet Radar</button>
         <button class="codex-nav-btn" data-codex="database">📚 Item Database (22,493)</button>
+        <button class="codex-nav-btn" data-codex="sets">🛡️ Armor Sets &amp; Bonuses (228)</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -1422,6 +1423,11 @@
         </div>
       </div>
 
+      <!-- Panel 13: Armor Sets & Set Bonuses Explorer -->
+      <div id="codex-sets" class="codex-panel">
+        <div id="codex-sets-container"></div>
+      </div>
+
     </section>
 
     <!-- TAB: ITEM DATABASE & MARKET -->
@@ -1442,7 +1448,7 @@
       <div class="atlas-subnav-container">
         <div class="atlas-subnav-bar" role="tablist" aria-label="Atlas Views">
           <button class="atlas-subnav-btn active" data-subtab="rares">
-            <span>💀</span> 34 World Rares
+            <span>💀</span> 354 World Rares
           </button>
           <button class="atlas-subnav-btn" data-subtab="books">
             <span>📖</span> 40 Library Books
@@ -1452,6 +1458,9 @@
           </button>
           <button class="atlas-subnav-btn" data-subtab="dungeons">
             <span>🏰</span> Dungeons &amp; Raids (40)
+          </button>
+          <button class="atlas-subnav-btn" data-subtab="travel">
+            <span>🦅</span> Flight Network (82)
           </button>
           <button class="atlas-subnav-btn" data-subtab="pets">
             <span>🐾</span> 520 Hunter Beasts
@@ -1626,6 +1635,11 @@
       <!-- Subtab 5: Dungeons & Raids Explorer -->
       <div id="atlas-subtab-dungeons" class="atlas-subtab-panel" hidden>
         <div id="atlas-dungeons-mount"></div>
+      </div>
+
+      <!-- Subtab 6: Azeroth Flight Network & Taxi Nodes -->
+      <div id="atlas-subtab-travel" class="atlas-subtab-panel" hidden>
+        <div id="atlas-travel-mount"></div>
       </div>
     </section>
 
@@ -3858,6 +3872,10 @@
   <script defer src="js/data/core-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/races-classes.js?v=1.60.1-70425"></script>
   <script defer src="js/data/tools-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/gear-sets-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/world-rares-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/travel-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/bis-enhancements-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/camping-matrix-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/forever-instances-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/spec-coach-data.js?v=1.60.1-70425"></script>
@@ -3890,7 +3908,8 @@
   <script defer src="js/modules/hunterpets.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/navigation.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/news.js?v=1.60.1-70425"></script>
-  <script defer src="js/modules/codex/codex-database.js?v=1.60.1-70425-c1"></script>
+  <script defer src="js/modules/codex/codex-database.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/codex/codex-sets.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/codex.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/legacy.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/camping.js?v=1.60.1-70425"></script>
@@ -3917,10 +3936,12 @@
   <script defer src="js/modules/tierlist.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/downranking.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis/bis-modal.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/bis/bis-enhancements.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/hiddenitems.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/guides.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/atlas-dungeons.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/atlas-travel.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/atlas.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/search.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/addons.js?v=1.60.1-70425"></script>

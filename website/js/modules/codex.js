@@ -28,6 +28,9 @@ function initCodex() {
           return;
         }
       }
+      if (panelId === 'sets') {
+        if (window.initCodexSets) window.initCodexSets();
+      }
       codexNavBtns.forEach(b => b.classList.remove('active'));
       codexPanels.forEach(p => p.classList.remove('active'));
 
