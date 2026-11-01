@@ -12,6 +12,7 @@ function initAtlas() {
   renderRaresRadar();
   renderBooksTracker();
   renderPvPSchedule();
+  if (typeof window.initAtlasDungeons === 'function') window.initAtlasDungeons();
 
   window.addEventListener('hashchange', checkAtlasHash);
 }
@@ -53,6 +54,10 @@ function setupAtlasSubNav() {
         if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
           window.initHunterPets();
         }
+      }
+
+      if (targetSub === 'dungeons' && typeof window.initAtlasDungeons === 'function') {
+        window.initAtlasDungeons();
       }
     });
   });

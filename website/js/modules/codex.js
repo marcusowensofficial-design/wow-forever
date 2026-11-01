@@ -329,8 +329,11 @@ window.openDungeonLootModal = function(dungeonId) {
   const expanded = window.WOW_ATLAS_DATA?.expandedDungeons?.[expKey];
   const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId] || (expKey ? window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[expKey] : null);
   const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId || d.id === expKey);
+  const foreverInst = window.WOW_FOREVER_INSTANCES_DATA?.find(d =>
+    d.slug === expKey || d.slug === dungeonId || String(d.id) === String(dungeonId) || (d.name && d.name.toLowerCase() === String(dungeonId).toLowerCase())
+  );
 
-  if (!expanded && !detailed && !general && !classicLoot) {
+  if (!expanded && !detailed && !general && !classicLoot && !foreverInst) {
     // Fallback for classic dungeons
     body.innerHTML = `
       <div style="padding: 1.5rem; text-align: center;">
@@ -343,11 +346,11 @@ window.openDungeonLootModal = function(dungeonId) {
     return;
   }
 
-  const name = expanded?.name || detailed?.name || general?.name || classicLoot?.name || dungeonId;
-  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange || classicLoot?.subtitle || 'Levels 13–60';
-  const zone = expanded?.zone || detailed?.zone || general?.zone || classicLoot?.subtitle || 'Azeroth';
-  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || 'Main instance portal.';
-  const bossList = expanded?.bosses || detailed?.bosses || (classicLoot?.bosses || []).map(b => ({
+  const name = expanded?.name || detailed?.name || general?.name || classicLoot?.name || foreverInst?.name || dungeonId;
+  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange || classicLoot?.subtitle || foreverInst?.levelDisplay || 'Levels 13–60';
+  const zone = expanded?.zone || detailed?.zone || general?.zone || classicLoot?.subtitle || foreverInst?.zone || 'Azeroth';
+  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || foreverInst?.entrance || 'Main instance portal.';
+  let bossList = expanded?.bosses || detailed?.bosses || (classicLoot?.bosses && classicLoot.bosses.length > 0 ? classicLoot.bosses.map(b => ({
     name: b.name,
     title: `${(b.loot || []).length} Drops`,
     drops: (b.loot || []).map(it => ({
@@ -360,7 +363,29 @@ window.openDungeonLootModal = function(dungeonId) {
       stats: it.stats || '',
       bestFor: it.bestFor || []
     }))
-  }));
+  })) : null);
+
+  if ((!bossList || bossList.length === 0) && foreverInst && foreverInst.bosses && foreverInst.bosses.length > 0) {
+    bossList = foreverInst.bosses.map(b => {
+      const bossLoot = (foreverInst.loot || []).filter(l => l.bossOrder === b.order || l.bossOrder === 0);
+      return {
+        name: b.name,
+        level: foreverInst.maxLevel || 60,
+        title: `${bossLoot.length} Confirmed Drops`,
+        mechanics: `Encounter #${b.order} in ${foreverInst.name}. Creature ID: ${b.creatureId}.`,
+        drops: bossLoot.map(it => ({
+          id: it.itemId,
+          name: it.name,
+          quality: 'q3',
+          iLvl: `Lvl ${foreverInst.minLevel || 60}`,
+          dropRate: it.source || 'Drop',
+          slot: 'Instance Loot',
+          stats: 'Confirmed drop in Build 1.60.1.70707'
+        }))
+      };
+    });
+  }
+  bossList = bossList || [];
   const questList = expanded?.quests || [];
 
   body.innerHTML = `

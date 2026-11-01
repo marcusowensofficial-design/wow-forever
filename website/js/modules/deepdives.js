@@ -224,6 +224,16 @@ function initClassDeepDives() {
 
     contentContainer.innerHTML = html;
 
+    // Mount rotation coach if present
+    contentContainer.querySelectorAll('.deepdive-coach-mount').forEach(coachMount => {
+      if (typeof window.renderSpecRotationCoach === 'function') {
+        const classId = coachMount.getAttribute('data-class-id');
+        const specId = coachMount.getAttribute('data-spec-id');
+        const level = coachMount.getAttribute('data-level') || '30';
+        window.renderSpecRotationCoach(coachMount, classId, specId, level);
+      }
+    });
+
     // Attach sub-tab event listeners
     contentContainer.querySelectorAll('.deepdive-subnav-btn').forEach(btn => {
       btn.addEventListener('click', () => {

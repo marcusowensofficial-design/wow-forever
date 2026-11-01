@@ -233,19 +233,21 @@
           <!-- Combat Priority & Rotational Loop (Pushed Down Below Talents, Full Width!) -->
           <div class="build-feature-box deepdive-rotation-box">
             <h4>
-              <span>⚔️</span> Level ${activeBuildContainer.levelCap || activeLevel} Combat Priority & Rotational Loop
+              <span>🎯</span> Level ${activeBuildContainer.levelCap || activeLevel} Spec Rotation &amp; Combat Priority Coach
             </h4>
-            <div class="deepdive-rotation-wrap">
-              <ol class="rotation-step-list deepdive-rotation-step-list">
-                ${(currentSpec.rotation || []).map(r => `
-                  <li class="rotation-step-item">
-                    <div>
-                      <strong style="color: #fff; font-size: 0.92rem; display: block; margin-bottom: 0.2rem;">${escapeHtml(r.label)}</strong>
-                      <span style="font-size: 0.88rem; line-height: 1.5; color: #cbd5e1;">${escapeHtml(r.desc)}</span>
-                    </div>
-                  </li>
-                `).join('')}
-              </ol>
+            <div class="deepdive-coach-mount" data-class-id="${escapeHtml(cData.id)}" data-spec-id="${escapeHtml(currentSpec.specId || currentSpec.id || currentSpec.name || '')}" data-level="${escapeHtml(activeBuildContainer.levelCap || activeLevel || '30')}">
+              <div class="deepdive-rotation-wrap">
+                <ol class="rotation-step-list deepdive-rotation-step-list">
+                  ${(currentSpec.rotation || []).map(r => `
+                    <li class="rotation-step-item">
+                      <div>
+                        <strong style="color: #fff; font-size: 0.92rem; display: block; margin-bottom: 0.2rem;">${escapeHtml(r.label)}</strong>
+                        <span style="font-size: 0.88rem; line-height: 1.5; color: #cbd5e1;">${escapeHtml(r.desc)}</span>
+                      </div>
+                    </li>
+                  `).join('')}
+                </ol>
+              </div>
             </div>
           </div>
 

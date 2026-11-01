@@ -1450,6 +1450,9 @@
           <button class="atlas-subnav-btn" data-subtab="pvp">
             <span>⚔️</span> PvP Honor System
           </button>
+          <button class="atlas-subnav-btn" data-subtab="dungeons">
+            <span>🏰</span> Dungeons &amp; Raids (40)
+          </button>
           <button class="atlas-subnav-btn" data-subtab="pets">
             <span>🐾</span> 520 Hunter Beasts
           </button>
@@ -1618,6 +1621,11 @@
       <!-- Subtab 4: Hunter Pets -->
       <div id="atlas-subtab-pets" class="atlas-subtab-panel" hidden>
         <div id="atlas-hunter-pets-mount"></div>
+      </div>
+
+      <!-- Subtab 5: Dungeons & Raids Explorer -->
+      <div id="atlas-subtab-dungeons" class="atlas-subtab-panel" hidden>
+        <div id="atlas-dungeons-mount"></div>
       </div>
     </section>
 
@@ -1944,6 +1952,9 @@
 
       <!-- Cozy Sleeping Bag & Rested Bonus Interactive Hub -->
       <div id="cozy-sleeping-bag-container" class="cozy-sleeping-bag-section" style="margin-top: 1.75rem;"></div>
+
+      <!-- Interactive Camp Builder & Buff Simulator Mount -->
+      <div id="interactive-camp-builder-mount" style="margin-top: 1.75rem;"></div>
 
       <!-- Filter Controls for Stations -->
       <div class="filter-controls-row" style="margin-top: 2rem;">
@@ -3847,6 +3858,9 @@
   <script defer src="js/data/core-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/races-classes.js?v=1.60.1-70425"></script>
   <script defer src="js/data/tools-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/camping-matrix-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/forever-instances-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/spec-coach-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/dungeons-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/dungeon-loot-tooltips.js?v=1.60.1-70425"></script>
   <script defer src="js/data/consumables-data.js?v=1.60.1-70425"></script>
@@ -3894,6 +3908,7 @@
   <script defer src="js/modules/deepdives/deepdives-hunter.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/deepdives-races.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/deepdives-specs.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/deepdives/deepdives-coach.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/deepdives-builds.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/progression-filter.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/deepdives/class-progression.js?v=1.60.1-70425"></script>
@@ -3905,6 +3920,7 @@
   <script defer src="js/modules/bis.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/hiddenitems.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/guides.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/atlas-dungeons.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/atlas.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/search.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/addons.js?v=1.60.1-70425"></script>

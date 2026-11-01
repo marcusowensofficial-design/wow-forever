@@ -17,6 +17,7 @@ function initCampingHub() {
     `).join('');
   }
 
+  renderCampBuilder();
   renderCampingStations('all');
 
   const filterBtns = document.querySelectorAll('#profession-filter-group .filter-chip');
@@ -231,9 +232,172 @@ function renderCozySleepingBag() {
   }
 }
 
+let selectedCampKitTier = 2; // Journeyman Campfire (5 stations)
+let activeCampStationIds = new Set([279956, 279944, 279978]); // Mana Well, Sharpening Wheel, Camp Tent
+let activeProfFilter = 'all';
+
+function renderCampBuilder() {
+  const mount = document.getElementById('interactive-camp-builder-mount');
+  if (!mount) return;
+
+  const matrix = window.WOW_CAMPING_MATRIX || [];
+  const kitDefs = [
+    { tier: 1, name: 'Basic Campfire Kit', maxStations: 3, levelReq: 1, skill: 1 },
+    { tier: 2, name: 'Journeyman Campfire Kit', maxStations: 5, levelReq: 20, skill: 140 },
+    { tier: 3, name: 'Expert Campfire Kit', maxStations: 10, levelReq: 40, skill: 220 }
+  ];
+
+  const currentKit = kitDefs.find(k => k.tier === selectedCampKitTier) || kitDefs[1];
+  const activeStations = matrix.filter(m => activeCampStationIds.has(m.itemId) && !m.isKit);
+
+  // Calculate mutual exclusions / conflicts
+  const activeExclusions = activeStations.filter(s => s.mutualExclusion).map(s => ({
+    name: s.name,
+    conflictsWith: s.mutualExclusion
+  }));
+
+  // Calculate required reagents
+  const reagentMap = {};
+  activeStations.forEach(s => {
+    (s.reagents || []).forEach(r => {
+      if (!reagentMap[r.id]) {
+        reagentMap[r.id] = { id: r.id, name: r.name, count: 0, wowheadUrl: r.wowheadUrl };
+      }
+      reagentMap[r.id].count += r.count;
+    });
+  });
+  const reagentList = Object.values(reagentMap);
+
+  const capacityReached = activeStations.length >= currentKit.maxStations;
+  const capacityOver = activeStations.length > currentKit.maxStations;
+
+  mount.innerHTML = `
+    <div class="interactive-camp-builder-card">
+      <div class="builder-header-row">
+        <div class="builder-title-group">
+          <span style="font-size: 2rem;">⛺</span>
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <h3 style="color: #f5d061; font-size: 1.25rem; margin: 0;">Interactive Camp Builder &amp; Party Buff Simulator</h3>
+              <span class="status-badge-highlight" style="font-size: 0.72rem; color: #34d399; border-color: rgba(52, 211, 153, 0.4);">
+                Build 1.60.1 Datamined
+              </span>
+            </div>
+            <p style="font-size: 0.82rem; color: #cbd5e1; margin: 0.2rem 0 0;">
+              Assemble your party's wilderness camp setup, monitor station capacity limits, check mutual exclusion buff conflicts, and preview total reagents.
+            </p>
+          </div>
+        </div>
+
+        <div class="builder-capacity-indicator ${capacityOver ? 'is-over' : (capacityReached ? 'is-full' : '')}">
+          <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Camp Capacity</span>
+          <strong style="font-size: 1.2rem; font-family: var(--font-mono, monospace);">
+            ${activeStations.length} / ${currentKit.maxStations}
+          </strong>
+          <small style="font-size: 0.72rem; color: #94a3b8;">Stations Placed</small>
+        </div>
+      </div>
+
+      <!-- Kit Tier Selector -->
+      <div class="builder-kit-selector-bar">
+        <span style="font-size: 0.8rem; color: var(--text-gold); font-weight: 700; text-transform: uppercase;">1. Choose Campfire Kit:</span>
+        <div class="kit-selector-btns">
+          ${kitDefs.map(k => `
+            <button type="button" class="btn-kit-select ${k.tier === selectedCampKitTier ? 'active' : ''}" data-tier="${k.tier}">
+              <strong>${escapeHtml(k.name)}</strong>
+              <span>(Max ${k.maxStations} Stations • Req Lv ${k.levelReq})</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Active Camp Tray -->
+      <div class="builder-active-tray">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+          <strong style="font-size: 0.82rem; color: #e2e8f0;">Active Camp Stations (${activeStations.length}):</strong>
+          ${activeStations.length > 0 ? `
+            <button type="button" class="btn-clear-camp" onclick="window.clearCampStations()">Clear All</button>
+          ` : ''}
+        </div>
+
+        <div class="builder-chips-wrap">
+          ${activeStations.length === 0 ? `
+            <div style="padding: 1rem; color: var(--text-muted); font-size: 0.82rem; font-style: italic;">
+              No stations placed in camp. Click "+ Add to Camp" on any station below to deploy it.
+            </div>
+          ` : activeStations.map(s => `
+            <div class="active-camp-chip">
+              <span class="chip-prof-pill">${escapeHtml(s.profession)}</span>
+              <strong class="chip-name">${escapeHtml(s.name)}</strong>
+              <button type="button" class="btn-chip-remove" onclick="window.toggleCampStation(${s.itemId})" title="Remove from camp">✕</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      ${activeExclusions.length > 0 ? `
+        <div class="builder-exclusion-alert">
+          <strong style="display: flex; align-items: center; gap: 0.4rem; color: #fbbf24; font-size: 0.82rem; margin-bottom: 0.3rem;">
+            <span>⚠️</span> Mutual Exclusion &amp; Raid Buff Conflicts:
+          </strong>
+          <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.78rem; color: #cbd5e1; line-height: 1.45;">
+            ${activeExclusions.map(e => `
+              <li><strong>${escapeHtml(e.name)}</strong> does not stack with raid buff: <span style="color: #fef08a;">${escapeHtml(e.conflictsWith)}</span></li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      ${reagentList.length > 0 ? `
+        <div class="builder-reagents-summary">
+          <strong style="font-size: 0.8rem; color: var(--text-gold); display: block; margin-bottom: 0.35rem;">
+            📦 Total Party Materials Required to Deploy:
+          </strong>
+          <div class="builder-reagent-pills">
+            ${reagentList.map(r => `
+              <a href="${r.wowheadUrl}" target="_blank" rel="noopener noreferrer" class="camp-reagent-tag">
+                <span class="reagent-count">×${r.count}</span>
+                <span class="reagent-name">${escapeHtml(r.name)}</span>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+    </div>
+  `;
+
+  // Wire kit selector buttons
+  mount.querySelectorAll('.btn-kit-select').forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedCampKitTier = parseInt(btn.getAttribute('data-tier'), 10);
+      renderCampBuilder();
+      renderCampingStations(activeProfFilter);
+    });
+  });
+}
+
+window.toggleCampStation = function(itemId) {
+  if (activeCampStationIds.has(itemId)) {
+    activeCampStationIds.delete(itemId);
+  } else {
+    activeCampStationIds.add(itemId);
+  }
+  renderCampBuilder();
+  renderCampingStations(activeProfFilter);
+};
+
+window.clearCampStations = function() {
+  activeCampStationIds.clear();
+  renderCampBuilder();
+  renderCampingStations(activeProfFilter);
+};
+
 function renderCampingStations(filter) {
+  activeProfFilter = filter || 'all';
   const container = document.getElementById('camping-stations-container');
   if (!container || !WOW_FOREVER_DATA.campingObjects) return;
+
+  const matrix = window.WOW_CAMPING_MATRIX || [];
 
   let list = WOW_FOREVER_DATA.campingObjects;
   if (filter === 'Primary') {
@@ -259,15 +423,49 @@ function renderCampingStations(filter) {
       </div>
 
       <div class="station-tiers-list">
-        ${p.objects.map(obj => `
-          <div class="station-tier-row">
-            <span class="tier-pill">Tier ${obj.tier}</span>
-            <div class="tier-info">
-              <strong style="color: #e2e8f0; font-size: 0.88rem;">${escapeHtml(obj.name)}</strong>
-              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0.15rem 0 0;">${escapeHtml(obj.desc)}</p>
+        ${p.objects.map(obj => {
+          const matrixItem = matrix.find(m =>
+            m.name.toLowerCase() === obj.name.toLowerCase() ||
+            (m.profession.toLowerCase() === (p.profession || '').toLowerCase() && m.tier === obj.tier)
+          );
+          const isInCamp = matrixItem ? activeCampStationIds.has(matrixItem.itemId) : false;
+
+          return `
+            <div class="station-tier-row ${isInCamp ? 'is-in-camp-row' : ''}">
+              <div style="display: flex; align-items: flex-start; gap: 0.6rem; flex: 1;">
+                <span class="tier-pill">Tier ${obj.tier}</span>
+                <div class="tier-info" style="flex: 1;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem;">
+                    <strong style="color: #e2e8f0; font-size: 0.88rem;">${escapeHtml(obj.name)}</strong>
+                    ${matrixItem ? `
+                      <button type="button" class="btn-camp-slot-toggle ${isInCamp ? 'is-active' : ''}" onclick="window.toggleCampStation(${matrixItem.itemId})">
+                        ${isInCamp ? '✓ Placed in Camp' : '+ Add to Camp'}
+                      </button>
+                    ` : ''}
+                  </div>
+                  <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0.15rem 0 0.35rem;">
+                    ${escapeHtml(matrixItem?.effects || obj.desc)}
+                  </p>
+                  ${matrixItem && matrixItem.reagents && matrixItem.reagents.length > 0 ? `
+                    <div class="station-mats-row">
+                      <span style="font-size: 0.72rem; color: var(--text-gold); font-weight: 600;">Reagents:</span>
+                      ${matrixItem.reagents.map(r => `
+                        <span class="station-mat-chip">
+                          ${r.count}× ${escapeHtml(r.name)}
+                        </span>
+                      `).join('')}
+                    </div>
+                  ` : ''}
+                  ${matrixItem && matrixItem.mutualExclusion ? `
+                    <div style="font-size: 0.72rem; color: #fbbf24; margin-top: 0.25rem;">
+                      ⚠️ Conflicts with: <strong>${escapeHtml(matrixItem.mutualExclusion)}</strong>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
             </div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
 
       ${(() => {
