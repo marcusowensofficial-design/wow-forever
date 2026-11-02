@@ -7457,6 +7457,24 @@ input:checked + .toggle-slider:before {
   pointer-events: none;
 }
 
+.qa-btn-text {
+  position: relative;
+  z-index: 3;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.qa-icon {
+  position: relative;
+  z-index: 3;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .hub-quick-access-btn:hover {
   transform: translateY(-2px) scale(1.02);
   filter: drop-shadow(0 0 12px var(--qa-color, #f59e0b))
