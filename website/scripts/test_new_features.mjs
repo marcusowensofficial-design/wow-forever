@@ -50,6 +50,8 @@ async function test() {
   console.log(`Rendered ${factionCards.length} faction cards.`);
 
   console.log('--- Testing Professions Tab ---');
+  await page.click('#nav-btn-home');
+  await page.waitForTimeout(500);
   await page.click('.nav-tab-btn[data-tab="professions"]');
   await page.waitForTimeout(800);
 
