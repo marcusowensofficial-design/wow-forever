@@ -119,8 +119,8 @@ function renderNewsGrid(items) {
     <article class="news-card">
       <div>
         <div class="news-card-top">
-          <span class="source-badge source-${item.sourceType}">${item.source}</span>
-          <span class="news-date">${item.date}</span>
+          <span class="source-badge source-${escapeHtml(item.sourceType)}">${escapeHtml(item.source)}</span>
+          <span class="news-date">${escapeHtml(item.date)}</span>
         </div>
         <h3 class="news-title">${escapeHtml(item.title)}</h3>
         <p class="news-summary">${escapeHtml(item.summary)}</p>

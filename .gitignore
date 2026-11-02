@@ -22,6 +22,10 @@ fc_bis_cache/
 
 # Agent logs and scratch
 .agents/
+.playwright-mcp/
+scratch/
+website/.playwright-mcp/
+website/scratch/
 
 # Private In-House Market Scanner Addon (Local Only)
 addons/ForeverMarket/

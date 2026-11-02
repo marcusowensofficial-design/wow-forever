@@ -49,7 +49,8 @@ function initCodex() {
   function checkCodexHash() {
     const hash = (window.location.hash || '').toLowerCase();
     if (hash.startsWith('#codex')) {
-      const sub = hash.split('/')[1]?.split('#')[0];
+      const rawSub = hash.split('/')[1]?.split('#')[0];
+      const sub = (rawSub || '').replace(/[^a-z0-9_-]/g, '');
       if (sub === 'matrix') {
         const plannerBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');
         if (plannerBtn) {
