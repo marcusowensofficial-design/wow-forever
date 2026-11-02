@@ -37,6 +37,12 @@ function initCodex() {
       if (panelId === 'reputation') {
         if (window.initCodexReputation) window.initCodexReputation();
       }
+      if (panelId === 'books') {
+        if (window.initLibraryBooks) window.initLibraryBooks();
+      }
+      if (panelId === 'mechanics') {
+        if (window.initClassMechanics) window.initClassMechanics();
+      }
       if (panelId === 'mounts') {
         if (window.initCollectionsExplorer) window.initCollectionsExplorer();
       }
