@@ -31,6 +31,12 @@ function initCodex() {
       if (panelId === 'sets') {
         if (window.initCodexSets) window.initCodexSets();
       }
+      if (panelId === 'mounts') {
+        if (window.initCollectionsExplorer) window.initCollectionsExplorer();
+      }
+      if (panelId === 'pets') {
+        if (window.initHunterPets) window.initHunterPets('hunter-pets-mount');
+      }
       codexNavBtns.forEach(b => b.classList.remove('active'));
       codexPanels.forEach(p => p.classList.remove('active'));
 

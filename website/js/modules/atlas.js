@@ -395,17 +395,44 @@ function renderPvPSchedule() {
     `;
   }).join('');
 
-  if (setsGrid && battlegrounds.length > 0) {
-    setsGrid.innerHTML = battlegrounds.map(bg => `
-      <div class="pvp-set-card">
-        <div class="pvp-set-header">
-          <span class="pvp-set-name">⚔️ ${escapeHtml(bg.name)}</span>
-          <span class="pvp-set-rank-req">${escapeHtml(bg.players)}</span>
+  const bgs = window.WOW_BATTLEGROUNDS_DATA || battlegrounds;
+  if (setsGrid && bgs.length > 0) {
+    setsGrid.innerHTML = bgs.map(bg => {
+      const isNew = bg.isNewInForever || bg.name === 'Darkspear Islands';
+      const objectivesHtml = bg.objectives && bg.objectives.length > 0 ? `
+        <div style="margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem;">Tactical Objectives &amp; Points:</div>
+          <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+            ${bg.objectives.map(obj => `
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; background: rgba(255, 255, 255, 0.02); padding: 0.2rem 0.45rem; border-radius: 4px;">
+                <span style="color: #cbd5e1;">${obj.icon || '📍'} <strong>${escapeHtml(obj.name)}</strong> <span style="color: #64748b; font-size: 0.7rem;">(${escapeHtml(obj.type)})</span></span>
+                <span style="color: #38bdf8; font-family: monospace; font-size: 0.72rem;">${escapeHtml(obj.coords)}</span>
+              </div>
+            `).join('')}
+          </div>
         </div>
-        <div style="font-size: 0.82rem; color: #f59e0b; font-weight: 600;">Bracket Levels: ${escapeHtml(bg.levels)}</div>
-        <p class="pvp-set-items">${escapeHtml(bg.type)}</p>
-      </div>
-    `).join('');
+      ` : '';
+
+      return `
+        <div class="pvp-set-card" style="border-color: ${isNew ? 'rgba(52, 211, 153, 0.4)' : 'rgba(255, 255, 255, 0.1)'};">
+          <div class="pvp-set-header">
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+              <span class="pvp-set-name">⚔️ ${escapeHtml(bg.name)}</span>
+              ${isNew ? '<span style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-size: 0.65rem; font-weight: 800; padding: 0.1rem 0.4rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.35);">NEW IN FOREVER</span>' : ''}
+            </div>
+            <span class="pvp-set-rank-req">${escapeHtml(bg.players || '15v15')}</span>
+          </div>
+          <div style="font-size: 0.82rem; color: #f59e0b; font-weight: 600; margin-top: 0.25rem;">
+            Bracket Levels: ${escapeHtml(bg.levelBrackets || bg.levels || '10–60')}
+          </div>
+          <p class="pvp-set-items" style="margin-top: 0.25rem; color: #94a3b8; font-size: 0.82rem;">
+            <strong>Objective:</strong> ${escapeHtml(bg.winCondition || bg.type || bg.kind || '')}
+          </p>
+          ${bg.factionContext ? `<div style="font-size: 0.75rem; color: #a5b4fc; margin-top: 0.25rem;">🚩 ${escapeHtml(bg.factionContext)}</div>` : ''}
+          ${objectivesHtml}
+        </div>
+      `;
+    }).join('');
   }
 }
 

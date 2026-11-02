@@ -139,6 +139,18 @@ function renderGuidesPage() {
 
   renderDungeonSubfilters();
 
+  const secretsMount = document.getElementById('special-quests-explorer-mount');
+  if (secretsMount) {
+    if (activeGuideCategory === 'secrets') {
+      secretsMount.style.display = 'block';
+      if (typeof window.renderSpecialQuestsExplorer === 'function') {
+        window.renderSpecialQuestsExplorer('special-quests-explorer-mount');
+      }
+    } else {
+      secretsMount.style.display = 'none';
+    }
+  }
+
   const guides = window.WOW_TOOLS_DATA?.guides || [];
   const filtered = getFilteredGuides();
 

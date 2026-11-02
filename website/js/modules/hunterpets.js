@@ -19,7 +19,7 @@
   const escapeHtml = window.escapeHtml;
 
   function getPetData() {
-    return window.WOW_ATLAS_DATA?.hunterPets || null;
+    return window.WOW_HUNTER_PETS_DATA || window.WOW_ATLAS_DATA?.hunterPets || null;
   }
 
   function copyPetMacro(text, btnElement, successLabel = 'Copied!') {

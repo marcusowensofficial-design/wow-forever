@@ -1319,6 +1319,68 @@ check('Guides dataset syntax, category mapping, and sub-tab filtering integrity'
   }
 });
 
+check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () => {
+  const hpCode = fs.readFileSync(path.join(ROOT, 'js/data/hunter-pets-data.js'), 'utf8');
+  const hpWin = {};
+  eval(hpCode.replace('window.', 'hpWin.'));
+  if (!hpWin.WOW_HUNTER_PETS_DATA?.allBeasts || hpWin.WOW_HUNTER_PETS_DATA.allBeasts.length !== 520) {
+    throw new Error(`Expected 520 beasts in WOW_HUNTER_PETS_DATA, found ${hpWin.WOW_HUNTER_PETS_DATA?.allBeasts?.length}`);
+  }
+
+  const colCode = fs.readFileSync(path.join(ROOT, 'js/data/collections-data.js'), 'utf8');
+  const colWin = {};
+  eval(colCode.replace('window.', 'colWin.'));
+  if (colWin.WOW_COLLECTIONS_DATA?.mounts?.length !== 141) {
+    throw new Error(`Expected 141 mounts in WOW_COLLECTIONS_DATA, found ${colWin.WOW_COLLECTIONS_DATA?.mounts?.length}`);
+  }
+
+  // Canonical Paladin Horde invariant
+  const forsakenCharger = colWin.WOW_COLLECTIONS_DATA.mounts.find(m => m.name === 'Forsaken Charger');
+  if (!forsakenCharger || forsakenCharger.faction !== 'Horde') {
+    throw new Error('Paladin Canonical Invariant Violation: Forsaken Charger must be assigned to Horde');
+  }
+
+  const sqCode = fs.readFileSync(path.join(ROOT, 'js/data/special-quests-data.js'), 'utf8');
+  const sqWin = {};
+  eval(sqCode.replace('window.', 'sqWin.'));
+  if (!Array.isArray(sqWin.WOW_SPECIAL_QUESTS_DATA) || sqWin.WOW_SPECIAL_QUESTS_DATA.length !== 15) {
+    throw new Error(`Expected 15 secret chains in WOW_SPECIAL_QUESTS_DATA, found ${sqWin.WOW_SPECIAL_QUESTS_DATA?.length}`);
+  }
+
+  const fqCode = fs.readFileSync(path.join(ROOT, 'js/data/forever-quests-data.js'), 'utf8');
+  const fqWin = {};
+  eval(fqCode.replace('window.', 'fqWin.'));
+  if (!Array.isArray(fqWin.WOW_FOREVER_NEW_QUESTS_DATA) || fqWin.WOW_FOREVER_NEW_QUESTS_DATA.length !== 279) {
+    throw new Error(`Expected 279 quests in WOW_FOREVER_NEW_QUESTS_DATA, found ${fqWin.WOW_FOREVER_NEW_QUESTS_DATA?.length}`);
+  }
+
+  const bgCode = fs.readFileSync(path.join(ROOT, 'js/data/battlegrounds-data.js'), 'utf8');
+  const bgWin = {};
+  eval(bgCode.replace('window.', 'bgWin.'));
+  if (!Array.isArray(bgWin.WOW_BATTLEGROUNDS_DATA) || bgWin.WOW_BATTLEGROUNDS_DATA.length !== 5) {
+    throw new Error(`Expected 5 battlegrounds in WOW_BATTLEGROUNDS_DATA, found ${bgWin.WOW_BATTLEGROUNDS_DATA?.length}`);
+  }
+});
+
+check('Module architecture file size cap (<= 1,500 lines)', () => {
+  function scanDir(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const ent of entries) {
+      const full = path.join(dir, ent.name);
+      if (ent.isDirectory()) {
+        scanDir(full);
+      } else if (ent.isFile() && ent.name.endsWith('.js')) {
+        const text = fs.readFileSync(full, 'utf8');
+        const lines = text.split('\n').length;
+        if (lines > 1500) {
+          throw new Error(`Module ${path.relative(ROOT, full)} exceeds 1,500 lines (${lines} lines)`);
+        }
+      }
+    }
+  }
+  scanDir(path.join(ROOT, 'js/modules'));
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);
