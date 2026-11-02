@@ -1,0 +1,1536 @@
+{
+  "meta": {
+    "totalEvents": 15,
+    "build": "1.60.1.70707",
+    "extracted": "2026-10-31",
+    "updatedAt": "2026-11-02"
+  },
+  "events": [
+    {
+      "slug": "call-to-arms-darkspear-islands",
+      "name": "Call to Arms: Darkspear Islands",
+      "desc": "The battle at Darkspear Islands is heating up. Join up and prove your might!",
+      "kind": "battleground",
+      "icon": 441150,
+      "isNewInForever": true,
+      "minLevel": 30,
+      "schedules": [
+        {
+          "holiday": 1840,
+          "hours": 168,
+          "rule": "cycle",
+          "cycle": 504,
+          "start": {
+            "y": 2026,
+            "mo": 4,
+            "d": 21,
+            "h": 8,
+            "mi": 0
+          },
+          "new": 1,
+          "text": "Runs for 7 days, then comes back 21 days after it started, on a repeating cycle from Tue 21 Apr 2026, 08:00 (realm time)."
+        }
+      ],
+      "battleground": {
+        "id": 1157,
+        "name": "Darkspear Islands",
+        "minLevel": 30,
+        "maxLevel": 60,
+        "players": 15,
+        "isNew": true
+      },
+      "factions": [
+        {
+          "id": 2798,
+          "name": "Darkspear Raiders",
+          "rewardsCount": 22,
+          "isNew": true
+        },
+        {
+          "id": 2799,
+          "name": "Theramore Expeditionary Force",
+          "rewardsCount": 22,
+          "isNew": true
+        }
+      ],
+      "challenge": {
+        "id": 62049,
+        "name": "Master of Darkspear Islands",
+        "desc": "Reach exalted reputation with the Darkspear Raiders or Theramore Expeditionary Force.",
+        "icon": 441150
+      },
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": [
+        {
+          "id": "forums-us-30675695",
+          "date": "2026-10-29",
+          "title": "World of Warcraft: Forever Goes Live Globally November 4!",
+          "quote": "Battle for the Darkspear Islands"
+        },
+        {
+          "id": "forums-us-30673599",
+          "date": "2026-10-29",
+          "title": "Return to Azeroth in World of Warcraft: Forever",
+          "quote": "Battle for the Darkspear Islands"
+        },
+        {
+          "id": "forums-us-30407581",
+          "date": "2026-10-09",
+          "title": "Battlegrounds, Builds, and Beyond in This Week's WoW Weekly",
+          "quote": "Battle for the Darkspear Islands in World of Warcraft: Forever"
+        }
+      ]
+    },
+    {
+      "slug": "call-to-arms-alterac-valley",
+      "name": "Call to Arms: Alterac Valley",
+      "desc": "The battle for Alterac Valley grows intense. Greater honor is given to those who pledge sword to their liege and battle in Alterac.",
+      "kind": "battleground",
+      "icon": 236711,
+      "isNewInForever": false,
+      "minLevel": 51,
+      "schedules": [
+        {
+          "holiday": 283,
+          "hours": 100,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2024,
+              "mo": 12,
+              "d": 27,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 17,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 2,
+              "d": 7,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 2,
+              "d": 28,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 3,
+              "d": 21,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 11,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 2,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 23,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 6,
+              "d": 13,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 7,
+              "d": 4,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 7,
+              "d": 25,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 15,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 9,
+              "d": 5,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 9,
+              "d": 26,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 17,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 11,
+              "d": 7,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 11,
+              "d": 28,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 12,
+              "d": 19,
+              "h": 0,
+              "mi": 0
+            }
+          ],
+          "text": "On 18 dates the client lists (2024 to 2025; the last starts Fri 19 Dec 2025, 00:00), 100 hours each."
+        }
+      ],
+      "battleground": {
+        "id": 1,
+        "name": "Alterac Valley",
+        "minLevel": 51,
+        "maxLevel": 60,
+        "players": 40,
+        "isNew": false
+      },
+      "factions": [
+        {
+          "id": 729,
+          "name": "Frostwolf Clan",
+          "rewardsCount": 0,
+          "isNew": false
+        },
+        {
+          "id": 730,
+          "name": "Stormpike Guard",
+          "rewardsCount": 0,
+          "isNew": false
+        }
+      ],
+      "challenge": {
+        "id": 62046,
+        "name": "Master of Alterac Valley",
+        "desc": "Reach exalted reputation with the Frostwolf Clan or Stormpike Guard.",
+        "icon": 236711
+      },
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "call-to-arms-arathi-basin",
+      "name": "Call to Arms: Arathi Basin",
+      "desc": "The battle for Arathi Basin grows intense. Greater honor is given to those who pledge sword to their liege and battle in Arathi.",
+      "kind": "battleground",
+      "icon": 236712,
+      "isNewInForever": false,
+      "minLevel": 20,
+      "schedules": [
+        {
+          "holiday": 285,
+          "hours": 100,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2024,
+              "mo": 12,
+              "d": 20,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 10,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 31,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 2,
+              "d": 21,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 3,
+              "d": 14,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 4,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 25,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 16,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 6,
+              "d": 6,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 6,
+              "d": 27,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 7,
+              "d": 18,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 8,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 29,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 9,
+              "d": 19,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 10,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 31,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 11,
+              "d": 21,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 12,
+              "d": 12,
+              "h": 0,
+              "mi": 0
+            }
+          ],
+          "text": "On 18 dates the client lists (2024 to 2025; the last starts Fri 12 Dec 2025, 00:00), 100 hours each."
+        },
+        {
+          "holiday": 1841,
+          "hours": 168,
+          "rule": "cycle",
+          "cycle": 504,
+          "start": {
+            "y": 2026,
+            "mo": 4,
+            "d": 28,
+            "h": 8,
+            "mi": 0
+          },
+          "new": 1,
+          "text": "Runs for 7 days, then comes back 21 days after it started, on a repeating cycle from Tue 28 Apr 2026, 08:00 (realm time)."
+        }
+      ],
+      "battleground": {
+        "id": 3,
+        "name": "Arathi Basin",
+        "minLevel": 20,
+        "maxLevel": 60,
+        "players": 15,
+        "isNew": false
+      },
+      "factions": [
+        {
+          "id": 510,
+          "name": "The Defilers",
+          "rewardsCount": 32,
+          "isNew": false
+        },
+        {
+          "id": 509,
+          "name": "The League of Arathor",
+          "rewardsCount": 33,
+          "isNew": false
+        }
+      ],
+      "challenge": {
+        "id": 62047,
+        "name": "Master of Arathi Basin",
+        "desc": "Reach exalted reputation with the Defilers or League of Arathor.",
+        "icon": 236712
+      },
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "call-to-arms-warsong-gulch",
+      "name": "Call to Arms: Warsong Gulch",
+      "desc": "The battle for Warsong Gulch grows intense. Greater honor is given to those who pledge sword to their liege and battle in the Gulch.",
+      "kind": "battleground",
+      "icon": 236396,
+      "isNewInForever": false,
+      "minLevel": 10,
+      "schedules": [
+        {
+          "holiday": 284,
+          "hours": 100,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 3,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 24,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 2,
+              "d": 14,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 3,
+              "d": 7,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 3,
+              "d": 28,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 18,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 9,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 30,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 6,
+              "d": 20,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 7,
+              "d": 11,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 1,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 22,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 9,
+              "d": 12,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 3,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 24,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 11,
+              "d": 14,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 12,
+              "d": 5,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 12,
+              "d": 26,
+              "h": 0,
+              "mi": 0
+            }
+          ],
+          "text": "On 18 dates the client lists (2025; the last starts Fri 26 Dec 2025, 00:00), 100 hours each."
+        },
+        {
+          "holiday": 1842,
+          "hours": 168,
+          "rule": "cycle",
+          "cycle": 504,
+          "start": {
+            "y": 2026,
+            "mo": 5,
+            "d": 5,
+            "h": 8,
+            "mi": 0
+          },
+          "new": 1,
+          "text": "Runs for 7 days, then comes back 21 days after it started, on a repeating cycle from Tue 5 May 2026, 08:00 (realm time)."
+        }
+      ],
+      "battleground": {
+        "id": 2,
+        "name": "Warsong Gulch",
+        "minLevel": 10,
+        "maxLevel": 60,
+        "players": 10,
+        "isNew": false
+      },
+      "factions": [
+        {
+          "id": 889,
+          "name": "Warsong Outriders",
+          "rewardsCount": 0,
+          "isNew": false
+        },
+        {
+          "id": 890,
+          "name": "Silverwing Sentinels",
+          "rewardsCount": 0,
+          "isNew": false
+        }
+      ],
+      "challenge": {
+        "id": 62048,
+        "name": "Master of Warsong Gulch",
+        "desc": "Reach exalted reputation with the Warsong Outriders or Silverwing Sentinels.",
+        "icon": 236396
+      },
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "childrens-week",
+      "name": "Children's Week",
+      "desc": "Show an orphan what the hero's life is like! Visit Orphan Matron Nightingale in Stormwind or Orphan Matron Battlewail in Orgrimmar and make a child's dream come true.",
+      "kind": "holiday",
+      "icon": 132161,
+      "isNewInForever": false,
+      "minLevel": 10,
+      "schedules": [
+        {
+          "holiday": 201,
+          "hours": 168,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2023,
+              "mo": 5,
+              "d": 1,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2024,
+              "mo": 5,
+              "d": 2,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 28,
+              "h": 10,
+              "mi": 0
+            }
+          ],
+          "text": "On 3 dates the client lists (2023 to 2025; the last starts Mon 28 Apr 2025, 10:00), 7 days each."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 4,
+      "itemsCount": 6,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "feast-of-winter-veil",
+      "name": "Feast of Winter Veil",
+      "desc": "Greatfather Winter is visiting the cities of Ironforge and Orgrimmar, courtesy of Smokywood Pastures. And throughout Azeroth, it is the season to be jolly!",
+      "kind": "holiday",
+      "icon": 132640,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 141,
+          "hours": 432,
+          "rule": "yearly",
+          "start": {
+            "mo": 12,
+            "d": 15,
+            "h": 6,
+            "mi": 0
+          },
+          "text": "Every year from 15 December, 06:00 (realm time), for 18 days."
+        },
+        {
+          "holiday": 1879,
+          "hours": 1464,
+          "rule": "yearly",
+          "start": {
+            "mo": 11,
+            "d": 15,
+            "h": 6,
+            "mi": 0
+          },
+          "hidden": 1,
+          "new": 1,
+          "note": "A second record with this event's description and no name, hidden from the calendar. The client doesn't say what it switches on.",
+          "text": "Every year from 15 November, 06:00 (realm time), for 61 days."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 31,
+      "itemsCount": 25,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "fireworks-spectacular",
+      "name": "Fireworks Spectacular",
+      "desc": "After the sun sets, the end of Midsummer is celebrated, with an hourly firework extravaganza.\n\nTo watch the show, visit any capital city or Booty Bay.",
+      "kind": "holiday",
+      "icon": 134939,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 62,
+          "hours": 18,
+          "rule": "yearly",
+          "start": {
+            "mo": 7,
+            "d": 4,
+            "h": 6,
+            "mi": 0
+          },
+          "region": "US",
+          "text": "Every year from 4 July, 06:00 (realm time), for 18 hours."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "hallows-end",
+      "name": "Hallow's End",
+      "desc": "Hallow's End celebrates the break of the Forsaken from the Scourge.\n\nFun and mischief reign as the Innkeepers of Azeroth give treats, and tricks, to whomever asks.",
+      "kind": "holiday",
+      "icon": 236443,
+      "isNewInForever": false,
+      "minLevel": 10,
+      "schedules": [
+        {
+          "holiday": 324,
+          "hours": 360,
+          "rule": "yearly",
+          "start": {
+            "mo": 10,
+            "d": 18,
+            "h": 4,
+            "mi": 0
+          },
+          "text": "Every year from 18 October, 04:00 (realm time), for 15 days."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 6,
+      "itemsCount": 29,
+      "vendorsCount": 2,
+      "posts": [
+        {
+          "id": "forums-us-30591004",
+          "date": "2026-10-23",
+          "title": "Dive Into WoW: Forever, the Gods of Zul’Aman, Hallow’s End, and More in WoW Weekly",
+          "quote": "Hallow's End Brings Frights, Delights, and Haunting Rewards"
+        }
+      ]
+    },
+    {
+      "slug": "harvest-festival",
+      "name": "Harvest Festival",
+      "desc": "The Harvest Festival is a time to commemorate those who have sacrificed their lives to help friends and allies. Feasts are held outside Orgrimmar and Ironforge in honor of these fallen heroes.",
+      "kind": "holiday",
+      "icon": 133739,
+      "isNewInForever": false,
+      "minLevel": 30,
+      "schedules": [
+        {
+          "holiday": 321,
+          "hours": 168,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2019,
+              "mo": 9,
+              "d": 9,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2020,
+              "mo": 9,
+              "d": 28,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2021,
+              "mo": 9,
+              "d": 20,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2022,
+              "mo": 9,
+              "d": 5,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2023,
+              "mo": 9,
+              "d": 26,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2024,
+              "mo": 9,
+              "d": 13,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 2,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 9,
+              "d": 21,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 9,
+              "d": 11,
+              "h": 10,
+              "mi": 0
+            }
+          ],
+          "text": "On 9 dates the client lists (2019 to 2027; the last starts Sat 11 Sep 2027, 10:00), 7 days each."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 2,
+      "itemsCount": 4,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "love-is-in-the-air",
+      "name": "Love is in the Air",
+      "desc": "Something is in the air in the major cities of Azeroth. Many guards and townsfolk spend their days giving and receiving gifts to other amorous citizens.",
+      "kind": "holiday",
+      "icon": 135449,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 335,
+          "hours": 120,
+          "rule": "yearly",
+          "start": {
+            "mo": 2,
+            "d": 11,
+            "h": 6,
+            "mi": 0
+          },
+          "text": "Every year from 11 February, 06:00 (realm time), for 5 days."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 8,
+      "itemsCount": 81,
+      "vendorsCount": 24,
+      "posts": []
+    },
+    {
+      "slug": "lunar-festival",
+      "name": "Lunar Festival",
+      "desc": "Every year the druids of Moonglade hold a celebration of their city's great triumph over an ancient evil. During the Lunar Festival, citizens of Azeroth have the opportunity to honor their elders by celebrating their sage wisdom, sharing in magnificent feasts, and of course... shooting lots of fireworks!",
+      "kind": "holiday",
+      "icon": 134941,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 327,
+          "hours": 336,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2006,
+              "mo": 1,
+              "d": 27,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2007,
+              "mo": 2,
+              "d": 16,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2008,
+              "mo": 2,
+              "d": 5,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2009,
+              "mo": 1,
+              "d": 24,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2010,
+              "mo": 2,
+              "d": 12,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2011,
+              "mo": 2,
+              "d": 1,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2012,
+              "mo": 1,
+              "d": 21,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2013,
+              "mo": 2,
+              "d": 8,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2020,
+              "mo": 1,
+              "d": 24,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2021,
+              "mo": 2,
+              "d": 5,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2022,
+              "mo": 1,
+              "d": 30,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2023,
+              "mo": 1,
+              "d": 20,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2024,
+              "mo": 2,
+              "d": 3,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 28,
+              "h": 6,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 2,
+              "d": 16,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 2,
+              "d": 2,
+              "h": 10,
+              "mi": 0
+            }
+          ],
+          "text": "On 16 dates the client lists (2006 to 2027; the last starts Tue 2 Feb 2027, 10:00), 14 days each."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 60,
+      "itemsCount": 6,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "midsummer-fire-festival",
+      "name": "Midsummer Fire Festival",
+      "desc": "A time of merriment and celebration, dedicated to the hottest season of the year.",
+      "kind": "holiday",
+      "icon": 134009,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 341,
+          "hours": 336,
+          "rule": "yearly",
+          "start": {
+            "mo": 6,
+            "d": 21,
+            "h": 4,
+            "mi": 0
+          },
+          "text": "Every year from 21 June, 04:00 (realm time), for 14 days."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 15,
+      "itemsCount": 16,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "noblegarden",
+      "name": "Noblegarden",
+      "desc": "The feast of Noblegarden has arrived. The proving grounds of each race, the place where young heroes first test their strength, each holds cleverly hidden treasure eggs. How many can you find?",
+      "kind": "holiday",
+      "icon": 134939,
+      "isNewInForever": false,
+      "minLevel": 1,
+      "schedules": [
+        {
+          "holiday": 181,
+          "hours": 0,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2006,
+              "mo": 4,
+              "d": 16,
+              "h": 0,
+              "mi": 0,
+              "wd": 0
+            },
+            {
+              "y": 2020,
+              "mo": 4,
+              "d": 12,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2021,
+              "mo": 4,
+              "d": 4,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2022,
+              "mo": 4,
+              "d": 17,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2023,
+              "mo": 4,
+              "d": 9,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2024,
+              "mo": 3,
+              "d": 31,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 20,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 4,
+              "d": 6,
+              "h": 0,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 3,
+              "d": 29,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2028,
+              "mo": 4,
+              "d": 17,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2029,
+              "mo": 4,
+              "d": 2,
+              "h": 10,
+              "mi": 0
+            },
+            {
+              "y": 2030,
+              "mo": 4,
+              "d": 22,
+              "h": 10,
+              "mi": 0
+            }
+          ],
+          "text": "On 12 dates the client lists (2006 to 2030; the last starts Mon 22 Apr 2030, 10:00); the client doesn't say how long it lasts."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 0,
+      "itemsCount": 0,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "stranglethorn-fishing-extravaganza",
+      "name": "Stranglethorn Fishing Extravaganza",
+      "desc": "A fishing tournament, held along the coasts of Stranglethorn Vale. Catch as many tastyfish as you can!\n\nWill you be the master fisherman who catches forty fish first and wins the grand prize?",
+      "kind": "weekly",
+      "icon": 136245,
+      "isNewInForever": false,
+      "minLevel": 60,
+      "schedules": [
+        {
+          "holiday": 301,
+          "hours": 2,
+          "rule": "weekly",
+          "start": {
+            "h": 14,
+            "mi": 0,
+            "wd": 0
+          },
+          "text": "Every Sunday at 14:00 (realm time), for 2 hours."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 1,
+      "itemsCount": 4,
+      "vendorsCount": 0,
+      "posts": []
+    },
+    {
+      "slug": "darkmoon-faire",
+      "name": "Darkmoon Faire",
+      "desc": "The Darkmoon Faire is here, this time in idyllic Elwynn Forest.\n\nMeet Silas Darkmoon and his troupe, play games that test mind and nerve, and behold exotic sights from the four corners of Azeroth... and beyond!",
+      "kind": "faire",
+      "icon": 133301,
+      "isNewInForever": false,
+      "minLevel": 6,
+      "schedules": [
+        {
+          "holiday": 263,
+          "hours": 168,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2025,
+              "mo": 1,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 3,
+              "d": 10,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 5,
+              "d": 5,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 7,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 9,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 11,
+              "d": 10,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 1,
+              "d": 5,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 3,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 5,
+              "d": 4,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 7,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 9,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 11,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 1,
+              "d": 4,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 3,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 5,
+              "d": 3,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 7,
+              "d": 5,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 9,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 11,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            }
+          ],
+          "text": "On 18 dates the client lists (2025 to 2027; the last starts Mon 8 Nov 2027, 04:00), 7 days each."
+        },
+        {
+          "holiday": 264,
+          "hours": 168,
+          "rule": "dates",
+          "dates": [
+            {
+              "y": 2024,
+              "mo": 12,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 2,
+              "d": 10,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 4,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 6,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 8,
+              "d": 4,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 10,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2025,
+              "mo": 12,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 2,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 4,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 6,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 8,
+              "d": 3,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 10,
+              "d": 5,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2026,
+              "mo": 12,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 2,
+              "d": 8,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 4,
+              "d": 5,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 6,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 8,
+              "d": 9,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 10,
+              "d": 4,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2027,
+              "mo": 12,
+              "d": 6,
+              "h": 4,
+              "mi": 0
+            },
+            {
+              "y": 2028,
+              "mo": 2,
+              "d": 7,
+              "h": 4,
+              "mi": 0
+            }
+          ],
+          "d": "The Darkmoon Faire is here, this time at the foot of Thunder Bluff.\n\nMeet Silas Darkmoon and his troupe, play games that test mind and nerve, and behold exotic sights from the four corners of Azeroth... and beyond!",
+          "text": "On 20 dates the client lists (2024 to 2028; the last starts Mon 7 Feb 2028, 04:00), 7 days each."
+        }
+      ],
+      "battleground": null,
+      "factions": [],
+      "challenge": null,
+      "questsCount": 2,
+      "itemsCount": 17,
+      "vendorsCount": 3,
+      "posts": []
+    }
+  ]
+}

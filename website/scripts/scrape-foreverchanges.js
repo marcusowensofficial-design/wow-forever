@@ -24,7 +24,7 @@ const NEW_DUNGEONS = [
   'shapers-terrace'
 ];
 
-const FIRECRAWL_KEY = process.env.FIRECRAWL_API_KEY || '';
+const FIRECRAWL_KEY = process.env.FIRECRAWL_API_KEY || 'fc-a65f7b3acd1e4761b08aaa4064b73052';
 
 async function fetchPage(url) {
   try {

@@ -1340,6 +1340,22 @@ check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () =>
     throw new Error('Paladin Canonical Invariant Violation: Forsaken Charger must be assigned to Horde');
   }
 
+  // Vanity Companion Pets integrity & local images
+  if (!colWin.WOW_COLLECTIONS_DATA?.vanityPets || colWin.WOW_COLLECTIONS_DATA.vanityPets.length !== 73) {
+    throw new Error(`Expected 73 vanityPets in WOW_COLLECTIONS_DATA, found ${colWin.WOW_COLLECTIONS_DATA?.vanityPets?.length}`);
+  }
+  for (const p of colWin.WOW_COLLECTIONS_DATA.vanityPets) {
+    if (!p.image || !fs.existsSync(path.join(ROOT, p.image))) {
+      throw new Error(`Missing local image on disk for vanity pet "${p.name}": ${p.image}`);
+    }
+  }
+
+  // Mount Image Integrity: Every mount must have a valid local image file on disk
+  const missingImgs = colWin.WOW_COLLECTIONS_DATA.mounts.filter(m => !m.image || !fs.existsSync(path.join(ROOT, m.image)));
+  if (missingImgs.length > 0) {
+    throw new Error(`Mount Image Integrity Violation: ${missingImgs.length} mounts missing valid local image on disk (${missingImgs[0].name})`);
+  }
+
   const sqCode = fs.readFileSync(path.join(ROOT, 'js/data/special-quests-data.js'), 'utf8');
   const sqWin = {};
   eval(sqCode.replace('window.', 'sqWin.'));

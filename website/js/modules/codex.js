@@ -31,6 +31,12 @@ function initCodex() {
       if (panelId === 'sets') {
         if (window.initCodexSets) window.initCodexSets();
       }
+      if (panelId === 'events') {
+        if (window.initCodexEvents) window.initCodexEvents();
+      }
+      if (panelId === 'reputation') {
+        if (window.initCodexReputation) window.initCodexReputation();
+      }
       if (panelId === 'mounts') {
         if (window.initCollectionsExplorer) window.initCollectionsExplorer();
       }
