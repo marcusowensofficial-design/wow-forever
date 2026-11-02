@@ -6697,3 +6697,843 @@ input:checked + .toggle-slider:before {
     left: 0;
   }
 }
+
+/* ==========================================================================
+   WARCRAFT: FOREVER - BLIZZARD TOP NAVIGATION BAR
+   ========================================================================== */
+.blizzard-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1.25rem;
+  margin: 0 auto 1rem;
+  background: rgba(10, 14, 23, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: var(--radius-md, 12px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 100;
+}
+
+.blizzard-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.blizzard-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm, 6px);
+  transition: transform 0.2s ease;
+}
+
+.blizzard-brand:hover {
+  transform: scale(1.03);
+}
+
+.blizzard-brand-logo {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  background: linear-gradient(135deg, #fff3c4 0%, #f5d061 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 14px rgba(243, 192, 67, 0.4);
+  white-space: nowrap;
+}
+
+.blizzard-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.blizzard-nav-item {
+  position: relative;
+}
+
+.blizzard-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.85rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: var(--radius-full, 9999px);
+  color: #cbd5e1;
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.blizzard-nav-btn:hover,
+.blizzard-nav-item:hover .blizzard-nav-btn,
+.blizzard-nav-item:focus-within .blizzard-nav-btn {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.blizzard-nav-btn.active {
+  background: linear-gradient(180deg, rgba(234, 179, 8, 0.22) 0%, rgba(180, 83, 9, 0.32) 100%);
+  border-color: #facc15;
+  color: #fef08a;
+  box-shadow: 0 0 16px rgba(234, 179, 8, 0.35);
+}
+
+.blizzard-dropdown-caret {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  opacity: 0.75;
+}
+
+.blizzard-nav-item:hover .blizzard-dropdown-caret,
+.blizzard-nav-item:focus-within .blizzard-dropdown-caret {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.blizzard-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #ef4444;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ef4444;
+  display: inline-block;
+  margin-left: 0.15rem;
+  animation: pulse-ring 1.8s infinite ease-out;
+}
+
+.blizzard-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 230px;
+  background: rgba(11, 15, 25, 0.96);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-md, 10px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(254, 240, 138, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 150;
+  animation: dropdownFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blizzard-nav-item:hover .blizzard-dropdown-menu,
+.blizzard-nav-item:focus-within .blizzard-dropdown-menu {
+  display: flex;
+}
+
+.blizzard-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.blizzard-dropdown-link:hover {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fef08a;
+  transform: translateX(3px);
+}
+
+.blizzard-dropdown-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.blizzard-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.blizzard-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: var(--radius-full, 9999px);
+  padding: 0.42rem 0.95rem;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.blizzard-search-box:hover,
+.blizzard-search-box:focus {
+  background: rgba(22, 30, 46, 0.9);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.2);
+}
+
+.blizzard-search-box kbd {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   WARCRAFT: FOREVER - GRAND LANDING PORTAL (HERO & 5 CARDS)
+   ========================================================================== */
+.hub-grand-portal {
+  position: relative;
+  margin: 0 auto 2.5rem;
+  background: #080b12;
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 16px;
+  box-shadow: 
+    0 0 0 1px rgba(254, 240, 138, 0.12),
+    0 24px 60px rgba(0, 0, 0, 0.9),
+    0 0 45px rgba(139, 92, 246, 0.08);
+  overflow: hidden;
+}
+
+.hub-hero-stage {
+  position: relative;
+  padding: 2.25rem 1.5rem 1.5rem;
+  text-align: center;
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(13, 18, 30, 0.4) 0%, rgba(6, 9, 15, 0.92) 80%),
+    url('../images/branding/hub/hub-hero-banner.jpg') center top / cover no-repeat;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hub-hero-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 7, 12, 0.2) 0%, rgba(7, 10, 17, 0.85) 85%, #080b12 100%);
+  pointer-events: none;
+}
+
+.hub-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hub-hero-blizzard-tag {
+  display: inline-block;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #f5d061;
+  text-shadow: 0 0 12px rgba(245, 208, 97, 0.5);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.hub-hero-title {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(135deg, #fff7d6 0%, #fbd061 40%, #eab308 70%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.9));
+}
+
+.hub-hero-subtitle-tag {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #fef08a;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px rgba(254, 240, 138, 0.4);
+}
+
+.hub-hero-blurb {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  max-width: 740px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.hub-hero-blurb strong {
+  color: #facc15;
+}
+
+.hub-feature-pills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.hub-feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(13, 19, 32, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-full, 9999px);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.hub-feature-pill:hover {
+  transform: translateY(-2px);
+  border-color: #facc15;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+  color: #fff;
+}
+
+/* 5 Main Feature Portal Cards */
+.hub-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.85rem;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.hub-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: 0.9rem;
+  background: #0d121c;
+  cursor: pointer;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  border: 1.5px solid transparent;
+}
+
+.hub-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  transition: opacity 0.25s ease, transform 0.35s ease;
+  z-index: 1;
+}
+
+.hub-card:hover .hub-card-bg {
+  opacity: 0.55;
+  transform: scale(1.06);
+}
+
+.hub-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 14, 22, 0.45) 0%, rgba(10, 14, 22, 0.88) 60%, rgba(8, 11, 18, 0.98) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hub-card-body {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.hub-card-title {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.hub-card-desc {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.hub-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.hub-card-btn-arrow {
+  margin-left: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-5px);
+}
+
+.hub-card:hover .hub-card-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* 5 Thematic Glowing Card Styles */
+.hub-card-amber {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+.hub-card-amber:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+}
+.hub-card-amber .hub-card-title { color: #fef08a; }
+.hub-card-amber .hub-card-btn {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #fef08a;
+}
+.hub-card-amber:hover .hub-card-btn {
+  background: #f59e0b;
+  color: #000;
+}
+
+.hub-card-blue {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+.hub-card-blue:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+}
+.hub-card-blue .hub-card-title { color: #bae6fd; }
+.hub-card-blue .hub-card-btn {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #bae6fd;
+}
+.hub-card-blue:hover .hub-card-btn {
+  background: #38bdf8;
+  color: #000;
+}
+
+.hub-card-orange {
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
+}
+.hub-card-orange:hover {
+  border-color: #f97316;
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.45);
+}
+.hub-card-orange .hub-card-title { color: #fed7aa; }
+.hub-card-orange .hub-card-btn {
+  background: rgba(249, 115, 22, 0.2);
+  border-color: #f97316;
+  color: #fed7aa;
+}
+.hub-card-orange:hover .hub-card-btn {
+  background: #f97316;
+  color: #000;
+}
+
+.hub-card-green {
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+}
+.hub-card-green:hover {
+  border-color: #22c55e;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.45);
+}
+.hub-card-green .hub-card-title { color: #bbf7d0; }
+.hub-card-green .hub-card-btn {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+.hub-card-green:hover .hub-card-btn {
+  background: #22c55e;
+  color: #000;
+}
+
+.hub-card-purple {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+.hub-card-purple:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+}
+.hub-card-purple .hub-card-title { color: #e9d5ff; }
+.hub-card-purple .hub-card-btn {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+  color: #e9d5ff;
+}
+.hub-card-purple:hover .hub-card-btn {
+  background: #a855f7;
+  color: #000;
+}
+
+/* Quick Access Ribbon */
+.hub-quick-access-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(8, 12, 20, 0.85);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.hub-quick-access-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.hub-quick-access-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #facc15;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.hub-quick-access-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.8rem;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hub-quick-access-btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.qa-amber { border-color: rgba(245, 158, 11, 0.45); color: #fef08a; }
+.qa-amber:hover { background: rgba(245, 158, 11, 0.25); border-color: #f59e0b; box-shadow: 0 0 12px rgba(245, 158, 11, 0.35); }
+
+.qa-blue { border-color: rgba(56, 189, 248, 0.45); color: #bae6fd; }
+.qa-blue:hover { background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; box-shadow: 0 0 12px rgba(56, 189, 248, 0.35); }
+
+.qa-green { border-color: rgba(34, 197, 94, 0.45); color: #bbf7d0; }
+.qa-green:hover { background: rgba(34, 197, 94, 0.25); border-color: #22c55e; box-shadow: 0 0 12px rgba(34, 197, 94, 0.35); }
+
+.qa-purple { border-color: rgba(168, 85, 247, 0.45); color: #e9d5ff; }
+.qa-purple:hover { background: rgba(168, 85, 247, 0.25); border-color: #a855f7; box-shadow: 0 0 12px rgba(168, 85, 247, 0.35); }
+
+.qa-cyan { border-color: rgba(6, 182, 212, 0.45); color: #a5f3fc; }
+.qa-cyan:hover { background: rgba(6, 182, 212, 0.25); border-color: #06b6d4; box-shadow: 0 0 12px rgba(6, 182, 212, 0.35); }
+
+.qa-orange { border-color: rgba(249, 115, 22, 0.45); color: #fed7aa; }
+.qa-orange:hover { background: rgba(249, 115, 22, 0.25); border-color: #f97316; box-shadow: 0 0 12px rgba(249, 115, 22, 0.35); }
+
+/* 3-Column Bottom Deck */
+.hub-bottom-deck {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.hub-deck-card {
+  background: rgba(12, 17, 28, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-deck-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #facc15;
+  text-transform: uppercase;
+}
+
+/* Recent Updates Widget */
+.hub-update-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.hub-update-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0.55rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hub-update-item:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.hub-update-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.12rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.tag-blue { background: rgba(56, 189, 248, 0.25); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.4); }
+.tag-purple { background: rgba(168, 85, 247, 0.25); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); }
+.tag-green { background: rgba(34, 197, 94, 0.25); color: #86efac; border: 1px solid rgba(34, 197, 94, 0.4); }
+
+.hub-update-title {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hub-update-date {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* Featured Guide Widget */
+.hub-featured-guide {
+  position: relative;
+  background: radial-gradient(circle at 75% 50%, rgba(56, 189, 248, 0.15) 0%, rgba(12, 17, 28, 0.95) 70%),
+              url('../images/branding/hub/hub-featured-skyborne.jpg') right center / contain no-repeat;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.hub-featured-guide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.hub-featured-guide-title {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.hub-featured-guide-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  max-width: 260px;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.hub-deck-footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #facc15;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.hub-deck-footer-link:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Community & External Tools Grid */
+.hub-tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.hub-tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.55rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hub-tool-btn:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Battlement Parapet Footer */
+.hub-battlement-footer {
+  height: 48px;
+  background: url('../images/branding/hub/hub-battlement-footer.jpg') center bottom / cover no-repeat;
+  border-top: 1px solid rgba(212, 175, 55, 0.4);
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .hub-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hub-bottom-deck {
+    grid-template-columns: 1fr;
+  }
+  .hub-featured-guide-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blizzard-navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .blizzard-nav-left, .blizzard-nav-center, .blizzard-nav-right {
+    justify-content: center;
+  }
+  .hub-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .hub-hero-title {
+    font-size: 1.8rem;
+  }
+  .hub-tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

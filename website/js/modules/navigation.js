@@ -128,6 +128,37 @@ function initNavigation() {
         targetPanel.classList.add('active');
       }
 
+      // Synchronize Blizzard top navbar active state
+      const categoryMap = {
+        overview: 'overview',
+        news: 'news',
+        guides: 'guides',
+        changes: 'guides',
+        codex: 'guides',
+        milestones: 'guides',
+        talents: 'talents',
+        deepdives: 'talents',
+        weapons: 'talents',
+        planner: 'talents',
+        downrank: 'talents',
+        bis: 'bis',
+        tierlist: 'bis',
+        database: 'bis',
+        tracker: 'bis',
+        atlas: 'resources',
+        professions: 'resources',
+        camping: 'resources',
+        legacy: 'resources',
+        addons: 'resources',
+        systems: 'resources'
+      };
+
+      const activeCat = categoryMap[targetTab] || 'overview';
+      document.querySelectorAll('.blizzard-nav-btn').forEach(b => {
+        const cat = b.getAttribute('data-target-tab');
+        b.classList.toggle('active', cat === activeCat || (activeCat === 'resources' && cat === 'codex'));
+      });
+
       if (targetTab === 'talents') {
         const mount = document.getElementById('talents-standalone-mount');
         if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
@@ -168,6 +199,30 @@ function initNavigation() {
         navBar.scrollIntoView({ behavior: 'smooth' });
       }
     });
+  });
+
+  // Support Grand Landing Portal & Blizzard Top Navigation Delegation
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-target-tab]');
+    if (!trigger) return;
+    const targetTab = trigger.getAttribute('data-target-tab');
+    if (!targetTab) return;
+
+    // Avoid infinite loop if clicking a .nav-tab-btn itself
+    if (trigger.classList.contains('nav-tab-btn')) return;
+
+    const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${targetTab}"]`);
+    if (targetBtn) {
+      targetBtn.click();
+      if (targetTab === 'overview') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const panel = document.getElementById(`tab-${targetTab}`);
+        if (panel) {
+          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
   });
 
   // Support URL hash routing to tabs (e.g. #bis, #tierlist, #codex) and native talent calculator (#calculator, #talents)

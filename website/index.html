@@ -54,28 +54,132 @@
 
   <div class="app-container">
 
-    <!-- Masthead Top Utility Bar -->
-    <div class="top-utility-bar">
-      <div class="utility-left">
-        <div class="beta-status-pill">
-          <span class="beta-pulse-dot"></span>
-          <span>Launch Prep Active • Build 1.60.1.70425 / 70707</span>
+    <!-- Blizzard Authentic Top Navigation Bar -->
+    <nav class="blizzard-navbar" aria-label="Main Navigation Masthead">
+      <div class="blizzard-nav-left">
+        <a href="#overview" class="blizzard-brand" data-target-tab="overview" title="World of Warcraft: Forever — Home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="rgba(245, 208, 97, 0.3)"></polygon>
+          </svg>
+          <span class="blizzard-brand-logo">BLIZZARD</span>
+        </a>
+      </div>
+
+      <div class="blizzard-nav-center">
+        <!-- Home -->
+        <button type="button" class="blizzard-nav-btn active" data-target-tab="overview" id="nav-btn-home">
+          <span>🏠</span> Home
+        </button>
+
+        <!-- Guides Dropdown -->
+        <div class="blizzard-nav-item">
+          <button type="button" class="blizzard-nav-btn" id="btn-open-guides" data-target-tab="guides" aria-expanded="false" aria-haspopup="true">
+            <span>📖</span> Guides <span class="blizzard-dropdown-caret">▼</span>
+          </button>
+          <div class="blizzard-dropdown-menu">
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="guides">
+              <span class="blizzard-dropdown-icon">📚</span> Classic+ Guides &amp; Launch
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="changes">
+              <span class="blizzard-dropdown-icon">🔄</span> What's Changed
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="codex">
+              <span class="blizzard-dropdown-icon">🔮</span> Content Codex &amp; Dungeons
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="milestones">
+              <span class="blizzard-dropdown-icon">🏁</span> Launch Milestones
+            </button>
+          </div>
         </div>
+
+        <!-- Classes Dropdown -->
+        <div class="blizzard-nav-item">
+          <button type="button" class="blizzard-nav-btn" data-target-tab="talents" aria-expanded="false" aria-haspopup="true">
+            <span>⚔️</span> Classes <span class="blizzard-dropdown-caret">▼</span>
+          </button>
+          <div class="blizzard-dropdown-menu">
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="talents">
+              <span class="blizzard-dropdown-icon">⚡</span> Interactive Talent Calculator
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="deepdives">
+              <span class="blizzard-dropdown-icon">🎯</span> Class Deep Dives &amp; Builds
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="weapons">
+              <span class="blizzard-dropdown-icon">🗡️</span> 1-60 Weapon Progression
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="planner">
+              <span class="blizzard-dropdown-icon">📜</span> Class &amp; Race Planner
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="downrank">
+              <span class="blizzard-dropdown-icon">🧪</span> Downranking Calculator
+            </button>
+          </div>
+        </div>
+
+        <!-- Tools Dropdown -->
+        <div class="blizzard-nav-item">
+          <button type="button" class="blizzard-nav-btn" data-target-tab="bis" aria-expanded="false" aria-haspopup="true">
+            <span>⚙️</span> Tools <span class="blizzard-dropdown-caret">▼</span>
+          </button>
+          <div class="blizzard-dropdown-menu">
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="bis">
+              <span class="blizzard-dropdown-icon">🛡️</span> Midway Level 30 BiS Planner
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="tierlist">
+              <span class="blizzard-dropdown-icon">🏆</span> Level 30 Tier List Maker
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="database">
+              <span class="blizzard-dropdown-icon">📦</span> Complete Item DB &amp; Market
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="tracker">
+              <span class="blizzard-dropdown-icon">👥</span> Our Forever Squad Roster
+            </button>
+          </div>
+        </div>
+
+        <!-- Resources Dropdown -->
+        <div class="blizzard-nav-item">
+          <button type="button" class="blizzard-nav-btn" data-target-tab="codex" aria-expanded="false" aria-haspopup="true">
+            <span>📚</span> Resources <span class="blizzard-dropdown-caret">▼</span>
+          </button>
+          <div class="blizzard-dropdown-menu">
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="atlas">
+              <span class="blizzard-dropdown-icon">🗺️</span> World Atlas &amp; Rare Map
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="professions">
+              <span class="blizzard-dropdown-icon">⚒️</span> Professions Hub &amp; Specializations
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="camping">
+              <span class="blizzard-dropdown-icon">⛺</span> Camping Hub &amp; Survival
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="legacy">
+              <span class="blizzard-dropdown-icon">🌟</span> Account-Wide Legacy Tree
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="addons">
+              <span class="blizzard-dropdown-icon">🧩</span> Companion Addon Suite
+            </button>
+            <button type="button" class="blizzard-dropdown-link" data-target-tab="systems">
+              <span class="blizzard-dropdown-icon">⚙️</span> Systems &amp; 12.0 Engine
+            </button>
+          </div>
+        </div>
+
+        <!-- Updates -->
+        <button type="button" class="blizzard-nav-btn" data-target-tab="news" id="nav-btn-news">
+          <span>🔔</span> Updates <span class="blizzard-badge-dot"></span>
+        </button>
+      </div>
+
+      <div class="blizzard-nav-right">
         <button type="button" class="murloc-counter-btn" id="murloc-camp-btn" title="Pull the murloc camp!">
           <span class="murloc-icon">🐟</span>
           <span id="murloc-count">3,842</span>
-          <span class="murloc-label">murlocs online</span>
+        </button>
+        <button type="button" class="blizzard-search-box" id="btn-open-search" aria-label="Search guides, tools, or topics">
+          <span class="search-icon">🔍</span> Search guides, tools, or topics... <kbd>/</kbd>
         </button>
       </div>
-      <div class="utility-right">
-        <button type="button" class="header-search-btn" id="btn-open-search" aria-label="Search Forever">
-          <span class="search-icon">🔍</span> Search Forever <kbd>/</kbd>
-        </button>
-        <button type="button" class="header-guides-btn" id="btn-open-guides" aria-label="Classic+ Guides">
-          <span class="guides-icon">📖</span> Classic+ Guides
-        </button>
-      </div>
-    </div>
+    </nav>
 
     <!-- Header & Hero -->
     <header class="header-hero">
@@ -456,6 +560,218 @@
 
     <!-- TAB 1: OPERATIONS HUB & COUNTDOWNS -->
     <main id="tab-overview" class="tab-content active">
+
+      <!-- GRAND LANDING PORTAL (Reference UI Design) -->
+      <section class="hub-grand-portal" aria-label="World of Warcraft: Forever Portal Deck">
+        
+        <!-- Hero Stage with Cinematic Dual-Faction Backdrop -->
+        <div class="hub-hero-stage">
+          <div class="hub-hero-content">
+            <span class="hub-hero-blizzard-tag">Blizzard Entertainment</span>
+            <h2 class="hub-hero-title">WORLD OF WARCRAFT: FOREVER</h2>
+            <div class="hub-hero-subtitle-tag">The Permanent, Living Classic+ Adventure</div>
+            <p class="hub-hero-blurb">
+              Featuring horizontal progression at Level 60, the new <strong>Skyborne</strong> race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+            </p>
+            <div class="hub-feature-pills">
+              <span class="hub-feature-pill"><span>♾️</span> Permanent Realm</span>
+              <span class="hub-feature-pill"><span>📚</span> Horizontal Progression</span>
+              <span class="hub-feature-pill"><span>🦅</span> New Skyborne Race</span>
+              <span class="hub-feature-pill"><span>⚔️</span> 3 Raid Tiers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Main Feature Portal Cards -->
+        <div class="hub-cards-grid">
+          
+          <!-- Card 1: Getting Started (Amber/Gold) -->
+          <div class="hub-card hub-card-amber" data-target-tab="guides" role="button" tabindex="0" aria-label="Getting Started - New to Forever? Start here.">
+            <div class="hub-card-bg" style="background-image: url('images/branding/hub/hub-card-getting-started.jpg');"></div>
+            <div class="hub-card-overlay"></div>
+            <div class="hub-card-body">
+              <div>
+                <h3 class="hub-card-title">Getting Started</h3>
+                <p class="hub-card-desc">New to Forever? Start here.</p>
+              </div>
+              <span class="hub-card-btn">Explore <span class="hub-card-btn-arrow">→</span></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Classes & Builds (Blue/Azure) -->
+          <div class="hub-card hub-card-blue" data-target-tab="talents" role="button" tabindex="0" aria-label="Classes and Builds - Class guides, deep dives, and talent planning.">
+            <div class="hub-card-bg" style="background-image: url('images/branding/hub/hub-card-classes-builds.jpg');"></div>
+            <div class="hub-card-overlay"></div>
+            <div class="hub-card-body">
+              <div>
+                <h3 class="hub-card-title">Classes &amp; Builds</h3>
+                <p class="hub-card-desc">Class guides, deep dives, and talent planning.</p>
+              </div>
+              <span class="hub-card-btn">Explore <span class="hub-card-btn-arrow">→</span></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Gear & Progression (Orange/Bronze) -->
+          <div class="hub-card hub-card-orange" data-target-tab="bis" role="button" tabindex="0" aria-label="Gear and Progression - Items, BiS lists, tier sets, and gearing paths.">
+            <div class="hub-card-bg" style="background-image: url('images/branding/hub/hub-card-gear-progression.jpg');"></div>
+            <div class="hub-card-overlay"></div>
+            <div class="hub-card-body">
+              <div>
+                <h3 class="hub-card-title">Gear &amp; Progression</h3>
+                <p class="hub-card-desc">Items, BiS lists, tier sets, and gearing paths.</p>
+              </div>
+              <span class="hub-card-btn">Explore <span class="hub-card-btn-arrow">→</span></span>
+            </div>
+          </div>
+
+          <!-- Card 4: World & Content (Emerald/Green) -->
+          <div class="hub-card hub-card-green" data-target-tab="codex" role="button" tabindex="0" aria-label="World and Content - Dungeons, raids, world content, and systems.">
+            <div class="hub-card-bg" style="background-image: url('images/branding/hub/hub-card-world-content.jpg');"></div>
+            <div class="hub-card-overlay"></div>
+            <div class="hub-card-body">
+              <div>
+                <h3 class="hub-card-title">World &amp; Content</h3>
+                <p class="hub-card-desc">Dungeons, raids, world content, and systems.</p>
+              </div>
+              <span class="hub-card-btn">Explore <span class="hub-card-btn-arrow">→</span></span>
+            </div>
+          </div>
+
+          <!-- Card 5: Tools & Resources (Arcane/Purple) -->
+          <div class="hub-card hub-card-purple" data-target-tab="tierlist" role="button" tabindex="0" aria-label="Tools and Resources - Calculators, trackers, and community tools.">
+            <div class="hub-card-bg" style="background-image: url('images/branding/hub/hub-card-tools-resources.jpg');"></div>
+            <div class="hub-card-overlay"></div>
+            <div class="hub-card-body">
+              <div>
+                <h3 class="hub-card-title">Tools &amp; Resources</h3>
+                <p class="hub-card-desc">Calculators, trackers, and community tools.</p>
+              </div>
+              <span class="hub-card-btn">Explore <span class="hub-card-btn-arrow">→</span></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Access Ribbon -->
+        <div class="hub-quick-access-bar" aria-label="Quick Access Ribbon">
+          <span class="hub-quick-access-label">⚡ Quick Access</span>
+          <button type="button" class="hub-quick-access-btn qa-amber" data-target-tab="overview">
+            <span>🏛️</span> Operations Hub
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-blue" data-target-tab="guides">
+            <span>📖</span> Classic+ Guide
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-green" data-target-tab="talents">
+            <span>⚡</span> Talents
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-purple" data-target-tab="tierlist">
+            <span>🏆</span> Tier List Maker
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-purple" data-target-tab="database">
+            <span>📦</span> Item DB &amp; Market
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-cyan" data-target-tab="downrank">
+            <span>🧪</span> Downrank Calc
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-green" data-target-tab="changes">
+            <span>🔄</span> What's Changed
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-orange" data-target-tab="addons">
+            <span>🧩</span> Add-on Suite
+          </button>
+          <button type="button" class="hub-quick-access-btn qa-blue" data-target-tab="tracker">
+            <span>👥</span> Our Forever Squad
+          </button>
+        </div>
+
+        <!-- 3-Column Bottom Deck -->
+        <div class="hub-bottom-deck">
+          
+          <!-- Column 1: Recent Updates -->
+          <div class="hub-deck-card">
+            <div>
+              <div class="hub-deck-card-header">
+                <span>📢</span> Recent Updates
+              </div>
+              <div class="hub-update-list">
+                <a class="hub-update-item" data-target-tab="news">
+                  <span class="hub-update-tag tag-blue">Update</span>
+                  <span class="hub-update-title">Skyborne Race Now Live</span>
+                  <span class="hub-update-date">Oct 30</span>
+                </a>
+                <a class="hub-update-item" data-target-tab="news">
+                  <span class="hub-update-tag tag-purple">Guide</span>
+                  <span class="hub-update-title">Phase 2 Raid Overview &amp; Prep</span>
+                  <span class="hub-update-date">Oct 28</span>
+                </a>
+                <a class="hub-update-item" data-target-tab="news">
+                  <span class="hub-update-tag tag-green">Tool</span>
+                  <span class="hub-update-title">Updated BiS Lists (All Classes)</span>
+                  <span class="hub-update-date">Oct 26</span>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="hub-deck-footer-link" data-target-tab="news">
+              View All Updates →
+            </button>
+          </div>
+
+          <!-- Column 2: Featured Guide (Skyborne Race Guide) -->
+          <div class="hub-deck-card hub-featured-guide">
+            <div>
+              <div class="hub-featured-guide-badge">
+                <span>⚡</span> Featured Guide
+              </div>
+              <h3 class="hub-featured-guide-title">Skyborne Race Guide</h3>
+              <p class="hub-featured-guide-desc">
+                Racials, class synergies, and leveling tips for the new neutral faction race.
+              </p>
+            </div>
+            <div>
+              <button type="button" class="hub-card-btn hub-card-btn-featured" data-target-tab="guides" style="background: #38bdf8; color: #000; font-weight: 700; width: auto; padding: 0.45rem 1.25rem;">
+                Read Guide <span class="hub-card-btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Column 3: Community & External Tools -->
+          <div class="hub-deck-card">
+            <div>
+              <div class="hub-deck-card-header">
+                <span>👥</span> Community &amp; External Tools
+              </div>
+              <div class="hub-tools-grid">
+                <a href="https://foreverchanges.pro/" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>🌐</span> ForeverChanges
+                </a>
+                <a href="https://wowforevertools.com/" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>⚔️</span> WoW Forever Tools
+                </a>
+                <a href="https://www.zockify.com/forever/" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>🧪</span> Zockify Forever
+                </a>
+                <a href="https://www.wowhead.com/forever" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>📖</span> Wowhead: Codex
+                </a>
+                <a href="https://mobalytics.gg/wow-forever" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>📊</span> Mobalytics: Meta
+                </a>
+                <a href="https://www.method.gg/wow-forever" target="_blank" rel="noopener noreferrer" class="hub-tool-btn">
+                  <span>🚀</span> Method.gg Launch
+                </a>
+              </div>
+            </div>
+            <a href="https://www.wowhead.com/forever" target="_blank" rel="noopener noreferrer" class="hub-deck-footer-link">
+              View All Resources →
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Battlement Parapet Footer -->
+        <div class="hub-battlement-footer" aria-hidden="true"></div>
+
+      </section>
 
       <!-- Countdowns Section - 4 Milestones -->
       <section class="countdown-section" aria-label="Release Countdowns">
