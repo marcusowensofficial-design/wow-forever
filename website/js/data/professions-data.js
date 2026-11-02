@@ -141118,9 +141118,10 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Mining ore nodes and smelting bars for blacksmiths and engineers",
     "campBuff": null,
     "stats": {
-      "recipeCount": 14,
-      "newInForever": 2,
-      "favorRecipes": 0
+      "recipeCount": 17,
+      "newInForever": 5,
+      "favorRecipes": 0,
+      "newRecipes": 5
     },
     "groups": [
       {
@@ -141128,6 +141129,12 @@ window.WOW_PROFESSIONS_DATA = {
         "label": "Smelting Bars",
         "icon": "inv_ore_copper_01",
         "count": 14
+      },
+      {
+        "key": "Camping",
+        "label": "Camp Features",
+        "icon": "spell_fire_fire",
+        "count": 3
       }
     ],
     "recipes": [
@@ -141487,6 +141494,119 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 279960,
+        "spellId": 1214031,
+        "name": "Lodestone",
+        "icon": "inv_misc_stonetablet_05",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Erects a lodestone that grants increased melee Attack Power (mutually exclusive with Blessing of Might).",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 20,
+        "yellow": 22,
+        "green": 22,
+        "grey": 25,
+        "reagents": [
+          {
+            "id": 2835,
+            "count": 1,
+            "name": "Rough Stone",
+            "icon": "inv_stone_06",
+            "quality": 1
+          },
+          {
+            "id": 2840,
+            "count": 1,
+            "name": "Copper Bar",
+            "icon": "inv_ingot_02",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer · 1s (Forever price)"
+      },
+      {
+        "id": 279948,
+        "spellId": 1214032,
+        "name": "Rock Garden",
+        "icon": "inv_stone_grindstone_02",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Rock Garden that spawns a common mining node over time, and provides all benefits of a Lodestone.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 142,
+        "grey": 145,
+        "reagents": [
+          {
+            "id": 2838,
+            "count": 2,
+            "name": "Heavy Stone",
+            "icon": "inv_stone_07",
+            "quality": 1
+          },
+          {
+            "id": 2772,
+            "count": 1,
+            "name": "Iron Ore",
+            "icon": "inv_ore_iron_01",
+            "quality": 1
+          },
+          {
+            "id": 2842,
+            "count": 1,
+            "name": "Silver Bar",
+            "icon": "inv_ingot_01",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Rock Garden"
+      },
+      {
+        "id": 279952,
+        "spellId": 1214033,
+        "name": "Molten Foundry",
+        "icon": "spell_fire_lavaspawn",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Molten Foundry usable for recipes that require it, and provides all benefits of a Lodestone.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "reagents": [
+          {
+            "id": 12359,
+            "count": 5,
+            "name": "Thorium Bar",
+            "icon": "inv_ingot_07",
+            "quality": 1
+          },
+          {
+            "id": 12365,
+            "count": 2,
+            "name": "Dense Stone",
+            "icon": "inv_stone_09",
+            "quality": 1
+          },
+          {
+            "id": 6037,
+            "count": 1,
+            "name": "Truesilver Bar",
+            "icon": "inv_ingot_08",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Molten Foundry"
       }
     ],
     "gatheringNodes": [
@@ -142038,12 +142158,134 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Harvesting wild herbs for alchemists and chanters",
     "campBuff": null,
     "stats": {
-      "recipeCount": 0,
-      "newInForever": 0,
-      "favorRecipes": 0
+      "recipeCount": 3,
+      "newInForever": 3,
+      "favorRecipes": 0,
+      "newRecipes": 3
     },
-    "groups": [],
-    "recipes": [],
+    "groups": [
+      {
+        "key": "Camping",
+        "label": "Camp Features",
+        "icon": "spell_fire_fire",
+        "count": 3
+      }
+    ],
+    "recipes": [
+      {
+        "id": 279962,
+        "spellId": 1214001,
+        "name": "Incense Candle",
+        "icon": "inv_misc_candle_01",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Ignites an incense candle that allows you and others sitting nearby to gain increased Intellect (mutually exclusive with Arcane Intellect).",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 20,
+        "yellow": 20,
+        "green": 22,
+        "grey": 25,
+        "reagents": [
+          {
+            "id": 2447,
+            "count": 1,
+            "name": "Peacebloom",
+            "icon": "inv_misc_herb_01",
+            "quality": 1
+          },
+          {
+            "id": 765,
+            "count": 1,
+            "name": "Silverleaf",
+            "icon": "inv_misc_herb_02",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer · 90c (Forever price)"
+      },
+      {
+        "id": 279964,
+        "spellId": 1214002,
+        "name": "Greenhouse",
+        "icon": "inv_misc_herb_sansamroot",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Greenhouse that will grow herbs over time from seeds planted, and provides all benefits of an Incense Candle.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 142,
+        "grey": 145,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 2,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 8836,
+            "count": 1,
+            "name": "Arthas' Tears",
+            "icon": "inv_misc_herb_03",
+            "quality": 1
+          },
+          {
+            "id": 8831,
+            "count": 1,
+            "name": "Purple Lotus",
+            "icon": "inv_misc_herb_17",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Greenhouse"
+      },
+      {
+        "id": 279947,
+        "spellId": 1214003,
+        "name": "Seed Hybridizer",
+        "icon": "inv_misc_herb_blacklotus",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Seed Hybridizer that allows seeds to be multiplied or combined into rarer tiers, and provides all benefits of an Incense Candle.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "reagents": [
+          {
+            "id": 13465,
+            "count": 4,
+            "name": "Mountain Silversage",
+            "icon": "inv_misc_herb_mountainssilversage",
+            "quality": 1
+          },
+          {
+            "id": 8925,
+            "count": 1,
+            "name": "Crystal Vial",
+            "icon": "inv_drink_06",
+            "quality": 1
+          },
+          {
+            "id": 14047,
+            "count": 2,
+            "name": "Runecloth",
+            "icon": "inv_fabric_purplefire_01",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Seed Hybridizer"
+      }
+    ],
     "gatheringNodes": [
       {
         "name": "Node #undefined",
@@ -142562,12 +142804,134 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Skinning beasts for leather, hides, and scales",
     "campBuff": null,
     "stats": {
-      "recipeCount": 0,
-      "newInForever": 0,
-      "favorRecipes": 0
+      "recipeCount": 3,
+      "newInForever": 3,
+      "favorRecipes": 0,
+      "newRecipes": 3
     },
-    "groups": [],
-    "recipes": [],
+    "groups": [
+      {
+        "key": "Camping",
+        "label": "Camp Features",
+        "icon": "spell_fire_fire",
+        "count": 3
+      }
+    ],
+    "recipes": [
+      {
+        "id": 279979,
+        "spellId": 1214011,
+        "name": "Camp Chair",
+        "icon": "inv_misc_pelt_wolf_01",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks (mutually exclusive with Moonkin Aura).",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 20,
+        "yellow": 20,
+        "green": 22,
+        "grey": 25,
+        "reagents": [
+          {
+            "id": 2318,
+            "count": 3,
+            "name": "Light Leather",
+            "icon": "inv_misc_leatherscraps_03",
+            "quality": 1
+          },
+          {
+            "id": 4470,
+            "count": 2,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer · 1s (Forever price)"
+      },
+      {
+        "id": 279969,
+        "spellId": 1214012,
+        "name": "Field Guide",
+        "icon": "inv_misc_book_09",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Field Guide that allows players to read it and gain Track Beasts, and provides all benefits of a Camp Chair.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 142,
+        "grey": 145,
+        "reagents": [
+          {
+            "id": 2319,
+            "count": 3,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscraps_04",
+            "quality": 1
+          },
+          {
+            "id": 5784,
+            "count": 2,
+            "name": "Slimy Murloc Scale",
+            "icon": "inv_misc_monsterscales_07",
+            "quality": 1
+          },
+          {
+            "id": 2321,
+            "count": 1,
+            "name": "Fine Thread",
+            "icon": "inv_fabric_linen_01",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Field Guide"
+      },
+      {
+        "id": 279938,
+        "spellId": 1214013,
+        "name": "Trapper's Workbench",
+        "icon": "inv_misc_pelt_bear_01",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Trapper's Workbench containing 1 trap, and provides all benefits of a Camp Chair.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 2,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 4234,
+            "count": 4,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscraps_05",
+            "quality": 1
+          },
+          {
+            "id": 3575,
+            "count": 1,
+            "name": "Iron Bar",
+            "icon": "inv_ingot_iron",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Trapper's Workbench"
+      }
+    ],
     "gatheringNodes": [
       {
         "name": "Node #undefined",
@@ -147421,12 +147785,134 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Catches fish across lakes, rivers, and oceanic waters",
     "campBuff": null,
     "stats": {
-      "recipeCount": 0,
-      "newInForever": 0,
-      "favorRecipes": 0
+      "recipeCount": 3,
+      "newInForever": 3,
+      "favorRecipes": 0,
+      "newRecipes": 3
     },
-    "groups": [],
-    "recipes": [],
+    "groups": [
+      {
+        "key": "Camping",
+        "label": "Camp Features",
+        "icon": "spell_fire_fire",
+        "count": 3
+      }
+    ],
+    "recipes": [
+      {
+        "id": 279967,
+        "spellId": 1214021,
+        "name": "Fish Bowl",
+        "icon": "inv_misc_fish_24",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a small fish bowl that allows you and others sitting nearby to gain 8% increased stats (mutually exclusive with Blessing of Kings).",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 20,
+        "yellow": 20,
+        "green": 20,
+        "grey": 20,
+        "reagents": [
+          {
+            "id": 6291,
+            "count": 1,
+            "name": "Raw Brilliant Smallfish",
+            "icon": "inv_misc_fish_01",
+            "quality": 1
+          },
+          {
+            "id": 3371,
+            "count": 1,
+            "name": "Empty Vial",
+            "icon": "inv_drink_06",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer · 1s (Forever price)"
+      },
+      {
+        "id": 279965,
+        "spellId": 1214022,
+        "name": "Fishing Rack",
+        "icon": "inv_misc_fish_08",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Fishing Rack that grants the ability to catch uncommon fish for 1 hour, provides lures, and provides all benefits of a Fish Bowl.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 142,
+        "grey": 145,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 2,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 8925,
+            "count": 1,
+            "name": "Crystal Vial",
+            "icon": "inv_drink_06",
+            "quality": 1
+          },
+          {
+            "id": 8365,
+            "count": 2,
+            "name": "Raw Mithril Head Trout",
+            "icon": "inv_misc_fish_03",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Fishing Rack"
+      },
+      {
+        "id": 279966,
+        "spellId": 1214023,
+        "name": "Fishing Hut",
+        "icon": "inv_misc_fish_50",
+        "quality": 1,
+        "cat": "Camping",
+        "kind": "Camp Feature",
+        "effect": "Places a Fishing Hut that grants the ability to catch rare fish for 1 hour, provides lures, and provides all benefits of a Fish Bowl.",
+        "isNew": true,
+        "isCamp": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 5,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 14048,
+            "count": 2,
+            "name": "Bolt of Runecloth",
+            "icon": "inv_fabric_purplefire_02",
+            "quality": 1
+          },
+          {
+            "id": 273295,
+            "count": 1,
+            "name": "Seasonal Fish Steaks",
+            "icon": "inv_misc_fish_21",
+            "quality": 1
+          }
+        ],
+        "source": "Blueprint: Fishing Hut"
+      }
+    ],
     "gatheringNodes": [
       {
         "name": "Node #undefined",

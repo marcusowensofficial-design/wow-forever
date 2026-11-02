@@ -89,7 +89,7 @@
 
   function handleProfessionsHashRoute() {
     const route = parseHashRoute();
-    if (route.profession === 'overview' || (window.WOW_PROFESSIONS_DATA && window.WOW_PROFESSIONS_DATA[route.profession])) {
+    if (route.profession === 'overview' || route.profession === 'quiz' || (window.WOW_PROFESSIONS_DATA && window.WOW_PROFESSIONS_DATA[route.profession])) {
       currentProfession = route.profession;
       currentSubTab = route.subtab;
       currentCategory = 'all';
@@ -245,14 +245,18 @@
     } else if (isHerbalism) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
       tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes & Routes (${prof.nodes?.length || 28})` });
+      tabs.push({ id: 'recipes', icon: '📜', label: `Camp Features (${prof.recipes?.length || 3})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isSkinning) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Skinning by Level' });
+      tabs.push({ id: 'beasts', icon: '🐾', label: 'Where to Skin (Beasts)' });
+      tabs.push({ id: 'recipes', icon: '📜', label: `Camp Features (${prof.recipes?.length || 3})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isFishing) {
       tabs.push({ id: 'waters', icon: '🌊', label: 'Waters & Schedule' });
       tabs.push({ id: 'lures', icon: '🪱', label: `Fishing Lures (${prof.fishingLures?.length || 14})` });
       tabs.push({ id: 'ranks', icon: '🎖️', label: `Ranks (${prof.ranks?.length || 8})` });
+      tabs.push({ id: 'recipes', icon: '📜', label: `Camp Features (${prof.recipes?.length || 3})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isCamping) {
       tabs.push({ id: 'guide', icon: '⛺', label: 'How It Works & Campfires' });
@@ -273,6 +277,13 @@
 
     if (currentProfession === 'overview') {
       renderOverviewHub(viewport);
+      return;
+    }
+
+    if (currentProfession === 'quiz') {
+      if (window.WOW_PROFESSIONS_QUIZ?.renderQuiz) {
+        window.WOW_PROFESSIONS_QUIZ.renderQuiz(viewport);
+      }
       return;
     }
 
@@ -437,6 +448,21 @@
               <div class="stat-lbl">Merchant's Favor</div>
             </div>
           </div>
+        </div>
+
+        <!-- Interactive Profession Quiz CTA Banner -->
+        <div class="prof-quiz-cta-banner" style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, rgba(30,41,59,0.95) 0%, rgba(15,23,42,0.98) 100%); border: 1px solid rgba(197,160,89,0.4); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="font-size: 2rem; background: rgba(197,160,89,0.15); width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(197,160,89,0.3);">🧭</div>
+            <div>
+              <div style="color: #c5a059; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Can't decide on professions?</div>
+              <h4 style="margin: 0.2rem 0; font-family: 'Cinzel', serif; font-size: 1.2rem; color: #f0e6d2;">Interactive Profession Matcher Quiz</h4>
+              <p style="margin: 0; font-size: 0.85rem; color: #94a3b8;">Six quick questions about your playstyle, class, and time commitment to find your optimal profession duo.</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary" id="launch-prof-quiz-btn" style="background: linear-gradient(135deg, #c5a059 0%, #9a7b38 100%); color: #0b1020; font-weight: bold; border: none; padding: 0.65rem 1.25rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; white-space: nowrap; box-shadow: 0 4px 12px rgba(197,160,89,0.3);">
+            Take the Quiz →
+          </button>
         </div>
 
         <!-- 4 Core Innovation Pillars -->
@@ -695,6 +721,20 @@
       });
     });
 
+    const quizBtn = container.querySelector('#launch-prof-quiz-btn');
+    if (quizBtn) {
+      quizBtn.addEventListener('click', () => {
+        currentProfession = 'quiz';
+        try {
+          history.pushState({ tab: 'professions', profession: 'quiz' }, '', '#professions/quiz');
+        } catch {
+          if (history.replaceState) history.replaceState(null, '', '#professions/quiz');
+        }
+        renderActiveProfession();
+        window.scrollTo({ top: container.offsetTop - 80, behavior: 'smooth' });
+      });
+    }
+
     attachTooltipListeners(container, null);
   }
 
@@ -734,6 +774,10 @@
       if (tabs.renderFishingLuresTab) tabs.renderFishingLuresTab(body, prof);
     } else if (currentSubTab === "ranks") {
       if (tabs.renderFishingRanksTab) tabs.renderFishingRanksTab(body, prof);
+    } else if (currentSubTab === "beasts") {
+      if (window.WOW_PROFESSIONS_BEASTS?.renderSkinningBeastsView) {
+        window.WOW_PROFESSIONS_BEASTS.renderSkinningBeastsView(body, prof);
+      }
     }
   }
 
@@ -858,6 +902,34 @@
           <input type="number" id="prof-skill-input" aria-label="Custom skill level simulator" class="prof-skill-input" min="1" max="300" placeholder="Custom" value="${playerSkill !== null ? playerSkill : ''}" />
         </div>
       </div>
+
+      ${(() => {
+        const bisItems = core.getCraftedBiSItemsForProfession ? core.getCraftedBiSItemsForProfession(prof) : [];
+        if (!bisItems.length) return '';
+        return `
+          <div class="prof-crafted-bis-banner" style="background: linear-gradient(180deg, rgba(28,42,66,0.85) 0%, rgba(14,22,36,0.92) 100%); border: 1px solid rgba(197,160,89,0.35); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 1.1rem;">⭐</span>
+                <strong style="color: #f0e6d2; font-size: 0.95rem; font-family: 'Cinzel', serif;">Crafted Best-in-Slot Gear (Phase 2 Level ≤ 30)</strong>
+                <span style="background: rgba(197,160,89,0.2); color: #c5a059; font-size: 0.72rem; padding: 1px 6px; border-radius: 10px; font-weight: bold;">${bisItems.length} Items</span>
+              </div>
+              <span style="font-size: 0.75rem; color: #8899aa;">Click skill tag to jump to leveling step</span>
+            </div>
+            <div class="crafted-bis-chips-grid" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              ${bisItems.slice(0, 12).map(b => `
+                <div class="crafted-bis-chip" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.8rem;">
+                  <img src="${getIconUrl(b.recipe.icon)}" width="20" height="20" style="border-radius: 3px;" alt="" />
+                  <span style="color: #f0e6d2; font-weight: 600;">${escapeHtml(b.recipe.name)}</span>
+                  <span style="color: #c5a059; font-size: 0.72rem; background: rgba(197,160,89,0.15); padding: 1px 4px; border-radius: 3px;">${b.bisInfo.className} (${b.bisInfo.specName})</span>
+                  <a href="#professions/${prof.slug}/leveling#at-${b.skillLearn}" class="bis-learn-link" style="color: #64b5f6; font-size: 0.72rem; text-decoration: none; margin-left: 2px;">Skill ${b.skillLearn} ›</a>
+                </div>
+              `).join('')}
+              ${bisItems.length > 12 ? `<span style="font-size: 0.75rem; color: #8899aa; align-self: center;">+${bisItems.length - 12} more BiS crafts</span>` : ''}
+            </div>
+          </div>
+        `;
+      })()}
 
       <!-- Category Filter Chips -->
       <div class="prof-category-chips" id="prof-category-chips">
@@ -1169,12 +1241,16 @@
                 })()}
                 ${isDungeonRecipe(r) ? '<span class="recipe-dungeon-tag" title="Dropped by dungeon mobs or bosses">🏰 Dungeon Drop</span>' : ''}
                 ${isBlueprintRecipe(r) ? '<span class="recipe-blueprint-tag" title="Campfire Station Blueprint">⛺ Camp Blueprint</span>' : ''}
+                ${core.renderClassicDiffBadge ? core.renderClassicDiffBadge(r) : ''}
               </h4>
               ${r.effect ? `<div class="recipe-effect">${escapeHtml(r.effect)}</div>` : ''}
             </div>
-            <span class="recipe-skill-badge ${skillClass}" title="Learn: ${r.learn} | Yellow: ${r.yellow} | Green: ${r.green} | Grey: ${r.grey}">
-              ${skillDisplay}
-            </span>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+              <span class="recipe-skill-badge ${skillClass}" title="Learn: ${r.learn} | Yellow: ${r.yellow} | Green: ${r.green} | Grey: ${r.grey}">
+                ${skillDisplay}
+              </span>
+              ${core.renderSkillBreakpointsHtml ? core.renderSkillBreakpointsHtml(r) : ''}
+            </div>
           </div>
 
           <div class="recipe-reagents-row">

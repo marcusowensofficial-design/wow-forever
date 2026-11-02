@@ -238,6 +238,11 @@
           <p>${escapeHtml(leveling.desc || "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.")}</p>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <div class="leveling-faction-toggle" style="display: inline-flex; gap: 0.25rem; align-items: center; background: rgba(0,0,0,0.3); padding: 3px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+            <button type="button" class="faction-filter-btn active" data-faction="all" style="background: rgba(197,160,89,0.25); border: none; color: #f0e6d2; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600;">Both Factions</button>
+            <button type="button" class="faction-filter-btn" data-faction="alliance" style="background: none; border: none; color: #94a3b8; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600;">🦁 Alliance</button>
+            <button type="button" class="faction-filter-btn" data-faction="horde" style="background: none; border: none; color: #94a3b8; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600;">🐺 Horde</button>
+          </div>
           <button type="button" class="shopping-copy-btn shopping-reset-btn" id="leveling-reset-btn" aria-label="Reset leveling checklist" title="Reset all checked leveling crafts">
             <span>↺</span> Reset Checklist
           </button>
@@ -303,9 +308,10 @@
             const resolved = resolveStepCraftedItem(item, prof);
             const craftedIconUrl = getIconUrl(resolved.icon, resolved.name, resolved.source);
             const qualityClass = `q${resolved.quality || 1}`;
+            const anchorId = item.from !== undefined ? `id="at-${item.from}"` : '';
 
             return `
-              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}" data-step-idx="${idx}">
+              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" ${anchorId} data-step-id="${stepId}" data-step-idx="${idx}">
                 <div class="step-check-col">
                   <input type="checkbox" class="leveling-step-check" ${isCompleted ? 'checked' : ''} aria-label="Mark ${escapeHtml(item.recipeName)} as completed" />
                 </div>
@@ -368,8 +374,9 @@
               : '1–300';
             const leftPercent = item.bar?.iLeft || '0%';
             const widthPercent = item.bar?.iWidth || '12%';
+            const anchorId = item.from !== undefined ? `id="at-${item.from}"` : '';
             return `
-              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}">
+              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" ${anchorId} data-step-id="${stepId}">
                 <div class="step-check-col">
                   <input type="checkbox" class="leveling-step-check" ${isCompleted ? 'checked' : ''} aria-label="Mark ${escapeHtml(item.title)} as completed" />
                 </div>
@@ -442,6 +449,28 @@
         }
       });
     }
+
+    container.querySelectorAll('.faction-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.faction-filter-btn').forEach(b => {
+          b.classList.remove('active');
+          b.style.background = 'none';
+          b.style.color = '#94a3b8';
+        });
+        btn.classList.add('active');
+        const f = btn.getAttribute('data-faction');
+        if (f === 'alliance') {
+          btn.style.background = '#1565c0';
+          btn.style.color = '#fff';
+        } else if (f === 'horde') {
+          btn.style.background = '#c62828';
+          btn.style.color = '#fff';
+        } else {
+          btn.style.background = 'rgba(197,160,89,0.25)';
+          btn.style.color = '#f0e6d2';
+        }
+      });
+    });
 
     attachTooltipListeners(container, prof);
   }

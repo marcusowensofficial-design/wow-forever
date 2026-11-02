@@ -192,6 +192,56 @@
     return exact.includes(n) || n.endsWith(' dust') || n.endsWith(' essence') || n.endsWith(' shard') || n.endsWith(' crystal');
   }
 
+  function renderSkillBreakpointsHtml(r) {
+    if (!r) return '';
+    const orange = r.learn || r.orange || 1;
+    const yellow = r.yellow || (r.learn ? Math.round(r.learn * 1.3) : '—');
+    const green = r.green || (r.yellow ? Math.round(r.yellow * 1.3) : '—');
+    const grey = r.grey || (r.green ? Math.round(r.green * 1.3) : '—');
+
+    return `<div class="skill-breakpoints" title="Skill Difficulty: Orange (100% point), Yellow (~75%), Green (~25%), Grey (0%)" style="display:inline-flex; align-items:center; gap:3px; font-size:0.75rem; font-family:monospace; font-weight:bold;">
+      <span style="color:#ff8c00; background:rgba(255,140,0,0.18); padding:1px 5px; border-radius:3px;">${orange}</span>
+      <span style="color:#ffd700; background:rgba(255,215,0,0.18); padding:1px 5px; border-radius:3px;">${yellow}</span>
+      <span style="color:#4caf50; background:rgba(76,175,80,0.18); padding:1px 5px; border-radius:3px;">${green}</span>
+      <span style="color:#9e9e9e; background:rgba(158,158,158,0.18); padding:1px 5px; border-radius:3px;">${grey}</span>
+    </div>`;
+  }
+
+  function renderClassicDiffBadge(r) {
+    if (!r) return '';
+    const diff = r.classicDiff || r.diffFromClassic || (r.isNew ? 'New in Forever' : (r.isChanged ? 'Changed from Classic' : ''));
+    if (!diff && !r.isNew && !r.isCamp) return '';
+    if (r.isCamp) {
+      return `<span class="badge-camp" style="background:rgba(255,152,0,0.2); color:#ffb74d; border:1px solid rgba(255,152,0,0.4); font-size:0.7rem; font-weight:600; padding:1px 5px; border-radius:3px; margin-left:4px;">⛺ Camp</span>`;
+    }
+    if (r.isNew) {
+      return `<span class="badge-new-forever" style="background:rgba(76,175,80,0.2); color:#81c784; border:1px solid rgba(76,175,80,0.4); font-size:0.7rem; font-weight:600; padding:1px 5px; border-radius:3px; margin-left:4px;">★ New</span>`;
+    }
+    return `<span class="badge-changed" title="${escapeHtml(diff)}" style="background:rgba(156,39,176,0.2); color:#ba68c8; border:1px solid rgba(156,39,176,0.4); font-size:0.7rem; font-weight:600; padding:1px 5px; border-radius:3px; margin-left:4px;">⚡ Changed</span>`;
+  }
+
+  function getCraftedBiSItemsForProfession(prof) {
+    if (!prof || !prof.recipes) return [];
+    const bisMap = buildBiSLookupMap();
+    const results = [];
+    const seen = new Set();
+
+    for (const r of prof.recipes) {
+      if (!r || !r.name || seen.has(r.name)) continue;
+      const bis = bisMap.get(r.name.toLowerCase().trim());
+      if (bis) {
+        seen.add(r.name);
+        results.push({
+          recipe: r,
+          bisInfo: bis,
+          skillLearn: r.learn || r.orange || 1
+        });
+      }
+    }
+    results.sort((a, b) => a.skillLearn - b.skillLearn);
+    return results;
+  }
+
   function formatWaypointsInHtml(htmlText, fallbackZone = '') {
     if (!htmlText || typeof htmlText !== 'string') return htmlText;
     return htmlText.replace(/(?:(\(\s*\/way\s+[^)]+\))|(\/way\s+(?:[-A-Za-z0-9\s,'’]+?\s+)?[\d.]+[,\s]+[\d.]+(?:\s*,\s*[A-Za-z]+)?))/g, (match, parenMatch, standaloneMatch, offset, fullStr) => {
@@ -231,6 +281,9 @@
     isBlueprintRecipe,
     isDisenchantMaterial,
     formatWaypointsInHtml,
-    escapeHtml
+    escapeHtml,
+    renderSkillBreakpointsHtml,
+    renderClassicDiffBadge,
+    getCraftedBiSItemsForProfession
   };
 })();

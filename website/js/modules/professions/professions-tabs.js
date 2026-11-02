@@ -1240,6 +1240,46 @@
           </div>
         `).join('')}
       </div>
+
+      <!-- Zone Catch Yields & Zero-Escape Table -->
+      <div class="section-heading-bar" style="margin-top: 2rem;">
+        <div>
+          <h2><span>🎣</span> Zone Catch Yield Percentages &amp; Getaway Thresholds</h2>
+          <p class="section-subtext">Detailed catch rates per zone, minimum casting skill, and exact 100% no-getaway threshold (+95 skill formula)</p>
+        </div>
+      </div>
+
+      <div class="fishing-zone-yields-table-wrapper" style="overflow-x: auto; margin-top: 1rem;">
+        <table class="classic-data-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="background: rgba(255,255,255,0.05); text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <th style="padding: 0.75rem 1rem;">Zone</th>
+              <th style="padding: 0.75rem 1rem;">Min Skill (Bite)</th>
+              <th style="padding: 0.75rem 1rem;">100% No-Escape</th>
+              <th style="padding: 0.75rem 1rem;">Catch Breakdown &amp; Yield Probabilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${(window.FISHING_ZONE_CATCH_DATA || []).map(z => `
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.75rem 1rem; font-weight: 600; color: #f1f5f9;">${escapeHtml(z.zone)}</td>
+                <td style="padding: 0.75rem 1rem;"><span style="color: #fbbf24; font-weight: 600;">${z.minSkill}</span></td>
+                <td style="padding: 0.75rem 1rem;"><span style="color: #4ade80; font-weight: 600;">${z.sureSkill}</span> <span style="color: #94a3b8; font-size: 0.8rem;">(+95)</span></td>
+                <td style="padding: 0.75rem 1rem;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    ${(z.yields || []).map(y => `
+                      <span style="display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(14, 116, 144, 0.15); border: 1px solid rgba(14, 116, 144, 0.4); border-radius: 4px; padding: 2px 8px; font-size: 0.825rem;">
+                        <span style="color: #e2e8f0;">${escapeHtml(y.item)}</span>
+                        <strong style="color: #38bdf8;">${escapeHtml(y.pct)}</strong>
+                      </span>
+                    `).join('')}
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
     `;
   }
 
