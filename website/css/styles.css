@@ -146,11 +146,12 @@ h1, h2, h3, h4, .font-heading {
   -webkit-text-fill-color: transparent;
 }
 
-/* App Container */
+/* App Container - Expanded Widescreen Gaming Portal */
 .app-container {
-  max-width: 1400px;
+  max-width: 1760px;
+  width: 96%;
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 0 1rem 4rem;
 }
 
 /* Top Live Status Bar */
@@ -6945,7 +6946,7 @@ input:checked + .toggle-slider:before {
 
 .hub-hero-banner-img {
   width: 100%;
-  max-width: 1360px;
+  max-width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
