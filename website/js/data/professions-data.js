@@ -55471,6 +55471,18 @@ window.WOW_PROFESSIONS_DATA = {
           },
           "trainerAlternative": "Trainer Backup: Craft Greater Arcane Elixir (285–300, 3x Dreamfoil + 1x Mountain Silversage) or Purification Potion (285–300, 2x Icecap + 2x Plaguebloom) from the trainer."
         }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🧪",
+          "title": "Endgame Zone Flasks: Barrow Deeps & Mount Hyjal",
+          "text": "Forever Alchemists can brew specialized raid flasks: Flask of Natural Accuracy (+5% Hit, item=274273), Flask of Natural Aggression (+4% Crit, item=274274), Flask of Natural Precision (+5% Expertise, item=274275), and Flask of Natural Swiftness (+5% Haste, item=274276) — all granting +60 Stamina and persisting through death in Mount Hyjal, Hyjal Summit, and the Barrow Deeps."
+        },
+        {
+          "icon": "🐾",
+          "title": "Combat Mobility & Burst Healing: Predatory Senses & Discolored Potions",
+          "text": "Craft Potion of Predatory Senses (item=250327, +10% movement speed & stealth detection for 1 hr), Swiftness Potion (+50% run speed for 15 sec), and Discolored Healing Potions (Lesser through Superior for instant burst heals with a minor damage-over-time symptom)."
+        }
       ]
     },
     "favor": {
@@ -102833,6 +102845,18 @@ window.WOW_PROFESSIONS_DATA = {
             "supply": "Limited (1)"
           },
           "trainerAlternative": "Trainer Backup: Craft Thorium Shells (285–300, 2x Thorium Bar + 1x Dense Blasting Powder) or Hi-Explosive Bomb from the trainer."
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "⚙️",
+          "title": "Desolace Mobility: Hoof-Shaped Foot Pedal (/way 35.6, 92.0) & Centaur War",
+          "text": "At Engineering 140, craft the Hoof-Shaped Foot Pedal (item=269902, Schematic found in Desolace at /way 35.6, 92.0). It transforms you into a centaur for 20 min, granting +30% movement speed while in Desolace that persists through combat! Engineers can also build the Centaur Banner Deployment Device (item=269900) to plant clan banners during the Desolace Centaur Clan War."
+        },
+        {
+          "icon": "🚀",
+          "title": "Forever Engineering Tech: SAF-T Nitro Boosts & Field Devices",
+          "text": "Engineers gain elite survival gadgets: SAF-T Nitro Boosts (item=260828, up to 160% sprint burst), Minor Recombobulator (polymorph dispel with instant health/mana recovery), and campsite deployables like Blueprint: Repair Bot to keep party runs going without resetting dungeons."
         }
       ]
     },
@@ -154867,13 +154891,13 @@ window.WOW_PROFESSIONS_DATA = {
       "guideCallouts": [
         {
           "icon": "🔥",
-          "title": "1–185 Smelting Bypass Trick & Smelting Pants (-25% Cast Time)",
-          "text": "Smelting grants skill-ups from 1–140 (Copper → Tin → Bronze → Silver → Iron) and 155–185 (Gold). Between 140 and 155, all smelting recipes are grey or locked, so you must mine 15 points in the open world (or equip a Mining Pick +5 and Enchant Gloves - Advanced Mining +5). Equip Smelting Pants (item=5199) to reduce Copper/Tin/Bronze/Silver smelting time by 25%!"
+          "title": "1–185 Smelting Bypass Trick, Smelting Pants (-25% Cast Time) & Miner's Cape",
+          "text": "Smelting grants skill-ups from 1–140 (Copper → Tin → Bronze → Silver → Iron) and 155–185 (Gold). Between 140 and 155, all smelting recipes are grey or locked, so you must mine 15 points in the open world (or equip a Mining Pick +5 and Enchant Gloves - Advanced Mining +5). Equip Smelting Pants (item=5199) from Gilnid in Deadmines to reduce smelting time by 25%! You can also equip Miner's Cape (item=5444, Miner Johnson in Deadmines) for +2 Mining."
         },
         {
           "icon": "⛏️",
           "title": "Forever Exclusives: Mining for Dummies, Rockslicer & Scarce Ores",
-          "text": "Complete your racial starter zone quest for the book \"Mining for Dummies\" (or visit starter trainers in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle, or Riverglades). Non-miners can use Rockslicer (30 charges) to mine Copper/Tin/Silver/Iron. Watch for Scarce materials (Pyrite, Bauxite, Pitchblende) and new endgame bars: Azerothium Bar (275), Heavy Thorium Bar (300), and Legionite Bar!"
+          "text": "Complete your racial starter zone quest for the book \"Mining for Dummies\" (or visit starter trainers in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle, or Riverglades). Non-miners can use Rockslicer (item=872, 30 charges from Rhahk'Zor in Deadmines) to gather Copper/Tin/Silver/Iron without the Mining skill. Watch for Scarce materials (Pyrite, Bauxite, Pitchblende) and new endgame bars: Azerothium Bar (275), Heavy Thorium Bar (300), and Legionite Bar!"
         }
       ],
       "steps": [
@@ -156185,8 +156209,8 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "icon": "🦌",
-          "title": "Forever Exclusives: Pelt Collecting for Beginners, Pristine & Fel Pelts",
-          "text": "Learn Apprentice Skinning via the starter quest book \"Pelt Collecting for Beginners\" (item=247846) or starter trainers in Zephras Isle, Riverglades, Goldshire, Kharanos, Razor Hill & Brill. Skinning in Forever yields Scarce Pristine Leather, Pristine Hide & Pristine Scale, plus endgame Fel Leather and Fel Hide! Boost skill up to +15 with Finkle's Skinner (+10) or Zulian Slicer (+10) + Enchant Gloves - Skinning (+5)."
+          "title": "Forever Exclusives: Cartilage Shapers (+4), Pelt Collecting, Pristine & Fel Pelts",
+          "text": "Learn Apprentice Skinning via the starter quest book \"Pelt Collecting for Beginners\" (item=247846) or starter trainers in Zephras Isle, Riverglades, Goldshire, Kharanos, Razor Hill & Brill. Equip Cartilage Shapers (item=273054, leather gloves from early dungeon drops) for +4 Skinning to access beast brackets earlier! At endgame, boost skill with Finkle's Skinner (+10) or Zulian Slicer (+10) + Enchant Gloves - Skinning (+5) to harvest Scarce Pristine Leather and endgame Fel Hides."
         }
       ],
       "steps": [
@@ -161073,8 +161097,8 @@ window.WOW_PROFESSIONS_DATA = {
       "guideCallouts": [
         {
           "icon": "🍖",
-          "title": "Forever Cooking Perks: +5% Kill XP & Cookie's Stirring Rod (+25% Speed)",
-          "text": "Every cooked food in WoW Forever grants Well Fed (+5% Experience from monster kills) in addition to stat buffs. Farm Cookie in The Deadmines for Cookie's Stirring Rod — updated in Forever to increase your Cooking speed by 25%!"
+          "title": "Forever Cooking Perks: +5% Kill XP, Cookie's Stirring Rod (+25% Speed) & Wastewanderer Rations",
+          "text": "Every cooked food in WoW Forever grants Well Fed (+5% Experience from monster kills) in addition to stat buffs. Equip Cookie's Stirring Rod (Wand, Deadmines) to increase Cooking speed by 25%! To maximize uptime, equip Wastewanderer Rations (Trinket, item=277950) — it slows Well Fed metabolism by 50% (doubled to 100% in Wastelands/Tanaris/Desolace/Silithus). Look out for zone-speed dishes like Westfall Stew (+15% speed in Westfall) and Sweetpaw Jam (+15% speed in Hyjal)!"
         },
         {
           "icon": "🐟",
@@ -161743,7 +161767,7 @@ window.WOW_PROFESSIONS_DATA = {
       {
         "step": 2,
         "title": "Equip a Fishing Pole & Stack Skill Boosts",
-        "desc": "Buy a Fishing Pole from the supplier next to the trainer, or upgrade to Blump Family Fishing Pole (+3, Darkshore quest), Strong Fishing Pole (+5, vendor), Big Iron Fishing Pole (+20, Desolace shell cages at /way 20.6, 73.7), Nat Pagle's Extreme Angler FC-5000 (+25, Hinterlands Horde quest), or Arcanite Fishing Pole (+35, STV Extravaganza)."
+        "desc": "Buy a Fishing Pole from the supplier next to the trainer, or upgrade to Blump Family Fishing Pole (+3, Darkshore quest), Strong Fishing Pole (+5, vendor), Big Iron Fishing Pole (+20, Desolace shell cages at /way 20.6, 73.7), Nat Pagle's Extreme Angler FC-5000 (+25, Hinterlands Horde quest), or Arcanite Fishing Pole (+35, STV Extravaganza). Equip Cloak of Hermitic Bliss (item=273084, Deadmines) for +33% Swim Speed between coastal pools, and deploy Blueprint: Fishing Rack (item=273141) at camp for +1 hr uncommon fish catches and skill lures!"
       },
       {
         "step": 3,

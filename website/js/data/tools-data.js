@@ -4186,6 +4186,73 @@ Every profession constructs a Campfire Feature around a **Basic Campfire Kit** (
 • **Mining — Lodestone:** Grants **+90 Melee Attack Power** (does not stack with *Blessing of Might*).
 • **Skinning — Camp Chair:** Grants **+2% Critical Strike Chance** with all spells and attacks (does not stack with *Moonkin Aura*).
 • **Tailoring — Faction Banner:** Grants **+32 Spirit** (does not stack with *Divine Spirit*).`
+    },
+    {
+      id: "guide-profession-utility-gear",
+      title: "Classic+ Profession Utility Artifacts & Speed Gear Directory",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Community Discovery · Wowhead",
+      icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_gear_01.jpg",
+      summary: "Master directory of unique profession gear, crafting speed reductions, zone mobility devices, gathering bypass tools, and food duration trinkets in WoW Forever.",
+      content: `### Classic+ Profession Utility & Speed Artifacts
+In WoW Forever, tradeskills and exploration are enriched with a specialized suite of **profession-speed gear**, **gathering bypass tools**, **zone mobility devices**, and **food metabolism artifacts**. 
+
+These items provide unique quality-of-life perks that dramatically accelerate crafting, leveling, and resource harvesting.
+
+---
+
+### Master Utility Item Matrix
+
+| Item | Slot / Type | Req Lvl / Skill | Primary Source | Unique Effect / Mechanic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Smelting Pants** | Leather Legs | Level 16 | Deadmines (Gilnid) | **-25% Crafting Time** for Smelt Copper, Tin, Bronze & Silver. |
+| **Cookie's Stirring Rod** | Wand | Level 17 | Deadmines (Cookie) | **+25% Cooking Speed** while equipped. |
+| **Hoof-Shaped Foot Pedal** | Device | Eng 140 | Desolace (/way 35.6, 92.0) | Centaur disguise; **+30% Movement Speed in Desolace** (persists in combat). |
+| **Wastewanderer Rations** | Trinket | Level 35 | World / Rare Drop | **-50% Well Fed Decay** (doubled to **-100%** in Wastelands: Tanaris, Silithus, Desolace). |
+| **Rockslicer** | 2H Axe | Level 15 | Deadmines (Rhahk'Zor) | **Use:** Mine Copper, Tin, Silver, or Iron Veins without Mining skill (30 charges). |
+| **Miner's Cape** | Back | Level 18 | Deadmines (Miner Johnson) | **+2 Mining**, +4 AP, +6 AP against Elementals. |
+| **Cartilage Shapers** | Leather Gloves | Level 18 | Leveling Dungeon Drop | **+4 Skinning**, allowing higher beast level brackets earlier. |
+| **Cloak of Hermitic Bliss** | Back | Level 17 | Deadmines | **+33% Swim Speed** (-25% land speed) for open-water gathering & fishing. |
+| **Centaur Banner Device** | Device | Eng 140 | Desolace Engineering | Deploy faction war banners during the Desolace Centaur Clan War (5 min). |
+| **Westfall Stew** | Food & Drink | Cooking 75 | Recipe: Westfall Stew | Well Fed: **+15% Movement Speed while in Westfall**. |
+| **Sweetpaw Jam** | Food & Drink | Cooking 275 | Recipe: Sweetpaw Jam | Well Fed: **+15% Movement Speed while in Hyjal**. |
+| **Flask of Natural Accuracy** | Flask | Alchemy 300 | Recipe: Alchemy (Endgame) | +60 Stamina; **+5% Hit Chance** in Mount Hyjal, Hyjal Summit & Barrow Deeps. |
+| **Flask of Natural Aggression**| Flask | Alchemy 300 | Recipe: Alchemy (Endgame) | +60 Stamina; **+4% Crit Chance** in Mount Hyjal, Hyjal Summit & Barrow Deeps. |
+| **Flask of Natural Precision** | Flask | Alchemy 300 | Recipe: Alchemy (Endgame) | +60 Stamina; **+5% Reduced Dodge/Parry** in Mount Hyjal, Hyjal Summit & Barrow Deeps. |
+| **Flask of Natural Swiftness** | Flask | Alchemy 300 | Recipe: Alchemy (Endgame) | +60 Stamina; **+5% Haste** in Mount Hyjal, Hyjal Summit & Barrow Deeps. |
+
+---
+
+### In-Depth Breakdown & Strategic Value
+
+#### 1. Smelting Pants & Cookie's Stirring Rod (Crafting Cast Reductions)
+• **Smelting Pants** (Item ID: 5199): In vanilla Classic, smelting hundreds of low-tier bars takes minutes of downtime. Smelting Pants reduces the base cast time of Copper, Tin, Bronze, and Silver by a full **25%**, cutting leveling and mass-smelting sessions significantly.
+• **Cookie's Stirring Rod** (Item ID: 5198): Drops from Cookie in The Deadmines. Equipped in the ranged wand slot, it passively accelerates all Cooking craft times by **25%**, stackable with camping speed buffs.
+
+#### 2. Hoof-Shaped Foot Pedal (Desolace Outdoor Mobility)
+• **Hoof-Shaped Foot Pedal** (Item ID: 269902): Schematic discovered from an engineering toolbox in southern Desolace at **/way 35.6, 92.0**.
+• Requires Engineering 140. When activated, you transform into a centaur for 20 minutes.
+• **Zone Super-Buff:** While in **Desolace**, you receive a permanent **+30% Movement Speed increase** that, unlike standard shapeshifts or mounts, **persists throughout active combat**!
+
+#### 3. Wastewanderer Rations (Well Fed & +5% Kill XP Optimization)
+• **Wastewanderer Rations** (Item ID: 277950): In WoW Forever, every cooked meal grants the standard stat buff PLUS a passive **+5% Experience bonus from monster kills**.
+• Because standard Well Fed durations last 15 minutes, maintaining full uptime requires frequent re-eating.
+• Wastewanderer Rations passively cuts consumption decay in half (**50% slower**). When operating in designated Wastelands (Tanaris desert, Silithus, Desolace), the effect doubles to **100% slower**, extending 15-minute meals into 30–60 minute power boosts.
+
+#### 4. Gathering Bypass & Early Skill Acceleration
+• **Rockslicer** (Item ID: 872): Allows Blacksmiths, Engineers, or non-miners to crack open nodes in the open world without unlearning their primary professions.
+• **Miner's Cape** (+2 Mining) & **Cartilage Shapers** (+4 Skinning): Essential early-game gear to reach elusive skill break points (e.g., skinning level 25–28 beasts or mining high-end silver/iron nodes before training Expert caps).
+• **Cloak of Hermitic Bliss** (Item ID: 273084): Turns waterlogged zones (Wetlands, Stranglethorn coast, Dustwallow Marsh) into high-speed waterways for fishermen tracking floating wreckage and schools of fish.
+
+---
+
+### Campsite Deployable Crafting Stations
+Through the **Camping Tradeskill**, players can place dedicated crafting and gathering stations in the field:
+• **Blueprint: Anvil** (Item ID: 273086) — Provides the benefits of a Blacksmithing Anvil and Sharpening Wheel anywhere outdoors.
+• **Blueprint: Tanning Rack** (Item ID: 273096) — Enables in-field leatherworking reagent cures.
+• **Blueprint: Spinning Wheel** (Item ID: 273099) — Enables tailoring cloth spinning without visiting capital looms.
+• **Blueprint: Arcane Salvager** (Item ID: 273103) — Grants enhanced disenchanting efficiency and dust yields.
+• **Blueprint: Fishing Rack** (Item ID: 273141) — Grants an aura for 1 hour that boosts uncommon fish catch rates and provides free lures.`
     }
   ]
 };
