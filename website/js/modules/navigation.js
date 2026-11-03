@@ -225,6 +225,9 @@ function initNavigation() {
     }
   });
 
+  // Top Blizzard navigation dropdowns & hover popouts
+  initNavbarDropdowns();
+
   // Support URL hash routing to tabs (e.g. #bis, #tierlist, #codex) and native talent calculator (#calculator, #talents)
   function checkUrlHashTab() {
     const rawHash = window.location.hash;
@@ -405,6 +408,134 @@ function initNavigation() {
           }
         }
       }
+    }
+  });
+}
+
+/* ==========================================================================
+   3b. BLIZZARD TOP NAVBAR DROPDOWNS & POPOUT CONTROLS
+   ========================================================================== */
+function initNavbarDropdowns() {
+  const navItems = document.querySelectorAll('.blizzard-nav-item');
+  if (!navItems.length) return;
+
+  const closeTimers = new Map();
+
+  function openDropdown(item) {
+    if (closeTimers.has(item)) {
+      clearTimeout(closeTimers.get(item));
+      closeTimers.delete(item);
+    }
+    navItems.forEach(other => {
+      if (other !== item) {
+        closeDropdown(other, true);
+      }
+    });
+    item.classList.remove('is-minimized');
+    item.classList.add('is-open');
+    const btn = item.querySelector('.blizzard-nav-btn');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown(item, immediate = false) {
+    if (closeTimers.has(item)) {
+      clearTimeout(closeTimers.get(item));
+      closeTimers.delete(item);
+    }
+    const doClose = () => {
+      item.classList.remove('is-open');
+      const btn = item.querySelector('.blizzard-nav-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (item.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+    };
+    if (immediate) {
+      doClose();
+    } else {
+      const timer = setTimeout(doClose, 180);
+      closeTimers.set(item, timer);
+    }
+  }
+
+  function reminimizeDropdown(item) {
+    if (closeTimers.has(item)) {
+      clearTimeout(closeTimers.get(item));
+      closeTimers.delete(item);
+    }
+    item.classList.add('is-minimized');
+    item.classList.remove('is-open');
+    const btn = item.querySelector('.blizzard-nav-btn');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (item.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+  }
+
+  navItems.forEach(item => {
+    const btn = item.querySelector('.blizzard-nav-btn');
+    const menu = item.querySelector('.blizzard-dropdown-menu');
+    const minimizeBtn = item.querySelector('.blizzard-dropdown-minimize');
+
+    // Keep popout open as long as hovering in this area (button, bridged gap, dropdown menu)
+    item.addEventListener('mouseenter', () => {
+      openDropdown(item);
+    });
+
+    item.addEventListener('mouseleave', () => {
+      closeDropdown(item, false);
+      setTimeout(() => {
+        item.classList.remove('is-minimized');
+      }, 200);
+    });
+
+    // Option to reminimize from inside the popout box
+    if (minimizeBtn) {
+      minimizeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        reminimizeDropdown(item);
+      });
+    }
+
+    // Toggle popout or reminimize when clicking top button
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        const isOpen = item.classList.contains('is-open') && !item.classList.contains('is-minimized');
+        if (isOpen) {
+          reminimizeDropdown(item);
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          openDropdown(item);
+        }
+      });
+    }
+
+    // When selecting a dropdown link, let navigation fire and immediately reminimize popout
+    if (menu) {
+      menu.querySelectorAll('.blizzard-dropdown-link').forEach(link => {
+        link.addEventListener('click', () => {
+          reminimizeDropdown(item);
+        });
+      });
+    }
+  });
+
+  // Global dismissals: Esc key & click outside
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      navItems.forEach(item => reminimizeDropdown(item));
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.blizzard-nav-item')) {
+      navItems.forEach(item => {
+        if (item.classList.contains('is-open')) {
+          reminimizeDropdown(item);
+        }
+      });
     }
   });
 }

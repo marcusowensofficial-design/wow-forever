@@ -6893,8 +6893,9 @@ input:checked + .toggle-slider:before {
   opacity: 0.75;
 }
 
-.blizzard-nav-item:hover .blizzard-dropdown-caret,
-.blizzard-nav-item:focus-within .blizzard-dropdown-caret {
+.blizzard-nav-item:not(.is-minimized):hover .blizzard-dropdown-caret,
+.blizzard-nav-item.is-open:not(.is-minimized) .blizzard-dropdown-caret,
+.blizzard-nav-item:not(.is-minimized):focus-within:has(:focus-visible) .blizzard-dropdown-caret {
   transform: rotate(180deg);
   opacity: 1;
 }
@@ -6928,14 +6929,31 @@ input:checked + .toggle-slider:before {
   animation: dropdownFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Invisible hover bridge to eliminate gap dead-zone between button and popout */
+.blizzard-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+  pointer-events: auto;
+}
+
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.blizzard-nav-item:hover .blizzard-dropdown-menu,
-.blizzard-nav-item:focus-within .blizzard-dropdown-menu {
+.blizzard-nav-item:not(.is-minimized):hover .blizzard-dropdown-menu,
+.blizzard-nav-item.is-open:not(.is-minimized) .blizzard-dropdown-menu,
+.blizzard-nav-item:not(.is-minimized):focus-within:has(:focus-visible) .blizzard-dropdown-menu {
   display: flex;
+}
+
+.blizzard-nav-item.is-minimized .blizzard-dropdown-menu {
+  display: none !important;
 }
 
 .blizzard-dropdown-link {
@@ -6960,6 +6978,46 @@ input:checked + .toggle-slider:before {
   background: rgba(245, 158, 11, 0.15);
   color: #fef08a;
   transform: translateX(3px);
+}
+
+.blizzard-dropdown-minimize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  margin-top: 0.35rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.5);
+  color: #94a3b8;
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.blizzard-dropdown-minimize:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-top-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  transform: translateY(-1px);
+}
+
+.blizzard-dropdown-minimize .blizzard-dropdown-icon {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+}
+
+.blizzard-dropdown-minimize:hover .blizzard-dropdown-icon {
+  transform: translateY(-2px);
 }
 
 .blizzard-dropdown-icon {
