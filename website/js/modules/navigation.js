@@ -194,9 +194,12 @@ function initNavigation() {
         }
       }
 
-      const navBar = document.querySelector('.nav-tab-bar');
-      if (navBar && window.scrollY > navBar.offsetTop + 100) {
-        navBar.scrollIntoView({ behavior: 'smooth' });
+      if (targetTab === 'overview') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (targetPanel) {
+        targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
   });
