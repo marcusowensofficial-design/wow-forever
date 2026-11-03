@@ -39,11 +39,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "In the Phase 2 Level 30 patch, Bear Form and Dire Bear Form generate 75% increased Rage whenever the Druid lands a Critical Strike, solving rage starvation during boss encounters."
       },
       {
-        title: "New Talent: Shifting Power (Cat Form)",
+        title: "New Talent: Shifting Power (Level 60 Row 7 Capstone)",
         status: "verified",
         statusLabel: "Verified in Phase 2",
         badge: "Energy Surge (Oct 2026)",
-        desc: "Tiger's Fury and King of the Jungle have been removed and replaced by Shifting Power (Cat Form only): instantly converts 55% of Base Mana into 40 Energy, supercharging powershifting openers!"
+        desc: "Tiger's Fury and King of the Jungle have been removed and replaced by Shifting Power on Row 7 Col 3: instantly converts 55% of Base Mana into 40 Energy on an 8-second cooldown (was 16s), supercharging Cat burn phases!"
       },
       {
         title: "Shapeshift Disarm Immunity & Swing Timers",
@@ -541,7 +541,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Two-Handed Mace / Staff (Smite's Mighty Hammer / Staff of Orgrimmar / Manual Crowd Pummeler prep)",
             talents: [
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy." },
-              { name: "Feral Aggression", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases damage dealt by Ferocious Bite by 15% and Demoralizing Roar attack power reduction by 40%." },
+              { name: "Furor", points: "5/5", tree: "Feral (Tier 1)", desc: "Gives you a 100% chance to gain 10 Rage when shifting into Bear Form, or 40 Energy when shifting into Cat Form." },
               { name: "Feral Instinct", points: "1/5", tree: "Feral (Tier 2)", desc: "Increases threat in Bear Form by 3% and reduces chance for enemies to detect you while Prowling." }
             ],
             legacyNotes: "Extra points obtained through Legacy Discovery unlock Sharpened Claws (+6% crit) and Blood Frenzy (combo point generation).",
@@ -635,29 +635,29 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         specs: [
           {
             specId: "feral_cat",
-            name: "Feral DPS (Cat Form Agility & Shifting Power)",
+            name: "Feral DPS (Cat Form Agility & Furor Powershifting)",
             icon: "🐾",
             role: "Melee Bleed & Energy Engine",
             buildUrl: "/talents/druid?b=-552000321230111-&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/-552000321230111-",
-            tagline: "Uncapped Energy pooling via the new Shifting Power keystone (converts 55% base mana into 40 Energy in Cat Form), disarm immunity, and vicious Ferocious Bite crits.",
+            tagline: "Uncapped Energy pooling via baseline powershifting and Tier 1 Furor (40 Energy on Cat shift), disarm immunity, and vicious Ferocious Bite crits.",
             statPriority: "Weapon Top-End DPS > Agility > Strength > Hit",
             bestWeapon: "Manual Crowd Pummeler (Gnomeregan) / Smite's Mighty Hammer / Excavation Heavy Mallet",
             talents: [
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy." },
-              { name: "Feral Aggression", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases damage dealt by Ferocious Bite by 15% and Demoralizing Roar attack power reduction by 40%." },
+              { name: "Furor", points: "5/5", tree: "Feral (Tier 1)", desc: "Gives you a 100% chance to gain 10 Rage when shifting into Bear Form, or 40 Energy when shifting into Cat Form." },
               { name: "Sharpened Claws", points: "3/3", tree: "Feral (Tier 2)", desc: "Increases your critical strike chance while in Bear, Dire Bear, or Cat Form by 6%." },
-              { name: "Shifting Power", points: "1/1", tree: "Feral (Tier 3 Keystone - NEW)", desc: "Druid Classic+ Keystone: In Cat Form, instantly converts 55% base mana into 40 Energy on a 45s cooldown. Provides immense sustained DPS during boss burn windows." },
+              { name: "Savage Fury", points: "2/2", tree: "Feral (Tier 3)", desc: "Increases the damage caused by your Claw, Rake, Maul, and Swipe abilities by 20%." },
               { name: "Blood Frenzy", points: "2/2", tree: "Feral (Tier 3)", desc: "Your critical strikes from Cat Form abilities that add combo points have a 100% chance to add an additional combo point." },
               { name: "Predatory Strikes", points: "3/3", tree: "Feral (Tier 4)", desc: "Increases your melee attack power in Cat, Bear, and Dire Bear Forms by 150% of your level." },
               { name: "Faerie Fire (Feral)", points: "1/1", tree: "Feral (Tier 4 Keystone)", desc: "Instant ranged armor reduction usable in form that does not reset your melee swing timer." },
               { name: "Feral Charge", points: "1/1", tree: "Feral (Tier 3)", desc: "Causes you to charge an enemy, immobilizing them for 4 sec and interrupting any spellcasting." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Heart of the Wild (+10% Strength / +20% Stamina) and Furor (retains 40 Energy on shift).",
+            legacyNotes: "Extra Legacy discovery points unlock Heart of the Wild in Restoration Tier 1 (+10% Strength / +20% Stamina). Shifting Power is the Level 60 Row 7 capstone (8s cooldown) converting 55% base mana into 40 Energy.",
             rotation: [
               { label: "Opener", desc: "Prowl -> Ravage / Shred from behind (Shapeshift forms are now fully immune to Disarm!)." },
               { label: "Faerie Fire & Bleed", desc: "Apply Faerie Fire (Feral) instantly without interrupting swing timer -> Rake bleed." },
-              { label: "Energy Engine", desc: "Claw to 4-5 CP -> When energy dips below 20, activate NEW Shifting Power to gain +40 Energy immediately." },
+              { label: "Energy Engine", desc: "Claw to 4-5 CP -> Powershift: macro out and into Cat Form with Tier 1 Furor to immediately gain +40 Energy on shift." },
               { label: "Execute", desc: "Ferocious Bite finisher with full AP bonus from Predatory Strikes." }
             ],
             bisGear: [

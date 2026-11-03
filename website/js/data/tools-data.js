@@ -2782,18 +2782,18 @@ Because spell travel time exists in WoW Forever, casting an instant spell immedi
     },
     {
       id: "guide-level30-druid",
-      title: "Druid Level 30 Guide: Feral Shifting Power, Bear Meatshield & Moonkin Burst",
+      title: "Druid Level 30 Guide: Feral Powershifting, Bear Meatshield & Moonkin Burst",
       category: "Classes & Specs",
       source: "ForeverChanges.pro · Wowhead · Build 1.60.1.70425 Forensics",
       icon: "https://render.worldofwarcraft.com/us/icons/56/classicon_druid.jpg",
-      summary: "Master the Level 30 Druid: smooth energy regen, Shifting Power keystone burst, Bear crit-rage scaling, Moonkin shatter armor, and Level 30 Pre-BiS.",
+      summary: "Master the Level 30 Druid: smooth energy regen, Furor powershifting, Bear crit-rage scaling, Moonkin shatter armor, and Level 30 Pre-BiS.",
       content: `### Master of the Wild at Level 30
-In WoW Forever, Level 30 brings monumental architectural modernization for Druids across Feral, Balance, and Restoration. With the permanent removal of rigid 2.0s energy ticks, the introduction of the **Shifting Power** keystone, and complete disarm immunity, Druids are premier dungeon tanks and versatile burst threats.
+In WoW Forever, Level 30 brings monumental architectural modernization for Druids across Feral, Balance, and Restoration. With the permanent removal of rigid 2.0s energy ticks, the restructuring of **Furor** into Feral Tier 1, and complete disarm immunity, Druids are premier dungeon tanks and versatile burst threats.
 
 ### Core Build 1.60.1.70425 Innovations
 
 • **Smooth Energy Regeneration:** Cat Form energy now regenerates in a smooth, continuous flow rather than discrete 2-second ticks, providing fluid combat rhythm.
-• **Shifting Power (Feral Tier 3 Keystone):** In Cat Form, instantly converts 55% base mana into 40 Energy on a 45s cooldown. Provides immense sustained DPS during boss burn windows.
+• **Furor Powershifting (Feral Tier 1):** Furor now lives at Feral Tier 1 (Row 1 Col 3), granting 40 Energy immediately when shifting into Cat Form. (Shifting Power serves as the Level 60 Row 7 capstone on an 8s cooldown).
 • **100% Disarm Immunity:** All shapeshift forms (Cat, Bear, Dire Bear, Travel, Aquatic, Moonkin) are completely immune to Disarm mechanics.
 • **Baseline Quality of Life:**
   - **Omen of Clarity:** Learned at Level 20 directly from trainers (costs 0 mana; Clearcasting is not consumed by zero-cost spells).
@@ -2806,11 +2806,11 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
 ### Level 30 Specialization Geometry (21 Talent Points)
 
 #### 1. Feral Cat DPS (0/21/0) · Bleed & Energy Engine
-• **Point Distribution:** 5/5 *Ferocity*, 5/5 *Feral Aggression*, 3/3 *Sharpened Claws*, 1/1 *Shifting Power*, 2/2 *Blood Frenzy*, 3/3 *Predatory Strikes*, 1/1 *Faerie Fire (Feral)*, 1/1 *Feral Charge*.
+• **Point Distribution:** 5/5 *Ferocity*, 5/5 *Furor*, 3/3 *Sharpened Claws*, 2/2 *Blood Frenzy*, 3/3 *Predatory Strikes*, 1/1 *Faerie Fire (Feral)*, 1/1 *Feral Charge*, 1/1 *Savage Fury*.
 • **Rotation & Priority:**
   - **Opener:** Prowl -> Ravage / Shred from behind (Forms are 100% immune to Disarm).
   - **Debuff:** Apply Faerie Fire (Feral) on pull without clipping swing timer -> Rake bleed.
-  - **Energy Engine:** Claw to 4–5 Combo Points. When energy dips below 20, trigger **Shifting Power** to gain +40 Energy immediately.
+  - **Energy Engine:** Claw to 4–5 Combo Points. When energy dips below 20, powershift out and back into Cat Form to instantly gain +40 Energy via Tier 1 Furor.
   - **Finisher:** Ferocious Bite with maximum Attack Power scaling from Predatory Strikes.
 
 #### 2. Feral Bear Tank (0/21/0) · The Unstoppable Meatshield
@@ -2844,11 +2844,11 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
 
 \`\`\`lua
 #showtooltip Cat Form
-/cast [nostance:3] Cat Form
-/cast [form:3] Shifting Power
+/cancelform [noform:0]
+/cast [noform:3] Cat Form
 \`\`\`
 
-💡 **Form Weaving Tip:** Furor retains 40 Energy when shifting into Cat Form. Pair this with *Shifting Power* to instantly dump 80 Energy into two rapid Shreds or Bites within 1.5 seconds!`
+💡 **Form Weaving Tip:** Furor retains 40 Energy when shifting into Cat Form. Powershift macros dump and regenerate 40 Energy instantly, sustaining maximum Shred and Ferocious Bite uptime!`
     },
     {
       id: "guide-darkspear-islands-pvp",
@@ -3795,13 +3795,13 @@ In WoW Forever, **World Buffs are disabled inside raid instances**:
     },
     {
       id: "guide-early-name-reservation",
-      title: "Early Name Reservation & Character Creation Guide (LIVE NOW: Oct 27 – Nov 3)",
+      title: "Early Name Reservation & Character Creation Guide (Oct 27 – Nov 3 • Concluded)",
       category: "Leveling & Quests",
       source: "Blizzard Official · Blue Post Operations",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_character_orc_male.jpg",
-      summary: "How to secure your top 3 character names during the active pre-launch reservation window (Oct 27 – Nov 3) across PvP, PvE, RP, and RP-PvP rulesets. Includes Kaivax naming filter hotfix notes, race/class combos, and launch checklist.",
+      summary: "Architecture and rules of the pre-launch reservation window (Oct 27 – Nov 3) across PvP, PvE, RP, and RP-PvP rulesets. Includes naming filter rules, race/class combos, and launch checklist.",
       content: `### Pre-Launch Timeline: Early Name Reservation Window
-Early character name reservation is **LIVE NOW** across all World of Warcraft: Forever regional megarealms (running October 27 through November 3, 2026 at 10:00 AM PST). Players with eligible pre-purchase editions have a full 7-day window to secure iconic character names and customize appearances ahead of the November 4 Global Launch!
+Early character name reservation concluded on **November 3, 2026 at 10:00 AM PST** across all World of Warcraft: Forever regional megarealms. All reserved names and customized character appearances are locked in for the November 4 Global Launch!
 
 | Parameter | Launch Reservation Rule |
 | :--- | :--- |

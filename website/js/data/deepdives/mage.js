@@ -657,7 +657,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Ice Shards", "points": "5/5", "tree": "Frost (Tier 2)", "desc": "Increases the critical strike damage bonus of your Frost spells by 100%." },
             { "name": "Frostbite", "points": "3/3", "tree": "Frost (Tier 2)", "desc": "Gives your Chill effects a 15% chance to freeze the target for 5 sec for instant Shatter procs." },
             { "name": "Frost Channeling", "points": "3/3", "tree": "Frost (Tier 3)", "desc": "Reduces the mana cost of your Frost spells by 15% and reduces threat by 30%." },
-            { "name": "Ice Lance", "points": "1/1", "tree": "Frost (Tier 3)", "desc": "Deals Frost damage to an enemy target on an 8 sec cooldown, dealing 200% increased damage to Frozen targets." },
+            { "name": "Ice Lance", "points": "1/1", "tree": "Frost (Tier 3)", "desc": "Deals Frost damage to an enemy target on an 8 sec cooldown, dealing 300% increased damage to Frozen targets." },
             { "name": "Shatter", "points": "3/3", "tree": "Frost (Tier 4)", "desc": "Increases the critical strike chance of all your spells against Frozen targets by 50%." },
             { "name": "Cold Snap", "points": "1/1", "tree": "Frost (Tier 5 Keystone)", "desc": "When activated, this spell finishes the cooldown on all Frost spells you recently cast on an 8-minute cooldown." },
             { "name": "Fingers of Frost", "points": "2/2", "tree": "Frost (Tier 5)", "desc": "Gives your Chill effects a 15% chance to grant the Fingers of Frost effect, treating your next 2 spells as if the target were Frozen." }

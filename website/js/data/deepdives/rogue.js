@@ -113,16 +113,16 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cost: "60 Energy",
           cast: "Instant",
           status: "verified",
-          desc: "Instantly attacks with both weapons for 75% weapon damage plus additional flat damage from each weapon. Deals 20% more damage if the target is poisoned and awards 2 combo points. Crucially, the tooltip does NOT require daggers!"
+          desc: "Instantly attacks with both weapons for 90% weapon damage plus additional flat damage from each weapon. Deals 20% more damage if the target is poisoned and awards 2 combo points. Crucially, the tooltip does NOT require daggers!"
         },
         {
-          name: "Venom Maintenance Finisher",
-          type: "Finishing Move",
+          name: "Venom (Shank Poison Amplification)",
+          type: "Passive Talent",
           cost: "25 Energy",
           cast: "Instant",
           duration: "Up to 30 sec Duration",
           status: "verified",
-          desc: "Finishing move that increases poison damage dealt by 30% and poison-application chance by 10%. Acts as an essential maintenance steroid for sustained poison pressure."
+          desc: "Your Shank ability increases your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds."
         },
         {
           name: "Mutilate Critical 3-Combo Point Generation",
