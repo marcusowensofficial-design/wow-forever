@@ -187,6 +187,68 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-69",
+      "title": "Hunter Class Buffs on WoW: Forever (Live Hotfix)",
+      "source": "Wowhead News & Live Hotfixes",
+      "sourceType": "community",
+      "author": "Squishei & Wowhead Desk",
+      "date": "November 3, 2026",
+      "tag": "Hunter Hotfix & Tuning",
+      "summary": "Live server hotfixes have been applied to WoW: Forever, partially reverting recent nerfs and significantly increasing direct damage across Hunter shots, Aspect of the Hawk, and Trueshot Aura.",
+      "content": `Blizzard has deployed live hotfixes to WoW: Forever, substantially buffing Hunter direct shot damage and group utility:
+
+• **Aspect of the Hawk:** Ranged Attack Power buffed across all ranks:
+  - Rank 1: 20 RAP (was 15)
+  - Rank 2: 35 RAP (was 22)
+  - Rank 3: 50 RAP (was 30)
+  - Rank 4: 70 RAP (was 38)
+  - Rank 5: 90 RAP (was 47)
+  - Rank 6: 110 RAP (was 55)
+
+• **Trueshot Aura:** Group/raid Ranged Attack Power increased on all ranks:
+  - Rank 1: 20 (was 15)
+  - Rank 2: 35 (was 22)
+  - Rank 3: 50 (was 30)
+  - Rank 4: 75 (was 40)
+  - Rank 5: 100 (was 50)
+
+• **Barrage & Marksmanship Scaling:**
+  - Barrage damage bonus on Multi-Shot, Aimed Shot, and Volley raised to 5/10/15% (was 3/7/10%).
+  - Sniper Shot bonus damage doubled on all ranks: Rank 1 +320 (was 160), Rank 2 +450 (was 225), Rank 3 +590 (was 295).
+  - Aimed Shot bonus damage increased by ~110% across all ranks (Rank 1: 40, Rank 2: 70, Rank 3: 115, Rank 4: 185, Rank 5: 260, Rank 6: 350).
+  - Arcane Shot base damage increased by ~30% and Attack Power scaling coefficient raised from 0.10 to 0.15.
+  - Serpent Sting base damage increased by ~20% and Attack Power scaling per tick increased to 5% (was 3%).
+  - Trap cooldowns unified to a shared 30-second cooldown across Fire and Frost traps.`
+    },
+    {
+      "id": "news-68",
+      "title": "WoW: Forever Official Development Notes and Class Tuning",
+      "source": "Blizzard Official Development Notes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 2, 2026",
+      "tag": "Official Patch 1.60.1 Notes",
+      "summary": "Blizzard has published the comprehensive official launch development notes and class tuning for WoW: Forever, standardizing power budgets, overhauling class talent trees, introducing Shank and Poised, and completing Gamepad 1.0 support.",
+      "content": `Official development notes for the global launch of World of Warcraft: Forever (Build 1.60.1):
+
+• **Universal Combat & Systems Changes:**
+  - Throw uses a 0.5s windup timer instead of weapon attack speed.
+  - Diminishing Returns enabled for proc-based roots: Frostbite, Entrapment, Improved Wing Clip, Counterattack, and Improved Hamstring.
+  - Low-rank penalty removed on talents proccing from low-rank spells (Blizzard retains downranking check for ranks learned >12 levels below player).
+  - Class ability training costs normalized across levels 1–60 (between 206 and 207 gold for all classes).
+  - Bags no longer automatically equip into available bag slots; manual player placement is required.
+
+• **Class Highlights:**
+  - **Rogue:** New baseline off-hand strike *Shank* learned at level 24 (generates 15 energy; rank 2 at 44 generates 25 energy). New passive *Poised* at level 18 (-10 Energy on next ability when out of combat at max energy). Lethality compressed to 2 ranks (10/20%), Relentless Strikes moved to Row 5 (5 ranks), Venom is now a passive boosting poison application after Shank, Mutilate moved to Row 7 (90% weapon dmg), Improved Eviscerate renamed Coup de Grace, and new Subtlety capstone *Death Mark*.
+  - **Druid:** *Poised* passive learned at level 32. Bear/Dire Bear Form threat bonus increased from 50% to 115%. Shred (200%), Claw (140%), and Ravage (435%) weapon damage scaling significantly increased. Lacerate is now a Feral Tier 4 talent; Furor swapped into Feral Tier 1 and Heart of the Wild into Restoration Tier 1. New Restoration Tier 3 talent *Bloom*.
+  - **Paladin:** Righteous Fury available to train at level 10 (mirrors tanking stances), granting 33% all threat and +90% Holy threat. Salvation, Mass Salvation, Revoke, and Blessing of Light removed. Holy tree gains *Oath of Light* and *Boundless Light*. Protection gains *Stoicism* and *Shieldsworn* (strikes with shield, triggers block talents, blocks spells). Retribution gains *Turn Evil* and *Unsealed Wrath* (stores active seal, swapping seals unleashes burst).
+  - **Shaman:** *Lava Burst* removed; replaced with *Call of Thunder* (+5% crit to LB/CL). Elemental Mastery renamed *Lightning Mastery*. Stormstrike deals 150% weapon damage on a 6s cooldown (was 8s). Mental Dexterity provides 50/100/150% AP of Int. Riptide redesigned (-40% mana, 12s CD, pure HoT). Totemic Projection renamed *Totemic Call* (30s CD).
+  - **Warrior:** Defensive Stance threat bonus increased to 80% (was 30%). Slam cooldown reduced to 15s. Improved Tactical Mastery compressed to 3 ranks (5/10/15 rage retention). Two-Handed Weapon Spec increased to 2/4/6%. Fury gains *Reckless Swings* and *Improved Whirlwind*; Bloodthirst requires Death Wish.
+  - **Mage:** Frost Blast removed. Precision in Frost tree now grants 2/4/6% hit with all spells (Arcane Focus removed). Ice Barrier grants +15% Frost damage for 1 min + 5% while held. Ice Lance on 8s CD shared with Fire Blast.
+  - **Warlock:** Amplify Curse affects Curse of Exhaustion and Bane of Agony. Wrack spell damage coefficient doubled. Shadow and Flame buffed to 4/8/12/16/20%.
+  - **Races:** Dwarf gains *Artisan's Precision* (+1% hit). Orc *Command* re-added (+5% pet dmg). Human *Ruthless* set to 1% crit, *Human Spirit* to 10% Spirit. Tauren *Plainsrunning* buffed to 2% per stack up to 60% max. Undead *Touch of the Grave* ICD reduced to 15s.`
+    },
+    {
       "id": "news-67",
       "title": "Final Pre-Launch Systems Sync: Client Build 1.60.1.70707 & Hotfixes, Level 60 Talent Trees, 22,493 Item Database Tooltips & Consumables",
       "source": "WoW Forever Systems & Datamining",
@@ -3641,6 +3703,31 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "cls": "Druid",
         "name": "Improved Mark of the Wild",
         "desc": "Baseline maximum stat and resistance buff scaling without talent point taxes."
+      },
+      {
+        "cls": "Druid",
+        "name": "Poised",
+        "desc": "Baseline level 32 passive reducing Energy cost of next ability by 10 when out of combat at maximum Energy."
+      },
+      {
+        "cls": "Rogue",
+        "name": "Shank",
+        "desc": "Baseline off-hand strike learned at level 24 (5 Energy, 10s CD) generating 15 Energy (25 at level 44). Cannot miss."
+      },
+      {
+        "cls": "Rogue",
+        "name": "Poised",
+        "desc": "Baseline level 18 passive reducing Energy cost of next ability by 10 when out of combat at maximum Energy."
+      },
+      {
+        "cls": "Paladin",
+        "name": "Righteous Fury (Level 10)",
+        "desc": "Trained at level 10 (was 16) to mirror other tank stances; generates 33% increased threat and +90% Holy threat (Blessing of Salvation removed)."
+      },
+      {
+        "cls": "Shaman",
+        "name": "Totemic Call",
+        "desc": "Learned at level 22 (renamed from Totemic Projection, 30s CD) instantly teleporting all active totems to the Shaman's location."
       }
     ]
   },

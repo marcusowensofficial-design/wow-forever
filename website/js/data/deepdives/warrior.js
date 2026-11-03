@@ -550,7 +550,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Arms (Rend & Overpower)",
             icon: "🗡️",
             role: "2-Handed Melee Burst DPS",
-            buildUrl: "/talents/warrior?b=05300003--&l=20",
+            buildUrl: "/talents/warrior?b=05320001--&l=20",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
             tagline: "Heavy two-handed strikes with critical Rend bleeds, stance dancing, and Overpower counters.",
             statPriority: "Strength > Melee Hit > Agility > Stamina",

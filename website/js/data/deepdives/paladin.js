@@ -12,12 +12,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     icon: "🛡️",
     color: "#F58CBA",
     role: "Tank / Healer / Melee DPS",
-    specs: "Holy (Light's Vigil/AoE Heals) • Protection (Seal of Fury/Taunt) • Retribution (Twist of Light/Sacred Arbiter)",
+    specs: "Holy (Light's Vigil/AoE Heals) • Protection (Seal of Fury/Taunt) • Retribution (Unsealed Wrath/Sacred Arbiter)",
     hasData: true,
     videoTitle: "WoW Forever Paladin Class Deep Dive & Undead Racials",
     videoUrl: "https://www.youtube.com/watch?v=CGEOZoZ_8I4",
     sourceAttribution: "Sodapoppin Level-38 Undead Paladin BlizzCon Early Access Demo & Closed Beta Forensics",
-    summary: "WoW Forever brings a monumental overhaul to the Paladin class: the historic introduction of Undead Paladins with the custom 'Forsaken Charger' skeletal warhorse, a dedicated single-target taunt via Judgment of Fury, block-based mana regeneration, AoE healing with Light's Vigil and 10s Holy Shock, baseline Holy Strike, 60-minute Blessings, and official seal-twisting mechanics supported by the Twist of Light capstone.",
+    summary: "WoW Forever brings a monumental overhaul to the Paladin class: the historic introduction of Undead Paladins with the custom 'Forsaken Charger' skeletal warhorse, a dedicated single-target taunt via Judgment of Fury, block-based mana regeneration, AoE healing with Light's Vigil and 10s Holy Shock, baseline Holy Strike, 60-minute Blessings, and official seal-twisting mechanics supported by the Unsealed Wrath seal-swapping capstone.",
 
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
@@ -25,7 +25,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "holy", label: "Holy Healer & AoE", icon: "✨" },
       { id: "protection", label: "Protection Tank & Taunt", icon: "🛡️" },
-      { id: "retribution", label: "Retribution & Twist of Light", icon: "⚔️" },
+      { id: "retribution", label: "Retribution & Unsealed Wrath", icon: "⚔️" },
       { id: "undead", label: "Undead Testing & Races", icon: "💀" },
       { id: "matrix", label: "Verification Matrix", icon: "🔬" }
     ],
@@ -67,11 +67,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "Holy Strike is available as a baseline melee strike dealing 35% weapon damage plus additional Holy damage on an instant cast. Serves as the core active melee button across all three specializations."
       },
       {
-        title: "Baseline Voice of Truth & Infusion of Light",
+        title: "Righteous Fury at Level 10 & Divine Precision",
         status: "exclusive",
         statusLabel: "✦ Forever Exclusive",
         badge: "Spell Progression",
-        desc: "Beta introduces potent capabilities: Voice of Truth (learned baseline at level 20, granting complete immunity to Silence and Interrupt mechanics), Reverence (in-combat mana regeneration while casting), Purifying Power (reduced costs/cooldowns for Cleanse/Exorcism), and Infusion of Light (holy crits make next Holy Light fast or instant)."
+        desc: "Launch updates introduce refined protection and utility: Righteous Fury is trained at Level 10 (was 16) granting +33% all threat and +90% Holy threat (Blessing of Salvation removed), Divine Precision reduces Silence duration by 10/20% alongside Holy hit, Sacred Duty reduces Forbearance duration, and Shieldsworn empowers Holy Strike to block spells."
       },
       {
         title: "Blessing of Freedom & Kings Mutual Exclusion",
@@ -261,11 +261,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
 
     retribution: {
-      title: "Retribution: Twist of Light, Sacred Arbiter & Hybrid Power",
-      tagline: "Rotational seal-twisting via Twist of Light Echoes, judgment refreshes with Sacred Arbiter, and 100% Intellect-to-Spell Damage scaling",
+      title: "Retribution: Unsealed Wrath, Sacred Arbiter & Hybrid Power",
+      tagline: "Rotational seal-swapping via Unsealed Wrath, judgment refreshes with Sacred Arbiter, and 100% Intellect-to-Spell Damage scaling",
       talents: [
         {
-          name: "Twist of Light (Seal Twisting Capstone)",
+          name: "Unsealed Wrath (Seal Swapping Capstone)",
           type: "Playstyle Keystone",
           cast: "Passive Proc",
           status: "verified",
@@ -442,7 +442,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Twist of Light (Echo)",
+        feature: "Unsealed Wrath (Seal Swapping)",
         category: "Retribution",
         details: "Seal swap creates an Echo consumed by next melee hit; modernizes seal twisting",
         status: "Verified in Closed Beta",
@@ -670,7 +670,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Repentance", points: "1/1", tree: "Retribution (Tier 5 Keystone)", desc: "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Instant cast crowd control on a 1-minute cooldown." },
               { name: "Vengeance", points: "2/5", tree: "Retribution (Tier 5)", desc: "Gives you a 6% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike." }
             ],
-            legacyNotes: "Extra Legacy discovery points max out 5/5 Vengeance (+15% Physical and Holy damage) and Twist of Light.",
+            legacyNotes: "Extra Legacy discovery points max out 5/5 Vengeance (+15% Physical and Holy damage) and Unsealed Wrath.",
             rotation: [
               { label: "Buffs & Seal", desc: "Cast 60-minute Blessing of Might or Kings (both baseline!) -> Seal of Command (Judgement does not consume the seal!)." },
               { label: "Strike Priority", desc: "Holy Strike on cooldown -> Judgement on 8s cooldown -> Hammer of Justice stun." },

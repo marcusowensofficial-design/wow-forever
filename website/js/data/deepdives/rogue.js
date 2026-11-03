@@ -12,12 +12,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     icon: "🗡️",
     color: "#FFF569",
     role: "Melee DPS / Physical & Poison Burst",
-    specs: "Assassination (Mutilate/Crit Poisons) • Combat (Restless Blades/Blade Flurry) • Subtlety (Thousand Cuts Rupture Engine/Preparation)",
+    specs: "Assassination (Mutilate/Crit Poisons) • Combat (Restless Blades/Blade Flurry) • Subtlety (Death Mark Burst Engine/Preparation)",
     hasData: true,
     videoTitle: "WoW Forever Rogue Class Deep Dive & Troll Racials",
     videoUrl: "https://www.youtube.com/watch?v=FiNZrJ24shk",
     sourceAttribution: "Sodapoppin Level-38 Troll Rogue BlizzCon Early Access Demo & Closed Beta Forensics",
-    summary: "WoW Forever preserves the classic Rogue control kit while introducing major modernizations: Mutilate usable without daggers, critical-strike and AP-scaling poisons, Restless Blades cooldown cycling for Adrenaline Rush and Vanish, and a transformative Thousand Cuts Rupture engine in Subtlety that refunds up to 15 Energy for Backstab and Hemorrhage.",
+    summary: "WoW Forever preserves the classic Rogue control kit while introducing major modernizations: Mutilate usable without daggers, critical-strike and AP-scaling poisons, Restless Blades cooldown cycling for Adrenaline Rush and Vanish, and a transformative Death Mark burst finisher in Subtlety that stores attack damage (at double rate for Garrote and Rupture) before bursting.",
 
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
@@ -245,11 +245,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
 
     subtlety: {
-      title: "Subtlety: Thousand Cuts Rupture Engine, Frontal Garrote & Preparation",
-      tagline: "Turn Rupture into an energy generator with Thousand Cuts, strike from the front with Dirty Deeds Garrote, and double all cooldowns with Preparation",
+      title: "Subtlety: Death Mark Burst Engine, Frontal Garrote & Preparation",
+      tagline: "Turn bleed pressure into massive burst with Death Mark, strike with off-hand Shank for energy generation, and double all cooldowns with Preparation",
       talents: [
         {
-          name: "Thousand Cuts (Rupture Energy Engine)",
+          name: "Death Mark (Delayed Burst Finisher)",
           type: "Signature Subtlety Keystone",
           cast: "Passive",
           duration: "10 sec Buff",
@@ -487,7 +487,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Thousand Cuts Rupture Engine",
+        feature: "Death Mark Burst Finisher",
         category: "Subtlety",
         details: "Rupture ticks reduce Hemorrhage/Backstab Energy cost by 3 (stacks up to 5 = -15 Energy)",
         status: "Verified in Closed Beta",
@@ -692,7 +692,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Assassination (Cold Blood & Mutilate Burst)",
             icon: "🩸",
             role: "Single-Target Burst & Poison Executioner",
-            buildUrl: "/talents/rogue?b=00530310501521--&l=30&tl=5",
+            buildUrl: "/talents/rogue?b=02530300241051--&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/rogue/005-02301",
             tagline: "Vicious burst utilizing Cold Blood (guaranteed 100% crit), +20% Mutilate damage on poisoned targets, 30% bonus Lethality crit damage, and Relentless Strikes energy refunds.",
             statPriority: "Agility > Attack Power > Melee Crit > Melee Hit",
@@ -729,7 +729,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Subtlety (Preparation & Ghostly Strike Engine)",
             icon: "👤",
             role: "PvP Duelist & Rupture Engine",
-            buildUrl: "/talents/rogue?b=3--4020223310013011&l=30&tl=5",
+            buildUrl: "/talents/rogue?b=--0353203203210011&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/rogue/--502202",
             tagline: "Total tactical control with Preparation (instant cooldown reset on Vanish, Sprint, Evasion), Ghostly Strike (+15% dodge), and Serrated Blades armor penetration.",
             statPriority: "Agility > Attack Power > Stamina > Crit",

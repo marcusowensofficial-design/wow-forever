@@ -459,7 +459,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Cannibalize",
         "type": "Active",
-        "effect": "Consume corpses to regenerate 35% Health and Mana over time."
+        "effect": "Consume corpses to regenerate 35% Health and Mana over time. Can be channeled while immune to Physical damage."
       },
       {
         "name": "Underwater Breathing",

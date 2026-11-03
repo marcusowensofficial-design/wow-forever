@@ -1,10 +1,10 @@
 /**
- * World of Warcraft: Forever - Class Talent Trees Dataset
- * Updated through October 31, 2026 (Client Build 1.60.1.70707 and Launch Realm Hotfix).
- * Authentic 3-tree Classic+ calculator across all 9 classes (27 specialization trees).
+ * World of Warcraft: Forever - Interactive Talent Tree Calculator Dataset
+ * Updated through November 3, 2026 (Launch Tuning & Class Buff Hotfixes).
  */
 
-window.WOW_TALENTS_DATA = {
+if (typeof window !== 'undefined') {
+  window.WOW_TALENTS_DATA = {
   "warrior": {
     "id": "warrior",
     "name": "Warrior",
@@ -111,14 +111,12 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_nature_enchantarmor",
         "row": 2,
         "col": 2,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 12295,
         "req": null,
         "descriptions": [
-          "Tactical Mastery lets you retain up to an additional 3 Rage when you change stances.",
-          "Tactical Mastery lets you retain up to an additional 6 Rage when you change stances.",
-          "Tactical Mastery lets you retain up to an additional 9 Rage when you change stances.",
-          "Tactical Mastery lets you retain up to an additional 12 Rage when you change stances.",
+          "Tactical Mastery lets you retain up to an additional 5 Rage when you change stances.",
+          "Tactical Mastery lets you retain up to an additional 10 Rage when you change stances.",
           "Tactical Mastery lets you retain up to an additional 15 Rage when you change stances."
         ]
       },
@@ -202,9 +200,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 12163,
         "req": null,
         "descriptions": [
-          "Increases the damage you deal with two-handed melee weapons by 1%.",
           "Increases the damage you deal with two-handed melee weapons by 2%.",
-          "Increases the damage you deal with two-handed melee weapons by 3%."
+          "Increases the damage you deal with two-handed melee weapons by 4%.",
+          "Increases the damage you deal with two-handed melee weapons by 6%."
         ]
       },
       {
@@ -233,14 +231,11 @@ window.WOW_TALENTS_DATA = {
         "iconName": "inv_sword_01",
         "row": 5,
         "col": 1,
-        "maxRank": 5,
+        "maxRank": 2,
         "spellId": 1289682,
         "req": null,
         "descriptions": [
-          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 4% chance to allow an activation of Overpower.",
-          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 8% chance to allow an activation of Overpower.",
-          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 12% chance to allow an activation of Overpower.",
-          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 16% chance to allow an activation of Overpower.",
+          "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 10% chance to allow an activation of Overpower.",
           "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 20% chance to allow an activation of Overpower."
         ]
       },
@@ -293,8 +288,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 12862,
         "req": null,
         "descriptions": [
-          "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
-          "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec."
+          "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 2.5 sec.",
+          "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 5.0 sec."
         ]
       },
       {
@@ -344,11 +339,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 12321,
         "req": null,
         "descriptions": [
-          "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%.",
-          "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%.",
-          "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%.",
-          "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%.",
-          "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%."
+          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 10%, and reduces the Rage cost of Piercing Howl by 5%.",
+          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 20%, and reduces the Rage cost of Piercing Howl by 10%.",
+          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 30%, and reduces the Rage cost of Piercing Howl by 15%.",
+          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 40%, and reduces the Rage cost of Piercing Howl by 20%.",
+          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 50%, and reduces the Rage cost of Piercing Howl by 25%."
         ]
       },
       {
@@ -506,8 +501,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Enrage",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_unholyfrenzy.jpg",
         "iconName": "spell_shadow_unholyfrenzy",
-        "row": 4,
-        "col": 3,
+        "row": 3,
+        "col": 4,
         "maxRank": 5,
         "spellId": 12317,
         "req": null,
@@ -595,15 +590,13 @@ window.WOW_TALENTS_DATA = {
         "iconName": "ability_ghoulfrenzy",
         "row": 6,
         "col": 2,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 12319,
-        "req": 31,
+        "req": null,
         "descriptions": [
-          "Increases your melee attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
           "Increases your melee attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your melee attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
           "Increases your melee attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your melee attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+          "Increases your melee attack speed by 30% for your next 3 swings after dealing a melee critical strike."
         ]
       },
       {
@@ -613,11 +606,11 @@ window.WOW_TALENTS_DATA = {
         "name": "Gore Drinker",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/racial_troll_berserk.jpg",
         "iconName": "racial_troll_berserk",
-        "row": 6,
+        "row": 5,
         "col": 3,
         "maxRank": 2,
         "spellId": 1323967,
-        "req": 28,
+        "req": 24,
         "descriptions": [
           "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
           "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
@@ -634,7 +627,7 @@ window.WOW_TALENTS_DATA = {
         "col": 2,
         "maxRank": 1,
         "spellId": 23881,
-        "req": null,
+        "req": 31,
         "descriptions": [
           "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
         ]
@@ -816,9 +809,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 12792,
         "req": null,
         "descriptions": [
-          "Increases all threat generated in Defensive stance by an additional 5% while a shield is equipped.",
-          "Increases all threat generated in Defensive stance by an additional 10% while a shield is equipped.",
-          "Increases all threat generated in Defensive stance by an additional 15% while a shield is equipped."
+          "Increases all threat generated in Defensive stance by an additional 7% while a shield is equipped.",
+          "Increases all threat generated in Defensive stance by an additional 13% while a shield is equipped.",
+          "Increases all threat generated in Defensive stance by an additional 20% while a shield is equipped."
         ]
       },
       {
@@ -957,6 +950,39 @@ window.WOW_TALENTS_DATA = {
         "req": 49,
         "descriptions": [
           "Slam the target with your shield, causing 421 to 439 damage, increased by your Block Value, and has a 50% chance of dispelling 1 magic effect on the target. Causes a very high amount of threat."
+        ]
+      },
+      {
+        "id": 507,
+        "tree": 1,
+        "treeId": 4,
+        "name": "Reckless Swings",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_decisivestrike.jpg",
+        "iconName": "ability_warrior_decisivestrike",
+        "row": 4,
+        "col": 3,
+        "maxRank": 1,
+        "spellId": 47174,
+        "req": null,
+        "descriptions": [
+          "15 sec cooldown. Costs 25% of base health. Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds."
+        ]
+      },
+      {
+        "id": 508,
+        "tree": 1,
+        "treeId": 4,
+        "name": "Improved Whirlwind",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_whirlwind.jpg",
+        "iconName": "ability_whirlwind",
+        "row": 6,
+        "col": 3,
+        "maxRank": 2,
+        "spellId": 47175,
+        "req": null,
+        "descriptions": [
+          "Reduces the cooldown of your Whirlwind ability by 1 sec and increases the damage it deals to the closest enemy by 15%.",
+          "Reduces the cooldown of your Whirlwind ability by 2 sec and increases the damage it deals to the closest enemy by 30%."
         ]
       }
     ]
@@ -1796,9 +1822,9 @@ window.WOW_TALENTS_DATA = {
         "maxRank": 3,
         "spellId": 20111,
         "descriptions": [
-          "Increases the physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
-          "Increases the physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
-          "Increases the physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
+          "Increases both Holy and physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
+          "Increases both Holy and physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
+          "Increases both Holy and physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
         ],
         "req": null
       },
@@ -2381,7 +2407,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1299346,
         "req": null,
         "descriptions": [
-          "Increases the Ranged Attack Power of party or raid members within 45 yds by 15."
+          "Increases the Ranged Attack Power of party or raid members within 45 yds by 20."
         ]
       },
       {
@@ -2434,9 +2460,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 19461,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 3%.",
-          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 7%.",
-          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 10%."
+          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 5%.",
+          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 10%.",
+          "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 15%."
         ]
       },
       {
@@ -2488,7 +2514,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310687,
         "req": 132,
         "descriptions": [
-          "A long-range shot that deals ranged damage plus 160 and increases the range of your next 3 Shots by 10 yards for 10 sec."
+          "A long-range shot that deals ranged damage plus 320 and increases the range of your next 3 Shots by 10 yards for 10 sec."
         ]
       },
       {
@@ -2790,11 +2816,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 19168,
         "req": null,
         "descriptions": [
-          "Increases your Agility by 2%.",
-          "Increases your Agility by 4%.",
+          "Increases your Agility by 3%.",
           "Increases your Agility by 6%.",
-          "Increases your Agility by 8%.",
-          "Increases your Agility by 10%."
+          "Increases your Agility by 9%.",
+          "Increases your Agility by 12%.",
+          "Increases your Agility by 15%."
         ]
       },
       {
@@ -2913,23 +2939,6 @@ window.WOW_TALENTS_DATA = {
         ]
       },
       {
-        "id": 161,
-        "tree": 0,
-        "treeId": 16,
-        "name": "Murder",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_deathscream.jpg",
-        "iconName": "spell_shadow_deathscream",
-        "row": 2,
-        "col": 2,
-        "maxRank": 2,
-        "spellId": 14158,
-        "req": null,
-        "descriptions": [
-          "Increases all damage dealt by 2% against Humanoid and Giant targets.",
-          "Increases all damage dealt by 4% against Humanoid and Giant targets."
-        ]
-      },
-      {
         "id": 162,
         "tree": 0,
         "treeId": 16,
@@ -2954,13 +2963,17 @@ window.WOW_TALENTS_DATA = {
         "name": "Relentless Strikes",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_decisivestrike.jpg",
         "iconName": "ability_warrior_decisivestrike",
-        "row": 3,
+        "row": 5,
         "col": 1,
-        "maxRank": 1,
+        "maxRank": 5,
         "spellId": 14179,
         "req": null,
         "descriptions": [
-          "Your finishing moves have a 20% chance per Combo Point to restore 25 Energy."
+          "Your finishing moves have a 4% chance per combo point to restore 25 Energy.",
+          "Your finishing moves have a 8% chance per combo point to restore 25 Energy.",
+          "Your finishing moves have a 12% chance per combo point to restore 25 Energy.",
+          "Your finishing moves have a 16% chance per combo point to restore 25 Energy.",
+          "Your finishing moves have a 20% chance per combo point to restore 25 Energy."
         ]
       },
       {
@@ -2970,7 +2983,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Improved Expose Armor",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_riposte.jpg",
         "iconName": "ability_warrior_riposte",
-        "row": 3,
+        "row": 2,
         "col": 2,
         "maxRank": 2,
         "spellId": 14168,
@@ -2989,14 +3002,11 @@ window.WOW_TALENTS_DATA = {
         "iconName": "ability_criticalstrike",
         "row": 3,
         "col": 3,
-        "maxRank": 5,
+        "maxRank": 2,
         "spellId": 14128,
         "req": 159,
         "descriptions": [
-          "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 4%.",
-          "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 8%.",
-          "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 12%.",
-          "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 16%.",
+          "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 10%.",
           "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 20%."
         ]
       },
@@ -3063,13 +3073,12 @@ window.WOW_TALENTS_DATA = {
         "name": "Vigor",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_earthbindtotem.jpg",
         "iconName": "spell_nature_earthbindtotem",
-        "row": 5,
+        "row": 3,
         "col": 1,
-        "maxRank": 2,
+        "maxRank": 1,
         "spellId": 14983,
         "req": null,
         "descriptions": [
-          "Increases your maximum Energy by 5.",
           "Increases your maximum Energy by 10."
         ]
       },
@@ -3080,13 +3089,13 @@ window.WOW_TALENTS_DATA = {
         "name": "Mutilate",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_deadlybrew.jpg",
         "iconName": "ability_rogue_deadlybrew",
-        "row": 5,
+        "row": 7,
         "col": 2,
         "maxRank": 1,
         "spellId": 1310707,
         "req": null,
         "descriptions": [
-          "Instantly attacks with both weapons for 75% weapon damage plus an additional 17 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points."
+          "Instantly attacks with both weapons for 90% weapon damage plus an additional 60 with each weapon. Damage is increased by 20% against Poisoned targets. Awards 2 combo points."
         ]
       },
       {
@@ -3115,15 +3124,13 @@ window.WOW_TALENTS_DATA = {
         "iconName": "spell_shadow_chilltouch",
         "row": 6,
         "col": 3,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 14186,
         "req": null,
         "descriptions": [
-          "Your critical strikes from abilities that add Combo Points have a 20% chance to add an additional Combo Point.",
-          "Your critical strikes from abilities that add Combo Points have a 40% chance to add an additional Combo Point.",
-          "Your critical strikes from abilities that add Combo Points have a 60% chance to add an additional Combo Point.",
-          "Your critical strikes from abilities that add Combo Points have a 80% chance to add an additional Combo Point.",
-          "Your critical strikes from abilities that add Combo Points have a 100% chance to add an additional Combo Point."
+          "Your critical strikes from abilities that add combo points have a 33% chance to add an additional combo point.",
+          "Your critical strikes from abilities that add combo points have a 66% chance to add an additional combo point.",
+          "Your critical strikes from abilities that add combo points have a 100% chance to add an additional combo point."
         ]
       },
       {
@@ -3133,20 +3140,20 @@ window.WOW_TALENTS_DATA = {
         "name": "Venom",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_sword_31.jpg",
         "iconName": "inv_sword_31",
-        "row": 7,
+        "row": 5,
         "col": 2,
         "maxRank": 1,
         "spellId": 1310703,
-        "req": 170,
+        "req": null,
         "descriptions": [
-          "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n1 point : 9 sec\n2 points: 12 sec\n3 points: 15 sec\n4 points: 18 sec\n5 points: 21 sec"
+          "Your Shank ability increases your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds."
         ]
       },
       {
         "id": 174,
         "tree": 1,
         "treeId": 17,
-        "name": "Improved Eviscerate",
+        "name": "Coup de Grace",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
         "iconName": "ability_rogue_eviscerate",
         "row": 1,
@@ -3155,16 +3162,16 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14162,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Eviscerate ability by 7%.",
-          "Increases the damage done by your Eviscerate ability by 13%.",
-          "Increases the damage done by your Eviscerate ability by 20%."
+          "Increases the damage done by your Eviscerate ability by 7%, and the damage and storage rate of your Death Mark ability by 7%.",
+          "Increases the damage done by your Eviscerate ability by 13%, and the damage and storage rate of your Death Mark ability by 13%.",
+          "Increases the damage done by your Eviscerate ability by 20%, and the damage and storage rate of your Death Mark ability by 20%."
         ]
       },
       {
         "id": 175,
         "tree": 1,
         "treeId": 17,
-        "name": "Improved Sinister Strike",
+        "name": "Efficient Strikes",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_ritualofsacrifice.jpg",
         "iconName": "spell_shadow_ritualofsacrifice",
         "row": 1,
@@ -3173,8 +3180,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 13732,
         "req": null,
         "descriptions": [
-          "Reduces the Energy cost of your Sinister Strike ability by 3.",
-          "Reduces the Energy cost of your Sinister Strike ability by 5."
+          "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 3.",
+          "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 5."
         ]
       },
       {
@@ -3291,7 +3298,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Improved Sprint",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_sprint.jpg",
         "iconName": "ability_rogue_sprint",
-        "row": 3,
+        "row": 2,
         "col": 4,
         "maxRank": 2,
         "spellId": 13743,
@@ -3331,7 +3338,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310711,
         "req": null,
         "descriptions": [
-          "Reduces the Energy cost of your Eviscerate ability by 10."
+          "Reduces the Energy cost of your Finishing Moves by 15."
         ]
       },
       {
@@ -3341,17 +3348,14 @@ window.WOW_TALENTS_DATA = {
         "name": "Dual Wield Specialization",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_dualwield.jpg",
         "iconName": "ability_dualwield",
-        "row": 4,
-        "col": 3,
-        "maxRank": 5,
+        "row": 5,
+        "col": 1,
+        "maxRank": 2,
         "spellId": 13715,
-        "req": 179,
+        "req": null,
         "descriptions": [
-          "Increases the damage done by your off-hand weapon by 5%.",
-          "Increases the damage done by your off-hand weapon by 10%.",
-          "Increases the damage done by your off-hand weapon by 15%.",
-          "Increases the damage done by your off-hand weapon by 20%.",
-          "Increases the damage done by your off-hand weapon by 25%."
+          "Increases the damage done by your off-hand weapon by 25%.",
+          "Increases the damage done by your off-hand weapon by 50%."
         ]
       },
       {
@@ -3397,11 +3401,11 @@ window.WOW_TALENTS_DATA = {
         "name": "Weapon Expertise",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_holy_blessingofstrength.jpg",
         "iconName": "spell_holy_blessingofstrength",
-        "row": 6,
-        "col": 2,
+        "row": 4,
+        "col": 3,
         "maxRank": 2,
         "spellId": 30919,
-        "req": 186,
+        "req": null,
         "descriptions": [
           "Reduces the chance for your attacks to be Dodged or Parried by 1%.",
           "Reduces the chance for your attacks to be Dodged or Parried by 2%."
@@ -3414,15 +3418,15 @@ window.WOW_TALENTS_DATA = {
         "name": "Aggression",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_racial_avatar.jpg",
         "iconName": "ability_racial_avatar",
-        "row": 6,
-        "col": 3,
+        "row": 4,
+        "col": 4,
         "maxRank": 3,
         "spellId": 18427,
         "req": null,
         "descriptions": [
-          "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 2%.",
-          "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 4%.",
-          "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 6%."
+          "Increases the damage of your Sinister Strike and Eviscerate abilities by 5%.",
+          "Increases the damage of your Sinister Strike and Eviscerate abilities by 10%.",
+          "Increases the damage of your Sinister Strike and Eviscerate abilities by 15%."
         ]
       },
       {
@@ -3448,17 +3452,15 @@ window.WOW_TALENTS_DATA = {
         "name": "Camouflage",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_stealth.jpg",
         "iconName": "ability_stealth",
-        "row": 1,
+        "row": 2,
         "col": 1,
-        "maxRank": 5,
+        "maxRank": 3,
         "spellId": 13975,
         "req": null,
         "descriptions": [
-          "Reduces your speed penalty from your Stealth ability by 3% and reduces its cooldown by 2 sec.",
-          "Reduces your speed penalty from your Stealth ability by 6% and reduces its cooldown by 3 sec.",
-          "Reduces your speed penalty from your Stealth ability by 9% and reduces its cooldown by 4 sec.",
-          "Reduces your speed penalty from your Stealth ability by 12% and reduces its cooldown by 5 sec.",
-          "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 6 sec."
+          "Increases your speed while stealthed by 5% and reduces the cooldown of your Stealth ability by 2 sec.",
+          "Increases your speed while stealthed by 10% and reduces the cooldown of your Stealth ability by 4 sec.",
+          "Increases your speed while stealthed by 15% and reduces the cooldown of your Stealth ability by 6 sec."
         ]
       },
       {
@@ -3488,12 +3490,15 @@ window.WOW_TALENTS_DATA = {
         "iconName": "ability_warrior_warcry",
         "row": 1,
         "col": 3,
-        "maxRank": 2,
+        "maxRank": 5,
         "spellId": 14057,
         "req": null,
         "descriptions": [
-          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 5%.",
-          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 10%."
+          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 4%.",
+          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 8%.",
+          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 12%.",
+          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 16%.",
+          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 20%."
         ]
       },
       {
@@ -3503,15 +3508,15 @@ window.WOW_TALENTS_DATA = {
         "name": "Setup",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_mirrorimage.jpg",
         "iconName": "spell_nature_mirrorimage",
-        "row": 2,
+        "row": 1,
         "col": 1,
         "maxRank": 3,
         "spellId": 13983,
         "req": null,
         "descriptions": [
-          "Gives you a 33% chance to add a Combo Point to your target after Dodging one of their attacks or fully resisting one of their spells.",
-          "Gives you a 67% chance to add a Combo Point to your target after Dodging one of their attacks or fully resisting one of their spells.",
-          "Gives you a 100% chance to add a Combo Point to your target after Dodging one of their attacks or fully resisting one of their spells."
+          "Gives you a 15% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+          "Gives you a 30% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+          "Gives you a 45% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells."
         ]
       },
       {
@@ -3521,8 +3526,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Elusiveness",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_magic_lesserinvisibilty.jpg",
         "iconName": "spell_magic_lesserinvisibilty",
-        "row": 2,
-        "col": 2,
+        "row": 4,
+        "col": 1,
         "maxRank": 2,
         "spellId": 13981,
         "req": null,
@@ -3591,30 +3596,13 @@ window.WOW_TALENTS_DATA = {
         "name": "Ghostly Strike",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_curse.jpg",
         "iconName": "spell_shadow_curse",
-        "row": 3,
+        "row": 4,
         "col": 2,
         "maxRank": 1,
         "spellId": 14278,
         "req": null,
         "descriptions": [
-          "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo points."
-        ]
-      },
-      {
-        "id": 200,
-        "tree": 2,
-        "treeId": 18,
-        "name": "Improved Distract",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_distract.jpg",
-        "iconName": "ability_rogue_distract",
-        "row": 3,
-        "col": 3,
-        "maxRank": 2,
-        "spellId": 14084,
-        "req": null,
-        "descriptions": [
-          "Increases the radius of your Distract ability by 3 yds, and further reduces the Stealth detection of distracted enemies as though they were an additional 1 level lower.",
-          "Increases the radius of your Distract ability by 5 yds, and further reduces the Stealth detection of distracted enemies as though they were an additional 2 levels lower."
+          "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. In addition, causes your next Ambush or Garrote cast within 7 seconds to not require Stealth. Awards 1 combo point."
         ]
       },
       {
@@ -3624,7 +3612,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Heightened Senses",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_ambush.jpg",
         "iconName": "ability_ambush",
-        "row": 4,
+        "row": 5,
         "col": 1,
         "maxRank": 2,
         "spellId": 30894,
@@ -3641,7 +3629,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Premeditation",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_possession.jpg",
         "iconName": "spell_shadow_possession",
-        "row": 4,
+        "row": 3,
         "col": 2,
         "maxRank": 1,
         "spellId": 14183,
@@ -3657,7 +3645,7 @@ window.WOW_TALENTS_DATA = {
         "name": "Serrated Blades",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_sword_17.jpg",
         "iconName": "inv_sword_17",
-        "row": 4,
+        "row": 3,
         "col": 3,
         "maxRank": 3,
         "spellId": 14171,
@@ -3675,8 +3663,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Dirty Deeds",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_summonsuccubus.jpg",
         "iconName": "spell_shadow_summonsuccubus",
-        "row": 5,
-        "col": 1,
+        "row": 2,
+        "col": 2,
         "maxRank": 2,
         "spellId": 14082,
         "req": null,
@@ -3714,63 +3702,113 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16511,
         "req": 203,
         "descriptions": [
-          "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Points."
+          "An instant strike that damages the opponent and causes the target to hemorrhage, increasing the physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. In addition, increases the damage of the caster's Rupture and Garrote abilities by 15%. Awards 1 combo point."
         ]
       },
       {
-        "id": 207,
-        "tree": 2,
-        "treeId": 18,
-        "name": "Quietus",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_garrote.jpg",
-        "iconName": "ability_rogue_garrote",
-        "row": 6,
-        "col": 1,
-        "maxRank": 5,
-        "spellId": 1310728,
-        "req": 204,
-        "descriptions": [
-          "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 2% more damage against targets below 35% health.",
-          "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 4% more damage against targets below 35% health.",
-          "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 6% more damage against targets below 35% health.",
-          "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 8% more damage against targets below 35% health.",
-          "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 10% more damage against targets below 35% health."
-        ]
-      },
-      {
-        "id": 208,
-        "tree": 2,
-        "treeId": 18,
-        "name": "Cutthroat",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/classicon_rogue.jpg",
-        "iconName": "classicon_rogue",
-        "row": 6,
-        "col": 3,
-        "maxRank": 5,
-        "spellId": 462708,
+        "id": 501,
+        "tree": 0,
+        "treeId": 8,
+        "name": "Blood Splatter",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_bloodyeye.jpg",
+        "iconName": "ability_rogue_bloodyeye",
+        "row": 3,
+        "col": 2,
+        "maxRank": 1,
+        "spellId": 47168,
         "req": null,
         "descriptions": [
-          "Your Backstab has a 3% chance to cause your next Ambush within 10 sec to not require Stealth.",
-          "Your Backstab has a 6% chance to cause your next Ambush within 10 sec to not require Stealth.",
-          "Your Backstab has a 9% chance to cause your next Ambush within 10 sec to not require Stealth.",
-          "Your Backstab has a 12% chance to cause your next Ambush within 10 sec to not require Stealth.",
-          "Your Backstab has a 15% chance to cause your next Ambush within 10 sec to not require Stealth."
+          "Increases the duration of your Rupture ability by 6 seconds and your Garrote ability by 9 seconds."
         ]
       },
       {
-        "id": 209,
+        "id": 502,
+        "tree": 1,
+        "treeId": 7,
+        "name": "Composure",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_stayingfocused.jpg",
+        "iconName": "ability_rogue_stayingfocused",
+        "row": 3,
+        "col": 4,
+        "maxRank": 2,
+        "spellId": 47169,
+        "req": null,
+        "descriptions": [
+          "Increases the Energy cost reduction of your Poised ability by 5.",
+          "Increases the Energy cost reduction of your Poised ability by 10."
+        ]
+      },
+      {
+        "id": 503,
+        "tree": 1,
+        "treeId": 7,
+        "name": "Flash of Steel",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_shadowstrikes.jpg",
+        "iconName": "ability_rogue_shadowstrikes",
+        "row": 6,
+        "col": 2,
+        "maxRank": 5,
+        "spellId": 47170,
+        "req": null,
+        "descriptions": [
+          "Increases the energy generated by your Shank ability by 3 and reduces its cooldown by 0.4 seconds.",
+          "Increases the energy generated by your Shank ability by 6 and reduces its cooldown by 0.8 seconds.",
+          "Increases the energy generated by your Shank ability by 9 and reduces its cooldown by 1.2 seconds.",
+          "Increases the energy generated by your Shank ability by 12 and reduces its cooldown by 1.6 seconds.",
+          "Increases the energy generated by your Shank ability by 15 and reduces its cooldown by 2.0 seconds."
+        ]
+      },
+      {
+        "id": 504,
         "tree": 2,
-        "treeId": 18,
-        "name": "Thousand Cuts",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_rupture.jpg",
-        "iconName": "ability_rogue_rupture",
+        "treeId": 9,
+        "name": "Quick Getaway",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_sprint.jpg",
+        "iconName": "ability_rogue_sprint",
+        "row": 4,
+        "col": 3,
+        "maxRank": 2,
+        "spellId": 47171,
+        "req": null,
+        "descriptions": [
+          "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 15% for 3 seconds after sapping a target.",
+          "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 30% for 3 seconds after sapping a target."
+        ]
+      },
+      {
+        "id": 505,
+        "tree": 2,
+        "treeId": 9,
+        "name": "Boot Knife",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_throwingknife_04.jpg",
+        "iconName": "inv_throwingknife_04",
+        "row": 6,
+        "col": 2,
+        "maxRank": 5,
+        "spellId": 47172,
+        "req": null,
+        "descriptions": [
+          "Gives your Shank ability a 20% chance to add 2 combo points to the target.",
+          "Gives your Shank ability a 40% chance to add 2 combo points to the target.",
+          "Gives your Shank ability a 60% chance to add 2 combo points to the target.",
+          "Gives your Shank ability a 80% chance to add 2 combo points to the target.",
+          "Gives your Shank ability a 100% chance to add 2 combo points to the target."
+        ]
+      },
+      {
+        "id": 506,
+        "tree": 2,
+        "treeId": 9,
+        "name": "Death Mark",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_deathmark.jpg",
+        "iconName": "spell_shadow_deathmark",
         "row": 7,
         "col": 2,
         "maxRank": 1,
-        "spellId": 1310721,
+        "spellId": 47173,
         "req": 205,
         "descriptions": [
-          "When your Rupture ability deals periodic damage, the Energy cost of your next Hemorrhage or Backstab ability within 10 sec is reduced by 3, stacking up to 5 times."
+          "25 Energy, 20 yd range, Instant, 10 sec cooldown. Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt up to a maximum increased by Attack Power and Critical Strike chance."
         ]
       }
     ]
@@ -4844,9 +4882,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16038,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
+          "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
         ]
       },
       {
@@ -4949,24 +4987,24 @@ window.WOW_TALENTS_DATA = {
         "spellId": 28999,
         "req": null,
         "descriptions": [
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards and reduces the cooldown of Totemic Projection by 10 sec.",
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards and reduces the cooldown of Totemic Projection by 20 sec."
+          "Increases the range of your Lightning Bolt and Chain Lightning spells by 3 yards and Earth Shock, Flame Shock, and Frost Shock by 3 yards.",
+          "Increases the range of your Lightning Bolt and Chain Lightning spells by 6 yards and Earth Shock, Flame Shock, and Frost Shock by 6 yards."
         ]
       },
       {
         "id": 278,
         "tree": 0,
         "treeId": 19,
-        "name": "Lava Burst",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shaman_lavaburst.jpg",
-        "iconName": "spell_shaman_lavaburst",
+        "name": "Call of Thunder",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_callstorm.jpg",
+        "iconName": "spell_nature_callstorm",
         "row": 5,
         "col": 2,
         "maxRank": 1,
         "spellId": 408490,
         "req": null,
         "descriptions": [
-          "You hurl molten lava at the target, dealing 114 to 145 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+          "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
         ]
       },
       {
@@ -4982,9 +5020,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 408438,
         "req": 277,
         "descriptions": [
-          "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-          "Gives your Lightning Bolt and Chain Lightning spells a 7% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-          "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+          "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 20% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
         ]
       },
       {
@@ -5027,9 +5065,9 @@ window.WOW_TALENTS_DATA = {
         "id": 474,
         "tree": 0,
         "treeId": 19,
-        "name": "Elemental Mastery",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_wispheal.jpg",
-        "iconName": "spell_nature_wispheal",
+        "name": "Lightning Mastery",
+        "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg",
+        "iconName": "spell_nature_lightning",
         "row": 7,
         "col": 2,
         "maxRank": 1,
@@ -5126,9 +5164,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 415140,
         "req": null,
         "descriptions": [
-          "Increases your Attack Power by an amount equal to 33% of your Intellect.",
-          "Increases your Attack Power by an amount equal to 67% of your Intellect.",
-          "Increases your Attack Power by an amount equal to 100% of your Intellect."
+          "Increases your Attack Power by an amount equal to 50% of your Intellect.",
+          "Increases your Attack Power by an amount equal to 100% of your Intellect.",
+          "Increases your Attack Power by an amount equal to 150% of your Intellect."
         ]
       },
       {
@@ -5138,8 +5176,8 @@ window.WOW_TALENTS_DATA = {
         "name": "Improved Ghost Wolf",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_spiritwolf.jpg",
         "iconName": "spell_nature_spiritwolf",
-        "row": 2,
-        "col": 3,
+        "row": 4,
+        "col": 4,
         "maxRank": 2,
         "spellId": 16262,
         "req": null,
@@ -5251,11 +5289,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16256,
         "req": 283,
         "descriptions": [
-          "Increases your attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
-          "Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+          "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+          "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike.",
+          "Increases your attack speed by 18% for your next 3 swings after dealing a melee critical strike.",
+          "Increases your attack speed by 24% for your next 3 swings after dealing a melee critical strike.",
+          "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike."
         ]
       },
       {
@@ -5271,7 +5309,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 17364,
         "req": null,
         "descriptions": [
-          "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+          "Instantly strike with both weapons for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec. 6 sec cooldown."
         ]
       },
       {
@@ -5337,11 +5375,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 408498,
         "req": null,
         "descriptions": [
-          "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 20%. Stacks up to 5 times. Lasts 30 sec.",
+          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 40%. Stacks up to 5 times. Lasts 30 sec.",
+          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 60%. Stacks up to 5 times. Lasts 30 sec.",
+          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 80%. Stacks up to 5 times. Lasts 30 sec.",
+          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 100%. Stacks up to 5 times. Lasts 30 sec."
         ]
       },
       {
@@ -5648,7 +5686,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 408521,
         "req": 309,
         "descriptions": [
-          "Heals a friendly target for 486 to 534, an additional 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+          "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%. 12 sec cooldown."
         ]
       }
     ]
@@ -6588,11 +6626,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11180,
         "req": null,
         "descriptions": [
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+          "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
         ]
       },
       {
@@ -7540,11 +7578,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 426316,
         "req": null,
         "descriptions": [
-          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 2% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 2% for 20 sec. In addition, Conflagrate has a 20% chance not to consume Immolate, and Shadowburn has a 20% chance to instantly refund a Soul Shard.",
-          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 4% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 4% for 20 sec. In addition, Conflagrate has a 40% chance not to consume Immolate, and Shadowburn has a 40% chance to instantly refund a Soul Shard.",
-          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 6% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 6% for 20 sec. In addition, Conflagrate has a 60% chance not to consume Immolate, and Shadowburn has a 60% chance to instantly refund a Soul Shard.",
-          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 8% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 8% for 20 sec. In addition, Conflagrate has a 80% chance not to consume Immolate, and Shadowburn has a 80% chance to instantly refund a Soul Shard.",
-          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 10% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 10% for 20 sec. In addition, Conflagrate has a 100% chance not to consume Immolate, and Shadowburn has a 100% chance to instantly refund a Soul Shard."
+          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 4% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 4% for 20 sec. In addition, Conflagrate has a 20% chance not to consume Immolate, and Shadowburn has a 20% chance to instantly refund a Soul Shard.",
+          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 8% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 8% for 20 sec. In addition, Conflagrate has a 40% chance not to consume Immolate, and Shadowburn has a 40% chance to instantly refund a Soul Shard.",
+          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 12% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 12% for 20 sec. In addition, Conflagrate has a 60% chance not to consume Immolate, and Shadowburn has a 60% chance to instantly refund a Soul Shard.",
+          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 16% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 16% for 20 sec. In addition, Conflagrate has a 80% chance not to consume Immolate, and Shadowburn has a 80% chance to instantly refund a Soul Shard.",
+          "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 20% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 20% for 20 sec. In addition, Conflagrate has a 100% chance not to consume Immolate, and Shadowburn has a 100% chance to instantly refund a Soul Shard."
         ]
       },
       {
@@ -8165,11 +8203,11 @@ window.WOW_TALENTS_DATA = {
         "maxRank": 5,
         "spellId": 1223246,
         "descriptions": [
-          "Increases damage done by your melee abilities on Bleeding targets by 2%.",
-          "Increases damage done by your melee abilities on Bleeding targets by 4%.",
+          "Increases damage done by your melee abilities on Bleeding targets by 3%.",
           "Increases damage done by your melee abilities on Bleeding targets by 6%.",
-          "Increases damage done by your melee abilities on Bleeding targets by 8%.",
-          "Increases damage done by your melee abilities on Bleeding targets by 10%."
+          "Increases damage done by your melee abilities on Bleeding targets by 9%.",
+          "Increases damage done by your melee abilities on Bleeding targets by 12%.",
+          "Increases damage done by your melee abilities on Bleeding targets by 15%."
         ],
         "req": 447
       },
@@ -8519,3 +8557,4 @@ window.WOW_TALENTS_DATA = {
     ]
   }
 };
+}

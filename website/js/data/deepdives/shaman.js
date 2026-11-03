@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "videoTitle": "WoW Forever Shaman Class Deep Dive",
   "videoUrl": "https://www.youtube.com/watch?v=WfB5HLAZxwg",
   "sourceAttribution": "Sodapoppin Level-38 Dwarf Shaman BlizzCon Early Access Demo & Closed Beta Forensics",
-  "summary": "WoW Forever introduces historic milestones for the Shaman: Dwarf Shamans (Wildhammer) bringing Bloodlust and Windfury to the Alliance, an 8-second Stormstrike cooldown with dodge/parry reset procs, Spirit Weapons dual-threat scaling for 5-man dungeon tanking, indoor Ghost Wolf, 60-minute weapon imbues, Call of the Ancestors 4-totem dropping, and modern rotation additions like Lava Burst and Riptide.",
+  "summary": "WoW Forever introduces historic milestones for the Shaman: Dwarf Shamans (Wildhammer) bringing Bloodlust and Windfury to the Alliance, a 6-second Stormstrike dealing 150% weapon damage, Spirit Weapons dual-threat scaling for 5-man dungeon tanking, indoor Ghost Wolf, 60-minute weapon imbues, Call of the Ancestors 4-totem dropping, Totemic Call, and rotation upgrades like Call of Thunder and Riptide.",
   "subTabs": [
     {
       "id": "overview",
@@ -140,7 +140,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "status": "verified",
       "statusLabel": "Verified in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
-      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (snappy 8s CD with dodge/parry reset flash), Lava Burst (8s), shared Shock spells (5-6s), Riptide (6s), and Chain Lightning (6s). Major Defensives & Bursts: Bloodlust / Heroism (5m), Elemental Mastery (3m), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
+      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (buffed 6s CD with 150% weapon damage), Totemic Call (30s), shared Shock spells (5-6s), Riptide (12s HoT), and Chain Lightning (2.5s cast). Major Defensives & Bursts: Bloodlust / Heroism (5m), Lightning Mastery (3m, renamed from Elemental Mastery), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
     },
     {
       "title": "Totemic Recall Added Baseline",
@@ -283,7 +283,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "tagline": "Devastating nature and fire spellcasting with Lava Burst, Elemental Overload double-casts, and shock haste",
     "talents": [
       {
-        "name": "Lava Burst",
+        "name": "Call of Thunder",
         "type": "New Fire Active Spell",
         "cast": "2.0 sec Cast (1.5s Talented)",
         "cd": "8 sec Cooldown",
@@ -687,7 +687,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Enhancement (Stormstrike & Flurry)",
           "icon": "⚡",
           "role": "Melee Physical & Spell DPS",
-          "buildUrl": "/talents/shaman?b=-0500320311051122-&l=30&tl=5",
+          "buildUrl": "/talents/shaman?b=-0500323110510122-&l=30&tl=5",
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-0500320311051122-",
           "tagline": "Thunderous 8-second Stormstrike rotations paired with 30% Flurry attack speed and Spirit Weapons.",
           "statPriority": "Strength > Agility > Attack Power > Hit Rating > Intellect",
@@ -724,7 +724,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Shaman Tank (Spirit Weapons & Shield Mastery)",
           "icon": "🛡️",
           "role": "Dungeon Main Tank / Off-Tank",
-          "buildUrl": "/talents/shaman?b=-0052300303501121-&l=30&tl=5",
+          "buildUrl": "/talents/shaman?b=-0052303035010112-&l=30&tl=5",
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-0052300303501121-",
           "tagline": "High-threat dungeon tanking with 30% Rockbiter aggro, Shield Block Value, and Spirit Weapons Parry.",
           "statPriority": "Stamina > Armor > Strength > Block Value > Agility",
@@ -757,12 +757,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         },
         {
           "specId": "elemental_30",
-          "name": "Elemental (Elemental Focus & Lava Burst)",
+          "name": "Elemental (Elemental Focus & Call of Thunder)",
           "icon": "🌋",
           "role": "Ranged Nature & Fire DPS",
           "buildUrl": "/talents/shaman?b=5505001300101--&l=30&tl=5",
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/5505001300101--",
-          "tagline": "Burst artillery combining 100% Clearcasting mana refunds, rapid 5s shocks, and the iconic Level 30 Lava Burst capstone.",
+          "tagline": "Burst artillery combining 100% Clearcasting mana refunds, rapid 5s shocks, and the Level 30 Call of Thunder critical strike capstone.",
           "statPriority": "Spell Power > Nature Damage > Spell Crit > Intellect > MP5",
           "bestWeapon": "Two-Handed Staff (Rod of the Sleepwalker / Staff of Orgrimmar)",
           "talents": [
@@ -772,7 +772,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Elemental Focus", "points": "1/1", "tree": "Elemental (Tier 3)", "desc": "Spell crits enter a Clearcasting state, reducing the mana cost of your next damage spell by 100%!" },
             { "name": "Elemental Warding", "points": "3/3", "tree": "Elemental (Tier 3)", "desc": "Reduces damage taken from Fire, Frost, and Nature effects by 10%." },
             { "name": "Earthbound", "points": "1/1", "tree": "Elemental (Tier 4)", "desc": "Increases the radius of your Earthbind Totem by 50% and health of your Stoneclaw Totem by 50%." },
-            { "name": "Lava Burst", "points": "1/1", "tree": "Elemental (Tier 5)", "desc": "Hurls molten lava at the target, dealing heavy Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage." }
+            { "name": "Call of Thunder", "points": "1/1", "tree": "Elemental (Tier 5)", "desc": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%." }
           ],
           "legacyNotes": "Extra Legacy points unlock Elemental Devastation and Lightning Mastery cast time reduction.",
           "rotation": [

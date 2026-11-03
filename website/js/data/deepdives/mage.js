@@ -386,9 +386,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   },
   "forensicMatrix": [
     {
-      "feature": "Frostbolt Downranking & Frost Blast",
+      "feature": "Frostbolt Downranking & Ice Barrier Empowerment",
       "category": "Core Mechanics",
-      "details": "Downranking penalization active; Frost Blast trainer removal noted in Oct 28 build (spell remains in client data)",
+      "details": "Downranking penalization active; Frost Blast has been removed from trainers. Frost mages now utilize empowered Ice Barrier (+15% Frost Damage buff for 1 min, +20% while held) and Ice Lance on an 8s cooldown shared with Fire Blast.",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
