@@ -50,7 +50,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 2026)",
         badge: "Major QoL",
-        desc: "All standard Paladin Blessings (Might, Wisdom, Kings, Salvation, Light) now have a full 60-minute duration. Notably, Blessing of Kings is trained baseline by ALL Paladins in WoW Forever, while Blessing of Sanctuary has been permanently removed."
+        desc: "All standard Paladin Blessings (Might, Wisdom, Kings) now have a full 60-minute duration. Notably, Blessing of Kings is trained baseline by ALL Paladins in WoW Forever, while Blessing of Sanctuary, Blessing of Salvation, and Blessing of Light have been permanently removed."
       },
       {
         title: "Consecration Baseline for All Specializations",

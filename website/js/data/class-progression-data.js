@@ -495,10 +495,10 @@ if (typeof window !== 'undefined') {
       },
       {
         "id": "shaman-macro-14",
-        "title": "Flame Shock, then Lava Burst",
-        "desc": "The first press puts Flame Shock on your target and the next press casts Lava Burst, which hits 20% harder while Flame Shock is on the target.",
+        "title": "Flame Shock, then Lightning Bolt",
+        "desc": "The first press applies Flame Shock and the second begins casting Lightning Bolt with Call of Thunder critical bonus.",
         "category": "General",
-        "code": "#showtooltip /castsequence reset=combat/target Flame Shock, Lava Burst"
+        "code": "#showtooltip /castsequence reset=combat/target Flame Shock, Lightning Bolt"
       },
       {
         "id": "shaman-macro-15",

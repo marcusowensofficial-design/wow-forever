@@ -119,7 +119,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "status": "exclusive",
       "statusLabel": "✦ Forever Exclusive",
       "badge": "Class Expansions",
-      "desc": "Shamans gain critical rotational upgrades: Lava Burst (Elemental fire burst), Maelstrom Weapon (Enhancement melee procs granting instant nature casts), Water Shield (Restoration mana engine), and Riptide (instant heal + HoT)."
+      "desc": "Shamans gain critical rotational upgrades: Call of Thunder (Elemental critical engine), Maelstrom Weapon (Enhancement melee procs granting instant nature casts), Water Shield (Restoration mana engine), and Riptide (instant heal + HoT)."
     },
     {
       "title": "Dedicated Reagent Bag Slot",
@@ -279,16 +279,16 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     ]
   },
   "elemental": {
-    "title": "Elemental: Fury of the Storm & Lava",
-    "tagline": "Devastating nature and fire spellcasting with Lava Burst, Elemental Overload double-casts, and shock haste",
+    "title": "Elemental: Fury of the Storm & Lightning",
+    "tagline": "Devastating nature and fire spellcasting with Call of Thunder, Elemental Overload double-casts, and shock haste",
     "talents": [
       {
         "name": "Call of Thunder",
-        "type": "New Fire Active Spell",
-        "cast": "2.0 sec Cast (1.5s Talented)",
+        "type": "Critical Strike Talent",
+        "cast": "Passive",
         "cd": "8 sec Cooldown",
         "status": "verified",
-        "desc": "Hurls molten lava at the target, dealing heavy Fire damage. If the target is affected by Flame Shock, Lava Burst deals 20% increased damage. Core rotational fire spell."
+        "desc": "Replaces Lava Burst in the Elemental tree. Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
       },
       {
         "name": "Elemental Overload",
@@ -302,7 +302,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "type": "Haste Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Reduces the cast times of Lightning Bolt, Chain Lightning, and Lava Burst by 0.5 seconds, making Lightning Bolt 2.5s and Lava Burst 1.5s."
+        "desc": "Reduces the cast times of Lightning Bolt and Chain Lightning by up to 0.5 seconds, making Lightning Bolt a fast 2.5s cast."
       },
       {
         "name": "Shock Cooldown & Pushback Reduction",
@@ -367,7 +367,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "type": "Hybrid Talent Structure",
         "cast": "Analysis",
         "status": "demo",
-        "desc": "The accessible talent layout appears to force a distinct choice between deep Restoration capstones (such as Nature's Swiftness) and deep Elemental capstones (such as Lava Burst), preventing overpowered hybrid burst."
+        "desc": "The accessible talent layout appears to force a distinct choice between deep Restoration capstones (such as Nature's Swiftness) and deep Elemental capstones (such as Lightning Mastery), preventing overpowered hybrid burst."
       }
     ]
   },
@@ -507,9 +507,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Lava Burst + Flame Shock",
+      "feature": "Call of Thunder + Lightning Mastery",
       "category": "Elemental",
-      "details": "+20% damage if Flame Shock is on target (not guaranteed crit)",
+      "details": "+5% Lightning Bolt/Chain Lightning crit; capstone renames Elemental Mastery to Lightning Mastery",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
