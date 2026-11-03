@@ -56,10 +56,7 @@ function initClassRacePlanner() {
         const matrixCodexBtn = document.querySelector('.codex-nav-btn[data-codex="matrix"]');
         if (matrixCodexBtn) matrixCodexBtn.click();
       }
-      const target = document.getElementById('tab-planner') || document.getElementById('codex-matrix');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -200,10 +197,7 @@ function initClassRacePlanner() {
           if (codexTabBtn) codexTabBtn.click();
           const statsCodexBtn = document.querySelector('.codex-nav-btn[data-codex="stats"]');
           if (statsCodexBtn) statsCodexBtn.click();
-          const target = document.getElementById('codex-stats');
-          if (target) {
-            setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-          }
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
       h.querySelectorAll('.jump-to-deepdive-btn').forEach(btn => {
@@ -214,10 +208,7 @@ function initClassRacePlanner() {
           if (typeof window.switchDeepDiveClass === 'function') {
             window.switchDeepDiveClass(classId);
           }
-          const target = document.getElementById('tab-deepdives');
-          if (target) {
-            setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-          }
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
     });

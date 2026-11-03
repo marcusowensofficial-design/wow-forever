@@ -45,10 +45,7 @@ function initClassDeepDives() {
         const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
         if (deepDiveTabBtn) deepDiveTabBtn.click();
         window.switchDeepDiveClass(classSlug);
-        const target = document.getElementById('tab-deepdives');
-        if (target) {
-          setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
   });

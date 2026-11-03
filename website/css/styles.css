@@ -767,6 +767,7 @@ h1, h2, h3, h4, .font-heading {
 .tab-content {
   display: none;
   animation: fadeIn 0.35s ease-out;
+  scroll-margin-top: 5rem;
 }
 
 .tab-content.active {

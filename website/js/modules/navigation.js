@@ -194,13 +194,7 @@ function initNavigation() {
         }
       }
 
-      if (targetTab === 'overview') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (targetPanel) {
-        targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
@@ -217,14 +211,8 @@ function initNavigation() {
     const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${targetTab}"]`);
     if (targetBtn) {
       targetBtn.click();
-      if (targetTab === 'overview') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const panel = document.getElementById(`tab-${targetTab}`);
-        if (panel) {
-          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
 
