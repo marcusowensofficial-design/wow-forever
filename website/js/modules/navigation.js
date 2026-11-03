@@ -102,7 +102,7 @@ function initBetaDurationTracker() {
   }
   if (daysBadge) daysBadge.textContent = isPostBeta ? 'Beta Complete' : `${daysRemaining} Days Left`;
   if (phase2DayBadge) phase2DayBadge.textContent = isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of ${totalDays}`;
-  if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? `Beta Complete (${totalDays}/${totalDays})` : `Day ${daysElapsed} of ${totalDays}`;
+  if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? '' : ` • Day ${daysElapsed} of ${totalDays}`;
   if (weekStatusText) weekStatusText.textContent = isPostBeta ? 'Completed (5 of 5 Weeks)' : (daysElapsed > 35 ? `Week 5 of 5 (Extended)` : `Week ${currentWeek} of 5`);
 }
 

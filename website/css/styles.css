@@ -157,26 +157,23 @@ h1, h2, h3, h4, .font-heading {
 /* Top Live Status Bar */
 .top-status-bar {
   background: linear-gradient(90deg, rgba(220, 38, 38, 0.2) 0%, rgba(13, 17, 26, 0.9) 30%, rgba(13, 17, 26, 0.9) 70%, rgba(37, 99, 235, 0.2) 100%);
-  border-bottom: 1px solid var(--border-gold);
+  border: 1px solid var(--border-gold);
   backdrop-filter: blur(12px);
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.25rem;
   font-size: 0.85rem;
   line-height: 1.4;
   min-height: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.6rem 1.25rem;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-  max-width: 100vw;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.top-status-bar::-webkit-scrollbar {
-  display: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .status-pulse-badge {
@@ -193,6 +190,9 @@ h1, h2, h3, h4, .font-heading {
   letter-spacing: 0.05em;
   font-size: 0.75rem;
   flex-shrink: 0;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .pulse-dot {
@@ -214,9 +214,11 @@ h1, h2, h3, h4, .font-heading {
   color: var(--text-gold-light);
   font-weight: 500;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
   align-items: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 
 .status-ticker span {
@@ -224,6 +226,32 @@ h1, h2, h3, h4, .font-heading {
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .top-status-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .status-ticker {
+    justify-content: flex-start;
+    gap: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-status-bar {
+    padding: 0.6rem 0.85rem;
+  }
+  .status-pulse-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+  .status-ticker {
+    font-size: 0.78rem;
+    gap: 0.35rem 0.75rem;
+  }
 }
 
 .status-badge-highlight {
