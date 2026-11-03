@@ -7025,8 +7025,12 @@ input:checked + .toggle-slider:before {
 .hub-hero-stage {
   position: relative;
   width: 100%;
+  max-height: 480px;
   text-align: center;
-  background: #080b12;
+  background: 
+    radial-gradient(ellipse at 12% 50%, rgba(185, 28, 28, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 88% 50%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
+    #080b12;
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
   display: flex;
   justify-content: center;
@@ -7035,11 +7039,23 @@ input:checked + .toggle-slider:before {
 }
 
 .hub-hero-banner-img {
-  width: 100%;
+  width: auto;
   max-width: 100%;
   height: auto;
+  max-height: 480px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  margin: 0 auto;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3.5%, black 96.5%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 3.5%, black 96.5%, transparent 100%);
+}
+
+@media (max-width: 1024px) {
+  .hub-hero-banner-img {
+    width: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }
 
 .hub-hero-content {
