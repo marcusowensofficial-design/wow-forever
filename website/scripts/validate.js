@@ -477,14 +477,14 @@ check('Addon spotlight cards in index.html have live download links and synced v
   }
 });
 
-check('Beta Build 1.60.1.70425 consistency across core-data.js and index.html without stale builds', () => {
+check('Launch Build 1.60.1.70707 / 70425 consistency across core-data.js and index.html without stale builds', () => {
   const coreCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'core-data.js'), 'utf8');
   const clientBuildMatch = coreCode.match(/"clientBuild":\s*"([^"]+)"/);
-  if (!clientBuildMatch || clientBuildMatch[1] !== '1.60.1.70425') {
-    throw new Error(`Expected core-data.js clientBuild to be '1.60.1.70425', got '${clientBuildMatch ? clientBuildMatch[1] : 'missing'}'`);
+  if (!clientBuildMatch || (clientBuildMatch[1] !== '1.60.1.70707' && clientBuildMatch[1] !== '1.60.1.70425')) {
+    throw new Error(`Expected core-data.js clientBuild to be '1.60.1.70707' or '1.60.1.70425', got '${clientBuildMatch ? clientBuildMatch[1] : 'missing'}'`);
   }
-  if (!indexHtml.includes('1.60.1.70425')) {
-    throw new Error('index.html missing reference to Beta Build 1.60.1.70425');
+  if (!indexHtml.includes('1.60.1.70707') && !indexHtml.includes('1.60.1.70425')) {
+    throw new Error('index.html missing reference to Launch Build 1.60.1.70707 or 1.60.1.70425');
   }
   if (indexHtml.includes('71890')) {
     throw new Error('Found stale build 71890 reference in index.html; should be updated to 1.60.1.70425');
@@ -495,8 +495,8 @@ check('Beta Build 1.60.1.70425 consistency across core-data.js and index.html wi
 
   const bisCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'bis-data.js'), 'utf8');
   const bisVersionMatch = bisCode.match(/"version":\s*"([^"]+)"/);
-  if (!bisVersionMatch || bisVersionMatch[1] !== '1.60.1.70425') {
-    throw new Error(`Expected bis-data.js version to be '1.60.1.70425', got '${bisVersionMatch ? bisVersionMatch[1] : 'missing'}'`);
+  if (!bisVersionMatch || (bisVersionMatch[1] !== '1.60.1.70707' && bisVersionMatch[1] !== '1.60.1.70425')) {
+    throw new Error(`Expected bis-data.js version to be '1.60.1.70707' or '1.60.1.70425', got '${bisVersionMatch ? bisVersionMatch[1] : 'missing'}'`);
   }
   if (bisCode.includes('71890')) {
     throw new Error('Found stale build 71890 reference in bis-data.js; should be updated to 1.60.1.70425');

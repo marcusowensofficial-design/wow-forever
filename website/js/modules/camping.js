@@ -916,39 +916,44 @@ function renderGameEditions() {
   const container = document.getElementById('game-editions-container');
   if (!container || !WOW_FOREVER_DATA.gameEditions) return;
 
-  const { standard, epicPack } = WOW_FOREVER_DATA.gameEditions;
+  const editions = Object.values(WOW_FOREVER_DATA.gameEditions);
 
-  container.innerHTML = `
-    <div class="edition-card standard">
-      <div>
-        <span class="edition-badge" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #6ee7b7;">${escapeHtml(standard.badge)}</span>
-        <h3 style="color: #fff; font-size: 1.4rem; margin: 0.5rem 0 0.2rem;">${escapeHtml(standard.name)}</h3>
-        <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; font-family: var(--font-heading);">${escapeHtml(standard.cost)}</div>
-        <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(standard.description)}</p>
-        <ul class="edition-perks-list">
-          ${standard.perks.map(p => `<li><span style="color: #10b981; font-weight: 700;">✓</span> <span>${escapeHtml(p)}</span></li>`).join('')}
-        </ul>
-      </div>
-      <div style="margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-muted);">
-        Access through standard Battle.net Client with monthly active subscription.
-      </div>
-    </div>
+  container.innerHTML = editions.map(ed => {
+    const isEpic = ed.name.includes('Epic');
+    const isHeroic = ed.name.includes('Heroic');
+    const badgeStyle = isEpic
+      ? 'background: rgba(243, 192, 67, 0.2); border: 1px solid var(--border-gold); color: var(--text-gold);'
+      : isHeroic
+        ? 'background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #38bdf8;'
+        : 'background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #6ee7b7;';
+    const costColor = isEpic ? 'var(--text-gold)' : isHeroic ? '#38bdf8' : '#34d399';
+    const cardClass = isEpic ? 'edition-card epic' : isHeroic ? 'edition-card heroic' : 'edition-card standard';
+    const checkColor = isEpic ? 'var(--text-gold)' : isHeroic ? '#38bdf8' : '#10b981';
+    const checkIcon = isEpic ? '★' : isHeroic ? '✦' : '✓';
+    const footerNote = isEpic
+      ? 'Includes instant Beta access, game time & 3 invite passes for your squad.'
+      : isHeroic
+        ? 'Unlocks playable Skyborne race, Zephras Isle starter zone, and Prideclaw mount.'
+        : 'Access through standard Battle.net Client with monthly active subscription.';
+    const footerColor = isEpic ? 'var(--text-gold)' : isHeroic ? '#38bdf8' : 'var(--text-muted)';
 
-    <div class="edition-card epic">
-      <div>
-        <span class="edition-badge" style="background: rgba(243, 192, 67, 0.2); border: 1px solid var(--border-gold); color: var(--text-gold);">${escapeHtml(epicPack.badge)}</span>
-        <h3 style="color: #fff; font-size: 1.4rem; margin: 0.5rem 0 0.2rem;">${escapeHtml(epicPack.name)}</h3>
-        <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-gold); font-family: var(--font-heading);">${escapeHtml(epicPack.cost)}</div>
-        <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(epicPack.description)}</p>
-        <ul class="edition-perks-list">
-          ${epicPack.perks.map(p => `<li><span style="color: var(--text-gold); font-weight: 700;">★</span> <span>${escapeHtml(p)}</span></li>`).join('')}
-        </ul>
+    return `
+      <div class="${cardClass}">
+        <div>
+          <span class="edition-badge" style="${badgeStyle}">${escapeHtml(ed.badge)}</span>
+          <h3 style="color: #fff; font-size: 1.4rem; margin: 0.5rem 0 0.2rem;">${escapeHtml(ed.name)}</h3>
+          <div style="font-size: 1.6rem; font-weight: 800; color: ${costColor}; font-family: var(--font-heading);">${escapeHtml(ed.cost)}</div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(ed.description)}</p>
+          <ul class="edition-perks-list">
+            ${ed.perks.map(p => `<li><span style="color: ${checkColor}; font-weight: 700;">${checkIcon}</span> <span>${escapeHtml(p)}</span></li>`).join('')}
+          </ul>
+        </div>
+        <div style="margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: ${footerColor};">
+          ${footerNote}
+        </div>
       </div>
-      <div style="margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-gold);">
-        Includes instant Beta access & 3 invite passes for your squad.
-      </div>
-    </div>
-  `;
+    `;
+  }).join('');
 }
 
 function renderMegarealms() {

@@ -289,7 +289,7 @@ function renderBiSApp() {
           </p>
           <div class="bis-tip-item">
             <span>🛡️</span>
-            <div><strong>Beta Build 1.60.1.70425:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
+            <div><strong>Launch Build 1.60.1.70707:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
           </div>
         </div>
 
@@ -316,7 +316,7 @@ function renderBiSApp() {
       <!-- Enchants Card -->
       <div class="bis-prep-card bis-enchants-card">
         <div class="bis-prep-header">
-          <h4><span>✨</span> Recommended Enchants (Build 1.60.1.70425)</h4>
+          <h4><span>✨</span> Recommended Enchants (Build 1.60.1.70707)</h4>
           <span class="bis-prep-badge">${currentSpec.enchants ? currentSpec.enchants.length : 0} Enchants</span>
         </div>
         <div class="bis-prep-list">

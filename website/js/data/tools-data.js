@@ -3809,7 +3809,7 @@ Early character name reservation concluded on **November 3, 2026 at 10:00 AM PST
 | **Character Cap** | Maximum **3 Characters** reserved per Battle.net Account |
 | **Ruleset Options** | Normal (PvE), PvP, RP-Normal, RP-PvP, Hardcore (Winter 2026) |
 | **Account Requirement** | Pre-Purchase of Skyborne Heroic/Epic Pack or Warcraft Forever Collection (Standard Sub unlocks Nov 4) |
-| **Client Version** | WoW Forever Client Build **1.60.1.70425** (Release Candidate) |
+| **Client Version** | WoW Forever Client Build **1.60.1.70707** (Launch Release Candidate) |
 
 ---
 
@@ -3829,7 +3829,7 @@ Because WoW Forever utilizes unified regional megarealms (Americas, Europe, Kore
 
 1. **Update Your Battle.net Game Client:**
    - Launch Battle.net Desktop App. Under the Game Version dropdown, select **World of Warcraft: Forever**.
-   - Verify that your client displays version **1.60.1.70425** or higher. Run a scan & repair to ensure texture files are cached.
+   - Verify that your client displays version **1.60.1.70707** or higher. Run a scan & repair to ensure texture files are cached.
 2. **Choose Your Realm Ruleset:**
    - WoW Forever operates on unified regional megarealms with seamless dynamic layering:
      - **Megarealm - PvP:** Open-world PvP enabled across all contested zones (Hillsbrad, Ashenvale, Stranglethorn).

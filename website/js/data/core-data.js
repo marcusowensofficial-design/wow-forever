@@ -16,12 +16,13 @@ const WOW_FOREVER_DATA = {
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
     "currentBetaPhase": "Launch Eve: Final Realm Prep (Early Name Reservation Concluded • Global Launch: Nov 4 at 3:00 PM PST)",
-    "clientBuild": "1.60.1.70425",
+    "clientBuild": "1.60.1.70707",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
-    "currentBetaCap": 30,
+    "currentBetaCap": 60,
+    "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 31, 2026"
+    "lastUpdated": "November 3, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -72,6 +73,15 @@ const WOW_FOREVER_DATA = {
     "globalLaunch": "2026-11-04T15:00:00-08:00",
     "raidUnlock": "2026-12-09T10:00:00-08:00"
   },
+  "launchTimezones": [
+    { "region": "Americas (West Coast)", "tz": "PST", "date": "Nov 4, 2026", "time": "3:00 PM PST", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "Americas (East Coast)", "tz": "EST", "date": "Nov 4, 2026", "time": "6:00 PM EST", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "Latin America (São Paulo)", "tz": "BRT", "date": "Nov 4, 2026", "time": "8:00 PM BRT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "United Kingdom (London)", "tz": "GMT", "date": "Nov 4, 2026", "time": "11:00 PM GMT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "Europe (Paris, Berlin, Rome)", "tz": "CET", "date": "Nov 5, 2026", "time": "12:00 AM CET (Midnight)", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "East Asia (Seoul, Tokyo)", "tz": "KST / JST", "date": "Nov 5, 2026", "time": "8:00 AM KST / JST", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "Australia & Oceania (Sydney)", "tz": "AEDT", "date": "Nov 5, 2026", "time": "10:00 AM AEDT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" }
+  ],
   "sitePhases": {
     "beta2": {
       "key": "beta2",
@@ -187,6 +197,32 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-70",
+      "title": "Blizzard Releases 'WoW: Forever—What’s New and What Feels Familiar' Launch Primer: Experience Presets, Controller 1.0 & Balance Freeze",
+      "source": "Blizzard Official News",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 3, 2026",
+      "tag": "Official Launch Primer",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-whats-new-and-what-feels-familiar",
+      "summary": "On launch eve, Blizzard details toggleable Experience Presets (Enhanced vs Classic), confirmed ~50 GB preload availability on Battle.net, native controller navigation, and an official class tuning freeze until Tier 1 raids open on December 9.",
+      "content": `On November 3, 2026, Blizzard Entertainment published its comprehensive pre-launch primer titled *"WoW: Forever—What’s New and What Feels Familiar"*, outlining day-one player options:
+
+• **Experience Presets at Character Creation:**
+  - **Enhanced Preset (For Modern WoW Players):** Features consolidated One-Bag inventory, on-screen quest objectives & Points of Interest (POIs), opt-in Transmog styling, modern strafe keybindings, centralized screen HUD, and modern high-definition character models.
+  - **Classic Preset (For Purists):** Features the authentic 2004 UI layout, original standard-definition models, traditional camera-turning bindings, with quest markers and transmog turned off by default.
+  - *Full Customizability:* Players can customize every individual option independently in the Interface menu at any time regardless of initial preset.
+
+• **Pre-Load & Download Footprint:**
+  - Client preload is available worldwide through the Battle.net desktop application with an installation footprint of ~50 GB.
+
+• **Official Launch Class Balance Freeze:**
+  - Blizzard confirmed that no major class tuning or sweeping balance adjustments will occur between worldwide launch on November 4 and Tier 1 raid unlocks on December 9, establishing Build 1.60.1.70707 as the stable progression baseline.
+
+• **Native Controller / Gamepad 1.0 Support:**
+  - Built-in controller integration is active on day one, including radial action wheels, contextual looting, and smooth target acquisition.`
+    },
+    {
       "id": "news-69",
       "title": "Hunter Class Buffs on WoW: Forever (Live Hotfix)",
       "source": "Wowhead News & Live Hotfixes",
@@ -194,6 +230,7 @@ const WOW_FOREVER_DATA = {
       "author": "Squishei & Wowhead Desk",
       "date": "November 3, 2026",
       "tag": "Hunter Hotfix & Tuning",
+      "url": "https://www.wowhead.com/forever/news/hunter-class-buffs-live-hotfix-aspect-of-the-hawk-trueshot-aura",
       "summary": "Live server hotfixes have been applied to WoW: Forever, partially reverting recent nerfs and significantly increasing direct damage across Hunter shots, Aspect of the Hawk, and Trueshot Aura.",
       "content": `Blizzard has deployed live hotfixes to WoW: Forever, substantially buffing Hunter direct shot damage and group utility:
 
@@ -228,6 +265,7 @@ const WOW_FOREVER_DATA = {
       "author": "Blizzard Entertainment",
       "date": "November 2, 2026",
       "tag": "Official Patch 1.60.1 Notes",
+      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-launch-build/",
       "summary": "Blizzard has published the comprehensive official launch development notes and class tuning for WoW: Forever, standardizing power budgets, overhauling class talent trees, introducing Shank and Poised, and completing Gamepad 1.0 support.",
       "content": `Official development notes for the global launch of World of Warcraft: Forever (Build 1.60.1):
 
@@ -1565,20 +1603,33 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "description": "Full access to World of Warcraft: Forever on launch day (Nov 4, 2026) for anyone with an active World of Warcraft monthly subscription or game time.",
       "perks": [
         "Full access to all Level 1–60 content, dungeons, and raids",
-        "Playable Skyborne race and all 6 new race/class combinations",
+        "Full access to all 6 new classic race/class combinations",
         "Permanent horizontal progression & realmless rulesets",
         "Zero token / zero paid boost environment"
       ]
     },
+    "heroicPack": {
+      "name": "Skyborne Heroic Pack",
+      "badge": "Digital Expansion",
+      "cost": "$29.99 USD",
+      "description": "Expansion pack unlocking the playable Skyborne race, Zephras Isle starting zone, exclusive mount, and cosmetic transmog set.",
+      "perks": [
+        "Playable Skyborne neutral race (Levels 1–60)",
+        "Zephras Isle starting zone access (Levels 1–12)",
+        "Exclusive Ground Mount: Cerulean Prideclaw",
+        "Cosmetic Transmog Ensemble: Shen'dorei Skyseer's Garb",
+        "Early Name Reservation access"
+      ]
+    },
     "epicPack": {
       "name": "Skyborne Epic Pack",
-      "badge": "Digital Pre-Purchase",
+      "badge": "Collector's Digital Bundle",
       "cost": "$59.99 USD",
-      "description": "Collector's digital bundle offering immediate beta access, game time, exclusive cosmetics, and friend invite passes.",
+      "description": "Ultimate digital bundle including everything in the Heroic Pack plus 30 days game time, invite codes, exclusive companion pets, and faction tabards.",
       "perks": [
-        "Guaranteed Closed Beta Access (Live Now!)",
-        "Three (3) Invite-A-Friend Launch & Beta Keys",
+        "Includes everything in the Skyborne Heroic Pack",
         "30 Days of World of Warcraft Game Time included",
+        "Three (3) Invite-A-Friend Launch & Beta Keys",
         "Exclusive Ground Mount: Veteran Adventurer's Loyal Companion (Canine Hound)",
         "Transmog Ensemble: Veteran Adventurer's Outdoor Wear",
         "Four (4) Vanity Pets: Zergling, Panda, Diablo, and Pachimari",
@@ -3549,9 +3600,21 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "icon": "🌐",
       "summary": "No locked server dead-ends: Pick your gameplay ruleset and play with the entire region.",
       "details": [
-        "Instead of locking into servers like 'Faerlina' or 'Whitemane', players select a Ruleset: Normal (PvE), PvP, Roleplaying (RP), or Hardcore (coming in later winter update).",
+        "Instead of locking into servers like 'Faerlina' or 'Whitemane', players select a Ruleset: Normal (PvE), PvP, Roleplay (RP), or Roleplay-PvP (RP-PvP), with Hardcore arriving in the winter update.",
         "Dynamic seamless layering preserves local world density while preventing dead servers or 5-hour queues.",
         "Guilds and world economy operate across unified ruleset regional fabrics."
+      ]
+    },
+    {
+      "id": "presets",
+      "name": "Experience Presets & Native Controller 1.0",
+      "icon": "🎮",
+      "summary": "Toggle modern conveniences or authentic 2004 vanilla purism at character creation.",
+      "details": [
+        "Enhanced Preset: Built-in quest guidance and marked objective POIs, consolidated One-Bag view, Transmog wardrobe, modern strafe keybinds, and modern HD character models.",
+        "Classic Preset: Authentic 2004 UI, original standard-definition models, traditional keyboard turning, with quest markers and transmog disabled by default.",
+        "Full Flexibility: All individual features can be toggled on or off at any time in the Interface options.",
+        "Native Gamepad 1.0: Full controller support with radial action wheels, contextual looting, and smooth target acquisition."
       ]
     },
     {
@@ -3612,6 +3675,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "status": "Available at Launch (Nov 4, 2026)",
       "rules": [
         "Contested zones are permanently PvP-flagged for authentic open-world warfare.",
+        "Strict single-faction account restriction: an account can only create characters of one faction on this ruleset.",
         "Reworked Rank 14 Honor System: No weekly decay, predictable milestone progression.",
         "World PvP objectives in Hillsbrad, Silithus, and Eastern Plaguelands award honor tokens.",
         "Faction balance enforced through dynamic login queues and layering."
@@ -3628,6 +3692,19 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "Dedicated tavern and campsite gathering zones with spatial roleplay chat layers.",
         "Open-world adventuring with opt-in PvP rules similar to Normal megarealms.",
         "Enhanced emotes, camping interactions, and community storytelling support."
+      ]
+    },
+    {
+      "id": "rp-pvp",
+      "name": "Roleplay-PvP (RP-PvP) Megarealm",
+      "badge": "Faction War & Immersion",
+      "icon": "⚔️📜",
+      "status": "Available at Launch (Nov 4, 2026)",
+      "rules": [
+        "Combines strict immersive roleplay naming conventions with permanent contested zone PvP flagging.",
+        "Strict single-faction account restriction: an account can only create characters of one faction on this ruleset.",
+        "Tavern gathering hubs and contested territories with spatial roleplay chat layers.",
+        "Reworked Rank 14 Honor System with zero weekly decay and world PvP objectives."
       ]
     },
     {

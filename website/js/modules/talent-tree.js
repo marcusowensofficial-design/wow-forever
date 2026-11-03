@@ -1,5 +1,5 @@
 /**
- * WoW Forever Beta Build 1.60.1.70425 Authentic Talent Tree Module
+ * WoW Forever Launch Build 1.60.1.70707 Authentic Talent Tree Module
  * 
  * Provides an authentic 3-tree Classic WoW interactive calculator:
  * - 4-column x 7-row visual grid matrix per specialization tree
