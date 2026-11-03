@@ -2132,7 +2132,7 @@ Shamans channel primal elements into bone-crushing melee swings, high-potency gr
 In WoW Forever Build 1.60.1.70425, the legacy 10-second "totem twisting" chore has been permanently retired:
 • **Raid-Wide Range (40 Yards):** All core elemental totems reach the entire 40-player raid or 5-man dungeon group within a 40-yard radius.
 • **Non-Exclusive Air Element Harmony:** **Windfury Totem** and **Grace of Air Totem** are non-exclusive; Windfury applies an instant extra-attack imbue aura while Grace of Air provides +Agility. Shamans no longer need to burn 300 mana every 9 seconds to alternate Air totems.
-• Plant your totems once, reposition only when moving encounters, and direct your active mana toward Shocks, Chain Heals, and Lava Bursts!
+• Plant your totems once, reposition only when moving encounters, and direct your active mana toward Shocks, Chain Heals, and Lightning Bolts!
 
 ---
 

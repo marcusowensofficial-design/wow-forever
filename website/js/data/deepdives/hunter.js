@@ -187,7 +187,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "cd": "15 sec Cooldown",
         "range": "35–41 Yards",
         "status": "verified",
-        "desc": "A devastating high-caliber shot described in the demo as a massive Aimed Shot-style burst ability. Punishing 4-second cast time rewarded with catastrophic damage."
+        "desc": "A devastating high-caliber shot providing massive ranged bonus damage (+320/+450/+590) and extending the range of your next 3 shots by 10 yards. Punishing 4-second cast time rewarded with catastrophic burst."
       },
       {
         "name": "Scatter Shot",
@@ -698,9 +698,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Hawk Eye", "points": "3/3", "tree": "Marksmanship (Tier 3)", "desc": "Increases the range of your ranged weapons by 6 yards (out to 41 yards total!)." },
             { "name": "Mortal Shots", "points": "5/5", "tree": "Marksmanship (Tier 4)", "desc": "Increases the critical strike damage bonus of your ranged weapon abilities by 30%." },
             { "name": "Scatter Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec on an instant cast (30s cooldown)." },
-            { "name": "Barrage", "points": "1/3", "tree": "Marksmanship (Tier 4)", "desc": "Increases the damage done by your Multi-Shot and Volley spells by 5%." }
+            { "name": "Barrage", "points": "1/3", "tree": "Marksmanship (Tier 4)", "desc": "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 5%." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+15 to +40 Ranged Attack Power to whole raid) and 3/3 Barrage.",
+          "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+20 to +100 Ranged Attack Power to whole raid) and 3/3 Barrage (5/10/15%).",
           "rotation": [
             { "label": "41-Yard Opener", "desc": "Hunter's Mark -> Cast Aimed Shot from maximum 41-yard range -> Serpent Sting." },
             { "label": "Auto-Shot Weaving", "desc": "Clip Auto Shot swing timer with Multi-Shot and Arcane Shot; Mortal Shots adds +30% critical damage." },
