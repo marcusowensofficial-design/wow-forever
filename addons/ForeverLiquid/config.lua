@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - Configuration & Slash Command Engine (v1.3.0)
+    ForeverLiquid - Configuration & Slash Command Engine (v1.3.1)
     Settings panel, neon sliders, theme selectors, automation options, and slash commands.
 --]]
 
@@ -165,7 +165,7 @@ SlashCmdList["FOREVERLIQUID"] = function(msg)
             print("  |cff888888No items currently protected. Use /fl protect <itemLink>|r")
         else
             for _, item in ipairs(list) do
-                local link = item.link or (item.id and select(2, GetItemInfo(item.id))) or ("Item ID: " .. tostring(item.id))
+                local link = item.link or (item.id and select(2, (C_Item and C_Item.GetItemInfo and C_Item.GetItemInfo(item.id)) or (GetItemInfo and GetItemInfo(item.id)))) or ("Item ID: " .. tostring(item.id))
                 print(string.format("  • %s", link))
             end
         end

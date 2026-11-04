@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - Core Engine (v1.1)
+    ForeverLiquid - Core Engine (v1.3.1)
     Sleek, high-performance Neon Liquid XP, Gold & Loot session tracker for WoW Forever.
     Features:
     - Session auto-resume with timeout & manual pause/save
@@ -12,6 +12,10 @@
 local ADDON_NAME, FL = ...
 _G.ForeverLiquid = FL
 _G.FL = FL
+
+FL.version = (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON_NAME, "Version"))
+    or (GetAddOnMetadata and GetAddOnMetadata(ADDON_NAME, "Version"))
+    or "1.3.1"
 
 -- Global SavedVariables Reference
 _G.ForeverLiquidDB = _G.ForeverLiquidDB or {}
@@ -740,7 +744,7 @@ function FL:GetClassConsumables()
             elseif GetItemCount then
                 count = GetItemCount(item.id, false, false) or 0
             end
-            local itemName, itemLink, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.id)
+            local itemName, itemLink, _, _, _, _, _, _, _, itemTexture = (C_Item and C_Item.GetItemInfo and C_Item.GetItemInfo(item.id)) or (GetItemInfo and GetItemInfo(item.id))
             table.insert(results, {
                 id = item.id,
                 name = itemName or item.name,
@@ -2756,7 +2760,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         FL:UpdateRosterData()
         FL:CheckInstanceStatus()
         if FL.UpdateHUD then FL:UpdateHUD() end
-        print("|cff00ff7fForeverLiquid|r v1.3.0 loaded. Type |cffffffff/fl|r or left-click the Gold Pod for dashboard.")
+        print(string.format("|cff00ff7fForeverLiquid|r v%s loaded. Type |cffffffff/fl|r or left-click the Gold Pod for dashboard.", FL.version or "1.3.1"))
         
     elseif event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" then
         session.currentXP = UnitXP("player")

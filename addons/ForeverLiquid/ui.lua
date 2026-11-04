@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - UI & Visual Engine (v1.3.0)
+    ForeverLiquid - UI & Visual Engine (v1.3.1)
     Sleek, high-tech neon liquid aesthetics & cyber-progression:
     - 6 Cyberpunk Color Themes (Matrix, Vaporwave, Sunwell, Blood Knight, Frost, Carbon)
     - 20-Bubble (5%) Classic tick marks with soft resting glow
@@ -3900,8 +3900,13 @@ function FL:ShowContextMenu()
     }
     
     if _G.EasyMenu then
-        local menuFrame = CreateFrame("Frame", "ForeverLiquidContextMenu", UIParent, "UIDropDownMenuTemplate")
-        _G.EasyMenu(menu, menuFrame, "cursor", 0, 0, "MENU")
+        local ok = pcall(function()
+            local menuFrame = _G.ForeverLiquidContextMenu or CreateFrame("Frame", "ForeverLiquidContextMenu", UIParent, "UIDropDownMenuTemplate")
+            _G.EasyMenu(menu, menuFrame, "cursor", 0, 0, "MENU")
+        end)
+        if not ok then
+            FL:ToggleDashboard()
+        end
     else
         FL:ToggleDashboard()
     end
