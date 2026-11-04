@@ -80,7 +80,8 @@ const WOW_FOREVER_DATA = {
     { "region": "United Kingdom (London)", "tz": "GMT", "date": "Nov 4, 2026", "time": "11:00 PM GMT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
     { "region": "Europe (Paris, Berlin, Rome)", "tz": "CET", "date": "Nov 5, 2026", "time": "12:00 AM CET (Midnight)", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
     { "region": "East Asia (Seoul, Tokyo)", "tz": "KST / JST", "date": "Nov 5, 2026", "time": "8:00 AM KST / JST", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
-    { "region": "Australia & Oceania (Sydney)", "tz": "AEDT", "date": "Nov 5, 2026", "time": "10:00 AM AEDT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" }
+    { "region": "Australia & Oceania (Sydney)", "tz": "AEDT", "date": "Nov 5, 2026", "time": "10:00 AM AEDT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" },
+    { "region": "New Zealand (Auckland)", "tz": "NZDT", "date": "Nov 5, 2026", "time": "1:00 PM NZDT", "utc": "23:00 UTC", "status": "Simultaneous Global Unlock" }
   ],
   "sitePhases": {
     "beta2": {
@@ -101,7 +102,7 @@ const WOW_FOREVER_DATA = {
       "heroTitle": "Launch Day — Final Global Deployment",
       "heroBadge": "Launch Countdown",
       "headline": "Launch Day: Final Realm Readiness & Launch Countdown",
-      "subline": "Early Name Reservation has concluded. Megarealms are finalizing world shards and client build verification ahead of Wednesday's worldwide launch at 3:00 PM PST.",
+      "subline": "Early Name Reservation has concluded. Megarealms are finalizing world shards and client build verification ahead of today's worldwide launch at 3:00 PM PST.",
       "milestonesTitle": "Launch Progression Milestones",
       "squadBracket": "Global Launch Progression (Level 60)"
     },
@@ -196,6 +197,37 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-71",
+      "title": "World of Warcraft: Forever Goes Live Globally Today: 3:00 PM PST Simultaneous Unlock, Megarealm Operations & Day-One Roadmap",
+      "source": "Blizzard Official Operations Desk",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 4, 2026",
+      "tag": "Official Global Launch",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-global-launch-live",
+      "summary": "World of Warcraft: Forever launches worldwide today, November 4, 2026 at 3:00 PM PST! Full 1–60 progression, 29 revamped dungeons, open-world Camping survival, dynamic megarealm sharding, and Build 1.60.1.70707 unlock simultaneously across all regions.",
+      "content": `The wait is over: *World of Warcraft: Forever* officially deploys worldwide today, **November 4, 2026, at 3:00 PM PST (23:00 UTC)**!
+
+• **Simultaneous Worldwide Launch Schedule:**
+  - **Americas (West Coast):** Nov 4, 3:00 PM PST
+  - **Americas (East Coast):** Nov 4, 6:00 PM EST
+  - **Latin America (São Paulo):** Nov 4, 8:00 PM BRT
+  - **United Kingdom:** Nov 4, 11:00 PM GMT
+  - **Europe (Paris / Berlin / Rome):** Nov 5, 12:00 AM CET (Midnight)
+  - **East Asia (Seoul / Tokyo):** Nov 5, 8:00 AM KST / JST
+  - **Australia (Sydney):** Nov 5, 10:00 AM AEDT
+  - **New Zealand (Auckland):** Nov 5, 1:00 PM NZDT
+
+• **Megarealms & Anti-Queue Layering Architecture:**
+  - Regional megarealms (Normal, PvP, RP, RP-PvP) utilize dynamic world sharding and intelligent shard load-balancing to eliminate login bottlenecks while preserving seamless capital city populations.
+  - Starting zones feature dynamically elevated creature respawn rates to ensure smooth quest completion during peak day-one concurrency.
+
+• **Day-One Progression Scope:**
+  - Level Cap: Level 60 unlocked from minute one across both Kalimdor and Eastern Kingdoms.
+  - Dungeons: All 29 revamped leveling and endgame dungeons accessible immediately, including *Excavation Site 4*, *Ruins of Lordaeron*, *Hall of Thanes*, and the *City of Dalaran*.
+  - Class Tuning Freeze: Build 1.60.1.70707 serves as the stable competitive progression baseline; class tuning is frozen through Tier 1 raid unlocks on December 9, 2026.`
+    },
     {
       "id": "news-70",
       "title": "Blizzard Releases 'WoW: Forever—What’s New and What Feels Familiar' Launch Primer: Experience Presets, Controller 1.0 & Balance Freeze",
@@ -3816,7 +3848,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-2",
-      "text": "Reach Level 10 and unlock the revamped 1.15.8 Talent Tree",
+      "text": "Reach Level 10 and unlock the revamped 1.60.1 Talent Tree",
       "cat": "Leveling"
     },
     {
@@ -3901,7 +3933,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.0.7) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.6.2) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {
