@@ -53,10 +53,14 @@ function FDJ.MigrateDatabase()
         scale = 1.0,
         defeatedBosses = {},
         activeInstanceMapID = nil,
-        seenNotices = {},
+        seenNotices = { ["lv30-data-v1"] = true },
         displayIDs = {},
         portraitTexturesByNpcID = {},
         hiddenDungeons = {},
+        itemSourceStrip = true,
+        autoHideOutleveled = false,
+        autoHideQuestsDone = false,
+        learnedItemIDs = {},
     }
 
     MergeDefaults(defaults, ForeverDungeonJournalDB)
@@ -107,6 +111,20 @@ local bindingNames = {
     zhTW = "開啟/關閉地城手冊",
 }
 BINDING_NAME_FOREVERDUNGEONJOURNAL_TOGGLE = bindingNames[bindingLocale] or "Open/Close Dungeon Journal"
+
+local openItemBindingNames = {
+    deDE = "Dungeonjournal für Gegenstand unter Maus öffnen",
+    frFR = "Ouvrir le journal pour l'objet sous la souris",
+    esES = "Abrir el diario para el objeto bajo el ratón",
+    esMX = "Abrir el diario para el objeto bajo el ratón",
+    itIT = "Apri il diario per l'oggetto sotto il cursore",
+    ptBR = "Abrir o diário para o item sob o cursor",
+    ruRU = "Открыть журнал для предмета под курсором",
+    koKR = "마우스 오버 아이템을 던전 도감에서 열기",
+    zhCN = "在地下城手册中打开鼠标悬停的物品",
+    zhTW = "在地下城手冊中打開滑鼠懸停的物品",
+}
+BINDING_NAME_FOREVERDUNGEONJOURNAL_OPENITEM = openItemBindingNames[bindingLocale] or "Open hovered item in Dungeon Journal"
 
 -- Security diagnostics: catch and report any Blizzard UI protected action blocks
 FDJ.securityAlerts = FDJ.securityAlerts or {}

@@ -2147,6 +2147,7 @@ FDJ.DB["City of Dalaran"] = {
             aliases = {"Lyn the Ignored"},
             description = "Rare elite.",
             rare = true,
+            summonItem = 275989,
             loot = {},
         },
         {

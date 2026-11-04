@@ -362,6 +362,10 @@ function FDJ.CreateGlobalSearchUI(frame)
             if result.kind == "item" then FocusSearchItem(result) end
         end
     end
+    FDJ.OpenSearchResult = OpenSearchResult
+    FDJ.FocusBossLootItem = function(itemID)
+        FocusSearchItem({ kind = "item", mode = "bosses", itemID = itemID })
+    end
 
     local function EnsureSearchRow(index)
         local row = searchRows[index]

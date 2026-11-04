@@ -2,4 +2,7 @@
     <Binding name="FOREVERDUNGEONJOURNAL_TOGGLE" header="FOREVERDUNGEONJOURNAL" category="ADDONS">
         ForeverDungeonJournal_Toggle()
     </Binding>
+    <Binding name="FOREVERDUNGEONJOURNAL_OPENITEM" header="FOREVERDUNGEONJOURNAL" category="ADDONS">
+        ForeverDungeonJournal_OpenHoveredItem()
+    </Binding>
 </Bindings>

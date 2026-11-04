@@ -811,3 +811,16 @@ function FDJ.ShowDungeonMap()
     FDJ.RenderCustomDungeonMap(mapData, mapData.entrance and mapData.entrance.floor or 1)
     if FDJ.UpdateModeTabs then FDJ.UpdateModeTabs() end
 end
+
+function FDJ.SavedMapFloor(dungeonName, mapData)
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if frame and frame.dungeonMapFloor and FDJ.selectedDungeon == dungeonName then
+        return frame.dungeonMapFloor
+    end
+    return mapData and mapData.entrance and mapData.entrance.floor or 1
+end
+
+function FDJ.SetMapDungeon(dungeonName)
+    if FDJ.SelectDungeon then FDJ.SelectDungeon(dungeonName) end
+    if FDJ.SetMode then FDJ.SetMode("map") end
+end

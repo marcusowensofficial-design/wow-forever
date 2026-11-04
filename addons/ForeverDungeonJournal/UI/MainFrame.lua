@@ -3102,6 +3102,24 @@ FDJ.ShowHomePage = ShowHomePage
 FDJ.SetMode = SetMode
 FDJ.RefreshAll = RefreshAll
 FDJ.SelectDungeon = SelectDungeon
+FDJ.GetSelectedDungeon = function()
+    return selectedDungeon, selectedBoss
+end
+FDJ.OpenBossPage = function(dungeonName, bossIndex)
+    if SelectDungeon then SelectDungeon(dungeonName) end
+    if SetMode then SetMode("bosses") end
+    if bossIndex and FDJ.SelectBoss then FDJ.SelectBoss(bossIndex) end
+    local f = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if f and not f:IsShown() then f:Show() end
+end
+FDJ.OpenQuestPage = function(dungeonName, questID)
+    if SelectDungeon then SelectDungeon(dungeonName) end
+    if SetMode then SetMode("quests") end
+    if questID and FDJ.SelectQuestByID then FDJ.SelectQuestByID(questID) end
+    local f = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if f and not f:IsShown() then f:Show() end
+end
+FDJ.UpdateQuestActionButtonSizes = UpdateQuestActionButtonSizes
 FDJ.UpdateModeTabs = UpdateModeTabs
 FDJ.UpdateDungeonHeaderTabs = UpdateDungeonHeaderTabs
 FDJ.UpdateLanguageControl = UpdateLanguageControl

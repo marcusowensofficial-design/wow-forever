@@ -286,3 +286,6 @@ watcher:SetScript("OnUpdate", function(_, dt)
     elapsed = 0
     pcall(SampleOutdoorPosition)
 end)
+
+FDJ.CurrentScarletWing = FDJ.ResolveScarletWing
+

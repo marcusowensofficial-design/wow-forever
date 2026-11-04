@@ -117,6 +117,7 @@ _G.ForeverDungeonJournal_Toggle = function()
         FDJ.ToggleJournal()
     end
 end
+FDJ.ShowJournal = FDJ.ToggleJournal
 
 -- ============================================================
 -- QUEST REFRESH SCHEDULER
@@ -152,9 +153,30 @@ end
 
 SLASH_FOREVERDUNGEONJOURNAL1 = "/fj"
 SLASH_FOREVERDUNGEONJOURNAL2 = "/fdj"
+SLASH_FOREVERDUNGEONJOURNAL3 = "/dj"
 
 SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
     msg = strtrim(msg or ""):lower()
+
+    if msg == "options" or msg == "settings" or msg == "config" or msg == "opt" then
+        if FDJ.ToggleSettingsPanel then
+            FDJ.ToggleSettingsPanel()
+        end
+        return
+    end
+
+    if msg == "newids" then
+        if FDJ.PrintLearnedItemIDs then
+            FDJ.PrintLearnedItemIDs()
+        end
+        return
+    end
+
+    if msg == "itemtip" or msg == "tooltip" then
+        local enabled = FDJ.ToggleItemSourceStrip and FDJ.ToggleItemSourceStrip()
+        print("|cffd8a83cForever Dungeon Journal|r Item source line: " .. (enabled and "|cff00ff00ON|r" or "|cffff0000OFF|r"))
+        return
+    end
 
     if msg == "devnotice" then
         if FDJ.ShowUpdateNotice then FDJ.ShowUpdateNotice(true) end
@@ -270,7 +292,8 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
 
     if msg == "help" then
         print("|cffd8a83cForever Dungeon Journal commands:|r")
-        print("  |cffffffff/fj|r or |cffffffff/fdj|r - Toggle journal window")
+        print("  |cffffffff/fj|r, |cffffffff/fdj|r, or |cffffffff/dj|r - Toggle journal window")
+        print("  |cffffffff/fj options|r - Open settings & keybind panel")
         print("  |cffffffff/fj import <ids>|r - Import BiS wishlist from website (e.g. |cff00ff00/fj import 270227,2281|r)")
         print("  |cffffffff/fj <dungeon>|r - Jump directly to dungeon (e.g. |cff00ff00rfc|r, |cff00ff00dm|r, |cff00ff00wc|r, |cff00ff00sfk|r, |cff00ff00bfd|r, |cff00ff00stocks|r, |cff00ff00gnomer|r, |cff00ff00rfk|r, |cff00ff00smgy|r, |cff00ff00smlib|r, |cff00ff00dalaran|r, |cff00ff00excavation|r)")
         print("  |cffffffff/fj wp [dungeon]|r - Set entrance waypoint & map pin (e.g. |cff00ff00/fj wp dm|r)")
