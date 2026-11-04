@@ -1,6 +1,6 @@
 --[[
     ForeverPlates Cast Bars - Core Engine (v2.2.0)
-    Optimized for WoW Forever (Camelot / Classic Beta 12.0 engine) & Modern WoW.
+    Optimized for WoW Forever (Camelot 12.0 engine) & Modern WoW.
     
     Features:
       - Clean enemy nameplate cast bars anchored directly below enemy nameplates.

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-04T20:20:40.535Z",
+  "generatedAt": "2026-11-04T21:32:13.645Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
     "sizeKb": 31701,
-    "sha256": "7c1f38c87d529962c3109a99666ab4a60e9c34bfb8da6c9da890fbf791a9cac8",
+    "sha256": "4cc625bf9a85554b1d79b2fd1f61780ebee401e31025b3b1979709f5d5734fa7",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -14,7 +14,7 @@
       "version": "2.1.1",
       "filename": "ForeverPlates-v2.1.1.zip",
       "sizeKb": 598,
-      "sha256": "6dcb8e2dc3d881393719b2a940f13e2391845baaf64b39a54469beec0dea0866",
+      "sha256": "191919dc0d241a9b622323b21430cccb81aaac7c158dd047b57b8afa4c0e2023",
       "downloadPath": "downloads/ForeverPlates-v2.1.1.zip"
     },
     {
@@ -22,7 +22,7 @@
       "version": "2.2.1",
       "filename": "Foreverplatescastbars-v2.2.1.zip",
       "sizeKb": 36,
-      "sha256": "b5e6e28c2d409115c9a28afc69c256ac95a50fb35315beaa371106c0e2058c87",
+      "sha256": "43d8a49e4f715c3064bfddda230ca1f9c8b53d7bc1fe3ca3426ff909e622109e",
       "downloadPath": "downloads/Foreverplatescastbars-v2.2.1.zip"
     },
     {

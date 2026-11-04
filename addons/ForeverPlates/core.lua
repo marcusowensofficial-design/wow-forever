@@ -1,7 +1,7 @@
 --[[
     ForeverPlates
     Sleek, modern, high-performance enemy nameplates for WoW Forever.
-    Compatible with 12.0 / Camelot / Classic Beta & Modern WoW.
+    Compatible with 12.0 / Camelot / WoW Forever & Modern WoW.
     
     Zero-Taint Architecture:
     - No overrides of shared Blizzard methods or global functions
@@ -279,7 +279,7 @@ local function CopyDefaults(destination, source)
 end
 FP.CopyDefaults = CopyDefaults
 
--- Diagnostic DB logger to verify SavedVariables vs Beta Snapshot loading
+-- Diagnostic DB logger to verify SavedVariables loading
 local function DebugDB(stage)
     if not FP.verboseDebug then return end
     local function FP_Print(msg)
@@ -298,15 +298,13 @@ local function DebugDB(stage)
     for _ in pairs(ForeverPlatesDB) do
         count = count + 1
     end
-    local isSnapshot = ForeverPlatesDB._isBetaSnapshot and " |cff00c0ff(Beta Snapshot Restored)|r" or " |cff00ff00(SavedVariables Restored)|r"
     FP_Print(string.format(
-        "|cff55ff55[ForeverPlates]|r %s | keys=%d | font=%s | barColor=%s | arrow=%s%s",
+        "|cff55ff55[ForeverPlates]|r %s | keys=%d | font=%s | barColor=%s | arrow=%s |cff00ff00(SavedVariables Restored)|r",
         tostring(stage),
         count,
         tostring(ForeverPlatesDB.font),
         tostring(ForeverPlatesDB.targetBarColor),
-        tostring(ForeverPlatesDB.targetArrowStyle),
-        isSnapshot
+        tostring(ForeverPlatesDB.targetArrowStyle)
     ))
 end
 FP.DebugDB = DebugDB
@@ -463,7 +461,7 @@ local COLOR_THREAT_LOST    = { r = 0.95, g = 0.15, b = 0.15 } -- Blood Red (Lost
 local COLOR_THREAT_COTANK  = { r = 0.20, g = 0.62, b = 0.90 } -- Ice Steel Blue (Co-Tank safely holding aggro)
 local COLOR_FOCUS_VIOLET   = { r = 0.80, g = 0.35, b = 1.00, a = 0.95 } -- Electric Violet (Focus target beacon)
 -------------------------------------------------------------------------------
--- Runtime Health Text Capability State (WoW Forever Beta Safe)
+-- Runtime Health Text Capability State (WoW Forever Launch Safe)
 -------------------------------------------------------------------------------
 FP.healthTextCapability = "BLIZZARD_TEXT_AVAILABLE"
 
@@ -620,7 +618,7 @@ local function IsUnitTappedByOther(unit)
     if UnitIsDead and UnitIsDead(unit) then return false end
     if UnitIsPlayer and UnitIsPlayer(unit) then return false end
 
-    -- Modern & Classic Beta Tap-Denied API: true if mob is tapped and player cannot loot/XP
+    -- Modern & Classic Tap-Denied API: true if mob is tapped and player cannot loot/XP
     if UnitIsTapDenied and UnitIsTapDenied(unit) then
         return true
     end

@@ -18,7 +18,7 @@ This skill provides critical domain knowledge, architectural standards, and debu
 ## 0. Official In-House Addon Suite (Marcus Owens & Team)
 
 > [!NOTE]
-> **Workspace & AddOn Directory Junctions**: The game client directory `C:\Program Files (x86)\World of Warcraft\_classic_beta_\Interface\AddOns\<Addon>` uses NTFS Directory Junctions mapped directly to `WOWFOREVER\addons\<Addon>`. Changes made in either folder update instantly in both. Version control, testing, and packaging scripts always operate out of the workspace `addons/` directory.
+> **Workspace & AddOn Directory Junctions**: The game client directory `C:\Program Files (x86)\World of Warcraft\_forever_\Interface\AddOns\<Addon>` uses NTFS Directory Junctions mapped directly to `WOWFOREVER\addons\<Addon>`. Changes made in either folder update instantly in both. Version control, testing, and packaging scripts always operate out of the workspace `addons/` directory.
 
 When referencing **our addon projects**, the following in-house addons located in `addons/` belong to our suite:
 
