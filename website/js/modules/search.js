@@ -101,6 +101,33 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
+    title: 'Vendor Directory & Who Sells What',
+    category: 'Directory & Database',
+    icon: '🏪',
+    desc: 'Who sells what in WoW Forever: 931 vendors, 1,896 items, recipes, limited goods, coordinates, and /tar macros.',
+    tab: 'vendors',
+    targetId: 'tab-vendors'
+  });
+
+  searchIndex.push({
+    title: 'Vendor Recipe Directory (10 Professions)',
+    category: 'Professions & Crafting',
+    icon: '📜',
+    desc: 'Complete catalogue of 662 profession recipes, patterns, plans, formulas, and skill books sold by vendors.',
+    tab: 'vendors',
+    targetId: 'tab-vendors'
+  });
+
+  searchIndex.push({
+    title: 'Limited-Supply Goods Directory',
+    category: 'Economy & Vendors',
+    icon: '⏳',
+    desc: 'Directory of 892 rare goods, recipes, and mounts sold in limited stock across Azeroth.',
+    tab: 'vendors',
+    targetId: 'tab-vendors'
+  });
+
+  searchIndex.push({
     title: 'The Items Blizzard is Hiding (Obfuscation Tracker)',
     category: 'Datamining & Gear',
     icon: '🔒',

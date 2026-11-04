@@ -381,17 +381,17 @@
               <span class="nav-tile-label">Tier List<br>Maker</span>
             </button>
 
-            <button type="button" class="nav-tab-btn" data-tab="downrank" title="Downranking Mana & Healing Calculator">
+            <button type="button" class="nav-tab-btn" data-tab="vendors" title="Vendors &amp; Recipes Directory (Who Sells What)">
               <span class="nav-tile-icon">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10 2h4M12 2v5" stroke="#94a3b8" stroke-width="2"/>
-                  <path d="M8.5 7h7L19 16.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 5 16.5L8.5 7z" fill="rgba(14, 165, 233, 0.25)" stroke="#38bdf8"/>
-                  <path d="M7 15c2-1 4 1 6 0s4-1 4-1" stroke="#bae6fd" stroke-width="1.5"/>
-                  <circle cx="11" cy="18" r="1" fill="#fff"/>
-                  <circle cx="13" cy="13" r="1.5" fill="#7dd3fc"/>
+                  <!-- Merchant Stall Awning & Shopfront -->
+                  <path d="M3 9l2-5h14l2 5v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0V9z" fill="url(#icon-gold-glow)" stroke="#facc15" stroke-width="1.6"/>
+                  <path d="M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" stroke="#eab308" stroke-width="1.6"/>
+                  <path d="M10 21v-6h4v6" stroke="#fef08a" stroke-width="1.6"/>
+                  <circle cx="12" cy="13.5" r="1.5" fill="#f59e0b"/>
                 </svg>
               </span>
-              <span class="nav-tile-label">Downrank<br>Calc</span>
+              <span class="nav-tile-label">Vendor<br>Directory</span>
             </button>
 
             <button type="button" class="nav-tab-btn" data-tab="planner" title="Class & Race Planner">
@@ -1696,6 +1696,11 @@
     <!-- TAB: ITEM DATABASE & MARKET -->
     <section id="tab-database" class="tab-content" aria-label="Item Database and Market">
       <div id="codex-database-mount"></div>
+    </section>
+
+    <!-- TAB: VENDOR DIRECTORY & WHO SELLS WHAT -->
+    <section id="tab-vendors" class="tab-content" aria-label="Vendor Directory and Who Sells What">
+      <div id="vendors-mount"></div>
     </section>
 
     <!-- TAB: WORLD ATLAS & RARES -->
@@ -3915,15 +3920,33 @@
       <div id="bis-container"></div>
     </section>
 
-    <!-- TAB 9.5: INTERACTIVE TALENT TREE CALCULATOR -->
-    <section id="tab-talents" class="tab-content" aria-label="Interactive Talent Tree Calculator">
+    <!-- TAB 9.5: INTERACTIVE TALENT TREE & DOWNRANKING CALCULATOR -->
+    <section id="tab-talents" class="tab-content" aria-label="Interactive Talent Tree and Downranking Calculator">
       <div class="section-heading-bar">
         <div>
-          <h2><span>🌳</span> Interactive Talent Tree Calculator</h2>
-          <p class="section-subtext">Authentic 3-tree Classic+ calculator across all 9 classes. Compare Classic vs Forever changes, test Level 30 caps, and export builds.</p>
+          <h2><span>🌳</span> Interactive Talent Tree &amp; Downranking Calculator</h2>
+          <p class="section-subtext">Authentic 3-tree Classic+ calculator across all 9 classes, plus spell downranking mana and healing coefficient tools. Compare Classic vs Forever changes, test Level 30 caps, and export builds.</p>
         </div>
       </div>
-      <div id="talents-standalone-mount"></div>
+
+      <!-- Talents Sub-Navigation -->
+      <div class="atlas-subnav-container" style="margin-bottom: 1.2rem;">
+        <div class="atlas-subnav-bar" role="tablist" aria-label="Talents Views">
+          <button type="button" class="atlas-subnav-btn active" id="btn-talents-subtab-tree" onclick="window.switchTalentsSubtab('tree')">
+            <span>🌳</span> Talent Calculator (9 Classes)
+          </button>
+          <button type="button" class="atlas-subnav-btn" id="btn-talents-subtab-downrank" onclick="window.switchTalentsSubtab('downrank')">
+            <span>🧪</span> Downranking Calculator
+          </button>
+        </div>
+      </div>
+
+      <div id="talents-subview-tree">
+        <div id="talents-standalone-mount"></div>
+      </div>
+      <div id="talents-subview-downrank" style="display: none;">
+        <div id="downranking-container"></div>
+      </div>
     </section>
 
     <!-- TAB 10: INTERACTIVE TIER LIST MAKER -->
@@ -3931,9 +3954,9 @@
       <div id="tierlist-container"></div>
     </section>
 
-    <!-- TAB 11: SPELL DOWNRANKING CALCULATOR -->
+    <!-- TAB 11: SPELL DOWNRANKING CALCULATOR (FORWARDING ALIAS) -->
     <section id="tab-downrank" class="tab-content" aria-label="Spell Downranking Calculator">
-      <div id="downranking-container"></div>
+      <div id="downranking-forwarding-mount"></div>
     </section>
 
   </div>
@@ -4247,6 +4270,7 @@
   <script defer src="js/data/market-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/library-books-data.js?v=1.60.1-70425"></script>
   <script defer src="js/data/class-mechanics-data.js?v=1.60.1-70425"></script>
+  <script defer src="js/data/vendors-data.js?v=1.60.1-70425"></script>
 
   <!-- 2. Feature Modules -->
   <script defer src="js/modules/lifecycle.js?v=1.60.1-70425"></script>
@@ -4287,6 +4311,7 @@
   <script defer src="js/modules/weapons-hub.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/tierlist.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/downranking.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/vendors.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis/bis-modal.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis/bis-enhancements.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/bis.js?v=1.60.1-70425"></script>

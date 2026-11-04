@@ -145,6 +145,7 @@ function initNavigation() {
         tierlist: 'bis',
         database: 'bis',
         tracker: 'bis',
+        vendors: 'resources',
         atlas: 'resources',
         professions: 'resources',
         camping: 'resources',
@@ -180,6 +181,13 @@ function initNavigation() {
             window.renderCodexItemDatabase();
           }
         }
+      } else if (targetTab === 'vendors') {
+        const mount = document.getElementById('vendors-mount');
+        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+          if (typeof window.renderVendors === 'function') {
+            window.renderVendors();
+          }
+        }
       }
 
       if (!isRestoringHistoryState) {
@@ -207,6 +215,17 @@ function initNavigation() {
 
     // Avoid infinite loop if clicking a .nav-tab-btn itself
     if (trigger.classList.contains('nav-tab-btn')) return;
+
+    if (targetTab === 'downrank') {
+      const talentsBtn = document.querySelector('.nav-tab-btn[data-tab="talents"]');
+      if (talentsBtn) {
+        talentsBtn.click();
+        if (typeof window.switchTalentsSubtab === 'function') {
+          window.switchTalentsSubtab('downrank');
+        }
+      }
+      return;
+    }
 
     const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${targetTab}"]`);
     if (targetBtn) {
@@ -277,6 +296,17 @@ function initNavigation() {
       tabName = 'guides';
     } else if (['database', 'items', 'item-database', 'market', 'ah'].includes(tabName)) {
       tabName = 'database';
+    } else if (['vendors', 'vendor', 'recipes', 'limited'].includes(tabName)) {
+      tabName = 'vendors';
+    } else if (tabName === 'downrank' || tabName === 'downranking') {
+      const talentsTabBtn = document.querySelector('.nav-tab-btn[data-tab="talents"]');
+      if (talentsTabBtn) {
+        if (!talentsTabBtn.classList.contains('active')) talentsTabBtn.click();
+        if (typeof window.switchTalentsSubtab === 'function') {
+          window.switchTalentsSubtab('downrank');
+        }
+        return;
+      }
     }
 
     // Switch tab safely
@@ -627,6 +657,27 @@ window.checkReturnPillState = function () {
   }
 };
 
+
+window.switchTalentsSubtab = function (subtab) {
+  const treeView = document.getElementById('talents-subview-tree');
+  const downrankView = document.getElementById('talents-subview-downrank');
+  const treeBtn = document.getElementById('btn-talents-subtab-tree');
+  const downrankBtn = document.getElementById('btn-talents-subtab-downrank');
+  if (subtab === 'downrank') {
+    if (treeView) treeView.style.display = 'none';
+    if (downrankView) downrankView.style.display = 'block';
+    if (treeBtn) treeBtn.classList.remove('active');
+    if (downrankBtn) downrankBtn.classList.add('active');
+    if (typeof window.renderDownrankCalculator === 'function') {
+      window.renderDownrankCalculator();
+    }
+  } else {
+    if (treeView) treeView.style.display = 'block';
+    if (downrankView) downrankView.style.display = 'none';
+    if (treeBtn) treeBtn.classList.add('active');
+    if (downrankBtn) downrankBtn.classList.remove('active');
+  }
+};
 
 /* ==========================================================================
    4. MURLOC ONLINE COUNTER & AUDIO-VISUAL MICRO-INTERACTION

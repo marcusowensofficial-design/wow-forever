@@ -352,6 +352,46 @@ check('Declared profession stats match actual array calculations', () => {
   }
 });
 
+check('ForeverDB Vendor Directory dataset integrity and synchronization', () => {
+  const vendorJsonPath = path.join(dataDir, 'forever_vendors.json');
+  if (!fs.existsSync(vendorJsonPath)) throw new Error('Missing data/forever_vendors.json');
+  const vendorJson = JSON.parse(fs.readFileSync(vendorJsonPath, 'utf8'));
+
+  const vendorCount = Object.keys(vendorJson.vendors || {}).length;
+  const itemCount = Object.keys(vendorJson.items || {}).length;
+  if (vendorCount < 900) {
+    throw new Error(`Expected at least 900 vendors in forever_vendors.json, found ${vendorCount}`);
+  }
+  if (itemCount < 1800) {
+    throw new Error(`Expected at least 1,800 items in forever_vendors.json, found ${itemCount}`);
+  }
+
+  // Ensure vendors-data.js exists and exports window.WOW_VENDORS_DATA
+  const vendorJsPath = path.join(ROOT, 'js', 'data', 'vendors-data.js');
+  if (!fs.existsSync(vendorJsPath)) throw new Error('Missing js/data/vendors-data.js');
+  const vendorJsRaw = fs.readFileSync(vendorJsPath, 'utf8');
+  if (!vendorJsRaw.includes('window.WOW_VENDORS_DATA =')) {
+    throw new Error('window.WOW_VENDORS_DATA not found in js/data/vendors-data.js');
+  }
+
+  // Verify navigation button and section in index.html
+  if (!indexHtml.includes('data-tab="vendors"')) {
+    throw new Error('data-tab="vendors" not found in index.html navigation');
+  }
+  if (!indexHtml.includes('id="tab-vendors"')) {
+    throw new Error('id="tab-vendors" not found in index.html sections');
+  }
+  if (!indexHtml.includes('id="vendors-mount"')) {
+    throw new Error('id="vendors-mount" not found in index.html');
+  }
+
+  // Dual-Faction Paladin rule: verify Horde vendors are present and interactive
+  const hordeVendors = Object.values(vendorJson.vendors).filter(v => v.side === 'Horde');
+  if (hordeVendors.length === 0) {
+    throw new Error('Horde vendors missing from forever_vendors.json');
+  }
+});
+
 console.log('\n--- 4. ADDON SUITE & DISTRIBUTION AUDIT ---');
 
 check('Addon Suite tab and section markup exist in index.html', () => {
