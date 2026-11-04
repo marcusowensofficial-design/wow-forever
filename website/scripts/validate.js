@@ -390,6 +390,24 @@ check('ForeverDB Vendor Directory dataset integrity and synchronization', () => 
   if (hordeVendors.length === 0) {
     throw new Error('Horde vendors missing from forever_vendors.json');
   }
+
+  // Local self-hosted vendor icon asset check
+  const iconsDir = path.join(ROOT, 'images', 'icons', 'vendors');
+  if (!fs.existsSync(iconsDir)) {
+    throw new Error('Missing images/icons/vendors/ directory');
+  }
+  const localWebpIcons = fs.readdirSync(iconsDir).filter(f => f.endsWith('.webp'));
+  if (localWebpIcons.length < 570) {
+    throw new Error(`Expected at least 570 local icons in images/icons/vendors/, found ${localWebpIcons.length}`);
+  }
+  if (!fs.existsSync(path.join(iconsDir, '134400.webp'))) {
+    throw new Error('Missing fallback icon 134400.webp in images/icons/vendors/');
+  }
+
+  // Verify CSP in index.html includes https://foreverdb.net
+  if (!indexHtml.includes('https://foreverdb.net')) {
+    throw new Error('index.html CSP missing https://foreverdb.net in img-src');
+  }
 });
 
 console.log('\n--- 4. ADDON SUITE & DISTRIBUTION AUDIT ---');

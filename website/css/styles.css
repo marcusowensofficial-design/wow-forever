@@ -8437,3 +8437,100 @@ input:checked + .toggle-slider:before {
     align-items: flex-start;
   }
 }
+
+
+/* Quick Filter Chips & Taxonomy Styles */
+.vd-quick-chips-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  background: rgba(15, 23, 42, 0.55);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.vd-quick-chips-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+.vd-quick-chips-bar {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 179, 8, 0.3) transparent;
+  flex-wrap: wrap;
+}
+
+.vd-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.vd-chip-btn:hover {
+  background: rgba(234, 179, 8, 0.12);
+  border-color: rgba(234, 179, 8, 0.4);
+  color: #fef08a;
+}
+
+.vd-chip-btn.active {
+  background: rgba(234, 179, 8, 0.22);
+  border-color: #facc15;
+  color: #fef08a;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.25);
+}
+
+.vd-chip-icon {
+  font-size: 0.9rem;
+}
+
+/* 2-Tier Taxonomy Controls */
+.vd-taxonomy-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.vd-taxonomy-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.vd-btn-reset {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(234, 179, 8, 0.2);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  border-radius: 6px;
+  color: #fef08a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vd-btn-reset:hover {
+  background: rgba(234, 179, 8, 0.35);
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.3);
+}
