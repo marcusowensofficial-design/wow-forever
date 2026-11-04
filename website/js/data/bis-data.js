@@ -13,7 +13,7 @@ const WOW_BIS_METADATA = {
   "version": "1.60.1.70707",
   "title": "Level 30 Pre-Raid & Dungeon BiS (Launch Build 1.60.1.70707)",
   "phase": "Pre-Launch Window (Midway Level 30 BiS Milestone)",
-  "lastUpdated": "November 3, 2026",
+  "lastUpdated": "November 4, 2026",
   "sourceNotice": "Curated directly from Launch Build 70707 discovering logs, itemcache, and Official Game Tables.",
   "totalSpecs": 39,
   "totalClasses": 9

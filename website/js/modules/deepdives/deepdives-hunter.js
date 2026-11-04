@@ -340,10 +340,10 @@
           </div>
           <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
             <button class="btn-switch-pet-tab pet-cta-secondary-btn" data-target-subtab="pets" type="button">
-              🐾 CLICK HERE TO VIEW 502 TAMABLE BEASTS DIRECTORY ➔
+              🐾 CLICK HERE TO VIEW 520 TAMABLE BEASTS DIRECTORY ➔
             </button>
-            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button" title="Open master modal of 502 beasts">
-              <span class="pmd-btn-title">🐾 Open 502 Beasts Table</span>
+            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button" title="Open master modal of 520 beasts">
+              <span class="pmd-btn-title">🐾 Open 520 Beasts Table</span>
               <span class="pmd-badge">Open Table ↗</span>
             </button>
           </div>

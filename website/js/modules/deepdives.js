@@ -542,7 +542,7 @@ function initClassDeepDives() {
       });
     });
 
-    // Subtab switch buttons (e.g. "CLICK HERE TO SEE WHAT'S CHANGED" or "RETURN TO 502 BEASTS")
+    // Subtab switch buttons (e.g. "CLICK HERE TO SEE WHAT'S CHANGED" or "RETURN TO 520 BEASTS")
     contentContainer.querySelectorAll('.btn-switch-pet-tab').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();

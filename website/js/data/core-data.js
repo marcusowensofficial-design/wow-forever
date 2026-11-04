@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 31, 2026 (Launch Pre-Release Candidate Build 1.60.1.70425 / 70707 Hotfix)
+ * Up-to-date as of November 4, 2026 (Launch Release Candidate Build 1.60.1.70707)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -15,14 +15,14 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Launch Eve: Final Realm Prep (Early Name Reservation Concluded • Global Launch: Nov 4 at 3:00 PM PST)",
+    "currentBetaPhase": "Launch Day: Final Realm Prep (Early Name Reservation Concluded • Global Launch Today at 3:00 PM PST)",
     "clientBuild": "1.60.1.70707",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 3, 2026"
+    "lastUpdated": "November 4, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -96,11 +96,11 @@ const WOW_FOREVER_DATA = {
     },
     "prelaunch": {
       "key": "prelaunch",
-      "topPill": "🛡️ Launch Eve: Final Realm Prep • Global Launch Nov 4 at 3:00 PM PST • Early Name Reservation Concluded",
+      "topPill": "🛡️ Launch Day: Final Realm Prep • Global Launch Today at 3:00 PM PST • Realms Online Soon",
       "tickerDuration": "Beta Completed (37/37 Days)",
-      "heroTitle": "Launch Eve — Final Global Deployment",
+      "heroTitle": "Launch Day — Final Global Deployment",
       "heroBadge": "Launch Countdown",
-      "headline": "Launch Eve: Final Realm Readiness & Client Pre-Load",
+      "headline": "Launch Day: Final Realm Readiness & Launch Countdown",
       "subline": "Early Name Reservation has concluded. Megarealms are finalizing world shards and client build verification ahead of Wednesday's worldwide launch at 3:00 PM PST.",
       "milestonesTitle": "Launch Progression Milestones",
       "squadBracket": "Global Launch Progression (Level 60)"

@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Hunter Pet Beast Radar Module
- * Handles complete explorer for all 502 beasts across 18 families:
+ * Handles complete explorer for all 520 beasts across 18 families:
  * - Family modifiers (+10% Dmg, Armor, HP), Diets, New in Forever abilities
  * - Filter by Attack Speed (1.0s fast-pets, 2.0s normal), Faction, Level (1-30 Beta Cap), New Classic+ spawns
  * - 1-Click TomTom /way coordinates copy & /target macro generation

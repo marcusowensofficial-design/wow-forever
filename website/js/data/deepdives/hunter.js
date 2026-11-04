@@ -511,7 +511,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
     {
       "id": "pets",
-      "label": "Pet Stable & 502 Beasts",
+      "label": "Pet Stable & 520 Beasts",
       "icon": "🐾"
     },
     {
