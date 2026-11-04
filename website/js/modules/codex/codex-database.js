@@ -186,15 +186,21 @@
     if (window.WOW_PROFESSIONS_DATA) {
       for (const prof of Object.values(window.WOW_PROFESSIONS_DATA)) {
         if (!prof || typeof prof !== 'object') continue;
+        const profName = prof.name || '';
         const lists = [prof.recipes, prof.favor?.recipes].filter(Array.isArray);
         for (const list of lists) {
           for (const rec of list) {
             if (!rec) continue;
+            const enhancedRec = { ...rec, profName };
             const rid = Number(rec.itemId || rec.id);
-            if (rid > 0 && !recipeById.has(rid)) recipeById.set(rid, rec);
+            if (rid > 0 && !recipeById.has(rid)) recipeById.set(rid, enhancedRec);
             if (rec.name) {
               const rk = String(rec.name).toLowerCase().trim();
-              if (!recipeByName.has(rk)) recipeByName.set(rk, rec);
+              if (!recipeByName.has(rk)) recipeByName.set(rk, enhancedRec);
+            }
+            if (rec.source) {
+              const sk = String(rec.source).toLowerCase().trim();
+              if (!recipeByName.has(sk)) recipeByName.set(sk, enhancedRec);
             }
           }
         }
@@ -345,7 +351,11 @@
     const consumableTip = window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : null);
     const richItem = rich.byId.get(id) || (name ? rich.byName.get(String(name).toLowerCase().trim()) : null);
     const cdlItem = rich.cdlById.get(id);
-    const recipeItem = rich.recipeById.get(id) || (name ? rich.recipeByName.get(String(name).toLowerCase().trim()) : null);
+    const cleanItemName = name ? String(name).toLowerCase().trim() : '';
+    const strippedRecipeName = cleanItemName.replace(/^(recipe|pattern|formula|plans|schematic|manual):\s*/i, '').trim();
+    const recipeItem = rich.recipeById.get(id)
+      || (cleanItemName ? rich.recipeByName.get(cleanItemName) : null)
+      || (strippedRecipeName ? rich.recipeByName.get(strippedRecipeName) : null);
     const reagentInfo = window.WOW_REAGENT_SOURCES?.[id];
     const marketEntry = window.WOW_MARKET_SCAN_DATA?.prices?.[id];
 
@@ -463,6 +473,8 @@
 
       if (recipeItem?.req) {
         html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.req)}</div>`;
+      } else if (recipeItem?.learn && recipeItem?.profName) {
+        html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.profName)} (${esc(recipeItem.learn)})</div>`;
       }
 
       if (equip.length > 0) {

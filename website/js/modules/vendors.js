@@ -474,13 +474,13 @@
     const classification = classifyItem(item);
 
     return `
-      <div class="vd-item-card" data-item-id="${itemId}">
+      <div class="vd-item-card" data-item-id="${itemId}" data-item-name="${esc(name)}" data-item-quality="q${quality}">
         <div class="vd-item-header">
-          <div class="vd-item-identity">
+          <div class="vd-item-identity" data-item-id="${itemId}" data-item-name="${esc(name)}">
             <img src="${iconSrc}" class="vd-item-icon" alt="" style="border-color:${qColor};" onerror="this.src='images/icons/vendors/134400.webp'">
             <div>
               <div class="vd-item-name" style="color:${qColor};">
-                <a href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">
+                <a href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;" data-item-id="${itemId}" data-item-name="${esc(name)}">
                   ${esc(name)}
                 </a>
                 ${classification.label ? `<span class="vd-badge vd-badge-prof">${esc(classification.label)}</span>` : ''}
@@ -564,9 +564,9 @@
       }
     }
 
-    // 4. Quality Filter
+    // 4. Quality / Rarity Filter
     if (state.quality !== 'all') {
-      if (quality !== Number(state.quality)) return false;
+      if (Number(quality) !== Number(state.quality)) return false;
     }
 
     // 5. Currency / Payment Filter
@@ -575,6 +575,31 @@
       const hasSpecialCurrency = vList.some(([, s]) => s.c && s.c.length > 0);
       if (state.currencyType === 'special' && !hasSpecialCurrency) return false;
       if (state.currencyType === 'money' && hasSpecialCurrency) return false;
+    }
+
+    // 6. Faction Filter (Alliance, Horde, Neutral)
+    if (state.faction !== 'all') {
+      const vList = idx.itemVendorsMap.get(id) || [];
+      const hasFactionVendor = vList.some(([v]) => {
+        const side = (v.side || 'Neutral').toLowerCase();
+        if (state.faction === 'neutral') return side === 'neutral';
+        return side === state.faction.toLowerCase() || side === 'neutral';
+      });
+      if (!hasFactionVendor) return false;
+    }
+
+    // 7. Limited Supply Filter
+    if (state.limOnly) {
+      const vList = idx.itemVendorsMap.get(id) || [];
+      const hasLim = vList.some(([, s]) => s.lim);
+      if (!hasLim) return false;
+    }
+
+    // 8. Seen in Forever Filter
+    if (state.seenOnly) {
+      const vList = idx.itemVendorsMap.get(id) || [];
+      const hasSeen = vList.some(([v]) => v.fv === 1);
+      if (!hasSeen) return false;
     }
 
     return true;
@@ -671,14 +696,26 @@
 
   function renderRecipesTab(container, idx) {
     const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
-    const recipeItemIds = Object.keys(idx.items).filter(id => idx.items[id][3] === 9);
+    const recipeItemIds = Object.keys(idx.items).filter(id => {
+      const itm = idx.items[id];
+      if (itm[3] !== 9) return false;
+      return itemMatchesFilters(id, itm, idx);
+    });
 
     const professionSections = Object.entries(PROFESSION_MAP).map(([subId, profName]) => {
       let items = recipeItemIds.filter(id => idx.items[id][4] === Number(subId));
       if (rawTokens.length > 0) {
         items = items.filter(id => {
           const name = idx.items[id][0].toLowerCase();
-          return rawTokens.every(tok => name.includes(tok));
+          const matchesItem = rawTokens.every(tok => name.includes(tok));
+          if (matchesItem) return true;
+          const vendors = idx.itemVendorsMap.get(id) || [];
+          return vendors.some(([v]) => {
+            const vName = (v.n || '').toLowerCase();
+            const vSub = (v.sub || '').toLowerCase();
+            const vZone = (v.zone || '').toLowerCase();
+            return rawTokens.every(tok => vName.includes(tok) || vSub.includes(tok) || vZone.includes(tok));
+          });
         });
       }
       items.sort((a, b) => idx.items[a][0].localeCompare(idx.items[b][0]));
@@ -688,6 +725,8 @@
         items
       };
     }).filter(sec => sec.items.length > 0);
+
+    const totalMatching = professionSections.reduce((acc, sec) => acc + sec.items.length, 0);
 
     const accordionsHtml = professionSections.map(sec => `
       <details class="vd-accordion-group" open>
@@ -706,11 +745,14 @@
 
     container.innerHTML = `
       <div class="vd-tab-intro">
-        <p>Complete catalogue of <strong>${recipeItemIds.length} profession recipes, formulas, patterns, and class grimoires</strong> sold by vendors across Azeroth.</p>
+        <p>Complete catalogue of <strong>${totalMatching} profession recipes, formulas, patterns, and class grimoires</strong> matching your active filters across Azeroth.</p>
       </div>
       ${accordionsHtml.length > 0 ? accordionsHtml : `
         <div class="vd-empty-state">
-          <p>No recipes match "${esc(state.q)}".</p>
+          <span style="font-size:2.4rem;">🔍</span>
+          <h3>No recipes match your selected filters</h3>
+          <p>Try resetting filters or adjusting rarity, faction, or search keyword.</p>
+          <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
         </div>
       `}
     `;
@@ -719,14 +761,24 @@
   function renderLimitedTab(container, idx) {
     const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
     let limitedItemIds = Object.keys(idx.items).filter(id => {
+      const itm = idx.items[id];
       const vList = idx.itemVendorsMap.get(id) || [];
-      return vList.some(([, sell]) => sell.lim);
+      if (!vList.some(([, sell]) => sell.lim)) return false;
+      return itemMatchesFilters(id, itm, idx);
     });
 
     if (rawTokens.length > 0) {
       limitedItemIds = limitedItemIds.filter(id => {
         const name = idx.items[id][0].toLowerCase();
-        return rawTokens.every(tok => name.includes(tok));
+        const matchesItem = rawTokens.every(tok => name.includes(tok));
+        if (matchesItem) return true;
+        const vendors = idx.itemVendorsMap.get(id) || [];
+        return vendors.some(([v]) => {
+          const vName = (v.n || '').toLowerCase();
+          const vSub = (v.sub || '').toLowerCase();
+          const vZone = (v.zone || '').toLowerCase();
+          return rawTokens.every(tok => vName.includes(tok) || vSub.includes(tok) || vZone.includes(tok));
+        });
       });
     }
 
@@ -740,7 +792,10 @@
       <div class="vd-cards-grid">
         ${cardsHtml.length > 0 ? cardsHtml : `
           <div class="vd-empty-state">
-            <p>No limited supply items match "${esc(state.q)}".</p>
+            <span style="font-size:2.4rem;">🔍</span>
+            <h3>No limited supply items match your selected filters</h3>
+            <p>Try resetting filters or adjusting rarity, faction, or search keyword.</p>
+            <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
           </div>
         `}
       </div>
@@ -754,10 +809,16 @@
       return rawTokens.every(tok => zone.toLowerCase().includes(tok));
     });
 
+    const hasActiveFilters = state.quality !== 'all' || state.cat !== 'all' || state.chip !== 'all' || state.currencyType !== 'all' || state.limOnly;
+
     const zoneAccordions = zonesList.map(zone => {
       let zoneVendors = idx.vendors.filter(v => v.zone === zone);
       if (state.faction !== 'all') {
-        zoneVendors = zoneVendors.filter(v => (v.side || 'Neutral').toLowerCase() === state.faction.toLowerCase());
+        zoneVendors = zoneVendors.filter(v => {
+          const side = (v.side || 'Neutral').toLowerCase();
+          if (state.faction === 'neutral') return side === 'neutral';
+          return side === state.faction.toLowerCase() || side === 'neutral';
+        });
       }
       if (state.seenOnly) {
         zoneVendors = zoneVendors.filter(v => v.fv);
@@ -768,8 +829,20 @@
       const vendorsHtml = zoneVendors.map(v => {
         const sideColor = FACTION_COLORS[v.side] || '#94a3b8';
         const sellEntries = Object.entries(v.sells || {});
-        const displaySells = sellEntries.slice(0, 24);
-        const hasMore = sellEntries.length > 24;
+
+        const filteredSells = hasActiveFilters
+          ? sellEntries.filter(([itemId]) => {
+              const itm = idx.items[itemId];
+              return itm && itemMatchesFilters(itemId, itm, idx);
+            })
+          : sellEntries;
+
+        if (filteredSells.length === 0 && hasActiveFilters) {
+          return '';
+        }
+
+        const displaySells = filteredSells.slice(0, 24);
+        const hasMore = filteredSells.length > 24;
 
         const itemsPills = displaySells.map(([itemId, sell]) => {
           const item = idx.items[itemId];
@@ -777,7 +850,7 @@
           const qColor = QUALITY_COLORS[item[2]] || '#f8fafc';
           const iconSrc = getIconUrl(item[1]);
           return `
-            <a class="vd-zone-item-pill" href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" title="${esc(item[0])}${sell.lim ? ` (Limited: ${sell.lim})` : ''}">
+            <a class="vd-zone-item-pill" href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" data-item-id="${itemId}" data-item-name="${esc(item[0])}" data-item-quality="q${item[2]}">
               <img src="${iconSrc}" class="vd-pill-icon" alt="" onerror="this.src='images/icons/vendors/134400.webp'">
               <span style="color:${qColor};">${esc(item[0])}</span>
               ${sell.lim ? `<span class="vd-lim-mini">${sell.lim}</span>` : ''}
@@ -802,7 +875,7 @@
             </div>
             <div class="vd-zone-vendor-sells">
               ${itemsPills}
-              ${hasMore ? `<span class="vd-zone-more-tag">+${sellEntries.length - 24} more goods</span>` : ''}
+              ${hasMore ? `<span class="vd-zone-more-tag">+${filteredSells.length - 24} more goods</span>` : ''}
             </div>
           </div>
         `;
@@ -1181,6 +1254,41 @@
       sortSelect.addEventListener('change', (e) => {
         state.sort = e.target.value;
         renderSubView();
+      });
+    }
+
+    // Delegated Hover Tooltip Handlers for Vendor Directory items
+    const subviewContainer = mount.querySelector('#vd-subview-container');
+    if (subviewContainer && !subviewContainer._hasTooltipEvents) {
+      subviewContainer._hasTooltipEvents = true;
+
+      subviewContainer.addEventListener('mouseover', (e) => {
+        const trigger = e.target.closest('[data-item-id]');
+        if (!trigger) return;
+        const itemId = trigger.getAttribute('data-item-id');
+        const itemName = trigger.getAttribute('data-item-name') || '';
+        if (typeof window.showCodexItemTooltipById === 'function') {
+          window.showCodexItemTooltipById(e, itemId, itemName);
+        }
+      });
+
+      subviewContainer.addEventListener('mousemove', (e) => {
+        const trigger = e.target.closest('[data-item-id]');
+        if (!trigger) return;
+        const tooltip = document.getElementById('wow-item-tooltip');
+        if (tooltip && !tooltip.hasAttribute('hidden') && typeof window.positionTooltip === 'function') {
+          window.positionTooltip(e, tooltip);
+        }
+      });
+
+      subviewContainer.addEventListener('mouseout', (e) => {
+        const trigger = e.target.closest('[data-item-id]');
+        if (!trigger) return;
+        const related = e.relatedTarget ? e.relatedTarget.closest('[data-item-id]') : null;
+        if (related === trigger) return;
+        if (typeof window.hideCodexItemTooltip === 'function') {
+          window.hideCodexItemTooltip();
+        }
       });
     }
   }
