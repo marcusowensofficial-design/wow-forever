@@ -246,7 +246,13 @@ function FDJ.MakeHomeDungeonCard(parent, dungeonName)
             else
                 GameTooltip:AddLine(L("CLICK_HIDE_DUNGEON"), 1, 1, 1)
             end
-        elseif dungeon and dungeon.previewOnly then
+        elseif FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(activeDungeonName) then
+            if FDJ.RPGLockedTooltip then
+                local title, desc = FDJ.RPGLockedTooltip(activeDungeonName)
+                if title then GameTooltip:SetText(title, 0.85, 0.85, 0.85) end
+                if desc then GameTooltip:AddLine(desc, 0.82, 0.78, 0.68, true) end
+            end
+        elseif dungeon and dungeon.previewOnly and not (FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[activeDungeonName]) then
             GameTooltip:AddLine("Boss, loot and quest data coming soon.", 0.82, 0.78, 0.68, true)
         else
             GameTooltip:AddLine(L("CLICK_DUNGEON"), 1, 1, 1)
@@ -271,6 +277,9 @@ function FDJ.MakeHomeDungeonCard(parent, dungeonName)
             FDJ.RefreshHomeDungeonCards()
             return
         end
+        if FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(activeDungeonName) then
+            return
+        end
         if FDJ.SelectDungeon then
             FDJ.SelectDungeon(activeDungeonName)
         end
@@ -290,7 +299,8 @@ function FDJ.RefreshHomeDungeonCards()
     for _, dungeonName in ipairs(FDJ.ORDER or {}) do
         local userHidden = ForeverDungeonJournalDB.hiddenDungeons[dungeonName] == true
         local autoHidden = FDJ.IsDungeonAutoHidden and FDJ.IsDungeonAutoHidden(dungeonName)
-        if FDJ.homeEditMode or (not userHidden and not autoHidden) then
+        local filterHidden = FDJ.HomeFilterHides and FDJ.HomeFilterHides(dungeonName)
+        if not filterHidden and (FDJ.homeEditMode or (not userHidden and not autoHidden)) then
             shownDungeons[#shownDungeons + 1] = dungeonName
         end
     end
@@ -385,6 +395,9 @@ function FDJ.RefreshHomeDungeonCards()
             end
         end
 
+        if FDJ.ApplyHomeBottomBand then pcall(FDJ.ApplyHomeBottomBand, card, dungeonName) end
+        if FDJ.ApplyRPGCard then pcall(FDJ.ApplyRPGCard, card, dungeonName) end
+
         local isHidden = (ForeverDungeonJournalDB.hiddenDungeons[dungeonName] == true)
             or (FDJ.IsDungeonAutoHidden and FDJ.IsDungeonAutoHidden(dungeonName))
         if card.editOverlay then card.editOverlay:SetShown(FDJ.homeEditMode) end
@@ -414,6 +427,7 @@ function FDJ.RefreshHomeDungeonCards()
     frame.homeCardsContent:SetHeight(contentHeight)
     FDJ.UpdateScrollBarVisibility(frame.homeScroll, contentHeight)
     if FDJ.UpdateHomeFactionButtons then FDJ.UpdateHomeFactionButtons() end
+    if FDJ.UpdateRPGHeader then pcall(FDJ.UpdateRPGHeader, frame) end
 end
 
 FDJ.RefreshHomeCards = FDJ.RefreshHomeDungeonCards

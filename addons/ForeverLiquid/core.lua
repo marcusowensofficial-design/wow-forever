@@ -2730,6 +2730,11 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         end
         
     elseif event == "PLAYER_LOGIN" then
+        -- Sanitize malformed camera distance CVar from corrupted configs/macros that crashes Blizzard Settings slider
+        local camDist = GetCVar and GetCVar("cameraDistanceMaxZoomFactor")
+        if camDist and not tonumber(camDist) then
+            pcall(SetCVar, "cameraDistanceMaxZoomFactor", "2.6")
+        end
         local restored = false
         if ForeverLiquidDB.profile and ForeverLiquidDB.profile.autoResumeSession then
             restored = FL:RestoreSession(false)
@@ -3062,11 +3067,29 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "CHAT_MSG_LOOT" then
         local msg, sender = ...
         if msg then
+            -- Ignore group loot roll activity, passes, and winner announcements
+            if msg:find("selected Greed") or msg:find("selected Need") or msg:find("selected Disenchant")
+               or msg:find("passed on") or msg:find("rolls ") or msg:find("Everyone passed") or msg:find(" won: ") then
+                return
+            end
+            
             local isSelf = false
             if sender and sender ~= "" then
                 isSelf = UnitIsUnit(sender, "player") or (Ambiguate(sender, "none") == Ambiguate(UnitName("player"), "none"))
             else
-                isSelf = msg:find("You receive") or msg:find("You create") or msg:find("You loot") or not (msg:match("^%S+ receives") or msg:match("^%S+ rolls"))
+                isSelf = msg:find("You receive") or msg:find("You create") or msg:find("You loot")
+                if not isSelf and LOOT_ITEM_SELF then
+                    local pattern = LOOT_ITEM_SELF:gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"):gsub("%%%%s", ".-"):gsub("%%%%d", "%%d+")
+                    if msg:find(pattern) then isSelf = true end
+                end
+                if not isSelf and LOOT_ITEM_PUSHED_SELF then
+                    local pattern = LOOT_ITEM_PUSHED_SELF:gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"):gsub("%%%%s", ".-"):gsub("%%%%d", "%%d+")
+                    if msg:find(pattern) then isSelf = true end
+                end
+                if not isSelf and LOOT_ITEM_CREATED_SELF then
+                    local pattern = LOOT_ITEM_CREATED_SELF:gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"):gsub("%%%%s", ".-"):gsub("%%%%d", "%%d+")
+                    if msg:find(pattern) then isSelf = true end
+                end
             end
             
             if isSelf then

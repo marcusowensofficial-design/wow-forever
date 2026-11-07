@@ -64,6 +64,7 @@ FDJ.ContentLocales.esES.quests = {
     [96394] = {
         ["name"] = "Los muertos inquietos",
         ["objective"] = "Mata a 15 apariciones enfurecidas y 10 almas atormentadas, y después da descanso al espíritu de Anvilmar.",
+        ["pickup"] = "Afadra Dunwall, en lo alto de la Antigua Forjaz, fuera de la mazmorra",
     },
     [96393] = {
         ["name"] = "Incursión en la antigua Forjaz",
@@ -379,9 +380,9 @@ FDJ.ContentLocales.esES.quests = {
     },
     [92749] = {
         ["name"] = "Un plan con dinamita",
-        ["objective"] = "Consigue 10 dinamitas burdas y vuelve con Sprite Jumpsprocket en Ventormenta.",
-        ["description"] = "La dinamita burda puede fabricarse, comerciarse o comprarse en la casa de subastas.",
-        ["note"] = "La dinamita burda puede fabricarse, comerciarse o comprarse en la casa de subastas.",
+        ["objective"] = "Consigue 10 dinamitas bastas y vuelve con Sprite Jumpsprocket en Ventormenta.",
+        ["description"] = "La dinamita basta puede fabricarse, comerciarse o comprarse en la casa de subastas.",
+        ["note"] = "La dinamita basta puede fabricarse, comerciarse o comprarse en la casa de subastas.",
     },
     [92750] = {
         ["name"] = "Detonación a distancia",
@@ -416,7 +417,7 @@ FDJ.ContentLocales.esES.quests = {
     [3765] = {
         ["name"] = "La corrupción lejana",
         ["objective"] = "Viaja hasta Gershala Susurranoche en Auberdine, Costa Oscura.",
-        ["description"] = "Misión introductoria de la Alianza que debe completarse antes de «Investigando la corrupción».",
+        ["note"] = "Paso introductorio que lleva a «Investigando la corrupción».",
     },
 }
 

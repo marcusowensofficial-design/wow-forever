@@ -203,7 +203,7 @@ function FP.CreateGUI()
     scrollFrameEnemy:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
 
     local contentEnemy = CreateFrame("Frame", "ForeverPlatesScrollChildEnemy", scrollFrameEnemy)
-    contentEnemy:SetSize(490, 1860)
+    contentEnemy:SetSize(490, 1972)
     scrollFrameEnemy:SetScrollChild(contentEnemy)
 
     local scrollFrameFriendly = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameFriendly", f, "UIPanelScrollFrameTemplate")
@@ -437,6 +437,47 @@ function FP.CreateGUI()
 
         table.insert(registeredCheckboxes, { cb = cb, dbKey = dbKey })
         return cb
+    end
+
+    ---------------------------------------------------------------------------
+    -- Custom Color Picker Helper (12.0 & Classic Safe)
+    ---------------------------------------------------------------------------
+    local function OpenCustomColorPicker(curR, curG, curB, callback)
+        if ColorPickerFrame and ColorPickerFrame.SetupColorPickerAndShow then
+            ColorPickerFrame:SetupColorPickerAndShow({
+                r = curR or 1,
+                g = curG or 1,
+                b = curB or 1,
+                hasOpacity = false,
+                swatchFunc = function()
+                    local r, g, b = ColorPickerFrame:GetColorRGB()
+                    if callback then callback(r, g, b) end
+                end,
+                cancelFunc = function(prev)
+                    if prev and callback then
+                        callback(prev.r or 1, prev.g or 1, prev.b or 1)
+                    end
+                end,
+            })
+        elseif ColorPickerFrame then
+            ColorPickerFrame.func = function()
+                local r, g, b = ColorPickerFrame:GetColorRGB()
+                if callback then callback(r, g, b) end
+            end
+            ColorPickerFrame.cancelFunc = function(prev)
+                if prev and callback then
+                    callback(prev.r or 1, prev.g or 1, prev.b or 1)
+                end
+            end
+            ColorPickerFrame.hasOpacity = false
+            ColorPickerFrame.previousValues = { r = curR or 1, g = curG or 1, b = curB or 1 }
+            ColorPickerFrame:SetColorRGB(curR or 1, curG or 1, curB or 1)
+            if ShowUIPanel then
+                ShowUIPanel(ColorPickerFrame)
+            else
+                ColorPickerFrame:Show()
+            end
+        end
     end
 
     ---------------------------------------------------------------------------
@@ -881,11 +922,117 @@ function FP.CreateGUI()
         table.insert(nameColorButtons, btn)
     end
 
+    -- Section 5b: Level Font Color & Mob Difficulty (Con) Coloring
+    local levelColorHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
+    levelColorHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    levelColorHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    levelColorHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -450)
+    levelColorHeader:SetText("LEVEL FONT COLOR & MOB DIFFICULTY (CON)")
+
+    local levelColorButtons = {}
+    local levelConCheckbox = nil
+    local levelColors = {
+        { key = "GOLD",   name = "Sun Gold",    r = 1.00, g = 0.85, b = 0.00 },
+        { key = "CYAN",   name = "Neon Cyan",   r = 0.00, g = 0.85, b = 1.00 },
+        { key = "WHITE",  name = "Pure White",  r = 1.00, g = 1.00, b = 1.00 },
+        { key = "LIME",   name = "Neon Lime",   r = 0.25, g = 1.00, b = 0.25 },
+        { key = "ORANGE", name = "Orange",      r = 1.00, g = 0.50, b = 0.20 },
+        { key = "RED",    name = "Blood Red",   r = 1.00, g = 0.20, b = 0.20 },
+        { key = "PURPLE", name = "Neon Purple", r = 0.75, g = 0.30, b = 1.00 },
+        { key = "CUSTOM", name = "Custom...",   r = 0.00, g = 0.85, b = 1.00, isCustom = true },
+    }
+
+    local function UpdateLevelColorHighlights()
+        local cur = (ForeverPlatesDB.levelFontColor or "GOLD"):upper()
+        local byCon = (ForeverPlatesDB.colorLevelByDifficulty == true)
+        local customCol = ForeverPlatesDB.levelCustomColor or { r = 0.00, g = 0.85, b = 1.00 }
+        for _, b in ipairs(levelColorButtons) do
+            if b.isCustom and b.swatch then
+                b.swatch:SetVertexColor(customCol.r or 0.00, customCol.g or 0.85, customCol.b or 1.00, 1)
+            end
+            if not byCon and b.lcKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+        if levelConCheckbox then
+            levelConCheckbox:SetChecked(byCon)
+        end
+    end
+
+    local lcBtnW = 114
+    local lcBtnH = 24
+    for i, item in ipairs(levelColors) do
+        local col = (i - 1) % 4
+        local row = math.floor((i - 1) / 4)
+        local posX = 10 + (col * (lcBtnW + 8))
+        local posY = -470 - (row * (lcBtnH + 6))
+
+        local btn = CreateFrame("Button", nil, contentEnemy)
+        btn:SetSize(lcBtnW, lcBtnH)
+        btn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local swatch = btn:CreateTexture(nil, "OVERLAY")
+        swatch:SetSize(12, 12)
+        swatch:SetPoint("LEFT", btn, "LEFT", 6, 0)
+        swatch:SetTexture(FLAT_TEXTURE)
+        swatch:SetVertexColor(item.r, item.g, item.b, 1)
+        btn.swatch = swatch
+        btn.isCustom = item.isCustom
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
+        lbl:SetPoint("LEFT", swatch, "RIGHT", 4, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.lcKey = item.key
+
+        btn:SetScript("OnClick", function()
+            if item.isCustom then
+                local curC = ForeverPlatesDB.levelCustomColor or { r = 0.00, g = 0.85, b = 1.00 }
+                OpenCustomColorPicker(curC.r, curC.g, curC.b, function(r, g, b)
+                    ForeverPlatesDB.levelCustomColor = { r = r, g = g, b = b }
+                    ForeverPlatesDB.levelFontColor = "CUSTOM"
+                    ForeverPlatesDB.colorLevelByDifficulty = false
+                    UpdateLevelColorHighlights()
+                    FP.RefreshAllPlates()
+                    UpdateStatusText()
+                end)
+            else
+                ForeverPlatesDB.levelFontColor = item.key
+                ForeverPlatesDB.colorLevelByDifficulty = false
+                UpdateLevelColorHighlights()
+                FP.RefreshAllPlates()
+                UpdateStatusText()
+            end
+        end)
+
+        table.insert(levelColorButtons, btn)
+    end
+
+    levelConCheckbox = CreateCheckbox(contentEnemy, "Color Level by Mob Difficulty / Con (Gray / Green / Yellow / Orange / Red)", "colorLevelByDifficulty", -530, function()
+        UpdateLevelColorHighlights()
+        FP.RefreshAllPlates()
+    end)
+
     -- Section 6: Health Text Position & Format
     local posHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     posHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     posHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    posHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -450)
+    posHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -562)
     posHeader:SetText("HEALTH TEXT POSITION & FORMAT")
 
     local posButtons = {}
@@ -913,7 +1060,7 @@ function FP.CreateGUI()
     local pBtnW = 153
     for i, item in ipairs(positions) do
         local posX = 10 + ((i - 1) * (pBtnW + 9))
-        local posY = -470
+        local posY = -582
 
         local btn = CreateFrame("Button", nil, contentEnemy)
         btn:SetSize(pBtnW, 24)
@@ -971,7 +1118,7 @@ function FP.CreateGUI()
     local fBtnW = 91
     for i, item in ipairs(formats) do
         local posX = 10 + ((i - 1) * (fBtnW + 5))
-        local posY = -502
+        local posY = -614
 
         local btn = CreateFrame("Button", nil, contentEnemy)
         btn:SetSize(fBtnW, 24)
@@ -1006,10 +1153,10 @@ function FP.CreateGUI()
     local toggleHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     toggleHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     toggleHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    toggleHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -540)
+    toggleHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -652)
     toggleHeader:SetText("VISUAL FEATURES & COMBAT FEEDBACK")
 
-    local cbStartY = -562
+    local cbStartY = -674
     local cbSpacing = 24
 
     CreateCheckbox(contentEnemy, "Cyan Target Glow (Outer Border Highlight)", "showTargetGlow", cbStartY)
@@ -1045,41 +1192,37 @@ function FP.CreateGUI()
         FP.RefreshAllPlates()
     end)
     CreateCheckbox(contentEnemy, "Clamp Boss Nameplates to Screen Bounds", "clampTargetToScreen", cbStartY - (cbSpacing * 16), function(checked)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateTargetRadialPosition", checked and "1" or "0")
-            end
-        end)
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateTargetRadialPosition", checked and "1" or "0")
+        end
     end)
     CreateCheckbox(contentEnemy, "Lock Distance Scale (Crisp 1px Borders at all Ranges)", "lockDistanceScale", cbStartY - (cbSpacing * 17), function(checked)
-        pcall(function()
-            if SetCVar then
-                if checked then
-                    SetCVar("nameplateMinScale", "1.0")
-                    SetCVar("nameplateMaxScale", "1.0")
-                else
-                    SetCVar("nameplateMinScale", "0.8")
-                    SetCVar("nameplateMaxScale", "1.0")
-                end
+        if FP.SafeSetCVar then
+            if checked then
+                FP.SafeSetCVar("nameplateMinScale", "1.0")
+                FP.SafeSetCVar("nameplateMaxScale", "1.0")
+            else
+                FP.SafeSetCVar("nameplateMinScale", "0.8")
+                FP.SafeSetCVar("nameplateMaxScale", "1.0")
             end
-        end)
+        end
     end)
     CreateCheckbox(contentEnemy, "Enable Click-to-Target on Mob Nameplates", "enableClickTargeting", cbStartY - (cbSpacing * 18), function(checked)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateEnemyClickThrough", checked and "0" or "1")
-            end
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateEnemyClickThrough", checked and "0" or "1")
+        end
+        if not (InCombatLockdown and InCombatLockdown()) then
             if C_NamePlate and C_NamePlate.SetNamePlateEnemyClickThrough then
-                C_NamePlate.SetNamePlateEnemyClickThrough(not checked)
+                pcall(C_NamePlate.SetNamePlateEnemyClickThrough, not checked)
             end
-        end)
+        else
+            FP.pendingCVarSync = true
+        end
     end)
     CreateCheckbox(contentEnemy, "Stack Nameplates When Fighting Multiple Mobs", "stackingNameplates", cbStartY - (cbSpacing * 19), function(checked)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateMotion", checked and "1" or "0")
-            end
-        end)
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateMotion", checked and "1" or "0")
+        end
     end)
     CreateCheckbox(contentEnemy, "Smart Multi-Mob Stacking (Auto-Stack in Combat & Dungeons)", "smartMultiMobStacking", cbStartY - (cbSpacing * 20))
 
@@ -1087,91 +1230,95 @@ function FP.CreateGUI()
     local sliderHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     sliderHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     sliderHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1080)
+    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1192)
     sliderHeader:SetText("ENEMY DIMENSIONS, SCALING & DEPTH")
 
     -- Row 1: Health Bar Dimensions
-    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -1104, function()
+    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -1216, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -1104, function()
+    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -1216, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
 
     -- Row 2: Target Arrow Sizing & Thickness
-    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -1154, function()
+    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -1266, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -1154, function()
+    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -1266, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
 
     -- Row 3: Typography
-    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1204, function()
+    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1316, function()
         FP.RefreshAllFonts()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1204, function()
+    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1316, function()
         FP.RefreshAllPlates()
     end)
 
     -- Row 4: Opacity & Target Scale
-    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1254)
-    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1254)
+    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1366)
+    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1366)
 
-    -- Row 5: Outline Thickness
-    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1304, function()
+    -- Row 5: Outline Thickness & Level Font Size
+    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1416, function()
         FP.RefreshAllOutlines()
         FP.RefreshAllPlates()
     end)
+    CreateSlider(contentEnemy, "Level Font Size", "levelFontSize", 8, 28, 1, "%s: %dpx", 256, -1416, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllFonts()
+        FP.RefreshAllPlates()
+        if FP.UpdateTestPlate and FP.testPlate and FP.testPlate:IsShown() then
+            FP.UpdateTestPlate()
+        end
+    end)
 
     -- Row 6: Level Text Nudge (Fine-tune text placement inside the unified level box)
-    CreateSlider(contentEnemy, "Level Text X Offset", "levelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -1354, function()
+    CreateSlider(contentEnemy, "Level Text X Offset", "levelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -1466, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Level Text Y Offset", "levelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -1354, function()
+    CreateSlider(contentEnemy, "Level Text Y Offset", "levelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -1466, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
 
     -- Row 7: Nameplate Stacking Separation (C++ Midnight 12.0 Engine)
-    CreateSlider(contentEnemy, "Vertical Stacking Gap", "stackingOverlapV", 0.80, 2.20, 0.05, "%s: %.2fx", 10, -1404, function(val)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateOverlapV", tostring(val))
-            end
-        end)
+    CreateSlider(contentEnemy, "Vertical Stacking Gap", "stackingOverlapV", 0.80, 2.20, 0.05, "%s: %.2fx", 10, -1516, function(val)
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateOverlapV", tostring(val))
+        end
     end)
-    CreateSlider(contentEnemy, "Horizontal Stacking Margin", "stackingOverlapH", 0.40, 1.60, 0.05, "%s: %.2fx", 256, -1404, function(val)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateOverlapH", tostring(val))
-            end
-        end)
+    CreateSlider(contentEnemy, "Horizontal Stacking Margin", "stackingOverlapH", 0.40, 1.60, 0.05, "%s: %.2fx", 256, -1516, function(val)
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateOverlapH", tostring(val))
+        end
     end)
 
     -- Section 9: Enemy Debuffs (Below Nameplate)
     local debuffHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     debuffHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     debuffHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    debuffHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1456)
+    debuffHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1568)
     debuffHeader:SetText("ENEMY DEBUFF DISPLAY & SIZING")
 
     local debuffSub = contentEnemy:CreateFontString(nil, "OVERLAY")
     debuffSub:SetFont(DEFAULT_FONT, 10, "")
     debuffSub:SetTextColor(0.65, 0.70, 0.75, 1)
-    debuffSub:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1474)
+    debuffSub:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1586)
     debuffSub:SetText("Positions enemy debuffs directly underneath the health bar (or cast bar), flush with the left border.")
 
     -- Test Enemy Plate Toggle Button
     local testBtn = CreateFrame("Button", nil, contentEnemy)
     testBtn:SetSize(220, 26)
-    testBtn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1496)
+    testBtn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1608)
     local testBtnBg = testBtn:CreateTexture(nil, "BACKGROUND")
     testBtnBg:SetAllPoints(testBtn)
     testBtnBg:SetTexture(FLAT_TEXTURE)
@@ -1195,53 +1342,53 @@ function FP.CreateGUI()
     end)
 
     -- Row 1: Size & Outline Thickness
-    CreateSlider(contentEnemy, "Enemy Debuff Size", "debuffSize", 10, 40, 1, "%s: %dpx", 10, -1534, function()
+    CreateSlider(contentEnemy, "Enemy Debuff Size", "debuffSize", 10, 40, 1, "%s: %dpx", 10, -1646, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Outline Thickness", "debuffOutlineThickness", 1, 5, 1, "%s: %dpx", 256, -1534, function()
+    CreateSlider(contentEnemy, "Debuff Outline Thickness", "debuffOutlineThickness", 1, 5, 1, "%s: %dpx", 256, -1646, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 2: X Offset & Y Offset
-    CreateSlider(contentEnemy, "Debuff X Offset (Nudge Left/Right)", "debuffXOffset", -40, 40, 1, "%s: %+dpx", 10, -1584, function()
+    CreateSlider(contentEnemy, "Debuff X Offset (Nudge Left/Right)", "debuffXOffset", -40, 40, 1, "%s: %+dpx", 10, -1696, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Y Offset (Nudge Up/Down)", "debuffYOffset", -30, 30, 1, "%s: %+dpx", 256, -1584, function()
+    CreateSlider(contentEnemy, "Debuff Y Offset (Nudge Up/Down)", "debuffYOffset", -30, 30, 1, "%s: %+dpx", 256, -1696, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 3: Spacing & Timer Font Size
-    CreateSlider(contentEnemy, "Debuff Spacing", "debuffSpacing", 0, 12, 1, "%s: %dpx", 10, -1634, function()
+    CreateSlider(contentEnemy, "Debuff Spacing", "debuffSpacing", 0, 12, 1, "%s: %dpx", 10, -1746, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Timer Font Size", "debuffDurationFontSize", 6, 24, 1, "%s: %dpx", 256, -1634, function()
+    CreateSlider(contentEnemy, "Debuff Timer Font Size", "debuffDurationFontSize", 6, 24, 1, "%s: %dpx", 256, -1746, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 4: Timer X & Y Offsets
-    CreateSlider(contentEnemy, "Debuff Timer X Offset", "debuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -1684, function()
+    CreateSlider(contentEnemy, "Debuff Timer X Offset", "debuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -1796, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Timer Y Offset", "debuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -1684, function()
+    CreateSlider(contentEnemy, "Debuff Timer Y Offset", "debuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -1796, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Wrap Checkbox
-    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1728, function()
+    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1840, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Player Debuffs Only Checkbox
-    CreateCheckbox(contentEnemy, "Only Show My Debuffs in Group / Raid", "onlyShowPlayerDebuffs", -1752, function()
+    CreateCheckbox(contentEnemy, "Only Show My Debuffs in Group / Raid", "onlyShowPlayerDebuffs", -1864, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
@@ -1258,14 +1405,12 @@ function FP.CreateGUI()
     fToggleHeader:SetText("FRIENDLY PLAYER NAMEPLATES")
 
     CreateCheckbox(contentFriendly, "Show Friendly Player Nameplates (Class Colors & FP Bars)", "showFriendlyNameplates", -32, function(checked)
-        pcall(function()
-            if SetCVar then
-                SetCVar("nameplateShowFriends", checked and "1" or "0")
-            end
-        end)
+        if FP.SafeSetCVar then
+            FP.SafeSetCVar("nameplateShowFriends", checked and "1" or "0")
+        end
         FP.RefreshAllPlates()
         if InCombatLockdown and InCombatLockdown() then
-            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Friendly player plates updated. (If plates don't update immediately, please /reload after combat)")
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Friendly player plates queued and will apply immediately when combat ends.")
         end
     end)
 
@@ -1766,6 +1911,13 @@ function FP.CreateGUI()
         FP.RefreshAllPlates()
     end)
 
+    -- Row 2: Friendly Level Font Size
+    CreateSlider(contentFriendly, "Level Font Size", "friendlyLevelFontSize", 8, 28, 1, "%s: %dpx", 10, -1082, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllFonts()
+        FP.RefreshAllPlates()
+    end)
+
     ---------------------------------------------------------------------------
     -- TAB 3: CAST BAR (Blizzard Built-In Nameplate Castbar Customization)
     ---------------------------------------------------------------------------
@@ -1940,6 +2092,7 @@ function FP.CreateGUI()
         UpdateTargetColorHighlights()
         UpdateOutlineHighlights()
         UpdateNameColorHighlights()
+        UpdateLevelColorHighlights()
         UpdatePosHighlights()
         UpdateFmtHighlights()
         UpdatePinHighlights()
@@ -1999,6 +2152,7 @@ function FP.CreateGUI()
         UpdateTargetColorHighlights()
         UpdateOutlineHighlights()
         UpdateNameColorHighlights()
+        UpdateLevelColorHighlights()
         UpdatePosHighlights()
         UpdateFmtHighlights()
         UpdatePinHighlights()

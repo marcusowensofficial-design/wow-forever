@@ -83,8 +83,8 @@ local DEFAULTS = {
     enemyCastYOffset           = -4,
     enemyCastIconGap           = 0,        -- 0 = flush against cast bar
     enemyCastMatchHealthWidth  = true,
-    enemyCastFlushEdges        = true,     -- Align flush left-to-right with enemy nameplate
-    showEnemyCastIcon          = true,
+    enemyCastFlushEdges        = true,     -- Align flush left-to-right with enemy health bar
+    showEnemyCastIcon          = false,    -- No icon on enemy plate cast bars per design (flush with health bar)
     showEnemyCastTimer         = true,
     showEnemyCastSpell         = true,
     enemyCastFontSize          = 9,
@@ -282,6 +282,20 @@ local function LoadConfig()
             BetterCastBarsDB.outlineColorKey = ForeverPlatesCastBarsDB.outlineColorKey
             BetterCastBarsDB.outlineColor = ForeverPlatesCastBarsDB.outlineColor
             BetterCastBarsDB._configVersion = 5
+        end
+    end
+
+    -- Automatic migration v6: Flush alignment directly under health bar (no levelBox stretch, no left gap)
+    if ForeverPlatesCastBarsDB._configVersion == nil or ForeverPlatesCastBarsDB._configVersion < 6 then
+        ForeverPlatesCastBarsDB.showEnemyCastIcon = false
+        ForeverPlatesCastBarsDB.enemyCastMatchHealthWidth = true
+        ForeverPlatesCastBarsDB.enemyCastFlushEdges = true
+        ForeverPlatesCastBarsDB._configVersion = 6
+        if type(BetterCastBarsDB) == "table" then
+            BetterCastBarsDB.showEnemyCastIcon = false
+            BetterCastBarsDB.enemyCastMatchHealthWidth = true
+            BetterCastBarsDB.enemyCastFlushEdges = true
+            BetterCastBarsDB._configVersion = 6
         end
     end
 
@@ -1031,19 +1045,25 @@ local function ApplyEnemyCastBarLayout(unitFrame, obj)
     bar:ClearAllPoints()
     if ih then ih:ClearAllPoints() end
 
+    local isCustomWidth = (CFG.enemyCastMatchHealthWidth == false) and (CFG.enemyCastFlushEdges == false)
+
+    bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
+    if isCustomWidth then
+        bar:SetSize(w, h)
+    else
+        bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
+        bar:SetHeight(h)
+    end
+
     if showIcon and ih then
         local iconSize = h
-        ih:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
+        ih:SetPoint("RIGHT", bar, "LEFT", -gap, 0)
         ih:SetSize(iconSize, iconSize)
-
-        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff + iconSize + gap, yOff)
-        bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
-        bar:SetHeight(h)
+        if obj.activeCast and obj.activeCast.texture then
+            ih:Show()
+        end
     else
         if ih then ih:Hide() end
-        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
-        bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
-        bar:SetHeight(h)
     end
 
     bar:SetStatusBarTexture(BAR_TEXTURE)
@@ -2130,10 +2150,20 @@ local function ShowTestAll()
         nameStr:SetText("|cffff3b3bDefias Pillager|r")
         testMockPlate.nameStr = nameStr
 
-        -- Unit Level
-        local lvlStr = testMockPlate:CreateFontString(nil, "OVERLAY")
+        -- Unit Level (Dedicated Level Box frame matching ForeverPlates)
+        local lbox = CreateFrame("Frame", nil, testMockPlate)
+        lbox:SetSize(22, 16)
+        lbox:SetPoint("LEFT", testMockPlate, "RIGHT", 4, 0)
+        local lbg = lbox:CreateTexture(nil, "BACKGROUND")
+        lbg:SetAllPoints()
+        lbg:SetTexture(FLAT_TEXTURE)
+        lbg:SetVertexColor(0.08, 0.08, 0.09, 0.95)
+        lbox.border = CreatePixelBorder(lbox, 1, tbr, tbg, tbb, 1.0)
+        testMockPlate.levelBox = lbox
+
+        local lvlStr = lbox:CreateFontString(nil, "OVERLAY")
         lvlStr:SetFont(GetFontPath(CFG.font), 9, "OUTLINE")
-        lvlStr:SetPoint("BOTTOMRIGHT", testMockPlate, "TOPRIGHT", -2, 2)
+        lvlStr:SetPoint("CENTER", lbox, "CENTER", 0, 0)
         lvlStr:SetText("|cffffff0018|r")
         testMockPlate.lvlStr = lvlStr
 
@@ -2229,23 +2259,26 @@ local function ShowTestAll()
     local ol = CFG.fontOutline or "OUTLINE"
     local showIcon = (CFG.showEnemyCastIcon ~= false)
 
+    local isCustomWidth = (CFG.enemyCastMatchHealthWidth == false) and (CFG.enemyCastFlushEdges == false)
+
     testFloatingBar:ClearAllPoints()
     testFloatingBar.iconHolder:ClearAllPoints()
 
+    testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
+    if isCustomWidth then
+        testFloatingBar:SetSize(w, h)
+    else
+        testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
+        testFloatingBar:SetHeight(h)
+    end
+
     if showIcon then
         local iconSize = h
-        testFloatingBar.iconHolder:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
+        testFloatingBar.iconHolder:SetPoint("RIGHT", testFloatingBar, "LEFT", -gap, 0)
         testFloatingBar.iconHolder:SetSize(iconSize, iconSize)
         testFloatingBar.iconHolder:Show()
-
-        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff + iconSize + gap, yOff)
-        testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
-        testFloatingBar:SetHeight(h)
     else
         testFloatingBar.iconHolder:Hide()
-        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
-        testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
-        testFloatingBar:SetHeight(h)
     end
 
     local bc = CFG.barBgColor or {0, 0, 0, 0.95}
@@ -2261,6 +2294,12 @@ local function ShowTestAll()
     testFloatingBar.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
     testFloatingBar.border:SetShown(showB)
     testFloatingBar.iconBorder:SetShown(showB and showIcon)
+
+    if testMockPlate.levelBox and testMockPlate.levelBox.border then
+        testMockPlate.levelBox.border:SetThickness(thick)
+        testMockPlate.levelBox.border:SetColor(b_r, b_g, b_b, 1.0)
+        testMockPlate.levelBox.border:SetShown(showB)
+    end
 
     testFloatingBar.txt:SetFont(fontPath, fs, ol)
     testFloatingBar.txt:SetText("Shadow Bolt")

@@ -259,7 +259,9 @@ end
 -- ============================================================
 
 function FDJ.IsSecret(v)
-    return type(issecretvalue) == "function" and issecretvalue(v)
+    if type(issecretvalue) == "function" and issecretvalue(v) then return true end
+    if type(canaccessvalue) == "function" and not canaccessvalue(v) then return true end
+    return false
 end
 
 function FDJ.FormatNumber(value)

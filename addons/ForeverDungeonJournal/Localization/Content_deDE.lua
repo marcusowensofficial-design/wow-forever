@@ -67,6 +67,7 @@ FDJ.ContentLocales.deDE.quests = {
     [96394] = {
         ["name"] = "Die ruhelosen Toten",
         ["objective"] = "Tötet 15 wütende Erscheinungen und 10 gequälte Seelen und bringt anschließend Anvilmars Geist zur Ruhe.",
+        ["pickup"] = "Afadra Dunwall, oben in Alt-Eisenschmiede, außerhalb des Dungeons",
     },
     [96393] = {
         ["name"] = "Vorstoß ins alte Eisenschmiede",
@@ -382,9 +383,9 @@ FDJ.ContentLocales.deDE.quests = {
     },
     [92749] = {
         ["name"] = "Ein Dynamitplan",
-        ["objective"] = "Beschafft 10 grobes Dynamit und kehrt anschließend zu Sprite Jumpsprocket in Sturmwind zurück.",
-        ["description"] = "Grobes Dynamit kann hergestellt, gehandelt oder im Auktionshaus gekauft werden.",
-        ["note"] = "Grobes Dynamit kann hergestellt, gehandelt oder im Auktionshaus gekauft werden.",
+        ["objective"] = "Beschafft 10 raues Dynamit und kehrt anschließend zu Sprite Jumpsprocket in Sturmwind zurück.",
+        ["description"] = "Raues Dynamit kann hergestellt, gehandelt oder im Auktionshaus gekauft werden.",
+        ["note"] = "Raues Dynamit kann hergestellt, gehandelt oder im Auktionshaus gekauft werden.",
     },
     [92750] = {
         ["name"] = "Fernzündung",
@@ -419,7 +420,7 @@ FDJ.ContentLocales.deDE.quests = {
     [3765] = {
         ["name"] = "Die Verderbnis in der Ferne",
         ["objective"] = "Reist zu Gershala Nachtraunen in Auberdine an der Dunkelküste.",
-        ["description"] = "Allianz-Zubringerquest, die vor „Die Verderbnis erforschen“ abgeschlossen werden muss.",
+        ["note"] = "Einführungsschritt, der zu „Die Verderbnis erforschen“ führt.",
     },
 }
 

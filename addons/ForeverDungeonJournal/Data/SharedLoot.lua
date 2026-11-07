@@ -31,6 +31,7 @@ local SHARED = {
         [BFD] = { "Gelihast", "Twilight Lord Kelris", "Old Serra'kis", "Aku'mai" },
         [STOCKS] = { "Bazil Thredd", "Dextren Ward" },
         [RFK] = { "Charlga Razorflank" },
+        [SMGY] = { "Azshir the Sleepless" },
     } },
     { 252514, "Stormrider's Leather Helm", {
         [BFD] = { "Gelihast", "Aku'mai" },

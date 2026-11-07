@@ -64,6 +64,7 @@ FDJ.ContentLocales.ptBR.quests = {
     [96394] = {
         ["name"] = "Os mortos inquietos",
         ["objective"] = "Mate 15 aparições enfurecidas e 10 almas atormentadas e, depois, dê descanso ao espírito de Anvilmar.",
+        ["pickup"] = "Afadra Dunwall, no alto da Velha Altaforja, fora da masmorra",
     },
     [96393] = {
         ["name"] = "Incursão na antiga Altaforja",
@@ -379,9 +380,9 @@ FDJ.ContentLocales.ptBR.quests = {
     },
     [92749] = {
         ["name"] = "Um plano com dinamite",
-        ["objective"] = "Obtenha 10 Dinamites Brutas e volte para Sprite Jumpsprocket em Ventobravo.",
-        ["description"] = "A Dinamite Bruta pode ser fabricada, negociada ou comprada na Casa de Leilões.",
-        ["note"] = "A Dinamite Bruta pode ser fabricada, negociada ou comprada na Casa de Leilões.",
+        ["objective"] = "Obtenha 10 Dinamites Grosseiras e volte para Sprite Jumpsprocket em Ventobravo.",
+        ["description"] = "A Dinamite Grosseira pode ser fabricada, negociada ou comprada na Casa de Leilões.",
+        ["note"] = "A Dinamite Grosseira pode ser fabricada, negociada ou comprada na Casa de Leilões.",
     },
     [92750] = {
         ["name"] = "Detonação à distância",
@@ -416,7 +417,7 @@ FDJ.ContentLocales.ptBR.quests = {
     [3765] = {
         ["name"] = "A Corrupção Distante",
         ["objective"] = "Vá até Gershala Sussurrante da Noite em Auberdine, Costa Negra.",
-        ["description"] = "Missão introdutória da Aliança que deve ser concluída antes de “Pesquisando a corrupção”.",
+        ["note"] = "Etapa introdutória que leva a “Pesquisando a corrupção”.",
     },
 }
 

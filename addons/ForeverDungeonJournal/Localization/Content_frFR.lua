@@ -64,6 +64,7 @@ FDJ.ContentLocales.frFR.quests = {
     [96394] = {
         ["name"] = "Les morts sans repos",
         ["objective"] = "Tuez 15 apparitions enragées et 10 âmes tourmentées, puis apaisez l’esprit d’Anvilmar.",
+        ["pickup"] = "Afadra Dunwall, en haut de la Vieille Forgefer, à l’extérieur du donjon",
     },
     [96393] = {
         ["name"] = "Incursion dans l’ancienne Forgefer",
@@ -115,8 +116,8 @@ FDJ.ContentLocales.frFR.quests = {
         ["note"] = "Le choix d’objet est accordé lors de la quête suivante « Tourment sans fin » à Fossoyeuse.",
     },
     [92401] = {
-        ["name"] = "Une requête terrifiée",
-        ["objective"] = "Enquêtez sur la disparition d’Edward Heartweaver dans les Ruines de Lordaeron.",
+        ["name"] = "Une requête apeurée",
+        ["objective"] = "Enquêtez sur la disparition d’Edward Tissecœur dans les ruines de Lordaeron.",
     },
     [95195] = {
         ["name"] = "Insigne ensanglanté",
@@ -379,9 +380,9 @@ FDJ.ContentLocales.frFR.quests = {
     },
     [92749] = {
         ["name"] = "Un plan à la dynamite",
-        ["objective"] = "Récupérez 10 dynamites grossières puis retournez voir Sprite Jumpsprocket à Hurlevent.",
-        ["description"] = "La dynamite grossière peut être fabriquée, échangée ou achetée à l’hôtel des ventes.",
-        ["note"] = "La dynamite grossière peut être fabriquée, échangée ou achetée à l’hôtel des ventes.",
+        ["objective"] = "Récupérez 10 dynamites basiques puis retournez voir Sprite Jumpsprocket à Hurlevent.",
+        ["description"] = "La dynamite basique peut être fabriquée, échangée ou achetée à l’hôtel des ventes.",
+        ["note"] = "La dynamite basique peut être fabriquée, échangée ou achetée à l’hôtel des ventes.",
     },
     [92750] = {
         ["name"] = "Détonation à distance",
@@ -416,7 +417,7 @@ FDJ.ContentLocales.frFR.quests = {
     [3765] = {
         ["name"] = "La corruption au loin",
         ["objective"] = "Rendez-vous auprès de Gershala Murmenuit à Auberdine, sur Sombrivage.",
-        ["description"] = "Quête d’introduction de l’Alliance à terminer avant « Recherches sur la corruption ».",
+        ["note"] = "Étape d’introduction menant à « Recherches sur la corruption ».",
     },
 }
 

@@ -69,8 +69,29 @@ local HOWTO = {
             "3. 把達拉然典籍帶進達拉然城來召喚 Lyn the Ignored。",
         },
     },
+    [9240] = { -- Sacred Mallet (Gahz'rilla)
+        enUS = {
+            "1. Defeat Qiaga the Keeper atop the Altar of Zul in the Hinterlands (49, 68) to loot the Unfired Sacred Mallet.",
+            "2. Bring the mallet to the altar atop Jintha'Alor in the Hinterlands (59, 79) and use it to craft the Sacred Mallet.",
+            "3. Strike the Gong of Zul'Farrak inside Zul'Farrak to summon Gahz'rilla.",
+        },
+    },
+    [10465] = { -- Egg of Hakkar (Avatar of Hakkar)
+        enUS = {
+            "1. Complete the Screeching Spirits quest chain in Feralas and Tanaris with Yeh'kinya at Steamwheedle Port.",
+            "2. Receive the Egg of Hakkar from Yeh'kinya for the quest 'The God Hakkar'.",
+            "3. Activate the Egg of Hakkar inside the Hall of Masks in Sunken Temple and extinguish the Eternal Flames to summon the Avatar of Hakkar.",
+        },
+    },
+    [13544] = { -- Blood of Innocents (Kirtonos the Herald)
+        enUS = {
+            "1. Complete Eva Sarkhoff's quest outside Scholomance ('Doctor Theolen Krastinov, the Butcher').",
+            "2. Defeat Doctor Theolen Krastinov inside Scholomance and loot the Blood of Innocents.",
+            "3. Return to Eva Sarkhoff to receive the Brazier of Beckoning, then light it on the balcony to summon Kirtonos the Herald.",
+        },
+    },
 }
-local FALLBACK_NAMES = { [275989] = "Tome of Dalaran" }
+local FALLBACK_NAMES = { [275989] = "Tome of Dalaran", [9240] = "Sacred Mallet", [10465] = "Egg of Hakkar", [13544] = "Blood of Innocents" }
 
 local function Lang()
     local lang = FDJ.GetLanguage and FDJ.GetLanguage() or "enUS"
@@ -126,6 +147,7 @@ local function Create(frame)
         local _, link = ItemData(self.itemID)
         local ok = pcall(GameTooltip.SetHyperlink, GameTooltip, link or ("item:" .. self.itemID))
         if not ok then GameTooltip:AddLine(ItemData(self.itemID), 0, 0.44, 0.87) end
+        if ok and FDJ.AddUnseenItemHint then FDJ.AddUnseenItemHint(GameTooltip) end
         local steps = Pick(HOWTO[self.itemID])
         if steps then
             GameTooltip:AddLine(" ")

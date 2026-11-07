@@ -16,6 +16,14 @@ local function Clamp(v)
     return v
 end
 
+-- Popups that are not children of the journal (the Favourites window lives on
+-- UIParent so it can stay open on its own) follow the journal's size here.
+function FDJ.SyncPopupScale()
+    local frame = _G.ForeverDungeonJournalFrame
+    local fav = _G.ForeverDungeonJournalFavourites
+    if frame and fav and fav.SetScale then fav:SetScale(frame:GetScale() or 1) end
+end
+
 function FDJ.SetJournalScale(scale)
     local frame = _G.ForeverDungeonJournalFrame
     if not frame then return end
@@ -23,6 +31,7 @@ function FDJ.SetJournalScale(scale)
     ForeverDungeonJournalDB = ForeverDungeonJournalDB or {}
     ForeverDungeonJournalDB.scale = scale
     frame:SetScale(scale)
+    FDJ.SyncPopupScale()
     return scale
 end
 
@@ -67,6 +76,7 @@ local function Setup()
         -- The window grows from its centre, so the corner moves half as far as it grows.
         local scale = Clamp(self.startScale + 2 * (x - self.startX) / self.unit)
         frame:SetScale(scale)
+        FDJ.SyncPopupScale()
     end)
     grip:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")

@@ -23,6 +23,10 @@ local function Settings()
     db.recipes = false
     if db.classOnly == nil then db.classOnly = false end
     if type(db.stats) ~= "table" then db.stats = {} end
+    -- Spell Crit / Spell Hit were folded into Critical Strike / Hit.
+    if db.stats.SPELLCRIT then db.stats.CRIT = true end
+    if db.stats.SPELLHIT then db.stats.HIT = true end
+    db.stats.SPELLCRIT, db.stats.SPELLHIT, db.stats.BLOCK = nil, nil, nil
     if db.matchAll == nil then db.matchAll = true end
     if db.enabled == nil then db.enabled = false end
     if type(db.minLevel) ~= "number" or db.minLevel <= 0 then db.minLevel = nil end
@@ -34,7 +38,36 @@ local function Settings()
     for key in pairs(db.armorTypes) do
         if key ~= "Cloth" and key ~= "Leather" and key ~= "Mail" and key ~= "Plate" then db.armorTypes[key] = nil end
     end
+    -- Weapon types ticked in the Weapon Filter (none ticked = no filter).
+    if type(db.weaponTypes) ~= "table" then db.weaponTypes = {} end
+    for _, kind in ipairs({ "Sword", "Axe", "Mace" }) do
+        if db.weaponTypes[kind] then
+            db.weaponTypes["1H " .. kind], db.weaponTypes["2H " .. kind] = true, true
+        end
+    end
+    for key in pairs(db.weaponTypes) do
+        if FDJ.LOOT_FILTER_WEAPON_SET and not FDJ.LOOT_FILTER_WEAPON_SET[key] then db.weaponTypes[key] = nil end
+    end
+    -- Spell schools ticked under Spell Damage (none ticked = any spell damage).
+    if type(db.schools) ~= "table" then db.schools = {} end
+    for key in pairs(db.schools) do
+        if key ~= "FIRE" and key ~= "FROST" and key ~= "NATURE" and key ~= "SHADOW" and key ~= "ARCANE" and key ~= "HOLY" then db.schools[key] = nil end
+    end
+    -- Resistances ticked in the Resistance Filter (none ticked = no filter).
+    if type(db.resists) ~= "table" then db.resists = {} end
+    for key in pairs(db.resists) do
+        if key ~= "FIRE" and key ~= "FROST" and key ~= "NATURE" and key ~= "SHADOW" and key ~= "ARCANE" then db.resists[key] = nil end
+    end
     return db
+end
+
+-- The resistance filter is switched off for now (set to true to bring back
+-- the drop-down next to Defense).
+local RESIST_FILTER = true
+
+local function AnyResistTicked(db)
+    if not RESIST_FILTER then return false end
+    return next(db.resists or {}) ~= nil
 end
 
 local function AnyArmorTicked(db)
@@ -46,9 +79,17 @@ end
 -- Only armor pieces of another type are filtered out; weapons, shields,
 -- rings, necks, trinkets and cloaks have no armor type and always stay.
 local ARMOR_TYPES = { "Cloth", "Leather", "Mail", "Plate" }
+-- Cloaks are stored as "Back, Cloth" but every armor type wears them.
+local function IsCloak(item)
+    local slot = type(item) == "table" and item[3]
+    if type(slot) ~= "string" then return false end
+    local first = slot:match("^%s*([^,]+)")
+    return first ~= nil and first:gsub("%s+$", "") == "Back"
+end
 local function ArmorType(item)
     local slot = type(item) == "table" and item[3]
     if type(slot) ~= "string" then return nil end
+    if IsCloak(item) then return nil end
     for token in slot:gmatch("([^,]+)") do
         token = token:gsub("^%s+", ""):gsub("%s+$", "")
         for _, armor in ipairs(ARMOR_TYPES) do
@@ -58,6 +99,42 @@ local function ArmorType(item)
     return nil
 end
 FDJ.LootFilterSettings = Settings
+
+-- ------------------------------------------------------------ weapon type
+-- Weapon filter: ticked weapon types (shields included). While any is ticked,
+-- weapons of other types are hidden, and so is everything that is not a
+-- weapon unless the Armor filter is also set and the item is armor of a
+-- ticked type (e.g. Leather + Dagger for a rogue).
+-- Swords, axes and maces come one- and two-handed; the other types only one way.
+local WEAPON_TYPES = { "1H Sword", "2H Sword", "1H Axe", "2H Axe", "1H Mace", "2H Mace", "Dagger", "Fist Weapon", "Polearm", "Staff", "Bow", "Gun", "Crossbow", "Wand", "Thrown", "Shield" }
+local HANDED = { Sword = true, Axe = true, Mace = true }
+local WEAPON_SET = {}
+for _, w in ipairs(WEAPON_TYPES) do WEAPON_SET[w] = true end
+FDJ.LOOT_FILTER_WEAPON_SET = WEAPON_SET
+local function WeaponType(item)
+    local slot = type(item) == "table" and item[3]
+    if type(slot) ~= "string" then return nil end
+    local first, kind = slot:match("^([^,]+),%s*(.+)$")
+    if not first then first = slot end
+    first = first:gsub("%s+$", "")
+    if first == "Thrown" then return "Thrown" end
+    if kind and first ~= "Projectile" then
+        kind = kind:gsub("%s+$", "")
+        if HANDED[kind] then return (first == "Two-Hand" and "2H " or "1H ") .. kind end
+        if WEAPON_SET[kind] then return kind end
+    end
+    return nil
+end
+-- Menu label: "One-Hand Sword", "Dagger"... in the journal language.
+local function WeaponLabel(key)
+    local loc = FDJ.LocalizeItemSlot or function(t) return t end
+    local hand, kind = key:match("^(%d)H (.+)$")
+    if hand then return loc(hand == "2" and "Two-Hand" or "One-Hand") .. " " .. loc(kind) end
+    return loc(key)
+end
+local function AnyWeaponTicked(db)
+    return next(db.weaponTypes or {}) ~= nil
+end
 
 -- ---------------------------------------------------------------- recipes
 -- Blueprints are few and distinctive: on boss pages they stay in the main
@@ -179,6 +256,23 @@ FDJ.LootFilterClassCanUse = ClassCanUse
 -- Read from the item tooltip. Primary stats use the client's own stat names,
 -- so they work in every language; the rest match the English tooltip wording.
 local function Has(line, text) return line:find(text, 1, true) ~= nil end
+-- Schools ticked under Spell Damage while a filter runs (nil = any school).
+local schoolsWanted
+local SCHOOL_WORDS = { FIRE = "fire", FROST = "frost", NATURE = "nature", SHADOW = "shadow", ARCANE = "arcane", HOLY = "holy" }
+local SCHOOL_ORDER = { "FIRE", "FROST", "NATURE", "SHADOW", "ARCANE", "HOLY" }
+local function SpellDamageLine(l)
+    if Has(l, "increases healing done") then return false end
+    local generic = Has(l, "increases damage and healing done") or (Has(l, "increases damage done") and Has(l, "spell")) or Has(l, "spell damage") or Has(l, "spell power")
+    if not generic then return false end
+    -- "Increases damage done by Fire spells and effects": one school only.
+    local lineSchool
+    for key, word in pairs(SCHOOL_WORDS) do
+        if Has(l, word .. " spell") or Has(l, word .. " damage") then lineSchool = key break end
+    end
+    if not schoolsWanted then return true end
+    -- With schools ticked, only "+X <school> damage" lines of those schools count.
+    return lineSchool ~= nil and schoolsWanted[lineSchool] == true
+end
 local STATS = {
     { key = "STR", global = "SPELL_STAT1_NAME", label = "Strength" },
     { key = "AGI", global = "SPELL_STAT2_NAME", label = "Agility" },
@@ -188,21 +282,28 @@ local STATS = {
     -- Healing only counts lines that lead with healing; spell damage lines
     -- ("Increases damage and healing done by magical spells") are Spell Damage.
     { key = "HEAL", test = function(l) return Has(l, "increases healing done") end },
-    { key = "SPELL", test = function(l)
-        if Has(l, "increases healing done") then return false end
-        return Has(l, "increases damage and healing done") or (Has(l, "increases damage done") and Has(l, "spell")) or Has(l, "spell damage") or Has(l, "spell power")
-    end },
+    { key = "SPELL", test = SpellDamageLine },
     { key = "AP", test = function(l) return Has(l, "attack power") end },
-    { key = "CRIT", test = function(l) return Has(l, "critical strike") and not Has(l, "spell") end },
-    { key = "SPELLCRIT", test = function(l) return Has(l, "critical strike") and Has(l, "spell") end },
-    { key = "HIT", test = function(l) return Has(l, "chance to hit") end },
+    -- WoW Forever merged spell and melee hit/crit into one stat each.
+    { key = "CRIT", test = function(l) return Has(l, "critical strike") end },
+    { key = "HIT", test = function(l) return Has(l, "chance to hit") or Has(l, "hit rating") end },
     { key = "DEF", test = function(l) return Has(l, "defense") end },
+    -- "Restores 5 mana per 5 sec." (some items say "every 5 sec").
+    { key = "MP5", tip = "LF_STAT_MP5_TIP", test = function(l) return Has(l, "mana per 5") or Has(l, "mana every 5") end },
+    -- "Restores 6 health per 5 sec." / "health every 5 sec."
+    { key = "HP5", tip = "LF_STAT_HP5_TIP", test = function(l) return Has(l, "health per 5") or Has(l, "health every 5") end },
 }
 FDJ.LOOT_FILTER_STATS = STATS
 
 local function StatLabel(stat)
     -- Use the journal language (it can differ from the client language).
-    return L("LF_STAT_" .. stat.key)
+    local text = L("LF_STAT_" .. stat.key)
+    if stat.key == "SPELL" then
+        local n = 0
+        for _ in pairs(Settings().schools or {}) do n = n + 1 end
+        if n > 0 then text = text .. " (" .. n .. ")" end
+    end
+    return text
 end
 
 local scanTip
@@ -260,6 +361,8 @@ local function HasAnyStat(item, wanted, matchAll)
     -- frame beforehand (WarmTooltips), so one click cannot run too long.
     local text = TooltipText(id, FDJ.lootFilterStrict)
     if not text then return not FDJ.lootFilterStrict end -- unknown yet: keep on boss pages, wait in the results list
+    local schools = Settings().schools
+    schoolsWanted = (schools and next(schools)) and schools or nil
     local found = false
     for _, stat in ipairs(STATS) do
         if wanted[stat.key] then
@@ -277,6 +380,43 @@ end
 local function AnyStatWanted(db)
     for _, on in pairs(db.stats) do if on then return true end end
     return false
+end
+
+-- ------------------------------------------------------------ resistances
+-- Matched on the tooltip with the client's own resistance names (so every
+-- client language works) plus the English wording. "+X All Resistances"
+-- counts for every school.
+local RESISTS = {
+    { key = "FIRE",   global = "RESISTANCE2_NAME", label = "fire resistance" },
+    { key = "NATURE", global = "RESISTANCE3_NAME", label = "nature resistance" },
+    { key = "FROST",  global = "RESISTANCE4_NAME", label = "frost resistance" },
+    { key = "SHADOW", global = "RESISTANCE5_NAME", label = "shadow resistance" },
+    { key = "ARCANE", global = "RESISTANCE6_NAME", label = "arcane resistance" },
+}
+local RESIST_ORDER = { "FIRE", "FROST", "NATURE", "SHADOW", "ARCANE" }
+
+local function HasResist(item, wanted)
+    local id = item and item[1]
+    if not id or id <= 0 then return false end
+    local text = TooltipText(id, FDJ.lootFilterStrict)
+    if not text then return not FDJ.lootFilterStrict end
+    -- The item must have every ticked school. Only real resistance lines
+    -- ("+10 Fire Resistance") count; proc text such as "deals 50 Fire
+    -- damage" does not. "+X All Resistances" covers every school.
+    local found = {}
+    for _, line in ipairs(text) do
+        if line:find("^%+%s*%d") then
+            if line:find("all resistances", 1, true) then return true end
+            for _, res in ipairs(RESISTS) do
+                local name = type(_G[res.global]) == "string" and string.lower(_G[res.global]) or nil
+                if (name and line:find(name, 1, true)) or line:find(res.label, 1, true) then found[res.key] = true end
+            end
+        end
+    end
+    for key in pairs(wanted) do
+        if not found[key] then return false end
+    end
+    return true
 end
 
 -- ----------------------------------------------------------------- filter
@@ -337,7 +477,9 @@ function FDJ.FilterBossLoot(boss)
     local wantStats = on and AnyStatWanted(db)
     local minLevel = on and db.minLevel or nil
     local armor = on and AnyArmorTicked(db) and db.armorTypes or nil
-    if showRecipes and not classOnly and not wantStats and not minLevel and not armor then return boss end
+    local resists = on and AnyResistTicked(db) and db.resists or nil
+    local weapons = on and AnyWeaponTicked(db) and db.weaponTypes or nil
+    if showRecipes and not classOnly and not wantStats and not minLevel and not armor and not resists and not weapons then return boss end
     local shown = {}
     for _, item in ipairs(boss.loot) do
         local keep = true
@@ -348,6 +490,14 @@ function FDJ.FilterBossLoot(boss)
             if keep and armor then
                 local itemArmor = ArmorType(item)
                 if itemArmor and not armor[itemArmor] then keep = false end
+            end
+            if keep and weapons then
+                local itemWeapon = WeaponType(item)
+                if itemWeapon then
+                    if not weapons[itemWeapon] then keep = false end
+                elseif not (armor and (ArmorType(item) or IsCloak(item))) then
+                    keep = false
+                end
             end
             if keep and minLevel then
                 local required
@@ -362,6 +512,7 @@ function FDJ.FilterBossLoot(boss)
                 end
             end
             if keep and wantStats and not HasAnyStat(item, db.stats, db.matchAll) then keep = false end
+            if keep and resists and not HasResist(item, resists) then keep = false end
         end
         if keep then shown[#shown + 1] = item end
     end
@@ -437,7 +588,7 @@ end
 -- --------------------------------------------------------------------- UI
 local function IsActive()
     local db = Settings()
-    return db.enabled and (db.recipes or db.classOnly or db.minLevel ~= nil or AnyArmorTicked(db) or AnyStatWanted(db))
+    return db.enabled and (db.recipes or db.classOnly or db.minLevel ~= nil or AnyArmorTicked(db) or AnyWeaponTicked(db) or AnyResistTicked(db) or AnyStatWanted(db))
 end
 
 local function UpdateButton(frame)
@@ -451,7 +602,7 @@ end
 
 local function Changed(frame)
     UpdateButton(frame)
-    if frame and frame.lootFilterResults and frame.lootFilterResults:IsShown() then FDJ.RefreshLootFilterResults(frame) end
+    if frame and frame.lootFilterResults and frame.lootFilterResults:IsShown() then FDJ.ShowLootFilterResults(frame) end
     if FDJ.RebuildLootFilterPage then FDJ.RebuildLootFilterPage(frame) end
     if FDJ.RefreshLootNow then FDJ.RefreshLootNow() end
 end
@@ -522,7 +673,8 @@ local function RefreshWindow(frame)
                 names[#names + 1] = (FDJ.LocalizeItemSlot and FDJ.LocalizeItemSlot(armor)) or armor
             end
         end
-        win.armor.text:SetText(#names > 0 and table.concat(names, ", ") or L("LF_ARMOR_ALL"))
+        -- Like Resistances: "Armor", or "Armor (2)" with ticks (nothing ticked = all).
+        win.armor.text:SetText(#names > 0 and (L("LF_ARMOR_BTN") .. " (" .. #names .. ")") or L("LF_ARMOR_BTN"))
         for _, option in ipairs(win.armor.options or {}) do
             local value = option.fdjArmor
             option.text:SetText(value and ((FDJ.LocalizeItemSlot and FDJ.LocalizeItemSlot(value)) or value) or L("LF_ARMOR_ALL"))
@@ -532,7 +684,47 @@ local function RefreshWindow(frame)
         end
         if not on and win.armor.menu then win.armor.menu:Hide() end
     end
-    for _, control in ipairs({ win.minBox, win.show, win.clear, win.armor }) do
+    if win.weapon then
+        local ticked = Settings().weaponTypes or {}
+        local names = {}
+        for _, w in ipairs(WEAPON_TYPES) do
+            if ticked[w] then names[#names + 1] = w end
+        end
+        win.weapon.text:SetText(#names > 0 and (L("LF_WEAPON_BTN") .. " (" .. #names .. ")") or L("LF_WEAPON_BTN"))
+        for _, option in ipairs(win.weapon.options or {}) do
+            local value = option.fdjWeapon
+            option.text:SetText(value and WeaponLabel(value) or L("LF_WEAPON_ALL"))
+            local checked
+            if value then checked = ticked[value] and true or false else checked = #names == 0 end
+            option.check:SetShown(checked)
+        end
+        if not on and win.weapon.menu then win.weapon.menu:Hide() end
+    end
+    if win.schoolArrow then
+        local ticked = Settings().schools or {}
+        for _, option in ipairs(win.schoolArrow.options) do
+            option.text:SetText(L("LF_RES_" .. option.fdjSchool))
+            option.check:SetShown(ticked[option.fdjSchool] and true or false)
+        end
+        win.schoolArrow:SetEnabled(on)
+        win.schoolArrow:SetAlpha(on and 1 or 0.45)
+        if not on then win.schoolArrow.menu:Hide() end
+    end
+    if win.resist then
+        local ticked = Settings().resists or {}
+        local names = {}
+        for _, key in ipairs(RESIST_ORDER) do
+            if ticked[key] then names[#names + 1] = L("LF_RES_" .. key) end
+        end
+        win.resist.text:SetText(#names > 0 and (L("LF_RESISTANCES") .. " (" .. #names .. ")") or L("LF_RESISTANCES"))
+        for _, option in ipairs(win.resist.options or {}) do
+            local value = option.fdjResist
+            option.text:SetText(L("LF_RES_" .. value))
+            option.check:SetShown(ticked[value] and true or false)
+        end
+        if not on and win.resist.menu then win.resist.menu:Hide() end
+    end
+    for _, control in ipairs({ win.minBox, win.show, win.clear, win.armor, win.weapon, win.resist }) do
         if control.SetEnabled then control:SetEnabled(on) end
         control:SetAlpha(on and 1 or 0.45)
     end
@@ -546,7 +738,7 @@ end
 local function CreateWindow(frame)
     local win = CreateFrame("Frame", "ForeverDungeonJournalLootFilter", frame, "BackdropTemplate")
     frame.lootFilterWindow = win
-    win:SetSize(390, 406)
+    win:SetSize(390, RESIST_FILTER and 490 or 462)
     win:SetPoint("CENTER", frame, "CENTER", 0, 0)
     win:SetFrameStrata("TOOLTIP")
     win:SetFrameLevel(200)
@@ -609,8 +801,9 @@ local function CreateWindow(frame)
     -- Armor type drop-down: a red WoW button like the others in this window,
     -- with a mail-armor icon on the left and a down arrow on the right.
     win.armor = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
-    win.armor:SetSize(118, 22)
-    win.armor:SetPoint("LEFT", win.minBox, "RIGHT", 16, 0)
+    -- Armor / Weapon / Resistance drop-downs side by side under the level box.
+    win.armor:SetSize(116, 22)
+    win.armor:SetPoint("TOPLEFT", win.minLabel, "BOTTOMLEFT", -2, -10)
     win.armor:SetText("")
     win.armor.icon = win.armor:CreateTexture(nil, "OVERLAY")
     win.armor.icon:SetSize(16, 16)
@@ -629,7 +822,7 @@ local function CreateWindow(frame)
 
     local menu = CreateFrame("Frame", nil, win.armor, "BackdropTemplate")
     win.armor.menu = menu
-    local choices = { false, "Cloth", "Leather", "Mail", "Plate" }
+    local choices = { "Cloth", "Leather", "Mail", "Plate" }
     menu:SetSize(130, #choices * 22 + 10)
     menu:SetPoint("TOPLEFT", win.armor, "BOTTOMLEFT", -4, -4)
     menu:SetFrameStrata("TOOLTIP")
@@ -676,15 +869,108 @@ local function CreateWindow(frame)
         end)
         win.armor.options[#win.armor.options + 1] = option
     end
-    win.armor:SetScript("OnClick", function() menu:SetShown(not menu:IsShown()) end)
+    win.armor:SetScript("OnClick", function()
+        if win.resist and win.resist.menu then win.resist.menu:Hide() end
+        if win.weapon and win.weapon.menu then win.weapon.menu:Hide() end
+        menu:SetShown(not menu:IsShown())
+    end)
     win.armor:SetScript("OnHide", function() menu:Hide() end)
     win.armor:SetScript("OnEnter", function(self)
         if not GameTooltip then return end
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
         GameTooltip:SetText(L("LF_ARMOR"), 1, 0.82, 0.27)
         GameTooltip:Show()
+        GameTooltip:SetFrameLevel(win:GetFrameLevel() + 40)
     end)
     win.armor:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
+
+    -- Weapon type drop-down (shields included), under the armor one.
+    do
+        local b = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
+        win.weapon = b
+        b:SetSize(116, 22)
+        b:SetPoint("LEFT", win.armor, "RIGHT", 4, 0)
+        b:SetText("")
+        b.icon = b:CreateTexture(nil, "OVERLAY")
+        b.icon:SetSize(18, 18)
+        b.icon:SetPoint("LEFT", b, "LEFT", 6, 0)
+        b.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\WeaponFilterIcon")
+        local arrow = b:CreateTexture(nil, "OVERLAY")
+        arrow:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
+        arrow:SetSize(12, 12)
+        arrow:SetPoint("RIGHT", b, "RIGHT", -7, -3)
+        b.text = b:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        b.text:SetPoint("LEFT", b.icon, "RIGHT", 3, 0)
+        b.text:SetPoint("RIGHT", arrow, "LEFT", -2, 3)
+        b.text:SetJustifyH("CENTER")
+        b.text:SetWordWrap(false)
+
+        local wmenu = CreateFrame("Frame", nil, b, "BackdropTemplate")
+        b.menu = wmenu
+        local wchoices = {}
+        for _, w in ipairs(WEAPON_TYPES) do wchoices[#wchoices + 1] = w end
+        -- Two columns so the list stays short.
+        local rows = math.ceil(#wchoices / 2)
+        wmenu:SetSize(330, rows * 22 + 10)
+        wmenu:SetPoint("TOPLEFT", b, "BOTTOMLEFT", -4, -4)
+        wmenu:SetFrameStrata("TOOLTIP")
+        wmenu:SetFrameLevel(win:GetFrameLevel() + 30)
+        wmenu:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8X8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeSize = 12,
+            insets = { left = 3, right = 3, top = 3, bottom = 3 },
+        })
+        wmenu:SetBackdropColor(0.055, 0.05, 0.043, 0.99)
+        wmenu:SetBackdropBorderColor(0.57, 0.43, 0.20, 1)
+        wmenu:Hide()
+        b.options = {}
+        for i, value in ipairs(wchoices) do
+            local option = CreateFrame("Button", nil, wmenu)
+            local col = (i - 1) % 2
+            local row = math.floor((i - 1) / 2)
+            option:SetPoint("TOPLEFT", 6 + col * 160, -5 - row * 22)
+            option:SetSize(156, 21)
+            option:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            option.fdjWeapon = value or nil
+            option.box = option:CreateTexture(nil, "ARTWORK")
+            option.box:SetTexture("Interface\\Buttons\\UI-CheckBox-Up")
+            option.box:SetSize(18, 18)
+            option.box:SetPoint("LEFT", 4, 0)
+            option.check = option:CreateTexture(nil, "OVERLAY")
+            option.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
+            option.check:SetAllPoints(option.box)
+            option.check:Hide()
+            option.text = option:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+            option.text:SetPoint("LEFT", option.box, "RIGHT", 4, 0)
+            option.text:SetTextColor(0.95, 0.83, 0.53)
+            option:SetScript("OnClick", function(self)
+                local s = Settings()
+                if self.fdjWeapon then
+                    s.weaponTypes[self.fdjWeapon] = not s.weaponTypes[self.fdjWeapon] or nil
+                else
+                    s.weaponTypes = {}
+                end
+                RefreshWindow(frame)
+                Changed(frame)
+            end)
+            b.options[#b.options + 1] = option
+        end
+        b:SetScript("OnClick", function()
+            if win.armor and win.armor.menu then win.armor.menu:Hide() end
+            if win.resist and win.resist.menu then win.resist.menu:Hide() end
+            wmenu:SetShown(not wmenu:IsShown())
+        end)
+        b:SetScript("OnHide", function() wmenu:Hide() end)
+        b:SetScript("OnEnter", function(self)
+            if not GameTooltip then return end
+            GameTooltip:SetOwner(self, "ANCHOR_TOP")
+            GameTooltip:SetText(L("LF_WEAPON"), 1, 0.82, 0.27)
+            GameTooltip:Show()
+            GameTooltip:SetFrameLevel(win:GetFrameLevel() + 40)
+        end)
+        b:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
+    end
 
     -- Master switch: while off, the journal shows its default loot view.
     win.toggle = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
@@ -703,14 +989,205 @@ local function CreateWindow(frame)
         check.fdjStat = stat
         local column = (i - 1) % 2
         local row = math.floor((i - 1) / 2)
-        check:SetPoint("TOPLEFT", win.minLabel, "BOTTOMLEFT", -6 + column * 182, -16 - row * 28)
+        check:SetPoint("TOPLEFT", win.minLabel, "BOTTOMLEFT", -6 + column * 182, -16 - 34 - row * 28)
+        if stat.tip then
+            -- The label is outside the 24px box; widen the hover/click area over it.
+            check:SetHitRectInsets(0, -130, 0, 0)
+            check:SetScript("OnEnter", function(self)
+                local tip = win.fdjTip
+                if not tip then
+                    tip = CreateFrame("Frame", nil, win, "BackdropTemplate")
+                    win.fdjTip = tip
+                    tip:SetFrameLevel(win:GetFrameLevel() + 60)
+                    tip:SetBackdrop({
+                        bgFile = "Interface\\Buttons\\WHITE8X8",
+                        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+                        edgeSize = 12,
+                        insets = { left = 3, right = 3, top = 3, bottom = 3 },
+                    })
+                    tip:SetBackdropColor(0.04, 0.04, 0.05, 0.96)
+                    tip:SetBackdropBorderColor(0.60, 0.60, 0.60, 1)
+                    tip.text = tip:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+                    tip.text:SetPoint("CENTER")
+                end
+                tip.text:SetText(L(stat.tip))
+                tip:SetSize((tip.text:GetStringWidth() or 100) + 20, 26)
+                tip:ClearAllPoints()
+                tip:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 4)
+                tip:Show()
+            end)
+            check:SetScript("OnLeave", function() if win.fdjTip then win.fdjTip:Hide() end end)
+        end
         win.checks[#win.checks + 1] = check
+        if key == "SPELL" then win.spellCheck = check end
         win.statChecks[#win.statChecks + 1] = check
     end
 
+    -- Small down arrow next to "Spell Damage" (like the language selector):
+    -- narrow spell damage down to schools. Ticking a school ticks Spell Damage.
+    if win.spellCheck then
+        local check = win.spellCheck
+        local arrow = CreateFrame("Button", nil, win)
+        win.schoolArrow = arrow
+        arrow:SetSize(18, 18)
+        arrow:SetPoint("LEFT", check.fdjLabel, "RIGHT", 3, -1)
+        local tex = arrow:CreateTexture(nil, "ARTWORK")
+        tex:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
+        tex:SetSize(13, 13)
+        tex:SetPoint("CENTER", 0, -2)
+        arrow:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+        local smenu = CreateFrame("Frame", nil, arrow, "BackdropTemplate")
+        arrow.menu = smenu
+        smenu:SetSize(150, #SCHOOL_ORDER * 22 + 10)
+        smenu:SetPoint("TOPLEFT", arrow, "BOTTOMLEFT", -4, -2)
+        smenu:SetFrameStrata("TOOLTIP")
+        smenu:SetFrameLevel(win:GetFrameLevel() + 30)
+        smenu:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8X8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeSize = 12,
+            insets = { left = 3, right = 3, top = 3, bottom = 3 },
+        })
+        smenu:SetBackdropColor(0.055, 0.05, 0.043, 0.99)
+        smenu:SetBackdropBorderColor(0.57, 0.43, 0.20, 1)
+        smenu:Hide()
+        arrow.options = {}
+        for i, value in ipairs(SCHOOL_ORDER) do
+            local option = CreateFrame("Button", nil, smenu)
+            option:SetPoint("TOPLEFT", 6, -5 - (i - 1) * 22)
+            option:SetPoint("TOPRIGHT", -6, -5 - (i - 1) * 22)
+            option:SetHeight(21)
+            option:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            option.fdjSchool = value
+            option.box = option:CreateTexture(nil, "ARTWORK")
+            option.box:SetTexture("Interface\\Buttons\\UI-CheckBox-Up")
+            option.box:SetSize(18, 18)
+            option.box:SetPoint("LEFT", 4, 0)
+            option.check = option:CreateTexture(nil, "OVERLAY")
+            option.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
+            option.check:SetAllPoints(option.box)
+            option.check:Hide()
+            option.text = option:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+            option.text:SetPoint("LEFT", option.box, "RIGHT", 4, 0)
+            option.text:SetTextColor(0.95, 0.83, 0.53)
+            option:SetScript("OnClick", function(self)
+                local db = Settings()
+                db.schools[self.fdjSchool] = not db.schools[self.fdjSchool] or nil
+                if next(db.schools) then db.stats.SPELL = true end
+                RefreshWindow(frame)
+                Changed(frame)
+            end)
+            arrow.options[#arrow.options + 1] = option
+        end
+        arrow:SetScript("OnClick", function()
+            if win.armor and win.armor.menu then win.armor.menu:Hide() end
+            if win.resist and win.resist.menu then win.resist.menu:Hide() end
+            if win.weapon and win.weapon.menu then win.weapon.menu:Hide() end
+            smenu:SetShown(not smenu:IsShown())
+        end)
+        arrow:SetScript("OnHide", function() smenu:Hide() end)
+        arrow:SetScript("OnEnter", function(self)
+            if not GameTooltip then return end
+            GameTooltip:SetOwner(self, "ANCHOR_TOP")
+            GameTooltip:SetText(L("LF_SCHOOLS"), 1, 0.82, 0.27)
+            GameTooltip:Show()
+            GameTooltip:SetFrameLevel(win:GetFrameLevel() + 40)
+        end)
+        arrow:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
+    end
+
     win.matchAll = MakeCheck(win, frame, function() return Settings().matchAll end, function(v) Settings().matchAll = v end)
-    win.matchAll:SetPoint("TOPLEFT", win.minLabel, "BOTTOMLEFT", -6, -16 - math.ceil(#STATS / 2) * 28 - 6)
+    win.matchAll:SetPoint("TOPLEFT", win.minLabel, "BOTTOMLEFT", -6, -16 - 34 - math.ceil(#STATS / 2) * 28 - 6)
     win.checks[#win.checks + 1] = win.matchAll
+
+    -- Resistance drop-down, built like the armor one, right under it.
+    -- Ticked schools: the item needs at least one of them.
+    if RESIST_FILTER then
+        local b = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
+        win.resist = b
+        b:SetSize(116, 22)
+        b:SetPoint("LEFT", win.weapon or win.armor, "RIGHT", 4, 0)
+        b:SetText("")
+        b.icon = b:CreateTexture(nil, "OVERLAY")
+        b.icon:SetSize(16, 16)
+        b.icon:SetPoint("LEFT", b, "LEFT", 7, 0)
+        b.icon:SetTexture("Interface\\Icons\\Spell_FireResistanceTotem_01")
+        b.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        local arrow = b:CreateTexture(nil, "OVERLAY")
+        arrow:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
+        arrow:SetSize(12, 12)
+        arrow:SetPoint("RIGHT", b, "RIGHT", -7, -3)
+        b.text = b:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        b.text:SetPoint("LEFT", b.icon, "RIGHT", 4, 0)
+        b.text:SetPoint("RIGHT", arrow, "LEFT", -2, 3)
+        b.text:SetJustifyH("CENTER")
+        b.text:SetWordWrap(false)
+
+        local rmenu = CreateFrame("Frame", nil, b, "BackdropTemplate")
+        b.menu = rmenu
+        local rchoices = { "FIRE", "FROST", "NATURE", "SHADOW", "ARCANE" }
+        rmenu:SetSize(150, #rchoices * 22 + 10)
+        rmenu:SetPoint("TOPLEFT", b, "BOTTOMLEFT", -4, -4)
+        rmenu:SetFrameStrata("TOOLTIP")
+        rmenu:SetFrameLevel(win:GetFrameLevel() + 30)
+        rmenu:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8X8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            edgeSize = 12,
+            insets = { left = 3, right = 3, top = 3, bottom = 3 },
+        })
+        rmenu:SetBackdropColor(0.055, 0.05, 0.043, 0.99)
+        rmenu:SetBackdropBorderColor(0.57, 0.43, 0.20, 1)
+        rmenu:Hide()
+        b.options = {}
+        for i, value in ipairs(rchoices) do
+            local option = CreateFrame("Button", nil, rmenu)
+            option:SetPoint("TOPLEFT", 6, -5 - (i - 1) * 22)
+            option:SetPoint("TOPRIGHT", -6, -5 - (i - 1) * 22)
+            option:SetHeight(21)
+            option:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            option.fdjResist = value or nil
+            option.box = option:CreateTexture(nil, "ARTWORK")
+            option.box:SetTexture("Interface\\Buttons\\UI-CheckBox-Up")
+            option.box:SetSize(18, 18)
+            option.box:SetPoint("LEFT", 4, 0)
+            option.check = option:CreateTexture(nil, "OVERLAY")
+            option.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
+            option.check:SetAllPoints(option.box)
+            option.check:Hide()
+            option.text = option:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+            option.text:SetPoint("LEFT", option.box, "RIGHT", 4, 0)
+            option.text:SetTextColor(0.95, 0.83, 0.53)
+            option:SetScript("OnClick", function(self)
+                local s = Settings()
+                s.resists[self.fdjResist] = not s.resists[self.fdjResist] or nil
+                RefreshWindow(frame)
+                Changed(frame)
+            end)
+            b.options[#b.options + 1] = option
+        end
+        b:SetScript("OnClick", function()
+            if win.armor and win.armor.menu then win.armor.menu:Hide() end
+            if win.weapon and win.weapon.menu then win.weapon.menu:Hide() end
+            rmenu:SetShown(not rmenu:IsShown())
+        end)
+        b:SetScript("OnHide", function() rmenu:Hide() end)
+        b:SetScript("OnEnter", function(self)
+            if not GameTooltip then return end
+            GameTooltip:SetOwner(self, "ANCHOR_TOP")
+            GameTooltip:SetText(L("LF_RESIST"), 1, 0.82, 0.27)
+            GameTooltip:Show()
+            GameTooltip:SetFrameLevel(win:GetFrameLevel() + 40)
+        end)
+        b:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
+    end
+
+    -- Fit the window to its content: the bottom buttons sit a fixed gap
+    -- under "Item must have all ticked stats".
+    win:SetScript("OnShow", function(self)
+        local top, bottom = self:GetTop(), self.matchAll and self.matchAll:GetBottom()
+        if top and bottom then self:SetHeight(math.floor(top - bottom + 0.5) + 70) end
+    end)
 
     win.clear = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
     win.clear:SetSize(110, 22)
@@ -726,14 +1203,15 @@ local function CreateWindow(frame)
     win.show:SetPoint("BOTTOMLEFT", 16, 14)
     -- The game's loot-pouch cursor icon.
     win.show.icon = win.show:CreateTexture(nil, "OVERLAY")
-    win.show.icon:SetSize(20, 20)
-    win.show.icon:SetTexture("Interface\\Cursor\\Pickup")
+    win.show.icon:SetSize(22, 22)
+    win.show.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\LootBags")
     win.show:SetScript("OnEnter", function(self)
         if not GameTooltip then return end
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
         GameTooltip:SetText(L("LF_SHOW"), 1, 0.82, 0.27)
         GameTooltip:AddLine(L("LF_SHOW_TIP"), 1, 1, 1, true)
         GameTooltip:Show()
+        GameTooltip:SetFrameLevel(win:GetFrameLevel() + 40)
     end)
     win.show:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
     win.show:SetScript("OnClick", function()
@@ -746,6 +1224,9 @@ local function CreateWindow(frame)
         s.stats = {}
         s.minLevel = nil
         s.armorTypes = {}
+        s.weaponTypes = {}
+        s.resists = {}
+        s.schools = {}
         if frame.lootFilterWindow and frame.lootFilterWindow.minBox then frame.lootFilterWindow.minBox:SetText("") end
         RefreshWindow(frame)
         Changed(frame)
@@ -891,6 +1372,7 @@ local function MakeResultRow(parent)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         if self.item[1] and self.item[1] > 0 then
             GameTooltip:SetHyperlink("item:" .. self.item[1])
+            if FDJ.AddUnseenItemHint then FDJ.AddUnseenItemHint(GameTooltip) end
         else
             GameTooltip:SetText(self.item[2] or "")
         end
@@ -921,6 +1403,7 @@ local function CollectResults()
     FDJ.lootFilterStrict = true
     for _, dungeonName in ipairs(FDJ.ORDER or {}) do
         local dungeon = FDJ.DB and FDJ.DB[dungeonName]
+        if FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(dungeonName) then dungeon = nil end
         local dungeonAdded = false
         for bossIndex, boss in ipairs((dungeon and dungeon.bosses) or {}) do
             local shown = FDJ.FilterBossLoot(boss).loot or {}
@@ -945,8 +1428,12 @@ end
 function FDJ.RefreshLootFilterResults(frame)
     local panel = frame and frame.lootFilterResults
     if not panel then return end
-    local list, itemCount = CollectResults()
-    panel.title:SetText(L("LF_RESULTS") .. "  |cffb8ab94" .. itemCount .. " " .. L("ITEMS") .. "|r")
+    -- Only used for the empty state now: when items match, the Show page
+    -- (boss list + loot) opens instead of this flat list.
+    local list, itemCount = {}, 0
+    panel.title:SetText(L("LF_RESULTS"))
+    local bar = rawget(panel.scroll, "ScrollBar") or _G["ForeverDungeonJournalLootFilterResultsScrollScrollBar"]
+    if type(bar) == "table" and bar.Hide then bar:Hide() end
     panel.back:SetText(L("LF_BACK"))
     panel.filter:SetText(L("LOOT_FILTER"))
     panel.empty:SetText(L("LF_NO_RESULTS"))
@@ -1060,7 +1547,7 @@ FDJ.ShowLootFilterList = function(frame)
             panel.fdjPending = true
             local function redraw()
                 panel.fdjPending = nil
-                if panel:IsShown() then FDJ.RefreshLootFilterResults(frame) end
+                if panel:IsShown() then FDJ.ShowLootFilterResults(frame) end
             end
             if C_Timer and C_Timer.After then C_Timer.After(0.5, redraw) else redraw() end
         end)
@@ -1085,10 +1572,11 @@ end
 local function BuildPage()
     local bosses, itemCount = {}, 0
     local db = Settings()
-    local recipesOnly = db.enabled and db.recipes and not db.classOnly and not db.minLevel and not AnyArmorTicked(db) and not AnyStatWanted(db)
+    local recipesOnly = db.enabled and db.recipes and not db.classOnly and not db.minLevel and not AnyArmorTicked(db) and not AnyWeaponTicked(db) and not AnyResistTicked(db) and not AnyStatWanted(db)
     FDJ.lootFilterStrict = true
     for _, dungeonName in ipairs(FDJ.ORDER or {}) do
         local dungeon = FDJ.DB and FDJ.DB[dungeonName]
+        if FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(dungeonName) then dungeon = nil end
         for _, boss in ipairs((dungeon and dungeon.bosses) or {}) do
             local shown = FDJ.FilterBossLoot(boss).loot or {}
             if recipesOnly then
@@ -1159,7 +1647,7 @@ end
 
 local OpenLootFilterPage
 function FDJ.ShowLootFilterResults(frame, keepBoss)
-    if Settings().enabled and AnyStatWanted(Settings()) then
+    if Settings().enabled and (AnyStatWanted(Settings()) or AnyResistTicked(Settings())) then
         WarmTooltips(function() OpenLootFilterPage(frame, keepBoss) end)
     else
         OpenLootFilterPage(frame, keepBoss)
@@ -1182,6 +1670,7 @@ OpenLootFilterPage = function(frame, keepBoss)
         quests = {},
         bosses = bosses,
         fdjItemCount = itemCount,
+        lootFilterPage = true, -- no Quests/Map tabs, larger centred title
     }
     if FDJ.OpenBossPage then
         local index = 1
@@ -1223,7 +1712,7 @@ if pageWatcher then
         self.pending = true
         local function check()
             self.pending = nil
-            if not PageIsOpen(frame) or not AnyStatWanted(Settings()) then return end
+            if not PageIsOpen(frame) or not (AnyStatWanted(Settings()) or AnyResistTicked(Settings())) then return end
             WarmTooltips(function()
                 if not PageIsOpen(frame) then return end
                 local _, count = BuildPage()
@@ -1270,7 +1759,14 @@ function FDJ.SetRowMobs(row, sourceText)
         button.fdjMobName = name
         button:ClearAllPoints()
         button:SetPoint("RIGHT", row, "RIGHT", -10 - (#names - i) * 38, 0)
-        pcall(SetPortraitTextureFromCreatureDisplayID, button.portrait, FDJ.TRASH_MOB_DISPLAY_IDS[name])
+        local mobDisplayID = FDJ.TRASH_MOB_DISPLAY_IDS[name]
+        -- Bundled picture, else the off-screen portrait pool like the bosses
+        -- (no black square while it loads; warmed after login).
+        local okPortrait, shown = false, false
+        if FDJ.AcquirePortrait then okPortrait, shown = pcall(FDJ.AcquirePortrait, button.portrait, mobDisplayID) end
+        if not (okPortrait and shown) then
+            pcall(SetPortraitTextureFromCreatureDisplayID, button.portrait, mobDisplayID)
+        end
         button:Show()
     end
     for i = #names + 1, #row.fdjMobButtons do row.fdjMobButtons[i]:Hide() end

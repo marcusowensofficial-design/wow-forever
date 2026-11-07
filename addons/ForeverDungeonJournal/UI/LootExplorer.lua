@@ -28,6 +28,7 @@ local CATEGORY_OPTIONS = {
     { id = "WEAPONS", label = "Weapons" },
     { id = "ACCESSORIES", label = "Accessories" },
     { id = "OFFHAND", label = "Shields & Off-Hand" },
+    { id = "QUEST_REWARD", label = "Quest Rewards" },
     { id = "MISC", label = "Other / Misc" },
 }
 
@@ -44,6 +45,8 @@ local BRACKET_OPTIONS = {
     { id = "13-20", label = "Req Lvl 13-20" },
     { id = "20-28", label = "Req Lvl 20-28" },
     { id = "28-38", label = "Req Lvl 28-38" },
+    { id = "38-48", label = "Req Lvl 38-48" },
+    { id = "48-60", label = "Req Lvl 48-60" },
 }
 
 local function GetSlotOptionsForCategory(cat)
@@ -77,6 +80,7 @@ local function GetSlotOptionsForCategory(cat)
             { id = "CROSSBOW", label = "Crossbow" },
             { id = "WAND", label = "Wand" },
             { id = "THROWN", label = "Thrown" },
+            { id = "PROJECTILE", label = "Projectile / Ammo" },
         }
     elseif cat == "ACCESSORIES" then
         return {
@@ -92,6 +96,38 @@ local function GetSlotOptionsForCategory(cat)
             { id = "ALL", label = "All Off-Hand" },
             { id = "SHIELD", label = "Shield" },
             { id = "HOLDABLE", label = "Held In Off-hand" },
+        }
+    elseif cat == "QUEST_REWARD" then
+        return {
+            { id = "ALL", label = "All Quest Rewards" },
+            { id = "HEAD", label = "Head" },
+            { id = "SHOULDER", label = "Shoulders" },
+            { id = "CHEST", label = "Chest" },
+            { id = "WRIST", label = "Wrists" },
+            { id = "HANDS", label = "Hands" },
+            { id = "WAIST", label = "Waist" },
+            { id = "LEGS", label = "Legs" },
+            { id = "FEET", label = "Feet" },
+            { id = "1H_SWORD", label = "1H Sword" },
+            { id = "2H_SWORD", label = "2H Sword" },
+            { id = "1H_MACE", label = "1H Mace" },
+            { id = "2H_MACE", label = "2H Mace" },
+            { id = "1H_AXE", label = "1H Axe" },
+            { id = "2H_AXE", label = "2H Axe" },
+            { id = "DAGGER", label = "Dagger" },
+            { id = "STAFF", label = "Staff" },
+            { id = "POLEARM", label = "Polearm" },
+            { id = "BOW", label = "Bow" },
+            { id = "GUN", label = "Gun" },
+            { id = "CROSSBOW", label = "Crossbow" },
+            { id = "WAND", label = "Wand" },
+            { id = "NECK", label = "Necklace" },
+            { id = "FINGER", label = "Ring" },
+            { id = "TRINKET", label = "Trinket" },
+            { id = "BACK", label = "Cloak / Back" },
+            { id = "SHIELD", label = "Shield" },
+            { id = "HOLDABLE", label = "Held In Off-hand" },
+            { id = "BAG", label = "Bag" },
         }
     elseif cat == "MISC" then
         return {
@@ -122,7 +158,10 @@ local function GetSlotOptionsForCategory(cat)
             { id = "POLEARM", label = "Polearm" },
             { id = "BOW", label = "Bow" },
             { id = "GUN", label = "Gun" },
+            { id = "CROSSBOW", label = "Crossbow" },
             { id = "WAND", label = "Wand" },
+            { id = "THROWN", label = "Thrown" },
+            { id = "PROJECTILE", label = "Projectile / Ammo" },
             { id = "NECK", label = "Necklace" },
             { id = "FINGER", label = "Ring" },
             { id = "TRINKET", label = "Trinket" },
@@ -166,6 +205,11 @@ local function MatchSubtype(sLower, sub)
     elseif sub == "CROSSBOW" then return sLower:find("crossbow", 1, true) ~= nil
     elseif sub == "WAND" then return sLower:find("wand", 1, true) ~= nil
     elseif sub == "THROWN" then return sLower:find("thrown", 1, true) ~= nil
+    elseif sub == "PROJECTILE" then
+        return sLower:find("projectile", 1, true) ~= nil
+            or sLower:find("arrow", 1, true) ~= nil
+            or sLower:find("bullet", 1, true) ~= nil
+            or sLower:find("ammo", 1, true) ~= nil
 
     -- Accessories
     elseif sub == "NECK" then return sLower:find("neck", 1, true) ~= nil
@@ -180,8 +224,19 @@ local function MatchSubtype(sLower, sub)
 
     -- Misc
     elseif sub == "BAG" then return sLower:find("bag", 1, true) ~= nil
-    elseif sub == "RECIPE" then return sLower:find("recipe", 1, true) ~= nil or sLower:find("cooking", 1, true) ~= nil or sLower:find("engineering", 1, true) ~= nil or sLower:find("leatherworking", 1, true) ~= nil or sLower:find("blacksmithing", 1, true) ~= nil
-    elseif sub == "QUEST" then return sLower:find("quest", 1, true) ~= nil
+    elseif sub == "RECIPE" then
+        return sLower:find("recipe", 1, true) ~= nil
+            or sLower:find("plans", 1, true) ~= nil
+            or sLower:find("pattern", 1, true) ~= nil
+            or sLower:find("blueprint", 1, true) ~= nil
+            or sLower:find("cooking", 1, true) ~= nil
+            or sLower:find("engineering", 1, true) ~= nil
+            or sLower:find("leatherworking", 1, true) ~= nil
+            or sLower:find("blacksmithing", 1, true) ~= nil
+            or sLower:find("tailoring", 1, true) ~= nil
+            or sLower:find("alchemy", 1, true) ~= nil
+            or sLower:find("enchanting", 1, true) ~= nil
+    elseif sub == "QUEST" then return sLower:find("quest", 1, true) ~= nil or sLower:find("key", 1, true) ~= nil
     end
     return true
 end
@@ -247,6 +302,59 @@ function FDJ.GetItemReqLevel(itemID)
     return reqLevel
 end
 
+local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
+    if type(rawSlot) == "number" and rawQuality == nil then
+        rawQuality = rawSlot
+        rawSlot = nil
+    elseif type(rawSlot) == "number" and type(rawQuality) == "string" then
+        rawSlot, rawQuality = rawQuality, rawSlot
+    end
+
+    if (not rawSlot or rawSlot == "" or tonumber(rawSlot)) and itemID then
+        if C_Item and C_Item.GetItemInfoInstant then
+            local ok, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
+            if ok and equipLoc and equipLoc ~= "" then
+                local locName = _G[equipLoc] or equipLoc
+                local subName = nil
+                if classID == 4 then -- Armor
+                    if subclassID == 1 then subName = "Cloth"
+                    elseif subclassID == 2 then subName = "Leather"
+                    elseif subclassID == 3 then subName = "Mail"
+                    elseif subclassID == 4 then subName = "Plate"
+                    elseif subclassID == 6 then subName = "Shield"
+                    end
+                elseif classID == 2 then -- Weapon
+                    if subclassID == 0 then subName = "Axe"
+                    elseif subclassID == 1 then subName = "Two-Hand, Axe"
+                    elseif subclassID == 2 then subName = "Bow"
+                    elseif subclassID == 3 then subName = "Gun"
+                    elseif subclassID == 4 then subName = "Mace"
+                    elseif subclassID == 5 then subName = "Two-Hand, Mace"
+                    elseif subclassID == 6 then subName = "Polearm"
+                    elseif subclassID == 7 then subName = "Sword"
+                    elseif subclassID == 8 then subName = "Two-Hand, Sword"
+                    elseif subclassID == 10 then subName = "Staff"
+                    elseif subclassID == 13 then subName = "Fist Weapon"
+                    elseif subclassID == 15 then subName = "Dagger"
+                    elseif subclassID == 16 then subName = "Thrown"
+                    elseif subclassID == 18 then subName = "Crossbow"
+                    elseif subclassID == 19 then subName = "Wand"
+                    end
+                elseif classID == 6 then -- Projectile
+                    subName = "Projectile"
+                end
+                if subName then
+                    rawSlot = locName .. ", " .. subName
+                else
+                    rawSlot = locName
+                end
+            end
+        end
+    end
+
+    return rawSlot, rawQuality
+end
+
 function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFilter, bracketFilter, wishlistOnly, query)
     -- Backward compatibility for older 3-argument call: (slotFilter, bracketFilter, query)
     if type(categoryFilter) == "string" and (categoryFilter == "WEAPONS" or categoryFilter == "CLOTH" or categoryFilter == "LEATHER" or categoryFilter == "MAIL" or categoryFilter == "ACCESSORIES") and materialFilter == nil then
@@ -272,6 +380,10 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
             bMin, bMax = 20, 28
         elseif bracketFilter == "28-38" then
             bMin, bMax = 28, 38
+        elseif bracketFilter == "38-48" then
+            bMin, bMax = 38, 48
+        elseif bracketFilter == "48-60" then
+            bMin, bMax = 48, 60
         else
             bMin, bMax = ParseLevelRange(bracketFilter)
         end
@@ -282,124 +394,187 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
 
     for _, dungeonName in ipairs(FDJ.ORDER) do
         local dung = FDJ.DB[dungeonName]
-        if dung and dung.bosses then
-            for bIdx, boss in ipairs(dung.bosses) do
-                if boss.loot then
-                    for _, item in ipairs(boss.loot) do
-                        local itemID = tonumber(item[1])
-                        local itemName = item[2]
-                        local rawSlot = item[3]
-                        local rawQuality = item[4]
-                        if type(rawSlot) == "number" and type(rawQuality) == "string" then
-                            rawSlot, rawQuality = rawQuality, rawSlot
+        if dung then
+            local dungeonItems = {}
+            if dung.bosses then
+                local seenSharedInDungeon = {}
+                for bIdx, boss in ipairs(dung.bosses) do
+                    if not boss.recipeTab then
+                        for _, item in ipairs(boss.loot or {}) do
+                            dungeonItems[#dungeonItems + 1] = {
+                                item = item,
+                                isShared = false,
+                                isQuestReward = false,
+                                boss = boss.name,
+                                bossIndex = bIdx,
+                            }
                         end
-
-                        local sLower = string.lower(tostring(rawSlot or ""))
-
-                        -- 1. Bracket / Custom Level Range Filter (Strict Item Required Level)
-                        local matchBracket = true
-                        if bMin and bMax then
-                            local req = FDJ.GetItemReqLevel and FDJ.GetItemReqLevel(itemID)
-                            if req and req > 0 then
-                                matchBracket = (req >= bMin and req <= bMax)
-                            elseif req == 0 then
-                                -- Item has no level requirement (e.g. bag, recipe, cosmetic, quest item)
-                                -- Only include if level range starts at level 1 (or 0)
-                                matchBracket = (bMin <= 1)
-                            else
-                                -- Level requirement could not be determined; do NOT include
-                                matchBracket = false
-                            end
-                        end
-
-                        -- 2. Wishlist Filter
-                        local matchWishlist = true
-                        if matchBracket and wishlistOnly then
-                            matchWishlist = (FDJ.IsWishlisted and FDJ.IsWishlisted(itemID))
-                        end
-
-                            -- 2. Material Filter (Cloth, Leather, Mail, Plate)
-                            local matchMaterial = true
-                            if matchWishlist and materialFilter and materialFilter ~= "ALL" then
-                                local matLower = string.lower(materialFilter)
-                                matchMaterial = sLower:find(matLower, 1, true) ~= nil
-                                if not matchMaterial and itemID and C_Item and C_Item.GetItemInfoInstant then
-                                    local _, _, _, _, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
-                                    if classID == 4 then -- Armor
-                                        if materialFilter == "CLOTH" and subclassID == 1 then matchMaterial = true
-                                        elseif materialFilter == "LEATHER" and subclassID == 2 then matchMaterial = true
-                                        elseif materialFilter == "MAIL" and subclassID == 3 then matchMaterial = true
-                                        elseif materialFilter == "PLATE" and subclassID == 4 then matchMaterial = true
-                                        end
-                                    end
+                        local sharedLoot = FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(dungeonName, boss) or nil
+                        if sharedLoot then
+                            for _, sItem in ipairs(sharedLoot) do
+                                local sID = tonumber(sItem and sItem[1])
+                                if sID and not seenSharedInDungeon[sID] then
+                                    seenSharedInDungeon[sID] = true
+                                    dungeonItems[#dungeonItems + 1] = {
+                                        item = sItem,
+                                        isShared = true,
+                                        isQuestReward = false,
+                                        boss = boss.name,
+                                        bossIndex = bIdx,
+                                    }
                                 end
-                            end
-
-                            -- 3. Category & Slot Filter
-                            local matchSlot = true
-                            if matchWishlist and matchMaterial then
-                                if categoryFilter == "ALL" then
-                                    matchSlot = MatchSubtype(sLower, slotFilter)
-                                elseif categoryFilter == "ARMOR" then
-                                    local isArmor = sLower:find("head", 1, true) or sLower:find("shoulder", 1, true)
-                                        or sLower:find("chest", 1, true) or sLower:find("robe", 1, true)
-                                        or sLower:find("wrist", 1, true) or sLower:find("hands", 1, true)
-                                        or sLower:find("waist", 1, true) or sLower:find("legs", 1, true)
-                                        or sLower:find("feet", 1, true)
-                                    matchSlot = isArmor and MatchSubtype(sLower, slotFilter)
-                                elseif categoryFilter == "WEAPONS" then
-                                    local isWeapon = sLower:find("axe", 1, true) or sLower:find("sword", 1, true)
-                                        or sLower:find("mace", 1, true) or sLower:find("dagger", 1, true)
-                                        or sLower:find("staff", 1, true) or sLower:find("polearm", 1, true)
-                                        or sLower:find("bow", 1, true) or sLower:find("gun", 1, true)
-                                        or sLower:find("crossbow", 1, true) or sLower:find("wand", 1, true)
-                                        or sLower:find("thrown", 1, true) or sLower:find("fist", 1, true)
-                                        or sLower:find("weapon", 1, true)
-                                    matchSlot = isWeapon and MatchSubtype(sLower, slotFilter)
-                                elseif categoryFilter == "ACCESSORIES" then
-                                    local isAcc = sLower:find("neck", 1, true) or sLower:find("finger", 1, true)
-                                        or sLower:find("ring", 1, true) or sLower:find("trinket", 1, true)
-                                        or sLower:find("back", 1, true) or sLower:find("cloak", 1, true)
-                                        or sLower:find("idol", 1, true) or sLower:find("libram", 1, true)
-                                        or sLower:find("totem", 1, true) or sLower:find("relic", 1, true)
-                                    matchSlot = isAcc and MatchSubtype(sLower, slotFilter)
-                                elseif categoryFilter == "OFFHAND" then
-                                    local isOff = sLower:find("shield", 1, true) or sLower:find("held in off%-hand", 1, true) or sLower:find("held in offhand", 1, true)
-                                    matchSlot = isOff and MatchSubtype(sLower, slotFilter)
-                                elseif categoryFilter == "MISC" then
-                                    local isMisc = sLower:find("bag", 1, true) or sLower:find("recipe", 1, true)
-                                        or sLower:find("cooking", 1, true) or sLower:find("engineering", 1, true)
-                                        or sLower:find("leatherworking", 1, true) or sLower:find("blacksmithing", 1, true)
-                                        or sLower:find("quest", 1, true) or rawQuality == 1
-                                    matchSlot = isMisc and MatchSubtype(sLower, slotFilter)
-                                end
-                            end
-
-                            -- 4. Search Query Filter
-                            local matchQuery = true
-                            if matchWishlist and matchMaterial and matchSlot and query then
-                                local nameLower = string.lower(tostring(itemName or ""))
-                                local bossLower = string.lower(tostring(boss.name or ""))
-                                local dungLower = string.lower(tostring(dungeonName or ""))
-                                matchQuery = nameLower:find(query, 1, true) or bossLower:find(query, 1, true) or dungLower:find(query, 1, true)
-                            end
-
-                            if matchWishlist and matchMaterial and matchSlot and matchQuery then
-                                results[#results + 1] = {
-                                    itemID = itemID,
-                                    name = itemName,
-                                    slot = rawSlot,
-                                    quality = rawQuality,
-                                    dungeon = dungeonName,
-                                    boss = boss.name,
-                                    bossIndex = bIdx,
-                                }
                             end
                         end
                     end
                 end
             end
+
+            if dung.quests then
+                local seenQuestItems = {}
+                for qIdx, quest in ipairs(dung.quests) do
+                    local questName = quest.name or "Quest"
+                    local qItems = {}
+                    for _, it in ipairs(quest.rewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(quest.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(quest.noteRewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(qItems) do
+                        local qItemID = tonumber(it and it[1])
+                        if qItemID and not seenQuestItems[qItemID] then
+                            seenQuestItems[qItemID] = true
+                            dungeonItems[#dungeonItems + 1] = {
+                                item = it,
+                                isShared = false,
+                                isQuestReward = true,
+                                questName = questName,
+                                questIndex = qIdx,
+                                questFaction = quest.faction,
+                                questID = quest.id,
+                                boss = "Quest: " .. questName,
+                            }
+                        end
+                    end
+                end
+            end
+
+            for _, entry in ipairs(dungeonItems) do
+                local item = entry.item
+                local itemID = tonumber(item[1])
+                local itemName = item[2]
+                local rawSlot, rawQuality = ResolveItemSlotAndQuality(itemID, item[3], item[4])
+
+                local sLower = string.lower(tostring(rawSlot or ""))
+
+                -- 1. Bracket / Custom Level Range Filter (Strict Item Required Level)
+                local matchBracket = true
+                if bMin and bMax then
+                    local req = FDJ.GetItemReqLevel and FDJ.GetItemReqLevel(itemID)
+                    if req and req > 0 then
+                        matchBracket = (req >= bMin and req <= bMax)
+                    elseif req == 0 then
+                        matchBracket = (bMin <= 1)
+                    else
+                        matchBracket = false
+                    end
+                end
+
+                -- 2. Wishlist Filter
+                local matchWishlist = true
+                if matchBracket and wishlistOnly then
+                    matchWishlist = (FDJ.IsWishlisted and FDJ.IsWishlisted(itemID))
+                end
+
+                -- 3. Material Filter (Cloth, Leather, Mail, Plate)
+                local matchMaterial = true
+                if matchBracket and matchWishlist and materialFilter and materialFilter ~= "ALL" then
+                    local matLower = string.lower(materialFilter)
+                    matchMaterial = sLower:find(matLower, 1, true) ~= nil
+                    if not matchMaterial and itemID and C_Item and C_Item.GetItemInfoInstant then
+                        local _, _, _, _, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
+                        if classID == 4 then -- Armor
+                            if materialFilter == "CLOTH" and subclassID == 1 then matchMaterial = true
+                            elseif materialFilter == "LEATHER" and subclassID == 2 then matchMaterial = true
+                            elseif materialFilter == "MAIL" and subclassID == 3 then matchMaterial = true
+                            elseif materialFilter == "PLATE" and subclassID == 4 then matchMaterial = true
+                            end
+                        end
+                    end
+                end
+
+                -- 4. Category & Slot Filter
+                local matchSlot = true
+                if matchBracket and matchWishlist and matchMaterial then
+                    if categoryFilter == "ALL" then
+                        matchSlot = MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "ARMOR" then
+                        local isArmor = sLower:find("head", 1, true) or sLower:find("shoulder", 1, true)
+                            or sLower:find("chest", 1, true) or sLower:find("robe", 1, true)
+                            or sLower:find("wrist", 1, true) or sLower:find("hands", 1, true)
+                            or sLower:find("waist", 1, true) or sLower:find("legs", 1, true)
+                            or sLower:find("feet", 1, true)
+                        matchSlot = isArmor and MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "WEAPONS" then
+                        local isWeapon = sLower:find("axe", 1, true) or sLower:find("sword", 1, true)
+                            or sLower:find("mace", 1, true) or sLower:find("dagger", 1, true)
+                            or sLower:find("staff", 1, true) or sLower:find("polearm", 1, true)
+                            or sLower:find("bow", 1, true) or sLower:find("gun", 1, true)
+                            or sLower:find("crossbow", 1, true) or sLower:find("wand", 1, true)
+                            or sLower:find("thrown", 1, true) or sLower:find("fist", 1, true)
+                            or sLower:find("projectile", 1, true) or sLower:find("arrow", 1, true)
+                            or sLower:find("bullet", 1, true) or sLower:find("weapon", 1, true)
+                        matchSlot = isWeapon and MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "ACCESSORIES" then
+                        local isAcc = sLower:find("neck", 1, true) or sLower:find("finger", 1, true)
+                            or sLower:find("ring", 1, true) or sLower:find("trinket", 1, true)
+                            or sLower:find("back", 1, true) or sLower:find("cloak", 1, true)
+                            or sLower:find("idol", 1, true) or sLower:find("libram", 1, true)
+                            or sLower:find("totem", 1, true) or sLower:find("relic", 1, true)
+                        matchSlot = isAcc and MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "OFFHAND" then
+                        local isOff = sLower:find("shield", 1, true) or sLower:find("held in off%-hand", 1, true) or sLower:find("held in offhand", 1, true)
+                        matchSlot = isOff and MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "QUEST_REWARD" then
+                        matchSlot = entry.isQuestReward and MatchSubtype(sLower, slotFilter)
+                    elseif categoryFilter == "MISC" then
+                        local isMisc = sLower:find("bag", 1, true) or sLower:find("recipe", 1, true)
+                            or sLower:find("plans", 1, true) or sLower:find("pattern", 1, true)
+                            or sLower:find("blueprint", 1, true) or sLower:find("tailoring", 1, true)
+                            or sLower:find("alchemy", 1, true) or sLower:find("enchanting", 1, true)
+                            or sLower:find("cooking", 1, true) or sLower:find("engineering", 1, true)
+                            or sLower:find("leatherworking", 1, true) or sLower:find("blacksmithing", 1, true)
+                            or sLower:find("quest", 1, true) or sLower:find("key", 1, true) or rawQuality == 1
+                        matchSlot = isMisc and MatchSubtype(sLower, slotFilter)
+                    end
+                end
+
+                -- 5. Search Query Filter
+                local matchQuery = true
+                if matchBracket and matchWishlist and matchMaterial and matchSlot and query then
+                    local nameLower = string.lower(tostring(itemName or ""))
+                    local bossLower = string.lower(tostring(entry.boss or ""))
+                    local dungLower = string.lower(tostring(dungeonName or ""))
+                    matchQuery = nameLower:find(query, 1, true) or bossLower:find(query, 1, true) or dungLower:find(query, 1, true)
+                end
+
+                if matchBracket and matchWishlist and matchMaterial and matchSlot and matchQuery then
+                    results[#results + 1] = {
+                        itemID = itemID,
+                        name = itemName,
+                        slot = rawSlot,
+                        quality = rawQuality,
+                        dungeon = dungeonName,
+                        boss = entry.boss,
+                        bossIndex = entry.bossIndex,
+                        isSharedLoot = entry.isShared,
+                        isQuestReward = entry.isQuestReward,
+                        questName = entry.questName,
+                        questIndex = entry.questIndex,
+                        questFaction = entry.questFaction,
+                        questID = entry.questID,
+                    }
+                end
+            end
         end
+    end
     return results
 end
 
@@ -1140,12 +1315,27 @@ local function GetOrCreateLootExplorerRow(frame, i)
 
         CloseAllDropdownMenus()
         if frame.homeLootExplorerPanel then frame.homeLootExplorerPanel:Hide() end
+        if self.itemData.isQuestReward then
+            if FDJ.SelectDungeon then FDJ.SelectDungeon(self.itemData.dungeon) end
+            if FDJ.SetMode then FDJ.SetMode("quests") end
+            if (self.itemData.questFaction == "Alliance" or self.itemData.questFaction == "Horde") and FDJ.SetQuestFaction then
+                FDJ.SetQuestFaction(self.itemData.questFaction)
+            end
+            if self.itemData.questIndex and FDJ.SelectQuest then
+                FDJ.SelectQuest(self.itemData.questIndex)
+            elseif self.itemData.questID and FDJ.SelectQuestByID then
+                FDJ.SelectQuestByID(self.itemData.questID, self.itemData.questName)
+            end
+            return
+        end
+        if self.itemData.isSharedLoot then FDJ.lootSharedExpanded = true end
         if FDJ.SelectDungeon then FDJ.SelectDungeon(self.itemData.dungeon) end
         if FDJ.SetMode then FDJ.SetMode("bosses") end
         if self.itemData.bossIndex and FDJ.SelectBoss then
             FDJ.SelectBoss(self.itemData.bossIndex)
         end
         if FDJ.SetBossSubTab then FDJ.SetBossSubTab("loot") end
+        if FDJ.FocusBossLootItem then FDJ.FocusBossLootItem(itemID) end
     end)
 
     rows[i] = row
@@ -1205,9 +1395,13 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             if slotText == "" and equipLoc and equipLoc ~= "" then
                 slotText = _G[equipLoc] or equipLoc
             end
-            local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
-            if dropRate then
-                slotText = slotText ~= "" and (slotText .. "  •  |cffffd200" .. dropRate .. "|r") or ("|cffffd200" .. dropRate .. "|r")
+            if it.isQuestReward then
+                slotText = slotText ~= "" and (slotText .. "  •  |cffffd200Quest|r") or "|cffffd200Quest Reward|r"
+            else
+                local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
+                if dropRate then
+                    slotText = slotText ~= "" and (slotText .. "  •  |cffffd200" .. dropRate .. "|r") or ("|cffffd200" .. dropRate .. "|r")
+                end
             end
             row.slotType:SetText(slotText)
             row.slotType:SetTextColor(0.85, 0.75, 0.55)
@@ -1222,7 +1416,11 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             row.dungeon:SetText(it.dungeon or "")
             row.dungeon:SetTextColor(1.00, 0.82, 0.25)
             row.boss:SetText(it.boss or "")
-            row.boss:SetTextColor(0.70, 0.65, 0.55)
+            if it.isQuestReward then
+                row.boss:SetTextColor(1.00, 0.82, 0.35)
+            else
+                row.boss:SetTextColor(0.70, 0.65, 0.55)
+            end
 
             local isOwned = false
             if it.itemID and type(GetItemCount) == "function" then
@@ -1280,9 +1478,27 @@ function FDJ.RefreshLootExplorerPanel(preserveScroll)
     if FDJ.ORDER and FDJ.DB then
         for _, dName in ipairs(FDJ.ORDER) do
             local dung = FDJ.DB[dName]
-            if dung and dung.bosses then
-                for _, b in ipairs(dung.bosses) do
-                    if b.loot then totalAll = totalAll + #b.loot end
+            if dung then
+                if dung.bosses then
+                    for _, b in ipairs(dung.bosses) do
+                        if b.loot and not b.recipeTab then totalAll = totalAll + #b.loot end
+                    end
+                end
+                if dung.quests then
+                    local seenQ = {}
+                    for _, q in ipairs(dung.quests) do
+                        local qItems = {}
+                        for _, it in ipairs(q.rewardItems or {}) do qItems[#qItems + 1] = it end
+                        for _, it in ipairs(q.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
+                        for _, it in ipairs(q.noteRewardItems or {}) do qItems[#qItems + 1] = it end
+                        for _, it in ipairs(qItems) do
+                            local qid = tonumber(it and it[1])
+                            if qid and not seenQ[qid] then
+                                seenQ[qid] = true
+                                totalAll = totalAll + 1
+                            end
+                        end
+                    end
                 end
             end
         end

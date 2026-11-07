@@ -23,6 +23,10 @@ function FDJ.ClearDungeonMapArt()
     if not frame then return end
     for _, tex in ipairs(frame.dungeonMapArtTiles or {}) do tex:Hide() end
     for _, marker in ipairs(frame.dungeonMapBossMarkers or {}) do marker:Hide() end
+    for _, ent in ipairs(frame.dungeonMapEntrances or {}) do ent:Hide() end
+    for _, tr in ipairs(frame.dungeonMapTransitions or {}) do tr:Hide() end
+    for _, poi in ipairs(frame.dungeonMapPOIMarkers or {}) do poi:Hide() end
+    for _, ti in ipairs(frame.dungeonMapTurnIns or {}) do ti:Hide() end
 end
 
 function FDJ.RenderRagefireMap()
@@ -237,6 +241,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
         return t
     end
     if floorData.texture then
+        if FDJ.CheckMapTiles then pcall(FDJ.CheckMapTiles, panel, nil) end
         local t = Tile(1)
         t:SetAllPoints(holder)
         t:SetTexture(floorData.texture)
@@ -245,26 +250,112 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
         if t.SetTexelSnappingBias then t:SetTexelSnappingBias(0.0) end
         t:Show()
     else
-        local gridW = artW * (1024 / 1002)
-        local gridH = artH * (768 / 668)
-        for i = 1, 12 do
-            local col, row = (i - 1) % 4, math.floor((i - 1) / 4)
-            local t = Tile(i)
-            local x0 = math.floor(col * (gridW / 4) + 0.5)
-            local x1 = math.floor((col + 1) * (gridW / 4) + 0.5)
-            local y0 = math.floor(row * (gridH / 3) + 0.5)
-            local y1 = math.floor((row + 1) * (gridH / 3) + 0.5)
-            t:ClearAllPoints()
-            t:SetPoint("TOPLEFT", holder, "TOPLEFT", x0, -y0)
-            t:SetSize(math.max(1, x1 - x0), math.max(1, y1 - y0))
-            t:SetTexture(floorData.tiles .. i)
-            t:SetTexCoord(0, 1, 0, 1)
-            if t.SetSnapToPixelGrid then t:SetSnapToPixelGrid(false) end
-            if t.SetTexelSnappingBias then t:SetTexelSnappingBias(0.0) end
-            t:SetDrawLayer("ARTWORK", 0)
-            t:Show()
+        local selectedDungeonForArt = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon) or "Ragefire Chasm"
+        local apiTextures, apiLayer
+        frame.dungeonMapArtMissing = false
+        frame.dungeonMapArtCopy = false
+        if floorData.uiMapID and C_Map and C_Map.GetMapArtLayers and C_Map.GetMapArtLayerTextures then
+            for attempt = 1, 2 do
+                local mapID = floorData.uiMapID
+                if attempt == 2 then mapID = FDJ.FindMapArtID and FDJ.FindMapArtID(selectedDungeonForArt, floorData) end
+                if not mapID or (attempt == 2 and mapID == floorData.uiMapID) then break end
+                local okLayers, layers = pcall(C_Map.GetMapArtLayers, mapID)
+                if okLayers and type(layers) == "table" and layers[1] then
+                    local okTextures, textures = pcall(C_Map.GetMapArtLayerTextures, mapID, 1)
+                    if okTextures and type(textures) == "table" and #textures > 0 then
+                        apiLayer, apiTextures = layers[1], textures
+                        break
+                    end
+                end
+            end
         end
-        for p, patch in ipairs(floorData.patches or {}) do
+
+        if apiTextures and apiLayer then
+            local layerW = tonumber(apiLayer.layerWidth) or 1002
+            local layerH = tonumber(apiLayer.layerHeight) or 668
+            local tileW = tonumber(apiLayer.tileWidth) or 256
+            local tileH = tonumber(apiLayer.tileHeight) or 256
+            local cols = math.max(1, math.ceil(layerW / tileW))
+            local scaleX, scaleY = artW / layerW, artH / layerH
+            local unloaded = false
+            for i = 1, #apiTextures do
+                local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+                local t = Tile(i)
+                t:SetSize(tileW * scaleX, tileH * scaleY)
+                t:SetPoint("TOPLEFT", holder, "TOPLEFT", col * tileW * scaleX, -row * tileH * scaleY)
+                local loaded = t:SetTexture(apiTextures[i])
+                if loaded == false and floorData.tiles then loaded = t:SetTexture(floorData.tiles .. i) end
+                if loaded == false then unloaded = true end
+                t:SetTexCoord(0, 1, 0, 1)
+                if t.SetSnapToPixelGrid then t:SetSnapToPixelGrid(false) end
+                if t.SetTexelSnappingBias then t:SetTexelSnappingBias(0.0) end
+                t:SetDrawLayer("ARTWORK", 0)
+                t:Show()
+            end
+            local copy = unloaded and FDJ.MapArtCopy and FDJ.MapArtCopy(floorData)
+            if copy then
+                for i = 2, #apiTextures do Tile(i):Hide() end
+                local t = Tile(1)
+                t:SetAllPoints(holder)
+                t:SetTexture(copy)
+                t:SetTexCoord(0, 1002 / 1024, 0, 668 / 1024)
+                if t.SetSnapToPixelGrid then t:SetSnapToPixelGrid(false) end
+                if t.SetTexelSnappingBias then t:SetTexelSnappingBias(0.0) end
+                t:Show()
+                frame.dungeonMapArtCopy = true
+            end
+        else
+            local gridW = artW * (1024 / 1002)
+            local gridH = artH * (768 / 668)
+            local first = Tile(1)
+            first:SetTexture(floorData.tiles .. 1)
+            frame.dungeonMapArtMissing = FDJ.forceMissingMapArt
+                or (first.GetTextureFileID and not first:GetTextureFileID()) or false
+            local copy = frame.dungeonMapArtMissing and FDJ.MapArtCopy and FDJ.MapArtCopy(floorData)
+            if copy then
+                frame.dungeonMapArtMissing = false
+                frame.dungeonMapArtCopy = true
+            end
+            for i = 1, 12 do
+                local col, row = (i - 1) % 4, math.floor((i - 1) / 4)
+                local t = Tile(i)
+                t:ClearAllPoints()
+                if copy or frame.dungeonMapArtMissing then
+                    if i == 1 then
+                        t:SetAllPoints(holder)
+                        if copy then
+                            t:SetTexture(copy)
+                            t:SetTexCoord(0, 1002 / 1024, 0, 668 / 1024)
+                        else
+                            t:SetColorTexture(0.42, 0.33, 0.20, 1)
+                        end
+                        t:SetDrawLayer("ARTWORK", 0)
+                        t:Show()
+                    else
+                        t:Hide()
+                    end
+                else
+                    local x0 = math.floor(col * (gridW / 4) + 0.5)
+                    local x1 = math.floor((col + 1) * (gridW / 4) + 0.5)
+                    local y0 = math.floor(row * (gridH / 3) + 0.5)
+                    local y1 = math.floor((row + 1) * (gridH / 3) + 0.5)
+                    t:SetPoint("TOPLEFT", holder, "TOPLEFT", x0, -y0)
+                    t:SetSize(math.max(1, x1 - x0), math.max(1, y1 - y0))
+                    t:SetTexture(floorData.tiles .. i)
+                    t:SetTexCoord(0, 1, 0, 1)
+                    if t.SetSnapToPixelGrid then t:SetSnapToPixelGrid(false) end
+                    if t.SetTexelSnappingBias then t:SetTexelSnappingBias(0.0) end
+                    t:SetDrawLayer("ARTWORK", 0)
+                    t:Show()
+                end
+            end
+        end
+        if FDJ.CheckMapTiles then
+            pcall(FDJ.CheckMapTiles, panel, tiles, apiTextures and #apiTextures or 12, floorData, apiTextures, apiLayer,
+                frame.dungeonMapArtMissing and not apiTextures)
+        end
+        for p, patch in ipairs((not (frame.dungeonMapArtMissing and not apiTextures)) and not frame.dungeonMapArtCopy
+            and floorData.patches or {}) do
             local t = Tile(12 + p)
             t:SetDrawLayer("ARTWORK", 1)
             t:ClearAllPoints()
@@ -375,8 +466,9 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
         end
     end
 
+    if FDJ.UpdateMapBossSizer then pcall(FDJ.UpdateMapBossSizer, panel, holder, frame.dungeonMapFloorButtons) end
     local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
-    local size = math.max(26, math.floor(baseH * 0.095))
+    local size = math.floor(math.max(26, math.floor(baseH * 0.095)) * (FDJ.MapBossScale and FDJ.MapBossScale() or 1))
     local shown = 0
     for _, mapBoss in ipairs(data.bosses or {}) do
         if (mapBoss.floor or 1) == floorIndex then
@@ -399,8 +491,8 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 frame.dungeonMapBossMarkers[shown] = marker
             end
             if marker:GetParent() ~= holder then marker:SetParent(holder) end
-            marker:SetSize(size, size)
-            marker.border:SetSize(size * 1.55, size * 1.55)
+            marker:SetSize(math.max(1, size), math.max(1, size))
+            marker.border:SetSize(math.max(1, size * 1.55), math.max(1, size * 1.55))
             marker:SetFrameLevel(holder:GetFrameLevel() + 10)
 
             local bossRecord, bossIndex
@@ -408,7 +500,8 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 if candidate.name == mapBoss.name then bossRecord, bossIndex = candidate, idx break end
             end
             marker.portrait:SetTexCoord(0, 1, 0, 1)
-            if not (bossRecord and FDJ.SetBossPortrait and FDJ.SetBossPortrait(marker.portrait, selectedDungeon, bossRecord)) then
+            local portraitRecord = bossRecord or (mapBoss.npcID and { name = mapBoss.name, npcID = mapBoss.npcID })
+            if not (portraitRecord and FDJ.SetBossPortrait and FDJ.SetBossPortrait(marker.portrait, selectedDungeon, portraitRecord)) then
                 marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
                 marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
             end
@@ -464,15 +557,21 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 GameTooltip:Show()
             end)
 
+            local markerDungeon = selectedDungeon
             marker:SetScript("OnClick", function()
-                if bossIndex and FDJ.SetMode and FDJ.SelectBoss then
+                if not bossIndex then return end
+                if FDJ.IsWorldMapOverlayAttached and FDJ.IsWorldMapOverlayAttached() and FDJ.OpenBossFromWorldMap then
+                    FDJ.OpenBossFromWorldMap(markerDungeon, bossIndex)
+                    return
+                end
+                if FDJ.SetMode and FDJ.SelectBoss then
                     FDJ.SetMode("bosses")
                     FDJ.SelectBoss(bossIndex)
                 end
             end)
             marker:ClearAllPoints()
             marker:SetPoint("CENTER", holder, "TOPLEFT", mapBoss.x * artW, -(mapBoss.y * artH))
-            marker:Show()
+            marker:SetShown(size > 0)
         end
     end
     for i = shown + 1, #frame.dungeonMapBossMarkers do
@@ -481,74 +580,83 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
 
     -- Non-Boss Atlas Points of Interest (POIs)
     frame.dungeonMapPOIMarkers = frame.dungeonMapPOIMarkers or {}
+    local poiShown = 0
     if data.pois then
         for k, poi in ipairs(data.pois) do
-            local pMarker = frame.dungeonMapPOIMarkers[k]
-            if not pMarker then
-                pMarker = CreateFrame("Button", nil, holder)
-                pMarker:SetSize(22, 22)
-                pMarker.bg = pMarker:CreateTexture(nil, "BACKGROUND")
-                pMarker.bg:SetSize(18, 18)
-                pMarker.bg:SetPoint("CENTER")
-                pMarker.bg:SetTexture("Interface\\Buttons\\WHITE8X8")
-                pMarker.bg:SetColorTexture(0.08, 0.05, 0.03, 0.85)
+            if (poi.floor or 1) == floorIndex then
+                poiShown = poiShown + 1
+                local pMarker = frame.dungeonMapPOIMarkers[poiShown]
+                if not pMarker then
+                    pMarker = CreateFrame("Button", nil, holder)
+                    pMarker:SetSize(22, 22)
+                    pMarker.bg = pMarker:CreateTexture(nil, "BACKGROUND")
+                    pMarker.bg:SetSize(18, 18)
+                    pMarker.bg:SetPoint("CENTER")
+                    pMarker.bg:SetTexture("Interface\\Buttons\\WHITE8X8")
+                    pMarker.bg:SetColorTexture(0.08, 0.05, 0.03, 0.85)
 
-                pMarker.border = pMarker:CreateTexture(nil, "ARTWORK")
-                pMarker.border:SetSize(26, 26)
-                pMarker.border:SetPoint("CENTER")
-                pMarker.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
+                    pMarker.border = pMarker:CreateTexture(nil, "ARTWORK")
+                    pMarker.border:SetSize(26, 26)
+                    pMarker.border:SetPoint("CENTER")
+                    pMarker.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
 
-                pMarker.numText = pMarker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-                pMarker.numText:SetPoint("CENTER", 0, 0)
-                local fFile, fSize = pMarker.numText:GetFont()
-                if fFile then
-                    pMarker.numText:SetFont(fFile, math.max((fSize or 10), 11), "OUTLINE")
+                    pMarker.numText = pMarker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                    pMarker.numText:SetPoint("CENTER", 0, 0)
+                    local fFile, fSize = pMarker.numText:GetFont()
+                    if fFile then
+                        pMarker.numText:SetFont(fFile, math.max((fSize or 10), 11), "OUTLINE")
+                    end
+                    pMarker.numText:SetTextColor(1.00, 0.82, 0.20, 1.0)
+                    pMarker.numText:SetShadowOffset(1, -1)
+                    pMarker.numText:SetShadowColor(0, 0, 0, 1)
+
+                    pMarker:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+                    frame.dungeonMapPOIMarkers[poiShown] = pMarker
                 end
-                pMarker.numText:SetTextColor(1.00, 0.82, 0.20, 1.0)
-                pMarker.numText:SetShadowOffset(1, -1)
-                pMarker.numText:SetShadowColor(0, 0, 0, 1)
+                if pMarker:GetParent() ~= holder then pMarker:SetParent(holder) end
 
-                pMarker:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
-                frame.dungeonMapPOIMarkers[k] = pMarker
-            end
+                local poiNum = poi.number or k
+                local poiName = poi.name or poi.label or ""
+                local poiDetail = poi.detail or poi.note or ""
 
-            pMarker:SetFrameLevel(holder:GetFrameLevel() + 10)
-            pMarker.poiNumber = poi.number
-            pMarker.poiName = poi.name
-            pMarker.poiDetail = poi.detail
-            pMarker.numText:SetText(tostring(poi.number))
+                pMarker:SetFrameLevel(holder:GetFrameLevel() + 10)
+                pMarker.poiNumber = poiNum
+                pMarker.poiName = poiName
+                pMarker.poiDetail = poiDetail
+                pMarker.numText:SetText(tostring(poiNum))
 
-            pMarker:SetScript("OnEnter", function(self)
-                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                GameTooltip:SetText(string.format("%d. %s", self.poiNumber, self.poiName or ""), 1.0, 0.82, 0.20)
-                if self.poiDetail and self.poiDetail ~= "" then
-                    GameTooltip:AddLine(self.poiDetail, 0.90, 0.90, 0.90, true)
-                end
-                GameTooltip:Show()
-            end)
-            pMarker:SetScript("OnLeave", function() GameTooltip:Hide() end)
-            pMarker:SetScript("OnClick", function()
-                if frame.dungeonMapLegendPanel then
-                    if frame.dungeonMapLegendPanel:IsShown() then
-                        frame.dungeonMapLegendPanel:Hide()
-                        if frame.dungeonMapLegendButton and frame.dungeonMapLegendButton.text then
-                            frame.dungeonMapLegendButton.text:SetText(L("MAP_LEGEND"))
-                        end
-                    else
-                        frame.dungeonMapLegendPanel:Show()
-                        if frame.dungeonMapLegendButton and frame.dungeonMapLegendButton.text then
-                            frame.dungeonMapLegendButton.text:SetText(L("HIDE_LEGEND"))
+                pMarker:SetScript("OnEnter", function(self)
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                    GameTooltip:SetText(string.format("%d. %s", self.poiNumber, self.poiName or ""), 1.0, 0.82, 0.20)
+                    if self.poiDetail and self.poiDetail ~= "" then
+                        GameTooltip:AddLine(self.poiDetail, 0.90, 0.90, 0.90, true)
+                    end
+                    GameTooltip:Show()
+                end)
+                pMarker:SetScript("OnLeave", function() GameTooltip:Hide() end)
+                pMarker:SetScript("OnClick", function()
+                    if frame.dungeonMapLegendPanel then
+                        if frame.dungeonMapLegendPanel:IsShown() then
+                            frame.dungeonMapLegendPanel:Hide()
+                            if frame.dungeonMapLegendButton and frame.dungeonMapLegendButton.text then
+                                frame.dungeonMapLegendButton.text:SetText(L("MAP_LEGEND"))
+                            end
+                        else
+                            frame.dungeonMapLegendPanel:Show()
+                            if frame.dungeonMapLegendButton and frame.dungeonMapLegendButton.text then
+                                frame.dungeonMapLegendButton.text:SetText(L("HIDE_LEGEND"))
+                            end
                         end
                     end
-                end
-            end)
+                end)
 
-            pMarker:ClearAllPoints()
-            pMarker:SetPoint("CENTER", holder, "TOPLEFT", poi.x * artW, -(poi.y * artH))
-            pMarker:Show()
+                pMarker:ClearAllPoints()
+                pMarker:SetPoint("CENTER", holder, "TOPLEFT", poi.x * artW, -(poi.y * artH))
+                pMarker:Show()
+            end
         end
     end
-    for i = (data.pois and #data.pois or 0) + 1, #frame.dungeonMapPOIMarkers do
+    for i = poiShown + 1, #frame.dungeonMapPOIMarkers do
         frame.dungeonMapPOIMarkers[i]:Hide()
     end
 
@@ -579,7 +687,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
             end)
         end
         frame.dungeonMapLegendButton:ClearAllPoints()
-        frame.dungeonMapLegendButton:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 10)
+        frame.dungeonMapLegendButton:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 36)
         frame.dungeonMapLegendButton:SetFrameLevel(holder:GetFrameLevel() + 25)
         frame.dungeonMapLegendButton.text:SetText(L("MAP_LEGEND"))
         frame.dungeonMapLegendButton:Show()
@@ -611,7 +719,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
         end
 
         frame.dungeonMapLegendPanel:ClearAllPoints()
-        frame.dungeonMapLegendPanel:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 38)
+        frame.dungeonMapLegendPanel:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 64)
         frame.dungeonMapLegendPanel:SetFrameLevel(holder:GetFrameLevel() + 30)
 
         local legPanel = frame.dungeonMapLegendPanel
@@ -636,11 +744,15 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 legPanel.rows[rIdx] = row
             end
 
+            local poiNum = poi.number or rIdx
+            local poiName = poi.name or poi.label or ""
+            local poiDetail = poi.detail or poi.note or ""
+
             row:ClearAllPoints()
             row:SetPoint("TOPLEFT", legPanel, "TOPLEFT", 12, panelY)
-            row.title:SetText(string.format("|cffffd200[%d]|r  %s", poi.number, poi.name))
-            if poi.detail and poi.detail ~= "" then
-                row.detail:SetText(poi.detail)
+            row.title:SetText(string.format("|cffffd200[%d]|r  %s", poiNum, poiName))
+            if poiDetail ~= "" then
+                row.detail:SetText(poiDetail)
                 row.detail:Show()
                 local dH = row.detail:GetStringHeight() or 12
                 row:SetHeight(16 + dH)
@@ -663,10 +775,13 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
         if frame.dungeonMapLegendPanel then frame.dungeonMapLegendPanel:Hide() end
     end
 
-    -- Entrance
-    local ent = data.entrance
-    if not frame.dungeonMapEntrance then
-        local e = CreateFrame("Frame", nil, holder)
+    -- Entrances (single or multi-entrance dungeons like Maraudon)
+    local entList = data.entrances or (data.entrance and { data.entrance }) or {}
+    frame.dungeonMapEntrances = frame.dungeonMapEntrances or {}
+    local function EntranceFrame(i)
+        local e = frame.dungeonMapEntrances[i]
+        if e then return e end
+        e = CreateFrame("Frame", nil, holder)
         e.icon = e:CreateTexture(nil, "OVERLAY")
         e.icon:SetAllPoints()
         local ok = e.icon.SetAtlas and pcall(e.icon.SetAtlas, e.icon, "Dungeon", false)
@@ -675,39 +790,47 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
             e.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
         end
         e.label = e:CreateFontString(nil, "OVERLAY", _G.SystemFont_Shadow_Large_Outline and "SystemFont_Shadow_Large_Outline" or "GameFontNormalLarge")
-        e.label:SetTextColor(1.00, 0.82, 0.00)
         e.label:SetShadowColor(0, 0, 0, 1)
         e.label:SetShadowOffset(1, -1)
-        frame.dungeonMapEntrance = e
+        frame.dungeonMapEntrances[i] = e
+        return e
     end
-    local e = frame.dungeonMapEntrance
-    if e:GetParent() ~= holder then e:SetParent(holder) end
-    if ent and (ent.floor or 1) == floorIndex then
-        local iconSize = math.max(22, math.floor(baseH * 0.075))
-        e:SetSize(iconSize, iconSize)
-        e:SetFrameLevel(holder:GetFrameLevel() + 15)
-        e:ClearAllPoints()
-        e:SetPoint("CENTER", holder, "TOPLEFT", ent.x * artW, -(ent.y * artH))
-        local rad = math.rad(ent.angle or 0)
-        e.label:SetText(L("MAP_ENTRANCE"))
-        e.label:ClearAllPoints()
-        if ent.labelPos == "top" then
-            e.label:SetPoint("BOTTOM", e, "TOP", 0, 1)
-        elseif math.cos(rad) < -0.3 then
-            e.label:SetPoint("RIGHT", e, "LEFT", -3, 0)
-        else
-            e.label:SetPoint("LEFT", e, "RIGHT", 3, 0)
+    local entShown = 0
+    for _, ent in ipairs(entList) do
+        if (ent.floor or 1) == floorIndex then
+            entShown = entShown + 1
+            local e = EntranceFrame(entShown)
+            if e:GetParent() ~= holder then e:SetParent(holder) end
+            local iconSize = math.max(22, math.floor(baseH * 0.075))
+            e:SetSize(iconSize, iconSize)
+            e:SetFrameLevel(holder:GetFrameLevel() + 15)
+            e:ClearAllPoints()
+            e:SetPoint("CENTER", holder, "TOPLEFT", ent.x * artW, -(ent.y * artH))
+            local rad = math.rad(ent.angle or 0)
+            e.label:SetText(L(ent.labelKey or "MAP_ENTRANCE"))
+            local c = ent.color
+            if c then e.label:SetTextColor(c[1], c[2], c[3]) else e.label:SetTextColor(1.00, 0.82, 0.00) end
+            e.label:ClearAllPoints()
+            if ent.labelPos == "top" then
+                e.label:SetPoint("BOTTOM", e, "TOP", 0, 1)
+            elseif math.cos(rad) < -0.3 then
+                e.label:SetPoint("RIGHT", e, "LEFT", -3, 0)
+            else
+                e.label:SetPoint("LEFT", e, "RIGHT", 3, 0)
+            end
+            e:Show()
         end
-        e:Show()
-    else
-        e:Hide()
     end
+    for i = entShown + 1, #frame.dungeonMapEntrances do
+        frame.dungeonMapEntrances[i]:Hide()
+    end
+    frame.dungeonMapEntrance = frame.dungeonMapEntrances[1]
 
-    -- Floor Transitions / Ladders
+    -- Floor Transitions / Ladders / Traversal Notes
     frame.dungeonMapTransitions = frame.dungeonMapTransitions or {}
     local used = 0
     for _, tr in ipairs(data.transitions or {}) do
-        if tr.floor == floorIndex and floors[tr.to] then
+        if tr.floor == floorIndex and (floors[tr.to] or tr.note) then
             used = used + 1
             local t = frame.dungeonMapTransitions[used]
             if not t then
@@ -722,13 +845,14 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 t.label:SetTextColor(0.35, 1.00, 0.35)
                 t.label:SetPoint("BOTTOM", t, "TOP", 0, 1)
                 t:SetScript("OnClick", function(self)
+                    if not self.toFloor then return end
                     FDJ.ResetDungeonMapView()
                     local curDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon) or "Ragefire Chasm"
                     FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[curDungeon], self.toFloor)
                 end)
                 t:SetScript("OnEnter", function(self)
                     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                    GameTooltip:SetText(L("MAP_FLOOR", self.toFloor), 0.35, 1, 0.35)
+                    GameTooltip:SetText(self.toFloor and L("MAP_FLOOR", self.toFloor) or self.noteText or "", 0.35, 1, 0.35)
                     GameTooltip:Show()
                 end)
                 t:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -741,12 +865,49 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
             t:SetFrameLevel(holder:GetFrameLevel() + 14)
             t:ClearAllPoints()
             t:SetPoint("CENTER", holder, "TOPLEFT", tr.x * artW, -(tr.y * artH))
-            t.label:SetText(L(tr.labelKey or "MAP_FLOOR", tr.to))
+            t.noteText = tr.note and L(tr.labelKey) or nil
+            t.label:SetText(tr.note and "" or L(tr.labelKey or "MAP_FLOOR", tr.to))
             t:Show()
         end
     end
     for i = used + 1, #frame.dungeonMapTransitions do
         frame.dungeonMapTransitions[i]:Hide()
+    end
+
+    -- Quest Turn-In NPCs inside the dungeon (e.g. Captain Truman in Ruins of Lordaeron)
+    frame.dungeonMapTurnIns = frame.dungeonMapTurnIns or {}
+    local nTurn = 0
+    for _, ti in ipairs(data.turnins or {}) do
+        if (ti.floor or 1) == floorIndex then
+            nTurn = nTurn + 1
+            local q = frame.dungeonMapTurnIns[nTurn]
+            if not q then
+                q = CreateFrame("Frame", nil, holder)
+                q:EnableMouse(true)
+                q.icon = q:CreateTexture(nil, "OVERLAY")
+                q.icon:SetAllPoints()
+                q.icon:SetTexture("Interface\\GossipFrame\\ActiveQuestIcon")
+                q:SetScript("OnEnter", function(self)
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                    GameTooltip:SetText(self.npcName or "", 1, 0.82, 0)
+                    GameTooltip:AddLine(L("TURN_IN_HERE"), 0.9, 0.9, 0.9, true)
+                    GameTooltip:Show()
+                end)
+                q:SetScript("OnLeave", function() GameTooltip:Hide() end)
+                frame.dungeonMapTurnIns[nTurn] = q
+            end
+            if q:GetParent() ~= holder then q:SetParent(holder) end
+            q.npcName = ti.npc
+            local qSize = math.max(18, math.floor(baseH * 0.055))
+            q:SetSize(qSize, qSize)
+            q:SetFrameLevel(holder:GetFrameLevel() + 14)
+            q:ClearAllPoints()
+            q:SetPoint("CENTER", holder, "TOPLEFT", ti.x * artW, -(ti.y * artH))
+            q:Show()
+        end
+    end
+    for i = nTurn + 1, #frame.dungeonMapTurnIns do
+        frame.dungeonMapTurnIns[i]:Hide()
     end
 
     -- View Mode Toggle Button

@@ -11,11 +11,14 @@ local FDJ = _G.ForeverDungeonJournal_NS
 if not FDJ then return end
 
 local GRAVEYARD, LIBRARY = "Scarlet Monastery: Graveyard", "Scarlet Monastery: Library"
-FDJ.SCARLET_WINGS = { GRAVEYARD, LIBRARY }
-FDJ.SCARLET_WING_MAPS = FDJ.SCARLET_WING_MAPS or { [302] = GRAVEYARD, [303] = LIBRARY }
+local ARMORY, CATHEDRAL = "Scarlet Monastery: Armory", "Scarlet Monastery: Cathedral"
+FDJ.SCARLET_WINGS = { GRAVEYARD, LIBRARY, ARMORY, CATHEDRAL }
+FDJ.SCARLET_WING_MAPS = FDJ.SCARLET_WING_MAPS or { [302] = GRAVEYARD, [303] = LIBRARY, [304] = ARMORY, [305] = CATHEDRAL }
 FDJ.SCARLET_WING_SUBZONES = {
     ["chamber of atonement"] = GRAVEYARD, ["forlorn cloister"] = GRAVEYARD, ["honor's tomb"] = GRAVEYARD,
     ["huntsman's cloister"] = LIBRARY, ["gallery of treasures"] = LIBRARY, ["athenaeum"] = LIBRARY,
+    ["training grounds"] = ARMORY, ["footman's armory"] = ARMORY, ["crusader's armory"] = ARMORY, ["hall of champions"] = ARMORY,
+    ["chapel gardens"] = CATHEDRAL, ["crusader's chapel"] = CATHEDRAL,
 }
 
 local DOOR_RADIUS = 0.006 -- map-coordinate distance treated as "the same door"
@@ -67,6 +70,8 @@ local function WingFromText(text)
     if FDJ.SCARLET_WING_SUBZONES[n] then return FDJ.SCARLET_WING_SUBZONES[n] end
     if n:find("graveyard", 1, true) then return GRAVEYARD end
     if n:find("library", 1, true) then return LIBRARY end
+    if n:find("armory", 1, true) then return ARMORY end
+    if n:find("cathedral", 1, true) or n:find("chapel", 1, true) then return CATHEDRAL end
     return nil
 end
 
@@ -220,7 +225,9 @@ end
 
 -- The player says which wing this is (buttons on the map, or /dj wing).
 function FDJ.SetScarletWing(wing)
-    if wing ~= GRAVEYARD and wing ~= LIBRARY then return false end
+    local known = false
+    for _, w in ipairs(FDJ.SCARLET_WINGS) do if w == wing then known = true end end
+    if not known then return false end
     local visit = Visit()
     visit.wing = wing
     Store().scarletLastPick = wing
@@ -233,6 +240,8 @@ function FDJ.ScarletWingFromWord(word)
     word = type(word) == "string" and word:lower() or ""
     if word == "gy" or word:find("grave", 1, true) then return GRAVEYARD end
     if word == "lib" or word:find("libr", 1, true) then return LIBRARY end
+    if word == "arm" or word:find("armo", 1, true) then return ARMORY end
+    if word == "cath" or word:find("cathe", 1, true) then return CATHEDRAL end
     return nil
 end
 
@@ -288,4 +297,3 @@ watcher:SetScript("OnUpdate", function(_, dt)
 end)
 
 FDJ.CurrentScarletWing = FDJ.ResolveScarletWing
-

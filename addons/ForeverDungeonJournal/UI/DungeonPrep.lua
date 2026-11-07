@@ -103,15 +103,12 @@ function FDJ.DungeonHasPrep(dungeonName)
     if not dungeonName then return false end
     local prep = FDJ.DUNGEON_PREPARATION and FDJ.DUNGEON_PREPARATION[dungeonName]
     if not prep then return false end
-    if prep.keys and #prep.keys > 0 then
-        return true
-    end
-    if prep.attunements and #prep.attunements > 0 then
-        return true
-    end
-    if prep.requiredPrep == true then
-        return true
-    end
+    if prep.keys and #prep.keys > 0 then return true end
+    if prep.attunements and #prep.attunements > 0 then return true end
+    if prep.dispels and #prep.dispels > 0 then return true end
+    if prep.consumables and #prep.consumables > 0 then return true end
+    if prep.tacticalNotes and #prep.tacticalNotes > 0 then return true end
+    if prep.requiredPrep == true then return true end
     return false
 end
 

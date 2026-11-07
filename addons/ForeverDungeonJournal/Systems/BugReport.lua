@@ -112,6 +112,7 @@ function FDJ.CreateBugReportButton(frame, home, anchorButton)
         icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     end
     icon:SetAlpha(0.85)
+    button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     button:SetScript("OnEnter", function(self)
         icon:SetAlpha(1)
         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT")

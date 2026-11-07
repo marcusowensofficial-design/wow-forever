@@ -936,6 +936,7 @@ RefreshQuestList = function()
                 local lineHeight = 18
                 local panelHeight = 10 + (#chain * lineHeight) + 7
                 button.chainPanel:ClearAllPoints()
+                button.chainPanel:SetFrameLevel(button:GetFrameLevel() + 2)
                 button.chainPanel:SetPoint("TOPLEFT", button, "TOPLEFT", 39, -baseRowHeight + 2)
                 button.chainPanel:SetPoint("RIGHT", button, "RIGHT", -8, 0)
                 button.chainPanel:SetHeight(panelHeight)
@@ -945,6 +946,7 @@ RefreshQuestList = function()
                     local row = button.chainRows[chainIndex]
                     if not row then
                         row = CreateFrame("Button", nil, button.chainPanel)
+                        row:SetFrameLevel(button.chainPanel:GetFrameLevel() + 2)
                         row:SetHeight(lineHeight)
                         row:SetPoint("TOPLEFT", button.chainPanel, "TOPLEFT", 8, -5 - ((chainIndex - 1) * lineHeight))
                         row:SetPoint("RIGHT", button.chainPanel, "RIGHT", -6, 0)
@@ -975,9 +977,15 @@ RefreshQuestList = function()
 
                         row:SetScript("OnClick", function(self)
                             if not self.step then return end
+                            if self.parentQuestIndex then
+                                selectedQuest = self.parentQuestIndex
+                            end
                             selectedPrereqStep = self.step
                             selectedPrereqParentQuestName = self.parentQuestName
                             selectedPrereqParentQuestID = self.parentQuestID
+                            -- Persist before refreshing: RefreshQuestList() calls
+                            -- SyncState(), which would otherwise discard this click.
+                            SaveState()
                             if self.step.id then RequestQuestRewardData(self.step.id) end
                             RefreshQuestList()
                             RefreshQuestDetail()
@@ -988,7 +996,9 @@ RefreshQuestList = function()
                         button.chainRows[chainIndex] = row
                     end
 
+                    row:SetFrameLevel(button.chainPanel:GetFrameLevel() + 2)
                     row.step = step
+                    row.parentQuestIndex = questIndex
                     row.parentQuestName = quest.name
                     row.parentQuestID = quest.id
 
@@ -1238,6 +1248,7 @@ local function SelectPrerequisiteStepByOffset(offset)
     local target = chain[currentIndex + offset]
     if not target then return end
     selectedPrereqStep = target
+    SaveState()
     if target.id then RequestQuestRewardData(target.id) end
     RefreshQuestList()
     RefreshQuestDetail()
@@ -1440,6 +1451,11 @@ local function RefreshPrerequisiteQuestDetail(step)
         frame.questMapButton.prereqLocation = nil
         frame.questMapButton:Hide()
     end
+    if frame.questTurninMapButton then
+        frame.questTurninMapButton.turninLocation = nil
+        frame.questTurninMapButton:Hide()
+    end
+    UpdateQuestActionButtonSizes()
     if frame.questChainButton then
         frame.questChainButton.questID = nil
         frame.questChainButton.parentQuestName = nil
@@ -1586,7 +1602,19 @@ local function RefreshPrerequisiteQuestDetail(step)
         frame.questTurninText:SetText(QuestField(questID, "turnin", details.turnin))
         frame.questTurninText:SetTextColor(0.10, 0.065, 0.025)
         frame.questTurninText:Show()
-        cursorY = cursorY + (frame.questTurninText:GetStringHeight() or 24) + 12
+        if details.turninMap and frame.questTurninMapButton then
+            cursorY = cursorY + (frame.questTurninText:GetStringHeight() or 24) + 7
+            frame.questTurninMapButton:ClearAllPoints()
+            frame.questTurninMapButton.turninLocation = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(details.turninMap)) or details.turninMap
+            if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+                FDJ.MapMarkers.ConfigureTargetAndMarkAction(frame.questTurninMapButton, frame.questTurninMapButton.turninLocation, true)
+            end
+            frame.questTurninMapButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+            frame.questTurninMapButton:Show()
+            cursorY = cursorY + 31
+        else
+            cursorY = cursorY + (frame.questTurninText:GetStringHeight() or 24) + 12
+        end
     end
 
     local usefulNote = QuestField(questID, "note", details.note)
@@ -1930,6 +1958,10 @@ RefreshQuestDetail = function()
     frame.questMapButton:ClearAllPoints()
     frame.questMapButton.prereqLocation = quest.startMap
     frame.questMapButton.quest = quest
+    if frame.questTurninMapButton then
+        frame.questTurninMapButton.turninLocation = nil
+        frame.questTurninMapButton:Hide()
+    end
 
     if frame.questStartLinkButton then
         frame.questStartLinkButton.questID = nil

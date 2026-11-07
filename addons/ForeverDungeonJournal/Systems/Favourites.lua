@@ -237,6 +237,7 @@ local function ShowItemTooltip(owner, itemID, hint)
         local _, link = GetItemInfo(itemID)
         if link then GameTooltip:SetHyperlink(link) end
     end
+    if FDJ.AddUnseenItemHint then FDJ.AddUnseenItemHint(GameTooltip) end
     if hint then
         GameTooltip:AddLine(" ")
         GameTooltip:AddLine(hint, 0.75, 0.75, 0.75, true)
@@ -560,6 +561,8 @@ local function CreateWindow(frame)
     end)
 
     win:HookScript("OnShow", function()
+        -- Same size as the journal (it can be resized with its corner grip).
+        if FDJ.SyncPopupScale then pcall(FDJ.SyncPopupScale) end
         close:EnableMouse(true)
         close:SetAlpha(1)
         close:Show()
@@ -892,7 +895,7 @@ function FDJ.ImportWishlist(rawString)
     local importedCount = 0
     local db = GetDB()
 
-    -- Build lookup of boss drops and quests from FDJ.DB
+    -- Build lookup of boss drops (including shared loot) and quests from FDJ.DB
     local itemLookup = {}
     if FDJ.DB then
         for dungeonName, dungeon in pairs(FDJ.DB) do
@@ -904,6 +907,18 @@ function FDJ.ImportWishlist(rawString)
                             dungeon = dungeonName,
                             boss = boss.name,
                         }
+                    end
+                end
+                local sharedLoot = FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(dungeonName, boss) or nil
+                if sharedLoot then
+                    for _, item in ipairs(sharedLoot) do
+                        if item and item[1] and not itemLookup[tonumber(item[1])] then
+                            itemLookup[tonumber(item[1])] = {
+                                item = item,
+                                dungeon = dungeonName,
+                                boss = boss.name,
+                            }
+                        end
                     end
                 end
             end
@@ -970,4 +985,3 @@ function FDJ.ImportWishlist(rawString)
 
     print(string.format("|cffd8a83cForever Dungeon Journal|r |cff00ff7fSuccessfully imported %d BiS wishlist items!|r Boss drops are now starred |cffffd100★|r in your journal.", importedCount))
 end
-

@@ -623,6 +623,7 @@ function FDJ.MakeRoleTipCard(parent, title, iconPath, titleColor)
     end)
 
     card.title = card:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    card.label = card.title
     card.title:SetPoint("TOPLEFT", card.icon, "TOPRIGHT", 10, -1)
     card.title:SetPoint("RIGHT", announceBtn, "LEFT", -6, 0)
     card.title:SetJustifyH("LEFT")
@@ -1015,6 +1016,9 @@ function FDJ.RefreshBossList()
             else
                 button.name:SetPoint("RIGHT", -10, 0)
             end
+            if FDJ.ApplyBossFactionTag then
+                pcall(FDJ.ApplyBossFactionTag, button, boss, isRare)
+            end
 
             local hasPortrait = FDJ.SetBossPortrait and FDJ.SetBossPortrait(
                 button.portrait,
@@ -1099,6 +1103,9 @@ function FDJ.RefreshLoot()
             frame.selectedBossType:SetText("")
             frame.selectedBossType:Hide()
         end
+    end
+    if FDJ.UpdateBossSummon then
+        pcall(FDJ.UpdateBossSummon, frame, boss)
     end
 
     local hasPortrait = FDJ.SetBossPortrait and FDJ.SetBossPortrait(
@@ -1351,6 +1358,41 @@ end
 
 FDJ.RefreshLootNow = FDJ.RefreshLoot
 
+function FDJ.ResolveRoleTips(roleTips)
+    if not roleTips then return nil, nil, nil, nil end
+    local tankTip = roleTips.tank
+    local healerTip = roleTips.healer
+    local meleeTip = roleTips.melee
+    local rangedTip = roleTips.ranged
+
+    if (not meleeTip or not rangedTip) and roleTips.dps and roleTips.dps ~= "" then
+        local dps = roleTips.dps
+        local mPart, rPart = dps:match("[Mm]elee%s*:%s*(.-)%s+[Rr]anged%s*:%s*(.+)$")
+        if not mPart then
+            rPart, mPart = dps:match("[Rr]anged%s*:%s*(.-)%s+[Mm]elee%s*:%s*(.+)$")
+        end
+        if mPart and rPart then
+            meleeTip = meleeTip or mPart
+            rangedTip = rangedTip or rPart
+        else
+            local onlyM = dps:match("^[Mm]elee%s*:%s*(.+)$")
+            local onlyR = dps:match("^[Rr]anged%s*:%s*(.+)$")
+            if onlyM then
+                meleeTip = meleeTip or onlyM
+                rangedTip = rangedTip or onlyM
+            elseif onlyR then
+                meleeTip = meleeTip or onlyR
+                rangedTip = rangedTip or onlyR
+            else
+                meleeTip = meleeTip or dps
+                rangedTip = rangedTip or dps
+            end
+        end
+    end
+
+    return tankTip, healerTip, meleeTip, rangedTip
+end
+
 function FDJ.RefreshBossTactics()
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     if not frame or not frame.bossTacticsContent or not frame.bossTacticsScroll then return end
@@ -1375,6 +1417,8 @@ function FDJ.RefreshBossTactics()
         frame.tacticsRoleHeader:Hide()
         if frame.tacticsTankCard then frame.tacticsTankCard:Hide() end
         if frame.tacticsHealerCard then frame.tacticsHealerCard:Hide() end
+        if frame.tacticsMeleeCard then frame.tacticsMeleeCard:Hide() end
+        if frame.tacticsRangedCard then frame.tacticsRangedCard:Hide() end
         if frame.tacticsDpsCard then frame.tacticsDpsCard:Hide() end
         frame.tacticsAbilitiesHeader:Hide()
         if frame.tacticsAnnounceButton then frame.tacticsAnnounceButton:Hide() end
@@ -1435,10 +1479,12 @@ function FDJ.RefreshBossTactics()
     end
     cursorY = cursorY + 22
 
+    local tankTip, healerTip, meleeTip, rangedTip = FDJ.ResolveRoleTips(tactics.roleTips)
     local cards = {
-        { frame.tacticsTankCard, tactics.roleTips and tactics.roleTips.tank, L("TANK") },
-        { frame.tacticsHealerCard, tactics.roleTips and tactics.roleTips.healer, L("HEALER") },
-        { frame.tacticsDpsCard, tactics.roleTips and tactics.roleTips.dps, L("DPS") },
+        { frame.tacticsTankCard, tankTip, L("TANK") or "Tank" },
+        { frame.tacticsHealerCard, healerTip, L("HEALER") or "Healer" },
+        { frame.tacticsMeleeCard or frame.tacticsDpsCard, meleeTip, L("MELEE_DPS") or "Melee DPS" },
+        { frame.tacticsRangedCard, rangedTip, L("RANGED_DPS") or "Ranged DPS" },
     }
     for _, cInfo in ipairs(cards) do
         local card, tipText, roleLabel = cInfo[1], cInfo[2], cInfo[3]

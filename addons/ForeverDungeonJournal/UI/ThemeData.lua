@@ -210,3 +210,83 @@ for _, tableName in ipairs({ "THEMES", "DUNGEON_HOME_ART", "DUNGEON_HOME_TEXCOOR
     end
 end
 
+-- Armory and Cathedral share the Graveyard look; Razorfen Downs the Kraul one.
+-- Home-card art: the first loading screen this client actually has.
+do
+    local function Pick(candidates)
+        if not GetFileIDFromPath then return nil end
+        for _, path in ipairs(candidates) do
+            local ok, id = pcall(GetFileIDFromPath, path)
+            if ok and id then return path end
+        end
+    end
+    local SM = { "Interface\\Glues\\LoadingScreens\\LoadScreenScarletMonastery", "Interface\\Glues\\LoadingScreens\\LoadScreenMonastery" }
+    local RFD = { "Interface\\Glues\\LoadingScreens\\LoadScreenRazorfenDowns", "Interface\\Glues\\LoadingScreens\\LoadScreenRazorfenDown" }
+    local smArt, rfdArt = Pick(SM), Pick(RFD)
+    for _, wing in ipairs({ "Scarlet Monastery: Armory", "Scarlet Monastery: Cathedral" }) do
+        if smArt then
+            FDJ.DUNGEON_HOME_ART[wing] = smArt
+            FDJ.DUNGEON_HOME_TEXCOORD[wing] = { 0.02, 0.98, 0.24, 0.82 }
+        end
+    end
+    if rfdArt then
+        FDJ.DUNGEON_HOME_ART["Razorfen Downs"] = rfdArt
+        FDJ.DUNGEON_HOME_TEXCOORD["Razorfen Downs"] = { 0.02, 0.98, 0.24, 0.82 }
+    end
+    for _, tableName in ipairs({ "THEMES", "DUNGEON_HOME_ART", "DUNGEON_HOME_TEXCOORD", "DUNGEON_PAGE_ART", "DUNGEON_PAGE_TEXCOORD" }) do
+        local t = FDJ[tableName]
+        if type(t) == "table" then
+            for _, wing in ipairs({ "Scarlet Monastery: Armory", "Scarlet Monastery: Cathedral" }) do
+                if t[wing] == nil then t[wing] = t["Scarlet Monastery: Graveyard"] end
+            end
+            if t["Razorfen Downs"] == nil then t["Razorfen Downs"] = t["Razorfen Kraul"] end
+        end
+    end
+end
+
+-- The Cathedral has its own bundled card art (its loading screen, logo cut off).
+FDJ.DUNGEON_HOME_ART["Scarlet Monastery: Cathedral"] = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ScarletMonasteryCathedralHome"
+FDJ.DUNGEON_HOME_TEXCOORD["Scarlet Monastery: Cathedral"] = { 0, 1, 0.06, 0.94 }
+
+FDJ.DUNGEON_HOME_ART["Scarlet Monastery: Armory"] = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ScarletMonasteryArmoryHome"
+FDJ.DUNGEON_HOME_TEXCOORD["Scarlet Monastery: Armory"] = { 0, 1, 0.06, 0.94 }
+
+-- Uldaman and Zul'Farrak: the client's own loading screens when it has them.
+do
+    local function Has(path)
+        if not GetFileIDFromPath then return false end
+        local ok, id = pcall(GetFileIDFromPath, path)
+        return ok and id ~= nil
+    end
+    for name, paths in pairs({
+        ["Uldaman"] = { "Interface\\Glues\\LoadingScreens\\LoadScreenUldaman" },
+        ["Zul'Farrak"] = { "Interface\\Glues\\LoadingScreens\\LoadScreenZulFarrak", "Interface\\Glues\\LoadingScreens\\LoadScreenZulfarrak" },
+    }) do
+        for _, path in ipairs(paths) do
+            if Has(path) then
+                FDJ.DUNGEON_HOME_ART[name] = path
+                FDJ.DUNGEON_HOME_TEXCOORD[name] = { 0.02, 0.98, 0.24, 0.82 }
+                break
+            end
+        end
+    end
+end
+
+-- Bundled card art (the client may not ship these loading screens yet).
+for name, file in pairs({ ["Uldaman"] = "UldamanHome", ["Zul'Farrak"] = "ZulFarrakHome", ["Razorfen Downs"] = "RazorfenDownsHome",
+    ["Sunken Temple"] = "SunkenTempleHome", ["Scholomance"] = "ScholomanceHome", ["Maraudon"] = "MaraudonHome",
+    ["Blackrock Depths"] = "BlackrockDepthsHome", ["Upper Blackrock Spire"] = "UpperBlackrockSpireHome", ["Lower Blackrock Spire"] = "BlackrockSpireHome",
+    ["Dire Maul: East"] = "DireMaulHome", ["Dire Maul: West"] = "DireMaulWestHome", ["Dire Maul: North"] = "DireMaulNorthHome",
+    ["Stratholme: Living"] = "StratholmeHome", ["Stratholme: Undead"] = "StratholmeUndeadHome",
+    -- WoW Forever dungeons announced but not out yet ("Coming Soon" cards).
+    ["The Drowned City"] = "DrownedCityHome", ["Krol'dok Stronghold"] = "KroldokHome", ["Alcaz Prison"] = "AlcazPrisonHome",
+    ["Blackmaw Hold"] = "BlackmawHoldHome", ["Shaper's Terrace"] = "ShapersTerraceHome" }) do
+    FDJ.DUNGEON_HOME_ART[name] = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\" .. file
+    FDJ.DUNGEON_HOME_TEXCOORD[name] = { 0, 1, 0.06, 0.94 }
+end
+
+-- Cards whose art ends in a dark strip get a coloured band over the bottom
+-- edge, tinted to match the art: { r, g, b, height }.
+FDJ.DUNGEON_HOME_BOTTOM_BAND = {
+    ["City of Dalaran"] = { 0.36, 0.26, 0.42, 4 },
+}

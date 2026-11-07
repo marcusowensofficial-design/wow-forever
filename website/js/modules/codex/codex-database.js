@@ -322,6 +322,26 @@
     return { primary, equip, dps };
   }
 
+  function formatRecipeUseText(profName, craftedName) {
+    const p = String(profName || '').toLowerCase();
+    const cName = String(craftedName || '').trim();
+    if (p.includes('enchant')) {
+      if (/^enchant\s+/i.test(cName)) {
+        return `Use: Teaches you how to permanently ${cName.toLowerCase()}.`;
+      }
+      return `Use: Teaches you how to enchant ${cName}.`;
+    }
+    const verb = (p.includes('tailor') ? 'sew' : (p.includes('cook') ? 'cook' : 'make'));
+    if (/^(a|an|the)\s+/i.test(cName) || p.includes('cook')) {
+      return `Use: Teaches you how to ${verb} ${cName}.`;
+    }
+    if (/s$/i.test(cName) && !/(dress|harness|compass|bass)$/i.test(cName)) {
+      return `Use: Teaches you how to ${verb} ${cName}.`;
+    }
+    const article = /^[aeiou]/i.test(cName) ? 'an' : 'a';
+    return `Use: Teaches you how to ${verb} ${article} ${cName}.`;
+  }
+
   function buildCodexItemTooltipHtml(rowIdx, fallbackItem = null) {
     const idx = ensureIndex();
     const rich = ensureRichLookup();
@@ -347,8 +367,16 @@
     const sList = r ? (r[13] || []) : [];
     const rawStats = r ? (r[14] || '') : (fallbackItem?.stats || '');
 
+    const itemCat = (r && meta.cats ? meta.cats[r[5]] : '') || '';
+    const isRecipe = itemCat.startsWith('recipe') || /^(recipe|pattern|formula|plans|schematic|manual):\s*/i.test(name);
+    const isConsumable = itemCat.startsWith('consumable') || ['Potions', 'Elixirs', 'Flasks', 'Scrolls', 'Bandages', 'Consumable'].includes(kind);
+    const isGear = itemCat.startsWith('armor') || itemCat.startsWith('weapons') || itemCat.startsWith('jewelry') || itemCat.startsWith('offhand');
+    const isQuiver = r ? (r[6] === 95 || (meta.kinds && /quiver|ammo pouch/i.test(meta.kinds[r[6]]))) : /quiver|ammo pouch/i.test(kind);
+
     const curatedTip = window.WOW_DUNGEON_LOOT_TOOLTIPS?.[id];
-    const consumableTip = window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : null);
+    const consumableTip = (isConsumable && !isRecipe)
+      ? (window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : null))
+      : null;
     const richItem = rich.byId.get(id) || (name ? rich.byName.get(String(name).toLowerCase().trim()) : null);
     const cdlItem = rich.cdlById.get(id);
     const cleanItemName = name ? String(name).toLowerCase().trim() : '';
@@ -471,29 +499,77 @@
         html += `<div style="color:#fff;font-size:0.8rem;margin:0.2rem 0;">Requires Level ${esc(req)}</div>`;
       }
 
-      if (recipeItem?.req) {
-        html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.req)}</div>`;
-      } else if (recipeItem?.learn && recipeItem?.profName) {
-        html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.profName)} (${esc(recipeItem.learn)})</div>`;
-      }
-
-      if (equip.length > 0) {
-        for (const eq of equip) {
-          html += `<div class="wow-tip-equip">${esc(eq)}</div>`;
+      if (isRecipe) {
+        if (recipeItem?.req) {
+          html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.req)}</div>`;
+        } else if (recipeItem?.learn && recipeItem?.profName) {
+          html += `<div style="color:#ff8000;font-size:0.8rem;font-weight:600;margin:0.2rem 0;">Requires ${esc(recipeItem.profName)} (${esc(recipeItem.learn)})</div>`;
         }
-      }
 
-      const itemCat = (r && meta.cats ? meta.cats[r[5]] : '') || '';
-      const isRecipe = itemCat.startsWith('recipe');
-      const isConsumable = itemCat.startsWith('consumable') || ['Potions', 'Elixirs', 'Flasks', 'Scrolls', 'Bandages', 'Consumable'].includes(kind);
+        const profName = recipeItem?.profName || (meta.cats && r && meta.cats[r[5]] ? meta.cats[r[5]].split(':')[1] : '') || '';
+        const cleanProf = (profName === '2' ? 'Tailoring' : profName === '1' ? 'Leatherworking' : profName === '4' ? 'Blacksmithing' : profName === '6' ? 'Alchemy' : profName === '5' ? 'Cooking' : profName === '3' ? 'Engineering' : profName === '8' ? 'Enchanting' : profName === '7' ? 'First Aid' : profName);
+        const craftedName = recipeItem?.name || name.replace(/^(recipe|pattern|formula|plans|schematic|manual):\s*/i, '').trim();
+        const recipeUseLine = formatRecipeUseText(cleanProf, craftedName);
+        html += `<div class="wow-tip-equip" style="color:#4ade80;">${esc(recipeUseLine)}</div>`;
 
-      const useEffect = consumableTip || richItem?.effect || (isRecipe || isConsumable ? recipeItem?.effect : null);
-      if (useEffect && equip.length === 0) {
-        const effStr = String(useEffect).trim();
-        const displayEff = (effStr.startsWith('Use:') || effStr.startsWith('Equip:')) ? effStr : `Use: ${effStr}`;
-        html += `<div class="wow-tip-equip" style="color:#4ade80;">${esc(displayEff)}</div>`;
-      } else if (recipeItem?.effect && equip.length === 0) {
-        html += `<div class="wow-tip-equip">${esc(recipeItem.effect)}</div>`;
+        let cRow = null;
+        if (recipeItem?.id && idx?.idToRow && idx.idToRow.has(Number(recipeItem.id))) {
+          cRow = idx.rows[idx.idToRow.get(Number(recipeItem.id))];
+        } else if (craftedName && idx?.nameToRow && idx.nameToRow.has(craftedName.toLowerCase().trim())) {
+          cRow = idx.rows[idx.nameToRow.get(craftedName.toLowerCase().trim())];
+        }
+
+        if (cRow) {
+          const cId = cRow[0];
+          const cName = cRow[1];
+          const cQ = Math.min(cRow[2], 5);
+          const cIlvl = cRow[3];
+          const cReqLvl = cRow[4];
+          const cKind = (meta.kinds && meta.kinds[cRow[6]]) || '';
+          const cBind = BIND_TEXT[cRow[8]] || '';
+          const cRawStats = cRow[14] || '';
+          const cStats = parseDbStats(cRawStats);
+          const cRich = rich.byId.get(cId) || rich.byName.get(cName.toLowerCase().trim());
+
+          html += `
+            <div class="wow-tip-crafted-block" style="margin-top:0.4rem;padding-top:0.35rem;border-top:1px dashed rgba(255,255,255,0.14);">
+              <div style="font-size:0.7rem;color:#94a3b8;margin-bottom:0.15rem;text-transform:uppercase;letter-spacing:0.04em;font-weight:600;">Teaches:</div>
+              <div style="color:${Q_COLORS[cQ]};font-weight:700;font-size:0.92rem;line-height:1.25;">${esc(cName)}</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin:0.12rem 0;font-size:0.75rem;">
+                ${cKind ? `<span style="color:#cbd5e1;">${esc(cKind)}</span>` : '<span></span>'}
+                ${cIlvl ? `<span style="color:#facc15;font-weight:600;">Item Level ${cIlvl}</span>` : ''}
+              </div>
+              ${cBind ? `<div class="wow-tip-bind" style="font-size:0.76rem;">${esc(cBind)}</div>` : ''}
+              ${cRich?.armor ? `<div style="color:#fff;font-size:0.78rem;">${esc(String(cRich.armor).includes('Armor') ? cRich.armor : `${cRich.armor} Armor`)}</div>` : ''}
+              ${cStats.primary.length > 0 ? `<div class="wow-tip-stats" style="font-size:0.78rem;">${cStats.primary.map(s => `<span>${esc(s)}</span>`).join('')}</div>` : ''}
+              ${cReqLvl && cReqLvl > 0 ? `<div style="color:#fff;font-size:0.78rem;margin:0.15rem 0;">Requires Level ${esc(cReqLvl)}</div>` : ''}
+              ${cStats.equip.length > 0 ? cStats.equip.map(eq => `<div class="wow-tip-equip" style="font-size:0.78rem;">${esc(eq)}</div>`).join('') : ''}
+              ${(cStats.equip.length === 0 && recipeItem?.effect) ? `
+                <div class="wow-tip-equip" style="font-size:0.78rem;color:#4ade80;">${esc(recipeItem.effect.startsWith('Use:') || recipeItem.effect.startsWith('Equip:') ? recipeItem.effect : (meta.cats && meta.cats[cRow[5]] && meta.cats[cRow[5]].startsWith('armor') ? `Equip: ${recipeItem.effect}` : `Use: ${recipeItem.effect}`))}</div>
+              ` : ''}
+            </div>
+          `;
+        } else if (recipeItem?.effect) {
+          const effStr = String(recipeItem.effect).trim();
+          const effDisplay = (effStr.startsWith('Use:') || effStr.startsWith('Equip:') || effStr.startsWith('Permanently')) ? effStr : `Use: ${effStr}`;
+          html += `<div class="wow-tip-equip" style="color:#4ade80;font-size:0.78rem;margin-top:0.25rem;">${esc(effDisplay)}</div>`;
+        }
+      } else {
+        if (equip.length > 0) {
+          for (const eq of equip) {
+            html += `<div class="wow-tip-equip">${esc(eq)}</div>`;
+          }
+        }
+
+        const useEffect = (isConsumable ? consumableTip : null) || richItem?.effect;
+        if (useEffect && equip.length === 0) {
+          const effStr = String(useEffect).trim();
+          let displayEff = effStr;
+          if (!effStr.startsWith('Use:') && !effStr.startsWith('Equip:') && !effStr.startsWith('Chance on hit:')) {
+            displayEff = (isGear || isQuiver) ? `Equip: ${effStr}` : `Use: ${effStr}`;
+          }
+          html += `<div class="wow-tip-equip" style="color:#4ade80;">${esc(displayEff)}</div>`;
+        }
       }
 
       if (reagentInfo?.summary) {
@@ -735,7 +811,9 @@
       ? `<span style="display:inline-block;padding:0.12rem 0.45rem;border-radius:4px;font-size:0.72rem;font-weight:700;background:${bind === 'BoE' ? 'rgba(34,197,94,0.16)' : 'rgba(245,158,11,0.16)'};color:${bind === 'BoE' ? '#4ade80' : '#fbbf24'};">${bind}</span>`
       : `<span style="color:#64748b;font-size:0.75rem;">—</span>`;
 
-    const consumableEffect = !stats ? (window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : '')) : '';
+    const rowCat = (meta.cats && meta.cats[r[5]]) || '';
+    const isRowConsumable = rowCat.startsWith('consumable') || ['Potions', 'Elixirs', 'Flasks', 'Scrolls', 'Bandages', 'Consumable'].includes(kind);
+    const consumableEffect = (!stats && isRowConsumable) ? (window.WOW_CONSUMABLE_TOOLTIPS?.[id] || (name ? window.WOW_CONSUMABLE_TOOLTIPS?.[String(name).toLowerCase().trim()] : '')) : '';
     const cleanConsumableEffect = consumableEffect ? String(consumableEffect).replace(/^Use:\s*/i, '').trim() : '';
 
     return `

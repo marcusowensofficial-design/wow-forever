@@ -80,7 +80,7 @@ local function RemoveTarget(target)
     end
     GameTooltip:Hide()
     if DEFAULT_CHAT_FRAME then
-        DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bForever Dungeon Journal:|r " .. L("MAP_MARKER_REMOVED"))
+        DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bDungeonJournal:|r " .. L("MAP_MARKER_REMOVED"))
     end
 end
 
@@ -251,6 +251,8 @@ local function CreateMapMarker(key)
     marker.pulse:SetBlendMode("ADD")
     marker.pulse:SetSize(32, 32)
     marker.pulse:SetPoint("CENTER")
+    -- The ring rests invisible; each ripple fades in, expands and fades out,
+    -- then pauses. Nothing snaps back into view when the loop restarts.
     marker.pulse:SetAlpha(0)
     pcall(function()
         local group = marker.pulse:CreateAnimationGroup()
@@ -382,6 +384,7 @@ local function CreateMapMarker(key)
         end
         GameTooltip:SetText(labelText or (target.markerType == "dungeon" and L("DUNGEON_ENTRANCE") or L("QUEST_GIVER")))
         local fallbackDetail = target.markerType == "dungeon" and L("DUNGEON_ENTRANCE") or L("QUEST_STARTS_HERE")
+        if target.turnIn then detailText, fallbackDetail = nil, L("TURN_IN_HERE") end
         GameTooltip:AddLine(detailText or fallbackDetail, 1, 0.82, 0.05)
         if IsTargetableNPCMarker(target) and self._fdjCanTarget then
             GameTooltip:AddLine(L("MAP_LEFT_TARGET"), 0.35, 1.00, 0.35)
@@ -448,6 +451,7 @@ local function PositionMarker(marker, target, parent)
             if isDungeon then marker.pulseAnim:Stop() elseif not marker.pulseAnim:IsPlaying() then marker.pulseAnim:Play() end
         end
     end
+
     marker:Show()
 end
 
@@ -1173,17 +1177,16 @@ local function StartQuestStartMapTicker()
 end
 
 local function ForceWorldMapMapID(mapID)
-    if not mapID then return false end
-    if not WorldMapFrame or not WorldMapFrame:IsShown() then
-        if C_Map and type(C_Map.OpenWorldMap) == "function" then
-            pcall(C_Map.OpenWorldMap, mapID)
-        elseif type(OpenWorldMap) == "function" then
-            pcall(OpenWorldMap, mapID)
-        elseif WorldMapFrame and WorldMapFrame.Show then
-            pcall(WorldMapFrame.Show, WorldMapFrame)
-        end
+    if not WorldMapFrame or not mapID then return false end
+    if not WorldMapFrame:IsShown() then
+        -- In combat only the game itself opens the map (M key, or the secure
+        -- click Show on Map uses); trying from here would just be blocked.
+        if InCombatLockdown and InCombatLockdown() then return false end
+        local shown = false
+        if type(ShowUIPanel) == "function" then shown = pcall(ShowUIPanel, WorldMapFrame) end
+        if not shown then pcall(WorldMapFrame.Show, WorldMapFrame) end
     end
-    if WorldMapFrame and type(WorldMapFrame.SetMapID) == "function" then
+    if type(WorldMapFrame.SetMapID) == "function" then
         local ok = pcall(WorldMapFrame.SetMapID, WorldMapFrame, mapID)
         if ok then return true end
     end
@@ -1192,20 +1195,18 @@ end
 
 local function ShowRecordedLocationOnMap(loc, fallbackText)
     if not loc then return end
-    if InCombatLockdown and InCombatLockdown() then
-        if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bForever Dungeon Journal:|r " .. (L("MAP_OPEN_FAILED") or "could not open the recorded map location.") .. " (In Combat)")
-        end
-        return
-    end
 
     local key = TargetKey(loc)
     if not key then return end
     local target = {}
     for k, v in pairs(loc) do target[k] = v end
     target._fdjKey = key
+    -- The journal names the quest this pin was opened for; the tooltip shows it.
     target.questTitle = FDJ.pendingMarkerQuestTitle
     FDJ.pendingMarkerQuestTitle = nil
+    -- Opened from a Show Turn In button: the pin is where it is handed in.
+    target.turnIn = FDJ.pendingMarkerTurnIn and true or nil
+    FDJ.pendingMarkerTurnIn = nil
     local existing = mapTargets[key]
     if existing and existing.raidMarkIndex then
         target.raidMarkIndex = existing.raidMarkIndex
@@ -1215,15 +1216,22 @@ local function ShowRecordedLocationOnMap(loc, fallbackText)
     mapTargets[key] = target
 
     local opened = false
-    if C_Map and type(C_Map.OpenWorldMap) == "function" then
-        local ok = pcall(C_Map.OpenWorldMap, target.mapID)
-        opened = ok
-    elseif type(OpenWorldMap) == "function" then
-        local ok = pcall(OpenWorldMap, target.mapID)
-        opened = ok
+    local inCombat = InCombatLockdown and InCombatLockdown()
+    if inCombat then
+        -- The map is only open now if Show on Map's secure click opened it (or
+        -- the player did); otherwise jump to the spot when they open it.
+        opened = ForceWorldMapMapID(target.mapID)
+        if not opened and FDJ.RememberCombatMapSpot then FDJ.RememberCombatMapSpot(target.mapID) end
+    else
+        if C_Map and type(C_Map.OpenWorldMap) == "function" then
+            local ok = pcall(C_Map.OpenWorldMap, target.mapID)
+            opened = ok
+        elseif type(OpenWorldMap) == "function" then
+            local ok = pcall(OpenWorldMap, target.mapID)
+            opened = ok
+        end
+        opened = ForceWorldMapMapID(target.mapID) or opened
     end
-
-    opened = ForceWorldMapMapID(target.mapID) or opened
     StartQuestStartMapTicker()
     UpdateMapMarkers()
 
@@ -1239,32 +1247,40 @@ local function ShowRecordedLocationOnMap(loc, fallbackText)
 
     if DEFAULT_CHAT_FRAME then
         local mapText = FreeText(target.label or fallbackText or "recorded location")
+        -- Short dash in chat ("Alba Fairmoon - Sentinel Hill inn"), like the game's own lines.
+        mapText = tostring(mapText):gsub("%s*\226\128\148%s*", " - "):gsub("%s*\226\128\147%s*", " - ")
+        -- Labels without a place ("Thrall") get the zone name: "Thrall - Orgrimmar".
+        if not mapText:find(" - ", 1, true) and target.mapID and C_Map and C_Map.GetMapInfo then
+            local ok, info = pcall(C_Map.GetMapInfo, target.mapID)
+            if ok and info and info.name and info.name ~= "" then mapText = mapText .. " - " .. info.name end
+        end
         if opened then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bForever Dungeon Journal:|r " .. L("MAP_MARKED", mapText))
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bDungeonJournal:|r " .. L("MAP_MARKED", mapText))
+        elseif inCombat then
+            local key = GetBindingKey and GetBindingKey("TOGGLEWORLDMAP")
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bDungeonJournal:|r " .. L("MAP_COMBAT", key or "M"))
         else
-            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bForever Dungeon Journal:|r " .. L("MAP_OPEN_FAILED"))
+            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bDungeonJournal:|r " .. L("MAP_OPEN_FAILED"))
         end
     end
 end
 
 local function ShowRouteOnMap(routeMap)
     if not routeMap or not routeMap.mapID or not routeMap.points or #routeMap.points < 2 then return end
-    if InCombatLockdown and InCombatLockdown() then
-        if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
-            DEFAULT_CHAT_FRAME:AddMessage("|cffffd36bForever Dungeon Journal:|r " .. (L("MAP_OPEN_FAILED") or "could not open the recorded map location.") .. " (In Combat)")
-        end
-        return
-    end
     activeRouteMap = routeMap
     routeGeometryCache.key = nil
     HookRouteMapChanges()
     StartRouteHoverDriver()
 
     local opened = false
-    if C_Map and type(C_Map.OpenWorldMap) == "function" then
-        opened = pcall(C_Map.OpenWorldMap, routeMap.mapID)
-    elseif type(OpenWorldMap) == "function" then
-        opened = pcall(OpenWorldMap, routeMap.mapID)
+    if not (InCombatLockdown and InCombatLockdown()) then
+        if C_Map and type(C_Map.OpenWorldMap) == "function" then
+            opened = pcall(C_Map.OpenWorldMap, routeMap.mapID)
+        elseif type(OpenWorldMap) == "function" then
+            opened = pcall(OpenWorldMap, routeMap.mapID)
+        end
+    elseif FDJ.RememberCombatMapSpot and not (WorldMapFrame and WorldMapFrame:IsShown()) then
+        FDJ.RememberCombatMapSpot(routeMap.mapID)
     end
 
     ForceWorldMapMapID(routeMap.mapID)
@@ -1293,72 +1309,16 @@ end
 
 local function ShowQuestStartOnMap(quest)
     if not quest then return end
-    local loc = quest.startMap or (quest.id and QUEST_START_MAPS[quest.id])
+    local loc = QUEST_START_MAPS[quest.id]
     if not loc then return end
     ShowRecordedLocationOnMap(loc, quest.pickup or quest.name)
 end
-
-local function SetDungeonWaypoint(dungeonName)
-    if not dungeonName then
-        dungeonName = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon)
-    end
-    if not dungeonName then return false end
-
-    local entrance = (FDJ.DUNGEON_ENTRANCES and FDJ.DUNGEON_ENTRANCES[dungeonName])
-        or (FDJ.DB and FDJ.DB[dungeonName] and FDJ.DB[dungeonName].entrance)
-    if not entrance then
-        local msg = "|cffd8a83cForever Dungeon Journal|r: No entrance coordinates recorded for " .. tostring(dungeonName) .. "."
-        if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage(msg) else print(msg) end
-        return false
-    end
-
-    -- 1. Show custom FDJ map pin & open map
-    ShowRecordedLocationOnMap(entrance, entrance.label or (dungeonName .. " Entrance"))
-
-    -- 2. Blizzard native SuperTrack waypoint (Retail / modern Classic engine)
-    local wpSet = false
-    if C_Map and C_Map.CanSetUserWaypointOnMap and C_Map.CanSetUserWaypointOnMap(entrance.mapID) then
-        if UiMapPoint and UiMapPoint.CreateFromCoordinates and C_Map.SetUserWaypoint then
-            local ok = pcall(function()
-                local point = UiMapPoint.CreateFromCoordinates(entrance.mapID, entrance.x, entrance.y)
-                C_Map.SetUserWaypoint(point)
-                if C_SuperTrack and C_SuperTrack.SetSuperTrackedUserWaypoint then
-                    C_SuperTrack.SetSuperTrackedUserWaypoint(true)
-                end
-            end)
-            if ok then wpSet = true end
-        end
-    end
-
-    -- 3. TomTom integration if present
-    if _G.TomTom and type(_G.TomTom.AddWaypoint) == "function" then
-        pcall(function()
-            _G.TomTom:AddWaypoint(entrance.mapID, entrance.x, entrance.y, {
-                title = entrance.label or (dungeonName .. " Entrance"),
-                persistent = false,
-                minimap = true,
-                world = true,
-            })
-        end)
-        wpSet = true
-    end
-
-    local label = entrance.label or (dungeonName .. " Entrance")
-    local coordsStr = string.format("(%.1f, %.1f)", (entrance.x or 0) * 100, (entrance.y or 0) * 100)
-    local status = wpSet and "Waypoint & map pin set for" or "Map pin opened for"
-    local notice = string.format("|cffd8a83cForever Dungeon Journal|r: %s |cffffff00%s|r %s.", status, label, coordsStr)
-    if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage(notice) else print(notice) end
-    return true
-end
-
-FDJ.SetDungeonWaypoint = SetDungeonWaypoint
 
 FDJ.MapMarkers = FDJ.MapMarkers or {}
 FDJ.MapMarkers.ShowRecordedLocationOnMap = ShowRecordedLocationOnMap
 FDJ.MapMarkers.ShowRouteOnMap = ShowRouteOnMap
 FDJ.MapMarkers.ClearRouteOnMap = ClearRouteOnMap
 FDJ.MapMarkers.ShowQuestStartOnMap = ShowQuestStartOnMap
-FDJ.MapMarkers.SetDungeonWaypoint = SetDungeonWaypoint
 FDJ.MapMarkers.UpdateMapMarkers = UpdateMapMarkers
 FDJ.MapMarkers.ConfigureTargetAndMarkAction = ConfigureTargetAndMarkAction
 FDJ.MapMarkers.ApplyQuestGiverRaidMark = ApplyQuestGiverRaidMark
@@ -1366,3 +1326,208 @@ FDJ.MapMarkers.RaidMarkIndexForTarget = RaidMarkIndexForTarget
 FDJ.MapMarkers.QuestGiverName = QuestGiverName
 FDJ.MapMarkers.QUEST_GIVER_MARK_PRIORITY = QUEST_GIVER_MARK_PRIORITY
 FDJ.MapMarkers.QUEST_GIVER_MARK_NAMES = QUEST_GIVER_MARK_NAMES
+
+-- BEGIN combatmap
+-- ------------------------------------------------ Show on Map in combat
+-- The game blocks addon code from opening the world map in combat, but a
+-- secure click on its own map button (what the M key does) is allowed. A
+-- protected button can't sit inside the journal (the journal would then be
+-- stuck open or closed during combat), so when combat starts with a quest page
+-- open, an invisible secure button is laid over Show on Map and Show Turn In
+-- for the fight. It presses the game's map button, then the spot is marked as
+-- usual. Secure buttons can't move during combat: if the journal closes,
+-- scrolls or changes page in the fight, a plain frame covers the old spot so
+-- no stray click toggles the map, and the real button falls back to "press M"
+-- (the map then jumps to the spot when it opens). All of it ends with combat.
+local GAME_MAP_BUTTONS = { "WorldMapMicroButton", "MiniMapWorldMapButton" }
+local combatClicks = {}
+
+local function GameMapButtonName()
+    for _, name in ipairs(GAME_MAP_BUTTONS) do
+        local b = _G[name]
+        if type(b) == "table" and b.Click then return name end
+    end
+end
+
+-- Show on Map pressed in combat with the map closed: when the player opens
+-- the map (within two minutes), show the zone of that spot.
+local pendingSpot
+local mapShowHooked = false
+function FDJ.RememberCombatMapSpot(mapID)
+    if not mapID then return end
+    pendingSpot = { mapID = mapID, at = GetTime and GetTime() or 0 }
+    if mapShowHooked or not (WorldMapFrame and WorldMapFrame.HookScript) then return end
+    mapShowHooked = true
+    WorldMapFrame:HookScript("OnShow", function()
+        local spot = pendingSpot
+        pendingSpot = nil
+        if not spot or (GetTime and GetTime() - spot.at > 120) then return end
+        local function Apply()
+            if WorldMapFrame:IsShown() and WorldMapFrame.SetMapID then
+                pcall(WorldMapFrame.SetMapID, WorldMapFrame, spot.mapID)
+            end
+        end
+        Apply()
+        if C_Timer and C_Timer.After then
+            for _, delay in ipairs({ 0.03, 0.10, 0.25 }) do C_Timer.After(delay, Apply) end
+        end
+    end)
+end
+
+-- Screen rectangle of a journal button, in UIParent units.
+local function CoverRect(real)
+    local l, b, w, h = real:GetLeft(), real:GetBottom(), real:GetWidth(), real:GetHeight()
+    if not (l and b and w and h) then return nil end
+    local s = real:GetEffectiveScale() / UIParent:GetEffectiveScale()
+    return l * s, b * s, w * s, h * s
+end
+
+local function MakeCombatClick(i)
+    if InCombatLockdown and InCombatLockdown() then return nil end
+    local ok, o = pcall(CreateFrame, "Button", "ForeverDungeonJournalMapClick" .. i, UIParent, "SecureActionButtonTemplate")
+    if not ok or not o then return nil end
+    o:Hide()
+    o:RegisterForClicks("LeftButtonUp")
+    o:SetAttribute("useOnKeyDown", false)
+    -- Looks and tooltip of the journal button underneath.
+    o:SetScript("OnEnter", function(self)
+        local real = self.fdjReal
+        if not (real and real:IsVisible()) then return end
+        local enter = real:GetScript("OnEnter")
+        if enter then pcall(enter, real) end
+        if real.LockHighlight then real:LockHighlight() end
+    end)
+    o:SetScript("OnLeave", function(self)
+        local real = self.fdjReal
+        if real and real.UnlockHighlight then real:UnlockHighlight() end
+        GameTooltip:Hide()
+    end)
+    -- After the secure click has opened the map: mark the spot as usual.
+    o:SetScript("PostClick", function(self)
+        local real = self.fdjReal
+        if not (real and real:IsVisible()) then return end
+        local open = real:GetScript("PostClick") or real:GetScript("OnClick")
+        if open then pcall(open, real, "LeftButton", false) end
+    end)
+    local blocker = CreateFrame("Frame", nil, UIParent)
+    blocker:EnableMouse(true)
+    blocker:Hide()
+    o.fdjBlocker = blocker
+    return o
+end
+
+-- While armed: cover a secure button whose journal button is gone or moved.
+local combatWatch = CreateFrame("Frame")
+combatWatch:Hide()
+combatWatch.t = 0
+combatWatch:SetScript("OnUpdate", function(self, elapsed)
+    self.t = self.t + elapsed
+    if self.t < 0.1 then return end
+    self.t = 0
+    for _, o in pairs(combatClicks) do
+        if o:IsShown() then
+            local real, r = o.fdjReal, o.fdjRect
+            local stray = true
+            if real and r and real:IsVisible() then
+                local l, b, w, h = CoverRect(real)
+                stray = not l or math.abs(l - r[1]) > 1 or math.abs(b - r[2]) > 1
+                    or math.abs(w - r[3]) > 1 or math.abs(h - r[4]) > 1
+            end
+            if o.fdjBlocker:IsShown() ~= stray then o.fdjBlocker:SetShown(stray) end
+        end
+    end
+end)
+
+-- PLAYER_REGEN_DISABLED comes just before the combat lock: last chance to
+-- place secure buttons for this fight.
+local function ArmCombatClicks()
+    if InCombatLockdown and InCombatLockdown() then return end
+    local journal = _G.ForeverDungeonJournalFrame
+    local mapButton = GameMapButtonName()
+    if not (journal and journal:IsVisible() and mapButton) then return end
+    local armed = false
+    for i, real in ipairs({ journal.questMapButton, journal.questTurninMapButton }) do
+        if real and real:IsVisible() then
+            combatClicks[i] = combatClicks[i] or MakeCombatClick(i)
+            local o = combatClicks[i]
+            local l, b, w, h = CoverRect(real)
+            if o and l then
+                o.fdjReal = real
+                o.fdjRect = { l, b, w, h }
+                o:SetAttribute("type", "macro")
+                o:SetAttribute("macrotext", "/click " .. mapButton)
+                o:SetFrameStrata(journal:GetFrameStrata())
+                o:SetFrameLevel(math.min(9000, journal:GetFrameLevel() + 300))
+                o:ClearAllPoints()
+                o:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", l, b)
+                o:SetSize(w, h)
+                o:Show()
+                local blocker = o.fdjBlocker
+                blocker:SetFrameStrata(o:GetFrameStrata())
+                blocker:SetFrameLevel(o:GetFrameLevel() + 1)
+                blocker:ClearAllPoints()
+                blocker:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", l, b)
+                blocker:SetSize(w, h)
+                blocker:Hide()
+                armed = true
+            end
+        end
+    end
+    if armed then combatWatch:Show() end
+end
+
+local function DisarmCombatClicks()
+    combatWatch:Hide()
+    for _, o in pairs(combatClicks) do
+        o:Hide()
+        o.fdjBlocker:Hide()
+        if o.fdjReal and o.fdjReal.UnlockHighlight then o.fdjReal:UnlockHighlight() end
+        o.fdjReal = nil
+    end
+end
+
+local combatEvents = CreateFrame("Frame")
+combatEvents:RegisterEvent("PLAYER_LOGIN")
+combatEvents:RegisterEvent("PLAYER_REGEN_DISABLED")
+combatEvents:RegisterEvent("PLAYER_REGEN_ENABLED")
+combatEvents:SetScript("OnEvent", function(_, event)
+    if event == "PLAYER_REGEN_DISABLED" then
+        pcall(ArmCombatClicks)
+    elseif event == "PLAYER_REGEN_ENABLED" then
+        pcall(DisarmCombatClicks)
+    elseif event == "PLAYER_LOGIN" then
+        for i = 1, 2 do combatClicks[i] = combatClicks[i] or MakeCombatClick(i) end
+        -- Dev: /dj devmap says what the combat path found.
+        local base = SlashCmdList and SlashCmdList.FOREVERDUNGEONJOURNAL
+        if base then
+            SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg, ...)
+                local cmd = tostring(msg or ""):lower():gsub("^%s+", ""):gsub("%s+$", "")
+                if cmd == "devmap" then
+                    local made, armed = 0, 0
+                    for _, o in pairs(combatClicks) do
+                        made = made + 1
+                        if o:IsShown() then armed = armed + 1 end
+                    end
+                    local protected = WorldMapFrame and WorldMapFrame.IsProtected and WorldMapFrame:IsProtected()
+                    print("|cffd8a83cDungeon Journal:|r map in combat (dev): game map button "
+                        .. tostring(GameMapButtonName() or "NOT FOUND") .. ", secure buttons " .. made
+                        .. ", armed now " .. armed .. ", world map protected " .. tostring(protected))
+                    return
+                end
+                return base(msg, ...)
+            end
+        end
+    end
+end)
+-- END combatmap
+
+-- BEGIN devmapdump
+-- Test builds 1.6.9 and 1.6.10 saved every map floor for research. That is
+-- done: drop the saved copy.
+local dumpCleanup = CreateFrame("Frame")
+dumpCleanup:RegisterEvent("PLAYER_LOGIN")
+dumpCleanup:SetScript("OnEvent", function(self)
+    self:UnregisterAllEvents()
+    if type(ForeverDungeonJournalDB) == "table" then ForeverDungeonJournalDB.devMapDump = nil end
+end)
+-- END devmapdump

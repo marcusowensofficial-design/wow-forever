@@ -11,8 +11,15 @@ end
 -- DUNGEON NAME NORMALIZATION & CURRENT LOCATION DETECTOR
 -- ============================================================
 
+local function IsSecret(v)
+    if FDJ and FDJ.IsSecret then return FDJ.IsSecret(v) end
+    if type(issecretvalue) == "function" and issecretvalue(v) then return true end
+    if type(canaccessvalue) == "function" and not canaccessvalue(v) then return true end
+    return false
+end
+
 function FDJ.NormalizeDungeonName(name)
-    if type(name) ~= "string" then return nil end
+    if type(name) ~= "string" or IsSecret(name) then return nil end
 
     local n = name:lower()
     if n:find("ragefire chasm", 1, true) then
@@ -51,14 +58,73 @@ function FDJ.NormalizeDungeonName(name)
     if n:find("razorfen kraul", 1, true) then
         return "Razorfen Kraul"
     end
-    if n:find("scarlet monastery", 1, true) and n:find("library", 1, true) then
-        return "Scarlet Monastery: Library"
-    end
     if n:find("scarlet monastery", 1, true) and n:find("graveyard", 1, true) then
         return "Scarlet Monastery: Graveyard"
     end
+    if n:find("scarlet monastery", 1, true) and n:find("library", 1, true) then
+        return "Scarlet Monastery: Library"
+    end
+    if n:find("scarlet monastery", 1, true) and n:find("armory", 1, true) then
+        return "Scarlet Monastery: Armory"
+    end
+    if n:find("scarlet monastery", 1, true) and n:find("cathedral", 1, true) then
+        return "Scarlet Monastery: Cathedral"
+    end
+    if n:find("razorfen downs", 1, true) then
+        return "Razorfen Downs"
+    end
+    if n:find("uldaman", 1, true) then
+        return "Uldaman"
+    end
+    if n:find("zul'farrak", 1, true) or n:find("zulfarrak", 1, true) then
+        return "Zul'Farrak"
+    end
+    if n:find("sunken temple", 1, true) or n:find("atal'hakkar", 1, true) then
+        return "Sunken Temple"
+    end
+    if n:find("scholomance", 1, true) then
+        return "Scholomance"
+    end
+    if n:find("maraudon", 1, true) then
+        return "Maraudon"
+    end
+    if n:find("blackrock depths", 1, true) or n:find("shadowforge city", 1, true) or n:find("detention block", 1, true) then
+        return "Blackrock Depths"
+    end
+    if n:find("lower blackrock spire", 1, true) or n == "lbrs" then
+        return "Lower Blackrock Spire"
+    end
+    if n:find("upper blackrock spire", 1, true) or n == "ubrs" then
+        return "Upper Blackrock Spire"
+    end
+    if n:find("drowned city", 1, true) then
+        return "The Drowned City"
+    end
+    if n:find("krol'dok", 1, true) or n:find("kroldok", 1, true) then
+        return "Krol'dok Stronghold"
+    end
+    if n:find("shaper's terrace", 1, true) or n:find("shapers terrace", 1, true) then
+        return "Shaper's Terrace"
+    end
+    if FDJ.WingFromText then
+        local wing = FDJ.WingFromText(n)
+        if wing then return wing end
+    end
     return nil
 end
+
+FDJ.INSTANCE_ID_TO_DUNGEON = {
+    [389] = "Ragefire Chasm", [36] = "The Deadmines", [43] = "Wailing Caverns", [33] = "Shadowfang Keep",
+    [34] = "The Stockade", [48] = "Blackfathom Deeps", [90] = "Gnomeregan", [47] = "Razorfen Kraul",
+    [189] = "Scarlet Monastery", [2999] = "Ruins of Lordaeron", [2959] = "City of Dalaran",
+    [2998] = "Excavation Site: Wetlands", [3065] = "Hall of Thanes", [129] = "Razorfen Downs",
+    [70] = "Uldaman", [209] = "Zul'Farrak", [109] = "Sunken Temple", [289] = "Scholomance",
+    [349] = "Maraudon", [230] = "Blackrock Depths",
+}
+FDJ.SCARLET_WING_MAPS = {
+    [302] = "Scarlet Monastery: Graveyard", [303] = "Scarlet Monastery: Library",
+    [304] = "Scarlet Monastery: Armory", [305] = "Scarlet Monastery: Cathedral",
+}
 
 function FDJ.CurrentDungeon()
     if type(IsInInstance) == "function" then
@@ -66,25 +132,54 @@ function FDJ.CurrentDungeon()
         if not inInstance then return nil end
     end
 
+    if GetInstanceInfo then
+        local instanceID = select(8, GetInstanceInfo())
+        if not IsSecret(instanceID) then
+            local byID = FDJ.INSTANCE_ID_TO_DUNGEON[tonumber(instanceID) or -1]
+            if byID and byID ~= "Scarlet Monastery" and FDJ.DB and FDJ.DB[byID] then
+                return byID
+            end
+        end
+    end
+
+    if FDJ.InScarletMonastery and FDJ.ResolveScarletWing then
+        local okIn, inScarlet = pcall(FDJ.InScarletMonastery)
+        if okIn and inScarlet then
+            local okWing, wing = pcall(FDJ.ResolveScarletWing)
+            if okWing and wing and FDJ.DB and FDJ.DB[wing] then return wing end
+        end
+    end
+
     local instanceName = GetInstanceInfo and GetInstanceInfo()
     local n = FDJ.NormalizeDungeonName(instanceName)
     if n then return n end
+    if type(instanceName) == "string" and not IsSecret(instanceName) and instanceName ~= "" then
+        local wanted = instanceName:lower()
+        for _, content in pairs(FDJ.ContentLocales or {}) do
+            for internal, entry in pairs(content.dungeons or {}) do
+                if FDJ.DB and FDJ.DB[internal] and type(entry.name) == "string" and entry.name:lower() == wanted then
+                    return internal
+                end
+            end
+        end
+    end
 
     local zone = GetRealZoneText and GetRealZoneText()
     n = FDJ.NormalizeDungeonName(zone)
     if n then return n end
 
     local subZone = GetSubZoneText and GetSubZoneText()
-    if type(instanceName) == "string" and instanceName:lower():find("scarlet monastery", 1, true) then
+    if type(instanceName) == "string" and not IsSecret(instanceName) and instanceName:lower():find("scarlet monastery", 1, true) then
         if FDJ.CurrentScarletWing then
             local wing = FDJ.CurrentScarletWing()
             if wing then return wing end
         end
-        if type(subZone) == "string" and subZone:lower():find("library", 1, true) then
-            return "Scarlet Monastery: Library"
-        end
-        if type(subZone) == "string" and subZone:lower():find("graveyard", 1, true) then
-            return "Scarlet Monastery: Graveyard"
+        if type(subZone) == "string" and not IsSecret(subZone) then
+            local sz = subZone:lower()
+            if sz:find("library", 1, true) then return "Scarlet Monastery: Library" end
+            if sz:find("graveyard", 1, true) then return "Scarlet Monastery: Graveyard" end
+            if sz:find("armory", 1, true) then return "Scarlet Monastery: Armory" end
+            if sz:find("cathedral", 1, true) then return "Scarlet Monastery: Cathedral" end
         end
     end
 
@@ -380,43 +475,49 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         return
     end
 
+    local function ResolveQuickDungeonAlias(q)
+        if not q or q == "" then return nil end
+        if q == "rfc" or q == "ragefire" or q == "ragefirechasm" then return "Ragefire Chasm"
+        elseif q == "hall" or q == "hot" or q == "thanes" then return "Hall of Thanes"
+        elseif q == "dm" or q == "vc" or q == "deadmines" then return "The Deadmines"
+        elseif q == "ruins" or q == "rol" or q == "lordaeron" then return "Ruins of Lordaeron"
+        elseif q == "wc" or q == "wailing" or q == "wailingcaverns" then return "Wailing Caverns"
+        elseif q == "sfk" or q == "shadowfang" or q == "shadowfangkeep" then return "Shadowfang Keep"
+        elseif q == "bfd" or q == "blackfathom" or q == "blackfathomdeeps" or q == "blackfathomdepths" then return "Blackfathom Deeps"
+        elseif q == "stocks" or q == "stockade" or q == "thestockade" then return "The Stockade"
+        elseif q == "gnome" or q == "gnomer" or q == "gnomeregan" then return "Gnomeregan"
+        elseif q == "rfk" or q == "razorfen" or q == "razorfenkraul" then return "Razorfen Kraul"
+        elseif q == "sm" or q == "smgy" or q == "graveyard" or q == "smgraveyard" then return "Scarlet Monastery: Graveyard"
+        elseif q == "smlib" or q == "library" or q == "smlibrary" then return "Scarlet Monastery: Library"
+        elseif q == "smarm" or q == "armory" or q == "smarmory" then return "Scarlet Monastery: Armory"
+        elseif q == "smcath" or q == "cathedral" or q == "smcathedral" then return "Scarlet Monastery: Cathedral"
+        elseif q == "excavation" or q == "wetlands" or q == "excavationsite" then return "Excavation Site: Wetlands"
+        elseif q == "dalaran" or q == "cityofdalaran" then return "City of Dalaran"
+        elseif q == "rfd" or q == "razorfendowns" or q == "downs" then return "Razorfen Downs"
+        elseif q == "ulda" or q == "uldaman" then return "Uldaman"
+        elseif q == "zf" or q == "zulfarrak" or q == "zul'farrak" then return "Zul'Farrak"
+        elseif q == "mara" or q == "maraudon" then return "Maraudon"
+        elseif q == "st" or q == "sunkentemple" or q == "atalhakkar" then return "Sunken Temple"
+        elseif q == "brd" or q == "blackrockdepths" then return "Blackrock Depths"
+        elseif q == "lbrs" or q == "lowerblackrockspire" then return "Lower Blackrock Spire"
+        elseif q == "ubrs" or q == "upperblackrockspire" then return "Upper Blackrock Spire"
+        elseif q == "dme" or q == "diremauleast" then return "Dire Maul: East"
+        elseif q == "dmw" or q == "diremaulwest" then return "Dire Maul: West"
+        elseif q == "dmn" or q == "dmt" or q == "diremaulnorth" or q == "tribute" then return "Dire Maul: North"
+        elseif q == "strat" or q == "stratlive" or q == "stratholmeliving" then return "Stratholme: Living"
+        elseif q == "stratud" or q == "stratdead" or q == "stratholmeundead" then return "Stratholme: Undead"
+        elseif q == "scholo" or q == "scholomance" then return "Scholomance"
+        elseif q == "drowned" or q == "drownedcity" then return "The Drowned City"
+        elseif q == "kroldok" or q == "krol'dok" then return "Krol'dok Stronghold"
+        elseif q == "shapers" or q == "shapersterrace" then return "Shaper's Terrace"
+        end
+        return FDJ.NormalizeDungeonName and FDJ.NormalizeDungeonName(q) or nil
+    end
+
     local wpTarget = msg:match("^wp%s*(.*)$") or msg:match("^waypoint%s*(.*)$")
     if wpTarget then
         wpTarget = strtrim(wpTarget)
-        local targetDungeon = nil
-        if wpTarget ~= "" then
-            if wpTarget == "rfc" or wpTarget == "ragefire" or wpTarget == "ragefirechasm" then
-                targetDungeon = "Ragefire Chasm"
-            elseif wpTarget == "hall" or wpTarget == "hot" or wpTarget == "thanes" then
-                targetDungeon = "Hall of Thanes"
-            elseif wpTarget == "dm" or wpTarget == "vc" or wpTarget == "deadmines" then
-                targetDungeon = "The Deadmines"
-            elseif wpTarget == "ruins" or wpTarget == "rol" or wpTarget == "lordaeron" then
-                targetDungeon = "Ruins of Lordaeron"
-            elseif wpTarget == "wc" or wpTarget == "wailing" or wpTarget == "wailingcaverns" then
-                targetDungeon = "Wailing Caverns"
-            elseif wpTarget == "sfk" or wpTarget == "shadowfang" or wpTarget == "shadowfangkeep" then
-                targetDungeon = "Shadowfang Keep"
-            elseif wpTarget == "bfd" or wpTarget == "blackfathom" or wpTarget == "blackfathomdeeps" then
-                targetDungeon = "Blackfathom Deeps"
-            elseif wpTarget == "stocks" or wpTarget == "stockade" or wpTarget == "thestockade" then
-                targetDungeon = "The Stockade"
-            elseif wpTarget == "gnome" or wpTarget == "gnomer" or wpTarget == "gnomeregan" then
-                targetDungeon = "Gnomeregan"
-            elseif wpTarget == "rfk" or wpTarget == "razorfen" or wpTarget == "razorfenkraul" then
-                targetDungeon = "Razorfen Kraul"
-            elseif wpTarget == "sm" or wpTarget == "smgy" or wpTarget == "graveyard" then
-                targetDungeon = "Scarlet Monastery: Graveyard"
-            elseif wpTarget == "smlib" or wpTarget == "library" or wpTarget == "smlibrary" then
-                targetDungeon = "Scarlet Monastery: Library"
-            elseif wpTarget == "excavation" or wpTarget == "wetlands" then
-                targetDungeon = "Excavation Site: Wetlands"
-            elseif wpTarget == "dalaran" or wpTarget == "cityofdalaran" then
-                targetDungeon = "City of Dalaran"
-            else
-                targetDungeon = FDJ.NormalizeDungeonName and FDJ.NormalizeDungeonName(wpTarget)
-            end
-        end
+        local targetDungeon = ResolveQuickDungeonAlias(wpTarget)
         if not targetDungeon then
             targetDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon) or FDJ.CurrentDungeon()
         end
@@ -426,36 +527,7 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         return
     end
 
-    local quickDungeon = nil
-    if msg == "rfc" or msg == "ragefire" or msg == "ragefirechasm" then
-        quickDungeon = "Ragefire Chasm"
-    elseif msg == "hall" or msg == "hot" or msg == "thanes" then
-        quickDungeon = "Hall of Thanes"
-    elseif msg == "dm" or msg == "vc" or msg == "deadmines" then
-        quickDungeon = "The Deadmines"
-    elseif msg == "ruins" or msg == "rol" or msg == "lordaeron" then
-        quickDungeon = "Ruins of Lordaeron"
-    elseif msg == "wc" or msg == "wailing" or msg == "wailingcaverns" then
-        quickDungeon = "Wailing Caverns"
-    elseif msg == "sfk" or msg == "shadowfang" or msg == "shadowfangkeep" then
-        quickDungeon = "Shadowfang Keep"
-    elseif msg == "bfd" or msg == "blackfathom" or msg == "blackfathomdeeps" or msg == "blackfathomdepths" then
-        quickDungeon = "Blackfathom Deeps"
-    elseif msg == "stocks" or msg == "stockade" or msg == "thestockade" then
-        quickDungeon = "The Stockade"
-    elseif msg == "gnome" or msg == "gnomer" or msg == "gnomeregan" then
-        quickDungeon = "Gnomeregan"
-    elseif msg == "rfk" or msg == "razorfen" or msg == "razorfenkraul" then
-        quickDungeon = "Razorfen Kraul"
-    elseif msg == "sm" or msg == "smgy" or msg == "graveyard" or msg == "smgraveyard" then
-        quickDungeon = "Scarlet Monastery: Graveyard"
-    elseif msg == "smlib" or msg == "library" or msg == "smlibrary" then
-        quickDungeon = "Scarlet Monastery: Library"
-    elseif msg == "excavation" or msg == "wetlands" or msg == "excavationsite" then
-        quickDungeon = "Excavation Site: Wetlands"
-    elseif msg == "dalaran" or msg == "cityofdalaran" then
-        quickDungeon = "City of Dalaran"
-    end
+    local quickDungeon = ResolveQuickDungeonAlias(msg)
 
     if quickDungeon then
         local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
@@ -550,8 +622,8 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
     end
 
     if event == "QUEST_DATA_LOAD_RESULT" then
-        if FDJ.questDataRequests and FDJ.questDataRequests[questID] then
-            FDJ.questDataRequests[questID] = (success == false)
+        if questID and not IsSecret(questID) and FDJ.questDataRequests and FDJ.questDataRequests[questID] then
+            FDJ.questDataRequests[questID] = (not IsSecret(success) and success == false)
                 and { state = "failed", retryAt = (GetTime and GetTime() or 0) + 30 }
                 or { state = "loaded" }
             FDJ.ScheduleQuestRefresh()
@@ -560,10 +632,10 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
     end
 
     if event == "GET_ITEM_INFO_RECEIVED" then
-        if FDJ.itemTooltipQualityCache and questID then
+        if FDJ.itemTooltipQualityCache and questID and not IsSecret(questID) then
             FDJ.itemTooltipQualityCache[questID] = nil
         end
-        if FDJ.itemStatsSummaryCache and questID then
+        if FDJ.itemStatsSummaryCache and questID and not IsSecret(questID) then
             FDJ.itemStatsSummaryCache[questID] = nil
         end
         local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
@@ -652,7 +724,7 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
 
     if event == "CHAT_MSG_SYSTEM" then
         local msg = arg1
-        if type(msg) == "string" then
+        if type(msg) == "string" and not IsSecret(msg) then
             local msgLower = msg:lower()
             if msgLower:find("has been reset") or msgLower:find("instance reset") or (INSTANCE_RESET_SUCCESS and msgLower:find(INSTANCE_RESET_SUCCESS:lower())) then
                 if FDJ.ResetDefeatedBosses then FDJ.ResetDefeatedBosses() end
@@ -671,11 +743,11 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
 
     if event == "BOSS_KILL" or event == "ENCOUNTER_END" then
         local encounterID, encounterName = arg1, arg2
-        if event == "ENCOUNTER_END" and arg5 ~= 1 then
+        if event == "ENCOUNTER_END" and (IsSecret(arg5) or arg5 ~= 1) then
             return
         end
         local matched = false
-        if encounterName and FDJ.bossByName and FDJ.bossByName[encounterName:lower()] then
+        if type(encounterName) == "string" and not IsSecret(encounterName) and FDJ.bossByName and FDJ.bossByName[encounterName:lower()] then
             local info = FDJ.bossByName[encounterName:lower()]
             if FDJ.SetBossDefeated then FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true) end
             matched = true
@@ -696,14 +768,14 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
     if event == "COMBAT_LOG_EVENT_UNFILTERED" then
         if CombatLogGetCurrentEventInfo then
             local _, subevent, _, _, _, _, _, destGUID, destName = CombatLogGetCurrentEventInfo()
-            if subevent == "UNIT_DIED" and destGUID then
+            if not IsSecret(subevent) and subevent == "UNIT_DIED" and destGUID and not IsSecret(destGUID) then
                 local npcID = tonumber(destGUID:match("Creature%-%d+%-%d+%-%d+%-%d+%-(%d+)"))
                 local matched = false
                 if npcID and FDJ.bossByNpcID and FDJ.bossByNpcID[npcID] then
                     local info = FDJ.bossByNpcID[npcID]
                     if FDJ.SetBossDefeated then FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true) end
                     matched = true
-                elseif destName and FDJ.bossByName and FDJ.bossByName[destName:lower()] then
+                elseif type(destName) == "string" and not IsSecret(destName) and FDJ.bossByName and FDJ.bossByName[destName:lower()] then
                     local info = FDJ.bossByName[destName:lower()]
                     if FDJ.SetBossDefeated then FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true) end
                     matched = true
@@ -725,7 +797,7 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
 
     if event == "CHAT_MSG_LOOT" then
         local message = arg1
-        if message and type(message) == "string" then
+        if message and type(message) == "string" and not IsSecret(message) then
             local itemIDStr = message:match("item:(%d+)")
             local itemID = tonumber(itemIDStr)
             if itemID and FDJ.IsWishlisted and FDJ.IsWishlisted(itemID) then

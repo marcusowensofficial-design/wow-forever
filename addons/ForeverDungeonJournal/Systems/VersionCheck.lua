@@ -16,6 +16,12 @@ local SEND_THROTTLE = 10 -- seconds between broadcasts on the same channel
 local CHAT_TAG = "|cffd8a83cDungeonJournal|r "
 
 local notified = false
+-- A newer version only keeps the login reminder going while it has been
+-- heard recently: test builds announce their version too, and a version
+-- heard once from one (or saved by an older copy, which kept no date) must
+-- not nag at every login until a real release passes it.
+local REMEMBER_FOR = 3 * 24 * 60 * 60 -- seconds
+local function Now() return (time and time()) or 0 end
 local lastSent = {}
 local pendingReply = {}
 local lastGroupSize = 0
@@ -139,6 +145,9 @@ local function OnAddonMessage(prefix, text, channel)
             local known = ParseVersion(db.newestSeenVersion)
             if not known or IsNewer(theirs, known) then
                 db.newestSeenVersion = text
+                db.newestSeenAt = Now()
+            elseif not IsNewer(known, theirs) then
+                db.newestSeenAt = Now() -- the same version heard again
             end
         end
         Notify(text)
@@ -151,10 +160,13 @@ local function LoginChecks()
     local mine = ParseVersion(MyVersion() or "")
     if type(db) == "table" and mine then
         local known = ParseVersion(db.newestSeenVersion)
-        if known and IsNewer(known, mine) then
+        local heardAt = tonumber(db.newestSeenAt)
+        local recent = heardAt and Now() - heardAt < REMEMBER_FOR
+        if known and IsNewer(known, mine) and recent then
             Notify(db.newestSeenVersion)
         else
             db.newestSeenVersion = nil
+            db.newestSeenAt = nil
         end
     end
 

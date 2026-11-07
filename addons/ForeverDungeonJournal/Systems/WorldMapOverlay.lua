@@ -15,6 +15,9 @@ local PlaceToggle
 local saved
 local wantWorld = false   -- the player switched to the world map this session
 local toggle, backdrop
+-- True while the journal is open on a boss page that was opened from a boss
+-- pin on the world map: the world map keeps showing the dungeon map.
+local keepWithJournal = false
 
 local function Enabled()
     ForeverDungeonJournalDB = ForeverDungeonJournalDB or {}
@@ -45,7 +48,7 @@ local function Attach(dungeonName)
     local panel = journal and journal.dungeonMapPanel
     local mapData = FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dungeonName]
     if not panel or not mapData or not WorldMapFrame then return false end
-    if journal:IsShown() then return false end -- the journal is using its own map
+    if journal:IsShown() and not keepWithJournal then return false end -- the journal is using its own map
 
     if FDJ.SetMapDungeon then FDJ.SetMapDungeon(dungeonName) end
 
@@ -87,6 +90,17 @@ local function Attach(dungeonName)
     backdrop:Show()
 
     panel:SetParent(backdrop)
+    -- Journal pages hide the map panel when they refresh; while it is lent to
+    -- the world map, put it straight back.
+    if not panel.fdjWorldMapHideHook then
+        panel.fdjWorldMapHideHook = true
+        panel:HookScript("OnHide", function(self)
+            if not attached then return end
+            if C_Timer and C_Timer.After then
+                C_Timer.After(0, function() if attached and self:GetParent() == backdrop then self:Show() end end)
+            end
+        end)
+    end
     panel:ClearAllPoints()
     panel:SetAllPoints(backdrop)
     panel:SetFrameLevel(backdrop:GetFrameLevel() + 1)
@@ -280,21 +294,47 @@ watcher:SetScript("OnEvent", function(_, event)
     if WorldMapFrame and WorldMapFrame.HookScript and not FDJ.worldMapHooked then
         FDJ.worldMapHooked = true
         WorldMapFrame:HookScript("OnShow", Safe)
-        WorldMapFrame:HookScript("OnHide", function() pcall(Detach) end)
+        WorldMapFrame:HookScript("OnHide", function() keepWithJournal = false; pcall(Detach) end)
     end
     local journal = Journal()
     if journal and journal.HookScript and not FDJ.worldMapJournalHooked then
         FDJ.worldMapJournalHooked = true
         -- The journal needs its map panel back whenever its own window opens.
         journal:HookScript("OnShow", function()
+            if keepWithJournal then return end
             pcall(Detach)
             if toggle and WorldMapFrame and WorldMapFrame:IsShown() then pcall(UpdateToggle, nil) end
         end)
         journal:HookScript("OnHide", function()
+            keepWithJournal = false
             if WorldMapFrame and WorldMapFrame:IsShown() then Safe() end
         end)
     end
 end)
+
+-- Boss pins on the world-map version of the dungeon map: close the world map
+-- and open the journal on that boss's loot page.
+function FDJ.IsWorldMapOverlayAttached() return attached end
+function FDJ.OpenBossFromWorldMap(dungeonName, bossIndex)
+    if not dungeonName or not bossIndex then return end
+    keepWithJournal = true -- the world map stays open on the dungeon map
+    local journal = Journal()
+    if journal and not journal:IsShown() then journal:Show() end
+    local function open()
+        if FDJ.OpenBossPage then pcall(FDJ.OpenBossPage, dungeonName, bossIndex) end
+        -- Opening the page re-rendered the journal; put the dungeon map back on the world map.
+        if WorldMapFrame and WorldMapFrame:IsShown() then pcall(FDJ.RefreshWorldMapOverlay) end
+    end
+    open()
+    -- The journal picks its page on show; make sure the boss page wins.
+    if C_Timer and C_Timer.After then C_Timer.After(0.05, open) end
+end
+
+-- The journal wants its map panel back (its own Map tab was opened).
+function FDJ.DetachWorldMapOverlay()
+    keepWithJournal = false
+    Detach()
+end
 
 -- /dj worldmap toggles the feature.
 function FDJ.ToggleWorldMapOverlay()

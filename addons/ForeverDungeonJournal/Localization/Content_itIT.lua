@@ -64,6 +64,7 @@ FDJ.ContentLocales.itIT.quests = {
     [96394] = {
         ["name"] = "I morti inquieti",
         ["objective"] = "Uccidi 15 apparizioni infuriate e 10 anime tormentate, poi dona pace allo spirito di Anvilmar.",
+        ["pickup"] = "Afadra Dunwall, in cima alla Vecchia Forgiardente, fuori dal dungeon",
     },
     [96393] = {
         ["name"] = "Incursione nella Vecchia Forgiardente",
@@ -416,7 +417,7 @@ FDJ.ContentLocales.itIT.quests = {
     [3765] = {
         ["name"] = "La corruzione lontana",
         ["objective"] = "Raggiungi Gershala Sussurranotte ad Auberdine, Rivafosca.",
-        ["description"] = "Missione introduttiva dell’Alleanza da completare prima di «Studiare la corruzione».",
+        ["note"] = "Passaggio introduttivo che porta a «Studiare la corruzione».",
     },
 }
 
