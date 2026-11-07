@@ -136,7 +136,7 @@ local function Progress()
             if q.id and forFaction and forClass and forProfession and not q.hideFromMainList and not q.repeatable and not seen[q.id] then
                 seen[q.id] = true
                 total = total + 1
-                if FDJ.IsQuestFinished and FDJ.IsQuestFinished(q.id) then done = done + 1 end
+                if FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(q.id) then done = done + 1 end -- questdone: handed in
             end
         end
     end
@@ -1289,3 +1289,1166 @@ if SlashWithoutDevPopup then
     end
 end
 -- END rpgintro
+
+-- BEGIN questunlock
+-- ------------------------------------------------ RPG Mode: quests unlocked
+-- A dungeon's quests unlock too, one by one, as this character comes to
+-- them: accepting the quest, or any step of the chain that leads to it. In
+-- RPG Mode a small achievement pops up, the same as for a page: "Dungeon
+-- Quest Unlocked", the dungeon, a ! on its sketch, and on the shield how many
+-- of that dungeon's quests this character has unlocked out of all it can take
+-- (own faction, class and professions), e.g. 2/6, with the same line in chat.
+-- Quests done or in the quest log (or with a chain step done or in the log)
+-- count as unlocked without a popup. Kept in Gamer Mode too, silently, like
+-- the pages, so turning RPG Mode on later doesn't pop old quests.
+do
+    local function QuestsUnlocked()
+        local db = CharDB()
+        if type(db.rpgQuests) ~= "table" then db.rpgQuests = {} end
+        return db.rpgQuests
+    end
+
+    -- Every quest this character can take on every journal page, in the
+    -- journal's order (a quest on several pages is listed on each).
+    local function Mine()
+        local faction = UnitFactionGroup and Plain(UnitFactionGroup("player"))
+        local _, class = UnitClass("player")
+        class = Plain(class)
+        local list = {}
+        for _, name in ipairs(FDJ.ORDER or {}) do
+            local d = FDJ.DB and FDJ.DB[name]
+            local seen = {}
+            for _, q in ipairs((d and not d.previewOnly and not d.questChainPage and d.quests) or {}) do
+                if type(q) == "table" and type(q.id) == "number" and not seen[q.id] then
+                    local forFaction = q.faction == nil or q.faction == "Both" or q.faction == "Neutral" or q.faction == faction
+                    local forClass = not q.classOnly or (class and tostring(q.classOnly):upper() == class)
+                    local forProfession = not q.profession or not FDJ.PlayerHasProfession or FDJ.PlayerHasProfession(q.profession)
+                    if forFaction and forClass and forProfession and not q.hideFromMainList and not q.repeatable then
+                        seen[q.id] = true
+                        list[#list + 1] = { dungeon = name, quest = q }
+                    end
+                end
+            end
+        end
+        return list
+    end
+
+    local function Steps(q)
+        local chain = FDJ.QUEST_PREREQ_CHAINS and FDJ.QUEST_PREREQ_CHAINS[q.id]
+        return type(chain) == "table" and chain or {}
+    end
+
+    -- Accepting this quest unlocks q: q itself or a step of its chain.
+    local function Leads(q, id)
+        if q.id == id then return true end
+        for _, step in ipairs(Steps(q)) do
+            if type(step) == "table" and step.id == id then return true end
+        end
+        return false
+    end
+
+    local function Started(id, skip)
+        if type(id) ~= "number" or id == skip then return false end
+        if FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(id) then return true end
+        return FDJ.IsQuestInLog and FDJ.IsQuestInLog(id) == true or false
+    end
+
+    -- Quests (or chain steps) done or in the quest log: unlocked, no popup.
+    -- Once a session, a few seconds after login (or before the first quest
+    -- accepted, leaving that one out).
+    local seeded = false
+    local function Seed(skip)
+        seeded = true
+        local unlocked = QuestsUnlocked()
+        for _, e in ipairs(Mine()) do
+            local q = e.quest
+            if not unlocked[q.id] then
+                local started = Started(q.id, skip)
+                if not started then
+                    for _, step in ipairs(Steps(q)) do
+                        if type(step) == "table" and Started(step.id, skip) then started = true break end
+                    end
+                end
+                if started then unlocked[q.id] = true end
+            end
+        end
+    end
+
+    local function Count(list, name)
+        local unlocked, n, total = QuestsUnlocked(), 0, 0
+        for _, e in ipairs(list) do
+            if e.dungeon == name then
+                total = total + 1
+                if unlocked[e.quest.id] then n = n + 1 end
+            end
+        end
+        return n, total
+    end
+
+    local function DungeonName(name)
+        return FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(name) or name
+    end
+
+    local function QuestName(q)
+        local shown = FDJ.LocalizeQuestField and FDJ.LocalizeQuestField(q.id, "name", q.name)
+        return type(shown) == "string" and shown ~= "" and shown or q.name or ("#" .. tostring(q.id))
+    end
+
+    local function Hint(entry)
+        if entry.kind == "map" then
+            return L(FDJ.IsDungeonLocked(entry.dungeon) and "RPG_MAP_TOAST_HINT_M" or "RPG_MAP_TOAST_HINT")
+        end
+        if FDJ.IsDungeonLocked(entry.dungeon) then return L("RPG_LOCKED_MSG") end
+        return L("RPG_QUEST_TOAST_HINT")
+    end
+
+    -- The ! of a quest; the dungeon map's icon (as on the Map tab) for a map.
+    local BADGES = {
+        quest = { "Interface\\GossipFrame\\AvailableQuestIcon", 0, 1, 0, 1 },
+        map = { "Interface\\Icons\\Ability_Spy", 0.07, 0.93, 0.07, 0.93 },
+    }
+
+    -- --------------------------------------------------------------- popup
+    -- The page unlock's toast, with a ! on the sketch. One at a time: the
+    -- rest wait their turn; another quest of the dungeon on screen counts up
+    -- on it instead.
+    local queue = {}
+    local Show
+
+    local function ShowNext()
+        if toast and toast:IsShown() then return end
+        local entry = table.remove(queue, 1)
+        if entry then Show(entry) end
+    end
+
+    local function Toast()
+        if not toast then
+            toast = HasAtlas("ui-achievement-guild-background") and BuildAchievementToast() or BuildPlainToast()
+        end
+        local t = toast
+        if t.fdjQuestReady then return t end
+        t.fdjQuestReady = true
+
+        local owner = t.sketch.GetParent and t.sketch:GetParent() or t
+        local holder = CreateFrame("Frame", nil, t)
+        holder:SetAllPoints(t)
+        holder:SetFrameLevel(((owner and owner.GetFrameLevel and owner:GetFrameLevel()) or t:GetFrameLevel() or 1) + 2)
+        t.questBadge = holder:CreateTexture(nil, "OVERLAY")
+        t.questBadge:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon")
+        if t.unlocked then
+            t.questBadge:SetSize(22, 22)
+            t.questBadge:SetPoint("BOTTOMRIGHT", t.sketch, "BOTTOMRIGHT", 6, -4)
+        else
+            t.questBadge:SetSize(26, 26)
+            t.questBadge:SetPoint("BOTTOMRIGHT", t.sketch, "BOTTOMRIGHT", -18, 0)
+        end
+        t.questBadge:Hide()
+
+        local pageEnter, pageClick = t:GetScript("OnEnter"), t:GetScript("OnClick")
+        t:SetScript("OnEnter", function(self, ...)
+            local entry = self.questEntry
+            if not entry then
+                if pageEnter then return pageEnter(self, ...) end
+                return
+            end
+            self.outro:Stop(); self:SetAlpha(1)
+            if not self.unlocked then return end -- the plain one has its hint on it
+            GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+            if entry.kind == "map" then GameTooltip:SetText(DungeonName(entry.dungeon), 1, 0.82, 0) end
+            for i, q in ipairs(entry.quests) do
+                if i == 1 and entry.kind ~= "map" then GameTooltip:SetText(QuestName(q), 1, 0.82, 0) else GameTooltip:AddLine(QuestName(q), 1, 0.82, 0) end
+            end
+            GameTooltip:AddLine(Hint(entry), 1, 1, 1, true)
+            GameTooltip:Show()
+        end)
+        t:SetScript("OnClick", function(self, button, ...)
+            local entry = self.questEntry
+            if not entry then
+                if pageClick then return pageClick(self, button, ...) end
+                return
+            end
+            GameTooltip:Hide()
+            self.outro:Stop()
+            self:Hide()
+            if button ~= "LeftButton" then return end
+            local journal = _G.ForeverDungeonJournalFrame
+            if FDJ.ToggleJournal and not (journal and journal:IsShown()) then pcall(FDJ.ToggleJournal) end
+            if FDJ.IsDungeonLocked(entry.dungeon) then return end
+            if entry.kind == "map" then
+                if FDJ.OpenDungeonMap then pcall(FDJ.OpenDungeonMap, entry.dungeon) end
+            elseif FDJ.OpenQuestChain then
+                pcall(FDJ.OpenQuestChain, entry.dungeon, entry.questID)
+            elseif FDJ.OpenQuestPage then
+                pcall(FDJ.OpenQuestPage, entry.dungeon, entry.questID)
+            end
+        end)
+        t:HookScript("OnHide", function(self)
+            if self:IsShown() then return end -- the whole UI hidden (Alt+Z): still up
+            self.questEntry = nil
+            if #queue > 0 then
+                if C_Timer and C_Timer.After then C_Timer.After(0.3, ShowNext) else ShowNext() end
+            end
+        end)
+        return t
+    end
+
+    Show = function(entry, again)
+        local t = Toast()
+        t.questEntry = entry
+        t.dungeon = entry.dungeon
+        t.sketch:SetTexture(SketchFor(entry.dungeon))
+        local badge = BADGES[entry.kind or "quest"] or BADGES.quest
+        t.questBadge:SetTexture(badge[1])
+        t.questBadge:SetTexCoord(badge[2], badge[3], badge[4], badge[5])
+        t.questBadge:Show()
+        t.name:SetText(DungeonName(entry.dungeon))
+        local count = entry.count or (entry.n .. "/" .. entry.total)
+        local title = entry.title or L("RPG_QUEST_TOAST_TITLE")
+        if t.unlocked then
+            t.guild:SetText("Dungeon Journal")
+            t.unlocked:SetText(title)
+            t.points:SetText(count)
+            t.left = 4.05
+        else
+            t.header:SetText(title .. "  |cff40ff40" .. count .. "|r")
+            t.hint:SetText(Hint(entry))
+            t.left = 6
+        end
+        t.outro:Stop()
+        t:SetAlpha(1)
+        t:Show()
+        if not again then t.intro:Stop(); t.intro:Play() end
+        t.sweep:Stop(); t.sweep:Play()
+        PlayFanfare()
+    end
+
+    local function Enqueue(entry)
+        local t = Toast()
+        if not t:IsShown() then return Show(entry) end
+        local current = t.questEntry
+        local fading = t.outro.IsPlaying and t.outro:IsPlaying()
+        local waiting
+        local kind = entry.kind or "quest"
+        if current and current.dungeon == entry.dungeon and (current.kind or "quest") == kind and not fading then
+            waiting = current
+        else
+            for _, e in ipairs(queue) do
+                if e.dungeon == entry.dungeon and (e.kind or "quest") == kind then waiting = e break end
+            end
+        end
+        if waiting then
+            for _, q in ipairs(entry.quests) do waiting.quests[#waiting.quests + 1] = q end
+            waiting.n, waiting.total = entry.n, entry.total
+            if waiting == current then Show(current, true) end
+            return
+        end
+        if #queue < 8 then queue[#queue + 1] = entry end
+    end
+    -- Other RPG Mode popups (the dungeon map unlocking) use the same frame
+    -- and queue: { kind, dungeon, title, count, quests }.
+    FDJ.RPGToast = function(entry) pcall(Enqueue, entry) end
+
+    -- Page toasts take the frame as they always did, without the !. A quest
+    -- popup they cut short comes back after them.
+    local ShowPageToast = ShowUnlockToast
+    ShowUnlockToast = function(name, ...)
+        if toast then
+            local cut = toast.questEntry
+            if cut and toast:IsShown() and (toast.left or 0) > 1 then table.insert(queue, 1, cut) end
+            toast.questEntry = nil
+            if toast.questBadge then toast.questBadge:Hide() end
+        end
+        return ShowPageToast(name, ...)
+    end
+
+    -- ------------------------------------------------------------ accepted
+    local function Accepted(id)
+        if type(id) ~= "number" then return end
+        if not seeded then Seed(id) end
+        local list = Mine()
+        local unlocked = QuestsUnlocked()
+        local now, fresh, order = {}, {}, {}
+        for _, e in ipairs(list) do
+            local q = e.quest
+            if Leads(q, id) then
+                if not unlocked[q.id] then
+                    unlocked[q.id] = true
+                    now[q.id] = true
+                end
+                if now[q.id] then
+                    if not fresh[e.dungeon] then
+                        fresh[e.dungeon] = {}
+                        order[#order + 1] = e.dungeon
+                    end
+                    table.insert(fresh[e.dungeon], q)
+                end
+            end
+        end
+        if #order == 0 then return end
+        if FDJ.RPGStateChanged then pcall(FDJ.RPGStateChanged) end
+        if not FDJ.IsRPGMode() then return end
+        -- One popup: the page the accepted quest is on, else the first page
+        -- its chain leads to. Every page gets its line in chat.
+        local pick
+        for _, name in ipairs(order) do
+            for _, q in ipairs(fresh[name]) do
+                if q.id == id and not pick then pick = name end
+            end
+        end
+        pick = pick or order[1]
+        for _, name in ipairs(order) do
+            local n, total = Count(list, name)
+            print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L("RPG_QUEST_UNLOCKED_MSG", DungeonName(name), n, total) .. "|r")
+            if name == pick then
+                local mainID = fresh[name][1].id
+                for _, q in ipairs(fresh[name]) do
+                    if q.id == id then mainID = id end
+                end
+                local quests = {}
+                for i, q in ipairs(fresh[name]) do quests[i] = q end
+                local ok, err = pcall(Enqueue, { dungeon = name, quests = quests, questID = mainID, n = n, total = total })
+                if not ok and FDJ.Debug then FDJ.Debug(err) end
+            end
+        end
+    end
+
+    local watch = CreateFrame("Frame")
+    watch:RegisterEvent("PLAYER_ENTERING_WORLD")
+    watch:RegisterEvent("QUEST_ACCEPTED")
+    watch:SetScript("OnEvent", function(_, event, a, b)
+        if event == "QUEST_ACCEPTED" then
+            -- WoW Forever: (questID); Classic clients: (questLogIndex, questID).
+            local id = tonumber(Plain(b)) or tonumber(Plain(a))
+            pcall(Accepted, id)
+        elseif not seeded then
+            if C_Timer and C_Timer.After then
+                C_Timer.After(3, function() if not seeded then pcall(Seed) end end)
+            else
+                pcall(Seed)
+            end
+        end
+    end)
+
+    FDJ.RPGQuestsUnlocked = function(name)
+        if not seeded then Seed() end
+        return Count(Mine(), name)
+    end
+
+    -- Dev: /dj devquest shows the popup (and its chat line) for the next
+    -- dungeon with quests this character can take, each time another one, as
+    -- if one more of its quests was just unlocked. Any mode; nothing saved.
+    local devNext = 0
+    local SlashWithoutDevQuest = SlashCmdList and SlashCmdList.FOREVERDUNGEONJOURNAL
+    if SlashWithoutDevQuest then
+        SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg, ...)
+            local cmd = tostring(msg or ""):lower():gsub("^%s+", ""):gsub("%s+$", "")
+            if cmd ~= "devquest" then return SlashWithoutDevQuest(msg, ...) end
+            if not seeded then Seed() end
+            local list = Mine()
+            local names, seen = {}, {}
+            for _, e in ipairs(list) do
+                if not seen[e.dungeon] then
+                    seen[e.dungeon] = true
+                    names[#names + 1] = e.dungeon
+                end
+            end
+            if #names == 0 then
+                print("|cffd8a83cDungeon Journal:|r quest unlock popup (dev): no dungeon quests for this character.")
+                return
+            end
+            devNext = devNext % #names + 1
+            local name = names[devNext]
+            local n, total = Count(list, name)
+            local unlocked, pick, first = QuestsUnlocked(), nil, nil
+            for _, e in ipairs(list) do
+                if e.dungeon == name then
+                    first = first or e.quest
+                    if not pick and not unlocked[e.quest.id] then pick = e.quest end
+                end
+            end
+            if pick then n = n + 1 end
+            pick = pick or first
+            print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L("RPG_QUEST_UNLOCKED_MSG", DungeonName(name), n, total)
+                .. "|r |cff9d9d9d(dev test, nothing saved)|r")
+            Show({ dungeon = name, quests = { pick }, questID = pick.id, n = n, total = total })
+        end
+    end
+end
+-- END questunlock
+
+-- BEGIN rpgpartial
+-- ------------------------------------------ RPG Mode: pages opened by quests
+-- A dungeon's page opens partly as soon as one of its quests is unlocked
+-- (accepted, or a step of the chain leading to it), before its final boss:
+--   * each boss stays a ? ("???") until this character kills it, then shows
+--     its usual page;
+--   * quests not unlocked yet are ??? rows;
+--   * the Map tab is greyed out (and M in the dungeon shows the normal world
+--     map), with Trash Drops / Recipes & Patterns, until about 20% of the
+--     dungeon's trash has died around this character.
+-- The final boss still unlocks everything, as before. Kills are seen as
+-- enemies die (nameplates, target, mouseover, loot, encounter end): WoW
+-- Forever keeps the combat log from addons. All of it is kept in Gamer Mode
+-- too, silently, like the pages.
+do
+    -- Trash per dungeon: hostile spawns that are not bosses, rares, critters
+    -- or friendly NPCs, counted from a classic world database (cmangos
+    -- classic-db). The dungeons WoW Forever added are estimates.
+    local TRASH = {
+        ["Blackfathom Deeps"] = 205,
+        ["Blackrock Depths"] = 998,
+        ["Dire Maul: East"] = 288,
+        ["Dire Maul: North"] = 155,
+        ["Dire Maul: West"] = 255,
+        ["Gnomeregan"] = 394,
+        ["Lower Blackrock Spire"] = 398,
+        ["Maraudon"] = 503,
+        ["Ragefire Chasm"] = 128,
+        ["Razorfen Downs"] = 200,
+        ["Razorfen Kraul"] = 182,
+        ["Scarlet Monastery: Armory"] = 66,
+        ["Scarlet Monastery: Cathedral"] = 93,
+        ["Scarlet Monastery: Graveyard"] = 80,
+        ["Scarlet Monastery: Library"] = 77,
+        ["Scholomance"] = 291,
+        ["Shadowfang Keep"] = 117,
+        ["Stratholme: Living"] = 268,
+        ["Stratholme: Undead"] = 157,
+        ["Sunken Temple"] = 225,
+        ["The Deadmines"] = 190,
+        ["The Stockade"] = 91,
+        ["Uldaman"] = 314,
+        ["Upper Blackrock Spire"] = 153,
+        ["Wailing Caverns"] = 241,
+        ["Zul'Farrak"] = 262,
+        ["City of Dalaran"] = 140, -- estimate
+        ["Excavation Site: Wetlands"] = 60, -- estimate
+        ["Hall of Thanes"] = 80, -- estimate
+        ["Ruins of Lordaeron"] = 120, -- estimate
+        ["The Drowned City"] = 120, -- estimate
+    }
+    local SHARE = 0.20
+
+    local function Store(key)
+        local db = CharDB()
+        if type(db[key]) ~= "table" then db[key] = {} end
+        return db[key]
+    end
+
+    local function DungeonName(name)
+        return FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(name) or name
+    end
+
+    local function BossLabel(name)
+        local shown = FDJ.LocalizeBossName and FDJ.LocalizeBossName(name)
+        return type(shown) == "string" and shown ~= "" and shown or name
+    end
+
+    -- Nothing hidden: Gamer Mode, pages that are not dungeons, "coming soon"
+    -- pages, or a page unlocked by its final boss.
+    local function FullyOpen(name)
+        if not FDJ.IsRPGMode() or not InOrder(name) then return true end
+        local d = FDJ.DB and FDJ.DB[name]
+        if not d or d.previewOnly or d.questChainPage then return true end
+        return CharDB().rpgKills[name] == true
+    end
+
+    local function QuestOpen(name)
+        local d = FDJ.DB and FDJ.DB[name]
+        local unlocked = CharDB().rpgQuests
+        if not d or type(unlocked) ~= "table" then return false end
+        for _, q in ipairs(d.quests or {}) do
+            if type(q) == "table" and q.id and unlocked[q.id] then return true end
+        end
+        return false
+    end
+
+    local function Need(name)
+        return math.max(1, math.ceil((TRASH[name] or 100) * SHARE))
+    end
+
+    local function MapOpen(name)
+        return Store("rpgMaps")[name] == true
+    end
+
+    -- Trash seen dying so far and how much opens the map.
+    local function TrashSoFar(name)
+        local need = Need(name)
+        if MapOpen(name) then return need, need end
+        local rec = Store("rpgTrash")[name]
+        return math.min(type(rec) == "table" and rec.n or 0, need), need
+    end
+    FDJ.RPGTrashProgress = TrashSoFar
+
+    -- A locked page opens (partly) once one of its quests is unlocked.
+    local LockedUntilFinalBoss = FDJ.IsDungeonLocked
+    FDJ.IsDungeonLocked = function(name, ...)
+        if not LockedUntilFinalBoss(name, ...) then return false end
+        return not QuestOpen(name)
+    end
+
+    -- --------------------------------------------------- what stays hidden
+    local owner = setmetatable({}, { __mode = "k" }) -- boss table -> dungeon
+    local function Owner(boss)
+        local found = owner[boss]
+        if found == nil then
+            for _, name in ipairs(FDJ.ORDER or {}) do
+                local d = FDJ.DB and FDJ.DB[name]
+                for _, b in ipairs((d and d.bosses) or {}) do owner[b] = name end
+            end
+            found = owner[boss]
+            if found == nil then owner[boss] = false end
+        end
+        return found or nil
+    end
+
+    -- The journal's own boss behind a view of it (Loot Filter and recipe
+    -- search pages, filtered loot), and its dungeon.
+    local function Real(boss, name, depth)
+        local via = rawget(boss, "fdjDungeon")
+        local mt = getmetatable(boss)
+        local base = mt and type(mt.__index) == "table" and mt.__index or nil
+        if via then return base or boss, via end
+        local mine = Owner(boss)
+        if mine then return boss, mine end
+        if base and (depth or 0) < 4 then return Real(base, name, (depth or 0) + 1) end
+        return boss, name
+    end
+
+    local function Seen(name, boss)
+        local list = Store("rpgBosses")[name]
+        if type(list) ~= "table" then return false end
+        if boss.npcID and list[boss.npcID] then return true end
+        return type(boss.name) == "string" and list[boss.name:lower()] == true
+    end
+
+    function FDJ.RPGBossHidden(name, boss)
+        if type(boss) ~= "table" or not FDJ.IsRPGMode() then return false end
+        local real, dungeon = Real(boss, name)
+        if not dungeon or FullyOpen(dungeon) then return false end
+        if real.trash or real.recipeTab then return not MapOpen(dungeon) end
+        return not Seen(dungeon, real)
+    end
+
+    function FDJ.RPGQuestHidden(name, quest)
+        if type(quest) ~= "table" or not name or FullyOpen(name) then return false end
+        local unlocked = CharDB().rpgQuests
+        return not (type(unlocked) == "table" and quest.id and unlocked[quest.id])
+    end
+
+    function FDJ.IsDungeonMapLocked(name)
+        if not name or FullyOpen(name) then return false end
+        return not MapOpen(name)
+    end
+
+    -- Boss pins on the dungeon map: a pin with no boss page stays a ? too.
+    function FDJ.RPGMapBossHidden(name, boss)
+        if not name or FullyOpen(name) then return false end
+        if not boss then return true end
+        return FDJ.RPGBossHidden(name, boss)
+    end
+
+    -- A hidden boss is shown as this: "???", the ?, no level and no loot.
+    local stubs = setmetatable({}, { __mode = "k" })
+    local function Stub(real)
+        local s = stubs[real]
+        if not s then
+            s = { name = "???", loot = {} }
+            stubs[real] = s
+        end
+        s.fdjRPGHint = L((real.trash or real.recipeTab) and "RPG_TRASH_HIDDEN" or "RPG_BOSS_HIDDEN")
+        return s
+    end
+
+    function FDJ.RPGBossView(name, boss)
+        if FDJ.RPGBossHidden(name, boss) then return Stub((Real(boss, name))) end
+        return boss
+    end
+
+    -- Hidden bosses' loot is not listed anywhere: boss pages, the Loot
+    -- Filter page, search.
+    local FilterPlain, ForPagePlain, SearchPlain = FDJ.FilterBossLoot, FDJ.FilterBossLootForPage, FDJ.SearchableBossLoot
+    if FilterPlain then
+        FDJ.FilterBossLoot = function(boss, ...)
+            if FDJ.RPGBossHidden(nil, boss) then
+                FDJ.lootFilterHidden = 0
+                return setmetatable({ loot = {} }, { __index = boss })
+            end
+            return FilterPlain(boss, ...)
+        end
+    end
+    if ForPagePlain then
+        FDJ.FilterBossLootForPage = function(boss, ...)
+            if FDJ.RPGBossHidden(nil, boss) then
+                FDJ.lootFilterDimmed, FDJ.lootFilterHidden = {}, 0
+                FDJ.lootRecipeCount, FDJ.lootRecipeSplit = 0, nil
+                return Stub((Real(boss)))
+            end
+            return ForPagePlain(boss, ...)
+        end
+    end
+    if SearchPlain then
+        FDJ.SearchableBossLoot = function(boss, ...)
+            if FDJ.RPGBossHidden(nil, boss) then return {} end
+            return SearchPlain(boss, ...)
+        end
+    end
+
+    -- ------------------------------------------------------- the Map tab
+    function FDJ.RPGMapLockedNotice(name)
+        local have, need = TrashSoFar(name)
+        print("|cffd8a83cDungeon Journal:|r " .. L("RPG_MAP_LOCKED_MSG", have, need))
+    end
+
+    function FDJ.RPGStyleMapTab(tab, name)
+        if not tab then return end
+        local locked = tab:IsShown() and FDJ.IsDungeonMapLocked(name) or false
+        tab.fdjRPGMapLocked = locked
+        tab.fdjRPGDungeon = name
+        if not tab.fdjRPGTip then
+            tab.fdjRPGTip = true
+            -- Disabled buttons only get OnEnter / OnLeave when asked to.
+            if tab.SetMotionScriptsWhileDisabled then tab:SetMotionScriptsWhileDisabled(true) end
+            tab:HookScript("OnEnter", function(self)
+                if not self.fdjRPGMapLocked then return end
+                local have, need = TrashSoFar(self.fdjRPGDungeon)
+                GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+                GameTooltip:SetText(L("RPG_MAP_LOCKED_TITLE"), 1, 0.82, 0)
+                GameTooltip:AddLine(L("RPG_MAP_LOCKED_TIP", have, need), 1, 1, 1, true)
+                GameTooltip:Show()
+            end)
+            tab:HookScript("OnLeave", function(self)
+                if GameTooltip:IsOwned(self) then GameTooltip:Hide() end
+            end)
+        end
+        if locked then
+            tab:Disable()
+            tab:SetAlpha(0.55)
+            if tab.text then tab.text:SetTextColor(0.55, 0.55, 0.55) end
+            if tab.fdjIcon and tab.fdjIcon.SetDesaturated then tab.fdjIcon:SetDesaturated(true) end
+        elseif tab.fdjIcon and tab.fdjIcon.SetDesaturated then
+            tab.fdjIcon:SetDesaturated(false)
+        end
+    end
+
+    -- Locked pages: their tooltip says a quest opens them too.
+    local LockedTooltipPlain = FDJ.RPGLockedTooltip
+    FDJ.RPGLockedTooltip = function(owner, name, ...)
+        LockedTooltipPlain(owner, name, ...)
+        local _, total = 0, 0
+        if FDJ.RPGQuestsUnlocked then _, total = FDJ.RPGQuestsUnlocked(name) end
+        if (total or 0) > 0 then
+            GameTooltip:AddLine(L("RPG_LOCKED_TIP_QUEST"), 1, 1, 1, true)
+            GameTooltip:Show()
+        end
+    end
+
+    -- ------------------------------------------------ refresh after changes
+    local pending = false
+    local function Changed()
+        if FDJ.ResetSearchCache then pcall(FDJ.ResetSearchCache) end
+        if pending then return end
+        pending = true
+        local function run()
+            pending = false
+            if FDJ.RefreshHomeCards then pcall(FDJ.RefreshHomeCards) end
+            if FDJ.RefreshRPGPage then pcall(FDJ.RefreshRPGPage) end
+            if FDJ.RefreshWorldMapOverlay and WorldMapFrame and WorldMapFrame:IsShown() then pcall(FDJ.RefreshWorldMapOverlay) end
+        end
+        if C_Timer and C_Timer.After then C_Timer.After(0.2, run) else run() end
+    end
+    FDJ.RPGStateChanged = Changed
+
+    -- The final boss unlocks the whole page: show it all at once.
+    local UnlockWithoutPage = Unlock
+    Unlock = function(name, ...)
+        UnlockWithoutPage(name, ...)
+        Changed()
+    end
+
+    -- -------------------------------------------------------------- kills
+    local here -- the journal dungeon the character is in (nil outside)
+    local function Where()
+        here = FDJ.CurrentDungeon and FDJ.CurrentDungeon() or nil
+        if here and not InOrder(here) then here = nil end
+    end
+
+    local byNpc, byName, indexLang
+    local function Index()
+        local lang = FDJ.GetLanguage and FDJ.GetLanguage() or ""
+        if byNpc and indexLang == lang then return end
+        indexLang = lang
+        byNpc, byName = {}, {}
+        local function Add(map, key, name, b)
+            map[key] = map[key] or {}
+            table.insert(map[key], { name, b })
+        end
+        for _, name in ipairs(FDJ.ORDER or {}) do
+            local d = FDJ.DB and FDJ.DB[name]
+            if d and not d.previewOnly then
+                for _, b in ipairs(d.bosses or {}) do
+                    if type(b) == "table" and not b.trash and not b.recipeTab then
+                        if b.npcID then Add(byNpc, b.npcID, name, b) end
+                        if type(b.name) == "string" then
+                            Add(byName, b.name:lower(), name, b)
+                            -- "Fel Steed / Shadow Charger": either one.
+                            for part in b.name:gmatch("[^/]+") do
+                                part = part:gsub("^%s+", ""):gsub("%s+$", "")
+                                if part ~= "" and part ~= b.name then Add(byName, part:lower(), name, b) end
+                            end
+                            local shown = FDJ.LocalizeBossName and FDJ.LocalizeBossName(b.name)
+                            if type(shown) == "string" and shown ~= "" and shown ~= b.name then Add(byName, shown:lower(), name, b) end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- The bosses a kill points at: the ones of this dungeon, else (anywhere)
+    -- every match.
+    local function Pick(list, anywhere)
+        if type(list) ~= "table" then return nil end
+        local out = {}
+        for _, e in ipairs(list) do
+            if e[1] == here then out[#out + 1] = e end
+        end
+        if #out == 0 and anywhere then return list end
+        return #out > 0 and out or nil
+    end
+
+    local function Reveal(entries)
+        local any = false
+        Build()
+        local all = Store("rpgBosses")
+        for _, e in ipairs(entries or {}) do
+            local name, b = e[1], e[2]
+            if type(all[name]) ~= "table" then all[name] = {} end
+            local seen = all[name]
+            if not Seen(name, b) then
+                if b.npcID then seen[b.npcID] = true end
+                if type(b.name) == "string" then seen[b.name:lower()] = true end
+                any = true
+                local final = b.npcID and finalByNpc and finalByNpc[b.npcID] == name
+                if FDJ.IsRPGMode() and not final and not CharDB().rpgKills[name] and QuestOpen(name) then
+                    print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L("RPG_BOSS_REVEALED_MSG", BossLabel(b.name)) .. "|r")
+                end
+            end
+        end
+        if any then Changed() end
+    end
+
+    local function Trash(guid)
+        if not here or MapOpen(here) or CharDB().rpgKills[here] then return end
+        local all = Store("rpgTrash")
+        local rec = all[here]
+        if type(rec) ~= "table" then
+            rec = { n = 0, seen = {} }
+            all[here] = rec
+        end
+        if type(rec.seen) ~= "table" then rec.seen = {} end
+        if rec.seen[guid] then return end
+        rec.seen[guid] = true
+        rec.n = (rec.n or 0) + 1
+        if rec.n < Need(here) then return end
+        local name = here
+        Store("rpgMaps")[name] = true
+        all[name] = nil
+        if FDJ.IsRPGMode() then
+            print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L("RPG_MAP_UNLOCKED_MSG", DungeonName(name)) .. "|r")
+            if FDJ.RPGToast then
+                FDJ.RPGToast({ kind = "map", dungeon = name, title = L("RPG_MAP_TOAST_TITLE"),
+                    count = math.floor(SHARE * 100 + 0.5) .. "%", quests = {} })
+            end
+        end
+        Changed()
+    end
+
+    local function Watching()
+        return here and not CharDB().rpgKills[here]
+    end
+
+    local function Creature(guid)
+        if type(guid) ~= "string" then return nil end
+        local kind, _, _, _, _, id = strsplit("-", guid)
+        if kind ~= "Creature" and kind ~= "Vehicle" then return nil end
+        return tonumber(id) or 0
+    end
+
+    -- An enemy lying dead: a boss is revealed, anything else hostile is trash.
+    local function Dead(unit)
+        if not Watching() then return end
+        local okE, exists = pcall(UnitExists, unit)
+        if not okE or not Plain(exists) then return end
+        local okD, dead = pcall(UnitIsDead, unit)
+        if not okD or not Plain(dead) then return end
+        local okG, guid = pcall(UnitGUID, unit)
+        guid = okG and Plain(guid) or nil
+        local id = Creature(guid)
+        if not id then return end
+        Index()
+        local hit = Pick(byNpc[id], true)
+        if not hit then
+            local okN, who = pcall(UnitName, unit)
+            who = okN and Plain(who) or nil
+            if type(who) == "string" then hit = Pick(byName[who:lower()], false) end
+        end
+        if hit then return Reveal(hit) end
+        local okR, reaction = pcall(UnitReaction, unit, "player")
+        reaction = okR and Plain(reaction) or nil
+        if type(reaction) ~= "number" or reaction > 3 then return end -- critters, friends
+        Trash(guid)
+    end
+
+    -- Corpses looted (area loot can hold several).
+    local function Looted()
+        if not Watching() or type(GetNumLootItems) ~= "function" or type(GetLootSourceInfo) ~= "function" then return end
+        local okN, count = pcall(GetNumLootItems)
+        if not okN or type(count) ~= "number" then return end
+        Index()
+        for slot = 1, count do
+            local sources = { pcall(GetLootSourceInfo, slot) }
+            if sources[1] then
+                for i = 2, #sources, 2 do
+                    local guid = Plain(sources[i])
+                    local id = Creature(guid)
+                    if id then
+                        local hit = Pick(byNpc[id], true)
+                        if hit then Reveal(hit) else Trash(guid) end
+                    end
+                end
+            end
+        end
+    end
+
+    local function Encounter(name)
+        name = Plain(name)
+        if type(name) ~= "string" or name == "" then return end
+        Index()
+        local hit = Pick(byName[name:lower()], true)
+        if hit then Reveal(hit) end
+    end
+
+    local watch = CreateFrame("Frame")
+    for _, event in ipairs({ "PLAYER_ENTERING_WORLD", "ZONE_CHANGED_NEW_AREA", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
+        "UNIT_HEALTH", "NAME_PLATE_UNIT_REMOVED", "PLAYER_TARGET_CHANGED", "UPDATE_MOUSEOVER_UNIT", "LOOT_OPENED",
+        "ENCOUNTER_END", "BOSS_KILL" }) do
+        pcall(watch.RegisterEvent, watch, event)
+    end
+    watch:SetScript("OnEvent", function(_, event, a, b, _, _, e)
+        if event == "UNIT_HEALTH" then
+            if here and type(a) == "string" and (a:find("^nameplate") or a == "target" or a == "focus" or a:find("^boss")) then
+                pcall(Dead, a)
+            end
+        elseif event == "NAME_PLATE_UNIT_REMOVED" then
+            if here and type(a) == "string" then pcall(Dead, a) end
+        elseif event == "PLAYER_TARGET_CHANGED" then
+            if here then pcall(Dead, "target") end
+        elseif event == "UPDATE_MOUSEOVER_UNIT" then
+            if here then pcall(Dead, "mouseover") end
+        elseif event == "LOOT_OPENED" then
+            if here then pcall(Looted) end
+        elseif event == "ENCOUNTER_END" then
+            if e == 1 or e == true then pcall(Encounter, b) end
+        elseif event == "BOSS_KILL" then
+            pcall(Encounter, b)
+        else
+            pcall(Where)
+        end
+    end)
+end
+-- END rpgpartial
+
+-- BEGIN rpgproof
+-- ------------------------------------------- RPG Mode: quests as proof
+-- A quest the character has handed in that can't be done without a boss
+-- dying (kill him, bring back his head, an item only he drops) proves that
+-- boss was killed, even before the journal was there to see it: the boss is
+-- revealed, and his dungeon's final boss unlocks the whole page. A quest
+-- started by an item the boss drops counts as soon as it is in the quest
+-- log. Checked in RPG Mode: at login, when RPG Mode is turned on, and as
+-- such a quest is picked up or handed in.
+do
+    -- [questID] = { { dungeon, npcID, ... }, ... }
+    local PROOF = {
+        -- Hall of Thanes
+        [96393] = { { "Hall of Thanes", 261319 } },              -- Old Ironforge Incursion: Durgen Dirgehammer's Head
+        [96395] = { { "Hall of Thanes", 261306 } },              -- An Ancient Grudge: Faldrim Anvilmar put to rest
+        [96394] = { { "Hall of Thanes", 261306 } },              -- The Restless Dead: Faldrim Anvilmar put to rest
+        -- Ragefire Chasm
+        [5728] = { { "Ragefire Chasm", 11519, 11518 } },         -- Hidden Enemies: Bazzalan, Jergosh the Invoker
+        [5761] = { { "Ragefire Chasm", 11520 } },                -- Slaying the Beast: Taragaman the Hungerer
+        -- Ruins of Lordaeron
+        [92422] = { { "Ruins of Lordaeron", 250657 } },          -- The Wrath of Rath'mael
+        [95250] = { { "Ruins of Lordaeron", 250660 } },          -- Abominable Creatures: the Head of the Baron
+        [97288] = { { "Ruins of Lordaeron", 250660 } },          -- Unending Torment: the Abominable Head, from the Baron
+        [95216] = { { "Ruins of Lordaeron", 250483 } },          -- The New Plague: Witherfang's strain
+        -- The Deadmines
+        [166] = { { "The Deadmines", 639 } },                    -- The Defias Brotherhood: Edwin VanCleef's head
+        [373] = { { "The Deadmines", 639 } },                    -- The Unsent Letter, looted from Edwin VanCleef
+        [2040] = { { "The Deadmines", 642 } },                   -- Underground Assault: from Sneed's Shredder
+        -- Wailing Caverns
+        [6981] = { { "Wailing Caverns", 3654 } },                -- The Glowing Shard, from Mutanus the Devourer
+        [914] = { { "Wailing Caverns", 3669, 3671, 3670, 3673 } }, -- Leaders of the Fang: the four gems
+        -- Shadowfang Keep
+        [1014] = { { "Shadowfang Keep", 4275 } },                -- Arugal Must Die
+        [95036] = { { "Shadowfang Keep", 4275 } },               -- A Moon-Kissed Blade: the ingot in Arugal's room after he dies
+        -- Blackfathom Deeps
+        [1200] = { { "Blackfathom Deeps", 4832 } },              -- Blackfathom Villainy: the Head of Kelris
+        [6561] = { { "Blackfathom Deeps", 4832 } },
+        [6565] = { { "Blackfathom Deeps", 12902 } },             -- Allegiance to the Old Gods: Lorgus Jett
+        -- Excavation Site: Wetlands (the Titan Relic, from the Relic Guardian)
+        [95810] = { { "Excavation Site: Wetlands", 260326 } },
+        [95664] = { { "Excavation Site: Wetlands", 260326 } },
+        [98824] = { { "Excavation Site: Wetlands", 260326 } },
+        [98823] = { { "Excavation Site: Wetlands", 260326 } },
+        -- The Stockade
+        [391] = { { "The Stockade", 1716 } },                    -- The Stockade Riots: Bazil Thredd
+        [377] = { { "The Stockade", 1663 } },                    -- Crime and Punishment: Dextren Ward
+        [378] = { { "The Stockade", 1666 } },                    -- The Fury Runs Deep: Kam Deepfury
+        [386] = { { "The Stockade", 1696 } },                    -- What Comes Around...: Targorr the Dread
+        -- City of Dalaran
+        [92489] = { { "City of Dalaran", 246016 } },             -- Power Overwhelming: Arcanic Enigma
+        [96986] = { { "City of Dalaran", 247126 } },             -- The Grave Knight: Atrexis
+        -- Gnomeregan
+        [2929] = { { "Gnomeregan", 7800 } },                     -- The Grand Betrayal: Mekgineer Thermaplugg
+        [2841] = { { "Gnomeregan", 7800 } },                     -- Rig Wars: Thermaplugg's Safe Combination
+        -- Razorfen Kraul (Charlga Razorflank)
+        [6522] = { { "Razorfen Kraul", 4421 } },                 -- the Small Scroll
+        [1101] = { { "Razorfen Kraul", 4421 } },                 -- The Crone of the Kraul: Razorflank's Medallion
+        [1102] = { { "Razorfen Kraul", 4421 } },                 -- A Vengeful Fate: Razorflank's Heart
+        -- The Drowned City
+        [95776] = { { "The Drowned City", 258924 } },            -- The Only Good Brinescale...: Var'Taka
+        -- Scarlet Monastery: Whitemane, Mograine, Herod and Loksey
+        [1048] = { { "Scarlet Monastery: Cathedral", 3977, 3976 }, { "Scarlet Monastery: Armory", 3975 },
+            { "Scarlet Monastery: Library", 3974 } },
+        [1053] = { { "Scarlet Monastery: Cathedral", 3977, 3976 }, { "Scarlet Monastery: Armory", 3975 },
+            { "Scarlet Monastery: Library", 3974 } },
+        -- Razorfen Downs
+        [3341] = { { "Razorfen Downs", 7358 } },
+        [3636] = { { "Razorfen Downs", 7358 } },
+        -- Uldaman (the power source from Archaedas, the sapphire from Grimlok)
+        [2204] = { { "Uldaman", 2748 } },
+        [2339] = { { "Uldaman", 2748, 4854 } },
+        [2201] = { { "Uldaman", 4854 } },
+        -- Zul'Farrak
+        [2770] = { { "Zul'Farrak", 7273 } },
+        -- Maraudon
+        [7064] = { { "Maraudon", 12201 } },
+        [7065] = { { "Maraudon", 12201 } },
+        -- Sunken Temple
+        [3373] = { { "Sunken Temple", 5709 } },
+        [8232] = { { "Sunken Temple", 5719 } },
+        [8253] = { { "Sunken Temple", 5719 } },
+        [8257] = { { "Sunken Temple", 5719 } },
+        -- Blackrock Depths
+        [4024] = { { "Blackrock Depths", 9016 } },
+        [4003] = { { "Blackrock Depths", 9019 } },
+        [4362] = { { "Blackrock Depths", 9019 } },
+        [3802] = { { "Blackrock Depths", 9056 } },
+        [4132] = { { "Blackrock Depths", 9033 } },
+        [4282] = { { "Blackrock Depths", 8983, 9033 } },
+        [4063] = { { "Blackrock Depths", 8983 } },
+        [3907] = { { "Blackrock Depths", 9017 } },
+        [4263] = { { "Blackrock Depths", 9017 } },
+        -- Lower Blackrock Spire
+        [4701] = { { "Lower Blackrock Spire", 10220 } },
+        [4724] = { { "Lower Blackrock Spire", 10220 } },
+        [4742] = { { "Lower Blackrock Spire", 9196, 9237, 9568 } },
+        [4903] = { { "Lower Blackrock Spire", 9196, 9237, 9568 } },
+        [5081] = { { "Lower Blackrock Spire", 9196, 9237, 9568 } },
+        [5089] = { { "Lower Blackrock Spire", 9568 } },
+        -- Upper Blackrock Spire
+        [5102] = { { "Upper Blackrock Spire", 10363 } },
+        [6502] = { { "Upper Blackrock Spire", 10363 } },
+        [6602] = { { "Upper Blackrock Spire", 10363 } },
+        [5127] = { { "Upper Blackrock Spire", 10899 } },
+        [4974] = { { "Upper Blackrock Spire", 10429 } },
+        -- Dire Maul
+        [5526] = { { "Dire Maul: East", 11492 } },
+        [7463] = { { "Dire Maul: East", 13280 } },
+        [7488] = { { "Dire Maul: East", 14327 } },
+        [7489] = { { "Dire Maul: East", 14327 } },
+        [7461] = { { "Dire Maul: West", 11496, 11486 } },
+        -- Stratholme
+        [5251] = { { "Stratholme: Living", 10811 } },
+        [5262] = { { "Stratholme: Living", 10813 } },
+        [5263] = { { "Stratholme: Undead", 10440 } },
+        [5125] = { { "Stratholme: Undead", 10440 } },
+        [8945] = { { "Stratholme: Undead", 10440 } },
+        [6163] = { { "Stratholme: Undead", 10439 } },
+        -- Scholomance
+        [5382] = { { "Scholomance", 11261 } },
+        [5515] = { { "Scholomance", 10503 } },
+        [5466] = { { "Scholomance", 10508 } },
+        [4771] = { { "Scholomance", 10432 } },
+    }
+    -- Started by the boss's own drop: in the quest log is proof enough.
+    local DROP = {
+        [373] = true, [6981] = true, [6522] = true, [97288] = true, [95810] = true,
+        [95664] = true, [3373] = true, [5089] = true, [5262] = true,
+    }
+    FDJ.RPG_QUEST_PROOF, FDJ.RPG_QUEST_PROOF_DROP = PROOF, DROP
+
+    local strings = {
+        enUS = { RPG_PROOF_UNLOCKED = "Unlocked by quests you have done: %s", RPG_PROOF_REVEALED = "Revealed by quests you have done: %s" },
+        deDE = { RPG_PROOF_UNLOCKED = "Durch erledigte Quests freigeschaltet: %s", RPG_PROOF_REVEALED = "Durch erledigte Quests aufgedeckt: %s" },
+        frFR = { RPG_PROOF_UNLOCKED = "Débloqué grâce à vos quêtes terminées : %s", RPG_PROOF_REVEALED = "Révélé grâce à vos quêtes terminées : %s" },
+        esES = { RPG_PROOF_UNLOCKED = "Desbloqueado por misiones que ya completaste: %s", RPG_PROOF_REVEALED = "Revelado por misiones que ya completaste: %s" },
+        itIT = { RPG_PROOF_UNLOCKED = "Sbloccato dalle missioni già completate: %s", RPG_PROOF_REVEALED = "Svelato dalle missioni già completate: %s" },
+        ptBR = { RPG_PROOF_UNLOCKED = "Desbloqueado por missões que você já concluiu: %s", RPG_PROOF_REVEALED = "Revelado por missões que você já concluiu: %s" },
+        ruRU = { RPG_PROOF_UNLOCKED = "Открыто по выполненным заданиям: %s", RPG_PROOF_REVEALED = "Раскрыто по выполненным заданиям: %s" },
+        koKR = { RPG_PROOF_UNLOCKED = "완료한 퀘스트로 열림: %s", RPG_PROOF_REVEALED = "완료한 퀘스트로 공개됨: %s" },
+        zhCN = { RPG_PROOF_UNLOCKED = "已通过完成的任务解锁：%s", RPG_PROOF_REVEALED = "已通过完成的任务揭示：%s" },
+        zhTW = { RPG_PROOF_UNLOCKED = "已透過完成的任務解鎖：%s", RPG_PROOF_REVEALED = "已透過完成的任務揭示：%s" },
+    }
+    for locale, entries in pairs(strings) do
+        local t = FDJ.Locales and FDJ.Locales[locale]
+        if t then
+            for key, value in pairs(entries) do
+                if t[key] == nil then t[key] = value end
+            end
+        end
+    end
+
+    local function Shown(id)
+        if FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(id) then return true end
+        return DROP[id] and FDJ.IsQuestInLog and FDJ.IsQuestInLog(id) and true or false
+    end
+
+    local function BossOf(name, npcID)
+        local d = FDJ.DB and FDJ.DB[name]
+        for _, b in ipairs((d and d.bosses) or {}) do
+            if type(b) == "table" and b.npcID == npcID then return b end
+        end
+    end
+
+    local function Localized(fn, name)
+        local shown = fn and fn(name)
+        return type(shown) == "string" and shown ~= "" and shown or name
+    end
+
+    -- Marks what these quests prove. Returns the pages it unlocked and the
+    -- bosses it revealed (on pages still not fully open), both new.
+    local function Prove(ids, live)
+        Build()
+        local db = CharDB()
+        if type(db.rpgBosses) ~= "table" then db.rpgBosses = {} end
+        local pages, bosses, any = {}, {}, false
+        for _, id in ipairs(ids) do
+            for _, entry in ipairs(PROOF[id] or {}) do
+                local name = entry[1]
+                if InOrder(name) then
+                    for i = 2, #entry do
+                        local b = BossOf(name, entry[i])
+                        if b then
+                            local seen = db.rpgBosses[name]
+                            if type(seen) ~= "table" then
+                                seen = {}
+                                db.rpgBosses[name] = seen
+                            end
+                            if not seen[b.npcID] then
+                                seen[b.npcID] = true
+                                if type(b.name) == "string" then seen[b.name:lower()] = true end
+                                bosses[#bosses + 1] = { name, b }
+                                any = true
+                            end
+                            if finalByNpc and finalByNpc[b.npcID] == name and not db.rpgKills[name] then
+                                if live then
+                                    Unlock(name) -- the page's popup, as for a kill seen
+                                else
+                                    db.rpgKills[name] = true
+                                end
+                                pages[#pages + 1] = name
+                                any = true
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        local revealed = {}
+        for _, e in ipairs(bosses) do
+            if not db.rpgKills[e[1]] then revealed[#revealed + 1] = e[2] end
+        end
+        return pages, revealed, any
+    end
+
+    local function Say(key, list)
+        if #list == 0 then return end
+        print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L(key, table.concat(list, ", ")) .. "|r")
+    end
+
+    local function Refresh()
+        if FDJ.RPGStateChanged then pcall(FDJ.RPGStateChanged) end
+        if FDJ.RefreshHomeCards then pcall(FDJ.RefreshHomeCards) end
+    end
+
+    -- Every quest that proves something: login, RPG Mode turned on.
+    local function Check()
+        if not FDJ.IsRPGMode() then return end
+        local ids = {}
+        for id in pairs(PROOF) do
+            if Shown(id) then ids[#ids + 1] = id end
+        end
+        table.sort(ids)
+        local pages, revealed, any = Prove(ids, false)
+        if not any then return end
+        local names = {}
+        for _, name in ipairs(pages) do names[#names + 1] = Localized(FDJ.LocalizeDungeonName, name) end
+        Say("RPG_PROOF_UNLOCKED", names)
+        local list = {}
+        for _, b in ipairs(revealed) do list[#list + 1] = Localized(FDJ.LocalizeBossName, b.name) end
+        Say("RPG_PROOF_REVEALED", list)
+        Refresh()
+    end
+    FDJ.RPGCheckQuestProof = Check
+
+    -- One quest just picked up or handed in: as if the kill had been seen.
+    local function Now(id)
+        if not FDJ.IsRPGMode() or not PROOF[id] then return end
+        local _, revealed, any = Prove({ id }, true)
+        if not any then return end
+        for _, b in ipairs(revealed) do
+            print("|cffd8a83cDungeon Journal:|r |cff40ff40" .. L("RPG_BOSS_REVEALED_MSG", Localized(FDJ.LocalizeBossName, b.name)) .. "|r")
+        end
+        Refresh()
+    end
+
+    local function Later(seconds, fn)
+        if C_Timer and C_Timer.After then C_Timer.After(seconds, fn) else fn() end
+    end
+
+    local proofEvents = CreateFrame("Frame")
+    proofEvents:RegisterEvent("PLAYER_ENTERING_WORLD")
+    proofEvents:RegisterEvent("QUEST_TURNED_IN")
+    proofEvents:RegisterEvent("QUEST_ACCEPTED")
+    local checked = false
+    proofEvents:SetScript("OnEvent", function(_, event, a, b)
+        if event == "PLAYER_ENTERING_WORLD" then
+            if checked then return end
+            checked = true
+            -- The game knows the quests done a moment after login (and once
+            -- more a little later, in case it took its time).
+            Later(5, Check)
+            Later(30, Check)
+        elseif event == "QUEST_TURNED_IN" then
+            local id = tonumber(Plain(a))
+            if id and PROOF[id] then Now(id) end
+        else
+            -- WoW Forever: (questID); Classic clients: (questLogIndex, questID).
+            local id = tonumber(Plain(b)) or tonumber(Plain(a))
+            if id and DROP[id] then Now(id) end
+        end
+    end)
+
+    -- RPG Mode turned on: what the quests done already prove, at once.
+    local SetJournalModeWithoutProof = FDJ.SetJournalMode
+    FDJ.SetJournalMode = function(mode, ...)
+        local was = FDJ.IsRPGMode()
+        local a, b, c = SetJournalModeWithoutProof(mode, ...)
+        if mode == "rpg" and not was then Later(0.5, Check) end
+        return a, b, c
+    end
+end
+-- END rpgproof

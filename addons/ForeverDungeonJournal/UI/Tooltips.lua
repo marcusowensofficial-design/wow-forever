@@ -560,6 +560,18 @@ function FDJ.UpdateItemComparison(owner)
     end
 end
 
+function FDJ.AddUnseenItemHint(tooltip)
+    if not tooltip or not tooltip.GetName or not tooltip:GetName() then return false end
+    local first = _G[tooltip:GetName() .. "TextLeft1"]
+    local text = first and first:IsShown() and first:GetText()
+    if not text then return false end
+    if text ~= (RETRIEVING_ITEM_INFO or "Retrieving item information") and text ~= "Retrieving item information" then return false end
+    tooltip:AddLine(" ")
+    tooltip:AddLine(L("ITEM_UNSEEN_TITLE"), 1.00, 0.82, 0.10)
+    tooltip:AddLine(L("ITEM_UNSEEN_TIP"), 0.85, 0.85, 0.85, true)
+    return true
+end
+
 function FDJ.ShowItemTooltip(row)
     if not row or not row.item then return end
 
@@ -570,19 +582,33 @@ function FDJ.ShowItemTooltip(row)
     itemTooltip:SetOwner(row, "ANCHOR_NONE")
     if itemTooltip.ClearLines then itemTooltip:ClearLines() end
     if not row.item[1] or row.item[1] <= 0 then
-        local r, g, b = FDJ.QualityColor(row.item[3] or 1)
+        local q = tonumber(row.item[4]) or tonumber(row.item[3]) or 1
+        local r, g, b = FDJ.QualityColor(q)
         itemTooltip:AddLine(row.item[2] or L("ITEM"), r, g, b)
+        for _, line in ipairs(type(row.item.tip) == "table" and row.item.tip or {}) do
+            if type(line) == "table" then
+                itemTooltip:AddDoubleLine(line[1], line[2], 1, 1, 1, 1, 1, 1)
+            else
+                itemTooltip:AddLine(line, 1, 1, 1, true)
+            end
+        end
         itemTooltip:Show()
+        if FDJ.RefreshTooltipBacking then FDJ.RefreshTooltipBacking() end
         FDJ.PositionPrimaryItemTooltip(row)
         return
     end
     local _, liveLink = FDJ.ItemInfo(row.item[1])
     itemTooltip:SetHyperlink(liveLink or ("item:" .. row.item[1]))
+    FDJ.AddUnseenItemHint(itemTooltip)
     if row.fdjSourceText and row.fdjSourceText ~= "" then
         itemTooltip:AddLine(" ")
         itemTooltip:AddLine(row.fdjSourceText, 1.00, 0.82, 0.10, true)
     end
+    if row.fdjMapLocation then
+        itemTooltip:AddLine(L("ITEM_CLICK_MAP"), 0.35, 1.00, 0.35, true)
+    end
     itemTooltip:Show()
+    if FDJ.RefreshTooltipBacking then FDJ.RefreshTooltipBacking() end
     FDJ.PositionPrimaryItemTooltip(row)
 
     FDJ.UpdateItemComparison(row)

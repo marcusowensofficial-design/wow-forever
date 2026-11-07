@@ -176,31 +176,49 @@ local function GetSlotOptionsForCategory(cat)
     end
 end
 
+local function IsTwoHandSlot(sLower)
+    return sLower:find("two-hand", 1, true) ~= nil or sLower:find("two hand", 1, true) ~= nil
+end
+
+local function IsArmorSlotText(sLower)
+    if sLower:find("back", 1, true) or sLower:find("cloak", 1, true) then
+        return false
+    end
+    return sLower:find("head", 1, true) ~= nil or sLower:find("helm", 1, true) ~= nil
+        or sLower:find("shoulder", 1, true) ~= nil or sLower:find("spaulder", 1, true) ~= nil or sLower:find("mantle", 1, true) ~= nil
+        or sLower:find("chest", 1, true) ~= nil or sLower:find("robe", 1, true) ~= nil or sLower:find("tunic", 1, true) ~= nil or sLower:find("vest", 1, true) ~= nil
+        or sLower:find("wrist", 1, true) ~= nil or sLower:find("bracer", 1, true) ~= nil or sLower:find("cuff", 1, true) ~= nil
+        or sLower:find("hands", 1, true) ~= nil or sLower:find("gloves", 1, true) ~= nil or sLower:find("gauntlets", 1, true) ~= nil
+        or sLower:find("waist", 1, true) ~= nil or sLower:find("belt", 1, true) ~= nil or sLower:find("girdle", 1, true) ~= nil or sLower:find("sash", 1, true) ~= nil
+        or sLower:find("legs", 1, true) ~= nil or sLower:find("pants", 1, true) ~= nil or sLower:find("leggings", 1, true) ~= nil or sLower:find("kilt", 1, true) ~= nil
+        or sLower:find("feet", 1, true) ~= nil or sLower:find("boots", 1, true) ~= nil or sLower:find("treads", 1, true) ~= nil or sLower:find("sabaton", 1, true) ~= nil
+end
+
 local function MatchSubtype(sLower, sub)
     if not sub or sub == "ALL" then return true end
 
     -- Armor Slots
-    if sub == "HEAD" then return sLower:find("head", 1, true) ~= nil
-    elseif sub == "SHOULDER" then return sLower:find("shoulder", 1, true) ~= nil
-    elseif sub == "CHEST" then return sLower:find("chest", 1, true) ~= nil or sLower:find("robe", 1, true) ~= nil
-    elseif sub == "WRIST" then return sLower:find("wrist", 1, true) ~= nil or sLower:find("bracer", 1, true) ~= nil
-    elseif sub == "HANDS" then return sLower:find("hands", 1, true) ~= nil or sLower:find("gloves", 1, true) ~= nil
-    elseif sub == "WAIST" then return sLower:find("waist", 1, true) ~= nil or sLower:find("belt", 1, true) ~= nil
-    elseif sub == "LEGS" then return sLower:find("legs", 1, true) ~= nil or sLower:find("pants", 1, true) ~= nil
-    elseif sub == "FEET" then return sLower:find("feet", 1, true) ~= nil or sLower:find("boots", 1, true) ~= nil
+    if sub == "HEAD" then return sLower:find("head", 1, true) ~= nil or sLower:find("helm", 1, true) ~= nil
+    elseif sub == "SHOULDER" then return sLower:find("shoulder", 1, true) ~= nil or sLower:find("spaulder", 1, true) ~= nil or sLower:find("mantle", 1, true) ~= nil
+    elseif sub == "CHEST" then return sLower:find("chest", 1, true) ~= nil or sLower:find("robe", 1, true) ~= nil or sLower:find("tunic", 1, true) ~= nil or sLower:find("vest", 1, true) ~= nil
+    elseif sub == "WRIST" then return sLower:find("wrist", 1, true) ~= nil or sLower:find("bracer", 1, true) ~= nil or sLower:find("cuff", 1, true) ~= nil
+    elseif sub == "HANDS" then return sLower:find("hands", 1, true) ~= nil or sLower:find("gloves", 1, true) ~= nil or sLower:find("gauntlets", 1, true) ~= nil
+    elseif sub == "WAIST" then return sLower:find("waist", 1, true) ~= nil or sLower:find("belt", 1, true) ~= nil or sLower:find("girdle", 1, true) ~= nil or sLower:find("sash", 1, true) ~= nil
+    elseif sub == "LEGS" then return sLower:find("legs", 1, true) ~= nil or sLower:find("pants", 1, true) ~= nil or sLower:find("leggings", 1, true) ~= nil or sLower:find("kilt", 1, true) ~= nil
+    elseif sub == "FEET" then return sLower:find("feet", 1, true) ~= nil or sLower:find("boots", 1, true) ~= nil or sLower:find("treads", 1, true) ~= nil or sLower:find("sabaton", 1, true) ~= nil
 
     -- Weapons
-    elseif sub == "1H_SWORD" then return (sLower:find("sword", 1, true) ~= nil) and not sLower:find("two%-hand")
-    elseif sub == "2H_SWORD" then return (sLower:find("sword", 1, true) ~= nil) and (sLower:find("two%-hand") ~= nil)
-    elseif sub == "1H_MACE" then return (sLower:find("mace", 1, true) ~= nil) and not sLower:find("two%-hand")
-    elseif sub == "2H_MACE" then return (sLower:find("mace", 1, true) ~= nil) and (sLower:find("two%-hand") ~= nil)
-    elseif sub == "1H_AXE" then return (sLower:find("axe", 1, true) ~= nil) and not sLower:find("two%-hand")
-    elseif sub == "2H_AXE" then return (sLower:find("axe", 1, true) ~= nil) and (sLower:find("two%-hand") ~= nil)
+    elseif sub == "1H_SWORD" then return (sLower:find("sword", 1, true) ~= nil) and not IsTwoHandSlot(sLower)
+    elseif sub == "2H_SWORD" then return (sLower:find("sword", 1, true) ~= nil) and IsTwoHandSlot(sLower)
+    elseif sub == "1H_MACE" then return (sLower:find("mace", 1, true) ~= nil) and not IsTwoHandSlot(sLower)
+    elseif sub == "2H_MACE" then return (sLower:find("mace", 1, true) ~= nil) and IsTwoHandSlot(sLower)
+    elseif sub == "1H_AXE" then return (sLower:find("axe", 1, true) ~= nil) and not IsTwoHandSlot(sLower)
+    elseif sub == "2H_AXE" then return (sLower:find("axe", 1, true) ~= nil) and IsTwoHandSlot(sLower)
     elseif sub == "DAGGER" then return sLower:find("dagger", 1, true) ~= nil
     elseif sub == "FIST" then return sLower:find("fist", 1, true) ~= nil
     elseif sub == "STAFF" then return sLower:find("staff", 1, true) ~= nil
     elseif sub == "POLEARM" then return sLower:find("polearm", 1, true) ~= nil
-    elseif sub == "BOW" then return sLower:find("bow", 1, true) ~= nil
+    elseif sub == "BOW" then return sLower:find("bow", 1, true) ~= nil and not sLower:find("crossbow", 1, true)
     elseif sub == "GUN" then return sLower:find("gun", 1, true) ~= nil
     elseif sub == "CROSSBOW" then return sLower:find("crossbow", 1, true) ~= nil
     elseif sub == "WAND" then return sLower:find("wand", 1, true) ~= nil
@@ -220,15 +238,18 @@ local function MatchSubtype(sLower, sub)
 
     -- Offhand
     elseif sub == "SHIELD" then return sLower:find("shield", 1, true) ~= nil
-    elseif sub == "HOLDABLE" then return sLower:find("held in off%-hand", 1, true) ~= nil or sLower:find("held in offhand", 1, true) ~= nil
+    elseif sub == "HOLDABLE" then return sLower:find("held in off-hand", 1, true) ~= nil or sLower:find("held in offhand", 1, true) ~= nil
 
     -- Misc
-    elseif sub == "BAG" then return sLower:find("bag", 1, true) ~= nil
+    elseif sub == "BAG" then return sLower:find("bag", 1, true) ~= nil or sLower:find("quiver", 1, true) ~= nil or sLower:find("pouch", 1, true) ~= nil
     elseif sub == "RECIPE" then
         return sLower:find("recipe", 1, true) ~= nil
             or sLower:find("plans", 1, true) ~= nil
             or sLower:find("pattern", 1, true) ~= nil
             or sLower:find("blueprint", 1, true) ~= nil
+            or sLower:find("schematic", 1, true) ~= nil
+            or sLower:find("formula", 1, true) ~= nil
+            or sLower:find("manual", 1, true) ~= nil
             or sLower:find("cooking", 1, true) ~= nil
             or sLower:find("engineering", 1, true) ~= nil
             or sLower:find("leatherworking", 1, true) ~= nil
@@ -265,28 +286,61 @@ local function ParseLevelRange(text)
     return nil, nil
 end
 
-function FDJ.GetItemReqLevel(itemID)
-    if not itemID then return nil end
+function FDJ.GetItemReqLevelFast(itemID, fallbackQuestReq)
+    if not itemID then return fallbackQuestReq end
     itemID = tonumber(itemID)
-    if not itemID then return nil end
+    if not itemID then return fallbackQuestReq end
 
-    -- 1. Fast static lookup from ItemReqLevels table (instant, synchronous, 100% accurate)
+    -- 1. Fast static lookup from ItemReqLevels table
     if FDJ.ITEM_REQ_LEVEL and FDJ.ITEM_REQ_LEVEL[itemID] ~= nil then
-        return FDJ.ITEM_REQ_LEVEL[itemID]
+        local staticReq = FDJ.ITEM_REQ_LEVEL[itemID]
+        if staticReq and staticReq > 0 then
+            return staticReq
+        end
+        if fallbackQuestReq and fallbackQuestReq > 0 then
+            return fallbackQuestReq
+        end
+        return staticReq
     end
 
-    -- 2. Live client cache (C_Item.GetItemInfo)
-    local _, _, _, _, reqLevel = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
-    if reqLevel and reqLevel > 0 then
-        return reqLevel
-    end
-
-    -- 3. Tooltip scanner cache
+    -- 2. Tooltip scanner cache (already scanned previously)
     if FDJ.itemStatsSummaryCache and FDJ.itemStatsSummaryCache[itemID] and FDJ.itemStatsSummaryCache[itemID].reqLevel then
-        return FDJ.itemStatsSummaryCache[itemID].reqLevel
+        local cachedReq = FDJ.itemStatsSummaryCache[itemID].reqLevel
+        if cachedReq and cachedReq > 0 then
+            return cachedReq
+        end
     end
 
-    -- 4. Dynamic tooltip scan fallback
+    -- 3. Live client cache without triggering synchronous tooltip scans
+    if C_Item and C_Item.GetItemInfo then
+        local ok, _, _, _, _, reqLevel = pcall(C_Item.GetItemInfo, itemID)
+        if ok and type(reqLevel) == "number" and reqLevel > 0 then
+            return reqLevel
+        end
+    elseif GetItemInfo then
+        local ok, _, _, _, _, reqLevel = pcall(GetItemInfo, itemID)
+        if ok and type(reqLevel) == "number" and reqLevel > 0 then
+            return reqLevel
+        end
+    end
+
+    if fallbackQuestReq and fallbackQuestReq > 0 then
+        return fallbackQuestReq
+    end
+
+    return nil
+end
+
+function FDJ.GetItemReqLevel(itemID, fallbackQuestReq)
+    local fastReq = FDJ.GetItemReqLevelFast(itemID, fallbackQuestReq)
+    if fastReq ~= nil then
+        return fastReq
+    end
+
+    itemID = tonumber(itemID)
+    if not itemID then return fallbackQuestReq end
+
+    -- Dynamic tooltip scan fallback (used only for visible rows)
     if FDJ.GetItemStatsSummary then
         local _, scannedReq = FDJ.GetItemStatsSummary(itemID)
         if scannedReq and scannedReq > 0 then
@@ -294,13 +348,42 @@ function FDJ.GetItemReqLevel(itemID)
         end
     end
 
-    -- 5. Trigger client cache preload if available
     if C_Item and C_Item.RequestLoadItemDataByID then
         C_Item.RequestLoadItemDataByID(itemID)
     end
 
-    return reqLevel
+    return fallbackQuestReq
 end
+
+local EQUIP_LOC_CANONICAL = {
+    INVTYPE_HEAD = "Head",
+    INVTYPE_NECK = "Neck",
+    INVTYPE_SHOULDER = "Shoulder",
+    INVTYPE_BODY = "Shirt",
+    INVTYPE_CHEST = "Chest",
+    INVTYPE_ROBE = "Chest",
+    INVTYPE_WAIST = "Waist",
+    INVTYPE_LEGS = "Legs",
+    INVTYPE_FEET = "Feet",
+    INVTYPE_WRIST = "Wrist",
+    INVTYPE_HAND = "Hands",
+    INVTYPE_FINGER = "Finger",
+    INVTYPE_TRINKET = "Trinket",
+    INVTYPE_CLOAK = "Back",
+    INVTYPE_WEAPON = "One-Hand",
+    INVTYPE_SHIELD = "Off Hand",
+    INVTYPE_2HWEAPON = "Two-Hand",
+    INVTYPE_WEAPONMAINHAND = "Main Hand",
+    INVTYPE_WEAPONOFFHAND = "Off Hand",
+    INVTYPE_HOLDABLE = "Held In Off-hand",
+    INVTYPE_RANGED = "Ranged",
+    INVTYPE_THROWN = "Ranged",
+    INVTYPE_RANGEDRIGHT = "Ranged",
+    INVTYPE_RELIC = "Relic",
+    INVTYPE_TABARD = "Tabard",
+    INVTYPE_BAG = "Bag",
+    INVTYPE_QUIVER = "Bag",
+}
 
 local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
     if type(rawSlot) == "number" and rawQuality == nil then
@@ -314,9 +397,11 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
         if C_Item and C_Item.GetItemInfoInstant then
             local ok, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
             if ok and equipLoc and equipLoc ~= "" then
-                local locName = _G[equipLoc] or equipLoc
+                local locName = EQUIP_LOC_CANONICAL[equipLoc] or _G[equipLoc] or equipLoc
                 local subName = nil
-                if classID == 4 then -- Armor
+                if equipLoc == "INVTYPE_CLOAK" then
+                    rawSlot = "Back"
+                elseif classID == 4 then -- Armor
                     if subclassID == 1 then subName = "Cloth"
                     elseif subclassID == 2 then subName = "Leather"
                     elseif subclassID == 3 then subName = "Mail"
@@ -325,14 +410,14 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
                     end
                 elseif classID == 2 then -- Weapon
                     if subclassID == 0 then subName = "Axe"
-                    elseif subclassID == 1 then subName = "Two-Hand, Axe"
+                    elseif subclassID == 1 then subName = (locName == "Two-Hand") and "Axe" or "Two-Hand, Axe"
                     elseif subclassID == 2 then subName = "Bow"
                     elseif subclassID == 3 then subName = "Gun"
                     elseif subclassID == 4 then subName = "Mace"
-                    elseif subclassID == 5 then subName = "Two-Hand, Mace"
+                    elseif subclassID == 5 then subName = (locName == "Two-Hand") and "Mace" or "Two-Hand, Mace"
                     elseif subclassID == 6 then subName = "Polearm"
                     elseif subclassID == 7 then subName = "Sword"
-                    elseif subclassID == 8 then subName = "Two-Hand, Sword"
+                    elseif subclassID == 8 then subName = (locName == "Two-Hand") and "Sword" or "Two-Hand, Sword"
                     elseif subclassID == 10 then subName = "Staff"
                     elseif subclassID == 13 then subName = "Fist Weapon"
                     elseif subclassID == 15 then subName = "Dagger"
@@ -343,19 +428,235 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
                 elseif classID == 6 then -- Projectile
                     subName = "Projectile"
                 end
-                if subName then
-                    rawSlot = locName .. ", " .. subName
-                else
-                    rawSlot = locName
+                if equipLoc ~= "INVTYPE_CLOAK" then
+                    if subName then
+                        rawSlot = locName .. ", " .. subName
+                    else
+                        rawSlot = locName
+                    end
                 end
             end
         end
     end
 
+    if not rawQuality and itemID then
+        local _, _, liveQual = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+        if liveQual then rawQuality = liveQual end
+    end
+
     return rawSlot, rawQuality
 end
 
-function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFilter, bracketFilter, wishlistOnly, query)
+-- ============================================================
+-- PRE-INDEXED MASTER LOOT CACHE
+-- ============================================================
+
+local masterLootList = nil
+local masterLootByItemID = {}
+local masterDungeonCounts = {}
+
+local function RefreshMasterEntryMetadata(entry)
+    if not entry or not entry.itemID then return false end
+    local itemID = entry.itemID
+    local changed = false
+
+    if (not entry.slot or entry.slot == "") or not entry.quality then
+        local resolvedSlot, resolvedQual = ResolveItemSlotAndQuality(itemID, entry.rawSlotInit, entry.rawQualInit)
+        if resolvedSlot and resolvedSlot ~= "" and resolvedSlot ~= entry.slot then
+            entry.slot = resolvedSlot
+            entry.sLower = string.lower(tostring(resolvedSlot))
+            changed = true
+        end
+        if resolvedQual and resolvedQual ~= entry.quality then
+            entry.quality = resolvedQual
+            changed = true
+        end
+    end
+
+    if C_Item and C_Item.GetItemInfo then
+        local ok, liveName, _, liveQual, _, liveReq = pcall(C_Item.GetItemInfo, itemID)
+        if ok then
+            if type(liveName) == "string" and liveName ~= "" and liveName ~= entry.name then
+                entry.name = liveName
+                entry.nameLower = string.lower(liveName)
+                changed = true
+            end
+            if type(liveQual) == "number" and not entry.quality then
+                entry.quality = liveQual
+                changed = true
+            end
+            if type(liveReq) == "number" and liveReq > 0 and entry.reqLevel ~= liveReq then
+                entry.reqLevel = liveReq
+                changed = true
+            end
+        end
+    end
+
+    if not entry.reqLevel then
+        local fastReq = FDJ.GetItemReqLevelFast(itemID, entry.questReqLevel)
+        if fastReq ~= nil then
+            entry.reqLevel = fastReq
+            changed = true
+        end
+    end
+
+    return changed
+end
+
+local function BuildMasterLootExplorerCache()
+    local list = {}
+    local byItemID = {}
+    local dungeonCounts = {}
+
+    if not FDJ.DB or not FDJ.ORDER then return list end
+
+    for _, dungeonName in ipairs(FDJ.ORDER) do
+        local dung = FDJ.DB[dungeonName]
+        if dung then
+            local dCount = 0
+            local dungLower = string.lower(tostring(dungeonName or ""))
+
+            local function AddMasterEntry(rawItem, extra)
+                local itemID = tonumber(rawItem and rawItem[1])
+                if not itemID then return end
+                local itemName = rawItem[2] or ("Item #" .. itemID)
+                local resolvedSlot, resolvedQual = ResolveItemSlotAndQuality(itemID, rawItem[3], rawItem[4])
+                local questReq = extra.questReqLevel
+                local fastReq = FDJ.GetItemReqLevelFast(itemID, questReq)
+
+                local entry = {
+                    itemID = itemID,
+                    name = itemName,
+                    nameLower = string.lower(tostring(itemName)),
+                    rawSlotInit = rawItem[3],
+                    rawQualInit = rawItem[4],
+                    slot = resolvedSlot,
+                    sLower = string.lower(tostring(resolvedSlot or "")),
+                    quality = resolvedQual,
+                    reqLevel = fastReq,
+                    questReqLevel = questReq,
+                    dungeon = dungeonName,
+                    dungLower = dungLower,
+                    boss = extra.boss or "",
+                    bossLower = string.lower(tostring(extra.boss or "")),
+                    bossIndex = extra.bossIndex,
+                    isSharedLoot = extra.isShared or false,
+                    isTrashLoot = extra.isTrash or false,
+                    isQuestReward = extra.isQuestReward or false,
+                    questName = extra.questName,
+                    questIndex = extra.questIndex,
+                    questFaction = extra.questFaction,
+                    questID = extra.questID,
+                }
+
+                list[#list + 1] = entry
+                if not byItemID[itemID] then
+                    byItemID[itemID] = {}
+                end
+                table.insert(byItemID[itemID], entry)
+                dCount = dCount + 1
+            end
+
+            if dung.bosses then
+                local seenSharedInDungeon = {}
+                local seenTrashInDungeon = {}
+                for bIdx, boss in ipairs(dung.bosses) do
+                    if not boss.recipeTab then
+                        local isTrashBoss = (boss.trash == true)
+                        for _, item in ipairs(boss.loot or {}) do
+                            if isTrashBoss then
+                                local tID = tonumber(item and item[1])
+                                if tID and not seenTrashInDungeon[tID] then
+                                    seenTrashInDungeon[tID] = true
+                                    local trashBossName = (type(item[5]) == "string" and item[5] ~= "") and item[5] or boss.name
+                                    AddMasterEntry(item, {
+                                        isTrash = true,
+                                        boss = trashBossName,
+                                        bossIndex = bIdx,
+                                    })
+                                end
+                            else
+                                AddMasterEntry(item, {
+                                    boss = boss.name,
+                                    bossIndex = bIdx,
+                                })
+                            end
+                        end
+                        local sharedLoot = (not isTrashBoss) and FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(dungeonName, boss) or nil
+                        if sharedLoot then
+                            for _, sItem in ipairs(sharedLoot) do
+                                local sID = tonumber(sItem and sItem[1])
+                                if sID and not seenSharedInDungeon[sID] then
+                                    seenSharedInDungeon[sID] = true
+                                    AddMasterEntry(sItem, {
+                                        isShared = true,
+                                        boss = boss.name,
+                                        bossIndex = bIdx,
+                                    })
+                                end
+                            end
+                        end
+                        if type(boss.trash) == "table" then
+                            for _, tItem in ipairs(boss.trash) do
+                                local tID = tonumber(tItem and tItem[1])
+                                if tID and not seenTrashInDungeon[tID] then
+                                    seenTrashInDungeon[tID] = true
+                                    AddMasterEntry(tItem, {
+                                        isTrash = true,
+                                        boss = boss.name,
+                                        bossIndex = bIdx,
+                                    })
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+
+            if dung.quests then
+                local seenQuestItems = {}
+                for qIdx, quest in ipairs(dung.quests) do
+                    local questName = quest.name or "Quest"
+                    local questReq = tonumber(quest.requires) or tonumber(quest.req) or tonumber(quest.level) or nil
+                    local qItems = {}
+                    for _, it in ipairs(quest.rewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(quest.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(quest.noteRewardItems or {}) do qItems[#qItems + 1] = it end
+                    for _, it in ipairs(qItems) do
+                        local qItemID = tonumber(it and it[1])
+                        if qItemID and not seenQuestItems[qItemID] then
+                            seenQuestItems[qItemID] = true
+                            AddMasterEntry(it, {
+                                isQuestReward = true,
+                                questName = questName,
+                                questIndex = qIdx,
+                                questFaction = quest.faction,
+                                questID = quest.id,
+                                questReqLevel = questReq,
+                                boss = "Quest: " .. questName,
+                            })
+                        end
+                    end
+                end
+            end
+
+            dungeonCounts[dungeonName] = dCount
+        end
+    end
+
+    masterLootList = list
+    masterLootByItemID = byItemID
+    masterDungeonCounts = dungeonCounts
+    return masterLootList
+end
+
+function FDJ.InvalidateLootExplorerCache()
+    masterLootList = nil
+    masterLootByItemID = {}
+    masterDungeonCounts = {}
+end
+
+function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFilter, bracketFilter, wishlistOnly, query, dungeonFilter)
     -- Backward compatibility for older 3-argument call: (slotFilter, bracketFilter, query)
     if type(categoryFilter) == "string" and (categoryFilter == "WEAPONS" or categoryFilter == "CLOTH" or categoryFilter == "LEATHER" or categoryFilter == "MAIL" or categoryFilter == "ACCESSORIES") and materialFilter == nil then
         query = bracketFilter
@@ -370,6 +671,7 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
     slotFilter = slotFilter or "ALL"
     materialFilter = materialFilter or "ALL"
     bracketFilter = bracketFilter or "ALL"
+    dungeonFilter = dungeonFilter or "ALL"
     query = (query and query:gsub("^%s*(.-)%s*$", "%1") ~= "") and string.lower(query:gsub("^%s*(.-)%s*$", "%1")) or nil
 
     local bMin, bMax = nil, nil
@@ -389,108 +691,63 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
         end
     end
 
+    local master = masterLootList or BuildMasterLootExplorerCache()
     local results = {}
-    if not FDJ.DB or not FDJ.ORDER then return results end
+    local totalPoolCount = #master
+    if dungeonFilter ~= "ALL" then
+        totalPoolCount = masterDungeonCounts[dungeonFilter] or 0
+    end
 
-    for _, dungeonName in ipairs(FDJ.ORDER) do
-        local dung = FDJ.DB[dungeonName]
-        if dung then
-            local dungeonItems = {}
-            if dung.bosses then
-                local seenSharedInDungeon = {}
-                for bIdx, boss in ipairs(dung.bosses) do
-                    if not boss.recipeTab then
-                        for _, item in ipairs(boss.loot or {}) do
-                            dungeonItems[#dungeonItems + 1] = {
-                                item = item,
-                                isShared = false,
-                                isQuestReward = false,
-                                boss = boss.name,
-                                bossIndex = bIdx,
-                            }
-                        end
-                        local sharedLoot = FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(dungeonName, boss) or nil
-                        if sharedLoot then
-                            for _, sItem in ipairs(sharedLoot) do
-                                local sID = tonumber(sItem and sItem[1])
-                                if sID and not seenSharedInDungeon[sID] then
-                                    seenSharedInDungeon[sID] = true
-                                    dungeonItems[#dungeonItems + 1] = {
-                                        item = sItem,
-                                        isShared = true,
-                                        isQuestReward = false,
-                                        boss = boss.name,
-                                        bossIndex = bIdx,
-                                    }
-                                end
-                            end
-                        end
-                    end
+    -- Material filter (Cloth/Leather/Mail/Plate) only applies to Armor or All Categories
+    local checkMaterial = (materialFilter ~= "ALL") and (categoryFilter == "ALL" or categoryFilter == "ARMOR" or categoryFilter == "QUEST_REWARD")
+
+    for i = 1, #master do
+        local entry = master[i]
+
+        -- 0. Dungeon Filter
+        if dungeonFilter == "ALL" or entry.dungeon == dungeonFilter then
+            local itemID = entry.itemID
+
+            -- Resolve slot lazily if it was uncached at startup
+            if not entry.slot or entry.slot == "" then
+                RefreshMasterEntryMetadata(entry)
+            end
+            local sLower = entry.sLower or ""
+
+            -- 1. Bracket / Custom Level Range Filter
+            local matchBracket = true
+            if bMin and bMax then
+                local req = entry.reqLevel
+                if req == nil then
+                    req = FDJ.GetItemReqLevelFast(itemID, entry.questReqLevel)
+                    entry.reqLevel = req
+                end
+                if req and req > 0 then
+                    matchBracket = (req >= bMin and req <= bMax)
+                elseif req == 0 then
+                    matchBracket = (bMin <= 1)
+                else
+                    matchBracket = false
                 end
             end
 
-            if dung.quests then
-                local seenQuestItems = {}
-                for qIdx, quest in ipairs(dung.quests) do
-                    local questName = quest.name or "Quest"
-                    local qItems = {}
-                    for _, it in ipairs(quest.rewardItems or {}) do qItems[#qItems + 1] = it end
-                    for _, it in ipairs(quest.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
-                    for _, it in ipairs(quest.noteRewardItems or {}) do qItems[#qItems + 1] = it end
-                    for _, it in ipairs(qItems) do
-                        local qItemID = tonumber(it and it[1])
-                        if qItemID and not seenQuestItems[qItemID] then
-                            seenQuestItems[qItemID] = true
-                            dungeonItems[#dungeonItems + 1] = {
-                                item = it,
-                                isShared = false,
-                                isQuestReward = true,
-                                questName = questName,
-                                questIndex = qIdx,
-                                questFaction = quest.faction,
-                                questID = quest.id,
-                                boss = "Quest: " .. questName,
-                            }
-                        end
-                    end
-                end
+            -- 2. Wishlist Filter
+            local matchWishlist = true
+            if matchBracket and wishlistOnly then
+                matchWishlist = (FDJ.IsWishlisted and FDJ.IsWishlisted(itemID)) or false
             end
 
-            for _, entry in ipairs(dungeonItems) do
-                local item = entry.item
-                local itemID = tonumber(item[1])
-                local itemName = item[2]
-                local rawSlot, rawQuality = ResolveItemSlotAndQuality(itemID, item[3], item[4])
-
-                local sLower = string.lower(tostring(rawSlot or ""))
-
-                -- 1. Bracket / Custom Level Range Filter (Strict Item Required Level)
-                local matchBracket = true
-                if bMin and bMax then
-                    local req = FDJ.GetItemReqLevel and FDJ.GetItemReqLevel(itemID)
-                    if req and req > 0 then
-                        matchBracket = (req >= bMin and req <= bMax)
-                    elseif req == 0 then
-                        matchBracket = (bMin <= 1)
-                    else
-                        matchBracket = false
-                    end
-                end
-
-                -- 2. Wishlist Filter
-                local matchWishlist = true
-                if matchBracket and wishlistOnly then
-                    matchWishlist = (FDJ.IsWishlisted and FDJ.IsWishlisted(itemID))
-                end
-
-                -- 3. Material Filter (Cloth, Leather, Mail, Plate)
-                local matchMaterial = true
-                if matchBracket and matchWishlist and materialFilter and materialFilter ~= "ALL" then
+            -- 3. Material Filter (Cloth, Leather, Mail, Plate — excludes Cloaks/Back)
+            local matchMaterial = true
+            if matchBracket and matchWishlist and checkMaterial then
+                if sLower:find("back", 1, true) or sLower:find("cloak", 1, true) then
+                    matchMaterial = false
+                else
                     local matLower = string.lower(materialFilter)
                     matchMaterial = sLower:find(matLower, 1, true) ~= nil
                     if not matchMaterial and itemID and C_Item and C_Item.GetItemInfoInstant then
-                        local _, _, _, _, _, classID, subclassID = C_Item.GetItemInfoInstant(itemID)
-                        if classID == 4 then -- Armor
+                        local ok, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
+                        if ok and classID == 4 and equipLoc ~= "INVTYPE_CLOAK" then
                             if materialFilter == "CLOTH" and subclassID == 1 then matchMaterial = true
                             elseif materialFilter == "LEATHER" and subclassID == 2 then matchMaterial = true
                             elseif materialFilter == "MAIL" and subclassID == 3 then matchMaterial = true
@@ -499,95 +756,120 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                         end
                     end
                 end
+            end
 
-                -- 4. Category & Slot Filter
-                local matchSlot = true
-                if matchBracket and matchWishlist and matchMaterial then
-                    if categoryFilter == "ALL" then
-                        matchSlot = MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "ARMOR" then
-                        local isArmor = sLower:find("head", 1, true) or sLower:find("shoulder", 1, true)
-                            or sLower:find("chest", 1, true) or sLower:find("robe", 1, true)
-                            or sLower:find("wrist", 1, true) or sLower:find("hands", 1, true)
-                            or sLower:find("waist", 1, true) or sLower:find("legs", 1, true)
-                            or sLower:find("feet", 1, true)
-                        matchSlot = isArmor and MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "WEAPONS" then
-                        local isWeapon = sLower:find("axe", 1, true) or sLower:find("sword", 1, true)
-                            or sLower:find("mace", 1, true) or sLower:find("dagger", 1, true)
-                            or sLower:find("staff", 1, true) or sLower:find("polearm", 1, true)
-                            or sLower:find("bow", 1, true) or sLower:find("gun", 1, true)
-                            or sLower:find("crossbow", 1, true) or sLower:find("wand", 1, true)
-                            or sLower:find("thrown", 1, true) or sLower:find("fist", 1, true)
-                            or sLower:find("projectile", 1, true) or sLower:find("arrow", 1, true)
-                            or sLower:find("bullet", 1, true) or sLower:find("weapon", 1, true)
-                        matchSlot = isWeapon and MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "ACCESSORIES" then
-                        local isAcc = sLower:find("neck", 1, true) or sLower:find("finger", 1, true)
-                            or sLower:find("ring", 1, true) or sLower:find("trinket", 1, true)
-                            or sLower:find("back", 1, true) or sLower:find("cloak", 1, true)
-                            or sLower:find("idol", 1, true) or sLower:find("libram", 1, true)
-                            or sLower:find("totem", 1, true) or sLower:find("relic", 1, true)
-                        matchSlot = isAcc and MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "OFFHAND" then
-                        local isOff = sLower:find("shield", 1, true) or sLower:find("held in off%-hand", 1, true) or sLower:find("held in offhand", 1, true)
-                        matchSlot = isOff and MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "QUEST_REWARD" then
-                        matchSlot = entry.isQuestReward and MatchSubtype(sLower, slotFilter)
-                    elseif categoryFilter == "MISC" then
-                        local isMisc = sLower:find("bag", 1, true) or sLower:find("recipe", 1, true)
-                            or sLower:find("plans", 1, true) or sLower:find("pattern", 1, true)
-                            or sLower:find("blueprint", 1, true) or sLower:find("tailoring", 1, true)
-                            or sLower:find("alchemy", 1, true) or sLower:find("enchanting", 1, true)
-                            or sLower:find("cooking", 1, true) or sLower:find("engineering", 1, true)
-                            or sLower:find("leatherworking", 1, true) or sLower:find("blacksmithing", 1, true)
-                            or sLower:find("quest", 1, true) or sLower:find("key", 1, true) or rawQuality == 1
-                        matchSlot = isMisc and MatchSubtype(sLower, slotFilter)
-                    end
+            -- 4. Category & Slot Filter
+            local matchSlot = true
+            if matchBracket and matchWishlist and matchMaterial then
+                if categoryFilter == "ALL" then
+                    matchSlot = MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "ARMOR" then
+                    matchSlot = IsArmorSlotText(sLower) and MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "WEAPONS" then
+                    local isWeapon = sLower:find("axe", 1, true) or sLower:find("sword", 1, true)
+                        or sLower:find("mace", 1, true) or sLower:find("dagger", 1, true)
+                        or sLower:find("staff", 1, true) or sLower:find("polearm", 1, true)
+                        or sLower:find("bow", 1, true) or sLower:find("gun", 1, true)
+                        or sLower:find("crossbow", 1, true) or sLower:find("wand", 1, true)
+                        or sLower:find("thrown", 1, true) or sLower:find("fist", 1, true)
+                        or sLower:find("projectile", 1, true) or sLower:find("arrow", 1, true)
+                        or sLower:find("bullet", 1, true) or sLower:find("weapon", 1, true)
+                    matchSlot = (isWeapon ~= nil) and MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "ACCESSORIES" then
+                    local isAcc = sLower:find("neck", 1, true) or sLower:find("finger", 1, true)
+                        or sLower:find("ring", 1, true) or sLower:find("trinket", 1, true)
+                        or sLower:find("back", 1, true) or sLower:find("cloak", 1, true)
+                        or sLower:find("idol", 1, true) or sLower:find("libram", 1, true)
+                        or sLower:find("totem", 1, true) or sLower:find("relic", 1, true)
+                    matchSlot = (isAcc ~= nil) and MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "OFFHAND" then
+                    local isOff = sLower:find("shield", 1, true) or sLower:find("held in off-hand", 1, true) or sLower:find("held in offhand", 1, true)
+                    matchSlot = (isOff ~= nil) and MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "QUEST_REWARD" then
+                    matchSlot = entry.isQuestReward and MatchSubtype(sLower, slotFilter)
+                elseif categoryFilter == "MISC" then
+                    local isMisc = sLower:find("bag", 1, true) or sLower:find("quiver", 1, true) or sLower:find("pouch", 1, true)
+                        or sLower:find("recipe", 1, true) or sLower:find("plans", 1, true)
+                        or sLower:find("pattern", 1, true) or sLower:find("blueprint", 1, true)
+                        or sLower:find("schematic", 1, true) or sLower:find("formula", 1, true) or sLower:find("manual", 1, true)
+                        or sLower:find("tailoring", 1, true) or sLower:find("alchemy", 1, true)
+                        or sLower:find("enchanting", 1, true) or sLower:find("cooking", 1, true)
+                        or sLower:find("engineering", 1, true) or sLower:find("leatherworking", 1, true)
+                        or sLower:find("blacksmithing", 1, true) or sLower:find("quest", 1, true)
+                        or sLower:find("key", 1, true) or entry.quality == 1
+                    matchSlot = (isMisc ~= nil) and MatchSubtype(sLower, slotFilter)
                 end
+            end
 
-                -- 5. Search Query Filter
-                local matchQuery = true
-                if matchBracket and matchWishlist and matchMaterial and matchSlot and query then
-                    local nameLower = string.lower(tostring(itemName or ""))
-                    local bossLower = string.lower(tostring(entry.boss or ""))
-                    local dungLower = string.lower(tostring(dungeonName or ""))
-                    matchQuery = nameLower:find(query, 1, true) or bossLower:find(query, 1, true) or dungLower:find(query, 1, true)
-                end
+            -- 5. Search Query Filter
+            local matchQuery = true
+            if matchBracket and matchWishlist and matchMaterial and matchSlot and query then
+                local nameLower = entry.nameLower or ""
+                local bossLower = entry.bossLower or ""
+                local dungLower = entry.dungLower or ""
+                matchQuery = (nameLower:find(query, 1, true) ~= nil)
+                    or (bossLower:find(query, 1, true) ~= nil)
+                    or (dungLower:find(query, 1, true) ~= nil)
+                    or (sLower:find(query, 1, true) ~= nil)
+            end
 
-                if matchBracket and matchWishlist and matchMaterial and matchSlot and matchQuery then
-                    results[#results + 1] = {
-                        itemID = itemID,
-                        name = itemName,
-                        slot = rawSlot,
-                        quality = rawQuality,
-                        dungeon = dungeonName,
-                        boss = entry.boss,
-                        bossIndex = entry.bossIndex,
-                        isSharedLoot = entry.isShared,
-                        isQuestReward = entry.isQuestReward,
-                        questName = entry.questName,
-                        questIndex = entry.questIndex,
-                        questFaction = entry.questFaction,
-                        questID = entry.questID,
-                    }
-                end
+            if matchBracket and matchWishlist and matchMaterial and matchSlot and matchQuery then
+                results[#results + 1] = entry
             end
         end
     end
-    return results
+
+    return results, totalPoolCount
 end
 
 -- ============================================================
 -- LOOT EXPLORER UI CREATION
 -- ============================================================
 
+local leSelectedDungeon = "ALL"
 local leSelectedCategory = "ALL"
 local leSelectedSlot = "ALL"
 local leSelectedMaterial = "ALL"
 local leSelectedBracket = "ALL"
 local leWishlistOnly = false
 local leSearchQuery = ""
+
+local function GetDungeonFilterOptions()
+    local opts = {
+        { id = "ALL", label = "All Dungeons" },
+    }
+    local currentDung = FDJ.CurrentDungeon and FDJ.CurrentDungeon()
+    if currentDung and FDJ.DB and FDJ.DB[currentDung] then
+        local dName = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(currentDung)) or currentDung
+        opts[#opts + 1] = {
+            id = currentDung,
+            label = "|cff00ff00Current: " .. dName .. "|r",
+            buttonLabel = dName,
+        }
+    end
+    local viewedDung = FDJ.selectedDungeon
+    if viewedDung and viewedDung ~= currentDung and FDJ.DB and FDJ.DB[viewedDung] and not FDJ.DB[viewedDung].previewOnly then
+        local dName = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(viewedDung)) or viewedDung
+        opts[#opts + 1] = {
+            id = viewedDung,
+            label = "|cffffd100Viewed: " .. dName .. "|r",
+            buttonLabel = dName,
+        }
+    end
+    for _, dungeonName in ipairs(FDJ.ORDER or {}) do
+        local dung = FDJ.DB and FDJ.DB[dungeonName]
+        if dung and not dung.previewOnly then
+            local dName = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(dungeonName)) or dungeonName
+            local lvl = dung.level and (" |cffb8a888(" .. tostring(dung.level) .. ")|r") or ""
+            opts[#opts + 1] = {
+                id = dungeonName,
+                label = dName .. lvl,
+                buttonLabel = dName,
+            }
+        end
+    end
+    return opts
+end
 
 local allDropdownMenus = {}
 local function CloseAllDropdownMenus()
@@ -653,6 +935,7 @@ local function CreateDropdownMenu(parent, width)
     local scroll = CreateFrame("ScrollFrame", nil, menu, "UIPanelScrollFrameTemplate")
     scroll:SetPoint("TOPLEFT", 4, -4)
     scroll:SetPoint("BOTTOMRIGHT", -4, 4)
+    scroll:EnableMouseWheel(true)
     menu.scroll = scroll
 
     local content = CreateFrame("Frame", nil, scroll)
@@ -660,13 +943,25 @@ local function CreateDropdownMenu(parent, width)
     scroll:SetScrollChild(content)
     menu.content = content
 
+    scroll:SetScript("OnMouseWheel", function(self, delta)
+        local sb = FDJ.GetScrollBar and FDJ.GetScrollBar(self) or self.ScrollBar
+        local cur = self:GetVerticalScroll() or 0
+        local maxScroll = math.max(0, (content:GetHeight() or 0) - (self:GetHeight() or 220))
+        local nextVal = math.max(0, math.min(maxScroll, cur - (delta * 44)))
+        self:SetVerticalScroll(nextVal)
+        if sb and sb.SetValue then
+            sb:SetMinMaxValues(0, maxScroll)
+            sb:SetValue(nextVal)
+        end
+    end)
+
     menu.buttons = {}
     table.insert(allDropdownMenus, menu)
     return menu
 end
 
 local function PopulateDropdownMenu(menu, options, currentSelectedId, onSelectCallback)
-    local maxVisible = 10
+    local maxVisible = 12
     local itemHeight = 22
     local totalItems = #options
     local visibleItems = math.min(totalItems, maxVisible)
@@ -677,11 +972,16 @@ local function PopulateDropdownMenu(menu, options, currentSelectedId, onSelectCa
     menu:SetSize(menuWidth, menuHeight)
 
     local contentW = needsScroll and (menuWidth - 24) or (menuWidth - 8)
-    menu.content:SetSize(contentW, math.max(1, totalItems * itemHeight))
+    local contentH = math.max(1, totalItems * itemHeight)
+    menu.content:SetSize(contentW, contentH)
 
     local scrollBar = FDJ.GetScrollBar and FDJ.GetScrollBar(menu.scroll)
     if scrollBar then
         scrollBar:SetShown(needsScroll)
+        local maxMenuScroll = math.max(0, contentH - (visibleItems * itemHeight))
+        if scrollBar.SetMinMaxValues then
+            scrollBar:SetMinMaxValues(0, maxMenuScroll)
+        end
     end
     if needsScroll then
         menu.scroll:SetPoint("BOTTOMRIGHT", -22, 4)
@@ -720,7 +1020,7 @@ local function PopulateDropdownMenu(menu, options, currentSelectedId, onSelectCa
             btn:SetScript("OnClick", function()
                 FDJ.PlayJournalOptionSound()
                 menu:Hide()
-                onSelectCallback(opt.id, opt.label)
+                onSelectCallback(opt.id, opt.buttonLabel or opt.label)
             end)
             btn:Show()
         else
@@ -729,9 +1029,66 @@ local function PopulateDropdownMenu(menu, options, currentSelectedId, onSelectCa
     end
 
     if FDJ.UpdateScrollBarVisibility then
-        FDJ.UpdateScrollBarVisibility(menu.scroll, totalItems * itemHeight)
+        FDJ.UpdateScrollBarVisibility(menu.scroll, contentH)
     end
     menu.scroll:SetVerticalScroll(0)
+end
+
+local ROW_HEIGHT = 55
+local NUM_VISIBLE_ROWS = 10
+
+local function SyncLootExplorerScrollRange(leScroll, contentH, preserveScroll)
+    if not leScroll then return end
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    local leContent = frame and frame.homeLootExplorerContent
+    if leContent then
+        leContent:SetHeight(contentH)
+        if leContent.bottomSpacer then
+            leContent.bottomSpacer:ClearAllPoints()
+            leContent.bottomSpacer:SetPoint("TOPLEFT", leContent, "TOPLEFT", 0, -math.max(0, contentH - 1))
+            leContent.bottomSpacer:Show()
+        end
+    end
+
+    if leScroll.UpdateScrollChildRect then
+        leScroll:UpdateScrollChildRect()
+    end
+
+    local viewportH = leScroll:GetHeight() or 0
+    if viewportH <= 10 then
+        viewportH = 363
+    end
+    local maxScroll = math.max(0, contentH - viewportH)
+    local sb = (FDJ.GetScrollBar and FDJ.GetScrollBar(leScroll))
+        or leScroll.ScrollBar
+        or _G["ForeverDungeonJournalLootExplorerScrollScrollBar"]
+
+    if FDJ.UpdateScrollBarVisibility then
+        FDJ.UpdateScrollBarVisibility(leScroll, contentH)
+    end
+
+    if sb then
+        if sb.SetMinMaxValues then
+            sb:SetMinMaxValues(0, maxScroll)
+        end
+        if maxScroll > 0 then
+            sb:Show()
+        else
+            sb:Hide()
+        end
+    end
+
+    local targetScroll = 0
+    if preserveScroll then
+        targetScroll = math.max(0, math.min(maxScroll, leScroll:GetVerticalScroll() or 0))
+    end
+
+    leScroll._fdjSuppressRangeHook = true
+    leScroll:SetVerticalScroll(targetScroll)
+    if sb and sb.SetValue then
+        sb:SetValue(targetScroll)
+    end
+    leScroll._fdjSuppressRangeHook = false
 end
 
 function FDJ.CreateLootExplorerUI(frame, home)
@@ -742,7 +1099,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
 
     local lePanel = CreateFrame("Frame", nil, frame, "BackdropTemplate")
     frame.homeLootExplorerPanel = lePanel
-    lePanel:SetSize(720, 500)
+    lePanel:SetSize(780, 508)
     lePanel:SetPoint("CENTER", frame, "CENTER", 0, -10)
     lePanel:SetFrameLevel(frame:GetFrameLevel() + 50)
     FDJ.SetBackdrop(lePanel, "Interface\\Buttons\\WHITE8X8", "Interface\\DialogFrame\\UI-DialogBox-Border", 20, 4)
@@ -755,13 +1112,13 @@ function FDJ.CreateLootExplorerUI(frame, home)
     end)
 
     local leTitle = lePanel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-    leTitle:SetPoint("TOPLEFT", 22, -14)
+    leTitle:SetPoint("TOPLEFT", 20, -14)
     leTitle:SetText("|TInterface\\Icons\\INV_Misc_Bag_08:18:18:0:0:64:64:4:60:4:60|t  " .. lootExpLabel)
     leTitle:SetTextColor(1.0, 0.82, 0.25)
 
     local leSub = lePanel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     leSub:SetPoint("TOPLEFT", leTitle, "BOTTOMLEFT", 0, -2)
-    leSub:SetText("Filter and browse dungeon loot. Click an item to view its boss encounter.")
+    leSub:SetText("Browse all loot by dungeon, category, slot, armor type, or level. Click an item to view its source.")
     leSub:SetTextColor(0.70, 0.65, 0.55)
 
     local leClose = CreateFrame("Button", nil, lePanel, "UIPanelCloseButton")
@@ -771,52 +1128,44 @@ function FDJ.CreateLootExplorerUI(frame, home)
         lePanel:Hide()
     end)
 
-    -- Preload loot item data asynchronously into client cache
-    if C_Item and C_Item.RequestLoadItemDataByID and FDJ.ORDER and FDJ.DB then
-        for _, dName in ipairs(FDJ.ORDER) do
-            local dung = FDJ.DB[dName]
-            if dung and dung.bosses then
-                for _, boss in ipairs(dung.bosses) do
-                    if boss.loot then
-                        for _, item in ipairs(boss.loot) do
-                            local itemID = tonumber(item[1])
-                            if itemID then
-                                C_Item.RequestLoadItemDataByID(itemID)
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
+    -- ============================================================
+    -- ROW 1: DUNGEON, CATEGORY, SLOT, ARMOR TYPE, LEVEL & SEARCH
+    -- ============================================================
 
-    -- ============================================================
-    -- ROW 1: AUCTION HOUSE STYLE FILTER DROPDOWNS & SEARCH
-    -- ============================================================
+    -- Dungeon Dropdown
+    local dungeonBtn = CreateDropdownButton(lePanel, 148, "All Dungeons")
+    dungeonBtn:SetPoint("TOPLEFT", 20, -53)
+    local dungeonMenu = CreateDropdownMenu(lePanel, 230)
+    dungeonMenu:SetPoint("TOPLEFT", dungeonBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerDungeonBtn = dungeonBtn
 
     -- Category Dropdown
-    local catBtn = CreateDropdownButton(lePanel, 125, "All Categories")
-    catBtn:SetPoint("TOPLEFT", 22, -53)
-    local catMenu = CreateDropdownMenu(lePanel, 140)
+    local catBtn = CreateDropdownButton(lePanel, 118, "All Categories")
+    catBtn:SetPoint("LEFT", dungeonBtn, "RIGHT", 6, 0)
+    local catMenu = CreateDropdownMenu(lePanel, 145)
     catMenu:SetPoint("TOPLEFT", catBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerCatBtn = catBtn
 
     -- Slot Dropdown (Dynamic based on Category)
-    local slotBtn = CreateDropdownButton(lePanel, 135, "All Slots")
+    local slotBtn = CreateDropdownButton(lePanel, 122, "All Slots")
     slotBtn:SetPoint("LEFT", catBtn, "RIGHT", 6, 0)
-    local slotMenu = CreateDropdownMenu(lePanel, 160)
+    local slotMenu = CreateDropdownMenu(lePanel, 165)
     slotMenu:SetPoint("TOPLEFT", slotBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerSlotBtn = slotBtn
 
     -- Material Dropdown
-    local matBtn = CreateDropdownButton(lePanel, 105, "All Types")
+    local matBtn = CreateDropdownButton(lePanel, 94, "All Types")
     matBtn:SetPoint("LEFT", slotBtn, "RIGHT", 6, 0)
     local matMenu = CreateDropdownMenu(lePanel, 120)
     matMenu:SetPoint("TOPLEFT", matBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerMatBtn = matBtn
 
     -- Level Bracket Dropdown
-    local bracketBtn = CreateDropdownButton(lePanel, 110, "All Req Levels")
+    local bracketBtn = CreateDropdownButton(lePanel, 104, "All Req Levels")
     bracketBtn:SetPoint("LEFT", matBtn, "RIGHT", 6, 0)
     local bracketMenu = CreateDropdownMenu(lePanel, 140)
     bracketMenu:SetPoint("TOPLEFT", bracketBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerBracketBtn = bracketBtn
 
     -- Custom Level Range Controls inside bracketMenu
     local bDiv = bracketMenu:CreateTexture(nil, "ARTWORK")
@@ -882,13 +1231,13 @@ function FDJ.CreateLootExplorerUI(frame, home)
             local displayLbl = (minL == maxL) and ("Req Lvl " .. minL) or ("Req Lvl " .. minL .. "-" .. maxL)
             bracketBtn.text:SetText(displayLbl)
             CloseAllDropdownMenus()
-            FDJ.RefreshLootExplorerPanel()
+            FDJ.RefreshLootExplorerPanel(false)
         elseif txt:gsub("%s+", "") == "" then
             FDJ.PlayJournalOptionSound()
             leSelectedBracket = "ALL"
             bracketBtn.text:SetText("All Req Levels")
             CloseAllDropdownMenus()
-            FDJ.RefreshLootExplorerPanel()
+            FDJ.RefreshLootExplorerPanel(false)
         else
             bBox:SetBackdropBorderColor(0.85, 0.25, 0.25, 1.0)
             C_Timer.After(0.4, function()
@@ -921,8 +1270,8 @@ function FDJ.CreateLootExplorerUI(frame, home)
 
     -- Search Box
     local leSearchBox = CreateFrame("EditBox", nil, lePanel, "BackdropTemplate")
-    leSearchBox:SetSize(160, 22)
-    leSearchBox:SetPoint("TOPRIGHT", -26, -53)
+    leSearchBox:SetSize(124, 22)
+    leSearchBox:SetPoint("TOPRIGHT", -20, -53)
     leSearchBox:SetAutoFocus(false)
     leSearchBox:SetMaxLetters(50)
     leSearchBox:SetFontObject("GameFontHighlightSmall")
@@ -937,10 +1286,14 @@ function FDJ.CreateLootExplorerUI(frame, home)
     lePlaceholder:SetTextColor(0.48, 0.47, 0.44)
 
     leSearchBox:SetScript("OnTextChanged", function(self)
-        leSearchQuery = self:GetText() or ""
+        local nextQuery = self:GetText() or ""
+        local changed = (nextQuery ~= leSearchQuery)
+        leSearchQuery = nextQuery
         lePlaceholder:SetShown(leSearchQuery == "" and not self:HasFocus())
-        CloseAllDropdownMenus()
-        FDJ.RefreshLootExplorerPanel()
+        if changed then
+            CloseAllDropdownMenus()
+            FDJ.RefreshLootExplorerPanel(false)
+        end
     end)
     leSearchBox:SetScript("OnEditFocusGained", function()
         CloseAllDropdownMenus()
@@ -950,6 +1303,22 @@ function FDJ.CreateLootExplorerUI(frame, home)
         lePlaceholder:SetShown((self:GetText() or "") == "")
     end)
     leSearchBox:SetScript("OnEscapePressed", function(self) self:ClearFocus() end)
+
+    -- Dungeon Dropdown Click Handler
+    dungeonBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        local isShown = dungeonMenu:IsShown()
+        CloseAllDropdownMenus()
+        if not isShown then
+            local dungOpts = GetDungeonFilterOptions()
+            PopulateDropdownMenu(dungeonMenu, dungOpts, leSelectedDungeon, function(id, label)
+                leSelectedDungeon = id
+                dungeonBtn.text:SetText(label)
+                FDJ.RefreshLootExplorerPanel(false)
+            end)
+            dungeonMenu:Show()
+        end
+    end)
 
     -- Category Dropdown Click Handler
     catBtn:SetScript("OnClick", function()
@@ -966,10 +1335,16 @@ function FDJ.CreateLootExplorerUI(frame, home)
                     or (id == "WEAPONS" and "All Weapons")
                     or (id == "ACCESSORIES" and "All Accessories")
                     or (id == "OFFHAND" and "All Off-Hand")
+                    or (id == "QUEST_REWARD" and "All Quest Rewards")
                     or (id == "MISC" and "All Misc")
                     or "All Slots"
                 slotBtn.text:SetText(defSlotLabel)
-                FDJ.RefreshLootExplorerPanel()
+                -- Reset armor material filter if switching to a non-armor category
+                if id ~= "ALL" and id ~= "ARMOR" and id ~= "QUEST_REWARD" and leSelectedMaterial ~= "ALL" then
+                    leSelectedMaterial = "ALL"
+                    matBtn.text:SetText("All Types")
+                end
+                FDJ.RefreshLootExplorerPanel(false)
             end)
             catMenu:Show()
         end
@@ -985,7 +1360,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
             PopulateDropdownMenu(slotMenu, slotOpts, leSelectedSlot, function(id, label)
                 leSelectedSlot = id
                 slotBtn.text:SetText(label)
-                FDJ.RefreshLootExplorerPanel()
+                FDJ.RefreshLootExplorerPanel(false)
             end)
             slotMenu:Show()
         end
@@ -1000,7 +1375,13 @@ function FDJ.CreateLootExplorerUI(frame, home)
             PopulateDropdownMenu(matMenu, MATERIAL_OPTIONS, leSelectedMaterial, function(id, label)
                 leSelectedMaterial = id
                 matBtn.text:SetText(label)
-                FDJ.RefreshLootExplorerPanel()
+                if id ~= "ALL" and leSelectedCategory ~= "ALL" and leSelectedCategory ~= "ARMOR" and leSelectedCategory ~= "QUEST_REWARD" then
+                    leSelectedCategory = "ARMOR"
+                    catBtn.text:SetText("Armor")
+                    leSelectedSlot = "ALL"
+                    slotBtn.text:SetText("All Armor Slots")
+                end
+                FDJ.RefreshLootExplorerPanel(false)
             end)
             matMenu:Show()
         end
@@ -1017,9 +1398,9 @@ function FDJ.CreateLootExplorerUI(frame, home)
                 bracketBtn.text:SetText(label)
                 bBox:SetText("")
                 bPlace:Show()
-                FDJ.RefreshLootExplorerPanel()
+                FDJ.RefreshLootExplorerPanel(false)
             end)
-            if leSelectedBracket ~= "ALL" and leSelectedBracket ~= "13-20" and leSelectedBracket ~= "20-28" and leSelectedBracket ~= "28-38" then
+            if leSelectedBracket ~= "ALL" and leSelectedBracket ~= "13-20" and leSelectedBracket ~= "20-28" and leSelectedBracket ~= "28-38" and leSelectedBracket ~= "38-48" and leSelectedBracket ~= "48-60" then
                 bBox:SetText(leSelectedBracket)
                 bPlace:Hide()
             end
@@ -1030,12 +1411,12 @@ function FDJ.CreateLootExplorerUI(frame, home)
     end)
 
     -- ============================================================
-    -- ROW 2: WISHLIST TOGGLE, RESET FILTERS & ITEM COUNTER
+    -- ROW 2: WISHLIST TOGGLE, CURRENT DUNGEON, RESET & ITEM COUNTER
     -- ============================================================
 
     local leWishlistBtn = CreateFrame("Button", nil, lePanel, "BackdropTemplate")
     leWishlistBtn:SetSize(115, 22)
-    leWishlistBtn:SetPoint("TOPLEFT", 22, -81)
+    leWishlistBtn:SetPoint("TOPLEFT", 20, -81)
     FDJ.SetBackdrop(leWishlistBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     leWishlistBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     local wishTxt = leWishlistBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
@@ -1049,7 +1430,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
         leWishlistOnly = not leWishlistOnly
         StyleFilterChip(leWishlistBtn, leWishlistOnly)
         CloseAllDropdownMenus()
-        FDJ.RefreshLootExplorerPanel()
+        FDJ.RefreshLootExplorerPanel(false)
     end)
 
     local leResetBtn = CreateFrame("Button", nil, lePanel, "BackdropTemplate")
@@ -1075,6 +1456,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
     end)
     leResetBtn:SetScript("OnClick", function()
         FDJ.PlayJournalOptionSound()
+        leSelectedDungeon = "ALL"
         leSelectedCategory = "ALL"
         leSelectedSlot = "ALL"
         leSelectedMaterial = "ALL"
@@ -1084,6 +1466,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
         leSearchBox:SetText("")
         lePlaceholder:Show()
 
+        dungeonBtn.text:SetText("All Dungeons")
         catBtn.text:SetText("All Categories")
         slotBtn.text:SetText("All Slots")
         matBtn.text:SetText("All Types")
@@ -1095,22 +1478,22 @@ function FDJ.CreateLootExplorerUI(frame, home)
 
         StyleFilterChip(leWishlistBtn, false)
         CloseAllDropdownMenus()
-        FDJ.RefreshLootExplorerPanel()
+        FDJ.RefreshLootExplorerPanel(false)
     end)
 
     local leCountText = lePanel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    leCountText:SetPoint("TOPRIGHT", -26, -83)
+    leCountText:SetPoint("TOPRIGHT", -20, -83)
     leCountText:SetTextColor(0.75, 0.70, 0.60)
     frame.homeLootExplorerCountText = leCountText
 
     -- ============================================================
-    -- COLUMN HEADERS & SCROLLFRAME
+    -- COLUMN HEADERS & VIRTUALIZED SCROLLFRAME
     -- ============================================================
 
     local leHeaderBar = CreateFrame("Frame", nil, lePanel)
     frame.homeLootExplorerHeaderBar = leHeaderBar
-    leHeaderBar:SetSize(660, 18)
-    leHeaderBar:SetPoint("TOPLEFT", 26, -109)
+    leHeaderBar:SetSize(720, 18)
+    leHeaderBar:SetPoint("TOPLEFT", 24, -109)
 
     local hItem = leHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
     hItem:SetPoint("LEFT", 0, 0)
@@ -1118,7 +1501,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
     hItem:SetTextColor(0.70, 0.60, 0.40)
 
     local hSlot = leHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
-    hSlot:SetPoint("LEFT", 290, 0)
+    hSlot:SetPoint("LEFT", 315, 0)
     hSlot:SetText("SLOT & REQUIREMENTS")
     hSlot:SetTextColor(0.70, 0.60, 0.40)
 
@@ -1131,15 +1514,72 @@ function FDJ.CreateLootExplorerUI(frame, home)
     frame.homeLootExplorerScroll = leScroll
     leScroll:SetPoint("TOPLEFT", 18, -129)
     leScroll:SetPoint("BOTTOMRIGHT", -34, 16)
+    leScroll:EnableMouseWheel(true)
 
     local leContent = CreateFrame("Frame", nil, leScroll)
-    leContent:SetSize(660, 1)
+    leContent:SetSize(720, 1)
     leScroll:SetScrollChild(leContent)
     frame.homeLootExplorerContent = leContent
+
+    -- Invisible 1x1 bottom anchor ensures C++ ScrollFrame always measures the full
+    -- virtualized contentH rather than stopping at the 10th pooled row button.
+    local bottomSpacer = leContent:CreateTexture(nil, "BACKGROUND")
+    bottomSpacer:SetSize(1, 1)
+    bottomSpacer:SetColorTexture(0, 0, 0, 0)
+    bottomSpacer:SetPoint("TOPLEFT", leContent, "TOPLEFT", 0, 0)
+    leContent.bottomSpacer = bottomSpacer
 
     leScroll:HookScript("OnVerticalScroll", function(self, offset)
         if FDJ.UpdateLootExplorerVisibleRows then
             FDJ.UpdateLootExplorerVisibleRows(offset)
+        end
+    end)
+
+    leScroll:HookScript("OnScrollRangeChanged", function(self)
+        if self._fdjSuppressRangeHook then return end
+        local contentH = (frame.homeLootExplorerContent and frame.homeLootExplorerContent:GetHeight()) or 1
+        local viewportH = self:GetHeight() or 363
+        if viewportH <= 10 then viewportH = 363 end
+        local trueMax = math.max(0, contentH - viewportH)
+        local sb = (FDJ.GetScrollBar and FDJ.GetScrollBar(self))
+            or self.ScrollBar
+            or _G["ForeverDungeonJournalLootExplorerScrollScrollBar"]
+        if sb and sb.SetMinMaxValues then
+            self._fdjSuppressRangeHook = true
+            sb:SetMinMaxValues(0, trueMax)
+            self._fdjSuppressRangeHook = false
+        end
+    end)
+
+    leScroll:SetScript("OnMouseWheel", function(self, delta)
+        local contentH = (frame.homeLootExplorerContent and frame.homeLootExplorerContent:GetHeight()) or 1
+        local viewportH = self:GetHeight() or 363
+        if viewportH <= 10 then viewportH = 363 end
+        local maxScroll = math.max(0, contentH - viewportH)
+        local cur = self:GetVerticalScroll() or 0
+        local step = ROW_HEIGHT * 2
+        local nextVal = math.max(0, math.min(maxScroll, cur - (delta * step)))
+        self:SetVerticalScroll(nextVal)
+        local sb = (FDJ.GetScrollBar and FDJ.GetScrollBar(self))
+            or self.ScrollBar
+            or _G["ForeverDungeonJournalLootExplorerScrollScrollBar"]
+        if sb and sb.SetValue then
+            sb:SetMinMaxValues(0, maxScroll)
+            sb:SetValue(nextVal)
+        end
+        if FDJ.UpdateLootExplorerVisibleRows then
+            FDJ.UpdateLootExplorerVisibleRows(nextVal)
+        end
+    end)
+
+    lePanel:SetScript("OnShow", function()
+        local items = frame.lootExplorerFilteredItems
+        if not items then
+            FDJ.RefreshLootExplorerPanel(false)
+        else
+            local contentH = math.max(1, #items * ROW_HEIGHT)
+            SyncLootExplorerScrollRange(leScroll, contentH, true)
+            FDJ.UpdateLootExplorerVisibleRows(leScroll:GetVerticalScroll() or 0)
         end
     end)
 
@@ -1153,8 +1593,24 @@ function FDJ.CreateLootExplorerUI(frame, home)
     leEmpty:Hide()
 end
 
-local ROW_HEIGHT = 55
-local NUM_VISIBLE_ROWS = 9
+function FDJ.SetLootExplorerDungeon(dungeonName)
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if not dungeonName or dungeonName == "ALL" or not (FDJ.DB and FDJ.DB[dungeonName]) then
+        leSelectedDungeon = "ALL"
+        if frame and frame.lootExplorerDungeonBtn then
+            frame.lootExplorerDungeonBtn.text:SetText("All Dungeons")
+        end
+    else
+        leSelectedDungeon = dungeonName
+        if frame and frame.lootExplorerDungeonBtn then
+            local dName = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(dungeonName)) or dungeonName
+            frame.lootExplorerDungeonBtn.text:SetText(dName)
+        end
+    end
+    if frame and frame.homeLootExplorerPanel and frame.homeLootExplorerPanel:IsShown() then
+        FDJ.RefreshLootExplorerPanel(false)
+    end
+end
 
 local function GetOrCreateLootExplorerRow(frame, i)
     local rows = frame.lootExplorerRows
@@ -1166,7 +1622,7 @@ local function GetOrCreateLootExplorerRow(frame, i)
     if row then return row end
 
     row = CreateFrame("Button", nil, frame.homeLootExplorerContent, "BackdropTemplate")
-    row:SetSize(660, 50)
+    row:SetSize(720, 50)
     FDJ.SetBackdrop(row, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     row:SetBackdropColor(0.16, 0.12, 0.07, 0.92)
     row:SetBackdropBorderColor(0.42, 0.30, 0.15, 1)
@@ -1184,37 +1640,37 @@ local function GetOrCreateLootExplorerRow(frame, i)
 
     row.name = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     row.name:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 10, -6)
-    row.name:SetWidth(235)
+    row.name:SetWidth(260)
     row.name:SetJustifyH("LEFT")
     row.name:SetWordWrap(false)
 
     row.stats = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     row.stats:SetPoint("BOTTOMLEFT", row.icon, "BOTTOMRIGHT", 10, 6)
-    row.stats:SetWidth(240)
+    row.stats:SetWidth(265)
     row.stats:SetJustifyH("LEFT")
     row.stats:SetWordWrap(false)
 
     row.slotType = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    row.slotType:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 255, -6)
-    row.slotType:SetWidth(140)
+    row.slotType:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 280, -6)
+    row.slotType:SetWidth(160)
     row.slotType:SetJustifyH("LEFT")
     row.slotType:SetWordWrap(false)
 
     row.reqLevel = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    row.reqLevel:SetPoint("BOTTOMLEFT", row.icon, "BOTTOMRIGHT", 255, 6)
-    row.reqLevel:SetWidth(140)
+    row.reqLevel:SetPoint("BOTTOMLEFT", row.icon, "BOTTOMRIGHT", 280, 6)
+    row.reqLevel:SetWidth(160)
     row.reqLevel:SetJustifyH("LEFT")
     row.reqLevel:SetWordWrap(false)
 
     row.dungeon = row:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     row.dungeon:SetPoint("TOPRIGHT", -36, -6)
-    row.dungeon:SetWidth(160)
+    row.dungeon:SetWidth(185)
     row.dungeon:SetJustifyH("RIGHT")
     row.dungeon:SetWordWrap(false)
 
     row.boss = row:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
     row.boss:SetPoint("BOTTOMRIGHT", -36, 6)
-    row.boss:SetWidth(160)
+    row.boss:SetWidth(185)
     row.boss:SetJustifyH("RIGHT")
     row.boss:SetWordWrap(false)
 
@@ -1329,6 +1785,7 @@ local function GetOrCreateLootExplorerRow(frame, i)
             return
         end
         if self.itemData.isSharedLoot then FDJ.lootSharedExpanded = true end
+        if self.itemData.isTrashLoot then FDJ.lootTrashExpanded = true end
         if FDJ.SelectDungeon then FDJ.SelectDungeon(self.itemData.dungeon) end
         if FDJ.SetMode then FDJ.SetMode("bosses") end
         if self.itemData.bossIndex and FDJ.SelectBoss then
@@ -1370,7 +1827,7 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             quality = quality or it.quality or 1
             if not reqLevel or reqLevel == 0 then
                 if FDJ.GetItemReqLevel then
-                    reqLevel = FDJ.GetItemReqLevel(it.itemID)
+                    reqLevel = FDJ.GetItemReqLevel(it.itemID, it.questReqLevel)
                 end
             end
 
@@ -1393,10 +1850,17 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
 
             local slotText = it.slot or ""
             if slotText == "" and equipLoc and equipLoc ~= "" then
-                slotText = _G[equipLoc] or equipLoc
+                slotText = EQUIP_LOC_CANONICAL[equipLoc] or _G[equipLoc] or equipLoc
             end
             if it.isQuestReward then
                 slotText = slotText ~= "" and (slotText .. "  •  |cffffd200Quest|r") or "|cffffd200Quest Reward|r"
+            elseif it.isTrashLoot then
+                local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
+                if dropRate then
+                    slotText = slotText ~= "" and (slotText .. "  •  |cffc8b080Trash (" .. dropRate .. ")|r") or ("|cffc8b080Trash (" .. dropRate .. ")|r")
+                else
+                    slotText = slotText ~= "" and (slotText .. "  •  |cffc8b080Trash|r") or "|cffc8b080Trash Drop|r"
+                end
             else
                 local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
                 if dropRate then
@@ -1407,13 +1871,18 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             row.slotType:SetTextColor(0.85, 0.75, 0.55)
 
             if reqLevel and reqLevel > 0 then
-                row.reqLevel:SetText(string.format("Req Level %d", reqLevel))
+                if it.isQuestReward and (not FDJ.ITEM_REQ_LEVEL or not FDJ.ITEM_REQ_LEVEL[it.itemID]) and it.questReqLevel == reqLevel then
+                    row.reqLevel:SetText(string.format("Quest Req Lvl %d", reqLevel))
+                else
+                    row.reqLevel:SetText(string.format("Req Level %d", reqLevel))
+                end
                 row.reqLevel:SetTextColor(0.65, 0.65, 0.65)
             else
                 row.reqLevel:SetText("")
             end
 
-            row.dungeon:SetText(it.dungeon or "")
+            local dungDisplay = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(it.dungeon)) or it.dungeon or ""
+            row.dungeon:SetText(dungDisplay)
             row.dungeon:SetTextColor(1.00, 0.82, 0.25)
             row.boss:SetText(it.boss or "")
             if it.isQuestReward then
@@ -1453,6 +1922,24 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
         end
     end
 
+    -- Lookahead preload for the next 5 items just below the visible viewport
+    if C_Item and C_Item.RequestLoadItemDataByID then
+        local lookaheadStart = startIndex + NUM_VISIBLE_ROWS
+        local lookaheadEnd = math.min(count, lookaheadStart + 4)
+        for idx = lookaheadStart, lookaheadEnd do
+            local nextIt = items[idx]
+            if nextIt and nextIt.itemID then
+                if C_Item.IsItemDataCachedByID then
+                    if not C_Item.IsItemDataCachedByID(nextIt.itemID) then
+                        C_Item.RequestLoadItemDataByID(nextIt.itemID)
+                    end
+                else
+                    C_Item.RequestLoadItemDataByID(nextIt.itemID)
+                end
+            end
+        end
+    end
+
     if frame.lootExplorerRows and #frame.lootExplorerRows > NUM_VISIBLE_ROWS then
         for j = NUM_VISIBLE_ROWS + 1, #frame.lootExplorerRows do
             frame.lootExplorerRows[j]:Hide()
@@ -1463,65 +1950,44 @@ end
 function FDJ.RefreshLootExplorerPanel(preserveScroll)
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     if not frame or not frame.homeLootExplorerPanel or not frame.homeLootExplorerContent then return end
+    if preserveScroll == nil then
+        preserveScroll = true
+    end
 
-    local items = FDJ.GetFilteredLootExplorerItems(
+    local items, totalAll = FDJ.GetFilteredLootExplorerItems(
         leSelectedCategory,
         leSelectedSlot,
         leSelectedMaterial,
         leSelectedBracket,
         leWishlistOnly,
-        leSearchQuery
+        leSearchQuery,
+        leSelectedDungeon
     )
     frame.lootExplorerFilteredItems = items
-
-    local totalAll = 0
-    if FDJ.ORDER and FDJ.DB then
-        for _, dName in ipairs(FDJ.ORDER) do
-            local dung = FDJ.DB[dName]
-            if dung then
-                if dung.bosses then
-                    for _, b in ipairs(dung.bosses) do
-                        if b.loot and not b.recipeTab then totalAll = totalAll + #b.loot end
-                    end
-                end
-                if dung.quests then
-                    local seenQ = {}
-                    for _, q in ipairs(dung.quests) do
-                        local qItems = {}
-                        for _, it in ipairs(q.rewardItems or {}) do qItems[#qItems + 1] = it end
-                        for _, it in ipairs(q.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
-                        for _, it in ipairs(q.noteRewardItems or {}) do qItems[#qItems + 1] = it end
-                        for _, it in ipairs(qItems) do
-                            local qid = tonumber(it and it[1])
-                            if qid and not seenQ[qid] then
-                                seenQ[qid] = true
-                                totalAll = totalAll + 1
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
+    totalAll = totalAll or #items
 
     if frame.homeLootExplorerCountText then
         local count = #items
-        if totalAll > 0 and count < totalAll then
-            frame.homeLootExplorerCountText:SetText(string.format("Showing |cffffd100%d|r of %d items", count, totalAll))
-        elseif totalAll > 0 then
-            frame.homeLootExplorerCountText:SetText(string.format("Showing all |cffffd100%d|r items", totalAll))
+        if leSelectedDungeon ~= "ALL" then
+            local dName = (FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(leSelectedDungeon)) or leSelectedDungeon
+            if totalAll > 0 and count < totalAll then
+                frame.homeLootExplorerCountText:SetText(string.format("%s: Showing |cffffd100%d|r of %d items", dName, count, totalAll))
+            else
+                frame.homeLootExplorerCountText:SetText(string.format("%s: Showing all |cffffd100%d|r items", dName, count))
+            end
         else
-            frame.homeLootExplorerCountText:SetText(string.format("Showing |cffffd100%d|r items", count))
+            if totalAll > 0 and count < totalAll then
+                frame.homeLootExplorerCountText:SetText(string.format("Showing |cffffd100%d|r of %d items", count, totalAll))
+            elseif totalAll > 0 then
+                frame.homeLootExplorerCountText:SetText(string.format("Showing all |cffffd100%d|r items", count))
+            else
+                frame.homeLootExplorerCountText:SetText(string.format("Showing |cffffd100%d|r items", count))
+            end
         end
     end
 
     local count = #items
     local contentH = math.max(1, count * ROW_HEIGHT)
-    frame.homeLootExplorerContent:SetHeight(contentH)
-
-    if not preserveScroll and frame.homeLootExplorerScroll then
-        frame.homeLootExplorerScroll:SetVerticalScroll(0)
-    end
 
     if frame.homeLootExplorerEmptyText then
         if leWishlistOnly then
@@ -1532,9 +1998,7 @@ function FDJ.RefreshLootExplorerPanel(preserveScroll)
         frame.homeLootExplorerEmptyText:SetShown(count == 0)
     end
 
-    if FDJ.UpdateScrollBarVisibility then
-        FDJ.UpdateScrollBarVisibility(frame.homeLootExplorerScroll, contentH)
-    end
+    SyncLootExplorerScrollRange(frame.homeLootExplorerScroll, contentH, preserveScroll)
 
     local currentScroll = frame.homeLootExplorerScroll and frame.homeLootExplorerScroll:GetVerticalScroll() or 0
     FDJ.UpdateLootExplorerVisibleRows(currentScroll)
@@ -1543,23 +2007,64 @@ end
 local lootRefreshPending = false
 local lootRefreshWorker = CreateFrame("Frame")
 lootRefreshWorker:Hide()
+local lootRefreshElapsed = 0
 
-function FDJ.ScheduleLootExplorerRefresh()
+function FDJ.ScheduleLootExplorerRefresh(visibleOnly)
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     if not frame or not frame.homeLootExplorerPanel or not frame.homeLootExplorerPanel:IsShown() then return end
+    if not visibleOnly then
+        lootRefreshWorker._needsFullFilter = true
+    end
     if lootRefreshPending then return end
     lootRefreshPending = true
-    lootRefreshWorker:SetScript("OnUpdate", function(self)
+    lootRefreshElapsed = 0
+    lootRefreshWorker:SetScript("OnUpdate", function(self, elapsed)
+        lootRefreshElapsed = lootRefreshElapsed + (elapsed or 0.016)
+        if lootRefreshElapsed < 0.08 then return end
         self:SetScript("OnUpdate", nil)
         self:Hide()
         lootRefreshPending = false
+        local fullFilter = self._needsFullFilter
+        self._needsFullFilter = false
         local f = FDJ.frame or _G["ForeverDungeonJournalFrame"]
         if f and f.homeLootExplorerPanel and f.homeLootExplorerPanel:IsShown() then
-            if FDJ.RefreshLootExplorerPanel then
+            if fullFilter and FDJ.RefreshLootExplorerPanel then
                 FDJ.RefreshLootExplorerPanel(true)
+            elseif FDJ.UpdateLootExplorerVisibleRows then
+                local curScroll = f.homeLootExplorerScroll and f.homeLootExplorerScroll:GetVerticalScroll() or 0
+                FDJ.UpdateLootExplorerVisibleRows(curScroll)
             end
         end
     end)
     lootRefreshWorker:Show()
 end
+
+local itemLoadWatcher = CreateFrame("Frame")
+itemLoadWatcher:RegisterEvent("GET_ITEM_INFO_RECEIVED")
+itemLoadWatcher:SetScript("OnEvent", function(_, _, itemID, success)
+    if not success or not itemID then return end
+    itemID = tonumber(itemID)
+    if not itemID then return end
+
+    local entries = masterLootByItemID and masterLootByItemID[itemID]
+    local metaChanged = false
+    if entries then
+        for i = 1, #entries do
+            if RefreshMasterEntryMetadata(entries[i]) then
+                metaChanged = true
+            end
+        end
+    end
+
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if frame and frame:IsShown() and frame.homeLootExplorerPanel and frame.homeLootExplorerPanel:IsShown() then
+        local hasActiveFilter = (leSelectedCategory ~= "ALL")
+            or (leSelectedSlot ~= "ALL")
+            or (leSelectedMaterial ~= "ALL")
+            or (leSelectedBracket ~= "ALL")
+            or (leSearchQuery ~= "")
+        FDJ.ScheduleLootExplorerRefresh(not (metaChanged and hasActiveFilter))
+    end
+end)
+
 

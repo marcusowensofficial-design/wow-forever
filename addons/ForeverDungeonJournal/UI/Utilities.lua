@@ -215,6 +215,7 @@ function FDJ.NormalizeDungeonName(name)
     if n:find("gnomeregan", 1, true) then return "Gnomeregan" end
     if n:find("razorfen kraul", 1, true) then return "Razorfen Kraul" end
     if n:find("scarlet monastery", 1, true) and n:find("graveyard", 1, true) then return "Scarlet Monastery: Graveyard" end
+    if n:find("drowned city", 1, true) then return "The Drowned City" end
 end
 
 function FDJ.CurrentDungeon()
@@ -252,6 +253,66 @@ function FDJ.StartsInsideDungeon(pickupText)
     if type(pickupText) ~= "string" then return false end
     local text = string.lower(pickupText)
     return text:find("inside ", 1, true) ~= nil
+end
+
+function FDJ.StartItemDropsIn(quest, dungeonName)
+    local item = type(quest) == "table" and quest.startItem
+    local id = type(item) == "table" and item[1]
+    local dungeon = id and dungeonName and FDJ.DB and FDJ.DB[dungeonName]
+    if type(dungeon) ~= "table" then return false end
+    for _, boss in ipairs(dungeon.bosses or {}) do
+        for _, loot in ipairs(type(boss) == "table" and boss.loot or {}) do
+            if type(loot) == "table" and loot[1] == id then return true end
+        end
+    end
+    return false
+end
+
+function FDJ.ChainStartsInside(quest, dungeonName, pendingOnly)
+    local chains = FDJ.QUEST_PREREQ_CHAINS or {}
+    local detailsMap = FDJ.QUEST_PREREQ_DETAILS or {}
+    local chain = type(quest) == "table" and quest.id and chains[quest.id]
+    if type(chain) ~= "table" or #chain == 0 then return nil end
+    for _, step in ipairs(chain) do
+        if type(step) == "table" and step.id ~= quest.id and not (pendingOnly and step.id
+            and not step.itemStep and FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(step.id)) then
+            local details = (step.id and detailsMap[step.id]) or {}
+            return details.startsInDungeon == true or FDJ.StartsInsideDungeon(details.pickup)
+                or FDJ.StartItemDropsIn(details, dungeonName)
+        end
+    end
+    return nil
+end
+
+function FDJ.SetRowDungeonIcon(button, show, offsetX)
+    local icon = button.dungeonStartIcon
+    if not show then
+        if icon then icon:Hide() end
+        return
+    end
+    if not icon then
+        icon = CreateFrame("Frame", nil, button)
+        button.dungeonStartIcon = icon
+        icon:SetSize(26, 26)
+        icon:SetFrameLevel(button:GetFrameLevel() + 6)
+        icon:EnableMouse(true)
+        icon.tex = icon:CreateTexture(nil, "OVERLAY")
+        icon.tex:SetAllPoints()
+        local ok = icon.tex.SetAtlas and pcall(icon.tex.SetAtlas, icon.tex, "Dungeon", false)
+        if not ok then
+            icon.tex:SetTexture("Interface\Icons\INV_Misc_Rune_01")
+            icon.tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        end
+        icon:SetScript("OnEnter", function(self)
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(L("IN_DUNGEON"))
+            GameTooltip:Show()
+        end)
+        icon:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    end
+    icon:ClearAllPoints()
+    icon:SetPoint("LEFT", button.meta, "LEFT", offsetX, 0)
+    icon:Show()
 end
 
 -- ============================================================
@@ -457,6 +518,9 @@ function FDJ.BossNpcID(boss)
     if not boss then return nil end
     if type(boss.npcID) == "number" and boss.npcID > 0 then
         return boss.npcID
+    end
+    if type(boss.portraitNpcID) == "number" and boss.portraitNpcID > 0 then
+        return boss.portraitNpcID
     end
     if type(boss.creatureID) == "number" and boss.creatureID > 0 then
         return boss.creatureID

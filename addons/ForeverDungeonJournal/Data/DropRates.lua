@@ -1188,6 +1188,29 @@ FDJ.DROP_RATES = {
     [16679] = "17%", -- Beaststalker's Mantle (Overlord Wyrmthalak)
     [22321] = "17%", -- Heart of Wyrmthalak (Overlord Wyrmthalak)
     [9461] = "20%", -- Charged Gear (Crowd Pummeler 9-60)
+    [17008] = "100%", -- Small Scroll (Charlga Razorflank)
+
+    -- --------------------------------------------------------
+    -- THE DROWNED CITY
+    -- --------------------------------------------------------
+    [274598] = "33%", -- Bloodslash Axe (Zul'Alai)
+    [274599] = "33%", -- Oathbound Bracers (Zul'Alai)
+    [274600] = "33%", -- Berserker Shackles (Zul'Alai)
+    [274601] = "50%", -- Harpoon of Command (Var'Taka)
+    [274602] = "50%", -- Brinebelly Leggings (Var'Taka)
+    [274603] = "33%", -- Dreadfrost Saber (Captain Dreadrise)
+    [274604] = "33%", -- Frosty Blunderbuss (Captain Dreadrise)
+    [274605] = "33%", -- Briny Sash (Captain Dreadrise)
+    [274606] = "50%", -- Bloodspine Staff (Deathless Marrow)
+    [274607] = "50%", -- Viscera Spaulders (Deathless Marrow)
+    [274608] = "33%", -- Maw of Min'loth (Min'loth the Serpent)
+    [274609] = "33%", -- Serpentbane Crown (Min'loth the Serpent)
+    [274610] = "33%", -- Ritual-Binder's Gloves (Min'loth the Serpent)
+    [274611] = "20%", -- Robe of the Drowned (Primeval Elemental)
+    [274612] = "20%", -- Waterlogged Burial Shroud (Primeval Elemental)
+    [274613] = "20%", -- Priestess Cloak (Primeval Elemental)
+    [274614] = "20%", -- Knucklebone Ring (Primeval Elemental)
+    [274615] = "20%", -- Heart of the Primeval (Primeval Elemental)
 }
 
 function FDJ.GetItemDropRate(itemID)

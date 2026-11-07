@@ -1392,6 +1392,43 @@ local routes = {
             },
         },
     },
+
+    ["The Drowned City"] = {
+        faction = "Both",
+        guide = {
+            en = {
+                title = "Travel & Walkthrough Guide: The Drowned City",
+                subtitle = "Sailing to the Sunken Ruins of I'lalai in Stranglethorn Vale",
+                steps = {
+                    {
+                        title = "Travel to the Southeastern Coast of Stranglethorn Vale",
+                        text = "Alliance players can ride south from Darkshire through Stranglethorn Vale or take the boat to Booty Bay and ride northeast around Crystalvein Mine. Horde players can take the Zeppelin to Grom'gol Base Camp and ride southeast across the Nazferiti river toward the Ruins of Aboraz.",
+                        map = { markerType = "location", mapID = 1434, x = 0.493, y = 0.562, label = "The Drowned City Entrance", detail = "Off the eastern coast of Stranglethorn Vale, inside the sunken ruins of I'lalai." },
+                    },
+                    {
+                        title = "Clear the Outer Sunken Plaza & Defeat Zul'Alai",
+                        text = "Enter the flooded temple ruins and clear the undead Gurubashi patrols around the outer courtyard before engaging Zul'Alai (Lv 37). Save defensive cooldowns for his low-health Undying Frenzy.",
+                    },
+                    {
+                        title = "Push West Through the Brinescale Ruins & Defeat Var'Taka",
+                        text = "Fight through the Brinescale Naga packs holding the western ruins and defeat Var'Taka (Lv 38), keeping him faced away from the party to avoid Forked Lightning.",
+                    },
+                    {
+                        title = "Board the Wrecked Galleon & Defeat Captain Dreadrise",
+                        text = "Cross the coastal shoals to the cursed pirate wreck and defeat Captain Dreadrise (Lv 38), staying clear of his frontal Broadside Grapeshot cones.",
+                    },
+                    {
+                        title = "Defeat Deathless Marrow & the Primeval Elemental",
+                        text = "In the sunken courtyard, focus down the bound Primeval Elemental (Lv 38) first while interrupting Water Bolt Volley and stepping out of Tidal Nova, then finish off Deathless Marrow (Lv 39). Both bosses drop their own distinct loot tables!",
+                    },
+                    {
+                        title = "Ascend the Storm Altar & Defeat Min'loth the Serpent",
+                        text = "Optionally clear Gill in the flooded grotto, then climb the storm-lashed temple steps to confront Min'loth the Serpent (Lv 40). Destroy his Venomous Effigy totems immediately and interrupt Serpent's Wrath.",
+                    },
+                },
+            },
+        },
+    },
 }
 
 for dungeonName, route in pairs(routes) do

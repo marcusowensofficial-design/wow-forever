@@ -17,6 +17,9 @@ FDJ.DUNGEON_MAPS = {
     ["Hall of Thanes"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\HallOfThanesMap", texBottom = 683 / 1024 } },
         entrance = { floor = 1, x = 0.510, y = 0.944, angle = 0 },
+        turnins = {
+            { npc = "Ghostly Attendant", floor = 1, x = 0.510, y = 0.820 },
+        },
         bosses = {
             { name = "Faldrim Anvilmar",   x = 0.509, y = 0.668 },
             { name = "Magmatus",           x = 0.748, y = 0.478 },
@@ -58,6 +61,9 @@ FDJ.DUNGEON_MAPS = {
         entrance = { floor = 1, x = 0.190, y = 0.838, angle = 0 },
         transitions = {
             { floor = 1, to = 2, x = 0.778, y = 0.564 },
+        },
+        turnins = {
+            { npc = "Rexxie Copperclutch", floor = 1, x = 0.220, y = 0.820 },
         },
         -- Only bosses whose spot is known are placed.
         bosses = {
@@ -107,6 +113,9 @@ FDJ.DUNGEON_MAPS = {
             { floor = 3, to = 4, x = 0.370, y = 0.720 }, -- Engineering Labs
             { floor = 4, to = 3, x = 0.440, y = 0.726 }, -- corridor bend between Tinkers' Court and the Engineering Labs
         },
+        turnins = {
+            { npc = "The Sparklematic 5200", floor = 3, x = 0.441, y = 0.472 },
+        },
         bosses = {
             { name = "Grubbis",               floor = 1, x = 0.776, y = 0.671 },
             { name = "Viscous Fallout",       floor = 2, x = 0.760, y = 0.469 },
@@ -118,6 +127,9 @@ FDJ.DUNGEON_MAPS = {
     ["Razorfen Kraul"] = {
         floors = { { uiMapID = 301, tiles = "Interface\\WorldMap\\RazorfenKraul\\RazorfenKraul1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s1", x0 = 0.2036, y0 = 0.2874, x1 = 0.2375, y1 = 0.3383 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s2", x0 = 0.5589, y0 = 0.2874, x1 = 0.5928, y1 = 0.3383 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s3", x0 = 0.8593, y0 = 0.3937, x1 = 0.8932, y1 = 0.4446 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s4", x0 = 0.7914, y0 = 0.4955, x1 = 0.8253, y1 = 0.5464 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s5", x0 = 0.0649, y0 = 0.6602, x1 = 0.0988, y1 = 0.7111 } } } },
         entrance = { floor = 1, x = 0.714, y = 0.840, angle = 180 },
+        turnins = {
+            { npc = "Willix the Importer", floor = 1, x = 0.380, y = 0.840 },
+        },
         -- Ladder notes (no level change): how to get across to Roogug.
         transitions = {
             { floor = 1, x = 0.606, y = 0.725, note = true, labelKey = "MAP_RFK_WALLJUMP" },
@@ -166,6 +178,9 @@ FDJ.DUNGEON_MAPS = {
     ["Razorfen Downs"] = {
         floors = { { uiMapID = 300, tiles = "Interface\\WorldMap\\RazorfenDowns\\RazorfenDowns1_" } },
         entrance = { floor = 1, x = 0.234, y = 0.185, angle = 90 },
+        turnins = {
+            { npc = "Belnistrasz", floor = 1, x = 0.479, y = 0.540 },
+        },
         bosses = {
             { name = "Tuten'kash",               x = 0.589, y = 0.342 },
             { name = "Mordresh Fire Eye",        x = 0.860, y = 0.467 },
@@ -181,6 +196,13 @@ FDJ.DUNGEON_MAPS = {
             { uiMapID = 243, tiles = "Interface\\WorldMap\\BlackrockDepths\\BlackrockDepths2_" },
         },
         entrance = { floor = 1, x = 0.329, y = 0.794, angle = 0 }, -- the swirl in the Dark Iron Highway
+        turnins = {
+            { npc = "Princess Moira Bronzebeard", floor = 2, x = 0.920, y = 0.110 },
+            { npc = "Commander Gor'shak", floor = 1, x = 0.400, y = 0.530 },
+            { npc = "Private Rocknot", floor = 2, x = 0.490, y = 0.675 },
+            { npc = "Gloom'rel", floor = 2, x = 0.538, y = 0.247 },
+            { npc = "Mistress Nagmara", floor = 2, x = 0.490, y = 0.675 },
+        },
         bosses = {
             { name = "High Interrogator Gerstahn", floor = 1, x = 0.474, y = 0.922 },
             { name = "Lord Roccor",                floor = 1, x = 0.556, y = 0.670 },
@@ -214,6 +236,12 @@ FDJ.DUNGEON_MAPS = {
             { uiMapID = 231, tiles = "Interface\\WorldMap\\Uldaman\\Uldaman2_" },
         },
         entrance = { floor = 1, x = 0.679, y = 0.725, angle = 0 }, -- the swirl right of the Hall of the Keepers
+        turnins = {
+            { npc = "Remains of a Paladin", floor = 1, x = 0.533, y = 0.638 },
+            { npc = "Baelog", floor = 1, x = 0.638, y = 0.948 },
+            { npc = "Hammertoe Grez", floor = 1, x = 0.470, y = 0.580 },
+            { npc = "The Discs of Norgannon", floor = 2, x = 0.501, y = 0.331 },
+        },
         bosses = {
             { name = "The Lost Dwarves",     floor = 1, x = 0.584, y = 0.920 },
             { name = "Revelosh",             floor = 1, x = 0.534, y = 0.725 },
@@ -251,6 +279,9 @@ FDJ.DUNGEON_MAPS = {
     ["Excavation Site: Wetlands"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ExcavationSiteMap", texBottom = 683 / 1024 } },
         entrance = { floor = 1, x = 0.888, y = 0.258, angle = 180, labelPos = "top" }, -- the swirl at the right of the map
+        turnins = {
+            { npc = "Daewyn Songblade", floor = 1, x = 0.440, y = 0.580 },
+        },
         -- Boss spots as marked by Exehn on the map (2026-10-06).
         bosses = {
             { name = "Saltspine",       x = 0.550, y = 0.361 },
@@ -325,6 +356,9 @@ FDJ.DUNGEON_MAPS = {
             { uiMapID = 315, tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep6_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep6_s1", x0 = 0.6677, y0 = 0.3084, x1 = 0.7016, y1 = 0.3593 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep6_s2", x0 = 0.5289, y0 = 0.6018, x1 = 0.5629, y1 = 0.6527 } } },
         },
         entrance = { floor = 1, x = 0.705, y = 0.605, angle = 0 },
+        turnins = {
+            { npc = "Deathstalker Vincent", floor = 1, x = 0.558, y = 0.622 },
+        },
         -- Pins on a printed map marker sit exactly on it; the rest follow the
         -- boss positions published for the Forever client.
         bosses = {
@@ -363,6 +397,9 @@ FDJ.DUNGEON_MAPS = {
             { uiMapID = 223, tiles = "Interface\\WorldMap\\BlackFathomDeeps\\BlackFathomDeeps3_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps3_s1", x0 = 0.5569, y0 = 0.2799, x1 = 0.5908, y1 = 0.3308 } } },
         },
         entrance = { floor = 1, x = 0.455, y = 0.085, angle = -20 },
+        turnins = {
+            { npc = "Argent Guard Thaelrid", floor = 1, x = 0.208, y = 0.753 },
+        },
         -- Quest objectives you click or loot on the spot (not kills / drops).
         -- Positions from Wowhead's spawn data for the same map.
         -- Switched off for now (shown later):
@@ -386,6 +423,9 @@ FDJ.DUNGEON_MAPS = {
     -- the client's own UiMapAssignment regions).
     ["Dire Maul: North"] = {
         entrance = { floor = 1, x = 0.717, y = 0.924, angle = 0 },
+        turnins = {
+            { npc = "Knot Thimblejack", floor = 1, x = 0.260, y = 0.530 },
+        },
         floors = { { uiMapID = 235, tiles = "Interface\\WorldMap\\DireMaul\\DireMaul1_" } }, -- Gordok Commons
         bosses = {
             { name = "Guard Mol'dar",          x = 0.695, y = 0.760 },
@@ -399,6 +439,9 @@ FDJ.DUNGEON_MAPS = {
     },
     ["Dire Maul: West"] = {
         entrance = { floor = 1, x = 0.935, y = 0.507, angle = 180, labelPos = "top" },
+        turnins = {
+            { npc = "Shen'dralar Ancient", floor = 1, x = 0.280, y = 0.420 },
+        },
         floors = {
             { uiMapID = 236, tiles = "Interface\\WorldMap\\DireMaul\\DireMaul2_" }, -- Capital Gardens
             { uiMapID = 237, tiles = "Interface\\WorldMap\\DireMaul\\DireMaul3_" }, -- Court of the Highborne
@@ -437,6 +480,9 @@ FDJ.DUNGEON_MAPS = {
             { uiMapID = 280, tiles = "Interface\\WorldMap\\Maraudon\\Maraudon1_" },
             { uiMapID = 281, tiles = "Interface\\WorldMap\\Maraudon\\Maraudon2_" },
         },
+        turnins = {
+            { npc = "Celebras the Redeemed", floor = 2, x = 0.260, y = 0.165 },
+        },
         bosses = {
             { name = "Noxxion",               floor = 1, x = 0.362, y = 0.098 },
             { name = "Razorlash",             floor = 1, x = 0.166, y = 0.344 },
@@ -451,6 +497,9 @@ FDJ.DUNGEON_MAPS = {
     },
     ["Stratholme: Living"] = {
         entrance = { floor = 1, x = 0.675, y = 0.877, angle = 0 },
+        turnins = {
+            { npc = "Aurius", floor = 1, x = 0.678, y = 0.729 },
+        },
         floors = { { uiMapID = 317, tiles = "Interface\\WorldMap\\Stratholme\\Stratholme1_" } },
         bosses = {
             { name = "Skul",                   x = 0.574, y = 0.652 },
@@ -465,6 +514,10 @@ FDJ.DUNGEON_MAPS = {
     },
     ["Stratholme: Undead"] = {
         entrance = { floor = 1, x = 0.658, y = 0.902, angle = 0 },
+        turnins = {
+            { npc = "Menethil's Gift", floor = 1, x = 0.414, y = 0.258 },
+            { npc = "Aurius", floor = 1, x = 0.678, y = 0.729 },
+        },
         floors = { { uiMapID = 318, tiles = "Interface\\WorldMap\\Stratholme\\Stratholme2_" } },
         bosses = {
             { name = "Magistrate Barthilas", x = 0.566, y = 0.161 },
@@ -477,6 +530,11 @@ FDJ.DUNGEON_MAPS = {
         },
     },
     ["Sunken Temple"] = {
+        turnins = {
+            { npc = "Altar of Hakkar", floor = 1, x = 0.501, y = 0.358 },
+            { npc = "Idol of Hakkar", floor = 1, x = 0.501, y = 0.477 },
+            { npc = "Essence Font", floor = 1, x = 0.719, y = 0.803 },
+        },
         floors = { { uiMapID = 220, tiles = "Interface\\WorldMap\\TheTempleOfAtalHakkar\\TheTempleOfAtalHakkar1_" } },
         bosses = {
             { name = "Avatar of Hakkar",       x = 0.243, y = 0.459 },

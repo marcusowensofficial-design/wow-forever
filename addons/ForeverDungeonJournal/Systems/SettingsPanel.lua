@@ -51,10 +51,11 @@ local function MaxDungeonLevel(dungeon)
     return top
 end
 
--- True when the character has finished every quest of this dungeon that it
+-- True when the character has handed in every quest of this dungeon that it
 -- can actually take (own faction, own class). False when there are none.
+-- (questdone: a quest ready to turn in is not done yet.)
 local function AllQuestsDone(dungeon)
-    if not FDJ.IsQuestFinished then return false end
+    if not FDJ.QuestTurnedIn then return false end
     local faction, class = PlayerFaction(), PlayerClass()
     if not faction then return false end
     local count = 0
@@ -67,7 +68,7 @@ local function AllQuestsDone(dungeon)
             or not FDJ.PlayerHasProfession or FDJ.PlayerHasProfession(quest.profession)
         if forFaction and forClass and forProfession and not quest.hideFromMainList and not quest.repeatable and quest.id then
             count = count + 1
-            if not FDJ.IsQuestFinished(quest.id) then return false end
+            if not FDJ.QuestTurnedIn(quest.id) then return false end
         end
     end
     return count > 0
@@ -126,6 +127,12 @@ local OPTIONS = {
         tip = "OPT_HIDE_LFG_TIP",
         get = function() return FDJ.IsLFGButtonHidden and FDJ.IsLFGButtonHidden() or false end,
         set = function(on) if FDJ.SetLFGButtonHidden then FDJ.SetLFGButtonHidden(on) end end,
+    },
+    {
+        label = "OPT_HIDE_SLEEPING_BAG",
+        tip = "OPT_HIDE_SLEEPING_BAG_TIP",
+        get = function() return FDJ.IsSleepingBagHidden and FDJ.IsSleepingBagHidden() or false end,
+        set = function(on) if FDJ.SetSleepingBagHidden then FDJ.SetSleepingBagHidden(on) end end,
     },
     {
         label = "OPT_HIDE_DUNGEON_MAP",

@@ -500,12 +500,13 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 if candidate.name == mapBoss.name then bossRecord, bossIndex = candidate, idx break end
             end
             marker.portrait:SetTexCoord(0, 1, 0, 1)
-            local portraitRecord = bossRecord or (mapBoss.npcID and { name = mapBoss.name, npcID = mapBoss.npcID })
+            local rpgHidden = FDJ.RPGMapBossHidden and FDJ.RPGMapBossHidden(selectedDungeon, bossRecord) or false
+            local portraitRecord = (not rpgHidden) and (bossRecord or (mapBoss.npcID and { name = mapBoss.name, npcID = mapBoss.npcID })) or nil
             if not (portraitRecord and FDJ.SetBossPortrait and FDJ.SetBossPortrait(marker.portrait, selectedDungeon, portraitRecord)) then
                 marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
                 marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
             end
-            marker.bossName = bossRecord and BossName(bossRecord.name) or mapBoss.name
+            marker.bossName = rpgHidden and "???" or (bossRecord and BossName(bossRecord.name) or mapBoss.name)
 
             if not marker.orderText then
                 marker.orderText = marker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
@@ -945,6 +946,104 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
     local curMode = (ForeverDungeonJournalDB and ForeverDungeonJournalDB.mapViewMode) or "fill"
     frame.dungeonMapViewModeButton.text:SetText((curMode == "fill") and (L("MAP_FIT_VIEW") or "Fit View") or (L("MAP_FILL_VIEW") or "Fill View"))
     frame.dungeonMapViewModeButton:Show()
+
+    local turnIn = FDJ.dungeonTurnIns and FDJ.dungeonTurnIns[data]
+    local mark = frame.dungeonMapTurnIn
+    if turnIn and (turnIn.floor or 1) == floorIndex then
+        if not mark then
+            mark = CreateFrame("Button", nil, holder)
+            mark:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+            mark.icon = mark:CreateTexture(nil, "OVERLAY")
+            mark.icon:SetAllPoints()
+            mark:SetScript("OnEnter", function(self)
+                local t = self.turnIn
+                if not t then return end
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                local npcText = FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(t.npc) or t.npc or ""
+                GameTooltip:SetText(npcText, 1.00, 0.82, 0.10)
+                if t.title then GameTooltip:AddLine(t.title, 0.30, 1.00, 0.36, true) end
+                GameTooltip:AddLine(L("WAYPOINT_CLEAR_TIP"), 0.65, 0.65, 0.65)
+                GameTooltip:Show()
+            end)
+            mark:SetScript("OnLeave", function() GameTooltip:Hide() end)
+            mark:SetScript("OnClick", function(self, btn)
+                local t = self.turnIn
+                if btn == "LeftButton" and t and t.questID and FDJ.OpenQuestPage then
+                    FDJ.OpenQuestPage(FDJ.selectedDungeon, t.questID)
+                    return
+                end
+                if FDJ.dungeonTurnIns and self.mapData then FDJ.dungeonTurnIns[self.mapData] = nil end
+                self.turnIn = nil
+                self:Hide()
+                GameTooltip:Hide()
+                if FDJ.RefreshMapQuestPins then pcall(FDJ.RefreshMapQuestPins) end
+            end)
+            frame.dungeonMapTurnIn = mark
+        end
+        mark.turnIn = turnIn
+        mark.mapData = data
+        mark.icon:SetTexture(turnIn.start and "Interface\\GossipFrame\\AvailableQuestIcon" or "Interface\\GossipFrame\\ActiveQuestIcon")
+        local size = math.max(24, math.floor(baseH * 0.08))
+        mark:SetSize(size, size)
+        if FDJ.StrokeIcon then FDJ.StrokeIcon(mark, mark.icon, size) end
+        mark:SetFrameLevel(holder:GetFrameLevel() + 16)
+        mark:ClearAllPoints()
+        mark:SetPoint("CENTER", holder, "TOPLEFT", turnIn.x * artW, -(turnIn.y * artH))
+        mark:Show()
+    elseif mark then
+        mark.turnIn = nil
+        mark:Hide()
+    end
+
+    if FDJ.RenderMapQuestPins then
+        pcall(FDJ.RenderMapQuestPins, selectedDungeon, floorIndex, holder, artW, artH, baseH, FDJ.selectedQuestFaction)
+    end
+end
+
+function FDJ.ShowTurnInOnDungeonMap(dungeonName, spot, questTitle, questID, start)
+    local mapData = FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dungeonName]
+    if not FDJ.DB or not FDJ.DB[dungeonName] or not mapData or type(spot) ~= "table" then return end
+    if FDJ.IsDungeonMapLocked and FDJ.IsDungeonMapLocked(dungeonName) then
+        if FDJ.RPGMapLockedNotice then FDJ.RPGMapLockedNotice(dungeonName) end
+        if questID and FDJ.OpenQuestPage then FDJ.OpenQuestPage(dungeonName, questID) end
+        return
+    end
+    local floor = spot.floor or 1
+    FDJ.dungeonTurnIns = FDJ.dungeonTurnIns or {}
+    FDJ.dungeonTurnIns[mapData] = { floor = floor, x = spot.x, y = spot.y, npc = spot.npc, title = questTitle, questID = questID, start = start and true or nil }
+    if FDJ.SelectDungeon then FDJ.SelectDungeon(dungeonName) end
+    if FDJ.selectedDungeon ~= dungeonName then return end
+    FDJ.ShowDungeonMap()
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if frame and frame.dungeonMapFloor ~= floor then
+        FDJ.ResetDungeonMapView()
+        FDJ.RenderCustomDungeonMap(mapData, floor)
+    end
+end
+
+function FDJ.ShowQuestSpotOnDungeonMap(spot)
+    local name = type(spot) == "table" and spot.dungeon or nil
+    local mapData = name and FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[name]
+    if not name or not FDJ.DB or not FDJ.DB[name] or not mapData then return end
+    if FDJ.IsDungeonMapLocked and FDJ.IsDungeonMapLocked(name) then
+        if FDJ.RPGMapLockedNotice then FDJ.RPGMapLockedNotice(name) end
+        return
+    end
+    if FDJ.SelectDungeon then FDJ.SelectDungeon(name) end
+    if FDJ.selectedDungeon ~= name then return end
+    FDJ.ShowDungeonMap()
+    local floor = spot.floor or 1
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if frame and frame.dungeonMapFloor ~= floor then
+        FDJ.ResetDungeonMapView()
+        FDJ.RenderCustomDungeonMap(mapData, floor)
+    end
+end
+
+function FDJ.OpenDungeonMap(dungeonName)
+    if not FDJ.DB or not FDJ.DB[dungeonName] then return end
+    if FDJ.SelectDungeon then FDJ.SelectDungeon(dungeonName) end
+    if FDJ.selectedDungeon == dungeonName and FDJ.ShowDungeonMap then FDJ.ShowDungeonMap() end
 end
 
 function FDJ.HideDungeonMap()
@@ -958,6 +1057,8 @@ function FDJ.ShowDungeonMap()
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     local selectedDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon) or "Ragefire Chasm"
     if not frame or not FDJ.DUNGEON_MAPS or not FDJ.DUNGEON_MAPS[selectedDungeon] then return end
+    if FDJ.IsDungeonMapLocked and FDJ.IsDungeonMapLocked(selectedDungeon) then return end
+    if FDJ.DetachWorldMapOverlay then pcall(FDJ.DetachWorldMapOverlay) end
     if FDJ.HideRouteGuide then FDJ.HideRouteGuide() end
     if frame.leftPanel then frame.leftPanel:Hide() end
     if frame.rightPanel then frame.rightPanel:Hide() end

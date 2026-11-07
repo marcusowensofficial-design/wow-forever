@@ -256,7 +256,9 @@ end
 function FDJ.RefreshWorldMapOverlay()
     if not WorldMapFrame or not WorldMapFrame:IsShown() then Detach() return end
     local dungeonName = FDJ.CurrentDungeon and FDJ.CurrentDungeon()
-    if not dungeonName or not (FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dungeonName]) or not Enabled() then
+    -- rpgpartial: RPG Mode keeps the dungeon map locked until 20% of the trash.
+    if not dungeonName or not (FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dungeonName]) or not Enabled()
+        or (FDJ.IsDungeonMapLocked and FDJ.IsDungeonMapLocked(dungeonName)) then
         Detach()
         UpdateToggle(nil)
         return
@@ -327,6 +329,25 @@ function FDJ.OpenBossFromWorldMap(dungeonName, bossIndex)
     end
     open()
     -- The journal picks its page on show; make sure the boss page wins.
+    if C_Timer and C_Timer.After then C_Timer.After(0.05, open) end
+end
+
+-- mapquests: a quest spot clicked on the world map: the journal on that
+-- quest's page (a chain step: the step), the world map left as it is.
+function FDJ.OpenQuestFromWorldMap(dungeonName, questID, stepID)
+    if not dungeonName or not questID then return end
+    keepWithJournal = true
+    local journal = Journal()
+    if journal and not journal:IsShown() then journal:Show() end
+    local function open()
+        if stepID and FDJ.OpenQuestChainStep then
+            pcall(FDJ.OpenQuestChainStep, dungeonName, questID, stepID)
+        elseif FDJ.OpenQuestPage then
+            pcall(FDJ.OpenQuestPage, dungeonName, questID)
+        end
+        if WorldMapFrame and WorldMapFrame:IsShown() then pcall(FDJ.RefreshWorldMapOverlay) end
+    end
+    open()
     if C_Timer and C_Timer.After then C_Timer.After(0.05, open) end
 end
 

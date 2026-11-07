@@ -189,6 +189,12 @@ function FDJ.CreateGlobalSearchUI(frame)
     local MAX_VISIBLE_SEARCH_RESULTS = 6
     local MAX_SEARCH_RESULTS = 80
 
+    local function SearchSkipsDungeon(dungeonName)
+        if FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(dungeonName) then return true end
+        local d = FDJ.DB and FDJ.DB[dungeonName]
+        return (d and d.previewOnly and FDJ.IsRPGMode and FDJ.IsRPGMode()) and true or false
+    end
+
     local function BuildSearchResults(queryText)
         local query = SearchText(queryText):gsub("^%s+", ""):gsub("%s+$", "")
         local results = {}
@@ -196,7 +202,7 @@ function FDJ.CreateGlobalSearchUI(frame)
         if query == "" then
             for _, dungeonName in ipairs(FDJ.ORDER or {}) do
                 local dungeon = FDJ.DB and FDJ.DB[dungeonName]
-                if dungeon then
+                if dungeon and not SearchSkipsDungeon(dungeonName) then
                     results[#results + 1] = {
                         kind = "dungeon",
                         dungeonName = dungeonName,
@@ -213,7 +219,7 @@ function FDJ.CreateGlobalSearchUI(frame)
 
         for _, dungeonName in ipairs(FDJ.ORDER or {}) do
             local dungeon = FDJ.DB and FDJ.DB[dungeonName]
-            if dungeon then
+            if dungeon and not SearchSkipsDungeon(dungeonName) then
                 local localizedDungeon = DungeonName(dungeonName)
                 local aliases = DUNGEON_SEARCH_ALIASES[dungeonName]
                 local aliasText = aliases and table.concat(aliases, " ") or ""
@@ -228,7 +234,8 @@ function FDJ.CreateGlobalSearchUI(frame)
 
                 local seenSharedInDungeon = {}
                 for bossIndex, boss in ipairs(dungeon.bosses or {}) do
-                    if not boss.recipeTab then
+                    local bossHidden = FDJ.RPGBossHidden and FDJ.RPGBossHidden(dungeonName, boss) or false
+                    if not boss.recipeTab and not bossHidden then
                         for _, item in ipairs(boss.loot or {}) do
                             local itemName = SearchItemDisplayName(item)
                             AddSearchCandidate(results, {
@@ -263,6 +270,20 @@ function FDJ.CreateGlobalSearchUI(frame)
                                 end
                             end
                         end
+                        for _, pItem in ipairs(type(boss.probableLoot) == "table" and boss.probableLoot or {}) do
+                            local itemName = SearchItemDisplayName(pItem)
+                            AddSearchCandidate(results, {
+                                kind = "item",
+                                mode = "bosses",
+                                dungeonName = dungeonName,
+                                bossIndex = bossIndex,
+                                itemID = pItem[1],
+                                isProbableLoot = true,
+                                displayName = itemName,
+                                subText = localizedDungeon .. "  -  " .. BossName(boss.name) .. " (Probable)",
+                                icon = pItem[5] or (FDJ.ItemIcon and FDJ.ItemIcon(pItem[1])),
+                            }, query, 3, itemName, pItem[2])
+                        end
                     end
                 end
 
@@ -280,7 +301,7 @@ function FDJ.CreateGlobalSearchUI(frame)
                     AddQuestSearchItem(quest.startItem)
                     AddQuestSearchItem(quest.noteItem)
 
-                    for _, item in ipairs(questItems) do
+                    for _, item in ipairs((FDJ.RPGQuestHidden and FDJ.RPGQuestHidden(dungeonName, quest)) and {} or questItems) do
                         local itemName = SearchItemDisplayName(item)
                         AddSearchCandidate(results, {
                             kind = "item",
@@ -395,6 +416,7 @@ function FDJ.CreateGlobalSearchUI(frame)
         if FDJ.SelectDungeon then FDJ.SelectDungeon(result.dungeonName) end
         if result.kind == "item" and result.mode == "bosses" then
             if result.isSharedLoot then FDJ.lootSharedExpanded = true end
+            if result.isProbableLoot then FDJ.lootProbableExpanded = true end
             if FDJ.SetMode then FDJ.SetMode("bosses") end
             if result.bossIndex and FDJ.SelectBoss then FDJ.SelectBoss(result.bossIndex) end
             if FDJ.SetBossSubTab then FDJ.SetBossSubTab("loot") end

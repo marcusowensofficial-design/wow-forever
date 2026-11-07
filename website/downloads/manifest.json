@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-07T01:49:56.544Z",
+  "generatedAt": "2026-11-07T19:19:59.008Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
-    "sizeKb": 59221,
-    "sha256": "26b5f081ee8cebb2cdf01e95d771f0bb16765cb9ca43d25f1c190dd791770e2d",
+    "sizeKb": 59429,
+    "sha256": "085d796a95b87ab28e123b1d5809ceb68e0a3ed60efd906be5a86be5b44d7130",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -14,7 +14,7 @@
       "version": "2.2.1",
       "filename": "ForeverPlates-v2.2.1.zip",
       "sizeKb": 601,
-      "sha256": "ebca4ac35fcd24d48b4af65231ab0a215fb18be79506ca81641d0549994388f6",
+      "sha256": "04aa3428dde9eae0727204c1f1a6d82c0b1a70921e94a43a375daa41c7c5c5f1",
       "downloadPath": "downloads/ForeverPlates-v2.2.1.zip"
     },
     {
@@ -35,11 +35,11 @@
     },
     {
       "name": "ForeverDungeonJournal",
-      "version": "1.7.0",
-      "filename": "ForeverDungeonJournal-v1.7.0.zip",
-      "sizeKb": 58401,
-      "sha256": "01e450fceb1433bc3125f332cfeca3b14081f349a54f9b9dca92b2cc02b36d12",
-      "downloadPath": "downloads/ForeverDungeonJournal-v1.7.0.zip"
+      "version": "1.7.1",
+      "filename": "ForeverDungeonJournal-v1.7.1.zip",
+      "sizeKb": 58609,
+      "sha256": "57ee0823f791f030037e0c9c2a038f40c3df07fb341213030e2d0a298ce9092d",
+      "downloadPath": "downloads/ForeverDungeonJournal-v1.7.1.zip"
     },
     {
       "name": "ForeverBlessings",

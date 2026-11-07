@@ -187,7 +187,7 @@ function FP.CreateGUI()
 
     local function UpdateStatusText()
         local font = ForeverPlatesDB.font or "forced"
-        local arrow = ForeverPlatesDB.targetArrowStyle or "neonred"
+        local arrow = (ForeverPlatesDB.showTargetArrow == false) and "no arrow" or (ForeverPlatesDB.targetArrowStyle or "neonred")
         local w = ForeverPlatesDB.barWidth or 142
         local h = ForeverPlatesDB.barHeight or 18
         local fmt = ForeverPlatesDB.healthFormat or "CURRENT_MAX_PERCENT"
@@ -619,7 +619,7 @@ function FP.CreateGUI()
         table.insert(namePosButtons, btn)
     end
 
-    -- Section 2: Floating Target Arrow (9 Styles)
+    -- Section 2: Floating Target Arrow (9 Styles + No Arrow)
     local arrowHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     arrowHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     arrowHeader:SetTextColor(0.00, 0.82, 1.00, 1)
@@ -637,10 +637,11 @@ function FP.CreateGUI()
         { key = "redchev",    name = "Red Chev" },
         { key = "cyanchev",   name = "Cyan Chev" },
         { key = "standard",   name = "Classic Red" },
+        { key = "none",       name = "No Arrow", isTargetOnly = true },
     }
 
     local function UpdateArrowButtonHighlights()
-        local cur = ForeverPlatesDB.targetArrowStyle or "neonred"
+        local cur = (ForeverPlatesDB.showTargetArrow == false) and "none" or (ForeverPlatesDB.targetArrowStyle or "neonred")
         for _, b in ipairs(arrowButtons) do
             if b.arrowKey == cur then
                 b.border:SetColor(0.00, 0.85, 1.00, 1.0)
@@ -674,24 +675,39 @@ function FP.CreateGUI()
         local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
         btn.border = border
 
-        local icon = btn:CreateTexture(nil, "OVERLAY")
-        local cfg = FP.ARROWS and FP.ARROWS[item.key]
-        if cfg then icon:SetTexture(cfg.path) end
-        icon:SetSize(16, 20)
-        icon:SetPoint("LEFT", btn, "LEFT", 6, 0)
-
         local lbl = btn:CreateFontString(nil, "OVERLAY")
         lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-        lbl:SetPoint("LEFT", icon, "RIGHT", 4, 0)
+        local cfg = FP.ARROWS and FP.ARROWS[item.key]
+        if cfg and cfg.path then
+            local icon = btn:CreateTexture(nil, "OVERLAY")
+            icon:SetTexture(cfg.path)
+            icon:SetSize(16, 20)
+            icon:SetPoint("LEFT", btn, "LEFT", 6, 0)
+            lbl:SetPoint("LEFT", icon, "RIGHT", 4, 0)
+        else
+            lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
+        end
         lbl:SetText(item.name)
         btn.label = lbl
         btn.arrowKey = item.key
 
         btn:SetScript("OnClick", function()
-            ForeverPlatesDB.targetArrowStyle = item.key
+            if item.key == "none" then
+                ForeverPlatesDB.targetArrowStyle = "none"
+                ForeverPlatesDB.showTargetArrow = false
+            else
+                ForeverPlatesDB.targetArrowStyle = item.key
+                ForeverPlatesDB.showTargetArrow = true
+            end
+            for _, reg in ipairs(registeredCheckboxes) do
+                if reg.dbKey == "showTargetArrow" then
+                    reg.cb:SetChecked(ForeverPlatesDB.showTargetArrow == true)
+                end
+            end
             UpdateArrowButtonHighlights()
             FP.RefreshAllArrows()
             FP.RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
             UpdateStatusText()
         end)
 
@@ -1160,7 +1176,14 @@ function FP.CreateGUI()
     local cbSpacing = 24
 
     CreateCheckbox(contentEnemy, "Cyan Target Glow (Outer Border Highlight)", "showTargetGlow", cbStartY)
-    CreateCheckbox(contentEnemy, "Floating Target Arrow (Above Name)", "showTargetArrow", cbStartY - cbSpacing)
+    CreateCheckbox(contentEnemy, "Floating Target Arrow (Above Name)", "showTargetArrow", cbStartY - cbSpacing, function(checked)
+        if checked and (ForeverPlatesDB.targetArrowStyle == "none" or not ForeverPlatesDB.targetArrowStyle) then
+            ForeverPlatesDB.targetArrowStyle = "neonred"
+        end
+        UpdateArrowButtonHighlights()
+        FP.RefreshAllArrows()
+        if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+    end)
     CreateCheckbox(contentEnemy, "Target Side Brackets ([ ])", "showTargetBrackets", cbStartY - (cbSpacing * 2))
     CreateCheckbox(contentEnemy, "Fiery Execute Range Glow (<= 20% Health Pulse)", "showExecuteGlow", cbStartY - (cbSpacing * 3), function()
         FP.RefreshAllPlates()
@@ -1517,45 +1540,49 @@ function FP.CreateGUI()
     paHeader:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", 10, -200)
     paHeader:SetText("Pin Arrow Style:")
 
-    for i, item in ipairs(arrowList) do
-        local col = (i - 1) % 5
-        local row = math.floor((i - 1) / 5)
-        local posX = 10 + (col * (aBtnW + 6))
-        local posY = -218 - (row * (aBtnH + 6))
+    local pinArrowIdx = 0
+    for _, item in ipairs(arrowList) do
+        if not item.isTargetOnly then
+            pinArrowIdx = pinArrowIdx + 1
+            local col = (pinArrowIdx - 1) % 5
+            local row = math.floor((pinArrowIdx - 1) / 5)
+            local posX = 10 + (col * (aBtnW + 6))
+            local posY = -218 - (row * (aBtnH + 6))
 
-        local btn = CreateFrame("Button", nil, contentFriendly)
-        btn:SetSize(aBtnW, aBtnH)
-        btn:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", posX, posY)
+            local btn = CreateFrame("Button", nil, contentFriendly)
+            btn:SetSize(aBtnW, aBtnH)
+            btn:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", posX, posY)
 
-        local bbg = btn:CreateTexture(nil, "BACKGROUND")
-        bbg:SetAllPoints(btn)
-        bbg:SetTexture(FLAT_TEXTURE)
-        btn.bg = bbg
+            local bbg = btn:CreateTexture(nil, "BACKGROUND")
+            bbg:SetAllPoints(btn)
+            bbg:SetTexture(FLAT_TEXTURE)
+            btn.bg = bbg
 
-        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
-        btn.border = border
+            local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+            btn.border = border
 
-        local icon = btn:CreateTexture(nil, "OVERLAY")
-        local cfg = FP.ARROWS and FP.ARROWS[item.key]
-        if cfg then icon:SetTexture(cfg.path) end
-        icon:SetSize(16, 20)
-        icon:SetPoint("LEFT", btn, "LEFT", 6, 0)
+            local icon = btn:CreateTexture(nil, "OVERLAY")
+            local cfg = FP.ARROWS and FP.ARROWS[item.key]
+            if cfg and cfg.path then icon:SetTexture(cfg.path) end
+            icon:SetSize(16, 20)
+            icon:SetPoint("LEFT", btn, "LEFT", 6, 0)
 
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-        lbl:SetPoint("LEFT", icon, "RIGHT", 4, 0)
-        lbl:SetText(item.name)
-        btn.label = lbl
-        btn.arrowKey = item.key
+            local lbl = btn:CreateFontString(nil, "OVERLAY")
+            lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+            lbl:SetPoint("LEFT", icon, "RIGHT", 4, 0)
+            lbl:SetText(item.name)
+            btn.label = lbl
+            btn.arrowKey = item.key
 
-        btn:SetScript("OnClick", function()
-            ForeverPlatesDB.partyPinArrowStyle = item.key
-            UpdatePinArrowHighlights()
-            FP.RefreshAllPlates()
-            UpdateStatusText()
-        end)
+            btn:SetScript("OnClick", function()
+                ForeverPlatesDB.partyPinArrowStyle = item.key
+                UpdatePinArrowHighlights()
+                FP.RefreshAllPlates()
+                UpdateStatusText()
+            end)
 
-        table.insert(pinArrowButtons, btn)
+            table.insert(pinArrowButtons, btn)
+        end
     end
 
     -- Pin Arrow Size & Thickness Sliders

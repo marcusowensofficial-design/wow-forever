@@ -34,7 +34,7 @@ local FONTS = {
 }
 FP.FONTS = FONTS
 
--- 2. Arrow Texture Registry (9 Arrow Styles)
+-- 2. Arrow Texture Registry (10 Arrow Options)
 local ARROWS = {
     neongreen  = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonGreenArrow.tga",  name = "Neon Green",  w = 26, h = 34 },
     neonred    = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonRedArrow.tga",    name = "Neon Red",    w = 26, h = 34 },
@@ -45,6 +45,7 @@ local ARROWS = {
     cyanchev   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\CyanChevronArrow.tga",name = "Cyan Chev",  w = 24, h = 24 },
     redchev    = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\RedChevronArrow.tga", name = "Red Chev",   w = 24, h = 24 },
     standard   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrow.tga",                   name = "Classic Red", w = 22, h = 22 },
+    none       = { path = nil,                                                                    name = "No Arrow",    w = 26, h = 34, isNone = true },
 }
 FP.ARROWS = ARROWS
 
@@ -4174,7 +4175,9 @@ local function StyleNamePlate(unitFrame)
     data.bracketRight = rightBracket
 
     local arrow = healthBar:CreateTexture(nil, "OVERLAY", nil, 7)
-    arrow:SetTexture(arrowCfg.path)
+    if arrowCfg.path then
+        arrow:SetTexture(arrowCfg.path)
+    end
     local aspect = arrowCfg.h / arrowCfg.w
     local thickness = ForeverPlatesDB.targetArrowThickness or 1.0
     local arrowW = math.floor(arrowSize * thickness + 0.5)
@@ -4541,13 +4544,13 @@ local function UpdateTestPlate()
     -- Target Arrow
     local aSize = db.targetArrowSize or 32
     local aThick = db.targetArrowThickness or 1.0
-    if arrowCfg then
+    if arrowCfg and arrowCfg.path then
         f.arrow:SetTexture(arrowCfg.path)
     end
     f.arrow:SetSize(aSize * aThick, aSize)
     f.arrow:ClearAllPoints()
     f.arrow:SetPoint("BOTTOM", f.nameText, "TOP", 0, 2)
-    f.arrow:SetShown(db.showTargetArrow ~= false)
+    f.arrow:SetShown(db.showTargetArrow ~= false and not (arrowCfg and arrowCfg.isNone))
 
     -- Health Text
     local hSize = db.healthFontSize or 17
@@ -4667,8 +4670,14 @@ local function RefreshAllArrows()
         local unitFrame = np.UnitFrame
         local d = plates[unitFrame]
         if d and d.targetArrow then
-            d.targetArrow:SetTexture(arrowCfg.path)
-            d.targetArrow:SetSize(arrowW, arrowH)
+            if arrowCfg.isNone or ForeverPlatesDB.showTargetArrow == false then
+                d.targetArrow:Hide()
+            else
+                if arrowCfg.path then
+                    d.targetArrow:SetTexture(arrowCfg.path)
+                end
+                d.targetArrow:SetSize(arrowW, arrowH)
+            end
         end
     end
 end
@@ -4887,8 +4896,8 @@ local function UpdateTargetState(unitFrame, passedUnit)
             end
         end
         if d and d.targetArrow then
-            if ForeverPlatesDB.showTargetArrow == true then
-                local arrowCfg = GetCurrentArrow()
+            local arrowCfg = GetCurrentArrow()
+            if ForeverPlatesDB.showTargetArrow == true and not arrowCfg.isNone and arrowCfg.path then
                 local arrowSize = ForeverPlatesDB.targetArrowSize or 28
                 local thickness = ForeverPlatesDB.targetArrowThickness or 1.0
                 local aspect = arrowCfg.h / arrowCfg.w
@@ -5434,11 +5443,18 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
     elseif cmd == "arrow" then
         if ARROWS[param] then
             ForeverPlatesDB.targetArrowStyle = param
+            ForeverPlatesDB.showTargetArrow = (param ~= "none")
             RefreshAllArrows()
+            RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
             DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Arrow style set to |cff00ff00" .. ARROWS[param].name .. "|r!")
         else
             ForeverPlatesDB.showTargetArrow = not ForeverPlatesDB.showTargetArrow
+            if ForeverPlatesDB.showTargetArrow and ForeverPlatesDB.targetArrowStyle == "none" then
+                ForeverPlatesDB.targetArrowStyle = "neonred"
+            end
             RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
             DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Floating target arrow " .. (ForeverPlatesDB.showTargetArrow and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
         end
     elseif cmd == "arrowthick" or cmd == "arrowthickness" then

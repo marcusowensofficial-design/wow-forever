@@ -267,11 +267,463 @@ FDJ.QUEST_START_MAPS = {
 -- BEGIN turninspots
 -- Turn-in NPCs who give no quest of their own here, for the quest tracker's
 -- ? button. In-game coordinates from Warcraft Tavern's WoW Forever guide to
--- the Ruins of Lordaeron quests.
+-- the Ruins of Lordaeron quests and classic quest databases.
 FDJ.TURNIN_SPOTS = {
     { mapID = 1453, x = 0.690, y = 0.828, label = "General Marcus Jonathan — Valley of Heroes, Stormwind", targetName = "General Marcus Jonathan" },
     { mapID = 1453, x = 0.692, y = 0.277, label = "Lady Dena Kennedy — Stormwind Keep, Stormwind", targetName = "Lady Dena Kennedy" },
     { mapID = 1453, x = 0.562, y = 0.540, label = "Orphan Matron Nightingale — Cathedral Square, Stormwind", targetName = "Orphan Matron Nightingale" },
     { mapID = 1458, x = 0.733, y = 0.326, label = "Oran Snakewrithe — Magic Quarter, Undercity", targetName = "Oran Snakewrithe" },
+    -- The Deadmines
+    { mapID = 1453, x = 0.536, y = 0.652, label = "Baros Alexston — City Hall, Cathedral Square, Stormwind", targetName = "Baros Alexston" },
+    { mapID = 1436, x = 0.526, y = 0.538, label = "Alba Fairmoon — Sentinel Hill inn, Westfall", targetName = "Alba Fairmoon" },
+    -- Excavation Site: Wetlands
+    { mapID = 1437, x = 0.119, y = 0.588, label = "Caitlin Grassman — Menethil Harbor, Wetlands", targetName = "Caitlin Grassman" },
+    { mapID = 1455, x = 0.772, y = 0.118, label = "High Explorer Magellas — Hall of Explorers, Ironforge", targetName = "High Explorer Magellas" },
+    { mapID = 1412, x = 0.325, y = 0.206, label = "Muln Earthfury — Skywatcher Plateau, Mulgore", targetName = "Muln Earthfury" },
+    { mapID = 1433, x = 0.256, y = 0.466, label = "Dorin Songblade — Lakeshire, Redridge Mountains", targetName = "Dorin Songblade" },
+    -- City of Dalaran
+    { mapID = 1424, x = 0.615, y = 0.192, label = "Magus Wordeen Voidglare — Tarren Mill, Hillsbrad", targetName = "Magus Wordeen Voidglare" },
+    -- Gnomeregan
+    { mapID = 1434, x = 0.274, y = 0.774, label = "Scooty — Booty Bay, Stranglethorn Vale", targetName = "Scooty" },
+    -- Uldaman
+    { mapID = 1455, x = 0.748, y = 0.116, label = "Prospector Stormpike — Hall of Explorers, Ironforge", targetName = "Prospector Stormpike" },
+    -- Stratholme
+    { mapID = 1423, x = 0.816, y = 0.580, label = "Duke Nicholas Zverenhoff — Light's Hope Chapel, Eastern Plaguelands", targetName = "Duke Nicholas Zverenhoff" },
+    { mapID = 1423, x = 0.266, y = 0.748, label = "Nathanos Blightcaller — Marris Stead, Eastern Plaguelands", targetName = "Nathanos Blightcaller" },
+    { mapID = 1423, x = 0.076, y = 0.436, label = "Tirion Fordring — Thondroril River, Eastern Plaguelands", targetName = "Tirion Fordring" },
+    -- Blackrock Depths
+    { mapID = 1428, x = 0.846, y = 0.690, label = "Marshal Maxwell — Morgan's Vigil, Burning Steppes", targetName = "Marshal Maxwell" },
+    { mapID = 1426, x = 0.468, y = 0.524, label = "Ragnar Thunderbrew — Kharanos, Dun Morogh", targetName = "Ragnar Thunderbrew" },
+    -- Upper Blackrock Spire
+    { mapID = 1452, x = 0.608, y = 0.376, label = "Malyfous Darkhammer — Everlook, Winterspring", targetName = "Malyfous Darkhammer" },
+    { mapID = 1452, x = 0.574, y = 0.672, label = "Haleh — Mazthoril, Winterspring", targetName = "Haleh" },
 }
 -- END turninspots
+
+function FDJ.FindTurninLocation(quest)
+    if type(quest) ~= "table" then return nil end
+    if quest.turninMap then return quest.turninMap end
+    local turninText = quest.turnin
+    if not turninText or turninText == "" then return nil end
+
+    local npc = turninText:match("^([^,]+)")
+    if not npc then return nil end
+    npc = npc:gsub("^%s+", ""):gsub("%s+$", "")
+    local npcLower = npc:lower()
+
+    -- 1. Check in-dungeon turnins
+    local dName = quest.dungeon or FDJ.selectedDungeon
+    local mapData = dName and FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dName]
+    if mapData and mapData.turnins then
+        for _, ti in ipairs(mapData.turnins) do
+            if ti.npc and ti.npc:lower() == npcLower then
+                return { dungeon = dName, floor = ti.floor or 1, x = ti.x, y = ti.y, label = ti.npc, targetName = ti.npc, npc = ti.npc }
+            end
+        end
+    end
+
+    -- 2. Check FDJ.TURNIN_SPOTS
+    if FDJ.TURNIN_SPOTS then
+        for _, spot in ipairs(FDJ.TURNIN_SPOTS) do
+            if spot.targetName and spot.targetName:lower() == npcLower then
+                return spot
+            elseif spot.label and spot.label:lower():find(npcLower, 1, true) then
+                return spot
+            end
+        end
+    end
+
+    -- 3. Check FDJ.QUEST_START_MAPS by targetName or matching label
+    if FDJ.QUEST_START_MAPS then
+        for _, spot in pairs(FDJ.QUEST_START_MAPS) do
+            if type(spot) == "table" then
+                if spot.targetName and spot.targetName:lower() == npcLower then
+                    return spot
+                elseif spot.label and spot.label:lower():find(npcLower, 1, true) then
+                    return spot
+                end
+            end
+        end
+    end
+
+    return nil
+end
+
+-- BEGIN mapquests
+-- Quest spots inside the dungeons, shown on the dungeon maps: objects to
+-- loot or use, quest givers / turn-ins inside, places to explore.
+-- Positions: the Classic spawn database (CMaNGOS classic-db), converted
+-- with the client's UiMapAssignment regions (as the boss spots); the
+-- floor checked on the map art. Spots next to a boss portrait sit just
+-- beside it. acts: start / end / loot / use / explore. dungeon: the
+-- journal page that lists the quest; main: its journal entry (a chain
+-- step's own quest).
+FDJ.MAP_QUEST_PINS = {
+    ["Hall of Thanes"] = {
+        { floor = 1, x = 0.510, y = 0.820, spots = {
+            { name = "Ghostly Attendant", quests = {
+                { id = 96395, name = "An Ancient Grudge", dungeon = "Hall of Thanes", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Excavation Site: Wetlands"] = {
+        { floor = 1, x = 0.440, y = 0.580, spots = {
+            { name = "Daewyn Songblade", quests = {
+                { id = 95772, name = "Songblade Search", dungeon = "Excavation Site: Wetlands", acts = { "end" } },
+                { id = 95795, name = "Fallen in the Fen", dungeon = "Excavation Site: Wetlands", acts = { "start" } },
+            } },
+        } },
+    },
+    ["City of Dalaran"] = {
+        { floor = 1, x = 0.220, y = 0.820, spots = {
+            { name = "Rexxie Copperclutch", quests = {
+                { id = 96987, name = "Opportunistic Education", dungeon = "City of Dalaran", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Maraudon"] = {
+        { floor = 2, x = 0.260, y = 0.165, spots = {
+            { name = "Celebras the Redeemed", quests = {
+                { id = 7044, name = "Legends of Maraudon", dungeon = "Maraudon", acts = { "end" } },
+                { id = 7046, name = "The Scepter of Celebras", dungeon = "Maraudon", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Blackfathom Deeps"] = {
+        { floor = 1, x = 0.329, y = 0.412, spots = {
+            { name = "Pitted Iron Chest", quests = {
+                { id = 971, name = "Knowledge in the Deeps", dungeon = "Blackfathom Deeps", acts = { "loot" }, item = 5359, itemName = "Lorgalis Manuscript", textKey = "MAP_OBJ_BFD_CHEST" },
+            } },
+        } },
+        { floor = 1, x = 0.208, y = 0.753, spots = {
+            { name = "Argent Guard Thaelrid", quests = {
+                { id = 1198, name = "In Search of Thaelrid", dungeon = "Blackfathom Deeps", acts = { "end" } },
+                { id = 1200, name = "Blackfathom Villainy", dungeon = "Blackfathom Deeps", acts = { "start" } },
+                { id = 6561, name = "Blackfathom Villainy", dungeon = "Blackfathom Deeps", acts = { "start" } },
+            } },
+        } },
+        { floor = 2, x = 0.406, y = 0.804, spots = {
+            { name = "Fathom Stone", quests = {
+                { id = 6921, name = "Amongst the Ruins", dungeon = "Blackfathom Deeps", acts = { "loot" }, item = 16762, itemName = "Fathom Core", textKey = "MAP_OBJ_BFD_FATHOM" },
+            } },
+        } },
+    },
+    ["Blackrock Depths"] = {
+        { floor = 1, x = 0.509, y = 0.844, spots = {
+            { name = "Commander Gor'shak", quests = {
+                { id = 3982, name = "What Is Going On?", dungeon = "Blackrock Depths", acts = { "start", "end" } },
+                { id = 3981, name = "Commander Gor'shak", dungeon = "Blackrock Depths", main = 3982, acts = { "end" } },
+                { id = 4001, name = "What Is Going On?", dungeon = "Blackrock Depths", main = 4003, acts = { "start" } },
+            } },
+            { name = "Kharan Mighthammer", quests = {
+                { id = 4341, name = "Kharan Mighthammer", dungeon = "Blackrock Depths", main = 4362, acts = { "end" } },
+                { id = 4342, name = "Kharan's Tale", dungeon = "Blackrock Depths", main = 4362, acts = { "start", "end" } },
+                { id = 4361, name = "The Bearer of Bad News", dungeon = "Blackrock Depths", main = 4362, acts = { "start" } },
+            } },
+        } },
+        { floor = 1, x = 0.532, y = 0.928, spots = {
+            { name = "Marshal Windsor", quests = {
+                { id = 4322, name = "Jail Break!", dungeon = "Blackrock Depths", acts = { "start" } },
+                { id = 4241, name = "Marshal Windsor", dungeon = "Blackrock Depths", main = 4322, acts = { "end" } },
+                { id = 4242, name = "Abandoned Hope", dungeon = "Blackrock Depths", main = 4322, acts = { "start" } },
+                { id = 4264, name = "A Crumpled Up Note", dungeon = "Blackrock Depths", main = 4322, acts = { "end" } },
+                { id = 4282, name = "A Shred of Hope", dungeon = "Blackrock Depths", main = 4322, acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 2, x = 0.551, y = 0.331, spots = {
+            { name = "Spectral Chalice", quests = {
+                { id = 4083, name = "The Spectral Chalice", dungeon = "Blackrock Depths", acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 2, x = 0.693, y = 0.370, spots = {
+            { name = "Core Fragment", quests = {
+                { id = 7848, name = "Attunement to the Core", dungeon = "Blackrock Depths", acts = { "loot" }, item = 18412, itemName = "Core Fragment" },
+            } },
+        } },
+        { floor = 2, x = 0.514, y = 0.591, spots = {
+            { name = "Mistress Nagmara", quests = {
+                { id = 4201, name = "The Love Potion", dungeon = "Blackrock Depths", acts = { "start", "end" } },
+            } },
+            { name = "Lokhtos Darkbargainer", quests = {
+                { id = 7604, name = "A Binding Contract", dungeon = "Blackrock Depths", acts = { "end" } },
+            } },
+            { name = "Private Rocknot", quests = {
+                { id = 4295, name = "Rocknot's Ale", dungeon = "Blackrock Depths", acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 2, x = 0.632, y = 0.732, spots = {
+            { name = "Heart of the Mountain", quests = {
+                { id = 4123, name = "The Heart of the Mountain", dungeon = "Blackrock Depths", acts = { "loot" }, item = 11309, itemName = "The Heart of the Mountain" },
+            } },
+            { name = "Dark Coffer", quests = {
+                { id = 4083, name = "The Spectral Chalice", dungeon = "Blackrock Depths", acts = { "loot" }, item = 7910, itemName = "Star Ruby" },
+            } },
+        } },
+        { floor = 2, x = 0.615, y = 0.950, spots = {
+            { name = "Monument of Franclorn Forgewright", quests = {
+                { id = 3802, name = "Dark Iron Legacy", dungeon = "Blackrock Depths", acts = { "end" } },
+            } },
+        } },
+        { floor = 2, x = 0.920, y = 0.110, spots = {
+            { name = "Princess Moira Bronzebeard", quests = {
+                { id = 4362, name = "The Fate of the Kingdom", dungeon = "Blackrock Depths", acts = { "end" } },
+                { id = 4003, name = "The Royal Rescue", dungeon = "Blackrock Depths", acts = { "end" } },
+            } },
+        } },
+    },
+    ["Dire Maul: North"] = {
+        { floor = 1, x = 0.217, y = 0.526, spots = {
+            { name = "Ogre Tannin Basket", quests = {
+                { id = 5518, name = "The Gordok Ogre Suit", dungeon = "Dire Maul: North", acts = { "loot" }, item = 18240, itemName = "Ogre Tannin" },
+            } },
+        } },
+        { floor = 1, x = 0.321, y = 0.599, spots = {
+            { name = "Knot Thimblejack", quests = {
+                { id = 5525, name = "Free Knot!", dungeon = "Dire Maul: North", acts = { "start", "end" } },
+                { id = 5518, name = "The Gordok Ogre Suit", dungeon = "Dire Maul: North", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Dire Maul: West"] = {
+        { floor = 1, x = 0.484, y = 0.538, spots = {
+            { name = "Shen'dralar Ancient", quests = {
+                { id = 7461, name = "The Madness Within", dungeon = "Dire Maul: West", acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.747, y = 0.113, spots = {
+            { name = "Lorekeeper Javon", quests = {
+                { id = 7506, name = "The Emerald Dream...", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7504, name = "Holy Bologna: What the Light Won't Tell You", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7505, name = "Frost Shock and You", dungeon = "Dire Maul: North", acts = { "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.802, y = 0.114, spots = {
+            { name = "Lorekeeper Mykos", quests = {
+                { id = 7503, name = "The Greatest Race of Hunters", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7501, name = "The Light and How To Swing It", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7502, name = "Harnessing Shadows", dungeon = "Dire Maul: North", acts = { "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.737, y = 0.171, spots = {
+            { name = "Lorekeeper Lydros", quests = {
+                { id = 7463, name = "Arcane Refreshment", dungeon = "Dire Maul: East", acts = { "start", "end" } },
+                { id = 7507, name = "Nostro's Compendium", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7483, name = "Libram of Rapidity", dungeon = "Dire Maul: North", acts = { "start", "end" } },
+                { id = 7484, name = "Libram of Focus", dungeon = "Dire Maul: North", acts = { "start", "end" } },
+                { id = 7485, name = "Libram of Protection", dungeon = "Dire Maul: North", acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.845, y = 0.230, spots = {
+            { name = "Lorekeeper Kildrath", quests = {
+                { id = 7500, name = "The Arcanist's Cookbook", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7498, name = "Garona: A Study on Stealth and Treachery", dungeon = "Dire Maul: North", acts = { "end" } },
+                { id = 7499, name = "Codex of Defense", dungeon = "Dire Maul: North", acts = { "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.573, y = 0.276, spots = {
+            { name = "The Prince's Chest", quests = {
+                { id = 7703, name = "Unfinished Gordok Business", dungeon = "Dire Maul: West", acts = { "loot" }, item = 18336, itemName = "Gauntlet of Gordok Might" },
+            } },
+        } },
+    },
+    ["Gnomeregan"] = {
+        { floor = 1, x = 0.427, y = 0.660, spots = {
+            { name = "The Sparklematic 5200", quests = {
+                { id = 2951, name = "The Sparklematic 5200!", dungeon = "Gnomeregan", acts = { "start", "end" } },
+                { id = 2945, name = "Grime-Encrusted Ring", dungeon = "Gnomeregan", main = 2948, acts = { "end" } },
+                { id = 2947, name = "Return of the Ring", dungeon = "Gnomeregan", main = 2948, acts = { "start" } },
+                { id = 2949, name = "Return of the Ring", dungeon = "Gnomeregan", main = 2950, acts = { "start" } },
+            } },
+        } },
+        { floor = 4, x = 0.354, y = 0.177, spots = {
+            { name = "Thermaplugg's Safe", quests = {
+                { id = 2841, name = "Rig Wars", dungeon = "Gnomeregan", main = 2843, acts = { "loot" }, item = 9153, itemName = "Rig Blueprints" },
+            } },
+        } },
+    },
+    ["Ragefire Chasm"] = {
+        { floor = 1, x = 0.618, y = 0.387, spots = {
+            { name = "Maur Grimtotem", quests = {
+                { id = 5724, name = "Returning the Lost Satchel", dungeon = "Ragefire Chasm", acts = { "start" } },
+                { id = 5722, name = "Searching for the Lost Satchel", dungeon = "Ragefire Chasm", main = 5724, acts = { "end" } },
+            } },
+        } },
+    },
+    ["Razorfen Downs"] = {
+        { floor = 1, x = 0.775, y = 0.152, spots = {
+            { name = "Belnistrasz", quests = {
+                { id = 3525, name = "Extinguishing the Idol", dungeon = "Razorfen Downs", acts = { "start", "end" } },
+                { id = 3523, name = "Scourge of the Downs", dungeon = "Razorfen Downs", main = 3525, acts = { "start", "end" } },
+            } },
+        } },
+        { floor = 1, x = 0.469, y = 0.223, spots = {
+            { name = "Belnistrasz's Brazier", quests = {
+                { id = 3525, name = "Extinguishing the Idol", dungeon = "Razorfen Downs", acts = { "end" } },
+            } },
+        } },
+    },
+    ["Razorfen Kraul"] = {
+        { floor = 1, x = 0.364, y = 0.324, spots = {
+            { name = "Willix the Importer", quests = {
+                { id = 1144, name = "Willix the Importer", dungeon = "Razorfen Kraul", acts = { "start", "end" } },
+            } },
+            { name = "Heralath Fallowbrook", quests = {
+                { id = 1142, name = "Mortality Wanes", dungeon = "Razorfen Kraul", acts = { "start" } },
+            } },
+        } },
+    },
+    ["Ruins of Lordaeron"] = {
+        { floor = 1, x = 0.612, y = 0.272, spots = {
+            { name = "Captain Truman", quests = {
+                { id = 95250, name = "Abominable Creatures", dungeon = "Ruins of Lordaeron", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Scarlet Monastery: Graveyard"] = {
+        { floor = 1, x = 0.719, y = 0.514, spots = {
+            { name = "Vorrel Sengutz", quests = {
+                { id = 1051, name = "Vorrel's Revenge", dungeon = "Scarlet Monastery: Graveyard", acts = { "start" } },
+            } },
+        } },
+    },
+    ["Scarlet Monastery: Library"] = {
+        { floor = 1, x = 0.593, y = 0.122, spots = {
+            { name = "Mythology of the Titans", quests = {
+                { id = 1050, name = "Mythology of the Titans", dungeon = "Scarlet Monastery: Library", acts = { "loot" }, item = 5536, itemName = "Mythology of the Titans" },
+            } },
+        } },
+        { floor = 1, x = 0.822, y = 0.140, spots = {
+            { name = "Compendium of the Fallen", quests = {
+                { id = 1049, name = "Compendium of the Fallen", dungeon = "Scarlet Monastery: Library", acts = { "loot" }, item = 5535, itemName = "Compendium of the Fallen" },
+            } },
+        } },
+        { floor = 1, x = 0.454, y = 0.322, spots = {
+            { name = "Beginnings of the Undead Threat", quests = {
+                { id = 1160, name = "Test of Lore", dungeon = "Scarlet Monastery: Library", main = 1394, acts = { "loot" }, item = 5861, itemName = "Beginnings of the Undead Threat" },
+            } },
+        } },
+    },
+    ["Shadowfang Keep"] = {
+        { floor = 1, x = 0.336, y = 0.550, spots = {
+            { name = "Jordan's Hammer", quests = {
+                { id = 1654, name = "The Test of Righteousness", dungeon = "Shadowfang Keep", main = 1806, acts = { "loot" }, item = 6895, itemName = "Jordan's Smithing Hammer" },
+            } },
+        } },
+        { floor = 1, x = 0.558, y = 0.622, spots = {
+            { name = "Deathstalker Vincent", quests = {
+                { id = 1098, name = "Deathstalkers in Shadowfang", dungeon = "Shadowfang Keep", acts = { "end" } },
+            } },
+        } },
+        { floor = 3, x = 0.472, y = 0.793, spots = {
+            { name = "The Book of Ur", quests = {
+                { id = 1013, name = "The Book of Ur", dungeon = "Shadowfang Keep", acts = { "loot" }, item = 6283, itemName = "The Book of Ur" },
+            } },
+        } },
+    },
+    ["Stratholme: Living"] = {
+        { floor = 1, x = 0.310, y = 0.408, spots = {
+            { name = "Malor's Strongbox", quests = {
+                { id = 5122, name = "The Medallion of Faith", dungeon = "Stratholme: Living", acts = { "loot" }, item = 12845, itemName = "Medallion of Faith" },
+            } },
+        } },
+        { floor = 1, x = 0.307, y = 0.818, spots = {
+            { name = "Scarlet Archive", quests = {
+                { id = 5251, name = "The Archivist", dungeon = "Stratholme: Living", acts = { "use" } },
+            } },
+            { name = "Unfinished Painting", quests = {
+                { id = 5848, name = "Of Love and Family", dungeon = "Stratholme: Living", acts = { "loot" }, item = 14679, itemName = "Of Love and Family" },
+            } },
+        } },
+    },
+    ["Stratholme: Undead"] = {
+        { floor = 1, x = 0.695, y = 0.146, spots = {
+            { name = "Scourge Data", quests = {
+                { id = 5213, name = "The Active Agent", dungeon = "Stratholme: Undead", acts = { "loot" }, item = 13176, itemName = "Scourge Data" },
+            } },
+        } },
+        { floor = 1, x = 0.414, y = 0.258, spots = {
+            { name = "Menethil's Gift", quests = {
+                { id = 5463, name = "Menethil's Gift", dungeon = "Stratholme: Undead", acts = { "end" } },
+            } },
+        } },
+        { floor = 1, x = 0.803, y = 0.463, spots = {
+            { name = "Scourge Data", quests = {
+                { id = 5213, name = "The Active Agent", dungeon = "Stratholme: Undead", acts = { "loot" }, item = 13176, itemName = "Scourge Data" },
+            } },
+        } },
+        { floor = 1, x = 0.530, y = 0.520, spots = {
+            { name = "Scourge Data", quests = {
+                { id = 5213, name = "The Active Agent", dungeon = "Stratholme: Undead", acts = { "loot" }, item = 13176, itemName = "Scourge Data" },
+            } },
+        } },
+        { floor = 1, x = 0.678, y = 0.729, spots = {
+            { name = "Aurius", quests = {
+                { id = 5122, name = "The Medallion of Faith", dungeon = "Stratholme: Undead", main = 5125, acts = { "start", "end" } },
+                { id = 5125, name = "Aurius' Reckoning", dungeon = "Stratholme: Undead", acts = { "start", "end" } },
+            } },
+        } },
+    },
+    ["Sunken Temple"] = {
+        { floor = 1, x = 0.501, y = 0.358, spots = {
+            { name = "Altar of Hakkar", quests = {
+                { id = 3446, name = "Into the Depths", dungeon = "Sunken Temple", acts = { "end" } },
+            } },
+        } },
+        { floor = 1, x = 0.501, y = 0.477, spots = {
+            { name = "Idol of Hakkar", quests = {
+                { id = 3447, name = "Secret of the Circle", dungeon = "Sunken Temple", acts = { "end" } },
+            } },
+        } },
+        { floor = 1, x = 0.719, y = 0.803, spots = {
+            { name = "Essence Font", quests = {
+                { id = 3373, name = "The Essence of Eranikus", dungeon = "Sunken Temple", acts = { "end" } },
+            } },
+        } },
+    },
+    ["Uldaman"] = {
+        { floor = 1, x = 0.207, y = 0.341, spots = {
+            { name = "Tablet of Will", quests = {
+                { id = 1139, name = "The Lost Tablets of Will", dungeon = "Uldaman", acts = { "loot" }, item = 5824, itemName = "Tablet of Will" },
+            } },
+            { name = "Shadowforge Cache", quests = {
+                { id = 2201, name = "Find the Gems", dungeon = "Uldaman", acts = { "loot" }, item = 7669, itemName = "Shattered Necklace Ruby" },
+                { id = 2339, name = "Find the Gems and Power Source", dungeon = "Uldaman", acts = { "loot" }, item = 7669, itemName = "Shattered Necklace Ruby" },
+            } },
+        } },
+        { floor = 1, x = 0.533, y = 0.638, spots = {
+            { name = "Remains of a Paladin", quests = {
+                { id = 2200, name = "Back to Uldaman", dungeon = "Uldaman", acts = { "end" } },
+                { id = 2201, name = "Find the Gems", dungeon = "Uldaman", acts = { "start" } },
+                { id = 2284, name = "Necklace Recovery, Take 2", dungeon = "Uldaman", acts = { "end" } },
+                { id = 2318, name = "Translating the Journal", dungeon = "Uldaman", main = 2339, acts = { "start" } },
+            } },
+            { name = "Hammertoe Grez", quests = {
+                { id = 721, name = "A Sign of Hope", dungeon = "Uldaman", acts = { "end" } },
+                { id = 722, name = "Amulet of Secrets", dungeon = "Uldaman", acts = { "start" } },
+            } },
+        } },
+        { floor = 1, x = 0.316, y = 0.719, spots = {
+            { quests = {
+                { id = 2240, name = "The Hidden Chamber", dungeon = "Uldaman", acts = { "explore" } },
+            } },
+        } },
+        { floor = 1, x = 0.638, y = 0.948, spots = {
+            { name = "Baelog", quests = {
+                { id = 2398, name = "The Lost Dwarves", dungeon = "Uldaman", acts = { "end" } },
+                { id = 2240, name = "The Hidden Chamber", dungeon = "Uldaman", acts = { "start" } },
+            } },
+            { name = "Conspicuous Urn", quests = {
+                { id = 2201, name = "Find the Gems", dungeon = "Uldaman", acts = { "loot" }, item = 7671, itemName = "Shattered Necklace Topaz" },
+                { id = 2339, name = "Find the Gems and Power Source", dungeon = "Uldaman", acts = { "loot" }, item = 7671, itemName = "Shattered Necklace Topaz" },
+            } },
+        } },
+        { floor = 2, x = 0.501, y = 0.331, spots = {
+            { name = "The Discs of Norgannon", quests = {
+                { id = 2278, name = "The Platinum Discs", dungeon = "Uldaman", acts = { "start", "end" } },
+                { id = 2279, name = "The Platinum Discs", dungeon = "Uldaman", acts = { "start" } },
+                { id = 2280, name = "The Platinum Discs", dungeon = "Uldaman", acts = { "start" } },
+            } },
+        } },
+    },
+}
+-- END mapquests

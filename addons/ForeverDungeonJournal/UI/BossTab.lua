@@ -948,7 +948,7 @@ end
 function FDJ.ShowsItemsTBD(name)
     if name == "The Stockade" then return false end
     local d = FDJ.DB and FDJ.DB[name]
-    if not d then return false end
+    if not d or d.questChainPage then return false end
     if d.itemsTBD or d.fullItemsTBD then return true end
     for _, boss in ipairs(d.bosses or {}) do
         if boss.loot and #boss.loot > 0 then return false end
@@ -992,7 +992,7 @@ function FDJ.RefreshBossList()
                 end
             end
 
-            local boss = dungeon.bosses[i]
+            local boss = (FDJ.RPGBossView and FDJ.RPGBossView(selectedDungeon, dungeon.bosses[i])) or dungeon.bosses[i]
             button.index = i
             button.name:SetText(BossName(boss.name))
 
@@ -1074,6 +1074,7 @@ function FDJ.RefreshLoot()
     local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
     local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
     if not boss then return end
+    boss = (FDJ.RPGBossView and FDJ.RPGBossView(selectedDungeon, boss)) or boss
 
     local isStockade = FDJ.ShowsItemsTBD(selectedDungeon)
     if frame.stockadeItemsTBD then
@@ -1131,8 +1132,13 @@ function FDJ.RefreshLoot()
     end
 
     if frame.selectedBossDescription then
-        frame.selectedBossDescription:SetText("")
-        frame.selectedBossDescription:Hide()
+        if boss.fdjRPGHint then
+            frame.selectedBossDescription:SetText(boss.fdjRPGHint)
+            frame.selectedBossDescription:Show()
+        else
+            frame.selectedBossDescription:SetText("")
+            frame.selectedBossDescription:Hide()
+        end
     end
     if frame.lootTitle then
         frame.lootTitle:SetText("")
@@ -1162,6 +1168,19 @@ function FDJ.RefreshLoot()
             local slotMatch = (FDJ.selectedSlotFilter == "ALL") or ItemMatchesSlot(item, FDJ.selectedSlotFilter)
             if classMatch and slotMatch then
                 table.insert(filteredShared, item)
+            end
+        end
+    end
+
+    local probableList = boss.probableLoot
+    local probableCount = probableList and #probableList or 0
+    local filteredProbable = {}
+    if probableCount > 0 and FDJ.lootProbableExpanded then
+        for _, item in ipairs(probableList) do
+            local classMatch = (FDJ.selectedClassFilter == "ALL") or ItemMatchesClass(item, FDJ.selectedClassFilter)
+            local slotMatch = (FDJ.selectedSlotFilter == "ALL") or ItemMatchesSlot(item, FDJ.selectedSlotFilter)
+            if classMatch and slotMatch then
+                table.insert(filteredProbable, item)
             end
         end
     end
@@ -1329,6 +1348,58 @@ function FDJ.RefreshLoot()
         if frame.lootSharedLine then frame.lootSharedLine:Hide() end
     end
 
+    -- Probable Loot Divider & Items
+    if probableCount > 0 then
+        local probableY = totalH
+        local line = frame.lootProbableLine
+        if not line then
+            line = CreateFrame("Button", nil, frame.lootContent)
+            frame.lootProbableLine = line
+            line:SetHeight(24)
+            line.rule = line:CreateTexture(nil, "BACKGROUND")
+            line.rule:SetHeight(1)
+            line.rule:SetPoint("BOTTOMLEFT", 0, 0)
+            line.rule:SetPoint("BOTTOMRIGHT", 0, 0)
+            line.rule:SetColorTexture(0.48, 0.40, 0.27, 0.6)
+            line.icon = line:CreateTexture(nil, "ARTWORK")
+            line.icon:SetSize(16, 16)
+            line.icon:SetPoint("LEFT", 4, 0)
+            line.text = line:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+            line.text:SetPoint("LEFT", line.icon, "RIGHT", 6, 0)
+            line.text:SetJustifyH("LEFT")
+            line:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            line:SetScript("OnClick", function()
+                FDJ.lootProbableExpanded = not FDJ.lootProbableExpanded
+                FDJ.RefreshLoot()
+            end)
+        end
+
+        local open = FDJ.lootProbableExpanded and true or false
+        line.text:SetText(L("PROBABLE_LOOT", probableCount))
+        line.icon:SetTexture(open and "Interface\\Buttons\\UI-MinusButton-Up" or "Interface\\Buttons\\UI-PlusButton-Up")
+        line:ClearAllPoints()
+        line:SetPoint("TOPLEFT", frame.lootContent, "TOPLEFT", 0, -probableY)
+        line:SetPoint("RIGHT", frame.lootContent, "RIGHT", 0, 0)
+        line:Show()
+
+        totalH = probableY + LINE_STEP
+
+        if open then
+            for k, item in ipairs(filteredProbable) do
+                rowIndex = rowIndex + 1
+                local row = FDJ.lootRows[rowIndex]
+                if not row then
+                    row = FDJ.MakeLootRow(frame.lootContent)
+                    FDJ.lootRows[rowIndex] = row
+                end
+                SetupRow(row, item, probableY + LINE_STEP + (k - 1) * ROW_STEP)
+            end
+            totalH = totalH + (#filteredProbable * ROW_STEP)
+        end
+    else
+        if frame.lootProbableLine then frame.lootProbableLine:Hide() end
+    end
+
     -- Hide unused rows
     for i = rowIndex + 1, #FDJ.lootRows do
         local row = FDJ.lootRows[i]
@@ -1342,8 +1413,8 @@ function FDJ.RefreshLoot()
     FDJ.UpdateScrollBarVisibility(frame.lootScroll, totalH)
 
     if frame.noLootMessage then
-        local totalRecorded = (#(boss.loot or {})) + sharedCount
-        local totalVisible = #filteredLoot + #filteredShared
+        local totalRecorded = (#(boss.loot or {})) + sharedCount + probableCount
+        local totalVisible = #filteredLoot + #filteredShared + #filteredProbable
         if totalVisible == 0 and totalRecorded > 0 then
             frame.noLootMessage:SetText(L("NO_LOOT_MATCHES_FILTER") or "No loot matches current filters.")
             frame.noLootMessage:Show()
@@ -1402,6 +1473,7 @@ function FDJ.RefreshBossTactics()
     local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
     local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
     if not boss then return end
+    boss = (FDJ.RPGBossView and FDJ.RPGBossView(selectedDungeon, boss)) or boss
 
     local tactics = FDJ.BOSS_TACTICS and FDJ.BOSS_TACTICS[selectedDungeon] and FDJ.BOSS_TACTICS[selectedDungeon][boss.name]
     local theme = (FDJ.THEMES and FDJ.THEMES[selectedDungeon]) or (FDJ.THEMES and FDJ.THEMES["Hall of Thanes"])
@@ -1583,6 +1655,7 @@ function FDJ.UpdateSelectedBossHeader()
     local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
     local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
     if not boss then return end
+    boss = (FDJ.RPGBossView and FDJ.RPGBossView(selectedDungeon, boss)) or boss
 
     frame.selectedBossName:SetText(BossName(boss.name))
     frame.selectedBossName:SetTextColor(1.0, 1.0, 1.0)

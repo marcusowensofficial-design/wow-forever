@@ -545,6 +545,168 @@ do
 end
 -- END drownedcity
 
+-- BEGIN sleepingbag
+-- The Cozy Sleeping Bag (WoW Forever 1.60.1): its quest chain as a page of
+-- its own (questChainPage), opened from the button left of Favourites on the
+-- journal's home page. The Alliance start at the Burned-Out Remains in
+-- Westfall and follow the note to The Barrens, the Horde the other way round;
+-- from Stepping Stones on, the chain is the same for both. Every step starts
+-- and ends at an object. Quests, objects, spawns, levels and XP: Forever
+-- client tables via Polestar forever-db; rewards and the way to each spot:
+-- Wowhead (Forever).
+do
+    local PAGE = "Cozy Sleeping Bag"
+    FDJ.SLEEPING_BAG_PAGE = PAGE
+    FDJ.SLEEPING_BAG_ITEM = 211527
+
+    -- Objects, not NPCs: nothing to target from the map.
+    local function Spot(mapID, x, y, label, detail)
+        return { markerType = "location", mapID = mapID, x = x, y = y, label = label, detail = detail }
+    end
+    local BARRENS_REMAINS = Spot(1413, 0.463, 0.739, "Burned-Out Remains — The Barrens", "The burnt tower on the road south of Camp Taurajo")
+    local WESTFALL_REMAINS = Spot(1436, 0.373, 0.506, "Burned-Out Remains — Westfall", "The cart wreckage at the Alexston Farmstead")
+    local BARRENS_PLANK = Spot(1413, 0.464, 0.738, "Nailed Plank — The Barrens", "Beside the Burned-Out Remains, south of Camp Taurajo")
+    local WESTFALL_PLANK = Spot(1436, 0.374, 0.509, "Nailed Plank — Westfall", "Beside the Burned-Out Remains at the Alexston Farmstead")
+    local POCKET_LITTER = Spot(1442, 0.408, 0.526, "Pocket Litter — Stonetalon Mountains", "On a box at the abandoned camp")
+    local MOUND = Spot(1442, 0.396, 0.499, "Mound of Dirt — Stonetalon Mountains", "Below the cliff north of the abandoned camp")
+    local FIGURINE = Spot(1432, 0.494, 0.129, "Carved Figurine — Stonewrought Dam", "On the carved heads of the dam, facing the Wetlands")
+    local BAG = Spot(1424, 0.857, 0.522, "Messenger Bag — Thoradin's Wall", "Hanging outside the room in Thoradin's Wall")
+    local SATCHEL = Spot(1424, 0.857, 0.522, "Hastily Rolled-Up Satchel — Thoradin's Wall", "Right under the Messenger Bag")
+
+    -- Where each step is picked up and handed in, written out with the
+    -- coordinates (shown on the step's page under Starts at / Turn in).
+    local AT_BARRENS = "Burned-Out Remains at the burnt tower on the road south of Camp Taurajo, The Barrens (46.3, 73.9)"
+    local AT_WESTFALL = "Burned-Out Remains in the cart wreckage at the Alexston Farmstead, Westfall (37.3, 50.6)"
+    local AT_LITTER = "Pocket Litter on a box at the abandoned camp, Stonetalon Mountains (40.8, 52.6)"
+    local AT_MOUND = "Mound of Dirt below the cliff north of the camp, Stonetalon Mountains (39.6, 49.9)"
+    local AT_FIGURINE = "Carved Figurine on the carved heads of the Stonewrought Dam, Loch Modan (49.4, 12.9)"
+    local AT_BAG = "Messenger Bag hanging at Thoradin's Wall, Hillsbrad Foothills (85.7, 52.2)"
+
+    FDJ.DB[PAGE] = {
+        questChainPage = true, -- Quests is its only tab
+        level = "14+",
+        location = "",
+        description = "",
+        bosses = {},
+        quests = { {
+            id = 79976, name = "This Must Be The Place", level = 32, requires = 14, faction = "Alliance",
+            objective = "Search the Hastily Rolled-Up Satchel under the Messenger Bag at Thoradin's Wall.",
+            pickup = AT_BAG,
+            turnin = "Hastily Rolled-Up Satchel, right under the Messenger Bag",
+            startMap = BAG, turninMap = SATCHEL,
+            liveXPFallback = 1950,
+            rewardItems = { {211527, "Cozy Sleeping Bag", 3}, {216619, "Student Fodder", 2} },
+        } },
+    }
+
+    -- Step 1 is a quest of its own for each faction (79007 Horde, 79008
+    -- Alliance); FDJ.SetSleepingBagFaction picks the character's.
+    local NOTE = { id = 79008, name = "... and that note you found" }
+    FDJ.QUEST_PREREQ_CHAINS[79976] = {
+        NOTE,
+        { id = 79192, name = "Stepping Stones" },
+        { id = 79980, name = "Scramble" },
+        { id = 79974, name = "Wet Job" },
+        { id = 79975, name = "Eagle's Fist" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[79007] = {
+        level = 22, requires = 14,
+        objective = "Follow the charred note from The Barrens to its twin place: the Burned-Out Remains at the Alexston Farmstead in Westfall.",
+        pickup = AT_BARRENS, turnin = AT_WESTFALL,
+        map = BARRENS_REMAINS, turninMap = WESTFALL_REMAINS,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[79008] = {
+        level = 22, requires = 14,
+        objective = "Follow the charred note from Westfall to its twin place: the Burned-Out Remains at the burnt tower south of Camp Taurajo in The Barrens.",
+        pickup = AT_WESTFALL, turnin = AT_BARRENS,
+        map = WESTFALL_REMAINS, turninMap = BARRENS_REMAINS,
+    }
+    -- Picked up from the Nailed Plank where step 1 ends (pickup and map: set
+    -- for the faction below).
+    local STEPPING = {
+        level = 24, requires = 14,
+        objective = "Find the cozy spot in the mountains between The Barrens and Desolace: the Pocket Litter at an abandoned camp in Stonetalon Mountains.",
+        turnin = AT_LITTER,
+        turninMap = POCKET_LITTER,
+        note = "Take the path north-east of Sun Rock Retreat (50.9, 52.3) up to the abandoned camp; the Pocket Litter lies on a box. Optional: light the Firepit in the middle of the camp with the Simple Wood and Flint and Tinder from this quest (Rekindle).",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[79192] = STEPPING
+    FDJ.QUEST_PREREQ_DETAILS[79980] = {
+        level = 24, requires = 14,
+        objective = "Take a hundred paces due north of the camp and find the Mound of Dirt below the cliff.",
+        pickup = AT_LITTER, turnin = AT_MOUND,
+        map = POCKET_LITTER, turninMap = MOUND,
+        note = "Head straight north from the camp, climb the hill and jump down from its edge to the Mound of Dirt. Watch your step.",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[79974] = {
+        level = 32, requires = 14,
+        objective = "Find the eagle's nest on the face of the Stonewrought Dam in Loch Modan: the Carved Figurine.",
+        pickup = AT_MOUND, turnin = AT_FIGURINE,
+        map = MOUND, turninMap = FIGURINE,
+        note = "Jump onto the carved heads of the dam, on the side facing the Wetlands, to reach the figurine. Getting there is tricky for the Horde.",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[79975] = {
+        level = 32, requires = 14,
+        objective = "Find the Messenger Bag at Thoradin's Wall, between Hillsbrad Foothills and the Arathi Highlands.",
+        pickup = AT_FIGURINE, turnin = AT_BAG,
+        map = FIGURINE, turninMap = BAG,
+        note = "Climb into Thoradin's Wall from the cart on the Hillsbrad side (87.3, 49.6), go through the room in the wall and look outside to the right: the bag hangs there.",
+    }
+
+    local PLANK = {
+        Horde = { WESTFALL_PLANK, "Nailed Plank next to the Burned-Out Remains at the Alexston Farmstead, Westfall (37.4, 50.9)" },
+        Alliance = { BARRENS_PLANK, "Nailed Plank on the side of the burnt tower south of Camp Taurajo, The Barrens (46.4, 73.8)" },
+    }
+    -- The page shows the character's faction only: its quest is that
+    -- faction's, and the journal hides the Alliance / Horde buttons on it.
+    function FDJ.SetSleepingBagFaction(faction)
+        local plank = PLANK[faction] or PLANK.Alliance
+        NOTE.id = faction == "Horde" and 79007 or 79008
+        STEPPING.map, STEPPING.pickup = plank[1], plank[2]
+        FDJ.DB[PAGE].quests[1].faction = faction == "Horde" and "Horde" or "Alliance"
+    end
+    FDJ.SetSleepingBagFaction("Alliance")
+
+    local REWARDS = FDJ.PREREQ_REWARD_ITEMS_FALLBACK
+    REWARDS[79007] = { items = { {2459, "Swiftness Potion", 1}, {3388, "Lesser Troll's Blood Elixir", 1} }, choice = false }
+    REWARDS[79008] = REWARDS[79007]
+    REWARDS[79192] = { items = { {2901, "Mining Pick", 1}, {3334, "Farmer's Shovel", 2} }, choice = true,
+        also = { {1652, "Sturdy Lunchbox", 1}, {4470, "Simple Wood", 1}, {4471, "Flint and Tinder", 1}, {221498, "Old Toolbox", 1} } }
+    REWARDS[79980] = { items = { {3463, "Silver Star", 2}, {217314, "Moonsight Rifle", 2}, {217315, "Precision Bow", 2} }, choice = true,
+        also = { {3464, "Feathered Arrow", 2}, {3465, "Exploding Shot", 2}, {216619, "Student Fodder", 2} } }
+    REWARDS[79974] = { items = { {5432, "Hickory Pipe", 0}, {20709, "Rumsey Rum Light", 1} }, choice = false }
+
+    local XP = FDJ.FOREVER_QUEST_XP_FALLBACK
+    XP[79007], XP[79008], XP[79192], XP[79980] = 1750, 1750, 1950, 200
+    XP[79974], XP[79975], XP[79976] = 2550, 2550, 1950
+    for _, id in ipairs({ 79007, 79008, 79192, 79980, 79974, 79975, 79976 }) do
+        FDJ.QUEST_SHAREABILITY_AUDIT[id] = false
+    end
+end
+-- END sleepingbag
+
+-- BEGIN glowingshard
+-- The Glowing Shard: first speak with Sputtervalve in Ratchet (the quest's
+-- objective; he has no ? over his head), then hand it in to Falla Sagewind on
+-- top of the mountain above Wailing Caverns (Forever client tables via
+-- Polestar forever-db: end NPC 8418, Sputtervalve 3442 and their spawns). The
+-- tracker's ? shows Ratchet until he has been spoken to, then Falla.
+do
+    local FALLA = { mapID = 1413, x = 0.482, y = 0.328, label = "Falla Sagewind — above Wailing Caverns", targetName = "Falla Sagewind", detail = "In a tent on top of the mountain above Wailing Caverns" }
+    for _, quest in ipairs((FDJ.DB["Wailing Caverns"] and FDJ.DB["Wailing Caverns"].quests) or {}) do
+        if quest.id == 6981 then
+            quest.objective = "Speak with Sputtervalve in Ratchet about the Glowing Shard, then deliver it to Falla Sagewind on top of the mountain above Wailing Caverns."
+            quest.turnin = "Falla Sagewind, on top of the mountain above Wailing Caverns, The Barrens (48.2, 32.8)"
+            quest.turninMap = FALLA
+            quest.objectiveMap = { mapID = 1413, x = 0.630, y = 0.372, label = "Sputtervalve — Ratchet", targetName = "Sputtervalve", detail = "By the flight master in Ratchet; he has no ? over his head" }
+            quest.objectiveWhere = "Sputtervalve, by the flight master in Ratchet (63.0, 37.2); he has no ? over his head"
+        end
+    end
+    -- Falla Sagewind was put in Thunder Bluff here by mistake.
+    FDJ.QUEST_START_MAPS[6981] = FALLA
+end
+-- END glowingshard
+
 -- BEGIN lesstext
 -- Step pages show the objective, the quest givers and where to go. Notes that only
 -- give the step's place in its chain (the chain list already shows it) or story
@@ -554,3 +716,296 @@ for _, id in ipairs({ 65, 132, 135, 141, 153, 155, 275, 276, 277, 303, 373, 389,
     if d then d.suppressDescription = true end
 end
 -- END lesstext
+
+-- BEGIN npcfloors
+-- Quest NPCs well below (-) or above (+) the ground around them, in yards:
+-- { continent, world x, world y, height }. The waypoint arrow says so near
+-- them (a crypt, Undercity under the ruins, a tower top). Generated by
+-- floors.py from the Polestar forever-db spawn heights (SOURCES.txt).
+FDJ.NPC_FLOORS = {
+    ["Apothecary Zamah"] = { { 1, -996, 277, -26 }, { 1, -995.5, 278.5, -26 }, { 1, -995.5, 280.5, -26 } },
+    ["Argent Outfitter"] = { { 0, 1580, 245, -122 }, { 0, 1586, 250, -122 } },
+    ["Argent Scout"] = { { 0, 1577, 238, -122 } },
+    ["Astarii Starseeker"] = { { 1, 9666, 2531.5, 26 }, { 1, 9667, 2532.5, 26 } },
+    ["Beetix Ficklespragg"] = { { 1, -6855.5, 740, 11 } },
+    ["Cenarion Emissary Blackhoof"] = { { 1, 1658.5, -4349, -32 } },
+    ["Clarice Foster"] = { { 1, -1033.5, 214, -25 } },
+    ["Dizzy One-Eye"] = { { 0, -14397.5, 396.5, 14 } },
+    ["Elder Skychaser"] = { { 0, -10499, 1034, 28 } },
+    ["Elenia Haydon"] = { { 0, 1588.5, 231, -112 } },
+    ["Fenstad Argyle"] = { { 0, 1591.5, 233.5, -112 } },
+    ["Godrick Farsan"] = { { 0, 1783, 60, -16 } },
+    ["Harbinger Balthazad"] = { { 0, 1596, 260, -117 } },
+    ["High Executor Hadrec"] = { { 0, 522.5, 1626.5, -20 } },
+    ["High Sorcerer Andromath"] = { { 0, -9011, 876.5, 119 } },
+    ["Innkeeper Norman"] = { { 0, 1635.5, 223.5, -106 } },
+    ["Jeremiah Payson"] = { { 0, 1595.5, 224.5, -122 } },
+    ["Kwee Q. Peddlefeet"] = { { 1, 9669.5, 2536.5, 28 }, { 1, 9670.5, 2535, 26 } },
+    ["Lunar Festival Herald"] = { { 0, 1600.5, 233, -112 } },
+    ["Malakai Cross"] = { { 1, -1008, 259, -26 }, { 1, -1007, 260.5, -26 }, { 1, -1006, 260, -26 } },
+    ["Nardstrum Copperpinch"] = { { 0, 1629, 218.5, -106 } },
+    ["Nissa Firestone"] = { { 0, -4876.5, -1149, 10 } },
+    ["Nixxrax Fillamug"] = { { 0, -14451.5, 495.5, -11 } },
+    ["Noggle Ficklespragg"] = { { 1, -6852.5, 739, 12 } },
+    ["Oglethorpe Obnoticus"] = { { 0, -14417, 411, 14 } },
+    ["Priestess Alathea"] = { { 1, 9665.5, 2520, 26 }, { 1, 9666, 2521.5, 26 } },
+    ["Sage Truthseeker"] = { { 1, -1177, 157.5, -9 }, { 1, -1176, 157.5, -9 } },
+    ["Scooty"] = { { 0, -14465, 459.5, -11 } },
+    ["Scout Riell"] = { { 0, -10505, 1033, 28 } },
+    ["Sentinel Elissa Starbreeze"] = { { 1, 6431.5, 384, 9 } },
+    ["Thurston Xane"] = { { 1, -996, 254, -36 }, { 1, -995.5, 255, -36 } },
+    ["Tyrande Whisperwind"] = { { 1, 9662.5, 2524.5, 29 }, { 1, 9662.5, 2526.5, 28 } },
+}
+-- END npcfloors
+
+-- BEGIN dalaranquests
+-- Kirin Tor quests from Archmage Lan'dalock in Dalaran (Alterac Mountains),
+-- seen in the game on 2026-11-06. Alliance for now: Dalaran is where the
+-- Alliance lands from Zephras Isle (the Horde lands in Mulgore).
+-- Their quest IDs are not public yet. Each has a stand-in ID until the game
+-- names it: the quest in the log (any language: the quest's own item among
+-- its objectives) or at the quest giver (English title). The real ID is then
+-- used and remembered (ForeverDungeonJournalDB.learnedQuestIDs).
+do
+    local LANDALOCK = { mapID = 1416, x = 0.1589, y = 0.7310, label = "Archmage Lan'dalock — Dalaran", targetName = "Archmage Lan'dalock" }
+    local ADDED = {
+        { dungeon = "Razorfen Downs", quest = {
+            id = -96901,
+            learnTitle = "The Coldbringer's Eye",
+            learnItem = 276916,
+            name = "The Coldbringer's Eye",
+            level = 42,
+            requires = 37,
+            faction = "Alliance",
+            pickup = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
+            objective = "Recover The Coldbringer's Eye from Razorfen Downs.",
+            turnin = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
+            liveXPFallback = 8600,
+            rewardSummary = "55s",
+            requiredItem = { 276916, "The Coldbringer's Eye", 1, 1, "From Amnennar the Coldbringer, the last boss of Razorfen Downs" },
+            note = "Quest giver not confirmed yet: it is handed in to Archmage Lan'dalock.",
+            startMap = LANDALOCK,
+            turninMap = LANDALOCK,
+        } },
+        { dungeon = "Zul'Farrak", quest = {
+            id = -96902,
+            learnTitle = "The Witch Doctor's Head",
+            learnItem = 277112,
+            name = "The Witch Doctor's Head",
+            level = 46,
+            requires = 40,
+            faction = "Alliance",
+            pickup = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
+            objective = "Slay Witch Doctor Zum'rah and bring Zum'rah's Head to Archmage Lan'dalock in Dalaran.",
+            turnin = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
+            liveXPFallback = 10100,
+            rewardSummary = "1g 30s",
+            requiredItem = { 277112, "Zum'rah's Head", 1, 1, "From Witch Doctor Zum'rah, Zul'Farrak" },
+            startMap = LANDALOCK,
+            turninMap = LANDALOCK,
+        } },
+    }
+
+    local pending = {} -- stand-in ID -> quest
+    for _, add in ipairs(ADDED) do
+        local d = FDJ.DB and FDJ.DB[add.dungeon]
+        if d then
+            d.quests = d.quests or {}
+            local have = false
+            for _, q in ipairs(d.quests) do
+                if q.name == add.quest.name and q.faction == add.quest.faction then have = true end
+            end
+            if not have then
+                table.insert(d.quests, add.quest)
+                pending[add.quest.id] = add.quest
+                if FDJ.QUEST_START_MAPS then FDJ.QUEST_START_MAPS[add.quest.id] = add.quest.startMap end
+            end
+        end
+    end
+
+    local function Plain(v)
+        if type(issecretvalue) == "function" and issecretvalue(v) then return nil end
+        return v
+    end
+
+    local function Saved()
+        ForeverDungeonJournalDB = ForeverDungeonJournalDB or {}
+        if type(ForeverDungeonJournalDB.learnedQuestIDs) ~= "table" then ForeverDungeonJournalDB.learnedQuestIDs = {} end
+        return ForeverDungeonJournalDB.learnedQuestIDs
+    end
+
+    -- The stand-in ID becomes the real one everywhere the journal keeps it.
+    local function Use(standIn, real, quiet)
+        local quest = pending[standIn]
+        if not quest or type(real) ~= "number" or real <= 0 then return end
+        pending[standIn] = nil
+        for _, d in pairs(FDJ.DB or {}) do
+            for _, q in ipairs((type(d) == "table" and d.quests) or {}) do
+                if q.id == standIn then q.id = real end
+            end
+        end
+        local maps = FDJ.QUEST_START_MAPS
+        if maps and maps[standIn] ~= nil then
+            if maps[real] == nil then maps[real] = maps[standIn] end
+            maps[standIn] = nil
+        end
+        Saved()[quest.learnTitle] = real
+        if not quiet then
+            if FDJ.RPGStateChanged then pcall(FDJ.RPGStateChanged) end
+            if FDJ.ScheduleQuestRefresh then pcall(FDJ.ScheduleQuestRefresh) end
+        end
+    end
+
+    local function ItemName(id)
+        local name
+        if C_Item and C_Item.GetItemNameByID then
+            local ok, n = pcall(C_Item.GetItemNameByID, id)
+            if ok then name = Plain(n) end
+        end
+        if not name and GetItemInfo then
+            local ok, n = pcall(GetItemInfo, id)
+            if ok then name = Plain(n) end
+        end
+        if not name and C_Item and C_Item.RequestLoadItemDataByID then pcall(C_Item.RequestLoadItemDataByID, id) end
+        return type(name) == "string" and name ~= "" and name or nil
+    end
+
+    -- A quest the game names (log or giver window): one of ours?
+    function FDJ.LearnQuestID(questID, title)
+        questID = tonumber(Plain(questID))
+        if not questID or questID <= 0 or not next(pending) then return end
+        for _, q in pairs(FDJ.DB or {}) do
+            for _, e in ipairs((type(q) == "table" and q.quests) or {}) do
+                if e.id == questID then return end -- already known
+            end
+        end
+        title = Plain(title)
+        local faction = UnitFactionGroup and Plain(UnitFactionGroup("player"))
+        for standIn, quest in pairs(pending) do
+            if quest.faction == "Both" or quest.faction == faction then
+                local hit = type(title) == "string" and title:lower() == quest.learnTitle:lower()
+                if not hit and quest.learnItem and C_QuestLog and C_QuestLog.GetQuestObjectives then
+                    local item = ItemName(quest.learnItem)
+                    local ok, objectives = pcall(C_QuestLog.GetQuestObjectives, questID)
+                    if item and ok and type(objectives) == "table" then
+                        for _, o in ipairs(objectives) do
+                            local text = type(o) == "table" and Plain(o.text)
+                            if type(text) == "string" and text:find(item, 1, true) then hit = true break end
+                        end
+                    end
+                end
+                if hit then return Use(standIn, questID) end
+            end
+        end
+    end
+
+    -- Learned before (any character of this account), and quests accepted
+    -- now: known before the rest of the journal hears of them.
+    local learn = CreateFrame("Frame")
+    learn:RegisterEvent("PLAYER_LOGIN")
+    learn:RegisterEvent("QUEST_ACCEPTED")
+    learn:SetScript("OnEvent", function(_, event, a, b)
+        if event == "PLAYER_LOGIN" then
+            local saved = Saved()
+            for standIn, quest in pairs(pending) do
+                if type(saved[quest.learnTitle]) == "number" then Use(standIn, saved[quest.learnTitle], true) end
+            end
+            return
+        end
+        local id = tonumber(Plain(b)) or tonumber(Plain(a))
+        if not id then return end
+        local title
+        if C_QuestLog and C_QuestLog.GetTitleForQuestID then
+            local ok, t = pcall(C_QuestLog.GetTitleForQuestID, id)
+            if ok then title = t end
+        end
+        pcall(FDJ.LearnQuestID, id, title)
+    end)
+end
+-- END dalaranquests
+
+-- BEGIN drownedloot
+-- The Drowned City as seen in the game (a stream, 2026-11-06): the bosses'
+-- levels and the drops seen so far, item IDs from the game's own item data
+-- (its hotfix cache). Primeval Elemental, fought with Deathless Marrow,
+-- drops its own loot: it has its own page after him.
+do
+    local d = FDJ.DB and FDJ.DB["The Drowned City"]
+    if d and type(d.bosses) == "table" then
+        d.fullItemsTBD = true -- only the drops seen so far
+        local LOOT = {
+            ["Zul'Alai"] = { { 274600, "Berserker Shackles", "Wrist, Mail", 3 } },
+            ["Var'Taka"] = { { 274602, "Brinebelly Leggings", "Legs, Leather", 3 } },
+            ["Captain Dreadrise"] = {
+                { 274604, "Frosty Blunderbuss", "Ranged, Gun", 3 },
+                { 274605, "Briny Sash", "Waist, Cloth", 3 },
+            },
+            ["Deathless Marrow"] = { { 274606, "Bloodspine Staff", "Two-Hand, Staff", 3 } },
+            ["Primeval Elemental"] = { { 274612, "Waterlogged Burial Shroud", "Back", 3 } },
+            ["Min'loth the Serpent"] = { { 274610, "Ritual-Binder's Gloves", "Hands, Leather", 3 } },
+        }
+        -- The rest of the dungeon's loot (the same batch of item IDs,
+        -- 274598-274615, in the game's item data): put with a boss by ID order
+        -- and required level, nobody has seen it drop yet. Shown folded under
+        -- "Not confirmed, but probable drop" on the boss page.
+        local PROBABLE = {
+            ["Zul'Alai"] = {
+                { 274598, "Bloodslash Axe", "One-Hand, Axe", 3 },
+                { 274599, "Oathbound Bracers", "Wrist, Leather", 3 },
+            },
+            ["Var'Taka"] = { { 274601, "Harpoon of Command", "Two-Hand, Polearm", 3 } },
+            ["Captain Dreadrise"] = { { 274603, "Dreadfrost Saber", "Main Hand, Sword", 3 } },
+            ["Deathless Marrow"] = { { 274607, "Viscera Spaulders", "Shoulder, Mail", 3 } },
+            ["Primeval Elemental"] = {
+                { 274611, "Robe of the Drowned", "Chest, Cloth", 3 },
+                { 274613, "Priestess Cloak", "Back", 3 },
+                { 274614, "Knucklebone Ring", "Finger", 3 },
+                { 274615, "Heart of the Primeval", "Trinket", 3 },
+            },
+            ["Min'loth the Serpent"] = {
+                { 274608, "Maw of Min'loth", "Off Hand, Shield", 3 },
+                { 274609, "Serpentbane Crown", "Head, Mail", 3 },
+            },
+        }
+        local have = false
+        for _, b in ipairs(d.bosses) do
+            if b.name == "Primeval Elemental" then have = true end
+        end
+        if not have then
+            for i, b in ipairs(d.bosses) do
+                if b.name == "Deathless Marrow" then
+                    table.insert(d.bosses, i + 1, {
+                        name = "Primeval Elemental",
+                        portraitNpcID = 270887, -- the client's "Staging Area" copy, for the picture only
+                        aliases = { "Primeval Elemental" },
+                        description = "Fought together with Deathless Marrow.",
+                        loot = {},
+                    })
+                    break
+                end
+            end
+        end
+        for _, b in ipairs(d.bosses) do
+            for _, item in ipairs(LOOT[b.name] or {}) do
+                b.loot = b.loot or {}
+                local dup = false
+                for _, listed in ipairs(b.loot) do
+                    if listed[2] == item[2] then dup = true end
+                end
+                if not dup then table.insert(b.loot, item) end
+            end
+            if PROBABLE[b.name] and not b.probableLoot then b.probableLoot = PROBABLE[b.name] end
+        end
+    end
+    if FDJ.BOSS_LEVELS then
+        FDJ.BOSS_LEVELS["The Drowned City"] = FDJ.BOSS_LEVELS["The Drowned City"] or {}
+        local levels = FDJ.BOSS_LEVELS["The Drowned City"]
+        levels["Zul'Alai"] = "37"
+        levels["Var'Taka"] = "38"
+        levels["Captain Dreadrise"] = "38"
+        levels["Deathless Marrow"] = "39"
+        levels["Primeval Elemental"] = "38"
+        levels["Min'loth the Serpent"] = "40"
+    end
+end
+-- END drownedloot

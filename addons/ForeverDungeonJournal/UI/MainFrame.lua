@@ -330,11 +330,28 @@ local function UpdateModeTabs()
             frame.dungeonPrepButton:SetBackdropColor(0.12, 0.115, 0.105, 0.95)
         end
     end
+    if FDJ.RPGStyleMapTab then FDJ.RPGStyleMapTab(frame.mapTab, selectedDungeon) end
 end
 
 local function UpdateDungeonHeaderTabs()
     SyncMainState()
     if not frame or not frame.bossesTab or not frame.questsTab then return end
+
+    local currentDungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+    if currentDungeon and currentDungeon.questChainPage then
+        frame.bossesTab:Hide()
+        frame.questsTab:Show()
+        frame.questsTab:ClearAllPoints()
+        frame.questsTab:SetSize(108, 30)
+        frame.questsTab:SetPoint("TOPRIGHT", -13, -14)
+        if frame.mapTab then frame.mapTab:Hide() end
+        if frame.dungeonRouteButton then frame.dungeonRouteButton:Hide() end
+        if frame.dungeonPrepButton then frame.dungeonPrepButton:Hide() end
+        if frame.dungeonMapPanel then frame.dungeonMapPanel:Hide() end
+        if frame.dungeonRoutePanel then frame.dungeonRoutePanel:Hide() end
+        if frame.dungeonPrepPanel then frame.dungeonPrepPanel:Hide() end
+        return
+    end
 
     -- All dungeons now use the same larger two-tab layout.  The experimental
     -- dungeon-map tab is disabled for now until the map presentation is ready.
@@ -434,6 +451,7 @@ local function UpdateDungeonHeaderTabs()
             frame.mapTab.text:SetJustifyH("CENTER")
         end
     end
+    if FDJ.RPGStyleMapTab then FDJ.RPGStyleMapTab(frame.mapTab, selectedDungeon) end
 end
 
 local function ApplyTheme()
@@ -785,6 +803,13 @@ RefreshAll = function()
     if selectedQuest > #quests then selectedQuest = 1 end
     if selectedBoss > #dungeon.bosses then selectedBoss = 1 end
 
+    if dungeon.questChainPage then
+        if selectedMode ~= "quests" then FDJ.modeBeforeQuestChain = selectedMode end
+        selectedMode = "quests"
+    elseif FDJ.modeBeforeQuestChain then
+        selectedMode = FDJ.modeBeforeQuestChain
+        FDJ.modeBeforeQuestChain = nil
+    end
     SetMode(selectedMode)
 end
 
@@ -2401,6 +2426,9 @@ local function CreateMainFrame()
 
     frame.hordeQuestButton = CreateFactionButton("Horde", -10, FDJ.HORDE_ICON)
     frame.allianceQuestButton = CreateFactionButton("Alliance", -66, FDJ.ALLIANCE_ICON)
+    if FDJ.CreateQuestTrackButton then
+        FDJ.CreateQuestTrackButton(frame, questLeft)
+    end
 
     local questScroll = CreateFrame(
         "ScrollFrame",
@@ -2495,6 +2523,12 @@ local function CreateMainFrame()
     frame.selectedQuestComplete:SetSize(24, 24)
     frame.selectedQuestComplete:SetPoint("TOPRIGHT", -16, -11)
     frame.selectedQuestComplete:Hide()
+
+    if FDJ.CreateTurnInButton then
+        frame.selectedQuestTurnIn = FDJ.CreateTurnInButton(questInset, 34)
+        frame.selectedQuestTurnIn:SetPoint("CENTER", frame.selectedQuestComplete, "CENTER", -2, -2)
+        frame.selectedQuestTurnIn:SetFrameLevel(questInset:GetFrameLevel() + 6)
+    end
 
     frame.questShareButton = CreateFrame("Button", nil, questInset, "BackdropTemplate")
     frame.questShareButton:SetSize(76, 24)
@@ -2725,6 +2759,10 @@ local function CreateMainFrame()
         if self.mapLocation then
             HideItemTooltip()
             HideComparisonTooltips()
+            if self.mapLocation.dungeon and FDJ.ShowQuestSpotOnDungeonMap then
+                FDJ.ShowQuestSpotOnDungeonMap(self.mapLocation)
+                return
+            end
             FDJ.MapMarkers.ShowRecordedLocationOnMap(self.mapLocation, self.mapLocation.label)
             return
         end
@@ -2806,7 +2844,9 @@ local function CreateMainFrame()
     end
     local function QuestTurninMapButtonOpenMap(self)
         local loc = self.turninLocation
-        if loc and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
+        if loc and loc.dungeon and FDJ.ShowTurnInOnDungeonMap then
+            FDJ.ShowTurnInOnDungeonMap(loc.dungeon, loc, self.questTitle, self.questID)
+        elseif loc and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
             FDJ.MapMarkers.ShowRecordedLocationOnMap(loc, loc.label)
         end
     end

@@ -2567,6 +2567,7 @@ FDJ.DB["Razorfen Kraul"] = {
                 {6694, "Heart of Agamaggan", "Off Hand, Shield", 3},
                 {6692, "Pronged Reaver", "One-Hand, Axe", 3},
                 {273103, "Blueprint: Arcane Salvager", "Blueprint", 2},
+                {17008, "Small Scroll", "Quest Item", 1},
             },
         },
         {

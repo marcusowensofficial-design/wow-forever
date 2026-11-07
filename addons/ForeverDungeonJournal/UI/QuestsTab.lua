@@ -627,6 +627,19 @@ local function MakeQuestButton(parent)
     button.check:SetPoint("TOPRIGHT", button, "TOPRIGHT", -8, -8)
     button.check:Hide()
 
+    if FDJ.CreateTurnInButton then
+        button.turnIn = FDJ.CreateTurnInButton(button, 44)
+        button.turnIn:SetPoint("CENTER", button, "TOPRIGHT", -26, -24)
+        button.turnIn:SetFrameLevel(button:GetFrameLevel() + 6)
+    end
+    if button.turnIn then
+        button.turnInLabel = button:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+        button.turnInLabel:SetPoint("RIGHT", button.turnIn, "LEFT", 3, 0)
+        button.turnInLabel:SetJustifyH("RIGHT")
+        button.turnInLabel:SetTextColor(0.30, 1.00, 0.36)
+        button.turnInLabel:Hide()
+    end
+
     button.allianceIcon = button:CreateTexture(nil, "OVERLAY")
     button.allianceIcon:SetSize(20, 20)
     button.allianceIcon:SetPoint("TOPRIGHT", button, "TOPRIGHT", -50, -8)
@@ -741,7 +754,7 @@ local function MakeQuestButton(parent)
     button.chainRows = {}
 
     button:SetScript("OnClick", function(self)
-        if FDJ.TryLinkQuest and FDJ.TryLinkQuest(self.questID, self.name and self.name:GetText(), self.quest and self.quest.level) then
+        if not self.fdjRPGHidden and FDJ.TryLinkQuest and FDJ.TryLinkQuest(self.questID, self.name and self.name:GetText(), self.quest and self.quest.level) then
             return
         end
         SelectQuest(self.questIndex)
@@ -802,14 +815,33 @@ local function MakeQuestRewardButton(parent)
             end
         end
         if not self.item then return end
-        if not self.item[1] or self.item[1] <= 0 then return end
-        local _, link = FDJ.ItemInfo(self.item[1])
-        if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
-            local used = ChatEdit_InsertLink(link)
-            if used then return end
+        if self.item[1] and self.item[1] > 0 then
+            local _, link = FDJ.ItemInfo(self.item[1])
+            if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
+                local used = ChatEdit_InsertLink(link)
+                if used then return end
+            end
+            if link and IsModifiedClick and IsModifiedClick("DRESSUP") and DressUpItemLink then
+                DressUpItemLink(link)
+                return
+            end
         end
-        if link and IsModifiedClick and IsModifiedClick("DRESSUP") and DressUpItemLink then
-            DressUpItemLink(link)
+        if self.fdjMapLocation then
+            HideItemTooltip()
+            HideComparisonTooltips()
+            local src = self.fdjMapLocation
+            if src.dungeon and FDJ.ShowQuestSpotOnDungeonMap then
+                FDJ.ShowQuestSpotOnDungeonMap(src)
+                return
+            end
+            if FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
+                local loc = {
+                    mapID = src.mapID, x = src.x, y = src.y, markerType = src.markerType,
+                    label = FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(src.label) or src.label,
+                    npcName = FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(src.npcName) or src.npcName,
+                }
+                FDJ.MapMarkers.ShowRecordedLocationOnMap(loc, loc.label)
+            end
         end
     end)
 
@@ -846,6 +878,9 @@ local function UpdateFactionButtons()
 
     Style(frame.allianceQuestButton, selectedQuestFaction == "Alliance", "Alliance")
     Style(frame.hordeQuestButton, selectedQuestFaction == "Horde", "Horde")
+    local single = FDJ.DB[selectedDungeon] and FDJ.DB[selectedDungeon].questChainPage
+    frame.allianceQuestButton:SetShown(not single)
+    frame.hordeQuestButton:SetShown(not single)
 end
 
 local function BuildVisibleQuestIndexes()
@@ -870,6 +905,12 @@ local function BuildVisibleQuestIndexes()
 
     if not selectedVisible then
         selectedQuest = FDJ.visibleQuestIndexes[1] or 1
+        for _, index in ipairs(FDJ.visibleQuestIndexes) do
+            if not (FDJ.RPGQuestHidden and FDJ.RPGQuestHidden(selectedDungeon, quests[index])) then
+                selectedQuest = index
+                break
+            end
+        end
         ForeverDungeonJournalDB.lastQuest = selectedQuest
     end
 end
@@ -905,20 +946,38 @@ RefreshQuestList = function()
             end
 
             local quest = quests[questIndex]
+            local rpgHidden = FDJ.RPGQuestHidden and FDJ.RPGQuestHidden(selectedDungeon, quest) or false
+            button.fdjRPGHidden = rpgHidden
             local complete = IsQuestFinished(quest.id)
             local inLog = IsQuestInLog(quest.id)
+            local ready = complete and inLog and not (FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(quest.id))
 
             button.questIndex = questIndex
-            button.name:SetText(QuestField(quest.id, "name", quest.name))
-            button.meta:SetText(L("AVAILABLE_FROM_LEVEL", quest.requires))
+            if button.turnInLabel then
+                button.turnInLabel:SetText(L("TURN_IN_LABEL"))
+                button.turnInLabel:SetShown(ready == true)
+                button.fdjTextRoom = ready and math.max(120, math.min(182, 203 - (button.turnInLabel:GetStringWidth() or 0))) or 182
+                button.name:SetWidth(button.fdjTextRoom)
+                button.meta:SetWidth(button.fdjTextRoom)
+            end
+            button.name:SetText(rpgHidden and "???" or QuestField(quest.id, "name", quest.name))
+            button.meta:SetText(rpgHidden and "" or L("AVAILABLE_FROM_LEVEL", quest.requires))
             local titleHeight = math.max(14, button.name:GetStringHeight() or 14)
             local metaHeight = math.max(12, button.meta:GetStringHeight() or 12)
             local baseRowHeight = math.max(48, 9 + titleHeight + 5 + metaHeight + 10)
             local rowHeight = baseRowHeight
 
             button.questID = quest.id
-            local rawChain = GetQuestPrereqChain(quest)
+            local rawChain = (not rpgHidden) and GetQuestPrereqChain(quest) or nil
             local chain = rawChain
+
+            local rowIconOffset = (button.meta:GetStringWidth() or 0) + 6
+            if chain and button.chainToggle then rowIconOffset = rowIconOffset + (button.chainToggle:GetWidth() or 20) + 4 end
+            if FDJ.SetRowDungeonIcon then
+                FDJ.SetRowDungeonIcon(button, (not rpgHidden) and (quest.startsInDungeon or ((not chain) and (FDJ.StartsInsideDungeon(quest.pickup)
+                    or (FDJ.StartItemDropsIn and FDJ.StartItemDropsIn(quest, selectedDungeon))))
+                    or (chain and FDJ.ChainStartsInside and FDJ.ChainStartsInside(quest, selectedDungeon) == true)), rowIconOffset)
+            end
 
             local chainExpanded = chain and FDJ.expandedQuestChains[quest.id] == true
 
@@ -1114,6 +1173,20 @@ RefreshQuestList = function()
                     button.classIcon:SetPoint("TOPRIGHT", button, "TOPRIGHT", -31, iconTopY)
                 end
             end
+            if rpgHidden then
+                button.allianceIcon:Hide()
+                button.hordeIcon:Hide()
+                if button.classIcon then button.classIcon:Hide() end
+            end
+            if button.icon and button.icon.SetDesaturated then button.icon:SetDesaturated(rpgHidden) end
+            if ready and button.turnIn then
+                button.allianceIcon:Hide()
+                button.hordeIcon:Hide()
+                if button.classIcon and button.classIcon:IsShown() then
+                    button.classIcon:ClearAllPoints()
+                    button.classIcon:SetPoint("TOPRIGHT", button, "TOPRIGHT", -52, iconTopY)
+                end
+            end
 
             if selectedQuest == questIndex then
                 button:SetBackdropColor(unpack(theme.rowSelected))
@@ -1126,8 +1199,11 @@ RefreshQuestList = function()
             end
 
             button.meta:SetTextColor(unpack(theme.muted))
-            button.completeGlow:SetShown(complete)
-            button.check:SetShown(complete)
+            button.completeGlow:SetShown(complete and not ready)
+            button.check:SetShown(complete and not (ready and button.turnIn))
+            if button.turnIn and FDJ.SetTurnInButton then
+                FDJ.SetTurnInButton(button.turnIn, ready and quest or nil, QuestField(quest.id, "name", quest.name))
+            end
             if button.UpdateHaveItLabel then button:UpdateHaveItLabel() end
             button.haveIt:SetShown(inLog and not complete)
 
@@ -1274,7 +1350,7 @@ local function UpdatePrerequisiteNavButtons()
 end
 
 function FDJ.TryLinkQuest(questID, name, level)
-    if not questID or not IsModifiedClick or not IsModifiedClick("CHATLINK") then return false end
+    if type(questID) ~= "number" or questID <= 0 or not IsModifiedClick or not IsModifiedClick("CHATLINK") then return false end
     if not ChatEdit_InsertLink then return false end
     if type(ChatEdit_GetActiveWindow) == "function" and not ChatEdit_GetActiveWindow() then return false end
     local title = name
@@ -1302,6 +1378,7 @@ function FDJ.HideStepItemButtons()
     for _, button in ipairs(f.questStepItemButtons or {}) do
         button.item = nil
         button.fdjSourceText = nil
+        button.fdjMapLocation = nil
         button:Hide()
     end
     if f.questProvidedItemHeader then f.questProvidedItemHeader:Hide() end
@@ -1323,6 +1400,7 @@ function FDJ.PlaceStepItemButtons(items, startIndex, cursorY, width)
             f.questStepItemButtons[index] = button
         end
         button.item = item
+        button.fdjMapLocation = item.map
         if FDJ.UpdateFavouriteIndicator then FDJ.UpdateFavouriteIndicator(button, item[1]) end
         button.fdjSourceText = item[4] and FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(item[4]) or item[4]
         button:SetSize(width, 42)
@@ -1417,7 +1495,11 @@ local function RefreshPrerequisiteQuestDetail(step)
     if frame.selectedQuestClass then frame.selectedQuestClass:Hide() end
     if frame.selectedQuestClassIcon then frame.selectedQuestClassIcon:Hide() end
     if frame.selectedQuestMetaClassIcon then frame.selectedQuestMetaClassIcon:Hide() end
-    frame.selectedQuestComplete:SetShown(complete)
+    local stepReady = complete and not (FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(questID))
+    frame.selectedQuestComplete:SetShown(complete and not (stepReady and frame.selectedQuestTurnIn))
+    if frame.selectedQuestTurnIn and FDJ.SetTurnInButton then
+        FDJ.SetTurnInButton(frame.selectedQuestTurnIn, stepReady and { id = questID, turnin = details.turnin, turninMap = details.turninMap } or nil, title)
+    end
     UpdatePrerequisiteNavButtons()
 
     -- Prerequisite/quest-chain steps use the same shareability control as
@@ -1505,7 +1587,7 @@ local function RefreshPrerequisiteQuestDetail(step)
         else
             body = L("QUEST_NOT_CACHED")
         end
-    elseif description and objectiveText and description ~= objectiveText then
+    elseif description and objectiveText and description ~= objectiveText and not details.suppressDescription then
         body = objectiveText .. "\n\n" .. description
     end
     frame.questDetailText:SetText(body)
@@ -1572,7 +1654,8 @@ local function RefreshPrerequisiteQuestDetail(step)
             frame.questStartsText:Show()
             if frame.questStartDungeonIcon then
                 frame.questStartDungeonIcon:Hide()
-                if FDJ.StartsInsideDungeon(pickupText) then
+                if details.startsInDungeon or FDJ.StartsInsideDungeon(pickupText)
+                    or (FDJ.StartItemDropsIn and FDJ.StartItemDropsIn(details, selectedDungeon)) then
                     FDJ.PositionInDungeonIcon()
                 end
             end
@@ -1752,17 +1835,20 @@ RefreshQuestDetail = function()
         BuildVisibleQuestIndexes()
         quest = dungeon.quests and dungeon.quests[selectedQuest]
     end
-    if not quest or not QuestMatchesFaction(quest, selectedQuestFaction) then
-        frame.selectedQuestName:SetText(L("NO_QUESTS"))
+    local rpgHiddenQuest = quest and QuestMatchesFaction(quest, selectedQuestFaction)
+        and FDJ.RPGQuestHidden and FDJ.RPGQuestHidden(selectedDungeon, quest) or false
+    if not quest or not QuestMatchesFaction(quest, selectedQuestFaction) or rpgHiddenQuest then
+        frame.selectedQuestName:SetText(rpgHiddenQuest and "???" or L("NO_QUESTS"))
         frame.selectedQuestMeta:SetText("")
         if frame.selectedQuestClass then frame.selectedQuestClass:Hide() end
         if frame.selectedQuestClassIcon then frame.selectedQuestClassIcon:Hide() end
         if frame.selectedQuestMetaClassIcon then frame.selectedQuestMetaClassIcon:Hide() end
         frame.selectedQuestComplete:Hide()
+        if frame.selectedQuestTurnIn then frame.selectedQuestTurnIn:Hide() end
         if frame.questShareButton then frame.questShareButton.questID = nil; frame.questShareButton:Hide() end
         if frame.questDetailScroll then frame.questDetailScroll:Hide() end
         if frame.noQuestMessage then
-            frame.noQuestMessage:SetText(L("NO_FACTION_QUESTS", selectedQuestFaction))
+            frame.noQuestMessage:SetText(rpgHiddenQuest and L("RPG_QUEST_HIDDEN") or L("NO_FACTION_QUESTS", selectedQuestFaction))
             frame.noQuestMessage:Show()
         end
         frame.questDetailText:SetText("")
@@ -1865,8 +1951,15 @@ RefreshQuestDetail = function()
     frame.questDetailScroll:SetPoint("TOPLEFT", 16, -(headerHeight + 14))
     frame.questDetailScroll:SetPoint("BOTTOMRIGHT", -31, 16)
 
+    local ready = complete and IsQuestInLog(quest.id) and not (FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(quest.id))
     if frame.selectedQuestComplete then
-        frame.selectedQuestComplete:SetShown(complete)
+        frame.selectedQuestComplete:SetShown(complete and not (ready and frame.selectedQuestTurnIn))
+    end
+    if frame.selectedQuestTurnIn and FDJ.SetTurnInButton then
+        FDJ.SetTurnInButton(frame.selectedQuestTurnIn, ready and quest or nil, QuestField(quest.id, "name", quest.name))
+    end
+    if FDJ.UpdateQuestTrackButton then
+        pcall(FDJ.UpdateQuestTrackButton, selectedDungeon, quest)
     end
 
     -- Keep the body text identical to Blizzard's parchment quest text. Only
@@ -1890,6 +1983,8 @@ RefreshQuestDetail = function()
     if quest.requiredItem and frame.questRequiredItemButton then
         cursorY = PlaceHeader(frame.questRequiredItemsHeader, cursorY)
         frame.questRequiredItemButton.item = quest.requiredItem
+        frame.questRequiredItemButton.fdjMapLocation = FDJ.MapQuestItemSpot and FDJ.MapQuestItemSpot(quest.id, quest.requiredItem[1]) or nil
+        frame.questRequiredItemButton.fdjSourceText = FreeText(quest.requiredItem[5])
         frame.questRequiredItemButton:SetWidth(math.min(260, rewardWidth))
         frame.questRequiredItemButton.icon:SetTexture(FDJ.ItemIcon(quest.requiredItem[1]))
         if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
@@ -1910,7 +2005,12 @@ RefreshQuestDetail = function()
         cursorY = cursorY + 54
     else
         if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:Hide() end
-        if frame.questRequiredItemButton then frame.questRequiredItemButton.item = nil; frame.questRequiredItemButton:Hide() end
+        if frame.questRequiredItemButton then
+            frame.questRequiredItemButton.item = nil
+            frame.questRequiredItemButton.fdjSourceText = nil
+            frame.questRequiredItemButton.fdjMapLocation = nil
+            frame.questRequiredItemButton:Hide()
+        end
     end
 
     cursorY = PlaceHeader(frame.questStartsHeader, cursorY)
@@ -2027,6 +2127,21 @@ RefreshQuestDetail = function()
     frame.questTurninText:SetTextColor(0.10, 0.065, 0.025)
     cursorY = cursorY + (frame.questTurninText:GetStringHeight() or 24)
 
+    local turninLoc = quest.turninMap or (FDJ.FindTurninLocation and FDJ.FindTurninLocation(quest))
+    if turninLoc and frame.questTurninMapButton then
+        cursorY = cursorY + 7
+        frame.questTurninMapButton:ClearAllPoints()
+        frame.questTurninMapButton.turninLocation = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(turninLoc)) or turninLoc
+        frame.questTurninMapButton.questTitle = quest.name
+        frame.questTurninMapButton.questID = quest.id
+        if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+            FDJ.MapMarkers.ConfigureTargetAndMarkAction(frame.questTurninMapButton, frame.questTurninMapButton.turninLocation, true)
+        end
+        frame.questTurninMapButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+        frame.questTurninMapButton:Show()
+        cursorY = cursorY + 31
+    end
+
     for _, button in ipairs(FDJ.questNoteRewardButtons) do
         button.item = nil
         button:Hide()
@@ -2068,6 +2183,7 @@ RefreshQuestDetail = function()
             frame.questNoteItemButton.item = noteItem
             frame.questNoteItemButton.fdjSourceText = FreeText(noteItem[4])
             frame.questNoteItemButton.mapLocation = quest.noteItemMap
+                or (FDJ.MapQuestItemSpot and FDJ.MapQuestItemSpot(quest.id, noteItem[1])) or nil
             frame.questNoteItemButton.icon:SetTexture(FDJ.ItemIcon(noteItem[1]))
             local itemName = FDJ.ItemInfo(noteItem[1])
             frame.questNoteItemButton.name:SetText(itemName or noteItem[2])
@@ -2521,6 +2637,38 @@ SelectQuest = function(index)
     SaveState()
     RefreshQuestList()
     RefreshQuestDetail()
+end
+
+function FDJ.OpenQuestPage(dungeonName, questID)
+    if not FDJ.DB or not FDJ.DB[dungeonName] then return end
+    if FDJ.SelectDungeon then FDJ.SelectDungeon(dungeonName) end
+    if FDJ.SetMode then FDJ.SetMode("quests") end
+    if SelectQuestByID then SelectQuestByID(questID) end
+end
+
+function FDJ.OpenQuestChainStep(dungeonName, questID, stepID)
+    FDJ.OpenQuestPage(dungeonName, questID)
+    local chain = FDJ.QUEST_PREREQ_CHAINS and FDJ.QUEST_PREREQ_CHAINS[questID]
+    if selectedDungeon ~= dungeonName or not chain then return end
+    local found
+    for _, step in ipairs(chain) do
+        if type(step) == "table" and step.id == stepID then found = step break end
+    end
+    if not found then return end
+    FDJ.expandedQuestChains[questID] = true
+    selectedPrereqStep = found
+    selectedPrereqParentQuestID = questID
+    SaveState()
+    RefreshQuestList()
+    RefreshQuestDetail()
+end
+
+function FDJ.OpenQuestChain(dungeonName, questID, stepID)
+    if stepID then return FDJ.OpenQuestChainStep(dungeonName, questID, stepID) end
+    FDJ.OpenQuestPage(dungeonName, questID)
+    if selectedDungeon ~= dungeonName or not (FDJ.QUEST_PREREQ_CHAINS and FDJ.QUEST_PREREQ_CHAINS[questID]) then return end
+    FDJ.expandedQuestChains[questID] = true
+    RefreshQuestList()
 end
 
 SelectQuestByID = function(questID, questName)

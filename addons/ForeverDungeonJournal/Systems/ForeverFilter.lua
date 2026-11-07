@@ -131,7 +131,7 @@ local function PlaceRaid(frame, emblem, size)
     local btn = frame.foreverRaidButton or BuildRaid(frame)
     btn:SetSize(size, size)
     btn:ClearAllPoints()
-    btn:SetPoint("LEFT", emblem, "RIGHT", size >= 40 and 12 or 8, 0)
+    btn:SetPoint("LEFT", emblem, "RIGHT", size >= 40 and 12 or (size >= 30 and 10 or 8), 0)
     btn:Show()
 end
 
@@ -148,8 +148,9 @@ local function Place(frame)
         -- emblem lines up with them.
         frame.rpgBar:ClearAllPoints()
         frame.rpgBar:SetPoint("TOPLEFT", home, "TOPLEFT", 26, -(FDJ.RPG_BAR_Y or 37))
-        btn:SetSize(22, 22)
-        emblemSize = 22
+        -- rpgicons (1.9.8): 32, was 22 (too small).
+        btn:SetSize(32, 32)
+        emblemSize = 32
         btn:SetPoint("BOTTOMLEFT", frame.rpgBar, "TOPLEFT", 2, 2)
     else
         -- Gamer Mode: no "Browse Dungeons" heading; the emblem sits alone at the
@@ -163,6 +164,10 @@ local function Place(frame)
     Paint(btn)
     btn:Show()
     PlaceRaid(frame, btn, emblemSize)
+    -- The Cozy Sleeping Bag's medallion, right of the Raids one (Systems/QuestText.lua).
+    if FDJ.PlaceSleepingBagButton and frame.foreverRaidButton then
+        pcall(FDJ.PlaceSleepingBagButton, frame, frame.foreverRaidButton, emblemSize)
+    end
 end
 
 -- The home list calls UpdateRPGHeader after every refresh; place the emblem

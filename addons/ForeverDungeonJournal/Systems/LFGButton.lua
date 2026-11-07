@@ -663,6 +663,7 @@ function FDJ.UpdateLFGButton(frame, dungeonName, dungeon)
     local b = frame and frame.lfgButton
     if not b then return end
     local valid = dungeon and not dungeon.recipeSearch and not dungeon.fdjItemCount and not dungeon.previewOnly
+        and not dungeon.questChainPage
     b.fdjDungeon = valid and dungeonName or nil
     local show = valid and not FDJ.IsLFGButtonHidden()
     b:SetShown(show and true or false)

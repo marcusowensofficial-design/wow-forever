@@ -1808,6 +1808,20 @@ FDJ.BOSS_TACTICS = {
                 { id = 15531, name = "Tidal Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "The Primeval Elemental releases a freezing ring of water around itself." },
             },
         },
+        ["Primeval Elemental"] = {
+            overview = "An ancient bound water spirit fought simultaneously alongside Deathless Marrow in the flooded courtyard. Drops its own distinct loot table once slain and unleashes [Tidal Nova] and [Water Bolt Volley].",
+            roleTips = {
+                tank = "Pick up the Primeval Elemental alongside Deathless Marrow on the pull and interrupt [Water Bolt Volley] when possible.",
+                healer = "Dispel freezing slows from [Tidal Nova] immediately so melee can reposition, and top off the group after [Water Bolt Volley].",
+                melee = "Focus the Primeval Elemental down first while kicking [Water Bolt Volley] and stepping out of [Tidal Nova].",
+                ranged = "Burn the Primeval Elemental down first from range outside [Tidal Nova] radius so it cannot overwhelm the party with water spells.",
+                dps = "Melee: Focus the Primeval Elemental down first while kicking [Water Bolt Volley] and stepping out of [Tidal Nova].\nRanged: Burn the Primeval Elemental down first from range outside [Tidal Nova] radius so it cannot overwhelm the party with water spells.",
+            },
+            abilities = {
+                { id = 15531, name = "Tidal Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Unleashes a freezing wave of abyssal water around the elemental, damaging and rooting nearby enemies." },
+                { id = 34427, name = "Water Bolt Volley", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Hurls bolts of pressurized seawater at nearby party members." },
+            },
+        },
         ["Gill"] = {
             overview = "A mutated deep-sea murloc terror lurking in the flooded grottoes of I'lalai. Gill leaps between targets with [Ravenous Leap] and secretes [Venomous Slime].",
             roleTips = {

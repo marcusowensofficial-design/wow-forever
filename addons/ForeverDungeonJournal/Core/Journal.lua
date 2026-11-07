@@ -242,6 +242,28 @@ function FDJ.ScheduleQuestRefresh()
     FDJ.questRefreshWorker:Show()
 end
 
+function FDJ.RefreshLootNow()
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if FDJ.selectedDungeon and FDJ.DB and FDJ.DB[FDJ.selectedDungeon] and frame and frame.lootContent and FDJ.RefreshLoot then
+        pcall(FDJ.RefreshLoot)
+    end
+end
+
+function FDJ.RefreshRPGPage()
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if not frame or not frame:IsShown() or frame.currentView == "home" then return end
+    if not FDJ.selectedDungeon or not FDJ.DB or not FDJ.DB[FDJ.selectedDungeon] then return end
+    if FDJ.IsDungeonLocked and FDJ.IsDungeonLocked(FDJ.selectedDungeon) then return end
+    if FDJ.UpdateModeTabs then FDJ.UpdateModeTabs() end
+    if FDJ.selectedMode == "quests" then
+        if FDJ.RefreshQuestList then FDJ.RefreshQuestList() end
+        if FDJ.RefreshQuestDetail then FDJ.RefreshQuestDetail() end
+    else
+        if FDJ.RefreshBossList then FDJ.RefreshBossList() end
+        if FDJ.RefreshLoot then FDJ.RefreshLoot() end
+    end
+end
+
 -- ============================================================
 -- SLASH COMMANDS
 -- ============================================================
@@ -468,8 +490,8 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
                 frame.homeLootExplorerPanel:Hide()
             else
                 if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
-                if FDJ.RefreshLootExplorerPanel then FDJ.RefreshLootExplorerPanel() end
                 if frame.homeLootExplorerPanel then frame.homeLootExplorerPanel:Show() end
+                if FDJ.RefreshLootExplorerPanel then FDJ.RefreshLootExplorerPanel(true) end
             end
         end
         return
@@ -612,7 +634,7 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
         elseif GetAddOnMetadata then
             addonVersion = GetAddOnMetadata("ForeverDungeonJournal", "Version")
         end
-        addonVersion = (addonVersion and tostring(addonVersion)) or "1.6.0"
+        addonVersion = (addonVersion and tostring(addonVersion)) or "1.7.1"
         print("|cffd8a83cForever Dungeon Journal|r |cffffffffv" .. addonVersion .. "|r loaded. Type |cffffffff/fj|r.")
         return
     end
