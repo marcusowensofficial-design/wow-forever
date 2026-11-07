@@ -1005,8 +1005,9 @@ function FDJ.RefreshWishlistPanel()
 
                 row:SetScript("OnClick", function(self)
                     if not self.itemData then return end
-                    local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(self.itemData.itemID, self.itemData.name, self.itemData.quality)
-                    if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
+                    local itemID = self.itemData.itemID
+                    local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.itemData.name, self.itemData.quality)
+                    if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID, self.itemData.name, self.itemData.quality) then
                         return
                     end
                     FDJ.PlayJournalOptionSound()

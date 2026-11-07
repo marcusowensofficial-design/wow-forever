@@ -857,9 +857,10 @@ function FDJ.MakeLootRow(parent)
             end
         end
         if not self.item then return end
-        local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(self.item[1], self.item[2], self.item[4])
+        local itemID = self.item[1]
+        local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.item[2], self.item[4])
 
-        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
+        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID, self.item[2], self.item[4]) then
             return
         end
     end)

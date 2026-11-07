@@ -1772,7 +1772,7 @@ local function GetOrCreateLootExplorerRow(frame, i)
         local itemID = self.itemData.itemID
         local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.itemData.name, self.itemData.quality)
 
-        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
+        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID, self.itemData.name, self.itemData.quality) then
             return
         end
 

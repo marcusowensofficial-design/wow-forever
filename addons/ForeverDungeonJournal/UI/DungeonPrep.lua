@@ -372,9 +372,9 @@ function FDJ.RefreshDungeonPrep()
                 end)
                 row:SetScript("OnClick", function(self)
                     if not self.item or not self.item[1] then return end
-                    local _, link = FDJ.ItemInfo(self.item[1])
-                    if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
-                        ChatEdit_InsertLink(link)
+                    local itemID = self.item[1]
+                    local _, link = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+                    if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID) then
                         return
                     end
                 end)
@@ -488,9 +488,9 @@ function FDJ.RefreshDungeonPrep()
             end)
             row:SetScript("OnClick", function(self)
                 if not self.item or not self.item[1] then return end
-                local _, link = FDJ.ItemInfo(self.item[1])
-                if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
-                    ChatEdit_InsertLink(link)
+                local itemID = self.item[1]
+                local _, link = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+                if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID) then
                     return
                 end
             end)

@@ -57,8 +57,60 @@ end
 function FDJ.ItemInfo(id)
     if not id then return end
     if C_Item and C_Item.GetItemInfo then
-        return C_Item.GetItemInfo(id)
+        local name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice, classID, subclassID, bindType, expacID, setID, isCrafting = C_Item.GetItemInfo(id)
+        if name then
+            return name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice, classID, subclassID, bindType, expacID, setID, isCrafting
+        end
     end
+    if GetItemInfo then
+        return GetItemInfo(id)
+    end
+end
+
+function FDJ.InsertChatLink(link)
+    if not link or link == "" then return false end
+
+    -- 1. Modern retail/12.0 ChatFrameUtil
+    if ChatFrameUtil and ChatFrameUtil.InsertLink then
+        if not C_ChatInfo or not C_ChatInfo.InChatMessagingLockdown or not C_ChatInfo.InChatMessagingLockdown() then
+            local ok, inserted = pcall(ChatFrameUtil.InsertLink, link)
+            if ok and inserted then
+                return true
+            end
+        end
+    end
+
+    -- 2. Classic/legacy ChatEdit_InsertLink
+    if ChatEdit_InsertLink then
+        local ok, inserted = pcall(ChatEdit_InsertLink, link)
+        if ok and inserted then
+            return true
+        end
+    end
+
+    -- 3. If an active edit box is open, insert directly
+    local activeEditBox = (ChatEdit_GetActiveWindow and ChatEdit_GetActiveWindow()) or (ChatFrameEditBox and ChatFrameEditBox:IsVisible() and ChatFrameEditBox)
+    if activeEditBox and activeEditBox.Insert then
+        local ok = pcall(activeEditBox.Insert, activeEditBox, link)
+        if ok then return true end
+    end
+
+    -- 4. If no chat window had focus/was open, open chat with the link pre-filled
+    if ChatFrame_OpenChat then
+        local ok = pcall(ChatFrame_OpenChat, link)
+        if ok then return true end
+    end
+
+    -- 5. Fallback: Selected chat frame editbox
+    if SELECTED_CHAT_FRAME and SELECTED_CHAT_FRAME.editBox then
+        pcall(function()
+            SELECTED_CHAT_FRAME.editBox:Show()
+            SELECTED_CHAT_FRAME.editBox:Insert(link)
+        end)
+        return true
+    end
+
+    return false
 end
 
 function FDJ.ItemIcon(id)
@@ -106,49 +158,98 @@ function FDJ.GetAuthoritativeItemLink(itemID, fallbackName, fallbackQuality)
     end
 
     if C_Item and C_Item.RequestLoadItemDataByID then
-        C_Item.RequestLoadItemDataByID(itemID)
+        pcall(C_Item.RequestLoadItemDataByID, itemID)
     end
 
-    local hex = "ffffffff"
-    local q = tonumber(fallbackQuality) or 1
-    if ITEM_QUALITY_COLORS and ITEM_QUALITY_COLORS[q] and ITEM_QUALITY_COLORS[q].hex then
-        hex = ITEM_QUALITY_COLORS[q].hex:gsub("^|c", ""):gsub("^|C", "")
-    elseif q == 0 then hex = "ff9d9d9d"
-    elseif q == 1 then hex = "ffffffff"
-    elseif q == 2 then hex = "ff1eff00"
-    elseif q == 3 then hex = "ff0070dd"
-    elseif q == 4 then hex = "ffa335ee"
-    elseif q == 5 then hex = "ffff8000"
-    end
-    local itemName = fallbackName or ("Item #" .. tostring(itemID))
-    return string.format("|c%s|Hitem:%d:0:0:0:0:0:0:0:0:0:0:0:0|h[%s]|h|r", hex, itemID, itemName)
+    return nil
 end
 
-function FDJ.HandleModifiedItemClick(link)
-    if not link then return false end
-
-    -- 1. Shift-Click: Link to Chat
-    local isChatLink = (IsModifiedClick and IsModifiedClick("CHATLINK")) or (IsShiftKeyDown and IsShiftKeyDown())
-    if isChatLink then
-        if ChatEdit_InsertLink and ChatEdit_InsertLink(link) then
-            return true
+function FDJ.HandleModifiedItemClick(link, itemID, fallbackName, fallbackQuality)
+    -- Normalize arguments: allow itemID to be passed in first argument if numeric
+    if not itemID and type(link) == "number" then
+        itemID = link
+        link = nil
+    elseif not itemID and type(link) == "string" and link:match("^%d+$") then
+        itemID = tonumber(link)
+        link = nil
+    end
+    if not itemID and type(link) == "string" then
+        local idMatch = link:match("item:(%d+)")
+        if idMatch then
+            itemID = tonumber(idMatch)
         end
-        if ChatFrame_OpenChat then
-            ChatFrame_OpenChat(link)
-            return true
-        end
-        return true -- Always consume modified Shift-click so parent button does not navigate away
     end
 
-    -- 2. Ctrl-Click: Dressing Room preview
+    -- 1. Check modifiers: Shift-Click (chat link) vs Ctrl-Click (dress up)
+    local isChatLink = (IsModifiedClick and IsModifiedClick("CHATLINK")) or (IsShiftKeyDown and IsShiftKeyDown())
     local isDressUp = (IsModifiedClick and IsModifiedClick("DRESSUP")) or (IsControlKeyDown and IsControlKeyDown())
-    if isDressUp then
+    if not isChatLink and not isDressUp then
+        return false
+    end
+
+    local function DressUp(itemLink)
+        if not itemLink then return false end
         if DressUpItemLink then
-            DressUpItemLink(link)
-            return true
+            return pcall(DressUpItemLink, itemLink)
         elseif DressUpLink then
-            DressUpLink(link)
+            return pcall(DressUpLink, itemLink)
+        end
+        return false
+    end
+
+    local function RouteLink(itemLink)
+        if not itemLink or itemLink == "" then return false end
+        if isChatLink then
+            return FDJ.InsertChatLink(itemLink)
+        elseif isDressUp then
+            return DressUp(itemLink)
+        end
+        return false
+    end
+
+    -- If link is already authoritative (from client cache), handle immediately
+    if link and link ~= "" and link:find("|Hitem:") then
+        RouteLink(link)
+        return true
+    end
+
+    -- If not cached yet, query cache once more in case it just arrived
+    if itemID then
+        local _, cachedLink = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+        if cachedLink and cachedLink ~= "" and cachedLink:find("|Hitem:") then
+            RouteLink(cachedLink)
             return true
+        end
+
+        -- Asynchronous load via ItemMixin (standard across modern WoW & Forever)
+        if Item and Item.CreateFromItemID then
+            local itemObj = Item:CreateFromItemID(itemID)
+            if itemObj and not itemObj:IsItemEmpty() then
+                itemObj:ContinueOnItemLoad(function()
+                    local loadedLink = itemObj:GetItemLink()
+                    if not loadedLink or loadedLink == "" then
+                        local _, cLink = FDJ.ItemInfo(itemID)
+                        loadedLink = cLink
+                    end
+                    if loadedLink and loadedLink ~= "" and loadedLink:find("|Hitem:") then
+                        RouteLink(loadedLink)
+                    end
+                end)
+                return true
+            end
+        end
+
+        -- Fallback: RequestLoadItemDataByID with small frame-delayed retry
+        if C_Item and C_Item.RequestLoadItemDataByID then
+            pcall(C_Item.RequestLoadItemDataByID, itemID)
+        end
+        if C_Timer and C_Timer.After then
+            C_Timer.After(0.15, function()
+                local _, loadedLink = FDJ.ItemInfo(itemID)
+                if loadedLink and loadedLink ~= "" and loadedLink:find("|Hitem:") then
+                    RouteLink(loadedLink)
+                end
+            end)
         end
         return true
     end

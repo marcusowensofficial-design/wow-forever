@@ -159,9 +159,11 @@ local function Create(frame)
     b:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
     b:SetScript("OnClick", function(self)
         -- Shift-click links the item in chat, like any item button.
-        if IsModifiedClick and IsModifiedClick("CHATLINK") and self.itemID then
+        if self.itemID then
             local _, link = ItemData(self.itemID)
-            if link and ChatEdit_InsertLink then ChatEdit_InsertLink(link) end
+            if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, self.itemID) then
+                return
+            end
         end
     end)
     return b
