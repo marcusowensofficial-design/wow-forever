@@ -1005,6 +1005,10 @@ function FDJ.RefreshWishlistPanel()
 
                 row:SetScript("OnClick", function(self)
                     if not self.itemData then return end
+                    local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(self.itemData.itemID, self.itemData.name, self.itemData.quality)
+                    if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
+                        return
+                    end
                     FDJ.PlayJournalOptionSound()
                     if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
                     if FDJ.SelectDungeon then FDJ.SelectDungeon(self.itemData.dungeon) end

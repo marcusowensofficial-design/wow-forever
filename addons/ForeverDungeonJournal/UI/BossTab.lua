@@ -857,15 +857,10 @@ function FDJ.MakeLootRow(parent)
             end
         end
         if not self.item then return end
-        local _, link = FDJ.ItemInfo(self.item[1])
+        local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(self.item[1], self.item[2], self.item[4])
 
-        if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
-            local used = ChatEdit_InsertLink(link)
-            if used then return end
-        end
-
-        if link and IsModifiedClick and IsModifiedClick("DRESSUP") and DressUpItemLink then
-            DressUpItemLink(link)
+        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
+            return
         end
     end)
 

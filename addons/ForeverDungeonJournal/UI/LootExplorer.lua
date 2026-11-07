@@ -1770,16 +1770,9 @@ local function GetOrCreateLootExplorerRow(frame, i)
     row:SetScript("OnClick", function(self)
         if not self.itemData then return end
         local itemID = self.itemData.itemID
-        local _, link = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
-        link = link or ("item:" .. tostring(itemID))
+        local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.itemData.name, self.itemData.quality)
 
-        if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
-            local used = ChatEdit_InsertLink(link)
-            if used then return end
-        end
-
-        if link and IsModifiedClick and IsModifiedClick("DRESSUP") and DressUpItemLink then
-            DressUpItemLink(link)
+        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link) then
             return
         end
 

@@ -95,6 +95,67 @@ function FDJ.ItemLinkColor(link)
     return r / 255, g / 255, b / 255
 end
 
+function FDJ.GetAuthoritativeItemLink(itemID, fallbackName, fallbackQuality)
+    if not itemID then return nil end
+    itemID = tonumber(itemID)
+    if not itemID then return nil end
+
+    local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+    if liveLink and liveLink ~= "" and liveLink:find("|Hitem:") then
+        return liveLink
+    end
+
+    if C_Item and C_Item.RequestLoadItemDataByID then
+        C_Item.RequestLoadItemDataByID(itemID)
+    end
+
+    local hex = "ffffffff"
+    local q = tonumber(fallbackQuality) or 1
+    if ITEM_QUALITY_COLORS and ITEM_QUALITY_COLORS[q] and ITEM_QUALITY_COLORS[q].hex then
+        hex = ITEM_QUALITY_COLORS[q].hex:gsub("^|c", ""):gsub("^|C", "")
+    elseif q == 0 then hex = "ff9d9d9d"
+    elseif q == 1 then hex = "ffffffff"
+    elseif q == 2 then hex = "ff1eff00"
+    elseif q == 3 then hex = "ff0070dd"
+    elseif q == 4 then hex = "ffa335ee"
+    elseif q == 5 then hex = "ffff8000"
+    end
+    local itemName = fallbackName or ("Item #" .. tostring(itemID))
+    return string.format("|c%s|Hitem:%d:0:0:0:0:0:0:0:0:0:0:0:0|h[%s]|h|r", hex, itemID, itemName)
+end
+
+function FDJ.HandleModifiedItemClick(link)
+    if not link then return false end
+
+    -- 1. Shift-Click: Link to Chat
+    local isChatLink = (IsModifiedClick and IsModifiedClick("CHATLINK")) or (IsShiftKeyDown and IsShiftKeyDown())
+    if isChatLink then
+        if ChatEdit_InsertLink and ChatEdit_InsertLink(link) then
+            return true
+        end
+        if ChatFrame_OpenChat then
+            ChatFrame_OpenChat(link)
+            return true
+        end
+        return true -- Always consume modified Shift-click so parent button does not navigate away
+    end
+
+    -- 2. Ctrl-Click: Dressing Room preview
+    local isDressUp = (IsModifiedClick and IsModifiedClick("DRESSUP")) or (IsControlKeyDown and IsControlKeyDown())
+    if isDressUp then
+        if DressUpItemLink then
+            DressUpItemLink(link)
+            return true
+        elseif DressUpLink then
+            DressUpLink(link)
+            return true
+        end
+        return true
+    end
+
+    return false
+end
+
 function FDJ.ExtractRGB(color)
     if not color then return nil end
     if type(color) == "table" then
