@@ -42,11 +42,11 @@ local MATERIAL_OPTIONS = {
 
 local BRACKET_OPTIONS = {
     { id = "ALL", label = "All Req Levels" },
-    { id = "13-20", label = "Req Lvl 13-20" },
-    { id = "20-28", label = "Req Lvl 20-28" },
-    { id = "28-38", label = "Req Lvl 28-38" },
-    { id = "38-48", label = "Req Lvl 38-48" },
-    { id = "48-60", label = "Req Lvl 48-60" },
+    { id = "1-20", label = "Req Lvl 1-20" },
+    { id = "20-30", label = "Req Lvl 20-30" },
+    { id = "30-40", label = "Req Lvl 30-40" },
+    { id = "40-50", label = "Req Lvl 40-50" },
+    { id = "50-60", label = "Req Lvl 50-60" },
 }
 
 local function GetSlotOptionsForCategory(cat)
@@ -270,6 +270,16 @@ end
 local function ParseLevelRange(text)
     if not text then return nil, nil end
     local s = tostring(text):gsub("^[Rr][Ee]?[Qq]?%s*[Ll][Ee]?[Vv]?[Ee]?[Ll]?%s*%.?%s*", ""):gsub("^[Ll][Ee]?[Vv]?[Ee]?[Ll]?%s*%.?%s*", ""):gsub("%s+[Tt][Oo]%s+", "-"):gsub("^%s*(.-)%s*$", "%1")
+    local plusLvl = s:match("^(%d+)%s*%+$") or s:match("^(%d+)%s*plus$")
+    if plusLvl then
+        local minL = tonumber(plusLvl)
+        if minL then return minL, 60 end
+    end
+    local maxLvl = s:match("^<%s*=?%s*(%d+)$")
+    if maxLvl then
+        local maxL = tonumber(maxLvl)
+        if maxL then return 1, maxL end
+    end
     local n1, n2 = s:match("^(%d+)%s*[%-%s]%s*(%d+)$")
     if not n1 then
         n1 = s:match("^(%d+)$")
@@ -293,14 +303,7 @@ function FDJ.GetItemReqLevelFast(itemID, fallbackQuestReq)
 
     -- 1. Fast static lookup from ItemReqLevels table
     if FDJ.ITEM_REQ_LEVEL and FDJ.ITEM_REQ_LEVEL[itemID] ~= nil then
-        local staticReq = FDJ.ITEM_REQ_LEVEL[itemID]
-        if staticReq and staticReq > 0 then
-            return staticReq
-        end
-        if fallbackQuestReq and fallbackQuestReq > 0 then
-            return fallbackQuestReq
-        end
-        return staticReq
+        return FDJ.ITEM_REQ_LEVEL[itemID]
     end
 
     -- 2. Tooltip scanner cache (already scanned previously)
@@ -676,16 +679,16 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
 
     local bMin, bMax = nil, nil
     if bracketFilter and bracketFilter ~= "ALL" then
-        if bracketFilter == "13-20" then
-            bMin, bMax = 13, 20
-        elseif bracketFilter == "20-28" then
-            bMin, bMax = 20, 28
-        elseif bracketFilter == "28-38" then
-            bMin, bMax = 28, 38
-        elseif bracketFilter == "38-48" then
-            bMin, bMax = 38, 48
-        elseif bracketFilter == "48-60" then
-            bMin, bMax = 48, 60
+        if bracketFilter == "1-20" or bracketFilter == "13-20" then
+            bMin, bMax = 1, 20
+        elseif bracketFilter == "20-30" or bracketFilter == "20-28" then
+            bMin, bMax = 20, 30
+        elseif bracketFilter == "30-40" or bracketFilter == "28-38" then
+            bMin, bMax = 30, 40
+        elseif bracketFilter == "40-50" or bracketFilter == "38-48" then
+            bMin, bMax = 40, 50
+        elseif bracketFilter == "50-60" or bracketFilter == "48-60" then
+            bMin, bMax = 50, 60
         else
             bMin, bMax = ParseLevelRange(bracketFilter)
         end
@@ -1167,25 +1170,25 @@ function FDJ.CreateLootExplorerUI(frame, home)
     bracketMenu:SetPoint("TOPLEFT", bracketBtn, "BOTTOMLEFT", 0, -2)
     frame.lootExplorerBracketBtn = bracketBtn
 
-    -- Custom Level Range Controls inside bracketMenu
+    -- Custom Level Range Controls inside bracketMenu (positioned cleanly below the 6 preset buttons)
     local bDiv = bracketMenu:CreateTexture(nil, "ARTWORK")
     bDiv:SetHeight(1)
-    bDiv:SetPoint("TOPLEFT", 6, -93)
-    bDiv:SetPoint("TOPRIGHT", -6, -93)
+    bDiv:SetPoint("TOPLEFT", 6, -136)
+    bDiv:SetPoint("TOPRIGHT", -6, -136)
     bDiv:SetColorTexture(0.55, 0.42, 0.22, 0.7)
     bracketMenu.customDiv = bDiv
 
     local bLabel = bracketMenu:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    bLabel:SetPoint("TOPLEFT", 8, -98)
+    bLabel:SetPoint("TOPLEFT", 8, -142)
     bLabel:SetText("Req Level Range:")
     bLabel:SetTextColor(0.85, 0.75, 0.55)
     bracketMenu.customLabel = bLabel
 
     local bBox = CreateFrame("EditBox", nil, bracketMenu, "BackdropTemplate")
     bBox:SetSize(82, 20)
-    bBox:SetPoint("TOPLEFT", 8, -114)
+    bBox:SetPoint("TOPLEFT", 8, -158)
     bBox:SetAutoFocus(false)
-    bBox:SetMaxLetters(10)
+    bBox:SetMaxLetters(12)
     bBox:SetFontObject("GameFontHighlightSmall")
     bBox:SetTextInsets(4, 4, 0, 0)
     FDJ.SetBackdrop(bBox, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 1)
@@ -1195,7 +1198,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
 
     local bPlace = bBox:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
     bPlace:SetPoint("LEFT", 5, 0)
-    bPlace:SetText("e.g. 13-15")
+    bPlace:SetText("e.g. 20-30")
     bPlace:SetTextColor(0.45, 0.42, 0.38)
     bracketMenu.customPlace = bPlace
 
@@ -1254,7 +1257,11 @@ function FDJ.CreateLootExplorerUI(frame, home)
         bPlace:Hide()
     end)
     bBox:SetScript("OnEditFocusLost", function(self)
-        bPlace:SetShown((self:GetText() or "") == "")
+        local val = self:GetText() or ""
+        bPlace:SetShown(val == "")
+        if val:gsub("%s+", "") ~= "" then
+            ApplyCustomLevelFilter()
+        end
     end)
     bBox:SetScript("OnEnterPressed", function(self)
         self:ClearFocus()
@@ -1400,12 +1407,19 @@ function FDJ.CreateLootExplorerUI(frame, home)
                 bPlace:Show()
                 FDJ.RefreshLootExplorerPanel(false)
             end)
-            if leSelectedBracket ~= "ALL" and leSelectedBracket ~= "13-20" and leSelectedBracket ~= "20-28" and leSelectedBracket ~= "28-38" and leSelectedBracket ~= "38-48" and leSelectedBracket ~= "48-60" then
+            local isPreset = false
+            for _, opt in ipairs(BRACKET_OPTIONS) do
+                if opt.id == leSelectedBracket then
+                    isPreset = true
+                    break
+                end
+            end
+            if not isPreset and leSelectedBracket ~= "ALL" then
                 bBox:SetText(leSelectedBracket)
                 bPlace:Hide()
             end
-            bracketMenu:SetHeight(142)
-            bracketMenu.scroll:SetPoint("BOTTOMRIGHT", -4, 48)
+            bracketMenu:SetHeight(188)
+            bracketMenu.scroll:SetPoint("BOTTOMRIGHT", -4, 54)
             bracketMenu:Show()
         end
     end)
