@@ -714,6 +714,27 @@ function renderFloatingTooltip(card, e, tooltip) {
     html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.1.70425)</div>`;
   }
 
+  const market = window.WOW_MARKET_SCAN_DATA;
+  const cleanBiSName = name ? String(name).toLowerCase().trim() : '';
+  const itemMarket = market?.byName?.[cleanBiSName] || (tipId ? market?.prices?.[Number(tipId)] : null);
+  if (itemMarket && itemMarket.minBuyout > 0) {
+    const formatCopperBiS = (c) => {
+      const g = Math.floor(c / 10000);
+      const s = Math.floor((c % 10000) / 100);
+      const cp = Math.floor(c % 100);
+      const parts = [];
+      if (g > 0) parts.push(`${g}g`);
+      if (s > 0 || g > 0) parts.push(`${s}s`);
+      if (cp > 0 || parts.length === 0) parts.push(`${cp}c`);
+      return parts.join(' ');
+    };
+    html += `
+      <div class="wow-tip-source" style="color: #facc15; font-weight: 700; border-top-color: rgba(250, 204, 21, 0.3);">
+        🪙 Live PvE AH Buyout: ${formatCopperBiS(itemMarket.minBuyout)}${itemMarket.qty > 1 ? ` (${itemMarket.qty} listed)` : ''}
+      </div>
+    `;
+  }
+
   tooltip.innerHTML = html;
   tooltip.removeAttribute("hidden");
   tooltip.style.display = "block";

@@ -57,6 +57,31 @@
     return 'inv_enchant_duststrange';
   }
 
+  function formatCopper(c) {
+    if (!c || c <= 0) return '0c';
+    const g = Math.floor(c / 10000);
+    const s = Math.floor((c % 10000) / 100);
+    const cp = Math.floor(c % 100);
+    const parts = [];
+    if (g > 0) parts.push(`${g}g`);
+    if (s > 0 || g > 0) parts.push(`${s}s`);
+    if (cp > 0 || parts.length === 0) parts.push(`${cp}c`);
+    return parts.join(' ');
+  }
+
+  function getMaterialAHPrice(name) {
+    if (!name || name === '—') return null;
+    const lower = name.toLowerCase();
+    const market = window.WOW_MARKET_SCAN_DATA;
+    if (!market || !market.byName) return null;
+    for (const key of Object.keys(MATERIAL_ICONS)) {
+      if (lower.includes(key)) {
+        return market.byName[key] || null;
+      }
+    }
+    return null;
+  }
+
   function renderDisenchantingTab(container, _prof) {
     const tableData = window.WOW_DISENCHANT_TABLE || [];
 
@@ -237,6 +262,8 @@
       const result = computeYield(state.ilvl, state.quality, state.slotType);
       const isWeapon = state.slotType === 'weapon';
       const yieldStr = isWeapon ? (result.weaponYield || result.armorYield) : result.armorYield;
+      const primaryPriceObj = getMaterialAHPrice(yieldStr);
+      const shardPriceObj = getMaterialAHPrice(result.shardYield);
 
       yieldOutput.innerHTML = `
         <div class="yield-result-panel">
@@ -249,6 +276,12 @@
               <span>Target:</span>
               <strong>${state.quality.toUpperCase()} ${state.slotType.toUpperCase()} (iLvl ${state.ilvl})</strong>
             </div>
+            ${primaryPriceObj?.minBuyout > 0 ? `
+              <div class="yield-skill-chip" style="background: rgba(250, 204, 21, 0.1); border-color: rgba(250, 204, 21, 0.3);">
+                <span>PvE AH Sync:</span>
+                <strong style="color: #facc15;">Active</strong>
+              </div>
+            ` : ''}
           </div>
 
           <div class="yield-cards-row">
@@ -258,6 +291,7 @@
                 <img src="${getIconUrl(resolveMaterialIcon(yieldStr))}" alt="Material" class="yield-mat-icon" loading="lazy" />
                 <div class="yield-text-block">
                   <span class="yield-headline">${escapeHtml(yieldStr)}</span>
+                  ${primaryPriceObj?.minBuyout > 0 ? `<div style="color: #facc15; font-size: 0.8rem; font-weight: 700; margin-top: 0.2rem;">🪙 Live PvE AH: ${formatCopper(primaryPriceObj.minBuyout)} / unit</div>` : ''}
                   <p class="yield-desc">${isWeapon ? 'Weapons heavily prioritize Essences over Dusts.' : 'Armor heavily prioritizes Dusts over Essences.'}</p>
                 </div>
               </div>
@@ -269,6 +303,7 @@
                 <img src="${getIconUrl(resolveMaterialIcon(result.shardYield))}" alt="Shard" class="yield-mat-icon" loading="lazy" />
                 <div class="yield-text-block">
                   <span class="yield-headline">${escapeHtml(result.shardYield || '—')}</span>
+                  ${shardPriceObj?.minBuyout > 0 ? `<div style="color: #facc15; font-size: 0.8rem; font-weight: 700; margin-top: 0.2rem;">🪙 Live PvE AH: ${formatCopper(shardPriceObj.minBuyout)} / unit</div>` : ''}
                   <p class="yield-desc">${result.shardYield && result.shardYield !== '—' ? 'Bonus roll on uncommon items; 100% guaranteed on rare & epic crafts.' : 'No shard roll in this early tier.'}</p>
                 </div>
               </div>

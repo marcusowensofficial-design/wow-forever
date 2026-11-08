@@ -28,6 +28,7 @@
     onlyNew: false,
     onlyDrops: false,
     onlySets: false,
+    onlyAH: false,
     minLvl: 1,
     maxLvl: 60,
     sort: 'new',
@@ -613,7 +614,13 @@
         html += `<div style="color:#93c5fd;font-weight:600;">📍 Drops from: ${esc(dropSources.slice(0, 3).join(' • '))}${dropSources.length > 3 ? ` (+${dropSources.length - 3} more)` : ''}</div>`;
       }
       if (marketEntry?.minBuyout > 0) {
-        html += `<div style="color:#facc15;margin-top:0.18rem;">🪙 Live Server AH Buyout: <strong>${formatCopper(marketEntry.minBuyout)}</strong></div>`;
+        const qtyStr = marketEntry.qty > 1 ? ` (${marketEntry.qty} avail)` : '';
+        const medStr = marketEntry.med14 && marketEntry.med14 !== marketEntry.minBuyout ? ` · 14d Med: ${formatCopper(marketEntry.med14)}` : '';
+        html += `<div style="color:#facc15;margin-top:0.18rem;">🪙 Live PvE AH Buyout: <strong>${formatCopper(marketEntry.minBuyout)}</strong>${qtyStr}${medStr}</div>`;
+        if (sell > 0 && marketEntry.minBuyout < sell) {
+          const profit = sell - marketEntry.minBuyout;
+          html += `<div style="color:#4ade80;font-weight:700;margin-top:0.15rem;">🔥 Vendor Arbitrage Flip: +${formatCopper(profit)} instant profit vendoring this item!</div>`;
+        }
       }
       html += `</div>`;
     }
@@ -703,6 +710,8 @@
       if (state.onlyNew && !(r[10] & 1)) continue;
       if (state.onlyDrops && (!r[13] || r[13].length === 0)) continue;
       if (state.onlySets && (!window.WOW_GEAR_SETS_ITEM_MAP || !window.WOW_GEAR_SETS_ITEM_MAP[r[0]])) continue;
+      if (state.onlyAH && !(window.WOW_MARKET_SCAN_DATA?.prices?.[r[0]]?.minBuyout > 0)) continue;
+      if (state.onlyFlips && !(window.WOW_MARKET_SCAN_DATA?.prices?.[r[0]]?.minBuyout > 0 && (r[9] || 0) > window.WOW_MARKET_SCAN_DATA.prices[r[0]].minBuyout)) continue;
 
       const req = r[4] || 1;
       if (hasLvlFilter && (req < minL || req > maxL)) continue;
@@ -749,6 +758,17 @@
       const rb = rows[b];
       if (sortMode === 'name') {
         return ra[1] < rb[1] ? -1 * dir : ra[1] > rb[1] ? 1 * dir : ra[0] - rb[0];
+      }
+      if (sortMode === 'ah') {
+        const pa = window.WOW_MARKET_SCAN_DATA?.prices?.[ra[0]]?.minBuyout || 0;
+        const pb = window.WOW_MARKET_SCAN_DATA?.prices?.[rb[0]]?.minBuyout || 0;
+        if (pa !== pb) return (pa > pb ? 1 : -1) * dir;
+      } else if (sortMode === 'ah_asc') {
+        const pa = window.WOW_MARKET_SCAN_DATA?.prices?.[ra[0]]?.minBuyout || 0;
+        const pb = window.WOW_MARKET_SCAN_DATA?.prices?.[rb[0]]?.minBuyout || 0;
+        if (pa > 0 && pb > 0 && pa !== pb) return pa - pb;
+        if (pa > 0 && pb === 0) return -1;
+        if (pa === 0 && pb > 0) return 1;
       }
       let va;
       let vb;
@@ -803,9 +823,11 @@
       instStr = (meta.inst && meta.inst[s0[0]] ? meta.inst[s0[0]] : s0[0]) + (extraCount > 0 ? ` (+${extraCount} more)` : '');
     }
 
-    const marketPrice = window.WOW_MARKET_SCAN_DATA?.prices?.[id]?.minBuyout || 0;
+    const marketEntry = window.WOW_MARKET_SCAN_DATA?.prices?.[id];
+    const marketPrice = marketEntry?.minBuyout || 0;
+    const isArbitrage = marketPrice > 0 && sell > marketPrice;
     const priceDisplay = marketPrice > 0
-      ? `<span style="color:#facc15;font-weight:700;" title="Live Server AH Scan">${formatCopper(marketPrice)}</span>`
+      ? `<span style="color:#facc15;font-weight:700;" title="Live PvE AH Buyout (${marketEntry.qty || 1} available)">${formatCopper(marketPrice)}</span>${isArbitrage ? `<span style="display:block;color:#4ade80;font-size:0.72rem;font-weight:700;">+${formatCopper(sell - marketPrice)} Flip</span>` : `<span style="display:block;color:#64748b;font-size:0.72rem;">${marketEntry.qty || 1} on AH</span>`}`
       : `<span style="color:#94a3b8;font-size:0.78rem;">Vendor: ${formatCopper(sell)}</span>`;
 
     const bindBadge = bind
@@ -896,6 +918,10 @@
 
     const { db, meta } = idx;
     const instEntries = Object.entries(meta.inst || {});
+    const market = window.WOW_MARKET_SCAN_DATA;
+    const marketCount = market?.totalItems || Object.keys(market?.prices || {}).length || 0;
+    const flipsCount = market?.vendorFlips?.length || 0;
+    const scanDateStr = market?.lastScanTime ? new Date(market.lastScanTime * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
 
     mount.innerHTML = `
       <div class="codex-db-wrapper" style="display:flex;flex-direction:column;gap:1.1rem;">
@@ -904,9 +930,14 @@
             <h2><span>📦</span> WoW Forever Item Database &amp; Market (${db.totalItems.toLocaleString('en-US')} Items)</h2>
             <p class="section-subtext">Search every weapon, armor piece, recipe, reagent, and boss drop extracted directly from the Build 1.60.6 game client — including ${db.newInForeverItems.toLocaleString('en-US')} brand-new Classic+ items, ${db.revealedItems.toLocaleString('en-US')} detailed items, and live BoE auction valuations.</p>
             <div style="display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem;flex-wrap:wrap;">
-              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);color:#facc15;font-size:0.75rem;font-weight:600;">
-                <span>💰</span> AH Live Pricing Ready (Companion Addon Stream)
+              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);color:#facc15;font-size:0.75rem;font-weight:600;" title="${marketCount > 0 ? `Scanned ${scanDateStr} on ${market.activeRealm || 'PvE'}` : 'Requires ForeverMarket in-game scan'}">
+                <span>💰</span> ${marketCount > 0 ? `PvE AH: ${marketCount.toLocaleString('en-US')} Live Prices (${scanDateStr})` : 'AH Live Pricing Ready'}
               </span>
+              ${flipsCount > 0 ? `
+                <button type="button" id="codex-db-flips-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:${state.onlyFlips ? 'rgba(249,115,22,0.35)' : 'rgba(249,115,22,0.14)'};border:1px solid rgba(249,115,22,0.5);color:#fb923c;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Toggle guaranteed vendor arbitrage flips">
+                  <span>🔥</span> ${flipsCount} Vendor Flips ${state.onlyFlips ? '✓' : ''}
+                </button>
+              ` : ''}
               <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#7dd3fc;font-size:0.75rem;font-weight:600;">
                 <span>🏰</span> 28 Dungeon Boss Drop Tables
               </span>
@@ -974,16 +1005,23 @@
                 <input type="checkbox" id="codex-db-sets" aria-label="Only show items that belong to gear sets" ${state.onlySets ? 'checked' : ''}>
                 🛡️ Armor Sets Only
               </label>
+
+              <label style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#facc15;font-weight:600;cursor:pointer;">
+                <input type="checkbox" id="codex-db-ah" aria-label="Only show items with active live AH listings" ${state.onlyAH ? 'checked' : ''}>
+                🪙 AH Listed Only (${marketCount.toLocaleString('en-US')})
+              </label>
             </div>
 
             <div style="display:flex;align-items:center;gap:0.55rem;">
               <select id="codex-db-sort" aria-label="Sort item database results" style="background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:6px;padding:0.38rem 0.55rem;font-size:0.8rem;">
-                <option value="new">Sort: Newest / Forever First</option>
-                <option value="ilvl">Sort: Item Level (High → Low)</option>
-                <option value="req">Sort: Req Level (High → Low)</option>
-                <option value="quality">Sort: Rarity (High → Low)</option>
-                <option value="sell">Sort: Vendor Value (High → Low)</option>
-                <option value="name">Sort: Name (A → Z)</option>
+                <option value="new" ${state.sort === 'new' ? 'selected' : ''}>Sort: Newest / Forever First</option>
+                <option value="ah" ${state.sort === 'ah' ? 'selected' : ''}>Sort: AH Buyout (High → Low)</option>
+                <option value="ah_asc" ${state.sort === 'ah_asc' ? 'selected' : ''}>Sort: AH Buyout (Low → High)</option>
+                <option value="ilvl" ${state.sort === 'ilvl' ? 'selected' : ''}>Sort: Item Level (High → Low)</option>
+                <option value="req" ${state.sort === 'req' ? 'selected' : ''}>Sort: Req Level (High → Low)</option>
+                <option value="quality" ${state.sort === 'quality' ? 'selected' : ''}>Sort: Rarity (High → Low)</option>
+                <option value="sell" ${state.sort === 'sell' ? 'selected' : ''}>Sort: Vendor Value (High → Low)</option>
+                <option value="name" ${state.sort === 'name' ? 'selected' : ''}>Sort: Name (A → Z)</option>
               </select>
               <button type="button" id="codex-db-reset" style="background:rgba(239,68,68,0.15);color:#fca5a5;border:1px solid rgba(239,68,68,0.35);border-radius:6px;padding:0.38rem 0.7rem;font-size:0.78rem;font-weight:600;cursor:pointer;">Reset Filters</button>
             </div>
@@ -1091,13 +1129,22 @@
     mount.querySelector('#codex-db-new')?.addEventListener('change', (e) => { state.onlyNew = e.target.checked; refresh(); });
     mount.querySelector('#codex-db-drops')?.addEventListener('change', (e) => { state.onlyDrops = e.target.checked; refresh(); });
     mount.querySelector('#codex-db-sets')?.addEventListener('change', (e) => { state.onlySets = e.target.checked; refresh(); });
+    mount.querySelector('#codex-db-ah')?.addEventListener('change', (e) => { state.onlyAH = e.target.checked; refresh(); });
+    mount.querySelector('#codex-db-flips-pill')?.addEventListener('click', () => {
+      state.onlyFlips = !state.onlyFlips;
+      if (state.onlyFlips) {
+        state.onlyAH = true;
+        state.sort = 'ah_asc';
+      }
+      refresh();
+    });
     mount.querySelector('#codex-db-sort')?.addEventListener('change', (e) => {
       state.sort = e.target.value;
-      state.dir = state.sort === 'name' ? 1 : -1;
+      state.dir = (state.sort === 'name' || state.sort === 'ah_asc') ? 1 : -1;
       refresh();
     });
     mount.querySelector('#codex-db-reset')?.addEventListener('click', () => {
-      state = { q: '', cat: 'all', cls: -1, minQuality: 0, bind: '', inst: '', onlyNew: false, onlyDrops: false, onlySets: false, minLvl: 1, maxLvl: 60, sort: 'new', dir: -1, shown: 50 };
+      state = { q: '', cat: 'all', cls: -1, minQuality: 0, bind: '', inst: '', onlyNew: false, onlyDrops: false, onlySets: false, onlyAH: false, onlyFlips: false, minLvl: 1, maxLvl: 60, sort: 'new', dir: -1, shown: 50 };
       window.renderCodexItemDatabase();
     });
     mount.querySelector('#codex-db-more')?.addEventListener('click', () => {

@@ -99,6 +99,18 @@
     return { bind, slot, subType, dmgRow, dps, armor, stats, reqLevel, reqClass, equip, use, sellPrice, generic };
   }
 
+  function formatCopper(c) {
+    if (!c || c <= 0) return '0c';
+    const g = Math.floor(c / 10000);
+    const s = Math.floor((c % 10000) / 100);
+    const cp = Math.floor(c % 100);
+    const parts = [];
+    if (g > 0) parts.push(`${g}g`);
+    if (s > 0 || g > 0) parts.push(`${s}s`);
+    if (cp > 0 || parts.length === 0) parts.push(`${cp}c`);
+    return parts.join(' ');
+  }
+
   function showItemTooltip(e, name, quality = 1, desc = '', reagents = null, extra = null) {
     let tooltip = document.getElementById('wow-item-tooltip');
     if (!tooltip) {
@@ -181,28 +193,68 @@
       `;
     }
 
+    // Check live PvE AH pricing for crafted item and reagents
+    const market = window.WOW_MARKET_SCAN_DATA;
+    const cleanCraftedName = name ? String(name).toLowerCase().trim() : '';
+    const itemMarket = market?.byName?.[cleanCraftedName] || (extra?.id ? market?.prices?.[extra.id] : null);
+    let ahItemRow = '';
+    if (itemMarket && itemMarket.minBuyout > 0) {
+      ahItemRow = `
+        <div style="font-size: 0.78rem; color: #facc15; margin-top: 0.35rem; display: flex; align-items: center; justify-content: space-between; padding: 0.22rem 0.45rem; background: rgba(250, 204, 21, 0.09); border-radius: 4px; border: 1px solid rgba(250, 204, 21, 0.28);">
+          <span>🪙 <strong>Live PvE AH Buyout:</strong></span>
+          <span style="font-weight: 700;">${formatCopper(itemMarket.minBuyout)}</span>
+        </div>
+      `;
+    }
+
     let reagentsHtml = '';
     if (reagents && reagents.length) {
       const craftsCount = extra && extra.crafts && extra.crafts > 1 ? Number(extra.crafts) : 1;
+      let totalAHCraftCost = 0;
+      let allReagentsPriced = true;
+
+      const reagentPills = reagents.map(r => {
+        const perCraft = r.count || 1;
+        const totalBracket = craftsCount * perCraft;
+        const rName = (r.name || '').toLowerCase().trim();
+        const rPriceObj = market?.byName?.[rName] || (r.id ? market?.prices?.[r.id] : null);
+        const rPrice = rPriceObj?.minBuyout || 0;
+        if (rPrice > 0) {
+          totalAHCraftCost += rPrice * perCraft;
+        } else {
+          allReagentsPriced = false;
+        }
+
+        return `
+          <span style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(0,0,0,0.4); padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.72rem;">
+            <img src="${getIconUrl(r.icon)}" width="16" height="16" style="border-radius: 2px;" />
+            <span style="color: #fff; font-weight:700;">${perCraft}x</span>
+            <span class="q${r.quality || 1}">${escapeHtml(r.name)}</span>
+            ${rPrice > 0 ? `<span style="color: #facc15; font-weight: 600; font-size: 0.68rem;" title="Live AH unit buyout">(${formatCopper(rPrice)})</span>` : ''}
+            ${craftsCount > 1 ? `<span style="color: #38bdf8; font-weight: 700; margin-left: 0.15rem;">(=${totalBracket} total)</span>` : ''}
+          </span>
+        `;
+      }).join('');
+
+      let craftCostRow = '';
+      if (totalAHCraftCost > 0) {
+        craftCostRow = `
+          <div style="font-size: 0.72rem; color: #cbd5e1; margin-top: 0.32rem; display: flex; justify-content: space-between;">
+            <span style="color: #94a3b8;">Est. Reagent AH Cost:</span>
+            <strong style="color: #facc15;">${formatCopper(totalAHCraftCost)}${!allReagentsPriced ? '*' : ''}</strong>
+          </div>
+        `;
+      }
+
       reagentsHtml = `
         <div style="margin-top: 0.5rem; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.4rem;">
           <div style="font-size: 0.72rem; color: #94a3b8; margin-bottom: 0.3rem;">
             Reagents Required${craftsCount > 1 ? ` <span style="color: #38bdf8;">(Per Craft · Total for ~${craftsCount} Crafts)</span>` : ':'}
           </div>
           <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-            ${reagents.map(r => {
-              const perCraft = r.count || 1;
-              const totalBracket = craftsCount * perCraft;
-              return `
-                <span style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(0,0,0,0.4); padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.72rem;">
-                  <img src="${getIconUrl(r.icon)}" width="16" height="16" style="border-radius: 2px;" />
-                  <span style="color: #fff; font-weight:700;">${perCraft}x</span>
-                  <span class="q${r.quality || 1}">${escapeHtml(r.name)}</span>
-                  ${craftsCount > 1 ? `<span style="color: #38bdf8; font-weight: 700; margin-left: 0.15rem;">(=${totalBracket} total)</span>` : ''}
-                </span>
-              `;
-            }).join('')}
+            ${reagentPills}
           </div>
+          ${craftCostRow}
         </div>
       `;
     }
@@ -217,6 +269,7 @@
           ${desc && !extraUse ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(desc)}</div>` : ''}
         `}
         ${reagentsHtml}
+        ${ahItemRow}
         ${extraCost}
       </div>
     `;

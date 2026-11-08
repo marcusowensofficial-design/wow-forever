@@ -58,14 +58,16 @@ function parseForeverMarketLua(luaText) {
     const lastScanTime = lastScanMatch ? Number(lastScanMatch[1]) : Math.floor(Date.now() / 1000);
 
     const items = {};
-    const itemRe = /\[(\d+)\]\s*=\s*\{([\s\S]*?)\n\t\t\t\}/g;
-    let m;
-    while ((m = itemRe.exec(body)) !== null) {
-      const itemId = Number(m[1]);
-      const itemBody = m[2];
+    const itemParts = body.split(/\n\s*\[(\d+)\]\s*=\s*\{/);
+    for (let j = 1; j < itemParts.length; j += 2) {
+      const itemId = Number(itemParts[j]);
+      const itemBody = itemParts[j + 1] || '';
       const minBuyout = Number((itemBody.match(/\["minBuyout"\]\s*=\s*(\d+)/) || [])[1] || 0);
       const qty = Number((itemBody.match(/\["qty"\]\s*=\s*(\d+)/) || [])[1] || 1);
       const lastSeen = Number((itemBody.match(/\["lastSeen"\]\s*=\s*(\d+)/) || [])[1] || lastScanTime);
+      const nameMatch = itemBody.match(/\["name"\]\s*=\s*"([^"]*)"/);
+      const name = nameMatch && nameMatch[1] ? nameMatch[1] : null;
+
       const histPrices = [];
       const histMatch = itemBody.match(/\["history"\]\s*=\s*\{([\s\S]*?)\}/);
       if (histMatch) {
@@ -76,7 +78,7 @@ function parseForeverMarketLua(luaText) {
         }
       }
       if (minBuyout > 0) {
-        items[itemId] = { minBuyout, qty, lastSeen, histPrices };
+        items[itemId] = { minBuyout, qty, lastSeen, name, histPrices };
       }
     }
     realms[bucketKey] = { lastScanTime, items };
@@ -92,9 +94,22 @@ function median(values) {
 }
 
 function main() {
-  const inputPath = process.argv[2];
+  let inputPath = process.argv[2];
   const itemMap = loadItemDatabaseMap();
   console.log(`Loaded ${itemMap.size.toLocaleString()} items from item-database-data.js`);
+
+  if (!inputPath || !fs.existsSync(inputPath)) {
+    const candidatePaths = [
+      'C:/Program Files (x86)/World of Warcraft/_forever_/WTF/Account/54273602#2/SavedVariables/ForeverMarket.lua',
+      'C:\\Program Files (x86)\\World of Warcraft\\_forever_\\WTF\\Account\\54273602#2\\SavedVariables\\ForeverMarket.lua'
+    ];
+    for (const p of candidatePaths) {
+      if (fs.existsSync(p)) {
+        inputPath = p;
+        break;
+      }
+    }
+  }
 
   let parsedRealms = {};
   if (inputPath && fs.existsSync(inputPath)) {
@@ -102,31 +117,50 @@ function main() {
     const rawLua = fs.readFileSync(inputPath, 'utf8');
     parsedRealms = parseForeverMarketLua(rawLua);
   } else {
-    console.log('No SavedVariables file passed (or file not found). Generating baseline market-data.js scaffold ready for Nov 4 launch scans.');
+    console.log('No SavedVariables file passed (or file not found). Generating baseline market-data.js scaffold ready for launch scans.');
   }
 
   const output = {
     generatedAt: new Date().toISOString(),
     addonVersion: '1.0.0',
-    realms: {}
+    activeRealm: 'PvE',
+    lastScanTime: 0,
+    totalItems: 0,
+    realms: {},
+    prices: {},
+    byName: {},
+    vendorFlips: []
   };
 
   for (const [bucketKey, bucket] of Object.entries(parsedRealms)) {
     const deals = [];
     const prices = {};
+    const byName = {};
     for (const [idStr, info] of Object.entries(bucket.items)) {
       const id = Number(idStr);
       const meta = itemMap.get(id);
+      const itemName = (meta && meta.name) || info.name || '';
       const med14 = median(info.histPrices.length ? info.histPrices : [info.minBuyout]);
-      prices[id] = [info.minBuyout, info.qty, med14, info.lastSeen];
+      const priceObj = {
+        minBuyout: info.minBuyout,
+        qty: info.qty,
+        med14,
+        lastSeen: info.lastSeen,
+        name: itemName
+      };
+      prices[id] = priceObj;
+      if (itemName) {
+        byName[itemName.toLowerCase().trim()] = priceObj;
+      }
 
-      if (meta && meta.vendorCopper > info.minBuyout) {
+      const vendorSell = (meta && meta.vendorCopper) || 0;
+      if (vendorSell > info.minBuyout) {
         deals.push({
           id,
-          name: meta.name,
+          name: itemName,
           buyout: info.minBuyout,
-          vendor: meta.vendorCopper,
-          profit: meta.vendorCopper - info.minBuyout,
+          vendor: vendorSell,
+          profit: vendorSell - info.minBuyout,
           qty: info.qty
         });
       }
@@ -138,6 +172,15 @@ function main() {
       vendorFlips: deals.slice(0, 100),
       prices
     };
+
+    if (bucketKey.startsWith('PvE') || Object.keys(output.prices).length === 0) {
+      output.activeRealm = bucketKey;
+      output.lastScanTime = bucket.lastScanTime;
+      output.totalItems = Object.keys(prices).length;
+      output.prices = prices;
+      output.byName = byName;
+      output.vendorFlips = deals.slice(0, 100);
+    }
   }
 
   const jsContent = `/**
@@ -147,7 +190,7 @@ function main() {
 window.WOW_MARKET_SCAN_DATA = ${JSON.stringify(output, null, 2)};\n`;
 
   fs.writeFileSync(OUT_MARKET_PATH, jsContent, 'utf8');
-  console.log(`✓ Wrote ${OUT_MARKET_PATH}`);
+  console.log(`✓ Wrote ${OUT_MARKET_PATH} (${output.totalItems.toLocaleString()} PvE prices synced, ${output.vendorFlips.length} vendor flips spotted)`);
 }
 
 main();
