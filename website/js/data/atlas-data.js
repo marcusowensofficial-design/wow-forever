@@ -1058,7 +1058,7 @@ window.WOW_ATLAS_DATA = {
   "tanningRack": {
     "name": "Tanning Rack",
     "prof": "Leatherworking",
-    "reqSkill": 140,
+    "reqSkill": 125,
     "blueprintSource": "Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)",
     "reagents": "5x Medium Leather, 3x Fine Thread, 2x Simple Wood",
     "duration": "15 minutes (Replaces Camp Tent, grants Tent bonuses + 1hr CD)",
@@ -1145,7 +1145,7 @@ window.WOW_ATLAS_DATA = {
   "spinningWheel": {
     "name": "Spinning Wheel",
     "prof": "Tailoring",
-    "reqSkill": 140,
+    "reqSkill": 125,
     "blueprintSource": "Unstable Sentinel (City of Dalaran)",
     "reagents": "5x Bolt of Silk Cloth, 3x Fine Thread, 2x Simple Wood",
     "duration": "15 minutes (Replaces Faction Banner, preserves Spirit buff)",

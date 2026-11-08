@@ -274,22 +274,22 @@
             const isArtisan = item.rank && item.rank.toLowerCase().includes('artisan');
             return `
               ${isArtisan && !steps.some(s => s.type === 'beta-stop') ? `
-                <div class="leveling-beta-stop-banner">
-                  <div class="beta-stop-title">🔒 THE BETA STOPS AT 225 (REQUIRES LEVEL 35)</div>
-                  <p>In Closed Beta Phase 2, player level is capped at 30. Artisan training requires Character Level 35 and skill 200+. These 225–300 steps outline the fastest path once Phase 3 unlocks.</p>
+                <div class="leveling-beta-stop-banner leveling-artisan-banner">
+                  <div class="beta-stop-title artisan-banner-title">⚡ ARTISAN TRAINING (SKILL 225–300)</div>
+                  <p>Advance past 225 by learning Artisan from your master trainer (Character Level 35 required). Full 225–300 leveling route detailed below.</p>
                 </div>
               ` : ''}
               <div class="leveling-rank-divider">
                 <strong class="rank-name">${escapeHtml(item.rank)}</strong>
                 <span class="rank-details">${formatWaypointsInHtml(escapeHtml(item.details))}</span>
-                ${isArtisan ? `<span class="rank-phase-badge" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: auto;">Phase 3 (Req Lvl 35)</span>` : ''}
+                ${isArtisan ? `<span class="rank-phase-badge" style="background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.4); color: #fde047; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: auto;">Req Level 35</span>` : ''}
               </div>
             `;
           }
           if (item.type === 'beta-stop') {
             return `
-              <div class="leveling-beta-stop-banner">
-                <div class="beta-stop-title">ARTISAN TRAINING (SKILL 225–300)</div>
+              <div class="leveling-beta-stop-banner leveling-artisan-banner">
+                <div class="beta-stop-title artisan-banner-title">⚡ ARTISAN TRAINING (SKILL 225–300)</div>
                 <p>Advance past 225 by learning Artisan from your master trainer (Character Level 35 required). Full 225–300 leveling route detailed below.</p>
               </div>
             `;
@@ -319,7 +319,6 @@
                   <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
-                    <span class="step-progress-cap-marker" style="left: 74.67%;" title="Beta Cap at 225"></span>
                   </div>
                 </div>
                 <div class="step-info-col">
@@ -384,7 +383,6 @@
                   <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
-                    <span class="step-progress-cap-marker" style="left: 74.67%;" title="Beta Cap at 225"></span>
                   </div>
                 </div>
                 <div class="step-info-col">
@@ -521,12 +519,15 @@
     const steps = prof.leveling?.steps || [];
     const recipes = prof.recipes || [];
     const hasPostBetaSplit = groups.length > 3
-      || groups.some(g => g.title && g.title.toLowerCase().includes('after the beta'))
+      || groups.some(g => g.title && (g.title.toLowerCase().includes('after the beta') || g.title.toLowerCase().includes('225 to 300') || g.title.toLowerCase().includes('artisan')))
       || (groups.length === 3 && groups[1]?.title === groups[2]?.title);
 
     function isPost225GroupAt(idx, g) {
       if (!hasPostBetaSplit) return false;
-      return idx >= 3 || (groups.length === 3 && idx === 2) || Boolean(g?.title && g.title.toLowerCase().includes('after the beta'));
+      if (g?.title && (g.title.toLowerCase().includes('after the beta') || g.title.toLowerCase().includes('225 to 300') || g.title.toLowerCase().includes('artisan'))) {
+        return true;
+      }
+      return idx >= 3 || (groups.length === 3 && idx === 2);
     }
 
     const rawNamesByBracket = { false: new Set(), true: new Set() };
@@ -660,7 +661,7 @@
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
-          <h3>${escapeHtml(shopping.title || 'SHOPPING LIST, 1 TO 225')}</h3>
+          <h3>${escapeHtml(shopping.title || 'REAGENT SHOPPING LIST (1 TO 300)')}</h3>
           <p>${escapeHtml(shopping.subtitle || 'Trade goods, looted supplies, and crafted components needed to level.')}</p>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -702,9 +703,9 @@
           const isFirstPost225Group = isPost225Group && (idx === 0 || !isPost225GroupAt(idx - 1, groups[idx - 1]));
           return `
             ${isFirstPost225Group ? `
-              <div class="shopping-beta-divider">
+              <div class="shopping-beta-divider shopping-artisan-divider">
                 <h4><span>⚡</span> Artisan Reagents &amp; Components (225 to 300)</h4>
-                <p>Trade goods, looted supplies, and crafted components needed for Artisan progression to 300 at launch.</p>
+                <p>Trade goods, looted supplies, and crafted components needed for Artisan progression (Skill 225 to 300).</p>
               </div>
             ` : ''}
             <div class="shopping-group-section">
@@ -797,7 +798,7 @@
     const copyBtn = container.querySelector('#shopping-copy-btn');
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
-        let text = `=== ${prof.name} — ${shopping.title || 'Reagent Shopping List (1 to 225)'}${syncWithLeveling ? ' [Remaining Synced]' : ''} ===\n\n`;
+        let text = `=== ${prof.name} — ${shopping.title || 'Reagent Shopping List (1 to 300)'}${syncWithLeveling ? ' [Remaining Synced]' : ''} ===\n\n`;
         groups.forEach((g, idx) => {
           const isPost225Group = isPost225GroupAt(idx, g);
           text += `${g.title}${g.note ? ' (' + g.note + ')' : ''}:\n`;

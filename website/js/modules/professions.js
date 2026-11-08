@@ -226,6 +226,9 @@
       if (['engineering', 'blacksmithing', 'leatherworking'].includes(slug)) {
         tabs.push({ id: 'specs', icon: '⭐', label: 'Specializations' });
       }
+      if (slug === 'enchanting') {
+        tabs.push({ id: 'disenchant', icon: '✨', label: 'Disenchanting & Yields' });
+      }
       if (['tailoring', 'leatherworking'].includes(slug)) {
         tabs.push({ id: 'containers', icon: '🎒', label: slug === 'tailoring' ? 'Containers & Bags' : 'Quivers & Pouches' });
       }
@@ -244,15 +247,25 @@
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isHerbalism) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
+      if (prof.shopping?.groups?.length) {
+        tabs.push({ id: 'shopping', icon: '🛒', label: 'Harvest Checklist' });
+      }
       tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes & Routes (${prof.nodes?.length || 28})` });
       tabs.push({ id: 'recipes', icon: '📜', label: `Camp Features (${prof.recipes?.length || 3})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isSkinning) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Skinning by Level' });
+      if (prof.shopping?.groups?.length) {
+        tabs.push({ id: 'shopping', icon: '🛒', label: 'Harvest Checklist' });
+      }
       tabs.push({ id: 'beasts', icon: '🐾', label: 'Where to Skin (Beasts)' });
       tabs.push({ id: 'recipes', icon: '📜', label: `Camp Features (${prof.recipes?.length || 3})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isFishing) {
+      tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling 1–300' });
+      if (prof.shopping?.groups?.length) {
+        tabs.push({ id: 'shopping', icon: '🛒', label: 'Shopping & Gear' });
+      }
       tabs.push({ id: 'waters', icon: '🌊', label: 'Waters & Schedule' });
       tabs.push({ id: 'lures', icon: '🪱', label: `Fishing Lures (${prof.fishingLures?.length || 14})` });
       tabs.push({ id: 'ranks', icon: '🎖️', label: `Ranks (${prof.ranks?.length || 8})` });
@@ -260,7 +273,7 @@
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isCamping) {
       tabs.push({ id: 'guide', icon: '⛺', label: 'How It Works & Campfires' });
-      tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling 1–225' });
+      tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling 1–300' });
       tabs.push({ id: 'shopping', icon: '🛒', label: 'Shopping List' });
       tabs.push({ id: 'buffs', icon: '✨', label: 'Camp Buffs (11)' });
       tabs.push({ id: 'upgrades', icon: '🛠️', label: 'Upgrades (140 & 300)' });
@@ -760,6 +773,10 @@
       if (leveling.renderShoppingTab) leveling.renderShoppingTab(body, prof);
     } else if (currentSubTab === "specs") {
       if (tabs.renderSpecializationsTab) tabs.renderSpecializationsTab(body, prof);
+    } else if (currentSubTab === "disenchant") {
+      if (window.WOW_PROFESSIONS_DISENCHANT?.renderDisenchantingTab) {
+        window.WOW_PROFESSIONS_DISENCHANT.renderDisenchantingTab(body, prof);
+      }
     } else if (currentSubTab === "containers") {
       if (tabs.renderContainersTab) tabs.renderContainersTab(body, prof);
     } else if (currentSubTab === "favor") {
@@ -881,8 +898,8 @@
           <button type="button" id="prof-new-toggle" class="filter-chip ${filterNewOnly ? 'active' : ''}">
             <span>✨</span> New in Forever Only
           </button>
-          <button type="button" id="prof-beta-cap-toggle" class="filter-chip ${filterBetaCap ? 'active' : ''}" title="Filter to recipes learnable within Phase 2 beta level cap (Skill 1–225)">
-            <span>🔒</span> Beta Cap (≤225)
+          <button type="button" id="prof-beta-cap-toggle" class="filter-chip ${filterBetaCap ? 'active' : ''}" title="Filter to recipes learnable within Expert skill (Skill 1–225)">
+            <span>🔒</span> Expert Cap (≤225)
           </button>
           <button type="button" id="prof-dungeon-toggle" class="filter-chip ${filterDungeonOnly ? 'active' : ''}" title="Filter to recipes dropped in dungeons or by instance bosses">
             <span>🏰</span> Dungeon Drops Only
@@ -896,7 +913,7 @@
           <div class="prof-skill-presets">
             <button type="button" class="prof-preset-btn ${playerSkill === 75 ? 'active' : ''}" data-skill="75" title="Apprentice Skill Cap (75)">75</button>
             <button type="button" class="prof-preset-btn ${playerSkill === 150 ? 'active' : ''}" data-skill="150" title="Journeyman Skill Cap (150)">150</button>
-            <button type="button" class="prof-preset-btn ${playerSkill === 225 ? 'active' : ''}" data-skill="225" title="Beta Phase 2 Cap (225)">225</button>
+            <button type="button" class="prof-preset-btn ${playerSkill === 225 ? 'active' : ''}" data-skill="225" title="Expert Skill Cap (225)">225</button>
             <button type="button" class="prof-preset-btn ${playerSkill === 300 ? 'active' : ''}" data-skill="300" title="Artisan Mastery (300)">300</button>
           </div>
           <input type="number" id="prof-skill-input" aria-label="Custom skill level simulator" class="prof-skill-input" min="1" max="300" placeholder="Custom" value="${playerSkill !== null ? playerSkill : ''}" />

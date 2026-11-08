@@ -70,6 +70,7 @@ async function scrapeForeverDbMounts() {
   await page.goto('https://foreverdb.net/mounts', { waitUntil: 'networkidle', timeout: 30000 });
 
   const scrapedMounts = await page.evaluate(() => {
+    /* global document */
     const mountMap = new Map();
     const articles = document.querySelectorAll('article.mt-card');
 

@@ -15,14 +15,14 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Launch Day: Final Realm Prep (Early Name Reservation Concluded • Global Launch Today at 3:00 PM PST)",
+    "currentBetaPhase": "WoW Forever Live Worldwide (Level 60 Progression Active • Tier 1 Raids Unlock Dec 9)",
     "clientBuild": "1.60.1.70707",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 4, 2026"
+    "lastUpdated": "November 7, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -198,6 +198,74 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-74",
+      "title": "WoW: Forever Live Hotfixes — November 7, 2026: Tanning Rack Skill Floor, Warlock PvE Buffs & Tabard Fix",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 7, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-7-2026",
+      "summary": "Tanning Rack Leatherworking crafting requirement lowered to 125 (was 140), Warlock Unstable Affliction and Rain of Fire PvE damage increased by 20%, and Rexxar tabard rendering resolved.",
+      "content": `Blizzard deployed hotfixes to WoW: Forever live realms on November 7, 2026:
+
+• **Professions & Camping:**
+  - **Leatherworking:** Lowered the crafting requirement for the *Tanning Rack* camping station to Skill 125 (down from 140) to smooth early outdoor profession progression.
+
+• **Class Balancing (PvE):**
+  - **Warlock:** *Unstable Affliction* and *Rain of Fire* direct/periodic damage increased by 20% in PvE encounters.
+  - **Trickster:** *Fazed* damage bonus normalized to 5% (down from 7%).
+
+• **Items & Display:**
+  - Resolved an issue where equipping certain player tabards suppressed the *Rexxar* armor set appearance.`
+    },
+    {
+      "id": "news-73",
+      "title": "WoW: Forever Live Hotfixes — November 6, 2026: Class Mechanics, Voidwalker Base HP & Dungeon Spawns",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 6, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-6-2026",
+      "summary": "Voidwalker base health increased by ~40 across all levels, Swiftmend tooltip clarified (no longer consumes HoTs), Maraudon Zaetar's Spirit spawn resolved, and The Drowned City portal fixed.",
+      "content": `A major wave of hotfixes was deployed to live realms on November 6, 2026:
+
+• **Classes & Combat:**
+  - **Warlock:** Voidwalker base health increased by ~40 points across all levels (1–60). Fixed an issue where the *Soul Siphon* talent caused *Wrack* to scale its own damage.
+  - **Druid:** *Bloom* now reliably heals its target. Corrected tooltip descriptions on *Bear Form* and *Ravage*. Fixed *Swiftmend* tooltip to remove erroneous mentions of consuming the active HoT.
+  - **Warrior:** *Reckless Swings* tooltip now explicitly confirms that activation triggers *Gore Drinker*.
+  - **Rogue:** *Shank* tooltips properly display Rank 1 and Rank 2 and correctly display combo point generation while *Boot Knife* is talented.
+  - **Mage:** Corrected *Arcane Blast* debuff duration to 18 seconds. Fixed an issue where relogging caused Mages to lose the *Study* quest spell.
+  - **System:** *Cooldown Manager* now dynamically factors in diminishing returns and racial CC reductions (Orc Hardiness). Fixed *Quick and the Dead* Legacy Talent activation.
+
+• **Dungeons & Quests:**
+  - **Maraudon:** Fixed a critical progression blocker where *Zaetar's Spirit* failed to spawn after defeating Princess Theradras.
+  - **The Drowned City & Blackmaw Hold:** Resolved creature disengage pathing bugs; instance portal for *The Drowned City* now reliably teleports players inside.`
+    },
+    {
+      "id": "news-72",
+      "title": "WoW: Forever Live Hotfixes — November 5, 2026: Plainsrunning Flag Fix, NPC Respawns & Mild Spices",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 5, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-5-2026",
+      "summary": "Plainsrunning disabled during BG prep and canceled upon flag pickup in Warsong Gulch. NPC respawn pacing adjusted across Durotar and Dustwallow; Mild Spices vendor price set to 1c.",
+      "content": `The first post-launch hotfix wave deployed on November 5, 2026:
+
+• **Player versus Player (PvP):**
+  - Tauren *Plainsrunning* no longer stacks during Battleground preparation gates and active stacks cancel immediately upon picking up the flag in Warsong Gulch.
+
+• **Economy & Vendors:**
+  - *Mild Spices* vendor resale price reduced from 2 copper to 1 copper to close unintended vendor profit arbitrage.
+  - Zephras Isle trade suppliers now correctly stock Apprentice tradeskill bags.
+
+• **World & Quests:**
+  - Adjusted respawn intervals for Yarrog Baneshadow (Durotar) and Deathstalker Erland (Silverpine). Lotheluum Starbreeze on Zephras Isle now trains Druids.`
+    },
+    {
       "id": "news-71",
       "title": "World of Warcraft: Forever Goes Live Globally Today: 3:00 PM PST Simultaneous Unlock, Megarealm Operations & Day-One Roadmap",
       "source": "Blizzard Official Operations Desk",
@@ -316,7 +384,7 @@ const WOW_FOREVER_DATA = {
   - **Warrior:** Defensive Stance threat bonus increased to 80% (was 30%). Slam cooldown reduced to 15s. Improved Tactical Mastery compressed to 3 ranks (5/10/15 rage retention). Two-Handed Weapon Spec increased to 2/4/6%. Fury gains *Reckless Swings* and *Improved Whirlwind*; Bloodthirst requires Death Wish.
   - **Mage:** Frost Blast removed. Precision in Frost tree now grants 2/4/6% hit with all spells (Arcane Focus removed). Ice Barrier grants +15% Frost damage for 1 min + 5% while held. Ice Lance on 8s CD shared with Fire Blast.
   - **Warlock:** Amplify Curse affects Curse of Exhaustion and Bane of Agony. Wrack spell damage coefficient doubled. Shadow and Flame buffed to 4/8/12/16/20%.
-  - **Races:** Dwarf gains *Artisan's Precision* (+1% hit). Orc *Command* re-added (+5% pet dmg). Human *Ruthless* set to 1% crit, *Human Spirit* to 10% Spirit. Tauren *Plainsrunning* buffed to 2% per stack up to 60% max. Undead *Touch of the Grave* ICD reduced to 15s.`
+  - **Races:** Dwarf gains *Artisan's Precision* (+1% hit). Orc *Command* re-added (+5% pet dmg). Human *Ruthless* set to 1% crit, *Human Spirit* to 10% Spirit. Tauren *Plainsrunning* buffed to 2% per stack up to 60% max (Hotfix Nov 5: No battleground prep stacking; flag pickup immediately cancels stacks). Undead *Touch of the Grave* ICD reduced to 15s.`
     },
     {
       "id": "news-67",

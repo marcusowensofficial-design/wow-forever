@@ -606,13 +606,13 @@
         <div style="display: flex; align-items: center; gap: 0.85rem;">
           <span style="font-size: 2rem;">📈</span>
           <div>
-            <strong style="color: #fcd34d; font-size: 1.05rem;">Looking for the 1–225 Camping Leveling Roadmap?</strong>
+            <strong style="color: #fcd34d; font-size: 1.05rem;">Looking for the 1–300 Camping Leveling Roadmap?</strong>
             <p style="margin: 0.2rem 0 0 0; font-size: 0.85rem; color: #cbd5e1;">Step-by-step bracket roadmap, interactive checklist, and complete material shopping lists.</p>
           </div>
         </div>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button type="button" class="quick-link-chip" style="background: rgba(243, 192, 67, 0.2); border: 1px solid var(--border-gold-bright, #d4af37); color: #fff; padding: 0.45rem 0.9rem; font-weight: 600; cursor: pointer; border-radius: 4px;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping', 'leveling'); }">
-            <span>📈</span> Leveling Guide (1–225) ›
+            <span>📈</span> Leveling Guide (1–300) ›
           </button>
           <button type="button" class="quick-link-chip" style="background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-subtle); color: #cbd5e1; padding: 0.45rem 0.85rem; font-size: 0.82rem; cursor: pointer; border-radius: 4px;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping', 'shopping'); }">
             <span>🛒</span> Shopping List
@@ -1081,7 +1081,6 @@
                       <span class="recipe-skill-badge skill-orange" title="Requires ${escapeHtml(prof.name || 'Trade')} (${skillReq})">Skill ${skillReq}+</span>
                       <div class="favor-skill-track" data-skill="${skillReq}" data-prof="${escapeHtml(prof.name || 'Trade')}">
                         <span class="favor-skill-fill" style="width: ${skillPercent}%;"></span>
-                        <span class="favor-skill-cap-marker" style="left: 75%;" title="Beta Cap at 225"></span>
                       </div>
                     </div>
 

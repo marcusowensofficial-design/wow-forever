@@ -108,9 +108,7 @@ while ((mm = mountRegex.exec(collMountsText)) !== null) {
   const level = parseInt(levelStr, 10) || 0;
 
   // Determine faction label
-  let faction = 'Neutral';
-  if (side === 'A') faction = 'Alliance';
-  else if (side === 'H') faction = 'Horde';
+  let faction;
 
   // Parse source details: "v~Vendor Name, Zone~1" or "b~Boss Name~0" or "q~Quest Title~1" or "c~Crafting (Skill)~0"
   let sourceType = 'Unknown';

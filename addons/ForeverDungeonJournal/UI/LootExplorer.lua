@@ -550,6 +550,7 @@ local function BuildMasterLootExplorerCache()
                     questIndex = extra.questIndex,
                     questFaction = extra.questFaction,
                     questID = extra.questID,
+                    originalIndex = #list + 1,
                 }
 
                 list[#list + 1] = entry
@@ -659,7 +660,54 @@ function FDJ.InvalidateLootExplorerCache()
     masterDungeonCounts = {}
 end
 
-function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFilter, bracketFilter, wishlistOnly, query, dungeonFilter)
+local function SortLootResults(results, sortMode)
+    if not results or #results <= 1 then return end
+    sortMode = sortMode or "DEFAULT"
+    if sortMode == "LEVEL_ASC" then
+        table.sort(results, function(a, b)
+            local aLvl = a.reqLevel or 0
+            local bLvl = b.reqLevel or 0
+            if aLvl ~= bLvl then return aLvl < bLvl end
+            local aQ = a.quality or 0
+            local bQ = b.quality or 0
+            if aQ ~= bQ then return aQ > bQ end
+            return (a.originalIndex or 0) < (b.originalIndex or 0)
+        end)
+    elseif sortMode == "LEVEL_DESC" then
+        table.sort(results, function(a, b)
+            local aLvl = a.reqLevel or 0
+            local bLvl = b.reqLevel or 0
+            if aLvl ~= bLvl then return aLvl > bLvl end
+            local aQ = a.quality or 0
+            local bQ = b.quality or 0
+            if aQ ~= bQ then return aQ > bQ end
+            return (a.originalIndex or 0) < (b.originalIndex or 0)
+        end)
+    elseif sortMode == "QUALITY_DESC" then
+        table.sort(results, function(a, b)
+            local aQ = a.quality or 0
+            local bQ = b.quality or 0
+            if aQ ~= bQ then return aQ > bQ end
+            local aLvl = a.reqLevel or 0
+            local bLvl = b.reqLevel or 0
+            if aLvl ~= bLvl then return aLvl > bLvl end
+            return (a.originalIndex or 0) < (b.originalIndex or 0)
+        end)
+    elseif sortMode == "NAME_ASC" then
+        table.sort(results, function(a, b)
+            local aN = a.nameLower or ""
+            local bN = b.nameLower or ""
+            if aN ~= bN then return aN < bN end
+            return (a.originalIndex or 0) < (b.originalIndex or 0)
+        end)
+    elseif sortMode == "DEFAULT" then
+        table.sort(results, function(a, b)
+            return (a.originalIndex or 0) < (b.originalIndex or 0)
+        end)
+    end
+end
+
+function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFilter, bracketFilter, wishlistOnly, query, dungeonFilter, classFilter, qualityFilter, sortMode)
     -- Backward compatibility for older 3-argument call: (slotFilter, bracketFilter, query)
     if type(categoryFilter) == "string" and (categoryFilter == "WEAPONS" or categoryFilter == "CLOTH" or categoryFilter == "LEATHER" or categoryFilter == "MAIL" or categoryFilter == "ACCESSORIES") and materialFilter == nil then
         query = bracketFilter
@@ -675,6 +723,9 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
     materialFilter = materialFilter or "ALL"
     bracketFilter = bracketFilter or "ALL"
     dungeonFilter = dungeonFilter or "ALL"
+    classFilter = classFilter or "ALL"
+    qualityFilter = qualityFilter or "ALL"
+    sortMode = sortMode or "DEFAULT"
     query = (query and query:gsub("^%s*(.-)%s*$", "%1") ~= "") and string.lower(query:gsub("^%s*(.-)%s*$", "%1")) or nil
 
     local bMin, bMax = nil, nil
@@ -703,6 +754,11 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
 
     -- Material filter (Cloth/Leather/Mail/Plate) only applies to Armor or All Categories
     local checkMaterial = (materialFilter ~= "ALL") and (categoryFilter == "ALL" or categoryFilter == "ARMOR" or categoryFilter == "QUEST_REWARD")
+
+    local targetClass = classFilter
+    if targetClass == "MY_CLASS" then
+        targetClass = FDJ.GetPlayerClassToken and FDJ.GetPlayerClassToken() or "WARRIOR"
+    end
 
     for i = 1, #master do
         local entry = master[i]
@@ -740,9 +796,32 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                 matchWishlist = (FDJ.IsWishlisted and FDJ.IsWishlisted(itemID)) or false
             end
 
-            -- 3. Material Filter (Cloth, Leather, Mail, Plate — excludes Cloaks/Back)
+            -- 3. Quality / Rarity Filter
+            local matchQuality = true
+            if matchBracket and matchWishlist and qualityFilter ~= "ALL" then
+                local q = entry.quality or 1
+                if qualityFilter == "RARE_EPIC" then
+                    matchQuality = (q >= 3)
+                elseif qualityFilter == "EPIC" then
+                    matchQuality = (q == 4)
+                elseif qualityFilter == "RARE" then
+                    matchQuality = (q == 3)
+                elseif qualityFilter == "UNCOMMON_PLUS" then
+                    matchQuality = (q >= 2)
+                end
+            end
+
+            -- 4. Class Usability Filter
+            local matchClass = true
+            if matchBracket and matchWishlist and matchQuality and classFilter ~= "ALL" then
+                if FDJ.ItemMatchesClass then
+                    matchClass = FDJ.ItemMatchesClass({ itemID, entry.name, entry.slot, entry.quality }, targetClass)
+                end
+            end
+
+            -- 5. Material Filter (Cloth, Leather, Mail, Plate — excludes Cloaks/Back)
             local matchMaterial = true
-            if matchBracket and matchWishlist and checkMaterial then
+            if matchBracket and matchWishlist and matchQuality and matchClass and checkMaterial then
                 if sLower:find("back", 1, true) or sLower:find("cloak", 1, true) then
                     matchMaterial = false
                 else
@@ -761,9 +840,9 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                 end
             end
 
-            -- 4. Category & Slot Filter
+            -- 6. Category & Slot Filter
             local matchSlot = true
-            if matchBracket and matchWishlist and matchMaterial then
+            if matchBracket and matchWishlist and matchQuality and matchClass and matchMaterial then
                 if categoryFilter == "ALL" then
                     matchSlot = MatchSubtype(sLower, slotFilter)
                 elseif categoryFilter == "ARMOR" then
@@ -804,9 +883,9 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                 end
             end
 
-            -- 5. Search Query Filter
+            -- 7. Search Query Filter
             local matchQuery = true
-            if matchBracket and matchWishlist and matchMaterial and matchSlot and query then
+            if matchBracket and matchWishlist and matchQuality and matchClass and matchMaterial and matchSlot and query then
                 local nameLower = entry.nameLower or ""
                 local bossLower = entry.bossLower or ""
                 local dungLower = entry.dungLower or ""
@@ -816,11 +895,13 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                     or (sLower:find(query, 1, true) ~= nil)
             end
 
-            if matchBracket and matchWishlist and matchMaterial and matchSlot and matchQuery then
+            if matchBracket and matchWishlist and matchQuality and matchClass and matchMaterial and matchSlot and matchQuery then
                 results[#results + 1] = entry
             end
         end
     end
+
+    SortLootResults(results, sortMode)
 
     return results, totalPoolCount
 end
@@ -834,8 +915,42 @@ local leSelectedCategory = "ALL"
 local leSelectedSlot = "ALL"
 local leSelectedMaterial = "ALL"
 local leSelectedBracket = "ALL"
+local leSelectedClass = "ALL"
+local leSelectedQuality = "ALL"
+local leCurrentSort = "DEFAULT"
 local leWishlistOnly = false
 local leSearchQuery = ""
+
+local QUALITY_OPTIONS = {
+    { id = "ALL", label = "All Qualities" },
+    { id = "RARE_EPIC", label = "|cff0070ddRare|r & |cffa335eeEpic|r", buttonLabel = "Rare & Epic" },
+    { id = "EPIC", label = "|cffa335eeEpic Only|r", buttonLabel = "Epic Only" },
+    { id = "RARE", label = "|cff0070ddRare Only|r", buttonLabel = "Rare Only" },
+    { id = "UNCOMMON_PLUS", label = "|cff1eff00Uncommon+|r", buttonLabel = "Uncommon+" },
+}
+
+local function GetClassFilterOptions()
+    local myClassToken = FDJ.GetPlayerClassToken and FDJ.GetPlayerClassToken() or "WARRIOR"
+    local myClassName = (FDJ.CLASS_DISPLAY_INFO and FDJ.CLASS_DISPLAY_INFO[myClassToken] and FDJ.CLASS_DISPLAY_INFO[myClassToken].name) or myClassToken
+    local _, myR, myG, myB = FDJ.GetClassDisplay(myClassToken)
+    local myHex = string.format("ff%02x%02x%02x", math.floor(myR * 255), math.floor(myG * 255), math.floor(myB * 255))
+
+    local opts = {
+        { id = "ALL", label = "All Classes" },
+        { id = "MY_CLASS", label = "|c" .. myHex .. "My Class (" .. myClassName .. ")|r", buttonLabel = myClassName },
+    }
+    local classList = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
+    for _, cToken in ipairs(classList) do
+        local name, r, g, b = FDJ.GetClassDisplay(cToken)
+        local hex = string.format("ff%02x%02x%02x", math.floor(r * 255), math.floor(g * 255), math.floor(b * 255))
+        opts[#opts + 1] = {
+            id = cToken,
+            label = "|c" .. hex .. name .. "|r",
+            buttonLabel = name,
+        }
+    end
+    return opts
+end
 
 local function GetDungeonFilterOptions()
     local opts = {
@@ -1100,7 +1215,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
     local lootExpLabel = L("LOOT_EXPLORER")
     if not lootExpLabel or lootExpLabel == "LOOT_EXPLORER" then lootExpLabel = "Loot Explorer" end
 
-    local lePanel = CreateFrame("Frame", nil, frame, "BackdropTemplate")
+    local lePanel = CreateFrame("Frame", "ForeverDungeonJournalLootExplorerPanel", frame, "BackdropTemplate")
     frame.homeLootExplorerPanel = lePanel
     lePanel:SetSize(780, 508)
     lePanel:SetPoint("CENTER", frame, "CENTER", 0, -10)
@@ -1112,6 +1227,21 @@ function FDJ.CreateLootExplorerUI(frame, home)
     lePanel:EnableMouse(true)
     lePanel:SetScript("OnMouseDown", function()
         CloseAllDropdownMenus()
+    end)
+
+    if UISpecialFrames then
+        local found = false
+        for _, n in ipairs(UISpecialFrames) do
+            if n == "ForeverDungeonJournalLootExplorerPanel" then found = true; break end
+        end
+        if not found then
+            table.insert(UISpecialFrames, 1, "ForeverDungeonJournalLootExplorerPanel")
+        end
+    end
+
+    lePanel:HookScript("OnHide", function()
+        CloseAllDropdownMenus()
+        if FDJ.HideItemTooltip then FDJ.HideItemTooltip() end
     end)
 
     local leTitle = lePanel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
@@ -1429,7 +1559,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
     -- ============================================================
 
     local leWishlistBtn = CreateFrame("Button", nil, lePanel, "BackdropTemplate")
-    leWishlistBtn:SetSize(115, 22)
+    leWishlistBtn:SetSize(112, 22)
     leWishlistBtn:SetPoint("TOPLEFT", 20, -81)
     FDJ.SetBackdrop(leWishlistBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     leWishlistBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
@@ -1447,9 +1577,71 @@ function FDJ.CreateLootExplorerUI(frame, home)
         FDJ.RefreshLootExplorerPanel(false)
     end)
 
+    -- Class Filter Dropdown
+    local classBtn = CreateDropdownButton(lePanel, 105, "All Classes")
+    classBtn:SetPoint("LEFT", leWishlistBtn, "RIGHT", 6, 0)
+    local classMenu = CreateDropdownMenu(lePanel, 145)
+    classMenu:SetPoint("TOPLEFT", classBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerClassBtn = classBtn
+
+    classBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        local isShown = classMenu:IsShown()
+        CloseAllDropdownMenus()
+        if not isShown then
+            local classOpts = GetClassFilterOptions()
+            PopulateDropdownMenu(classMenu, classOpts, leSelectedClass, function(id, label)
+                leSelectedClass = id
+                classBtn.text:SetText(label)
+                if id == "MY_CLASS" then
+                    local myToken = FDJ.GetPlayerClassToken and FDJ.GetPlayerClassToken() or "WARRIOR"
+                    local _, r, g, b = FDJ.GetClassDisplay(myToken)
+                    classBtn.text:SetTextColor(r, g, b)
+                elseif id ~= "ALL" then
+                    local _, r, g, b = FDJ.GetClassDisplay(id)
+                    classBtn.text:SetTextColor(r, g, b)
+                else
+                    classBtn.text:SetTextColor(1.0, 0.82, 0.27)
+                end
+                FDJ.RefreshLootExplorerPanel(false)
+            end)
+            classMenu:Show()
+        end
+    end)
+
+    -- Quality Filter Dropdown
+    local qualityBtn = CreateDropdownButton(lePanel, 105, "All Qualities")
+    qualityBtn:SetPoint("LEFT", classBtn, "RIGHT", 6, 0)
+    local qualityMenu = CreateDropdownMenu(lePanel, 145)
+    qualityMenu:SetPoint("TOPLEFT", qualityBtn, "BOTTOMLEFT", 0, -2)
+    frame.lootExplorerQualityBtn = qualityBtn
+
+    qualityBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        local isShown = qualityMenu:IsShown()
+        CloseAllDropdownMenus()
+        if not isShown then
+            PopulateDropdownMenu(qualityMenu, QUALITY_OPTIONS, leSelectedQuality, function(id, label)
+                leSelectedQuality = id
+                qualityBtn.text:SetText(label)
+                if id == "RARE_EPIC" or id == "RARE" then
+                    qualityBtn.text:SetTextColor(0.0, 0.44, 0.87)
+                elseif id == "EPIC" then
+                    qualityBtn.text:SetTextColor(0.64, 0.21, 0.93)
+                elseif id == "UNCOMMON_PLUS" then
+                    qualityBtn.text:SetTextColor(0.12, 1.0, 0.0)
+                else
+                    qualityBtn.text:SetTextColor(1.0, 0.82, 0.27)
+                end
+                FDJ.RefreshLootExplorerPanel(false)
+            end)
+            qualityMenu:Show()
+        end
+    end)
+
     local leResetBtn = CreateFrame("Button", nil, lePanel, "BackdropTemplate")
-    leResetBtn:SetSize(90, 22)
-    leResetBtn:SetPoint("LEFT", leWishlistBtn, "RIGHT", 8, 0)
+    leResetBtn:SetSize(86, 22)
+    leResetBtn:SetPoint("LEFT", qualityBtn, "RIGHT", 6, 0)
     FDJ.SetBackdrop(leResetBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     leResetBtn:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     leResetBtn:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
@@ -1459,6 +1651,8 @@ function FDJ.CreateLootExplorerUI(frame, home)
     resetTxt:SetText("Reset Filters")
     resetTxt:SetTextColor(0.85, 0.75, 0.60)
     leResetBtn.text = resetTxt
+
+    local UpdateHeaderSortLabels
 
     leResetBtn:SetScript("OnEnter", function(self)
         self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1.0)
@@ -1475,6 +1669,9 @@ function FDJ.CreateLootExplorerUI(frame, home)
         leSelectedSlot = "ALL"
         leSelectedMaterial = "ALL"
         leSelectedBracket = "ALL"
+        leSelectedClass = "ALL"
+        leSelectedQuality = "ALL"
+        leCurrentSort = "DEFAULT"
         leWishlistOnly = false
         leSearchQuery = ""
         leSearchBox:SetText("")
@@ -1485,6 +1682,11 @@ function FDJ.CreateLootExplorerUI(frame, home)
         slotBtn.text:SetText("All Slots")
         matBtn.text:SetText("All Types")
         bracketBtn.text:SetText("All Req Levels")
+        classBtn.text:SetText("All Classes")
+        classBtn.text:SetTextColor(1.0, 0.82, 0.27)
+        qualityBtn.text:SetText("All Qualities")
+        qualityBtn.text:SetTextColor(1.0, 0.82, 0.27)
+
         if bracketMenu.customBox then
             bracketMenu.customBox:SetText("")
             if bracketMenu.customPlace then bracketMenu.customPlace:Show() end
@@ -1492,6 +1694,7 @@ function FDJ.CreateLootExplorerUI(frame, home)
 
         StyleFilterChip(leWishlistBtn, false)
         CloseAllDropdownMenus()
+        if UpdateHeaderSortLabels then UpdateHeaderSortLabels() end
         FDJ.RefreshLootExplorerPanel(false)
     end)
 
@@ -1509,20 +1712,142 @@ function FDJ.CreateLootExplorerUI(frame, home)
     leHeaderBar:SetSize(720, 18)
     leHeaderBar:SetPoint("TOPLEFT", 24, -109)
 
-    local hItem = leHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+    -- Item column sort button
+    local hItemBtn = CreateFrame("Button", nil, leHeaderBar)
+    hItemBtn:SetSize(305, 18)
+    hItemBtn:SetPoint("TOPLEFT", 0, 0)
+    local hItem = hItemBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     hItem:SetPoint("LEFT", 0, 0)
     hItem:SetText("ITEM & STATS")
     hItem:SetTextColor(0.70, 0.60, 0.40)
+    hItemBtn.text = hItem
 
-    local hSlot = leHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
-    hSlot:SetPoint("LEFT", 315, 0)
+    -- Slot / Requirements column sort button
+    local hSlotBtn = CreateFrame("Button", nil, leHeaderBar)
+    hSlotBtn:SetSize(185, 18)
+    hSlotBtn:SetPoint("TOPLEFT", 315, 0)
+    local hSlot = hSlotBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    hSlot:SetPoint("LEFT", 0, 0)
     hSlot:SetText("SLOT & REQUIREMENTS")
     hSlot:SetTextColor(0.70, 0.60, 0.40)
+    hSlotBtn.text = hSlot
 
-    local hSource = leHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
-    hSource:SetPoint("RIGHT", -44, 0)
+    -- Encounter Source column sort button
+    local hSourceBtn = CreateFrame("Button", nil, leHeaderBar)
+    hSourceBtn:SetSize(190, 18)
+    hSourceBtn:SetPoint("TOPRIGHT", -26, 0)
+    local hSource = hSourceBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    hSource:SetPoint("RIGHT", 0, 0)
     hSource:SetText("ENCOUNTER SOURCE")
     hSource:SetTextColor(0.70, 0.60, 0.40)
+    hSourceBtn.text = hSource
+
+    UpdateHeaderSortLabels = function()
+        if leCurrentSort == "LEVEL_ASC" then
+            hSlot:SetText("SLOT & REQUIREMENTS  ▲")
+            hSlot:SetTextColor(1.0, 0.85, 0.30)
+            hItem:SetText("ITEM & STATS")
+            hItem:SetTextColor(0.70, 0.60, 0.40)
+            hSource:SetText("ENCOUNTER SOURCE")
+            hSource:SetTextColor(0.70, 0.60, 0.40)
+        elseif leCurrentSort == "LEVEL_DESC" then
+            hSlot:SetText("SLOT & REQUIREMENTS  ▼")
+            hSlot:SetTextColor(1.0, 0.85, 0.30)
+            hItem:SetText("ITEM & STATS")
+            hItem:SetTextColor(0.70, 0.60, 0.40)
+            hSource:SetText("ENCOUNTER SOURCE")
+            hSource:SetTextColor(0.70, 0.60, 0.40)
+        elseif leCurrentSort == "QUALITY_DESC" then
+            hItem:SetText("ITEM & STATS (Quality  ▼)")
+            hItem:SetTextColor(1.0, 0.85, 0.30)
+            hSlot:SetText("SLOT & REQUIREMENTS")
+            hSlot:SetTextColor(0.70, 0.60, 0.40)
+            hSource:SetText("ENCOUNTER SOURCE")
+            hSource:SetTextColor(0.70, 0.60, 0.40)
+        elseif leCurrentSort == "NAME_ASC" then
+            hItem:SetText("ITEM & STATS (A-Z  ▲)")
+            hItem:SetTextColor(1.0, 0.85, 0.30)
+            hSlot:SetText("SLOT & REQUIREMENTS")
+            hSlot:SetTextColor(0.70, 0.60, 0.40)
+            hSource:SetText("ENCOUNTER SOURCE")
+            hSource:SetTextColor(0.70, 0.60, 0.40)
+        else
+            hItem:SetText("ITEM & STATS")
+            hItem:SetTextColor(0.70, 0.60, 0.40)
+            hSlot:SetText("SLOT & REQUIREMENTS")
+            hSlot:SetTextColor(0.70, 0.60, 0.40)
+            hSource:SetText("ENCOUNTER SOURCE (Dungeon Order)")
+            hSource:SetTextColor(1.0, 0.85, 0.30)
+        end
+    end
+    frame.lootExplorerSortLabelsUpdate = UpdateHeaderSortLabels
+    UpdateHeaderSortLabels()
+
+    hSlotBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        if leCurrentSort == "LEVEL_ASC" then
+            leCurrentSort = "LEVEL_DESC"
+        elseif leCurrentSort == "LEVEL_DESC" then
+            leCurrentSort = "DEFAULT"
+        else
+            leCurrentSort = "LEVEL_ASC"
+        end
+        UpdateHeaderSortLabels()
+        FDJ.RefreshLootExplorerPanel(false)
+    end)
+    hSlotBtn:SetScript("OnEnter", function(self)
+        self.text:SetTextColor(1.0, 0.95, 0.50)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText("Sort by Required Level", 1, 0.85, 0.35)
+        GameTooltip:AddLine("Click to toggle between ascending, descending, or dungeon order.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+    end)
+    hSlotBtn:SetScript("OnLeave", function(self)
+        UpdateHeaderSortLabels()
+        GameTooltip:Hide()
+    end)
+
+    hItemBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        if leCurrentSort == "QUALITY_DESC" then
+            leCurrentSort = "NAME_ASC"
+        elseif leCurrentSort == "NAME_ASC" then
+            leCurrentSort = "DEFAULT"
+        else
+            leCurrentSort = "QUALITY_DESC"
+        end
+        UpdateHeaderSortLabels()
+        FDJ.RefreshLootExplorerPanel(false)
+    end)
+    hItemBtn:SetScript("OnEnter", function(self)
+        self.text:SetTextColor(1.0, 0.95, 0.50)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText("Sort by Quality / Name", 1, 0.85, 0.35)
+        GameTooltip:AddLine("Click to toggle between Quality (Epics first), Name (A-Z), or dungeon order.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+    end)
+    hItemBtn:SetScript("OnLeave", function(self)
+        UpdateHeaderSortLabels()
+        GameTooltip:Hide()
+    end)
+
+    hSourceBtn:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        leCurrentSort = "DEFAULT"
+        UpdateHeaderSortLabels()
+        FDJ.RefreshLootExplorerPanel(false)
+    end)
+    hSourceBtn:SetScript("OnEnter", function(self)
+        self.text:SetTextColor(1.0, 0.95, 0.50)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText("Reset to Dungeon Progression", 1, 0.85, 0.35)
+        GameTooltip:AddLine("Click to return to natural dungeon and encounter progression order.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+    end)
+    hSourceBtn:SetScript("OnLeave", function(self)
+        UpdateHeaderSortLabels()
+        GameTooltip:Hide()
+    end)
 
     local leScroll = CreateFrame("ScrollFrame", "ForeverDungeonJournalLootExplorerScroll", lePanel, "UIPanelScrollFrameTemplate")
     frame.homeLootExplorerScroll = leScroll
@@ -1755,16 +2080,32 @@ local function GetOrCreateLootExplorerRow(frame, i)
         self:SetBackdropColor(0.24, 0.17, 0.09, 0.98)
         self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1.0)
         if self.itemData and self.itemData.itemID then
-            local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(self.itemData.itemID)
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:SetHyperlink(liveLink or ("item:" .. tostring(self.itemData.itemID)))
-            GameTooltip:Show()
+            self.item = { self.itemData.itemID, self.itemData.name, self.itemData.slot, self.itemData.quality }
+            self.fdjSourceText = self.itemData.dungeon .. "  —  " .. (self.itemData.boss or "")
+            if FDJ.ShowItemTooltip then
+                FDJ.ShowItemTooltip(self)
+            else
+                local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(self.itemData.itemID)
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                GameTooltip:SetHyperlink(liveLink or ("item:" .. tostring(self.itemData.itemID)))
+                GameTooltip:Show()
+            end
         end
     end)
     row:SetScript("OnLeave", function(self)
         self:SetBackdropColor(0.16, 0.12, 0.07, 0.92)
         self:SetBackdropBorderColor(0.42, 0.30, 0.15, 1)
-        GameTooltip:Hide()
+        self.fdjComparing = nil
+        if FDJ.HideItemTooltip then
+            FDJ.HideItemTooltip()
+        else
+            GameTooltip:Hide()
+        end
+    end)
+    row:SetScript("OnUpdate", function(self)
+        if FDJ.UpdateItemComparison then
+            FDJ.UpdateItemComparison(self)
+        end
     end)
 
     row:SetScript("OnClick", function(self)
@@ -1829,6 +2170,8 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
         if itemIndex <= count then
             local it = items[itemIndex]
             row.itemData = it
+            row.item = { it.itemID, it.name, it.slot, it.quality }
+            row.fdjSourceText = it.dungeon .. "  —  " .. (it.boss or "")
 
             local liveName, liveLink, quality, _, reqLevel, classType, _, _, equipLoc, texture = FDJ.ItemInfo and FDJ.ItemInfo(it.itemID)
             quality = quality or it.quality or 1
@@ -1968,7 +2311,10 @@ function FDJ.RefreshLootExplorerPanel(preserveScroll)
         leSelectedBracket,
         leWishlistOnly,
         leSearchQuery,
-        leSelectedDungeon
+        leSelectedDungeon,
+        leSelectedClass,
+        leSelectedQuality,
+        leCurrentSort
     )
     frame.lootExplorerFilteredItems = items
     totalAll = totalAll or #items
@@ -2069,6 +2415,9 @@ itemLoadWatcher:SetScript("OnEvent", function(_, _, itemID, success)
             or (leSelectedSlot ~= "ALL")
             or (leSelectedMaterial ~= "ALL")
             or (leSelectedBracket ~= "ALL")
+            or (leSelectedClass ~= "ALL")
+            or (leSelectedQuality ~= "ALL")
+            or (leCurrentSort ~= "DEFAULT")
             or (leSearchQuery ~= "")
         FDJ.ScheduleLootExplorerRefresh(not (metaChanged and hasActiveFilter))
     end

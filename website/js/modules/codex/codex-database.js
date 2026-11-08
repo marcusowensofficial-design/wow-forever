@@ -747,11 +747,12 @@
     out.sort((a, b) => {
       const ra = rows[a];
       const rb = rows[b];
-      let va = 0;
-      let vb = 0;
       if (sortMode === 'name') {
         return ra[1] < rb[1] ? -1 * dir : ra[1] > rb[1] ? 1 * dir : ra[0] - rb[0];
-      } else if (sortMode === 'ilvl') {
+      }
+      let va;
+      let vb;
+      if (sortMode === 'ilvl') {
         va = ra[3];
         vb = rb[3];
       } else if (sortMode === 'req') {

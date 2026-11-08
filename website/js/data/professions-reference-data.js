@@ -2329,7 +2329,7 @@
     "dust": "Soul Dust (1–3x)",
     "essence": "Astral Essence (Lesser/Greater 1–2x)",
     "shard": "Small Glowing Shard (100% Blue)",
-    "notes": "Phase 2 Beta Cap prime equipment range."
+    "notes": "Level 20–30 mid-game equipment range."
   },
   {
     "ilvl": "iLvl 36–45",

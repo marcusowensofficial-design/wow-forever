@@ -26485,7 +26485,8 @@ window.WOW_CHANGES_DATA = {
       "changes": [
         "Replaces Improved Drain Life",
         "3 ranks (Classic: 5)",
-        "Moved from tier 2 to tier 5"
+        "Moved from tier 2 to tier 5",
+        "Hotfix (Nov 6): Resolved issue where Wrack scaled its own damage"
       ],
       "reported_previous_name": "Improved Drain Life",
       "classic": {
@@ -53699,9 +53700,10 @@ window.WOW_CHANGES_DATA = {
       "reported_change_kind": "new",
       "evidence_status": "official_notes",
       "discovered_at": "2026-11-02",
-      "summary": "Learned at level 24. 5 Energy, 10s cooldown, Melee. Instantly strike with off-hand weapon, dealing 50% weapon damage and generating 15 Energy (Rank 2 at level 44 generates 25 Energy). Cannot miss.",
+      "summary": "Learned at level 24 (Rank 1: 15 Energy returned) and level 44 (Rank 2: 25 Energy returned). 5 Energy cost, 10s cooldown, Melee. Instantly strike with off-hand weapon dealing 50% weapon damage. Cannot miss. Generates 1 Combo Point while Boot Knife is active.",
       "changes": [
-        "New baseline off-hand strike ability generating energy."
+        "New baseline off-hand strike ability generating energy.",
+        "Hotfix (Nov 6): Tooltip displays Rank 1 and Rank 2; displays Combo Points when Boot Knife is active."
       ]
     },
     {

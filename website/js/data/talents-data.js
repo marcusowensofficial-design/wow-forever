@@ -965,7 +965,7 @@ if (typeof window !== 'undefined') {
         "spellId": 47174,
         "req": null,
         "descriptions": [
-          "15 sec cooldown. Costs 25% of base health. Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds."
+          "15 sec cooldown. Costs 25% of base health. Activates Gore Drinker. Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds."
         ]
       },
       {
@@ -8463,7 +8463,7 @@ if (typeof window !== 'undefined') {
         "maxRank": 1,
         "spellId": 18562,
         "descriptions": [
-          "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of the consumed spell."
+          "Instantly heals a friendly target with your active Rejuvenation or Regrowth effect for an amount equal to the full periodic duration of that spell without consuming the effect."
         ],
         "req": null
       },

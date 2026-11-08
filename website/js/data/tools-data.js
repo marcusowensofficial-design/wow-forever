@@ -2167,7 +2167,7 @@ Warlocks in WoW Forever turn health into mana and mana into dead enemies with ne
 
 | Demon | When to Summon | Signature Power |
 | **Imp** | Dungeon DPS groups | Blood Pact (+15 Stamina to entire party), Firebolt |
-| **Voidwalker** | Solo leveling & PvP defense | Sacrifice (Grants 505 damage absorption shield) |
+| **Voidwalker** | Solo leveling & PvP defense (+40 Base HP hotfixed Nov 6) | Sacrifice (Grants 505 damage absorption shield) |
 | **Succubus** | World PvP & humanoid duels | Seduction (Charms humanoid target for 15 seconds) |
 | **Felhunter (Lvl 30)** | Caster duels & Mage counters | Spell Lock (Counterspell silence) & Devour Magic |`
     },
@@ -2928,7 +2928,7 @@ In WoW Forever, crafting is no longer confined to capital city anvils and looms.
 
 ### 1. The Tanning Rack (Leatherworking Station)
 
-• **Profession Requirement:** Leatherworking (Skill 140+).
+• **Profession Requirement:** Leatherworking (Skill 125+; hotfixed down from 140 on Nov 7).
 • **Blueprint Source:** Rare drop from **Razorclaw the Butcher** in Shadowfang Keep (~1 in 900 drop rate).
 • **Deployment Reagents:** 5x Medium Leather, 3x Fine Thread, 2x Simple Wood.
 • **Field Duration:** Lasts **15 minutes** in the world (Replaces standard Camp Tent; grants standard tent rest bonuses + 1-hour cooldown).

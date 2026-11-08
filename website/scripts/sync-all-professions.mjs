@@ -21,7 +21,7 @@ async function fetchWowheadMeta(type, id) {
     if (!res.ok) return null;
     const xml = await res.text();
 
-    const nameMatch = xml.match(/<name><\!\[CDATA\[(.*?)\]\]><\/name>/);
+    const nameMatch = xml.match(/<name><!\[CDATA\[(.*?)\]\]><\/name>/);
     const iconMatch = xml.match(/<icon[^>]*>([^<]+)<\/icon>/);
     const qualMatch = xml.match(/<quality id="([0-9]+)"/);
     const slotMatch = xml.match(/<inventorySlot id="([0-9]+)">([^<]+)<\/inventorySlot>/);

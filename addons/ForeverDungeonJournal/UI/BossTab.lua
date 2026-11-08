@@ -69,6 +69,15 @@ local function ItemMatchesClass(item, classToken)
     local slot = item[3] or ""
     local slotLower = string.lower(slot)
 
+    -- Relic filters
+    if string.find(slotLower, "idol", 1, true) then
+        return classToken == "DRUID"
+    elseif string.find(slotLower, "libram", 1, true) then
+        return classToken == "PALADIN"
+    elseif string.find(slotLower, "totem", 1, true) then
+        return classToken == "SHAMAN"
+    end
+
     -- Armor type proficiency filters (Classic rules)
     if string.find(slotLower, "plate", 1, true) then
         return classToken == "WARRIOR" or classToken == "PALADIN"
