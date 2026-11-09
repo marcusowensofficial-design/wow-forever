@@ -9,6 +9,7 @@
 ## Category-enUS: Information
 ## DefaultState: enabled
 ## AllowLoadGameType: camelot
+## OptionalDeps: ForeverMarket
 
 core.lua
 ui.lua

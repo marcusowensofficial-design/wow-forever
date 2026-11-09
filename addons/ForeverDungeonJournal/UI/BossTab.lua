@@ -25,6 +25,7 @@ FDJ.tacticsAbilityRows = FDJ.tacticsAbilityRows or {}
 FDJ.selectedClassFilter = FDJ.selectedClassFilter or "ALL"
 FDJ.selectedSlotFilter = FDJ.selectedSlotFilter or "ALL"
 FDJ.selectedBossSubTab = FDJ.selectedBossSubTab or "tactics"
+FDJ.selectedTacticsRoleFilter = FDJ.selectedTacticsRoleFilter or "ALL"
 
 function FDJ.GetPlayerClassToken()
     if type(UnitClass) == "function" then
@@ -32,6 +33,100 @@ function FDJ.GetPlayerClassToken()
         if token and token ~= "" then return string.upper(token) end
     end
     return "WARRIOR"
+end
+
+function FDJ.GetPlayerCombatRole()
+    -- 1. Check LFG / Dungeon Finder group assigned role if available
+    if type(UnitGroupRolesAssigned) == "function" then
+        local ok, assignedRole = pcall(UnitGroupRolesAssigned, "player")
+        if ok and assignedRole then
+            if assignedRole == "TANK" then
+                return "TANK"
+            elseif assignedRole == "HEALER" then
+                return "HEALER"
+            elseif assignedRole == "DAMAGER" then
+                local classToken = FDJ.GetPlayerClassToken()
+                if classToken == "HUNTER" or classToken == "MAGE" or classToken == "WARLOCK" or classToken == "PRIEST" then
+                    return "RANGED"
+                elseif classToken == "ROGUE" or classToken == "WARRIOR" or classToken == "PALADIN" then
+                    return "MELEE"
+                elseif classToken == "DRUID" then
+                    local form = (type(GetShapeshiftForm) == "function") and GetShapeshiftForm() or 0
+                    if form == 1 then return "TANK" end
+                    if form == 3 then return "MELEE" end
+                    if form == 5 then return "RANGED" end
+                    return "MELEE"
+                elseif classToken == "SHAMAN" then
+                    return "MELEE"
+                end
+            end
+        end
+    end
+
+    -- 2. Inspect class token, stance / shapeshift form, and equipped gear
+    local class = FDJ.GetPlayerClassToken()
+    if class == "HUNTER" or class == "MAGE" or class == "WARLOCK" then
+        return "RANGED"
+    elseif class == "ROGUE" then
+        return "MELEE"
+    elseif class == "WARRIOR" then
+        local form = (type(GetShapeshiftForm) == "function") and GetShapeshiftForm() or 0
+        if form == 2 then return "TANK" end -- Defensive Stance
+        if type(GetInventoryItemID) == "function" then
+            local offhandID = GetInventoryItemID("player", 17)
+            if offhandID and C_Item and C_Item.GetItemInfoInstant then
+                local ok, _, _, _, equipLoc = pcall(C_Item.GetItemInfoInstant, offhandID)
+                if ok and equipLoc == "INVTYPE_SHIELD" then
+                    return "TANK"
+                end
+            end
+        end
+        return "MELEE"
+    elseif class == "DRUID" then
+        local form = (type(GetShapeshiftForm) == "function") and GetShapeshiftForm() or 0
+        if form == 1 then
+            return "TANK"   -- Bear / Dire Bear Form
+        elseif form == 3 then
+            return "MELEE"  -- Cat Form
+        elseif form == 5 then
+            return "RANGED" -- Moonkin Form
+        else
+            return "HEALER" -- Caster / Tree Form default in Classic/Forever
+        end
+    elseif class == "PRIEST" then
+        local form = (type(GetShapeshiftForm) == "function") and GetShapeshiftForm() or 0
+        if form == 1 then
+            return "RANGED" -- Shadowform
+        end
+        return "HEALER"
+    elseif class == "PALADIN" then
+        local hasRighteousFury = false
+        if type(AuraUtil) == "table" and type(AuraUtil.FindAuraByName) == "function" then
+            local ok, aura = pcall(AuraUtil.FindAuraByName, "Righteous Fury", "player")
+            if ok and aura then hasRighteousFury = true end
+        end
+        if not hasRighteousFury and type(C_UnitAuras) == "table" and type(C_UnitAuras.GetPlayerAuraBySpellID) == "function" then
+            local ok, aura = pcall(C_UnitAuras.GetPlayerAuraBySpellID, 25780)
+            if ok and aura then hasRighteousFury = true end
+        end
+        if hasRighteousFury then
+            return "TANK"
+        end
+        if type(GetInventoryItemID) == "function" then
+            local offhandID = GetInventoryItemID("player", 17)
+            if offhandID and C_Item and C_Item.GetItemInfoInstant then
+                local ok, _, _, _, equipLoc = pcall(C_Item.GetItemInfoInstant, offhandID)
+                if ok and equipLoc == "INVTYPE_SHIELD" then
+                    return "TANK"
+                end
+            end
+        end
+        return "MELEE"
+    elseif class == "SHAMAN" then
+        return "HEALER"
+    end
+
+    return "MELEE"
 end
 
 FDJ.CLASS_DISPLAY_INFO = {
@@ -425,25 +520,38 @@ function FDJ.FormatTacticsAbilityLinks(tipText, abilities)
             local lowerRes = result:lower()
             local s, e = lowerRes:find(lowerName, pos, true)
             if not s then break end
+            local resLen = #result
 
-            local valid = true
-            if s > 1 then
-                local charBefore = result:sub(s - 1, s - 1)
-                if charBefore:match("%a") then
-                    valid = false
-                elseif charBefore == "[" or (s > 2 and result:sub(s - 2, s - 1) == "|h") then
-                    valid = false
-                end
+            -- Check if already inside an existing hyperlink: |h[...]
+            local inHyperlink = false
+            if s >= 3 and result:sub(s - 2, s - 1) == "|h" then
+                inHyperlink = true
+            elseif s >= 4 and result:sub(s - 3, s - 1) == "|h[" then
+                inHyperlink = true
+            elseif e + 2 <= resLen and result:sub(e + 1, e + 3) == "]|h" then
+                inHyperlink = true
+            elseif e + 1 <= resLen and result:sub(e + 1, e + 2) == "|h" then
+                inHyperlink = true
             end
 
-            if valid then
-                local nextE = e
-                local resLen = #result
-                if e < resLen then
-                    local charAfter = result:sub(e + 1, e + 1)
-                    if charAfter == "]" then
+            if inHyperlink then
+                pos = e + 1
+            else
+                local hasBracketBefore = (s > 1 and result:sub(s - 1, s - 1) == "[")
+                local hasBracketAfter = (e < resLen and result:sub(e + 1, e + 1) == "]")
+
+                local valid = true
+                if s > 1 then
+                    local charBefore = result:sub(s - 1, s - 1)
+                    if charBefore:match("%a") then
                         valid = false
-                    elseif charAfter:match("%a") then
+                    end
+                end
+
+                local nextE = e
+                if valid and not hasBracketAfter and e < resLen then
+                    local charAfter = result:sub(e + 1, e + 1)
+                    if charAfter:match("%a") then
                         local sub2 = lowerRes:sub(e + 1, e + 2)
                         local sub1 = lowerRes:sub(e + 1, e + 1)
                         if sub2 == "ed" and (e + 2 == resLen or not lowerRes:sub(e + 3, e + 3):match("%a")) then
@@ -460,15 +568,15 @@ function FDJ.FormatTacticsAbilityLinks(tipText, abilities)
 
                 if valid then
                     local origText = result:sub(s, nextE)
+                    local repStart = (hasBracketBefore and hasBracketAfter) and (s - 1) or s
+                    local repEnd = (hasBracketBefore and hasBracketAfter) and (nextE + 1) or nextE
                     local replacement = "|cffffd200|Hability:" .. ab.index .. ":" .. ab.id .. "|h[" .. origText .. "]|h|r"
                     table.insert(matched, ab)
-                    result = result:sub(1, s - 1) .. replacement .. result:sub(nextE + 1)
-                    pos = s + #replacement
+                    result = result:sub(1, repStart - 1) .. replacement .. result:sub(repEnd + 1)
+                    pos = repStart + #replacement
                 else
                     pos = e + 1
                 end
-            else
-                pos = e + 1
             end
         end
     end
@@ -611,7 +719,7 @@ function FDJ.MakeRoleTipCard(parent, title, iconPath, titleColor)
         local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
         local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
         local bossName = boss and boss.name or "Boss"
-        local roleTitle = card.title and card.title:GetText() or "Role"
+        local roleTitle = card.roleTitle or (card.title and card.title:GetText()) or "Role"
         local tipText = card.rawTipText or (card.desc and card.desc:GetText()) or ""
         if tipText == "" then return end
 
@@ -620,14 +728,33 @@ function FDJ.MakeRoleTipCard(parent, title, iconPath, titleColor)
         local inRaid = IsInRaid and IsInRaid()
         local inParty = IsInGroup and IsInGroup()
         local channel = inRaid and "RAID" or (inParty and "PARTY" or nil)
-        local msg = "[Forever DJ] " .. bossName .. " (" .. roleTitle .. "): " .. tipText
-        if #msg > 250 then msg = msg:sub(1, 247) .. "..." end
-
-        if channel then
-            SendChatMessage(msg, channel)
+        local prefix = "[Forever DJ] " .. bossName .. " (" .. roleTitle .. "): "
+        local fullMsg = prefix .. tipText
+        local msgs = {}
+        if #fullMsg <= 245 then
+            msgs[1] = fullMsg
         else
-            print("|cffffd100[Forever DJ]|r " .. (L("ANNOUNCE_PREVIEW") or "Tactics announcement preview (not in party/raid):"))
-            print("  |cffffffff" .. msg .. "|r")
+            local maxLen = 240
+            local sub = fullMsg:sub(1, maxLen)
+            local splitPos = sub:match(".*()[%.;!%?]")
+            if not splitPos or splitPos <= #prefix + 20 then
+                splitPos = sub:match(".*()%s") or maxLen
+            end
+            msgs[1] = fullMsg:sub(1, splitPos):gsub("%s+$", "")
+            local remainder = fullMsg:sub(splitPos + 1):gsub("^%s+", "")
+            if remainder ~= "" then
+                local line2 = prefix .. remainder
+                if #line2 > 245 then line2 = line2:sub(1, 242) .. "..." end
+                msgs[2] = line2
+            end
+        end
+
+        for _, msg in ipairs(msgs) do
+            if channel then
+                SendChatMessage(msg, channel)
+            else
+                print("|cffffd100[Forever DJ]|r " .. msg)
+            end
         end
     end)
 
@@ -1469,6 +1596,42 @@ function FDJ.ResolveRoleTips(roleTips)
     return tankTip, healerTip, meleeTip, rangedTip
 end
 
+local TACTICS_ROLE_FILTERS = {
+    { key = "ALL",     label = "ALL_ROLES", fallback = "All" },
+    { key = "MY_ROLE", label = "MY_ROLE",   fallback = "My Role" },
+    { key = "TANK",    label = "TANK",      fallback = "Tank" },
+    { key = "HEALER",  label = "HEALER",    fallback = "Healer" },
+    { key = "DPS",     label = "DPS",       fallback = "DPS" },
+}
+
+function FDJ.EnsureTacticsRoleFilters(frame)
+    if frame.tacticsRoleFilterButtons then return frame.tacticsRoleFilterButtons end
+    frame.tacticsRoleFilterButtons = {}
+
+    for _, fInfo in ipairs(TACTICS_ROLE_FILTERS) do
+        local btn = CreateFrame("Button", nil, frame.bossTacticsContent, "BackdropTemplate")
+        btn:SetHeight(20)
+        FDJ.SetBackdrop(btn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+        btn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+
+        local text = btn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+        text:SetPoint("CENTER", 0, 0)
+        btn.text = text
+        btn.filterKey = fInfo.key
+        btn.labelKey = fInfo.label
+        btn.fallbackText = fInfo.fallback
+
+        btn:SetScript("OnClick", function(self)
+            FDJ.selectedTacticsRoleFilter = self.filterKey
+            FDJ.RefreshBossTactics()
+        end)
+
+        frame.tacticsRoleFilterButtons[fInfo.key] = btn
+    end
+
+    return frame.tacticsRoleFilterButtons
+end
+
 function FDJ.RefreshBossTactics()
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     if not frame or not frame.bossTacticsContent or not frame.bossTacticsScroll then return end
@@ -1487,11 +1650,26 @@ function FDJ.RefreshBossTactics()
         frame.tacticsReturnButton:Hide()
     end
 
+    if not tactics and boss.trash then
+        local overviewDesc = L("TRASH_TACTICS_OVERVIEW") or "Trash packs drop valuable zone-wide bind-on-equip gear, rare recipes, and crafting materials. Coordinate crowd control, interrupt high-damage casters, and clear packs deliberately before engaging wandering patrols."
+        tactics = {
+            overview = "|cffffd200[" .. (L("TRASH_TACTICS_TITLE") or "Dungeon Trash & Route Hazards") .. "]|r\n" .. overviewDesc,
+            roleTips = {
+                tank = L("TRASH_TIP_TANK") or "Group multi-target trash packs tightly, turn cleaving mobs away from the party, and keep eyes on wandering patrols.",
+                healer = L("TRASH_TIP_HEALER") or "Conserve mana between pulls, dispel debilitating magic/curses/poisons promptly, and prioritize the tank during multi-pack pulls.",
+                melee = L("TRASH_TIP_MELEE") or "Watch enemy frontal cleaves, interrupt high-damage caster mobs, and focus marked kill targets.",
+                ranged = L("TRASH_TIP_RANGED") or "Assist with crowd control (Polymorph/Trap/Fear), focus down priority casters, and spread out if mobs cast AoE.",
+            },
+            abilities = {},
+        }
+    end
+
     if not tactics then
         frame.tacticsOverviewHeader:Hide()
         if frame.tacticsOverviewFrame then frame.tacticsOverviewFrame:Hide() end
         frame.tacticsOverviewText:Hide()
         frame.tacticsRoleHeader:Hide()
+        for _, btn in pairs(frame.tacticsRoleFilterButtons or {}) do btn:Hide() end
         if frame.tacticsTankCard then frame.tacticsTankCard:Hide() end
         if frame.tacticsHealerCard then frame.tacticsHealerCard:Hide() end
         if frame.tacticsMeleeCard then frame.tacticsMeleeCard:Hide() end
@@ -1554,28 +1732,174 @@ function FDJ.RefreshBossTactics()
         frame.tacticsRoleHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
         frame.tacticsRoleHeader:Show()
     end
-    cursorY = cursorY + 22
+
+    local filterButtons = FDJ.EnsureTacticsRoleFilters(frame)
+    local curFilter = FDJ.selectedTacticsRoleFilter or "ALL"
+    local prevFilterBtn = nil
+    for i = #TACTICS_ROLE_FILTERS, 1, -1 do
+        local fInfo = TACTICS_ROLE_FILTERS[i]
+        local btn = filterButtons[fInfo.key]
+        if btn then
+            local label = L(fInfo.label) or fInfo.fallback
+            btn.text:SetText(label)
+            local textW = btn.text:GetStringWidth() or 24
+            local btnW = math.max(34, textW + 12)
+            btn:SetWidth(btnW)
+            btn:ClearAllPoints()
+            if not prevFilterBtn then
+                btn:SetPoint("TOPRIGHT", frame.bossTacticsContent, "TOPRIGHT", -8, -cursorY + 1)
+            else
+                btn:SetPoint("RIGHT", prevFilterBtn, "LEFT", -4, 0)
+            end
+            prevFilterBtn = btn
+
+            local isSelected = (curFilter == fInfo.key)
+            if isSelected then
+                btn:SetBackdropColor(0.28, 0.20, 0.08, 0.98)
+                btn:SetBackdropBorderColor(1.0, 0.85, 0.30, 1.0)
+                btn.text:SetTextColor(1.00, 0.88, 0.35)
+            else
+                btn:SetBackdropColor(0.12, 0.08, 0.04, 0.85)
+                btn:SetBackdropBorderColor(0.40, 0.28, 0.12, 0.85)
+                btn.text:SetTextColor(0.70, 0.64, 0.52)
+            end
+            btn:Show()
+        end
+    end
+
+    cursorY = cursorY + 24
 
     local tankTip, healerTip, meleeTip, rangedTip = FDJ.ResolveRoleTips(tactics.roleTips)
-    local cards = {
-        { frame.tacticsTankCard, tankTip, L("TANK") or "Tank" },
-        { frame.tacticsHealerCard, healerTip, L("HEALER") or "Healer" },
-        { frame.tacticsMeleeCard or frame.tacticsDpsCard, meleeTip, L("MELEE_DPS") or "Melee DPS" },
-        { frame.tacticsRangedCard, rangedTip, L("RANGED_DPS") or "Ranged DPS" },
-    }
-    for _, cInfo in ipairs(cards) do
-        local card, tipText, roleLabel = cInfo[1], cInfo[2], cInfo[3]
-        if card and tipText then
+    local playerRole = FDJ.GetPlayerCombatRole()
+
+    -- Smart Collapse: If melee and ranged are identical (or only one DPS tip exists), combine into a single DPS card
+    local collapseDps = false
+    local unifiedDpsTip = nil
+    if meleeTip and rangedTip and meleeTip ~= "" and meleeTip == rangedTip then
+        collapseDps = true
+        unifiedDpsTip = meleeTip
+    elseif meleeTip and meleeTip ~= "" and (not rangedTip or rangedTip == "") then
+        collapseDps = true
+        unifiedDpsTip = meleeTip
+    elseif rangedTip and rangedTip ~= "" and (not meleeTip or meleeTip == "") then
+        collapseDps = true
+        unifiedDpsTip = rangedTip
+    end
+
+    local cardsToRender = {}
+    if tankTip and tankTip ~= "" then
+        table.insert(cardsToRender, {
+            card = frame.tacticsTankCard,
+            tip = tankTip,
+            label = L("TANK") or "Tank",
+            roleKey = "TANK",
+            isMyRole = (playerRole == "TANK"),
+        })
+    elseif frame.tacticsTankCard then
+        frame.tacticsTankCard:Hide()
+    end
+
+    if healerTip and healerTip ~= "" then
+        table.insert(cardsToRender, {
+            card = frame.tacticsHealerCard,
+            tip = healerTip,
+            label = L("HEALER") or "Healer",
+            roleKey = "HEALER",
+            isMyRole = (playerRole == "HEALER"),
+        })
+    elseif frame.tacticsHealerCard then
+        frame.tacticsHealerCard:Hide()
+    end
+
+    if collapseDps then
+        if frame.tacticsMeleeCard then frame.tacticsMeleeCard:Hide() end
+        if frame.tacticsRangedCard then frame.tacticsRangedCard:Hide() end
+        if unifiedDpsTip and unifiedDpsTip ~= "" then
+            table.insert(cardsToRender, {
+                card = frame.tacticsDpsCard,
+                tip = unifiedDpsTip,
+                label = L("DPS") or "DPS",
+                roleKey = "DPS",
+                isMyRole = (playerRole == "MELEE" or playerRole == "RANGED"),
+            })
+        elseif frame.tacticsDpsCard then
+            frame.tacticsDpsCard:Hide()
+        end
+    else
+        if frame.tacticsDpsCard then frame.tacticsDpsCard:Hide() end
+        if meleeTip and meleeTip ~= "" then
+            table.insert(cardsToRender, {
+                card = frame.tacticsMeleeCard,
+                tip = meleeTip,
+                label = L("MELEE_DPS") or "Melee DPS",
+                roleKey = "MELEE",
+                isMyRole = (playerRole == "MELEE"),
+            })
+        elseif frame.tacticsMeleeCard then
+            frame.tacticsMeleeCard:Hide()
+        end
+        if rangedTip and rangedTip ~= "" then
+            table.insert(cardsToRender, {
+                card = frame.tacticsRangedCard,
+                tip = rangedTip,
+                label = L("RANGED_DPS") or "Ranged DPS",
+                roleKey = "RANGED",
+                isMyRole = (playerRole == "RANGED"),
+            })
+        elseif frame.tacticsRangedCard then
+            frame.tacticsRangedCard:Hide()
+        end
+    end
+
+    local yourRoleBadge = " |cffffd200(" .. (L("YOUR_ROLE") or "Your Role") .. ")|r"
+
+    for _, item in ipairs(cardsToRender) do
+        local card = item.card
+        local tipText = item.tip
+        local roleLabel = item.label
+        local roleKey = item.roleKey
+        local isMyRole = item.isMyRole
+
+        local shouldShow = false
+        if curFilter == "ALL" then
+            shouldShow = true
+        elseif curFilter == "MY_ROLE" then
+            shouldShow = isMyRole
+        elseif curFilter == "TANK" and roleKey == "TANK" then
+            shouldShow = true
+        elseif curFilter == "HEALER" and roleKey == "HEALER" then
+            shouldShow = true
+        elseif curFilter == "DPS" and (roleKey == "DPS" or roleKey == "MELEE" or roleKey == "RANGED") then
+            shouldShow = true
+        end
+
+        if card and shouldShow then
             card.rawTipText = tipText
             card.roleTitle = roleLabel
+
+            if isMyRole then
+                card:SetBackdropBorderColor(1.0, 0.85, 0.30, 1.0)
+                if card.title then
+                    card.title:SetText(roleLabel .. yourRoleBadge)
+                end
+            else
+                card:SetBackdropBorderColor(0.38, 0.26, 0.12, 0.9)
+                if card.title then
+                    card.title:SetText(roleLabel)
+                end
+            end
+
             local formattedText = FDJ.FormatTacticsAbilityLinks(tipText, tactics.abilities)
             card:ClearAllPoints()
             card:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
             card:SetPoint("RIGHT", frame.bossTacticsContent, "RIGHT", -6, 0)
+            if card.desc.SetWidth then
+                card.desc:SetWidth(320)
+            end
             card.desc:SetText(formattedText)
 
             local dHeight = math.max(16, card.desc:GetStringHeight() or 16)
-            local cHeight = math.max(48, 28 + dHeight + 8)
+            local cHeight = math.max(48, 28 + dHeight + 10)
             card:SetHeight(cHeight)
             card:Show()
             cursorY = cursorY + cHeight + 6

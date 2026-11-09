@@ -444,7 +444,7 @@
               <span class="nav-tile-label">What's<br>Changed</span>
             </button>
 
-            <button type="button" class="nav-tab-btn" data-tab="professions" title="Professions & Level 30 Specializations">
+            <button type="button" class="nav-tab-btn" data-tab="professions" title="Professions, Recipes & Leveling (1–300)">
               <span class="nav-tile-icon">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="url(#icon-steel-glow)" stroke="#cbd5e1"/>
@@ -719,7 +719,7 @@
       <section class="countdown-section" aria-label="Release Countdowns">
         
         <!-- Early Name Reservation Countdown -->
-        <div class="countdown-card featured-beta-ends">
+        <div class="countdown-card featured-beta-ends" data-phase-only="beta2,prelaunch">
           <div class="countdown-header">
             <div>
               <span class="countdown-label" style="color: #34d399;">Pre-Launch Window (Concluded)</span>
@@ -787,7 +787,7 @@
         </div>
 
         <!-- Launch Timer -->
-        <div class="countdown-card featured-launch">
+        <div class="countdown-card featured-launch" data-phase-only="beta2,prelaunch">
           <div class="countdown-header">
             <div>
               <span class="countdown-label">Global Release</span>
@@ -857,7 +857,7 @@
       </section>
 
       <!-- Global Launch Timezones Schedule Banner -->
-      <section class="global-timezone-card" aria-label="Worldwide Regional Launch Schedule" style="margin-bottom: 2rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 1.25rem 1.5rem;">
+      <section class="global-timezone-card" data-phase-only="beta2,prelaunch" aria-label="Worldwide Regional Launch Schedule" style="margin-bottom: 2rem; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 1.25rem 1.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.85rem;">
           <div>
             <span class="status-badge-highlight" style="font-size: 0.75rem; color: var(--text-gold); border-color: var(--border-gold); background: rgba(245, 158, 11, 0.15);">Simultaneous Global Unlock • Nov 4 &amp; 5, 2026</span>
@@ -905,7 +905,9 @@
       </section>
 
       <!-- Beta Duration & Testing Roadmap Tracker -->
-      <section class="beta-duration-box" aria-label="Beta Testing Schedule & Duration Roadmap">
+      <details class="beta-history-details" style="margin-bottom: 2rem;">
+        <summary style="cursor: pointer; font-weight: 700; color: var(--text-gold); padding: 0.75rem 0;">Beta &amp; launch history (Sept 17 – Nov 4, 2026)</summary>
+        <section class="beta-duration-box" aria-label="Beta Testing Schedule & Duration Roadmap">
         <div class="beta-duration-top-row">
           <div>
             <span class="countdown-label" style="color: #34d399;">Official Beta &amp; Launch Schedule</span>
@@ -983,6 +985,7 @@
           </div>
         </div>
       </section>
+      </details>
 
       <!-- Launch Preparation & Milestone Hub Banner -->
       <section class="beta-hub-banner" data-phase-only="beta2,prelaunch">
@@ -3884,7 +3887,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
               <h3 style="font-size: 1.4rem;" data-phase-key="milestonesTitle">Launch Progression Milestones</h3>
-              <p style="font-size: 0.88rem; color: var(--text-muted);">Track your Level 1–30 rapid leveling progression &amp; world milestones.</p>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Track your Level 1–60 leveling progression, dungeons, professions &amp; PvP milestones.</p>
             </div>
             <button id="reset-checklist-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem;">
               Reset Marks

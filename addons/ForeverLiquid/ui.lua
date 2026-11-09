@@ -2725,24 +2725,27 @@ function FL:CreateDashboard()
     local filterBar = CreateFrame("Frame", nil, lootFrame)
     filterBar:SetPoint("TOPLEFT", lootFrame, "TOPLEFT", 0, 0)
     filterBar:SetPoint("TOPRIGHT", lootFrame, "TOPRIGHT", -20, 0)
-    filterBar:SetHeight(22)
+    filterBar:SetHeight(44)
     
     local filterLabel = filterBar:CreateFontString(nil, "OVERLAY")
     filterLabel:SetFont(FONT_MAIN, 9, "OUTLINE")
-    filterLabel:SetPoint("LEFT", filterBar, "LEFT", 4, 0)
+    filterLabel:SetPoint("TOPLEFT", filterBar, "TOPLEFT", 4, -4)
     filterLabel:SetText(theme.accent.hex .. "Filter:|r")
     
     local filterOpts = {
-        { name = "ALL", quality = 0 },
-        { name = "White+", quality = 1 },
-        { name = "Green+", quality = 2 },
-        { name = "Blue+", quality = 3 },
+        { name = "ALL", quality = 0, width = 44 },
+        { name = "White+", quality = 1, width = 48 },
+        { name = "Green+", quality = 2, width = 50 },
+        { name = "Blue+", quality = 3, width = 48 },
+        { name = "AH Deals", quality = 99, width = 60 },
     }
     lootFrame.filterButtons = {}
+    local fOffset = 0
     for idx, opt in ipairs(filterOpts) do
         local fBtn = CreateFrame("Button", nil, filterBar)
-        fBtn:SetSize(72, 18)
-        fBtn:SetPoint("LEFT", filterLabel, "RIGHT", 6 + (idx - 1) * 78, 0)
+        fBtn:SetSize(opt.width or 48, 18)
+        fBtn:SetPoint("LEFT", filterLabel, "RIGHT", 6 + fOffset, 0)
+        fOffset = fOffset + (opt.width or 48) + 4
         local fBg = fBtn:CreateTexture(nil, "BACKGROUND")
         fBg:SetAllPoints(true)
         fBg:SetTexture(BACKDROP_PIXEL)
@@ -2760,9 +2763,73 @@ function FL:CreateDashboard()
         end)
         lootFrame.filterButtons[opt.quality] = fBtn
     end
+
+    -- Market Freshness / Sync Status text
+    local fmStatusText = filterBar:CreateFontString(nil, "OVERLAY")
+    fmStatusText:SetFont(FONT_MAIN, 8.5, "OUTLINE")
+    fmStatusText:SetPoint("TOPRIGHT", filterBar, "TOPRIGHT", -4, -4)
+    fmStatusText:SetJustifyH("RIGHT")
+    lootFrame.fmStatusText = fmStatusText
+
+    -- Row 2: Sort Mode & Pricing Mode Controls
+    local sortLabel = filterBar:CreateFontString(nil, "OVERLAY")
+    sortLabel:SetFont(FONT_MAIN, 9, "OUTLINE")
+    sortLabel:SetPoint("TOPLEFT", filterBar, "TOPLEFT", 4, -25)
+    sortLabel:SetText(theme.accent.hex .. "Sort:|r")
+
+    local sortBtn = CreateFrame("Button", nil, filterBar)
+    sortBtn:SetSize(110, 18)
+    sortBtn:SetPoint("LEFT", sortLabel, "RIGHT", 4, 0)
+    local sBg = sortBtn:CreateTexture(nil, "BACKGROUND")
+    sBg:SetAllPoints(true)
+    sBg:SetTexture(BACKDROP_PIXEL)
+    sBg:SetVertexColor(0.04, 0.07, 0.05, 0.9)
+    sortBtn.bg = sBg
+    CreatePixelBorder(sortBtn, theme.cardBorder)
+    local sTxt = sortBtn:CreateFontString(nil, "OVERLAY")
+    sTxt:SetFont(FONT_MAIN, 8.5, "OUTLINE")
+    sTxt:SetPoint("CENTER", sortBtn, "CENTER", 0, 0)
+    sTxt:SetText("Recent")
+    sortBtn.txt = sTxt
+    sortBtn:SetScript("OnClick", function()
+        local current = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.lootSortMode) or "RECENT"
+        local cycle = { RECENT = "AH_VALUE", AH_VALUE = "VENDOR_VALUE", VENDOR_VALUE = "COUNT", COUNT = "QUALITY", QUALITY = "RECENT" }
+        local nextMode = cycle[current] or "RECENT"
+        FL:SetLootSortMode(nextMode)
+        PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON)
+    end)
+    lootFrame.sortBtn = sortBtn
+
+    local priceLabel = filterBar:CreateFontString(nil, "OVERLAY")
+    priceLabel:SetFont(FONT_MAIN, 9, "OUTLINE")
+    priceLabel:SetPoint("LEFT", sortBtn, "RIGHT", 10, 0)
+    priceLabel:SetText(theme.accent.hex .. "Price:|r")
+
+    local priceBtn = CreateFrame("Button", nil, filterBar)
+    priceBtn:SetSize(90, 18)
+    priceBtn:SetPoint("LEFT", priceLabel, "RIGHT", 4, 0)
+    local pBg = priceBtn:CreateTexture(nil, "BACKGROUND")
+    pBg:SetAllPoints(true)
+    pBg:SetTexture(BACKDROP_PIXEL)
+    pBg:SetVertexColor(0.04, 0.07, 0.05, 0.9)
+    priceBtn.bg = pBg
+    CreatePixelBorder(priceBtn, theme.cardBorder)
+    local pTxt = priceBtn:CreateFontString(nil, "OVERLAY")
+    pTxt:SetFont(FONT_MAIN, 8.5, "OUTLINE")
+    pTxt:SetPoint("CENTER", priceBtn, "CENTER", 0, 0)
+    pTxt:SetText("Hybrid")
+    priceBtn.txt = pTxt
+    priceBtn:SetScript("OnClick", function()
+        local current = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.lootPricingMode) or "HYBRID"
+        local cycle = { HYBRID = "MARKET", MARKET = "VENDOR", VENDOR = "HYBRID" }
+        local nextMode = cycle[current] or "HYBRID"
+        FL:SetLootPricingMode(nextMode)
+        PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON)
+    end)
+    lootFrame.priceBtn = priceBtn
     
     local lootScroll = CreateFrame("ScrollFrame", "ForeverLiquidLootScroll", lootFrame, "UIPanelScrollFrameTemplate")
-    lootScroll:SetPoint("TOPLEFT", lootFrame, "TOPLEFT", 0, -26)
+    lootScroll:SetPoint("TOPLEFT", lootFrame, "TOPLEFT", 0, -48)
     lootScroll:SetPoint("BOTTOMRIGHT", lootFrame, "BOTTOMRIGHT", -16, 26)
     SkinNeonScrollbar(lootScroll, theme)
     EnableScrollFrameMouseWheel(lootScroll)
@@ -2793,7 +2860,7 @@ function FL:CreateDashboard()
     local totalLabel = totalBar:CreateFontString(nil, "OVERLAY")
     totalLabel:SetFont(FONT_MAIN, 9, "OUTLINE")
     totalLabel:SetPoint("LEFT", totalBar, "LEFT", 8, 0)
-    totalLabel:SetText("|cffffffffTotal Coin from items this session:|r")
+    totalLabel:SetText("|cffffffffSession Loot Total:|r")
     
     local totalCoinText = totalBar:CreateFontString(nil, "OVERLAY")
     totalCoinText:SetFont(FONT_MAIN, 9, "OUTLINE")
@@ -3134,7 +3201,14 @@ function FL:UpdateDashboard()
         local activeFilter = ForeverLiquidDB.profile.lootFeedFilter or 0
         
         if lFrame.totalCoinText then
-            lFrame.totalCoinText:SetText(FL.FormatMoney(FL.session.lootedItemsValue or 0))
+            local activeTotal = FL.FormatMoney(FL.session.lootedItemsValue or 0)
+            local vendorTotal = FL.FormatMoney(FL.session.lootedVendorValue or 0)
+            local marketTotal = FL.FormatMoney(FL.session.lootedMarketValue or 0)
+            if (FL.session.lootedMarketValue or 0) > (FL.session.lootedVendorValue or 0) then
+                lFrame.totalCoinText:SetText(string.format("%s |cff888888(V: %s | |cff00ccffAH: %s|r)|r", activeTotal, vendorTotal, marketTotal))
+            else
+                lFrame.totalCoinText:SetText(activeTotal)
+            end
         end
         
         if lFrame.filterButtons then
@@ -3148,13 +3222,75 @@ function FL:UpdateDashboard()
                 end
             end
         end
+
+        local sortMode = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.lootSortMode) or "RECENT"
+        local sortLabels = { RECENT = "Sort: Recent", AH_VALUE = "Sort: AH Value", VENDOR_VALUE = "Sort: Vendor", COUNT = "Sort: Count", QUALITY = "Sort: Quality" }
+        if lFrame.sortBtn and lFrame.sortBtn.txt then
+            lFrame.sortBtn.txt:SetText(sortLabels[sortMode] or "Sort: Recent")
+        end
+
+        local priceMode = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.lootPricingMode) or "HYBRID"
+        local priceLabels = { HYBRID = "Price: Hybrid", MARKET = "Price: AH Only", VENDOR = "Price: Vendor" }
+        if lFrame.priceBtn and lFrame.priceBtn.txt then
+            lFrame.priceBtn.txt:SetText(priceLabels[priceMode] or "Price: Hybrid")
+        end
+
+        if lFrame.fmStatusText then
+            local hasFM = _G.ForeverMarket and _G.ForeverMarket.IsAvailable and _G.ForeverMarket:IsAvailable()
+            if not hasFM and _G.ForeverMarketDB and _G.ForeverMarketDB.realms then
+                for _, b in pairs(_G.ForeverMarketDB.realms) do
+                    if b.items and next(b.items) then hasFM = true break end
+                end
+            end
+            if hasFM then
+                lFrame.fmStatusText:SetText("|cff00ccffFM Synced|r")
+            else
+                lFrame.fmStatusText:SetText("|cff888888FM Unscanned|r")
+            end
+        end
         
         local drops = {}
         for _, d in ipairs(allDrops) do
             if FL.UpgradeDropQuality then FL:UpgradeDropQuality(d) end
-            if (d.quality or 0) >= activeFilter then
+            local passFilter = false
+            if activeFilter == 99 then
+                passFilter = (d.priceSource == "AH" or (d.marketUnitPrice and d.marketUnitPrice > (d.vendorUnitPrice or 0)))
+            else
+                passFilter = (d.quality or 0) >= activeFilter
+            end
+            if passFilter then
                 table.insert(drops, d)
             end
+        end
+
+        if sortMode == "AH_VALUE" then
+            table.sort(drops, function(a, b)
+                local aVal = a.marketTotalValue or a.totalValue or 0
+                local bVal = b.marketTotalValue or b.totalValue or 0
+                if aVal == bVal then return (a.timestamp or 0) > (b.timestamp or 0) end
+                return aVal > bVal
+            end)
+        elseif sortMode == "VENDOR_VALUE" then
+            table.sort(drops, function(a, b)
+                local aVal = a.vendorTotalValue or a.vendorUnitPrice or 0
+                local bVal = b.vendorTotalValue or b.vendorUnitPrice or 0
+                if aVal == bVal then return (a.timestamp or 0) > (b.timestamp or 0) end
+                return aVal > bVal
+            end)
+        elseif sortMode == "COUNT" then
+            table.sort(drops, function(a, b)
+                local aCount = a.count or 1
+                local bCount = b.count or 1
+                if aCount == bCount then return (a.totalValue or 0) > (b.totalValue or 0) end
+                return aCount > bCount
+            end)
+        elseif sortMode == "QUALITY" then
+            table.sort(drops, function(a, b)
+                local aQ = a.quality or 0
+                local bQ = b.quality or 0
+                if aQ == bQ then return (a.totalValue or 0) > (b.totalValue or 0) end
+                return aQ > bQ
+            end)
         end
         
         if lFrame.emptyText then
@@ -3235,10 +3371,17 @@ function FL:UpdateDashboard()
                 local qtyStr = (drop.count and drop.count > 1) and string.format(" |cffffffff(x%d)|r", drop.count) or ""
                 row.nameText:SetText(string.format("%s[%s]|r%s", qHex, cleanName, qtyStr))
                 
+                local badge = ""
+                if drop.priceSource == "AH" then
+                    badge = " |cff00ccff[AH]|r"
+                elseif drop.vendorUnitPrice and drop.vendorUnitPrice > 0 then
+                    badge = " |cffffd700[V]|r"
+                end
+                
                 if drop.totalValue and drop.totalValue > 0 then
-                    row.valText:SetText(FL.FormatMoney(drop.totalValue, true))
+                    row.valText:SetText(FL.FormatMoney(drop.totalValue, true) .. badge)
                 elseif drop.resolved then
-                    row.valText:SetText("0|cffeda55fc|r")
+                    row.valText:SetText("0|cffeda55fc|r" .. badge)
                 else
                     row.valText:SetText("|cff808080...|r")
                 end
@@ -3252,7 +3395,12 @@ function FL:UpdateDashboard()
                 end)
                 row:SetScript("OnClick", function(self, button)
                     if button == "RightButton" and (IsAltKeyDown() or IsControlKeyDown()) then
-                        FL:RemoveDrop(i)
+                        for idx, d in ipairs(FL.session.recentDrops) do
+                            if d == drop then
+                                FL:RemoveDrop(idx)
+                                break
+                            end
+                        end
                         PlaySound(SOUNDKIT.IG_MAINMENU_CLOSE)
                         return
                     end
@@ -3277,9 +3425,36 @@ function FL:UpdateDashboard()
                         local qC = GetQualityColor(drop.quality)
                         GameTooltip:SetText(drop.name or "Item", qC.r, qC.g, qC.b)
                     end
-                    if drop.unitPrice and drop.unitPrice > 0 then
-                        GameTooltip:AddDoubleLine("Vendor Value:", FL.FormatMoney(drop.totalValue or drop.unitPrice), 0.7, 0.7, 0.7, 1, 1, 1)
+                    
+                    GameTooltip:AddLine(" ")
+                    local count = drop.count or 1
+                    local vUnit = drop.vendorUnitPrice or drop.unitPrice or 0
+                    local vTotal = drop.vendorTotalValue or (vUnit * count)
+                    if vUnit > 0 then
+                        GameTooltip:AddDoubleLine("Vendor Value (ea / total):", string.format("%s / %s", FL.FormatMoney(vUnit, true), FL.FormatMoney(vTotal, true)), 0.8, 0.8, 0.8, 1, 1, 1)
+                    else
+                        GameTooltip:AddDoubleLine("Vendor Value:", "|cff888888No sell price|r", 0.8, 0.8, 0.8, 1, 1, 1)
                     end
+                    
+                    if drop.marketUnitPrice and drop.marketUnitPrice > 0 then
+                        local mUnit = drop.marketUnitPrice
+                        local mTotal = drop.marketTotalValue or (mUnit * count)
+                        local cutNote = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.ahDeductCut ~= false) and " (-5% cut)" or ""
+                        GameTooltip:AddDoubleLine(string.format("|cff00ccffForeverMarket Buyout%s:|r", cutNote), string.format("%s / %s", FL.FormatMoney(mUnit, true), FL.FormatMoney(mTotal, true)), 0, 0.8, 1, 1, 1, 1)
+                        if mTotal > vTotal then
+                            local profit = mTotal - vTotal
+                            local pct = vTotal > 0 and math.floor(((mTotal - vTotal) / vTotal) * 100) or 0
+                            GameTooltip:AddDoubleLine("Estimated AH Margin:", string.format("|cff00ff98+%s (+%d%%)|r", FL.FormatMoney(profit, true), pct), 0.7, 0.7, 0.7, 0, 1, 0.6)
+                        end
+                        if drop.marketLastSeen and drop.marketLastSeen > 0 then
+                            local ageH = math.max(0, math.floor((time() - drop.marketLastSeen) / 3600))
+                            local ageStr = ageH == 0 and "<1h ago" or (tostring(ageH) .. "h ago")
+                            GameTooltip:AddDoubleLine("Market Freshness:", string.format("|cffffffff%s|r |cff888888(%d listings)|r", ageStr, drop.marketListings or 1), 0.6, 0.6, 0.6, 0.9, 0.9, 0.9)
+                        end
+                    else
+                        GameTooltip:AddDoubleLine("ForeverMarket Buyout:", "|cff888888No scan data|r", 0.6, 0.6, 0.6, 0.6, 0.6, 0.6)
+                    end
+                    
                     GameTooltip:AddLine(" ")
                     GameTooltip:AddLine("|cff00ff7fShift-Click|r to link in chat.", 0.6, 0.8, 0.7)
                     GameTooltip:AddLine("|cffff3366Alt+Right-Click|r to remove drop from session.", 0.8, 0.4, 0.4)
@@ -3750,11 +3925,17 @@ function FL:SpawnLootToast(dropEntry)
     
     toast.icon:SetTexture(dropEntry.icon or 134400)
     local qColor = GetQualityColor(dropEntry.quality)
-    toast:SetBorderColor(qColor.r, qColor.g, qColor.b, 0.9)
-    
-    local countStr = (dropEntry.count and dropEntry.count > 1) and (" x" .. dropEntry.count) or ""
-    toast.nameText:SetText(dropEntry.link or dropEntry.name .. countStr)
-    toast.valText:SetText(string.format("Value: %s", FL.FormatMoney(dropEntry.totalValue, true)))
+    if dropEntry.isJackpot then
+        toast:SetBorderColor(0, 0.85, 1, 1)
+        toast.nameText:SetText(string.format("|cff00ccff★ AH JACKPOT ★|r %s", dropEntry.link or dropEntry.name))
+        toast.valText:SetText(string.format("Market Buyout: |cff00ccff%s|r", FL.FormatMoney(dropEntry.marketTotalValue or dropEntry.totalValue, true)))
+    else
+        toast:SetBorderColor(qColor.r, qColor.g, qColor.b, 0.9)
+        local countStr = (dropEntry.count and dropEntry.count > 1) and (" x" .. dropEntry.count) or ""
+        toast.nameText:SetText(dropEntry.link or dropEntry.name .. countStr)
+        local badge = dropEntry.priceSource == "AH" and " |cff00ccff[AH]|r" or ""
+        toast.valText:SetText(string.format("Value: %s%s", FL.FormatMoney(dropEntry.totalValue, true), badge))
+    end
     
     toast:SetAlpha(0)
     toast:Show()

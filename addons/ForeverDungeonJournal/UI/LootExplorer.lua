@@ -398,7 +398,7 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
 
     if (not rawSlot or rawSlot == "" or tonumber(rawSlot)) and itemID then
         if C_Item and C_Item.GetItemInfoInstant then
-            local ok, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
+            local ok, _, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
             if ok and equipLoc and equipLoc ~= "" then
                 local locName = EQUIP_LOC_CANONICAL[equipLoc] or _G[equipLoc] or equipLoc
                 local subName = nil
@@ -828,7 +828,7 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                     local matLower = string.lower(materialFilter)
                     matchMaterial = sLower:find(matLower, 1, true) ~= nil
                     if not matchMaterial and itemID and C_Item and C_Item.GetItemInfoInstant then
-                        local ok, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
+                        local ok, _, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
                         if ok and classID == 4 and equipLoc ~= "INVTYPE_CLOAK" then
                             if materialFilter == "CLOTH" and subclassID == 1 then matchMaterial = true
                             elseif materialFilter == "LEATHER" and subclassID == 2 then matchMaterial = true
@@ -889,10 +889,20 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
                 local nameLower = entry.nameLower or ""
                 local bossLower = entry.bossLower or ""
                 local dungLower = entry.dungLower or ""
+                local matchDungAlias = false
+                if FDJ.DUNGEON_SEARCH_ALIASES and entry.dungeon and FDJ.DUNGEON_SEARCH_ALIASES[entry.dungeon] then
+                    for _, alias in ipairs(FDJ.DUNGEON_SEARCH_ALIASES[entry.dungeon]) do
+                        if alias == query or alias:find(query, 1, true) then
+                            matchDungAlias = true
+                            break
+                        end
+                    end
+                end
                 matchQuery = (nameLower:find(query, 1, true) ~= nil)
                     or (bossLower:find(query, 1, true) ~= nil)
                     or (dungLower:find(query, 1, true) ~= nil)
                     or (sLower:find(query, 1, true) ~= nil)
+                    or matchDungAlias
             end
 
             if matchBracket and matchWishlist and matchQuality and matchClass and matchMaterial and matchSlot and matchQuery then

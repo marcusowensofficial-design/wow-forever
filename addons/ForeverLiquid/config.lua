@@ -64,6 +64,10 @@ local function PrintHelp()
     print(string.format("  %s/fl width <280-850>|r  -  Adjust HUD bar width (extends XP bar)", t.accent.hex))
     print(string.format("  %s/fl height <20-60>|r  -  Adjust HUD bar height", t.accent.hex))
     print(string.format("  %s/fl test|r  -  Preview a simulated Epic drop toast", t.accent.hex))
+    print(string.format("  %s/fl pricing <hybrid|ah|vendor>|r  -  Switch loot valuation mode", t.accent.hex))
+    print(string.format("  %s/fl sort <recent|ah|vendor|count|quality>|r  -  Change loot feed sort", t.accent.hex))
+    print(string.format("  %s/fl ahtoast [mingold]|r  -  Toggle or configure AH jackpot toast alerts", t.accent.hex))
+    print(string.format("  %s/fl ahcut|r  -  Toggle deducting 5%% AH cut from market prices", t.accent.hex))
     print(string.format("  %s/fl config|r  -  Open the Blizzard settings options panel", t.accent.hex))
     print(string.format("%s========================================================|r", t.accent.hex))
 end
@@ -298,6 +302,64 @@ SlashCmdList["FOREVERLIQUID"] = function(msg)
         print(string.format("%s[ForeverLiquid]|r Exclude mail/bank transfers from farming Gold/hr: %s.", theme.accent.hex,
             (ForeverLiquidDB.profile.excludeTransfersFromGoldRate ~= false) and "|cff00ff7fENABLED|r" or "|cffff3366DISABLED|r"))
         FL:UpdateHUD()
+        
+    elseif cmd == "pricing" or cmd == "val" or cmd == "valuation" then
+        arg = arg and arg:lower():trim() or ""
+        if arg == "ah" or arg == "market" then
+            FL:SetLootPricingMode("MARKET")
+            print(string.format("%s[ForeverLiquid]|r Loot pricing mode set to: |cff00ccffAH / Market Only|r.", theme.accent.hex))
+        elseif arg == "vendor" or arg == "v" then
+            FL:SetLootPricingMode("VENDOR")
+            print(string.format("%s[ForeverLiquid]|r Loot pricing mode set to: |cffffd700Guaranteed Vendor Cash Only|r.", theme.accent.hex))
+        elseif arg == "hybrid" or arg == "smart" or arg == "" then
+            FL:SetLootPricingMode("HYBRID")
+            print(string.format("%s[ForeverLiquid]|r Loot pricing mode set to: |cff00ff7fSmart Hybrid (Greys/BoP vendor, trade goods/BoEs AH)|r.", theme.accent.hex))
+        else
+            print(string.format("%s[ForeverLiquid]|r Usage: /fl pricing <hybrid | ah | vendor>", theme.accent.hex))
+        end
+        
+    elseif cmd == "sort" then
+        arg = arg and arg:lower():trim() or ""
+        if arg == "ah" or arg == "market" or arg == "value" then
+            FL:SetLootSortMode("AH_VALUE")
+            print(string.format("%s[ForeverLiquid]|r Loot feed sort: |cff00ccffGross AH Market Value|r.", theme.accent.hex))
+        elseif arg == "vendor" or arg == "v" then
+            FL:SetLootSortMode("VENDOR_VALUE")
+            print(string.format("%s[ForeverLiquid]|r Loot feed sort: |cffffd700Guaranteed Vendor Coin|r.", theme.accent.hex))
+        elseif arg == "count" or arg == "qty" or arg == "quantity" then
+            FL:SetLootSortMode("COUNT")
+            print(string.format("%s[ForeverLiquid]|r Loot feed sort: |cffffffffQuantity Looted|r.", theme.accent.hex))
+        elseif arg == "quality" or arg == "rare" then
+            FL:SetLootSortMode("QUALITY")
+            print(string.format("%s[ForeverLiquid]|r Loot feed sort: |cffa335eeItem Quality|r.", theme.accent.hex))
+        elseif arg == "recent" or arg == "" then
+            FL:SetLootSortMode("RECENT")
+            print(string.format("%s[ForeverLiquid]|r Loot feed sort: |cff00ff7fChronological (Most Recent First)|r.", theme.accent.hex))
+        else
+            print(string.format("%s[ForeverLiquid]|r Usage: /fl sort <recent | ah | vendor | count | quality>", theme.accent.hex))
+        end
+        
+    elseif cmd == "ahtoast" or cmd == "jackpot" then
+        arg = arg and arg:trim() or ""
+        local num = tonumber(arg)
+        if num and num > 0 then
+            ForeverLiquidDB.profile.ahJackpotMinGold = num
+            ForeverLiquidDB.profile.ahJackpotToast = true
+            print(string.format("%s[ForeverLiquid]|r AH Market Jackpot alerts enabled for items >= |cffffd700%dg|r.", theme.accent.hex, num))
+        else
+            ForeverLiquidDB.profile.ahJackpotToast = not ForeverLiquidDB.profile.ahJackpotToast
+            local state = ForeverLiquidDB.profile.ahJackpotToast and string.format("|cff00ff7fENABLED|r (Min: %dg)", ForeverLiquidDB.profile.ahJackpotMinGold or 5) or "|cffff3366DISABLED|r"
+            print(string.format("%s[ForeverLiquid]|r AH Market Jackpot toasts: %s. (Set threshold with /fl ahtoast <gold>)", theme.accent.hex, state))
+        end
+        
+    elseif cmd == "ahcut" or cmd == "cut" then
+        ForeverLiquidDB.profile.ahDeductCut = not (ForeverLiquidDB.profile.ahDeductCut ~= false)
+        local state = (ForeverLiquidDB.profile.ahDeductCut ~= false) and "|cff00ff7fDEDUCTING 5% AH CUT|r" or "|cffffd700GROSS BUYOUT (NO CUT)|r"
+        print(string.format("%s[ForeverLiquid]|r Estimated AH Market calculation: %s.", theme.accent.hex, state))
+        for _, drop in ipairs(FL.session.recentDrops) do FL:ResolveDrop(drop) end
+        FL:RecalculateLootedValue()
+        FL:UpdateHUD()
+        if FL.UpdateDashboard then FL:UpdateDashboard() end
         
     elseif cmd == "scale" then
         local s = tonumber(arg)
@@ -674,6 +736,23 @@ local cbAutoHide = CreateCheckbox("Auto-hide XP bar at Level Cap", "autoHideAtMa
 local cbLootRate = CreateCheckbox("Factor looted item value into Gold/hr speed", "includeLootInGoldRate", cbAutoHide, 0, -4)
 local cbToast = CreateCheckbox("Display Neon Toast for rare loot drops", "showLootToasts", cbLootRate, 0, -4)
 local cbSound = CreateCheckbox("Play audio fanfare on Level Up & milestones", "playMilestoneSound", cbToast, 0, -4)
+local cbAHCut = CreateCheckbox("Deduct 5% Auction House cut from market values", "ahDeductCut", cbSound, 0, -4)
+local cbAHJackpot = CreateCheckbox("Display Neon Toast for AH Market Jackpots", "ahJackpotToast", cbAHCut, 0, -4)
+local sliderJackpotMin = CreateSlider("ForeverLiquidJackpotMinSlider", "AH Jackpot Min Gold Threshold", 1, 50, 1, "%d Gold", "ahJackpotMinGold", cbAHJackpot, 0, -22, 220)
+
+cbAHCut:SetScript("OnClick", function(self)
+    local checked = self:GetChecked() and true or false
+    ForeverLiquidDB.profile.ahDeductCut = checked
+    for _, drop in ipairs(FL.session.recentDrops) do FL:ResolveDrop(drop) end
+    FL:RecalculateLootedValue()
+    if FL.UpdateHUD then FL:UpdateHUD() end
+    if FL.UpdateDashboard then FL:UpdateDashboard() end
+end)
+
+cbAHJackpot:SetScript("OnClick", function(self)
+    local checked = self:GetChecked() and true or false
+    ForeverLiquidDB.profile.ahJackpotToast = checked
+end)
 
 cbPerf:SetScript("OnClick", function(self)
     local checked = self:GetChecked() and true or false
@@ -766,6 +845,9 @@ local function SyncOptions()
     cbLootRate:SetChecked(p.includeLootInGoldRate)
     cbToast:SetChecked(p.showLootToasts)
     cbSound:SetChecked(p.playMilestoneSound)
+    cbAHCut:SetChecked(p.ahDeductCut ~= false)
+    cbAHJackpot:SetChecked(p.ahJackpotToast ~= false)
+    sliderJackpotMin:SetValue(p.ahJackpotMinGold or 5)
     
     sliderScale:SetValue(p.scale or 1.0)
     sliderWidth:SetValue(p.barWidth or 480)

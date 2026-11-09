@@ -339,6 +339,15 @@ FDJ.Locales.enUS = {
     MAP_LEGEND = "Map Legend",
     HIDE_LEGEND = "Hide Legend",
     MAP_LEGEND_TITLE = "Dungeon Landmarks",
+    YOUR_ROLE = "Your Role",
+    MY_ROLE = "My Role",
+    ALL_ROLES = "All Roles",
+    TRASH_TACTICS_TITLE = "Dungeon Trash & Route Hazards",
+    TRASH_TACTICS_OVERVIEW = "Trash packs drop valuable zone-wide bind-on-equip gear, rare recipes, and crafting materials. Coordinate crowd control, interrupt high-damage casters, and clear packs deliberately before engaging wandering patrols.",
+    TRASH_TIP_TANK = "Group multi-target trash packs tightly, turn cleaving mobs away from the party, and keep eyes on wandering patrols.",
+    TRASH_TIP_HEALER = "Conserve mana between pulls, dispel debilitating magic/curses/poisons promptly, and prioritize the tank during multi-pack pulls.",
+    TRASH_TIP_MELEE = "Watch enemy frontal cleaves, interrupt high-damage caster mobs, and focus marked kill targets.",
+    TRASH_TIP_RANGED = "Assist with crowd control (Polymorph/Trap/Fear), focus down priority casters, and spread out if mobs cast AoE.",
 }
 
 FDJ.Locales.deDE = {
@@ -630,6 +639,22 @@ FDJ.Locales.deDE = {
     TRACK_CLICK = "Klicken, um sie im Journal zu öffnen",
     TURN_IN_HERE = "Hier abgeben",
     TRACK_ACCEPT = "Klicken, um die Quest anzunehmen",
+    TANK = "Tank",
+    HEALER = "Heiler",
+    MELEE_DPS = "Nahkampf-DPS",
+    RANGED_DPS = "Fernkampf-DPS",
+    ROLE_TIPS = "Rollentipps",
+    ANNOUNCE_TACTICS = "Taktik ankündigen",
+    RETURN_TO_TIPS = "Zurück zu %s",
+    YOUR_ROLE = "Deine Rolle",
+    MY_ROLE = "Meine Rolle",
+    ALL_ROLES = "Alle Rollen",
+    TRASH_TACTICS_TITLE = "Dungeon-Trash & Gefahren",
+    TRASH_TACTICS_OVERVIEW = "Trash-Gegner lassen wertvolle zoneweite BoE-Ausrüstung, seltene Rezepte und Handwerksmaterialien fallen. Stimmt Gruppenkontrolle ab, unterbrecht gefährliche Zauberwirker und räumt Patrouillen rechtzeitig aus dem Weg.",
+    TRASH_TIP_TANK = "Zieht Gegnergruppen dicht zusammen, dreht spaltende Mobs von der Gruppe weg und behaltet wandernde Patrouillen im Auge.",
+    TRASH_TIP_HEALER = "Teilt Mana zwischen den Zügen ein, bannt Schwächungszauber zügig und priorisiert den Tank bei großen Gruppen.",
+    TRASH_TIP_MELEE = "Achtet auf frontale Spaltungen der Gegner, unterbrecht Zauberer und fokussiert markierte Primärziele.",
+    TRASH_TIP_RANGED = "Unterstützt mit Massenkontrolle (Verwandlung/Falle/Furcht), besiegt gefährliche Zauberer zuerst und verteilt euch bei Flächenschaden.",
 }
 
 local function NormalizeLanguage(value)

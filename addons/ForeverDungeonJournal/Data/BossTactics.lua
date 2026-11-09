@@ -158,15 +158,31 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Face away from the party; anticipate Disarm (temporarily disables parry/block and drops threat).",
                 healer = "Keep the tank topped during Disarm phase when incoming damage spikes.",
-                melee = "TOP PRIORITY: Interrupt Holy Light to prevent the boss from healing to full. Melee pace attacks during Shield Wall.",
-                ranged = "TOP PRIORITY: Interrupt Holy Light to prevent the boss from healing to full. Melee pace attacks during Shield Wall.",
-                dps = "TOP PRIORITY: Interrupt Holy Light to prevent the boss from healing to full. Melee pace attacks during Shield Wall.",
+                melee = "Stay strictly behind the boss to avoid parry and frontal strikes. Kick [Holy Light] on cooldown to prevent healing.",
+                ranged = "Counterspell or stun [Holy Light] from max range and burn down the escort guards first.",
+                dps = "Melee: Stay strictly behind the boss to avoid parry and frontal strikes. Kick [Holy Light] on cooldown to prevent healing.\nRanged: Counterspell or stun [Holy Light] from max range and burn down the escort guards first.",
             },
             abilities = {
                 { id = 871, name = "Shield Wall", icon = "Interface\\Icons\\Ability_Warrior_ShieldWall", desc = "Reduces all damage taken by 60% for 8 sec." },
                 { id = 15655, name = "Shield Slam", icon = "Interface\\Icons\\INV_Shield_05", desc = "Slams the target with a shield, dealing physical damage and stunning for 2 sec." },
+                { id = 1026, name = "Holy Light", icon = "Interface\\Icons\Spell_Holy_HolyBolt", desc = "Calls upon the Light to heal the caster." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Ruins of Lordaeron. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Ragefire Chasm"] = {
@@ -175,9 +191,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pick up Oggleflint and his trogg guards immediately on pull with Thunderclap or Demoralizing Roar.",
                 healer = "Be prepared for sudden target shifts when Oggleflint uses Intimidating Roar.",
-                melee = "Kill the trogg bodyguard adds first before burning down Oggleflint.",
-                ranged = "Kill the trogg bodyguard adds first before burning down Oggleflint.",
-                dps = "Kill the trogg bodyguard adds first before burning down Oggleflint.",
+                melee = "Focus down the trogg bodyguards first before engaging Oggleflint; position behind to avoid frontal cleave.",
+                ranged = "Burn Oggleflint's trogg adds from max distance, then switch to Oggleflint.",
+                dps = "Melee: Focus down the trogg bodyguards first before engaging Oggleflint; position behind to avoid frontal cleave.\nRanged: Burn Oggleflint's trogg adds from max distance, then switch to Oggleflint.",
             },
             abilities = {
                 { id = 797, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes up to 2 targets in front of the caster for physical damage." },
@@ -189,9 +205,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Tank Taragaman with your back facing a rock wall so his Uppercut does not launch you into the surrounding lava pool.",
                 healer = "Keep the tank topped off to absorb the Uppercut spike damage.",
-                melee = "Never stand behind the tank; stay out of the cone of Fire Nova.",
-                ranged = "Never stand behind the tank; stay out of the cone of Fire Nova.",
-                dps = "Never stand behind the tank; stay out of the cone of Fire Nova.",
+                melee = "Never stand behind the tank; attack from max melee range behind Taragaman to avoid frontal [Fire Nova].",
+                ranged = "Spread out at max 30+ yard range to completely outrange [Fire Nova] and burn the boss.",
+                dps = "Melee: Never stand behind the tank; attack from max melee range behind Taragaman to avoid frontal [Fire Nova].\nRanged: Spread out at max 30+ yard range to completely outrange [Fire Nova] and burn the boss.",
             },
             abilities = {
                 { id = 18072, name = "Uppercut", icon = "Interface\\Icons\\INV_Gauntlets_05", desc = "Knocks the target high into the air and backward, causing threat to temporarily reset." },
@@ -203,9 +219,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Interrupt Jergosh's Immolate casts. Pull him away from summoned Voidwalkers.",
                 healer = "Dispel Curse of Weakness from physical damage dealers and heal through Immolate damage ticks.",
-                melee = "Quickly interrupt or stun Jergosh to prevent his casted fire spells from landing.",
-                ranged = "Quickly interrupt or stun Jergosh to prevent his casted fire spells from landing.",
-                dps = "Quickly interrupt or stun Jergosh to prevent his casted fire spells from landing.",
+                melee = "Quickly interrupt or stun Jergosh to prevent his casted fire spells; stay behind to avoid fire breath.",
+                ranged = "Counterspell Jergosh's fire casts from range and kill his imp minions immediately.",
+                dps = "Melee: Quickly interrupt or stun Jergosh to prevent his casted fire spells; stay behind to avoid fire breath.\nRanged: Counterspell Jergosh's fire casts from range and kill his imp minions immediately.",
             },
             abilities = {
                 { id = 348, name = "Immolate", icon = "Interface\\Icons\\Spell_Fire_Immolation", desc = "Burns an enemy for initial Fire damage and additional damage every 3 sec for 15 sec." },
@@ -217,9 +233,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep aggro firmly locked on Bazzalan; his fast attack speed can quickly drop a healer if threat is lost.",
                 healer = "Cure or heal through Deadly Poison applied to the tank.",
-                melee = "Burn down Bazzalan quickly before poison stacks build up on the tank.",
-                ranged = "Burn down Bazzalan quickly before poison stacks build up on the tank.",
-                dps = "Burn down Bazzalan quickly before poison stacks build up on the tank.",
+                melee = "Stay behind Bazzalan; save kicks and stuns to lock him down before poison stacks build up on the tank.",
+                ranged = "Focus down Bazzalan quickly from range before stacking poison debuffs overwhelm the healer.",
+                dps = "Melee: Stay behind Bazzalan; save kicks and stuns to lock him down before poison stacks build up on the tank.\nRanged: Focus down Bazzalan quickly from range before stacking poison debuffs overwhelm the healer.",
             },
             abilities = {
                 { id = 744, name = "Poison", icon = "Interface\\Icons\\Spell_Nature_CorrosiveBreath", desc = "Poisons the target, dealing Nature damage every 3 sec for 15 sec." },
@@ -247,9 +263,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Turn Johnson away so Gold Dust does not blind ranged members.",
                 healer = "If the tank is blinded, prepare to heal whichever party member Johnson targets next.",
-                melee = "Burn him down swiftly once he activates Enrage.",
-                ranged = "Burn him down swiftly once he activates Enrage.",
-                dps = "Burn him down swiftly once he activates Enrage.",
+                melee = "Pace attacks or pop personal defensives once Johnson activates [Enrage] at low health.",
+                ranged = "Kite or burn Miner Johnson down rapidly from distance once his [Enrage] activates.",
+                dps = "Melee: Pace attacks or pop personal defensives once Johnson activates [Enrage] at low health.\nRanged: Kite or burn Miner Johnson down rapidly from distance once his [Enrage] activates.",
             },
             abilities = {
                 { id = 773, name = "Gold Dust", icon = "Interface\\Icons\\INV_Misc_Dust_02", desc = "Flings a pouch of blinding gold dust into the target's eyes, reducing hit chance by 50% for 5 sec." },
@@ -289,9 +305,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Gilnid stationary near the anvil. Watch for Sunder Armor stacks.",
                 healer = "Heal through Molten Metal burn ticks on affected group members.",
-                melee = "Interrupt Molten Metal casts whenever possible.",
-                ranged = "Interrupt Molten Metal casts whenever possible.",
-                dps = "Interrupt Molten Metal casts whenever possible.",
+                melee = "Interrupt [Molten Metal] casts whenever possible and step out of burning forge coals on the ground.",
+                ranged = "Interrupt [Molten Metal] from distance and burn Gilnid down before furnace heat overwhelms the group.",
+                dps = "Melee: Interrupt [Molten Metal] casts whenever possible and step out of burning forge coals on the ground.\nRanged: Interrupt [Molten Metal] from distance and burn Gilnid down before furnace heat overwhelms the group.",
             },
             abilities = {
                 { id = 5213, name = "Molten Metal", icon = "Interface\\Icons\\Spell_Fire_Fireball", desc = "Splashes boiling liquid metal on an enemy, dealing Fire damage over 6 sec." },
@@ -303,9 +319,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "War Stomp stuns the entire group at 66% and 33%. Immediately re-taunt Smite as soon as the stun breaks.",
                 healer = "Pre-shield and HoT the tank right before 66% and 33% stuns; heal immediately after the stun breaks as two-hand damage spikes.",
-                melee = "Stop burst right before 66% and 33% health transitions to avoid pulling threat when Smite equips new weapons.",
-                ranged = "Stop burst right before 66% and 33% health transitions to avoid pulling threat when Smite equips new weapons.",
-                dps = "Stop burst right before 66% and 33% health transitions to avoid pulling threat when Smite equips new weapons.",
+                melee = "Stop high-burst attacks right before 66% and 33% health transitions to avoid wasted cooldowns during stun.",
+                ranged = "Hold big cooldowns across his 66% and 33% weapon-chest phase shifts; resume burn once he re-engages.",
+                dps = "Melee: Stop high-burst attacks right before 66% and 33% health transitions to avoid wasted cooldowns during stun.\nRanged: Hold big cooldowns across his 66% and 33% weapon-chest phase shifts; resume burn once he re-engages.",
             },
             abilities = {
                 { id = 6435, name = "Smite Slam", icon = "Interface\\Icons\\Ability_Smash", desc = "Stuns all nearby enemies for 2 sec." },
@@ -331,13 +347,13 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pull VanCleef to the ship deck wall. Immediately AoE taunt when Defias Blackguard adds spawn at 75%, 50%, and 25%.",
                 healer = "Stay close to the tank so spawned adds hit the tank rather than running to you.",
-                melee = "Switch immediately to Defias Blackguard stealth adds as soon as they spawn before continuing damage on VanCleef.",
-                ranged = "Switch immediately to Defias Blackguard stealth adds as soon as they spawn before continuing damage on VanCleef.",
-                dps = "Switch immediately to Defias Blackguard stealth adds as soon as they spawn before continuing damage on VanCleef.",
+                melee = "Switch immediately to Defias Blackguard adds as soon as they spawn and stun them before they reach the healer.",
+                ranged = "Focus down the Defias Blackguards from range, using Frost Nova or traps to control them before burning VanCleef.",
+                dps = "Melee: Switch immediately to Defias Blackguard adds as soon as they spawn and stun them before they reach the healer.\nRanged: Focus down the Defias Blackguards from range, using Frost Nova or traps to control them before burning VanCleef.",
             },
             abilities = {
                 { id = 1752, name = "Sinister Strike", icon = "Interface\\Icons\\Spell_Shadow_RitualOfSacrifice", desc = "Vicious strike dealing weapon damage plus additional physical damage." },
-                { id = 0, name = "Call Blackguard", icon = "Interface\\\\Icons\\\\Spell_Shadow_Charm", desc = "Calls two stealthy Defias Blackguard assassins from the shadows to ambush the party." },
+                { id = 0, name = "Call Blackguard", icon = "Interface\\Icons\\\\Spell_Shadow_Charm", desc = "Calls two stealthy Defias Blackguard assassins from the shadows to ambush the party." },
             },
         },
         ["Cookie"] = {
@@ -345,15 +361,30 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Tank Cookie inside the kitchen galley. Interrupt Acid Spit when possible.",
                 healer = "Keep players topped up; Cookie's spit deals quick nature burst.",
-                melee = "Burn Cookie down swiftly and look out for his tenderizer knockbacks.",
-                ranged = "Burn Cookie down swiftly and look out for his tenderizer knockbacks.",
-                dps = "Burn Cookie down swiftly and look out for his tenderizer knockbacks.",
+                melee = "Burn Cookie down swiftly and watch for his tenderizer knockbacks; stay behind him.",
+                ranged = "Burn Cookie down from distance away from his cooking pot.",
+                dps = "Melee: Burn Cookie down swiftly and watch for his tenderizer knockbacks; stay behind him.\nRanged: Burn Cookie down from distance away from his cooking pot.",
             },
             abilities = {
                 { id = 9591, name = "Acid Spit", icon = "Interface\\Icons\\Spell_Nature_Acid_01", desc = "Spits corrosive juices at an enemy, dealing Nature damage." },
                 { id = 0, name = "Cookie's Tenderize", icon = "Interface\\Icons\\INV_Mace_01", desc = "Whacks the target with a tenderizer, briefly dazing and increasing damage taken." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in The Deadmines. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Wailing Caverns"] = {
@@ -362,9 +393,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Face away from party; call for an immediate magic dispel if hit by Slumber. Interrupt Healing Touch!",
                 healer = "Dispel Slumber from the tank immediately so Cobrahn does not run loose on the party. Cleanse Poison.",
-                melee = "TOP PRIORITY: Interrupt Healing Touch on cooldown! Melee stay behind to avoid poison spit.",
-                ranged = "TOP PRIORITY: Interrupt Healing Touch on cooldown! Melee stay behind to avoid poison spit.",
-                dps = "TOP PRIORITY: Interrupt Healing Touch on cooldown! Melee stay behind to avoid poison spit.",
+                melee = "TOP PRIORITY: Interrupt [Healing Touch] on cooldown! Melee stay behind to avoid Sleep.",
+                ranged = "Save counterspells/silences for [Healing Touch] and burn Cobrahn down when he shifts into serpent form.",
+                dps = "Melee: TOP PRIORITY: Interrupt [Healing Touch] on cooldown! Melee stay behind to avoid Sleep.\nRanged: Save counterspells/silences for [Healing Touch] and burn Cobrahn down when he shifts into serpent form.",
             },
             abilities = {
                 { id = 5187, name = "Healing Touch", icon = "Interface\\Icons\\Spell_Nature_HealingTouch", desc = "Heals himself or an ally for a significant amount of health. Must be interrupted." },
@@ -377,9 +408,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Anacondra focused on you. Interrupt Lightning Bolt.",
                 healer = "Dispel Sleep from the tank immediately so Anacondra does not attack squishy party members.",
-                melee = "Focus on interrupting Healing Touch; she heals a massive portion of health if the cast succeeds.",
-                ranged = "Focus on interrupting Healing Touch; she heals a massive portion of health if the cast succeeds.",
-                dps = "Focus on interrupting Healing Touch; she heals a massive portion of health if the cast succeeds.",
+                melee = "Save all kicks and stuns for [Healing Touch]; she heals a massive portion of health if unkicked.",
+                ranged = "Prioritize interrupting [Healing Touch] from max range and dispel [Sleep] on allies.",
+                dps = "Melee: Save all kicks and stuns for [Healing Touch]; she heals a massive portion of health if unkicked.\nRanged: Prioritize interrupting [Healing Touch] from max range and dispel [Sleep] on allies.",
             },
             abilities = {
                 { id = 5187, name = "Healing Touch", icon = "Interface\\Icons\\Spell_Nature_HealingTouch", desc = "Heals herself for a large portion of health. Interrupt immediately." },
@@ -404,13 +435,14 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Pythas locked down and interrupt his nature spells.",
                 healer = "Watch for Sleep on the tank and dispel promptly.",
-                melee = "Prioritize interrupts on Healing Touch above all other actions.",
-                ranged = "Prioritize interrupts on Healing Touch above all other actions.",
-                dps = "Prioritize interrupts on Healing Touch above all other actions.",
+                melee = "Prioritize interrupts on [Healing Touch] above all other actions; position behind to avoid frontal strikes.",
+                ranged = "Save ranged interrupts for [Healing Touch] and outrange [Thunderstomp] stuns.",
+                dps = "Melee: Prioritize interrupts on [Healing Touch] above all other actions; position behind to avoid frontal strikes.\nRanged: Save ranged interrupts for [Healing Touch] and outrange [Thunderstomp] stuns.",
             },
             abilities = {
                 { id = 5187, name = "Healing Touch", icon = "Interface\\Icons\\Spell_Nature_HealingTouch", desc = "Restores substantial health. High interrupt priority." },
                 { id = 700, name = "Sleep", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Incapacitates an enemy for up to 10 sec." },
+                { id = 8139, name = "Thunderstomp", icon = "Interface\\Icons\Ability_WarStomp", desc = "Stuns all nearby enemies for 3 sec." },
             },
         },
         ["Skum"] = {
@@ -431,9 +463,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Position Serpentis away from the party. Be prepared for Sleep effects and keep taunt ready.",
                 healer = "Be ready with quick dispel magic or poison cleanses.",
-                melee = "Coordinate interrupts on Healing Touch so Serpentis cannot recover health.",
-                ranged = "Coordinate interrupts on Healing Touch so Serpentis cannot recover health.",
-                dps = "Coordinate interrupts on Healing Touch so Serpentis cannot recover health.",
+                melee = "Coordinate interrupts on [Healing Touch] so Serpentis cannot reset his health; burn him down in serpent form.",
+                ranged = "Interrupt [Healing Touch] from distance and burn Serpentis down swiftly.",
+                dps = "Melee: Coordinate interrupts on [Healing Touch] so Serpentis cannot reset his health; burn him down in serpent form.\nRanged: Interrupt [Healing Touch] from distance and burn Serpentis down swiftly.",
             },
             abilities = {
                 { id = 6778, name = "Healing Touch", icon = "Interface\\Icons\\Spell_Nature_HealingTouch", desc = "Full heal spell; must be interrupted." },
@@ -450,7 +482,7 @@ FDJ.BOSS_TACTICS = {
                 dps = "Melee: Stay strictly behind boss.\nRanged: Help free rooted allies if Grasping Vines hits healers.",
             },
             abilities = {
-                { id = 0, name = "Tremor", icon = "Interface\\\\Icons\\\\Spell_Nature_Earthquake", desc = "Shakes the cavern floor, dealing heavy physical damage to all nearby enemies." },
+                { id = 0, name = "Tremor", icon = "Interface\\Icons\\\\Spell_Nature_Earthquake", desc = "Shakes the cavern floor, dealing heavy physical damage to all nearby enemies." },
                 { id = 8142, name = "Grasping Vines", icon = "Interface\\Icons\\Spell_Nature_StrangleVines", desc = "Entangles enemies in roots, preventing movement for 6 sec." },
             },
         },
@@ -473,14 +505,29 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Establish quick threat to prevent Faerie Dragon from targeting casters.",
                 healer = "Keep distance to avoid Mana Burn drains.",
-                melee = "Interrupt Mana Burn whenever cast.",
-                ranged = "Interrupt Mana Burn whenever cast.",
-                dps = "Interrupt Mana Burn whenever cast.",
+                melee = "Interrupt [Mana Burn] whenever cast to protect healer and caster mana pools.",
+                ranged = "Max-range [Mana Burn] (30+ yards) so your mana is never drained; burn the dragon down.",
+                dps = "Melee: Interrupt [Mana Burn] whenever cast to protect healer and caster mana pools.\nRanged: Max-range [Mana Burn] (30+ yards) so your mana is never drained; burn the dragon down.",
             },
             abilities = {
                 { id = 8129, name = "Mana Burn", icon = "Interface\\Icons\\Spell_Shadow_ManaBurn", desc = "Drains mana from an enemy and deals Shadow damage equal to the mana drained." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Wailing Caverns. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Shadowfang Keep"] = {
@@ -517,9 +564,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Rethilgore facing the dungeon wall to prevent Soul Drain from targeting the rest of the group.",
                 healer = "Dispel shadow debuffs and keep the tank stabilized against life drains.",
-                melee = "Burst him down swiftly before Soul Drain stacks heal him significantly.",
-                ranged = "Burst him down swiftly before Soul Drain stacks heal him significantly.",
-                dps = "Burst him down swiftly before Soul Drain stacks heal him significantly.",
+                melee = "Burst him down swiftly and stun him before [Soul Drain] stacks heal him significantly.",
+                ranged = "Burn Rethilgore down from range; interrupt or knock him back during [Soul Drain].",
+                dps = "Melee: Burst him down swiftly and stun him before [Soul Drain] stacks heal him significantly.\nRanged: Burn Rethilgore down from range; interrupt or knock him back during [Soul Drain].",
             },
             abilities = {
                 { id = 7295, name = "Soul Drain", icon = "Interface\\Icons\\Spell_Shadow_LifeDrain02", desc = "Channels shadow energy, draining health from the target and restoring it to Rethilgore." },
@@ -530,9 +577,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Be prepared for Gouge which will cause Razorclaw to turn on the healer or nearest DPS.",
                 healer = "Keep defensive buffs up; when the tank is gouged, heal whichever player takes aggro.",
-                melee = "Save stuns for when Razorclaw turns away from the incapacitated tank.",
-                ranged = "Save stuns for when Razorclaw turns away from the incapacitated tank.",
-                dps = "Save stuns for when Razorclaw turns away from the incapacitated tank.",
+                melee = "Save stuns for when Razorclaw turns away from the incapacitated tank to protect DPS.",
+                ranged = "Kite or slow Razorclaw if he drops threat on the tank; maintain distance.",
+                dps = "Melee: Save stuns for when Razorclaw turns away from the incapacitated tank to protect DPS.\nRanged: Kite or slow Razorclaw if he drops threat on the tank; maintain distance.",
             },
             abilities = {
                 { id = 1776, name = "Gouge", icon = "Interface\\Icons\\Ability_Gouge", desc = "Incapacitates the tank for 4 sec, dropping threat temporarily." },
@@ -544,9 +591,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Call out Veil of Shadow immediately so the healer can decurse you.",
                 healer = "TOP PRIORITY: Decurse / dispel Veil of Shadow instantly! Tank receives 75% less healing while cursed.",
-                melee = "Interrupt Silverlaine's shadow casts; burn down before multiple curses are applied to the party.",
-                ranged = "Interrupt Silverlaine's shadow casts; burn down before multiple curses are applied to the party.",
-                dps = "Interrupt Silverlaine's shadow casts; burn down before multiple curses are applied to the party.",
+                melee = "Interrupt Silverlaine's shadow casts; burn him down before multiple Shadow Wolf adds spawn.",
+                ranged = "Counterspell shadow casts and switch to kill summoned Shadow Wolf adds immediately.",
+                dps = "Melee: Interrupt Silverlaine's shadow casts; burn him down before multiple Shadow Wolf adds spawn.\nRanged: Counterspell shadow casts and switch to kill summoned Shadow Wolf adds immediately.",
             },
             abilities = {
                 { id = 7068, name = "Veil of Shadow", icon = "Interface\\Icons\\Spell_Shadow_GatherShadows", desc = "Curses the target, reducing all healing received by 75% for 15 sec. High decurse priority." },
@@ -570,9 +617,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pick up Odo and his pet bats quickly on pull.",
                 healer = "Watch for Blind on party members and heal through his howling enrage.",
-                melee = "Burn the pet bats down first with AoE, then switch to Odo.",
-                ranged = "Burn the pet bats down first with AoE, then switch to Odo.",
-                dps = "Burn the pet bats down first with AoE, then switch to Odo.",
+                melee = "AoE down the pet bats first, then position behind Odo to avoid Blind and howling roars.",
+                ranged = "AoE the bats down from range, staying 20+ yards back so Blind never hits you.",
+                dps = "Melee: AoE down the pet bats first, then position behind Odo to avoid Blind and howling roars.\nRanged: AoE the bats down from range, staying 20+ yards back so Blind never hits you.",
             },
             abilities = {
                 { id = 7481, name = "Howling Rage", icon = "Interface\\Icons\\Ability_BullRush", desc = "Increases attack speed and physical damage by 25% for 10 sec." },
@@ -596,9 +643,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Hold Fenrus steady. Double Attack can cause sudden health drops.",
                 healer = "Cleanse poison from party members.",
-                melee = "Burn the hound down quickly; no complex mechanics.",
-                ranged = "Burn the hound down quickly; no complex mechanics.",
-                dps = "Burn the hound down quickly; no complex mechanics.",
+                melee = "Stay behind the hound and burn him down; step back if toxic bite stacks on you.",
+                ranged = "Burn Fenrus down from max range; keep distance to avoid spreading disease.",
+                dps = "Melee: Stay behind the hound and burn him down; step back if toxic bite stacks on you.\nRanged: Burn Fenrus down from max range; keep distance to avoid spreading disease.",
             },
             abilities = {
                 { id = 0, name = "Double Attack", icon = "Interface\\Icons\\Ability_GhoulFrenzy", desc = "Chance on hit to instantly make a second melee swing." },
@@ -609,9 +656,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pick up the summoned wolf pack immediately with AoE abilities.",
                 healer = "Be ready for multiple enemies attacking at once; use defensive cooldowns if adds target you.",
-                melee = "AoE down the Lupine Horror wolves as soon as Nandos summons them.",
-                ranged = "AoE down the Lupine Horror wolves as soon as Nandos summons them.",
-                dps = "AoE down the Lupine Horror wolves as soon as Nandos summons them.",
+                melee = "AoE down the Lupine Horror wolves as soon as Nandos summons them; stay behind Nandos.",
+                ranged = "AoE and slow the Lupine Horror wolf packs from range before they swarm the healer.",
+                dps = "Melee: AoE down the Lupine Horror wolves as soon as Nandos summons them; stay behind Nandos.\nRanged: AoE and slow the Lupine Horror wolf packs from range before they swarm the healer.",
             },
             abilities = {
                 { id = 7489, name = "Call Lupine Horrors", icon = "Interface\\Icons\\Ability_Hunter_Pet_Wolf", desc = "Summons a pack of spectral wolves to overwhelm the party." },
@@ -632,6 +679,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 0, name = "Arugal's Curse", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Takes control of an enemy party member for 10 sec, increasing their size and damage." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Shadowfang Keep. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["The Stockade"] = {
@@ -640,9 +702,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Hold Targorr inside his cell with his back turned to the door.",
                 healer = "Maintain steady healing; Targorr hits hard but has no complex spell mechanics.",
-                melee = "Stand behind him to avoid Cleave.",
-                ranged = "Stand behind him to avoid Cleave.",
-                dps = "Stand behind him to avoid Cleave.",
+                melee = "Stand strictly behind Targorr to avoid frontal [Cleave] and sweeping weapon strikes.",
+                ranged = "Burn Targorr down from outside the cell doorway; stay clear of frontal cleaves.",
+                dps = "Melee: Stand strictly behind Targorr to avoid frontal [Cleave] and sweeping weapon strikes.\nRanged: Burn Targorr down from outside the cell doorway; stay clear of frontal cleaves.",
             },
             abilities = {
                 { id = 15496, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes up to 2 enemies in front of the caster for physical damage." },
@@ -653,9 +715,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Watch for Enrage at low health. Sunder Armor can reduce your defense.",
                 healer = "Save burst healing for the final 20% when Kam enrages.",
-                melee = "Focus down any cellmate adds before damaging Kam.",
-                ranged = "Focus down any cellmate adds before damaging Kam.",
-                dps = "Focus down any cellmate adds before damaging Kam.",
+                melee = "Focus down any cellmate adds before damaging Kam; interrupt dark iron casts.",
+                ranged = "Burn down the cellmate adds from range, then focus Kam Deepfury.",
+                dps = "Melee: Focus down any cellmate adds before damaging Kam; interrupt dark iron casts.\nRanged: Burn down the cellmate adds from range, then focus Kam Deepfury.",
             },
             abilities = {
                 { id = 8599, name = "Enrage", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Increases physical damage dealt by 40% when health drops low." },
@@ -666,9 +728,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pick up Hamhock and his gnoll attendant immediately. Position Hamhock away from the hallway.",
                 healer = "Keep the tank above 70% to handle Chain Slam spikes.",
-                melee = "Kill the gnoll add first to eliminate extra incoming damage.",
-                ranged = "Kill the gnoll add first to eliminate extra incoming damage.",
-                dps = "Kill the gnoll add first to eliminate extra incoming damage.",
+                melee = "Kill the gnoll add first to eliminate extra incoming damage, then finish Hamhock from behind.",
+                ranged = "Burst down Hamhock's companion gnoll from range, then burn Hamhock.",
+                dps = "Melee: Kill the gnoll add first to eliminate extra incoming damage, then finish Hamhock from behind.\nRanged: Burst down Hamhock's companion gnoll from range, then burn Hamhock.",
             },
             abilities = {
                 { id = 0, name = "Chain Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Swings heavy iron chains, dealing physical damage and knocking back nearby enemies." },
@@ -679,12 +741,13 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Tank Dextren inside his cell so feared party members do not run out into adjacent prison halls and pull extra mobs.",
                 healer = "Stay near max range to avoid Terrifying Roar fear.",
-                melee = "Keep your back to a cell corner so if feared, you don't run into uncleared cells.",
-                ranged = "Keep your back to a cell corner so if feared, you don't run into uncleared cells.",
-                dps = "Keep your back to a cell corner so if feared, you don't run into uncleared cells.",
+                melee = "Keep your back to a cell corner so if feared, you don't run into adjacent prisoner packs.",
+                ranged = "Stand back in the corridor so [Terrifying Howl] does not fear you into uncleared cells.",
+                dps = "Melee: Keep your back to a cell corner so if feared, you don't run into adjacent prisoner packs.\nRanged: Stand back in the corridor so [Terrifying Howl] does not fear you into uncleared cells.",
             },
             abilities = {
                 { id = 14100, name = "Terrifying Roar", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Roars with fury, causing nearby enemies to flee in fear for 4 sec." },
+                { id = 8715, name = "Terrifying Howl", icon = "Interface\\Icons\Ability_Physical_Taunt", desc = "Howls loudly, causing nearby enemies to flee in terror for 4 sec." },
             },
         },
         ["Bazil Thredd"] = {
@@ -692,9 +755,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Taunt Thredd back when he attempts to switch targets. Pick up summoned riot adds.",
                 healer = "Keep hot effects ticking on the tank; Thredd attacks rapidly with daggers.",
-                melee = "Do not waste high-cooldown attacks while Evasion is active (switch to magic damage).",
-                ranged = "Do not waste high-cooldown attacks while Evasion is active (switch to magic damage).",
-                dps = "Do not waste high-cooldown attacks while Evasion is active (switch to magic damage).",
+                melee = "Do not waste high-cooldown attacks while [Evasion] is active; resume full burst once it drops.",
+                ranged = "Burn Bazil Thredd with magical spells through [Evasion] since magic cannot be dodged.",
+                dps = "Melee: Do not waste high-cooldown attacks while [Evasion] is active; resume full burst once it drops.\nRanged: Burn Bazil Thredd with magical spells through [Evasion] since magic cannot be dodged.",
             },
             abilities = {
                 { id = 5277, name = "Evasion", icon = "Interface\\Icons\\Spell_Shadow_ShadowWard", desc = "Increases dodge chance by 50% for 15 sec." },
@@ -706,14 +769,29 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Watch for Concussion Blow which stuns for 5 sec.",
                 healer = "When the tank is stunned, be ready to shield or heal whoever takes aggro.",
-                melee = "Burn him down quickly; simple melee fight.",
-                ranged = "Burn him down quickly; simple melee fight.",
-                dps = "Burn him down quickly; simple melee fight.",
+                melee = "Stay behind Bruegal; watch for sudden threat drops and stun on enrage.",
+                ranged = "Burn Bruegal down quickly from range; simple physical fight.",
+                dps = "Melee: Stay behind Bruegal; watch for sudden threat drops and stun on enrage.\nRanged: Burn Bruegal down quickly from range; simple physical fight.",
             },
             abilities = {
                 { id = 12809, name = "Concussion Blow", icon = "Interface\\Icons\\Ability_ThunderBolt", desc = "Stuns the target for 5 sec and deals physical damage." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in The Stockade. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Blackfathom Deeps"] = {
@@ -735,13 +813,15 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pick up both Lady Sarevess and her guard. Dispel Frost Nova or move out of it.",
                 healer = "Dispel Slow from party members and heal through Forked Lightning.",
-                melee = "Kill the naga bodyguard first, then interrupt Sarevess's Frost spells.",
-                ranged = "Kill the naga bodyguard first, then interrupt Sarevess's Frost spells.",
-                dps = "Kill the naga bodyguard first, then interrupt Sarevess's Frost spells.",
+                melee = "Kill the naga bodyguard first, then interrupt Sarevess's [Frostbolt] and kick on cooldown.",
+                ranged = "Focus down the naga bodyguard add, then counterspell [Frostbolt] and outrange [Slow].",
+                dps = "Melee: Kill the naga bodyguard first, then interrupt Sarevess's [Frostbolt] and kick on cooldown.\nRanged: Focus down the naga bodyguard add, then counterspell [Frostbolt] and outrange [Slow].",
             },
             abilities = {
                 { id = 865, name = "Frost Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Freezes all nearby enemies in place for up to 6 sec." },
                 { id = 8435, name = "Forked Lightning", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Hurls cones of electrical energy at targets in front of her." },
+                { id = 15043, name = "Frostbolt", icon = "Interface\\Icons\Spell_Frost_FrostBolt02", desc = "Hurls a bolt of frost, dealing Frost damage and slowing movement." },
+                { id = 13747, name = "Slow", icon = "Interface\\Icons\Spell_Nature_Slow", desc = "Slows target movement and attack speed." },
             },
         },
         ["Gelihast"] = {
@@ -777,9 +857,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Aquanis faced away from the water platform. Watch for Tidal Wave knockbacks.",
                 healer = "Frost Resistance helps absorb Frostbolt damage.",
-                melee = "Interrupt Frostbolt whenever possible.",
-                ranged = "Interrupt Frostbolt whenever possible.",
-                dps = "Interrupt Frostbolt whenever possible.",
+                melee = "Stay close to the water platform edge; interrupt [Frostbolt] whenever possible.",
+                ranged = "Interrupt [Frostbolt] from range and stay spaced to avoid chained water damage.",
+                dps = "Melee: Stay close to the water platform edge; interrupt [Frostbolt] whenever possible.\nRanged: Interrupt [Frostbolt] from range and stay spaced to avoid chained water damage.",
             },
             abilities = {
                 { id = 15043, name = "Frostbolt", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Deals heavy Frost damage and slows the target." },
@@ -791,9 +871,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Fight Serra'kis while swimming or near the platform lip. Beware of underwater breath timers.",
                 healer = "Keep an eye on party member breath meters; stay close to the water surface or use underwater breathing.",
-                melee = "Burn Serra'kis down quickly to avoid prolonged swimming combat.",
-                ranged = "Burn Serra'kis down quickly to avoid prolonged swimming combat.",
-                dps = "Burn Serra'kis down quickly to avoid prolonged swimming combat.",
+                melee = "Swim down behind Serra'kis and burn him down quickly to avoid prolonged underwater combat.",
+                ranged = "Cast from the water surface or platform; keep track of your Breath bar.",
+                dps = "Melee: Swim down behind Serra'kis and burn him down quickly to avoid prolonged underwater combat.\nRanged: Cast from the water surface or platform; keep track of your Breath bar.",
             },
             abilities = {
                 { id = 9591, name = "Corrosive Spit", icon = "Interface\\Icons\\Spell_Nature_Acid_01", desc = "Spits corrosive bile, dealing Nature damage and reducing armor." },
@@ -828,6 +908,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 3490, name = "Enrage", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "At 20% health, Aku'mai enrages, increasing attack speed by 50% and damage dealt by 25%." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Blackfathom Deeps. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Excavation Site: Wetlands"] = {
@@ -866,9 +961,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Face Highland Horror away from the party to avoid cone root sweeps. Taunt quickly after Bog Slam knockbacks.",
                 healer = "Dispel Strangling Roots immediately to prevent stacking Nature damage on affected party members.",
-                melee = "Kill Creeping Tendrils and Spore Pods immediately when summoned before burning the boss.",
-                ranged = "Kill Creeping Tendrils and Spore Pods immediately when summoned before burning the boss.",
-                dps = "Kill Creeping Tendrils and Spore Pods immediately when summoned before burning the boss.",
+                melee = "Kill Creeping Tendrils immediately when summoned; avoid standing in fungal spore clouds.",
+                ranged = "Burn Spore Pods and Tendrils from distance before they erupt with poisonous spores.",
+                dps = "Melee: Kill Creeping Tendrils immediately when summoned; avoid standing in fungal spore clouds.\nRanged: Burn Spore Pods and Tendrils from distance before they erupt with poisonous spores.",
             },
             abilities = {
                 { id = 0, name = "Strangling Roots", icon = "Interface\\Icons\\Spell_Nature_Stranglevines", desc = "Entangles all enemies in front of the caster, dealing Nature damage every 3 sec and rooting them in place for 9 sec." },
@@ -881,9 +976,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep the Relic Guardian centered in the chamber. Move the boss out of Static Fields quickly so melee can continue DPS.",
                 healer = "Use heavy group heals when Arcane Overload pulses every 15 seconds. Dispel Static Charge.",
-                melee = "Quickly switch to Arcane Power Cells when they deploy around the room to remove the Guardian's damage immunity shield.",
-                ranged = "Quickly switch to Arcane Power Cells when they deploy around the room to remove the Guardian's damage immunity shield.",
-                dps = "Quickly switch to Arcane Power Cells when they deploy around the room to remove the Guardian's damage immunity shield.",
+                melee = "Quickly switch to Arcane Power Cells when they deploy around the chamber.",
+                ranged = "Target and destroy Arcane Power Cells from range to keep the Guardian's shields down.",
+                dps = "Melee: Quickly switch to Arcane Power Cells when they deploy around the chamber.\nRanged: Target and destroy Arcane Power Cells from range to keep the Guardian's shields down.",
             },
             abilities = {
                 { id = 0, name = "Static Field", icon = "Interface\\Icons\\Spell_Nature_LightningOverload", desc = "Electrifies a 10-yard pool of water on the chamber floor, dealing Nature damage to anyone standing inside." },
@@ -899,9 +994,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Hold Atrexis facing away from the staircase. Rotate active mitigation when he begins casting Obliterating Strike.",
                 healer = "Cleanse Frost Fever instantly to prevent severe attack and casting speed slows on party members.",
-                melee = "If gripped by Death's Grasp, immediately reposition away from his frontal Frost Cleave.",
-                ranged = "If gripped by Death's Grasp, immediately reposition away from his frontal Frost Cleave.",
-                dps = "If gripped by Death's Grasp, immediately reposition away from his frontal Frost Cleave.",
+                melee = "If gripped by [Death's Grasp], immediately reposition behind Atrexis and continue DPS.",
+                ranged = "Stay at max 30+ yard range; if gripped in, step back immediately away from melee cleave.",
+                dps = "Melee: If gripped by [Death's Grasp], immediately reposition behind Atrexis and continue DPS.\nRanged: Stay at max 30+ yard range; if gripped in, step back immediately away from melee cleave.",
             },
             abilities = {
                 { id = 0, name = "Frost Cleave", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Cleaves enemies in front of the caster for Frost damage, slowing movement speed by 40%." },
@@ -914,9 +1009,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Taunt and reposition the Anomaly immediately after each Blink. Pick up wild Mana Remnants as they spawn.",
                 healer = "Keep raid health topped above 70% before Arcane Explosion detonates.",
-                melee = "Save mobility tools to close the distance when the Anomaly teleports. Prioritize burning volatile mana sparks before they detonate.",
-                ranged = "Save mobility tools to close the distance when the Anomaly teleports. Prioritize burning volatile mana sparks before they detonate.",
-                dps = "Save mobility tools to close the distance when the Anomaly teleports. Prioritize burning volatile mana sparks before they detonate.",
+                melee = "Save mobility tools to close the distance when the Anomaly teleports across the chamber.",
+                ranged = "Stay centered in the room so you can maintain DPS regardless of where the Anomaly blinks.",
+                dps = "Melee: Save mobility tools to close the distance when the Anomaly teleports across the chamber.\nRanged: Stay centered in the room so you can maintain DPS regardless of where the Anomaly blinks.",
             },
             abilities = {
                 { id = 1449, name = "Arcane Explosion", icon = "Interface\\Icons\\Spell_Nature_WispSplode", desc = "Releases a violent burst of raw mana, dealing Arcane damage to all enemies within 15 yards." },
@@ -972,13 +1067,14 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Aggro the Devourer quickly after each Nullification pulse. Tank active mitigation is critical.",
                 healer = "DO NOT cast new buffs during combat; the Devourer consumes active buffs to heal itself!",
-                melee = "Save offensive burst cooldowns for Mana Satiation (+50% damage taken for 10 sec).",
-                ranged = "Save offensive burst cooldowns for Mana Satiation (+50% damage taken for 10 sec).",
-                dps = "Save offensive burst cooldowns for Mana Satiation (+50% damage taken for 10 sec).",
+                melee = "Save offensive burst cooldowns for [Mana Satiation] (+50% damage phase).",
+                ranged = "Conserve high-cost spells until [Mana Satiation] activates for +50% amplified damage.",
+                dps = "Melee: Save offensive burst cooldowns for [Mana Satiation] (+50% damage phase).\nRanged: Conserve high-cost spells until [Mana Satiation] activates for +50% amplified damage.",
             },
             abilities = {
                 { id = 0, name = "Nullification Burst", icon = "Interface\\Icons\\Spell_Holy_DispelMagic", desc = "Purges all magical beneficial effects from players and deals damage proportional to buffs removed." },
                 { id = 0, name = "Mana Bomb", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Launches an explosive orb of volatile arcane power at a ranged player's location." },
+                { id = 0, name = "Mana Satiation", icon = "Interface\\Icons\Spell_Arcane_ManaDrain", desc = "Gorges on mana, increasing damage taken by 50% for a short window." },
             },
         },
         ["Mana Elemental"] = {
@@ -1014,9 +1110,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Watch for mirror images. Keep Lyn tagged with Rend or Faerie Fire to distinguish the real boss from illusions.",
                 healer = "Dispel polymorph effects from party members immediately.",
-                melee = "Identify the real Lyn by checking her debuff icons; kill illusions with quick single-target strikes.",
-                ranged = "Identify the real Lyn by checking her debuff icons; kill illusions with quick single-target strikes.",
-                dps = "Identify the real Lyn by checking her debuff icons; kill illusions with quick single-target strikes.",
+                melee = "Identify the real Lyn by checking her debuff icons; kill illusions or cleave them down.",
+                ranged = "Tab-target to find the real Lyn with existing debuffs; burn illusions with AoE.",
+                dps = "Melee: Identify the real Lyn by checking her debuff icons; kill illusions or cleave them down.\nRanged: Tab-target to find the real Lyn with existing debuffs; burn illusions with AoE.",
             },
             abilities = {
                 { id = 118, name = "Polymorph: Sheep", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Transforms an enemy party member into a sheep for up to 8 sec, disabling them completely." },
@@ -1039,6 +1135,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 5143, name = "Arcane Missiles", icon = "Interface\\Icons\\Spell_Nature_StarFall", desc = "Channels high-velocity magical bolts into the primary target over 3 sec." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in City of Dalaran. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Gnomeregan"] = {
@@ -1047,9 +1158,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Hold Grubbis and Chomper together. Have DPS kill Chomper first or off-tank to avoid Petrifying Gaze.",
                 healer = "Dispel Basilisk Stun from party members. Watch for sudden tank spikes when Grubbis enrages.",
-                melee = "Burn Chomper down first to remove Petrifying Gaze, then focus Grubbis. Don't pull extra troggs from the side vents.",
-                ranged = "Burn Chomper down first to remove Petrifying Gaze, then focus Grubbis. Don't pull extra troggs from the side vents.",
-                dps = "Burn Chomper down first to remove Petrifying Gaze, then focus Grubbis. Don't pull extra troggs from the side vents.",
+                melee = "Burn Chomper down first to remove [Petrifying Gaze], then focus Grubbis from behind.",
+                ranged = "Focus down Chomper from range while avoiding basilisk gaze, then burn Grubbis.",
+                dps = "Melee: Burn Chomper down first to remove [Petrifying Gaze], then focus Grubbis from behind.\nRanged: Focus down Chomper from range while avoiding basilisk gaze, then burn Grubbis.",
             },
             abilities = {
                 { id = 10252, name = "Petrifying Gaze", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Chomper glares at a target, turning them to stone and stunning them for 4 sec." },
@@ -1061,9 +1172,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Viscous Fallout away from the party. Drag the boss backward as toxic puddles form underfoot.",
                 healer = "Cleanse Radioactive Poison quickly. Use Nature Resistance Totem or Aspect of the Wild if available.",
-                melee = "Quickly eliminate Irradiated Slime adds before they reach the boss and heal it.",
-                ranged = "Quickly eliminate Irradiated Slime adds before they reach the boss and heal it.",
-                dps = "Quickly eliminate Irradiated Slime adds before they reach the boss and heal it.",
+                melee = "Step back or focus-fire Irradiated Slime adds before they reach melee range.",
+                ranged = "Slow and AoE down the Irradiated Slime adds from range before they reach the party.",
+                dps = "Melee: Step back or focus-fire Irradiated Slime adds before they reach melee range.\nRanged: Slow and AoE down the Irradiated Slime adds from range before they reach the party.",
             },
             abilities = {
                 { id = 0, name = "Radioactive Aura", icon = "Interface\\Icons\\Spell_Shadow_CreepingPlague", desc = "Deals periodic Nature damage to all players within 20 yards and reduces healing received." },
@@ -1127,6 +1238,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 13813, name = "Explosive Trap", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Places a hidden incendiary trap that detonates when stepped on, knocking back nearby players." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Gnomeregan. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Razorfen Kraul"] = {
@@ -1163,9 +1289,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Keep Jargba positioned near the center. Be ready to retake aggro when Mind Control fades from party members.",
                 healer = "Dispel Magic to remove Bone Shield. Prepare heavy healing when Shadow Nova detonates.",
-                melee = "Crowd control (polymorph, trap, stun) charmed allies without killing them! Interrupt Dominate Mind.",
-                ranged = "Crowd control (polymorph, trap, stun) charmed allies without killing them! Interrupt Dominate Mind.",
-                dps = "Crowd control (polymorph, trap, stun) charmed allies without killing them! Interrupt Dominate Mind.",
+                melee = "Crowd control or stun charmed allies without killing them; interrupt Jargba's shadow casts.",
+                ranged = "Polymorph or trap charmed allies immediately; counterspell Jargba from distance.",
+                dps = "Melee: Crowd control or stun charmed allies without killing them; interrupt Jargba's shadow casts.\nRanged: Polymorph or trap charmed allies immediately; counterspell Jargba from distance.",
             },
             abilities = {
                 { id = 14515, name = "Dominate Mind", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Chontrolls the mind of a party member for up to 10 sec, forcing them to attack their allies." },
@@ -1234,15 +1360,32 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pull Halmgar away from his Earthbind and Strength of Earth totems immediately.",
                 healer = "Frost Resistance helps absorb Frost Shock burst. Cleanse slows.",
-                melee = "Kill totems on sight, especially Earthbind Totem and Healing Totem.",
-                ranged = "Kill totems on sight, especially Earthbind Totem and Healing Totem.",
-                dps = "Kill totems on sight, especially Earthbind Totem and Healing Totem.",
+                melee = "Kill totems on sight, especially [Earthbind Totem] and [Healing Stream Totem].",
+                ranged = "Shoot down totems immediately from range, prioritizing Healing Stream.",
+                dps = "Melee: Kill totems on sight, especially [Earthbind Totem] and [Healing Stream Totem].\nRanged: Shoot down totems immediately from range, prioritizing Healing Stream.",
             },
             abilities = {
                 { id = 8056, name = "Frost Shock", icon = "Interface\\Icons\\Spell_Frost_FrostShock", desc = "Blasts the target with frost, dealing damage and reducing movement speed by 50% for 6 sec." },
                 { id = 8075, name = "Strength of Earth Totem", icon = "Interface\\Icons\\Spell_Nature_EarthBindTotem", desc = "Plants a totem that increases Halmgar's melee damage by 30%." },
+                { id = 2484, name = "Earthbind Totem", icon = "Interface\\Icons\Spell_Nature_StrengthOfEarthTotem02", desc = "Summons an Earthbind Totem that slows nearby enemies." },
+                { id = 5675, name = "Healing Stream Totem", icon = "Interface\\Icons\INV_Spear_04", desc = "Summons a totem that heals nearby allies over time." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Razorfen Kraul. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Scarlet Monastery: Graveyard"] = {
@@ -1265,9 +1408,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Establish aggro on Azshir and hold him near the mausoleum entrance. Pick up summoned ghouls.",
                 healer = "Heavy shadow damage during Terrifying Shriek. Dispel sleep/fear effects.",
-                melee = "AoE down the Crypt Crawler adds quickly, then resume single-target focus on Azshir.",
-                ranged = "AoE down the Crypt Crawler adds quickly, then resume single-target focus on Azshir.",
-                dps = "AoE down the Crypt Crawler adds quickly, then resume single-target focus on Azshir.",
+                melee = "AoE down the Crypt Crawler adds quickly, then resume single-target burn on Azshir.",
+                ranged = "AoE the Crypt Crawler swarms down from range before they overwhelm the healer.",
+                dps = "Melee: AoE down the Crypt Crawler adds quickly, then resume single-target burn on Azshir.\nRanged: AoE the Crypt Crawler swarms down from range before they overwhelm the healer.",
             },
             abilities = {
                 { id = 7399, name = "Terrifying Shriek", icon = "Interface\\Icons\\Spell_Shadow_PsychicScream", desc = "Lets out a horrifying scream, causing all players within 10 yards to flee in terror for 4 sec." },
@@ -1279,9 +1422,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Tank the Champion away from the crypt steps. Use defensive mitigation when he casts Desecrated Strike.",
                 healer = "Be prepared for sudden physical spike damage on the tank. Cleanse disease debuffs.",
-                melee = "Stay behind the Champion. Interrupt Holy/Unholy spellcasts.",
-                ranged = "Stay behind the Champion. Interrupt Holy/Unholy spellcasts.",
-                dps = "Stay behind the Champion. Interrupt Holy/Unholy spellcasts.",
+                melee = "Stay strictly behind the Champion to avoid parry and frontal strikes. Interrupt spellcasts.",
+                ranged = "Burn the Champion from distance; counterspell Holy/Unholy casts.",
+                dps = "Melee: Stay strictly behind the Champion to avoid parry and frontal strikes. Interrupt spellcasts.\nRanged: Burn the Champion from distance; counterspell Holy/Unholy casts.",
             },
             abilities = {
                 { id = 0, name = "Desecrated Strike", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes the target with unholy fury, dealing physical damage and applying a stacking disease." },
@@ -1317,6 +1460,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 0, name = "Raise Fallen Crusaders", icon = "Interface\\Icons\\Spell_Shadow_RaiseDead", desc = "Raises fallen Scarlet crusaders as skeletal minions to swarm the highest threat target." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Scarlet Monastery: Graveyard. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Scarlet Monastery: Library"] = {
@@ -1325,9 +1483,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Pull Loksey and immediately gather his hounds. Keep the pack grouped together facing away from the group.",
                 healer = "Be prepared for rapid spike damage when Loksey casts Bloodlust on himself and his hounds.",
-                melee = "Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage before burning Loksey.",
-                ranged = "Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage before burning Loksey.",
-                dps = "Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage before burning Loksey.",
+                melee = "Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage.",
+                ranged = "Slow and AoE the hounds from range, then burn down Loksey.",
+                dps = "Melee: Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage.\nRanged: Slow and AoE the hounds from range, then burn down Loksey.",
             },
             abilities = {
                 { id = 6742, name = "Bloodlust", icon = "Interface\\Icons\\Spell_Nature_BloodLust", desc = "Increases melee attack speed of the caster and all nearby hound allies by 30% for 30 sec." },
@@ -1340,9 +1498,9 @@ FDJ.BOSS_TACTICS = {
             roleTips = {
                 tank = "Tank Doan near the center of the circular room. When he begins channeling Detonation, sprint behind a pillar out of sight!",
                 healer = "Heal through Arcane Explosion and Fire Nova bursts. Dispel Silence from healers and casters if possible.",
-                melee = "Kick Arcane Explosion and Polymorph. Immediately run behind pillars when Doan begins his Detonation cast!",
-                ranged = "Kick Arcane Explosion and Polymorph. Immediately run behind pillars when Doan begins his Detonation cast!",
-                dps = "Kick Arcane Explosion and Polymorph. Immediately run behind pillars when Doan begins his Detonation cast!",
+                melee = "Kick [Polymorph]; when Doan begins casting [Detonation], RUN 30+ yards away immediately!",
+                ranged = "Interrupt [Polymorph] and [Arcane Explosion]; step out of line-of-sight during [Detonation].",
+                dps = "Melee: Kick [Polymorph]; when Doan begins casting [Detonation], RUN 30+ yards away immediately!\nRanged: Interrupt [Polymorph] and [Arcane Explosion]; step out of line-of-sight during [Detonation].",
             },
             abilities = {
                 { id = 9435, name = "Detonation", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Channels for 5 sec before unleashing a massive fiery explosion dealing catastrophic lethal Fire damage within 30 yards. Line of sight behind library pillars to avoid!" },
@@ -1352,6 +1510,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 11969, name = "Fire Nova", icon = "Interface\\Icons\\Spell_Fire_SealOfFire", desc = "Releases an expanding ring of fire, inflicting Fire damage to all nearby enemies." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Scarlet Monastery: Library. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Scarlet Monastery: Armory"] = {
@@ -1371,6 +1544,21 @@ FDJ.BOSS_TACTICS = {
                 { id = 15496, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes up to 3 targets in front of Herod for heavy weapon damage." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Scarlet Monastery: Armory. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Scarlet Monastery: Cathedral"] = {
@@ -1388,6 +1576,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 12096, name = "Fear", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Strikes fear into an enemy, causing them to flee for up to 6 sec." },
                 { id = 11647, name = "Power Word: Shield", icon = "Interface\\Icons\\Spell_Holy_PowerWordShield", desc = "Wraps the caster in a holy shield that absorbs damage and prevents spell pushback." },
                 { id = 12039, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Calls upon Holy magic to restore a large amount of health." },
+                { id = 12098, name = "Sleep", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Puts an enemy to sleep for up to 20 sec. Any damage taken will awaken the target." },
             },
         },
         ["Scarlet Commander Mograine"] = {
@@ -1403,6 +1592,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 14517, name = "Crusader Strike", icon = "Interface\\Icons\\Spell_Holy_HolySmite", desc = "Inflicts Holy damage and increases Holy damage taken by the target for 30 sec." },
                 { id = 853, name = "Hammer of Justice", icon = "Interface\\Icons\\Spell_Holy_SealOfMight", desc = "Stuns the primary target for 4 sec." },
                 { id = 642, name = "Divine Shield", icon = "Interface\\Icons\\Spell_Holy_DivineIntervention", desc = "Protects Mograine from all attacks and spells for 8 sec." },
+                { id = 20922, name = "Consecration", icon = "Interface\\Icons\\Spell_Holy_InnerFire", desc = "Consecrates the ground beneath Mograine, dealing Holy damage over 8 sec." },
             },
         },
         ["High Inquisitor Whitemane"] = {
@@ -1419,8 +1609,24 @@ FDJ.BOSS_TACTICS = {
                 { id = 9232, name = "Scarlet Resurrection", icon = "Interface\\Icons\\Spell_Holy_Resurrection", desc = "Resurrects Scarlet Commander Mograine with full health and mana." },
                 { id = 12039, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Restores a large amount of health to Mograine or Whitemane." },
                 { id = 9481, name = "Holy Smite", icon = "Interface\\Icons\\Spell_Holy_HolySmite", desc = "Smites an enemy with Holy fire." },
+                { id = 10901, name = "Power Word: Shield", icon = "Interface\\Icons\\Spell_Holy_PowerWordShield", desc = "Draws upon Holy power to shield Whitemane, absorbing damage and preventing spell pushback." },
             },
         },
+        ["Trash Drops"] = {
+            overview = "Notable zone trash drops, rare recipes, and world BoEs found across the creatures in Scarlet Monastery: Cathedral. Clear pulls methodically and watch for patrolling mobs and runners.",
+            roleTips = {
+                tank = "Mark primary kill targets (Skull/X) on multi-mob pulls; pull caster packs around corners using Line-of-Sight to group them for cleave.",
+                healer = "Prioritize dispelling lethal poisons, curses, and diseases; conserve mana between packs and drink whenever out of combat.",
+                melee = "Kick dangerous enemy spellcasts on sight and watch for frontal cleaves or whirlwinds from humanoid and undead trash mobs.",
+                ranged = "Focus the primary marked target and use crowd control (Polymorph, Freezing Trap, Sap) on dangerous humanoid pulls before engaging.",
+                dps = "Melee: Kick dangerous spellcasts on sight and beware frontal cleaves.\nRanged: Focus skull marker and crowd-control dangerous humanoids.",
+            },
+            abilities = {
+                { id = 0, name = "Line-of-Sight Pulling", icon = "Interface\\Icons\\Ability_Rogue_Sprint", desc = "Duck behind a wall or pillar after pulling ranged casters to force them to run into melee range." },
+                { id = 0, name = "Fleeing Adds", icon = "Interface\\Icons\\Ability_Physical_Taunt", desc = "Low-health humanoids flee and aggro adjacent packs. Stun, snare, or execute them quickly." },
+            },
+        },
+
     },
 
     ["Razorfen Downs"] = {
@@ -1481,6 +1687,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 7645, name = "Dominate Mind", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Charms a party member to fight for Ragglesnout for 10 sec." },
                 { id = 11642, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Heals Ragglesnout for a substantial amount." },
                 { id = 11659, name = "Shadow Word: Pain", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", desc = "Inflicts Shadow damage over 18 sec." },
+                { id = 9613, name = "Shadow Bolt", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls a bolt of dark magic at an enemy, dealing Shadow damage." },
             },
         },
         ["Plaguemaw the Rotting"] = {
@@ -1632,6 +1839,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 11895, name = "Healing Ward", icon = "Interface\\Icons\\Spell_Holy_LayOnHands", desc = "Drops a powerful totem that rapidly heals Antu'sul and his basilisks." },
                 { id = 16006, name = "Chain Lightning", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Strikes a target with lightning that arcs to nearby allies." },
                 { id = 11894, name = "Sul'lithuz Broodling", icon = "Interface\\Icons\\Spell_Nature_NatureTouchGrow", desc = "Summons a wave of young basilisks to overwhelm the party." },
+                { id = 15586, name = "Greater Healing Wave", icon = "Interface\\Icons\Spell_Nature_MagicImmunity", desc = "Calls upon nature magic to heal Antu'sul or a nearby ally for significant health." },
             },
         },
         ["Witch Doctor Zum'rah"] = {
@@ -1647,6 +1855,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 11086, name = "Ward of Zum'rah", icon = "Interface\\Icons\\Spell_Totem_WardOfDraining", desc = "Summons a totem that continuously spawns skeletal minions until destroyed." },
                 { id = 15245, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Fires Shadow Bolts at all nearby party members." },
                 { id = 12491, name = "Healing Wave", icon = "Interface\\Icons\\Spell_Nature_MagicImmunity", desc = "Calls upon voodoo magic to heal Zum'rah." },
+                { id = 0, name = "Zul'Farrak Zombies", icon = "Interface\\Icons\Spell_Shadow_RaiseDead", desc = "Summons skeletal zombies from nearby shallow graves to swarm the party." },
             },
         },
         ["Shadowpriest Sezz'ziz"] = {
@@ -1662,6 +1871,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 12039, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Restores a large amount of health to Sezz'ziz or Nekrum Gutchewer." },
                 { id = 13704, name = "Psychic Scream", icon = "Interface\\Icons\\Spell_Shadow_PsychicScream", desc = "Causes nearby enemies to flee in terror for 6 sec." },
                 { id = 12739, name = "Shadow Bolt", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls a bolt of dark magic at the target." },
+                { id = 15654, name = "Shadow Word: Pain", icon = "Interface\\Icons\Spell_Shadow_ShadowWordPain", desc = "Utters a word of darkness, dealing Shadow damage over 18 sec." },
             },
         },
         ["Gahz'rilla"] = {
@@ -1719,6 +1929,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 12739, name = "Shadow Bolt", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Blasts the target with Shadow damage." },
                 { id = 11838, name = "Zero Mana", icon = "Interface\\Icons\\Spell_Shadow_ManaBurn", desc = "Burns mana from a spellcaster target." },
+                { id = 0, name = "Chaotic Focus", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Channels pure chaotic energy to boost spell power." },
             },
         },
         ["Ruuzlu"] = {
@@ -1746,6 +1957,7 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 11837, name = "Wide Slash", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Sweeping blade strike hitting all enemies in a wide frontal cone." },
+                { id = 15284, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Sweeping strike that deals weapon damage to the target and its nearest allies." },
                 { id = 8269, name = "Frenzy", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Increases Ukorz's attack speed by 60% at low health." },
             },
         },
@@ -1922,6 +2134,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 21793, name = "Twisted Tranquility", icon = "Interface\\Icons\\Spell_Nature_Tranquility", desc = "Channels a dark nature spell that heals Celebras and nearby allies." },
                 { id = 21807, name = "Wrath", icon = "Interface\\Icons\\Spell_Nature_AbolishMagic", desc = "Hurls a bolt of Nature energy at the target." },
                 { id = 12747, name = "Entangling Roots", icon = "Interface\\Icons\\Spell_Nature_StrangleVines", desc = "Roots an enemy in place and deals Nature damage over time." },
+                { id = 21908, name = "Corrupt Forces of Nature", icon = "Interface\\Icons\Spell_Nature_StrangleVines", desc = "Summons corrupted treants from the surrounding grove to attack the party." },
             },
         },
         ["Landslide"] = {
@@ -1937,6 +2150,8 @@ FDJ.BOSS_TACTICS = {
                 { id = 21808, name = "Landslide", icon = "Interface\\Icons\\Spell_Nature_Earthquake", desc = "Stuns all nearby enemies and summons stone shards to attack the party." },
                 { id = 10101, name = "Knock Away", icon = "Interface\\Icons\\Ability_Kick", desc = "Knocks the primary target back and reduces threat." },
                 { id = 5568, name = "Trample", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Inflicts physical damage to all nearby enemies." },
+                { id = 24375, name = "War Stomp", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Stuns all nearby enemies for 4 sec." },
+                { id = 0, name = "Subterranean Diemetradon", icon = "Interface\\Icons\Ability_Hunter_Pet_Hydra", desc = "Summons a subterranean beast from the cavern depths to assist the giant." },
             },
         },
         ["Tinkerer Gizlock"] = {
@@ -1996,6 +2211,7 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 12887, name = "Sweeping Slam", icon = "Interface\\Icons\\Ability_Devastation", desc = "Slams targets in front of the golem, knocking them far back." },
+                { id = 0, name = "Atal'ai Traps", icon = "Interface\\Icons\Spell_Shadow_GrimWard", desc = "Triggers explosive temple ground traps beneath player positions." },
             },
         },
         ["Dreamscythe"] = {
@@ -2053,6 +2269,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 12480, name = "Hex of Jammal'an", icon = "Interface\\Icons\\Spell_Totem_WardOfDraining", desc = "After 10 sec, transforms the target into a hostile Atal'ai troll with quadrupled damage for 10 sec." },
                 { id = 12491, name = "Healing Wave", icon = "Interface\\Icons\\Spell_Nature_MagicImmunity", desc = "Restores a large amount of health to Jammal'an or Ogom." },
                 { id = 8376, name = "Earthgrab Totem", icon = "Interface\\Icons\\Spell_Nature_NatureTouchDecay", desc = "Roots nearby enemies in place every few seconds." },
+                { id = 12466, name = "Flamestrike", icon = "Interface\\Icons\Spell_Fire_SelfDestruct", desc = "Calls down a pillar of flame, inflicting heavy Fire damage." },
             },
         },
         ["Ogom the Wretched"] = {
@@ -2067,6 +2284,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 11659, name = "Shadow Word: Pain", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", desc = "Inflicts Shadow damage over 18 sec." },
                 { id = 12493, name = "Curse of Weakness", icon = "Interface\\Icons\\Spell_Shadow_CurseOfMannoroth", desc = "Reduces physical damage dealt by the target." },
+                { id = 12471, name = "Shadow Bolt", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Hurls a bolt of dark magic at an enemy." },
             },
         },
         ["Morphaz"] = {
@@ -2081,6 +2299,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 12884, name = "Acid Breath", icon = "Interface\\Icons\\Spell_Nature_Acid_01", desc = "Cone of corrosive acid that stacks a Nature DoT." },
                 { id = 12882, name = "Wing Flap", icon = "Interface\\Icons\\INV_Misc_MonsterScales_14", desc = "Knocks back frontal targets." },
+                { id = 12524, name = "Lethargic Cloud", icon = "Interface\\Icons\Spell_Nature_Sleep", desc = "Releases a sleeping cloud that slows and incapacitates players." },
             },
         },
         ["Hazzas"] = {
@@ -2130,6 +2349,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 17228, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls Shadow Bolts at all enemies on the balcony." },
                 { id = 12889, name = "Curse of Tongues", icon = "Interface\\Icons\\Spell_Shadow_CurseOfTounges", desc = "Reduces casting speed by 50%." },
                 { id = 18144, name = "Swoop", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Dives down to stun nearby enemies for 2 sec." },
+                { id = 12097, name = "Pierce Armor", icon = "Interface\\Icons\Spell_Shadow_VampiricAura", desc = "Pierces the target's armor, reducing armor by 50% for 20 sec." },
             },
         },
         ["Jandice Barov"] = {
@@ -2159,6 +2379,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 10101, name = "Knock Away", icon = "Interface\\Icons\\Ability_Kick", desc = "Knocks the primary tank backward and reduces their threat by 50%." },
                 { id = 11876, name = "War Stomp", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Stuns all nearby enemies for 3 sec." },
                 { id = 15580, name = "Strike", icon = "Interface\\Icons\\Ability_Rogue_Ambush", desc = "Delivers a crushing physical blow to the tank." },
+                { id = 3391, name = "Thrash", icon = "Interface\\Icons\Ability_GhoulFrenzy", desc = "Gives the caster 2 extra attacks on the target." },
             },
         },
         ["Marduk Blackpool"] = {
@@ -2173,6 +2394,8 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 16440, name = "Shadow Shield", icon = "Interface\\Icons\\Spell_Shadow_AntiShadow", desc = "Absorbs incoming damage and reflects Shadow damage." },
                 { id = 15496, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes up to 3 frontal targets." },
+                { id = 11874, name = "Flamestrike", icon = "Interface\\Icons\Spell_Fire_SelfDestruct", desc = "Calls down a column of fire on the party." },
+                { id = 17650, name = "Defiling Aura", icon = "Interface\\Icons\Spell_Shadow_AuraOfDarkness", desc = "Pulsing aura of unholy shadow damage." },
             },
         },
         ["Vectus"] = {
@@ -2187,6 +2410,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 18399, name = "Flamestrike", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Calls down a pillar of fire that burns the ground for 8 sec." },
                 { id = 16099, name = "Blast Wave", icon = "Interface\\Icons\\Spell_Holy_Excorcism_02", desc = "Unleashes a wave of flame that damages and dazes nearby enemies." },
+                { id = 134, name = "Fire Shield", icon = "Interface\\Icons\Spell_Fire_Immolation", desc = "Deals Fire damage to attackers whenever struck in melee." },
             },
         },
         ["Ras Frostwhisper"] = {
@@ -2202,6 +2426,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 18103, name = "Freeze", icon = "Interface\\Icons\\Spell_Frost_Glacier", desc = "Encases the primary target in ice for 10 sec and drops threat unless dispelled immediately." },
                 { id = 8398, name = "Frostbolt Volley", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Hurls Frostbolts at all nearby enemies, dealing Frost damage and slowing movement." },
                 { id = 12096, name = "Fear", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Fears a random player for up to 6 sec." },
+                { id = 18099, name = "Chill Nova", icon = "Interface\\Icons\Spell_Frost_FrostNova", desc = "Explodes in a wave of frost, slowing and freezing nearby enemies." },
             },
         },
         ["Instructor Malicia"] = {
@@ -2217,6 +2442,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 17831, name = "Call of the Grave", icon = "Interface\\Icons\\Spell_Shadow_ChillTouch", desc = "Inflicts heavy Shadow damage after 10 sec unless dispelled." },
                 { id = 12039, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Restores a large amount of health to Malicia." },
                 { id = 13747, name = "Slow", icon = "Interface\\Icons\\Spell_Nature_Slow", desc = "Reduces movement and attack speed." },
+                { id = 8362, name = "Renew", icon = "Interface\\Icons\Spell_Holy_Renew", desc = "Restores health to an ally over 15 sec." },
             },
         },
         ["Doctor Theolen Krastinov"] = {
@@ -2292,6 +2518,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 20740, name = "Dominate Mind", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Charms a party member for 10 sec." },
                 { id = 12528, name = "Silence", icon = "Interface\\Icons\\Spell_Holy_Silence", desc = "Silences nearby enemies for 5 sec." },
                 { id = 12096, name = "Fear", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Fears a target for up to 6 sec." },
+                { id = 17399, name = "Shadow Shock", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Shocks an enemy with instant Shadow damage." },
             },
         },
         ["Darkmaster Gandling"] = {
@@ -2325,6 +2552,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 22651, name = "Sacrifice", icon = "Interface\\Icons\\Spell_Shadow_AntiMagicShell", desc = "Teleports a player onto the sacrificial altar, stunning them and draining health over 8 sec." },
                 { id = 22478, name = "Intense Pain", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", desc = "Channels dark agony that deals heavy Shadow damage over time." },
+                { id = 12471, name = "Shadow Bolt", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls a bolt of dark magic at an enemy, dealing Shadow damage." },
             },
         },
         ["Hydrospawn"] = {
@@ -2355,6 +2583,9 @@ FDJ.BOSS_TACTICS = {
                 { id = 22709, name = "Enlarge", icon = "Interface\\Icons\\Spell_Nature_Strength", desc = "Enlarges her imp Pimgib, dramatically increasing his damage and fire rate." },
                 { id = 17228, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls Shadow Bolts at all nearby enemies." },
                 { id = 12889, name = "Curse of Tongues", icon = "Interface\\Icons\\Spell_Shadow_CurseOfTounges", desc = "Slows spellcasting speed by 50%." },
+                { id = 11990, name = "Immolate", icon = "Interface\\Icons\Spell_Fire_Immolation", desc = "Burns an enemy for Fire damage over 15 sec." },
+                { id = 16247, name = "Curse of Thorns", icon = "Interface\\Icons\Spell_Shadow_AntiShadow", desc = "Causes physical attackers to take damage on hit." },
+                { id = 11659, name = "Shadow Word: Pain", icon = "Interface\\Icons\Spell_Shadow_ShadowWordPain", desc = "Inflicts Shadow damage over 18 sec." },
             },
         },
         ["Alzzin the Wildshaper"] = {
@@ -2371,6 +2602,8 @@ FDJ.BOSS_TACTICS = {
                 { id = 22662, name = "Wither", icon = "Interface\\Icons\\Spell_Nature_NullifyDisease", desc = "Disease that deals Nature damage and reduces strength and stamina." },
                 { id = 22688, name = "Mangle", icon = "Interface\\Icons\\Ability_Druid_Disembowel", desc = "In Wolf form, savages the tank and reduces movement speed." },
                 { id = 22660, name = "Wild Regeneration", icon = "Interface\\Icons\\Spell_Nature_Rejuvenation", desc = "In Tree form, heals Alzzin over time (Purge/Dispel immediately)." },
+                { id = 6713, name = "Disarm", icon = "Interface\\Icons\Ability_Warrior_Disarm", desc = "Disarms the target's weapon for 5 sec." },
+                { id = 19985, name = "Vicious Bite", icon = "Interface\\Icons\Ability_Druid_Rake", desc = "Bites an enemy for high physical damage." },
             },
         },
     },
@@ -2404,6 +2637,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 22915, name = "Volley", icon = "Interface\\Icons\\Ability_Marksmanship", desc = "Rains arrows down on a target area for 6 sec." },
                 { id = 20735, name = "Multi-Shot", icon = "Interface\\Icons\\Ability_UpgradeMoonGlaive", desc = "Fires arrows at 3 random party members." },
                 { id = 22910, name = "Immolation Trap", icon = "Interface\\Icons\\Spell_Fire_FlameShock", desc = "Places a fire trap that burns the first enemy to step on it." },
+                { id = 15547, name = "Concussive Shot", icon = "Interface\\Icons\Spell_Frost_Stun", desc = "Dazes the target, reducing movement speed by 50% for 4 sec." },
             },
         },
         ["Tsu'zee"] = {
@@ -2433,6 +2667,8 @@ FDJ.BOSS_TACTICS = {
                 { id = 7645, name = "Dominate Mind", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Takes control of a party member for 10 sec." },
                 { id = 22919, name = "Mind Flay", icon = "Interface\\Icons\\Spell_Shadow_SiphonMana", desc = "Channels Shadow damage and slows movement speed by 50%." },
                 { id = 22917, name = "Shadowform", icon = "Interface\\Icons\\Spell_Shadow_Shadowform", desc = "At 50% health, reduces physical damage taken and increases Shadow damage dealt." },
+                { id = 15587, name = "Mind Blast", icon = "Interface\\Icons\Spell_Shadow_UnholyFrenzy", desc = "Blasts the target with direct Shadow damage." },
+                { id = 15654, name = "Shadow Word: Pain", icon = "Interface\\Icons\Spell_Shadow_ShadowWordPain", desc = "Inflicts Shadow damage over 18 sec." },
             },
         },
         ["Immol'thar"] = {
@@ -2479,6 +2715,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 22920, name = "Arcane Blast", icon = "Interface\\Icons\\Spell_Nature_WispSplode", desc = "Blasts the primary target for heavy Arcane damage, knocking them far back and wiping their threat!" },
                 { id = 15589, name = "Whirlwind", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Spins in place, striking all nearby enemies for physical damage." },
                 { id = 3391, name = "Thrash", icon = "Interface\\Icons\\Ability_GhoulFrenzy", desc = "Grants 2 extra attacks on his next swing." },
+                { id = 15667, name = "Counterattack", icon = "Interface\\Icons\Ability_Warrior_Challange", desc = "Strikes an attacker immediately after parrying." },
             },
         },
     },
@@ -2496,6 +2733,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 11972, name = "Shield Bash", icon = "Interface\\Icons\\Ability_Warrior_ShieldBash", desc = "Bashes the target, interrupting spellcasting for 5 sec." },
                 { id = 8269, name = "Frenzy", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Increases attack speed at low health." },
+                { id = 11976, name = "Strike", icon = "Interface\\Icons\Ability_Rogue_Ambush", desc = "Strikes an enemy with weapon damage." },
             },
         },
         ["Stomper Kreeg"] = {
@@ -2539,6 +2777,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 22856, name = "Ice Lock", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Freezes nearby enemies in ice." },
                 { id = 22835, name = "Ferocious Charge", icon = "Interface\\Icons\\Ability_Warrior_Charge", desc = "Charges a target." },
+                { id = 8269, name = "Frenzy", icon = "Interface\\Icons\Spell_Shadow_UnholyFrenzy", desc = "Increases attack speed by 60%." },
             },
         },
         ["Captain Kromcrush"] = {
@@ -2569,6 +2808,8 @@ FDJ.BOSS_TACTICS = {
                 { id = 16006, name = "Chain Lightning", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Hurls lightning that arcs between nearby players (Shaman variant)." },
                 { id = 15982, name = "Healing Wave", icon = "Interface\\Icons\\Spell_Nature_MagicImmunity", desc = "Heals King Gordok for a large amount (interrupt immediately)." },
                 { id = 15532, name = "Frost Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Freezes nearby enemies in place (Mage variant)." },
+                { id = 12466, name = "Fireball", icon = "Interface\\Icons\Spell_Fire_FlameBolt", desc = "Hurls a fiery ball that inflicts Fire damage." },
+                { id = 15587, name = "Mind Blast", icon = "Interface\\Icons\Spell_Shadow_UnholyFrenzy", desc = "Inflicts direct Shadow damage." },
             },
         },
         ["King Gordok"] = {
@@ -2602,6 +2843,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 16369, name = "Frostbolt", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Inflicts Frost damage and slows movement." },
                 { id = 15089, name = "Frost Shock", icon = "Interface\\Icons\\Spell_Frost_FrostShock", desc = "Instantly shocks the target with Frost damage." },
+                { id = 13748, name = "Arcane Bolt", icon = "Interface\\Icons\Spell_Arcane_Blast", desc = "Shoots a bolt of pure arcane magic." },
             },
         },
         ["Hearthsinger Forresten"] = {
@@ -2629,6 +2871,7 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 14907, name = "Frost Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Freezes all nearby enemies in place for 8 sec." },
+                { id = 17208, name = "Relentless Strike", icon = "Interface\\Icons\Ability_Warrior_DecisiveStrike", desc = "Strikes the target with furious melee damage." },
             },
         },
         ["Timmy the Cruel"] = {
@@ -2704,6 +2947,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 13704, name = "Psychic Scream", icon = "Interface\\Icons\\Spell_Shadow_PsychicScream", desc = "Fears up to 4 nearby enemies for 6 sec." },
                 { id = 16798, name = "Sleep", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Puts a random party member to sleep for 8 sec." },
                 { id = 17289, name = "Crusader's Hammer", icon = "Interface\\Icons\\Spell_Holy_SealOfMight", desc = "In Dathrohan form, stuns all nearby enemies for 3 sec." },
+                { id = 17399, name = "Shadow Shock", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Instant Shadow damage to all nearby enemies." },
             },
         },
     },
@@ -2720,6 +2964,7 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 14331, name = "Vicious Rend", icon = "Interface\\Icons\\Ability_Gouge", desc = "Rends the target, inflicting heavy bleed damage every 3 sec." },
+                { id = 0, name = "Furious Stone", icon = "Interface\\Icons\Spell_Nature_Earthquake", desc = "Hardens his gargoyle hide, increasing armor." },
             },
         },
         ["Magistrate Barthilas"] = {
@@ -2735,6 +2980,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 10887, name = "Crowd Pummel", icon = "Interface\\Icons\\INV_Gauntlets_04", desc = "Slams the ground, dealing physical damage and stunning nearby enemies for 4 sec." },
                 { id = 16791, name = "Furious Anger", icon = "Interface\\Icons\\Spell_Nature_Reincarnation", desc = "Stacking self-buff that increases Barthilas's physical damage over time." },
                 { id = 14099, name = "Mighty Blow", icon = "Interface\\Icons\\INV_Gauntlets_05", desc = "Knocks the primary target backward." },
+                { id = 16793, name = "Draining Blow", icon = "Interface\\Icons\Spell_Shadow_LifeDrain", desc = "Strikes for physical damage and drains mana." },
             },
         },
         ["Nerub'enkan"] = {
@@ -2829,6 +3075,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 14033, name = "Mana Burn", icon = "Interface\\Icons\\Spell_Shadow_ManaBurn", desc = "Burns mana from a target and deals Shadow damage equal to half the mana burned." },
                 { id = 13704, name = "Psychic Scream", icon = "Interface\\Icons\\Spell_Shadow_PsychicScream", desc = "Fears nearby enemies for 6 sec." },
                 { id = 14032, name = "Shadow Word: Pain", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", desc = "Inflicts periodic Shadow damage." },
+                { id = 22417, name = "Shadow Shield", icon = "Interface\\Icons\Spell_Shadow_AntiMagicShell", desc = "Surrounds the caster in a barrier of shadow." },
             },
         },
         ["Lord Roccor"] = {
@@ -2901,6 +3148,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 7121, name = "Anti-Magic Shield", icon = "Interface\\Icons\\Spell_Shadow_AntiMagicShell", desc = "Renders Eviscerator immune to harmful spells for 10 sec." },
                 { id = 15245, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls Shadow Bolts at nearby enemies." },
+                { id = 13443, name = "Rend", icon = "Interface\\Icons\\Ability_Gouge", desc = "Inflicts bleeding damage over 15 sec." },
             },
         },
         ["Ok'thor the Breaker"] = {
@@ -2916,6 +3164,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 13323, name = "Polymorph", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Transforms the target into a sheep and drops threat temporarily." },
                 { id = 15254, name = "Arcane Bolt", icon = "Interface\\Icons\\Spell_Arcane_StarFire", desc = "Blasts the target with Arcane damage." },
                 { id = 15253, name = "Arcane Explosion", icon = "Interface\\Icons\\Spell_Nature_WispSplode", desc = "Deals Arcane damage to all nearby enemies." },
+                { id = 13747, name = "Slow", icon = "Interface\\Icons\Spell_Nature_Slow", desc = "Slows target movement and attack speed." },
             },
         },
         ["Anub'shiah"] = {
@@ -2931,6 +3180,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 8994, name = "Banish", icon = "Interface\\Icons\\Spell_Shadow_Cripple", desc = "Banishes a target for 10 sec, making them invulnerable and unable to act." },
                 { id = 15470, name = "Curse of Tongues", icon = "Interface\\Icons\\Spell_Shadow_CurseOfTounges", desc = "Slows spellcasting speed by 50%." },
                 { id = 15471, name = "Enveloping Web", icon = "Interface\\Icons\\Spell_Nature_EarthBind", desc = "Roots the target in webs." },
+                { id = 12741, name = "Curse of Weakness", icon = "Interface\\Icons\Spell_Shadow_CurseOfMannoroth", desc = "Reduces the target's physical attack power." },
             },
         },
         ["Hedrum the Creeper"] = {
@@ -2960,6 +3210,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 15038, name = "Searing Totem", icon = "Interface\\Icons\\Spell_Fire_SearingTotem", desc = "Summons a totem that repeatedly hurls fireballs at party members." },
                 { id = 15039, name = "Molten Blast", icon = "Interface\\Icons\\Spell_Fire_Fire", desc = "Blasts the target with heavy Fire damage." },
+                { id = 11877, name = "Flame Ward", icon = "Interface\\Icons\Spell_Fire_FireArmor", desc = "Absorbs Fire damage." },
             },
         },
         ["Fineous Darkvire"] = {
@@ -2974,6 +3225,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 13952, name = "Holy Light", icon = "Interface\\Icons\\Spell_Holy_HolyBolt", desc = "Heals Fineous Darkvire for a large amount of health." },
                 { id = 15346, name = "Seal of Reckoning", icon = "Interface\\Icons\\Spell_Holy_SealOfWrath", desc = "Adds bonus Holy damage to melee attacks." },
+                { id = 10291, name = "Devotion Aura", icon = "Interface\\Icons\Spell_Holy_DevotionAura", desc = "Increases armor of nearby allies." },
             },
         },
         ["Warder Stilgiss"] = {
@@ -2989,6 +3241,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 12675, name = "Frostbolt", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Blasts the target with Frost damage and slows movement." },
                 { id = 12674, name = "Frost Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Freezes nearby enemies in place." },
                 { id = 15041, name = "Curse of Blood", icon = "Interface\\Icons\\Spell_Shadow_RitualOfBlood", desc = "Verek curses enemies to take increased physical damage." },
+                { id = 12557, name = "Cone of Cold", icon = "Interface\\Icons\Spell_Frost_Glacier", desc = "Cone of frost that slows and damages targets in front." },
             },
         },
         ["Lord Incendius"] = {
@@ -3105,6 +3358,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 8994, name = "Banish", icon = "Interface\\Icons\\Spell_Shadow_Cripple", desc = "Banishes a party member for 10 sec." },
                 { id = 13338, name = "Curse of Tongues", icon = "Interface\\Icons\\Spell_Shadow_CurseOfTounges", desc = "Slows spellcasting speed by 50%." },
                 { id = 12739, name = "Shadow Bolt", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls a bolt of dark magic." },
+                { id = 11990, name = "Immolate", icon = "Interface\\Icons\Spell_Fire_Immolation", desc = "Inflicts Fire damage over 15 sec." },
             },
         },
         ["Ambassador Flamelash"] = {
@@ -3147,6 +3401,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 12674, name = "Frost Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Seeth'rel freezes nearby enemies in place." },
                 { id = 15092, name = "Summon Voidwalkers", icon = "Interface\\Icons\\Spell_Shadow_SummonVoidWalker", desc = "Doom'rel summons 3 Voidwalkers during the final wave." },
                 { id = 12741, name = "Curse of Weakness", icon = "Interface\\Icons\\Spell_Shadow_CurseOfMannoroth", desc = "Reduces physical damage dealt." },
+                { id = 15043, name = "Frostbolt", icon = "Interface\\Icons\Spell_Frost_FrostBolt02", desc = "Hurls frost at the enemy." },
             },
         },
         ["Magmus"] = {
@@ -3176,6 +3431,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 15586, name = "Heal", icon = "Interface\\Icons\\Spell_Holy_Heal", desc = "Restores a huge amount of health to Emperor Thaurissan (interrupt immediately!)." },
                 { id = 8362, name = "Renew", icon = "Interface\\Icons\\Spell_Holy_Renew", desc = "Heals Emperor Thaurissan over 15 sec (purge/dispel)." },
                 { id = 15587, name = "Mind Blast", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Blasts the target with Shadow damage." },
+                { id = 15654, name = "Shadow Word: Pain", icon = "Interface\\Icons\Spell_Shadow_ShadowWordPain", desc = "Inflicts Shadow damage over 18 sec." },
             },
         },
         ["Emperor Dagran Thaurissan"] = {
@@ -3233,6 +3489,8 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 15749, name = "Shield Charge", icon = "Interface\\Icons\\Ability_Warrior_Charge", desc = "Charges an enemy and interrupts spellcasting." },
+                { id = 11976, name = "Strike", icon = "Interface\\Icons\\Ability_Rogue_Ambush", desc = "Strikes an enemy with weapon damage." },
+                { id = 9128, name = "Battle Shout", icon = "Interface\\Icons\\Ability_Warrior_BattleShout", desc = "Increases attack power of nearby allies." },
             },
         },
         ["Goraluk Anvilcrack"] = {
@@ -3247,6 +3505,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 6253, name = "Backhand", icon = "Interface\\Icons\\INV_Gauntlets_05", desc = "Stuns the primary target for 2 sec." },
                 { id = 16172, name = "Head Crack", icon = "Interface\\Icons\\Ability_ThunderBolt", desc = "Reduces the target's stamina for 20 sec." },
+                { id = 11976, name = "Strike", icon = "Interface\\Icons\Ability_Rogue_Ambush", desc = "Strikes an enemy with weapon damage." },
             },
         },
         ["Gyth"] = {
@@ -3309,6 +3568,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 27286, name = "Shadow Wrath", icon = "Interface\\Icons\\Spell_Shadow_Requiem", desc = "Below 40% health, pulses heavy Shadow damage to the entire party." },
                 { id = 27249, name = "Summon Spectral Assassin", icon = "Interface\\Icons\\Spell_Shadow_Haunting", desc = "Summons ghostly assassins that fixate on random players." },
+                { id = 0, name = "Shadow Staff", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Strikes with dark shadow magic." },
             },
         },
         ["General Drakkisath"] = {
@@ -3356,6 +3616,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 15708, name = "Mortal Strike", icon = "Interface\\Icons\\Ability_Warrior_SavageBlow", desc = "Reduces healing received by 50% for 5 sec." },
                 { id = 15496, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Frontal sweeping cleave." },
+                { id = 16636, name = "Berserker Charge", icon = "Interface\\Icons\Ability_Warrior_Charge", desc = "Charges a distant enemy, stunning them." },
             },
         },
         ["Spirestone Lord Magus"] = {
@@ -3370,6 +3631,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 6742, name = "Bloodlust", icon = "Interface\\Icons\\Spell_Nature_BloodLust", desc = "Increases attack speed by 30%." },
                 { id = 16369, name = "Frostbolt", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Blasts the target with Frost damage." },
+                { id = 15245, name = "Shadow Bolt", icon = "Interface\\Icons\Spell_Shadow_ShadowBolt", desc = "Hurls shadow magic at an enemy." },
             },
         },
         ["Highlord Omokk"] = {
@@ -3416,6 +3678,8 @@ FDJ.BOSS_TACTICS = {
                 { id = 15618, name = "Snap Kick", icon = "Interface\\Icons\\Ability_Kick", desc = "Stuns the primary target for 2 sec." },
                 { id = 10966, name = "Uppercut", icon = "Interface\\Icons\\INV_Gauntlets_05", desc = "Knocks the primary target backward." },
                 { id = 16856, name = "Mortal Strike", icon = "Interface\\Icons\\Ability_Warrior_SavageBlow", desc = "Reduces healing received by 50%." },
+                { id = 3391, name = "Thrash", icon = "Interface\\Icons\\Ability_GhoulFrenzy", desc = "Gives the caster 2 extra attacks on the target." },
+                { id = 15284, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Sweeping attack hitting up to 3 targets in front of the caster." },
             },
         },
         ["Mother Smolderweb"] = {
@@ -3444,6 +3708,7 @@ FDJ.BOSS_TACTICS = {
             },
             abilities = {
                 { id = 15524, name = "Crystal Gaze", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Stuns a target in crystal for 6 sec." },
+                { id = 16172, name = "Venom Spit", icon = "Interface\\Icons\Spell_Nature_CorrosiveBreath", desc = "Spits poisonous venom at a target." },
             },
         },
         ["Urok Doomhowl"] = {
@@ -3487,6 +3752,7 @@ FDJ.BOSS_TACTICS = {
                 { id = 16497, name = "Stun Bomb", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Throws an explosive bomb that stuns enemies in a small radius for 3 sec." },
                 { id = 15504, name = "Drink Healing Potion", icon = "Interface\\Icons\\INV_Potion_54", desc = "Drinks a potion to restore health." },
                 { id = 15609, name = "Hooked Net", icon = "Interface\\Icons\\Ability_Ensnare", desc = "Immobilizes a target in a net." },
+                { id = 16100, name = "Shoot", icon = "Interface\\Icons\Ability_Marksmanship", desc = "Shoots a projectile at the target." },
             },
         },
         ["Halycon"] = {
@@ -3530,6 +3796,7 @@ FDJ.BOSS_TACTICS = {
             abilities = {
                 { id = 15589, name = "Whirlwind", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Spins rapidly, hitting nearby enemies." },
                 { id = 15496, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Sweeping frontal strike." },
+                { id = 8269, name = "Enrage", icon = "Interface\\Icons\Spell_Shadow_UnholyFrenzy", desc = "Increases physical damage done." },
             },
         },
         ["Overlord Wyrmthalak"] = {

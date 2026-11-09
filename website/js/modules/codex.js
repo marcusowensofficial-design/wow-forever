@@ -102,9 +102,9 @@ function initCodex() {
       let filtered = WOW_FOREVER_DATA.dungeonsAndRaids;
 
       if (filter === 'beta1') {
-        filtered = filtered.filter(d => d.playableNow === true);
+        filtered = filtered.filter(d => d.type.includes('Dungeon') && parseInt(d.levelRange, 10) < 35);
       } else if (filter === 'phase2' || filter === 'endgame') {
-        filtered = filtered.filter(d => d.type.includes('Dungeon') && d.playableNow !== true);
+        filtered = filtered.filter(d => d.type.includes('Dungeon') && parseInt(d.levelRange, 10) >= 35);
       } else if (filter === 'dungeons') {
         filtered = filtered.filter(d => d.type.includes('Dungeon'));
       } else if (filter === 'raids') {
@@ -147,7 +147,7 @@ function renderDungeons(items) {
       <div>
         <div class="dungeon-card-header">
           <span class="dungeon-level-badge">${d.levelRange}</span>
-          ${d.playableNow ? '<span class="status-pulse-badge" style="font-size: 0.7rem;"><span class="pulse-dot"></span> In Beta Now</span>' : ''}
+          ${d.playableNow ? '<span class="status-pulse-badge" style="font-size: 0.7rem;"><span class="pulse-dot"></span> Live Now</span>' : (d.type.includes('Raid') ? '<span class="status-pulse-badge" style="font-size: 0.7rem;"><span class="pulse-dot"></span> Opens Dec 9</span>' : '')}
         </div>
         <h3 class="dungeon-name">${escapeHtml(d.name)}</h3>
         <p class="dungeon-zone">📍 ${escapeHtml(d.zone)} • ${escapeHtml(d.type)}</p>

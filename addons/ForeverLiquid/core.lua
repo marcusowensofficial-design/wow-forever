@@ -105,6 +105,13 @@ local DEFAULT_SETTINGS = {
         clockMode = "12H", -- "12H", "24H", "REALM_12H", "REALM_24H"
         autoPurgeMemoryOnZone = false,
         excludeTransfersFromGoldRate = true,
+        lootPricingMode = "HYBRID", -- "HYBRID" (Greys/BoP vendor, trade goods/BoEs AH), "MARKET" (AH if listed), "VENDOR" (Guaranteed cash floor)
+        lootSortMode = "RECENT", -- "RECENT", "AH_VALUE", "VENDOR_VALUE", "COUNT", "QUALITY"
+        lootSortAscending = false,
+        ahDeductCut = true, -- Standard 5% AH cut deducted from estimated market value
+        ahJackpotToast = true, -- Alert on lucrative AH drops
+        ahJackpotMinGold = 5, -- Min gold threshold for jackpot toast (in whole gold)
+        ahJackpotMultiplier = 5, -- 5x vendor price multiplier
     },
     savedSession = {}, -- [realmKey][playerKey] = { ... }
     roster = {}, -- [realmKey][playerKey] = { level, class, gold, restedXP, maxXP, location, isResting, lastSeen }
@@ -174,6 +181,8 @@ local session = {
     
     lootedItemsCount = 0,
     lootedItemsValue = 0,
+    lootedVendorValue = 0,
+    lootedMarketValue = 0,
     recentDrops = {},
     
     -- Dungeon / Farm Run Telemetry
@@ -1013,7 +1022,11 @@ function FL:ReportSession(channel)
         table.insert(parts, string.format("PvP: %d HKs / +%d Honor", session.hkCount or 0, session.honorGained or 0))
     end
     if session.lootedItemsCount > 0 then
-        table.insert(parts, string.format("Loot: %d items (%s)", session.lootedItemsCount, self.FormatMoney(session.lootedItemsValue, true)))
+        local lValStr = self.FormatMoney(session.lootedItemsValue, true)
+        if (session.lootedMarketValue or 0) > (session.lootedVendorValue or 0) then
+            lValStr = string.format("%s [AH: %s]", lValStr, self.FormatMoney(session.lootedMarketValue, true))
+        end
+        table.insert(parts, string.format("Loot: %d items (%s)", session.lootedItemsCount, lValStr))
     end
     
     local reportText = table.concat(parts, " | ")
@@ -1083,6 +1096,8 @@ function FL:SaveSession(isExplicitPause)
         
         lootedItemsCount = session.lootedItemsCount,
         lootedItemsValue = session.lootedItemsValue,
+        lootedVendorValue = session.lootedVendorValue or 0,
+        lootedMarketValue = session.lootedMarketValue or 0,
         recentDrops = session.recentDrops,
         instanceRuns = session.instanceRuns or {},
         
@@ -1141,6 +1156,8 @@ function FL:RestoreSession(force)
     
     session.lootedItemsCount = saved.lootedItemsCount or 0
     session.lootedItemsValue = saved.lootedItemsValue or 0
+    session.lootedVendorValue = saved.lootedVendorValue or 0
+    session.lootedMarketValue = saved.lootedMarketValue or 0
     session.recentDrops = saved.recentDrops or {}
     for _, drop in ipairs(session.recentDrops) do
         if drop.icon == 134268 or (drop.name and drop.name:lower():find("spider ichor") and drop.icon ~= "Interface\\Icons\\inv_misc_slime_01") then
@@ -1226,6 +1243,8 @@ function FL:ResetSession()
     
     session.lootedItemsCount = 0
     session.lootedItemsValue = 0
+    session.lootedVendorValue = 0
+    session.lootedMarketValue = 0
     session.recentDrops = {}
     
     -- Clear saved session
@@ -1507,9 +1526,13 @@ function FL:GenerateDiscordReport()
     end
     
     local totalVal = self:GetTotalSessionValue()
+    local lootStr = self.FormatMoney(session.lootedItemsValue, true)
+    if (session.lootedMarketValue or 0) > (session.lootedVendorValue or 0) then
+        lootStr = string.format("%s (AH Est: %s)", lootStr, self.FormatMoney(session.lootedMarketValue, true))
+    end
     table.insert(lines, string.format("> 💰 **Economy**: Total Profit %s (%s/hr) | **Net Cash**: %s | **Bag Loot**: %s",
         self.FormatMoney(totalVal, true), self.FormatMoney(self:GetGoldRate(), true),
-        self.FormatMoney(session.netMoney, true), self.FormatMoney(session.lootedItemsValue, true)))
+        self.FormatMoney(session.netMoney, true), lootStr))
     
     if (session.grossIncome or 0) > 0 or (session.grossExpense or 0) > 0 then
         local subList = {}
@@ -2140,6 +2163,76 @@ function FL:GetItemVendorPrice(itemID, itemLink, itemName)
     return 0
 end
 
+function FL:GetMarketItemPrice(itemID, itemLink)
+    if not itemID and itemLink then
+        itemID = tonumber(itemLink:match("item:(%d+)"))
+    end
+    if not itemID or type(itemID) ~= "number" or itemID <= 0 then return nil end
+
+    -- Bind on Pickup (BoP) and Quest items cannot be auctioned on the AH
+    local bindType = nil
+    local itemClassID = nil
+    if C_Item and C_Item.GetItemInfoInstant then
+        local _, _, _, _, _, classID = C_Item.GetItemInfoInstant(itemID)
+        itemClassID = classID
+    end
+    if itemLink or itemID then
+        local _, _, _, _, _, _, _, _, _, _, _, classID, _, bType = (C_Item and C_Item.GetItemInfo and C_Item.GetItemInfo(itemLink or itemID)) or (GetItemInfo and GetItemInfo(itemLink or itemID))
+        if bType then bindType = bType end
+        if classID then itemClassID = classID end
+    end
+    if bindType == 1 or itemClassID == 12 then
+        return nil, 0, 0, 0, "BoP/Quest"
+    end
+
+    local rawBuyout, qty, lastSeen, listings, name = nil, 1, 0, 1, nil
+
+    -- 1. Check ForeverMarket public API if available
+    if _G.ForeverMarket and _G.ForeverMarket.GetItemPrice then
+        rawBuyout, qty, lastSeen, listings, name = _G.ForeverMarket:GetItemPrice(itemID)
+    end
+
+    -- 2. Fallback check _G.ForeverMarketDB directly
+    if not rawBuyout and _G.ForeverMarketDB and _G.ForeverMarketDB.realms then
+        local ruleset = FL.GetMakeshiftRealmName and FL:GetMakeshiftRealmName() or "PvE"
+        local faction = (UnitFactionGroup and UnitFactionGroup("player")) or "Neutral"
+        local key = ruleset .. "_" .. faction
+        local bucket = _G.ForeverMarketDB.realms[key]
+        if bucket and bucket.items and bucket.items[itemID] then
+            local rec = bucket.items[itemID]
+            rawBuyout = rec.minBuyout
+            qty = rec.qty or 1
+            lastSeen = rec.lastSeen or 0
+            listings = rec.listings or 1
+            name = rec.name
+        else
+            for _, b in pairs(_G.ForeverMarketDB.realms) do
+                if b and b.items and b.items[itemID] then
+                    local rec = b.items[itemID]
+                    rawBuyout = rec.minBuyout
+                    qty = rec.qty or 1
+                    lastSeen = rec.lastSeen or 0
+                    listings = rec.listings or 1
+                    name = rec.name
+                    break
+                end
+            end
+        end
+    end
+
+    if not rawBuyout or rawBuyout <= 0 then
+        return nil
+    end
+
+    local finalBuyout = rawBuyout
+    local p = ForeverLiquidDB and ForeverLiquidDB.profile
+    if not p or p.ahDeductCut ~= false then
+        finalBuyout = math.max(1, math.floor(rawBuyout * 0.95))
+    end
+
+    return finalBuyout, qty, lastSeen, listings, name, rawBuyout
+end
+
 function FL:GetResolvedItemIcon(drop)
     if not drop then return 134400 end
     if drop.name and drop.name:lower():find("spider ichor") and (not drop.icon or drop.icon == 134268) then
@@ -2426,10 +2519,93 @@ function FL:ResolveDrop(drop)
         drop.icon = icon
         changed = true
     end
-    if sellPrice and sellPrice > 0 and drop.unitPrice ~= sellPrice then
-        drop.unitPrice = sellPrice
-        drop.totalValue = sellPrice * (drop.count or 1)
+    -- Dual Valuation: Vendor Price and ForeverMarket AH Buyout
+    local vendorUnitPrice = sellPrice or drop.vendorUnitPrice or 0
+    drop.vendorUnitPrice = vendorUnitPrice
+    drop.vendorTotalValue = vendorUnitPrice * (drop.count or 1)
+
+    local marketUnitPrice, marketQty, marketLastSeen, marketListings, _, rawBuyout = FL:GetMarketItemPrice(itemID, drop.link)
+    if marketUnitPrice and marketUnitPrice > 0 then
+        drop.marketUnitPrice = marketUnitPrice
+        drop.marketRawBuyout = rawBuyout
+        drop.marketQty = marketQty
+        drop.marketLastSeen = marketLastSeen
+        drop.marketListings = marketListings
+        drop.marketTotalValue = marketUnitPrice * (drop.count or 1)
+    else
+        drop.marketUnitPrice = nil
+        drop.marketTotalValue = drop.vendorTotalValue
+    end
+
+    -- Item class check for Hybrid rules (trade goods/reagents vs equipment)
+    local itemClassID = nil
+    if C_Item and C_Item.GetItemInfoInstant and itemID then
+        local _, _, _, _, _, classID = C_Item.GetItemInfoInstant(itemID)
+        itemClassID = classID
+    end
+
+    local q = drop.quality or quality or 0
+    local mode = (ForeverLiquidDB and ForeverLiquidDB.profile and ForeverLiquidDB.profile.lootPricingMode) or "HYBRID"
+    local activeUnitPrice = drop.vendorUnitPrice
+    local priceSource = "VENDOR"
+
+    if mode == "VENDOR" then
+        activeUnitPrice = drop.vendorUnitPrice
+        priceSource = "VENDOR"
+    elseif mode == "MARKET" then
+        if drop.marketUnitPrice and drop.marketUnitPrice > 0 then
+            activeUnitPrice = drop.marketUnitPrice
+            priceSource = "AH"
+        else
+            activeUnitPrice = drop.vendorUnitPrice
+            priceSource = "VENDOR"
+        end
+    else -- "HYBRID"
+        if q == 0 then
+            -- Grey/Poor items: Always vendor sell price
+            activeUnitPrice = drop.vendorUnitPrice
+            priceSource = "VENDOR"
+        elseif q == 1 then
+            -- White items: Use AH buyout if trade good, consumable, or recipe AND AH buyout > vendor
+            local isTradeGood = (itemClassID == 7 or itemClassID == 0 or itemClassID == 9)
+            if isTradeGood and drop.marketUnitPrice and drop.marketUnitPrice > drop.vendorUnitPrice then
+                activeUnitPrice = drop.marketUnitPrice
+                priceSource = "AH"
+            else
+                activeUnitPrice = drop.vendorUnitPrice
+                priceSource = "VENDOR"
+            end
+        else
+            -- Green/Blue/Epic: Use AH buyout if listed, fallback to vendor
+            if drop.marketUnitPrice and drop.marketUnitPrice > 0 then
+                activeUnitPrice = drop.marketUnitPrice
+                priceSource = "AH"
+            else
+                activeUnitPrice = drop.vendorUnitPrice
+                priceSource = "VENDOR"
+            end
+        end
+    end
+
+    local newTotalVal = activeUnitPrice * (drop.count or 1)
+    if drop.unitPrice ~= activeUnitPrice or drop.totalValue ~= newTotalVal or drop.priceSource ~= priceSource then
+        drop.unitPrice = activeUnitPrice
+        drop.totalValue = newTotalVal
+        drop.priceSource = priceSource
         changed = true
+    end
+
+    -- Market Jackpot Detection
+    local prof = ForeverLiquidDB and ForeverLiquidDB.profile
+    local jackpotEnabled = prof and prof.ahJackpotToast ~= false
+    local minGold = (prof and prof.ahJackpotMinGold) or 5
+    local minCopper = minGold * 10000
+    local multiplier = (prof and prof.ahJackpotMultiplier) or 5
+
+    if jackpotEnabled and drop.marketUnitPrice and drop.marketUnitPrice >= minCopper then
+        if (drop.vendorUnitPrice > 0 and drop.marketUnitPrice >= (drop.vendorUnitPrice * multiplier)) or (drop.marketUnitPrice >= 50000) then
+            drop.isJackpot = true
+        end
     end
     
     if (drop.icon and drop.icon ~= 134400 and drop.icon ~= 134268) and (drop.unitPrice > 0 or hasNoVal) and (drop.quality and drop.quality > 0) then
@@ -2442,12 +2618,48 @@ end
 function FL:RecalculateLootedValue()
     local totalVal = 0
     local totalCount = 0
+    local totalVendor = 0
+    local totalMarket = 0
     for _, drop in ipairs(session.recentDrops) do
         totalVal = totalVal + (drop.totalValue or 0)
         totalCount = totalCount + (drop.count or 1)
+        totalVendor = totalVendor + (drop.vendorTotalValue or drop.totalValue or 0)
+        totalMarket = totalMarket + (drop.marketTotalValue or drop.totalValue or 0)
     end
     session.lootedItemsValue = totalVal
     session.lootedItemsCount = totalCount
+    session.lootedVendorValue = totalVendor
+    session.lootedMarketValue = totalMarket
+end
+
+function FL:SetLootPricingMode(mode)
+    if mode ~= "HYBRID" and mode ~= "MARKET" and mode ~= "VENDOR" then mode = "HYBRID" end
+    ForeverLiquidDB.profile.lootPricingMode = mode
+    for _, drop in ipairs(session.recentDrops) do
+        FL:ResolveDrop(drop)
+    end
+    FL:RecalculateLootedValue()
+    if FL.UpdateHUD then FL:UpdateHUD() end
+    if FL.UpdateDashboard then FL:UpdateDashboard() end
+end
+
+function FL:SetLootSortMode(mode)
+    local valid = { RECENT = true, AH_VALUE = true, VENDOR_VALUE = true, COUNT = true, QUALITY = true }
+    if not valid[mode] then mode = "RECENT" end
+    ForeverLiquidDB.profile.lootSortMode = mode
+    if FL.UpdateDashboard then FL:UpdateDashboard() end
+end
+
+function FL:OnMarketDataUpdated()
+    local anyChanged = false
+    for _, drop in ipairs(session.recentDrops) do
+        if FL:ResolveDrop(drop) then
+            anyChanged = true
+        end
+    end
+    FL:RecalculateLootedValue()
+    if FL.UpdateHUD then FL:UpdateHUD() end
+    if FL.UpdateDashboard then FL:UpdateDashboard() end
 end
 
 function FL:RefreshPendingDrops()
@@ -2622,7 +2834,7 @@ local function ProcessLootItem(itemLink, itemID, quantity, msg)
     
     -- Trigger Neon Toast
     local toastThreshold = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.toastQualityThreshold) or 2
-    if (dropEntry.quality and dropEntry.quality >= toastThreshold) or (dropEntry.totalValue >= 5000) then
+    if (dropEntry.quality and dropEntry.quality >= toastThreshold) or (dropEntry.totalValue >= 5000) or dropEntry.isJackpot then
         local suppress = FL.inCombat and ForeverLiquidDB.profile.suppressToastsInCombat
         if not suppress and ForeverLiquidDB.profile.showLootToasts and FL.SpawnLootToast then
             FL:SpawnLootToast(dropEntry)

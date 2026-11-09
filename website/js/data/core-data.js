@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of November 4, 2026 (Launch Release Candidate Build 1.60.1.70707)
+ * Up-to-date as of November 9, 2026 (Live build 1.60.1.70707)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -22,7 +22,7 @@ const WOW_FOREVER_DATA = {
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 7, 2026"
+    "lastUpdated": "November 9, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -197,6 +197,52 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-77",
+      "title": "Blizzard Posts 'Dungeon Enemy XP Increased' for WoW: Forever Live Realms",
+      "source": "Warcraft Tavern",
+      "sourceType": "tavern",
+      "author": "Warcraft Tavern",
+      "date": "November 8, 2026",
+      "tag": "Live Realm Update",
+      "url": "https://www.warcrafttavern.com/forever/",
+      "summary": "Blizzard published a November 8 update raising the experience granted by dungeon enemy kills. Exact values were not available when this entry was written - check the Blizzard post for numbers.",
+      "content": `A November 8, 2026 Blizzard post titled *Dungeon Enemy XP Increased* raises the experience earned from killing enemies inside dungeons on live realms.
+
+• Exact percentages and affected dungeon ranges were not confirmed when this entry was written.
+• Earlier in the beta (October 8), Blizzard had already raised base dungeon kill XP by 20% and fixed mixed-level groups earning very little XP per kill.`
+    },
+    {
+      "id": "news-76",
+      "title": "Blizzard Calls WoW: Forever Its Biggest Launch Ever; World-First Level 60s Include a Paladin, a Shaman and Three Mages",
+      "source": "Wowhead",
+      "sourceType": "wowhead",
+      "author": "Wowhead News Team",
+      "date": "November 7, 2026",
+      "tag": "Launch Coverage",
+      "url": "https://www.wowhead.com/forever",
+      "summary": "Blizzard says WoW: Forever is the largest launch in World of Warcraft history, and the race to Level 60 finished about three days after launch.",
+      "content": `Launch-week coverage from Wowhead:
+
+• Blizzard describes WoW: Forever as the biggest launch World of Warcraft has had.
+• The world-first Level 60 race ended roughly three days after launch, with a Paladin, a Shaman and three Mages among the first to reach the cap.`
+    },
+    {
+      "id": "news-75",
+      "title": "Blizzard Flags Upcoming Class Tuning for Shamans, Warlocks and Hunter Pets",
+      "source": "Wowhead",
+      "sourceType": "wowhead",
+      "author": "Wowhead News Team",
+      "date": "November 6, 2026",
+      "tag": "Class Balancing",
+      "url": "https://www.wowhead.com/forever",
+      "summary": "Blizzard has identified problems with Shamans, Warlocks and Hunter pets and plans a tuning pass. Warlock PvE buffs already shipped in the November 7 hotfixes.",
+      "content": `Blizzard said it has identified class and Hunter pet issues it intends to address:
+
+• Classes named: Shaman and Warlock, plus Hunter pets.
+• The November 7 live hotfixes already include Warlock PvE damage increases (see the November 7 hotfix entry).
+• Further tuning details had not been published when this entry was written.`
+    },
     {
       "id": "news-74",
       "title": "WoW: Forever Live Hotfixes — November 7, 2026: Tanning Rack Skill Floor, Warlock PvE Buffs & Tabard Fix",
@@ -3489,8 +3535,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "type": "5-Man Dungeon",
       "levelRange": "35 – 42",
       "zone": "Stranglethorn Vale (Sunken Coast)",
-      "status": "Launch Day Content",
-      "playableNow": false,
+      "status": "Available at Launch (Level 35–42)",
+      "playableNow": true,
       "entrance": "Sunken Gurubashi coastal city with non-linear layout; players can dive underwater immediately to fight Zin'aka or delve deep into inner ruins.",
       "description": "An ancient Gurubashi coastal city reclaimed by the tide and infested by Makrura, Risen Sentries, and sea monstrosities. Bosses possess deadly enrage mechanics.",
       "bosses": [
@@ -3518,8 +3564,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "type": "5-Man Dungeon",
       "levelRange": "40 – 46",
       "zone": "Riverglades (New Zone)",
-      "status": "Launch Day Content",
-      "playableNow": false,
+      "status": "Available at Launch (Level 40–46)",
+      "playableNow": true,
       "description": "A massive multi-tiered ogre fortress towering over the eastern Riverglades, uniting renegade centaurs and ogre magi.",
       "bosses": [
         "Warboss Krol'dok",
@@ -3537,8 +3583,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "type": "5-Man Dungeon",
       "levelRange": "48 – 54",
       "zone": "Dustwallow Marsh",
-      "status": "Launch Day Content",
-      "playableNow": false,
+      "status": "Available at Launch (Level 48–54)",
+      "playableNow": true,
       "description": "The secret island fortress where high-value political prisoners and draconic experiments are guarded by elite Defias and black drakes.",
       "bosses": [
         "Warden Bloodthorn",
@@ -3556,8 +3602,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "type": "5-Man Dungeon",
       "levelRange": "55 – 60",
       "zone": "Azshara (Kalimdor)",
-      "status": "Launch Day Content",
-      "playableNow": false,
+      "status": "Available at Launch (Level 55–60)",
+      "playableNow": true,
       "description": "The ancient timbermaw furbolg stronghold deep within Azshara, now corrupted by subterranean void fissures.",
       "bosses": [
         "Chieftain Winterhoof",
@@ -3575,8 +3621,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "type": "5-Man Dungeon",
       "levelRange": "58 – 60",
       "zone": "Un'Goro Crater",
-      "status": "Launch Day Content",
-      "playableNow": false,
+      "status": "Available at Launch (Level 58–60)",
+      "playableNow": true,
       "description": "The deepest Titan testing facility beneath Fire Plume Ridge, harboring primal genetic strains and ancient defense platforms.",
       "bosses": [
         "Prime Warden Aurelius",
@@ -3593,20 +3639,21 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "name": "Barrow Deeps (Launch Raid)",
       "type": "10-Player Raid",
       "levelRange": "Level 60 (Tier 1)",
-      "zone": "Mount Hyjal / Blackmaw Underworld",
+      "zone": "Mount Hyjal (also entered from Winterspring & Blackmaw Hold)",
       "status": "Unlocks Dec 9, 2026",
       "playableNow": false,
-      "description": "The subterranean prison where Illidan Stormrage was bound for ten millennia. Ancient Wardens and Shadowed Horrors guard forbidden vaults.",
+      "description": "The former prison of Illidan Stormrage, with 8 bosses across multiple paths and themes. Blizzard confirms entrances in Mount Hyjal, Winterspring and Blackmaw Hold and a weekly lockout. Encounter names come from the Legacy achievement data; Blizzard has not published an official boss or loot list yet.",
       "bosses": [
-        "Warden Avatar Maiev's Vigil",
-        "Shadow Fiend Tenebrous",
-        "The Slumbering Druid",
-        "Tormentor Grazz"
+        "Deepscar Matriarch",
+        "Khalith the Dreadspinner",
+        "Amethrax",
+        "Ravus and Darlissa",
+        "Elder Tangleclaw",
+        "Well of Sorrow",
+        "Del'lynar Songwood",
+        "Sonya Darkhallow"
       ],
-      "lootHighlights": [
-        "Tier 1 Classic+ Shoulders & Helms",
-        "Glaive of the Slumbering Watcher"
-      ]
+      "lootHighlights": []
     },
     {
       "id": "raid-02",
@@ -3616,17 +3663,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "zone": "Mount Hyjal",
       "status": "Unlocks Dec 9, 2026",
       "playableNow": false,
-      "description": "The scorched roots of Nordrassil following Archimonde's defeat, clearing rogue Burning Legion stragglers and corrupted world-tree roots.",
+      "description": "The summit of Mount Hyjal beside the World Tree Nordrassil, with 13 bosses. The first is an ancient guardian, then the raid branches into routes above and below ground. Weekly lockout. Encounter names come from the Legacy achievement data; Blizzard has not published an official boss or loot list yet.",
       "bosses": [
-        "Dreadlord Mal'Ganis Avatar",
-        "Anetheron the Defiler",
-        "Corrupted Nordrassil Sapling",
-        "General Kaz'rogal"
+        "Bandalar",
+        "Ancient of Decay",
+        "Time-Lost Battalion",
+        "Sylvestris Dusksong",
+        "Old Gloomlurker",
+        "Gharalis the Abyssal",
+        "Kathris the Haunted",
+        "Anara Chillwind",
+        "Elder Minderel",
+        "Tracker Stillwind",
+        "Council of Thorns",
+        "Nythus the Dreambound",
+        "The Wild King"
       ],
-      "lootHighlights": [
-        "World-Tree Heart Trinket",
-        "Crown of Nordrassil"
-      ]
+      "lootHighlights": []
     },
     {
       "id": "raid-03",
@@ -3636,15 +3689,11 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "zone": "Dustwallow Marsh",
       "status": "Unlocks Dec 9, 2026",
       "playableNow": false,
-      "description": "The classic broodmother encounter retuned for WoW: Forever's new itemization and class balance, with new Deep Breath phase mechanics.",
+      "description": "Onyxia's three-phase fire encounter, so stack fire resistance beforehand. Every raid member must carry the Drakefire Amulet (it does not need to be equipped). The attunement chain is nearly the same as Classic: Alliance via Marshal Maxwell and Highlord Bolvar, Horde via Thrall and Rexxar, both ending with General Drakkisath in Upper Blackrock Spire. Weekly lockout. Blizzard has not published loot.",
       "bosses": [
-        "Onyxia, Broodmother of the Black Dragonflight"
+        "Onyxia"
       ],
-      "lootHighlights": [
-        "Shard of the Scale",
-        "Vis'kag the Bloodletter",
-        "Head of Onyxia"
-      ]
+      "lootHighlights": []
     }
   ],
   "newZones": [
@@ -4001,7 +4050,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.6.2) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.7.3) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {
@@ -4013,6 +4062,36 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "id": "step-21",
       "text": "Configure Blizzard's new Native Cooldown Manager in Edit Mode for your class's essential rotation and proc tracking",
       "cat": "Combat & UI"
+    },
+    {
+      "id": "step-22",
+      "text": "Reach Level 60 (Legacy class milestones at Levels 25, 45 and 60)",
+      "cat": "Leveling Milestone"
+    },
+    {
+      "id": "step-23",
+      "text": "Clear 6, then 10, then 17 different dungeons for the Novice, Experienced and Master Spelunker Legacy achievements",
+      "cat": "Dungeons"
+    },
+    {
+      "id": "step-24",
+      "text": "Take primary professions to 225, then 300 (Artisan) - Legacy tradeskill goals sit at 150, 225 and 300",
+      "cat": "Professions"
+    },
+    {
+      "id": "step-25",
+      "text": "Queue Darkspear Islands (15v15, Level 30+) and Alterac Valley (40v40, Level 51-60)",
+      "cat": "PvP"
+    },
+    {
+      "id": "step-26",
+      "text": "Start the Honor climb: Rank 1 (Private / Scout) needs 750 RP",
+      "cat": "PvP"
+    },
+    {
+      "id": "step-27",
+      "text": "Gear up for Tier 1 raids opening December 9: Barrow Deeps (10-player) and Hyjal Summit (20-player)",
+      "cat": "Raid Prep"
     }
   ],
   "classDeepDives": {}

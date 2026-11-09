@@ -61,6 +61,7 @@ local DUNGEON_SEARCH_ALIASES = {
     ["Krol'dok Stronghold"] = { "kroldok", "krol'dok", "stronghold" },
     ["Shaper's Terrace"] = { "shapers", "shaper's terrace", "terrace" },
 }
+FDJ.DUNGEON_SEARCH_ALIASES = DUNGEON_SEARCH_ALIASES
 
 local function SearchText(value)
     local s = tostring(value or "")
