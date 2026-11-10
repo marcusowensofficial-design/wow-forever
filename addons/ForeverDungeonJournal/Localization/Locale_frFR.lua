@@ -293,3 +293,33 @@ FDJ.Locales.frFR = {
     ["TURN_IN_HERE"] = "Rendre la quête ici",
     ["TRACK_ACCEPT"] = "Cliquer pour accepter la quête",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.frFR
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Partager au groupe",
+        ALL_DUNGEONS = "Tous les donjons",
+        THIS_DUNGEON = "Ce donjon",
+        NO_WISHLIST_ITEMS = "Aucun objet dans votre liste de souhaits.",
+        ADD_TO_WISHLIST = "Ajouter à la liste de souhaits",
+        REMOVE_FROM_WISHLIST = "Retirer de la liste de souhaits",
+        WISHLIST_TOOLTIP_DESC = "Suivez cet objet et recevez une alerte en jeu quand il tombe.",
+        ITEM_REQ_LEVEL = "Niveau %d requis",
+        OWNED = "[Possédé]",
+        WEAPONS = "Armes",
+        ARMOR = "Armures",
+        ACCESSORIES = "Accessoires",
+        QUEST_ITEMS = "Objets de quête",
+        NO_LOOT_MATCHES_FILTER = "Aucun butin ne correspond aux filtres actuels.",
+        NO_LOOT_RECORDED = "Aucun butin enregistré.",
+        CLOSE = "Fermer",
+        WAYPOINT_CLEAR_TIP = "Clic gauche : ouvrir la quête. Clic droit : retirer le marqueur.",
+        WISHLIST_DROP = "Objet de la liste de souhaits obtenu :",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

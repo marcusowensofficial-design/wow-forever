@@ -8,3 +8,17 @@ ignore:
   - "*.py"
   - "*.html"
   - __pycache__
+  - ARCHITECTURE.md
+  # Media no longer referenced by any Lua file (~26 MB)
+  - Media/Maps/BlackfathomDeeps_Map.tga
+  - Media/Maps/HallOfThanes_Map.tga
+  - Media/Maps/RagefireChasm_Map.tga
+  - Media/Maps/RuinsOfLordaeron_Map.tga
+  - Media/Maps/ShadowfangKeep_Map.tga
+  - Media/Maps/TheDeadmines_Map.tga
+  - Media/Maps/TheStockade_Map.tga
+  - Media/Maps/WailingCaverns_Map.tga
+  - Media/MagmatusPortrait.tga
+  - Media/ManaElementalPortrait.tga
+  - Media/HordeOutlined.tga
+  - Media/MapPatches/WailingCaverns1_1.tga

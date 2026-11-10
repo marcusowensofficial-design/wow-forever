@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemCount = GetItemCount or (C_Item and C_Item.GetItemCount)
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 _G.ForeverDungeonJournal_NS = FDJ
@@ -61,11 +64,19 @@ local function GetSafeItemIcon(itemID, fallback)
     return fallback or "Interface\\Icons\\INV_Misc_Key_03"
 end
 
+-- Unit identity can be a secret value in restricted content (encounters);
+-- secrets can't be used as table keys or compared, so treat them as unknown.
+local function Plain(v)
+    if type(issecretvalue) == "function" and issecretvalue(v) then return nil end
+    return v
+end
+
 local function GetPartyMembersInfo()
     local members = {}
     local pClass, pToken = UnitClass("player")
-    if pToken then
-        table.insert(members, { unit = "player", name = UnitName("player") or "You", class = string.upper(pToken), isPlayer = true })
+    pToken = Plain(pToken)
+    if type(pToken) == "string" then
+        table.insert(members, { unit = "player", name = Plain(UnitName("player")) or "You", class = string.upper(pToken), isPlayer = true })
     end
     if IsInGroup and IsInGroup() then
         local num = (GetNumGroupMembers and GetNumGroupMembers()) or 0
@@ -74,10 +85,13 @@ local function GetPartyMembersInfo()
         local count = isRaid and num or (num - 1)
         for i = 1, count do
             local u = prefix .. i
-            if UnitExists(u) then
+            -- raidN includes the player, who is already in the list.
+            local isSelf = isRaid and UnitIsUnit and Plain(UnitIsUnit(u, "player"))
+            if not isSelf and UnitExists(u) then
                 local _, token = UnitClass(u)
                 local name = UnitName(u)
-                if token and name then
+                token, name = Plain(token), Plain(name)
+                if type(token) == "string" and name then
                     table.insert(members, { unit = u, name = name, class = string.upper(token), isPlayer = false })
                 end
             end

@@ -1,3 +1,10 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemCount = GetItemCount or (C_Item and C_Item.GetItemCount)
+local GetItemIcon = GetItemIcon or (C_Item and C_Item.GetItemIconByID)
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
+local GetQuestLogIndexByID = GetQuestLogIndexByID or (C_QuestLog and C_QuestLog.GetLogIndexForQuestID)
+local IsQuestFlaggedCompleted = IsQuestFlaggedCompleted or (C_QuestLog and C_QuestLog.IsQuestFlaggedCompleted)
 -- Real quest text from the game. WoW only hands addons a quest's text while
 -- it is in the quest log or while its quest-giver window is open, so the
 -- journal remembers it then (per client language, shared by all characters)

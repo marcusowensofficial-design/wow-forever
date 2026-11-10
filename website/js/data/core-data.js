@@ -198,6 +198,37 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-79",
+      "title": "Darkmoon Faire Is Live in WoW: Forever",
+      "source": "Wowhead",
+      "sourceType": "wowhead",
+      "author": "Wowhead News Team",
+      "date": "November 9, 2026",
+      "tag": "Live Event",
+      "url": "https://www.wowhead.com/forever",
+      "summary": "Wowhead reports the Darkmoon Faire is now live on WoW: Forever realms and has posted a guide.",
+      "content": `Wowhead posted a November 9, 2026 guide titled *Darkmoon Faire is Live!* for WoW: Forever.
+
+• Only the headline was available when this entry was written - see the Wowhead Forever guide for rewards, quests and schedule.`
+    },
+    {
+      "id": "news-78",
+      "title": "Class Tuning Incoming November 10: Hunter Pets, Voidwalkers, Affliction Warlock and Enhancement Shaman",
+      "source": "Blizzard Official Forums",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 10, 2026",
+      "tag": "Class Balancing",
+      "url": "https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-november-10/2404092",
+      "summary": "Blizzard announced hotfix class tuning for November 10: sturdier Hunter pets and Voidwalkers, Affliction DoTs worth casting alongside Wrack, and Strength as the top Enhancement Shaman stat.",
+      "content": `Blizzard announced class tuning hotfixes for Tuesday, November 10, 2026. No time of day or numbers had been published when this entry was written.
+
+• **Hunter pets & Voidwalkers:** Durability will move closer to Classic Era levels, with stats adjusted as needed.
+• **Affliction Warlock:** Siphon Life, Corruption and Bane of Agony should become worth casting alongside Wrack, without changing total damage output.
+• **Enhancement Shaman:** Strength becomes the strongest stat. Best items carry Strength or Attack Power plus some Intellect and/or Spell Power, so leveling Enhancement Shamans should collect Strength and Attack Power gear.
+• Blizzard says it may tune classes on Tuesdays as new issues surface.`
+    },
+    {
       "id": "news-77",
       "title": "Blizzard Posts 'Dungeon Enemy XP Increased' for WoW: Forever Live Realms",
       "source": "Warcraft Tavern",
@@ -4045,12 +4076,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-18",
-      "text": "Equip & configure ForeverLiquid (v1.3.1) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
+      "text": "Equip & configure ForeverLiquid (v1.4.0) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
       "cat": "Addons & Tools"
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.7.3) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.7.4) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {

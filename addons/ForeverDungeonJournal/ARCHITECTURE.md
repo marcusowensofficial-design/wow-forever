@@ -1,6 +1,11 @@
-# Forever Dungeon Journal Architecture (v1.5.0)
+# Forever Dungeon Journal Architecture (v1.7.4)
 
-Forever Dungeon Journal is engineered for World of Warcraft Forever Beta (Interface `16001` / 12.0 engine branch). It provides a full-featured, zero-taint, standalone Dungeon Journal covering Classic dungeons and custom beta encounters.
+Forever Dungeon Journal is engineered for World of Warcraft Forever Beta (Interface `16001` / 12.0 engine branch). It provides a full-featured, zero-taint, standalone Dungeon Journal covering Classic dungeons and custom Forever encounters.
+
+> **Modern API note (1.7.4):** Forever runs the 12.x API. Legacy globals such as `GetItemInfo`, `GetItemCount`,
+> `GetItemIcon`, `GetItemQualityColor`, `GetItemStats`, `GetSpellTexture`, `GetAddOnMetadata`, `IsQuestFlaggedCompleted`,
+> `GetQuestLogIndexByID` and `MouseIsOver` do not exist. Files that use them declare a local alias at the top
+> (`local GetItemCount = GetItemCount or (C_Item and C_Item.GetItemCount)`); new code should call the `C_` API directly.
 
 ---
 

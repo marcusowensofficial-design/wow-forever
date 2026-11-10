@@ -45,7 +45,11 @@ const IGNORE_PATTERNS = [
   /SKILL\.md$/i,
   /ARCHITECTURE\.md$/i,
   /\.pkgmeta$/i,
-  /\.orig(\.|$)/i
+  /\.orig(\.|$)/i,
+  /_backup/i,
+  /\.bak$/i,
+  /_merge_preview/i,
+  /(^|\/)dev(\/|$)/i
 ];
 
 function shouldInclude(relPath) {

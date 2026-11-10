@@ -389,7 +389,7 @@ export function validateAllAddons() {
     function scanAndValidate(dir) {
       const entries = fs.readdirSync(dir, { withFileTypes: true });
       for (const entry of entries) {
-        if (entry.name === '.git' || entry.name === 'tools' || entry.name === 'scratch' || entry.name === 'media-scratch') {
+        if (entry.name === '.git' || entry.name === 'tools' || entry.name === 'scratch' || entry.name === 'media-scratch' || entry.name.startsWith('_backup') || entry.name === '_merge_preview' || entry.name === 'dev') {
           continue;
         }
         const fullPath = path.join(dir, entry.name);

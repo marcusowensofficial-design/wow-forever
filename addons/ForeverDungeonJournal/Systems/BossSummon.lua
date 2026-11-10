@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 -- Bosses that have to be summoned with an item (boss.summonItem = itemID).
 -- The boss page shows "Summoned by: [item]" under the boss name; hovering it
 -- shows the item and how to get it.

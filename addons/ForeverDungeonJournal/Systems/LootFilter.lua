@@ -1,3 +1,7 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemIcon = GetItemIcon or (C_Item and C_Item.GetItemIconByID)
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 -- Loot Filter: a small options window opened from the home page that decides
 -- which items the boss loot lists show.
 --   * Show recipes            (off by default: recipe drops are a big shared pool)

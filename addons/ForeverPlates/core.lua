@@ -421,10 +421,11 @@ local function InitializeDatabase()
         ForeverPlatesDB = {}
     end
     CopyDefaults(ForeverPlatesDB, defaults)
+    local needsLegacyMigration = (tonumber(ForeverPlatesDB.dbVersion) or 0) < 1
     if ForeverPlatesDB.friendlyBuffXOffset == nil then
         ForeverPlatesDB.friendlyBuffXOffset = 0
     end
-    if ForeverPlatesDB.friendlyBuffYOffset == nil or ForeverPlatesDB.friendlyBuffYOffset == 4 or ForeverPlatesDB.friendlyBuffYOffset == 1 then
+    if ForeverPlatesDB.friendlyBuffYOffset == nil or (needsLegacyMigration and (ForeverPlatesDB.friendlyBuffYOffset == 4 or ForeverPlatesDB.friendlyBuffYOffset == 1)) then
         ForeverPlatesDB.friendlyBuffYOffset = 0
     end
     if ForeverPlatesDB.friendlyBuffOutlineThickness == nil then
@@ -470,7 +471,7 @@ local function InitializeDatabase()
     if ForeverPlatesDB.friendlyLevelFontSize == nil then
         ForeverPlatesDB.friendlyLevelFontSize = 14
     end
-    if (ForeverPlatesDB.levelTextXOffset == 2 and ForeverPlatesDB.levelTextYOffset == -6) or ForeverPlatesDB.levelTextXOffset == -2 or ForeverPlatesDB.levelTextXOffset == 0 then
+    if needsLegacyMigration and ((ForeverPlatesDB.levelTextXOffset == 2 and ForeverPlatesDB.levelTextYOffset == -6) or ForeverPlatesDB.levelTextXOffset == -2 or ForeverPlatesDB.levelTextXOffset == 0) then
         ForeverPlatesDB.levelTextXOffset = 1
         ForeverPlatesDB.levelTextYOffset = 0
     end
@@ -480,7 +481,7 @@ local function InitializeDatabase()
     if ForeverPlatesDB.levelTextYOffset == nil then
         ForeverPlatesDB.levelTextYOffset = 0
     end
-    if ForeverPlatesDB.friendlyLevelTextXOffset == -2 or ForeverPlatesDB.friendlyLevelTextXOffset == 0 then
+    if needsLegacyMigration and (ForeverPlatesDB.friendlyLevelTextXOffset == -2 or ForeverPlatesDB.friendlyLevelTextXOffset == 0) then
         ForeverPlatesDB.friendlyLevelTextXOffset = 1
     end
     if ForeverPlatesDB.friendlyLevelTextXOffset == nil then
@@ -504,6 +505,7 @@ local function InitializeDatabase()
     if ForeverPlatesDB.enableClickTargeting == nil then
         ForeverPlatesDB.enableClickTargeting = true
     end
+    ForeverPlatesDB.dbVersion = 1
     return ForeverPlatesDB
 end
 FP.InitializeDatabase = InitializeDatabase
@@ -583,7 +585,7 @@ local function DetectHealthTextCapability()
 end
 FP.DetectHealthTextCapability = DetectHealthTextCapability
 
-local ApplyMatchingOutline, GetLevelFrame, GetLevelFontString, GetLevelTextOffsets, GetLevelTextXOffset, GetSelectedBorder, AdjustAuraFrames, IsFriendlyUnit
+local ApplyMatchingOutline, GetLevelFrame, GetLevelFontString, GetLevelTextOffsets, GetLevelTextXOffset, GetSelectedBorder, AdjustAuraFrames, IsFriendlyUnit, SuppressBlizzardLevel
 
 
 -------------------------------------------------------------------------------
@@ -1224,6 +1226,79 @@ FP.ShowFriendlyPlate = ShowFriendlyPlate
 -------------------------------------------------------------------------------
 -- Update Health Text & Positioning (Zero-Taint / 12.0 Composite Display)
 -------------------------------------------------------------------------------
+-- Health text layout helpers (shared by every display format)
+local function SetSecretNumber(fs, value)
+    local ok = pcall(fs.SetFormattedText, fs, "%d", value)
+    if not ok then pcall(fs.SetText, fs, value) end
+end
+
+local function SetPercentText(fs, secretPct, pctStr)
+    if secretPct ~= nil then
+        local ok = pcall(fs.SetFormattedText, fs, "%.0f%%", secretPct)
+        if ok then return end
+    end
+    fs:SetText(pctStr)
+end
+
+-- One fontstring (hpCurrent) holds the whole text; the extra parts are hidden.
+local function ShowSingleHealthText(data, hb, pos)
+    if data.hpDivider then data.hpDivider:Hide() end
+    if data.hpMax then data.hpMax:Hide() end
+    if data.hpPercent then data.hpPercent:Hide() end
+    local fs = data.hpCurrent
+    fs:ClearAllPoints()
+    if pos == "LEFT" then
+        fs:SetPoint("LEFT", hb, "LEFT", 4, 0)
+        fs:SetJustifyH("LEFT")
+    elseif pos == "RIGHT" then
+        fs:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+        fs:SetJustifyH("RIGHT")
+    else
+        fs:SetPoint("CENTER", hb, "CENTER", 0, 0)
+        fs:SetJustifyH("CENTER")
+    end
+    fs:Show()
+end
+
+-- Separate fontstrings (current | divider | max | percent) chained together.
+-- Used for secret values, which cannot be concatenated into one string.
+local function ShowChainedHealthText(data, hb, pos, centerX, pctGap, hasPct)
+    local cur, div, mx, pct = data.hpCurrent, data.hpDivider, data.hpMax, data.hpPercent
+    cur:ClearAllPoints()
+    div:ClearAllPoints()
+    mx:ClearAllPoints()
+    pct:ClearAllPoints()
+
+    if pos == "LEFT" then
+        cur:SetPoint("LEFT", hb, "LEFT", 4, 0)
+        div:SetPoint("LEFT", cur, "RIGHT", 0, 0)
+        mx:SetPoint("LEFT", div, "RIGHT", 0, 0)
+        pct:SetPoint("LEFT", mx, "RIGHT", pctGap, 0)
+        cur:SetJustifyH("LEFT"); div:SetJustifyH("LEFT"); mx:SetJustifyH("LEFT"); pct:SetJustifyH("LEFT")
+    elseif pos == "RIGHT" then
+        if hasPct then
+            pct:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+            mx:SetPoint("RIGHT", pct, "LEFT", -pctGap, 0)
+        else
+            mx:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+        end
+        div:SetPoint("RIGHT", mx, "LEFT", 0, 0)
+        cur:SetPoint("RIGHT", div, "LEFT", 0, 0)
+        cur:SetJustifyH("RIGHT"); div:SetJustifyH("RIGHT"); mx:SetJustifyH("RIGHT"); pct:SetJustifyH("RIGHT")
+    else
+        div:SetPoint("CENTER", hb, "CENTER", centerX, 0)
+        cur:SetPoint("RIGHT", div, "LEFT", 0, 0)
+        mx:SetPoint("LEFT", div, "RIGHT", 0, 0)
+        pct:SetPoint("LEFT", mx, "RIGHT", pctGap, 0)
+        div:SetJustifyH("CENTER"); cur:SetJustifyH("RIGHT"); mx:SetJustifyH("LEFT"); pct:SetJustifyH("LEFT")
+    end
+
+    cur:Show()
+    div:Show()
+    mx:Show()
+    if hasPct then pct:Show() else pct:Hide() end
+end
+
 local function UpdateHealthText(unitFrame, passedUnit)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
     local unit = passedUnit or GetUnitForFrame(unitFrame)
@@ -1422,268 +1497,57 @@ local function UpdateHealthText(unitFrame, passedUnit)
     end
 
     -- Layout & Text Assignment
+    local secretPct = isSecret and secretPercent or nil
+    local hpCur = data.hpCurrent
+
     if fmt == "CURRENT" then
         if isSecret then
-            local okFmt = pcall(data.hpCurrent.SetFormattedText, data.hpCurrent, "%d", hp)
-            if not okFmt then pcall(data.hpCurrent.SetText, data.hpCurrent, hp) end
+            SetSecretNumber(hpCur, hp)
         else
-            data.hpCurrent:SetText(Abbreviate(hp))
+            hpCur:SetText(Abbreviate(hp))
         end
-        if data.hpDivider then data.hpDivider:Hide() end
-        if data.hpMax then data.hpMax:Hide() end
-        if data.hpPercent then data.hpPercent:Hide() end
-
-        data.hpCurrent:ClearAllPoints()
-        if pos == "LEFT" then
-            data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-            data.hpCurrent:SetJustifyH("LEFT")
-        elseif pos == "RIGHT" then
-            data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-            data.hpCurrent:SetJustifyH("RIGHT")
-        else
-            data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
-            data.hpCurrent:SetJustifyH("CENTER")
-        end
-        data.hpCurrent:Show()
+        ShowSingleHealthText(data, hb, pos)
 
     elseif fmt == "PERCENT" then
-        if isSecret and secretPercent ~= nil then
-            local formattedOk = pcall(data.hpCurrent.SetFormattedText, data.hpCurrent, "%.0f%%", secretPercent)
-            if not formattedOk then
-                data.hpCurrent:SetText(pctStr)
-            end
-        else
-            data.hpCurrent:SetText(pctStr)
-        end
-        if data.hpDivider then data.hpDivider:Hide() end
-        if data.hpMax then data.hpMax:Hide() end
-        if data.hpPercent then data.hpPercent:Hide() end
-
-        data.hpCurrent:ClearAllPoints()
-        if pos == "LEFT" then
-            data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-            data.hpCurrent:SetJustifyH("LEFT")
-        elseif pos == "RIGHT" then
-            data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-            data.hpCurrent:SetJustifyH("RIGHT")
-        else
-            data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
-            data.hpCurrent:SetJustifyH("CENTER")
-        end
-        data.hpCurrent:Show()
+        SetPercentText(hpCur, secretPct, pctStr)
+        ShowSingleHealthText(data, hb, pos)
 
     elseif fmt == "BOTH" then
         -- "120 (100%)"
         if isSecret then
-            local okCur = pcall(data.hpCurrent.SetFormattedText, data.hpCurrent, "%d", hp)
-            if not okCur then pcall(data.hpCurrent.SetText, data.hpCurrent, hp) end
-
+            SetSecretNumber(hpCur, hp)
             data.hpDivider:SetText(" (")
-            local formattedOk = false
-            if secretPercent ~= nil then
-                formattedOk = pcall(data.hpMax.SetFormattedText, data.hpMax, "%.0f%%", secretPercent)
-            end
-            if not formattedOk then
-                data.hpMax:SetText(pctStr)
-            end
+            SetPercentText(data.hpMax, secretPct, pctStr)
             data.hpPercent:SetText(")")
-
-            data.hpDivider:ClearAllPoints()
-            data.hpCurrent:ClearAllPoints()
-            data.hpMax:ClearAllPoints()
-            data.hpPercent:ClearAllPoints()
-
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
-                data.hpDivider:SetJustifyH("LEFT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 0, 0)
-                data.hpPercent:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpPercent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpPercent:SetJustifyH("RIGHT")
-                data.hpMax:SetPoint("RIGHT", data.hpPercent, "LEFT", 0, 0)
-                data.hpMax:SetJustifyH("RIGHT")
-                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
-                data.hpDivider:SetJustifyH("RIGHT")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                data.hpDivider:SetPoint("CENTER", hb, "CENTER", -10, 0)
-                data.hpDivider:SetJustifyH("CENTER")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 0, 0)
-                data.hpPercent:SetJustifyH("LEFT")
-            end
-            data.hpCurrent:Show()
-            data.hpDivider:Show()
-            data.hpMax:Show()
-            data.hpPercent:Show()
+            ShowChainedHealthText(data, hb, pos, -10, 0, true)
         else
-            data.hpCurrent:SetText(Abbreviate(hp) .. " (" .. pctStr .. ")")
-            if data.hpDivider then data.hpDivider:Hide() end
-            if data.hpMax then data.hpMax:Hide() end
-            if data.hpPercent then data.hpPercent:Hide() end
-
-            data.hpCurrent:ClearAllPoints()
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
-                data.hpCurrent:SetJustifyH("CENTER")
-            end
-            data.hpCurrent:Show()
+            hpCur:SetText(Abbreviate(hp) .. " (" .. pctStr .. ")")
+            ShowSingleHealthText(data, hb, pos)
         end
 
     elseif fmt == "CURRENT_MAX_PERCENT" then
-        -- "150/150 100%" (Zero gap around slash, clean percentage to the right)
+        -- "150/150 100%" (zero gap around slash, percentage to the right)
         if isSecret then
-            local okCur = pcall(data.hpCurrent.SetFormattedText, data.hpCurrent, "%d", hp)
-            if not okCur then pcall(data.hpCurrent.SetText, data.hpCurrent, hp) end
-
+            SetSecretNumber(hpCur, hp)
             data.hpDivider:SetText("/")
-
-            local okMax = pcall(data.hpMax.SetFormattedText, data.hpMax, "%d", maxHp)
-            if not okMax then pcall(data.hpMax.SetText, data.hpMax, maxHp) end
-
-            local formattedOk = false
-            if secretPercent ~= nil then
-                formattedOk = pcall(data.hpPercent.SetFormattedText, data.hpPercent, "%.0f%%", secretPercent)
-            end
-            if not formattedOk then
-                data.hpPercent:SetText(pctStr)
-            end
-
-            data.hpDivider:ClearAllPoints()
-            data.hpCurrent:ClearAllPoints()
-            data.hpMax:ClearAllPoints()
-            data.hpPercent:ClearAllPoints()
-
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
-                data.hpDivider:SetJustifyH("LEFT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 4, 0)
-                data.hpPercent:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpPercent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpPercent:SetJustifyH("RIGHT")
-                data.hpMax:SetPoint("RIGHT", data.hpPercent, "LEFT", -4, 0)
-                data.hpMax:SetJustifyH("RIGHT")
-                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
-                data.hpDivider:SetJustifyH("RIGHT")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                -- CENTER: Center the composite block horizontally on the health bar
-                data.hpDivider:SetPoint("CENTER", hb, "CENTER", -16, 0)
-                data.hpDivider:SetJustifyH("CENTER")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 4, 0)
-                data.hpPercent:SetJustifyH("LEFT")
-            end
-
-            data.hpCurrent:Show()
-            data.hpDivider:Show()
-            data.hpMax:Show()
-            data.hpPercent:Show()
+            SetSecretNumber(data.hpMax, maxHp)
+            SetPercentText(data.hpPercent, secretPct, pctStr)
+            ShowChainedHealthText(data, hb, pos, -16, 4, true)
         else
-            data.hpCurrent:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp) .. " " .. pctStr)
-            if data.hpDivider then data.hpDivider:Hide() end
-            if data.hpMax then data.hpMax:Hide() end
-            if data.hpPercent then data.hpPercent:Hide() end
-
-            data.hpCurrent:ClearAllPoints()
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
-                data.hpCurrent:SetJustifyH("CENTER")
-            end
-            data.hpCurrent:Show()
+            hpCur:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp) .. " " .. pctStr)
+            ShowSingleHealthText(data, hb, pos)
         end
 
     else
-        -- "CURRENT_MAX" ("120/120") - Zero gap around slash
+        -- "CURRENT_MAX" ("120/120") - zero gap around slash
         if isSecret then
-            local okCur = pcall(data.hpCurrent.SetFormattedText, data.hpCurrent, "%d", hp)
-            if not okCur then pcall(data.hpCurrent.SetText, data.hpCurrent, hp) end
-
+            SetSecretNumber(hpCur, hp)
             data.hpDivider:SetText("/")
-
-            local okMax = pcall(data.hpMax.SetFormattedText, data.hpMax, "%d", maxHp)
-            if not okMax then pcall(data.hpMax.SetText, data.hpMax, maxHp) end
-
-            if data.hpPercent then data.hpPercent:Hide() end
-
-            data.hpDivider:ClearAllPoints()
-            data.hpCurrent:ClearAllPoints()
-            data.hpMax:ClearAllPoints()
-
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
-                data.hpDivider:SetJustifyH("LEFT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpMax:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpMax:SetJustifyH("RIGHT")
-                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
-                data.hpDivider:SetJustifyH("RIGHT")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                data.hpDivider:SetPoint("CENTER", hb, "CENTER", 0, 0)
-                data.hpDivider:SetJustifyH("CENTER")
-                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
-                data.hpMax:SetJustifyH("LEFT")
-            end
-
-            data.hpCurrent:Show()
-            data.hpDivider:Show()
-            data.hpMax:Show()
+            SetSecretNumber(data.hpMax, maxHp)
+            ShowChainedHealthText(data, hb, pos, 0, 0, false)
         else
-            data.hpCurrent:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp))
-            if data.hpDivider then data.hpDivider:Hide() end
-            if data.hpMax then data.hpMax:Hide() end
-            if data.hpPercent then data.hpPercent:Hide() end
-
-            data.hpCurrent:ClearAllPoints()
-            if pos == "LEFT" then
-                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
-                data.hpCurrent:SetJustifyH("LEFT")
-            elseif pos == "RIGHT" then
-                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
-                data.hpCurrent:SetJustifyH("RIGHT")
-            else
-                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
-                data.hpCurrent:SetJustifyH("CENTER")
-            end
-            data.hpCurrent:Show()
+            hpCur:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp))
+            ShowSingleHealthText(data, hb, pos)
         end
     end
 end
@@ -1695,9 +1559,29 @@ FP.UpdateHealthText = UpdateHealthText
 -------------------------------------------------------------------------------
 -- All cast bar handling has been extracted to the dedicated ForeverPlates Cast Bars
 -- addon to prevent frame fighting, layout race conditions, and UI taint.
+-- When ForeverPlates Cast Bars is loaded it owns Blizzard cast bar hiding
+-- (cached per plate, respects its "Hide Blizzard Cast Bars" option). The code
+-- below is only a fallback for running ForeverPlates without it.
+local function GetCastBarsAddon()
+    local CB = _G.ForeverPlatesCastBars
+    if CB and CB.SuppressPlateCastBar and CB.SuppressBlizzardBar and CB.CFG then
+        return CB
+    end
+end
+
 local function SuppressNativeCastBar(unitFrame)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
     local p = unitFrame:GetParent()
+
+    local CB = GetCastBarsAddon()
+    if CB then
+        if CB.CFG.hideBlizzardBars then
+            -- Pass the nameplate itself so its cast bar references are covered too
+            local isPlate = p and (p.UnitFrame == unitFrame or p.unitFrame == unitFrame)
+            pcall(CB.SuppressPlateCastBar, isPlate and p or unitFrame)
+        end
+        return
+    end
     local blizzBars = {
         unitFrame.castBar, unitFrame.CastBar,
         unitFrame.CastBarsContainer,
@@ -1801,6 +1685,11 @@ local function GetUnitFrameCastBar(unitFrame)
 end
 local function SuppressBlizzardCastBarArt(cb)
     if not cb or (cb.IsForbidden and cb:IsForbidden()) or cb.FPOwned then return end
+    local CB = GetCastBarsAddon()
+    if CB then
+        pcall(CB.SuppressBlizzardBar, cb)
+        return
+    end
     pcall(cb.SetAlpha, cb, 0)
     pcall(cb.Hide, cb)
     pcall(cb.SetSize, cb, 0.0001, 0.0001)
@@ -1875,7 +1764,7 @@ local function ApplyBarDimensions(unitFrame)
 
     local d = plates[unitFrame]
     if hb and d and d.levelBox then
-        local lSize = (isFriendly and ForeverPlatesDB.friendlyLevelFontSize) or (ForeverPlatesDB and ForeverPlatesDB.levelFontSize) or 14
+        local lSize = (isFriendlyPlayer and ForeverPlatesDB.friendlyLevelFontSize) or (ForeverPlatesDB and ForeverPlatesDB.levelFontSize) or 14
         local fontW = math.floor(lSize * 1.05 + 0.5)
         local boxW = math.max(h, fontW)
         d.levelBox:ClearAllPoints()
@@ -2245,7 +2134,8 @@ local function StripAuraMasksAndOverlays(btn, iconTex)
     end
 end
 
-local function LayoutNameplateAuras(unitFrame)
+local LayoutNameplateAuras -- debounced entry point (assigned below DoLayoutNameplateAuras)
+local function DoLayoutNameplateAuras(unitFrame)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
     local unit = GetUnitForFrame(unitFrame)
     if not unit then return end
@@ -2926,13 +2816,45 @@ local function LayoutNameplateAuras(unitFrame)
         end
     end
 end
-FP.LayoutNameplateAuras = LayoutNameplateAuras
-FP.LayoutFriendlyBuffs = LayoutNameplateAuras
-local LayoutFriendlyBuffs = LayoutNameplateAuras
+
+-- Blizzard re-layout hooks fire many times per frame. Coalesce them into one
+-- layout pass per plate on the next frame, and ignore hook echoes caused by our own layout.
+local pendingAuraLayout = {}
+local auraLayoutRunning = false
+local auraLayoutFrame = CreateFrame("Frame")
+auraLayoutFrame:Hide()
+auraLayoutFrame:SetScript("OnUpdate", function(self)
+    self:Hide()
+    local batch = pendingAuraLayout
+    pendingAuraLayout = {}
+    auraLayoutRunning = true
+    for uf in pairs(batch) do
+        pcall(DoLayoutNameplateAuras, uf)
+    end
+    auraLayoutRunning = false
+end)
+
+LayoutNameplateAuras = function(unitFrame)
+    if auraLayoutRunning or not unitFrame then return end
+    pendingAuraLayout[unitFrame] = true
+    auraLayoutFrame:Show()
+end
+
+local function LayoutNameplateAurasNow(unitFrame)
+    if not unitFrame then return end
+    pendingAuraLayout[unitFrame] = nil
+    local wasRunning = auraLayoutRunning
+    auraLayoutRunning = true
+    DoLayoutNameplateAuras(unitFrame)
+    auraLayoutRunning = wasRunning
+end
+FP.LayoutNameplateAuras = LayoutNameplateAurasNow
+FP.LayoutFriendlyBuffs = LayoutNameplateAurasNow
+local LayoutFriendlyBuffs = LayoutNameplateAurasNow
 
 AdjustAuraFrames = function(unitFrame)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
-    LayoutNameplateAuras(unitFrame)
+    LayoutNameplateAurasNow(unitFrame)
 end
 FP.AdjustAuraFrames = AdjustAuraFrames
 
@@ -3657,7 +3579,7 @@ local function SuppressLevelElement(elem)
     end
 end
 
-local function SuppressBlizzardLevel(unitFrame)
+SuppressBlizzardLevel = function(unitFrame)
     if not unitFrame then return end
     local d = plates[unitFrame]
 
@@ -5043,7 +4965,10 @@ eventFrame:RegisterEvent("UNIT_AURA")
 eventFrame:RegisterEvent("CVAR_UPDATE")
 eventFrame:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 
-local PERIODIC_REFRESH_INTERVAL = 0.50
+local pendingAuraUnits = {}
+local auraFlushScheduled = false
+local pendingColorRefresh = false
+local PERIODIC_REFRESH_INTERVAL = 1.0
 local periodicRefreshElapsed = 0
 
 eventFrame:SetScript("OnUpdate", function(_, elapsed)
@@ -5054,7 +4979,7 @@ eventFrame:SetScript("OnUpdate", function(_, elapsed)
     if not C_NamePlate or not C_NamePlate.GetNamePlates then return end
 
     local nameplates = C_NamePlate.GetNamePlates()
-    if not nameplates then return end
+    if not nameplates or #nameplates == 0 then return end
 
     for _, np in ipairs(nameplates) do
         if np and (not np.IsShown or np:IsShown()) then
@@ -5074,7 +4999,7 @@ end)
 eventFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" then
         local loadedAddon = ...
-        if loadedAddon and (loadedAddon == "ForeverPlates" or loadedAddon == "ForeverPlates_Camelot" or loadedAddon:lower():find("foreverplate") or loadedAddon == ADDON_NAME) then
+        if loadedAddon and (loadedAddon == "ForeverPlates" or loadedAddon == "ForeverPlates_Camelot" or loadedAddon == ADDON_NAME) then
             DebugDB("ADDON_LOADED before defaults")
             InitializeDatabase()
             DebugDB("ADDON_LOADED after defaults")
@@ -5095,7 +5020,9 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         RefreshAllFonts()
         RefreshAllArrows()
         RefreshAllOutlines()
-        DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates|r v2.2.1 loaded! Saved outline: |cff00ff00%s|r (Thick: %s). Type |cff00c0ff/fp|r to open settings.", tostring(ForeverPlatesDB and ForeverPlatesDB.outlineColor), tostring(ForeverPlatesDB and ForeverPlatesDB.outlineThickness)))
+        local getMeta = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+        local ver = (getMeta and getMeta(ADDON_NAME, "Version")) or "?"
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates|r v%s loaded! Type |cff00c0ff/fp|r to open settings.", tostring(ver)))
         local nameplates = C_NamePlate.GetNamePlates()
         if nameplates then
             for _, np in ipairs(nameplates) do
@@ -5203,42 +5130,49 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                 if AdjustAuraFrames then AdjustAuraFrames(namePlate.UnitFrame) end
             end
         elseif unit == "player" or event == "UNIT_THREAT_LIST_UPDATE" then
-            local nameplates = C_NamePlate.GetNamePlates()
-            if nameplates then
-                for _, np in ipairs(nameplates) do
-                    if np.UnitFrame then
-                        UpdateUnitHealthAndColors(np.UnitFrame, np.UnitFrame.unit)
-                        if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
+            if not pendingColorRefresh then
+                pendingColorRefresh = true
+                local function FlushColors()
+                    pendingColorRefresh = false
+                    local nameplates = C_NamePlate.GetNamePlates()
+                    if nameplates then
+                        for _, np in ipairs(nameplates) do
+                            if np.UnitFrame then
+                                UpdateUnitHealthAndColors(np.UnitFrame, np.UnitFrame.unit)
+                            end
+                        end
                     end
+                end
+                if C_Timer and C_Timer.After then
+                    C_Timer.After(0.1, FlushColors)
+                else
+                    FlushColors()
                 end
             end
         end
     elseif event == "UNIT_AURA" then
         local unit = ...
-        if unit then
-            local function RunAdjust()
-                local np = GetSafeNamePlateForUnit(unit)
-                if np and np.UnitFrame and AdjustAuraFrames then
-                    AdjustAuraFrames(np.UnitFrame)
-                else
-                    local nameplates = C_NamePlate.GetNamePlates and C_NamePlate.GetNamePlates()
-                    if nameplates then
-                        for _, n in ipairs(nameplates) do
-                            local uf = n.UnitFrame or n
-                            if uf and not (uf.IsForbidden and uf:IsForbidden()) then
-                                local u = GetUnitForFrame(uf)
-                                if u and UnitIsUnit(u, unit) then
-                                    if AdjustAuraFrames then AdjustAuraFrames(uf) end
-                                    break
-                                end
-                            end
+        -- Only nameplate units and target matter; party/raid/player aura spam is ignored.
+        if unit and (unit == "target" or unit:find("^nameplate")) then
+            pendingAuraUnits[unit] = true
+            if not auraFlushScheduled then
+                auraFlushScheduled = true
+                local function Flush()
+                    auraFlushScheduled = false
+                    local batch = pendingAuraUnits
+                    pendingAuraUnits = {}
+                    for u in pairs(batch) do
+                        local np = GetSafeNamePlateForUnit(u)
+                        if np and np.UnitFrame and AdjustAuraFrames then
+                            AdjustAuraFrames(np.UnitFrame)
                         end
                     end
                 end
-            end
-            RunAdjust()
-            if C_Timer and C_Timer.After then
-                C_Timer.After(0, RunAdjust)
+                if C_Timer and C_Timer.After then
+                    C_Timer.After(0, Flush)
+                else
+                    Flush()
+                end
             end
         end
     elseif event == "PLAYER_LEVEL_UP" then

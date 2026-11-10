@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 -- Item ID learner.
 -- Some items are added to the journal before their item ID is known (they
 -- are written with ID 0: the row shows a red "?" icon). This file finds the
@@ -110,6 +113,9 @@ local function Apply(key, id, announce)
     missingCount = missingCount - 1
     if FDJ.ResetItemSourceIndex then pcall(FDJ.ResetItemSourceIndex) end
     if FDJ.RefreshLootNow then pcall(FDJ.RefreshLootNow) end
+    -- The Loot Explorer indexes item IDs once, so it has to be rebuilt.
+    if FDJ.InvalidateLootExplorerCache then pcall(FDJ.InvalidateLootExplorerCache) end
+    if FDJ.ScheduleLootExplorerRefresh then pcall(FDJ.ScheduleLootExplorerRefresh, false) end
     if announce then
         Say("found the item ID of " .. tostring(name) .. ": " .. id .. "  (/dj newids)")
     end

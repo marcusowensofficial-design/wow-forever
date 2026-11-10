@@ -1,92 +1,106 @@
 --[[
-    ForeverPlates Cast Bars - GUI Configuration Window (v2.2.0)
-    Sleek, OLED-inspired, zero-taint configuration panel.
-    Now with complete interactive feedback, pinned action footer,
-    registered control synchronization, and full Target & Focus controls.
+    ForeverPlates Cast Bars - Settings Window (v2.3.0)
+
+    Layout: header (title, version, Test button) / left sidebar with grouped
+    sections / scrolling page on the right / pinned footer.
+
+    Every page is built from a small layout helper (Section, Checks, Sliders,
+    Colors, Buttons, Note) so controls line up and stay in sync with CFG.
+    The window is created the first time it is opened (/fpc), not at login.
 --]]
 
 local ADDON_NAME, FP_CB = ...
 local CFG = FP_CB.CFG
 
-local FLAT_TEXTURE = "Interface\\Buttons\\WHITE8X8"
-local DEFAULT_FONT = (FP_CB.GetFontPath and FP_CB.GetFontPath("forced")) or "Fonts\\FRIZQT__.TTF"
+local FLAT = "Interface\\Buttons\\WHITE8X8"
+local function Font() return (FP_CB.GetFontPath and FP_CB.GetFontPath("forced")) or "Fonts\\FRIZQT__.TTF" end
 
-local guiFrame = nil
+-- Palette for the window itself
+local C = {
+    bg        = { 0.07, 0.08, 0.10, 0.98 },
+    sidebar   = { 0.05, 0.06, 0.08, 1.00 },
+    line      = { 0.18, 0.22, 0.28, 0.85 },
+    accent    = { 0.00, 0.85, 1.00, 1.00 },
+    text      = { 0.90, 0.90, 0.90, 1.00 },
+    dim       = { 0.60, 0.65, 0.72, 1.00 },
+    group     = { 0.45, 0.50, 0.58, 1.00 },
+    ctrlBg    = { 0.12, 0.14, 0.18, 0.95 },
+    ctrlHover = { 0.18, 0.22, 0.28, 1.00 },
+    ctrlEdge  = { 0.22, 0.25, 0.30, 1.00 },
+    idleEdge  = { 0.18, 0.20, 0.24, 0.80 },
+    idleText  = { 0.80, 0.80, 0.80, 1.00 },
+}
 
--------------------------------------------------------------------------------
--- Helper: 1px Pixel Border
--------------------------------------------------------------------------------
-local function CreatePixelBorder(parent, inset, r, g, b, a)
-    inset = inset or 0
-    r, g, b, a = r or 0.12, g or 0.12, b or 0.14, a or 1.0
-    local border = {}
+local WIN_W, WIN_H = 730, 620
+local SIDEBAR_W    = 168
+local PAGE_W       = 486
+local COL2_X       = 250
 
-    local top = parent:CreateTexture(nil, "BORDER", nil, 1)
-    top:SetTexture(FLAT_TEXTURE)
-    top:SetVertexColor(r, g, b, a)
-    top:SetPoint("TOPLEFT", parent, "TOPLEFT", -inset, inset)
-    top:SetPoint("BOTTOMRIGHT", parent, "TOPRIGHT", inset, inset - 1)
-    border.top = top
+local guiFrame
 
-    local bottom = parent:CreateTexture(nil, "BORDER", nil, 1)
-    bottom:SetTexture(FLAT_TEXTURE)
-    bottom:SetVertexColor(r, g, b, a)
-    bottom:SetPoint("TOPLEFT", parent, "BOTTOMLEFT", -inset, -inset + 1)
-    bottom:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", inset, -inset)
-    border.bottom = bottom
-
-    local left = parent:CreateTexture(nil, "BORDER", nil, 1)
-    left:SetTexture(FLAT_TEXTURE)
-    left:SetVertexColor(r, g, b, a)
-    left:SetPoint("TOPLEFT", parent, "TOPLEFT", -inset, inset)
-    left:SetPoint("BOTTOMRIGHT", parent, "BOTTOMLEFT", -inset + 1, -inset)
-    border.left = left
-
-    local right = parent:CreateTexture(nil, "BORDER", nil, 1)
-    right:SetTexture(FLAT_TEXTURE)
-    right:SetVertexColor(r, g, b, a)
-    right:SetPoint("TOPLEFT", parent, "TOPRIGHT", inset - 1, inset)
-    right:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", inset, -inset)
-    border.right = right
-
-    function border:SetColor(nr, ng, nb, na)
-        top:SetVertexColor(nr, ng, nb, na or 1.0)
-        bottom:SetVertexColor(nr, ng, nb, na or 1.0)
-        left:SetVertexColor(nr, ng, nb, na or 1.0)
-        right:SetVertexColor(nr, ng, nb, na or 1.0)
-    end
-
-    function border:SetThickness(thick)
-        thick = math.max(1, thick or 1)
-        top:SetPoint("TOPLEFT", parent, "TOPLEFT", -thick, thick)
-        top:SetPoint("BOTTOMRIGHT", parent, "TOPRIGHT", thick, 0)
-        bottom:SetPoint("TOPLEFT", parent, "BOTTOMLEFT", -thick, 0)
-        bottom:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", thick, -thick)
-        left:SetPoint("TOPLEFT", parent, "TOPLEFT", -thick, thick)
-        left:SetPoint("BOTTOMRIGHT", parent, "BOTTOMLEFT", 0, -thick)
-        right:SetPoint("TOPLEFT", parent, "TOPRIGHT", 0, thick)
-        right:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", thick, -thick)
-    end
-
-    function border:SetShown(show)
-        top:SetShown(show)
-        bottom:SetShown(show)
-        left:SetShown(show)
-        right:SetShown(show)
-    end
-
-    return border
+local function Border(parent, r, g, b, a)
+    return FP_CB.CreatePixelBorder(parent, 1, r, g, b, a)
 end
 
+local function Tex(parent, layer, color)
+    local t = parent:CreateTexture(nil, layer)
+    t:SetTexture(FLAT)
+    t:SetVertexColor(color[1], color[2], color[3], color[4] or 1)
+    return t
+end
+
+local function Label(parent, size, color, flags)
+    local fs = parent:CreateFontString(nil, "OVERLAY")
+    fs:SetFont(Font(), size, flags or "OUTLINE")
+    local c = color or C.text
+    fs:SetTextColor(c[1], c[2], c[3], c[4] or 1)
+    return fs
+end
+
+local function Tooltip(owner, title, body)
+    if not title then return end
+    owner:HookScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:AddLine(title, 1, 1, 1)
+        if body then GameTooltip:AddLine(body, 0.75, 0.75, 0.75, true) end
+        GameTooltip:Show()
+    end)
+    owner:HookScript("OnLeave", function() GameTooltip:Hide() end)
+end
+
+local function Click()
+    if SOUNDKIT then PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON) end
+end
+
+local function SetEdge(border, c) border:SetColor(c[1], c[2], c[3], c[4] or 1) end
+
 -------------------------------------------------------------------------------
--- Main GUI Factory
+-- Confirmation dialog for Reset Defaults
+-------------------------------------------------------------------------------
+StaticPopupDialogs["FP_CB_RESET_DEFAULTS"] = {
+    text = "Reset ALL ForeverPlates Cast Bars settings (including bar positions) to defaults?",
+    button1 = YES or "Yes",
+    button2 = NO or "No",
+    OnAccept = function()
+        if FP_CB.ResetToDefaults then FP_CB.ResetToDefaults() end
+        if FP_CB.SyncGUI then FP_CB.SyncGUI() end
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Cast Bars:|r Settings reset to defaults.")
+    end,
+    timeout = 0,
+    whileDead = true,
+    hideOnEscape = true,
+    preferredIndex = 3,
+}
+
+-------------------------------------------------------------------------------
+-- Main window
 -------------------------------------------------------------------------------
 function FP_CB.CreateGUI()
     if guiFrame then return guiFrame end
 
-    local f = CreateFrame("Frame", "ForeverPlatesCastBarsGUI", UIParent, "BackdropTemplate")
-    f:SetSize(540, 680)
-    f:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+    local f = CreateFrame("Frame", "ForeverPlatesCastBarsGUI", UIParent)
+    f:SetSize(WIN_W, WIN_H)
+    f:SetPoint("CENTER")
     f:SetMovable(true)
     f:EnableMouse(true)
     f:RegisterForDrag("LeftButton")
@@ -95,1440 +109,895 @@ function FP_CB.CreateGUI()
     f:SetFrameStrata("DIALOG")
     f:SetClampedToScreen(true)
     f:Hide()
-
     tinsert(UISpecialFrames, "ForeverPlatesCastBarsGUI")
 
-    -- OLED Dark Background
-    local bg = f:CreateTexture(nil, "BACKGROUND")
-    bg:SetAllPoints(f)
-    bg:SetTexture(FLAT_TEXTURE)
-    bg:SetVertexColor(0.07, 0.08, 0.10, 0.98)
+    Tex(f, "BACKGROUND", C.bg):SetAllPoints()
+    Border(f, 0.15, 0.18, 0.22, 1)
 
-    -- Pixel Outer Border
-    CreatePixelBorder(f, 1, 0.15, 0.18, 0.22, 1.0)
+    ---------------------------------------------------------------------------
+    -- Registered controls (re-synced on show and after Reset Defaults)
+    ---------------------------------------------------------------------------
+    local syncers, keySyncers = {}, {}
+    local function Register(fn) syncers[#syncers + 1] = fn end
+    local function SyncAll()
+        for i = 1, #syncers do pcall(syncers[i]) end
+    end
+    FP_CB.SyncGUI = SyncAll
 
-    -- Header Title
-    local title = f:CreateFontString(nil, "OVERLAY")
-    title:SetFont(DEFAULT_FONT, 18, "OUTLINE")
-    title:SetPoint("TOPLEFT", f, "TOPLEFT", 16, -14)
+    -- Syncers per setting key, so two controls bound to one key stay in step
+    local function RegisterKey(key, fn)
+        keySyncers[key] = keySyncers[key] or {}
+        table.insert(keySyncers[key], fn)
+        Register(fn)
+    end
+    local function SyncKey(key)
+        for _, fn in ipairs(keySyncers[key] or {}) do pcall(fn) end
+    end
+
+    local function Set(key, value)
+        CFG[key] = value
+        FP_CB.Save(key)
+        SyncKey(key)
+    end
+
+    ---------------------------------------------------------------------------
+    -- Header
+    ---------------------------------------------------------------------------
+    local title = Label(f, 18)
+    title:SetPoint("TOPLEFT", 18, -14)
     title:SetText("Forever|cff00c0ffPlates|r Cast Bars")
 
-    local subtitle = f:CreateFontString(nil, "OVERLAY")
-    subtitle:SetFont(DEFAULT_FONT, 11, "")
-    subtitle:SetTextColor(0.65, 0.70, 0.75, 1)
-    subtitle:SetPoint("LEFT", title, "RIGHT", 10, -1)
-    subtitle:SetText("v2.2.0 Configuration")
+    local ver = Label(f, 10, C.dim, "")
+    ver:SetPoint("LEFT", title, "RIGHT", 10, -2)
+    ver:SetText("v" .. (FP_CB.GetAddonVersion and FP_CB.GetAddonVersion() or "?"))
 
-    -- Close Button [X] with hover highlight
-    local closeBtn = CreateFrame("Button", nil, f)
-    closeBtn:SetSize(24, 24)
-    closeBtn:SetPoint("TOPRIGHT", f, "TOPRIGHT", -10, -10)
-    local closeBorder = CreatePixelBorder(closeBtn, 1, 0.20, 0.24, 0.30, 0.8)
-    local closeBg = closeBtn:CreateTexture(nil, "BACKGROUND")
-    closeBg:SetAllPoints()
-    closeBg:SetTexture(FLAT_TEXTURE)
-    closeBg:SetVertexColor(0.12, 0.14, 0.18, 0.85)
-
-    local closeText = closeBtn:CreateFontString(nil, "OVERLAY")
-    closeText:SetFont(DEFAULT_FONT, 13, "OUTLINE")
-    closeText:SetPoint("CENTER", closeBtn, "CENTER", 0, 0)
-    closeText:SetText("X")
-    closeText:SetTextColor(0.8, 0.8, 0.8, 1)
-
-    closeBtn:SetScript("OnEnter", function()
-        closeText:SetTextColor(1.0, 0.3, 0.3, 1)
-        closeBg:SetVertexColor(0.25, 0.10, 0.10, 0.95)
-        closeBorder:SetColor(1.0, 0.3, 0.3, 1)
-    end)
-    closeBtn:SetScript("OnLeave", function()
-        closeText:SetTextColor(0.8, 0.8, 0.8, 1)
-        closeBg:SetVertexColor(0.12, 0.14, 0.18, 0.85)
-        closeBorder:SetColor(0.20, 0.24, 0.30, 0.8)
-    end)
-    closeBtn:SetScript("OnClick", function()
-        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
-        f:Hide()
-    end)
-
-    -- Header Test Bars Button
-    local testBtn = CreateFrame("Button", nil, f)
-    testBtn:SetSize(90, 22)
-    testBtn:SetPoint("RIGHT", closeBtn, "LEFT", -10, 0)
-    local testBtnBg = testBtn:CreateTexture(nil, "BACKGROUND")
-    testBtnBg:SetAllPoints()
-    testBtnBg:SetTexture(FLAT_TEXTURE)
-    testBtnBg:SetVertexColor(0.12, 0.22, 0.32, 0.9)
-    testBtn.bg = testBtnBg
-    testBtn.border = CreatePixelBorder(testBtn, 1, 0.00, 0.85, 1.00, 0.8)
-    local testBtnText = testBtn:CreateFontString(nil, "OVERLAY")
-    testBtnText:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-    testBtnText:SetPoint("CENTER")
-    testBtnText:SetText("Test Bars")
-    testBtnText:SetTextColor(0.00, 0.85, 1.00, 1)
-
-    local isTestActive = false
-    local function UpdateTestButtonVisual(active)
-        isTestActive = active
-        if isTestActive then
-            testBtnText:SetText("Hide Test")
-            testBtnBg:SetVertexColor(0.35, 0.15, 0.15, 0.95)
-            testBtn.border:SetColor(1, 0.3, 0.3, 1)
-            testBtnText:SetTextColor(1, 0.4, 0.4, 1)
-        else
-            testBtnText:SetText("Test Bars")
-            testBtnBg:SetVertexColor(0.12, 0.22, 0.32, 0.9)
-            testBtn.border:SetColor(0.00, 0.85, 1.00, 0.8)
-            testBtnText:SetTextColor(0.00, 0.85, 1.00, 1)
-        end
+    local function HeaderButton(text, w)
+        local b = CreateFrame("Button", nil, f)
+        b:SetSize(w, 22)
+        b.bg = Tex(b, "BACKGROUND", C.ctrlBg); b.bg:SetAllPoints()
+        b.border = Border(b, C.ctrlEdge[1], C.ctrlEdge[2], C.ctrlEdge[3], 1)
+        b.text = Label(b, 10)
+        b.text:SetPoint("CENTER")
+        b.text:SetText(text)
+        b.restEdge = C.ctrlEdge
+        b:SetScript("OnEnter", function() SetEdge(b.border, C.accent) end)
+        b:SetScript("OnLeave", function() SetEdge(b.border, b.restEdge) end)
+        return b
     end
 
-    testBtn:SetScript("OnEnter", function()
-        if isTestActive then
-            testBtnBg:SetVertexColor(0.45, 0.20, 0.20, 1.0)
+    local closeBtn = HeaderButton("X", 24)
+    closeBtn:SetPoint("TOPRIGHT", -10, -10)
+    closeBtn:SetScript("OnClick", function() f:Hide() end)
+
+    local testBtn = HeaderButton("Test Bars", 100)
+    testBtn:SetPoint("RIGHT", closeBtn, "LEFT", -8, 0)
+    Tooltip(testBtn, "Preview all cast bars", "Shows looping test casts on the player, target and focus bars plus a mock enemy nameplate. Closing this window ends the preview.")
+
+    local function UpdateTestButton()
+        local on = FP_CB.IsTesting and FP_CB.IsTesting()
+        testBtn.text:SetText(on and "Stop Test" or "Test Bars")
+        if on then
+            testBtn.bg:SetVertexColor(0.35, 0.15, 0.15, 0.95)
+            testBtn.restEdge = { 1, 0.3, 0.3, 1 }
         else
-            testBtnBg:SetVertexColor(0.18, 0.30, 0.42, 1.0)
-            testBtn.border:SetColor(0.00, 0.95, 1.00, 1.0)
+            testBtn.bg:SetVertexColor(C.ctrlBg[1], C.ctrlBg[2], C.ctrlBg[3], C.ctrlBg[4])
+            testBtn.restEdge = C.ctrlEdge
         end
-    end)
-    testBtn:SetScript("OnLeave", function()
-        UpdateTestButtonVisual(isTestActive)
-    end)
-    testBtn:SetScript("OnClick", function()
-        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-        if isTestActive then
-            UpdateTestButtonVisual(false)
-            FP_CB.HideTestAll()
-        else
-            UpdateTestButtonVisual(true)
-            FP_CB.ShowTestAll()
-        end
-    end)
+        SetEdge(testBtn.border, testBtn.restEdge)
+    end
+    local function ToggleTest()
+        if FP_CB.IsTesting and FP_CB.IsTesting() then FP_CB.HideTestAll() else FP_CB.ShowTestAll() end
+        UpdateTestButton()
+    end
+    testBtn:SetScript("OnClick", function() Click(); ToggleTest() end)
+    FP_CB.OnTestStateChanged = function() UpdateTestButton() end
+
+    local headLine = Tex(f, "ARTWORK", C.line)
+    headLine:SetHeight(1)
+    headLine:SetPoint("TOPLEFT", 1, -44)
+    headLine:SetPoint("TOPRIGHT", -1, -44)
 
     ---------------------------------------------------------------------------
-    -- Navigation Tabs
+    -- Sidebar
     ---------------------------------------------------------------------------
-    local tabNames = {
-        { id = "ENEMY",    text = "ENEMY PLATES" },
-        { id = "PLAYER",   text = "PLAYER BAR" },
-        { id = "COLORS",   text = "COLORS & STYLE" },
-        { id = "TYPO",     text = "TYPOGRAPHY" },
-        { id = "TARGET",   text = "TARGET & FOCUS" },
-    }
-    local tabButtons = {}
-    local tabW = 97
-    local tabH = 26
-    local currentTab = "ENEMY"
+    local sidebar = CreateFrame("Frame", nil, f)
+    sidebar:SetPoint("TOPLEFT", 1, -45)
+    sidebar:SetPoint("BOTTOMLEFT", 1, 45)
+    sidebar:SetWidth(SIDEBAR_W)
+    Tex(sidebar, "BACKGROUND", C.sidebar):SetAllPoints()
+    local sideEdge = Tex(sidebar, "ARTWORK", C.line)
+    sideEdge:SetWidth(1)
+    sideEdge:SetPoint("TOPRIGHT")
+    sideEdge:SetPoint("BOTTOMRIGHT")
 
-    for i, tInfo in ipairs(tabNames) do
-        local btn = CreateFrame("Button", nil, f)
-        btn:SetSize(tabW, tabH)
-        btn:SetPoint("TOPLEFT", f, "TOPLEFT", 16 + ((i - 1) * (tabW + 6)), -46)
+    local pages, navButtons = {}, {}
+    local currentPage
+    local sideY = -10
 
-        local tbg = btn:CreateTexture(nil, "BACKGROUND")
-        tbg:SetAllPoints()
-        tbg:SetTexture(FLAT_TEXTURE)
-        tbg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-        btn.bg = tbg
-
-        btn.border = CreatePixelBorder(btn, 1, 0.20, 0.23, 0.28, 0.8)
-
-        local txt = btn:CreateFontString(nil, "OVERLAY")
-        txt:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-        txt:SetPoint("CENTER")
-        txt:SetText(tInfo.text)
-        txt:SetTextColor(0.65, 0.70, 0.75, 1.0)
-        btn.text = txt
-        btn.tabId = tInfo.id
-
-        btn:SetScript("OnEnter", function()
-            if currentTab ~= tInfo.id then
-                btn.bg:SetVertexColor(0.16, 0.20, 0.26, 0.90)
-                btn.border:SetColor(0.35, 0.40, 0.48, 1.0)
-                btn.text:SetTextColor(0.95, 0.95, 0.95, 1.0)
-            end
-        end)
-        btn:SetScript("OnLeave", function()
-            if currentTab ~= tInfo.id then
-                btn.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-                btn.border:SetColor(0.20, 0.23, 0.28, 0.8)
-                btn.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-            end
-        end)
-
-        tabButtons[tInfo.id] = btn
+    local function SelectPage(id)
+        currentPage = id
+        for pid, p in pairs(pages) do p.scroll:SetShown(pid == id) end
+        for pid, b in pairs(navButtons) do
+            local sel = (pid == id)
+            b.accent:SetShown(sel)
+            b.sel:SetShown(sel)
+            local c = sel and C.accent or C.text
+            b.text:SetTextColor(c[1], c[2], c[3], 1)
+        end
+        if ForeverPlatesCastBarsDB then ForeverPlatesCastBarsDB._lastPage = id end
     end
 
-    local tabLine = f:CreateTexture(nil, "ARTWORK")
-    tabLine:SetTexture(FLAT_TEXTURE)
-    tabLine:SetVertexColor(0.18, 0.22, 0.28, 0.85)
-    tabLine:SetHeight(1)
-    tabLine:SetPoint("TOPLEFT", f, "TOPLEFT", 16, -74)
-    tabLine:SetPoint("TOPRIGHT", f, "TOPRIGHT", -16, -74)
+    local function NavGroup(text)
+        sideY = sideY - 6
+        local g = Label(sidebar, 9, C.group, "")
+        g:SetPoint("TOPLEFT", 14, sideY)
+        g:SetText(text:upper())
+        sideY = sideY - 16
+    end
+
+    local function NavButton(id, text)
+        local b = CreateFrame("Button", nil, sidebar)
+        b:SetSize(SIDEBAR_W - 12, 22)
+        b:SetPoint("TOPLEFT", 6, sideY)
+        b.sel = Tex(b, "BACKGROUND", { 0.10, 0.20, 0.28, 0.95 }); b.sel:SetAllPoints(); b.sel:Hide()
+        b.hover = Tex(b, "BACKGROUND", { 0.14, 0.17, 0.22, 0.90 }); b.hover:SetAllPoints(); b.hover:Hide()
+        b.accent = Tex(b, "ARTWORK", C.accent); b.accent:SetWidth(3)
+        b.accent:SetPoint("TOPLEFT"); b.accent:SetPoint("BOTTOMLEFT"); b.accent:Hide()
+        b.text = Label(b, 11)
+        b.text:SetPoint("LEFT", 14, 0)
+        b.text:SetText(text)
+        b:SetScript("OnEnter", function() if currentPage ~= id then b.hover:Show() end end)
+        b:SetScript("OnLeave", function() b.hover:Hide() end)
+        b:SetScript("OnClick", function()
+            if SOUNDKIT then PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB) end
+            b.hover:Hide()
+            SelectPage(id)
+        end)
+        navButtons[id] = b
+        sideY = sideY - 24
+    end
 
     ---------------------------------------------------------------------------
-    -- Scroll Container Factory
+    -- Page builder
     ---------------------------------------------------------------------------
-    local scrollFrames = {}
-    local contentFrames = {}
+    local Page = {}
+    Page.__index = Page
 
-    local function CreateTabContent(tabId, childHeight)
-        local sf = CreateFrame("ScrollFrame", "FP_CB_Scroll_" .. tabId, f, "UIPanelScrollFrameTemplate")
-        sf:SetPoint("TOPLEFT", f, "TOPLEFT", 14, -80)
-        sf:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 48)
+    local function NewPage(id, navText, pageTitle, desc)
+        NavButton(id, navText)
 
-        local child = CreateFrame("Frame", "FP_CB_Child_" .. tabId, sf)
-        child:SetSize(485, childHeight or 750)
+        local sf = CreateFrame("ScrollFrame", "FP_CB_Page_" .. id, f, "UIPanelScrollFrameTemplate")
+        sf:SetPoint("TOPLEFT", sidebar, "TOPRIGHT", 12, -8)
+        sf:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -30, 52)
+        local child = CreateFrame("Frame", nil, sf)
+        child:SetSize(PAGE_W, 400)
         sf:SetScrollChild(child)
         sf:Hide()
-
         sf:EnableMouseWheel(true)
         sf:SetScript("OnMouseWheel", function(self, delta)
-            local cur = self:GetVerticalScroll()
-            local maxScroll = self:GetVerticalScrollRange()
-            local step = 35
-            if delta > 0 then
-                self:SetVerticalScroll(math.max(0, cur - step))
-            else
-                self:SetVerticalScroll(math.min(maxScroll, cur + step))
-            end
+            local cur, max = self:GetVerticalScroll(), self:GetVerticalScrollRange()
+            self:SetVerticalScroll(math.max(0, math.min(max, cur - delta * 40)))
         end)
 
-        scrollFrames[tabId] = sf
-        contentFrames[tabId] = child
-        return child
-    end
-
-    local cEnemy  = CreateTabContent("ENEMY", 1000)
-    local cPlayer = CreateTabContent("PLAYER", 940)
-    local cColors = CreateTabContent("COLORS", 820)
-    local cTypo   = CreateTabContent("TYPO", 620)
-    local cTarget = CreateTabContent("TARGET", 620)
-
-    local function SelectTab(tabId)
-        currentTab = tabId
-        for id, btn in pairs(tabButtons) do
-            if id == tabId then
-                btn.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-                btn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                btn.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
-            else
-                btn.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-                btn.border:SetColor(0.20, 0.23, 0.28, 0.8)
-                btn.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-            end
+        local t = Label(child, 16)
+        t:SetPoint("TOPLEFT", 10, -6)
+        t:SetText(pageTitle)
+        local y = -30
+        if desc then
+            local d = Label(child, 10, C.dim, "")
+            d:SetPoint("TOPLEFT", 10, y)
+            d:SetWidth(PAGE_W - 24)
+            d:SetJustifyH("LEFT")
+            d:SetText(desc)
+            y = y - math.max(14, d:GetStringHeight()) - 6
         end
-        for id, sf in pairs(scrollFrames) do
-            sf:SetShown(id == tabId)
-        end
+
+        local p = setmetatable({ id = id, scroll = sf, frame = child, y = y - 4 }, Page)
+        pages[id] = p
+        return p
     end
 
-    for id, btn in pairs(tabButtons) do
-        btn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
-            SelectTab(id)
-        end)
+    function Page:Finish()
+        self.frame:SetHeight(-self.y + 24)
     end
 
-    ---------------------------------------------------------------------------
-    -- Registered Controls Architecture (for instant sync on reset/load)
-    ---------------------------------------------------------------------------
-    local registeredCheckboxes  = {}
-    local registeredSliders     = {}
-    local registeredColorGrids  = {}
-    local RefreshFontHighlights = nil
-    local RefreshOlHighlights   = nil
-
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Action Button
-    ---------------------------------------------------------------------------
-    local function CreateActionButton(parent, labelText, posX, posY, width, height, onClick)
-        local btn = CreateFrame("Button", nil, parent)
-        btn:SetSize(width, height)
-        btn:SetPoint("TOPLEFT", parent, "TOPLEFT", posX, posY)
-
-        local bbg = btn:CreateTexture(nil, "BACKGROUND")
-        bbg:SetAllPoints(btn)
-        bbg:SetTexture(FLAT_TEXTURE)
-        bbg:SetVertexColor(0.12, 0.16, 0.22, 0.95)
-        btn.bg = bbg
-
-        local border = CreatePixelBorder(btn, 1, 0.22, 0.26, 0.32, 1.0)
-        btn.border = border
-
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-        lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
-        lbl:SetText(labelText)
-        lbl:SetTextColor(0.95, 0.95, 0.95, 1)
-        btn.label = lbl
-
-        btn:SetScript("OnEnter", function()
-            bbg:SetVertexColor(0.18, 0.24, 0.32, 1.0)
-            border:SetColor(0.00, 0.85, 1.00, 1.0)
-            lbl:SetTextColor(0.00, 0.85, 1.00, 1)
-        end)
-        btn:SetScript("OnLeave", function()
-            bbg:SetVertexColor(0.12, 0.16, 0.22, 0.95)
-            border:SetColor(0.22, 0.26, 0.32, 1.0)
-            lbl:SetTextColor(0.95, 0.95, 0.95, 1)
-        end)
-        btn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            if onClick then onClick(btn) end
-        end)
-
-        return btn
+    function Page:Note(text, color)
+        local n = Label(self.frame, 10, color or C.dim, "")
+        n:SetPoint("TOPLEFT", 12, self.y)
+        n:SetWidth(PAGE_W - 30)
+        n:SetJustifyH("LEFT")
+        n:SetText(text)
+        self.y = self.y - math.max(13, n:GetStringHeight()) - 6
+        return n
     end
 
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Checkbox
-    local function SyncCheckbox(dbKey)
-        for _, item in ipairs(registeredCheckboxes) do
-            if item.dbKey == dbKey and item.RefreshState then
-                item.RefreshState()
-            end
-        end
+    function Page:Section(text, note)
+        self.y = self.y - 10
+        local h = Label(self.frame, 11, C.accent)
+        h:SetPoint("TOPLEFT", 10, self.y)
+        h:SetText(text:upper())
+        local line = Tex(self.frame, "ARTWORK", C.line)
+        line:SetHeight(1)
+        line:SetPoint("LEFT", h, "RIGHT", 8, 0)
+        line:SetPoint("RIGHT", self.frame, "RIGHT", -10, 0)
+        self.y = self.y - 20
+        if note then self:Note(note) end
     end
 
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Checkbox
-    ---------------------------------------------------------------------------
-    local function CreateCheckbox(parent, label, dbKey, posX, posY, onChange)
+    -- Checkbox ------------------------------------------------------------
+    local function MakeCheck(parent, x, y, spec)
+        local key = spec[2]
         local cb = CreateFrame("Button", nil, parent)
-        cb:SetSize(18, 18)
-        cb:SetPoint("TOPLEFT", parent, "TOPLEFT", posX, posY)
-
-        local bg = cb:CreateTexture(nil, "BACKGROUND")
-        bg:SetAllPoints()
-        bg:SetTexture(FLAT_TEXTURE)
-        bg:SetVertexColor(0.12, 0.14, 0.18, 0.95)
-        cb.bg = bg
-
-        cb.border = CreatePixelBorder(cb, 1, 0.22, 0.25, 0.30, 1.0)
-
-        local check = cb:CreateTexture(nil, "OVERLAY")
-        check:SetPoint("CENTER", cb, "CENTER", 0, 0)
-        check:SetSize(10, 10)
-        check:SetTexture(FLAT_TEXTURE)
-        check:SetVertexColor(0.00, 0.85, 1.00, 1.0)
-        cb.check = check
-
-        local lbl = cb:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+        cb:SetSize(16, 16)
+        cb:SetPoint("TOPLEFT", x, y)
+        local bg = Tex(cb, "BACKGROUND", C.ctrlBg); bg:SetAllPoints()
+        local border = Border(cb, C.ctrlEdge[1], C.ctrlEdge[2], C.ctrlEdge[3], 1)
+        local mark = Tex(cb, "ARTWORK", C.accent)
+        mark:SetSize(8, 8)
+        mark:SetPoint("CENTER")
+        local lbl = Label(cb, 11)
         lbl:SetPoint("LEFT", cb, "RIGHT", 8, 0)
-        lbl:SetText(label)
-        lbl:SetTextColor(0.90, 0.90, 0.90, 1.0)
-        cb.label = lbl
+        lbl:SetJustifyH("LEFT")
+        lbl:SetWordWrap(false)
+        lbl:SetText(spec[1])
+        -- Clicking the label toggles too
+        cb:SetHitRectInsets(0, -math.min(COL2_X - 40, lbl:GetStringWidth() + 10), 0, 0)
 
-        local function RefreshState()
-            local val = CFG[dbKey]
-            check:SetShown(val == true)
-            if val then
-                cb.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            else
-                cb.border:SetColor(0.22, 0.25, 0.30, 1.0)
-            end
+        local function Refresh()
+            local on = CFG[key] == true
+            mark:SetShown(on)
+            SetEdge(border, on and C.accent or C.ctrlEdge)
         end
-        RefreshState()
+        RegisterKey(key, Refresh)
+        Refresh()
 
         cb:SetScript("OnEnter", function()
-            bg:SetVertexColor(0.18, 0.22, 0.28, 1.0)
-            cb.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            lbl:SetTextColor(0.00, 0.85, 1.00, 1.0)
+            bg:SetVertexColor(C.ctrlHover[1], C.ctrlHover[2], C.ctrlHover[3], 1)
+            lbl:SetTextColor(C.accent[1], C.accent[2], C.accent[3], 1)
         end)
         cb:SetScript("OnLeave", function()
-            bg:SetVertexColor(0.12, 0.14, 0.18, 0.95)
-            RefreshState()
-            lbl:SetTextColor(0.90, 0.90, 0.90, 1.0)
+            bg:SetVertexColor(C.ctrlBg[1], C.ctrlBg[2], C.ctrlBg[3], C.ctrlBg[4])
+            lbl:SetTextColor(C.text[1], C.text[2], C.text[3], 1)
         end)
         cb:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            CFG[dbKey] = not CFG[dbKey]
-            FP_CB.Save(dbKey)
-            RefreshState()
-            SyncCheckbox(dbKey)
-            if onChange then onChange(CFG[dbKey]) end
+            Click()
+            Set(key, not CFG[key])
+            if spec[3] then spec[3](CFG[key]) end
             FP_CB.RefreshAllBars()
         end)
-
-        table.insert(registeredCheckboxes, { cb = cb, dbKey = dbKey, RefreshState = RefreshState })
+        Tooltip(cb, spec.tip and spec[1], spec.tip)
         return cb
     end
 
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Slider
-    ---------------------------------------------------------------------------
-    local function CreateSlider(parent, labelText, dbKey, minVal, maxVal, step, formatStr, posX, posY, onChange)
-        local container = CreateFrame("Frame", nil, parent)
-        container:SetPoint("TOPLEFT", parent, "TOPLEFT", posX, posY)
-        container:SetSize(230, 40)
-
-        local lbl = container:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-        lbl:SetPoint("TOPLEFT", container, "TOPLEFT", 0, 0)
-        lbl:SetTextColor(0.90, 0.90, 0.90, 1)
-
-        local val = CFG[dbKey] or minVal
-        local function UpdateLabel(v)
-            lbl:SetText(string.format(formatStr or "%s: %d", labelText, v))
+    -- Checks: list of { label, key, onChange, tip = "..." }, two per row
+    function Page:Checks(list, oneColumn)
+        local col = 0
+        for i, spec in ipairs(list) do
+            MakeCheck(self.frame, (col == 0) and 10 or COL2_X, self.y, spec)
+            if oneColumn or col == 1 or i == #list then
+                self.y = self.y - 24
+                col = 0
+            else
+                col = 1
+            end
         end
-        UpdateLabel(val)
+    end
 
-        -- Minus Button [-]
-        local minusBtn = CreateFrame("Button", nil, container)
-        minusBtn:SetSize(18, 18)
-        minusBtn:SetPoint("BOTTOMLEFT", container, "BOTTOMLEFT", 0, 0)
-        local mbg = minusBtn:CreateTexture(nil, "BACKGROUND")
-        mbg:SetAllPoints()
-        mbg:SetTexture(FLAT_TEXTURE)
-        mbg:SetVertexColor(0.14, 0.16, 0.20, 0.9)
-        minusBtn.border = CreatePixelBorder(minusBtn, 1, 0.22, 0.24, 0.28, 1.0)
-        local mtxt = minusBtn:CreateFontString(nil, "OVERLAY")
-        mtxt:SetFont(DEFAULT_FONT, 12, "OUTLINE")
-        mtxt:SetPoint("CENTER")
-        mtxt:SetText("-")
-        mtxt:SetTextColor(0.90, 0.90, 0.90, 1)
+    -- Slider ---------------------------------------------------------------
+    local function MakeSlider(parent, x, y, spec)
+        local labelText, key, minV, maxV, step, fmt, onChange = spec[1], spec[2], spec[3], spec[4], spec[5] or 1, spec[6] or "%s: %d", spec[7]
+        local box = CreateFrame("Frame", nil, parent)
+        box:SetPoint("TOPLEFT", x, y)
+        box:SetSize(226, 38)
 
-        minusBtn:SetScript("OnEnter", function()
-            mbg:SetVertexColor(0.22, 0.28, 0.36, 1.0)
-            minusBtn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            mtxt:SetTextColor(0.00, 0.85, 1.00, 1.0)
-        end)
-        minusBtn:SetScript("OnLeave", function()
-            mbg:SetVertexColor(0.14, 0.16, 0.20, 0.9)
-            minusBtn.border:SetColor(0.22, 0.24, 0.28, 1.0)
-            mtxt:SetTextColor(0.90, 0.90, 0.90, 1)
-        end)
+        local lbl = Label(box, 10)
+        lbl:SetPoint("TOPLEFT")
 
-        -- Plus Button [+]
-        local plusBtn = CreateFrame("Button", nil, container)
-        plusBtn:SetSize(18, 18)
-        plusBtn:SetPoint("BOTTOMRIGHT", container, "BOTTOMRIGHT", 0, 0)
-        local pbg = plusBtn:CreateTexture(nil, "BACKGROUND")
-        pbg:SetAllPoints()
-        pbg:SetTexture(FLAT_TEXTURE)
-        pbg:SetVertexColor(0.14, 0.16, 0.20, 0.9)
-        plusBtn.border = CreatePixelBorder(plusBtn, 1, 0.22, 0.24, 0.28, 1.0)
-        local ptxt = plusBtn:CreateFontString(nil, "OVERLAY")
-        ptxt:SetFont(DEFAULT_FONT, 12, "OUTLINE")
-        ptxt:SetPoint("CENTER")
-        ptxt:SetText("+")
-        ptxt:SetTextColor(0.90, 0.90, 0.90, 1)
+        local function SmallBtn(txt)
+            local b = CreateFrame("Button", nil, box)
+            b:SetSize(16, 16)
+            Tex(b, "BACKGROUND", C.ctrlBg):SetAllPoints()
+            local bb = Border(b, C.ctrlEdge[1], C.ctrlEdge[2], C.ctrlEdge[3], 1)
+            local t = Label(b, 12); t:SetPoint("CENTER", 0, 1); t:SetText(txt)
+            b:SetScript("OnEnter", function() SetEdge(bb, C.accent) end)
+            b:SetScript("OnLeave", function() SetEdge(bb, C.ctrlEdge) end)
+            return b
+        end
+        local minus = SmallBtn("-"); minus:SetPoint("BOTTOMLEFT")
+        local plus  = SmallBtn("+"); plus:SetPoint("BOTTOMRIGHT")
 
-        plusBtn:SetScript("OnEnter", function()
-            pbg:SetVertexColor(0.22, 0.28, 0.36, 1.0)
-            plusBtn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            ptxt:SetTextColor(0.00, 0.85, 1.00, 1.0)
-        end)
-        plusBtn:SetScript("OnLeave", function()
-            pbg:SetVertexColor(0.14, 0.16, 0.20, 0.9)
-            plusBtn.border:SetColor(0.22, 0.24, 0.28, 1.0)
-            ptxt:SetTextColor(0.90, 0.90, 0.90, 1)
-        end)
-
-        local trackW = 186
-        local track = CreateFrame("Frame", nil, container)
+        local trackW = 226 - 16 * 2 - 8
+        local track = CreateFrame("Frame", nil, box)
         track:SetSize(trackW, 4)
-        track:SetPoint("LEFT", minusBtn, "RIGHT", 4, 0)
-        local tTex = track:CreateTexture(nil, "BACKGROUND")
-        tTex:SetAllPoints()
-        tTex:SetTexture(FLAT_TEXTURE)
-        tTex:SetVertexColor(0.16, 0.18, 0.22, 1.0)
+        track:SetPoint("LEFT", minus, "RIGHT", 4, 0)
+        Tex(track, "BACKGROUND", { 0.16, 0.18, 0.22, 1 }):SetAllPoints()
+        local fill = Tex(track, "ARTWORK", { 0.00, 0.82, 1.00, 0.8 })
+        fill:SetPoint("TOPLEFT"); fill:SetPoint("BOTTOMLEFT")
 
-        local fill = track:CreateTexture(nil, "ARTWORK")
-        fill:SetPoint("TOPLEFT", track, "TOPLEFT", 0, 0)
-        fill:SetPoint("BOTTOMLEFT", track, "BOTTOMLEFT", 0, 0)
-        fill:SetTexture(FLAT_TEXTURE)
-        fill:SetVertexColor(0.00, 0.82, 1.00, 0.8)
-
-        local slider = CreateFrame("Slider", nil, container)
+        local slider = CreateFrame("Slider", nil, box)
         slider:SetSize(trackW, 14)
-        slider:SetPoint("CENTER", track, "CENTER", 0, 0)
+        slider:SetPoint("CENTER", track)
         slider:SetOrientation("HORIZONTAL")
-        slider:SetMinMaxValues(minVal, maxVal)
-        slider:SetValueStep(step or 1)
+        slider:SetMinMaxValues(minV, maxV)
+        slider:SetValueStep(step)
         slider:SetObeyStepOnDrag(true)
-
         local thumb = slider:CreateTexture(nil, "OVERLAY")
         thumb:SetSize(8, 14)
-        thumb:SetTexture(FLAT_TEXTURE)
-        thumb:SetVertexColor(0.00, 0.85, 1.00, 1.0)
+        thumb:SetTexture(FLAT)
+        thumb:SetVertexColor(C.accent[1], C.accent[2], C.accent[3], 1)
         slider:SetThumbTexture(thumb)
 
-        local function RefreshTrack(v)
-            local range = maxVal - minVal
-            if range > 0 then
-                local pct = math.max(0, math.min(1, (v - minVal) / range))
-                fill:SetWidth(math.max(1, trackW * pct))
-            end
+        local function Show(v)
+            lbl:SetText(string.format(fmt, labelText, v))
+            local pct = (maxV > minV) and math.max(0, math.min(1, (v - minV) / (maxV - minV))) or 0
+            fill:SetWidth(math.max(1, trackW * pct))
         end
 
-        local function UpdateValue(newVal)
-            slider:SetValue(newVal)
-            UpdateLabel(newVal)
-            RefreshTrack(newVal)
+        local syncing = false
+        local function Sync()
+            local v = tonumber(CFG[key]) or minV
+            syncing = true
+            slider:SetValue(v)
+            syncing = false
+            Show(v)
         end
+        Sync()
 
-        slider:SetValue(val)
-        RefreshTrack(val)
-
-        slider:SetScript("OnValueChanged", function(self, newVal)
-            newVal = math.floor((newVal / (step or 1)) + 0.5) * (step or 1)
-            CFG[dbKey] = newVal
-            FP_CB.Save(dbKey)
-
-            if dbKey == "enemyCastWidth" then
-                if CFG.enemyCastMatchHealthWidth then
-                    CFG.enemyCastMatchHealthWidth = false
-                    FP_CB.Save("enemyCastMatchHealthWidth")
-                    SyncCheckbox("enemyCastMatchHealthWidth")
-                end
-            end
-
-            UpdateLabel(newVal)
-            RefreshTrack(newVal)
-            if onChange then onChange(newVal) end
+        slider:SetScript("OnValueChanged", function(_, v)
+            v = math.floor(v / step + 0.5) * step
+            Show(v)
+            -- Programmatic updates (sync / reset) never write back or trigger side effects
+            if syncing or CFG[key] == v then return end
+            CFG[key] = v
+            FP_CB.Save(key)
+            if onChange then onChange(v) end
             FP_CB.RefreshAllBars()
         end)
+        minus:SetScript("OnClick", function() Click(); slider:SetValue(math.max(minV, (tonumber(CFG[key]) or minV) - step)) end)
+        plus:SetScript("OnClick", function() Click(); slider:SetValue(math.min(maxV, (tonumber(CFG[key]) or minV) + step)) end)
 
-        minusBtn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            local cur = CFG[dbKey] or minVal
-            local nv = math.max(minVal, cur - (step or 1))
-            slider:SetValue(nv)
-        end)
-
-        plusBtn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            local cur = CFG[dbKey] or minVal
-            local nv = math.min(maxVal, cur + (step or 1))
-            slider:SetValue(nv)
-        end)
-
-        table.insert(registeredSliders, {
-            dbKey = dbKey,
-            minVal = minVal,
-            maxVal = maxVal,
-            step = step,
-            UpdateValue = UpdateValue,
-        })
-        return container
+        RegisterKey(key, Sync)
+        return box
     end
 
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Section Header
-    ---------------------------------------------------------------------------
-    local function CreateSectionHeader(parent, text, posY)
-        local h = parent:CreateFontString(nil, "OVERLAY")
-        h:SetFont(DEFAULT_FONT, 11, "OUTLINE")
-        h:SetTextColor(0.00, 0.85, 1.00, 1.0)
-        h:SetPoint("TOPLEFT", parent, "TOPLEFT", 10, posY)
-        h:SetText(text)
-
-        local line = parent:CreateTexture(nil, "ARTWORK")
-        line:SetTexture(FLAT_TEXTURE)
-        line:SetVertexColor(0.18, 0.22, 0.28, 0.65)
-        line:SetHeight(1)
-        line:SetPoint("LEFT", h, "RIGHT", 8, 0)
-        line:SetPoint("RIGHT", parent, "RIGHT", -10, 0)
-        return h
+    -- Sliders: list of { label, key, min, max, step, fmt, onChange }, two per row
+    function Page:Sliders(list)
+        for i, spec in ipairs(list) do
+            MakeSlider(self.frame, (i % 2 == 1) and 10 or COL2_X, self.y, spec)
+            if i % 2 == 0 or i == #list then self.y = self.y - 46 end
+        end
     end
 
-    local defaultBtnW, defaultBtnH = 92, 22
-
-    ---------------------------------------------------------------------------
-    -- Reusable Component: Color Button Grid
-    ---------------------------------------------------------------------------
-    local function CreateColorGrid(parent, keyList, dbKey, posY, cols, customBtnW, customBtnH, onSelect)
-        cols = cols or 5
-        local bW = customBtnW or defaultBtnW
-        local bH = customBtnH or defaultBtnH
+    -- Option buttons (single choice) ----------------------------------------
+    -- items: { { key, text, font? }, ... }; isSelected(key); onPick(key)
+    local function Choices(page, items, cols, bW, isSelected, onPick, syncKey)
+        local bH = 24
         local buttons = {}
-
-        local function RefreshHighlights()
-            local cur = CFG[dbKey]
+        local function Refresh()
             for _, b in ipairs(buttons) do
-                if b.colorKey == cur then
-                    b.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                    b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
-                    b.label:SetTextColor(0.00, 0.85, 1.00, 1)
-                else
-                    b.border:SetColor(0.18, 0.20, 0.24, 0.8)
-                    b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
-                    b.label:SetTextColor(0.75, 0.75, 0.75, 1)
-                end
+                local sel = isSelected(b.key)
+                SetEdge(b.border, sel and C.accent or C.idleEdge)
+                local c = sel and C.accent or C.idleText
+                b.text:SetTextColor(c[1], c[2], c[3], 1)
             end
         end
-
-        for i, cKey in ipairs(keyList) do
-            local col = (i - 1) % cols
-            local row = math.floor((i - 1) / cols)
-            local posX = 10 + (col * (bW + 4))
-            local y = posY - (row * (bH + 4))
-
-            local btn = CreateFrame("Button", nil, parent)
-            btn:SetSize(bW, bH)
-            btn:SetPoint("TOPLEFT", parent, "TOPLEFT", posX, y)
-            local bbg = btn:CreateTexture(nil, "BACKGROUND")
-            bbg:SetAllPoints()
-            bbg:SetTexture(FLAT_TEXTURE)
-            btn.bg = bbg
-            btn.border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
-
-            local isOutline = (FP_CB.OUTLINE_PALETTES and FP_CB.OUTLINE_PALETTES[cKey]) and (dbKey:find("Border") or dbKey:find("outline") or dbKey:find("Outline"))
-            local pal = (isOutline and FP_CB.OUTLINE_PALETTES[cKey]) or FP_CB.COLOR_PALETTES[cKey] or { r = 1, g = 1, b = 1, name = cKey }
-            if isOutline and cKey == "DARK" and _G.ForeverPlates and _G.ForeverPlates.OUTLINE_COLORS and _G.ForeverPlates.OUTLINE_COLORS.DARK then
-                pal = _G.ForeverPlates.OUTLINE_COLORS.DARK
-            end
-            local swatch = btn:CreateTexture(nil, "OVERLAY")
-            swatch:SetSize(10, 10)
-            swatch:SetPoint("LEFT", btn, "LEFT", 4, 0)
-            swatch:SetTexture(FLAT_TEXTURE)
-            swatch:SetVertexColor(pal.r, pal.g, pal.b, 1)
-
-            local lbl = btn:CreateFontString(nil, "OVERLAY")
-            lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-            lbl:SetPoint("LEFT", swatch, "RIGHT", 4, 0)
-            lbl:SetText(pal.name)
-            btn.label = lbl
-            btn.colorKey = cKey
-
-            btn:SetScript("OnEnter", function()
-                btn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                btn.bg:SetVertexColor(0.18, 0.24, 0.32, 1.0)
-                btn.label:SetTextColor(0.00, 0.85, 1.00, 1.0)
-                GameTooltip:SetOwner(btn, "ANCHOR_RIGHT")
-                GameTooltip:AddLine(pal.name or cKey, pal.r, pal.g, pal.b)
-                GameTooltip:AddLine("Click to select this color.", 0.7, 0.7, 0.7)
-                GameTooltip:Show()
-            end)
-            btn:SetScript("OnLeave", function()
-                RefreshHighlights()
-                GameTooltip:Hide()
-            end)
-            btn:SetScript("OnClick", function()
-                PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-                CFG[dbKey] = cKey
-                FP_CB.Save(dbKey)
-                RefreshHighlights()
-                if onSelect then onSelect(cKey, pal) end
+        for i, item in ipairs(items) do
+            local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+            local b = CreateFrame("Button", nil, page.frame)
+            b:SetSize(bW, bH)
+            b:SetPoint("TOPLEFT", 10 + col * (bW + 4), page.y - row * (bH + 4))
+            Tex(b, "BACKGROUND", { 0.10, 0.11, 0.14, 0.85 }):SetAllPoints()
+            b.border = Border(b, C.idleEdge[1], C.idleEdge[2], C.idleEdge[3], C.idleEdge[4])
+            b.text = b:CreateFontString(nil, "OVERLAY")
+            b.text:SetFont(item[3] or Font(), 10, "OUTLINE")
+            b.text:SetPoint("CENTER")
+            b.text:SetText(item[2])
+            b.key = item[1]
+            b:SetScript("OnEnter", function() SetEdge(b.border, C.accent) end)
+            b:SetScript("OnLeave", Refresh)
+            b:SetScript("OnClick", function()
+                Click()
+                onPick(b.key)
+                Refresh()
                 FP_CB.RefreshAllBars()
             end)
-
-            table.insert(buttons, btn)
+            buttons[#buttons + 1] = b
         end
-
-        RefreshHighlights()
-        table.insert(registeredColorGrids, { dbKey = dbKey, RefreshHighlights = RefreshHighlights })
-
-        local totalRows = math.ceil(#keyList / cols)
-        return posY - (totalRows * (bH + 4))
+        RegisterKey(syncKey, Refresh)
+        Refresh()
+        page.y = page.y - math.ceil(#items / cols) * (bH + 4) - 4
     end
 
-    local PALETTE_ALL     = {"GOLD", "ORANGE", "CYAN", "LIME", "PINK", "PURPLE", "RED", "WHITE", "SILVER", "DARK"}
-    local PALETTE_SHIELD  = {"SILVER", "DARK", "RED", "ORANGE", "GOLD", "CYAN"}
-    local PALETTE_OUTLINE = {"DARK", "BLACK", "WHITE", "CYAN", "GOLD", "LIME"}
-    local PALETTE_TEXT    = {"WHITE", "GOLD", "ORANGE", "CYAN", "LIME", "PINK", "PURPLE", "RED", "SILVER", "DARK"}
-
-    ---------------------------------------------------------------------------
-    -- TAB 1: ENEMY PLATES
-    ---------------------------------------------------------------------------
-    CreateSectionHeader(cEnemy, "ENEMY NAMEPLATE CAST BARS", -10)
-    CreateCheckbox(cEnemy, "Enable Enemy Cast Bars Below Nameplates", "showEnemyPlateCast", 10, -32)
-    CreateCheckbox(cEnemy, "Hostile Units Only (Ignore friendly profession casts)", "onlyHostileEnemyPlateCast", 10, -58)
-    CreateCheckbox(cEnemy, "Match Nameplate Health Bar Width", "enemyCastMatchHealthWidth", 10, -84)
-    CreateCheckbox(cEnemy, "Align Flush to Health Bar Edges (Left-to-Right)", "enemyCastFlushEdges", 10, -110)
-    CreateCheckbox(cEnemy, "Hide Blizzard Enemy Cast Bars (Always On)", "hideBlizzardBars", 10, -136, function()
-        FP_CB.ApplyBlizzardSuppression()
-    end)
-
-    CreateSectionHeader(cEnemy, "ENEMY CAST BAR SIZING & POSITIONING", -168)
-    CreateSlider(cEnemy, "Cast Bar Width", "enemyCastWidth", 80, 300, 2, "%s: %dpx", 10, -190)
-    CreateSlider(cEnemy, "Cast Bar Height", "enemyCastHeight", 8, 36, 1, "%s: %dpx", 250, -190)
-    CreateSlider(cEnemy, "Gap Below Nameplate (Y-Offset)", "enemyCastYOffset", -25, 10, 1, "%s: %dpx", 10, -240)
-    CreateSlider(cEnemy, "Horizontal Alignment (X-Offset)", "enemyCastXOffset", -60, 60, 1, "%s: %dpx", 250, -240)
-    CreateSlider(cEnemy, "Icon Gap (0 = Flush)", "enemyCastIconGap", -4, 12, 1, "%s: %dpx", 10, -290)
-
-    CreateSectionHeader(cEnemy, "ENEMY CAST BAR COLOR (KICKABLE)", -342)
-    local yE = CreateColorGrid(cEnemy, PALETTE_ALL, "enemyCastColorKey", -364, 5, 92, 22)
-
-    CreateSectionHeader(cEnemy, "ENEMY SHIELDED COLOR (NON-INTERRUPTIBLE)", yE - 10)
-    local yES = CreateColorGrid(cEnemy, PALETTE_SHIELD, "enemyShieldColorKey", yE - 32, 6, 76, 22)
-
-    CreateSectionHeader(cEnemy, "ENEMY OUTLINE & BORDER", yES - 10)
-    CreateCheckbox(cEnemy, "Show Outline Border", "enemyShowBorder", 10, yES - 32)
-    CreateSlider(cEnemy, "Outline Thickness", "enemyBorderThickness", 1, 4, 1, "%s: %dpx", 250, yES - 32)
-
-    local lblEBorder = cEnemy:CreateFontString(nil, "OVERLAY")
-    lblEBorder:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblEBorder:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblEBorder:SetPoint("TOPLEFT", cEnemy, "TOPLEFT", 10, yES - 80)
-    lblEBorder:SetText("Enemy Border Color (Kickable):")
-
-    local yEB = CreateColorGrid(cEnemy, PALETTE_OUTLINE, "enemyBorderColorKey", yES - 96, 6, 76, 22)
-
-    local lblEShieldBorder = cEnemy:CreateFontString(nil, "OVERLAY")
-    lblEShieldBorder:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblEShieldBorder:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblEShieldBorder:SetPoint("TOPLEFT", cEnemy, "TOPLEFT", 10, yEB - 10)
-    lblEShieldBorder:SetText("Enemy Shield Border Color:")
-
-    local yESB = CreateColorGrid(cEnemy, PALETTE_SHIELD, "enemyShieldBorderColorKey", yEB - 26, 6, 76, 22)
-
-    CreateSectionHeader(cEnemy, "DISPLAYED ELEMENTS & TYPOGRAPHY", yESB - 10)
-    CreateCheckbox(cEnemy, "Show Spell Icon", "showEnemyCastIcon", 10, yESB - 32)
-    CreateCheckbox(cEnemy, "Show Spell Name", "showEnemyCastSpell", 10, yESB - 58)
-    CreateCheckbox(cEnemy, "Show Cast Duration Timer", "showEnemyCastTimer", 10, yESB - 84)
-    CreateSlider(cEnemy, "Font Size", "enemyCastFontSize", 7, 18, 1, "%s: %dpt", 250, yESB - 58)
-
-    ---------------------------------------------------------------------------
-    -- TAB 2: PLAYER BAR
-    ---------------------------------------------------------------------------
-    CreateSectionHeader(cPlayer, "PLAYER CAST BAR SETTINGS", -10)
-    CreateCheckbox(cPlayer, "Show Player Cast Bar", "showPlayerBar", 10, -32, function(shown)
-        if FP_CB.singleBars and FP_CB.singleBars["player"] then
-            if not shown then FP_CB.singleBars["player"].anchor:Hide() end
+    -- Color grid -------------------------------------------------------------
+    local function PaletteEntry(cKey, dbKey)
+        local isOutline = FP_CB.OUTLINE_PALETTES[cKey] and (dbKey:find("Border") or dbKey:find("utline"))
+        local pal = (isOutline and FP_CB.OUTLINE_PALETTES[cKey]) or FP_CB.COLOR_PALETTES[cKey] or { r = 1, g = 1, b = 1, name = cKey }
+        if isOutline and cKey == "DARK" and _G.ForeverPlates and _G.ForeverPlates.OUTLINE_COLORS and _G.ForeverPlates.OUTLINE_COLORS.DARK then
+            local d = _G.ForeverPlates.OUTLINE_COLORS.DARK
+            pal = { r = d.r, g = d.g, b = d.b, name = pal.name }
         end
-    end)
-    CreateCheckbox(cPlayer, "Lock Position (Uncheck to Drag Bar on Screen)", "playerLocked", 10, -58, function(locked)
-        if FP_CB.singleBars and FP_CB.singleBars["player"] then
-            FP_CB.singleBars["player"]:UpdateLayout()
+        return pal
+    end
+
+    -- Colors(label or nil, keys, dbKey, cols, onSelect)
+    function Page:Colors(label, keys, dbKey, cols, onSelect)
+        if label then
+            local l = Label(self.frame, 10, C.dim, "")
+            l:SetPoint("TOPLEFT", 12, self.y)
+            l:SetText(label)
+            self.y = self.y - 16
         end
-    end)
-
-    CreateSectionHeader(cPlayer, "PLAYER BAR SIZING & POSITIONING", -90)
-    CreateSlider(cPlayer, "Player Bar Width", "playerW", 120, 500, 5, "%s: %dpx", 10, -112)
-    CreateSlider(cPlayer, "Player Bar Height", "playerH", 12, 50, 1, "%s: %dpx", 250, -112)
-    CreateSlider(cPlayer, "Icon Gap (0 = Flush)", "playerIconGap", -4, 12, 1, "%s: %dpx", 10, -162)
-
-    CreateActionButton(cPlayer, "Reset Player Position", 250, -162, 160, 24, function()
-        CFG.playerPt = "CENTER"
-        CFG.playerRPt = "CENTER"
-        CFG.playerX = 0
-        CFG.playerY = -180
-        FP_CB.Save("playerPt"); FP_CB.Save("playerRPt")
-        FP_CB.Save("playerX");  FP_CB.Save("playerY")
-        if FP_CB.singleBars and FP_CB.singleBars["player"] then
-            local a = FP_CB.singleBars["player"].anchor
-            a:ClearAllPoints()
-            a:SetPoint("CENTER", UIParent, "CENTER", 0, -180)
-            FP_CB.singleBars["player"]:UpdateLayout()
-        end
-        FP_CB.RefreshAllBars()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Player cast bar position reset to center.")
-    end)
-
-    CreateSectionHeader(cPlayer, "PLAYER OUTLINE & BORDER", -206)
-    CreateCheckbox(cPlayer, "Show Outline Border", "playerShowBorder", 10, -228)
-    CreateSlider(cPlayer, "Outline Thickness", "playerBorderThickness", 1, 4, 1, "%s: %dpx", 250, -228)
-
-    local lblPBorder = cPlayer:CreateFontString(nil, "OVERLAY")
-    lblPBorder:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblPBorder:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblPBorder:SetPoint("TOPLEFT", cPlayer, "TOPLEFT", 10, -276)
-    lblPBorder:SetText("Player Border Color:")
-
-    local yPB = CreateColorGrid(cPlayer, PALETTE_OUTLINE, "playerBorderColorKey", -292, 6, 76, 22)
-
-    CreateSectionHeader(cPlayer, "PLAYER ELEMENTS & LATENCY", yPB - 10)
-    CreateCheckbox(cPlayer, "Show Spell Icon", "showPlayerIcon", 10, yPB - 32)
-    CreateCheckbox(cPlayer, "Show Spell Name", "showPlayerSpell", 10, yPB - 58)
-    CreateSlider(cPlayer, "Player Font Size", "fontSize", 8, 28, 1, "%s: %dpt", 250, yPB - 58, function(nv)
-        CFG.playerFontSize = nv
-        FP_CB.Save("playerFontSize")
-    end)
-    CreateCheckbox(cPlayer, "Show Cast Timer", "showPlayerTimer", 10, yPB - 84)
-    CreateCheckbox(cPlayer, "Show Latency Window Overlay (Ping)", "showLatency", 10, yPB - 110)
-    CreateCheckbox(cPlayer, "Show Latency MS Text", "showLatencyText", 10, yPB - 136)
-
-    CreateSectionHeader(cPlayer, "GLOBAL COOLDOWN (GCD) TRACKER", yPB - 170)
-    CreateCheckbox(cPlayer, "Show GCD Bar Below Player Cast Bar", "showGCD", 10, yPB - 192)
-    CreateSlider(cPlayer, "GCD Bar Height", "gcdHeight", 1, 14, 1, "%s: %dpx", 250, yPB - 192)
-
-    CreateActionButton(cPlayer, "Open Colors & Typography ->", 10, yPB - 226, 220, 24, function()
-        SelectTab("TYPO")
-    end)
-
-    ---------------------------------------------------------------------------
-    -- TAB 3: COLORS & STYLE
-    ---------------------------------------------------------------------------
-    CreateSectionHeader(cColors, "INTERACTIVE LIVE TEST TRIGGERS", -10)
-    CreateActionButton(cColors, "Test Kickable Cast (4s)", 10, -32, 170, 24, function()
-        FP_CB.SimulateCast(false, "player")
-    end)
-    CreateActionButton(cColors, "Test Shielded Cast (4s)", 190, -32, 170, 24, function()
-        FP_CB.SimulateCast(true, "player")
-    end)
-
-    CreateSectionHeader(cColors, "GLOBAL DEFAULT CAST BAR COLOR", -72)
-    local yC1 = CreateColorGrid(cColors, PALETTE_ALL, "colorCastKey", -94, 5, 92, 22)
-
-    CreateSectionHeader(cColors, "GLOBAL SHIELDED / UNKICKABLE COLOR", yC1 - 10)
-    local yC2 = CreateColorGrid(cColors, PALETTE_SHIELD, "colorNoIntKey", yC1 - 32, 6, 76, 22)
-
-    CreateSectionHeader(cColors, "GLOBAL OUTLINE & BORDER COLOR", yC2 - 10)
-    CreateCheckbox(cColors, "Show Outlines / Borders by Default", "showBorder", 10, yC2 - 32)
-    CreateSlider(cColors, "Border Thickness", "outlineThickness", 1, 4, 1, "%s: %dpx", 250, yC2 - 32)
-    local yC3 = CreateColorGrid(cColors, PALETTE_OUTLINE, "outlineColorKey", yC2 - 82, 6, 76, 22)
-
-    CreateSectionHeader(cColors, "VISUAL EFFECTS & BLIZZARD SUPPRESSION", yC3 - 10)
-    CreateCheckbox(cColors, "Show Cast Spark Glow at Progress Edge", "barSpark", 10, yC3 - 32)
-    CreateCheckbox(cColors, "Hide Blizzard Default Cast Bars (Player, Nameplates, Target)", "hideBlizzardBars", 10, yC3 - 58, function()
-        FP_CB.ApplyBlizzardSuppression()
-    end)
-    CreateCheckbox(cColors, "Show Focus Cast Bar (Uncheck to Hide Focus Bar)", "showFocusBar", 10, yC3 - 84, function(shown)
-        if FP_CB.singleBars and FP_CB.singleBars["focus"] then
-            if not shown then
-                FP_CB.singleBars["focus"].anchor:Hide()
-                FP_CB.singleBars["focus"].activeCast = nil
-                FP_CB.singleBars["focus"].isTest = false
+        cols = cols or 5
+        local bW = math.floor((PAGE_W - 24 - (cols - 1) * 4) / cols)
+        local bH = 22
+        local buttons = {}
+        local function Refresh()
+            for _, b in ipairs(buttons) do
+                local sel = CFG[dbKey] == b.key
+                SetEdge(b.border, sel and C.accent or C.idleEdge)
+                if sel then
+                    b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                    b.text:SetTextColor(C.accent[1], C.accent[2], C.accent[3], 1)
+                else
+                    b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                    b.text:SetTextColor(0.75, 0.75, 0.75, 1)
+                end
             end
         end
-    end)
-
-    ---------------------------------------------------------------------------
-    -- TAB 4: TYPOGRAPHY
-    ---------------------------------------------------------------------------
-    CreateSectionHeader(cTypo, "CAST BAR FONT SELECTION", -10)
-
-    local fontList = {
-        { key = "forced",     name = "Forced Square" },
-        { key = "expressway", name = "Expressway" },
-        { key = "carlito",    name = "Carlito" },
-        { key = "blizzard",   name = "Blizzard Friz" },
-        { key = "arial",      name = "Arial Narrow" },
-        { key = "morpheus",   name = "Morpheus" },
-        { key = "skurri",     name = "Skurri" },
-    }
-    local fontButtons = {}
-
-    RefreshFontHighlights = function()
-        local cur = CFG.font or "forced"
-        for _, b in ipairs(fontButtons) do
-            if b.fKey == cur then
-                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
-                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
-            else
-                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
-                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
-                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
-            end
+        for i, cKey in ipairs(keys) do
+            local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+            local pal = PaletteEntry(cKey, dbKey)
+            local b = CreateFrame("Button", nil, self.frame)
+            b:SetSize(bW, bH)
+            b:SetPoint("TOPLEFT", 10 + col * (bW + 4), self.y - row * (bH + 4))
+            b.bg = Tex(b, "BACKGROUND", { 0.10, 0.11, 0.14, 0.85 }); b.bg:SetAllPoints()
+            b.border = Border(b, C.idleEdge[1], C.idleEdge[2], C.idleEdge[3], C.idleEdge[4])
+            local sw = Tex(b, "ARTWORK", { pal.r, pal.g, pal.b, 1 })
+            sw:SetSize(10, 10)
+            sw:SetPoint("LEFT", 5, 0)
+            b.text = Label(b, 9)
+            b.text:SetPoint("LEFT", sw, "RIGHT", 4, 0)
+            b.text:SetPoint("RIGHT", -2, 0)
+            b.text:SetJustifyH("LEFT")
+            b.text:SetWordWrap(false)
+            b.text:SetText(pal.name)
+            b.key = cKey
+            b:SetScript("OnEnter", function() SetEdge(b.border, C.accent) end)
+            b:SetScript("OnLeave", Refresh)
+            b:SetScript("OnClick", function()
+                Click()
+                CFG[dbKey] = cKey
+                FP_CB.Save(dbKey)
+                if onSelect then onSelect(cKey, pal) end
+                SyncKey(dbKey)
+                FP_CB.RefreshAllBars()
+            end)
+            buttons[#buttons + 1] = b
         end
+        RegisterKey(dbKey, Refresh)
+        Refresh()
+        self.y = self.y - math.ceil(#keys / cols) * (bH + 4) - 4
     end
 
-    local fBtnW, fBtnH = 114, 22
-    for i, item in ipairs(fontList) do
-        local col = (i - 1) % 4
-        local row = math.floor((i - 1) / 4)
-        local posX = 10 + (col * (fBtnW + 6))
-        local posY = -34 - (row * (fBtnH + 6))
-
-        local btn = CreateFrame("Button", nil, cTypo)
-        btn:SetSize(fBtnW, fBtnH)
-        btn:SetPoint("TOPLEFT", cTypo, "TOPLEFT", posX, posY)
-        local bbg = btn:CreateTexture(nil, "BACKGROUND")
-        bbg:SetAllPoints()
-        bbg:SetTexture(FLAT_TEXTURE)
-        btn.bg = bbg
-        btn.border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
-
-        local fontPath = (FP_CB.FONTS and FP_CB.FONTS[item.key]) or DEFAULT_FONT
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(fontPath, 10, "OUTLINE")
-        lbl:SetPoint("CENTER")
-        lbl:SetText(item.name)
-        btn.label = lbl
-        btn.fKey = item.key
-
-        btn:SetScript("OnEnter", function()
-            btn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            btn.bg:SetVertexColor(0.16, 0.24, 0.32, 1.0)
-            btn.label:SetTextColor(0.00, 0.85, 1.00, 1.0)
-        end)
-        btn:SetScript("OnLeave", function()
-            RefreshFontHighlights()
-        end)
-        btn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            CFG.font = item.key
-            FP_CB.Save("font")
-            RefreshFontHighlights()
-            FP_CB.RefreshAllBars()
-        end)
-
-        table.insert(fontButtons, btn)
-    end
-    RefreshFontHighlights()
-
-    CreateSectionHeader(cTypo, "FONT SIZING & OUTLINE", -104)
-    CreateSlider(cTypo, "Player Cast Bar Font Size", "fontSize", 8, 28, 1, "%s: %dpt", 10, -128, function(nv)
-        CFG.playerFontSize = nv
-        FP_CB.Save("playerFontSize")
-    end)
-
-    local outlineStyles = {
-        { key = "NONE",         name = "None" },
-        { key = "OUTLINE",      name = "Outline" },
-        { key = "THICKOUTLINE", name = "Thick" },
-    }
-    local olButtons = {}
-
-    RefreshOlHighlights = function()
-        local cur = CFG.fontOutline or "OUTLINE"
-        for _, b in ipairs(olButtons) do
-            if b.olKey == cur then
-                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
-                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
-            else
-                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
-                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
-                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
-            end
+    -- Buttons: list of { text, width, onClick, tip }
+    function Page:Buttons(list)
+        local x = 10
+        for _, spec in ipairs(list) do
+            local b = CreateFrame("Button", nil, self.frame)
+            b:SetSize(spec[2], 24)
+            b:SetPoint("TOPLEFT", x, self.y)
+            Tex(b, "BACKGROUND", { 0.12, 0.16, 0.22, 0.95 }):SetAllPoints()
+            local bb = Border(b, C.ctrlEdge[1], C.ctrlEdge[2], C.ctrlEdge[3], 1)
+            b.text = Label(b, 10)
+            b.text:SetPoint("CENTER")
+            b.text:SetText(spec[1])
+            b:SetScript("OnEnter", function() SetEdge(bb, C.accent); b.text:SetTextColor(C.accent[1], C.accent[2], C.accent[3], 1) end)
+            b:SetScript("OnLeave", function() SetEdge(bb, C.ctrlEdge); b.text:SetTextColor(C.text[1], C.text[2], C.text[3], 1) end)
+            b:SetScript("OnClick", function() Click(); spec[3](b) end)
+            Tooltip(b, spec[4] and spec[1], spec[4])
+            x = x + spec[2] + 8
         end
+        self.y = self.y - 32
     end
 
-    local olBtnW, olBtnH = 92, 22
-    for i, item in ipairs(outlineStyles) do
-        local posX = 10 + ((i - 1) * (olBtnW + 6))
-        local posY = -180
-
-        local btn = CreateFrame("Button", nil, cTypo)
-        btn:SetSize(olBtnW, olBtnH)
-        btn:SetPoint("TOPLEFT", cTypo, "TOPLEFT", posX, posY)
-        local bbg = btn:CreateTexture(nil, "BACKGROUND")
-        bbg:SetAllPoints()
-        bbg:SetTexture(FLAT_TEXTURE)
-        btn.bg = bbg
-        btn.border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
-
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-        lbl:SetPoint("CENTER")
-        lbl:SetText(item.name)
-        btn.label = lbl
-        btn.olKey = item.key
-
-        btn:SetScript("OnEnter", function()
-            btn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            btn.bg:SetVertexColor(0.16, 0.24, 0.32, 1.0)
-            btn.label:SetTextColor(0.00, 0.85, 1.00, 1.0)
-        end)
-        btn:SetScript("OnLeave", function()
-            RefreshOlHighlights()
-        end)
-        btn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            CFG.fontOutline = item.key
-            FP_CB.Save("fontOutline")
-            RefreshOlHighlights()
-            FP_CB.RefreshAllBars()
-        end)
-
-        table.insert(olButtons, btn)
-    end
-    RefreshOlHighlights()
-
     ---------------------------------------------------------------------------
-    -- SHARED CUSTOM COLOR PICKER HELPER
+    -- Shared helpers for pages
     ---------------------------------------------------------------------------
-    local function OpenCustomColorPicker(curR, curG, curB, callback)
+    local PALETTE_ALL     = { "GOLD", "ORANGE", "CYAN", "LIME", "PINK", "PURPLE", "RED", "WHITE", "SILVER", "DARK" }
+    local PALETTE_SHIELD  = { "SILVER", "DARK", "RED", "ORANGE", "GOLD", "CYAN" }
+    local PALETTE_OUTLINE = { "DARK", "BLACK", "WHITE", "CYAN", "GOLD", "LIME" }
+    local PALETTE_TEXT    = { "WHITE", "GOLD", "ORANGE", "CYAN", "LIME", "PINK", "PURPLE", "RED", "SILVER", "DARK" }
+    local PALETTE_CHANNEL = { "CHANNEL", "LIME", "CYAN", "GOLD", "PURPLE", "PINK", "WHITE", "SILVER", "ORANGE", "RED" }
+
+    local function OpenColorPicker(cur, callback)
+        local r, g, b = cur[1] or 1, cur[2] or 1, cur[3] or 1
         if ColorPickerFrame and ColorPickerFrame.SetupColorPickerAndShow then
             ColorPickerFrame:SetupColorPickerAndShow({
-                r = curR or 1,
-                g = curG or 1,
-                b = curB or 1,
-                hasOpacity = false,
-                swatchFunc = function()
-                    local r, g, b = ColorPickerFrame:GetColorRGB()
-                    if callback then callback(r, g, b) end
-                end,
-                cancelFunc = function(prev)
-                    if prev and callback then
-                        callback(prev.r or 1, prev.g or 1, prev.b or 1)
-                    end
-                end,
+                r = r, g = g, b = b, hasOpacity = false,
+                swatchFunc = function() callback(ColorPickerFrame:GetColorRGB()) end,
+                cancelFunc = function() callback(r, g, b) end,
             })
         elseif ColorPickerFrame then
-            ColorPickerFrame.func = function()
-                local r, g, b = ColorPickerFrame:GetColorRGB()
-                if callback then callback(r, g, b) end
-            end
-            ColorPickerFrame.cancelFunc = function(prev)
-                if prev and callback then
-                    callback(prev.r or 1, prev.g or 1, prev.b or 1)
-                end
-            end
+            ColorPickerFrame.func = function() callback(ColorPickerFrame:GetColorRGB()) end
+            ColorPickerFrame.cancelFunc = function() callback(r, g, b) end
             ColorPickerFrame.hasOpacity = false
-            ColorPickerFrame.previousValues = { r = curR or 1, g = curG or 1, b = curB or 1 }
-            ColorPickerFrame:SetColorRGB(curR or 1, curG or 1, curB or 1)
-            if ShowUIPanel then
-                ShowUIPanel(ColorPickerFrame)
-            else
-                ColorPickerFrame:Show()
+            ColorPickerFrame.previousValues = { r = r, g = g, b = b }
+            ColorPickerFrame:SetColorRGB(r, g, b)
+            ShowUIPanel(ColorPickerFrame)
+        end
+    end
+
+    local function HideBarIfOff(unit)
+        return function(shown)
+            local obj = FP_CB.singleBars and FP_CB.singleBars[unit]
+            if obj and not shown then
+                obj.activeCast = nil
+                obj.isTest = false
+                obj.anchor:Hide()
             end
         end
     end
 
-    ---------------------------------------------------------------------------
-    -- PLAYER CAST BAR COLOR (Typography Tab - All Colors In One Place)
-    ---------------------------------------------------------------------------
-    CreateSectionHeader(cTypo, "PLAYER CAST BAR COLOR", -218)
-
-    local lblPBarColor = cTypo:CreateFontString(nil, "OVERLAY")
-    lblPBarColor:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblPBarColor:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblPBarColor:SetPoint("TOPLEFT", cTypo, "TOPLEFT", 10, -242)
-    lblPBarColor:SetText("Cast Bar Fill Color (Default: Neon Cyan):")
-
-    local yPCB = CreateColorGrid(cTypo, PALETTE_ALL, "playerCastColorKey", -260, 5, 92, 22, function(cKey, pal)
-        if pal then
-            CFG.playerCastColor = { pal.r, pal.g, pal.b, 1 }
-            FP_CB.Save("playerCastColor")
+    local function UnitLayoutPage(unit, U, navText, desc)
+        local p = NewPage(unit, navText, U .. " Cast Bar", desc)
+        p:Section("Display")
+        p:Checks({
+            { "Show " .. U .. " Cast Bar", "show" .. U .. "Bar", HideBarIfOff(unit) },
+            { "Lock Position", unit .. "Locked", nil,
+              tip = "Unlock to drag the bar. While this window is open, an unlocked bar shows a placeholder you can drag." },
+            { "Show Spell Icon", "show" .. U .. "Icon" },
+            { "Show Spell Name", "show" .. U .. "Spell" },
+            { "Show Cast Timer", "show" .. U .. "Timer" },
+        })
+        p:Section("Size & Position")
+        local sliders = {
+            { "Width", unit .. "W", 120, unit == "player" and 500 or 450, 5, "%s: %dpx" },
+            { "Height", unit .. "H", 12, unit == "player" and 50 or 40, 1, "%s: %dpx" },
+            { "Icon Gap (0 = flush)", unit .. "IconGap", -4, 12, 1, "%s: %dpx" },
+        }
+        if unit == "player" then
+            table.insert(sliders, { "Font Size", "playerFontSize", 8, 28, 1, "%s: %dpt" })
         end
-        FP_CB.RefreshAllBars()
-    end)
+        p:Sliders(sliders)
+        local buttons = {
+            { "Reset Position", 130, function() FP_CB.ResetPosition(unit) end },
+            { "Test Cast", 100, function() FP_CB.SimulateCast(false, unit) end, "Runs one 4-second test cast on this bar." },
+        }
+        if unit ~= "player" then
+            table.insert(buttons, { "Test Shielded Cast", 150, function() FP_CB.SimulateCast(true, unit) end,
+                "Shows the non-interruptible color (set under Shared Colors)." })
+        end
+        p:Buttons(buttons)
+        return p
+    end
 
-    CreateActionButton(cTypo, "Custom Bar Color...", 10, yPCB - 8, 130, 24, function()
-        local cur = CFG.playerCastColor or {0.00, 0.85, 1.00, 1}
-        OpenCustomColorPicker(cur[1], cur[2], cur[3], function(r, g, b)
-            CFG.playerCastColor = { r, g, b, 1 }
-            CFG.playerCastColorKey = "CUSTOM"
-            FP_CB.Save("playerCastColor")
-            FP_CB.Save("playerCastColorKey")
-            FP_CB.RefreshAllBars()
-            for _, cg in ipairs(registeredColorGrids) do
-                if cg.dbKey == "playerCastColorKey" and cg.RefreshHighlights then
-                    cg.RefreshHighlights()
-                end
-            end
-        end)
-    end)
+    local function UnitBorderSection(p, unit)
+        p:Section("Outline & Border")
+        p:Checks({ { "Show Outline Border", unit .. "ShowBorder" } })
+        p:Sliders({ { "Outline Thickness", unit .. "BorderThickness", 1, 4, 1, "%s: %dpx" } })
+        p:Colors("Border color", PALETTE_OUTLINE, unit .. "BorderColorKey", 6)
+    end
 
-    CreateActionButton(cTypo, "Reset Bar to Cyan", 150, yPCB - 8, 130, 24, function()
-        CFG.playerCastColorKey = "CYAN"
-        CFG.playerCastColor = { 0.00, 0.85, 1.00, 1 }
-        FP_CB.Save("playerCastColorKey")
+    ---------------------------------------------------------------------------
+    -- GENERAL
+    ---------------------------------------------------------------------------
+    NavGroup("General")
+    local pOverview = NewPage("overview", "Overview", "Overview",
+        "Quick switches for every bar. The sections on the left hold the detailed settings. Changes apply instantly and save automatically.")
+    pOverview:Section("Cast Bars")
+    pOverview:Checks({
+        { "Enemy Nameplate Bars", "showEnemyPlateCast" },
+        { "Player Cast Bar", "showPlayerBar", HideBarIfOff("player") },
+        { "Target Cast Bar", "showTargetBar", HideBarIfOff("target") },
+        { "Focus Cast Bar", "showFocusBar", HideBarIfOff("focus") },
+        { "GCD Bar", "showGCD", nil, tip = "Thin global cooldown bar under the player cast bar." },
+        { "Hide Blizzard Cast Bars", "hideBlizzardBars", function() FP_CB.ApplyBlizzardSuppression() end,
+          tip = "Hides Blizzard's own player, target, focus and nameplate cast bars. Turning this off fully restores them after a /reload." },
+    })
+    pOverview:Section("Moving Bars", "While this window is open, unlocked bars show a placeholder you can drag. Outside the window use /fpc unlock and /fpc lock.")
+    pOverview:Buttons({
+        { "Unlock All", 110, function() FP_CB.SetAllLocked(false); FP_CB.SetMoveMode(true) end },
+        { "Lock All", 110, function() FP_CB.SetAllLocked(true); FP_CB.SetMoveMode(true) end },
+        { "Reset All Positions", 150, function()
+            FP_CB.ResetPosition("player"); FP_CB.ResetPosition("target"); FP_CB.ResetPosition("focus")
+        end },
+    })
+    pOverview:Section("Preview")
+    pOverview:Buttons({
+        { "Test All Bars", 120, function() ToggleTest() end },
+        { "Kickable Cast", 120, function() FP_CB.SimulateCast(false, "player") end, "One 4-second cast on the player bar." },
+        { "Shielded Cast", 120, function() FP_CB.SimulateCast(true, "target") end, "One 4-second shielded cast on the target bar (enable it first)." },
+    })
+    pOverview:Section("Slash Commands")
+    pOverview:Note("|cff00e5ff/fpc|r - open this window      |cff00e5ff/fpc help|r - list all commands\n" ..
+        "|cff00e5ff/fpc unlock|r, |cff00e5ff/fpc lock|r - move bars outside this window\n" ..
+        "|cff00e5ff/fpc test|r, |cff00e5ff/fpc hidetest|r - preview bars\n" ..
+        "|cff00e5ff/fpc reset|r - reset positions      |cff00e5ff/fpc debug|r - target nameplate diagnostics", C.text)
+    pOverview:Section("Status")
+    local statusNote = pOverview:Note(" ")
+    Register(function()
+        local fp = _G.ForeverPlates and "|cff00ff00detected|r" or "|cffffaa00not loaded|r (cast bars still work on their own)"
+        statusNote:SetText("Version " .. (FP_CB.GetAddonVersion and FP_CB.GetAddonVersion() or "?") .. "   |   ForeverPlates: " .. fp)
+    end)
+    pOverview:Finish()
+
+    ---------------------------------------------------------------------------
+    -- NAMEPLATES
+    ---------------------------------------------------------------------------
+    NavGroup("Nameplates")
+    local pEnemy = NewPage("enemy", "Enemy Cast Bars", "Enemy Nameplate Cast Bars",
+        "Cast bars drawn directly under enemy nameplates. Click Test Bars (top right) to see a mock nameplate while you adjust.")
+    pEnemy:Section("Display")
+    pEnemy:Checks({
+        { "Enable Enemy Cast Bars", "showEnemyPlateCast" },
+        { "Hostile Units Only", "onlyHostileEnemyPlateCast", nil, tip = "Ignore friendly units (for example profession casts)." },
+        { "Show Spell Icon", "showEnemyCastIcon" },
+        { "Show Spell Name", "showEnemyCastSpell" },
+        { "Show Cast Timer", "showEnemyCastTimer" },
+    })
+    pEnemy:Section("Width & Alignment")
+    pEnemy:Checks({
+        { "Match Health Bar Width", "enemyCastMatchHealthWidth", nil,
+          tip = "Stretch the cast bar edge-to-edge under the health bar. Turn off to use the Width slider." },
+        { "Left-Align Custom Width", "enemyCastFlushEdges", nil,
+          tip = "With a custom width: on = aligned to the health bar's left edge, off = centered under it." },
+    })
+    local widthNote = pEnemy:Note(" ")
+    local function RefreshWidthNote()
+        if CFG.enemyCastMatchHealthWidth ~= false then
+            widthNote:SetText("Width follows the health bar. Moving the Width slider switches to a custom width.")
+        else
+            widthNote:SetText("Using a custom width, " .. (CFG.enemyCastFlushEdges ~= false and "left-aligned." or "centered."))
+        end
+    end
+    RegisterKey("enemyCastMatchHealthWidth", RefreshWidthNote)
+    RegisterKey("enemyCastFlushEdges", RefreshWidthNote)
+    RefreshWidthNote()
+    pEnemy:Sliders({
+        { "Width", "enemyCastWidth", 80, 300, 2, "%s: %dpx", function()
+            if CFG.enemyCastMatchHealthWidth ~= false then Set("enemyCastMatchHealthWidth", false) end
+        end },
+        { "Height", "enemyCastHeight", 8, 36, 1, "%s: %dpx" },
+        { "Vertical Offset", "enemyCastYOffset", -25, 10, 1, "%s: %dpx" },
+        { "Horizontal Offset", "enemyCastXOffset", -60, 60, 1, "%s: %dpx" },
+        { "Icon Gap (0 = flush)", "enemyCastIconGap", -4, 12, 1, "%s: %dpx" },
+        { "Font Size", "enemyCastFontSize", 7, 18, 1, "%s: %dpt" },
+    })
+    pEnemy:Finish()
+
+    local pEnemyStyle = NewPage("enemyStyle", "Enemy Colors", "Enemy Colors & Borders",
+        "Kickable casts use the cast color. Casts that can't be interrupted use the shielded color and border.")
+    pEnemyStyle:Section("Cast Colors")
+    pEnemyStyle:Colors("Kickable cast", PALETTE_ALL, "enemyCastColorKey", 5)
+    pEnemyStyle:Colors("Shielded (non-interruptible) cast", PALETTE_SHIELD, "enemyShieldColorKey", 6)
+    pEnemyStyle:Section("Outline & Border")
+    pEnemyStyle:Checks({ { "Show Outline Border", "enemyShowBorder" } })
+    pEnemyStyle:Sliders({ { "Outline Thickness", "enemyBorderThickness", 1, 4, 1, "%s: %dpx" } })
+    pEnemyStyle:Colors("Border color (kickable)", PALETTE_OUTLINE, "enemyBorderColorKey", 6)
+    pEnemyStyle:Colors("Border color (shielded)", PALETTE_SHIELD, "enemyShieldBorderColorKey", 6)
+    pEnemyStyle:Finish()
+
+    ---------------------------------------------------------------------------
+    -- UNIT BARS
+    ---------------------------------------------------------------------------
+    NavGroup("Unit Bars")
+    local pPlayer = UnitLayoutPage("player", "Player", "Player Bar",
+        "Your own cast bar, with an optional latency window and global cooldown bar.")
+    pPlayer:Section("Latency", "Shades the end of a cast by your world latency - the window where you can queue the next spell.")
+    pPlayer:Checks({
+        { "Show Latency Window", "showLatency" },
+        { "Show Latency in ms", "showLatencyText" },
+    })
+    pPlayer:Section("Global Cooldown Bar")
+    pPlayer:Checks({ { "Show GCD Bar Below Player Bar", "showGCD" } }, true)
+    pPlayer:Sliders({
+        { "GCD Bar Height", "gcdHeight", 1, 14, 1, "%s: %dpx" },
+        { "Gap Below Cast Bar", "gcdGap", 0, 12, 1, "%s: %dpx" },
+    })
+    pPlayer:Finish()
+
+    local pPlayerStyle = NewPage("playerStyle", "Player Colors", "Player Colors",
+        "Fill, text and border colors for your own cast bar. Channels use the shared channel color (Appearance > Shared Colors).")
+    pPlayerStyle:Section("Bar Fill")
+    pPlayerStyle:Colors(nil, PALETTE_ALL, "playerCastColorKey", 5, function(_, pal)
+        CFG.playerCastColor = { pal.r, pal.g, pal.b, 1 }
         FP_CB.Save("playerCastColor")
-        FP_CB.RefreshAllBars()
-        for _, cg in ipairs(registeredColorGrids) do
-            if cg.dbKey == "playerCastColorKey" and cg.RefreshHighlights then
-                cg.RefreshHighlights()
-            end
-        end
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Cast Bars:|r Player cast bar color reset to Neon Cyan.")
     end)
-
-    ---------------------------------------------------------------------------
-    -- PLAYER SPELL CAST TEXT COLOR (Right Below Cast Bar Color!)
-    ---------------------------------------------------------------------------
-    local yTextHeader = yPCB - 44
-    CreateSectionHeader(cTypo, "PLAYER SPELL & TIMER TEXT COLOR", yTextHeader)
-
-    local lblPText = cTypo:CreateFontString(nil, "OVERLAY")
-    lblPText:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblPText:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblPText:SetPoint("TOPLEFT", cTypo, "TOPLEFT", 10, yTextHeader - 24)
-    lblPText:SetText("Spell Name & Timer Text Color (Default: Pure White):")
-
-    local yPTC = CreateColorGrid(cTypo, PALETTE_TEXT, "playerSpellTextColorKey", yTextHeader - 42, 5, 92, 22, function(cKey, pal)
-        if pal then
-            CFG.playerSpellTextColor = { pal.r, pal.g, pal.b, 1 }
-            FP_CB.Save("playerSpellTextColor")
-        end
-        FP_CB.RefreshAllBars()
-    end)
-
-    CreateActionButton(cTypo, "Custom Text Color...", 10, yPTC - 8, 130, 24, function()
-        local cur = CFG.playerSpellTextColor or {1, 1, 1, 1}
-        OpenCustomColorPicker(cur[1], cur[2], cur[3], function(r, g, b)
-            CFG.playerSpellTextColor = { r, g, b, 1 }
-            CFG.playerSpellTextColorKey = "CUSTOM"
-            FP_CB.Save("playerSpellTextColor")
-            FP_CB.Save("playerSpellTextColorKey")
+    pPlayerStyle:Buttons({
+        { "Custom Color...", 130, function()
+            OpenColorPicker(CFG.playerCastColor or { 0, 0.85, 1 }, function(r, g, b)
+                CFG.playerCastColor = { r, g, b, 1 }
+                FP_CB.Save("playerCastColor")
+                Set("playerCastColorKey", "CUSTOM")
+                FP_CB.RefreshAllBars()
+            end)
+        end },
+        { "Reset to Cyan", 120, function()
+            CFG.playerCastColor = { 0.00, 0.85, 1.00, 1 }
+            FP_CB.Save("playerCastColor")
+            Set("playerCastColorKey", "CYAN")
             FP_CB.RefreshAllBars()
-            for _, cg in ipairs(registeredColorGrids) do
-                if cg.dbKey == "playerSpellTextColorKey" and cg.RefreshHighlights then
-                    cg.RefreshHighlights()
-                end
-            end
-        end)
-    end)
-
-    CreateActionButton(cTypo, "Reset Text to White", 150, yPTC - 8, 130, 24, function()
-        CFG.playerSpellTextColorKey = "WHITE"
-        CFG.playerSpellTextColor = { 1.00, 1.00, 1.00, 1 }
-        FP_CB.Save("playerSpellTextColorKey")
+        end },
+    })
+    pPlayerStyle:Section("Spell & Timer Text")
+    pPlayerStyle:Colors(nil, PALETTE_TEXT, "playerSpellTextColorKey", 5, function(_, pal)
+        CFG.playerSpellTextColor = { pal.r, pal.g, pal.b, 1 }
         FP_CB.Save("playerSpellTextColor")
-        FP_CB.RefreshAllBars()
-        for _, cg in ipairs(registeredColorGrids) do
-            if cg.dbKey == "playerSpellTextColorKey" and cg.RefreshHighlights then
-                cg.RefreshHighlights()
-            end
-        end
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Cast Bars:|r Player spell text color reset to Pure White.")
     end)
+    pPlayerStyle:Buttons({
+        { "Custom Color...", 130, function()
+            OpenColorPicker(CFG.playerSpellTextColor or { 1, 1, 1 }, function(r, g, b)
+                CFG.playerSpellTextColor = { r, g, b, 1 }
+                FP_CB.Save("playerSpellTextColor")
+                Set("playerSpellTextColorKey", "CUSTOM")
+                FP_CB.RefreshAllBars()
+            end)
+        end },
+        { "Reset to White", 120, function()
+            CFG.playerSpellTextColor = { 1, 1, 1, 1 }
+            FP_CB.Save("playerSpellTextColor")
+            Set("playerSpellTextColorKey", "WHITE")
+            FP_CB.RefreshAllBars()
+        end },
+    })
+    UnitBorderSection(pPlayerStyle, "player")
+    pPlayerStyle:Finish()
 
-    CreateActionButton(cTypo, "Test Player Cast (4s)", 290, yPTC - 8, 150, 24, function()
-        FP_CB.SimulateCast(false, "player")
-    end)
+    for _, u in ipairs({ { "target", "Target" }, { "focus", "Focus" } }) do
+        local unit, U = u[1], u[2]
+        local p = UnitLayoutPage(unit, U, U .. " Bar",
+            "Cast bar for your " .. unit .. ". Shielded casts use the shared non-interruptible color (Appearance > Shared Colors).")
+        p:Section("Bar Color")
+        p:Colors(nil, PALETTE_ALL, unit .. "CastColorKey", 5)
+        UnitBorderSection(p, unit)
+        p:Finish()
+    end
 
     ---------------------------------------------------------------------------
-    -- TAB 5: TARGET & FOCUS (Sub-tabs with full immediate visibility)
+    -- APPEARANCE
     ---------------------------------------------------------------------------
-    local panelTarget = CreateFrame("Frame", nil, cTarget)
-    panelTarget:SetPoint("TOPLEFT", cTarget, "TOPLEFT", 0, -38)
-    panelTarget:SetSize(485, 580)
+    NavGroup("Appearance")
+    local pFonts = NewPage("fonts", "Fonts & Text", "Fonts & Text",
+        "Font used by every cast bar. The custom fonts ship with this addon, so they work without ForeverPlates.")
+    pFonts:Section("Font")
+    local fontItems = {}
+    for _, it in ipairs({
+        { "forced", "Forced Square" }, { "expressway", "Expressway" }, { "carlito", "Carlito" },
+        { "blizzard", "Blizzard Friz" }, { "arial", "Arial Narrow" }, { "morpheus", "Morpheus" }, { "skurri", "Skurri" },
+    }) do
+        fontItems[#fontItems + 1] = { it[1], it[2], FP_CB.GetFontPath(it[1]) }
+    end
+    Choices(pFonts, fontItems, 4, 114,
+        function(k) return (CFG.font or "forced") == k end,
+        function(k) Set("font", k) end, "font")
 
-    local panelFocus = CreateFrame("Frame", nil, cTarget)
-    panelFocus:SetPoint("TOPLEFT", cTarget, "TOPLEFT", 0, -38)
-    panelFocus:SetSize(485, 580)
-    panelFocus:Hide()
+    pFonts:Section("Text Outline")
+    Choices(pFonts, { { "NONE", "None" }, { "OUTLINE", "Outline" }, { "THICKOUTLINE", "Thick" } }, 3, 96,
+        function(k) return (CFG.fontOutline or "OUTLINE") == k end,
+        function(k) Set("fontOutline", k) end, "fontOutline")
 
-    local subBtnW, subBtnH = 230, 24
-    local subBtnTarget = CreateFrame("Button", nil, cTarget)
-    subBtnTarget:SetSize(subBtnW, subBtnH)
-    subBtnTarget:SetPoint("TOPLEFT", cTarget, "TOPLEFT", 10, -6)
-    local sbgT = subBtnTarget:CreateTexture(nil, "BACKGROUND")
-    sbgT:SetAllPoints()
-    sbgT:SetTexture(FLAT_TEXTURE)
-    sbgT:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-    subBtnTarget.bg = sbgT
-    subBtnTarget.border = CreatePixelBorder(subBtnTarget, 1, 0.00, 0.85, 1.00, 1.0)
-    local sTxtT = subBtnTarget:CreateFontString(nil, "OVERLAY")
-    sTxtT:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-    sTxtT:SetPoint("CENTER")
-    sTxtT:SetText("TARGET CAST BAR")
-    sTxtT:SetTextColor(1.0, 1.0, 1.0, 1.0)
-    subBtnTarget.text = sTxtT
+    pFonts:Section("Font Sizes", "The player and enemy plate sizes are also on their own pages.")
+    pFonts:Sliders({
+        { "Target & Focus", "fontSize", 8, 28, 1, "%s: %dpt" },
+        { "Player", "playerFontSize", 8, 28, 1, "%s: %dpt" },
+        { "Enemy Plates", "enemyCastFontSize", 7, 18, 1, "%s: %dpt" },
+    })
+    pFonts:Finish()
 
-    local subBtnFocus = CreateFrame("Button", nil, cTarget)
-    subBtnFocus:SetSize(subBtnW, subBtnH)
-    subBtnFocus:SetPoint("TOPRIGHT", cTarget, "TOPRIGHT", -10, -6)
-    local sbgF = subBtnFocus:CreateTexture(nil, "BACKGROUND")
-    sbgF:SetAllPoints()
-    sbgF:SetTexture(FLAT_TEXTURE)
-    sbgF:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-    subBtnFocus.bg = sbgF
-    subBtnFocus.border = CreatePixelBorder(subBtnFocus, 1, 0.20, 0.23, 0.28, 0.8)
-    local sTxtF = subBtnFocus:CreateFontString(nil, "OVERLAY")
-    sTxtF:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-    sTxtF:SetPoint("CENTER")
-    sTxtF:SetText("FOCUS CAST BAR")
-    sTxtF:SetTextColor(0.65, 0.70, 0.75, 1.0)
-    subBtnFocus.text = sTxtF
-
-    local currentSubTab = "TARGET"
-    local function SelectSubTab(which)
-        currentSubTab = which
-        if which == "TARGET" then
-            subBtnTarget.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-            subBtnTarget.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            subBtnTarget.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
-            subBtnFocus.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-            subBtnFocus.border:SetColor(0.20, 0.23, 0.28, 0.8)
-            subBtnFocus.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-            panelTarget:Show()
-            panelFocus:Hide()
+    local pEffects = NewPage("effects", "Shared Colors", "Shared Colors & Effects",
+        "Colors and effects used by more than one bar, plus Blizzard cast bar handling.")
+    pEffects:Section("Shared Colors")
+    pEffects:Colors("Channeled spells (player & enemy)", PALETTE_CHANNEL, "colorChannelKey", 5)
+    pEffects:Colors("Target & Focus shielded (non-interruptible)", PALETTE_SHIELD, "colorNoIntKey", 6)
+    pEffects:Section("Effects")
+    pEffects:Checks({
+        { "Spark at Progress Edge", "barSpark" },
+        { "Flash \"Interrupted!\"", "showInterruptedFlash", nil, tip = "Briefly show a red Interrupted! bar when a cast is kicked." },
+        { "Show Borders (master)", "showBorder", nil, tip = "When off, no cast bar draws a border, regardless of per-bar settings." },
+    })
+    pEffects:Section("Blizzard Cast Bars")
+    pEffects:Checks({
+        { "Hide Blizzard Cast Bars", "hideBlizzardBars", function() FP_CB.ApplyBlizzardSuppression() end,
+          tip = "Hides Blizzard's own player, target, focus and nameplate cast bars." },
+    }, true)
+    local reloadNote = pEffects:Note(" ")
+    RegisterKey("hideBlizzardBars", function()
+        if not CFG.hideBlizzardBars and FP_CB.NeedsReloadToRestore and FP_CB.NeedsReloadToRestore() then
+            reloadNote:SetText("|cffffaa00Blizzard bars are visible again but only fully work after a reload - click Reload UI below.|r")
         else
-            subBtnFocus.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-            subBtnFocus.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            subBtnFocus.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
-            subBtnTarget.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-            subBtnTarget.border:SetColor(0.20, 0.23, 0.28, 0.8)
-            subBtnTarget.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-            panelTarget:Hide()
-            panelFocus:Show()
+            reloadNote:SetText("Turning this off restores Blizzard's bars. A /reload makes them fully functional again.")
         end
+    end)
+    pEffects:Finish()
+
+    ---------------------------------------------------------------------------
+    -- Footer
+    ---------------------------------------------------------------------------
+    local footLine = Tex(f, "ARTWORK", C.line)
+    footLine:SetHeight(1)
+    footLine:SetPoint("BOTTOMLEFT", 1, 44)
+    footLine:SetPoint("BOTTOMRIGHT", -1, 44)
+
+    local saved = Label(f, 10, C.dim, "")
+    saved:SetPoint("BOTTOMLEFT", 18, 18)
+    saved:SetText("Changes save automatically")
+
+    local function FooterButton(text, w, onClick)
+        local b = HeaderButton(text, w)
+        b:SetHeight(26)
+        b:SetScript("OnClick", function() Click(); onClick() end)
+        return b
     end
-
-    subBtnTarget:SetScript("OnClick", function()
-        PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
-        SelectSubTab("TARGET")
-    end)
-    subBtnFocus:SetScript("OnClick", function()
-        PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
-        SelectSubTab("FOCUS")
-    end)
-
-    local subLine = cTarget:CreateTexture(nil, "ARTWORK")
-    subLine:SetTexture(FLAT_TEXTURE)
-    subLine:SetVertexColor(0.18, 0.22, 0.28, 0.85)
-    subLine:SetHeight(1)
-    subLine:SetPoint("TOPLEFT", cTarget, "TOPLEFT", 10, -34)
-    subLine:SetPoint("TOPRIGHT", cTarget, "TOPRIGHT", -10, -34)
-
-    local function OnFocusVisibilityChanged(shown)
-        if FP_CB.singleBars and FP_CB.singleBars["focus"] then
-            if not shown then
-                FP_CB.singleBars["focus"].anchor:Hide()
-                FP_CB.singleBars["focus"].activeCast = nil
-                FP_CB.singleBars["focus"].isTest = false
-            end
-        end
-    end
-
-    -- =========================================================================
-    -- SUB-PANEL 1: TARGET BAR
-    -- =========================================================================
-    CreateSectionHeader(panelTarget, "TARGET CAST BAR SETTINGS", 0)
-    CreateCheckbox(panelTarget, "Show Target Cast Bar", "showTargetBar", 10, -22, function(shown)
-        if FP_CB.singleBars and FP_CB.singleBars["target"] then
-            if not shown then
-                FP_CB.singleBars["target"].anchor:Hide()
-                FP_CB.singleBars["target"].activeCast = nil
-                FP_CB.singleBars["target"].isTest = false
-            end
-        end
-    end)
-    CreateCheckbox(panelTarget, "Show Focus Cast Bar", "showFocusBar", 250, -22, OnFocusVisibilityChanged)
-    CreateCheckbox(panelTarget, "Lock Target Bar (Uncheck to Drag)", "targetLocked", 10, -48, function()
-        if FP_CB.singleBars and FP_CB.singleBars["target"] then
-            FP_CB.singleBars["target"]:UpdateLayout()
-        end
-    end)
-
-    CreateSectionHeader(panelTarget, "TARGET BAR SIZING & POSITIONING", -80)
-    CreateSlider(panelTarget, "Target Bar Width", "targetW", 120, 450, 5, "%s: %dpx", 10, -102)
-    CreateSlider(panelTarget, "Target Bar Height", "targetH", 12, 40, 1, "%s: %dpx", 250, -102)
-    CreateSlider(panelTarget, "Icon Gap (0 = Flush)", "targetIconGap", -4, 12, 1, "%s: %dpx", 10, -152)
-
-    CreateActionButton(panelTarget, "Reset Target Position", 250, -152, 160, 24, function()
-        CFG.targetPt = "CENTER"
-        CFG.targetRPt = "CENTER"
-        CFG.targetX = 0
-        CFG.targetY = -215
-        FP_CB.Save("targetPt"); FP_CB.Save("targetRPt")
-        FP_CB.Save("targetX");  FP_CB.Save("targetY")
-        if FP_CB.singleBars and FP_CB.singleBars["target"] then
-            local a = FP_CB.singleBars["target"].anchor
-            a:ClearAllPoints()
-            a:SetPoint("CENTER", UIParent, "CENTER", 0, -215)
-            FP_CB.singleBars["target"]:UpdateLayout()
-        end
-        FP_CB.RefreshAllBars()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Target cast bar position reset to center.")
-    end)
-
-    CreateSectionHeader(panelTarget, "TARGET CAST BAR COLOR", -196)
-    local yTC = CreateColorGrid(panelTarget, PALETTE_ALL, "targetCastColorKey", -218, 5, 92, 22)
-
-    CreateSectionHeader(panelTarget, "TARGET OUTLINE & BORDER", yTC - 10)
-    CreateCheckbox(panelTarget, "Show Outline Border", "targetShowBorder", 10, yTC - 32)
-    CreateSlider(panelTarget, "Outline Thickness", "targetBorderThickness", 1, 4, 1, "%s: %dpx", 250, yTC - 32)
-
-    local lblTBorder = panelTarget:CreateFontString(nil, "OVERLAY")
-    lblTBorder:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblTBorder:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblTBorder:SetPoint("TOPLEFT", panelTarget, "TOPLEFT", 10, yTC - 80)
-    lblTBorder:SetText("Target Border Color:")
-
-    local yTB = CreateColorGrid(panelTarget, PALETTE_OUTLINE, "targetBorderColorKey", yTC - 96, 6, 76, 22)
-
-    CreateSectionHeader(panelTarget, "TARGET DISPLAYED ELEMENTS", yTB - 10)
-    CreateCheckbox(panelTarget, "Show Spell Icon", "showTargetIcon", 10, yTB - 32)
-    CreateCheckbox(panelTarget, "Show Spell Name", "showTargetSpell", 10, yTB - 58)
-    CreateCheckbox(panelTarget, "Show Cast Timer", "showTargetTimer", 10, yTB - 84)
-
-    -- =========================================================================
-    -- SUB-PANEL 2: FOCUS BAR (Immediate top-level visibility)
-    -- =========================================================================
-    CreateSectionHeader(panelFocus, "FOCUS CAST BAR SETTINGS", 0)
-    CreateCheckbox(panelFocus, "Show Focus Cast Bar", "showFocusBar", 10, -22, OnFocusVisibilityChanged)
-    CreateCheckbox(panelFocus, "Show Target Cast Bar", "showTargetBar", 250, -22, function(shown)
-        if FP_CB.singleBars and FP_CB.singleBars["target"] then
-            if not shown then
-                FP_CB.singleBars["target"].anchor:Hide()
-                FP_CB.singleBars["target"].activeCast = nil
-                FP_CB.singleBars["target"].isTest = false
-            end
-        end
-    end)
-    CreateCheckbox(panelFocus, "Lock Focus Bar (Uncheck to Drag)", "focusLocked", 10, -48, function()
-        if FP_CB.singleBars and FP_CB.singleBars["focus"] then
-            FP_CB.singleBars["focus"]:UpdateLayout()
-        end
-    end)
-
-    CreateSectionHeader(panelFocus, "FOCUS BAR SIZING & POSITIONING", -80)
-    CreateSlider(panelFocus, "Focus Bar Width", "focusW", 120, 450, 5, "%s: %dpx", 10, -102)
-    CreateSlider(panelFocus, "Focus Bar Height", "focusH", 12, 40, 1, "%s: %dpx", 250, -102)
-    CreateSlider(panelFocus, "Icon Gap (0 = Flush)", "focusIconGap", -4, 12, 1, "%s: %dpx", 10, -152)
-
-    CreateActionButton(panelFocus, "Reset Focus Position", 250, -152, 160, 24, function()
-        CFG.focusPt = "CENTER"
-        CFG.focusRPt = "CENTER"
-        CFG.focusX = 0
-        CFG.focusY = -245
-        FP_CB.Save("focusPt"); FP_CB.Save("focusRPt")
-        FP_CB.Save("focusX");  FP_CB.Save("focusY")
-        if FP_CB.singleBars and FP_CB.singleBars["focus"] then
-            local a = FP_CB.singleBars["focus"].anchor
-            a:ClearAllPoints()
-            a:SetPoint("CENTER", UIParent, "CENTER", 0, -245)
-            FP_CB.singleBars["focus"]:UpdateLayout()
-        end
-        FP_CB.RefreshAllBars()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Focus cast bar position reset to center.")
-    end)
-
-    CreateSectionHeader(panelFocus, "FOCUS CAST BAR COLOR", -196)
-    local yFC = CreateColorGrid(panelFocus, PALETTE_ALL, "focusCastColorKey", -218, 5, 92, 22)
-
-    CreateSectionHeader(panelFocus, "FOCUS OUTLINE & BORDER", yFC - 10)
-    CreateCheckbox(panelFocus, "Show Outline Border", "focusShowBorder", 10, yFC - 32)
-    CreateSlider(panelFocus, "Outline Thickness", "focusBorderThickness", 1, 4, 1, "%s: %dpx", 250, yFC - 32)
-
-    local lblFBorder = panelFocus:CreateFontString(nil, "OVERLAY")
-    lblFBorder:SetFont(DEFAULT_FONT, 9, "OUTLINE")
-    lblFBorder:SetTextColor(0.85, 0.85, 0.85, 1)
-    lblFBorder:SetPoint("TOPLEFT", panelFocus, "TOPLEFT", 10, yFC - 80)
-    lblFBorder:SetText("Focus Border Color:")
-
-    local yFB = CreateColorGrid(panelFocus, PALETTE_OUTLINE, "focusBorderColorKey", yFC - 96, 6, 76, 22)
-
-    CreateSectionHeader(panelFocus, "FOCUS DISPLAYED ELEMENTS", yFB - 10)
-    CreateCheckbox(panelFocus, "Show Spell Icon", "showFocusIcon", 10, yFB - 32)
-    CreateCheckbox(panelFocus, "Show Spell Name", "showFocusSpell", 10, yFB - 58)
-    CreateCheckbox(panelFocus, "Show Cast Timer", "showFocusTimer", 10, yFB - 84)
+    local closeFoot = FooterButton("Close", 90, function() f:Hide() end)
+    closeFoot:SetPoint("BOTTOMRIGHT", -14, 10)
+    closeFoot.restEdge = C.accent
+    SetEdge(closeFoot.border, C.accent)
+    local reloadFoot = FooterButton("Reload UI", 100, function() ReloadUI() end)
+    reloadFoot:SetPoint("RIGHT", closeFoot, "LEFT", -8, 0)
+    local resetFoot = FooterButton("Reset Defaults", 120, function() StaticPopup_Show("FP_CB_RESET_DEFAULTS") end)
+    resetFoot:SetPoint("RIGHT", reloadFoot, "LEFT", -8, 0)
 
     ---------------------------------------------------------------------------
-    -- Control Synchronization Utility (for Reset Defaults and OnShow)
-    ---------------------------------------------------------------------------
-    local function SyncAllControls()
-        for _, reg in ipairs(registeredCheckboxes) do
-            reg.RefreshState()
-        end
-        for _, reg in ipairs(registeredSliders) do
-            local val = CFG[reg.dbKey] or reg.minVal
-            reg.UpdateValue(val)
-        end
-        for _, reg in ipairs(registeredColorGrids) do
-            reg.RefreshHighlights()
-        end
-        if RefreshFontHighlights then RefreshFontHighlights() end
-        if RefreshOlHighlights then RefreshOlHighlights() end
-    end
-
-    ---------------------------------------------------------------------------
-    -- PINNED FOOTER: Test All, Reset Defaults, Save & Close, Reload UI
-    ---------------------------------------------------------------------------
-    local footerLine = f:CreateTexture(nil, "ARTWORK")
-    footerLine:SetTexture(FLAT_TEXTURE)
-    footerLine:SetVertexColor(0.18, 0.22, 0.28, 0.85)
-    footerLine:SetHeight(1)
-    footerLine:SetPoint("BOTTOMLEFT", f, "BOTTOMLEFT", 16, 44)
-    footerLine:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -16, 44)
-
-    local function CreateFooterButton(parent, labelText, posX, posY, width, height, onClick)
-        local btn = CreateFrame("Button", nil, parent)
-        btn:SetSize(width, height)
-        btn:SetPoint("BOTTOMLEFT", parent, "BOTTOMLEFT", posX, posY)
-
-        local btnBg = btn:CreateTexture(nil, "BACKGROUND")
-        btnBg:SetAllPoints(btn)
-        btnBg:SetTexture(FLAT_TEXTURE)
-        btnBg:SetVertexColor(0.12, 0.14, 0.18, 0.95)
-        btn.bg = btnBg
-
-        local border = CreatePixelBorder(btn, 1, 0.25, 0.28, 0.34, 1.0)
-        btn.border = border
-
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-        lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
-        lbl:SetText(labelText)
-        lbl:SetTextColor(0.90, 0.90, 0.90, 1)
-        btn.label = lbl
-
-        btn:SetScript("OnEnter", function()
-            btnBg:SetVertexColor(0.18, 0.22, 0.28, 1.0)
-            border:SetColor(0.00, 0.85, 1.00, 1.0)
-            lbl:SetTextColor(0.00, 0.85, 1.00, 1)
-        end)
-        btn:SetScript("OnLeave", function()
-            btnBg:SetVertexColor(0.12, 0.14, 0.18, 0.95)
-            border:SetColor(0.25, 0.28, 0.34, 1.0)
-            lbl:SetTextColor(0.90, 0.90, 0.90, 1)
-        end)
-        btn:SetScript("OnClick", function()
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
-            if onClick then onClick(btn) end
-        end)
-
-        return btn
-    end
-
-    -- 1. Footer Test All Bars Button
-    local footTestBtn = CreateFooterButton(f, "Test All Bars", 16, 12, 110, 26, function(btn)
-        if isTestActive then
-            UpdateTestButtonVisual(false)
-            btn.label:SetText("Test All Bars")
-            btn.bg:SetVertexColor(0.12, 0.14, 0.18, 0.95)
-            FP_CB.HideTestAll()
-        else
-            UpdateTestButtonVisual(true)
-            btn.label:SetText("Hide Test")
-            btn.bg:SetVertexColor(0.35, 0.15, 0.15, 0.95)
-            FP_CB.ShowTestAll()
-        end
-    end)
-
-    -- 2. Footer Reset Defaults Button
-    CreateFooterButton(f, "Reset Defaults", 134, 12, 110, 26, function()
-        if FP_CB.ResetToDefaults then
-            FP_CB.ResetToDefaults()
-        end
-        SyncAllControls()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Cast Bars:|r Settings reset to defaults.")
-    end)
-
-    -- 3. Footer Save & Close Button
-    local saveBtn = CreateFooterButton(f, "Save & Close", 252, 12, 130, 26, function()
-        FP_CB.RefreshAllBars()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Cast Bars:|r Settings applied and saved!")
-        f:Hide()
-    end)
-    saveBtn.bg:SetVertexColor(0.08, 0.28, 0.38, 0.95)
-    saveBtn.border:SetColor(0.00, 0.85, 1.00, 1.0)
-    saveBtn.label:SetTextColor(0.00, 0.85, 1.00, 1)
-
-    -- 4. Footer Reload UI Button
-    CreateFooterButton(f, "Reload UI", 390, 12, 110, 26, function()
-        ReloadUI()
-    end)
-
-    -- Default to ENEMY tab
-    SelectTab("ENEMY")
-
-    ---------------------------------------------------------------------------
-    -- OnShow Synchronization (Always reflects exact CFG)
+    -- Show / hide behaviour
     ---------------------------------------------------------------------------
     f:SetScript("OnShow", function()
-        SyncAllControls()
-        UpdateTestButtonVisual(isTestActive)
+        SyncAll()
+        UpdateTestButton()
+        if FP_CB.SetMoveMode then FP_CB.SetMoveMode(true) end
+    end)
+    f:SetScript("OnHide", function()
+        -- Never leave previews or drag placeholders on screen after closing
+        if FP_CB.IsTesting and FP_CB.IsTesting() then FP_CB.HideTestAll() end
+        if FP_CB.SetMoveMode then FP_CB.SetMoveMode(false) end
+        UpdateTestButton()
     end)
 
-    ---------------------------------------------------------------------------
-    -- Register with Blizzard Game Menu AddOn Settings
-    ---------------------------------------------------------------------------
-    if Settings and Settings.RegisterCanvasLayoutCategory then
-        local category = Settings.RegisterCanvasLayoutCategory(f, "ForeverPlates Cast Bars")
-        Settings.RegisterAddOnCategory(category)
-    elseif InterfaceOptions_AddCategory then
-        InterfaceOptions_AddCategory(f)
-    end
+    local last = ForeverPlatesCastBarsDB and ForeverPlatesCastBarsDB._lastPage
+    SelectPage(pages[last] and last or "overview")
 
     guiFrame = f
-    return guiFrame
+    return f
 end
 
 function FP_CB.ToggleGUI()
     local g = FP_CB.CreateGUI()
-    if g:IsShown() then
-        g:Hide()
+    g:SetShown(not g:IsShown())
+end
+
+-------------------------------------------------------------------------------
+-- Small entry under Game Menu > Options > AddOns that opens the full window
+-------------------------------------------------------------------------------
+function FP_CB.RegisterSettingsPanel()
+    if FP_CB._settingsRegistered then return end
+    local hasSettings = Settings and Settings.RegisterCanvasLayoutCategory
+    if not hasSettings and not InterfaceOptions_AddCategory then return end
+    FP_CB._settingsRegistered = true
+
+    local panel = CreateFrame("Frame")
+    panel.name = "ForeverPlates Cast Bars"
+
+    local t = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+    t:SetPoint("TOPLEFT", 16, -16)
+    t:SetText("ForeverPlates Cast Bars")
+
+    local d = panel:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    d:SetPoint("TOPLEFT", t, "BOTTOMLEFT", 0, -8)
+    d:SetText("All settings live in the ForeverPlates Cast Bars window. You can also type /fpc.")
+
+    local b = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
+    b:SetSize(200, 26)
+    b:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -12)
+    b:SetText("Open Settings Window")
+    b:SetScript("OnClick", function()
+        if SettingsPanel and SettingsPanel:IsShown() then HideUIPanel(SettingsPanel) end
+        if InterfaceOptionsFrame and InterfaceOptionsFrame:IsShown() then HideUIPanel(InterfaceOptionsFrame) end
+        FP_CB.CreateGUI():Show()
+    end)
+
+    if hasSettings then
+        local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
+        Settings.RegisterAddOnCategory(category)
     else
-        g:Show()
+        InterfaceOptions_AddCategory(panel)
     end
 end

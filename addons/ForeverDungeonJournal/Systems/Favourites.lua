@@ -1,3 +1,8 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemCount = GetItemCount or (C_Item and C_Item.GetItemCount)
+local GetItemIcon = GetItemIcon or (C_Item and C_Item.GetItemIconByID)
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 -- Favourites: persistent item favourites plus a home-page popup.
 -- Boss-loot rows can be right-clicked to add/remove items.
 local FDJ = _G.ForeverDungeonJournal_NS
@@ -281,8 +286,19 @@ local function RefreshOpenWindow()
 end
 
 
+-- MouseIsOver() was removed from the modern UI; Region:IsMouseOver() replaces it.
+local function MouseIsOver(region)
+    if not region then return false end
+    if _G.MouseIsOver then return _G.MouseIsOver(region) end
+    if region.IsMouseOver then
+        local ok, over = pcall(region.IsMouseOver, region)
+        return ok and over == true
+    end
+    return false
+end
+
 local function IsMouseOverFavouriteMenu()
-    if MouseIsOver then
+    do
         local fallback = FDJ.favouriteContextMenu
         if fallback and fallback:IsShown() then
             -- Check both the container and the actual action button. Some WoW

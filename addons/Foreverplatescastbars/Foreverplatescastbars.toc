@@ -3,9 +3,10 @@
 ## IconTexture: Interface\AddOns\Foreverplatescastbars\BCB_Icon
 ## Notes: Cast bar display — enemy nameplates below plates, player, target, focus with latency, borders, and OLED configuration
 ## Author: Marcus Owens / GI-Ka
-## Version: 2.2.1
+## Version: 2.3.0
 ## SavedVariables: ForeverPlatesCastBarsDB, BetterCastBarsDB
 ## LoadSavedVariablesFirst: true
+## OptionalDeps: ForeverPlates, Blizzard_NamePlates
 ## Category-enUS: Combat
 ## DefaultState: enabled
 ## AllowLoadGameType: camelot

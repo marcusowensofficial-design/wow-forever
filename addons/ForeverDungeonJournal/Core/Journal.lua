@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetAddOnMetadata = GetAddOnMetadata or (C_AddOns and C_AddOns.GetAddOnMetadata)
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 _G.ForeverDungeonJournal_NS = FDJ
@@ -791,7 +794,8 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
         if CombatLogGetCurrentEventInfo then
             local _, subevent, _, _, _, _, _, destGUID, destName = CombatLogGetCurrentEventInfo()
             if not IsSecret(subevent) and subevent == "UNIT_DIED" and destGUID and not IsSecret(destGUID) then
-                local npcID = tonumber(destGUID:match("Creature%-%d+%-%d+%-%d+%-%d+%-(%d+)"))
+                local guidType, _, _, _, _, guidNpc = strsplit("-", destGUID)
+                local npcID = (guidType == "Creature" or guidType == "Vehicle") and tonumber(guidNpc) or nil
                 local matched = false
                 if npcID and FDJ.bossByNpcID and FDJ.bossByNpcID[npcID] then
                     local info = FDJ.bossByNpcID[npcID]

@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - Core Engine (v1.3.1)
+    ForeverLiquid - Core Engine (v1.4.0)
     Sleek, high-performance Neon Liquid XP, Gold & Loot session tracker for WoW Forever.
     Features:
     - Session auto-resume with timeout & manual pause/save
@@ -15,7 +15,7 @@ _G.FL = FL
 
 FL.version = (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON_NAME, "Version"))
     or (GetAddOnMetadata and GetAddOnMetadata(ADDON_NAME, "Version"))
-    or "1.3.1"
+    or "1.4.0"
 
 -- Global SavedVariables Reference
 _G.ForeverLiquidDB = _G.ForeverLiquidDB or {}
@@ -112,7 +112,10 @@ local DEFAULT_SETTINGS = {
         ahJackpotToast = true, -- Alert on lucrative AH drops
         ahJackpotMinGold = 5, -- Min gold threshold for jackpot toast (in whole gold)
         ahJackpotMultiplier = 5, -- 5x vendor price multiplier
+        recentWindowMinutes = 15, -- window for the rolling "recent" XP/Gold per hour rates
+        autoPauseMinutes = 0, -- 0 = off; otherwise auto-pause the session after N idle minutes
     },
+    history = {}, -- archived finished sessions (newest first, capped)
     savedSession = {}, -- [realmKey][playerKey] = { ... }
     roster = {}, -- [realmKey][playerKey] = { level, class, gold, restedXP, maxXP, location, isResting, lastSeen }
     lockouts = {}, -- [timestamps] for 5/hr instance lockout tracking
@@ -192,6 +195,7 @@ local session = {
     
     -- Transfer & Mana Tick Telemetry
     transfers = 0,
+    deaths = 0,
     lastLevel = 1,
     lastManaTick = 0,
     lastManaVal = 0,
@@ -1018,6 +1022,15 @@ function FL:ReportSession(channel)
     if (session.questsDone or 0) > 0 then
         table.insert(parts, string.format("Quests: %d", session.questsDone))
     end
+    if (session.deaths or 0) > 0 then
+        table.insert(parts, string.format("Deaths: %d", session.deaths))
+    end
+    if self.GetRecentRates then
+        local rXP, rGold, rMin = self:GetRecentRates()
+        if rXP and session.xpGained > 0 then
+            table.insert(parts, string.format("Last %dm: %s XP/hr", rMin, self.FormatNumber(rXP)))
+        end
+    end
     if (session.honorGained or 0) > 0 or (session.hkCount or 0) > 0 then
         table.insert(parts, string.format("PvP: %d HKs / +%d Honor", session.hkCount or 0, session.honorGained or 0))
     end
@@ -1100,6 +1113,8 @@ function FL:SaveSession(isExplicitPause)
         lootedMarketValue = session.lootedMarketValue or 0,
         recentDrops = session.recentDrops,
         instanceRuns = session.instanceRuns or {},
+        transfers = session.transfers or 0,
+        deaths = session.deaths or 0,
         
         saveTimestamp = time(),
         isPaused = isExplicitPause or session.isPaused or false,
@@ -1165,7 +1180,11 @@ function FL:RestoreSession(force)
             drop.resolved = true
         end
     end
+    session.transfers = saved.transfers or 0
+    session.deaths = saved.deaths or 0
     session.isPaused = saved.isPaused or false
+    -- A session restored in the paused state needs a pause anchor, otherwise the timer keeps running.
+    session.pauseStart = session.isPaused and GetTime() or nil
     
     if FL.UpdateHUD then FL:UpdateHUD() end
     if FL.UpdateDashboard then FL:UpdateDashboard() end
@@ -1196,6 +1215,7 @@ function FL:TogglePauseSession()
 end
 
 function FL:ResetSession()
+    if FL.ArchiveSession then FL:ArchiveSession("reset") end
     session.startTime = GetTime()
     session.pauseStart = nil
     session.isPaused = false
@@ -1240,6 +1260,9 @@ function FL:ResetSession()
     session.instanceRuns = {}
     session.activeRun = nil
     session.goalCelebrated = false
+    session.transfers = 0
+    session.deaths = 0
+    if FL.ResetInsights then FL:ResetInsights() end
     
     session.lootedItemsCount = 0
     session.lootedItemsValue = 0
@@ -1516,8 +1539,14 @@ function FL:GenerateDiscordReport()
     table.insert(lines, string.format("```yaml\n=== FOREVERLIQUID SESSION REPORT ===\nRealm: %s | Character: %s (Lv %d %s)\nDuration: %s\n```",
         realmKey, charName, level, className or "", clockStr))
     
-    table.insert(lines, string.format("> ⚡ **XP Progress**: +%s XP (%s/hr) | **Mobs**: %d kills | **Quests**: %d",
-        self.FormatNumber(session.xpGained), self.FormatNumber(self:GetXPRate()), session.mobKills, session.questsDone or 0))
+    table.insert(lines, string.format("> ⚡ **XP Progress**: +%s XP (%s/hr) | **Mobs**: %d kills | **Quests**: %d | **Deaths**: %d",
+        self.FormatNumber(session.xpGained), self.FormatNumber(self:GetXPRate()), session.mobKills, session.questsDone or 0, session.deaths or 0))
+    if self.GetRecentRates then
+        local rXP, rGold, rMin = self:GetRecentRates()
+        if rXP then
+            table.insert(lines, string.format("> 📈 **Last %d min**: %s XP/hr | %s/hr gold", rMin, self.FormatNumber(rXP), self.FormatMoney(rGold or 0, true)))
+        end
+    end
     
     local repData = self:GetWatchedFactionData()
     if repData and (session.repGained or 0) > 0 then
@@ -2879,7 +2908,7 @@ eventFrame:RegisterEvent("QUEST_TURNED_IN")
 eventFrame:RegisterEvent("UPDATE_FACTION")
 eventFrame:RegisterEvent("CHAT_MSG_COMBAT_HONOR_GAIN")
 eventFrame:RegisterEvent("PLAYER_PVP_KILLS_CHANGED")
-eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+eventFrame:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "player")
 eventFrame:RegisterEvent("MAIL_SHOW")
 eventFrame:RegisterEvent("MAIL_CLOSED")
 eventFrame:RegisterEvent("TRADE_SHOW")
@@ -2888,7 +2917,7 @@ eventFrame:RegisterEvent("BANKFRAME_OPENED")
 eventFrame:RegisterEvent("BANKFRAME_CLOSED")
 eventFrame:RegisterEvent("GUILDBANKFRAME_OPENED")
 eventFrame:RegisterEvent("GUILDBANKFRAME_CLOSED")
-eventFrame:RegisterEvent("UNIT_POWER_UPDATE")
+eventFrame:RegisterUnitEvent("UNIT_POWER_UPDATE", "player")
 
 eventFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" then
@@ -2972,12 +3001,14 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             end
         end
         
+        if not restored and FL.ArchiveSavedSession then FL:ArchiveSavedSession() end
+        
         FL:RecalculateLootedValue()
         FL:RefreshPendingDrops()
         FL:UpdateRosterData()
         FL:CheckInstanceStatus()
         if FL.UpdateHUD then FL:UpdateHUD() end
-        print(string.format("|cff00ff7fForeverLiquid|r v%s loaded. Type |cffffffff/fl|r or left-click the Gold Pod for dashboard.", FL.version or "1.3.1"))
+        print(string.format("|cff00ff7fForeverLiquid|r v%s loaded. Type |cffffffff/fl|r or left-click the Gold Pod for dashboard.", FL.version or "1.4.0"))
         
     elseif event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" then
         session.currentXP = UnitXP("player")

@@ -2,7 +2,7 @@
 ## Title: |cffffcc00Dungeon|r |cffffffffJournal|r
 ## Notes: Boss, loot and quest journal for WoW Classic dungeons.
 ## Author: Marcus
-## Version: 1.7.3
+## Version: 1.7.4
 ## IconTexture: Interface\Icons\INV_Misc_Book_09
 ## AddonCompartmentFunc: ForeverDungeonJournal_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: ForeverDungeonJournal_OnAddonCompartmentEnter
@@ -84,6 +84,7 @@ UI\Portraits.lua
 UI\Tooltips.lua
 UI\DungeonMapsTab.lua
 UI\SearchWishlist.lua
+UI\LootExplorerLocale.lua
 UI\LootExplorer.lua
 UI\HomeTab.lua
 UI\BossTab.lua

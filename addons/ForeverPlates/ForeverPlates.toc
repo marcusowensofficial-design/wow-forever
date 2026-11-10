@@ -11,4 +11,5 @@
 ## AllowLoadGameType: camelot
 
 core.lua
+profiles.lua
 gui.lua

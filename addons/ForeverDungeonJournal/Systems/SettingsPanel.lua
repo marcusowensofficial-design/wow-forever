@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetAddOnMetadata = GetAddOnMetadata or (C_AddOns and C_AddOns.GetAddOnMetadata)
 -- Settings panel (right-click the minimap button, or /dj options).
 -- Also owns the two "auto-hide" rules for the dungeon list on the home page.
 local FDJ = _G.ForeverDungeonJournal_NS

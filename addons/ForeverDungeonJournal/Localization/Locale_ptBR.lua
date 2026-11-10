@@ -293,3 +293,33 @@ FDJ.Locales.ptBR = {
     ["TURN_IN_HERE"] = "Entregar aqui",
     ["TRACK_ACCEPT"] = "Clique para aceitar a missão",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.ptBR
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Compartilhar com o grupo",
+        ALL_DUNGEONS = "Todas as masmorras",
+        THIS_DUNGEON = "Esta masmorra",
+        NO_WISHLIST_ITEMS = "Nenhum item na sua lista de desejos ainda.",
+        ADD_TO_WISHLIST = "Adicionar à lista de desejos",
+        REMOVE_FROM_WISHLIST = "Remover da lista de desejos",
+        WISHLIST_TOOLTIP_DESC = "Acompanhe este item e receba um alerta no jogo quando ele cair.",
+        ITEM_REQ_LEVEL = "Requer nível %d",
+        OWNED = "[Possuído]",
+        WEAPONS = "Armas",
+        ARMOR = "Armaduras",
+        ACCESSORIES = "Acessórios",
+        QUEST_ITEMS = "Itens de missão",
+        NO_LOOT_MATCHES_FILTER = "Nenhum saque corresponde aos filtros atuais.",
+        NO_LOOT_RECORDED = "Nenhum saque registrado.",
+        CLOSE = "Fechar",
+        WAYPOINT_CLEAR_TIP = "Clique esquerdo: abrir missão. Clique direito: remover marcador.",
+        WISHLIST_DROP = "Item da lista de desejos obtido:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

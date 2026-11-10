@@ -1,5 +1,5 @@
 --[[
-    ForeverPlates Cast Bars - Core Engine (v2.2.0)
+    ForeverPlates Cast Bars - Core Engine (v2.3.0)
     Optimized for WoW Forever (Camelot 12.0 engine) & Modern WoW.
     
     Features:
@@ -37,6 +37,7 @@ local COLOR_PALETTES = {
     SILVER = { r = 0.70, g = 0.74, b = 0.82, name = "Steel Silver" },
     DARK   = { r = 0.32, g = 0.35, b = 0.40, name = "Dark Slate" },
     BLACK  = { r = 0.05, g = 0.05, b = 0.05, name = "Pitch Black" },
+    CHANNEL = { r = 0.10, g = 0.85, b = 0.35, name = "Channel Green" },
     CUSTOM = { r = 1.00, g = 1.00, b = 1.00, name = "Custom Color" },
 }
 FP_CB.COLOR_PALETTES = COLOR_PALETTES
@@ -52,23 +53,69 @@ local OUTLINE_PALETTES = {
 }
 FP_CB.OUTLINE_PALETTES = OUTLINE_PALETTES
 
--- Font Registry with fallback support
+-- Font Registry. Custom fonts ship in this addon's own media folder so the
+-- addon works without ForeverPlates installed; ForeverPlates' copy is a
+-- secondary fallback and Blizzard's Friz Quadrata is the final fallback.
+local MEDIA = "Interface\\AddOns\\Foreverplatescastbars\\media\\"
+local FP_MEDIA = "Interface\\AddOns\\ForeverPlates\\media\\"
+local FALLBACK_FONT = "Fonts\\FRIZQT__.TTF"
 local FONTS = {
-    forced     = "Interface\\AddOns\\ForeverPlates\\media\\ForcedSquare.ttf",
-    expressway = "Interface\\AddOns\\ForeverPlates\\media\\Expressway.TTF",
-    carlito    = "Interface\\AddOns\\ForeverPlates\\media\\Carlito.ttf",
+    forced     = MEDIA .. "ForcedSquare.ttf",
+    expressway = MEDIA .. "Expressway.TTF",
+    carlito    = MEDIA .. "Carlito.ttf",
     blizzard   = "Fonts\\FRIZQT__.TTF",
     arial      = "Fonts\\ARIALN.TTF",
     morpheus   = "Fonts\\MORPHEUS.TTF",
     skurri     = "Fonts\\SKURRI.TTF",
 }
+local FONT_ALTERNATES = {
+    forced     = FP_MEDIA .. "ForcedSquare.ttf",
+    expressway = FP_MEDIA .. "Expressway.TTF",
+    carlito    = FP_MEDIA .. "Carlito.ttf",
+}
 FP_CB.FONTS = FONTS
 
+-- SetFont returns false for a missing file; a FontString with no valid font
+-- then errors on SetText ("Font not set"). Probe each path once and cache.
+local fontProbe
+local fontValid = {}
+local function IsFontUsable(path)
+    if not path then return false end
+    if fontValid[path] == nil then
+        if not fontProbe then
+            fontProbe = UIParent:CreateFontString(nil, "BACKGROUND")
+            fontProbe:Hide()
+        end
+        local ok, res = pcall(fontProbe.SetFont, fontProbe, path, 12, "")
+        fontValid[path] = (ok and res) and true or false
+    end
+    return fontValid[path]
+end
+
+local resolvedFonts = {}
 local function GetFontPath(key)
-    local path = FONTS[key] or FONTS.forced
+    key = FONTS[key] and key or "forced"
+    local cached = resolvedFonts[key]
+    if cached then return cached end
+    local path = FONTS[key]
+    if not IsFontUsable(path) then
+        path = FONT_ALTERNATES[key]
+        if not IsFontUsable(path) then
+            path = FALLBACK_FONT
+        end
+    end
+    resolvedFonts[key] = path
     return path
 end
 FP_CB.GetFontPath = GetFontPath
+
+-- Display version straight from the TOC so it never drifts out of sync
+local function GetAddonVersion()
+    local getMeta = (C_AddOns and C_AddOns.GetAddOnMetadata) or _G.GetAddOnMetadata
+    local v = getMeta and getMeta(ADDON_NAME, "Version")
+    return v or "?"
+end
+FP_CB.GetAddonVersion = GetAddonVersion
 
 -------------------------------------------------------------------------------
 -- 2. Default Configuration
@@ -82,8 +129,8 @@ local DEFAULTS = {
     enemyCastXOffset           = 0,
     enemyCastYOffset           = -4,
     enemyCastIconGap           = 0,        -- 0 = flush against cast bar
-    enemyCastMatchHealthWidth  = true,
-    enemyCastFlushEdges        = true,     -- Align flush left-to-right with enemy health bar
+    enemyCastMatchHealthWidth  = true,     -- true = stretch edge-to-edge under the health bar
+    enemyCastFlushEdges        = true,     -- custom width only: true = left-aligned, false = centered
     showEnemyCastIcon          = false,    -- No icon on enemy plate cast bars per design (flush with health bar)
     showEnemyCastTimer         = true,
     showEnemyCastSpell         = true,
@@ -106,7 +153,6 @@ local DEFAULTS = {
     playerLocked          = false,
     playerIconGap         = 0,            -- 0 = flush against cast bar
     showPlayerIcon        = true,
-    showPlayerName        = false,
     showPlayerSpell       = true,
     showPlayerTimer       = true,
     showLatency           = false,        -- Latency overlay disabled per screenshot
@@ -116,7 +162,6 @@ local DEFAULTS = {
     gcdHeight             = 4,
     gcdGap                = 2,
     gcdColor              = {0.0, 0.5, 1.0, 0.9},
-    gcdSparkColor         = {1.0, 1.0, 1.0, 1.0},
     playerCastColorKey    = "CYAN",
     playerCastColor       = {0.00, 0.85, 1.00, 1},
     playerShowBorder      = true,
@@ -161,27 +206,22 @@ local DEFAULTS = {
 
     -- Global Defaults & Fallbacks
     colorCastKey          = "GOLD",
-    colorCast             = {1.00, 0.72, 0.00, 1},
     colorChannel          = {0.10, 0.85, 0.35, 1},
-    colorNoIntKey         = "SILVER",
-    colorNoInt            = {0.70, 0.74, 0.82, 1},
-    colorEmpower          = {1.00, 0.65, 0.00, 1},
-    
+    colorChannelKey       = "CHANNEL",    -- Channel fill color (player & enemy channels)
+    colorNoIntKey         = "SILVER",     -- Target & Focus shielded (non-interruptible) color
+
     showBorder            = true,
     outlineColorKey       = "DARK",
     outlineColor          = {0.12, 0.12, 0.14, 1},
     outlineThickness      = 1,
     shieldBorderColorKey  = "SILVER",
-    shieldBorderColor     = {0.85, 0.88, 0.95, 1},
-    
+
     barBgColor            = {0.06, 0.07, 0.09, 0.95},
-    iconBgColor           = {0.04, 0.05, 0.06, 0.90},
-    
+
     -- Text Colors
     spellTextColor        = {1.00, 1.00, 1.00, 1},
     playerSpellTextColorKey = "WHITE",
     playerSpellTextColor  = {1.00, 1.00, 1.00, 1},
-    timerTextColor        = {1.00, 1.00, 1.00, 1},
     latencyTextColor      = {0.85, 0.85, 0.85, 0.85},
 
     -- Typography
@@ -191,11 +231,9 @@ local DEFAULTS = {
     playerFontSize        = 17,
     
     -- Visual Effects
-    useGradient           = false,
     barSpark              = true,
-    showTicks             = true,
-    tickColor             = {1.00, 1.00, 1.00, 0.60},
-    
+    showInterruptedFlash  = true,
+
     -- Blizzard Suppression
     hideBlizzardBars      = true,
 }
@@ -203,6 +241,8 @@ FP_CB.DEFAULTS = DEFAULTS
 
 local CFG = {}
 FP_CB.CFG = CFG
+
+local CONFIG_VERSION = 7
 
 local function DeepCopy(t)
     if type(t) ~= "table" then return t end
@@ -277,12 +317,6 @@ local function LoadConfig()
         end
         ForeverPlatesCastBarsDB.outlineColor = { 0.12, 0.12, 0.14, 1.0 }
         ForeverPlatesCastBarsDB._configVersion = 5
-        if type(BetterCastBarsDB) == "table" then
-            BetterCastBarsDB.enemyBorderColorKey = ForeverPlatesCastBarsDB.enemyBorderColorKey
-            BetterCastBarsDB.outlineColorKey = ForeverPlatesCastBarsDB.outlineColorKey
-            BetterCastBarsDB.outlineColor = ForeverPlatesCastBarsDB.outlineColor
-            BetterCastBarsDB._configVersion = 5
-        end
     end
 
     -- Automatic migration v6: Flush alignment directly under health bar (no levelBox stretch, no left gap)
@@ -291,12 +325,14 @@ local function LoadConfig()
         ForeverPlatesCastBarsDB.enemyCastMatchHealthWidth = true
         ForeverPlatesCastBarsDB.enemyCastFlushEdges = true
         ForeverPlatesCastBarsDB._configVersion = 6
-        if type(BetterCastBarsDB) == "table" then
-            BetterCastBarsDB.showEnemyCastIcon = false
-            BetterCastBarsDB.enemyCastMatchHealthWidth = true
-            BetterCastBarsDB.enemyCastFlushEdges = true
-            BetterCastBarsDB._configVersion = 6
-        end
+    end
+
+    -- Migration v7 (2.3.0): width logic changed. "Flush edges" now only picks
+    -- left-aligned vs centered for a custom width, so a player who had turned
+    -- Match Health Width off keeps a custom width that actually applies.
+    if ForeverPlatesCastBarsDB._configVersion < 7 then
+        ForeverPlatesCastBarsDB.enemyCastFlushEdges = true
+        ForeverPlatesCastBarsDB._configVersion = CONFIG_VERSION
     end
 
     if ForeverPlatesCastBarsDB.hideBlizzardBars == nil then
@@ -313,12 +349,11 @@ local function LoadConfig()
 end
 FP_CB.LoadConfig = LoadConfig
 
+-- BetterCastBarsDB is now read only once, for migrating very old installs.
+-- It is no longer written, so it can't collide with the original BetterCastBars addon.
 local function Save(key)
     if ForeverPlatesCastBarsDB then
         ForeverPlatesCastBarsDB[key] = CFG[key]
-    end
-    if BetterCastBarsDB then
-        BetterCastBarsDB[key] = CFG[key]
     end
 end
 FP_CB.Save = Save
@@ -396,8 +431,12 @@ FP_CB.CreatePixelBorder = CreatePixelBorder
 -------------------------------------------------------------------------------
 -- 4. Blizzard Native Cast Bar Suppression (Plater Engine Parity)
 -------------------------------------------------------------------------------
-local suppressedFrames = {}
-local hookedBlizzBars = {}
+-- Suppression state is cached per frame so repeat calls are nearly free.
+-- suppressedFrames[f] = true (hidden by us) / false (restored)
+local suppressedFrames = setmetatable({}, { __mode = "k" })
+local hookedBlizzBars  = setmetatable({}, { __mode = "k" })
+local scannedPlates    = setmetatable({}, { __mode = "k" })
+local needsReloadToRestore = false
 
 -- Helper for resilient NamePlate acquisition in 12.0 / Camelot
 local function GetSafeNamePlate(unit)
@@ -427,124 +466,57 @@ local function UpdateBaseNameplateOptions()
         NamePlateFriendlyFrameOptions,
         NamePlateEnemyFrameOptions,
     }
-
-    if not CFG.hideBlizzardBars then
-        -- Restore Blizzard nameplate cast bars
-        for _, tbl in ipairs(optTables) do
-            if tbl then
-                if TextureLoadingGroupMixin then
-                    pcall(TextureLoadingGroupMixin.RemoveTexture, { textures = tbl }, "hideCastbar")
-                    pcall(TextureLoadingGroupMixin.AddTexture, { textures = tbl }, "showCastbar")
-                end
-                tbl.hideCastbar = false
-                tbl.showCastbar = true
-            end
-        end
-        return
-    end
-
-    -- Plater's proven baseline options manipulation
+    local hide = CFG.hideBlizzardBars and true or false
     for _, tbl in ipairs(optTables) do
-        if tbl then
-            if TextureLoadingGroupMixin then
-                pcall(TextureLoadingGroupMixin.AddTexture, { textures = tbl }, "hideCastbar")
-                pcall(TextureLoadingGroupMixin.RemoveTexture, { textures = tbl }, "showCastbar")
-            end
-            tbl.hideCastbar = true
-            tbl.showCastbar = false
+        if tbl and tbl.hideCastbar ~= hide then
+            tbl.hideCastbar = hide
+            tbl.showCastbar = not hide
         end
     end
 end
 FP_CB.UpdateBaseNameplateOptions = UpdateBaseNameplateOptions
 
--- Bulletproof widget suppression
+-- Hide a Blizzard cast bar. Uses alpha + event unregistration + Hide only;
+-- no SetSize, so layout-managed frames (PlayerCastingBarFrame) are not resized.
 local function SuppressBlizzardBar(f)
     if not f or (f.IsForbidden and f:IsForbidden()) or f.FPOwned then return end
-    suppressedFrames[f] = true
 
-    if CFG.hideBlizzardBars then
-        -- 1. Unregister events so engine stops firing cast updates
-        if f.UnregisterAllEvents then
-            pcall(f.UnregisterAllEvents, f)
-        end
-        if CompactUnitFrame_UnregisterEvents then
-            pcall(CompactUnitFrame_UnregisterEvents, f)
-        end
-        if CastingBarFrame_SetUnit then
-            pcall(CastingBarFrame_SetUnit, f, nil, nil, nil)
-        end
+    local want = CFG.hideBlizzardBars and true or false
+    if suppressedFrames[f] == want then return end -- already in the wanted state
+    suppressedFrames[f] = want
 
-        -- 2. Plater TextureLoadingGroup tags
-        if TextureLoadingGroupMixin then
-            pcall(TextureLoadingGroupMixin.RemoveTexture, { textures = f }, "showCastbar")
-            pcall(TextureLoadingGroupMixin.AddTexture, { textures = f }, "showOnlyName")
-            pcall(TextureLoadingGroupMixin.AddTexture, { textures = f }, "widgetsOnly")
-        end
-
-        -- 3. Strip StatusBar texture so engine draws nothing
-        if f.SetStatusBarTexture then
-            pcall(f.SetStatusBarTexture, f, "")
-        end
+    if want then
+        if f.UnregisterAllEvents then pcall(f.UnregisterAllEvents, f) end
         local sbTex = f.GetStatusBarTexture and f:GetStatusBarTexture()
-        if sbTex then
-            pcall(sbTex.SetAlpha, sbTex, 0)
-        end
-
-        -- 4. Strip regions (borders, background, text, spark, icon)
-        if f.GetRegions then
-            for _, reg in ipairs({ f:GetRegions() }) do
-                pcall(reg.SetAlpha, reg, 0)
-                if reg.SetTexture then pcall(reg.SetTexture, reg, "") end
-                if reg.SetText then pcall(reg.SetText, reg, "") end
-            end
-        end
-
-        -- 5. Collapse dimensions & hide
+        if sbTex then pcall(sbTex.SetAlpha, sbTex, 0) end
         pcall(f.SetAlpha, f, 0)
-        pcall(f.SetSize, f, 0.0001, 0.0001)
         if not (f.IsProtected and f:IsProtected()) then
             pcall(f.Hide, f)
         end
     else
-        -- Clean Restoration when unchecked
-        if TextureLoadingGroupMixin then
-            pcall(TextureLoadingGroupMixin.AddTexture, { textures = f }, "showCastbar")
-            pcall(TextureLoadingGroupMixin.RemoveTexture, { textures = f }, "showOnlyName")
-            pcall(TextureLoadingGroupMixin.RemoveTexture, { textures = f }, "widgetsOnly")
-        end
+        -- Visual restore. Events Blizzard registered in OnLoad only come back
+        -- after a /reload, which the settings window points out.
         pcall(f.SetAlpha, f, 1)
-        pcall(f.SetSize, f, 140, 14)
         local sbTex = f.GetStatusBarTexture and f:GetStatusBarTexture()
-        if sbTex then
-            pcall(sbTex.SetAlpha, sbTex, 1)
-        end
-        if f.GetRegions then
-            for _, reg in ipairs({ f:GetRegions() }) do
-                pcall(reg.SetAlpha, reg, 1)
-            end
-        end
+        if sbTex then pcall(sbTex.SetAlpha, sbTex, 1) end
+        needsReloadToRestore = true
     end
 
-    -- 6. Hook Show and SetAlpha (protected-safe with recursion guard)
     if not hookedBlizzBars[f] then
         hookedBlizzBars[f] = true
-
         hooksecurefunc(f, "Show", function(self)
             if not CFG.hideBlizzardBars or self._fpSuppressing then return end
             self._fpSuppressing = true
             pcall(self.SetAlpha, self, 0)
-            pcall(self.SetSize, self, 0.0001, 0.0001)
-            local tex = self.GetStatusBarTexture and self:GetStatusBarTexture()
-            if tex then pcall(tex.SetAlpha, tex, 0) end
             if not (self.IsProtected and self:IsProtected()) then
                 pcall(self.Hide, self)
             end
             self._fpSuppressing = false
         end)
-
         hooksecurefunc(f, "SetAlpha", function(self, alpha)
             if not CFG.hideBlizzardBars or self._fpSuppressing then return end
-            if alpha ~= 0 then
+            local ok, visible = pcall(function() return alpha ~= 0 end)
+            if ok and visible then
                 self._fpSuppressing = true
                 pcall(self.SetAlpha, self, 0)
                 self._fpSuppressing = false
@@ -555,37 +527,53 @@ end
 local SuppressFrame = SuppressBlizzardBar
 FP_CB.SuppressBlizzardBar = SuppressBlizzardBar
 FP_CB.SuppressFrame = SuppressFrame
+FP_CB.NeedsReloadToRestore = function() return needsReloadToRestore end
 
-local function GetAllBlizzardBars()
-    local list = {
-        _G.PlayerCastingBarFrame,
-        _G.CastingBarFrame,
-        _G.OverlayPlayerCastingBarFrame,
-        _G.TargetFrameSpellBar,
-        _G.FocusFrameSpellBar,
-        _G.PetCastingBarFrame,
-    }
-    if _G.TargetFrame then
-        table.insert(list, _G.TargetFrame.spellbar)
-        table.insert(list, _G.TargetFrame.SpellBar)
-        table.insert(list, _G.TargetFrame.CastingBarFrame)
-        table.insert(list, _G.TargetFrame.castbar)
+local cachedBlizzardBars
+local function GetAllBlizzardBars(refresh)
+    if cachedBlizzardBars and not refresh then return cachedBlizzardBars end
+    local list, seen = {}, {}
+    local function add(f)
+        if f and not seen[f] then seen[f] = true; list[#list + 1] = f end
     end
-    if _G.FocusFrame then
-        table.insert(list, _G.FocusFrame.spellbar)
-        table.insert(list, _G.FocusFrame.SpellBar)
-        table.insert(list, _G.FocusFrame.CastingBarFrame)
-        table.insert(list, _G.FocusFrame.castbar)
+    add(_G.PlayerCastingBarFrame)
+    add(_G.CastingBarFrame)
+    add(_G.OverlayPlayerCastingBarFrame)
+    add(_G.TargetFrameSpellBar)
+    add(_G.FocusFrameSpellBar)
+    add(_G.PetCastingBarFrame)
+    for _, parent in ipairs({ _G.TargetFrame, _G.FocusFrame, _G.PetFrame }) do
+        add(parent.spellbar); add(parent.SpellBar)
+        add(parent.CastingBarFrame); add(parent.castbar)
     end
-    if _G.PetFrame then
-        table.insert(list, _G.PetFrame.spellbar)
-        table.insert(list, _G.PetFrame.SpellBar)
-    end
+    cachedBlizzardBars = list
     return list
 end
 FP_CB.GetAllBlizzardBars = GetAllBlizzardBars
 
-local function SuppressPlateCastBar(plateOrUnit)
+local function ScanForCastBars(uf, root, out, depth)
+    if not root or not root.GetChildren or depth > 3 then return end
+    local hb = root.healthBar or root.HealthBar or uf.healthBar or uf.HealthBar
+    local pb = root.powerBar or root.PowerBar or uf.powerBar or uf.PowerBar
+    for _, ch in ipairs({ root:GetChildren() }) do
+        if ch and not ch.FPOwned and ch ~= hb and ch ~= pb then
+            local isStatusBar = ch.GetStatusBarTexture or (ch.IsObjectType and ch:IsObjectType("StatusBar"))
+            local hasTimer = ch.SetTimerDuration or ch.BorderShield or ch.borderShield or ch.Spark or ch.spark
+            local name = ch.GetName and ch:GetName()
+            local lname = name and name:lower()
+            local nameMatch = lname and (lname:find("cast", 1, true) or lname:find("spell", 1, true))
+            if isStatusBar or hasTimer or nameMatch then
+                out[#out + 1] = ch
+            end
+            ScanForCastBars(uf, ch, out, depth + 1)
+        end
+    end
+end
+
+-- Suppress the Blizzard cast bar on one nameplate. The expensive child scan
+-- runs once per pooled plate frame (force = true re-scans, used when a unit is
+-- added). Hooks installed on the found bars keep them hidden afterwards.
+local function SuppressPlateCastBar(plateOrUnit, force)
     if not plateOrUnit then return end
     local plate = plateOrUnit
     if type(plateOrUnit) == "string" then
@@ -596,128 +584,97 @@ local function SuppressPlateCastBar(plateOrUnit)
     local uf = plate.UnitFrame or plate.unitFrame or plate
     if not uf or (uf.IsForbidden and uf:IsForbidden()) then return end
 
+    local want = CFG.hideBlizzardBars and true or false
+    if not force and scannedPlates[uf] == want then return end
+    scannedPlates[uf] = want
+
     if uf.optionTable then
-        if CFG.hideBlizzardBars then
-            uf.optionTable.hideCastbar = true
-            uf.optionTable.showCastbar = false
-        else
-            uf.optionTable.hideCastbar = false
-            uf.optionTable.showCastbar = true
-        end
+        uf.optionTable.hideCastbar = want
+        uf.optionTable.showCastbar = not want
     end
 
-    local blizzBars = {}
-
-    -- Direct candidate references (including Dragonflight / 12.0 CastBarsContainer)
+    local found = {}
     local candidates = {
-        uf.castBar, uf.CastBar, uf.CastingBarFrame, uf.castbar,
-        uf.CastBarsContainer,
+        uf.castBar, uf.CastBar, uf.CastingBarFrame, uf.castbar, uf.CastBarsContainer,
         uf.CastBarsContainer and uf.CastBarsContainer.castBar,
         uf.CastBarsContainer and uf.CastBarsContainer.CastBar,
-        plate.castBar, plate.CastBar, plate.CastingBarFrame, plate.castbar,
-        plate.CastBarsContainer,
+        plate.castBar, plate.CastBar, plate.CastingBarFrame, plate.castbar, plate.CastBarsContainer,
         plate.CastBarsContainer and plate.CastBarsContainer.castBar,
         plate.CastBarsContainer and plate.CastBarsContainer.CastBar,
         uf.spellBar, uf.SpellBar, plate.spellBar, plate.SpellBar,
     }
-    for _, b in ipairs(candidates) do
-        if b and not b.FPOwned then
-            table.insert(blizzBars, b)
+    for i = 1, #candidates do
+        local b = candidates[i]
+        if b and not b.FPOwned then found[#found + 1] = b end
+    end
+    ScanForCastBars(uf, uf, found, 0)
+    if plate ~= uf then
+        -- Only scan the plate's own children that are not the unit frame itself
+        for _, ch in ipairs({ plate:GetChildren() }) do
+            if ch ~= uf then ScanForCastBars(uf, ch, found, 1) end
         end
     end
 
-    -- Thorough recursive child scan on BOTH uf and plate
-    local function ScanForStatusBars(parentFrame, depth)
-        if not parentFrame or not parentFrame.GetChildren or (depth and depth > 3) then return end
-        depth = (depth or 0) + 1
-        local hb = parentFrame.healthBar or parentFrame.HealthBar or (uf and (uf.healthBar or uf.HealthBar))
-        local pb = parentFrame.powerBar or parentFrame.PowerBar or (uf and (uf.powerBar or uf.PowerBar))
-        for _, ch in ipairs({ parentFrame:GetChildren() }) do
-            if ch and not ch.FPOwned and ch ~= hb and ch ~= pb then
-                local isStatusBar = (ch.GetStatusBarTexture or (ch.IsObjectType and ch:IsObjectType("StatusBar")))
-                local hasTimer = ch.SetTimerDuration or ch.BorderShield or ch.borderShield or ch.Spark or ch.spark
-                local name = ch.GetName and ch:GetName()
-                local nameMatch = name and (name:lower():find("cast") or name:lower():find("spell"))
-                
-                if isStatusBar or hasTimer or nameMatch then
-                    table.insert(blizzBars, ch)
-                end
-                if ch.GetChildren then
-                    ScanForStatusBars(ch, depth)
-                end
-            end
-        end
-    end
-
-    ScanForStatusBars(uf)
-    ScanForStatusBars(plate)
-
-    for _, cb in ipairs(blizzBars) do
-        if cb and not cb.FPOwned then
-            SuppressBlizzardBar(cb)
-        end
+    for i = 1, #found do
+        SuppressBlizzardBar(found[i])
     end
 end
 FP_CB.SuppressPlateCastBar = SuppressPlateCastBar
 
-local function ApplyBlizzardSuppression()
+local CASTBAR_CVARS = { "showTargetCastbar", "ShowVKeyCastbar", "showVKeyCastbarOnlyOnTarget" }
+local function SetCVarIfDifferent(name, value)
+    local cur = (C_CVar and C_CVar.GetCVar and C_CVar.GetCVar(name)) or (GetCVar and GetCVar(name))
+    if cur == nil or cur == value then return end -- unknown CVar on this client, or already set
+    if C_CVar and C_CVar.SetCVar then
+        pcall(C_CVar.SetCVar, name, value)
+    else
+        pcall(SetCVar, name, value)
+    end
+end
+
+local lastCVarState
+local function ApplyBlizzardSuppression(forcePlates)
     UpdateBaseNameplateOptions()
 
-    local allBars = GetAllBlizzardBars()
-    for _, bar in ipairs(allBars) do
-        if bar then
-            SuppressBlizzardBar(bar)
-        end
+    for _, bar in ipairs(GetAllBlizzardBars(true)) do
+        SuppressBlizzardBar(bar)
     end
 
-    if CFG.hideBlizzardBars then
-        pcall(SetCVar, "showTargetCastbar", "0")
-        pcall(SetCVar, "ShowVKeyCastbar", "0")
-        pcall(SetCVar, "showVKeyCastbarOnlyOnTarget", "0")
-        if C_CVar and C_CVar.SetCVar then
-            pcall(C_CVar.SetCVar, "showTargetCastbar", "0")
-            pcall(C_CVar.SetCVar, "ShowVKeyCastbar", "0")
-            pcall(C_CVar.SetCVar, "showVKeyCastbarOnlyOnTarget", "0")
+    -- Only write CVars when the setting actually changes (not on every target swap)
+    local hide = CFG.hideBlizzardBars and true or false
+    if lastCVarState ~= hide then
+        if hide then
+            for _, cv in ipairs(CASTBAR_CVARS) do SetCVarIfDifferent(cv, "0") end
+        elseif lastCVarState ~= nil then
+            -- Restore only when the user switched suppression off this session
+            SetCVarIfDifferent("showTargetCastbar", "1")
+            SetCVarIfDifferent("ShowVKeyCastbar", "1")
         end
-    else
-        pcall(SetCVar, "showTargetCastbar", "1")
-        pcall(SetCVar, "ShowVKeyCastbar", "1")
-        if C_CVar and C_CVar.SetCVar then
-            pcall(C_CVar.SetCVar, "showTargetCastbar", "1")
-            pcall(C_CVar.SetCVar, "ShowVKeyCastbar", "1")
-        end
+        lastCVarState = hide
     end
 
-    local plates = GetSafeNamePlates()
-    for _, plate in ipairs(plates) do
-        SuppressPlateCastBar(plate)
+    for _, plate in ipairs(GetSafeNamePlates()) do
+        SuppressPlateCastBar(plate, forcePlates)
     end
 end
 FP_CB.ApplyBlizzardSuppression = ApplyBlizzardSuppression
 
--- Hook Blizzard engine CompactUnitFrame cast bar updates to prevent re-registration
+-- Blizzard cast bar updates on nameplates: cheap after the first scan per plate
 if CompactUnitFrame_UpdateCastBar then
     hooksecurefunc("CompactUnitFrame_UpdateCastBar", function(frame)
         if not frame or (frame.IsForbidden and frame:IsForbidden()) then return end
         if not CFG.hideBlizzardBars then return end
         SuppressPlateCastBar(frame)
+        local cb = frame.castBar or frame.CastBar
+        if cb then SuppressBlizzardBar(cb) end
     end)
 end
 
--- Hook NamePlateUnitFrameMixin updates (Plater line 5105 parity)
-if NamePlateUnitFrameMixin then
-    if NamePlateUnitFrameMixin.UpdateNameClassColor then
-        hooksecurefunc(NamePlateUnitFrameMixin, "UpdateNameClassColor", function(self)
-            if not CFG.hideBlizzardBars then return end
-            SuppressPlateCastBar(self)
-        end)
-    end
-    if NamePlateUnitFrameMixin.OnUnitSet then
-        hooksecurefunc(NamePlateUnitFrameMixin, "OnUnitSet", function(self)
-            if not CFG.hideBlizzardBars then return end
-            SuppressPlateCastBar(self)
-        end)
-    end
+if NamePlateUnitFrameMixin and NamePlateUnitFrameMixin.OnUnitSet then
+    hooksecurefunc(NamePlateUnitFrameMixin, "OnUnitSet", function(self)
+        if not CFG.hideBlizzardBars then return end
+        SuppressPlateCastBar(self, true)
+    end)
 end
 
 -------------------------------------------------------------------------------
@@ -824,7 +781,9 @@ local function GetSafeCastData(unit)
         if ok and dObj then chDurationObj = dObj end
     end
 
-    local okCh, chName, _, chTex, chStartMS, chEndMS, _, notIntCh, chSpellID, chNumStages = pcall(UnitChannelInfo, unit)
+    -- UnitChannelInfo: name, text, texture, startMS, endMS, isTradeSkill,
+    --                  notInterruptible, spellID, isEmpowered, numEmpowerStages
+    local okCh, chName, _, chTex, chStartMS, chEndMS, _, notIntCh, chSpellID, chIsEmpowered, chNumStages = pcall(UnitChannelInfo, unit)
     if okCh and chName then
         local isSecretTimes = IsSecret(chStartMS) or IsSecret(chEndMS)
         local startTime, endTime, duration
@@ -856,8 +815,13 @@ local function GetSafeCastData(unit)
 
         local isEmpower = false
         pcall(function()
-            if chNumStages and chNumStages > 0 then isEmpower = true end
+            if chIsEmpowered == true then isEmpower = true end
         end)
+        if not isEmpower then
+            pcall(function()
+                if type(chNumStages) == "number" and chNumStages > 0 then isEmpower = true end
+            end)
+        end
 
         return {
             name        = chName,
@@ -897,14 +861,24 @@ FP_CB.GetSafeSpellCooldown = GetSafeSpellCooldown
 -------------------------------------------------------------------------------
 -- 6. Color & Outline Helpers
 -------------------------------------------------------------------------------
+local function GetChannelColor()
+    local key = CFG.colorChannelKey
+    if key and key ~= "CUSTOM" and COLOR_PALETTES[key] then
+        local c = COLOR_PALETTES[key]
+        return c.r, c.g, c.b
+    end
+    local c = CFG.colorChannel or {0.10, 0.85, 0.35}
+    return c.r or c[1], c.g or c[2], c.b or c[3]
+end
+FP_CB.GetChannelColor = GetChannelColor
+
 local function GetEnemyBarColor(isShielded, isChannel)
     if isShielded then
         local cKey = CFG.enemyShieldColorKey or CFG.colorNoIntKey or "SILVER"
         local c = COLOR_PALETTES[cKey] or { r = 0.70, g = 0.74, b = 0.82 }
         return c.r, c.g, c.b
     elseif isChannel then
-        local c = CFG.colorChannel or {0.10, 0.85, 0.35}
-        return c.r or c[1], c.g or c[2], c.b or c[3]
+        return GetChannelColor()
     else
         local cKey = CFG.enemyCastColorKey or CFG.colorCastKey or "GOLD"
         local c = COLOR_PALETTES[cKey] or { r = 1.00, g = 0.72, b = 0.00 }
@@ -935,10 +909,13 @@ end
 FP_CB.GetEnemyBorderColor = GetEnemyBorderColor
 
 local function GetUnitBarColor(unit, isShielded, isChannel)
+    if (unit == "target" or unit == "focus") and isShielded then
+        local c = COLOR_PALETTES[CFG.colorNoIntKey or "SILVER"] or COLOR_PALETTES.SILVER
+        return c.r, c.g, c.b
+    end
     if unit == "player" then
         if isChannel then
-            local c = CFG.colorChannel or {0.10, 0.85, 0.35}
-            return c.r or c[1], c.g or c[2], c.b or c[3]
+            return GetChannelColor()
         else
             local cKey = CFG.playerCastColorKey or "CYAN"
             if cKey == "CUSTOM" and CFG.playerCastColor then
@@ -1031,28 +1008,23 @@ local function ApplyEnemyCastBarLayout(unitFrame, obj)
     local ol = CFG.fontOutline or "OUTLINE"
 
     local anchorTarget = unitFrame.healthBar or unitFrame.HealthBar or unitFrame
-
-    -- Match health bar width if enabled
-    if CFG.enemyCastMatchHealthWidth and anchorTarget and anchorTarget.GetWidth then
-        local hw = anchorTarget:GetWidth()
-        if hw and not IsSecret(hw) and hw > 20 then
-            w = hw
-        end
-    end
-
     local showIcon = (CFG.showEnemyCastIcon ~= false)
 
     bar:ClearAllPoints()
     if ih then ih:ClearAllPoints() end
 
-    local isCustomWidth = (CFG.enemyCastMatchHealthWidth == false) and (CFG.enemyCastFlushEdges == false)
-
-    bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
-    if isCustomWidth then
-        bar:SetSize(w, h)
-    else
+    -- Match width: stretch edge-to-edge under the health bar.
+    -- Custom width: use the Width slider, left-aligned (flush) or centered.
+    if CFG.enemyCastMatchHealthWidth ~= false then
+        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
         bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
         bar:SetHeight(h)
+    elseif CFG.enemyCastFlushEdges ~= false then
+        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
+        bar:SetSize(w, h)
+    else
+        bar:SetPoint("TOP", anchorTarget, "BOTTOM", xOff, yOff)
+        bar:SetSize(w, h)
     end
 
     if showIcon and ih then
@@ -1129,7 +1101,9 @@ local function GetEnemyCastBarBottomOffset(unitFrame)
     local yOff = CFG.enemyCastYOffset or -4
     local showB = (CFG.enemyShowBorder ~= false) and (CFG.showBorder ~= false)
     local thick = showB and (CFG.enemyBorderThickness or CFG.outlineThickness or 1) or 0
-    return math.abs(yOff) + h + thick
+    -- Depth of the cast bar's bottom edge below the health bar's bottom edge
+    -- (yOff is negative when the bar sits below the plate)
+    return math.max(0, -yOff + h + thick)
 end
 FP_CB.GetEnemyCastBarBottomOffset = GetEnemyCastBarBottomOffset
 
@@ -1212,6 +1186,8 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
     timerTxt.FPOwned = true
     timerTxt:SetPoint("RIGHT", bar, "RIGHT", -4, 0)
     timerTxt:SetJustifyH("RIGHT")
+    -- Bound the spell name so long names truncate instead of running into the timer
+    spellTxt:SetPoint("RIGHT", timerTxt, "LEFT", -4, 0)
 
     -- Spark
     local spark = bar:CreateTexture(nil, "OVERLAY", nil, 5)
@@ -1245,6 +1221,7 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
             ih:Hide()
             return
         end
+        if cast.interrupted then return end -- freeze while "Interrupted!" is shown
 
         local curUnit = obj.unit or ResolvePlateUnit(uf, self)
         if cast.isSecret then
@@ -1409,12 +1386,16 @@ local function UpdatePlateCast(unit)
     obj.isTest = false
     ApplyEnemyCastBarLayout(uf, obj)
 
-    -- Duration setup
-    if castData.durationObj and obj.bar.SetTimerDuration then
-        pcall(obj.bar.SetTimerDuration, obj.bar, castData.durationObj)
-    else
-        obj.bar:SetMinMaxValues(0, 1)
-        obj.bar:SetValue(castData.isChannel and 1 or 0)
+    -- Duration setup: secret timings are driven by the engine timer; readable
+    -- timings are driven by OnUpdate (one driver only, so they never fight).
+    obj.bar:SetMinMaxValues(0, 1)
+    obj.bar:SetValue(castData.isChannel and 1 or 0)
+    if castData.isSecret then
+        if castData.durationObj and obj.bar.SetTimerDuration then
+            pcall(obj.bar.SetTimerDuration, obj.bar, castData.durationObj)
+        end
+        obj.timerText:SetText("") -- no readable time left; don't show a stale value
+        obj.spark:Hide()
     end
 
     -- Icon
@@ -1483,7 +1464,7 @@ local function HidePlateCast(unit, isInterrupted)
     local obj = uf and plateCastBars[uf]
     if not obj then return end
 
-    if isInterrupted and obj.bar:IsShown() then
+    if isInterrupted and CFG.showInterruptedFlash ~= false and obj.bar:IsShown() then
         obj.spellText:SetText("|cffff2020Interrupted!|r")
         obj.bar:SetStatusBarColor(1.0, 0.15, 0.15, 1)
         C_Timer.After(0.4, function()
@@ -1553,11 +1534,21 @@ FP_CB.SetupNameplateCastBar = SetupNameplateCastBar
 local singleBars = {}
 FP_CB.singleBars = singleBars
 
+local UNIT_LABELS = { player = "Player", target = "Target", focus = "Focus" }
+
+-- Move mode (not saved): while on, unlocked bars show a draggable placeholder.
+-- Turned on while the settings window is open, or with /fpc unlock.
+FP_CB.moveMode = false
+local function IsMovable(unit)
+    return FP_CB.moveMode and not CFG[unit .. "Locked"]
+end
+
 local function CreateSingleCastBar(unit)
+    local U = unit:sub(1,1):upper() .. unit:sub(2)
     local frameName = "FP_CB_" .. unit:upper() .. "CastBar"
     local anchor = CreateFrame("Frame", frameName .. "_Anchor", UIParent)
     anchor:SetMovable(true)
-    anchor:EnableMouse(not CFG[unit .. "Locked"])
+    anchor:EnableMouse(false)
     anchor:RegisterForDrag("LeftButton", "RightButton")
     anchor:SetClampedToScreen(true)
     anchor:SetFrameStrata("MEDIUM")
@@ -1570,7 +1561,7 @@ local function CreateSingleCastBar(unit)
     anchor:SetPoint(pt, UIParent, rpt, x, y)
 
     anchor:SetScript("OnDragStart", function(self)
-        if not CFG[unit .. "Locked"] then
+        if IsMovable(unit) then
             self:StartMoving()
         end
     end)
@@ -1594,10 +1585,11 @@ local function CreateSingleCastBar(unit)
     statusBar:SetValue(0)
 
     -- Background
+    local bc = CFG.barBgColor or {0.06, 0.07, 0.09, 0.95}
     local bg = statusBar:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints()
     bg:SetTexture(FLAT_TEXTURE)
-    bg:SetVertexColor(CFG.barBgColor[1], CFG.barBgColor[2], CFG.barBgColor[3], CFG.barBgColor[4] or 0.95)
+    bg:SetVertexColor(bc[1] or 0, bc[2] or 0, bc[3] or 0, bc[4] or 0.95)
 
     -- Spark
     local spark = statusBar:CreateTexture(nil, "OVERLAY", nil, 4)
@@ -1612,7 +1604,7 @@ local function CreateSingleCastBar(unit)
 
     -- Icon (Flush with statusBar)
     local iconHolder = CreateFrame("Frame", nil, anchor)
-    iconHolder:SetPoint("RIGHT", statusBar, "LEFT", CFG[unit .. "IconGap"] or 0, 0)
+    iconHolder:SetPoint("RIGHT", statusBar, "LEFT", -(CFG[unit .. "IconGap"] or 0), 0)
 
     local iconBg = iconHolder:CreateTexture(nil, "BACKGROUND")
     iconBg:SetAllPoints()
@@ -1635,6 +1627,7 @@ local function CreateSingleCastBar(unit)
     local timerText = statusBar:CreateFontString(nil, "OVERLAY", nil, 6)
     timerText:SetPoint("RIGHT", statusBar, "RIGHT", -5, 0)
     timerText:SetJustifyH("RIGHT")
+    spellText:SetPoint("RIGHT", timerText, "LEFT", -4, 0)
 
     -- Latency Bar (Player only)
     local latencyBar, latencyText
@@ -1676,10 +1669,41 @@ local function CreateSingleCastBar(unit)
         activeCast  = nil,
     }
 
+    function obj:IsEnabled()
+        return CFG["show" .. U .. "Bar"] ~= false
+    end
+
+    -- When unlocked and idle, show a labelled placeholder so the bar can be dragged.
+    function obj:ShowPlaceholder()
+        obj.isPlaceholder = true
+        statusBar:SetMinMaxValues(0, 1)
+        statusBar:SetValue(1)
+        local r, g, b = GetUnitBarColor(unit, false, false)
+        statusBar:SetStatusBarColor(r, g, b, 0.35)
+        spellText:SetText((UNIT_LABELS[unit] or U) .. " Cast Bar - drag to move")
+        timerText:SetText("")
+        spark:Hide()
+        if latencyBar then latencyBar:Hide() end
+        if latencyText then latencyText:Hide() end
+        icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+        anchor:Show()
+    end
+
+    -- Called whenever no real or test cast is running
+    function obj:Idle()
+        obj.activeCast = nil
+        obj.isTest = false
+        if obj:IsEnabled() and IsMovable(unit) then
+            obj:ShowPlaceholder()
+        else
+            obj.isPlaceholder = false
+            anchor:Hide()
+        end
+    end
+
     function obj:UpdateLayout()
         local w = CFG[unit .. "W"] or 280
         local h = CFG[unit .. "H"] or 22
-        local U = unit:sub(1,1):upper() .. unit:sub(2)
         local showIcon = CFG["show" .. U .. "Icon"] ~= false
         local showSpell = CFG["show" .. U .. "Spell"] ~= false
         local showTimer = CFG["show" .. U .. "Timer"] ~= false
@@ -1691,10 +1715,10 @@ local function CreateSingleCastBar(unit)
         statusBar:SetSize(w, h)
 
         if showIcon then
-            local iconSize = h -- exact match with bar height for flush look!
-            iconHolder:SetSize(iconSize, iconSize)
+            iconHolder:SetSize(h, h) -- exact match with bar height for a flush look
             iconHolder:ClearAllPoints()
-            iconHolder:SetPoint("RIGHT", statusBar, "LEFT", gap, 0)
+            -- Positive gap = space between icon and bar (same direction as nameplates)
+            iconHolder:SetPoint("RIGHT", statusBar, "LEFT", -gap, 0)
             iconHolder:Show()
         else
             iconHolder:Hide()
@@ -1711,8 +1735,8 @@ local function CreateSingleCastBar(unit)
                 local pal = COLOR_PALETTES[CFG.playerSpellTextColorKey]
                 pr, pg, pb = pal.r, pal.g, pal.b
             elseif CFG.playerSpellTextColor then
-                local pt = CFG.playerSpellTextColor
-                pr, pg, pb = pt[1] or 1, pt[2] or 1, pt[3] or 1
+                local ptc = CFG.playerSpellTextColor
+                pr, pg, pb = ptc[1] or 1, ptc[2] or 1, ptc[3] or 1
             elseif CFG.spellTextColor then
                 local st = CFG.spellTextColor
                 pr, pg, pb = st[1] or 1, st[2] or 1, st[3] or 1
@@ -1722,15 +1746,16 @@ local function CreateSingleCastBar(unit)
             pr, pg, pb = st[1] or 1, st[2] or 1, st[3] or 1
         end
         spellText:SetTextColor(pr, pg, pb, 1)
-        spellText:SetShown(showSpell)
+        spellText:SetShown(showSpell or obj.isPlaceholder)
 
         timerText:SetFont(fontPath, math.max(8, fs - 1), ol)
         timerText:SetTextColor(pr, pg, pb, 1)
         timerText:SetShown(showTimer)
 
         if latencyText then
+            local lt = CFG.latencyTextColor or {0.85, 0.85, 0.85, 1}
             latencyText:SetFont(fontPath, math.max(7, fs - 2), ol)
-            latencyText:SetTextColor(CFG.latencyTextColor[1], CFG.latencyTextColor[2], CFG.latencyTextColor[3], 1)
+            latencyText:SetTextColor(lt[1] or 0.85, lt[2] or 0.85, lt[3] or 0.85, 1)
         end
 
         local showB = (CFG[unit .. "ShowBorder"] ~= false) and (CFG.showBorder ~= false)
@@ -1740,22 +1765,28 @@ local function CreateSingleCastBar(unit)
         border:SetShown(showB)
         iconBorder:SetShown(showB and showIcon)
 
-        local ubr, ubg, ubb = GetUnitBorderColor(unit)
-        border:SetColor(ubr, ubg, ubb, 1.0)
-        iconBorder:SetColor(ubr, ubg, ubb, 1.0)
+        local br, bgc, bb = GetUnitBorderColor(unit)
+        border:SetColor(br, bgc, bb, 1.0)
+        iconBorder:SetColor(br, bgc, bb, 1.0)
 
-        if obj.isTest then
-            local r, g, b = GetUnitBarColor(unit, false, false)
+        if obj.isTest and obj.activeCast then
+            local r, g, b = GetUnitBarColor(unit, obj.activeCast.isShielded, false)
             statusBar:SetStatusBarColor(r, g, b, 1)
         end
 
         spark:SetHeight(h * 2)
 
+        local unlocked = IsMovable(unit)
         dragHandle:ClearAllPoints()
         dragHandle:SetPoint("TOPLEFT", statusBar, "TOPLEFT", 0, 0)
         dragHandle:SetPoint("TOPRIGHT", statusBar, "TOPRIGHT", 0, 0)
-        dragHandle:SetShown(not CFG[unit .. "Locked"])
-        anchor:EnableMouse(not CFG[unit .. "Locked"])
+        dragHandle:SetShown(unlocked)
+        anchor:EnableMouse(unlocked)
+
+        -- Refresh idle visibility (placeholder appears/disappears with the lock)
+        if not obj.activeCast then
+            obj:Idle()
+        end
     end
 
     anchor:SetScript("OnUpdate", function(self, elapsed)
@@ -1764,8 +1795,7 @@ local function CreateSingleCastBar(unit)
         if cast.interrupted then return end
 
         if cast.isSecret then
-            -- On 12.0 Camelot, startMS and endMS are secret values on hostile enemies.
-            -- Safely check if cast is still ongoing without arithmetic on secret numbers.
+            -- Secret timings: the engine timer drives the fill; just watch for the end.
             if not obj.isTest then
                 local stillCasting = false
                 pcall(function()
@@ -1774,8 +1804,7 @@ local function CreateSingleCastBar(unit)
                     end
                 end)
                 if not stillCasting then
-                    anchor:Hide()
-                    obj.activeCast = nil
+                    obj:Idle()
                     return
                 end
             end
@@ -1784,7 +1813,14 @@ local function CreateSingleCastBar(unit)
         local now = GetTime()
 
         if now >= cast.endTime then
-            if not obj.isTest then
+            if obj.isTest and cast.once then
+                obj:Idle()
+                return
+            elseif obj.isTest then
+                -- Test casts loop so the bar stays visible while you adjust settings
+                cast.startTime = now
+                cast.endTime = now + cast.duration
+            else
                 local stillCasting = false
                 pcall(function()
                     if UnitCastingInfo(unit) or UnitChannelInfo(unit) then
@@ -1793,12 +1829,11 @@ local function CreateSingleCastBar(unit)
                 end)
                 if stillCasting then
                     local updatedData = GetSafeCastData(unit)
-                    if updatedData and updatedData.endTime > now then
+                    if updatedData and not updatedData.isSecret and updatedData.endTime > now then
                         obj.activeCast = updatedData
                         cast = updatedData
                     else
                         statusBar:SetValue(cast.isChannel and 0 or 1)
-                        local U = unit:sub(1,1):upper() .. unit:sub(2)
                         if CFG["show" .. U .. "Timer"] ~= false then
                             timerText:SetFormattedText("%.1f", 0.0)
                         end
@@ -1809,22 +1844,15 @@ local function CreateSingleCastBar(unit)
                         cast.holdEnd = now + 0.15
                     end
                     if now >= cast.holdEnd then
-                        anchor:Hide()
-                        obj.activeCast = nil
-                        return
+                        obj:Idle()
                     else
                         statusBar:SetValue(cast.isChannel and 0 or 1)
-                        local U = unit:sub(1,1):upper() .. unit:sub(2)
                         if CFG["show" .. U .. "Timer"] ~= false then
                             timerText:SetFormattedText("%.1f", 0.0)
                         end
-                        return
                     end
+                    return
                 end
-            else
-                anchor:Hide()
-                obj.activeCast = nil
-                return
             end
         end
 
@@ -1837,7 +1865,6 @@ local function CreateSingleCastBar(unit)
 
         statusBar:SetValue(prog)
 
-        local U = unit:sub(1,1):upper() .. unit:sub(2)
         if CFG["show" .. U .. "Timer"] ~= false then
             timerText:SetFormattedText("%.1f", math.max(0, rem))
         end
@@ -1846,18 +1873,17 @@ local function CreateSingleCastBar(unit)
             spark:Show()
             local barW = statusBar:GetWidth() or 0
             if barW > 0 then
-                local sx = barW * prog
                 spark:ClearAllPoints()
-                spark:SetPoint("CENTER", statusBar, "LEFT", sx, 0)
+                spark:SetPoint("CENTER", statusBar, "LEFT", barW * prog, 0)
             end
         else
             spark:Hide()
         end
     end)
 
-    obj:UpdateLayout()
     anchor:Hide()
     singleBars[unit] = obj
+    obj:UpdateLayout()
     return obj
 end
 
@@ -1865,37 +1891,41 @@ local function UpdateSingleCast(unit)
     local obj = singleBars[unit]
     if not obj then return end
 
-    if CFG["show" .. unit:sub(1,1):upper() .. unit:sub(2) .. "Bar"] == false then
-        obj.anchor:Hide()
+    if not obj:IsEnabled() then
         obj.activeCast = nil
+        obj.isTest = false
+        obj.anchor:Hide()
         return
     end
 
     local castData = GetSafeCastData(unit)
     if not castData then
-        obj.anchor:Hide()
-        obj.activeCast = nil
+        if not obj.isTest then obj:Idle() end
         return
     end
 
+    obj.isTest = false
+    obj.isPlaceholder = false
     obj.activeCast = castData
     obj:UpdateLayout()
 
-    -- Set timer duration on C++ StatusBar for secret duration support
-    if castData.durationObj and obj.statusBar.SetTimerDuration then
-        pcall(obj.statusBar.SetTimerDuration, obj.statusBar, castData.durationObj)
-    else
-        obj.statusBar:SetMinMaxValues(0, 1)
-        obj.statusBar:SetValue(castData.isChannel and 1 or 0)
+    -- Secret timings use the engine timer; readable timings use OnUpdate
+    obj.statusBar:SetMinMaxValues(0, 1)
+    obj.statusBar:SetValue(castData.isChannel and 1 or 0)
+    if castData.isSecret then
+        if castData.durationObj and obj.statusBar.SetTimerDuration then
+            pcall(obj.statusBar.SetTimerDuration, obj.statusBar, castData.durationObj)
+        end
+        obj.timerText:SetText("")
+        obj.spark:Hide()
     end
 
     -- Icon
     if castData.texture then
         obj.icon:SetTexture(castData.texture)
-        obj.iconHolder:Show()
-    else
-        obj.iconHolder:Hide()
     end
+    local U = unit:sub(1,1):upper() .. unit:sub(2)
+    obj.iconHolder:SetShown(castData.texture ~= nil and CFG["show" .. U .. "Icon"] ~= false)
 
     -- Spell Text
     obj.spellText:SetText(castData.name or "")
@@ -1910,7 +1940,7 @@ local function UpdateSingleCast(unit)
 
     -- Latency Bar (Player only)
     if unit == "player" and obj.latencyBar then
-        if CFG.showLatency and not castData.isChannel then
+        if CFG.showLatency and not castData.isChannel and not castData.isSecret then
             local _, _, _, lagWorld = GetNetStats()
             lagWorld = math.min(1000, lagWorld or 0)
             local lagSec = lagWorld / 1000
@@ -1942,20 +1972,20 @@ end
 local function HideSingleCast(unit, isInterrupted)
     local obj = singleBars[unit]
     if not obj then return end
+    if obj.isTest then return end -- real events must not cancel a test preview
 
-    if isInterrupted and obj.anchor:IsShown() and not obj.isTest then
+    if isInterrupted and CFG.showInterruptedFlash ~= false and obj.anchor:IsShown() and obj.activeCast then
         obj.spellText:SetText("|cffff2020Interrupted!|r")
         obj.statusBar:SetStatusBarColor(1.0, 0.15, 0.15, 1)
-        if obj.activeCast then obj.activeCast.interrupted = true end
+        local interruptedCast = obj.activeCast
+        interruptedCast.interrupted = true
         C_Timer.After(0.4, function()
-            if obj.activeCast == nil or obj.activeCast.interrupted then
-                obj.anchor:Hide()
-                obj.activeCast = nil
+            if obj.activeCast == interruptedCast then
+                obj:Idle()
             end
         end)
     else
-        obj.anchor:Hide()
-        obj.activeCast = nil
+        obj:Idle()
     end
 end
 
@@ -1968,11 +1998,12 @@ local function CreateGCDBar()
     local pObj = singleBars["player"]
     if not pObj then return end
 
-    gcdBar = CreateFrame("Frame", "FP_CB_GCDBar", pObj.anchor)
+    -- Parented to UIParent (not the player anchor) so it stays visible for
+    -- instant casts while the cast bar itself is hidden. It is still anchored
+    -- to the cast bar, so it follows the bar when you drag it.
+    gcdBar = CreateFrame("Frame", "FP_CB_GCDBar", UIParent)
     gcdBar:SetFrameStrata("MEDIUM")
     gcdBar:SetFrameLevel(65)
-    gcdBar:SetPoint("TOPLEFT", pObj.statusBar, "BOTTOMLEFT", 0, -(CFG.gcdGap or 2))
-    gcdBar:SetPoint("TOPRIGHT", pObj.statusBar, "BOTTOMRIGHT", 0, -(CFG.gcdGap or 2))
     gcdBar:SetHeight(CFG.gcdHeight or 4)
 
     local bg = gcdBar:CreateTexture(nil, "BACKGROUND")
@@ -1986,25 +2017,34 @@ local function CreateGCDBar()
     bar:SetStatusBarTexture(FLAT_TEXTURE)
     bar:SetMinMaxValues(0, 1)
     bar:SetValue(0)
-    local gc = CFG.gcdColor or {0.0, 0.5, 1.0, 0.9}
-    bar:SetStatusBarColor(gc[1], gc[2], gc[3], gc[4] or 0.9)
     gcdBar.bar = bar
 
     local spark = bar:CreateTexture(nil, "OVERLAY", nil, 5)
     spark:SetTexture(FLAT_TEXTURE)
     spark:SetVertexColor(1, 1, 1, 1)
     spark:SetWidth(2)
-    spark:SetHeight((CFG.gcdHeight or 4) + 2)
     spark:Hide()
     gcdBar.spark = spark
+
+    local function ApplyGCDLayout()
+        local gap = CFG.gcdGap or 2
+        gcdBar:ClearAllPoints()
+        gcdBar:SetPoint("TOPLEFT", pObj.statusBar, "BOTTOMLEFT", 0, -gap)
+        gcdBar:SetPoint("TOPRIGHT", pObj.statusBar, "BOTTOMRIGHT", 0, -gap)
+        gcdBar:SetHeight(CFG.gcdHeight or 4)
+        spark:SetHeight((CFG.gcdHeight or 4) + 2)
+        local gc = CFG.gcdColor or {0.0, 0.5, 1.0, 0.9}
+        bar:SetStatusBarColor(gc[1], gc[2], gc[3], gc[4] or 0.9)
+    end
+    FP_CB.ApplyGCDLayout = ApplyGCDLayout
+    ApplyGCDLayout()
 
     gcdBar:Hide()
 
     local gcdStart, gcdDur = 0, 0
     gcdBar:SetScript("OnUpdate", function(self)
         if gcdDur <= 0 then self:Hide(); return end
-        local now = GetTime()
-        local rem = (gcdStart + gcdDur) - now
+        local rem = (gcdStart + gcdDur) - GetTime()
         if rem <= 0 then
             self:Hide()
             gcdDur = 0
@@ -2021,12 +2061,18 @@ local function CreateGCDBar()
     end)
 
     FP_CB.TriggerGCD = function(start, duration)
-        if not CFG.showGCD or duration <= 0 or duration > 2.0 then return end
+        if not CFG.showGCD then return end
+        local ok, valid = pcall(function() return duration > 0 and duration <= 2.0 end)
+        if not ok or not valid then return end
         gcdStart = start
         gcdDur = duration
-        gcdBar:SetHeight(CFG.gcdHeight or 4)
-        spark:SetHeight((CFG.gcdHeight or 4) + 2)
+        ApplyGCDLayout()
         gcdBar:Show()
+    end
+
+    FP_CB.HideGCD = function()
+        gcdDur = 0
+        gcdBar:Hide()
     end
 end
 
@@ -2037,7 +2083,13 @@ local isTesting = false
 local testFloatingBar = nil
 local testMockPlate = nil
 
+FP_CB.IsTesting = function() return isTesting end
+local function NotifyTestState()
+    if FP_CB.OnTestStateChanged then pcall(FP_CB.OnTestStateChanged, isTesting) end
+end
+
 local function ShowTestAll()
+    local wasTesting = isTesting
     isTesting = true
 
     -- Show Player, Target, Focus Test Casts
@@ -2054,6 +2106,7 @@ local function ShowTestAll()
             local isShown = CFG["show" .. U .. "Bar"] ~= false
             if isShown then
                 obj.isTest = true
+                obj.isPlaceholder = false
                 obj.activeCast = {
                     name       = data.name,
                     texture    = data.tex,
@@ -2082,6 +2135,9 @@ local function ShowTestAll()
             end
         end
     end
+    if FP_CB.TriggerGCD and CFG.showGCD then
+        FP_CB.TriggerGCD(GetTime(), 1.5)
+    end
 
     -- Enemy Nameplates
     local plateFound = false
@@ -2093,7 +2149,7 @@ local function ShowTestAll()
                 if uf and not (uf.IsForbidden and uf:IsForbidden()) then
                     plateFound = true
                     local obj = GetOrCreatePlateCastBar(uf, plate, uf.unit or "nameplate1")
-                    if obj then
+                    if obj and (obj.isTest or not obj.activeCast) then
                         obj.isTest = true
                         obj.activeCast = {
                             name        = "Shadow Bolt",
@@ -2158,7 +2214,8 @@ local function ShowTestAll()
         lbg:SetAllPoints()
         lbg:SetTexture(FLAT_TEXTURE)
         lbg:SetVertexColor(0.08, 0.08, 0.09, 0.95)
-        lbox.border = CreatePixelBorder(lbox, 1, tbr, tbg, tbb, 1.0)
+        local lbr, lbg2, lbb = GetEnemyBorderColor(false)
+        lbox.border = CreatePixelBorder(lbox, 1, lbr, lbg2, lbb, 1.0)
         testMockPlate.levelBox = lbox
 
         local lvlStr = lbox:CreateFontString(nil, "OVERLAY")
@@ -2246,9 +2303,6 @@ local function ShowTestAll()
 
     local h = CFG.enemyCastHeight or 14
     local w = CFG.enemyCastWidth or 140
-    if CFG.enemyCastMatchHealthWidth then
-        w = plateW
-    end
     local xOff = CFG.enemyCastXOffset or 0
     local yOff = CFG.enemyCastYOffset or -4
     local gap = CFG.enemyCastIconGap or 0
@@ -2259,17 +2313,19 @@ local function ShowTestAll()
     local ol = CFG.fontOutline or "OUTLINE"
     local showIcon = (CFG.showEnemyCastIcon ~= false)
 
-    local isCustomWidth = (CFG.enemyCastMatchHealthWidth == false) and (CFG.enemyCastFlushEdges == false)
-
     testFloatingBar:ClearAllPoints()
     testFloatingBar.iconHolder:ClearAllPoints()
 
-    testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
-    if isCustomWidth then
-        testFloatingBar:SetSize(w, h)
-    else
+    if CFG.enemyCastMatchHealthWidth ~= false then
+        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
         testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
         testFloatingBar:SetHeight(h)
+    elseif CFG.enemyCastFlushEdges ~= false then
+        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
+        testFloatingBar:SetSize(w, h)
+    else
+        testFloatingBar:SetPoint("TOP", testMockPlate, "BOTTOM", xOff, yOff)
+        testFloatingBar:SetSize(w, h)
     end
 
     if showIcon then
@@ -2321,16 +2377,20 @@ local function ShowTestAll()
     end
 
     testFloatingBar:Show()
+    if not wasTesting then NotifyTestState() end
 end
 FP_CB.ShowTestAll = ShowTestAll
 
 local function HideTestAll()
+    local wasTesting = isTesting
     isTesting = false
-    for _, obj in pairs(singleBars) do
-        obj.isTest = false
-        obj.anchor:Hide()
-        obj.activeCast = nil
+    for unit, obj in pairs(singleBars) do
+        if obj.isTest then
+            obj:Idle()
+            UpdateSingleCast(unit) -- resume a real cast if one is running
+        end
     end
+    if FP_CB.HideGCD then FP_CB.HideGCD() end
     if testFloatingBar then testFloatingBar:Hide() end
     if testMockPlate then testMockPlate:Hide() end
     for uf, obj in pairs(plateCastBars) do
@@ -2343,6 +2403,7 @@ local function HideTestAll()
             end
         end
     end
+    if wasTesting then NotifyTestState() end
 end
 FP_CB.HideTestAll = HideTestAll
 
@@ -2364,12 +2425,45 @@ local function RefreshAllBars()
             end
         end
     end
+    if FP_CB.ApplyGCDLayout then FP_CB.ApplyGCDLayout() end
     if isTesting then
         ShowTestAll()
     end
-    ApplyBlizzardSuppression()
 end
 FP_CB.RefreshAllBars = RefreshAllBars
+
+-- Show/hide draggable placeholders for unlocked bars
+local function SetMoveMode(on)
+    FP_CB.moveMode = on and true or false
+    for _, obj in pairs(singleBars) do
+        obj:UpdateLayout()
+    end
+end
+FP_CB.SetMoveMode = SetMoveMode
+
+-- Move a bar back to its default position (and save it)
+local function ResetPosition(unit)
+    for _, suffix in ipairs({ "Pt", "RPt", "X", "Y" }) do
+        CFG[unit .. suffix] = DEFAULTS[unit .. suffix]
+        Save(unit .. suffix)
+    end
+    local obj = singleBars[unit]
+    if obj then
+        obj.anchor:ClearAllPoints()
+        obj.anchor:SetPoint(CFG[unit .. "Pt"], UIParent, CFG[unit .. "RPt"], CFG[unit .. "X"], CFG[unit .. "Y"])
+        obj:UpdateLayout()
+    end
+end
+FP_CB.ResetPosition = ResetPosition
+
+local function SetAllLocked(locked)
+    for _, u in ipairs({ "player", "target", "focus" }) do
+        CFG[u .. "Locked"] = locked and true or false
+        Save(u .. "Locked")
+    end
+    RefreshAllBars()
+end
+FP_CB.SetAllLocked = SetAllLocked
 
 local function ResetToDefaults()
     for k in pairs(CFG) do CFG[k] = nil end
@@ -2381,13 +2475,12 @@ local function ResetToDefaults()
         for k, v in pairs(DEFAULTS) do
             ForeverPlatesCastBarsDB[k] = DeepCopy(v)
         end
-        ForeverPlatesCastBarsDB._configVersion = 4
+        ForeverPlatesCastBarsDB._configVersion = CONFIG_VERSION
     end
-    if BetterCastBarsDB then
-        for k in pairs(BetterCastBarsDB) do BetterCastBarsDB[k] = nil end
-        for k, v in pairs(DEFAULTS) do
-            BetterCastBarsDB[k] = DeepCopy(v)
-        end
+    -- Positions are reset too, so put the anchors back
+    for unit, obj in pairs(singleBars) do
+        obj.anchor:ClearAllPoints()
+        obj.anchor:SetPoint(CFG[unit .. "Pt"] or "CENTER", UIParent, CFG[unit .. "RPt"] or "CENTER", CFG[unit .. "X"] or 0, CFG[unit .. "Y"] or 0)
     end
     RefreshAllBars()
     ApplyBlizzardSuppression()
@@ -2399,7 +2492,9 @@ local function SimulateCast(isShielded, unit)
     local obj = singleBars[unit]
     if not obj then return end
     obj.isTest = true
+    obj.isPlaceholder = false
     obj.activeCast = {
+        once       = true,
         name       = isShielded and "Shielded Cast" or "Kickable Cast",
         texture    = isShielded and "Interface\\Icons\\Spell_Holy_PowerInfusion" or "Interface\\Icons\\Spell_Fire_FlameShock",
         startTime  = GetTime(),
@@ -2446,10 +2541,29 @@ events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_UPDATE")
 events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_STOP")
 events:RegisterEvent("SPELL_UPDATE_COOLDOWN")
 
+local SINGLE_UNITS = { player = true, target = true, focus = true }
+
+local CAST_UPDATE_EVENTS = {
+    UNIT_SPELLCAST_START = true, UNIT_SPELLCAST_CHANNEL_START = true,
+    UNIT_SPELLCAST_DELAYED = true, UNIT_SPELLCAST_CHANNEL_UPDATE = true,
+    UNIT_SPELLCAST_EMPOWER_START = true, UNIT_SPELLCAST_EMPOWER_UPDATE = true,
+}
+local CAST_STOP_EVENTS = {
+    UNIT_SPELLCAST_STOP = true, UNIT_SPELLCAST_CHANNEL_STOP = true, UNIT_SPELLCAST_EMPOWER_STOP = true,
+}
+local CAST_FAIL_EVENTS = {
+    UNIT_SPELLCAST_FAILED = true, UNIT_SPELLCAST_INTERRUPTED = true,
+}
+
+local function GetPlateObj(unit)
+    local plate = GetSafeNamePlate(unit)
+    local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
+    return uf and plateCastBars[uf]
+end
+
 events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
     if event == "ADDON_LOADED" then
-        local loadedName = unit
-        if loadedName == ADDON_NAME or loadedName == "Foreverplatescastbars" or loadedName == "BetterCastBars" then
+        if unit == ADDON_NAME then
             LoadConfig()
 
             CreateSingleCastBar("player")
@@ -2459,39 +2573,28 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
 
             ApplyBlizzardSuppression()
 
-            if FP_CB.CreateGUI then
-                FP_CB.CreateGUI()
+            -- The full settings window is built on first open (/fpc); only a
+            -- small entry in Game Menu > Options > AddOns is registered now.
+            if FP_CB.RegisterSettingsPanel then
+                pcall(FP_CB.RegisterSettingsPanel)
             end
+            self:UnregisterEvent("ADDON_LOADED")
         end
         return
     end
 
     if event == "PLAYER_ENTERING_WORLD" then
-        ApplyBlizzardSuppression()
-        C_Timer.After(0.5, ApplyBlizzardSuppression)
+        ApplyBlizzardSuppression(true)
+        C_Timer.After(0.5, function() ApplyBlizzardSuppression(true) end)
         return
     end
 
-    if event == "PLAYER_TARGET_CHANGED" then
-        ApplyBlizzardSuppression()
-        if UnitExists("target") then
-            if CFG.showTargetBar then
-                UpdateSingleCast("target")
-            end
+    if event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_FOCUS_CHANGED" then
+        local u = (event == "PLAYER_TARGET_CHANGED") and "target" or "focus"
+        if UnitExists(u) then
+            UpdateSingleCast(u)
         else
-            HideSingleCast("target")
-        end
-        return
-    end
-
-    if event == "PLAYER_FOCUS_CHANGED" then
-        ApplyBlizzardSuppression()
-        if UnitExists("focus") then
-            if CFG.showFocusBar then
-                UpdateSingleCast("focus")
-            end
-        else
-            HideSingleCast("focus")
+            HideSingleCast(u)
         end
         return
     end
@@ -2499,29 +2602,23 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
     if event == "SPELL_UPDATE_COOLDOWN" then
         if CFG.showGCD and FP_CB.TriggerGCD then
             local start, dur = GetSafeSpellCooldown(61304)
-            if start and dur and dur > 0 and dur <= 2.0 then
-                FP_CB.TriggerGCD(start, dur)
+            if start and dur then
+                FP_CB.TriggerGCD(start, dur) -- validates (and guards secret values) itself
             end
         end
         return
     end
 
     if event == "NAME_PLATE_UNIT_ADDED" then
+        -- Full scan once when the plate is (re)assigned, then one late re-check
+        -- for cast bars Blizzard creates a moment after the plate appears.
+        pcall(SuppressPlateCastBar, unit, true)
         pcall(SetupNameplateCastBar, unit)
-        local plate = GetSafeNamePlate(unit)
-        if plate then
-            pcall(SuppressPlateCastBar, plate)
-        end
-        C_Timer.After(0.05, function()
-            pcall(SetupNameplateCastBar, unit)
-            local p2 = GetSafeNamePlate(unit)
-            if p2 then pcall(SuppressPlateCastBar, p2) end
-            pcall(ApplyBlizzardSuppression)
-        end)
         C_Timer.After(0.2, function()
-            pcall(SetupNameplateCastBar, unit)
-            local p3 = GetSafeNamePlate(unit)
-            if p3 then pcall(SuppressPlateCastBar, p3) end
+            if UnitExists(unit) then
+                pcall(SuppressPlateCastBar, unit, true)
+                pcall(SetupNameplateCastBar, unit)
+            end
         end)
         return
     elseif event == "NAME_PLATE_UNIT_REMOVED" then
@@ -2529,93 +2626,68 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
         return
     end
 
-    -- Periodic suppression ticker (catches frames dynamically shown on target change)
-    -- (Attached below via events:SetScript("OnUpdate"))
+    if not unit then return end
 
-    -- Spell cast updates
-    if unit then
-        if unit == "player" or unit == "target" or unit == "focus" then
-            if event == "UNIT_SPELLCAST_START" or event == "UNIT_SPELLCAST_CHANNEL_START"
-            or event == "UNIT_SPELLCAST_DELAYED" or event == "UNIT_SPELLCAST_CHANNEL_UPDATE"
-            or event == "UNIT_SPELLCAST_INTERRUPTIBLE" or event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE"
-            or event == "UNIT_SPELLCAST_EMPOWER_START" or event == "UNIT_SPELLCAST_EMPOWER_UPDATE" then
+    -- Player / Target / Focus
+    if SINGLE_UNITS[unit] then
+        local obj = singleBars[unit]
+        if CAST_UPDATE_EVENTS[event]
+        or event == "UNIT_SPELLCAST_INTERRUPTIBLE" or event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE" then
+            UpdateSingleCast(unit)
+        elseif CAST_STOP_EVENTS[event] then
+            if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then return end
+            if GetSafeCastData(unit) then
                 UpdateSingleCast(unit)
-            elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
-            or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
-                local obj = singleBars[unit]
-                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
-                    return
-                end
-                local nextCast = GetSafeCastData(unit)
-                if nextCast then
-                    UpdateSingleCast(unit)
-                else
-                    HideSingleCast(unit, false)
-                end
-            elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
-                local obj = singleBars[unit]
-                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
-                    return
-                end
-                HideSingleCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
+            else
+                HideSingleCast(unit, false)
             end
-        elseif unit:match("^nameplate%d+$") then
-            if event == "UNIT_SPELLCAST_START" or event == "UNIT_SPELLCAST_CHANNEL_START"
-            or event == "UNIT_SPELLCAST_DELAYED" or event == "UNIT_SPELLCAST_CHANNEL_UPDATE"
-            or event == "UNIT_SPELLCAST_EMPOWER_START" or event == "UNIT_SPELLCAST_EMPOWER_UPDATE" then
+        elseif CAST_FAIL_EVENTS[event] then
+            if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then return end
+            HideSingleCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
+        end
+        return
+    end
+
+    -- Enemy nameplates
+    if unit:find("^nameplate%d+$") then
+        if CAST_UPDATE_EVENTS[event] then
+            UpdatePlateCast(unit)
+        elseif event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE" then
+            SetPlateCastShielded(unit, true)
+        elseif event == "UNIT_SPELLCAST_INTERRUPTIBLE" then
+            SetPlateCastShielded(unit, false)
+        elseif CAST_STOP_EVENTS[event] then
+            local obj = GetPlateObj(unit)
+            if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then return end
+            if GetSafeCastData(unit) then
                 UpdatePlateCast(unit)
-            elseif event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE" then
-                SetPlateCastShielded(unit, true)
-            elseif event == "UNIT_SPELLCAST_INTERRUPTIBLE" then
-                SetPlateCastShielded(unit, false)
-            elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
-            or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
-                local plate = GetSafeNamePlate(unit)
-                local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
-                local obj = uf and plateCastBars[uf]
-                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
-                    return
-                end
-                local nextCast = GetSafeCastData(unit)
-                if nextCast then
-                    UpdatePlateCast(unit)
-                else
-                    HidePlateCast(unit, false)
-                end
-            elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
-                local plate = GetSafeNamePlate(unit)
-                local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
-                local obj = uf and plateCastBars[uf]
-                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
-                    return
-                end
-                HidePlateCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
+            else
+                HidePlateCast(unit, false)
             end
+        elseif CAST_FAIL_EVENTS[event] then
+            local obj = GetPlateObj(unit)
+            if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then return end
+            HidePlateCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
         end
     end
 end)
 
--- Continuous Blizzard suppression ticker (checks every 0.25s)
+-- Light safety net for the player/target/focus Blizzard bars only (cached
+-- list, no allocations, twice a second). Nameplate bars are kept hidden by
+-- the Show/SetAlpha hooks installed when they were first found.
 local lastSuppressionTick = 0
 events:SetScript("OnUpdate", function(self, elapsed)
     lastSuppressionTick = lastSuppressionTick + (elapsed or 0)
-    if lastSuppressionTick >= 0.25 then
-        lastSuppressionTick = 0
-        if CFG.hideBlizzardBars then
-            local allBars = GetAllBlizzardBars()
-            for _, f in ipairs(allBars) do
-                if f and f.IsShown and f:IsShown() then
-                    pcall(f.SetAlpha, f, 0)
-                    pcall(f.SetSize, f, 0.0001, 0.0001)
-                    if not (f.IsProtected and f:IsProtected()) then
-                        pcall(f.Hide, f)
-                    end
-                end
-            end
-
-            local plates = GetSafeNamePlates()
-            for _, plate in ipairs(plates) do
-                SuppressPlateCastBar(plate)
+    if lastSuppressionTick < 0.5 then return end
+    lastSuppressionTick = 0
+    if not CFG.hideBlizzardBars then return end
+    local bars = GetAllBlizzardBars()
+    for i = 1, #bars do
+        local f = bars[i]
+        if f.IsShown and f:IsShown() then
+            local ok, visible = pcall(function() return f:GetAlpha() > 0 end)
+            if ok and visible then
+                pcall(f.SetAlpha, f, 0)
             end
         end
     end
@@ -2627,19 +2699,24 @@ end)
 local function HandleSlash(msg)
     msg = strlower(strtrim(msg or ""))
 
-    if msg == "lock" then
-        CFG.playerLocked = true; Save("playerLocked")
-        CFG.targetLocked = true; Save("targetLocked")
-        CFG.focusLocked  = true; Save("focusLocked")
-        RefreshAllBars()
-        print("|cff00ccff[ForeverPlates Cast Bars]|r Bars Locked.")
+    if msg == "help" or msg == "?" then
+        local c = "|cff00ccff[ForeverPlates Cast Bars]|r "
+        print(c .. "v" .. GetAddonVersion() .. " commands:")
+        print("  |cff00e5ff/fpc|r - open settings")
+        print("  |cff00e5ff/fpc unlock|r - show bars and drag them;  |cff00e5ff/fpc lock|r - lock and hide placeholders")
+        print("  |cff00e5ff/fpc test|r / |cff00e5ff/fpc hidetest|r - preview all bars")
+        print("  |cff00e5ff/fpc target|r / |cff00e5ff/fpc focus|r - toggle target / focus bar")
+        print("  |cff00e5ff/fpc reset|r - reset bar positions;  |cff00e5ff/fpc debug|r - target nameplate diagnostics")
+
+    elseif msg == "lock" then
+        SetAllLocked(true)
+        SetMoveMode(false)
+        print("|cff00ccff[ForeverPlates Cast Bars]|r Bars locked.")
 
     elseif msg == "unlock" then
-        CFG.playerLocked = false; Save("playerLocked")
-        CFG.targetLocked = false; Save("targetLocked")
-        CFG.focusLocked  = false; Save("focusLocked")
-        RefreshAllBars()
-        print("|cff00ccff[ForeverPlates Cast Bars]|r Bars Unlocked — drag to position.")
+        SetAllLocked(false)
+        SetMoveMode(true)
+        print("|cff00ccff[ForeverPlates Cast Bars]|r Bars unlocked - drag them into place, then type /fpc lock.")
 
     elseif msg == "test" then
         ShowTestAll()
@@ -2726,13 +2803,9 @@ local function HandleSlash(msg)
         end
 
     elseif msg == "reset" then
-        CFG.playerX = DEFAULTS.playerX; CFG.playerY = DEFAULTS.playerY
-        CFG.targetX = DEFAULTS.targetX; CFG.targetY = DEFAULTS.targetY
-        CFG.focusX  = DEFAULTS.focusX;  CFG.focusY  = DEFAULTS.focusY
-        Save("playerX"); Save("playerY")
-        Save("targetX"); Save("targetY")
-        Save("focusX");  Save("focusY")
-        RefreshAllBars()
+        FP_CB.ResetPosition("player")
+        FP_CB.ResetPosition("target")
+        FP_CB.ResetPosition("focus")
         print("|cff00ccff[ForeverPlates Cast Bars]|r Positions reset to defaults.")
 
     else
@@ -2749,5 +2822,6 @@ SLASH_FOREVERPLATESCASTBARS1 = "/fpc"
 SLASH_FOREVERPLATESCASTBARS2 = "/forevercast"
 SLASH_FOREVERPLATESCASTBARS3 = "/foreverplatescastbars"
 SLASH_FOREVERPLATESCASTBARS4 = "/bcb"
+SLASH_FOREVERPLATESCASTBARS5 = "/bettercastbars"
 
 SlashCmdList["FOREVERPLATESCASTBARS"] = HandleSlash

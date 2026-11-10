@@ -296,3 +296,33 @@ FDJ.Locales.koKR = {
     ["TURN_IN_HERE"] = "여기서 완료",
     ["TRACK_ACCEPT"] = "클릭하면 퀘스트를 수락합니다",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.koKR
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "파티에 공유",
+        ALL_DUNGEONS = "모든 던전",
+        THIS_DUNGEON = "이 던전",
+        NO_WISHLIST_ITEMS = "위시리스트에 아이템이 없습니다.",
+        ADD_TO_WISHLIST = "위시리스트에 추가",
+        REMOVE_FROM_WISHLIST = "위시리스트에서 제거",
+        WISHLIST_TOOLTIP_DESC = "이 아이템을 추적하고 획득 시 게임 내 알림을 받습니다.",
+        ITEM_REQ_LEVEL = "%d 레벨 필요",
+        OWNED = "[보유]",
+        WEAPONS = "무기",
+        ARMOR = "방어구",
+        ACCESSORIES = "장신구",
+        QUEST_ITEMS = "퀘스트 아이템",
+        NO_LOOT_MATCHES_FILTER = "현재 필터에 맞는 전리품이 없습니다.",
+        NO_LOOT_RECORDED = "기록된 전리품이 없습니다.",
+        CLOSE = "닫기",
+        WAYPOINT_CLEAR_TIP = "왼쪽 클릭: 퀘스트 열기. 오른쪽 클릭: 표시 제거.",
+        WISHLIST_DROP = "위시리스트 아이템 획득:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

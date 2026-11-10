@@ -1,6 +1,26 @@
-# ForeverLiquid (v1.3.1)
+# ForeverLiquid (v1.4.0)
 
 **Ultra-sleek, high-tech neon liquid XP, Reputation, Gold, Inventory, Dungeon & Alt session tracker designed specifically for WoW Forever (Camelot / 12.0 engine) and modern WoW clients.**
+
+---
+
+## 🆕 What's New in v1.4.0 "Insight"
+* **Recent rates**: tooltips, `/fl stats` and reports now show XP/hr and Gold/hr over the *last 15 minutes* (adjustable) next to the whole-session average, so you can see how you're doing right now.
+* **Idle auto-pause** (opt-in): `/fl afk 5` pauses the session after 5 idle minutes and removes the idle time from the clock. It resumes by itself when you gain XP/money or enter combat. Also in the right-click menu.
+* **Session History** (`/fl history`): finished sessions (reset or timed-out) are archived, last 40 kept, with personal bests for XP/hr, Gold/hr and longest session. Hover a row for kills, loot, best drop.
+* **Death counter**: shown in the XP tooltip, reports, Discord export and history.
+* **`/fl stats`**: private full session summary in your chat window.
+* **Crash-safe**: session is auto-saved every 60 seconds.
+* **Fixes**: paused sessions now stay paused after a restore; `/fl reset` and restores now handle mail/bank transfers correctly; lighter event load in groups and dungeons.
+
+| New command | Description |
+| :--- | :--- |
+| `/fl stats` | Private session summary incl. recent rates |
+| `/fl history` / `/fl history clear` | Open the history window / wipe it |
+| `/fl rate <5-60>` | Minutes used for the "recent" rate window |
+| `/fl afk <minutes\|off>` | Idle auto-pause |
+
+See `CHANGELOG.md` for the full review notes and the backlog of ideas.
 
 ---
 

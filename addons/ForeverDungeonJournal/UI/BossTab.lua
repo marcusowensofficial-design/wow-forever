@@ -1,3 +1,7 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemCount = GetItemCount or (C_Item and C_Item.GetItemCount)
+local GetSpellTexture = GetSpellTexture or (C_Spell and C_Spell.GetSpellTexture)
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
@@ -26,14 +30,6 @@ FDJ.selectedClassFilter = FDJ.selectedClassFilter or "ALL"
 FDJ.selectedSlotFilter = FDJ.selectedSlotFilter or "ALL"
 FDJ.selectedBossSubTab = FDJ.selectedBossSubTab or "tactics"
 FDJ.selectedTacticsRoleFilter = FDJ.selectedTacticsRoleFilter or "ALL"
-
-function FDJ.GetPlayerClassToken()
-    if type(UnitClass) == "function" then
-        local _, token = UnitClass("player")
-        if token and token ~= "" then return string.upper(token) end
-    end
-    return "WARRIOR"
-end
 
 function FDJ.GetPlayerCombatRole()
     -- 1. Check LFG / Dungeon Finder group assigned role if available
@@ -129,71 +125,78 @@ function FDJ.GetPlayerCombatRole()
     return "MELEE"
 end
 
-FDJ.CLASS_DISPLAY_INFO = {
-    WARRIOR = { name = "Warrior", r = 0.78, g = 0.61, b = 0.43 },
-    PALADIN = { name = "Paladin", r = 0.96, g = 0.55, b = 0.73 },
-    HUNTER  = { name = "Hunter",  r = 0.67, g = 0.83, b = 0.45 },
-    ROGUE   = { name = "Rogue",   r = 1.00, g = 0.96, b = 0.41 },
-    PRIEST  = { name = "Priest",  r = 1.00, g = 1.00, b = 1.00 },
-    SHAMAN  = { name = "Shaman",  r = 0.00, g = 0.44, b = 0.87 },
-    MAGE    = { name = "Mage",    r = 0.41, g = 0.80, b = 0.94 },
-    WARLOCK = { name = "Warlock", r = 0.58, g = 0.51, b = 0.79 },
-    DRUID   = { name = "Druid",   r = 1.00, g = 0.49, b = 0.04 },
+-- Classic proficiencies. Armor types and weapon types are matched on exact
+-- tokens from the slot text ("Chest, Plate", "Two-Hand, Staff", ...), never
+-- on substrings.
+local ARMOR_CLASSES = {
+    leather = { WARRIOR = true, PALADIN = true, HUNTER = true, ROGUE = true, SHAMAN = true, DRUID = true },
+    mail    = { WARRIOR = true, PALADIN = true, HUNTER = true, SHAMAN = true },
+    plate   = { WARRIOR = true, PALADIN = true },
 }
+local function ClassSet(...)
+    local t = {}
+    for i = 1, select("#", ...) do t[(select(i, ...))] = true end
+    return t
+end
+local WEAPON_CLASSES = {
+    ["1h:sword"]  = ClassSet("WARRIOR", "PALADIN", "ROGUE", "HUNTER", "MAGE", "WARLOCK"),
+    ["2h:sword"]  = ClassSet("WARRIOR", "PALADIN", "HUNTER"),
+    ["1h:axe"]    = ClassSet("WARRIOR", "PALADIN", "ROGUE", "HUNTER", "SHAMAN"),
+    ["2h:axe"]    = ClassSet("WARRIOR", "PALADIN", "HUNTER", "SHAMAN"),
+    ["1h:mace"]   = ClassSet("WARRIOR", "PALADIN", "ROGUE", "PRIEST", "SHAMAN", "DRUID"),
+    ["2h:mace"]   = ClassSet("WARRIOR", "PALADIN", "SHAMAN", "DRUID"),
+    ["any:dagger"]   = ClassSet("WARRIOR", "ROGUE", "HUNTER", "MAGE", "PRIEST", "WARLOCK", "SHAMAN", "DRUID"),
+    ["any:fist weapon"] = ClassSet("WARRIOR", "ROGUE", "HUNTER", "SHAMAN", "DRUID"),
+    ["any:staff"]    = ClassSet("WARRIOR", "HUNTER", "MAGE", "PRIEST", "WARLOCK", "SHAMAN", "DRUID"),
+    ["any:polearm"]  = ClassSet("WARRIOR", "PALADIN", "HUNTER", "DRUID"),
+    ["any:bow"]      = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+    ["any:gun"]      = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+    ["any:crossbow"] = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+    ["any:thrown"]   = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+    ["any:wand"]     = ClassSet("MAGE", "PRIEST", "WARLOCK"),
+    ["any:arrow"]    = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+    ["any:bullet"]   = ClassSet("WARRIOR", "HUNTER", "ROGUE"),
+}
+local RELIC_CLASSES = { idol = "DRUID", libram = "PALADIN", totem = "SHAMAN" }
+local SHIELD_CLASSES = ClassSet("WARRIOR", "PALADIN", "SHAMAN")
 
-function FDJ.GetClassDisplay(token)
-    if not token or token == "ALL" then
-        local locAll = (L and L("ALL_CLASSES"))
-        if not locAll or locAll == "ALL_CLASSES" then locAll = "All Classes" end
-        return locAll, 1.0, 0.82, 0.27
+-- True when a class can use an item with this slot text.
+function FDJ.SlotUsableByClass(slot, classToken)
+    if not classToken or classToken == "ALL" then return true end
+    if type(slot) ~= "string" or slot == "" then return true end
+    local parts = {}
+    for part in string.gmatch(string.lower(slot), "[^,]+") do
+        parts[#parts + 1] = part:gsub("^%s+", ""):gsub("%s+$", "")
     end
-    local info = FDJ.CLASS_DISPLAY_INFO[token]
-    if info then
-        local locName = info.name
-        if RAID_CLASS_COLORS and RAID_CLASS_COLORS[token] then
-            local c = RAID_CLASS_COLORS[token]
-            return locName, c.r, c.g, c.b
-        end
-        return locName, info.r, info.g, info.b
+    local main, last = parts[1], parts[#parts]
+    if not main then return true end
+
+    if main == "relic" then
+        local owner = RELIC_CLASSES[last]
+        return owner == nil or owner == classToken
     end
-    return token, 0.95, 0.85, 0.65
+    if last == "shield" then
+        return SHIELD_CLASSES[classToken] == true
+    end
+    -- Cloth is for everyone; cloaks have no armor type.
+    if main ~= "back" and ARMOR_CLASSES[last] then
+        return ARMOR_CLASSES[last][classToken] == true
+    end
+
+    local twoHand = false
+    for _, p in ipairs(parts) do
+        if p == "two-hand" or p == "two hand" then twoHand = true end
+    end
+    local set = WEAPON_CLASSES[(twoHand and "2h:" or "1h:") .. last] or WEAPON_CLASSES["any:" .. last]
+    if main == "thrown" then set = WEAPON_CLASSES["any:thrown"] end
+    if main == "projectile" then set = WEAPON_CLASSES["any:" .. last] end
+    if set then return set[classToken] == true end
+    return true
 end
 
 local function ItemMatchesClass(item, classToken)
     if not item or not classToken or classToken == "ALL" then return true end
-    local slot = item[3] or ""
-    local slotLower = string.lower(slot)
-
-    -- Relic filters
-    if string.find(slotLower, "idol", 1, true) then
-        return classToken == "DRUID"
-    elseif string.find(slotLower, "libram", 1, true) then
-        return classToken == "PALADIN"
-    elseif string.find(slotLower, "totem", 1, true) then
-        return classToken == "SHAMAN"
-    end
-
-    -- Armor type proficiency filters (Classic rules)
-    if string.find(slotLower, "plate", 1, true) then
-        return classToken == "WARRIOR" or classToken == "PALADIN"
-    elseif string.find(slotLower, "mail", 1, true) then
-        return classToken == "WARRIOR" or classToken == "PALADIN" or classToken == "HUNTER" or classToken == "SHAMAN"
-    elseif string.find(slotLower, "leather", 1, true) then
-        return classToken ~= "MAGE" and classToken ~= "PRIEST" and classToken ~= "WARLOCK"
-    elseif string.find(slotLower, "shield", 1, true) then
-        return classToken == "WARRIOR" or classToken == "PALADIN" or classToken == "SHAMAN"
-    end
-
-    -- Weapon proficiency filters
-    if string.find(slotLower, "two-hand", 1, true) or string.find(slotLower, "polearm", 1, true) then
-        return classToken == "WARRIOR" or classToken == "PALADIN" or classToken == "HUNTER" or classToken == "SHAMAN" or classToken == "DRUID"
-    elseif string.find(slotLower, "bow", 1, true) or string.find(slotLower, "gun", 1, true) or string.find(slotLower, "crossbow", 1, true) then
-        return classToken == "WARRIOR" or classToken == "HUNTER" or classToken == "ROGUE"
-    elseif string.find(slotLower, "wand", 1, true) then
-        return classToken == "MAGE" or classToken == "PRIEST" or classToken == "WARLOCK"
-    end
-
-    return true
+    return FDJ.SlotUsableByClass(item[3] or "", classToken)
 end
 FDJ.ItemMatchesClass = ItemMatchesClass
 
@@ -723,7 +726,7 @@ function FDJ.MakeRoleTipCard(parent, title, iconPath, titleColor)
         local tipText = card.rawTipText or (card.desc and card.desc:GetText()) or ""
         if tipText == "" then return end
 
-        tipText = tipText:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|H.-|h(%[.-%])|h", "%1")
+        tipText = tipText:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|H.-|h(%[.-%])|h", "%1"):gsub("|", "")
 
         local inRaid = IsInRaid and IsInRaid()
         local inParty = IsInGroup and IsInGroup()
@@ -751,7 +754,7 @@ function FDJ.MakeRoleTipCard(parent, title, iconPath, titleColor)
 
         for _, msg in ipairs(msgs) do
             if channel then
-                SendChatMessage(msg, channel)
+                SendChatMessage(msg:gsub("|", ""), channel)
             else
                 print("|cffffd100[Forever DJ]|r " .. msg)
             end

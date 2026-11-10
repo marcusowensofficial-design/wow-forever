@@ -30,3 +30,9 @@ website/scratch/
 # Private In-House Market Scanner Addon (Local Only)
 addons/ForeverMarket/
 
+# Addon Scratch & Backups
+*_backup*/
+_backup*/
+_merge_preview/
+addons/**/dev/
+

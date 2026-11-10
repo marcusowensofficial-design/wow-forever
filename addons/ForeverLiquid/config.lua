@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - Configuration & Slash Command Engine (v1.3.1)
+    ForeverLiquid - Configuration & Slash Command Engine (v1.4.0)
     Settings panel, neon sliders, theme selectors, automation options, and slash commands.
 --]]
 

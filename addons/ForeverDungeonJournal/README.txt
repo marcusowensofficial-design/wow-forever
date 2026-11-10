@@ -1,11 +1,39 @@
-Forever Dungeon Journal v1.5.0 by Exehn
+Forever Dungeon Journal v1.7.4 by Exehn
 ======================================
 
 INSTALL
-Extract the ForeverDungeonJournal folder into the Forever beta client's
+Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.7.4
+- Fixed the green [Owned] badge never appearing on boss loot, Loot Explorer and
+  Wishlist rows: GetItemCount() no longer exists on Forever's modern API, so the
+  journal now uses C_Item.GetItemCount().
+- Fixed item quality colours always falling back to blue (GetItemQualityColor
+  removed), and favourites/loot-filter icons and names that relied on the removed
+  GetItemInfo()/GetItemIcon() globals. Same fix for GetItemStats, GetSpellTexture,
+  GetAddOnMetadata, IsQuestFlaggedCompleted and GetQuestLogIndexByID fallbacks.
+- Fixed the favourites right-click menu not detecting the mouse (MouseIsOver was
+  removed; Region:IsMouseOver() is used instead).
+- Fixed raw key names (OWNED, SHARE_WISHLIST, ITEM_REQ_LEVEL, WAYPOINT_CLEAR_TIP,
+  NO_LOOT_RECORDED, ...) showing in the UI: 18 missing strings added in all 10 languages.
+- Fixed the RPG Mode progress bar fallback calling BuildOldBar before it existed.
+- Dungeon Preparation: the player is no longer listed twice in a raid, and secret
+  unit names/classes during encounters are ignored instead of erroring.
+- Version check: no addon messages are sent during chat-messaging lockdown, and
+  secret addon-message payloads are ignored.
+- Boss tactics: 57 Classic boss entries rewritten so their abilities match what the
+  bosses actually cast (checked against creature spell data and the Forever 1.60.1
+  spell database). Removed invented mechanics such as Aku'mai's "Void Spray",
+  Ghamoo-ra's "Triple Chomp" and Gelihast's "Shadow Bubble"; role tips now refer to
+  the real abilities. 17 more abilities renamed to their in-game names.
+- Loot: 11 Forever recipe drops seen on live servers added to their bosses
+  (Deadmines, Wailing Caverns, Shadowfang Keep, Stockade, Razorfen Kraul), and
+  Dextren Ward added as a source of Defender's Leather Helm.
+- Loot Explorer is now translated into all 10 languages (filters, headers, sort
+  options, counts and empty messages). New file: UI/LootExplorerLocale.lua.
 
 CHANGES IN 1.5.0
 - Added authoritative Boss Loot Drop Rates across Classic & Forever beta dungeons.

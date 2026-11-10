@@ -293,3 +293,33 @@ FDJ.Locales.ruRU = {
     ["TURN_IN_HERE"] = "Сдать здесь",
     ["TRACK_ACCEPT"] = "Нажмите, чтобы принять задание",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.ruRU
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Поделиться с группой",
+        ALL_DUNGEONS = "Все подземелья",
+        THIS_DUNGEON = "Это подземелье",
+        NO_WISHLIST_ITEMS = "В списке желаемого пока нет предметов.",
+        ADD_TO_WISHLIST = "Добавить в список желаемого",
+        REMOVE_FROM_WISHLIST = "Убрать из списка желаемого",
+        WISHLIST_TOOLTIP_DESC = "Отслеживать предмет и получать оповещение в игре, когда он выпадет.",
+        ITEM_REQ_LEVEL = "Требуется уровень %d",
+        OWNED = "[Есть]",
+        WEAPONS = "Оружие",
+        ARMOR = "Доспехи",
+        ACCESSORIES = "Аксессуары",
+        QUEST_ITEMS = "Предметы для заданий",
+        NO_LOOT_MATCHES_FILTER = "Нет добычи, подходящей под фильтры.",
+        NO_LOOT_RECORDED = "Добыча не записана.",
+        CLOSE = "Закрыть",
+        WAYPOINT_CLEAR_TIP = "ЛКМ: открыть задание. ПКМ: убрать метку.",
+        WISHLIST_DROP = "Получен предмет из списка желаемого:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

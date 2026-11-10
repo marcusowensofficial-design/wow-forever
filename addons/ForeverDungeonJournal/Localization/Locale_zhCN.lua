@@ -296,3 +296,33 @@ FDJ.Locales.zhCN = {
     ["TURN_IN_HERE"] = "在此交付",
     ["TRACK_ACCEPT"] = "点击接受任务",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.zhCN
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "分享到队伍",
+        ALL_DUNGEONS = "所有地下城",
+        THIS_DUNGEON = "本地下城",
+        NO_WISHLIST_ITEMS = "愿望清单中还没有物品。",
+        ADD_TO_WISHLIST = "加入愿望清单",
+        REMOVE_FROM_WISHLIST = "从愿望清单移除",
+        WISHLIST_TOOLTIP_DESC = "追踪此物品，掉落时在游戏内提醒你。",
+        ITEM_REQ_LEVEL = "需要等级 %d",
+        OWNED = "[已拥有]",
+        WEAPONS = "武器",
+        ARMOR = "护甲",
+        ACCESSORIES = "饰品",
+        QUEST_ITEMS = "任务物品",
+        NO_LOOT_MATCHES_FILTER = "没有符合当前筛选条件的战利品。",
+        NO_LOOT_RECORDED = "没有记录的战利品。",
+        CLOSE = "关闭",
+        WAYPOINT_CLEAR_TIP = "左键：打开任务。右键：移除标记。",
+        WISHLIST_DROP = "获得愿望清单物品：",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

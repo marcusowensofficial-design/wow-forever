@@ -173,31 +173,31 @@ function buildSearchIndex() {
   // Companion Addons & All-in-One Suite
   [
     {
-      title: "Marcus's All-in-One WoW Forever Addon Suite (v2.2.1)",
+      title: "Marcus's All-in-One WoW Forever Addon Suite (v2.3.0)",
       icon: '🧩',
       desc: 'Complete 6-addon pack: ForeverPlates, Castbars, ForeverLiquid, ForeverDungeonJournal, ForeverBlessings, and EchoTwist.',
       targetId: 'tab-addons'
     },
     {
-      title: 'ForeverPlates (v2.1.1) — Zero-Taint Pixel Nameplate Engine',
+      title: 'ForeverPlates (v2.2.1) — Zero-Taint Pixel Nameplate Engine',
       icon: '🎯',
       desc: 'C-side health formatting on <secret number> values, threat colors, execute borders, and /fp test mode.',
       targetId: 'card-foreverplates'
     },
     {
-      title: 'Forever Nameplates Castbars (v2.2.1) — Sub-Pixel Castbar & Latency HUD',
+      title: 'Forever Nameplates Castbars (v2.3.0) — Sub-Pixel Castbar & Latency HUD',
       icon: '⚡',
       desc: 'Enemy nameplate castbars with uninterruptible shield detection and lag queue window (/bcb, /fpc).',
       targetId: 'card-forevercastbars'
     },
     {
-      title: 'ForeverLiquid (v1.3.1) — Cyberpunk Neon Fluid XP & Gold Ledger HUD',
+      title: 'ForeverLiquid (v1.4.0) — Cyberpunk Neon Fluid XP & Gold Ledger HUD',
       icon: '🧪',
       desc: '20-bubble fluid XP bar, live gold/hr cashflow ledger, mount fund ETA, and 5-instance/hr lockout radar (/fl).',
       targetId: 'card-foreverliquid'
     },
     {
-      title: 'ForeverDungeonJournal (v1.6.2) — Classic+ Encounter Atlas & BiS Wishlist',
+      title: 'ForeverDungeonJournal (v1.7.4) — Classic+ Encounter Atlas & BiS Wishlist',
       icon: '📖',
       desc: 'All 13 Classic+ dungeons, 3D boss viewer, calibrated maps, and /fj import in-game BiS wishlist starring.',
       targetId: 'card-foreverjournal'

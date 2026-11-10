@@ -1208,7 +1208,7 @@ FDJ.DROP_RATES = {
     [274610] = "33%", -- Ritual-Binder's Gloves (Min'loth the Serpent)
     [274611] = "20%", -- Robe of the Drowned (Primeval Elemental)
     [274612] = "20%", -- Waterlogged Burial Shroud (Primeval Elemental)
-    [274613] = "20%", -- Priestess Cloak (Primeval Elemental)
+    [274613] = "20%", -- Priestess Cloak (Var'Taka)
     [274614] = "20%", -- Knucklebone Ring (Primeval Elemental)
     [274615] = "20%", -- Heart of the Primeval (Primeval Elemental)
 }

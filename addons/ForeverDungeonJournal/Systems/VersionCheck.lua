@@ -1,3 +1,8 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetAddOnMetadata = GetAddOnMetadata or (C_AddOns and C_AddOns.GetAddOnMetadata)
+local RegisterAddonMessagePrefix = RegisterAddonMessagePrefix or (C_ChatInfo and C_ChatInfo.RegisterAddonMessagePrefix)
+local SendAddonMessage = SendAddonMessage or (C_ChatInfo and C_ChatInfo.SendAddonMessage)
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
@@ -79,6 +84,15 @@ local function Send(channel)
     if lastSent[channel] and now - lastSent[channel] < SEND_THROTTLE then return end
     lastSent[channel] = now
 
+    -- Addon messages are blocked during encounter/instance lockdown on Forever.
+    if C_ChatInfo and C_ChatInfo.InChatMessagingLockdown then
+        local ok, locked = pcall(C_ChatInfo.InChatMessagingLockdown)
+        if ok and locked == true then
+            lastSent[channel] = nil -- try again on the next broadcast
+            return
+        end
+    end
+
     if C_ChatInfo and C_ChatInfo.SendAddonMessage then
         pcall(C_ChatInfo.SendAddonMessage, PREFIX, version, channel)
     elseif SendAddonMessage then
@@ -123,6 +137,7 @@ local function ScheduleReply(channel)
 end
 
 local function OnAddonMessage(prefix, text, channel)
+    if type(issecretvalue) == "function" and (issecretvalue(prefix) or issecretvalue(text) or issecretvalue(channel)) then return end
     if prefix ~= PREFIX then return end
 
     local theirs = ParseVersion(text)

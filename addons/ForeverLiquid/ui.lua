@@ -1,5 +1,5 @@
 --[[
-    ForeverLiquid - UI & Visual Engine (v1.3.1)
+    ForeverLiquid - UI & Visual Engine (v1.4.0)
     Sleek, high-tech neon liquid aesthetics & cyber-progression:
     - 6 Cyberpunk Color Themes (Matrix, Vaporwave, Sunwell, Blood Knight, Frost, Carbon)
     - 20-Bubble (5%) Classic tick marks with soft resting glow
@@ -1479,6 +1479,12 @@ function FL:InitializeUI()
         GameTooltip:AddDoubleLine("Bag Loot Value:", FL.FormatMoney(FL.session.lootedItemsValue), 0.7, 0.7, 0.7, 1, 1, 1)
         GameTooltip:AddDoubleLine("Total Session Profit:", FL.FormatMoney(FL:GetTotalSessionValue()), t.accent.r, t.accent.g, t.accent.b, 1, 1, 1)
         GameTooltip:AddDoubleLine("Gold / Hour Rate:", FL.FormatMoney(FL:GetGoldRate()) .. "/hr", 1, 0.85, 0.2, 1, 1, 1)
+        if FL.GetRecentRates then
+            local _, rGold, rMin = FL:GetRecentRates()
+            if rGold then
+                GameTooltip:AddDoubleLine(string.format("Last %d min:", rMin), FL.FormatMoney(rGold) .. "/hr", 1, 0.85, 0.2, 1, 1, 1)
+            end
+        end
         
         local goal = FL:GetGoalProgress()
         if goal and not goal.isComplete then
@@ -1540,6 +1546,12 @@ function FL:InitializeUI()
             
             GameTooltip:AddDoubleLine("Session XP Gained:", FL.FormatComma(FL.session.xpGained), 0.7, 0.7, 0.7, 1, 1, 1)
             GameTooltip:AddDoubleLine("XP / Hour Rate:", FL.FormatNumber(FL:GetXPRate()) .. "/hr", 1, 0.85, 0.2, 1, 1, 1)
+            if FL.GetRecentRates then
+                local rXP, _, rMin = FL:GetRecentRates()
+                if rXP then
+                    GameTooltip:AddDoubleLine(string.format("Last %d min:", rMin), FL.FormatNumber(rXP) .. "/hr", 1, 0.85, 0.2, 1, 1, 1)
+                end
+            end
             
             local ttl = FL:GetTimeToLevel()
             if ttl then
@@ -1554,6 +1566,9 @@ function FL:InitializeUI()
         
         if (FL.session.questsDone or 0) > 0 then
             GameTooltip:AddDoubleLine("Quests Completed:", tostring(FL.session.questsDone), 0.7, 0.7, 0.7, 1, 1, 1)
+        end
+        if (FL.session.deaths or 0) > 0 then
+            GameTooltip:AddDoubleLine("Deaths:", tostring(FL.session.deaths), 0.7, 0.7, 0.7, 1, 0.3, 0.4)
         end
         if (FL.session.honorGained or 0) > 0 or (FL.session.hkCount or 0) > 0 then
             GameTooltip:AddDoubleLine("PvP Telemetry:", string.format("%d HKs  (+%d Honor)", FL.session.hkCount or 0, FL.session.honorGained or 0), 0.7, 0.7, 0.7, 1, 0.3, 0.4)
@@ -3973,6 +3988,15 @@ function FL:ShowContextMenu()
             rootDescription:CreateButton(FL.session.isPaused and (theme.accent.hex .. "Resume Session|r") or "|cffff3366Pause Session|r", function() FL:TogglePauseSession() end)
             rootDescription:CreateButton("Share Session to Chat", function() FL:ReportSession() end)
             rootDescription:CreateButton("Export for Discord", function() FL:ShowDiscordExportModal() end)
+            rootDescription:CreateButton("Session History & Personal Bests", function() if FL.ToggleHistory then FL:ToggleHistory() end end)
+            if FL.SetAutoPause then
+                local apMin = (ForeverLiquidDB.profile.autoPauseMinutes or 0)
+                local apMenu = rootDescription:CreateButton("Auto-Pause When Idle (" .. (apMin > 0 and (apMin .. "m") or "off") .. ")")
+                apMenu:CreateButton("Off", function() FL:SetAutoPause(0) end)
+                apMenu:CreateButton("After 2 minutes", function() FL:SetAutoPause(2) end)
+                apMenu:CreateButton("After 5 minutes", function() FL:SetAutoPause(5) end)
+                apMenu:CreateButton("After 10 minutes", function() FL:SetAutoPause(10) end)
+            end
             rootDescription:CreateButton("Save Session Snapshot", function() FL:SaveSession(false); print(theme.accent.hex .. "[ForeverLiquid]|r Session saved to database.") end)
             rootDescription:CreateButton("Reset Session Metrics", function() FL:ResetSession() end)
             
@@ -4061,6 +4085,7 @@ function FL:ShowContextMenu()
         { text = FL.session.isPaused and (theme.accent.hex .. "Resume Session|r") or "|cffff3366Pause Session|r", notCheckable = true, func = function() FL:TogglePauseSession() end },
         { text = "Share Session to Chat", notCheckable = true, func = function() FL:ReportSession() end },
         { text = "Export for Discord", notCheckable = true, func = function() FL:ShowDiscordExportModal() end },
+        { text = "Session History", notCheckable = true, func = function() if FL.ToggleHistory then FL:ToggleHistory() end end },
         { text = "Reload UI", notCheckable = true, func = function() ReloadUI() end },
         { text = "Purge Lua Memory", notCheckable = true, func = function() FL:PurgeLuaMemory() end },
         { text = "Toggle Clock Pod", notCheckable = true, func = function() ForeverLiquidDB.profile.showClockPod = not ForeverLiquidDB.profile.showClockPod; FL:UpdateHUD() end },

@@ -23,7 +23,7 @@ local SHARED = {
     } },
     { 252455, "Defender's Leather Helm", {
         [BFD] = { "Twilight Lord Kelris", "Old Serra'kis", "Aku'mai", "Lorgus Jett" },
-        [STOCKS] = { "Kam Deepfury", "Bazil Thredd" },
+        [STOCKS] = { "Kam Deepfury", "Bazil Thredd", "Dextren Ward" },
         [RFK] = { "Aggem Thorncurse", "Agathelos the Raging", "Charlga Razorflank", "Earthcaller Halmgar" },
         [SMGY] = { "Interrogator Vishas", "Bloodmage Thalnos" },
     } },

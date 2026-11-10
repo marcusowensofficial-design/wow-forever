@@ -2095,17 +2095,18 @@ function FP.CreateGUI()
     end
 
     -- 1. Test Plate Button
-    CreateFooterButton(f, "Test Enemy Plate", 16, 44, 110, 26, function()
+    CreateFooterButton(f, "Test Enemy Plate", 16, 44, 100, 26, function()
         if FP.ToggleTestPlate then
             FP.ToggleTestPlate()
         end
     end)
 
     -- 2. Reset Defaults Button
-    CreateFooterButton(f, "Reset Defaults", 132, 44, 100, 26, function()
+    CreateFooterButton(f, "Reset Defaults", 122, 44, 90, 26, function()
         if FP.defaults then
             for k, v in pairs(FP.defaults) do
-                ForeverPlatesDB[k] = v
+                -- Deep copy so editing a setting never mutates the shared defaults table
+                ForeverPlatesDB[k] = FP.DeepCopy and FP.DeepCopy(v) or v
             end
         end
         FP.RefreshAllDimensions()
@@ -2148,7 +2149,7 @@ function FP.CreateGUI()
     end)
 
     -- 3. Save & Close Button
-    local saveBtn = CreateFooterButton(f, "Save & Close", 238, 44, 130, 26, function()
+    local saveBtn = CreateFooterButton(f, "Save & Close", 218, 44, 106, 26, function()
         if FP.RefreshAllPlates then FP.RefreshAllPlates() end
         if FP.RefreshAllOutlines then FP.RefreshAllOutlines() end
         DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Settings applied! Saved to disk on /reload or exit.")
@@ -2159,7 +2160,11 @@ function FP.CreateGUI()
     saveBtn.label:SetTextColor(0.00, 0.85, 1.00, 1)
 
     -- 4. Reload UI Button
-    CreateFooterButton(f, "Reload UI", 374, 44, 150, 26, function()
+    CreateFooterButton(f, "Profiles", 330, 44, 90, 26, function()
+        if FP.ToggleProfilesUI then FP.ToggleProfilesUI() end
+    end)
+
+    CreateFooterButton(f, "Reload UI", 426, 44, 98, 26, function()
         ReloadUI()
     end)
 
@@ -2209,6 +2214,12 @@ function FP.CreateGUI()
         UpdateStatusText()
         SelectTab(currentTab)
     end)
+
+    -- Lets other modules (profiles import/load) re-sync every control with the DB
+    FP.SyncGUI = function()
+        local onShow = f:GetScript("OnShow")
+        if f:IsShown() and onShow then onShow(f) end
+    end
 
     -- Initially hidden so first ToggleGUI() call opens it
     f:Hide()

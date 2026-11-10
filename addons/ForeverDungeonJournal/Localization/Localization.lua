@@ -1008,3 +1008,63 @@ function FDJ.LocalizeMapLocation(loc)
         detail = FDJ.LocalizeFreeText(loc.detail),
     }
 end
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.enUS
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Share to Party",
+        ALL_DUNGEONS = "All Dungeons",
+        THIS_DUNGEON = "This Dungeon",
+        NO_WISHLIST_ITEMS = "No items on your wishlist yet.",
+        ADD_TO_WISHLIST = "Add to Wishlist",
+        REMOVE_FROM_WISHLIST = "Remove from Wishlist",
+        WISHLIST_TOOLTIP_DESC = "Track this item and receive in-game alerts when it drops.",
+        ITEM_REQ_LEVEL = "Requires Level %d",
+        OWNED = "[Owned]",
+        WEAPONS = "Weapons",
+        ARMOR = "Armor",
+        ACCESSORIES = "Accessories",
+        QUEST_ITEMS = "Quest Items",
+        NO_LOOT_MATCHES_FILTER = "No loot matches current filters.",
+        NO_LOOT_RECORDED = "No loot recorded.",
+        CLOSE = "Close",
+        WAYPOINT_CLEAR_TIP = "Left-click: open quest. Right-click: remove marker.",
+        WISHLIST_DROP = "Wishlist item acquired:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.deDE
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Mit Gruppe teilen",
+        ALL_DUNGEONS = "Alle Dungeons",
+        THIS_DUNGEON = "Dieser Dungeon",
+        NO_WISHLIST_ITEMS = "Noch keine Gegenstände auf deiner Wunschliste.",
+        ADD_TO_WISHLIST = "Zur Wunschliste hinzufügen",
+        REMOVE_FROM_WISHLIST = "Von Wunschliste entfernen",
+        WISHLIST_TOOLTIP_DESC = "Verfolge diesen Gegenstand und erhalte eine Meldung im Spiel, wenn er droppt.",
+        ITEM_REQ_LEVEL = "Benötigt Stufe %d",
+        OWNED = "[Im Besitz]",
+        WEAPONS = "Waffen",
+        ARMOR = "Rüstung",
+        ACCESSORIES = "Schmuck",
+        QUEST_ITEMS = "Questgegenstände",
+        NO_LOOT_MATCHES_FILTER = "Keine Beute entspricht den aktuellen Filtern.",
+        NO_LOOT_RECORDED = "Keine Beute erfasst.",
+        CLOSE = "Schließen",
+        WAYPOINT_CLEAR_TIP = "Linksklick: Quest öffnen. Rechtsklick: Markierung entfernen.",
+        WISHLIST_DROP = "Wunschlisten-Gegenstand erhalten:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

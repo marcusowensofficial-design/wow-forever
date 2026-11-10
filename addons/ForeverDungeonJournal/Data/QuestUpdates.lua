@@ -1,3 +1,6 @@
+-- Forever runs the modern (12.x) API, where these legacy globals no longer exist.
+-- Fall back to their C_ namespace equivalents so the code paths below still work.
+local GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
@@ -484,7 +487,13 @@ do
     local GROMGOL = "Kin'weelay, Grom'gol Base Camp, Stranglethorn Vale"
     FDJ.QUEST_START_MAPS[95775] = KINWEELAY
     FDJ.QUEST_START_MAPS[96774] = { mapID = 1412, x = 0.325, y = 0.206, label = "Mazu'kon — Mulgore", targetName = "Mazu'kon", detail = "Mazu'kon of the Earthen Ring, north-west Mulgore" }
+    FDJ.QUEST_START_MAPS[95789] = { mapID = 1434, x = 0.269, y = 0.772, label = "Krazek — Booty Bay", targetName = "Krazek", detail = "Krazek, upstairs in Booty Bay, Stranglethorn Vale" }
+    FDJ.QUEST_START_MAPS[95791] = FDJ.QUEST_START_MAPS[95789]
     FDJ.QUEST_START_MAPS[95787] = { mapID = 1424, x = 0.506, y = 0.571, label = "Loremaster Dibbs — Southshore", targetName = "Loremaster Dibbs", detail = "Loremaster Dibbs in Southshore, Hillsbrad Foothills" }
+    -- Magics of the Drowned City and Dibbs' two follow-ups: the same marker.
+    FDJ.QUEST_START_MAPS[95788] = FDJ.QUEST_START_MAPS[95787]
+    FDJ.QUEST_START_MAPS[95799] = FDJ.QUEST_START_MAPS[95787]
+    FDJ.QUEST_START_MAPS[95798] = FDJ.QUEST_START_MAPS[95787]
 
     FDJ.QUEST_PREREQ_CHAINS[95775] = {
         { id = 629, name = "The Vile Reef" },
@@ -518,14 +527,57 @@ do
         map = KINWEELAY,
     }
 
+    -- A Tale Spun Around the Fire follows The Drowned City (Wowhead Forever
+    -- quest 96078: Kin'weelay sends the etchings to Master Gadrin; a
+    -- player, Nov 2026). Like the Alliance side, the follow-up is the
+    -- list's entry and The Drowned City a step inside its chain.
+    local GADRIN = { mapID = 1411, x = 0.558, y = 0.744, label = "Master Gadrin — Sen'jin Village", targetName = "Master Gadrin", detail = "Master Gadrin in Sen'jin Village, Durotar" }
+    local INSIDE = "A rubbing of the tablet inside the Drowned City"
+    FDJ.QUEST_START_MAPS[96078] = KINWEELAY
+    FDJ.QUEST_PREREQ_CHAINS[96078] = {
+        { id = 629, name = "The Vile Reef" },
+        { id = 95748, name = "The Gurubashi Legends of Old" },
+        { id = 95770, name = "Locating the Lost City" },
+        { id = 95775, name = "The Drowned City" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[95775] = {
+        level = 40, requires = 30,
+        objective = "Use the hide and charcoal to make rubbings of the four Tablets of I'lalai in the Drowned City.",
+        pickup = GROMGOL, turnin = GROMGOL,
+        map = KINWEELAY, turninMap = KINWEELAY,
+        requiredItems = {
+            {270308, "The First Tablet of I'lalai", 1, INSIDE},
+            {270309, "The Second Tablet of I'lalai", 1, INSIDE},
+            {270310, "The Third Tablet of I'lalai", 1, INSIDE},
+            {270311, "The Fourth Tablet of I'lalai", 1, INSIDE},
+        },
+    }
+    for _, quest in ipairs((FDJ.DB["The Drowned City"] and FDJ.DB["The Drowned City"].quests) or {}) do
+        if quest.id == 95775 then quest.hideFromMainList = true end
+        if quest.id == 96078 then quest.turninMap = GADRIN end
+    end
+
+    -- Commander Aggro'gosh gives and takes both (Wowhead Forever: quests
+    -- 95773 and 95776, NPC 2464). Enemies in the Water needs The Gurubashi
+    -- Legends of Old handed in; The Only Good Brinescale... needs Enemies in
+    -- the Water and Locating the Lost City (a player, Nov 2026; its text
+    -- follows both).
+    local AGGROGOSH = { mapID = 1434, x = 0.322, y = 0.288, label = "Commander Aggro'gosh — Grom'gol Base Camp", targetName = "Commander Aggro'gosh", detail = "Commander Aggro'gosh at Grom'gol Base Camp, Stranglethorn Vale" }
+    local AT_AGGROGOSH = "Commander Aggro'gosh, Grom'gol Base Camp, Stranglethorn Vale"
+    FDJ.QUEST_START_MAPS[95773] = AGGROGOSH
+    FDJ.QUEST_START_MAPS[95776] = AGGROGOSH
     FDJ.QUEST_PREREQ_CHAINS[95776] = {
+        { id = 629, name = "The Vile Reef" },
+        { id = 95748, name = "The Gurubashi Legends of Old" },
         { id = 95773, name = "Enemies in the Water" },
+        { id = 95770, name = "Locating the Lost City" },
     }
     FDJ.QUEST_PREREQ_DETAILS[95773] = {
         level = 37, requires = 30,
         objective = "Gather 10 Brinescale Tridents from Brinescale Skirmishers.",
-        pickup = "Grom'gol Base Camp, Stranglethorn Vale (quest giver not known yet)",
-        turnin = "Grom'gol Base Camp, Stranglethorn Vale (not known yet)",
+        note = "Commander Aggro'gosh offers it once The Gurubashi Legends of Old is handed in.",
+        pickup = AT_AGGROGOSH, turnin = AT_AGGROGOSH,
+        map = AGGROGOSH, turninMap = AGGROGOSH,
         requiredItems = {
             {270305, "Brinescale Trident", 1, "Dropped by Brinescale Skirmishers around the Vile Reef, west of Grom'gol (around 22, 26)", map = { mapID = 1434, x = 0.225, y = 0.256, label = "Brinescale Skirmishers — around the Vile Reef", detail = "Brinescale Skirmishers on the sea floor west of Grom'gol (around 22, 26)" }},
         },
@@ -539,11 +591,156 @@ do
     FDJ.FOREVER_QUEST_XP_FALLBACK[95776] = 9500
     FDJ.FOREVER_QUEST_XP_FALLBACK[96774] = 8800
     FDJ.FOREVER_QUEST_XP_FALLBACK[97130] = 10450
-    for _, id in ipairs({ 629, 95748, 95770, 95773, 95775, 96774, 97130 }) do
+    FDJ.FOREVER_QUEST_XP_FALLBACK[96078] = 2350
+    for _, id in ipairs({ 629, 95748, 95770, 95773, 95775, 95776, 96078, 96774, 97130 }) do
         FDJ.QUEST_SHAREABILITY_AUDIT[id] = true
     end
 end
 -- END drownedcity
+
+-- BEGIN drownedalliance
+-- The Drowned City (Alliance) as chains, the last quest the list's entry and
+-- the steps inside it. At the Rebel Camp in northern Stranglethorn, Sergeant
+-- Yohwa's The Second Rebellion and Bad Medicine are done together; once both
+-- are handed in, Brother Nimetz gives Kurzen's Mystery, then Troll Witchery,
+-- then An Acquaintance in Southshore, which takes the player to Loremaster
+-- Dibbs. Dibbs gives Take Two With Water and Magics of the Drowned City; each
+-- leads to one of his follow-ups. Chain order: a player's notes (Discord,
+-- Nov 2026). Quest texts, levels, XP and items: Wowhead Forever (quests 203,
+-- 204, 205, 207, 95786-95788, 95798, 95799; the four troll tablets); where
+-- the NPCs stand: Forever client tables via Polestar forever-db (spawns of
+-- 739, 2277, 2916, 252019) and Wowhead Forever (733).
+do
+    local DIBBS = FDJ.QUEST_START_MAPS[95787]
+    local NIMETZ = { mapID = 1434, x = 0.378, y = 0.036, label = "Brother Nimetz — Rebel Camp", targetName = "Brother Nimetz", detail = "Brother Nimetz at the Rebel Camp, northern Stranglethorn Vale" }
+    local KARNIK = { mapID = 1455, x = 0.775, y = 0.118, label = "Historian Karnik — Hall of Explorers", targetName = "Historian Karnik", detail = "Historian Karnik in the Hall of Explorers, Ironforge" }
+    local ABRA = { mapID = 1416, x = 0.132, y = 0.696, label = "Abra Cadabra — Dalaran", targetName = "Abra Cadabra", detail = "Abra Cadabra in Dalaran, Alterac Mountains" }
+    local YOHWA = { mapID = 1434, x = 0.380, y = 0.034, label = "Sergeant Yohwa — Rebel Camp", targetName = "Sergeant Yohwa", detail = "Sergeant Yohwa at the Rebel Camp, northern Stranglethorn Vale" }
+    local AT_DIBBS = "Loremaster Dibbs, Southshore, Hillsbrad Foothills"
+    local AT_YOHWA = "Sergeant Yohwa, Rebel Camp, Stranglethorn Vale"
+    local AT_NIMETZ = "Brother Nimetz, Rebel Camp, Stranglethorn Vale"
+    local INSIDE = "A rubbing of the tablet inside the Drowned City"
+    local BOTH = "Done together with the other of Sergeant Yohwa's two quests (The Second Rebellion and Bad Medicine); Brother Nimetz offers Kurzen's Mystery once both are handed in."
+
+    -- Objects, not NPCs: nothing to target from the map.
+    local function Tablet(name, x, y, where)
+        return { markerType = "location", mapID = 1434, x = x, y = y, label = name .. " — Stranglethorn Vale", detail = where }
+    end
+
+    local LEAD_IN = {
+        { id = 203, name = "The Second Rebellion" },
+        { id = 204, name = "Bad Medicine" },
+        { id = 207, name = "Kurzen's Mystery" },
+        { id = 205, name = "Troll Witchery" },
+        { id = 95786, name = "An Acquaintance in Southshore" },
+    }
+    local function Chain(lastStep)
+        local chain = {}
+        for i, step in ipairs(LEAD_IN) do chain[i] = { id = step.id, name = step.name } end
+        chain[#chain + 1] = lastStep
+        return chain
+    end
+    FDJ.QUEST_PREREQ_CHAINS[95799] = Chain({ id = 95787, name = "Take Two With Water" })
+    FDJ.QUEST_PREREQ_CHAINS[95798] = Chain({ id = 95788, name = "Magics of the Drowned City" })
+
+    FDJ.QUEST_PREREQ_DETAILS[203] = {
+        level = 33, requires = 30,
+        objective = "Kill 15 Kurzen Jungle Fighters.",
+        pickup = AT_YOHWA, turnin = AT_YOHWA,
+        map = YOHWA, turninMap = YOHWA,
+        note = BOTH,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[204] = {
+        level = 34, requires = 30,
+        objective = "Bring 7 Jungle Remedies and 1 Venom Fern Extract to Sergeant Yohwa.",
+        pickup = AT_YOHWA, turnin = AT_YOHWA,
+        map = YOHWA, turninMap = YOHWA,
+        requiredItems = {
+            {2633, "Jungle Remedy", 1, "Dropped by the Kurzen trolls in and around Kurzen's Compound (7 needed)"},
+            {2634, "Venom Fern Extract", 1, "Dropped by the Kurzen trolls in and around Kurzen's Compound"},
+        },
+        note = BOTH,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[207] = {
+        level = 38, requires = 30,
+        objective = "Find the four troll tablets on the coast and in the Vile Reef, and bring back the First, Second, Third and Fourth Troll Legends.",
+        pickup = AT_NIMETZ, turnin = AT_NIMETZ,
+        map = NIMETZ, turninMap = NIMETZ,
+        requiredItems = {
+            {2005, "The First Troll Legend", 1, "From the tablet Moon Over the Vale (around 29, 19)", map = Tablet("Moon Over the Vale", 0.294, 0.192, "The tablet Moon Over the Vale (around 29, 19)")},
+            {2006, "The Second Troll Legend", 1, "From the tablet Gri'lek the Wanderer, at the bottom of the Vile Reef (around 25, 23)", map = Tablet("Gri'lek the Wanderer", 0.248, 0.228, "The tablet at the bottom of the Vile Reef (around 25, 23)")},
+            {2007, "The Third Troll Legend", 1, "From the tablet Fall of Gurubashi, in the troll ruins on the coast north of the Vile Reef (around 23, 12)", map = Tablet("Fall of Gurubashi", 0.230, 0.120, "The tablet in the troll ruins on the coast (around 23, 12)")},
+            {2008, "The Fourth Troll Legend", 1, "From the tablet The Emperor's Tomb (around 25, 9)", map = Tablet("The Emperor's Tomb", 0.247, 0.090, "The tablet The Emperor's Tomb (around 25, 9)")},
+        },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[205] = {
+        level = 40, requires = 30,
+        objective = "Bring 4 Skullsplitter Fetishes to Brother Nimetz.",
+        pickup = AT_NIMETZ, turnin = AT_NIMETZ,
+        map = NIMETZ, turninMap = NIMETZ,
+        requiredItems = {
+            {2466, "Skullsplitter Fetish", 1, "Dropped by Skullsplitter Witchdoctors and Mystics in the troll ruins south of the Rebel Camp (4 needed)"},
+        },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[95786] = {
+        level = 40, requires = 30,
+        objective = "Take the Savage Coast Report Bundle (the fetishes, the troll legends and the scouting report) to Loremaster Dibbs in Southshore.",
+        pickup = AT_NIMETZ, turnin = AT_DIBBS,
+        map = NIMETZ, turninMap = DIBBS,
+        providedItem = {270340, "Savage Coast Report Bundle", 1, "Given by Brother Nimetz when you accept the quest"},
+    }
+    FDJ.QUEST_PREREQ_DETAILS[95787] = {
+        level = 40, requires = 30,
+        objective = "Make rubbings of the four Tablets of I'lalai in the Drowned City.",
+        pickup = AT_DIBBS, turnin = AT_DIBBS,
+        map = DIBBS,
+        requiredItems = {
+            {270308, "The First Tablet of I'lalai", 1, INSIDE},
+            {270309, "The Second Tablet of I'lalai", 1, INSIDE},
+            {270310, "The Third Tablet of I'lalai", 1, INSIDE},
+            {270311, "The Fourth Tablet of I'lalai", 1, INSIDE},
+        },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[95788] = {
+        level = 40, requires = 30,
+        objective = "Collect 5 I'lalai Fetishes from the trolls in the Drowned City.",
+        pickup = AT_DIBBS, turnin = AT_DIBBS,
+        map = DIBBS,
+        requiredItems = {
+            {270343, "I'lalai Fetish", 1, "Dropped by the trolls in the Drowned City (5 needed)"},
+        },
+    }
+    FDJ.QUEST_START_MAPS[95786] = NIMETZ
+    FDJ.QUEST_START_MAPS[203] = YOHWA
+    FDJ.QUEST_START_MAPS[204] = YOHWA
+    FDJ.QUEST_START_MAPS[207] = NIMETZ
+    FDJ.QUEST_START_MAPS[205] = NIMETZ
+    FDJ.FOREVER_QUEST_XP_FALLBACK[203] = 1950
+    FDJ.FOREVER_QUEST_XP_FALLBACK[204] = 2700
+    FDJ.FOREVER_QUEST_XP_FALLBACK[207] = 3550
+    FDJ.FOREVER_QUEST_XP_FALLBACK[205] = 3150
+    FDJ.FOREVER_QUEST_XP_FALLBACK[95786] = 3150
+    FDJ.FOREVER_QUEST_XP_FALLBACK[95787] = 8450
+    FDJ.FOREVER_QUEST_XP_FALLBACK[95788] = 8450
+    for _, id in ipairs({ 203, 204, 205, 207 }) do
+        FDJ.QUEST_SHAREABILITY_AUDIT[id] = true
+    end
+
+    -- Ancient Gurubashi Secrets: Archmage Timear, outside where the Violet
+    -- Hold stood in Dalaran (a player, Nov 2026; Wowhead Forever's spawn of
+    -- 31439).
+    FDJ.QUEST_START_MAPS[97130] = { mapID = 1416, x = 0.154, y = 0.740, label = "Archmage Timear — Dalaran", targetName = "Archmage Timear", detail = "Archmage Timear, outside where the Violet Hold stood in Dalaran, Alterac Mountains" }
+
+    -- The steps are listed inside their chains only (QuestChains.lua's pass
+    -- ran before these chains were added), and the follow-ups' hand-in NPCs
+    -- get their map spots.
+    for _, quest in ipairs((FDJ.DB["The Drowned City"] and FDJ.DB["The Drowned City"].quests) or {}) do
+        if quest.id == 95787 or quest.id == 95788 then quest.hideFromMainList = true end
+        if quest.id == 95799 then quest.turninMap = KARNIK end
+        if quest.id == 95798 then quest.turninMap = ABRA end
+    end
+end
+-- END drownedalliance
 
 -- BEGIN sleepingbag
 -- The Cozy Sleeping Bag (WoW Forever 1.60.1): its quest chain as a page of
@@ -572,6 +769,136 @@ do
     local FIGURINE = Spot(1432, 0.494, 0.129, "Carved Figurine — Stonewrought Dam", "On the carved heads of the dam, facing the Wetlands")
     local BAG = Spot(1424, 0.857, 0.522, "Messenger Bag — Thoradin's Wall", "Hanging outside the room in Thoradin's Wall")
     local SATCHEL = Spot(1424, 0.857, 0.522, "Hastily Rolled-Up Satchel — Thoradin's Wall", "Right under the Messenger Bag")
+
+    -- arrowvia: the way to a spot the straight line does not reach: points
+    -- the waypoint arrow leads to first, in order (the Polestar guide to the
+    -- chain: the path into the Stonetalon hills, the fallen cart at
+    -- Thoradin's Wall; for the Alliance the way round Honor's Stand).
+    FDJ.ARROW_VIAS = FDJ.ARROW_VIAS or {}
+    local function Via(spot, list)
+        FDJ.ARROW_VIAS[string.format("%s|%.4f|%.4f", tostring(spot.mapID), spot.x, spot.y)] = list
+    end
+    -- The way to the abandoned camp, worked out on Polestar's walking maps
+    -- of Kalimdor (1.8.1): the camp sits on a shelf in the hills, reached
+    -- only by the path that leaves the main road at 52.2, 53.4 (or, from
+    -- the north, by the path off the Charred Vale descent); Sun Rock
+    -- Retreat's crater walls are cliffs on every other side.
+    Via(POCKET_LITTER, { routes = {
+        { -- from Sun Rock Retreat (Horde)
+            { mapID = 1442, x = 0.500, y = 0.610, label = "Out of Sun Rock Retreat: its east exit, to the road", faction = "Horde" },
+            { mapID = 1442, x = 0.520, y = 0.579, label = "The main road, north", faction = "Horde" },
+            { mapID = 1442, x = 0.522, y = 0.560, label = "The main road, north" },
+            { mapID = 1442, x = 0.522, y = 0.534, label = "Where the path into the hills leaves the road (left side)" },
+            { mapID = 1442, x = 0.510, y = 0.524, label = "Up the path into the hills" },
+            { mapID = 1442, x = 0.488, y = 0.542, label = "The hill path, west" },
+            { mapID = 1442, x = 0.430, y = 0.541, label = "The hill path, west" },
+        },
+        { -- from the Barrens road (both factions; the Alliance round Honor's Stand)
+            { mapID = 1413, x = 0.402, y = 0.249, label = "The road into Stonetalon (round Honor's Stand)", faction = "Alliance" },
+            { mapID = 1442, x = 0.605, y = 0.817, label = "The road west out of the Barrens" },
+            { mapID = 1442, x = 0.580, y = 0.672, label = "The road north, past Webwinder Path" },
+            { mapID = 1442, x = 0.540, y = 0.614, label = "The road north, past Webwinder Path" },
+            { mapID = 1442, x = 0.522, y = 0.560, label = "The main road, north" },
+            { mapID = 1442, x = 0.522, y = 0.534, label = "Where the path into the hills leaves the road (left side)" },
+            { mapID = 1442, x = 0.510, y = 0.524, label = "Up the path into the hills" },
+            { mapID = 1442, x = 0.488, y = 0.542, label = "The hill path, west" },
+            { mapID = 1442, x = 0.430, y = 0.541, label = "The hill path, west" },
+        },
+        { -- from Stonetalon Peak (Alliance)
+            { mapID = 1442, x = 0.410, y = 0.157, label = "The road south out of Stonetalon Peak", faction = "Alliance" },
+            { mapID = 1442, x = 0.438, y = 0.164, label = "The road south out of Stonetalon Peak", faction = "Alliance" },
+            { mapID = 1442, x = 0.467, y = 0.291, label = "The road south", faction = "Alliance" },
+            { mapID = 1442, x = 0.467, y = 0.358, label = "The road south", faction = "Alliance" },
+            { mapID = 1442, x = 0.455, y = 0.385, label = "West, down towards the Charred Vale", faction = "Alliance" },
+            { mapID = 1442, x = 0.426, y = 0.425, label = "West, down towards the Charred Vale", faction = "Alliance" },
+            { mapID = 1442, x = 0.390, y = 0.428, label = "Down the path towards the Charred Vale", faction = "Alliance" },
+            { mapID = 1442, x = 0.373, y = 0.445, label = "Down the path towards the Charred Vale", faction = "Alliance" },
+            { mapID = 1442, x = 0.376, y = 0.527, label = "Halfway down: the path right (east), into the mountains", faction = "Alliance" },
+            { mapID = 1442, x = 0.407, y = 0.552, label = "Up the mountain path to the camp", faction = "Alliance" },
+        },
+    } })
+    -- The Mound of Dirt: straight on from the camp, north over the ridge
+    -- and down the hillside (no via point).
+    -- Thoradin's Wall round the Messenger Bag (1.8.4), from Polestar's
+    -- walking maps of the Eastern Kingdoms: the fallen cart (its bed about
+    -- 6 yards up, centre 88.0, 47.1), a few yards of ground, then rubble that
+    -- ramps up south-west onto the wall and along it to the bag. The game
+    -- gives no height, so where the player stands on this grid (0.1 % map
+    -- steps from 85.0, 46.4) says whether they are up: '#' rubble, ramp and
+    -- wall top (only raised ground), '+' the cart and the structure's edges
+    -- (on or beside it), '.' plain ground, ' ' nothing to stand on. The
+    -- arrow keeps to the cart until the player is on it (within 5 yards of
+    -- its centre) or up on the rubble, and goes back to it on plain ground.
+    local WALL = { mapID = 1424, x0 = 0.850, y0 = 0.464, step = 0.001, rows = {
+            "............................+++++",
+            "........................... +++++",
+            "........................... +++++",
+            "............................+++++",
+            "............................+++++",
+            "............................+++++",
+            "...........................++++++",
+            "...........................++++++",
+            "...........................++++++",
+            "...........................++++++",
+            "...........................++++++",
+            "...........................++++++",
+            "............................+++++",
+            "............................+++++",
+            ".........................+++++.++",
+            ".........................++#++.++",
+            ".........................++#++++.",
+            ".........................++#++++.",
+            ".........................++#+++++",
+            ".........................++####++",
+            ".......................++++####++",
+            ".......................+++######+",
+            "......................++++######+",
+            "......................++#########",
+            ".....................+++#########",
+            ".....................++#########+",
+            "...................++++#########+",
+            "...................+++#########++",
+            "...................+++#########++",
+            "...................+#########++++",
+            "..................++#########+++.",
+            "..................+#########++++.",
+            ".................++#########++...",
+            ".................++########+++...",
+            ".............++++++########++....",
+            ".............+++++#########++....",
+            "...........+++++++#########+.....",
+            "...........+++############++.....",
+            "...........+############++++.....",
+            ".........+++############+++......",
+            ".........++############++++......",
+            ".........++############++........",
+            ".........+############+++........",
+            "........++############+++........",
+            "........+##############++........",
+            "........+##############++........",
+            ".......  #############+++........",
+            "......+  #############++.........",
+            "...... #############++++.........",
+            ".....+ #############+++..........",
+            ".....+############# +++..........",
+            "....++############# .............",
+            "....+##############+.............",
+            "..+++##############+.............",
+            "..+++############# +.............",
+            ".++++############# ..............",
+            ".++#############  +..............",
+            "+++#############  ...............",
+            "++############# +................",
+            "++############# .................",
+            "++############ +.................",
+            "++############ ..................",
+            "++##########  +..................",
+            "++##########  ...................",
+            "+###########+....................",
+    } }
+    local CART = { mapID = 1424, x = 0.8804, y = 0.4708, label = "The fallen cart at Thoradin's Wall: climb it", climb = WALL, reach = 5 }
+    Via(BAG, { CART })
+    Via(SATCHEL, { CART })
 
     -- Where each step is picked up and handed in, written out with the
     -- coordinates (shown on the step's page under Starts at / Turn in).
@@ -704,8 +1031,95 @@ do
     end
     -- Falla Sagewind was put in Thunder Bluff here by mistake.
     FDJ.QUEST_START_MAPS[6981] = FALLA
+    -- The game's objective line, named (Systems/QuestText.lua:
+    -- FDJ.ObjectiveLineOverride): 0/1 / 1/1 Speak with Sputtervalve in Ratchet.
+    FDJ.OBJECTIVE_LINE_OVERRIDES = FDJ.OBJECTIVE_LINE_OVERRIDES or {}
+    FDJ.OBJECTIVE_LINE_OVERRIDES[6981] = { match = "in ratchet", text = "Speak with Sputtervalve in Ratchet" }
 end
 -- END glowingshard
+
+-- BEGIN malletchain
+-- The Mallet of Zul'Farrak, which summons Gahz'rilla at the gong in
+-- Zul'Farrak: no quest in the game, two steps done by hand (WoW Forever is
+-- the same as Classic: Warcraft Tavern's Forever Zul'Farrak guide). Shown as
+-- a quest chain page of its own (questChainPage, like the Cozy Sleeping
+-- Bag), opened from the button on Gahz'rilla's boss page, beside his portrait.
+-- The steps have made-up IDs (no quest log entry): each counts as done once
+-- the character holds the item it gives (FDJ.PSEUDO_QUEST_DONE).
+-- Spots: Altar of Zul (48.6, 68.0) and the altar on top of Jintha'Alor
+-- (58.5, 77.5), The Hinterlands, from player guides.
+do
+    local PAGE = "Mallet of Zul'Farrak"
+    FDJ.MALLET_PAGE = PAGE
+    local MAIN, STEP = -97100, -97101
+    local SACRED, MALLET = 9241, 9240
+    FDJ.MALLET_QUEST, FDJ.MALLET_STEP = MAIN, STEP
+
+    local QIAGA = { mapID = 1425, x = 0.486, y = 0.680, label = "Qiaga the Keeper — Altar of Zul, The Hinterlands", targetName = "Qiaga the Keeper", detail = "At the top of the Altar of Zul" }
+    local ALTAR = { markerType = "location", mapID = 1425, x = 0.585, y = 0.775, label = "Altar of Jintha'Alor — The Hinterlands", detail = "The altar at the very top of Jintha'Alor" }
+
+    FDJ.DB[PAGE] = {
+        questChainPage = true, -- Quests, plus Bosses and Map of Zul'Farrak
+        -- Bosses and Map lead back to Zul'Farrak (Bosses at Gahz'rilla).
+        parentDungeon = "Zul'Farrak",
+        parentBoss = "Gahz'rilla",
+        level = "45+",
+        location = "The Hinterlands",
+        description = "",
+        bosses = {},
+        quests = { {
+            id = MAIN, name = "Mallet of Zul'Farrak", level = 50, requires = 1, faction = "Both",
+            objective = "Use the Sacred Mallet at the altar on the very top of Jintha'Alor: it turns into the Mallet of Zul'Farrak.",
+            pickup = "Altar at the very top of Jintha'Alor, The Hinterlands (58.5, 77.5)",
+            turnin = "The gong at Gahz'rilla's pool, inside Zul'Farrak: use the Mallet of Zul'Farrak there to summon Gahz'rilla.",
+            note = "Jintha'Alor is full of level 45-50 trolls: bring a group, or sneak up. You can use the Sacred Mallet in combat. One mallet in the group is enough, and it summons Gahz'rilla in every later run too.",
+            startMap = ALTAR,
+            rewardSummary = "",
+            rewardItems = { { MALLET, "Mallet of Zul'Farrak", 1 } },
+        } },
+    }
+    FDJ.QUEST_PREREQ_CHAINS[MAIN] = {
+        { id = STEP, name = "Sacred Mallet" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[STEP] = {
+        level = 50, requires = 1,
+        objective = "Kill Qiaga the Keeper at the top of the Altar of Zul and loot the Sacred Mallet.",
+        pickup = "Qiaga the Keeper, top of the Altar of Zul, The Hinterlands (48.6, 68.0)",
+        map = QIAGA,
+        note = "Qiaga the Keeper and Morta'gya the Keeper are level 50 elites, with casters around them. Everyone in the group can loot a Sacred Mallet.",
+        providedItem = { SACRED, "Sacred Mallet", 1 },
+    }
+
+    -- Done once the character has the item the step gives (bags or bank).
+    local function Has(itemID)
+        local count
+        if C_Item and C_Item.GetItemCount then
+            local ok, n = pcall(C_Item.GetItemCount, itemID, true)
+            if ok then count = n end
+        end
+        if count == nil and GetItemCount then
+            local ok, n = pcall(GetItemCount, itemID, true)
+            if ok then count = n end
+        end
+        if type(issecretvalue) == "function" and issecretvalue(count) then return false end
+        return type(count) == "number" and count > 0
+    end
+    FDJ.PSEUDO_QUEST_DONE = FDJ.PSEUDO_QUEST_DONE or {}
+    FDJ.PSEUDO_QUEST_DONE[STEP] = function() return Has(SACRED) or Has(MALLET) end
+    FDJ.PSEUDO_QUEST_DONE[MAIN] = function() return Has(MALLET) end
+
+    -- Gahz'rilla's page: "Summon with: [Mallet of Zul'Farrak]" under his
+    -- name (Systems/BossSummon.lua); a click on the mallet opens the chain at
+    -- the step not done yet.
+    local zf = FDJ.DB["Zul'Farrak"]
+    for _, boss in ipairs((zf and zf.bosses) or {}) do
+        if boss.name == "Gahz'rilla" then
+            boss.summonItem = MALLET
+            boss.summonChain = { page = PAGE, quest = MAIN }
+        end
+    end
+end
+-- END malletchain
 
 -- BEGIN lesstext
 -- Step pages show the objective, the quest givers and where to go. Notes that only
@@ -769,6 +1183,60 @@ FDJ.NPC_FLOORS = {
 do
     local LANDALOCK = { mapID = 1416, x = 0.1589, y = 0.7310, label = "Archmage Lan'dalock — Dalaran", targetName = "Archmage Lan'dalock" }
     local ADDED = {
+        -- Blackmaw Hold and Shaper's Terrace (Horde players' quest logs, Nov
+        -- 2026): not on Wowhead yet. Ekkal stands at the Ruins of Eldarath
+        -- (Wowhead Forever's spawn of NPC 235903).
+        { dungeon = "Blackmaw Hold", quest = {
+            id = -97201,
+            learnTitle = "Blackmaw Pouches",
+            learnItem = 273050,
+            name = "Blackmaw Pouches",
+            level = 58,
+            requires = 55,
+            faction = "Horde",
+            pickup = "Ekkal, Ruins of Eldarath, Azshara (41.8, 38.8)",
+            objective = "Enter Blackmaw Hold and recover 5 Blackmaw Pouches for Ekkal at the Ruins of Eldarath in Azshara.",
+            turnin = "Ekkal, Ruins of Eldarath, Azshara (41.8, 38.8)",
+            rewardSummary = "90s",
+            requiredItem = { 273050, "Blackmaw Pouch", 1, 5, "From the Blackmaw furbolgs inside Blackmaw Hold" },
+            note = "Seen by a Horde player; whether the Alliance gets it too is not known yet. Its level is not known yet: the dungeon's range is used.",
+            startMap = { mapID = 1447, x = 0.418, y = 0.388, label = "Ekkal — Ruins of Eldarath, Azshara", targetName = "Ekkal" },
+            turninMap = { mapID = 1447, x = 0.418, y = 0.388, label = "Ekkal — Ruins of Eldarath, Azshara", targetName = "Ekkal" },
+        } },
+        { dungeon = "Shaper's Terrace", quest = {
+            id = -97202,
+            learnTitle = "Essence of Seeping Slimes",
+            learnItem = 276235,
+            name = "Essence of Seeping Slimes",
+            level = 60,
+            requires = 55,
+            faction = "Horde",
+            pickup = "Not known yet",
+            objective = "Gather 8 Seeping Slime Essence in the Shaper's Terrace.",
+            turnin = "Not known yet",
+            rewardSummary = "90s",
+            rewardItems = { {279932, "Slime-Resistant Shroud", 3}, {279902, "Reinforced Muck Protectors", 3} },
+            rewardChoice = true,
+            requiredItem = { 276235, "Seeping Slime Essence", 1, 8, "From the slimes in the pools inside Shaper's Terrace" },
+            note = "Quest giver not known yet. Seen by a Horde player; whether the Alliance gets it too is not known yet.",
+        } },
+        { dungeon = "Shaper's Terrace", quest = {
+            id = -97203,
+            learnTitle = "The Dark Crystal",
+            learnItem = 271771,
+            name = "The Dark Crystal",
+            level = 60,
+            requires = 55,
+            faction = "Horde",
+            pickup = "Not known yet",
+            objective = "Gather a colorless Drained Crystal Fragment near the Achromatic Crystal in the Shaper's Terrace.",
+            turnin = "Not known yet",
+            rewardSummary = "",
+            rewardItems = { {279908, "Crystal-Infused Cleaver", 3}, {279910, "Beastslayer's Trident", 3}, {279912, "Faintly Glowing Orb", 3} },
+            rewardChoice = true,
+            requiredItem = { 271771, "Drained Crystal Fragment", 1, 1, "Near the Achromatic Crystal inside Shaper's Terrace" },
+            note = "Quest giver not known yet. Seen by a Horde player; whether the Alliance gets it too is not known yet.",
+        } },
         { dungeon = "Razorfen Downs", quest = {
             id = -96901,
             learnTitle = "The Coldbringer's Eye",
@@ -783,26 +1251,106 @@ do
             liveXPFallback = 8600,
             rewardSummary = "55s",
             requiredItem = { 276916, "The Coldbringer's Eye", 1, 1, "From Amnennar the Coldbringer, the last boss of Razorfen Downs" },
-            note = "Quest giver not confirmed yet: it is handed in to Archmage Lan'dalock.",
+            -- Archmage Lan'dalock gives it (a player's screenshot, Nov 2026).
             startMap = LANDALOCK,
             turninMap = LANDALOCK,
         } },
+        -- Its real ID is on Wowhead Forever now (96770; level 46, from 39).
         { dungeon = "Zul'Farrak", quest = {
-            id = -96902,
+            id = 96770,
             learnTitle = "The Witch Doctor's Head",
             learnItem = 277112,
             name = "The Witch Doctor's Head",
             level = 46,
-            requires = 40,
+            requires = 39,
             faction = "Alliance",
             pickup = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
             objective = "Slay Witch Doctor Zum'rah and bring Zum'rah's Head to Archmage Lan'dalock in Dalaran.",
             turnin = "Archmage Lan'dalock, Dalaran, Alterac Mountains",
             liveXPFallback = 10100,
-            rewardSummary = "1g 30s",
+            rewardSummary = "1g 30s  •  Kirin Tor +300",
             requiredItem = { 277112, "Zum'rah's Head", 1, 1, "From Witch Doctor Zum'rah, Zul'Farrak" },
             startMap = LANDALOCK,
             turninMap = LANDALOCK,
+        } },
+        -- The Horde side: Mazu'kon of the Earthen Ring on the Skywatcher
+        -- Plateau in Mulgore (a player, Nov 2026; Wowhead Forever quest
+        -- 96775: level 46, from 42, 10,100 XP, 65s, reputation).
+        { dungeon = "Zul'Farrak", quest = {
+            id = 96775,
+            learnTitle = "Zum'rah's Head",
+            learnItem = 277112,
+            name = "Zum'rah's Head",
+            level = 46,
+            requires = 42,
+            faction = "Horde",
+            pickup = "Mazu'kon, Skywatcher Plateau, Mulgore",
+            objective = "Slay Witch Doctor Zum'rah and bring Zum'rah's Head to Mazu'kon in Mulgore.",
+            turnin = "Mazu'kon, Skywatcher Plateau, Mulgore",
+            liveXPFallback = 10100,
+            rewardSummary = "65s  •  Earthen Ring +300  •  Darkspear Trolls +150",
+            requiredItem = { 277112, "Zum'rah's Head", 1, 1, "From Witch Doctor Zum'rah, Zul'Farrak" },
+            startMap = FDJ.QUEST_START_MAPS[96774],
+            turninMap = FDJ.QUEST_START_MAPS[96774],
+        } },
+        -- Alcaz Prison (a stream, 2026-11-07): given inside the prison by
+        -- Commander Folkar (NPC 260386), handed in to Thrall. Its level is
+        -- not known yet: the dungeon's range is used.
+        { dungeon = "Alcaz Prison", quest = {
+            id = -96903,
+            learnTitle = "Thrall Needs to Know",
+            name = "Thrall Needs to Know",
+            level = 53,
+            requires = 48,
+            faction = "Horde",
+            pickup = "Commander Folkar, inside Alcaz Prison",
+            objective = "Bring word of Varian Wrynn's fate to Thrall in Orgrimmar.",
+            turnin = "Thrall, Valley of Wisdom, Orgrimmar (32.0, 37.8)",
+            rewardSummary = "",
+            rewards = "Choose: Fatebound Buckler, Courier's Clasp or Dustwallow Dirk\n2,472 XP",
+            -- Item IDs: Wowhead Forever (all three rare).
+            rewardChoice = true,
+            rewardItems = { { 279831, "Fatebound Buckler", 3 }, { 279833, "Courier's Clasp", 3 }, { 279474, "Dustwallow Dirk", 3 } },
+            liveXPFallback = 2472,
+            turninMap = { mapID = 1454, x = 0.320, y = 0.378, label = "Thrall — Orgrimmar", targetName = "Thrall" },
+        } },
+        -- alcazquests (1.9.5, players' screenshots): the Kor'kron's masks
+        -- quest. Who gives it is not known yet: its text is a Kor'kron's
+        -- who fought the Defias there. Level not known yet: the dungeon's.
+        { dungeon = "Alcaz Prison", quest = {
+            id = -96906,
+            learnTitle = "Blood Red Bandanas",
+            learnItem = 274028,
+            name = "Blood Red Bandanas",
+            level = 50,
+            requires = 48,
+            faction = "Horde",
+            pickup = "Not known yet (probably Sergeant Ulka or Commander Folkar, of the Kor'kron at Alcaz Prison)",
+            objective = "Enter Alcaz Prison and collect 8 Blood Red Bandanas from the human guards there.",
+            turnin = "Eitrigg, Grommash Hold, Orgrimmar",
+            liveXPFallback = 9700,
+            rewardSummary = "",
+            rewardChoice = true,
+            rewardItems = { { 279448, "Bloodsplattered Bandana", 2 }, { 279473, "Makeshift Belt", 2 } },
+            requiredItem = { 274028, "Blood Red Bandana", 1, 8, "From the Defias guards in Alcaz Prison" },
+            turninMap = { mapID = 1454, x = 0.344, y = 0.386, label = "Eitrigg — Grommash Hold, Orgrimmar", targetName = "Eitrigg" },
+        } },
+        -- The naga's quest (a player's quest log, 1.9.6): level 53. Who gives
+        -- it and takes it back is not known yet; seen by a Horde player.
+        { dungeon = "Alcaz Prison", quest = {
+            id = -96907,
+            learnTitle = "A Little Payback",
+            learnItem = 273883,
+            name = "A Little Payback",
+            level = 53,
+            requires = 48,
+            faction = "Horde",
+            pickup = "Not known yet",
+            objective = "Slay 15 Strashaz Soldiers and 8 Strashaz Enchantresses in Alcaz Prison, and bring Ca'zass's Head.",
+            turnin = "Not known yet",
+            rewardSummary = "",
+            requiredItem = { 273883, "Ca'zass's Head", 1, 1, "From Tidemistress Ca'zass" },
+            note = "Quest giver not known yet. Seen by a Horde player; whether the Alliance gets it too is not known yet.",
         } },
     }
 
@@ -822,6 +1370,48 @@ do
             end
         end
     end
+
+    -- alcazquests (1.9.5): Thrall Needs to Know comes at the end of a chain
+    -- (players' screenshots): Sergeant Ulka, outside the prison, sends you
+    -- in after Commander Folkar (No Orc Left Behind); he sends you on to find
+    -- King Varian Wrynn (The Honor of the Kor'kron, handed in at the Perfumed
+    -- Note after Blazeroar), then back to Thrall. The steps' IDs are not
+    -- public either: stand-ins, learnt like the quests'.
+    local ULKA = { mapID = 1445, x = 0.704, y = 0.190, label = "Sergeant Ulka — Dustwallow Marsh", targetName = "Sergeant Ulka", detail = "Sergeant Ulka, outside Alcaz Prison on Alcaz Island" }
+    FDJ.QUEST_PREREQ_CHAINS[-96903] = {
+        { id = -96904, name = "No Orc Left Behind" },
+        { id = -96905, name = "The Honor of the Kor'kron" },
+        { id = -96908, name = "Bad News for Folkar" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[-96904] = {
+        level = 53, requires = 48,
+        objective = "Find Commander Folkar inside Alcaz Prison.",
+        pickup = "Sergeant Ulka, outside Alcaz Prison, Dustwallow Marsh (70.4, 19.0)",
+        turnin = "Commander Folkar, inside Alcaz Prison",
+        map = ULKA,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[-96905] = {
+        level = 53, requires = 48,
+        objective = "Look for King Varian Wrynn in Alcaz Prison.",
+        pickup = "Commander Folkar, inside Alcaz Prison",
+        turnin = "Perfumed Note, after Blazeroar, inside Alcaz Prison",
+    }
+    -- 1.9.6: the note sends you back to Folkar, who then gives Thrall Needs
+    -- to Know.
+    FDJ.QUEST_PREREQ_DETAILS[-96908] = {
+        level = 53, requires = 48,
+        objective = "Tell Commander Folkar what you found.",
+        pickup = "Perfumed Note, after Blazeroar, inside Alcaz Prison",
+        turnin = "Commander Folkar, inside Alcaz Prison",
+    }
+    if FDJ.FOREVER_QUEST_XP_FALLBACK then
+        FDJ.FOREVER_QUEST_XP_FALLBACK[-96904] = 12463
+        FDJ.FOREVER_QUEST_XP_FALLBACK[-96905] = 12463
+        FDJ.FOREVER_QUEST_XP_FALLBACK[-96908] = 2472
+    end
+    pending[-96904] = { id = -96904, learnTitle = "No Orc Left Behind", faction = "Horde" }
+    pending[-96905] = { id = -96905, learnTitle = "The Honor of the Kor'kron", faction = "Horde" }
+    pending[-96908] = { id = -96908, learnTitle = "Bad News for Folkar", faction = "Horde" }
 
     local function Plain(v)
         if type(issecretvalue) == "function" and issecretvalue(v) then return nil end
@@ -848,6 +1438,26 @@ do
         if maps and maps[standIn] ~= nil then
             if maps[real] == nil then maps[real] = maps[standIn] end
             maps[standIn] = nil
+        end
+        -- alcazquests: the chain it heads or is a step of, its chain page
+        -- and its XP go with it.
+        local chains = FDJ.QUEST_PREREQ_CHAINS
+        if chains then
+            if chains[standIn] ~= nil then
+                if chains[real] == nil then chains[real] = chains[standIn] end
+                chains[standIn] = nil
+            end
+            for _, chain in pairs(chains) do
+                for _, step in ipairs(type(chain) == "table" and chain or {}) do
+                    if type(step) == "table" and step.id == standIn then step.id = real end
+                end
+            end
+        end
+        for _, t in ipairs({ FDJ.QUEST_PREREQ_DETAILS, FDJ.FOREVER_QUEST_XP_FALLBACK, FDJ.QUEST_SHAREABILITY_AUDIT }) do
+            if type(t) == "table" and t[standIn] ~= nil then
+                if t[real] == nil then t[real] = t[standIn] end
+                t[standIn] = nil
+            end
         end
         Saved()[quest.learnTitle] = real
         if not quiet then
@@ -934,38 +1544,42 @@ do
     if d and type(d.bosses) == "table" then
         d.fullItemsTBD = true -- only the drops seen so far
         local LOOT = {
-            ["Zul'Alai"] = { { 274600, "Berserker Shackles", "Wrist, Mail", 3 } },
-            ["Var'Taka"] = { { 274602, "Brinebelly Leggings", "Legs, Leather", 3 } },
+            ["Zul'Alai"] = {
+                { 274599, "Oathbound Bracers", "Wrist, Leather", 3 }, -- confirmed (Nov 2026)
+                { 274598, "Bloodslash Axe", "One-Hand, Axe", 3 }, -- confirmed (a player, Nov 2026)
+                { 274600, "Berserker Shackles", "Wrist, Mail", 3 },
+            },
+            ["Var'Taka"] = {
+                { 274602, "Brinebelly Leggings", "Legs, Leather", 3 },
+                { 274601, "Harpoon of Command", "Two-Hand, Polearm", 3 }, -- confirmed (Nov 2026)
+                { 274613, "Priestess Cloak", "Back", 3 }, -- confirmed (a player, Nov 2026)
+            },
             ["Captain Dreadrise"] = {
                 { 274604, "Frosty Blunderbuss", "Ranged, Gun", 3 },
                 { 274605, "Briny Sash", "Waist, Cloth", 3 },
+                { 274603, "Dreadfrost Saber", "Main Hand, Sword", 3 }, -- confirmed (a player, Nov 2026)
             },
-            ["Deathless Marrow"] = { { 274606, "Bloodspine Staff", "Two-Hand, Staff", 3 } },
-            ["Primeval Elemental"] = { { 274612, "Waterlogged Burial Shroud", "Back", 3 } },
-            ["Min'loth the Serpent"] = { { 274610, "Ritual-Binder's Gloves", "Hands, Leather", 3 } },
+            ["Deathless Marrow"] = {
+                { 274606, "Bloodspine Staff", "Two-Hand, Staff", 3 },
+                { 274614, "Knucklebone Ring", "Finger", 3 }, -- confirmed (a player, Nov 2026)
+            },
+            ["Primeval Elemental"] = {
+                { 274612, "Waterlogged Burial Shroud", "Back", 3 },
+                { 274611, "Robe of the Drowned", "Chest, Cloth", 3 }, -- confirmed (Nov 2026)
+                { 274615, "Heart of the Primeval", "Trinket", 3 }, -- confirmed (a player, Nov 2026)
+            },
+            ["Min'loth the Serpent"] = {
+                { 274610, "Ritual-Binder's Gloves", "Hands, Leather", 3 },
+                { 274608, "Maw of Min'loth", "Off Hand, Shield", 3 }, -- confirmed (a player, Nov 2026)
+                { 274609, "Serpentbane Crown", "Head, Mail", 3 }, -- confirmed (a player, Nov 2026)
+            },
         }
         -- The rest of the dungeon's loot (the same batch of item IDs,
         -- 274598-274615, in the game's item data): put with a boss by ID order
         -- and required level, nobody has seen it drop yet. Shown folded under
         -- "Not confirmed, but probable drop" on the boss page.
         local PROBABLE = {
-            ["Zul'Alai"] = {
-                { 274598, "Bloodslash Axe", "One-Hand, Axe", 3 },
-                { 274599, "Oathbound Bracers", "Wrist, Leather", 3 },
-            },
-            ["Var'Taka"] = { { 274601, "Harpoon of Command", "Two-Hand, Polearm", 3 } },
-            ["Captain Dreadrise"] = { { 274603, "Dreadfrost Saber", "Main Hand, Sword", 3 } },
             ["Deathless Marrow"] = { { 274607, "Viscera Spaulders", "Shoulder, Mail", 3 } },
-            ["Primeval Elemental"] = {
-                { 274611, "Robe of the Drowned", "Chest, Cloth", 3 },
-                { 274613, "Priestess Cloak", "Back", 3 },
-                { 274614, "Knucklebone Ring", "Finger", 3 },
-                { 274615, "Heart of the Primeval", "Trinket", 3 },
-            },
-            ["Min'loth the Serpent"] = {
-                { 274608, "Maw of Min'loth", "Off Hand, Shield", 3 },
-                { 274609, "Serpentbane Crown", "Head, Mail", 3 },
-            },
         }
         local have = false
         for _, b in ipairs(d.bosses) do
@@ -1005,7 +1619,455 @@ do
         levels["Captain Dreadrise"] = "38"
         levels["Deathless Marrow"] = "39"
         levels["Primeval Elemental"] = "38"
+        levels["Gill"] = "38"
+        levels["Umbra"] = "38" -- rare; level from its nameplate (Discord screenshot, Nov 2026)
+        levels["\"Pyromancer\" Braxton"] = "38" -- rare elite; level from its nameplate (a stream, Nov 2026)
         levels["Min'loth the Serpent"] = "40"
     end
 end
 -- END drownedloot
+
+-- BEGIN kroldokquests
+-- Krol'dok Stronghold: the Alliance Tome of Twilight follows A Small Favor
+-- (Wowhead Forever). Vengeance of the Highborne: Ranath Nightstride in the
+-- inn in Dalaran (a player, Nov 2026; Wowhead Forever's spawn of NPC
+-- 268425), who also pays for it (the quest text); shareable (Wowhead).
+do
+    local RANATH = { mapID = 1416, x = 0.178, y = 0.660, label = "Ranath Nightstride — Dalaran", targetName = "Ranath Nightstride", detail = "Ranath Nightstride, in the inn in Dalaran, Alterac Mountains" }
+    FDJ.QUEST_START_MAPS[96771] = RANATH
+    for _, quest in ipairs((FDJ.DB["Krol'dok Stronghold"] and FDJ.DB["Krol'dok Stronghold"].quests) or {}) do
+        if quest.id == 96771 then quest.turninMap = RANATH end
+    end
+    FDJ.QUEST_SHAREABILITY_AUDIT[96771] = true
+
+    -- Before A Small Favor: Ashe Amberhall's two Sunnyglade quests
+    -- (Wowhead Forever 94879, 94881; a reported chain, Nov 2026).
+    local ASHE = { mapID = 2548, x = 0.666, y = 0.810, label = "Ashe Amberhall — Farholde Keep, Riverglades", targetName = "Ashe Amberhall" }
+    local AT_ASHE = "Ashe Amberhall, Farholde Keep, Riverglades"
+    FDJ.QUEST_PREREQ_CHAINS[94984] = {
+        { id = 94879, name = "Scraps of Knowledge" },
+        { id = 94881, name = "Curious Trinkets" },
+        { id = 94907, name = "A Small Favor" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94879] = {
+        level = 40, requires = 36,
+        objective = "Collect 5 Twilight Pages from within Sunnyglade for Ashe Amberhall in Farholde Keep.",
+        pickup = AT_ASHE, turnin = AT_ASHE, map = ASHE, turninMap = ASHE,
+        requiredItems = { {266424, "Twilight Page", 1, "From the Twilight's Hammer in Sunnyglade (5 needed)"} },
+        note = "Done alongside Curious Trinkets.",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94881] = {
+        level = 38, requires = 36,
+        objective = "Retrieve 25 Twilight Charms from Twilight Shadowmancers and Twilight Neophytes in Sunnyglade for Ashe Amberhall in Farholde Keep.",
+        pickup = AT_ASHE, turnin = AT_ASHE, map = ASHE, turninMap = ASHE,
+        requiredItems = { {266425, "Twilight Charm", 1, "Dropped by Twilight Shadowmancers and Twilight Neophytes in Sunnyglade (25 needed)"} },
+        note = "Done alongside Scraps of Knowledge.",
+    }
+
+    -- The key quests: a Krol'dok Moulding looted in the stronghold starts
+    -- Krol'dok Moulding (Wowhead Forever 94980 / 94973), then Key
+    -- Ingredients (94981 / 94974) gives the Krol'dok Compound Key.
+    FDJ.QUEST_PREREQ_CHAINS[94981] = { { id = 94980, name = "Krol'dok Moulding" } }
+    FDJ.QUEST_PREREQ_CHAINS[94974] = { { id = 94973, name = "Krol'dok Moulding" } }
+    FDJ.QUEST_PREREQ_DETAILS[94980] = {
+        level = 41, requires = 38, startsInDungeon = true,
+        objective = "Find someone in Farholde Keep who may know about the mould.",
+        pickup = "Krol'dok Moulding, looted in Krol'dok Stronghold",
+        startItem = {267138, "Krol'dok Moulding", 1, "Looted in Krol'dok Stronghold; keep any you find"},
+        turnin = "Alphonse Dumas, Farholde Keep, Riverglades (probably)",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94973] = {
+        level = 41, requires = 38, startsInDungeon = true,
+        objective = "Find someone in Rog'mar who may know about the mould.",
+        pickup = "Krol'dok Moulding, looted in Krol'dok Stronghold",
+        startItem = {267137, "Krol'dok Moulding", 1, "Looted in Krol'dok Stronghold; keep any you find"},
+        turnin = "Kreza Darkthorn, Rog'mar, Riverglades (probably)",
+    }
+
+    -- Twilight Mementos, then Lingering Essence (Wowhead Forever's series),
+    -- then probably Curios of Curiosity: the last is the list's entry.
+    -- Twilight Mementos opens once Bring Me His Head is handed in to
+    -- Sergeant Riftan (a Wowhead Forever comment on 94983, Nov 2026).
+    FDJ.QUEST_PREREQ_CHAINS[94998] = {
+        { id = 94890, name = "Bring Me His Head" },
+        { id = 94983, name = "Twilight Mementos" },
+        { id = 94997, name = "Lingering Essence" },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94890] = {
+        level = 46, requires = 38,
+        objective = "Defeat Overlord Kilgar within the Twilight's Shroud and bring his head to Sergeant Riftan.",
+        pickup = "Farholde Keep, Riverglades (giver not known yet)",
+        turnin = "Sergeant Riftan, Farholde Keep, Riverglades",
+        requiredItems = { {265837, "Kilgar's Head", 1, "From Overlord Kilgar in the Twilight's Shroud, Riverglades"} },
+        note = "Handing it in to Sergeant Riftan unlocks Twilight Mementos.",
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94983] = {
+        level = 42, requires = 38,
+        note = "Unlocked by handing in Bring Me His Head to Sergeant Riftan.",
+        objective = "Collect 8 Twilight Bangles from the Twilight's Hammer in Krol'dok Stronghold.",
+        pickup = "Farholde Keep, Riverglades (giver not known yet)",
+        turnin = "Farholde Keep, Riverglades (not known yet)",
+        requiredItems = { {267234, "Twilight Bangle", 1, "Dropped by the Twilight's Hammer cultists in Krol'dok Stronghold (8 needed)"} },
+    }
+    FDJ.QUEST_PREREQ_DETAILS[94997] = {
+        level = 42, requires = 38,
+        objective = "Bring the Satchel of Cursed Mementos to Ashe Amberhall in Farholde Keep.",
+        pickup = "Farholde Keep, Riverglades (who gives it is not known yet)",
+        turnin = AT_ASHE, turninMap = ASHE,
+        providedItem = {268035, "Satchel of Cursed Mementos", 1, "Given when you accept the quest"},
+    }
+    FDJ.QUEST_START_MAPS[94998] = ASHE
+
+    -- Rewards (Wowhead Forever): XP, money and items of the new steps.
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94879] = 3150
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94881] = 2850
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94980] = 3300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94973] = 3300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94981] = 3300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94974] = 3300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94890] = 5050
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94997] = 3450
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94998] = 3450
+    FDJ.FOREVER_QUEST_XP_FALLBACK[96772] = 14410
+    FDJ.PREREQ_REWARD_MONEY_FALLBACK[94980] = 5500
+    FDJ.PREREQ_REWARD_MONEY_FALLBACK[94973] = 5500
+    FDJ.PREREQ_REWARD_MONEY_FALLBACK[94997] = 5500
+    FDJ.PREREQ_REWARD_ITEMS_FALLBACK[94890] = { items = { {275046, "Twilight Overlord Drape", 2}, {275049, "Farholde Bastion", 2} }, choice = true }
+    for _, quest in ipairs((FDJ.DB["Krol'dok Stronghold"] and FDJ.DB["Krol'dok Stronghold"].quests) or {}) do
+        if quest.id == 94983 then quest.hideFromMainList = true end
+    end
+    FDJ.QUEST_PREREQ_DETAILS[94907] = {
+        objective = "Summon a Twilight's Thrall from a conduit within the Twilight's Shroud and capture it with Amberhall's Soulstone.",
+        pickup = "Ashe Amberhall, Riverglades (exact spot not known yet)",
+        turnin = "Ashe Amberhall, Riverglades",
+        providedItem = {0, "Amberhall's Soulstone", 1, "Given by Ashe Amberhall when you accept the quest"},
+    }
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94968] = 13000
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94972] = 12450
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94975] = 9250
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94982] = 13000
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94983] = 11500
+    FDJ.FOREVER_QUEST_XP_FALLBACK[94984] = 12450
+    FDJ.FOREVER_QUEST_XP_FALLBACK[96771] = 13000
+end
+-- END kroldokquests
+
+-- BEGIN blackmawquests
+-- Blackmaw Hold: Beneath Nordrassil leads to Get to the Roots of It (a
+-- Blackmaw Hold guide, Nov 2026, with Wowhead Forever quest IDs 92343-92346
+-- and 92069). Where the NPCs stand: the reported coordinates.
+do
+    local NARA = { mapID = 1456, x = 0.756, y = 0.310, label = "Nara Wildmane — Elder Rise, Thunder Bluff", targetName = "Nara Wildmane" }
+    local MATHRENGYL = { mapID = 1457, x = 0.354, y = 0.084, label = "Mathrengyl Bearwalker — Cenarion Enclave, Darnassus", targetName = "Mathrengyl Bearwalker" }
+    local JEDIGA = { mapID = 1447, x = 0.225, y = 0.514, label = "Jediga — Valormok, Azshara", targetName = "Jediga" }
+    local OGTINC = { mapID = 1447, x = 0.424, y = 0.426, label = "Ogtinc — Azshara", targetName = "Ogtinc" }
+    FDJ.QUEST_START_MAPS[92343] = NARA
+    FDJ.QUEST_START_MAPS[92344] = MATHRENGYL
+    FDJ.QUEST_START_MAPS[92069] = OGTINC
+    FDJ.QUEST_PREREQ_CHAINS[92343] = { { id = 92346, name = "Beneath Nordrassil" } }
+    FDJ.QUEST_PREREQ_CHAINS[92344] = { { id = 92345, name = "Beneath Nordrassil" } }
+    FDJ.QUEST_PREREQ_DETAILS[92346] = {
+        level = 55, requires = 45,
+        objective = "Speak with Nara Wildmane on Elder Rise in Thunder Bluff.",
+        pickup = "Jediga, Valormok, Azshara (22.5, 51.4)",
+        turnin = "Nara Wildmane, Elder Rise, Thunder Bluff",
+        map = JEDIGA, turninMap = NARA,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[92345] = {
+        level = 55, requires = 45,
+        objective = "Speak with Mathrengyl Bearwalker in the Cenarion Enclave in Darnassus.",
+        pickup = "Southern Azshara (giver not known yet)",
+        turnin = "Mathrengyl Bearwalker, Cenarion Enclave, Darnassus",
+        turninMap = MATHRENGYL,
+    }
+    FDJ.FOREVER_QUEST_XP_FALLBACK[92345] = 560
+    FDJ.FOREVER_QUEST_XP_FALLBACK[92346] = 560
+    FDJ.FOREVER_QUEST_XP_FALLBACK[92343] = 11300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[92344] = 11300
+    FDJ.FOREVER_QUEST_XP_FALLBACK[92069] = 12400
+    FDJ.FOREVER_QUEST_XP_FALLBACK[97173] = 12800
+    FDJ.FOREVER_QUEST_XP_FALLBACK[97198] = 16100
+    for _, quest in ipairs((FDJ.DB["Blackmaw Hold"] and FDJ.DB["Blackmaw Hold"].quests) or {}) do
+        if quest.id == 92343 then quest.turninMap = NARA end
+        if quest.id == 92344 then quest.turninMap = MATHRENGYL end
+        if quest.id == 92069 then quest.turninMap = OGTINC end
+    end
+end
+-- END blackmawquests
+
+-- BEGIN shapersquests
+-- Shaper's Terrace: Crystalline Elements' giver, Mayena Earthseeker, in
+-- Mulgore (Wowhead Forever's spawn of NPC 263445).
+do
+    local MAYENA = { mapID = 1412, x = 0.348, y = 0.222, label = "Mayena Earthseeker — Mulgore", targetName = "Mayena Earthseeker" }
+    FDJ.QUEST_START_MAPS[95928] = MAYENA
+    FDJ.FOREVER_QUEST_XP_FALLBACK[95928] = 17655
+end
+-- END shapersquests
+
+-- BEGIN leadinlinks
+-- Lead-in quests that end inside the dungeon, at the NPC (or corpse) who
+-- then gives the next quest, work like In Search of Thaelrid > Blackfathom
+-- Villainy: both are journal entries of their own. The lead-in's Notes have
+-- "Leads to: <next quest>"; the next quest starts inside the dungeon (In
+-- Dungeon icon) and has a button to the lead-in under Starts at. No quest
+-- chain for the pair (the lead-in has no earlier steps of its own).
+do
+    local PAIRS = {
+        { dungeon = "Excavation Site: Wetlands", nextID = 95795, lead = { id = 95772 } }, -- Songblade Search > Fallen in the Fen (both already entries)
+        { dungeon = "Excavation Site: Wetlands", nextID = 95809, lead = {
+            id = 95647,
+            name = "Lost in the Thicket Things",
+            faction = "Alliance",
+            level = 31,
+            requires = 24,
+            pickup = "Caitlin Grassman, Menethil Harbor, Wetlands",
+            objective = "Find Ardin Grassman in the Excavation Sites. Learn what happened to Ardin Grassman.",
+            turnin = "Ardin Grassman, inside Excavation Site: Wetlands",
+            rewardSummary = "",
+            rewardItems = {},
+            liveXPFallback = 4900,
+        } },
+        { dungeon = "Ragefire Chasm", nextID = 5724, lead = {
+            id = 5722,
+            name = "Searching for the Lost Satchel",
+            faction = "Horde",
+            level = 16,
+            requires = 9,
+            pickup = "Rahauro, Elder Rise, Thunder Bluff",
+            objective = "Find Maur Grimtotem's corpse inside Ragefire Chasm and search it for anything of interest.",
+            turnin = "Maur Grimtotem's corpse, inside Ragefire Chasm",
+            note = "From the first major three-way junction, take the right-hand tunnel, follow it uphill toward the dead end, then enter the small side room on the left. Interact with Maur's corpse there.",
+            rewardSummary = "",
+            rewardItems = {},
+            liveXPFallback = 880,
+        } },
+        { dungeon = "Lower Blackrock Spire", nextID = 4982, lead = {
+            id = 4981,
+            name = "Operative Bijou",
+            faction = "Horde",
+            level = 59,
+            requires = 55,
+            pickup = "Lexlort, Kargath, Badlands",
+            objective = "Travel to Blackrock Spire and find out what happened to Bijou.",
+            turnin = "Bijou, inside Lower Blackrock Spire",
+            rewardSummary = "",
+            rewardItems = {},
+        } },
+        { dungeon = "Maraudon", nextID = 7046, lead = {
+            id = 7044,
+            name = "Legends of Maraudon",
+            faction = "Both",
+            level = 49,
+            requires = 41,
+            pickup = "Cavindra, Maraudon Orange Entrance, Desolace",
+            objective = "Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond. Find a way to speak with Celebras.",
+            turnin = "Celebras the Redeemed, inside Maraudon",
+            rewardSummary = "",
+            rewardItems = {},
+        } },
+    }
+
+    for _, pair in ipairs(PAIRS) do
+        local d = FDJ.DB and FDJ.DB[pair.dungeon]
+        local quests = d and d.quests
+        if quests then
+            local nextIndex, nextQuest, leadQuest
+            for i, q in ipairs(quests) do
+                if q.id == pair.nextID then nextIndex, nextQuest = i, q end
+                if q.id == pair.lead.id then leadQuest = q end
+            end
+            if nextQuest then
+                -- The lead-in: its own entry, just before the quest it leads to.
+                if not leadQuest then
+                    leadQuest = pair.lead
+                    local details = FDJ.QUEST_PREREQ_DETAILS and FDJ.QUEST_PREREQ_DETAILS[leadQuest.id]
+                    leadQuest.startMap = leadQuest.startMap or (details and details.map)
+                        or (FDJ.QUEST_START_MAPS and FDJ.QUEST_START_MAPS[leadQuest.id])
+                    if FDJ.QUEST_START_MAPS and leadQuest.startMap and not FDJ.QUEST_START_MAPS[leadQuest.id] then
+                        FDJ.QUEST_START_MAPS[leadQuest.id] = leadQuest.startMap
+                    end
+                    table.insert(quests, nextIndex, leadQuest)
+                end
+                leadQuest.hideFromMainList = nil
+                leadQuest.leadsToQuestLink = { id = nextQuest.id, name = nextQuest.name }
+                nextQuest.startQuestLink = { id = leadQuest.id, name = leadQuest.name }
+                if FDJ.QUEST_PREREQ_CHAINS then FDJ.QUEST_PREREQ_CHAINS[nextQuest.id] = nil end
+            end
+        end
+    end
+
+    -- Notes that only repeated what the links now say.
+    local function Q(dungeon, id)
+        for _, q in ipairs((FDJ.DB and FDJ.DB[dungeon] and FDJ.DB[dungeon].quests) or {}) do
+            if q.id == id then return q end
+        end
+    end
+    local songblade = Q("Excavation Site: Wetlands", 95772)
+    if songblade then songblade.note = nil end
+    local heartwoven = Q("Excavation Site: Wetlands", 95809)
+    if heartwoven and heartwoven.note == "Follow-up of Lost in the Thicket Things." then heartwoven.note = nil end
+
+    -- Quest spots on the dungeon maps: these lead-ins now open their own page.
+    for _, pins in pairs(FDJ.MAP_QUEST_PINS or {}) do
+        for _, pin in ipairs(pins) do
+            for _, spot in ipairs(pin.spots or {}) do
+                for _, q in ipairs(spot.quests or {}) do
+                    if q.id == 95647 or q.id == 5722 or q.id == 4981 or q.id == 7044 then q.main = nil end
+                end
+            end
+        end
+    end
+end
+-- END leadinlinks
+
+-- BEGIN toxicsoilfinal
+-- The Deadmines: the Toxic Soil storyline ends with the second Destruction in
+-- Deadmines (92819, use the detonator), so that quest is the journal entry and
+-- the dungeon step (92753, plant the explosives at the forge) is step 10 of its
+-- chain, like every other chain: the final quest is listed, not repeated as a
+-- step. Wowhead Forever: 92753 ends with Alba Fairmoon at the Deadmines exit
+-- ("I will wait for you in the hills behind Moonbrook"), where 92819 is taken
+-- and handed in; 92753 gives Stormwind +100, 92819 Stormwind +50.
+do
+    local ALBA_EXIT = "Alba Fairmoon, in the hills behind Moonbrook (at the Deadmines exit), Westfall"
+    local d = FDJ.DB and FDJ.DB["The Deadmines"]
+    for i, q in ipairs((d and d.quests) or {}) do
+        if q.id == 92753 then
+            d.quests[i] = {
+                id = 92819,
+                name = "Destruction in Deadmines",
+                faction = "Alliance",
+                level = 18,
+                requires = 9,
+                pickup = ALBA_EXIT,
+                objective = "Use the detonator.",
+                turnin = ALBA_EXIT,
+                note = "The Deadmines part is step 10 of the chain: plant the Extra-Destructive Explosives beside the forge inside the Deadmines, then meet Alba Fairmoon at the Deadmines exit.",
+                rewardSummary = "Stormwind +50",
+                rewardItems = {},
+                liveXPFallback = 680,
+            }
+            break
+        end
+    end
+    local chains = FDJ.QUEST_PREREQ_CHAINS
+    if chains and chains[92753] then
+        local steps = {}
+        for _, step in ipairs(chains[92753]) do
+            if step.id ~= 92819 then steps[#steps + 1] = step end
+        end
+        chains[92819] = steps
+        chains[92753] = nil
+    end
+    local details = FDJ.QUEST_PREREQ_DETAILS
+    if details and details[92753] then
+        details[92753].turnin = ALBA_EXIT
+        details[92753].description = "Plant the explosives beside the forge, then meet Alba Fairmoon at the Deadmines exit."
+    end
+    -- 92819 is no longer a step: its old step data pointed at the Sentinel Hill inn.
+    if details then details[92819] = nil end
+    if FDJ.QUEST_START_MAPS then FDJ.QUEST_START_MAPS[92819] = nil end
+    for _, content in pairs(FDJ.ContentLocales or {}) do
+        local quests = content.quests or {}
+        if quests[92753] then quests[92753].turnin = nil end
+        if quests[92819] then quests[92819].pickup, quests[92819].turnin = nil, nil end
+    end
+end
+-- END toxicsoilfinal
+
+-- BEGIN turninall
+-- Turn-in places the ? buttons were missing (quest list, quest page, quest
+-- tracker): the NPCs' spots on the world map. Wowhead Forever NPC pages
+-- (Dawnwatcher Selgorm 4783, High Explorer Magellas 5387, Treshala
+-- Fallowbrook 4521, Monika Sengutz 3982, Keeper Remulos 11832, Sanath Lim-yo
+-- 8395, Greta Mosshoof 10922, Malyfous Darkhammer 10637, Franclorn Forgewright
+-- 8888, Lothos Riftwaker 14387, Krom'rosh 256418, Ashe Amberhall 257591, Muln
+-- Earthfury 259118); Demar Brant: Warcraft Wiki (Farholde Keep 66.6, 79.9).
+-- Detonation at a Distance ends with Jasper Fel (SI:7), Wowhead quest 92750.
+do
+    local spots = FDJ.TURNIN_SPOTS or {}
+    FDJ.TURNIN_SPOTS = spots
+    local function Add(mapID, x, y, label, targetName)
+        spots[#spots + 1] = { mapID = mapID, x = x, y = y, label = label, targetName = targetName }
+    end
+    Add(1457, 0.558, 0.242, "Dawnwatcher Selgorm — Darnassus", "Dawnwatcher Selgorm")
+    Add(1455, 0.694, 0.186, "High Explorer Magellas — Hall of Explorers, Ironforge", "High Explorer Magellas")
+    Add(1457, 0.693, 0.670, "Treshala Fallowbrook — Tradesmen's Terrace, Darnassus (walks around)", "Treshala Fallowbrook")
+    Add(1424, 0.626, 0.190, "Monika Sengutz — Tarren Mill", "Monika Sengutz")
+    Add(1450, 0.362, 0.416, "Keeper Remulos — Shrine of Remulos, Moonglade", "Keeper Remulos")
+    Add(1447, 0.280, 0.500, "Sanath Lim-yo — Azshara", "Sanath Lim-yo")
+    Add(1448, 0.512, 0.822, "Greta Mosshoof — Emerald Sanctuary, Felwood", "Greta Mosshoof")
+    Add(1452, 0.610, 0.386, "Malyfous Darkhammer — Everlook, Winterspring", "Malyfous Darkhammer")
+    Add(1428, 0.288, 0.284, "Franclorn Forgewright — Blackrock Mountain (a ghost, seen only while dead)", "Franclorn Forgewright")
+    Add(1428, 0.264, 0.246, "Lothos Riftwaker — Blackrock Mountain", "Lothos Riftwaker")
+    Add(2548, 0.594, 0.454, "Krom'rosh — Riverglades", "Krom'rosh")
+    Add(2548, 0.666, 0.810, "Ashe Amberhall — Farholde Keep, Riverglades", "Ashe Amberhall")
+    Add(2548, 0.666, 0.799, "Demar Brant — Farholde Keep, Riverglades", "Demar Brant")
+
+    -- Quests whose turn-in NPC shares a name with another, or is not known
+    -- yet: the place itself.
+    local MULN = { mapID = 1412, x = 0.334, y = 0.224, label = "Muln Earthfury — Skywatcher Plateau, Mulgore", targetName = "Muln Earthfury" }
+    local GROMGOL = { mapID = 1434, x = 0.323, y = 0.277, label = "Grom'gol Base Camp — Stranglethorn Vale (who takes it is not known yet)" }
+    local FARHOLDE = { mapID = 2548, x = 0.666, y = 0.800, label = "Farholde Keep — Riverglades (who takes it is not known yet)" }
+    -- The Grom'gol quests' hand-in, Commander Aggro'gosh, is known now (drownedcity).
+    local AGGROGOSH = { mapID = 1434, x = 0.322, y = 0.288, label = "Commander Aggro'gosh — Grom'gol Base Camp", targetName = "Commander Aggro'gosh" }
+    local byQuest = { [98823] = MULN, [95776] = AGGROGOSH, [95773] = AGGROGOSH, [94983] = FARHOLDE }
+    for _, data in pairs(FDJ.DB or {}) do
+        for _, quest in ipairs((type(data) == "table" and data.quests) or {}) do
+            local spot = type(quest) == "table" and quest.id and byQuest[quest.id]
+            if spot and not quest.turninMap then quest.turninMap = spot end
+        end
+    end
+    local details = FDJ.QUEST_PREREQ_DETAILS or {}
+    for id, spot in pairs(byQuest) do
+        if details[id] and not details[id].turninMap then details[id].turninMap = spot end
+    end
+    if details[92750] then
+        details[92750].turnin = "Jasper Fel, SI:7, Old Town, Stormwind"
+    end
+end
+-- END turninall
+
+-- BEGIN coldbringerhorde
+-- The Coldbringer's Eye, Horde (quest 97196): level 41, from level 34,
+-- shareable, 8,600 XP, 55s, Earthen Ring +300 and Thunder Bluff +150
+-- (Wowhead Forever). Given and taken back by Sutara Plainstalker
+-- <Quartermaster> of the Earthen Ring (NPC 264078), Skywatcher Plateau,
+-- Mulgore 34.4, 22.8 (Wowhead Forever).
+do
+    local SUTARA = { mapID = 1412, x = 0.344, y = 0.228, label = "Sutara Plainstalker — Mulgore", targetName = "Sutara Plainstalker", detail = "Sutara Plainstalker of the Earthen Ring, north-west Mulgore" }
+    local d = FDJ.DB and FDJ.DB["Razorfen Downs"]
+    if d then
+        d.quests = d.quests or {}
+        local have, after = false, nil
+        for i, q in ipairs(d.quests) do
+            if q.id == 97196 then
+                have = true
+                q.pickup = "Sutara Plainstalker, Skywatcher Plateau, Mulgore"
+                q.turnin = "Sutara Plainstalker, Skywatcher Plateau, Mulgore"
+                q.startMap, q.turninMap, q.note = SUTARA, SUTARA, nil
+            end
+            if q.name == "The Coldbringer's Eye" and q.faction == "Alliance" then after = i end
+        end
+        if not have then
+            table.insert(d.quests, (after or #d.quests) + 1, {
+                id = 97196,
+                name = "The Coldbringer's Eye",
+                level = 41,
+                requires = 34,
+                faction = "Horde",
+                pickup = "Sutara Plainstalker, Skywatcher Plateau, Mulgore",
+                objective = "Recover The Coldbringer's Eye from Razorfen Downs.",
+                turnin = "Sutara Plainstalker, Skywatcher Plateau, Mulgore",
+                liveXPFallback = 8600,
+                rewardSummary = "55s  •  Earthen Ring +300  •  Thunder Bluff +150",
+                requiredItem = { 276916, "The Coldbringer's Eye", 1, 1, "From Amnennar the Coldbringer, the last boss of Razorfen Downs" },
+                startMap = SUTARA,
+                turninMap = SUTARA,
+            })
+        end
+    end
+    if FDJ.QUEST_SHAREABILITY_AUDIT then FDJ.QUEST_SHAREABILITY_AUDIT[97196] = true end
+end
+-- END coldbringerhorde

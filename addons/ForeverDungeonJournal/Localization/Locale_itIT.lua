@@ -293,3 +293,33 @@ FDJ.Locales.itIT = {
     ["TURN_IN_HERE"] = "Consegna qui",
     ["TRACK_ACCEPT"] = "Clicca per accettare la missione",
 }
+
+-- Keys used by the wishlist, loot and map UIs that were missing from the
+-- tables above (L() returned the raw key, e.g. "OWNED", in game).
+do
+    local t = FDJ.Locales.itIT
+    if t then
+        for k, v in pairs({
+        SHARE_WISHLIST = "Condividi col gruppo",
+        ALL_DUNGEONS = "Tutte le spedizioni",
+        THIS_DUNGEON = "Questa spedizione",
+        NO_WISHLIST_ITEMS = "Nessun oggetto nella tua lista dei desideri.",
+        ADD_TO_WISHLIST = "Aggiungi alla lista dei desideri",
+        REMOVE_FROM_WISHLIST = "Rimuovi dalla lista dei desideri",
+        WISHLIST_TOOLTIP_DESC = "Segui questo oggetto e ricevi un avviso in gioco quando viene rilasciato.",
+        ITEM_REQ_LEVEL = "Richiede livello %d",
+        OWNED = "[Posseduto]",
+        WEAPONS = "Armi",
+        ARMOR = "Armature",
+        ACCESSORIES = "Accessori",
+        QUEST_ITEMS = "Oggetti delle missioni",
+        NO_LOOT_MATCHES_FILTER = "Nessun bottino corrisponde ai filtri attuali.",
+        NO_LOOT_RECORDED = "Nessun bottino registrato.",
+        CLOSE = "Chiudi",
+        WAYPOINT_CLEAR_TIP = "Clic sinistro: apri missione. Clic destro: rimuovi indicatore.",
+        WISHLIST_DROP = "Oggetto della lista dei desideri ottenuto:",
+        }) do
+            if t[k] == nil then t[k] = v end
+        end
+    end
+end

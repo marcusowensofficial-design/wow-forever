@@ -646,13 +646,15 @@ local function BuildSkillBar(home)
     return bar
 end
 
+local BuildOldBar -- defined below; BuildBar falls back to it
+
 local function BuildBar(home)
     local ok, bar = pcall(BuildSkillBar, home)
     if ok and bar then return bar end
     return BuildOldBar(home)
 end
 
-local function BuildOldBar(home)
+function BuildOldBar(home)
     local W, H = 360, 22
     local k = H / 16
     local bar = CreateFrame("StatusBar", nil, home)
