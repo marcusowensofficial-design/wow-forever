@@ -3080,20 +3080,37 @@ end
 -------------------------------------------------------------------------------
 -- Helper: Calculate Desired Health Bar Color
 -------------------------------------------------------------------------------
-local function GetDesiredHealthBarColor(unitFrame, passedUnit)
+-- Secret-safe boolean unit query: returns true only for a real, readable `true`.
+local function SafeUnitBool(fn, ...)
+    if type(fn) ~= "function" then return false end
+    local ok, res = pcall(fn, ...)
+    return ok and SafeIsTrue(res)
+end
+
+-- True when the mob is currently attacking/targeting the player. Used so a tank's
+-- own pull does not paint the bar "lost aggro" red for the ~0.5s before the server's
+-- threat table catches up (UnitDetailedThreatSituation briefly returns nil/0).
+local function MobIsTargetingPlayer(unit)
+    if not unit then return false end
+    return SafeUnitBool(UnitIsUnit, unit .. "target", "player")
+end
+FP.MobIsTargetingPlayer = MobIsTargetingPlayer
+
+local function ComputeDesiredHealthBarColor(unitFrame, passedUnit)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return nil, nil, nil end
     local unit = passedUnit or GetUnitForFrame(unitFrame)
     local healthBar = unitFrame.healthBar
     if not healthBar then return nil, nil, nil end
 
     -- 1. Check if mob is tapped by another player outside party/raid (Missed Tag)
-    local isTapped = unit and IsUnitTappedByOther(unit)
+    local tapOk, isTapped = pcall(IsUnitTappedByOther, unit)
+    isTapped = unit and tapOk and isTapped
     if isTapped and (ForeverPlatesDB.grayTappedMobs ~= false) then
         return COLOR_TAPPED.r, COLOR_TAPPED.g, COLOR_TAPPED.b
     end
 
     -- 2. Dead unit
-    if unit and UnitIsDead and UnitIsDead(unit) then
+    if unit and SafeUnitBool(UnitIsDead, unit) then
         return COLOR_TAPPED.r, COLOR_TAPPED.g, COLOR_TAPPED.b
     end
 
@@ -3153,8 +3170,9 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
         if threatStatus ~= nil then
             local isTank = IsPlayerTank()
             if isTank then
-                if threatStatus == 3 then
-                    -- Tank securely holding aggro: keep custom chosen color (e.g. Lime green)
+                if threatStatus == 3 or MobIsTargetingPlayer(unit) then
+                    -- Tank securely holding aggro (or mob is on us while the threat table
+                    -- catches up after the pull): keep custom chosen color (e.g. Lime green)
                 elseif threatStatus == 2 or threatStatus == 1 then
                     -- Tank losing aggro: turn Yellow / Orange
                     r, g, b = COLOR_THREAT_WARNING.r, COLOR_THREAT_WARNING.g, COLOR_THREAT_WARNING.b
@@ -3187,7 +3205,7 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
                     -- Normal threat (safe): keep custom chosen color
                 end
             end
-        elseif isEnemy and IsPlayerTank() and UnitAffectingCombat and UnitAffectingCombat(unit) and (IsInGroup() or IsInRaid()) then
+        elseif isEnemy and IsPlayerTank() and not MobIsTargetingPlayer(unit) and SafeUnitBool(UnitAffectingCombat, unit) and (IsInGroup() or IsInRaid()) then
             -- Mob in combat with group but tank has 0 threat / hasn't hit yet
             local isHeldByCoTank = false
             if ForeverPlatesDB.colorByCoTank ~= false then
@@ -3206,6 +3224,22 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
         end
     end
 
+    return r, g, b
+end
+
+-- Crash-proof wrapper. This runs inside hooksecurefunc callbacks on Blizzard's health
+-- bar; if any unit query throws (12.0 secret values in combat), the hook used to abort
+-- and Blizzard's red "in combat with you" color stayed on the bar until the next
+-- UNIT_HEALTH / threat event repainted it (the brief red flash). Now we always answer.
+local function GetDesiredHealthBarColor(unitFrame, passedUnit)
+    local ok, r, g, b = pcall(ComputeDesiredHealthBarColor, unitFrame, passedUnit)
+    if ok and r and g and b then return r, g, b end
+    if not ok then
+        local key = ForeverPlatesDB and ForeverPlatesDB.targetBarColor
+        local c = key and TARGET_BAR_COLORS[key]
+        if c then return c.r, c.g, c.b end
+        return COLOR_HOSTILE.r, COLOR_HOSTILE.g, COLOR_HOSTILE.b
+    end
     return r, g, b
 end
 FP.GetDesiredHealthBarColor = GetDesiredHealthBarColor
@@ -3280,6 +3314,31 @@ local function HookStatusBarTexture(unitFrame, healthBar)
     end
 end
 
+-- Next-frame safety net: if Blizzard touched the bar color this frame, repaint once more
+-- on the following frame in case it wrote again through a path we can't hook (coalesced
+-- per plate, so heavy combat never queues more than one timer per nameplate).
+local pendingReassert = {}
+local function ScheduleColorReassert(unitFrame)
+    if not unitFrame or pendingReassert[unitFrame] then return end
+    if not (C_Timer and C_Timer.After) then return end
+    pendingReassert[unitFrame] = true
+    C_Timer.After(0, function()
+        pendingReassert[unitFrame] = nil
+        if unitFrame.IsForbidden and unitFrame:IsForbidden() then return end
+        local bar = unitFrame.healthBar
+        if not bar then return end
+        local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
+        if not (desR and desG and desB) then return end
+        isApplyingColor[bar] = true
+        pcall(bar.SetStatusBarColor, bar, desR, desG, desB)
+        local tex = bar.GetStatusBarTexture and bar:GetStatusBarTexture()
+        if tex and tex.SetVertexColor then
+            pcall(tex.SetVertexColor, tex, desR, desG, desB)
+        end
+        isApplyingColor[bar] = nil
+    end)
+end
+
 local function HookHealthBar(unitFrame)
     if not unitFrame then return end
     local healthBar = unitFrame.healthBar
@@ -3300,10 +3359,19 @@ local function HookHealthBar(unitFrame)
         end)
     end
 
-    -- Ensure any future SetStatusBarTexture calls also hook the new fill texture
+    -- Ensure any future SetStatusBarTexture calls also hook the new fill texture,
+    -- and immediately repaint it (a freshly swapped fill texture carries Blizzard's color).
     if healthBar.SetStatusBarTexture then
         hooksecurefunc(healthBar, "SetStatusBarTexture", function(self)
             HookStatusBarTexture(unitFrame, self)
+            if isApplyingColor[self] then return end
+            if not (ForeverPlatesDB and ForeverPlatesDB.lockHealthBarColor) then return end
+            local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
+            if desR and desG and desB then
+                isApplyingColor[self] = true
+                pcall(self.SetStatusBarColor, self, desR, desG, desB)
+                isApplyingColor[self] = nil
+            end
         end)
     end
 
@@ -3333,6 +3401,7 @@ local function HookHealthBar(unitFrame)
                 end
                 isApplyingColor[self] = nil
                 LogHookCall(unitFrame, "SetStatusBarColor", r, g, b, desR, desG, desB)
+                ScheduleColorReassert(unitFrame)
             end
         end
     end)
@@ -4641,6 +4710,10 @@ local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
     if r and g and b then
         isApplyingColor[healthBar] = true
         healthBar:SetStatusBarColor(r, g, b)
+        local tex = healthBar.GetStatusBarTexture and healthBar:GetStatusBarTexture()
+        if tex and tex.SetVertexColor then
+            pcall(tex.SetVertexColor, tex, r, g, b)
+        end
         isApplyingColor[healthBar] = nil
     end
 

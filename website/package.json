@@ -14,7 +14,8 @@
     "lint": "npx eslint js/ scripts/",
     "build:data": "node scripts/compile-scraped-data.js",
     "scrape": "node scripts/scrape-foreverchanges.js",
-    "pipeline:progression": "node scripts/cache-forever-items.mjs && node scripts/build-progression.mjs && node scripts/compile-progression-data.mjs && node scripts/validate.js"
+    "rebuild:weapons": "node scripts/rebuild-weapon-paths.mjs && node scripts/validate.js",
+    "pipeline:progression": "node scripts/cache-forever-items.mjs && node scripts/rebuild-weapon-paths.mjs && node scripts/validate.js"
   },
   "keywords": [
     "world-of-warcraft",

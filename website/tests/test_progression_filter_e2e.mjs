@@ -1913,7 +1913,9 @@ function runTier4Tests(c, env, filter) {
         });
       });
 
-      expect(stepCount).toBeGreaterThanOrEqual(430);
+      // Consecutive brackets that share the same top pick are merged by
+      // scripts/rebuild-weapon-paths.mjs, so the step count is lower than the old 439.
+      expect(stepCount).toBeGreaterThanOrEqual(300);
       expect(altCount).toBeGreaterThanOrEqual(3400);
       expect(nanCount).toBe(0);
     });

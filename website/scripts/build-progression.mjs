@@ -893,9 +893,9 @@ export function isItemAllowedForClass(item, classId, trackId = 'primary') {
     if (!rLower.includes(cls)) return false;
   }
 
-  // Paladin: 0 axes (1H or 2H), 0 daggers, 0 staves, 0 ranged/wands, 0 fist, 0 thrown. Undead Paladins on Horde exist in WoW Forever.
+  // Paladin: axes (1H/2H), maces, swords and polearms per the WoW Forever trainer table;
+  // 0 daggers, 0 staves, 0 ranged/wands, 0 fist, 0 thrown. Undead Paladins on Horde exist in WoW Forever.
   if (cls === 'paladin') {
-    if (isAxeWeapon(item)) return false;
     if (isStaffWeapon(item)) return false;
     if (isRangedWeapon(item)) return false;
     if (isWandWeapon(item)) return false;
@@ -924,10 +924,9 @@ export function isItemAllowedForClass(item, classId, trackId = 'primary') {
     if (item.faction === 'alliance' || item.side === 1) return false;
   }
 
-  // Rogue: 0 two-handed weapons, 0 axes, 0 staves/polearms, 0 wands
+  // Rogue: 0 two-handed weapons, 0 staves/polearms, 0 wands (one-handed axes are trainable on WoW Forever)
   if (cls === 'rogue') {
     if (is2HWeapon(item)) return false;
-    if (isAxeWeapon(item)) return false;
     if (isStaffWeapon(item)) return false;
     if (item.subclass === 6 || String(item.weaponType).toLowerCase().includes('polearm')) return false;
     if (isWandWeapon(item)) return false;

@@ -761,20 +761,12 @@
 
       const primaryMatches = itemMatchesAll(displayStep, effectiveFaction, effectiveSource, effectiveSlot, classId);
 
-      // Check for Horde BiS promotion (Staff of Orgrimmar in brackets 13-18)
-      let hordeBisIdx = -1;
-      if (effectiveFaction === 'horde' && (effectiveSource === 'all' || effectiveSource === 'quest') && (effectiveSlot === 'all' || effectiveSlot === 'two-hand')) {
-        hordeBisIdx = displayAlts.findIndex(a => 
-          a.faction === 'horde' && 
-          (a.itemId === 15444 || a.name === 'Staff of Orgrimmar') && 
-          itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot, classId)
-        );
-      }
-
+      // Alternatives are pre-sorted by score, so the first alternative that matches the active
+      // filters is the best replacement when the top pick is filtered out. (A hardcoded
+      // "Staff of Orgrimmar" override used to force that staff to the top for Horde in every
+      // bracket it appeared in, even over better Horde/neutral weapons — removed.)
       let matchIdx = -1;
-      if (hordeBisIdx !== -1) {
-        matchIdx = hordeBisIdx;
-      } else if (!primaryMatches) {
+      if (!primaryMatches) {
         if (effectiveFaction !== 'all') {
           matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === effectiveFaction && itemMatchesAll(a, effectiveFaction, effectiveSource, effectiveSlot, classId));
         }
@@ -812,16 +804,9 @@
 
       if (effectiveFaction === 'all' && classId !== 'shaman' && (primaryFaction === 'alliance' || primaryFaction === 'horde')) {
         const counterpartFaction = primaryFaction === 'alliance' ? 'horde' : 'alliance';
-        let cpIdx = -1;
-        if (counterpartFaction === 'horde' && (effectiveSource === 'all' || effectiveSource === 'quest') && (effectiveSlot === 'all' || effectiveSlot === 'two-hand')) {
-          cpIdx = displayAlts.findIndex(a => a.faction === 'horde' && (a.itemId === 15444 || a.name === 'Staff of Orgrimmar') && itemMatchesAll(a, 'horde', effectiveSource, effectiveSlot, classId));
-        }
-        if (cpIdx === -1) {
-          cpIdx = displayAlts.findIndex(a => (a.faction || 'both') === counterpartFaction && itemMatchesAll(a, counterpartFaction, effectiveSource, effectiveSlot, classId));
-        }
-        if (cpIdx === -1) {
-          cpIdx = displayAlts.findIndex(a => itemMatchesAll(a, counterpartFaction, effectiveSource, effectiveSlot, classId));
-        }
+        // Best alternative the other faction can actually use (its own items or neutral ones).
+        // Alternatives are score-sorted, so a better neutral weapon beats a weaker faction-only one.
+        const cpIdx = displayAlts.findIndex(a => itemMatchesAll(a, counterpartFaction, effectiveSource, effectiveSlot, classId));
 
         if (cpIdx !== -1) {
           const cpRaw = displayAlts[cpIdx];

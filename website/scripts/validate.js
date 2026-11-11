@@ -847,7 +847,7 @@ check('Class weapon progression database coverage and pipeline integrity across 
     const d = fw[cls];
     if (!d || !d.levels) throw new Error(`Missing weapon progression for ${cls}`);
     const uniqueIds = new Set();
-    const allSets = [d.levels, d.healingLevels].filter(Boolean);
+    const allSets = [d.levels, d.healingLevels, ...Object.values(d.tracksData || {})].filter(Boolean);
     allSets.forEach(set => {
       set.forEach(l => {
         if (l.itemId) uniqueIds.add(l.itemId);
@@ -1064,13 +1064,43 @@ check('Weapon proficiency and class legality check across progression tracks', (
   const { progressionData, cache } = getProgressionContext();
   const allItems = getAllProgressionItems(progressionData);
 
-  const knownAxeNames = new Set(["crude battle axe", "copper battle axe", "thick war axe", "durgen's crescent axe", "corpse chopper", "forsaken greataxe", "reef axe", "taurenbane's family cleaver", "guardian's dualblade", "whirlwind axe", "corpsemaker", "ravager", "executioner's cleaver", "gatorbite axe", "arcanite reaper", "woodchopper", "lumbering ogre axe", "taskmaster axe", "bronze battle axe", "heavy mithril axe", "bonebiter", "massive iron axe", "riptear's cleaver", "thun'grim's axe", "axe of orgrimmar", "icesworn decapitator", "butcher's cleaver"]);
-  const knownSwordNames = new Set(["worn shortsword", "copper claymore", "heavy copper broadsword", "haunting blade", "vileblood scimitar", "plaguefang", "strike of the hydra", "trusty sword", "whirlwind sword", "stoneslayer", "blackblade of shahram", "copper shortsword", "bronze greatsword", "wolfsbane", "moonsteel broadsword", "sword of serenity", "blade of the titans", "warmonger", "cutlass", "cruel barb", "wingblade", "deadly bronze poniard", "bronze shortsword", "ruby-adorned blade", "city guard's tarnished blade", "sword of hammerfall", "the butcher", "vanquisher's sword", "thrash blade", "mirah's song", "dal'rend's sacred charge", "dal'rend's tribal guardian", "coldflame saber", "debt collector", "witchblade", "master hunter's spellsword", "zealot blade", "sword of omen", "forsaken shortsword", "deathstalker shortsword", "talonstrike", "thun'grim's sword", "heirloom sword", "sword of the fallen", "militia shortsword", "militia sword", "curved scimitar", "wildgore greatsword", "gilded blademaster's greatsword", "monstrous cleaver", "the skyblade", "blade of silverlaine", "alliance outrunner's sword", "blade of senseless slaughter"]);
-  const knownMaceNames = new Set(["wooden mallet", "large club", "northshire hammer", "giant mace", "trogg scepter", "heavy copper maul", "ironforge greathammer", "rhahk'zor's hammer", "smite's mighty hammer", "verigan's fist", "heavehammer", "defender of dalaran", "dark hearted hammer", "manual crowd pummeler", "mograine's might", "princess theradras' scepter", "dark iron pulverizer", "hammer of the grand crusader", "the unstoppable force", "militia warhammer", "scepter of the abandoned", "rage of the storm", "dendweller's hammer", "copper mace", "bronze mace", "bronze warhammer", "solid iron maul", "mighty iron hammer", "the pacifier", "enchanted battlehammer", "club", "crested scepter", "rock pulverizer", "archeus", "grisly sack of skulls", "goblin smasher", "bonecracker", "hammer of orgrimmar", "hammerbone", "mug of muddled memories", "the stitcher", "gul'gash's greathammer"]);
+  // WoW Forever weapon skills (trainer table): Paladins train 1H/2H axes and polearms, Druids
+  // polearms, Rogues one-handed axes; Hunters have no maces, Shamans no swords.
+  // Shaman 2H axes/maces are baseline (the Enhancement talent was removed).
+  const kindOf = (item) => {
+    const t = (item.weaponType || '').toLowerCase();
+    if (t.includes('fishing')) return 'fishing';
+    if (t.includes('wand')) return 'wand';
+    if (t.includes('crossbow')) return 'crossbow';
+    if (t.includes('bow')) return 'bow';
+    if (t.includes('gun') || t.includes('rifle')) return 'gun';
+    if (t.includes('thrown')) return 'thrown';
+    if (t.includes('polearm')) return 'polearm';
+    if (t.includes('staff') || t.includes('stave')) return 'staff';
+    if (t.includes('dagger')) return 'dagger';
+    if (t.includes('fist')) return 'fist';
+    if (t.includes('shield')) return 'shield';
+    if (t.includes('held in off-hand')) return 'holdable';
+    for (const base of ['axe', 'mace', 'sword']) {
+      if (t.includes(base)) return base + ((t.includes('two-hand') || t.includes('2h')) ? '2' : '1');
+    }
+    return null;
+  };
+  const CLASS_PROFICIENCY = {
+    warrior: ['axe1', 'axe2', 'mace1', 'mace2', 'sword1', 'sword2', 'polearm', 'staff', 'dagger', 'fist', 'bow', 'gun', 'crossbow', 'thrown', 'shield'],
+    paladin: ['axe1', 'axe2', 'mace1', 'mace2', 'sword1', 'sword2', 'polearm', 'shield', 'holdable'],
+    hunter: ['axe1', 'axe2', 'sword1', 'sword2', 'polearm', 'staff', 'dagger', 'fist', 'bow', 'gun', 'crossbow', 'thrown'],
+    rogue: ['dagger', 'fist', 'axe1', 'mace1', 'sword1', 'bow', 'gun', 'crossbow', 'thrown'],
+    shaman: ['axe1', 'axe2', 'mace1', 'mace2', 'staff', 'dagger', 'fist', 'shield', 'holdable'],
+    mage: ['dagger', 'sword1', 'staff', 'wand', 'holdable'],
+    warlock: ['dagger', 'sword1', 'staff', 'wand', 'holdable'],
+    priest: ['dagger', 'mace1', 'staff', 'wand', 'holdable'],
+    druid: ['dagger', 'fist', 'mace1', 'mace2', 'polearm', 'staff', 'holdable']
+  };
 
   const violations = [];
 
-  for (const { kind, cls, trackId, item: it } of allItems) {
+  for (const { kind: kind_, cls, trackId, bracket, item: it } of allItems) {
     const id = it.itemId || it.id;
     const name = (it.name || '').toLowerCase();
     const val = (it.value || '').toLowerCase();
@@ -1088,85 +1118,45 @@ check('Weapon proficiency and class legality check across progression tracks', (
       violations.push(`${cls} has "${it.name}" restricted to "${restriction}"`);
     }
 
-    // 3. Class-specific proficiencies
-    if (cls === 'rogue') {
-      if (sub === 19 || wt.includes('wand')) {
-        violations.push(`Rogue cannot equip wand "${it.name}"`);
-      }
-      if (knownAxeNames.has(name) || wt.includes('axe') || wt.includes('2h') || wt.includes('two-hand') || wt.includes('staff')) {
-        violations.push(`Rogue cannot equip 2H/axe/staff "${it.name}"`);
-      }
+    // 3. Class-specific proficiencies (Classic weapon skills; Forever: Shaman 2H axes/maces baseline)
+    const kind = kindOf(it);
+    if (!kind) {
+      violations.push(`${cls} ${kind_} item "${it.name}" has an unrecognised weaponType "${it.weaponType}"`);
+    } else if (!CLASS_PROFICIENCY[cls].includes(kind)) {
+      violations.push(`${cls} cannot equip ${it.weaponType} "${it.name}"`);
+    }
+    // Category shape: weapons never hold wands/shields/off-hands; wands only wands; off-hands only shields/held items
+    const kindSection = kind_;
+    const sectionOk = kindSection === 'wands' ? kind === 'wand'
+      : kindSection === 'offhands' ? (kind === 'shield' || kind === 'holdable')
+      : !['wand', 'shield', 'holdable', 'fishing'].includes(kind);
+    if (kind && !sectionOk) {
+      violations.push(`${cls} ${kindSection} path contains ${it.weaponType} "${it.name}"`);
     }
 
-    if (cls === 'paladin') {
-      if (knownAxeNames.has(name) || wt.includes('axe')) {
-        violations.push(`Paladin cannot equip axe "${it.name}"`);
-      }
-      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
-        violations.push(`Paladin cannot equip fist/thrown "${it.name}"`);
-      }
-    }
-
-    if (cls === 'shaman') {
-      if (knownSwordNames.has(name) || wt.includes('sword')) {
-        violations.push(`Shaman cannot equip sword "${it.name}"`);
-      }
-    }
-
-    if (cls === 'druid') {
-      if (knownSwordNames.has(name) || wt.includes('sword')) {
-        violations.push(`Druid cannot equip sword "${it.name}"`);
-      }
-      if ((knownAxeNames.has(name) || wt.includes('axe')) && !wt.includes('polearm')) {
-        violations.push(`Druid cannot equip axe "${it.name}"`);
-      }
-      if (wt.includes('thrown') || sub === 16) {
-        violations.push(`Druid cannot equip thrown weapon "${it.name}"`);
-      }
-    }
-
-    if (cls === 'priest') {
-      if (knownSwordNames.has(name) || wt.includes('sword')) {
-        violations.push(`Priest cannot equip sword "${it.name}"`);
-      }
-      if (knownAxeNames.has(name) || wt.includes('axe')) {
-        violations.push(`Priest cannot equip axe "${it.name}"`);
-      }
-      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
-        violations.push(`Priest cannot equip fist/thrown "${it.name}"`);
-      }
-      if ((wt.includes('2h') || wt.includes('two-hand')) && (knownMaceNames.has(name) || wt.includes('mace'))) {
-        violations.push(`Priest cannot equip 2H mace "${it.name}"`);
-      }
-    }
-
-    if (cls === 'mage' || cls === 'warlock') {
-      if (knownMaceNames.has(name) || wt.includes('mace')) {
-        violations.push(`${cls} cannot equip mace "${it.name}"`);
-      }
-      if (knownAxeNames.has(name) || wt.includes('axe')) {
-        violations.push(`${cls} cannot equip axe "${it.name}"`);
-      }
-      if (wt.includes('fist') || wt.includes('thrown') || sub === 13 || sub === 16) {
-        violations.push(`${cls} cannot equip fist/thrown "${it.name}"`);
-      }
-    }
-
-    if (cls === 'hunter' && kind === 'weapons') {
+    if (cls === 'hunter' && kindSection === 'weapons') {
       if (trackId === 'twohand' || trackId === 'melee') {
-        const is2hOrMelee = wt.includes('staff') || wt.includes('polearm') || wt.includes('sword') || wt.includes('axe') || wt.includes('dagger') || wt.includes('fist');
-        if (!is2hOrMelee) {
+        if (!['axe2', 'sword2', 'polearm', 'staff', 'axe1', 'sword1', 'dagger', 'fist'].includes(kind)) {
           violations.push(`Hunter two-handed track cannot contain non-melee weapon "${it.name}"`);
         }
-        if (knownMaceNames.has(name) || wt.includes('mace')) {
-          violations.push(`Hunter cannot equip mace "${it.name}"`);
-        }
-      } else {
-        const isRanged = wt.includes('bow') || wt.includes('gun') || wt.includes('crossbow') || wt.includes('rifle');
-        if (!isRanged) {
-          violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
-        }
+      } else if (!['bow', 'gun', 'crossbow'].includes(kind)) {
+        violations.push(`Hunter ranged track cannot contain non-ranged weapon "${it.name}"`);
       }
+    }
+    if (cls === 'rogue' && kindSection === 'weapons' && ['bow', 'gun', 'crossbow', 'thrown'].includes(kind)) {
+      violations.push(`Rogue melee path cannot contain ranged weapon "${it.name}"`);
+    }
+
+    // Raid / PvP-rank / legendary items are not leveling weapons
+    if (/\b(Grand Marshal|High Warlord|Field Marshal|Warlord|General|Marshal|Commander|Champion|Legionnaire|Blood Guard|Knight-Lieutenant|Knight-Captain|Centurion)'s\b/.test(it.name || '') || it.quality === 'q5' || /^Atiesh/.test(it.name || '')) {
+      violations.push(`${cls} leveling path contains raid/PvP-rank item "${it.name}"`);
+    }
+
+    // Must be equippable by the end of its bracket
+    const tipReq = Number(((it.lines || []).join('\n').match(/Requires Level (\d+)/) || [])[1] || 0);
+    const bMax = (() => { const p = String(bracket || '').split(/[–-]/).map(x => parseInt(x, 10)); return p[1] || p[0] || 60; })();
+    if (Math.max(Number(it.reqLevel || 0), tipReq) > bMax) {
+      violations.push(`${cls} "${it.name}" requires level ${Math.max(Number(it.reqLevel || 0), tipReq)} but is listed in bracket ${bracket}`);
     }
 
     // 4. Level floors

@@ -88,10 +88,10 @@ export class ProgressionSpecificationOracle {
 
     this.CLASS_ALLOWED_WEAPONS = {
       warrior: new Set(['1h sword', '2h sword', '1h axe', '2h axe', '1h mace', '2h mace', 'polearm', 'dagger', 'fist', 'bow', 'gun', 'crossbow', 'shield', 'one-handed sword', 'two-handed sword', 'one-handed axe', 'two-handed axe', 'one-handed mace', 'two-handed mace', 'fist weapon']),
-      paladin: new Set(['1h sword', '2h sword', '1h mace', '2h mace', 'polearm', 'shield', 'one-handed sword', 'two-handed sword', 'one-handed mace', 'two-handed mace']),
+      paladin: new Set(['1h sword', '2h sword', '1h mace', '2h mace', '1h axe', '2h axe', 'polearm', 'shield', 'one-handed sword', 'two-handed sword', 'one-handed mace', 'two-handed mace', 'one-handed axe', 'two-handed axe']),
       hunter: new Set(['bow', 'gun', 'crossbow', '1h sword', '2h sword', '1h axe', '2h axe', 'polearm', 'dagger', 'fist', 'fist weapon', 'two-handed sword']),
       hunterRangedOnly: new Set(['bow', 'gun', 'crossbow', 'rifle']),
-      rogue: new Set(['dagger', '1h sword', '1h mace', 'fist', 'fist weapon', 'bow', 'gun', 'crossbow', 'one-handed sword', 'one-handed mace']),
+      rogue: new Set(['dagger', '1h sword', '1h mace', '1h axe', 'fist', 'fist weapon', 'bow', 'gun', 'crossbow', 'one-handed sword', 'one-handed mace', 'one-handed axe']),
       shaman: new Set(['1h mace', '2h mace', '1h axe', '2h axe', 'dagger', 'staff', 'fist', 'fist weapon', 'shield', 'one-handed mace', 'two-handed mace', 'one-handed axe', 'two-handed axe']),
       druid: new Set(['1h mace', '2h mace', 'staff', 'dagger', 'polearm', 'fist', 'fist weapon', 'one-handed mace', 'two-handed mace']),
       priest: new Set(['1h mace', 'dagger', 'staff', 'wand', 'one-handed mace']),
@@ -283,9 +283,10 @@ export class ProgressionSpecificationOracle {
     if (!allowed) return false;
 
     // Negative constraints override
-    if (cls === 'paladin' && /axe/.test(wType)) return false;
+    // WoW Forever trainer table: Paladins train 1H/2H axes, Rogues train 1H axes, Druids train polearms
+    if (cls === 'paladin' && /dagger|staff|fist|thrown|wand|bow|gun/.test(wType)) return false;
     if (cls === 'shaman' && /sword/.test(wType)) return false;
-    if (cls === 'rogue' && (/axe/.test(wType) || /2h|two-hand/.test(wType))) return false;
+    if (cls === 'rogue' && /2h|two-hand/.test(wType)) return false;
     if (cls === 'druid' && (/sword/.test(wType) || (/axe/.test(wType) && !/polearm/.test(wType)))) return false;
     if (cls === 'priest' && (/sword|axe|2h|two-hand/.test(wType))) return false;
     if ((cls === 'mage' || cls === 'warlock') && (/mace|axe/.test(wType))) return false;
@@ -1018,10 +1019,11 @@ export function runTier1Tests(collector, oracle, env) {
 
   // Feature 9: Class Weapon Proficiency Constraints
   collector.describe('Tier 1.9: Class Weapon Proficiency Constraints', () => {
-    collector.test('1.9.1 Paladins are strictly forbidden from equipping 1H or 2H axes, and have genuine Horde items for Undead Paladins', () => {
-      expect(oracle.isClassProficient('paladin', '1H Axe')).toBe(false);
-      expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(false);
-      expect(oracle.isClassProficient('paladin', 'Two-handed axe')).toBe(false);
+    collector.test('1.9.1 Paladins train 1H/2H axes (WoW Forever trainer table), never daggers/staves/fists, and have genuine Horde items for Undead Paladins', () => {
+      expect(oracle.isClassProficient('paladin', '1H Axe')).toBe(true);
+      expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(true);
+      expect(oracle.isClassProficient('paladin', 'Dagger')).toBe(false);
+      expect(oracle.isClassProficient('paladin', 'Staff')).toBe(false);
 
       const paladinData = env.progressionData.weapons?.paladin;
       expect(paladinData).toBeDefined();
@@ -1032,8 +1034,8 @@ export function runTier1Tests(collector, oracle, env) {
         }
       }
       expect(allPaladinItems.length).toBeGreaterThanOrEqual(1);
-      const axes = allPaladinItems.filter(it => (it.weaponType || '').toLowerCase().includes('axe'));
-      expect(axes.length).toBe(0);
+      const illegal = allPaladinItems.filter(it => /dagger|staff|wand|bow|gun/.test((it.weaponType || '').toLowerCase()));
+      expect(illegal.length).toBe(0);
       const horde = allPaladinItems.filter(it => it.faction === 'horde' || it.side === 2);
       expect(horde.length).toBeGreaterThanOrEqual(1);
       const fistThrown = allPaladinItems.filter(it => (it.weaponType || '').toLowerCase().includes('fist') || (it.weaponType || '').toLowerCase().includes('thrown'));
@@ -1078,10 +1080,10 @@ export function runTier1Tests(collector, oracle, env) {
       expect(swords.length).toBe(0);
     });
 
-    collector.test('1.9.4 Rogues are strictly forbidden from equipping 2H weapons, axes, or wands (asserted directly against dataset: 0 wands)', () => {
+    collector.test('1.9.4 Rogues are strictly forbidden from equipping 2H weapons or wands (asserted directly against dataset: 0 wands)', () => {
       expect(oracle.isClassProficient('rogue', '2H Sword')).toBe(false);
       expect(oracle.isClassProficient('rogue', '2H Mace')).toBe(false);
-      expect(oracle.isClassProficient('rogue', '1H Axe')).toBe(false);
+      expect(oracle.isClassProficient('rogue', '2H Axe')).toBe(false);
 
       const rogueData = env.progressionData.weapons?.rogue;
       expect(rogueData).toBeDefined();
@@ -1092,7 +1094,7 @@ export function runTier1Tests(collector, oracle, env) {
       expect(allRogueItems.length).toBeGreaterThanOrEqual(1);
       const forbidden = allRogueItems.filter(it => {
         const wt = (it.weaponType || '').toLowerCase();
-        return wt.includes('2h') || wt.includes('two-hand') || wt.includes('axe') || wt.includes('wand') || it.subclass === 19;
+        return wt.includes('2h') || wt.includes('two-hand') || wt.includes('wand') || it.subclass === 19;
       });
       expect(forbidden.length).toBe(0);
     });
@@ -1460,9 +1462,10 @@ export function runTier1Tests(collector, oracle, env) {
       expect(oracle.isClassProficient('warrior', 'Wand')).toBe(false);
     });
 
-    collector.test('1.18.2 Paladin proficiency checks cleanly reject axes in both 1H and 2H forms', () => {
-      expect(oracle.isClassProficient('paladin', '1H Axe')).toBe(false);
-      expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(false);
+    collector.test('1.18.2 Paladin proficiency accepts axes in both 1H and 2H forms and rejects daggers', () => {
+      expect(oracle.isClassProficient('paladin', '1H Axe')).toBe(true);
+      expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(true);
+      expect(oracle.isClassProficient('paladin', 'Dagger')).toBe(false);
     });
 
     collector.test('1.18.3 Hunter ranged track strictly rejects melee weapons (swords, axes, daggers)', () => {
@@ -1471,9 +1474,10 @@ export function runTier1Tests(collector, oracle, env) {
       expect(oracle.isClassProficient('hunter', '2H Axe', true)).toBe(false);
     });
 
-    collector.test('1.18.4 Rogue proficiency strictly rejects 2H weapons and axes', () => {
+    collector.test('1.18.4 Rogue proficiency rejects 2H weapons and accepts one-handed axes (WoW Forever)', () => {
       expect(oracle.isClassProficient('rogue', 'Two-handed sword')).toBe(false);
-      expect(oracle.isClassProficient('rogue', '1H Axe')).toBe(false);
+      expect(oracle.isClassProficient('rogue', '2H Axe')).toBe(false);
+      expect(oracle.isClassProficient('rogue', '1H Axe')).toBe(true);
     });
 
     collector.test('1.18.5 Shaman and Druid proficiencies strictly reject swords', () => {
@@ -2136,7 +2140,7 @@ export function runTier2Tests(collector, oracle, env) {
   // F18 Boundary
   collector.describe('Tier 2.18: Weapon Proficiency Audit Boundary Cases', () => {
     collector.test('2.18.1 Injected prohibited weapon type into class profile is detected and rejected (0 test items in dataset)', () => {
-      const isLegal = oracle.isClassProficient('paladin', '2H Axe');
+      const isLegal = oracle.isClassProficient('paladin', 'Dagger');
       expect(isLegal).toBe(false);
 
       const re = /\b(test|foo|dnt|monster|copy|deprecated|debug)\b/i;
@@ -2158,7 +2162,7 @@ export function runTier2Tests(collector, oracle, env) {
       const step = {
         name: 'Hammer',
         weaponType: '1H Mace',
-        alts: [{ name: 'Axe', weaponType: '1H Axe' }]
+        alts: [{ name: 'Dagger', weaponType: 'Dagger' }]
       };
       const isPaladinStepLegal = oracle.isClassProficient('paladin', step.weaponType) &&
                                  step.alts.every(a => oracle.isClassProficient('paladin', a.weaponType));
@@ -2495,7 +2499,7 @@ export function runTier4Tests(collector, oracle) {
       const wEff = oracle.calculateEffectiveLevel(whirlwind);
       expect(wEff).toBe(30);
       expect(oracle.isClassProficient('warrior', '2H Axe')).toBe(true);
-      expect(oracle.isClassProficient('paladin', '2H Axe')).toBe(false);
+      expect(oracle.isClassProficient('paladin', 'Dagger')).toBe(false);
 
       // 3. Stat weight evaluation: Whirlwind Axe is top pick for Level 30 Warrior
       const score = oracle.calculateStatWeightScore(whirlwind, 'melee_dps', 30);
