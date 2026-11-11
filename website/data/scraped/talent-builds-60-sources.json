@@ -1,0 +1,4687 @@
+{
+ "_about": "Level 60 talent build sources gathered 2026-11-11 for the Talents tab presets. Build codes use the shared per-tree digit format (one digit per talent, ordered by row then column, trailing zeros trimmed, trees joined by '-'). 'wowheadLayout' is the live Forever tree layout read from Wowhead's talent calculator ([row0,col0,maxRank,spellId,slug]) and is used to decode every code. Rebuild the preset data with: node scripts/build-talent-builds-60.mjs",
+ "collectedAt": "2026-11-11",
+ "sites": {
+  "wowhead": {
+   "name": "Wowhead",
+   "home": "https://www.wowhead.com/forever",
+   "note": "Per-spec 'Talent Builds' guides; PvE raid and dungeon builds used."
+  },
+  "foreverdb": {
+   "name": "ForeverDB",
+   "home": "https://foreverdb.net/classes",
+   "note": "Per-class builds pages; the level-60 group/dungeon build per spec, checked by ForeverDB against client build 1.60.1.70862."
+  },
+  "wowforevertalents": {
+   "name": "WoW Forever Talents",
+   "home": "https://wowforevertalents.com/builds/",
+   "note": "Community public talent links with view and vote counts (51-point builds only)."
+  }
+ },
+ "sitesReviewedWithoutUsableLevel60Builds": {
+  "foreverchanges.pro": "Community builds exist but almost all have 0 likes, and many stored codes predate the 1.60.1 tree changes (their own calculator drops points when loading them).",
+  "warcrafttavern.com/forever": "Spec guides still show Level 30 beta builds only.",
+  "method.gg/wow-forever": "Leveling guides describe talents in prose; no level 60 build strings.",
+  "zockify.com/forever": "Page could not be fetched.",
+  "wowforevertools.com": "Calculator only; site still framed around the level 30 beta.",
+  "classicwowforever.com": "Calculator only; no preset builds.",
+  "playfulls.com": "Calculator only; no preset level 60 builds found."
+ },
+ "wowheadGuideUrls": {
+  "warrior/arms": "https://www.wowhead.com/forever/guide/classes/warrior/arms/talent-builds-pve-dps",
+  "warrior/fury": "https://www.wowhead.com/forever/guide/classes/warrior/fury/talent-builds-pve-dps",
+  "warrior/protection": "https://www.wowhead.com/forever/guide/classes/warrior/protection/talent-builds-pve-tank",
+  "paladin/holy": "https://www.wowhead.com/forever/guide/classes/paladin/holy/talent-builds-pve-healer",
+  "paladin/protection": "https://www.wowhead.com/forever/guide/classes/paladin/protection/talent-builds-pve-tank",
+  "paladin/retribution": "https://www.wowhead.com/forever/guide/classes/paladin/retribution/talent-builds-pve-dps",
+  "hunter/beast-mastery": "https://www.wowhead.com/forever/guide/classes/hunter/beast-mastery/talent-builds-pve-dps",
+  "hunter/marksmanship": "https://www.wowhead.com/forever/guide/classes/hunter/marksmanship/talent-builds-pve-dps",
+  "hunter/survival": "https://www.wowhead.com/forever/guide/classes/hunter/survival/talent-builds-pve-dps",
+  "rogue/assassination": "https://www.wowhead.com/forever/guide/classes/rogue/assassination/talent-builds-pve-dps",
+  "rogue/combat": "https://www.wowhead.com/forever/guide/classes/rogue/combat/talent-builds-pve-dps",
+  "rogue/subtlety": "https://www.wowhead.com/forever/guide/classes/rogue/subtlety/talent-builds-pve-dps",
+  "priest/discipline": "https://www.wowhead.com/forever/guide/classes/priest/discipline/talent-builds-pve-healer",
+  "priest/holy": "https://www.wowhead.com/forever/guide/classes/priest/holy/talent-builds-pve-healer",
+  "priest/shadow": "https://www.wowhead.com/forever/guide/classes/priest/shadow/talent-builds-pve-dps",
+  "shaman/elemental": "https://www.wowhead.com/forever/guide/classes/shaman/elemental/talent-builds-pve-dps",
+  "shaman/enhancement": "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/talent-builds-pve-dps",
+  "shaman/restoration": "https://www.wowhead.com/forever/guide/classes/shaman/restoration/talent-builds-pve-healer",
+  "mage/arcane": "https://www.wowhead.com/forever/guide/classes/mage/arcane/talent-builds-pve-dps",
+  "mage/fire": "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+  "mage/frost": "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+  "warlock/affliction": "https://www.wowhead.com/forever/guide/classes/warlock/affliction/talent-builds-pve-dps",
+  "warlock/demonology": "https://www.wowhead.com/forever/guide/classes/warlock/demonology/talent-builds-pve-dps",
+  "warlock/destruction": "https://www.wowhead.com/forever/guide/classes/warlock/destruction/talent-builds-pve-dps",
+  "druid/balance": "https://www.wowhead.com/forever/guide/classes/druid/balance/talent-builds-pve-dps",
+  "druid/feral": "https://www.wowhead.com/forever/guide/classes/druid/feral/talent-builds-pve-dps",
+  "druid/restoration": "https://www.wowhead.com/forever/guide/classes/druid/restoration/talent-builds-pve-healer"
+ },
+ "wowhead": {
+  "warrior/arms": [
+   [
+    "Raid",
+    "30303213132215201-05500005002-2"
+   ],
+   [
+    "PvP",
+    "03303213132215231-55000105"
+   ],
+   [
+    "Leveling",
+    "05323213032215201-05500105"
+   ]
+  ],
+  "warrior/fury": [
+   [
+    "Raid",
+    "30303213002-050530045122100231"
+   ],
+   [
+    "Dungeon",
+    "30303213002-051530055120100231"
+   ],
+   [
+    "PvP",
+    "03303213002-550011350102122231"
+   ]
+  ],
+  "warrior/protection": [
+   [
+    "Raid",
+    "04-05050005-050530120301021351"
+   ],
+   [
+    "Raid",
+    "35301003002-02-050530120301021351"
+   ],
+   [
+    "Raid",
+    "3-050501350122120031-050230120301"
+   ],
+   [
+    "Raid",
+    "35303013002-050530055120100031"
+   ],
+   [
+    "Dungeon",
+    "04-05050005-050233120301021351"
+   ],
+   [
+    "Dungeon",
+    "353030130020152-05-050033120301"
+   ],
+   [
+    "PvP",
+    "-05050135-055030123001201351"
+   ]
+  ],
+  "paladin/holy": [
+   [
+    "Raid",
+    "50320115022101251-50002-050330002"
+   ],
+   [
+    "Dungeon",
+    "50320015222121251-5-052300002"
+   ],
+   [
+    "PvP",
+    "50320215022101251-5002-052300002"
+   ]
+  ],
+  "paladin/protection": [
+   [
+    "Raid",
+    "-05302102313501531-50233000201"
+   ],
+   [
+    "Raid",
+    "05025211220021-0530210221310152"
+   ],
+   [
+    "Raid",
+    "-05302102213101-5223330120100035"
+   ],
+   [
+    "Raid",
+    "05025211220021--5523300120100033"
+   ],
+   [
+    "Dungeon",
+    "-05322102313001531-50233300201"
+   ],
+   [
+    "PvP",
+    "50325210020021-503221300130215"
+   ]
+  ],
+  "paladin/retribution": [
+   [
+    "Raid",
+    "050250002-501-05233011201301351"
+   ],
+   [
+    "Raid",
+    "05025210221021--0523320120130033"
+   ],
+   [
+    "PvP",
+    "05025-501-50233011221301351"
+   ],
+   [
+    "PvP",
+    "50325010022001--5023310120130135"
+   ]
+  ],
+  "hunter/beast-mastery": [
+   [
+    "Raid",
+    "5320001505101251-00520503014"
+   ],
+   [
+    "PvP",
+    "5023001505101251-0550050001-4"
+   ]
+  ],
+  "hunter/marksmanship": [
+   [
+    "Raid",
+    "5-0053552511521051-5"
+   ],
+   [
+    "PvP",
+    "-0553050511503151-500050001"
+   ]
+  ],
+  "hunter/survival": [
+   [
+    "Raid",
+    "51202005001-004-500230230050022151"
+   ],
+   [
+    "Raid",
+    "-00530501114-500230230050220151"
+   ],
+   [
+    "PvP",
+    "50230014001--502203031051222151"
+   ]
+  ],
+  "rogue/assassination": [
+   [
+    "Raid",
+    "00532310151501031-302303202014"
+   ],
+   [
+    "Raid",
+    "00532310101401-302303202015152-001"
+   ],
+   [
+    "PvP",
+    "30502010401-320302002-232002330021221"
+   ]
+  ],
+  "rogue/combat": [
+   [
+    "Raid",
+    "005323101012-32003320201515231"
+   ],
+   [
+    "Raid",
+    "00532310101-32030320201515231-002"
+   ]
+  ],
+  "rogue/subtlety": [
+   [
+    "Raid",
+    "005323101014--4323200300013211501"
+   ],
+   [
+    "Raid",
+    "0053031-3203-4320203300013211051"
+   ]
+  ],
+  "priest/discipline": [
+   [
+    "Raid",
+    "005005031330011531-0350501303"
+   ],
+   [
+    "Dungeon",
+    "025015021330011531-0150510303"
+   ],
+   [
+    "PvP",
+    "0053002013332115-320501320001-05"
+   ]
+  ],
+  "priest/holy": [
+   [
+    "Raid",
+    "00500500133001-10505103230121531"
+   ],
+   [
+    "Dungeon",
+    "025005001330011-0350510303002053"
+   ],
+   [
+    "PvP",
+    "005305201333011331-3020511302"
+   ]
+  ],
+  "priest/shadow": [
+   [
+    "Raid",
+    "00530400003-3-50042201251302051"
+   ],
+   [
+    "Dungeon",
+    "00530200003--50542201251302051"
+   ],
+   [
+    "PvP",
+    "00530020033-3-55002221201312051"
+   ]
+  ],
+  "shaman/elemental": [
+   [
+    "Raid",
+    "5500331013001351-04-053150001001"
+   ],
+   [
+    "Raid",
+    "5500331023001351-05500001-053"
+   ],
+   [
+    "PvP",
+    "5500331003121351-2502020130002-01"
+   ]
+  ],
+  "shaman/enhancement": [
+   [
+    "Raid",
+    "053303102-053030310051212251"
+   ],
+   [
+    "Dungeon",
+    "05330310201-0530303100212122-053"
+   ],
+   [
+    "PvP",
+    "05350310001-2502300130212122-050002"
+   ]
+  ],
+  "shaman/restoration": [
+   [
+    "Raid",
+    "-0550302000002-5330003315013151"
+   ],
+   [
+    "Raid",
+    "-055-5530003315513151"
+   ],
+   [
+    "PvP",
+    "-2552000100002-5330003315013151"
+   ]
+  ],
+  "mage/arcane": [
+   [
+    "Raid",
+    "050205203100311531-525000012001-003"
+   ],
+   [
+    "Raid",
+    "050205223101311531-5500003-003"
+   ],
+   [
+    "Raid",
+    "05020520310020153-505002012301-003"
+   ],
+   [
+    "PvP",
+    "050205220102211531-505230012001"
+   ]
+  ],
+  "mage/fire": [
+   [
+    "Raid",
+    "0502052001001-55500001230133031-003"
+   ],
+   [
+    "Raid",
+    "-5550000123011303-2035000311113002"
+   ],
+   [
+    "PvP",
+    "050205220002201-35523001230103-002"
+   ]
+  ],
+  "mage/frost": [
+   [
+    "Raid",
+    "2032050030003--053500031100331251"
+   ],
+   [
+    "PvP",
+    "2032202001--053532301101331251"
+   ]
+  ],
+  "warlock/affliction": [
+   [
+    "Raid",
+    "25500020135201351-0050203001-05"
+   ],
+   [
+    "Raid",
+    "2550001013520105--0550305003"
+   ],
+   [
+    "Dungeon",
+    "2550001013520105--0550205103"
+   ]
+  ],
+  "warlock/demonology": [
+   [
+    "Raid",
+    "011-0305003201220301351-0050055003"
+   ],
+   [
+    "Raid",
+    "011-0005003231220301351-0550005003"
+   ]
+  ],
+  "warlock/destruction": [
+   [
+    "Raid",
+    "2530000013-0004-0050355103101351"
+   ],
+   [
+    "Raid",
+    "2530000013-03020001-0050335103101351"
+   ],
+   [
+    "Raid",
+    "205-0050203001-0050355103101351"
+   ],
+   [
+    "Dungeon",
+    "2350000013-0004-0050355103101351"
+   ]
+  ],
+  "druid/balance": [
+   [
+    "Raid",
+    "5232220115501351--5053"
+   ],
+   [
+    "PvP",
+    "5332223115021051-050023-5"
+   ]
+  ],
+  "druid/feral": [
+   [
+    "OpenWorld",
+    "050022-55200002123112124011-054"
+   ],
+   [
+    "Raid",
+    "050022-53200032123012124001-055"
+   ],
+   [
+    "HybridTank",
+    "050022-50230302123110124011-055"
+   ],
+   [
+    "PvP",
+    "-55202002123112124011-05433000001"
+   ]
+  ],
+  "druid/restoration": [
+   [
+    "Raid",
+    "5530203110001--055300510311105"
+   ],
+   [
+    "Raid",
+    "552022011--0553005103113051"
+   ],
+   [
+    "Dungeon",
+    "503222011550135--05530011001"
+   ],
+   [
+    "Dungeon",
+    "-55000032023012125001-05530011031"
+   ]
+  ]
+ },
+ "foreverdb": {
+  "warrior/arms": "30303213032215201-55250000012",
+  "warrior/fury": "3202301-550530055122100231",
+  "warrior/protection": "3500301--250533120330021351",
+  "paladin/holy": "50320215222101251-50022-0503",
+  "paladin/protection": "-55322132513521531-2",
+  "paladin/retribution": "0502521022--05233021201301351",
+  "hunter/beast-mastery": "5520001525101251-0050550001",
+  "hunter/marksmanship": "-0050552401523051-50005003",
+  "hunter/survival": "5-00505-500250231050222151",
+  "rogue/assassination": "02532320251551031-302303",
+  "rogue/combat": "005303202-3223030200112321551",
+  "rogue/subtlety": "005003-312303-005033231321001151",
+  "priest/discipline": "005305031330011531-0250500302",
+  "priest/holy": "00510503103-03505103030121531",
+  "priest/shadow": "005004--50552201251312251",
+  "shaman/elemental": "5505331023021351-052-05",
+  "shaman/enhancement": "05-055230310551012251-05",
+  "shaman/restoration": "--5533523315513151",
+  "mage/arcane": "053225223122311531-5-003",
+  "mage/fire": "0500032-55500331130133131-003",
+  "mage/frost": "0500032--253502033120331251",
+  "warlock/affliction": "25500320135201351--05503",
+  "warlock/demonology": "-0045003231221001351-0550305",
+  "warlock/destruction": "05--2551355133121351",
+  "druid/balance": "5532220115501351--505",
+  "druid/feral": "-55200332023012125011-05503",
+  "druid/restoration": "03--5553035153113251"
+ },
+ "wowforevertalents": [
+  {
+   "class": "hunter",
+   "code": "5-005005001-500250230050222151",
+   "views": 17628,
+   "upvotes": 252,
+   "downvotes": 96
+  },
+  {
+   "class": "warlock",
+   "code": "05-0055003201221001351-0550005",
+   "views": 10733,
+   "upvotes": 107,
+   "downvotes": 64
+  },
+  {
+   "class": "hunter",
+   "code": "5-30535520115023051-5",
+   "views": 5055,
+   "upvotes": 53,
+   "downvotes": 39
+  },
+  {
+   "class": "priest",
+   "code": "005205031330011531-3050400303",
+   "views": 2358,
+   "upvotes": 11,
+   "downvotes": 25
+  },
+  {
+   "class": "warlock",
+   "code": "2-005022300122-0550305103101251",
+   "views": 2027,
+   "upvotes": 14,
+   "downvotes": 39
+  },
+  {
+   "class": "hunter",
+   "code": "5023001505011251--50023103105",
+   "views": 1744,
+   "upvotes": 9,
+   "downvotes": 38
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005201-500230230050222151",
+   "views": 1036,
+   "upvotes": 16,
+   "downvotes": 25
+  },
+  {
+   "class": "priest",
+   "code": "525135031030201001-30505110202",
+   "views": 1653,
+   "upvotes": 19,
+   "downvotes": 13
+  },
+  {
+   "class": "warrior",
+   "code": "35-0505002-250003120331021251",
+   "views": 262,
+   "upvotes": 1,
+   "downvotes": 9
+  },
+  {
+   "class": "warrior",
+   "code": "05323013102015-05-250033120301",
+   "views": 81,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "paladin",
+   "code": "05025-503-50233001201311351",
+   "views": 260,
+   "upvotes": 3,
+   "downvotes": 0
+  },
+  {
+   "class": "paladin",
+   "code": "50325000220121-053201320130215",
+   "views": 133,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "paladin",
+   "code": "050050002-503-05233011201301351",
+   "views": 62,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "5021201505011251-00505500005",
+   "views": 1034,
+   "upvotes": 17,
+   "downvotes": 11
+  },
+  {
+   "class": "hunter",
+   "code": "5-30500520115013151-50023003",
+   "views": 812,
+   "upvotes": 12,
+   "downvotes": 9
+  },
+  {
+   "class": "hunter",
+   "code": "5-30534525115023151",
+   "views": 251,
+   "upvotes": 6,
+   "downvotes": 4
+  },
+  {
+   "class": "hunter",
+   "code": "5-005205001-530200231051022151",
+   "views": 220,
+   "upvotes": 9,
+   "downvotes": 9
+  },
+  {
+   "class": "hunter",
+   "code": "53200005001-004-500230230050220151",
+   "views": 173,
+   "upvotes": 5,
+   "downvotes": 4
+  },
+  {
+   "class": "hunter",
+   "code": "5120201505101251-30500520014",
+   "views": 136,
+   "upvotes": 3,
+   "downvotes": 3
+  },
+  {
+   "class": "hunter",
+   "code": "5120201505101251-00530520014",
+   "views": 132,
+   "upvotes": 6,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5-005045001-500230230050220151",
+   "views": 132,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005001-500230230250222151",
+   "views": 92,
+   "upvotes": 4,
+   "downvotes": 3
+  },
+  {
+   "class": "hunter",
+   "code": "5-00530520115023051-50005003",
+   "views": 72,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5023001505101251-00500505-5",
+   "views": 71,
+   "upvotes": 4,
+   "downvotes": 3
+  },
+  {
+   "class": "hunter",
+   "code": "5-005025001-500230230050222151",
+   "views": 61,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5320001505101251-0053052-5",
+   "views": 55,
+   "upvotes": 3,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005001-500250230250220151",
+   "views": 54,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "52201005001-004-503200131050220151",
+   "views": 53,
+   "upvotes": 3,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "51202005001-00500525015020051-4",
+   "views": 51,
+   "upvotes": 2,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5520001525101051-305005-5",
+   "views": 46,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005001-503200230250222151",
+   "views": 44,
+   "upvotes": 1,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5-30500520115023051-50005003",
+   "views": 42,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005001-500230231051222151",
+   "views": 39,
+   "upvotes": 1,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5120201515101241-30500520014",
+   "views": 34,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "50230015031212--5002032310500221",
+   "views": 30,
+   "upvotes": 3,
+   "downvotes": 1
+  },
+  {
+   "class": "hunter",
+   "code": "5-005005001-050250231051220151",
+   "views": 29,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "5-00505520115023051-50005001",
+   "views": 26,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "51202005001-30500520015013051-4",
+   "views": 24,
+   "upvotes": 2,
+   "downvotes": 2
+  },
+  {
+   "class": "hunter",
+   "code": "5120201525101251-305055",
+   "views": 24,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "5-30500520115003051-05005023",
+   "views": 19,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "0521201505101251-205-50005003",
+   "views": 19,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "1421201425101241-32500500014",
+   "views": 19,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "hunter",
+   "code": "5120201505101251-3050052-5",
+   "views": 17,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "rogue",
+   "code": "00530320201-3200132202012321551",
+   "views": 98,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "rogue",
+   "code": "025300212-32-305230031321001151",
+   "views": 58,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "rogue",
+   "code": "3-3253302210210001-332203231021001",
+   "views": 57,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "rogue",
+   "code": "30530020201-32000322-0052031313210011",
+   "views": 39,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "rogue",
+   "code": "00532300221201-303303220001032125",
+   "views": 33,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "rogue",
+   "code": "005302002-3203032202000321551-005",
+   "views": 21,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "505035031030001-305251002020005",
+   "views": 1004,
+   "upvotes": 12,
+   "downvotes": 4
+  },
+  {
+   "class": "priest",
+   "code": "005205031330011531-3350010303",
+   "views": 700,
+   "upvotes": 6,
+   "downvotes": 2
+  },
+  {
+   "class": "priest",
+   "code": "00520501133-03505103030021521",
+   "views": 456,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "02530000103--50552201201312251",
+   "views": 197,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "505035031030001-005451000320005",
+   "views": 185,
+   "upvotes": 2,
+   "downvotes": 1
+  },
+  {
+   "class": "priest",
+   "code": "525035131033001001-30505-005",
+   "views": 166,
+   "upvotes": 4,
+   "downvotes": 1
+  },
+  {
+   "class": "priest",
+   "code": "52013000103-305051032320205-005",
+   "views": 85,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "520035031030001-20545100202-00502",
+   "views": 60,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "505035031032201001-10505131202",
+   "views": 54,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "priest",
+   "code": "505335001330011531-00505101",
+   "views": 44,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "005-305201-50552201201202251",
+   "views": 38,
+   "upvotes": 2,
+   "downvotes": 2
+  },
+  {
+   "class": "priest",
+   "code": "405035021330011531-32500103",
+   "views": 36,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "005310101330211-3-055502111013102",
+   "views": 30,
+   "upvotes": 2,
+   "downvotes": 0
+  },
+  {
+   "class": "priest",
+   "code": "525035231030001001-30525100202",
+   "views": 23,
+   "upvotes": 2,
+   "downvotes": 2
+  },
+  {
+   "class": "shaman",
+   "code": "5-055-5530000115513151",
+   "views": 155,
+   "upvotes": 1,
+   "downvotes": 4
+  },
+  {
+   "class": "shaman",
+   "code": "50050113-05503031350121025",
+   "views": 122,
+   "upvotes": 1,
+   "downvotes": 6
+  },
+  {
+   "class": "shaman",
+   "code": "5005031--5533000005513151",
+   "views": 113,
+   "upvotes": 2,
+   "downvotes": 3
+  },
+  {
+   "class": "shaman",
+   "code": "0535001-055030310551212211",
+   "views": 54,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "shaman",
+   "code": "0531-055030313551012251",
+   "views": 51,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "shaman",
+   "code": "2535-055033313051012211",
+   "views": 42,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "shaman",
+   "code": "-055-3530503015513151",
+   "views": 39,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "mage",
+   "code": "050005123102--050532303121301201",
+   "views": 1586,
+   "upvotes": 9,
+   "downvotes": 9
+  },
+  {
+   "class": "mage",
+   "code": "-35500001230133-0235300311013012",
+   "views": 93,
+   "upvotes": 3,
+   "downvotes": 0
+  },
+  {
+   "class": "mage",
+   "code": "-355230010301131-2035320001013012",
+   "views": 33,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "mage",
+   "code": "052205100121301531--1500023031013",
+   "views": 31,
+   "upvotes": 0,
+   "downvotes": 1
+  },
+  {
+   "class": "mage",
+   "code": "050205120102--050502303121331211",
+   "views": 18,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "warlock",
+   "code": "03-015121110122-2050055133001051",
+   "views": 738,
+   "upvotes": 15,
+   "downvotes": 16
+  },
+  {
+   "class": "warlock",
+   "code": "-0050203231221001351-2550005003",
+   "views": 695,
+   "upvotes": 18,
+   "downvotes": 10
+  },
+  {
+   "class": "warlock",
+   "code": "025-0050233201221001351-20550001",
+   "views": 513,
+   "upvotes": 10,
+   "downvotes": 7
+  },
+  {
+   "class": "warlock",
+   "code": "05-0050203001-2050355103101351",
+   "views": 485,
+   "upvotes": 16,
+   "downvotes": 8
+  },
+  {
+   "class": "warlock",
+   "code": "02500303130211-0055003201201101-0054",
+   "views": 281,
+   "upvotes": 8,
+   "downvotes": 9
+  },
+  {
+   "class": "warlock",
+   "code": "25-0050203001-0050355103101351",
+   "views": 202,
+   "upvotes": 7,
+   "downvotes": 7
+  },
+  {
+   "class": "warlock",
+   "code": "05-0025003231221001351-0550005",
+   "views": 140,
+   "upvotes": 13,
+   "downvotes": 5
+  },
+  {
+   "class": "warlock",
+   "code": "05002323030201-200523310020130035",
+   "views": 107,
+   "upvotes": 3,
+   "downvotes": 6
+  },
+  {
+   "class": "warlock",
+   "code": "04-0050203231221001351-05500051",
+   "views": 96,
+   "upvotes": 2,
+   "downvotes": 4
+  },
+  {
+   "class": "warlock",
+   "code": "25500000034-0050203001-1550005103001",
+   "views": 69,
+   "upvotes": 4,
+   "downvotes": 6
+  },
+  {
+   "class": "warlock",
+   "code": "05-0055200031221001-25550501001",
+   "views": 66,
+   "upvotes": 2,
+   "downvotes": 2
+  },
+  {
+   "class": "warlock",
+   "code": "25400020135-0050203001-0550005003",
+   "views": 49,
+   "upvotes": 2,
+   "downvotes": 4
+  },
+  {
+   "class": "warlock",
+   "code": "25-0050203001-0550305103101351",
+   "views": 47,
+   "upvotes": 4,
+   "downvotes": 5
+  },
+  {
+   "class": "warlock",
+   "code": "005-0050233201221001351-0055005",
+   "views": 45,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "warlock",
+   "code": "2-005022300122-0050255103101351",
+   "views": 44,
+   "upvotes": 1,
+   "downvotes": 5
+  },
+  {
+   "class": "warlock",
+   "code": "00520303113201-1055200201201101-0054",
+   "views": 39,
+   "upvotes": 2,
+   "downvotes": 4
+  },
+  {
+   "class": "warlock",
+   "code": "05520323035201351-03502001",
+   "views": 34,
+   "upvotes": 1,
+   "downvotes": 1
+  },
+  {
+   "class": "warlock",
+   "code": "055-0050023001-155000513310105",
+   "views": 34,
+   "upvotes": 2,
+   "downvotes": 4
+  },
+  {
+   "class": "warlock",
+   "code": "03-005013300122-0050055133101151",
+   "views": 32,
+   "upvotes": 4,
+   "downvotes": 7
+  },
+  {
+   "class": "warlock",
+   "code": "21522323035201351-0050202101",
+   "views": 30,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warlock",
+   "code": "02-0305002201221301351-2050305003",
+   "views": 29,
+   "upvotes": 2,
+   "downvotes": 3
+  },
+  {
+   "class": "warlock",
+   "code": "25500300035201351--25003051",
+   "views": 27,
+   "upvotes": 1,
+   "downvotes": 2
+  },
+  {
+   "class": "druid",
+   "code": "5032220115521351--5053",
+   "views": 172,
+   "upvotes": 3,
+   "downvotes": 1
+  },
+  {
+   "class": "druid",
+   "code": "050022-552121021230021205-05003",
+   "views": 92,
+   "upvotes": 1,
+   "downvotes": 2
+  },
+  {
+   "class": "druid",
+   "code": "052022311-052021001-0553302100113",
+   "views": 54,
+   "upvotes": 4,
+   "downvotes": 0
+  },
+  {
+   "class": "druid",
+   "code": "050022-5023030212310212041-055",
+   "views": 49,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "druid",
+   "code": "050022-55200032023012125001-05003",
+   "views": 42,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "druid",
+   "code": "5032220115501351--555",
+   "views": 42,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "05320003-05-250033120311021351",
+   "views": 15,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "-550201350102120031-0503331200012",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "0430301-050530355122120231",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "35320203002015-0505300550101",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "30303213102-050530055012100231",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "30323013002-050530305002122231",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "04303013-050530343102120231-2",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "30323013-050500355002122231",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "03303213032-050501350102120231",
+   "views": 2,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "0502301-0503-250030120331021351",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "05-05050005-050033120321011351",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "0512-0505-250033120331021331",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "21323013002-050520315102120031-003",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "-050500355102120131-050032123001",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "35320203002005-05053005502000001",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "05-05050005-050333120001211351",
+   "views": 1,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "warrior",
+   "code": "03303213032-550001350102122031",
+   "views": 6,
+   "upvotes": 0,
+   "downvotes": 0
+  },
+  {
+   "class": "paladin",
+   "code": "050050002-503-15233001201301351",
+   "views": 23,
+   "upvotes": 1,
+   "downvotes": 0
+  },
+  {
+   "class": "paladin",
+   "code": "05025-503-05233011201301351",
+   "views": 10,
+   "upvotes": 1,
+   "downvotes": 0
+  }
+ ],
+ "wowheadLayout": {
+  "warrior": [
+   [
+    [
+     0,
+     0,
+     3,
+     12282,
+     "improved-heroic-strike"
+    ],
+    [
+     0,
+     1,
+     5,
+     16462,
+     "deflection"
+    ],
+    [
+     0,
+     2,
+     3,
+     12286,
+     "improved-rend"
+    ],
+    [
+     1,
+     0,
+     2,
+     12285,
+     "improved-charge"
+    ],
+    [
+     1,
+     1,
+     3,
+     12295,
+     "improved-tactical-mastery"
+    ],
+    [
+     1,
+     3,
+     2,
+     12290,
+     "improved-overpower"
+    ],
+    [
+     2,
+     1,
+     1,
+     12296,
+     "anger-management"
+    ],
+    [
+     2,
+     2,
+     3,
+     12834,
+     "deep-wounds"
+    ],
+    [
+     3,
+     0,
+     1,
+     1310222,
+     "spearing-strike"
+    ],
+    [
+     3,
+     1,
+     3,
+     12163,
+     "two-handed-weapon-specialization"
+    ],
+    [
+     3,
+     2,
+     2,
+     16493,
+     "impale"
+    ],
+    [
+     4,
+     0,
+     2,
+     1289682,
+     "bloodthrill"
+    ],
+    [
+     4,
+     1,
+     1,
+     12292,
+     "sweeping-strikes"
+    ],
+    [
+     4,
+     2,
+     5,
+     1290261,
+     "weaponmaster"
+    ],
+    [
+     5,
+     0,
+     2,
+     12862,
+     "improved-slam"
+    ],
+    [
+     5,
+     2,
+     3,
+     12289,
+     "improved-hamstring"
+    ],
+    [
+     6,
+     1,
+     1,
+     12294,
+     "mortal-strike"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     12321,
+     "booming-voice"
+    ],
+    [
+     0,
+     2,
+     5,
+     12320,
+     "cruelty"
+    ],
+    [
+     1,
+     1,
+     5,
+     1323964,
+     "lingering-rage"
+    ],
+    [
+     1,
+     2,
+     5,
+     12322,
+     "unbridled-wrath"
+    ],
+    [
+     2,
+     0,
+     3,
+     1323963,
+     "furious-precision"
+    ],
+    [
+     2,
+     1,
+     1,
+     12323,
+     "piercing-howl"
+    ],
+    [
+     2,
+     2,
+     3,
+     16487,
+     "blood-craze"
+    ],
+    [
+     2,
+     3,
+     5,
+     12317,
+     "enrage"
+    ],
+    [
+     3,
+     0,
+     5,
+     23584,
+     "dual-wield-specialization"
+    ],
+    [
+     3,
+     1,
+     1,
+     1329555,
+     "reckless-swings"
+    ],
+    [
+     3,
+     3,
+     2,
+     20502,
+     "improved-execute"
+    ],
+    [
+     4,
+     0,
+     2,
+     20500,
+     "improved-berserker-rage"
+    ],
+    [
+     4,
+     1,
+     1,
+     12328,
+     "death-wish"
+    ],
+    [
+     4,
+     2,
+     2,
+     1323967,
+     "gore-drinker"
+    ],
+    [
+     4,
+     3,
+     2,
+     20504,
+     "improved-intercept"
+    ],
+    [
+     5,
+     0,
+     2,
+     1310315,
+     "improved-whirlwind"
+    ],
+    [
+     5,
+     2,
+     3,
+     12319,
+     "flurry"
+    ],
+    [
+     6,
+     1,
+     1,
+     23881,
+     "bloodthirst"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     12301,
+     "improved-bloodrage"
+    ],
+    [
+     0,
+     1,
+     5,
+     12298,
+     "shield-specialization"
+    ],
+    [
+     0,
+     2,
+     5,
+     12962,
+     "iron-will"
+    ],
+    [
+     1,
+     0,
+     5,
+     12297,
+     "anticipation"
+    ],
+    [
+     1,
+     2,
+     3,
+     12797,
+     "improved-revenge"
+    ],
+    [
+     1,
+     3,
+     3,
+     12287,
+     "improved-thunder-clap"
+    ],
+    [
+     2,
+     0,
+     1,
+     12975,
+     "last-stand"
+    ],
+    [
+     2,
+     1,
+     2,
+     1310316,
+     "master-of-defense"
+    ],
+    [
+     2,
+     2,
+     3,
+     12313,
+     "improved-disarm"
+    ],
+    [
+     2,
+     3,
+     3,
+     12792,
+     "defiance"
+    ],
+    [
+     3,
+     0,
+     3,
+     12308,
+     "improved-sunder-armor"
+    ],
+    [
+     3,
+     1,
+     1,
+     1310317,
+     "vanguard"
+    ],
+    [
+     3,
+     2,
+     2,
+     12311,
+     "improved-shield-bash"
+    ],
+    [
+     4,
+     0,
+     2,
+     12312,
+     "improved-shield-wall"
+    ],
+    [
+     4,
+     1,
+     1,
+     12809,
+     "concussion-blow"
+    ],
+    [
+     4,
+     2,
+     3,
+     29787,
+     "focused-rage"
+    ],
+    [
+     5,
+     2,
+     5,
+     16538,
+     "bastion"
+    ],
+    [
+     6,
+     1,
+     1,
+     23922,
+     "shield-slam"
+    ]
+   ]
+  ],
+  "paladin": [
+   [
+    [
+     0,
+     1,
+     5,
+     20205,
+     "spiritual-focus"
+    ],
+    [
+     0,
+     2,
+     5,
+     20262,
+     "divine-strength"
+    ],
+    [
+     1,
+     0,
+     3,
+     20237,
+     "healing-light"
+    ],
+    [
+     1,
+     1,
+     2,
+     1310899,
+     "reverence"
+    ],
+    [
+     1,
+     2,
+     5,
+     20224,
+     "improved-seals"
+    ],
+    [
+     1,
+     3,
+     2,
+     429144,
+     "purifying-power"
+    ],
+    [
+     2,
+     0,
+     1,
+     20216,
+     "divine-favor"
+    ],
+    [
+     2,
+     1,
+     5,
+     20210,
+     "illumination"
+    ],
+    [
+     2,
+     2,
+     2,
+     1237268,
+     "holy-conduit"
+    ],
+    [
+     3,
+     0,
+     2,
+     1310904,
+     "divine-precision"
+    ],
+    [
+     3,
+     1,
+     2,
+     426065,
+     "infusion-of-light"
+    ],
+    [
+     3,
+     2,
+     1,
+     1328548,
+     "oath-of-light"
+    ],
+    [
+     4,
+     0,
+     2,
+     1310905,
+     "consecrated-ground"
+    ],
+    [
+     4,
+     1,
+     1,
+     1311606,
+     "holy-shock"
+    ],
+    [
+     4,
+     2,
+     2,
+     1328550,
+     "boundless-light"
+    ],
+    [
+     5,
+     2,
+     5,
+     5923,
+     "holy-power"
+    ],
+    [
+     6,
+     1,
+     1,
+     1310911,
+     "lights-vigil"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     20257,
+     "divine-intellect"
+    ],
+    [
+     0,
+     2,
+     5,
+     20127,
+     "redoubt"
+    ],
+    [
+     1,
+     0,
+     3,
+     20189,
+     "precision"
+    ],
+    [
+     1,
+     1,
+     2,
+     20174,
+     "guardians-favor"
+    ],
+    [
+     1,
+     3,
+     2,
+     1224697,
+     "sacred-duty"
+    ],
+    [
+     2,
+     0,
+     1,
+     1311015,
+     "templars-bulwark"
+    ],
+    [
+     2,
+     1,
+     3,
+     20487,
+     "improved-hammer-of-justice"
+    ],
+    [
+     2,
+     2,
+     2,
+     20150,
+     "shield-specialization"
+    ],
+    [
+     2,
+     3,
+     5,
+     20143,
+     "toughness"
+    ],
+    [
+     3,
+     0,
+     1,
+     1310994,
+     "swift-judgement"
+    ],
+    [
+     3,
+     1,
+     3,
+     20468,
+     "improved-righteous-fury"
+    ],
+    [
+     3,
+     2,
+     5,
+     20096,
+     "anticipation"
+    ],
+    [
+     4,
+     0,
+     2,
+     1328546,
+     "stoicism"
+    ],
+    [
+     4,
+     1,
+     1,
+     20925,
+     "holy-shield"
+    ],
+    [
+     4,
+     2,
+     5,
+     20177,
+     "reckoning"
+    ],
+    [
+     5,
+     2,
+     3,
+     1311034,
+     "iron-creed"
+    ],
+    [
+     6,
+     1,
+     1,
+     1328544,
+     "shieldsworn"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     20060,
+     "deflection"
+    ],
+    [
+     0,
+     2,
+     5,
+     20101,
+     "benediction"
+    ],
+    [
+     1,
+     0,
+     2,
+     25956,
+     "improved-judgement"
+    ],
+    [
+     1,
+     1,
+     3,
+     20117,
+     "conviction"
+    ],
+    [
+     1,
+     2,
+     3,
+     1311074,
+     "sanctified-judgement"
+    ],
+    [
+     2,
+     0,
+     3,
+     9452,
+     "vindication"
+    ],
+    [
+     2,
+     1,
+     2,
+     9453,
+     "unyielding-faith"
+    ],
+    [
+     2,
+     2,
+     1,
+     20375,
+     "seal-of-command"
+    ],
+    [
+     2,
+     3,
+     2,
+     26022,
+     "pursuit-of-justice"
+    ],
+    [
+     3,
+     0,
+     2,
+     9799,
+     "eye-for-an-eye"
+    ],
+    [
+     3,
+     1,
+     1,
+     1311087,
+     "sacred-arbiter"
+    ],
+    [
+     3,
+     3,
+     3,
+     20111,
+     "two-handed-weapon-specialization"
+    ],
+    [
+     4,
+     0,
+     2,
+     1328370,
+     "turn-evil"
+    ],
+    [
+     4,
+     1,
+     1,
+     20066,
+     "repentance"
+    ],
+    [
+     4,
+     2,
+     3,
+     20049,
+     "vengeance"
+    ],
+    [
+     5,
+     2,
+     5,
+     1311084,
+     "champion-of-the-light"
+    ],
+    [
+     6,
+     1,
+     1,
+     1310735,
+     "unsealed-wrath"
+    ]
+   ]
+  ],
+  "hunter": [
+   [
+    [
+     0,
+     1,
+     5,
+     19552,
+     "deadly-aspects"
+    ],
+    [
+     0,
+     2,
+     5,
+     19583,
+     "endurance-training"
+    ],
+    [
+     1,
+     0,
+     2,
+     1223755,
+     "focused-fire"
+    ],
+    [
+     1,
+     1,
+     3,
+     19549,
+     "improved-aspect-of-the-monkey"
+    ],
+    [
+     1,
+     2,
+     2,
+     24443,
+     "improved-revive-pet"
+    ],
+    [
+     2,
+     0,
+     2,
+     19559,
+     "pathfinding"
+    ],
+    [
+     2,
+     1,
+     1,
+     19596,
+     "bestial-swiftness"
+    ],
+    [
+     2,
+     2,
+     5,
+     19616,
+     "unleashed-fury"
+    ],
+    [
+     3,
+     0,
+     2,
+     19572,
+     "improved-mend-pet"
+    ],
+    [
+     3,
+     2,
+     5,
+     19598,
+     "ferocity"
+    ],
+    [
+     3,
+     3,
+     1,
+     1293241,
+     "summon-hawk"
+    ],
+    [
+     4,
+     0,
+     2,
+     19578,
+     "spirit-bond"
+    ],
+    [
+     4,
+     1,
+     1,
+     19577,
+     "intimidation"
+    ],
+    [
+     4,
+     3,
+     2,
+     19590,
+     "bestial-discipline"
+    ],
+    [
+     5,
+     2,
+     5,
+     19621,
+     "frenzy"
+    ],
+    [
+     6,
+     1,
+     1,
+     19574,
+     "bestial-wrath"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     3,
+     19498,
+     "hawk-eye"
+    ],
+    [
+     0,
+     1,
+     5,
+     19407,
+     "improved-concussive-shot"
+    ],
+    [
+     0,
+     2,
+     5,
+     19426,
+     "lethal-attacks"
+    ],
+    [
+     1,
+     0,
+     3,
+     1310661,
+     "improved-stings"
+    ],
+    [
+     1,
+     1,
+     5,
+     19416,
+     "efficiency"
+    ],
+    [
+     1,
+     2,
+     5,
+     1223984,
+     "careful-aim"
+    ],
+    [
+     2,
+     0,
+     2,
+     415405,
+     "rapid-killing"
+    ],
+    [
+     2,
+     1,
+     5,
+     19454,
+     "improved-arcane-shot"
+    ],
+    [
+     2,
+     3,
+     1,
+     415370,
+     "lone-wolf"
+    ],
+    [
+     3,
+     1,
+     1,
+     1299346,
+     "trueshot-aura"
+    ],
+    [
+     3,
+     2,
+     5,
+     19485,
+     "mortal-shots"
+    ],
+    [
+     4,
+     0,
+     2,
+     1223987,
+     "rapid-recuperation"
+    ],
+    [
+     4,
+     2,
+     3,
+     19461,
+     "barrage"
+    ],
+    [
+     4,
+     3,
+     1,
+     19503,
+     "scatter-shot"
+    ],
+    [
+     5,
+     2,
+     5,
+     19507,
+     "ranged-weapon-specialization"
+    ],
+    [
+     6,
+     1,
+     1,
+     1310687,
+     "sniper-shot"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     24293,
+     "improved-tracking"
+    ],
+    [
+     0,
+     2,
+     5,
+     19295,
+     "deflection"
+    ],
+    [
+     1,
+     0,
+     5,
+     19184,
+     "entrapment"
+    ],
+    [
+     1,
+     1,
+     2,
+     19159,
+     "savage-strikes"
+    ],
+    [
+     1,
+     2,
+     5,
+     19255,
+     "survivalist"
+    ],
+    [
+     1,
+     3,
+     3,
+     19228,
+     "improved-wing-clip"
+    ],
+    [
+     2,
+     0,
+     2,
+     19239,
+     "clever-traps"
+    ],
+    [
+     2,
+     1,
+     3,
+     19290,
+     "surefooted"
+    ],
+    [
+     2,
+     2,
+     1,
+     19263,
+     "deterrence"
+    ],
+    [
+     3,
+     0,
+     2,
+     19376,
+     "survival-tactics"
+    ],
+    [
+     3,
+     1,
+     5,
+     1310627,
+     "predators-edge"
+    ],
+    [
+     3,
+     2,
+     1,
+     19306,
+     "counterattack"
+    ],
+    [
+     4,
+     0,
+     2,
+     440529,
+     "resourcefulness"
+    ],
+    [
+     4,
+     1,
+     2,
+     1310532,
+     "expose-prey"
+    ],
+    [
+     4,
+     2,
+     2,
+     1310496,
+     "survivalists-discipline"
+    ],
+    [
+     4,
+     3,
+     1,
+     1317257,
+     "strider-kick"
+    ],
+    [
+     5,
+     2,
+     5,
+     19168,
+     "lightning-reflexes"
+    ],
+    [
+     6,
+     1,
+     1,
+     1310533,
+     "lacerating-strikes"
+    ]
+   ]
+  ],
+  "rogue": [
+   [
+    [
+     0,
+     0,
+     3,
+     13741,
+     "improved-gouge"
+    ],
+    [
+     0,
+     1,
+     2,
+     14144,
+     "remorseless-attacks"
+    ],
+    [
+     0,
+     2,
+     5,
+     14138,
+     "malice"
+    ],
+    [
+     1,
+     0,
+     3,
+     14156,
+     "ruthlessness"
+    ],
+    [
+     1,
+     1,
+     2,
+     14168,
+     "improved-expose-armor"
+    ],
+    [
+     1,
+     3,
+     3,
+     14165,
+     "improved-slice-and-dice"
+    ],
+    [
+     2,
+     0,
+     2,
+     14983,
+     "vigor"
+    ],
+    [
+     2,
+     1,
+     1,
+     1329256,
+     "blood-splatter"
+    ],
+    [
+     2,
+     2,
+     2,
+     14128,
+     "lethality"
+    ],
+    [
+     3,
+     0,
+     5,
+     16513,
+     "vile-poisons"
+    ],
+    [
+     3,
+     1,
+     1,
+     14177,
+     "cold-blood"
+    ],
+    [
+     3,
+     2,
+     5,
+     14113,
+     "improved-poisons"
+    ],
+    [
+     4,
+     0,
+     5,
+     14179,
+     "relentless-strikes"
+    ],
+    [
+     4,
+     1,
+     1,
+     1329328,
+     "venom"
+    ],
+    [
+     4,
+     2,
+     2,
+     14174,
+     "improved-kidney-shot"
+    ],
+    [
+     5,
+     2,
+     3,
+     14186,
+     "seal-fate"
+    ],
+    [
+     6,
+     1,
+     1,
+     399956,
+     "mutilate"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     3,
+     14162,
+     "coup-de-grace"
+    ],
+    [
+     0,
+     1,
+     2,
+     13732,
+     "efficient-strikes"
+    ],
+    [
+     0,
+     2,
+     5,
+     13712,
+     "lightning-reflexes"
+    ],
+    [
+     1,
+     0,
+     3,
+     1224716,
+     "puncturing-wounds"
+    ],
+    [
+     1,
+     1,
+     3,
+     13713,
+     "deflection"
+    ],
+    [
+     1,
+     2,
+     3,
+     13705,
+     "precision"
+    ],
+    [
+     1,
+     3,
+     2,
+     13743,
+     "improved-sprint"
+    ],
+    [
+     2,
+     0,
+     2,
+     13742,
+     "endurance"
+    ],
+    [
+     2,
+     1,
+     1,
+     14251,
+     "riposte"
+    ],
+    [
+     2,
+     3,
+     2,
+     1329265,
+     "composure"
+    ],
+    [
+     3,
+     0,
+     2,
+     13754,
+     "improved-kick"
+    ],
+    [
+     3,
+     1,
+     1,
+     1310711,
+     "flawless-execution"
+    ],
+    [
+     3,
+     2,
+     2,
+     30919,
+     "weapon-expertise"
+    ],
+    [
+     3,
+     3,
+     3,
+     18427,
+     "aggression"
+    ],
+    [
+     4,
+     0,
+     2,
+     13715,
+     "dual-wield-specialization"
+    ],
+    [
+     4,
+     1,
+     1,
+     13877,
+     "blade-flurry"
+    ],
+    [
+     4,
+     2,
+     5,
+     13960,
+     "hack-and-slash"
+    ],
+    [
+     5,
+     2,
+     5,
+     1329284,
+     "flash-of-steel"
+    ],
+    [
+     6,
+     1,
+     1,
+     13750,
+     "adrenaline-rush"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     3,
+     13983,
+     "setup"
+    ],
+    [
+     0,
+     1,
+     3,
+     13958,
+     "master-of-deception"
+    ],
+    [
+     0,
+     2,
+     5,
+     14057,
+     "opportunity"
+    ],
+    [
+     1,
+     0,
+     2,
+     14082,
+     "dirty-deeds"
+    ],
+    [
+     1,
+     1,
+     3,
+     13975,
+     "camouflage"
+    ],
+    [
+     1,
+     2,
+     3,
+     14079,
+     "improved-ambush"
+    ],
+    [
+     1,
+     3,
+     2,
+     1224782,
+     "dirty-tricks"
+    ],
+    [
+     2,
+     0,
+     3,
+     13976,
+     "initiative"
+    ],
+    [
+     2,
+     1,
+     1,
+     14183,
+     "premeditation"
+    ],
+    [
+     2,
+     2,
+     3,
+     14171,
+     "serrated-blades"
+    ],
+    [
+     3,
+     0,
+     2,
+     13981,
+     "elusiveness"
+    ],
+    [
+     3,
+     1,
+     1,
+     14278,
+     "ghostly-strike"
+    ],
+    [
+     3,
+     3,
+     2,
+     1310728,
+     "quick-getaway"
+    ],
+    [
+     4,
+     0,
+     2,
+     30894,
+     "heightened-senses"
+    ],
+    [
+     4,
+     1,
+     1,
+     14185,
+     "preparation"
+    ],
+    [
+     4,
+     2,
+     1,
+     16511,
+     "hemorrhage"
+    ],
+    [
+     5,
+     2,
+     5,
+     1329286,
+     "boot-knife"
+    ],
+    [
+     6,
+     1,
+     1,
+     1316709,
+     "death-mark"
+    ]
+   ]
+  ],
+  "priest": [
+   [
+    [
+     0,
+     0,
+     5,
+     1309969,
+     "power-in-light"
+    ],
+    [
+     0,
+     1,
+     2,
+     14524,
+     "wand-specialization"
+    ],
+    [
+     0,
+     2,
+     5,
+     1225132,
+     "twin-disciplines"
+    ],
+    [
+     1,
+     0,
+     3,
+     14523,
+     "silent-resolve"
+    ],
+    [
+     1,
+     1,
+     3,
+     1309957,
+     "holy-precision"
+    ],
+    [
+     1,
+     2,
+     5,
+     18551,
+     "mental-strength"
+    ],
+    [
+     1,
+     3,
+     2,
+     14531,
+     "martyrdom"
+    ],
+    [
+     2,
+     0,
+     3,
+     14520,
+     "mental-agility"
+    ],
+    [
+     2,
+     1,
+     1,
+     14751,
+     "inner-focus"
+    ],
+    [
+     2,
+     2,
+     3,
+     14748,
+     "improved-power-word-shield"
+    ],
+    [
+     2,
+     3,
+     3,
+     14521,
+     "meditation"
+    ],
+    [
+     3,
+     0,
+     3,
+     14747,
+     "improved-inner-fire"
+    ],
+    [
+     3,
+     1,
+     2,
+     14750,
+     "improved-mana-burn"
+    ],
+    [
+     3,
+     2,
+     1,
+     402000,
+     "soul-warding"
+    ],
+    [
+     4,
+     1,
+     1,
+     402174,
+     "penance"
+    ],
+    [
+     4,
+     2,
+     5,
+     425280,
+     "renewed-hope"
+    ],
+    [
+     5,
+     2,
+     3,
+     431622,
+     "divine-aegis"
+    ],
+    [
+     6,
+     1,
+     1,
+     10060,
+     "power-infusion"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     3,
+     14913,
+     "twilight-focus"
+    ],
+    [
+     0,
+     1,
+     3,
+     14908,
+     "improved-renew"
+    ],
+    [
+     0,
+     2,
+     5,
+     14889,
+     "holy-specialization"
+    ],
+    [
+     1,
+     1,
+     5,
+     27900,
+     "spell-warding"
+    ],
+    [
+     1,
+     2,
+     5,
+     18530,
+     "divine-fury"
+    ],
+    [
+     2,
+     0,
+     1,
+     15237,
+     "holy-nova"
+    ],
+    [
+     2,
+     1,
+     3,
+     27811,
+     "blessed-recovery"
+    ],
+    [
+     2,
+     3,
+     3,
+     14892,
+     "inspiration"
+    ],
+    [
+     3,
+     0,
+     2,
+     27789,
+     "holy-reach"
+    ],
+    [
+     3,
+     1,
+     3,
+     14912,
+     "improved-healing"
+    ],
+    [
+     3,
+     2,
+     2,
+     14909,
+     "searing-light"
+    ],
+    [
+     3,
+     3,
+     1,
+     1328569,
+     "holy-binding"
+    ],
+    [
+     4,
+     0,
+     2,
+     1317006,
+     "litany-of-light"
+    ],
+    [
+     4,
+     1,
+     1,
+     20711,
+     "spirit-of-redemption"
+    ],
+    [
+     4,
+     2,
+     5,
+     14901,
+     "spiritual-guidance"
+    ],
+    [
+     5,
+     2,
+     3,
+     14898,
+     "spiritual-healing"
+    ],
+    [
+     6,
+     1,
+     1,
+     401859,
+     "prayer-of-mending"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     5,
+     15260,
+     "shadow-focus"
+    ],
+    [
+     0,
+     1,
+     5,
+     15326,
+     "blackout"
+    ],
+    [
+     0,
+     2,
+     5,
+     15270,
+     "spirit-tap"
+    ],
+    [
+     1,
+     0,
+     5,
+     15273,
+     "improved-mind-blast"
+    ],
+    [
+     1,
+     2,
+     2,
+     15275,
+     "improved-shadow-word-pain"
+    ],
+    [
+     1,
+     3,
+     2,
+     17322,
+     "shadow-reach"
+    ],
+    [
+     2,
+     1,
+     2,
+     15392,
+     "improved-psychic-scream"
+    ],
+    [
+     2,
+     2,
+     1,
+     15407,
+     "mind-flay"
+    ],
+    [
+     2,
+     3,
+     2,
+     1225139,
+     "improved-mind-flay"
+    ],
+    [
+     3,
+     0,
+     5,
+     1326159,
+     "dark-inspiration"
+    ],
+    [
+     3,
+     1,
+     1,
+     15286,
+     "vampiric-embrace"
+    ],
+    [
+     3,
+     2,
+     3,
+     15257,
+     "shadow-weaving"
+    ],
+    [
+     4,
+     0,
+     1,
+     15487,
+     "silence"
+    ],
+    [
+     4,
+     2,
+     2,
+     1309950,
+     "devouring-contagion"
+    ],
+    [
+     5,
+     0,
+     2,
+     1310076,
+     "early-demise"
+    ],
+    [
+     5,
+     2,
+     5,
+     15259,
+     "darkness"
+    ],
+    [
+     6,
+     1,
+     1,
+     15473,
+     "shadowform"
+    ]
+   ]
+  ],
+  "shaman": [
+   [
+    [
+     0,
+     1,
+     5,
+     16039,
+     "convection"
+    ],
+    [
+     0,
+     2,
+     5,
+     16035,
+     "concussion"
+    ],
+    [
+     1,
+     0,
+     3,
+     30160,
+     "elemental-devastation"
+    ],
+    [
+     1,
+     1,
+     5,
+     16040,
+     "reverberation"
+    ],
+    [
+     1,
+     2,
+     3,
+     16578,
+     "elemental-alacrity"
+    ],
+    [
+     1,
+     3,
+     3,
+     16038,
+     "call-of-flame"
+    ],
+    [
+     2,
+     0,
+     1,
+     16164,
+     "elemental-focus"
+    ],
+    [
+     2,
+     1,
+     3,
+     28996,
+     "elemental-warding"
+    ],
+    [
+     3,
+     0,
+     2,
+     16086,
+     "trial-by-fire"
+    ],
+    [
+     3,
+     1,
+     3,
+     29062,
+     "eye-of-the-storm"
+    ],
+    [
+     3,
+     3,
+     1,
+     1222988,
+     "earthbound"
+    ],
+    [
+     4,
+     0,
+     2,
+     28999,
+     "elemental-reach"
+    ],
+    [
+     4,
+     1,
+     1,
+     16120,
+     "call-of-thunder"
+    ],
+    [
+     4,
+     2,
+     3,
+     408438,
+     "lightning-overload"
+    ],
+    [
+     5,
+     2,
+     5,
+     16089,
+     "elemental-fury"
+    ],
+    [
+     6,
+     1,
+     1,
+     16166,
+     "lightning-mastery"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     16043,
+     "earths-grasp"
+    ],
+    [
+     0,
+     1,
+     5,
+     16255,
+     "thundering-strikes"
+    ],
+    [
+     0,
+     2,
+     5,
+     17485,
+     "ancestral-knowledge"
+    ],
+    [
+     1,
+     0,
+     2,
+     16258,
+     "guardian-totems"
+    ],
+    [
+     1,
+     1,
+     3,
+     415140,
+     "mental-dexterity"
+    ],
+    [
+     1,
+     2,
+     3,
+     16261,
+     "improved-lightning-shield"
+    ],
+    [
+     2,
+     0,
+     3,
+     16266,
+     "elemental-weapons"
+    ],
+    [
+     2,
+     2,
+     1,
+     1223030,
+     "shamanistic-focus"
+    ],
+    [
+     2,
+     3,
+     3,
+     16254,
+     "anticipation"
+    ],
+    [
+     3,
+     0,
+     5,
+     16252,
+     "toughness"
+    ],
+    [
+     3,
+     1,
+     5,
+     16256,
+     "flurry"
+    ],
+    [
+     3,
+     2,
+     1,
+     17364,
+     "stormstrike"
+    ],
+    [
+     3,
+     3,
+     2,
+     16262,
+     "improved-ghost-wolf"
+    ],
+    [
+     4,
+     0,
+     1,
+     16268,
+     "spirit-weapons"
+    ],
+    [
+     4,
+     1,
+     2,
+     30812,
+     "mental-quickness"
+    ],
+    [
+     4,
+     2,
+     2,
+     1223031,
+     "improved-stormstrike"
+    ],
+    [
+     5,
+     2,
+     5,
+     408498,
+     "maelstrom-weapon"
+    ],
+    [
+     6,
+     1,
+     1,
+     425336,
+     "rage-of-the-farseer"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     16182,
+     "improved-healing-wave"
+    ],
+    [
+     0,
+     2,
+     5,
+     16179,
+     "tidal-focus"
+    ],
+    [
+     1,
+     0,
+     3,
+     1223033,
+     "mindfulness"
+    ],
+    [
+     1,
+     1,
+     3,
+     29187,
+     "natural-grace"
+    ],
+    [
+     1,
+     2,
+     5,
+     16173,
+     "totemic-focus"
+    ],
+    [
+     1,
+     3,
+     2,
+     16184,
+     "improved-reincarnation"
+    ],
+    [
+     2,
+     0,
+     3,
+     16176,
+     "ancestral-healing"
+    ],
+    [
+     2,
+     1,
+     3,
+     16181,
+     "healing-focus"
+    ],
+    [
+     2,
+     2,
+     1,
+     408510,
+     "water-shield"
+    ],
+    [
+     3,
+     0,
+     5,
+     16194,
+     "tidal-mastery"
+    ],
+    [
+     3,
+     1,
+     5,
+     16187,
+     "restorative-totems"
+    ],
+    [
+     3,
+     2,
+     1,
+     16190,
+     "mana-tide-totem"
+    ],
+    [
+     4,
+     1,
+     3,
+     29206,
+     "healing-way"
+    ],
+    [
+     4,
+     2,
+     1,
+     16188,
+     "natures-swiftness"
+    ],
+    [
+     5,
+     2,
+     5,
+     16178,
+     "purification"
+    ],
+    [
+     6,
+     1,
+     1,
+     408521,
+     "riptide"
+    ]
+   ]
+  ],
+  "mage": [
+   [
+    [
+     0,
+     0,
+     2,
+     6057,
+     "wand-specialization"
+    ],
+    [
+     0,
+     1,
+     5,
+     11237,
+     "improved-channeling"
+    ],
+    [
+     0,
+     2,
+     3,
+     28574,
+     "arcane-resilience"
+    ],
+    [
+     1,
+     0,
+     2,
+     11210,
+     "arcane-subtlety"
+    ],
+    [
+     1,
+     1,
+     2,
+     29441,
+     "magic-absorption"
+    ],
+    [
+     1,
+     2,
+     5,
+     11213,
+     "arcane-concentration"
+    ],
+    [
+     1,
+     3,
+     2,
+     400588,
+     "missile-barrage"
+    ],
+    [
+     2,
+     0,
+     2,
+     11247,
+     "arcane-geometry"
+    ],
+    [
+     2,
+     1,
+     3,
+     11242,
+     "arcane-impact"
+    ],
+    [
+     2,
+     3,
+     1,
+     400574,
+     "arcane-blast"
+    ],
+    [
+     3,
+     0,
+     2,
+     11252,
+     "arcane-shielding"
+    ],
+    [
+     3,
+     1,
+     2,
+     11255,
+     "improved-counterspell"
+    ],
+    [
+     3,
+     2,
+     3,
+     18462,
+     "arcane-meditation"
+    ],
+    [
+     3,
+     3,
+     1,
+     1326079,
+     "arcane-wrath"
+    ],
+    [
+     4,
+     1,
+     1,
+     12043,
+     "presence-of-mind"
+    ],
+    [
+     4,
+     2,
+     5,
+     11232,
+     "arcane-mind"
+    ],
+    [
+     5,
+     2,
+     3,
+     15058,
+     "arcane-instability"
+    ],
+    [
+     6,
+     1,
+     1,
+     12042,
+     "arcane-power"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     18459,
+     "incineration"
+    ],
+    [
+     0,
+     2,
+     5,
+     11069,
+     "accelerant"
+    ],
+    [
+     1,
+     0,
+     5,
+     11119,
+     "ignite"
+    ],
+    [
+     1,
+     1,
+     2,
+     11100,
+     "flame-throwing"
+    ],
+    [
+     1,
+     2,
+     3,
+     11103,
+     "impact"
+    ],
+    [
+     2,
+     0,
+     3,
+     11083,
+     "burning-soul"
+    ],
+    [
+     2,
+     1,
+     3,
+     11108,
+     "improved-flamestrike"
+    ],
+    [
+     2,
+     2,
+     1,
+     11366,
+     "pyroblast"
+    ],
+    [
+     2,
+     3,
+     2,
+     11078,
+     "improved-fire-blast"
+    ],
+    [
+     3,
+     0,
+     3,
+     11095,
+     "improved-scorch"
+    ],
+    [
+     3,
+     1,
+     2,
+     11094,
+     "improved-fire-ward"
+    ],
+    [
+     3,
+     2,
+     1,
+     400624,
+     "heating-up"
+    ],
+    [
+     3,
+     3,
+     3,
+     29074,
+     "master-of-elements"
+    ],
+    [
+     4,
+     1,
+     3,
+     11115,
+     "critical-mass"
+    ],
+    [
+     4,
+     2,
+     1,
+     11113,
+     "blast-wave"
+    ],
+    [
+     5,
+     2,
+     3,
+     11124,
+     "fire-power"
+    ],
+    [
+     6,
+     1,
+     1,
+     11129,
+     "combustion"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     11189,
+     "frost-warding"
+    ],
+    [
+     0,
+     1,
+     5,
+     11070,
+     "improved-frostbolt"
+    ],
+    [
+     0,
+     2,
+     3,
+     29438,
+     "precision"
+    ],
+    [
+     1,
+     0,
+     5,
+     11207,
+     "ice-shards"
+    ],
+    [
+     1,
+     1,
+     3,
+     11071,
+     "frostbite"
+    ],
+    [
+     1,
+     2,
+     2,
+     11165,
+     "improved-frost-nova"
+    ],
+    [
+     1,
+     3,
+     3,
+     11175,
+     "permafrost"
+    ],
+    [
+     2,
+     0,
+     3,
+     11160,
+     "frost-channeling"
+    ],
+    [
+     2,
+     1,
+     3,
+     11185,
+     "improved-blizzard"
+    ],
+    [
+     2,
+     2,
+     1,
+     1312002,
+     "ice-lance"
+    ],
+    [
+     3,
+     0,
+     2,
+     16757,
+     "arctic-reach"
+    ],
+    [
+     3,
+     1,
+     1,
+     11958,
+     "ice-block"
+    ],
+    [
+     3,
+     3,
+     3,
+     11170,
+     "shatter"
+    ],
+    [
+     4,
+     0,
+     3,
+     11190,
+     "improved-cone-of-cold"
+    ],
+    [
+     4,
+     1,
+     1,
+     12472,
+     "cold-snap"
+    ],
+    [
+     4,
+     2,
+     2,
+     400647,
+     "fingers-of-frost"
+    ],
+    [
+     5,
+     2,
+     5,
+     11180,
+     "winters-chill"
+    ],
+    [
+     6,
+     1,
+     1,
+     11426,
+     "ice-barrier"
+    ]
+   ]
+  ],
+  "warlock": [
+   [
+    [
+     0,
+     0,
+     2,
+     18182,
+     "improved-life-tap"
+    ],
+    [
+     0,
+     1,
+     5,
+     18174,
+     "suppression"
+    ],
+    [
+     0,
+     2,
+     5,
+     17810,
+     "improved-corruption"
+    ],
+    [
+     1,
+     0,
+     2,
+     18218,
+     "grim-reach"
+    ],
+    [
+     1,
+     1,
+     2,
+     437032,
+     "soul-harvest"
+    ],
+    [
+     1,
+     2,
+     3,
+     403511,
+     "improved-drains"
+    ],
+    [
+     2,
+     0,
+     2,
+     18827,
+     "improved-bane-of-agony"
+    ],
+    [
+     2,
+     1,
+     3,
+     17783,
+     "fel-concentration"
+    ],
+    [
+     2,
+     2,
+     1,
+     18288,
+     "amplify-curse"
+    ],
+    [
+     2,
+     3,
+     3,
+     427712,
+     "pandemic"
+    ],
+    [
+     3,
+     0,
+     5,
+     1310949,
+     "malevolence"
+    ],
+    [
+     3,
+     1,
+     2,
+     18094,
+     "nightfall"
+    ],
+    [
+     3,
+     2,
+     1,
+     18223,
+     "curse-of-exhaustion"
+    ],
+    [
+     4,
+     1,
+     1,
+     18265,
+     "siphon-life"
+    ],
+    [
+     4,
+     2,
+     3,
+     17804,
+     "soul-siphon"
+    ],
+    [
+     5,
+     2,
+     5,
+     18271,
+     "shadow-mastery"
+    ],
+    [
+     6,
+     1,
+     1,
+     1316697,
+     "wrack"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     18703,
+     "improved-health-funnel"
+    ],
+    [
+     0,
+     1,
+     3,
+     18694,
+     "improved-imp"
+    ],
+    [
+     0,
+     2,
+     5,
+     18697,
+     "demonic-embrace"
+    ],
+    [
+     0,
+     3,
+     5,
+     18769,
+     "unholy-power"
+    ],
+    [
+     1,
+     0,
+     2,
+     1235316,
+     "demonic-aegis"
+    ],
+    [
+     1,
+     1,
+     3,
+     18705,
+     "improved-voidwalker"
+    ],
+    [
+     1,
+     2,
+     3,
+     18731,
+     "fel-vitality"
+    ],
+    [
+     1,
+     3,
+     2,
+     1225214,
+     "demonic-energies"
+    ],
+    [
+     2,
+     0,
+     3,
+     18754,
+     "improved-sayaad"
+    ],
+    [
+     2,
+     1,
+     1,
+     18788,
+     "demonic-sacrifice"
+    ],
+    [
+     2,
+     2,
+     2,
+     18709,
+     "master-summoner"
+    ],
+    [
+     3,
+     0,
+     2,
+     440870,
+     "decimation"
+    ],
+    [
+     3,
+     2,
+     1,
+     18708,
+     "fel-domination"
+    ],
+    [
+     3,
+     3,
+     3,
+     1293695,
+     "demonic-brand"
+    ],
+    [
+     4,
+     0,
+     3,
+     1225217,
+     "improved-felhunter"
+    ],
+    [
+     4,
+     1,
+     1,
+     19028,
+     "soul-link"
+    ],
+    [
+     4,
+     2,
+     3,
+     412732,
+     "demonic-knowledge"
+    ],
+    [
+     5,
+     2,
+     5,
+     23785,
+     "master-demonologist"
+    ],
+    [
+     6,
+     1,
+     1,
+     425464,
+     "demonic-pact"
+    ]
+   ],
+   [
+    [
+     0,
+     0,
+     2,
+     17917,
+     "destructive-reach"
+    ],
+    [
+     0,
+     1,
+     5,
+     17793,
+     "improved-shadow-bolt"
+    ],
+    [
+     0,
+     2,
+     5,
+     17788,
+     "bane"
+    ],
+    [
+     1,
+     0,
+     5,
+     1225220,
+     "molten-skin"
+    ],
+    [
+     1,
+     1,
+     3,
+     17778,
+     "cataclysm"
+    ],
+    [
+     1,
+     2,
+     5,
+     18119,
+     "aftermath"
+    ],
+    [
+     2,
+     1,
+     5,
+     17959,
+     "ruin"
+    ],
+    [
+     2,
+     2,
+     1,
+     17877,
+     "shadowburn"
+    ],
+    [
+     3,
+     0,
+     3,
+     18135,
+     "intensity"
+    ],
+    [
+     3,
+     1,
+     3,
+     17927,
+     "agonizing-flames"
+    ],
+    [
+     3,
+     2,
+     1,
+     1293817,
+     "conflagrate"
+    ],
+    [
+     4,
+     0,
+     2,
+     18073,
+     "pyroclasm"
+    ],
+    [
+     4,
+     1,
+     1,
+     1225228,
+     "bane-of-havoc"
+    ],
+    [
+     4,
+     2,
+     3,
+     412751,
+     "fire-and-brimstone"
+    ],
+    [
+     5,
+     2,
+     5,
+     426316,
+     "shadow-and-flame"
+    ],
+    [
+     6,
+     1,
+     1,
+     412758,
+     "incinerate"
+    ]
+   ]
+  ],
+  "druid": [
+   [
+    [
+     0,
+     1,
+     5,
+     16814,
+     "improved-wrath"
+    ],
+    [
+     0,
+     2,
+     5,
+     1223081,
+     "genesis"
+    ],
+    [
+     1,
+     0,
+     3,
+     16845,
+     "moonglow"
+    ],
+    [
+     1,
+     1,
+     2,
+     16821,
+     "improved-moonfire"
+    ],
+    [
+     1,
+     2,
+     2,
+     1223082,
+     "natures-majesty"
+    ],
+    [
+     1,
+     3,
+     2,
+     16819,
+     "natures-reach"
+    ],
+    [
+     2,
+     0,
+     3,
+     16918,
+     "improved-entangling-roots"
+    ],
+    [
+     2,
+     2,
+     1,
+     1223083,
+     "natures-splendor"
+    ],
+    [
+     3,
+     0,
+     1,
+     5570,
+     "insect-swarm"
+    ],
+    [
+     3,
+     1,
+     5,
+     16909,
+     "vengeance"
+    ],
+    [
+     3,
+     2,
+     5,
+     16850,
+     "improved-starfire"
+    ],
+    [
+     4,
+     0,
+     2,
+     17245,
+     "overgrowth"
+    ],
+    [
+     4,
+     1,
+     1,
+     16880,
+     "natures-grace"
+    ],
+    [
+     4,
+     2,
+     3,
+     408248,
+     "eclipse"
+    ],
+    [
+     5,
+     1,
+     5,
+     16896,
+     "moonfury"
+    ],
+    [
+     6,
+     1,
+     1,
+     24858,
+     "moonkin-form"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     16934,
+     "ferocity"
+    ],
+    [
+     0,
+     2,
+     5,
+     17056,
+     "furor"
+    ],
+    [
+     1,
+     0,
+     2,
+     17002,
+     "feral-swiftness"
+    ],
+    [
+     1,
+     1,
+     3,
+     16947,
+     "feral-instinct"
+    ],
+    [
+     1,
+     2,
+     2,
+     16940,
+     "brutal-impact"
+    ],
+    [
+     1,
+     3,
+     3,
+     16929,
+     "thick-hide"
+    ],
+    [
+     2,
+     0,
+     3,
+     16966,
+     "shredding-attacks"
+    ],
+    [
+     2,
+     1,
+     2,
+     16998,
+     "savage-fury"
+    ],
+    [
+     2,
+     2,
+     1,
+     1238122,
+     "feral-charge"
+    ],
+    [
+     2,
+     3,
+     2,
+     16942,
+     "sharpened-claws"
+    ],
+    [
+     3,
+     0,
+     3,
+     16972,
+     "predatory-strikes"
+    ],
+    [
+     3,
+     1,
+     1,
+     1328617,
+     "lacerate"
+    ],
+    [
+     3,
+     2,
+     1,
+     1328613,
+     "predatory-discipline"
+    ],
+    [
+     3,
+     3,
+     2,
+     16958,
+     "blood-frenzy"
+    ],
+    [
+     4,
+     1,
+     1,
+     17007,
+     "leader-of-the-pack"
+    ],
+    [
+     4,
+     3,
+     2,
+     1223242,
+     "natural-instinct"
+    ],
+    [
+     5,
+     0,
+     5,
+     1223246,
+     "rend-and-tear"
+    ],
+    [
+     5,
+     3,
+     5,
+     417051,
+     "natural-reaction"
+    ],
+    [
+     6,
+     1,
+     1,
+     407995,
+     "primal-bite"
+    ],
+    [
+     6,
+     2,
+     1,
+     1322605,
+     "shifting-power"
+    ]
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     17063,
+     "natures-focus"
+    ],
+    [
+     0,
+     2,
+     5,
+     17003,
+     "heart-of-the-wild"
+    ],
+    [
+     1,
+     0,
+     5,
+     17069,
+     "naturalist"
+    ],
+    [
+     1,
+     1,
+     3,
+     17106,
+     "reflection"
+    ],
+    [
+     1,
+     2,
+     3,
+     16833,
+     "natural-shapeshifter"
+    ],
+    [
+     2,
+     1,
+     3,
+     17118,
+     "subtlety"
+    ],
+    [
+     2,
+     2,
+     5,
+     17104,
+     "gift-of-nature"
+    ],
+    [
+     2,
+     3,
+     1,
+     1328621,
+     "bloom"
+    ],
+    [
+     3,
+     1,
+     5,
+     24968,
+     "tranquil-spirit"
+    ],
+    [
+     3,
+     2,
+     3,
+     17111,
+     "improved-rejuvenation"
+    ],
+    [
+     3,
+     3,
+     1,
+     18562,
+     "swiftmend"
+    ],
+    [
+     4,
+     0,
+     1,
+     17116,
+     "natures-swiftness"
+    ],
+    [
+     4,
+     1,
+     3,
+     1309631,
+     "living-spirit"
+    ],
+    [
+     4,
+     3,
+     2,
+     17123,
+     "improved-tranquility"
+    ],
+    [
+     5,
+     2,
+     5,
+     17074,
+     "improved-regrowth"
+    ],
+    [
+     6,
+     1,
+     1,
+     408120,
+     "wild-growth"
+    ]
+   ]
+  ]
+ }
+}

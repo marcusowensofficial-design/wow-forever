@@ -1304,12 +1304,12 @@ local routes = {
         guide = {
             en = {
                 title = "Horde Route to Excavation Site: Wetlands",
-                subtitle = "Horde overland route from Arathi Basin to the dig site",
+                subtitle = "Horde overland route from Hammerfall (Arathi Highlands) to the dig site",
                 steps = {
                     {
                         title = "Fly to Hammerfall in Arathi Highlands",
-                        text = "Take the Zeppelin from Undercity or Orgrimmar to the Eastern Kingdoms and fly to the Horde outpost of Hammerfall in northeastern Arathi Highlands.",
-                        map = { markerType = "location", mapID = 1417, x = 0.730, y = 0.340, label = "Hammerfall, Arathi Highlands", detail = "Primary Horde outpost with flight master, inn, and supplies." },
+                        text = "Take the Zeppelin from Undercity or Orgrimmar to the Eastern Kingdoms and fly to the Horde outpost of Hammerfall in northeastern Arathi Highlands. Pick up the lead-in quest Dragonmaw Rumors from Zaruk (74.4, 35.6).",
+                        map = { markerType = "location", mapID = 1417, x = 0.744, y = 0.356, label = "Zaruk — Hammerfall, Arathi Highlands", detail = "Primary Horde outpost in Arathi Highlands; pick up Dragonmaw Rumors from Zaruk (74.4, 35.6)." },
                     },
                     {
                         title = "Cross the Thandol Span into Wetlands",
@@ -1317,13 +1317,23 @@ local routes = {
                         map = { markerType = "location", mapID = 1437, x = 0.500, y = 0.120, label = "Thandol Span Bridge", detail = "Massive stone bridge connecting Arathi Highlands and Wetlands." },
                     },
                     {
-                        title = "Traverse the Wetlands Highway",
-                        text = "Travel south along the road past the Greenwarden's Grove. Avoid straying off-road into deep marsh pools containing aggressive Mottled Crocolisks.",
+                        title = "Follow the Wetlands Road South Past Dun Modr",
+                        text = "Follow the road south past Dun Modr through the Wetlands toward Thelgen Rock. Stay on the road to avoid deep marsh pools containing aggressive Mottled Crocolisks.",
                     },
                     {
-                        title = "Path to Whelgar's Excavation",
-                        text = "Turn northeast toward Whelgar's Excavation. Follow the uphill path near the spider cliffs at coordinates (53.2, 65.8) to discover the newly unearthed Titan portal.",
-                        map = { markerType = "location", mapID = 1437, x = 0.532, y = 0.658, label = "Excavation Site Entrance", detail = "New Titan portal discovered directly above Whelgar's Excavation." },
+                        title = "Enter the Uphill Path near Thelgen Rock (52.3, 66.0)",
+                        text = "Turn off the road near Thelgen Rock, next to the meeting stone, and enter the uphill path starting at coordinates (52.3, 66.0) leading up into the hills.",
+                        map = { markerType = "location", mapID = 1437, x = 0.523, y = 0.660, label = "Uphill Path Start — Thelgen Rock", detail = "Next to the meeting stone near Thelgen Rock; follow the uphill path starting at 52.3, 66.0." },
+                    },
+                    {
+                        title = "Meet the Deathstalker Agent (51.4, 59.2)",
+                        text = "Walk up the hill path to the hills overlooking the Dragonmaw encampment where the Deathstalker Agent waits around (51.4, 59.2). Turn in Dragonmaw Rumors and pick up Open the Maw.",
+                        map = { markerType = "location", mapID = 1437, x = 0.514, y = 0.592, label = "Deathstalker Agent — Wetlands", detail = "Hills overlooking the Dragonmaw camp (51.4, 59.2); turn in Dragonmaw Rumors and accept Open the Maw." },
+                    },
+                    {
+                        title = "Enter Excavation Site: Wetlands (47.7, 56.2)",
+                        text = "Continue into the hills above Whelgar's Excavation to the blue mist Titan portal beneath the large tree at (47.7, 56.2).",
+                        map = { markerType = "location", mapID = 1437, x = 0.477, y = 0.562, label = "Excavation Site: Wetlands Entrance", detail = "Blue mist Titan portal under a large tree in the hills southeast of Whelgar's Excavation." },
                     },
                 },
             },

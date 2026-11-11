@@ -479,22 +479,6 @@ if (typeof window !== 'undefined') {
         ]
       },
       {
-        "id": 27,
-        "tree": 1,
-        "treeId": 26,
-        "name": "Raging Blows",
-        "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_whirlwind.jpg",
-        "iconName": "ability_whirlwind",
-        "row": 4,
-        "col": 2,
-        "maxRank": 1,
-        "spellId": 1310315,
-        "req": null,
-        "descriptions": [
-          "Reduces the Rage cost of your Cleave and Whirlwind abilities by 3."
-        ]
-      },
-      {
         "id": 28,
         "tree": 1,
         "treeId": 26,
@@ -589,7 +573,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_ghoulfrenzy.jpg",
         "iconName": "ability_ghoulfrenzy",
         "row": 6,
-        "col": 2,
+        "col": 3,
         "maxRank": 3,
         "spellId": 12319,
         "req": null,
@@ -960,9 +944,9 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_decisivestrike.jpg",
         "iconName": "ability_warrior_decisivestrike",
         "row": 4,
-        "col": 3,
+        "col": 2,
         "maxRank": 1,
-        "spellId": 47174,
+        "spellId": 1329555,
         "req": null,
         "descriptions": [
           "15 sec cooldown. Costs 25% of base health. Activates Gore Drinker. Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds."
@@ -976,9 +960,9 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_whirlwind.jpg",
         "iconName": "ability_whirlwind",
         "row": 6,
-        "col": 3,
+        "col": 1,
         "maxRank": 2,
-        "spellId": 47175,
+        "spellId": 1310315,
         "req": null,
         "descriptions": [
           "Reduces the cooldown of your Whirlwind ability by 1 sec and increases the damage it deals to the closest enemy by 15%.",
@@ -1362,7 +1346,7 @@ if (typeof window !== 'undefined') {
         "row": 2,
         "col": 1,
         "maxRank": 3,
-        "spellId": 29438,
+        "spellId": 20189,
         "descriptions": [
           "Improves your chance to hit by 1%.",
           "Improves your chance to hit by 2%.",
@@ -3075,10 +3059,11 @@ if (typeof window !== 'undefined') {
         "iconName": "spell_nature_earthbindtotem",
         "row": 3,
         "col": 1,
-        "maxRank": 1,
+        "maxRank": 2,
         "spellId": 14983,
         "req": null,
         "descriptions": [
+          "Increases your maximum Energy by 5.",
           "Increases your maximum Energy by 10."
         ]
       },
@@ -3092,8 +3077,8 @@ if (typeof window !== 'undefined') {
         "row": 7,
         "col": 2,
         "maxRank": 1,
-        "spellId": 1310707,
-        "req": null,
+        "spellId": 399956,
+        "req": 173,
         "descriptions": [
           "Instantly attacks with both weapons for 90% weapon damage plus an additional 60 with each weapon. Damage is increased by 20% against Poisoned targets. Awards 2 combo points."
         ]
@@ -3143,7 +3128,7 @@ if (typeof window !== 'undefined') {
         "row": 5,
         "col": 2,
         "maxRank": 1,
-        "spellId": 1310703,
+        "spellId": 1329328,
         "req": null,
         "descriptions": [
           "Your Shank ability increases your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds."
@@ -3405,7 +3390,7 @@ if (typeof window !== 'undefined') {
         "col": 3,
         "maxRank": 2,
         "spellId": 30919,
-        "req": null,
+        "req": 179,
         "descriptions": [
           "Reduces the chance for your attacks to be Dodged or Parried by 1%.",
           "Reduces the chance for your attacks to be Dodged or Parried by 2%."
@@ -3440,7 +3425,7 @@ if (typeof window !== 'undefined') {
         "col": 2,
         "maxRank": 1,
         "spellId": 13750,
-        "req": null,
+        "req": 186,
         "descriptions": [
           "Increases your Energy regeneration rate by 100% for 15 sec."
         ]
@@ -3453,7 +3438,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_stealth.jpg",
         "iconName": "ability_stealth",
         "row": 2,
-        "col": 1,
+        "col": 2,
         "maxRank": 3,
         "spellId": 13975,
         "req": null,
@@ -3544,7 +3529,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_sap.jpg",
         "iconName": "ability_sap",
         "row": 2,
-        "col": 3,
+        "col": 4,
         "maxRank": 2,
         "spellId": 1224782,
         "req": null,
@@ -3561,7 +3546,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_ambush.jpg",
         "iconName": "ability_rogue_ambush",
         "row": 2,
-        "col": 4,
+        "col": 3,
         "maxRank": 3,
         "spellId": 14079,
         "req": null,
@@ -3664,7 +3649,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_summonsuccubus.jpg",
         "iconName": "spell_shadow_summonsuccubus",
         "row": 2,
-        "col": 2,
+        "col": 1,
         "maxRank": 2,
         "spellId": 14082,
         "req": null,
@@ -3715,7 +3700,7 @@ if (typeof window !== 'undefined') {
         "row": 3,
         "col": 2,
         "maxRank": 1,
-        "spellId": 47168,
+        "spellId": 1329256,
         "req": null,
         "descriptions": [
           "Increases the duration of your Rupture ability by 6 seconds and your Garrote ability by 9 seconds."
@@ -3731,7 +3716,7 @@ if (typeof window !== 'undefined') {
         "row": 3,
         "col": 4,
         "maxRank": 2,
-        "spellId": 47169,
+        "spellId": 1329265,
         "req": null,
         "descriptions": [
           "Increases the Energy cost reduction of your Poised ability by 5.",
@@ -3746,9 +3731,9 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_shadowstrikes.jpg",
         "iconName": "ability_rogue_shadowstrikes",
         "row": 6,
-        "col": 2,
+        "col": 3,
         "maxRank": 5,
-        "spellId": 47170,
+        "spellId": 1329284,
         "req": null,
         "descriptions": [
           "Increases the energy generated by your Shank ability by 3 and reduces its cooldown by 0.4 seconds.",
@@ -3766,10 +3751,10 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_sprint.jpg",
         "iconName": "ability_rogue_sprint",
         "row": 4,
-        "col": 3,
+        "col": 4,
         "maxRank": 2,
-        "spellId": 47171,
-        "req": null,
+        "spellId": 1310728,
+        "req": 196,
         "descriptions": [
           "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 15% for 3 seconds after sapping a target.",
           "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 30% for 3 seconds after sapping a target."
@@ -3783,9 +3768,9 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/inv_throwingknife_04.jpg",
         "iconName": "inv_throwingknife_04",
         "row": 6,
-        "col": 2,
+        "col": 3,
         "maxRank": 5,
-        "spellId": 47172,
+        "spellId": 1329286,
         "req": null,
         "descriptions": [
           "Gives your Shank ability a 20% chance to add 2 combo points to the target.",
@@ -3805,7 +3790,7 @@ if (typeof window !== 'undefined') {
         "row": 7,
         "col": 2,
         "maxRank": 1,
-        "spellId": 47173,
+        "spellId": 1316709,
         "req": 205,
         "descriptions": [
           "25 Energy, 20 yd range, Instant, 10 sec cooldown. Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt up to a maximum increased by Attack Power and Critical Strike chance."
@@ -4635,7 +4620,7 @@ if (typeof window !== 'undefined') {
         "row": 4,
         "col": 1,
         "maxRank": 5,
-        "spellId": 15286,
+        "spellId": 1326159,
         "req": null,
         "descriptions": [
           "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 3% for 10 sec.",
@@ -5001,7 +4986,7 @@ if (typeof window !== 'undefined') {
         "row": 5,
         "col": 2,
         "maxRank": 1,
-        "spellId": 408490,
+        "spellId": 16120,
         "req": null,
         "descriptions": [
           "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
@@ -5194,7 +5179,7 @@ if (typeof window !== 'undefined') {
         "icon": "https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightningshield.jpg",
         "iconName": "spell_nature_lightningshield",
         "row": 2,
-        "col": 4,
+        "col": 3,
         "maxRank": 3,
         "spellId": 16261,
         "req": null,
@@ -5937,7 +5922,7 @@ if (typeof window !== 'undefined') {
         "row": 2,
         "col": 4,
         "maxRank": 2,
-        "spellId": 44404,
+        "spellId": 400588,
         "req": null,
         "descriptions": [
           "Gives your Arcane Blast spell a 20% chance, and your Arcane Wrath, Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
@@ -5954,7 +5939,7 @@ if (typeof window !== 'undefined') {
         "row": 4,
         "col": 4,
         "maxRank": 1,
-        "spellId": 44614,
+        "spellId": 1326079,
         "req": 322,
         "descriptions": [
           "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana."
@@ -8135,7 +8120,7 @@ if (typeof window !== 'undefined') {
         "row": 4,
         "col": 3,
         "maxRank": 1,
-        "spellId": 0,
+        "spellId": 1328613,
         "descriptions": [
           "Your Ferocious Bite ability no longer converts extra Energy into damage, but still deals extra damage based on your excess Energy."
         ],

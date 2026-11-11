@@ -682,6 +682,69 @@ check('Presence of new talent nodes with valid metadata and rank counts in talen
   }
 });
 
+check('Level 60 popular talent builds are legal 51-point builds for every spec (talent-builds-60-data.js)', () => {
+  const data = loadAllData(ROOT);
+  const talentsData = data.talentsData;
+  const buildsPath = path.join(ROOT, 'js', 'data', 'talent-builds-60-data.js');
+  const ctx = { window: {} };
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(buildsPath, 'utf8'), ctx);
+  const builds = ctx.window.WOW_TALENT_BUILDS_60;
+  if (!builds || !builds.classes) throw new Error('window.WOW_TALENT_BUILDS_60.classes is missing');
+
+  for (const [cls, cData] of Object.entries(talentsData)) {
+    const list = builds.classes[cls];
+    if (!Array.isArray(list) || list.length !== 3) {
+      throw new Error(`${cls}: expected 3 level 60 builds (one per spec), got ${list ? list.length : 0}`);
+    }
+    const byName = Object.fromEntries(cData.talents.map(t => [t.name, t]));
+    const byId = Object.fromEntries(cData.talents.map(t => [t.id, t]));
+    list.forEach((b, idx) => {
+      const label = `${cls}/${b.specId}`;
+      if (b.tree !== idx) throw new Error(`${label}: tree index ${b.tree} does not match spec order ${idx}`);
+      const pts = {};
+      for (const [name, rank] of Object.entries(b.talents || {})) {
+        const t = byName[name];
+        if (!t) throw new Error(`${label}: talent "${name}" not found in talents-data.js`);
+        if (!Number.isInteger(rank) || rank < 1 || rank > t.maxRank) throw new Error(`${label}: "${name}" rank ${rank} outside 1-${t.maxRank}`);
+        pts[t.id] = rank;
+      }
+      const treeTotals = [0, 1, 2].map(i => cData.talents.filter(t => t.tree === i).reduce((a, t) => a + (pts[t.id] || 0), 0));
+      const total = treeTotals.reduce((a, v) => a + v, 0);
+      if (total !== 51) throw new Error(`${label}: ${total} points spent, expected 51`);
+      if (treeTotals.indexOf(Math.max(...treeTotals)) !== b.tree) throw new Error(`${label}: most points are not in its own tree (${treeTotals.join('/')})`);
+      if (treeTotals.join('/') !== (b.split || []).join('/')) throw new Error(`${label}: split ${b.split} does not match talents (${treeTotals.join('/')})`);
+      for (const [id, rank] of Object.entries(pts)) {
+        const t = byId[id];
+        const below = cData.talents.filter(o => o.tree === t.tree && o.row < t.row).reduce((a, o) => a + (pts[o.id] || 0), 0);
+        if (below < 5 * (t.row - 1)) throw new Error(`${label}: "${t.name}" needs ${5 * (t.row - 1)} points above it, has ${below}`);
+        if (t.req && (pts[t.req] || 0) < byId[t.req].maxRank) throw new Error(`${label}: "${t.name}" requires ${byId[t.req].name} at max rank`);
+      }
+      if (!/^https:\/\/www\.wowhead\.com\/forever\/talent-calc\//.test(b.wowheadCalcUrl || '')) throw new Error(`${label}: missing Forever Wowhead calculator link`);
+    });
+  }
+});
+
+check('Every BiS talent build link in bis-data.js is a legal 26-point Level 30 build', () => {
+  const data = loadAllData(ROOT);
+  const talentsData = data.talentsData;
+  const bisCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'bis-data.js'), 'utf8');
+  const problems = [];
+  let audited = 0;
+  for (const m of bisCode.matchAll(/\/talents\/([a-z]+)\?b=([0-9-]*)/g)) {
+    const [, cls, code] = m;
+    const classTalents = talentsData[cls]?.talents || [];
+    if (!classTalents.length) { problems.push(`${cls}: no talent tree`); continue; }
+    const points = parseBuildUrl(classTalents, code);
+    const total = getTotalPoints(points);
+    const audit = validateBuildLegality(classTalents, points, 26);
+    if (total > 26 || !audit.valid) problems.push(`${cls} ${code}: ${total} pts; ${audit.errors.slice(0, 2).join('; ')}`);
+    audited++;
+  }
+  if (audited === 0) throw new Error('No BiS talent build links found in bis-data.js');
+  if (problems.length) throw new Error(`${problems.length} illegal BiS talent build(s): ${problems.slice(0, 5).join(' | ')}`);
+});
+
 check('Replacement racials presence and exact 4-racial symmetry across all 9 races in races-classes.js', () => {
   const data = loadAllData(ROOT);
   const races = data.racesData;

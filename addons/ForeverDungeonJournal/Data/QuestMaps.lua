@@ -3,7 +3,7 @@ FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
 FDJ.QUEST_START_MAPS = {
     -- Excavation Site: Wetlands prerequisite quest giver.
-    [95663] = { mapID = 1417, x = 0.740, y = 0.360, label = "Zaruk — Hammerfall", targetName = "Zaruk", detail = "Start Dragonmaw Rumors here" },
+    [95663] = { mapID = 1417, x = 0.744, y = 0.356, label = "Zaruk — Hammerfall", targetName = "Zaruk", detail = "Start Dragonmaw Rumors here" },
 
     -- Hall of Thanes quest givers.
     [96394] = { mapID = 1455, x = 0.333, y = 0.481, label = "Afadra Dunwall — top of Old Ironforge", targetName = "Afadra Dunwall", detail = "Top of Old Ironforge, outside the dungeon" },
@@ -188,7 +188,7 @@ FDJ.QUEST_START_MAPS = {
     [92458] = { mapID = 1421, x = 0.684, y = 0.452, label = "Image of Archmage Modera — Silverpine Forest", targetName = "Image of Archmage Modera" },
     [92489] = { mapID = 1453, x = 0.488, y = 0.874, label = "High Sorcerer Andromath — Stormwind", targetName = "High Sorcerer Andromath" },
     [95646] = { mapID = 1437, x = 0.562, y = 0.404, label = "Rethiel the Greenwarden — Wetlands", targetName = "Rethiel the Greenwarden" },
-    [95682] = { mapID = 1437, x = 0.514, y = 0.592, label = "Deathstalker Agent — Wetlands", targetName = "Deathstalker Agent" },
+    [95682] = { mapID = 1437, x = 0.514, y = 0.592, label = "Deathstalker Agent — Wetlands", targetName = "Deathstalker Agent", detail = "Hills above the Dragonmaw camp near Thelgen Rock (uphill path starts at 52.3, 66.0 next to the meeting stone)" },
     [95697] = { mapID = 1454, x = 0.574, y = 0.534, label = "Borstan — Orgrimmar", targetName = "Borstan" },
     [95772] = { mapID = 1433, x = 0.256, y = 0.464, label = "Dorin Songblade — Redridge Mountains", targetName = "Dorin Songblade" },
     [96800] = { mapID = 1416, x = 0.094, y = 0.626, label = "Magus Olvek — Alterac Mountains", targetName = "Magus Olvek" },
@@ -196,8 +196,8 @@ FDJ.QUEST_START_MAPS = {
     [96986] = { mapID = 1424, x = 0.624, y = 0.204, label = "Melisara — Hillsbrad Foothills", targetName = "Melisara" },
     [96988] = { mapID = 1458, x = 0.458, y = 0.732, label = "Doctor Martin Felben — Undercity", targetName = "Doctor Martin Felben" },
     [98815] = { mapID = 1437, x = 0.084, y = 0.558, label = "James Halloran — Wetlands", targetName = "James Halloran" },
-    [98823] = { mapID = 1456, x = 0.702, y = 0.336, label = "Bashana Runetotem — Thunder Bluff", targetName = "Bashana Runetotem" },
-    [98824] = { mapID = 1437, x = 0.388, y = 0.522, label = "Prospector Whelgar — Wetlands", targetName = "Prospector Whelgar" },
+    [98823] = { mapID = 1456, x = 0.702, y = 0.336, label = "Bashana Runetotem — Thunder Bluff", targetName = "Bashana Runetotem", detail = "Turn in Elder Knowledge here (needs the Titan Relic from Relic Guardian in Excavation Site: Wetlands). She then offers Earthen Echo." },
+    [98824] = { mapID = 1437, x = 0.388, y = 0.522, label = "Prospector Whelgar — Wetlands", targetName = "Prospector Whelgar", detail = "Turn in Lost Relic Carry here (needs the Titan Relic from Relic Guardian in Excavation Site: Wetlands). He then offers Prehistoric Prism." },
 
     -- Quest givers added from the Classic Era quest compendium.
     [1956] = { mapID = 1445, x = 0.460, y = 0.570, label = "Tabetha — Dustwallow Marsh", targetName = "Tabetha" },

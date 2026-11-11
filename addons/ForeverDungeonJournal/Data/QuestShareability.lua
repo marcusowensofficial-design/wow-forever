@@ -396,6 +396,9 @@ FDJ.QUEST_SHAREABILITY_AUDIT = {
     [6136] = true,   -- The Corpulent One
     [5125] = true,   -- Aurius' Reckoning
     [8945] = true,   -- Dead Man's Plea
+    -- Excavation Site: Wetlands
+    [95663] = true,   -- Dragonmaw Rumors
+
     -- Zul'Farrak (sharing index)
     [2769] = true,   -- The Brassbolts Brothers
     [2770] = true,   -- Gahz'rilla

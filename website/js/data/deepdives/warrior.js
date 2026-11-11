@@ -698,7 +698,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Fury (Death Wish & Dual-Wield Engine)",
             icon: "⚡",
             role: "Dual-Wield Melee DPS & Flurry Enrage",
-            buildUrl: "/talents/warrior?b=-0505113215021-&l=30&tl=5",
+            buildUrl: "/talents/warrior?b=-050511321021-&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-0505113215021-",
             tagline: "Relentless dual-wielding pressure with Death Wish 21-pt keystone (+20% physical damage & fear immunity), +100% crit rage, and fixed off-hand weapon damage.",
             statPriority: "Strength > Melee Hit > Agility > Stamina",

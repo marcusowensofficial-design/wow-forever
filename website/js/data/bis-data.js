@@ -9582,14 +9582,14 @@ const WOW_BIS_DATA = {
       },
       {
         "id": "pvp",
-        "name": "Arms PvP",
+        "name": "Fury PvP",
         "role": "Melee DPS",
         "icon": "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_innerrage.jpg",
         "description": "The best gear for a level 30 Warrior in the WoW Forever beta, with stats and sources for every item. Weapon damage first, then Strength and Stamina, point for point. Mail wins when two pieces are close. The $100,000 duel tournament (October 17 and 18) is played at level 30.",
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/warrior?b=-5501013001500122-&l=30&tl=5"
+          "buildUrl": "/talents/warrior?b=-550101350102102-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -14547,7 +14547,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/warrior?b=--55000123300121003&l=30&tl=5"
+          "buildUrl": "/talents/warrior?b=--0505301203010213&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -19519,7 +19519,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/paladin?b=--05225031201023&l=30&tl=5"
+          "buildUrl": "/talents/paladin?b=03--052330012013003&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -28677,7 +28677,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/paladin?b=005320013125101--02&l=30&tl=5"
+          "buildUrl": "/talents/paladin?b=50320115002101-5-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -33853,7 +33853,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/paladin?b=005320213123101--02&l=30&tl=5"
+          "buildUrl": "/talents/paladin?b=50320213022001-5-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -39092,7 +39092,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/paladin?b=005023213220101--04&l=30&tl=5"
+          "buildUrl": "/talents/paladin?b=50025210222001--04&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -43962,7 +43962,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/paladin?b=-0502513321001-3&l=30&tl=5"
+          "buildUrl": "/talents/paladin?b=-05302102313501-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -63865,7 +63865,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/rogue?b=00530310501521--&l=30&tl=5"
+          "buildUrl": "/talents/rogue?b=0053032020154001--&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -68812,7 +68812,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/rogue?b=3--4020223310013011&l=30&tl=5"
+          "buildUrl": "/talents/rogue?b=1--0050332313210011&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -73972,7 +73972,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/rogue?b=2--4303010310213111&l=30&tl=5"
+          "buildUrl": "/talents/rogue?b=2--3301301313110211&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -79184,7 +79184,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/priest?b=--30532200120131201&l=30&tl=5"
+          "buildUrl": "/talents/priest?b=--3053220120131201&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -84281,7 +84281,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/priest?b=02--350022021201312&l=30&tl=5"
+          "buildUrl": "/talents/priest?b=02--35002221201312&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -100090,7 +100090,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/shaman?b=550030100210303-03-&l=30&tl=5"
+          "buildUrl": "/talents/shaman?b=55003310030003-03-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -105051,7 +105051,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/shaman?b=150500100310003-230002-&l=30&tl=5"
+          "buildUrl": "/talents/shaman?b=15053010031-25-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -110226,7 +110226,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/shaman?b=-0510320310051122-&l=30&tl=5"
+          "buildUrl": "/talents/shaman?b=-0530303100510122-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -115307,7 +115307,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/shaman?b=-0502321310051102-&l=30&tl=5"
+          "buildUrl": "/talents/shaman?b=-0502313100512102-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -136186,7 +136186,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/mage?b=-0055203013011311-&l=30&tl=5"
+          "buildUrl": "/talents/mage?b=-0552030103011311-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -141346,7 +141346,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/mage?b=-230523001301031-002&l=30&tl=5"
+          "buildUrl": "/talents/mage?b=-505230010301031-002&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -146715,7 +146715,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/mage?b=0250050031003115--&l=30&tl=5"
+          "buildUrl": "/talents/mage?b=0520051031003015--&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -162401,7 +162401,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/druid?b=-50230021231022110001-&l=30&tl=5"
+          "buildUrl": "/talents/druid?b=-5023003212300212-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {
@@ -172173,7 +172173,7 @@ const WOW_BIS_DATA = {
         "talents": {
           "points": "26 Points (Lvl 30 + Talented)",
           "summary": "26 points: 21 from level 30, 5 from Talented",
-          "buildUrl": "/talents/druid?b=-5021202103100001-05003&l=30&tl=5"
+          "buildUrl": "/talents/druid?b=-5521203210300002-&l=30&tl=5"
         },
         "statSummary": {
           "alliance": {

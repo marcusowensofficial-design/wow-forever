@@ -597,9 +597,10 @@ FDJ.QUEST_PREREQ_DETAILS = {
         turnin = "Belnistrasz, Razorfen Downs",
     },
     [6522] = {
+        startsInDungeon = true,
         level = 36, requires = 28,
         objective = "Take the Small Scroll to Varimathras in the Undercity.",
-        pickup = "Small Scroll (drops from Charlga Razorflank in Razorfen Kraul)",
+        pickup = "Small Scroll, dropped by Charlga Razorflank (boss) inside Razorfen Kraul",
         turnin = "Varimathras, Undercity",
         startItem = {17008, "Small Scroll", 1, "Dropped by Charlga Razorflank in Razorfen Kraul"},
     },
@@ -1469,9 +1470,10 @@ FDJ.QUEST_PREREQ_DETAILS = {
         map = { mapID = 1445, x = 0.562, y = 0.880, label = "Emberstrife — Dustwallow Marsh", targetName = "Emberstrife" },
     },
     [5089] = {
+        startsInDungeon = true,
         level = 60, requires = 55,
         objective = "Take General Drakkisath's Command to Marshal Maxwell in Burning Steppes.",
-        pickup = "General Drakkisath's Command (drops from Overlord Wyrmthalak)",
+        pickup = "General Drakkisath's Command, dropped by Overlord Wyrmthalak (boss) inside Lower Blackrock Spire",
         turnin = "Marshal Maxwell, Burning Steppes",
         startItem = {12780, "General Drakkisath's Command", 1, "Dropped by Overlord Wyrmthalak in Lower Blackrock Spire"},
     },
@@ -1877,7 +1879,17 @@ FDJ.QUEST_PREREQ_DETAILS = {
         map = { mapID = 1437, x = 0.080, y = 0.550, label = "James Halloran — Menethil Harbor", detail = "Start Young Crocolisk Skins here" },
     },
 
-    [95663] = { level = 31, requires = 24, objective = "Travel to the Wetlands and meet the Deathstalker Agent in the hills above the Dragonmaw camp.", pickup = "Zaruk, Hammerfall, Arathi Highlands", turnin = "Deathstalker Agent, hills above the Dragonmaw camp, Wetlands", description = "Required before Open the Maw.", map = { mapID = 1417, x = 0.740, y = 0.360, label = "Zaruk — Hammerfall", detail = "Start Dragonmaw Rumors here" } },
+    [95663] = {
+        level = 31,
+        requires = 24,
+        objective = "Travel south from Arathi Highlands into the Wetlands and meet the Deathstalker Agent in the hills above the Dragonmaw camp near Thelgen Rock (51.4, 59.2).",
+        pickup = "Zaruk, Hammerfall, Arathi Highlands (74.4, 35.6)",
+        turnin = "Deathstalker Agent, hills above the Dragonmaw camp near Thelgen Rock, Wetlands (51.4, 59.2; path starts at 52.3, 66.0)",
+        description = "Required before Open the Maw.",
+        note = "Cross the Thandol Span into the Wetlands and follow the road south past Dun Modr. Turn off near Thelgen Rock, next to the meeting stone, and take the uphill path starting at 52.3, 66.0 up to the hills overlooking the Dragonmaw camp where the Deathstalker Agent waits (51.4, 59.2). She gives the follow-up dungeon quest Open the Maw.",
+        map = { mapID = 1417, x = 0.744, y = 0.356, label = "Zaruk — Hammerfall", targetName = "Zaruk", detail = "Start Dragonmaw Rumors here" },
+        turninMap = { mapID = 1437, x = 0.514, y = 0.592, label = "Deathstalker Agent — Wetlands", targetName = "Deathstalker Agent", detail = "Hills above the Dragonmaw camp near Thelgen Rock (uphill path starts at 52.3, 66.0 next to the meeting stone)" },
+    },
     [95647] = { level = 31, requires = 24, objective = "Find Ardin Grassman in the Excavation Sites. Learn what happened to Ardin Grassman.", pickup = "Caitlin Grassman, Menethil Harbor, Wetlands", turnin = "Ardin Grassman, inside Excavation Site: Wetlands", description = "Required before Heartwoven.", map = { mapID = 1437, x = 0.119, y = 0.588, label = "Caitlin Grassman — Menethil Harbor", detail = "Start Lost in the Thicket Things here" } },
 
 
@@ -1949,7 +1961,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
 
     -- The Stockade prerequisite chains.
     [303] = { level = 30, requires = 25, objective = "Kill 10 Dark Iron Dwarves, 5 Dark Iron Tunnelers, 5 Dark Iron Saboteurs and 5 Dark Iron Demolitionists at Dun Modr.", pickup = "Motley Garmason, Dun Modr, Wetlands", turnin = "Motley Garmason, Dun Modr, Wetlands", description = "Complete The Dark Iron War to unlock The Fury Runs Deep.", map = { mapID = 1437, x = 0.496, y = 0.182, label = "Motley Garmason — Dun Modr", detail = "Start The Dark Iron War here" } },
-    [373] = { level = 22, requires = 16, objective = "Take An Unsent Letter from Edwin VanCleef to Baros Alexston in Stormwind.", pickup = "Use An Unsent Letter, looted from Edwin VanCleef in The Deadmines", turnin = "Baros Alexston, City Hall, Cathedral Square, Stormwind", description = "First required step leading to The Stockade Riots.", startItem = {2874, "An Unsent Letter", 1, "Looted from Edwin VanCleef"} },
+    [373] = { startsInDungeon = true, level = 22, requires = 16, objective = "Take An Unsent Letter from Edwin VanCleef to Baros Alexston in Stormwind.", pickup = "Use An Unsent Letter, looted from Edwin VanCleef (boss) inside The Deadmines", turnin = "Baros Alexston, City Hall, Cathedral Square, Stormwind", description = "First required step leading to The Stockade Riots.", startItem = {2874, "An Unsent Letter", 1, "Looted from Edwin VanCleef"} },
     [389] = { level = 22, requires = 16, objective = "Speak with Warden Thelwater outside The Stockade.", pickup = "Baros Alexston, City Hall, Cathedral Square, Stormwind", turnin = "Warden Thelwater, outside The Stockade, Stormwind", description = "Second required step leading to The Stockade Riots.", map = { mapID = 1453, x = 0.577, y = 0.479, label = "Baros Alexston — Stormwind", detail = "Continue the chain with Bazil Thredd here" } },
 
     [5726] = { level = 12, requires = 9, objective = "Bring a Lieutenant's Insignia from the Burning Blade in Skull Rock to Thrall.", pickup = "Thrall, Valley of Wisdom, Orgrimmar", turnin = "Thrall, Valley of Wisdom, Orgrimmar", description = "First required Hidden Enemies step for the Ragefire Chasm chain.", map = { mapID = 1454, x = 0.320, y = 0.378, label = "Thrall — Orgrimmar", detail = "Start Hidden Enemies here" } },

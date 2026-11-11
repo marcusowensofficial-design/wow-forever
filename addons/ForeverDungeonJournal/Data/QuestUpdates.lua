@@ -19,7 +19,8 @@ FDJ.QUEST_PREREQ_CHAINS[98824] = {{
 FDJ.QUEST_PREREQ_DETAILS[95664] = {
     objective = "Take the Titan Relic to the Elder Rise in Thunder Bluff and look for someone who can tell you more about it.",
     startItem = {270866, "Titan Relic", 1, "Dropped by: Relic Guardian"},
-    pickup = "Titan Relic (dropped by Relic Guardian)",
+    startsInDungeon = true,
+    pickup = "Titan Relic, dropped by Relic Guardian (boss) inside Excavation Site: Wetlands",
     level = 31,
     requires = 24,
     turnin = "Bashana Runetotem, Elder Rise, Thunder Bluff",
@@ -28,7 +29,8 @@ FDJ.FOREVER_QUEST_XP_FALLBACK[95664] = 1400
 FDJ.QUEST_PREREQ_DETAILS[95810] = {
     objective = "Deliver the Titan Relic to Prospector Whelgar at the Wetlands excavation site.",
     startItem = {270866, "Titan Relic", 1, "Dropped by: Relic Guardian"},
-    pickup = "Titan Relic (dropped by Relic Guardian)",
+    startsInDungeon = true,
+    pickup = "Titan Relic, dropped by Relic Guardian (boss) inside Excavation Site: Wetlands",
     level = 31,
     requires = 24,
     turnin = "Prospector Whelgar, Whelgar's Excavation Site, Wetlands",
@@ -137,7 +139,7 @@ FDJ.FOREVER_QUEST_XP_FALLBACK[95140] = 2650
 FDJ.QUEST_PREREQ_CHAINS[6521] = {
     { id = 6522, name = "An Unholy Alliance" },
 }
-FDJ.QUEST_PREREQ_DETAILS[6522] = { level = 36, requires = 28, objective = "Take the Small Scroll to Varimathras in the Undercity.", pickup = "Small Scroll, dropped by Charlga Razorflank", startItem = {17008, "Small Scroll", 1, "Drops from Charlga Razorflank in Razorfen Kraul"}, turnin = "Varimathras, Royal Quarter, Undercity" }
+FDJ.QUEST_PREREQ_DETAILS[6522] = { level = 36, requires = 28, startsInDungeon = true, objective = "Take the Small Scroll to Varimathras in the Undercity.", pickup = "Small Scroll, dropped by Charlga Razorflank (boss) inside Razorfen Kraul", startItem = {17008, "Small Scroll", 1, "Drops from Charlga Razorflank in Razorfen Kraul"}, turnin = "Varimathras, Royal Quarter, Undercity" }
 FDJ.QUEST_PREREQ_DETAILS[6521] = { level = 36, requires = 28, objective = "Bring Ambassador Malcin's Head to Varimathras in the Undercity.", pickup = "Varimathras, Royal Quarter, Undercity", turnin = "Varimathras, Royal Quarter, Undercity", description = "Final step. Ambassador Malcin is outside Razorfen Downs." }
 FDJ.PREREQ_REWARD_ITEMS_FALLBACK[6521] = { items = { {17039, "Skullbreaker", 2}, {17042, "Nail Spitter", 2}, {17043, "Zealot's Robe", 2}, {270054, "Cultist's Chestguard", 3} }, choice = true }
 FDJ.PREREQ_REWARD_MONEY_FALLBACK[6521] = 2000
@@ -1022,7 +1024,7 @@ do
     local FALLA = { mapID = 1413, x = 0.482, y = 0.328, label = "Falla Sagewind — above Wailing Caverns", targetName = "Falla Sagewind", detail = "In a tent on top of the mountain above Wailing Caverns" }
     for _, quest in ipairs((FDJ.DB["Wailing Caverns"] and FDJ.DB["Wailing Caverns"].quests) or {}) do
         if quest.id == 6981 then
-            quest.objective = "Speak with Sputtervalve in Ratchet about the Glowing Shard, then deliver it to Falla Sagewind on top of the mountain above Wailing Caverns."
+            quest.objective = "Kill all four Lords of the Fang bosses. Return to the beginning of the dungeon and do the Naralex escort event quest. Kill the murloc end boss Mutanus the Devourer to obtain The Glowing Shard. Then leave the dungeon and speak with Sputtervalve in Ratchet next to the flight path (63.0, 37.2). From there fly to the Crossroads and run up the side of the hill to Falla Sagewind on the mountain above Wailing Caverns (48.2, 32.8) to finish the quest."
             quest.turnin = "Falla Sagewind, on top of the mountain above Wailing Caverns, The Barrens (48.2, 32.8)"
             quest.turninMap = FALLA
             quest.objectiveMap = { mapID = 1413, x = 0.630, y = 0.372, label = "Sputtervalve — Ratchet", targetName = "Sputtervalve", detail = "By the flight master in Ratchet; he has no ? over his head" }

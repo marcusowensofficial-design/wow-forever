@@ -65,7 +65,13 @@
   /**
    * Resolve recommended build for a class from WOW_BIS_DATA
    */
-  function getRecommendedBuildForClass(classId, preferredSpecId = null) {
+  function getRecommendedBuildForClass(classId, preferredSpecId = null, allowLvl60 = true) {
+    if (allowLvl60 && state.capMode === 'lvl60') {
+      const b60 = getLvl60Build(classId, preferredSpecId);
+      if (b60) {
+        return { specId: b60.specId, specName: `${b60.name} (Popular Lvl 60)`, buildUrl: '', points: Object.assign({}, b60.points) };
+      }
+    }
     const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
     if (!bisData || !bisData[classId] || !bisData[classId].specs) return null;
     const specs = bisData[classId].specs;
@@ -80,6 +86,25 @@
       };
     }
     return null;
+  }
+
+  /**
+   * Popular level 60 presets (js/modules/talent-tree/talent-builds-60.js)
+   */
+  function getLvl60Build(classId, specId = null) {
+    const api = window.WOW_TALENT_BUILDS_60_API;
+    return api ? api.getBuild(classId, specId) : null;
+  }
+
+  function getActiveLvl60SpecId() {
+    const api = window.WOW_TALENT_BUILDS_60_API;
+    if (!api || state.capMode !== 'lvl60') return null;
+    const keys = Object.keys(state.points).filter(k => state.points[k] > 0);
+    const match = api.getBuilds(state.classId).find(b => {
+      const bk = Object.keys(b.points);
+      return bk.length === keys.length && bk.every(k => b.points[k] === state.points[k]);
+    });
+    return match ? match.specId : null;
   }
 
   /**
@@ -438,6 +463,9 @@
     const treePoints = [0, 1, 2].map(idx => getTreePoints(idx));
     const buildCode = generateBuildCode(state.classId, state.specId, state.points);
     const pointsRemaining = Math.max(0, state.maxPoints - totalPoints);
+    const lvl60Api = window.WOW_TALENT_BUILDS_60_API;
+    const lvl60Builds = (lvl60Api && state.capMode === 'lvl60') ? lvl60Api.getBuilds(state.classId) : [];
+    const activeLvl60SpecId = getActiveLvl60SpecId();
 
     const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
     const availableSpecs = (bisData && bisData[state.classId] && bisData[state.classId].specs) ? bisData[state.classId].specs : [];
@@ -510,7 +538,7 @@
             <button type="button" class="bis-talent-pill-btn ${state.isBlankSlate && totalPoints === 0 ? 'active-mode' : ''}" id="btn-toggle-blank-slate" title="Start with empty talent trees (0 points)">
               <span>✨</span> Blank Slate
             </button>
-            ${availableSpecs.map(s => `
+            ${lvl60Builds.length ? lvl60Api.renderPresetButtons(state.classId, activeLvl60SpecId, escapeHtml) : availableSpecs.map(s => `
               <button type="button" class="bis-talent-pill-btn ${!state.isBlankSlate && state.specId === s.id ? 'active-mode' : ''}" data-action="load-spec" data-spec-id="${s.id}" title="Load ${escapeHtml(s.name)} recommended build">
                 <span>⚔️</span> ${escapeHtml(s.name.replace(/\s*\(.*\)/, ''))}
               </button>
@@ -545,6 +573,8 @@
           </button>
         </div>
       </div>
+
+      ${activeLvl60SpecId ? lvl60Api.renderSourceStrip(state.classId, activeLvl60SpecId, escapeHtml) : ''}
 
       <!-- Main Body: 3-Column Talent Grid or Detailed Cards List -->
       ${state.viewMode === 'grid' ? `
@@ -709,6 +739,23 @@
       };
     });
 
+
+    content.querySelectorAll('[data-action="load-lvl60"]').forEach(btn => {
+      btn.onclick = () => {
+        hideTalentTooltip();
+        const b60 = getLvl60Build(state.classId, btn.getAttribute('data-spec-id'));
+        if (!b60) return;
+        state.isBlankSlate = false;
+        state.specId = b60.specId;
+        state.specName = `${b60.name} (Popular Lvl 60)`;
+        state.points = Object.assign({}, b60.points);
+        state.recommendedPoints = Object.assign({}, b60.points);
+        renderModalBody();
+        if (window.showToast) {
+          window.showToast(`Loaded the popular level 60 ${b60.name} build`, 'info');
+        }
+      };
+    });
 
     // 1d. Theorycrafting Cap Selector Buttons
     content.querySelectorAll('.bis-cap-btn').forEach(btn => {
@@ -1050,6 +1097,7 @@
     } else if (recBuild) {
       state.points = Object.assign({}, recBuild.points);
       state.specName = recBuild.specName;
+      state.specId = recBuild.specId;
     } else {
       state.points = {};
       state.specName = 'Custom Build';
@@ -1075,7 +1123,7 @@
     state.buildCode = options.buildCode || '';
     state.isBlankSlate = !!options.blankSlate;
 
-    const recBuild = getRecommendedBuildForClass(state.classId, options.specId);
+    const recBuild = getRecommendedBuildForClass(state.classId, options.specId, !options.buildUrl && !options.points);
     if (recBuild) {
       state.recommendedPoints = Object.assign({}, recBuild.points);
     } else if (options.buildUrl) {
