@@ -711,28 +711,61 @@ local function MakeQuestButton(parent)
     button.meta:SetWordWrap(true)
     button.meta:SetJustifyH("LEFT")
 
-    button.chainToggle = CreateFrame("Button", nil, button)
-    button.chainToggle:SetSize(16, 16)
-    -- Keep the chain control inside the visible quest row and away from the title.
-    button.chainToggle:SetPoint("RIGHT", button, "RIGHT", -86, -9)
+    -- The quest chain bar: a full-width, labelled strip under the quest's
+    -- level line ("Quest chain: 1 step before this quest - click to show"),
+    -- so it reads as something to click. The 16px chain icon alone was easy
+    -- to miss. The whole bar toggles the chain open and shut.
+    button.chainToggle = CreateFrame("Button", nil, button, "BackdropTemplate")
+    button.chainToggle:SetHeight(18)
     button.chainToggle:SetFrameLevel(button:GetFrameLevel() + 6)
     button.chainToggle:RegisterForClicks("LeftButtonUp")
+    FDJ.SetBackdrop(button.chainToggle, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 1)
     button.chainToggle:Hide()
 
     button.chainIcon = button.chainToggle:CreateTexture(nil, "OVERLAY")
-    button.chainIcon:SetAllPoints()
+    button.chainIcon:SetSize(14, 14)
+    button.chainIcon:SetPoint("LEFT", 4, 0)
     button.chainIcon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\QuestChain.tga")
     button.chainIcon:SetTexCoord(0, 1, 0, 1)
     button.chainIcon:SetVertexColor(1, 1, 1)
     button.chainIcon:SetAlpha(1)
 
+    button.chainArrow = button.chainToggle:CreateTexture(nil, "OVERLAY")
+    button.chainArrow:SetSize(12, 12)
+    button.chainArrow:SetPoint("RIGHT", -4, 0)
+
+    button.chainLabel = button.chainToggle:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+    button.chainLabel:SetPoint("LEFT", button.chainIcon, "RIGHT", 4, 0)
+    button.chainLabel:SetPoint("RIGHT", button.chainArrow, "LEFT", -3, 0)
+    button.chainLabel:SetJustifyH("LEFT")
+    if button.chainLabel.SetWordWrap then button.chainLabel:SetWordWrap(false) end
+
+    -- Colours for shut / open, brighter while the mouse is over it.
+    button.chainToggle.Paint = function(self, hover)
+        local open = self.fdjOpen
+        if hover then
+            self:SetBackdropColor(0.55, 0.40, 0.10, 0.70)
+            self:SetBackdropBorderColor(1.00, 0.82, 0.25, 1.00)
+        elseif open then
+            self:SetBackdropColor(0.30, 0.22, 0.06, 0.60)
+            self:SetBackdropBorderColor(0.85, 0.66, 0.22, 0.95)
+        else
+            self:SetBackdropColor(0.22, 0.16, 0.05, 0.55)
+            self:SetBackdropBorderColor(0.70, 0.54, 0.20, 0.90)
+        end
+        local owner = self:GetParent()
+        if owner and owner.chainLabel then owner.chainLabel:SetTextColor(1.00, hover and 0.92 or 0.82, hover and 0.45 or 0.25) end
+    end
+
     button.chainToggle:SetScript("OnEnter", function(self)
+        self:Paint(true)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         GameTooltip:AddLine(L("REQUIRED_QUESTS"), 1, 0.82, 0.25)
-        GameTooltip:AddLine(L("SHOW_WHOLE_CHAIN"), 0.85, 0.85, 0.85)
+        GameTooltip:AddLine(self.fdjOpen and L("CHAIN_BAR_HIDE_TIP") or L("SHOW_WHOLE_CHAIN"), 0.85, 0.85, 0.85, true)
         GameTooltip:Show()
     end)
-    button.chainToggle:SetScript("OnLeave", function()
+    button.chainToggle:SetScript("OnLeave", function(self)
+        self:Paint(false)
         GameTooltip:Hide()
     end)
     button.chainToggle:SetScript("OnClick", function(self)
@@ -760,6 +793,13 @@ local function MakeQuestButton(parent)
     button:SetScript("OnClick", function(self)
         if not self.fdjRPGHidden and FDJ.TryLinkQuest and FDJ.TryLinkQuest(self.questID, self.name and self.name:GetText(), self.quest and self.quest.level) then
             return
+        end
+        -- Picking a chain quest opens its chain the first time, so the steps
+        -- are seen without hunting for the toggle. Once the player shuts it
+        -- (false), it stays shut.
+        if self.chainToggle and self.chainToggle:IsShown() and self.questID
+            and FDJ.expandedQuestChains[self.questID] == nil then
+            FDJ.expandedQuestChains[self.questID] = true
         end
         SelectQuest(self.questIndex)
     end)
@@ -968,15 +1008,16 @@ RefreshQuestList = function()
             button.meta:SetText(rpgHidden and "" or L("AVAILABLE_FROM_LEVEL", quest.requires))
             local titleHeight = math.max(14, button.name:GetStringHeight() or 14)
             local metaHeight = math.max(12, button.meta:GetStringHeight() or 12)
-            local baseRowHeight = math.max(48, 9 + titleHeight + 5 + metaHeight + 10)
-            local rowHeight = baseRowHeight
-
             button.questID = quest.id
             local rawChain = (not rpgHidden) and GetQuestPrereqChain(quest) or nil
             local chain = rawChain
 
+            -- Chain quests get the chain bar (18px + gaps) under the level line.
+            local chainBarHeight = (chain and button.chainToggle) and 24 or 0
+            local baseRowHeight = math.max(48, 9 + titleHeight + 5 + metaHeight + 10 + chainBarHeight)
+            local rowHeight = baseRowHeight
+
             local rowIconOffset = (button.meta:GetStringWidth() or 0) + 6
-            if chain and button.chainToggle then rowIconOffset = rowIconOffset + (button.chainToggle:GetWidth() or 20) + 4 end
             if FDJ.SetRowDungeonIcon then
                 FDJ.SetRowDungeonIcon(button, (not rpgHidden) and (quest.startsInDungeon or ((not chain) and (FDJ.StartsInsideDungeon(quest.pickup)
                     or (FDJ.StartItemDropsIn and FDJ.StartItemDropsIn(quest, selectedDungeon))))
@@ -988,11 +1029,19 @@ RefreshQuestList = function()
             if button.chainToggle then
                 button.chainToggle:SetShown(chain ~= nil)
                 button.chainToggle:ClearAllPoints()
-                -- Keep the chain control directly to the right of the
-                -- "Available from Level X" text. This keeps it away from long
-                -- quest titles while leaving the faction/class icons on the far right.
-                local metaWidth = button.meta:GetStringWidth() or 0
-                button.chainToggle:SetPoint("LEFT", button.meta, "LEFT", metaWidth + 6, 0)
+                if chain then
+                    -- Under the "Available from Level X" line, clear of the
+                    -- faction/class icons and the turn-in mark on the right.
+                    button.chainToggle:SetPoint("TOPLEFT", button.meta, "BOTTOMLEFT", -2, -5)
+                    button.chainToggle:SetPoint("RIGHT", button, "RIGHT", -52, 0)
+                    button.chainToggle.fdjOpen = chainExpanded == true
+                    local steps = 0
+                    for _, step in ipairs(chain) do if type(step) == "table" and step.id ~= quest.id then steps = steps + 1 end end
+                    local count = (steps == 1) and L("CHAIN_BAR_ONE_STEP") or L("CHAIN_BAR_STEPS", steps)
+                    button.chainLabel:SetText(count .. "  " .. (chainExpanded and L("CHAIN_BAR_HIDE") or L("CHAIN_BAR_SHOW")))
+                    button.chainArrow:SetTexture(chainExpanded and "Interface\\Buttons\\UI-MinusButton-Up" or "Interface\\Buttons\\UI-PlusButton-Up")
+                    button.chainToggle:Paint(button.chainToggle:IsMouseOver())
+                end
             end
 
             if chain and chainExpanded and button.chainPanel then
@@ -1053,8 +1102,17 @@ RefreshQuestList = function()
                             RefreshQuestList()
                             RefreshQuestDetail()
                         end)
-                        row:SetScript("OnEnter", nil)
-                        row:SetScript("OnLeave", nil)
+                        row.more = row:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                        row.more:SetPoint("RIGHT", -2, 0)
+                        row.more:SetText(">")
+                        row.more:SetTextColor(1.00, 0.82, 0.25, 0.85)
+                        row:SetScript("OnEnter", function(self)
+                            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                            GameTooltip:AddLine(self.text and self.text:GetText() or "", 1, 0.82, 0.25)
+                            GameTooltip:AddLine(L("CHAIN_STEP_TIP"), 0.85, 0.85, 0.85, true)
+                            GameTooltip:Show()
+                        end)
+                        row:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
                         button.chainRows[chainIndex] = row
                     end
@@ -1431,6 +1489,34 @@ function FDJ.PlaceStepItemButtons(items, startIndex, cursorY, width)
     return cursorY
 end
 
+-- The step page's "Find <NPC>" button (objectiveMap), made the first time a
+-- step needs it. Every other quest page hides it.
+local function EnsureObjectiveMapButton()
+    if not frame or not frame.questDetailContent then return nil end
+    if frame.questObjectiveMapButton then return frame.questObjectiveMapButton end
+    local button = CreateFrame("Button", nil, frame.questDetailContent, "UIPanelButtonTemplate")
+    button:SetSize(150, 24)
+    button:SetScript("OnClick", function(self)
+        local loc = self.location
+        if loc and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
+            FDJ.MapMarkers.ShowRecordedLocationOnMap(loc, loc.label)
+        end
+    end)
+    button:SetScript("OnEnter", function(self)
+        local loc = self.location
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(L("SHOW_OBJECTIVE_ON_MAP"), 1, 0.82, 0)
+        if loc and type(loc.detail or loc.label) == "string" then
+            GameTooltip:AddLine(loc.detail or loc.label, 1, 1, 1, true)
+        end
+        GameTooltip:Show()
+    end)
+    button:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    button:Hide()
+    frame.questObjectiveMapButton = button
+    return button
+end
+
 local function RefreshPrerequisiteQuestDetail(step)
     if not frame or not step then return false end
 
@@ -1598,6 +1684,25 @@ local function RefreshPrerequisiteQuestDetail(step)
     frame.questDetailText:SetTextColor(0.10, 0.065, 0.025)
     frame.questDetailText:Show()
     cursorY = cursorY + (frame.questDetailText:GetStringHeight() or 40) + 14
+
+    -- A step whose objective is done somewhere other than the pickup or
+    -- turn-in (kill Ambassador Malcin outside Razorfen Downs): a button that
+    -- shows that place on the map.
+    local objectiveSpot = details.objectiveMap
+    if type(objectiveSpot) == "table" and objectiveSpot.mapID then
+        local button = EnsureObjectiveMapButton()
+        if button then
+            button.location = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(objectiveSpot)) or objectiveSpot
+            local target = objectiveSpot.targetName
+            button:SetText(target and L("FIND_TARGET_ON_MAP", target) or L("SHOW_OBJECTIVE_ON_MAP"))
+            local fs = button:GetFontString()
+            button:SetWidth(math.max(120, ((fs and fs:GetStringWidth()) or 100) + 26))
+            button:ClearAllPoints()
+            button:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+            button:Show()
+            cursorY = cursorY + 34
+        end
+    end
 
     local detailWidth = math.max(260, (frame.questDetailScroll:GetWidth() or 350) - 4)
     local stepRequired = details.requiredItems
@@ -1826,6 +1931,7 @@ RefreshQuestDetail = function()
     for _, button in ipairs(FDJ.questNoteRewardButtons) do HideSearchItemHighlight(button) end
     if frame and frame.questNoteItemButton then HideSearchItemHighlight(frame.questNoteItemButton) end
     if not frame or not frame.questDetailText then return end
+    if frame.questObjectiveMapButton then frame.questObjectiveMapButton:Hide() end
 
     if selectedPrereqStep then
         if RefreshPrerequisiteQuestDetail(selectedPrereqStep) then return end
@@ -1983,6 +2089,23 @@ RefreshQuestDetail = function()
     frame.questDetailText:SetText(QuestField(quest.id, "objective", quest.objective))
     frame.questDetailText:SetTextColor(0.10, 0.065, 0.025)
     cursorY = cursorY + (frame.questDetailText:GetStringHeight() or 30) + 13
+
+    -- Objective done out in the world (Ambassador Malcin): "Find <NPC>".
+    local objectiveSpot = quest.objectiveMap
+    if type(objectiveSpot) == "table" and objectiveSpot.mapID then
+        local button = EnsureObjectiveMapButton()
+        if button then
+            button.location = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(objectiveSpot)) or objectiveSpot
+            local target = objectiveSpot.targetName
+            button:SetText(target and L("FIND_TARGET_ON_MAP", target) or L("SHOW_OBJECTIVE_ON_MAP"))
+            local fs = button:GetFontString()
+            button:SetWidth(math.max(120, ((fs and fs:GetStringWidth()) or 100) + 26))
+            button:ClearAllPoints()
+            button:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+            button:Show()
+            cursorY = cursorY + 34
+        end
+    end
 
     if quest.requiredItem and frame.questRequiredItemButton then
         cursorY = PlaceHeader(frame.questRequiredItemsHeader, cursorY)

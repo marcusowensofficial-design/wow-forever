@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.7.4 by Exehn
+Forever Dungeon Journal v1.7.5 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,14 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.7.5
+- Added Data/QuestLocations.lua with verified start, turn-in, and objective map
+  coordinates across dungeon quests and prerequisite chain steps.
+- Added "Find <NPC>" objective map buttons (objectiveMap) in QuestsTab and
+  QuestText tracker routing for out-of-dungeon quest steps.
+- Added expandable inline quest chain bar in the quest list and refined dungeon
+  route/chain metadata.
 
 CHANGES IN 1.7.4
 - Fixed the green [Owned] badge never appearing on boss loot, Loot Explorer and

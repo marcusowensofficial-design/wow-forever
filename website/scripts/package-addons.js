@@ -44,10 +44,11 @@ const IGNORE_PATTERNS = [
   /Thumbs\.db/i,
   /SKILL\.md$/i,
   /ARCHITECTURE\.md$/i,
+  /QUEST_CLARITY_PLAN\.md$/i,
   /\.pkgmeta$/i,
   /\.orig(\.|$)/i,
   /_backup/i,
-  /\.bak$/i,
+  /\.bak(_|$)/i,
   /_merge_preview/i,
   /(^|\/)dev(\/|$)/i
 ];

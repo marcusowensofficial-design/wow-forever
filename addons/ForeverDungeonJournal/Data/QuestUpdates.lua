@@ -139,8 +139,68 @@ FDJ.FOREVER_QUEST_XP_FALLBACK[95140] = 2650
 FDJ.QUEST_PREREQ_CHAINS[6521] = {
     { id = 6522, name = "An Unholy Alliance" },
 }
-FDJ.QUEST_PREREQ_DETAILS[6522] = { level = 36, requires = 28, startsInDungeon = true, objective = "Take the Small Scroll to Varimathras in the Undercity.", pickup = "Small Scroll, dropped by Charlga Razorflank (boss) inside Razorfen Kraul", startItem = {17008, "Small Scroll", 1, "Drops from Charlga Razorflank in Razorfen Kraul"}, turnin = "Varimathras, Royal Quarter, Undercity" }
-FDJ.QUEST_PREREQ_DETAILS[6521] = { level = 36, requires = 28, objective = "Bring Ambassador Malcin's Head to Varimathras in the Undercity.", pickup = "Varimathras, Royal Quarter, Undercity", turnin = "Varimathras, Royal Quarter, Undercity", description = "Final step. Ambassador Malcin is outside Razorfen Downs." }
+do
+    local VARIMATHRAS = { mapID = 1458, x = 0.562, y = 0.926, label = "Varimathras — Royal Quarter, Undercity", targetName = "Varimathras", detail = "Varimathras: beside Lady Sylvanas in the Royal Quarter, Undercity" }
+    -- Ambassador Malcin: outside the Razorfen Downs portal (not inside the
+    -- dungeon). Main spawn first; he also spawns at the alternates below.
+    local MALCIN = { mapID = 1413, x = 0.480, y = 0.935, label = "Ambassador Malcin — outside Razorfen Downs", targetName = "Ambassador Malcin", detail = "Ambassador Malcin (level 36 elite): outside the Razorfen Downs portal. Alternates: 47.8 90.7, 48.0 92.0, 48.0 95.0, 46.2 90.2" }
+    local MALCIN_WHERE = "Ambassador Malcin is OUTSIDE the Razorfen Downs instance portal, in the far south of The Barrens — not inside the dungeon.\n"
+        .. "Main spawn: 48.0, 93.5\n"
+        .. "He has several spawn points. If he is not there, check the nearby huts and tents at 47.8, 90.7  •  48.0, 92.0  •  48.0, 95.0  •  46.2, 90.2\n"
+        .. "He is a level 36 elite with quilboar around him, so bring help if you need it."
+    FDJ.UNHOLY_ALLIANCE_MALCIN = MALCIN
+
+    FDJ.QUEST_PREREQ_DETAILS[6522] = {
+        level = 36, requires = 28, startsInDungeon = true,
+        objective = "Take the Small Scroll to Varimathras in the Undercity.",
+        description = "Part 1 of 2 (Horde only, level 28+). Loot the Small Scroll from Charlga Razorflank, the last boss of Razorfen Kraul, and right-click it in your bags to start this quest.\n"
+            .. "Bring it to Varimathras in the Royal Quarter of Undercity (56.2, 92.6). He gives you part 2, also called An Unholy Alliance: kill Ambassador Malcin outside Razorfen Downs.",
+        pickup = "Small Scroll, dropped by Charlga Razorflank (boss) inside Razorfen Kraul",
+        startItem = {17008, "Small Scroll", 1, "Drops from Charlga Razorflank in Razorfen Kraul"},
+        turnin = "Varimathras, Royal Quarter, Undercity (56.2, 92.6)",
+        turninMap = VARIMATHRAS,
+    }
+    FDJ.QUEST_PREREQ_DETAILS[6521] = {
+        level = 36, requires = 28,
+        objective = "Bring Ambassador Malcin's Head to Varimathras in the Undercity.",
+        description = "Part 2 of 2. " .. MALCIN_WHERE,
+        pickup = "Varimathras, Royal Quarter, Undercity (56.2, 92.6)",
+        map = VARIMATHRAS,
+        objectiveMap = MALCIN,
+        turnin = "Varimathras, Royal Quarter, Undercity (56.2, 92.6)",
+        turninMap = VARIMATHRAS,
+    }
+
+    -- The journal's own An Unholy Alliance entries (Razorfen Kraul and
+    -- Razorfen Downs): where Malcin is, for the quest page and the tracker.
+    for _, dungeonName in ipairs({ "Razorfen Kraul", "Razorfen Downs" }) do
+        local dungeon = FDJ.DB and FDJ.DB[dungeonName]
+        for _, quest in ipairs((dungeon and dungeon.quests) or {}) do
+            if quest.id == 6521 then
+                quest.pickup = "Varimathras, Royal Quarter, Undercity (56.2, 92.6)"
+                quest.turnin = "Varimathras, Royal Quarter, Undercity (56.2, 92.6)"
+                quest.turninMap = VARIMATHRAS
+                quest.objectiveMap = MALCIN
+                quest.objectiveWhere = "Ambassador Malcin, outside the Razorfen Downs portal (48.0, 93.5); alternates 47.8 90.7, 48.0 92.0, 48.0 95.0, 46.2 90.2"
+                quest.note = "Starts from the Small Scroll dropped by Charlga Razorflank in Razorfen Kraul: hand the scroll to Varimathras first (part 1), then he sends you after Malcin.\n\n" .. MALCIN_WHERE
+                quest.warning = "This quest is completed in the area OUTSIDE Razorfen Downs."
+            end
+        end
+    end
+    FDJ.QUEST_START_MAPS = FDJ.QUEST_START_MAPS or {}
+    FDJ.QUEST_START_MAPS[6521] = VARIMATHRAS
+
+    -- The English text above replaces older, vaguer lines: drop their
+    -- translations so no locale keeps showing the old wording.
+    for _, content in pairs(FDJ.ContentLocales or {}) do
+        local quests = content.quests or {}
+        for _, id in ipairs({ 6521, 6522 }) do
+            if quests[id] then
+                quests[id].pickup, quests[id].turnin, quests[id].note, quests[id].description = nil, nil, nil, nil
+            end
+        end
+    end
+end
 FDJ.PREREQ_REWARD_ITEMS_FALLBACK[6521] = { items = { {17039, "Skullbreaker", 2}, {17042, "Nail Spitter", 2}, {17043, "Zealot's Robe", 2}, {270054, "Cultist's Chestguard", 3} }, choice = true }
 FDJ.PREREQ_REWARD_MONEY_FALLBACK[6521] = 2000
 FDJ.FOREVER_QUEST_XP_FALLBACK[6521] = 3500
@@ -2073,3 +2133,86 @@ do
     if FDJ.QUEST_SHAREABILITY_AUDIT then FDJ.QUEST_SHAREABILITY_AUDIT[97196] = true end
 end
 -- END coldbringerhorde
+
+-- BEGIN stepmaps
+-- Quest chain steps only got a Show on Map / Show Turn In button when their
+-- own entry carried coordinates, so most steps ended at a bare NPC name. Any
+-- NPC the journal already has a recorded spot for (quest givers, turn-in
+-- spots, other quests' turn-ins, NPCs on the dungeon maps) now lends that spot
+-- to the steps that name them. Only exact, unambiguous name matches count: an
+-- NPC recorded in two different places (Tirion Fordring, Nathanos) is left
+-- alone rather than guessed. Runs last, after every data file.
+do
+    local function Trim(s) return (s:gsub("^%s+", ""):gsub("%s+$", "")) end
+    -- "Varimathras, Royal Quarter, Undercity (56.2, 92.6)" -> "varimathras"
+    local function NpcOf(text)
+        if type(text) ~= "string" or text == "" then return nil end
+        local npc = text:match("^([^,(]+)")
+        npc = npc and Trim(npc)
+        if not npc or npc == "" then return nil end
+        return npc:lower()
+    end
+    local function NameOf(spot)
+        if type(spot) ~= "table" then return nil end
+        local n = spot.targetName or spot.npc
+        if not n and type(spot.label) == "string" then n = spot.label:match("^(.-)%s+—") or spot.label end
+        return type(n) == "string" and Trim(n):lower() or nil
+    end
+
+    local world, conflict = {}, {}
+    local function AddWorld(spot)
+        if type(spot) ~= "table" or not spot.mapID or not spot.x or not spot.y then return end
+        local name = NameOf(spot)
+        if not name or conflict[name] then return end
+        local have = world[name]
+        if not have then
+            world[name] = spot
+        elseif have.mapID ~= spot.mapID or math.abs(have.x - spot.x) > 0.03 or math.abs(have.y - spot.y) > 0.03 then
+            world[name], conflict[name] = nil, true
+        end
+    end
+    for _, spot in pairs(FDJ.QUEST_START_MAPS or {}) do AddWorld(spot) end
+    for _, spot in ipairs(FDJ.TURNIN_SPOTS or {}) do AddWorld(spot) end
+    for _, dungeon in pairs(FDJ.DB or {}) do
+        if type(dungeon) == "table" then
+            for _, quest in ipairs(dungeon.quests or {}) do AddWorld(quest.turninMap); AddWorld(quest.startMap) end
+        end
+    end
+    for _, details in pairs(FDJ.QUEST_PREREQ_DETAILS or {}) do
+        if type(details) == "table" then AddWorld(details.map); AddWorld(details.turninMap) end
+    end
+
+    -- NPCs standing inside a dungeon (Commander Gor'shak, Belnistrasz...).
+    local inside, insideConflict = {}, {}
+    for dungeonName, mapData in pairs(FDJ.DUNGEON_MAPS or {}) do
+        for _, ti in ipairs((type(mapData) == "table" and mapData.turnins) or {}) do
+            local name = ti.npc and Trim(ti.npc):lower()
+            if name and not insideConflict[name] then
+                if inside[name] then
+                    inside[name], insideConflict[name] = nil, true
+                else
+                    inside[name] = { dungeon = dungeonName, floor = ti.floor or 1, x = ti.x, y = ti.y, label = ti.npc, targetName = ti.npc, npc = ti.npc }
+                end
+            end
+        end
+    end
+
+    local filledTurnin, filledPickup = 0, 0
+    for _, details in pairs(FDJ.QUEST_PREREQ_DETAILS or {}) do
+        if type(details) == "table" then
+            if not details.turninMap then
+                local npc = NpcOf(details.turnin)
+                local spot = npc and (world[npc] or (not conflict[npc] and inside[npc]))
+                if spot then details.turninMap, filledTurnin = spot, filledTurnin + 1 end
+            end
+            -- Pickup buttons open the world map, so world spots only.
+            if not details.map and not details.startItem then
+                local npc = NpcOf(details.pickup)
+                local spot = npc and world[npc]
+                if spot then details.map, filledPickup = spot, filledPickup + 1 end
+            end
+        end
+    end
+    FDJ.STEP_MAPS_FILLED = { turnin = filledTurnin, pickup = filledPickup }
+end
+-- END stepmaps

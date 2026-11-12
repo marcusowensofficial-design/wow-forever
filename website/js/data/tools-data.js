@@ -3956,10 +3956,10 @@ Built specifically for the **Camelot 12.0 engine** (Interface 16001), our 6 comp
 
 | Addon Package | Latest Version | Memory Footprint | Primary Functionality | Core Slash Command |
 | :--- | :--- | :--- | :--- | :--- |
-| **ForeverPlates** | v2.2.1 | 607 KB | High-contrast unit nameplates, execute coloring, threat outlines | \`/fp\` or \`/foreverplates\` |
+| **ForeverPlates** | v2.2.2 | 608 KB | High-contrast unit nameplates, execute coloring, threat outlines | \`/fp\` or \`/foreverplates\` |
 | **Foreverplatescastbars** | v2.3.0 | 372 KB | Sub-pixel calibrated spell castbars with interrupt immunity shields | \`/fpc\` |
 | **ForeverLiquid** | v1.4.0 | 155 KB | Floating HUD tracking XP/hr, 5/hr dungeon lockouts, Mount Fund ETA | \`/liquid\` or \`/fl\` |
-| **ForeverDungeonJournal** | v1.7.4 | 58.7 MB | Boss abilities, loot tables, sub-pixel maps, and **/fj import** BiS lists | \`/fj\` or \`/journal\` |
+| **ForeverDungeonJournal** | v1.7.5 | 58.7 MB | Boss abilities, loot tables, sub-pixel maps, and **/fj import** BiS lists | \`/fj\` or \`/journal\` |
 | **ForeverBlessings** | v1.1.0 | 13 KB | Paladin 15-minute blessing grid with 1-click intelligent rebuffing | \`/fb\` or \`/blessings\` |
 | **EchoTwist** | v1.0.0 | 28 KB | Shaman 9-second Windfury / Grace of Air totem twisting visualizer | \`/et\` or \`/echotwist\` |
 

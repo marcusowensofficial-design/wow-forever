@@ -4081,7 +4081,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.7.4) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.7.5) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {

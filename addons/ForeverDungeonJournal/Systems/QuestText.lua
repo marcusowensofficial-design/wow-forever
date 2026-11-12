@@ -1284,6 +1284,10 @@ do
                         entry.state = "ready"
                     else
                         entry.state = "log"
+                        -- A step done somewhere else first (kill Ambassador
+                        -- Malcin outside Razorfen Downs) points there until done.
+                        local goTo = details.objectiveMap
+                        if type(goTo) == "table" and goTo.mapID then entry.turnin, entry.goTo = goTo, true end
                     end
                 elseif not current then
                     current = true
@@ -1729,7 +1733,7 @@ do
             local entry = self:GetParent().entry
             if JustDragged() or not entry then return end
             local spot, turnIn = entry.start, nil
-            if entry.state == "ready" or entry.state == "log" then spot, turnIn = entry.turnin, true end
+            if entry.state == "ready" or entry.state == "log" then spot, turnIn = entry.turnin, not entry.goTo end
             local show = FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap
             if not spot or not show then return end
             spot = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(spot)) or spot
@@ -1743,7 +1747,10 @@ do
             local id, details = entry.step.id, entry.details
             TooltipBeside(self, SIDE + 4)
             local where
-            if entry.state == "ready" or entry.state == "log" then
+            if entry.goTo and entry.turnin then
+                GameTooltip:SetText(T("SHOW_ON_MAP"), 1, 0.82, 0)
+                where = entry.turnin.detail or entry.turnin.label
+            elseif entry.state == "ready" or entry.state == "log" then
                 GameTooltip:SetText(T("SHOW_TURN_IN"), 1, 0.82, 0)
                 where = Field(id, "turnin", details.turnin)
             else
@@ -2503,7 +2510,7 @@ do
                                 pending, spot, title = true, entry.start, entry.name
                                 break
                             elseif entry.state == "log" or entry.state == "ready" then
-                                pending, spot, title, turnIn = true, entry.turnin, entry.name, true
+                                pending, spot, title, turnIn = true, entry.turnin, entry.name, not entry.goTo
                                 break
                             end
                         end

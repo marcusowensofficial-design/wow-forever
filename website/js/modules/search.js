@@ -179,7 +179,7 @@ function buildSearchIndex() {
       targetId: 'tab-addons'
     },
     {
-      title: 'ForeverPlates (v2.2.1) — Zero-Taint Pixel Nameplate Engine',
+      title: 'ForeverPlates (v2.2.2) — Zero-Taint Pixel Nameplate Engine',
       icon: '🎯',
       desc: 'C-side health formatting on <secret number> values, threat colors, execute borders, and /fp test mode.',
       targetId: 'card-foreverplates'
@@ -197,7 +197,7 @@ function buildSearchIndex() {
       targetId: 'card-foreverliquid'
     },
     {
-      title: 'ForeverDungeonJournal (v1.7.4) — Classic+ Encounter Atlas & BiS Wishlist',
+      title: 'ForeverDungeonJournal (v1.7.5) — Classic+ Encounter Atlas & BiS Wishlist',
       icon: '📖',
       desc: 'All 13 Classic+ dungeons, 3D boss viewer, calibrated maps, and /fj import in-game BiS wishlist starring.',
       targetId: 'card-foreverjournal'
