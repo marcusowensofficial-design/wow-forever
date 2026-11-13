@@ -133,9 +133,18 @@ function FDJ.ItemIcon(id)
 end
 
 function FDJ.QualityColor(q)
+    local quality = q or 3
     if GetItemQualityColor then
-        local r, g, b = GetItemQualityColor(q or 3)
+        local r, g, b = GetItemQualityColor(quality)
         if r then return r, g, b end
+    end
+    if C_Item and C_Item.GetItemQualityColor then
+        local r, g, b = C_Item.GetItemQualityColor(quality)
+        if r then return r, g, b end
+    end
+    local fallback = ITEM_QUALITY_COLORS and ITEM_QUALITY_COLORS[quality]
+    if fallback and fallback.r then
+        return fallback.r, fallback.g, fallback.b
     end
     return 0, 0.44, 0.87
 end
@@ -156,7 +165,8 @@ function FDJ.GetAuthoritativeItemLink(itemID, fallbackName, fallbackQuality)
     itemID = tonumber(itemID)
     if not itemID then return nil end
 
-    local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+    local _, liveLink
+    if FDJ.ItemInfo then _, liveLink = FDJ.ItemInfo(itemID) end
     if liveLink and liveLink ~= "" and liveLink:find("|Hitem:") then
         return liveLink
     end
@@ -219,7 +229,8 @@ function FDJ.HandleModifiedItemClick(link, itemID, fallbackName, fallbackQuality
 
     -- If not cached yet, query cache once more in case it just arrived
     if itemID then
-        local _, cachedLink = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+        local _, cachedLink
+        if FDJ.ItemInfo then _, cachedLink = FDJ.ItemInfo(itemID) end
         if cachedLink and cachedLink ~= "" and cachedLink:find("|Hitem:") then
             RouteLink(cachedLink)
             return true
@@ -441,7 +452,8 @@ function FDJ.ChainStartsInside(quest, dungeonName, pendingOnly)
     if type(chain) ~= "table" or #chain == 0 then return nil end
     for _, step in ipairs(chain) do
         if type(step) == "table" and step.id ~= quest.id and not (pendingOnly and step.id
-            and not step.itemStep and FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(step.id)) then
+            and not step.itemStep and ((FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(step.id))
+                or (step.acceptOnly and FDJ.IsQuestInLog and FDJ.IsQuestInLog(step.id)))) then
             local details = (step.id and detailsMap[step.id]) or {}
             return details.startsInDungeon == true or FDJ.StartsInsideDungeon(details.pickup)
                 or FDJ.StartItemDropsIn(details, dungeonName)
@@ -466,7 +478,7 @@ function FDJ.SetRowDungeonIcon(button, show, offsetX)
         icon.tex:SetAllPoints()
         local ok = icon.tex.SetAtlas and pcall(icon.tex.SetAtlas, icon.tex, "Dungeon", false)
         if not ok then
-            icon.tex:SetTexture("Interface\Icons\INV_Misc_Rune_01")
+            icon.tex:SetTexture("Interface\\Icons\\INV_Misc_Rune_01")
             icon.tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
         end
         icon:SetScript("OnEnter", function(self)

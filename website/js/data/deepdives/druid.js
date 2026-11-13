@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Druid Class Deep Dive Dataset
- * Primary Source: Sodapoppin Level-38 Sky Elf Druid Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "WoW Forever's Druid Looks Absolutely Insane!" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  * Video URL: https://www.youtube.com/watch?v=neTPC3rkJRs
  */
 
@@ -14,9 +14,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     role: "Tank / Healer / Melee & Ranged DPS",
     specs: "Balance (Eclipse/Balance of Nature) • Feral (King of the Jungle/Bear Defense Scaling) • Restoration (Wild Growth/Swiftmend)",
     hasData: true,
-    videoTitle: "WoW Forever Druid Class Deep Dive & Sky Elf Racials",
+    videoTitle: "Sodapoppin: WoW Forever's Druid Looks Absolutely Insane!",
     videoUrl: "https://www.youtube.com/watch?v=neTPC3rkJRs",
-    sourceAttribution: "Sodapoppin Level-38 Sky Elf Druid BlizzCon Early Access Demo & Closed Beta Forensics",
+    sourceAttribution: "Sodapoppin video \"WoW Forever's Druid Looks Absolutely Insane!\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
     summary: "WoW Forever transforms the Druid experience across all roles: baseline Omen of Clarity and Nature's Grasp, smooth energy regeneration and reworked Furor shifting mechanics, standard out-of-combat resurrection via Revive, alternating-school Eclipse and Balance of Nature in Balance, early Swiftmend and Wild Growth in Restoration, and defense-scaling Bear tanking with King of the Jungle Cat DPS.",
 
     subTabs: [
@@ -26,7 +26,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       { id: "balance", label: "Balance & Eclipse", icon: "🌙" },
       { id: "feral", label: "Feral Cat & Bear Tank", icon: "🐾" },
       { id: "restoration", label: "Restoration & Wild Growth", icon: "🌱" },
-      { id: "skyelf", label: "Sky Elf Testing & Races", icon: "🪶" },
+      { id: "skyelf", label: "Skyborne Testing & Races", icon: "🪶" },
       { id: "matrix", label: "Verification Matrix", icon: "🔬" }
     ],
 
@@ -34,63 +34,63 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Bear Form Critical Rage Generation (+75%)",
         status: "verified",
-        statusLabel: "Verified in Phase 2",
+        statusLabel: "Reported in Beta",
         badge: "Rage Engine (Oct 2026)",
         desc: "In the Phase 2 Level 30 patch, Bear Form and Dire Bear Form generate 75% increased Rage whenever the Druid lands a Critical Strike, solving rage starvation during boss encounters."
       },
       {
         title: "New Talent: Shifting Power (Level 60 Row 7 Capstone)",
         status: "verified",
-        statusLabel: "Verified in Phase 2",
+        statusLabel: "Reported in Beta",
         badge: "Energy Surge (Oct 2026)",
         desc: "Tiger's Fury and King of the Jungle have been removed and replaced by Shifting Power on Row 7 Col 3: instantly converts 55% of Base Mana into 40 Energy on an 8-second cooldown (was 16s), supercharging Cat burn phases!"
       },
       {
         title: "Shapeshift Disarm Immunity & Swing Timers",
         status: "verified",
-        statusLabel: "Verified in Phase 2",
+        statusLabel: "Reported in Beta",
         badge: "Combat QoL (Oct 2026)",
         desc: "All Druid shapeshift forms are now fully immune to Disarm effects! Additionally, casting Faerie Fire in form no longer resets the melee swing timer."
       },
       {
         title: "Swipe Attack Power Scaling (+3%) & Primal Bite Threat",
         status: "verified",
-        statusLabel: "Verified in Phase 2",
+        statusLabel: "Reported in Beta",
         badge: "Threat Scaling (Oct 2026)",
         desc: "Swipe correctly benefits from 3% of the Druid's total Attack Power, and Primal Bite threat generation has been roughly doubled for dungeon tanking."
       },
       {
         title: "Baseline Omen of Clarity",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Baseline Keystone",
         desc: "Omen of Clarity is now baseline for all Druids! Clearcasting is not consumed by Wrath or by abilities that cost no resources, functioning cleanly across casting and melee forms."
       },
       {
         title: "Baseline Nature's Grasp",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Baseline Utility",
         desc: "Nature's Grasp is now baseline and no longer requires a talent point, giving all Druids reactive entangling roots when struck by melee attackers."
       },
       {
         title: "Revive (Standard Resurrection)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Major QoL",
         desc: "Druids now have Revive, a standard out-of-combat resurrection spell, permanently solving the classic 30-minute Rebirth limitation for 5-man dungeon groups."
       },
       {
         title: "Smooth Energy Regeneration",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Resource Modernization",
         desc: "Cat Form energy now regenerates in a smooth, continuous flow rather than discrete, rigid 2-second ticks, providing fluid combat rhythm."
       },
       {
         title: "Furor & Power-Shifting Rework",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Form Architecture",
         desc: "Shapeshifting into Bear/Dire Bear generates 10 Rage. Shifting into Cat Form restores 20% of Energy held when last in Cat Form, plus 2 Energy per second spent outside Bear Form. Furor now allows retaining Cat Energy even when shifting into Bear/Dire Bear Form."
       },
@@ -111,9 +111,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Native Cooldown Manager: Druid Essentials",
         status: "verified",
-        statusLabel: "Verified in Beta (Oct 8)",
+        statusLabel: "Reported in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Swiftmend (15s), Wild Growth (6s), Feral Charge (15s), and Bash (1m). Major Defensives & Bursts: Innervate (6m), Rebirth (20m), Barkskin (1m), Frenzied Regeneration (3m), Nature's Swiftness (3m), Tranquility (5m), and Dash (5m). Active Procs & Buffs: Eclipse charges (stores up to 4 rapid Starfire charges), Omen of Clarity / Clearcasting procs, Predator's Swiftness instant-cast procs, Furor energy/rage retention, and Lifebloom stacks."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Swiftmend (15s), Wild Growth (6s), Feral Charge (15s), and Bash (1m). Major Defensives & Bursts: Innervate (6m), Rebirth (30m), Barkskin (1m), Frenzied Regeneration (3m), Nature's Swiftness (3m), Tranquility (5m), and Dash (5m). Active Procs & Buffs: Eclipse charges (stores up to 4 rapid Starfire charges), Omen of Clarity / Clearcasting procs, Predator's Swiftness instant-cast procs, Furor energy/rage retention, and Lifebloom stacks."
       }
     ],
 
@@ -130,27 +130,20 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Casting Wrath reduces the cast time of your next two Starfires. This effect can store up to 4 charges, allowing back-to-back rapid-fire Starfire nukes during heavy burst windows."
         },
         {
-          name: "Balance of Nature (School Weaving)",
-          type: "Rotational Keystone",
-          cast: "Passive",
-          status: "verified",
-          desc: "Rewards alternating schools: casting Nature spells increases the damage of your next Arcane spell, while casting Arcane spells increases the damage of your next Nature spell!"
-        },
-        {
-          name: "Moonkin Form (306% Armor & 3% All Crit)",
+          name: "Moonkin Form",
           type: "Signature Shapeshift",
           cast: "Instant",
           status: "verified",
-          desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306%, grants +3% Critical Strike chance to all party and raid members within 45 yards (covering spells, melee, and ranged), and grants immunity to Polymorph effects."
+          desc: "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
         },
         {
-          name: "Insect Swarm in Balance Tree",
+          name: "Insect Swarm",
           type: "DoT Relocation",
           cast: "Instant",
           cd: "No Cooldown",
           duration: "12 sec Duration",
           status: "verified",
-          desc: "Moved directly into the Balance talent tree: afflicts the target with an insect swarm, dealing Nature damage over 12 seconds and reducing their chance to hit by 2%."
+          desc: "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
         },
         {
           name: "Nature's Splendor (Extended DoTs/HoTs)",
@@ -160,12 +153,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Increases the duration of Moonfire and Regrowth by 3 seconds, Rejuvenation by 6 seconds, and extends Insect Swarm duration for sustained multi-target pressure."
         },
         {
-          name: "Spell Haste & 10% GCD Reduction",
+          name: "Nature's Grace",
           type: "Burst Haste Talent",
           cast: "Passive Proc",
           duration: "6 sec Duration",
           status: "verified",
-          desc: "Non-periodic spell critical strikes increase casting speed and reduce the global cooldown by 10% for 6 seconds."
+          desc: "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec."
         },
         {
           name: "Improved Entangling Roots",
@@ -175,11 +168,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Increases the number of simultaneous rooted targets and allows Entangling Roots to absorb damage without immediately breaking."
         },
         {
-          name: "Wrath Cast & Mana Efficiency",
+          name: "Improved Wrath",
           type: "Rotational Foundation",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces Wrath's cast time and mana cost, while increasing periodic spell damage and healing by 5%."
+          desc: "Reduces the cast time of your Wrath spell by 0.5 sec and its Mana cost by 50%. (at 5/5)"
         }
       ]
     },
@@ -188,14 +181,6 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       title: "Feral: King of the Jungle, Cat Feral Charge & Bear Defense Scaling",
       tagline: "Leap as a Cat with Feral Charge, execute Predatory Discipline excess-energy finishers, and scale Bear armor directly from Defense rating",
       talents: [
-        {
-          name: "King of the Jungle & Tiger's Fury",
-          type: "Cat Burst Keystone",
-          cast: "Instant",
-          cd: "30 sec Cooldown",
-          status: "verified",
-          desc: "Tiger's Fury increases physical damage by 15% for 6 seconds on a 30s cooldown. King of the Jungle further raises all melee damage against bleeding targets by up to 10%!"
-        },
         {
           name: "Predatory Discipline",
           type: "Feral Finisher Keystone",
@@ -213,11 +198,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Cat Form now gains its own dedicated version of Feral Charge! Leaps behind the target, dazing them and allowing immediate Shred positioning."
         },
         {
-          name: "Bear Defense-to-Armor Scaling",
+          name: "Thick Hide",
           type: "Tank Mitigation Keystone",
           cast: "Passive",
           status: "verified",
-          desc: "Grants additional base armor per level and converts Defense rating above the normal 5x level threshold into additional armor, amplified by Bear Form multipliers. Makes Defense rating a premier Bear tank stat!"
+          desc: "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms. (at 3/3)"
         },
         {
           name: "Heart of the Wild (Early Placement)",
@@ -225,15 +210,6 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Passive",
           status: "verified",
           desc: "Moved significantly earlier in the Feral tree: increases total Intellect by 10%, Bear Form Stamina by 20%, and Cat Form Strength by 10%."
-        },
-        {
-          name: "Mangle (Bear & Dire Bear)",
-          type: "Signature Tank Attack",
-          cast: "Instant",
-          cost: "15 Rage",
-          cd: "6 sec Cooldown",
-          status: "verified",
-          desc: "Delivers a ferocious strike in Bear/Dire Bear form, dealing high physical damage, generating massive threat, and increasing bleed damage taken by the target."
         },
         {
           name: "Leader of the Pack (3% Crit)",
@@ -263,7 +239,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cd: "6 sec Cooldown",
           duration: "7 sec Duration",
           status: "verified",
-          desc: "Heals the target and up to 4 injured party members within 15 yards over 7 seconds (cast time reduced to 2.5s via Naturalist). The amount healed is highest initially and rolls off over time, providing massive emergency group throughput."
+          desc: "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
         },
         {
           name: "Swiftmend (Early Placement)",
@@ -293,7 +269,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           type: "Dual-Role Scaling",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces the cast time of Healing Touch by up to 0.5 seconds and increases all physical and spell damage dealt by 1% per talent rank."
+          desc: "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.5 sec and increases all damage you deal by 10%. (at 5/5; rank 1: 0.1 sec, 2%)"
         },
         {
           name: "Nature's Focus (Anti-Pushback)",
@@ -308,7 +284,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Instant",
           cd: "3 min Cooldown",
           status: "verified",
-          desc: "When activated, makes your next Nature spell with a casting time less than 10 seconds become an instant cast, pairing perfectly with max-rank Healing Touch."
+          desc: "When activated, your next Nature spell becomes an instant cast spell."
         },
         {
           name: "Subtlety & Improved Rejuvenation",
@@ -322,38 +298,38 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
 
     racialSynergies: {
       skyElfDemo: {
-        title: "Sodapoppin's Sky Elf Druid Hands-On Demo Findings",
-        subtitle: "Forensic testing of the new Skyborne (Sky Elf) race on a Druid in the BlizzCon 2026 early access demo",
+        title: "Sodapoppin's Skyborne Druid Hands-On Demo Findings",
+        subtitle: "Testing the new Skyborne race on a Druid in Sodapoppin's beta video",
         items: [
           {
             name: "Walk on Air (10s Directional Glide)",
             status: "verified",
-            statusLabel: "Verified in Beta",
-            desc: "Active racial granting a 10-second directional glide on a 2-minute cooldown. Allows traversal over chasms and high cliffs without fall damage."
+            statusLabel: "Reported in Beta",
+            desc: "Glide downward through the air for 10 sec while controlling your direction. 90 sec cooldown."
           },
           {
             name: "Wind Blessed (+2% Haste)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Passive racial granting +2% haste to melee, ranged, and spellcasting."
           },
           {
             name: "Elemental Insight (+5% Elemental Damage)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Increases damage dealt to Elemental creatures by 5%, aiding in dungeon and raid progression."
           },
           {
-            name: "Avian Shapeshift Customizations",
+            name: "Skyborne Druid Forms (Planned)",
             status: "verified",
-            statusLabel: "Verified in Beta",
-            desc: "Features unique visual customizations for Bear, Cat, Moonkin, and Travel forms with feathers, runes, and elemental glowing accents."
+            statusLabel: "Reported in Beta",
+            desc: "Blizzard's roadmap lists updated Skyborne character models and Druid forms for early 2027. Final visuals have not been shown."
           }
         ]
       },
       newRaces: [
         {
-          race: "Sky Elf (Skyborne) Druid",
+          race: "Skyborne Druid",
           faction: "Neutral (Alliance / Horde)",
           badge: "✦ NEW IN FOREVER",
           desc: "Avian-infused scholars with Walk on Air (glide), Wind Blessed (+2% haste), and unique feathered shapeshift forms. Can choose either faction."
@@ -431,9 +407,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Moonkin Form (306% Armor)",
+        feature: "Moonkin Form (360% Armor)",
         category: "Balance",
-        details: "306% armor from items, +3% raid spell crit, Polymorph immunity",
+        details: "360% armor from items, +3% raid crit, Polymorph immunity",
         status: "Verified in Closed Beta",
         statusType: "verified",
         source: "Beta Patch Build 1.60.1.70425"
@@ -495,7 +471,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Bear Defense-to-Armor Scaling",
+        feature: "Thick Hide",
         category: "Feral Tanking",
         details: "Defense rating above cap converts to armor, multiplied by Bear Form",
         status: "Verified in Closed Beta",
@@ -511,8 +487,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Sky Elf Walk on Air",
-        category: "Sky Elf Racials",
+        feature: "Skyborne Walk on Air",
+        category: "Skyborne Racials",
         details: "10-second directional glide on a 2-minute cooldown",
         status: "Verified in Closed Beta",
         statusType: "verified",
@@ -544,7 +520,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Furor", points: "5/5", tree: "Feral (Tier 1)", desc: "Gives you a 100% chance to gain 10 Rage when shifting into Bear Form, or 40 Energy when shifting into Cat Form." },
               { name: "Feral Instinct", points: "1/5", tree: "Feral (Tier 2)", desc: "Increases threat in Bear Form by 3% and reduces chance for enemies to detect you while Prowling." }
             ],
-            legacyNotes: "Extra points obtained through Legacy Discovery unlock Sharpened Claws (+6% crit) and Blood Frenzy (combo point generation).",
+            legacyNotes: "Extra points obtained through the Legacy Talented perk unlock Sharpened Claws (+6% crit) and Blood Frenzy (combo point generation).",
             rotation: [
               { label: "Prowl Opener", desc: "Prowl -> Ravage or Shred from behind (Sap no longer breaks stealth in party play)." },
               { label: "Bleed & Build", desc: "Rake bleed upkeep -> Claw (now only 40 Energy with Ferocity) to 4-5 combo points." },
@@ -559,8 +535,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Ring", item: "Lavishly Jeweled Ring", source: "Deadmines (Gilnid)", stats: "+6 Agi, +2 Int" }
             ],
             campingPerk: {
-              name: "Primal Instinct (+5% Agility & Strength)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Wild Senses' 2-hour +5% Agi/Str buff."
+              name: "Sharpening Wheel (Blacksmithing camp object)",
+              desc: "Everyone sitting at your camp gains up to +34 Strength (level 60 value; does not stack with Strength of Earth Totem). Requires a Campfire."
             },
             classQuestNote: "Cat Form is granted at level 20 via dedicated trial quest; Aquatic Form unlocked at level 16 in Moonglade."
           },
@@ -576,10 +552,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Two-Handed Mace / Staff with High Stamina",
             talents: [
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the Rage cost of Maul and Swipe by 5, enabling smooth threat on every swing." },
-              { name: "Thick Hide", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases your Armor rating from items by 10% (amplified to over +28% total armor in Bear Form!)." },
+              { name: "Thick Hide", points: "5/5", tree: "Feral (Tier 1)", desc: "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms. (at 3/3; rank 1: 178, 0.67)" },
               { name: "Brutal Impact", points: "1/2", tree: "Feral (Tier 2)", desc: "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec." }
             ],
-            legacyNotes: "Extra Legacy points unlock Feral Charge (interrupt/root in Bear Form) and Heart of the Wild (+20% Stamina).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Feral Charge (interrupt/root in Bear Form) and Heart of the Wild (+20% Stamina).",
             rotation: [
               { label: "Pull & Group", desc: "Enrage -> Bear Form Charge -> Demoralizing Roar to lower enemy physical damage." },
               { label: "Threat Cycle", desc: "Maul on primary target -> Swipe on multiple dungeon adds -> Bash caster mobs." }
@@ -590,8 +566,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Back", item: "Kresh's Back", source: "Wailing Caverns (Kresh)", stats: "450 Armor, 13 Block, +7 Sta" }
             ],
             campingPerk: {
-              name: "Hearth of Iron (+12% Armor in Bear Form)",
-              desc: "Camp rest bonus increases Bear Form armor contribution by an extra 12% for 2 hours."
+              name: "Enchanted Lute (Enchanting camp object)",
+              desc: "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
             },
             classQuestNote: "Bear Form quest grants the level-10 Bear Form; level 20 unlocks Frenzied Regeneration."
           },
@@ -606,11 +582,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Spell Power > Nature Damage > Intellect > Spirit",
             bestWeapon: "Two-Handed Staff (Staff of Orgrimmar / Staff of Westfall / Emberstone Staff)",
             talents: [
-              { name: "Starlight Wrath", points: "5/5", tree: "Balance (Tier 1)", desc: "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec." },
+              { name: "Eclipse", points: "5/5", tree: "Balance (Tier 1)", desc: "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec. (at 3/3)" },
               { name: "Improved Moonfire", points: "5/5", tree: "Balance (Tier 1)", desc: "Increases the damage and critical strike chance of Moonfire by 10%." },
               { name: "Nature's Reach", points: "1/2", tree: "Balance (Tier 2)", desc: "Increases the range of your Wrath, Entangling Roots, Faerie Fire, and Moonfire by 10%." }
             ],
-            legacyNotes: "Extra Legacy points unlock 2/2 Nature's Grace (-0.5s cast after spell crit) and Moonkin Form.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 2/2 Nature's Grace (-0.5s cast after spell crit) and Moonkin Form.",
             rotation: [
               { label: "Rotation", desc: "Faerie Fire (decreases enemy armor) -> Moonfire -> Wrath spam." },
               { label: "Outdoor Kite", desc: "Entangling Roots rank 1 to root melee mobs while casting Wrath at 33 yards." }
@@ -621,8 +597,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Robe", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
             ],
             campingPerk: {
-              name: "Lunar Guidance (+5% Spell Power)",
-              desc: "Camp resting grants +5% bonus Spell Power and 10% Nature damage increase for 2 hours."
+              name: "Incense Candle (Herbalism camp object)",
+              desc: "Everyone sitting at your camp gains up to +25 Intellect (level 60 value; does not stack with Arcane Intellect). Requires a Campfire."
             },
             classQuestNote: "Level 20 unlocks Teleport: Moonglade rank 2 and herbalism synergy perks."
           }
@@ -647,13 +623,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy." },
               { name: "Furor", points: "5/5", tree: "Feral (Tier 1)", desc: "Gives you a 100% chance to gain 10 Rage when shifting into Bear Form, or 40 Energy when shifting into Cat Form." },
               { name: "Sharpened Claws", points: "3/3", tree: "Feral (Tier 2)", desc: "Increases your critical strike chance while in Bear, Dire Bear, or Cat Form by 6%." },
-              { name: "Savage Fury", points: "2/2", tree: "Feral (Tier 3)", desc: "Increases the damage caused by your Claw, Rake, Maul, and Swipe abilities by 20%." },
+              { name: "Savage Fury", points: "2/2", tree: "Feral (Tier 3)", desc: "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%." },
               { name: "Blood Frenzy", points: "2/2", tree: "Feral (Tier 3)", desc: "Your critical strikes from Cat Form abilities that add combo points have a 100% chance to add an additional combo point." },
               { name: "Predatory Strikes", points: "3/3", tree: "Feral (Tier 4)", desc: "Increases your melee attack power in Cat, Bear, and Dire Bear Forms by 150% of your level." },
               { name: "Faerie Fire (Feral)", points: "1/1", tree: "Feral (Tier 4 Keystone)", desc: "Instant ranged armor reduction usable in form that does not reset your melee swing timer." },
               { name: "Feral Charge", points: "1/1", tree: "Feral (Tier 3)", desc: "Causes you to charge an enemy, immobilizing them for 4 sec and interrupting any spellcasting." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Heart of the Wild in Restoration Tier 1 (+10% Strength / +20% Stamina). Shifting Power is the Level 60 Row 7 capstone (8s cooldown) converting 55% base mana into 40 Energy.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Heart of the Wild in Restoration Tier 1 (+10% Strength / +20% Stamina). Shifting Power is the Level 60 Row 7 capstone (8s cooldown) converting 55% base mana into 40 Energy.",
             rotation: [
               { label: "Opener", desc: "Prowl -> Ravage / Shred from behind (Shapeshift forms are now fully immune to Disarm!)." },
               { label: "Faerie Fire & Bleed", desc: "Apply Faerie Fire (Feral) instantly without interrupting swing timer -> Rake bleed." },
@@ -668,8 +644,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Ring", item: "Lavishly Jeweled Ring", source: "Deadmines (Gilnid)", stats: "+6 Agi, +2 Int" }
             ],
             campingPerk: {
-              name: "Primal Instinct (+5% Agility & Strength)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Wild Senses' 2-hour +5% Agi/Str buff."
+              name: "Sharpening Wheel (Blacksmithing camp object)",
+              desc: "Everyone sitting at your camp gains up to +34 Strength (level 60 value; does not stack with Strength of Earth Totem). Requires a Campfire."
             },
             classQuestNote: "Level 30 Druids gain Travel Form (40% outdoor movement speed) at trainers across Moonglade and capital cities."
           },
@@ -685,14 +661,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Manual Crowd Pummeler / Living Root / Excavation Site Ironwood Maul",
             talents: [
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the Rage cost of Maul and Swipe by 5, enabling smooth spam threat." },
-              { name: "Thick Hide", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases your Armor rating from items by 10% (amplified to over +28% total armor in Bear Form)." },
-              { name: "Feral Instinct", points: "3/5", tree: "Feral (Tier 2)", desc: "Increases threat generated in Bear Form by 9%." },
+              { name: "Thick Hide", points: "5/5", tree: "Feral (Tier 1)", desc: "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms. (at 3/3; rank 1: 178, 0.67)" },
+              { name: "Feral Instinct", points: "3/5", tree: "Feral (Tier 2)", desc: "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher." },
               { name: "Brutal Impact", points: "2/2", tree: "Feral (Tier 2)", desc: "Increases the stun duration of your Bash and Pounce abilities by 1.0 sec." },
               { name: "Feral Charge", points: "1/1", tree: "Feral (Tier 3 Keystone)", desc: "Charges an enemy, immobilizing for 4s and interrupting casts with a 15s cooldown." },
-              { name: "Sharpened Claws", points: "3/3", tree: "Feral (Tier 2)", desc: "Increases critical strike chance by 6%, supercharging the +75% Rage generated on crits." },
-              { name: "Primal Fury", points: "2/2", tree: "Feral (Tier 3)", desc: "Gives you a 100% chance to gain an additional 5 Rage whenever you score a critical strike in Bear Form." }
+              { name: "Sharpened Claws", points: "3/3", tree: "Feral (Tier 2)", desc: "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 6%. (at 2/2; rank 1: 3%)" },
+              { name: "Blood Frenzy", points: "2/2", tree: "Feral (Tier 3)", desc: "Gives you a 100% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point. (at 2/2)" }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Heart of the Wild (+20% Stamina) for immense 2,000+ HP dungeon tank pools.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Heart of the Wild (+20% Stamina) for immense 2,000+ HP dungeon tank pools.",
             rotation: [
               { label: "Pull & Gap-Close", desc: "Enrage -> Feral Charge -> Demoralizing Roar (Forms are now immune to Disarm!)." },
               { label: "Rage Generation", desc: "Auto-attack crits now generate +75% Rage; every crit gives bonus Rage to fund constant Maul attacks." },
@@ -706,8 +682,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Shield / Offhand", item: "Living Root", source: "Wailing Caverns", stats: "+6 Spi, +5 Sta, 14.8 DPS" }
             ],
             campingPerk: {
-              name: "Hearth of Iron (+12% Armor in Bear Form)",
-              desc: "Camp rest bonus increases Bear Form armor contribution by an extra 12% for 2 hours."
+              name: "Enchanted Lute (Enchanting camp object)",
+              desc: "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
             },
             classQuestNote: "Bear Form Frenzied Regeneration and Barkskin available for emergency tank damage smoothing."
           },
@@ -718,19 +694,19 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             role: "Ranged Nature & Arcane DPS",
             buildUrl: "/talents/druid?b=50322201140213--&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/505001",
-            tagline: "Signature Moonkin Form (+306% Armor, +3% party all-crit), alternating Eclipse procs, and rapid-fire Starfire nukes.",
+            tagline: "Signature Moonkin Form (+360% item Armor, +3% party all-crit), alternating Eclipse procs, and rapid-fire Starfire nukes.",
             statPriority: "Spell Power > Nature / Arcane Damage > Intellect > Spirit",
             bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of the Blessed Seer / Staff of Westfall / Staff of Orgrimmar",
             talents: [
-              { name: "Starlight Wrath", points: "5/5", tree: "Balance (Tier 1)", desc: "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec." },
+              { name: "Eclipse", points: "5/5", tree: "Balance (Tier 1)", desc: "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec. (at 3/3)" },
               { name: "Improved Moonfire", points: "5/5", tree: "Balance (Tier 1)", desc: "Increases the damage and critical strike chance of Moonfire by 10%." },
               { name: "Nature's Reach", points: "2/2", tree: "Balance (Tier 2)", desc: "Increases the range of your Wrath, Entangling Roots, Faerie Fire, and Moonfire by 20%." },
-              { name: "Nature's Grace", points: "1/1", tree: "Balance (Tier 3 Keystone)", desc: "All spell criticals grace you with a blessing of nature, reducing the cast time of your next spell by 0.5 sec." },
-              { name: "Moonglow", points: "3/3", tree: "Balance (Tier 3)", desc: "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation by 9%." },
-              { name: "Moonkin Form", points: "1/1", tree: "Balance (Tier 5 Keystone)", desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306% and grants +3% spell critical chance to party." },
+              { name: "Nature's Grace", points: "1/1", tree: "Balance (Tier 3 Keystone)", desc: "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec." },
+              { name: "Moonglow", points: "3/3", tree: "Balance (Tier 3)", desc: "Reduces the Mana cost of your damaging spells by 25%." },
+              { name: "Moonkin Form", points: "1/1", tree: "Balance (Tier 5 Keystone)", desc: "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects." },
               { name: "Vengeance", points: "4/5", tree: "Balance (Tier 4)", desc: "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 80%." }
             ],
-            legacyNotes: "Extra Legacy discovery points max out 5/5 Vengeance (+100% crit damage) and Balance of Nature school weaving.",
+            legacyNotes: "Extra points from the Legacy Talented perk max out 5/5 Vengeance (+100% crit damage) and Balance of Nature school weaving.",
             rotation: [
               { label: "School Weaving", desc: "Faerie Fire -> Moonfire (DoT + crit debuff) -> Wrath spam until Eclipse charges proc." },
               { label: "Eclipse Burst", desc: "Spend stored Eclipse charges to cast instantaneous/rapid-fire Starfire nukes with Vengeance bonus." },
@@ -742,8 +718,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Shoulders", item: "Feline Mantle", source: "Shadowfang Keep", stats: "+10 Int, +3 Spi, +2 Sta" }
             ],
             campingPerk: {
-              name: "Lunar Guidance (+5% Spell Power)",
-              desc: "Camp resting grants +5% bonus Spell Power and 10% Nature damage increase for 2 hours."
+              name: "Incense Candle (Herbalism camp object)",
+              desc: "Everyone sitting at your camp gains up to +25 Intellect (level 60 value; does not stack with Arcane Intellect). Requires a Campfire."
             },
             classQuestNote: "Moonglade Teleport provides instant access to Phase 2 trainer upgrades and herbalism reagents."
           },
@@ -760,13 +736,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Improved Mark of the Wild", points: "5/5", tree: "Restoration (Tier 1)", desc: "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 35%." },
               { name: "Nature's Focus", points: "5/5", tree: "Restoration (Tier 1)", desc: "Gives you a 70% chance to avoid interruption caused by damage while casting Healing Touch or Regrowth." },
-              { name: "Improved Healing Touch", points: "5/5", tree: "Restoration (Tier 2)", desc: "Reduces the cast time of your Healing Touch spell by 0.5 sec." },
-              { name: "Reflection", points: "3/3", tree: "Restoration (Tier 3)", desc: "Allows 15% of your Mana regeneration to continue while casting." },
+              { name: "Naturalist", points: "5/5", tree: "Restoration (Tier 2)", desc: "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.5 sec and increases all damage you deal by 10%. (at 5/5)" },
+              { name: "Reflection", points: "3/3", tree: "Restoration (Tier 3)", desc: "Allows 50% of your Mana regeneration to continue while casting." },
               { name: "Insect Swarm", points: "1/1", tree: "Restoration (Tier 3 Keystone)", desc: "Deals Nature damage over 12 sec and reduces target's physical hit chance by 2% for tank damage mitigation." },
               { name: "Swiftmend", points: "1/1", tree: "Restoration (Tier 5 Keystone)", desc: "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them for an immense burst amount." },
-              { name: "Subtlety", points: "1/5", tree: "Restoration (Tier 2)", desc: "Reduces threat generated by your healing spells by 4%." }
+              { name: "Subtlety", points: "1/5", tree: "Restoration (Tier 2)", desc: "Reduces the threat generated by your Nature and Arcane spells by 10%." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Nature's Swiftness (instant cast heal on 3-minute cooldown) and Gift of Nature (+10% healing).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Nature's Swiftness (instant cast heal on 3-minute cooldown) and Gift of Nature (+10% healing).",
             rotation: [
               { label: "HoT Blanket", desc: "Pre-cast Rejuvenation on the tank before pulling -> Regrowth for direct heal + secondary HoT." },
               { label: "Swiftmend Triage", desc: "When the tank or party spikes low, consume an active HoT with Swiftmend for instant massive burst recovery." },
@@ -778,8 +754,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Hands", item: "Gloves of the Fang", source: "Wailing Caverns", stats: "+4 Agi, +4 Int, +4 Spi" }
             ],
             campingPerk: {
-              name: "Grove Blessing (+8% Healing Power)",
-              desc: "Resting beside an active Campfire grants +8% bonus Healing Power and 10% faster Mana regeneration while out of combat."
+              name: "Mana Well (Alchemy camp object)",
+              desc: "Craft a Mana Well."
             },
             classQuestNote: "Level 20 unlocks Aquatic Form and Level 30 unlocks Travel Form for swift outdoor positioning."
           }

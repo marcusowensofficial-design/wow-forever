@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Interactive Talent Tree Calculator Dataset
- * Updated through November 3, 2026 (Launch Tuning & Class Buff Hotfixes).
+ * Talent text verified against live client build 1.60.1.70938 (November 13, 2026).
  */
 
 if (typeof window !== 'undefined') {
@@ -339,11 +339,11 @@ if (typeof window !== 'undefined') {
         "spellId": 12321,
         "req": null,
         "descriptions": [
-          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 10%, and reduces the Rage cost of Piercing Howl by 5%.",
-          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 20%, and reduces the Rage cost of Piercing Howl by 10%.",
-          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 30%, and reduces the Rage cost of Piercing Howl by 15%.",
-          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 40%, and reduces the Rage cost of Piercing Howl by 20%.",
-          "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 50%, and reduces the Rage cost of Piercing Howl by 25%."
+          "Increases the area of effect of your Shouts by 10% and reduces the Rage cost by of your Shouts and Howls by 5%.",
+          "Increases the area of effect of your Shouts by 20% and reduces the Rage cost by of your Shouts and Howls by 10%.",
+          "Increases the area of effect of your Shouts by 30% and reduces the Rage cost by of your Shouts and Howls by 15%.",
+          "Increases the area of effect of your Shouts by 40% and reduces the Rage cost by of your Shouts and Howls by 20%.",
+          "Increases the area of effect of your Shouts by 50% and reduces the Rage cost by of your Shouts and Howls by 25%."
         ]
       },
       {
@@ -1806,9 +1806,9 @@ if (typeof window !== 'undefined') {
         "maxRank": 3,
         "spellId": 20111,
         "descriptions": [
-          "Increases both Holy and physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
-          "Increases both Holy and physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
-          "Increases both Holy and physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
+          "Increases the Physical and Holy damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
+          "Increases the Physical and Holy damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
+          "Increases the Physical and Holy damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
         ],
         "req": null
       },
@@ -1857,9 +1857,9 @@ if (typeof window !== 'undefined') {
         "maxRank": 3,
         "spellId": 20049,
         "descriptions": [
-          "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
-          "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
-          "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times."
+          "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times.",
+          "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times.",
+          "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times."
         ],
         "req": 97
       },
@@ -3131,7 +3131,7 @@ if (typeof window !== 'undefined') {
         "spellId": 1329328,
         "req": null,
         "descriptions": [
-          "Your Shank ability increases your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds."
+          "Causes your Shank ability to increase your Poison damage by 30% and your chance to apply Poisons by 20% for 6 sec."
         ]
       },
       {
@@ -3323,7 +3323,7 @@ if (typeof window !== 'undefined') {
         "spellId": 1310711,
         "req": null,
         "descriptions": [
-          "Reduces the Energy cost of your Finishing Moves by 15."
+          "Reduces the Energy cost of your Eviscerate ability by 15."
         ]
       },
       {
@@ -3443,9 +3443,9 @@ if (typeof window !== 'undefined') {
         "spellId": 13975,
         "req": null,
         "descriptions": [
-          "Increases your speed while stealthed by 5% and reduces the cooldown of your Stealth ability by 2 sec.",
-          "Increases your speed while stealthed by 10% and reduces the cooldown of your Stealth ability by 4 sec.",
-          "Increases your speed while stealthed by 15% and reduces the cooldown of your Stealth ability by 6 sec."
+          "Reduces your speed penalty from your Stealth ability by 5% and reduces its cooldown by 2 sec.",
+          "Reduces your speed penalty from your Stealth ability by 10% and reduces its cooldown by 4 sec.",
+          "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 6 sec."
         ]
       },
       {
@@ -3479,11 +3479,11 @@ if (typeof window !== 'undefined') {
         "spellId": 14057,
         "req": null,
         "descriptions": [
-          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 4%.",
-          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 8%.",
-          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 12%.",
-          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 16%.",
-          "Increases the damage dealt when striking from behind with your Backstab, Garrote, Ambush, or Mutilate abilities by 20%."
+          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 4%.",
+          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 8%.",
+          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 12%.",
+          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 16%.",
+          "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 20%."
         ]
       },
       {
@@ -3587,7 +3587,7 @@ if (typeof window !== 'undefined') {
         "spellId": 14278,
         "req": null,
         "descriptions": [
-          "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. In addition, causes your next Ambush or Garrote cast within 7 seconds to not require Stealth. Awards 1 combo point."
+          "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage, increases your chance to dodge by 15% for 7 sec, and causes your next Ambush or Garrote cast within 7 sec to not require Stealth. Awards 1 combo points."
         ]
       },
       {
@@ -3687,7 +3687,7 @@ if (typeof window !== 'undefined') {
         "spellId": 16511,
         "req": 203,
         "descriptions": [
-          "An instant strike that damages the opponent and causes the target to hemorrhage, increasing the physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. In addition, increases the damage of the caster's Rupture and Garrote abilities by 15%. Awards 1 combo point."
+          "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture and Garrote damage from the Rogue. Lasts 15 sec. Awards 1 Combo Points."
         ]
       },
       {
@@ -3756,8 +3756,8 @@ if (typeof window !== 'undefined') {
         "spellId": 1310728,
         "req": 196,
         "descriptions": [
-          "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 15% for 3 seconds after sapping a target.",
-          "Increases the maximum number of targets you may have Sapped by 1 and increases your movement speed by 30% for 3 seconds after sapping a target."
+          "Increases the maximum number of targets you may have Sapped by 1, and increases your movement speed by 15% for 3 sec after Sapping a target.",
+          "Increases the maximum number of targets you may have Sapped by 1, and increases your movement speed by 30% for 3 sec after Sapping a target."
         ]
       },
       {
@@ -3773,11 +3773,11 @@ if (typeof window !== 'undefined') {
         "spellId": 1329286,
         "req": null,
         "descriptions": [
-          "Gives your Shank ability a 20% chance to add 2 combo points to the target.",
-          "Gives your Shank ability a 40% chance to add 2 combo points to the target.",
-          "Gives your Shank ability a 60% chance to add 2 combo points to the target.",
-          "Gives your Shank ability a 80% chance to add 2 combo points to the target.",
-          "Gives your Shank ability a 100% chance to add 2 combo points to the target."
+          "Grants your Shank ability a 20% chance to add 2 Combo Points to the target.",
+          "Grants your Shank ability a 40% chance to add 2 Combo Points to the target.",
+          "Grants your Shank ability a 60% chance to add 2 Combo Points to the target.",
+          "Grants your Shank ability a 80% chance to add 2 Combo Points to the target.",
+          "Grants your Shank ability a 100% chance to add 2 Combo Points to the target."
         ]
       },
       {
@@ -4086,7 +4086,7 @@ if (typeof window !== 'undefined') {
         "spellId": 402174,
         "req": null,
         "descriptions": [
-          "Launches a volley of holy light at the target, causing 45 Holy damage to an enemy, or 134 healing to an ally, instantly and every 1 sec for 2 sec."
+          "Launches a volley of holy light at the target, causing 42 Holy damage to an enemy, or 126 healing to an ally, instantly and every 1 sec for 2 sec."
         ]
       },
       {
@@ -4789,11 +4789,11 @@ if (typeof window !== 'undefined') {
         "spellId": 16039,
         "req": null,
         "descriptions": [
-          "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 2%.",
-          "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 4%.",
-          "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 6%.",
-          "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 8%.",
-          "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 10%."
+          "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+          "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 4%.",
+          "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 6%.",
+          "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 8%.",
+          "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%."
         ]
       },
       {
@@ -4954,9 +4954,9 @@ if (typeof window !== 'undefined') {
         "spellId": 29062,
         "req": null,
         "descriptions": [
-          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 23% chance to not lose casting time when you take damage.",
-          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 47% chance to not lose casting time when you take damage.",
-          "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 70% chance to not lose casting time when you take damage."
+          "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 47% chance to not lose casting time when you take damage.",
+          "Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage."
         ]
       },
       {
@@ -4972,8 +4972,8 @@ if (typeof window !== 'undefined') {
         "spellId": 28999,
         "req": null,
         "descriptions": [
-          "Increases the range of your Lightning Bolt and Chain Lightning spells by 3 yards and Earth Shock, Flame Shock, and Frost Shock by 3 yards.",
-          "Increases the range of your Lightning Bolt and Chain Lightning spells by 6 yards and Earth Shock, Flame Shock, and Frost Shock by 6 yards."
+          "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+          "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards."
         ]
       },
       {
@@ -5294,7 +5294,7 @@ if (typeof window !== 'undefined') {
         "spellId": 17364,
         "req": null,
         "descriptions": [
-          "Instantly strike with both weapons for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec. 6 sec cooldown."
+          "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec. 8 sec cooldown. (Nov 10 hotfix)"
         ]
       },
       {
@@ -5360,11 +5360,11 @@ if (typeof window !== 'undefined') {
         "spellId": 408498,
         "req": null,
         "descriptions": [
-          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 20%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 40%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 60%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 80%. Stacks up to 5 times. Lasts 30 sec.",
-          "When you deal damage with a melee weapon, you have a chance (doubled in Forever) to reduce the cast time of your next Lightning Bolt, Chain Lightning, Lesser Healing Wave, or Healing Wave spell by 100%. Stacks up to 5 times. Lasts 30 sec."
+          "When you deal damage with a melee attack, you have a chance (6 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix)",
+          "When you deal damage with a melee attack, you have a chance (7 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix)",
+          "When you deal damage with a melee attack, you have a chance (8 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix)",
+          "When you deal damage with a melee attack, you have a chance (9 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix)",
+          "When you deal damage with a melee attack, you have a chance (10 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix)"
         ]
       },
       {
@@ -5671,7 +5671,7 @@ if (typeof window !== 'undefined') {
         "spellId": 408521,
         "req": 309,
         "descriptions": [
-          "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%. 12 sec cooldown."
+          "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
         ]
       }
     ]
@@ -6346,11 +6346,11 @@ if (typeof window !== 'undefined') {
         "spellId": 11070,
         "req": null,
         "descriptions": [
-          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.1 sec.",
-          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.2 sec.",
-          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.3 sec.",
-          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.4 sec.",
-          "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.5 sec."
+          "Reduces the casting time of your Frostbolt spell by 0.1 sec.",
+          "Reduces the casting time of your Frostbolt spell by 0.2 sec.",
+          "Reduces the casting time of your Frostbolt spell by 0.3 sec.",
+          "Reduces the casting time of your Frostbolt spell by 0.4 sec.",
+          "Reduces the casting time of your Frostbolt spell by 0.5 sec."
         ]
       },
       {
@@ -6509,8 +6509,8 @@ if (typeof window !== 'undefined') {
         "spellId": 16757,
         "req": null,
         "descriptions": [
-          "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
-          "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+          "Increases the range of your Frostbolt, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+          "Increases the range of your Frostbolt, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
         ]
       },
       {
@@ -6594,7 +6594,7 @@ if (typeof window !== 'undefined') {
         "spellId": 400647,
         "req": 357,
         "descriptions": [
-          "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 1 spell cast as if the target were Frozen. Lasts 15 sec.",
+          "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 1 spells cast as if the target were Frozen. Lasts 15 sec.",
           "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 2 spells cast as if the target were Frozen. Lasts 15 sec."
         ]
       },
@@ -6958,7 +6958,7 @@ if (typeof window !== 'undefined') {
         "spellId": 1316697,
         "req": 380,
         "descriptions": [
-          "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec."
+          "Tears the target apart from within for 6 sec, inflicting 25.2 Shadow damage every 1 sec. While channeling, your Siphon Life, Corruption, and Bane of Agony effects on the target deal their periodic damage 100% faster."
         ]
       },
       {
@@ -7137,7 +7137,7 @@ if (typeof window !== 'undefined') {
         "spellId": 18788,
         "req": null,
         "descriptions": [
-          "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hr. The effect is canceled if any Demon is summoned.\n\nImp: Increases your Shadow damage by 15%.\n\nVoidwalker: Restores 2% of your total Mana every 4 sec.\n\nSuccubus/Incubus: Increases your Fire damage by 15%.\n\nFelhunter: Restores 3% of your total Health every 4 sec."
+          "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hours. The effect is canceled if any Demon is summoned. Imp: Increases your Shadow damage by 15%. Voidwalker: Restores 2% of your total Mana every 4 sec. Succubus/Incubus: Increases your Fire damage by 15%. Felhunter: Restores 3% of your total Health every 4 sec."
         ]
       },
       {
@@ -8448,7 +8448,7 @@ if (typeof window !== 'undefined') {
         "maxRank": 1,
         "spellId": 18562,
         "descriptions": [
-          "Instantly heals a friendly target with your active Rejuvenation or Regrowth effect for an amount equal to the full periodic duration of that spell without consuming the effect."
+          "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect."
         ],
         "req": null
       },

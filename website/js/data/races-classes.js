@@ -10,10 +10,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "className": "Paladin",
     "faction": "Horde",
     "role": "Tank / Healer / DPS",
-    "lore": "Former knights of the Silver Hand whose broken faith now burns with agonizing cleansing light. Unlocks the unique 'Forsaken Charger' skeletal warhorse mount at level 40!",
+    "lore": "Former knights of the Silver Hand whose broken faith now burns with agonizing cleansing light. Paladins summon the unique Forsaken Charger as their class mount.",
     "icon": "paladin-undead",
     "badgeColor": "#C41E3A",
-    "mount": "Forsaken Charger (Unique Skeletal Warhorse)"
+    "mount": "Forsaken Charger (Paladin class mount)"
   },
   {
     "race": "Dwarf",
@@ -23,7 +23,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "lore": "Wildhammer clan emissaries from the Aerie Peak who commune with storm elementals and Khaz Modan stone. Brings Bloodlust and totems to Alliance.",
     "icon": "shaman-dwarf",
     "badgeColor": "#0078FF",
-    "mount": "Armored Ram of the Storm"
+    "mount": "Ram"
   },
   {
     "race": "Gnome",
@@ -33,7 +33,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "lore": "Tinkers and scholars of Gnomeregan who analyze the divine geometry of the Light and psychological frequencies of Shadow.",
     "icon": "priest-gnome",
     "badgeColor": "#0078FF",
-    "mount": "Mechanostrider of Clarity"
+    "mount": "Mechanostrider"
   },
   {
     "race": "Orc",
@@ -43,7 +43,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "lore": "Students of ancient clan scrolls studying ley lines beneath Durotar, combining Blood Fury with devastating pyroblasts and arcane torrents.",
     "icon": "mage-orc",
     "badgeColor": "#C41E3A",
-    "mount": "Arcane-Runed War Wolf"
+    "mount": "Wolf"
   },
   {
     "race": "Human",
@@ -53,7 +53,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "lore": "Frontiersmen, royal gamekeepers, and marksmen from the Elwynn woods, accompanied by guard mastiffs and redridge cougars.",
     "icon": "hunter-human",
     "badgeColor": "#0078FF",
-    "mount": "Elwynn Steed"
+    "mount": "Horse"
   },
   {
     "race": "Troll",
@@ -63,7 +63,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "lore": "Shadow hunters and witch doctors who delve past Loa spirits into nether pacts, binding felhounds and succubi through ancient voodoo mojo.",
     "icon": "warlock-troll",
     "badgeColor": "#C41E3A",
-    "mount": "Shadow-Marked Raptor"
+    "mount": "Raptor"
   }
 ];
   window.WOW_FOREVER_DATA.allRacesData = [
@@ -73,7 +73,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Alliance",
     "icon": "👤",
     "crest": "🦁",
-    "mount": "Elwynn Steed (Horse)",
+    "mount": "Horse",
     "lore": "Resilient and adaptive defenders of the Kingdom of Stormwind. Their mastery of swords, diplomatic spirit, and indomitable will make them natural leaders.",
     "allowedClasses": [
       {
@@ -135,7 +135,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Alliance",
     "icon": "⛏️",
     "crest": "🛡️",
-    "mount": "Mountain Ram / Armored Storm Ram (Shaman)",
+    "mount": "Ram",
     "lore": "Hardy mountain-dwellers of Ironforge and the Wildhammer peaks of Aerie Peak. Master miners and storm-callers who draw resilience from Khaz Modan stone.",
     "allowedClasses": [
       {
@@ -161,7 +161,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Shaman",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Wildhammer shamans bringing Bloodlust and totems to Alliance"
+        "note": "✦ NEW IN FOREVER: Dwarves can now be Shamans, bringing Shamans to the Alliance"
       }
     ],
     "racials": [
@@ -246,7 +246,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Alliance",
     "icon": "⚙️",
     "crest": "🔧",
-    "mount": "Mechanostrider of Clarity",
+    "mount": "Mechanostrider",
     "lore": "Brilliant, eccentric inventors of Gnomeregan who analyze arcane calculus, mechanical wizardry, and divine geometry.",
     "allowedClasses": [
       {
@@ -260,7 +260,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Priest",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Tinkers of the Light and psychological Shadow mechanics"
+        "note": "✦ NEW IN FOREVER: Gnomes can now be Priests"
       },
       {
         "name": "Mage",
@@ -280,7 +280,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Eureka!",
         "type": "Active • 8s",
-        "effect": "Increases spell damage and healing by 10% and reduces spell mana cost by 10% for 8 sec. Has no charge limit and directly benefits Power Word: Shield absorption. Cannot be used while in stealth or invisibility."
+        "effect": "Your non-periodic damaging abilities cost 10% less Mana, Rage, or Energy and deal 10% more damage for 8 sec."
       },
       {
         "name": "Expansive Mind",
@@ -300,38 +300,38 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Neutral (Alliance or Horde at L10)",
     "icon": "🦅",
     "crest": "💨",
-    "mount": "Cloudrunner / Sky-Strider",
-    "lore": "A majestic neutral race of high elven wind-weavers who took refuge on Zephras Isle during the Great Sundering. Masters of aerodynamics and aerial combat.",
+    "mount": "Galestrider",
+    "lore": "A brand-new playable race from Zephras Isle. Alliance players join the High Order Skyborne and Horde players the Windshaper Skyborne. They glide with Walk on Air and draw power from leylines and elemental convergences.",
     "allowedClasses": [
       {
         "name": "Warrior",
         "isNew": true,
-        "note": "✦ NEW PLAYABLE RACE: Aerial mobility & root-breaking charge (Both Factions)"
+        "note": "✦ NEW PLAYABLE RACE: Skyborne Warriors (both Skyborne factions)"
       },
       {
         "name": "Hunter",
         "isNew": true,
-        "note": "✦ NEW PLAYABLE RACE: Wind-guided archery and cloud-falcon taming (Both Factions)"
+        "note": "✦ NEW PLAYABLE RACE: Skyborne Hunters (both Skyborne factions)"
       },
       {
         "name": "Rogue",
         "isNew": true,
-        "note": "✦ NEW PLAYABLE RACE: Gliding backstabs and thermal shadow maneuvers (Both Factions)"
+        "note": "✦ NEW PLAYABLE RACE: Skyborne Rogues (both Skyborne factions)"
       },
       {
         "name": "Druid",
         "isNew": true,
-        "note": "✦ NEW PLAYABLE RACE: Sky-eagle flight forms and wind-weave nature magic (Both Factions)"
+        "note": "✦ NEW PLAYABLE RACE: Skyborne Druids (both Skyborne factions)"
       },
       {
         "name": "Mage",
         "isNew": true,
-        "note": "✦ ALLIANCE EXCLUSIVE (High Order): Ley line scholars manipulating arcane thermals & pyroblasts"
+        "note": "✦ ALLIANCE EXCLUSIVE (High Order): Only the Alliance-aligned High Order Skyborne can be Mages"
       },
       {
         "name": "Shaman",
         "isNew": true,
-        "note": "✦ HORDE EXCLUSIVE (Windshapers): Skywall wind pact elementals binding totems & lightning"
+        "note": "✦ HORDE EXCLUSIVE (Windshapers): Only the Horde-aligned Windshaper Skyborne can be Shamans"
       }
     ],
     "racials": [
@@ -343,7 +343,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Read Leyline",
         "type": "Active • 15s • 2m CD",
-        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (100% while Attuned for 1 hr at a Ley Line; replaced by Innervate). Horde Windshapers learn Skysight: increases movement speed by 15% for 15 sec (30% while Charged for 1 hr at an elemental convergence). Attuned and Charged persist through death and are removed upon entering a raid."
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (doubled while Attuned for 1 hr at a leyline; cannot be used alongside Innervate). Horde Windshapers learn Skysight: increases movement speed by 15% for 15 sec (30% while Charged for 1 hr at an elemental convergence). Attuned and Charged persist through death and are removed upon entering a raid."
       },
       {
         "name": "Wind Blessed",
@@ -363,7 +363,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Horde",
     "icon": "🐺",
     "crest": "🪓",
-    "mount": "War Wolf / Arcane-Runed Wolf (Mage)",
+    "mount": "Wolf",
     "lore": "Fierce warriors and shamans of Durotar who have forged a noble destiny under Thrall's Horde, embracing elemental honor and ley line magics.",
     "allowedClasses": [
       {
@@ -385,7 +385,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Mage",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Durotar ley line scholars combining Blood Fury with Pyroblasts"
+        "note": "✦ NEW IN FOREVER: Orcs can now be Mages"
       },
       {
         "name": "Warlock",
@@ -421,7 +421,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "faction": "Horde",
     "icon": "💀",
     "crest": "☣️",
-    "mount": "Skeletal Warhorse / Forsaken Charger (Paladin)",
+    "mount": "Skeletal Horse / Forsaken Charger (Paladin)",
     "lore": "Free-willed undead of Lordaeron who broke free from the Lich King's grasp under Queen Sylvanas. Dark vengeance and agonizing holy light guide their crusade.",
     "allowedClasses": [
       {
@@ -431,7 +431,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Paladin",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Horde's first Paladin! Features custom Forsaken Charger skeletal warhorse"
+        "note": "✦ NEW IN FOREVER: Horde's first Paladin, with the unique Forsaken Charger class mount"
       },
       {
         "name": "Rogue",
@@ -454,12 +454,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Will of the Forsaken",
         "type": "Active",
-        "effect": "Removes Charm, Fear, and Sleep. Not available while under the effects of Scatter Shot."
+        "effect": "Instantly removes all Charm, Fear, and Sleep effects."
       },
       {
         "name": "Cannibalize",
         "type": "Active",
-        "effect": "Consume corpses to regenerate 35% Health and Mana over time. Can be channeled while immune to Physical damage."
+        "effect": "Regenerates 7% of total Health and Mana every 2 sec for 10 sec (35% total) while eating a nearby Humanoid or Undead corpse. Moving, acting, or taking damage cancels it."
       },
       {
         "name": "Underwater Breathing",
@@ -469,7 +469,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Touch of the Grave",
         "type": "Passive",
-        "effect": "Damaging attacks and spells have a 30% chance (casters) or 20% chance (melee) to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of damage dealt. 15 sec internal cooldown; does not scale with Shadow damage increases or downranking multipliers."
+        "effect": "Your spells and attacks have a chance (30% for casters, 20% for Paladins, Rogues, and Warriors) to drain Health from the target, up to 5% of your maximum Health. 15 sec internal cooldown."
       }
     ]
   },
@@ -558,7 +558,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Warlock",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Voodoo witch doctors binding nether demons through Loa mojo"
+        "note": "✦ NEW IN FOREVER: Trolls can now be Warlocks"
       }
     ],
     "racials": [
@@ -626,7 +626,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne",
         "faction": "Alliance & Horde",
         "isNew": true,
-        "note": "✦ New in Forever: Aerial mobility & root-breaking charge"
+        "note": "✦ New in Forever: Skyborne can be Warriors"
       },
       {
         "id": "orc",
@@ -682,7 +682,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "Undead (Forsaken)",
         "faction": "Horde",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Horde's first Paladin! Features custom Forsaken Charger skeletal warhorse"
+        "note": "✦ NEW IN FOREVER: Horde's first Paladin, with the unique Forsaken Charger class mount"
       }
     ]
   },
@@ -721,7 +721,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne",
         "faction": "Alliance & Horde",
         "isNew": true,
-        "note": "✦ NEW RACE & CLASS COMBINATION: Skyborne Hunter — The Skyborne are a brand-new playable neutral race in WoW Forever hailing from Zephras Isle, mastering wind-guided archery and cloud-falcon taming."
+        "note": "✦ NEW RACE & CLASS COMBINATION: Skyborne Hunter — The Skyborne are a brand-new playable race from Zephras Isle, split into the Alliance-aligned High Order and the Horde-aligned Windshapers. Both can be Hunters."
       },
       {
         "id": "orc",
@@ -783,7 +783,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne",
         "faction": "Alliance & Horde",
         "isNew": true,
-        "note": "✦ New in Forever: Gliding backstabs and thermal shadow maneuvers"
+        "note": "✦ New in Forever: Skyborne can be Rogues"
       },
       {
         "id": "orc",
@@ -839,7 +839,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "Gnome",
         "faction": "Alliance",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Mechanostrider of Clarity mount; geometric Light and mental Shadow"
+        "note": "✦ NEW IN FOREVER: Gnomes can now be Priests"
       },
       {
         "id": "undead",
@@ -871,14 +871,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "Dwarf (Wildhammer)",
         "faction": "Alliance",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Brings Bloodlust, Windfury, and totems to Alliance!"
+        "note": "✦ NEW IN FOREVER: Dwarves can now be Shamans, bringing Shamans to the Alliance"
       },
       {
         "id": "skyborne",
         "name": "The Skyborne (Windshapers)",
         "faction": "Horde",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Horde Windshapers channeling Skywall elementals, wind-infused totems & chain lightning"
+        "note": "✦ NEW IN FOREVER: Horde-aligned Windshaper Skyborne can be Shamans"
       },
       {
         "id": "orc",
@@ -928,14 +928,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne (High Order)",
         "faction": "Alliance",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Alliance High Order ley scholars manipulating arcane thermals & devastating pyroblasts"
+        "note": "✦ NEW IN FOREVER: Alliance-aligned High Order Skyborne can be Mages"
       },
       {
         "id": "orc",
         "name": "Orc",
         "faction": "Horde",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Ley line masters combining Blood Fury with devastating Pyroblasts"
+        "note": "✦ NEW IN FOREVER: Orcs can now be Mages"
       },
       {
         "id": "undead",
@@ -991,7 +991,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "Troll (Darkspear)",
         "faction": "Horde",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Voodoo witch doctors binding nether demons through Loa mojo"
+        "note": "✦ NEW IN FOREVER: Trolls can now be Warlocks"
       }
     ]
   },
@@ -1017,7 +1017,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne",
         "faction": "Alliance & Horde",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Sky-eagle flight forms and wind-weave nature magic"
+        "note": "✦ NEW IN FOREVER: Skyborne can be Druids"
       },
       {
         "id": "tauren",

@@ -1,3 +1,62 @@
+REFERENCE SITES (ranked), reviewed 12 November 2026
+===================================================
+WoW Forever launched 4 November 2026; the beta ended 23 October 2026.
+Use the highest-ranked source that covers the fact. When two disagree, prefer
+data read from the current Forever client/server over Classic-derived data, and
+note the conflict in the changelog entry below. The live client API in-game
+always wins over any website. Data from a beta build (anything read before
+launch, e.g. builds 70245-70532) is pre-launch: never let it override
+post-launch data.
+
+PRIMARY
+- https://www.wowhead.com/forever
+  Main source. Item, quest, NPC, object and zone pages live under
+  /forever/item=, /forever/quest=, /forever/npc=, plus news and guides.
+
+STRONG BACKUPS (read from the current Forever client, updated for launch)
+- https://foreverchanges.pro/
+  Dungeons with bosses/loot, quests, items, 42 rares, Forever-vs-Classic diffs.
+  Read from the game files; build 1.60.1.70938 incl. Nov 10-11 hotfixes (checked 12 Nov 2026).
+- https://wowforevertalents.com/
+  Talents, abilities, dungeons, dungeon quests, reputations, recipes.
+  Read from client 1.60.1.70888 and compared with Classic Era (checked 11 Nov 2026).
+- https://foreverdb.net/
+  Items (23k), spells, sets, quest guides, dungeons/raids, maps.
+  Extracted from the local game client; latest build listed 1.60.1.70888.
+- https://www.foreverdb.app/en/forever
+  A different site from foreverdb.net. Its items/quests/NPCs come from players
+  who run its uploader (loot, merchants, quests), so it reflects real drops.
+  Coverage varies by zone.
+- https://eternadex.com/en/
+  Items (19k), quests, NPCs, 31 dungeons. Client build 1.60.1.70862 (7 Nov 2026).
+  Spot-check a few entries before relying on it alone.
+
+GUIDES / NEWS (boss tactics, routes, quest walkthroughs, hotfix news)
+- https://www.warcrafttavern.com/forever/   Dungeon guides by tier, class/profession guides, news.
+- https://www.method.gg/wow-forever         Dungeon, class, leveling and profession guides; travel routes.
+- https://www.zockify.com/forever/          Dungeons by level, talents, class guides, tools.
+- https://www.icy-veins.com/wow-forever/    News and datamining, dungeon guides in progress.
+- https://classicwowforever.com/            Tools (dungeon journal, travel map), guides, patch/hotfix notes.
+- https://playfulls.com/                    Item database (23k), dungeon/raid loot tables, AH prices.
+
+USE WITH CARE
+- https://wowforevertools.com/   PRE-LAUNCH. Good tools and maps, but data was last refreshed on beta
+                                 build 70450 (17 Oct 2026).
+- https://foreverdiff.gg/        PRE-LAUNCH. Forever-vs-Classic diff with player-reported creature
+                                 positions, still on beta build 1.60.1.70532.
+- https://warcraftmaps.com/      Items/spells read from the client (1.60.1.70685), but quests and NPCs come
+                                 from CMaNGOS Classic-DB, so don't use it for Forever quests or NPCs.
+
+CLASSIC CROSS-CHECKS (only for things Forever did not change)
+- https://www.wowhead.com/classic   https://warcraft.wiki.gg   https://www.60.tools
+- Previously cited Forever sites: https://wowf.io  https://wowsrc.com  https://wowforeverbuilds.com
+
+LOCAL GROUND TRUTH (no website needed)
+- In-game API via SavedVariables dumps, Blizzard UI source in
+  C:\Users\marco\wow-tools\framexml\forever, and the client's own
+  Logs\Hotfix.log (lists every record the Forever server changed).
+
+
 Deadmines data references, checked 22 September 2026
 ===================================================
 Quest IDs, minimum levels, rewards and beta-only quest:
@@ -65,7 +124,7 @@ Forever beta dungeon/quest cache and XP rewards:
 https://wowforevertalents.com/dungeons/shadowfang-keep/
 
 Current beta loot observations plus Classic fallback drops:
-https://wowforevertalent.com/dungeons/shadowfang-keep/
+https://wowforevertalents.com/dungeons/shadowfang-keep/
 
 Quest giver/map cross-checks:
 https://wowhandbook.com/zones/dungeons/shadowfang-keep/

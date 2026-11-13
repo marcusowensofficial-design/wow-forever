@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.7.5 by Exehn
+Forever Dungeon Journal v1.7.6 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,16 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.7.6
+- Rituals of Power (SM Library Mage chain): added Journey to the Marsh (1947)
+  as Step 1 with Horde/Alliance Mage trainer instructions and travel directions
+  to Tabetha, and added the Plucky Johnson /beckon walkthrough to Get the Scoop.
+- Verified map coordinates and route notes for prerequisite NPCs (Scout Galiaan,
+  Wiley the Black, Alba Fairmoon, Thom Filch, Guard Berton, Dorin Songblade,
+  Archmage Tervosh, Baros Alexston, Maur Grimtotem, Hammertoe Grez).
+- Synced Forever item requirement levels, drop sources, and prerequisite XP/reward
+  data; restored multi-value API returns and icon paths.
 
 CHANGES IN 1.7.5
 - Added Data/QuestLocations.lua with verified start, turn-in, and objective map

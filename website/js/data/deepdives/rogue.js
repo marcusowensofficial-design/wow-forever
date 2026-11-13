@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Rogue Class Deep Dive Dataset
- * Primary Source: Sodapoppin Level-38 Troll Rogue Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "Rogues Just Got a MASSIVE Rework in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  * Video URL: https://www.youtube.com/watch?v=FiNZrJ24shk
  */
 
@@ -14,9 +14,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     role: "Melee DPS / Physical & Poison Burst",
     specs: "Assassination (Mutilate/Crit Poisons) • Combat (Restless Blades/Blade Flurry) • Subtlety (Death Mark Burst Engine/Preparation)",
     hasData: true,
-    videoTitle: "WoW Forever Rogue Class Deep Dive & Troll Racials",
+    videoTitle: "Sodapoppin: Rogues Just Got a MASSIVE Rework in WoW Forever",
     videoUrl: "https://www.youtube.com/watch?v=FiNZrJ24shk",
-    sourceAttribution: "Sodapoppin Level-38 Troll Rogue BlizzCon Early Access Demo & Closed Beta Forensics",
+    sourceAttribution: "Sodapoppin video \"Rogues Just Got a MASSIVE Rework in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
     summary: "WoW Forever preserves the classic Rogue control kit while introducing major modernizations: Mutilate usable without daggers, critical-strike and AP-scaling poisons, Restless Blades cooldown cycling for Adrenaline Rush and Vanish, and a transformative Death Mark burst finisher in Subtlety that stores attack damage (at double rate for Garrote and Rupture) before bursting.",
 
     subTabs: [
@@ -34,70 +34,70 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Mutilate Poison Bonus Damage",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Assassination Synergies",
         desc: "Mutilate deals +20% bonus damage when striking targets already afflicted by poisons, perfectly synergizing with AP-scaling Instant and Deadly Poisons."
       },
       {
         title: "Party Stealth & Sap Consistency",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Stealth Mechanics Fix",
         desc: "Sap no longer breaks stealth during dungeon coordination, letting rogues cleanly crowd control multiple targets without breaking stealth or pulling body aggro."
       },
       {
         title: "Poisons Scale with Attack Power & Crit",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Damage Scaling",
         desc: "Deadly, Instant, and Wound poisons can now critically strike! Furthermore, poison damage scales with Attack Power, allowing poison builds to remain lethal across all gear tiers."
       },
       {
         title: "Blind Classified as Poison",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "PvP Counterplay",
         desc: "Blind remains classified as a Poison effect in this build, meaning poison-cleansing effects (Abolish Poison, Stoneform, Purify) can cleanse it, maintaining classic counterplay."
       },
       {
         title: "Absence of Cloak of Shadows",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Toolkit Boundary",
         desc: "Cloak of Shadows is NOT present in the accessible level-38 toolkit. Rogues rely on classic defensive cooldowns (Vanish, Evasion, Sprint) rather than total magic immunity."
       },
       {
         title: "Seal Fate 100% Extra Combo Point",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Combo Engine",
         desc: "Critical strikes from combo-point-generating abilities (Sinister Strike, Backstab, Mutilate, Hemorrhage) have a 100% chance to grant 1 additional combo point."
       },
       {
         title: "Heightened Senses (+3 Levels Stealth Detection)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Stealth Supremacy",
         desc: "Treats the Rogue as 3 levels higher for stealth detection and reduces the chance of being hit by spells and ranged attacks by 4%."
       },
       {
         title: "Improved Distract (Stealth Degradation)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Tactical Utility",
         desc: "Expands Distract's radius and lowers affected enemies' stealth detection as though they were 1 level lower, allowing precision stealth bypasses."
       },
       {
         title: "Setup (Dodge/Resist Combo Points)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Defensive Synergy",
         desc: "Grants a combo point whenever the Rogue dodges an incoming physical attack or fully resists an enemy spell."
       },
       {
         title: "Native Cooldown Manager: Rogue Essentials",
         status: "verified",
-        statusLabel: "Verified in Beta (Oct 8)",
+        statusLabel: "Reported in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
         desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Sinister Strike / Daggerless Mutilate, Ghostly Strike (20s), Riposte (6s parry proc), Kidney Shot (20s), Gouge (10s), and Kick (10s). Major Defensives & Bursts: Vanish (5m), Blind (3m), Sprint (5m), Evasion (3m), Preparation (10m), Adrenaline Rush (5m), Blade Flurry (2m), and Cold Blood (3m). Active Procs & Buffs: Slice and Dice duration timer, Blade Flurry uptime, Remorseless Attacks (+40% crit), and Restless Blades cooldown refund cycling tracker."
       }
@@ -125,27 +125,27 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Your Shank ability increases your Poison damage by 30% and your chance to apply Poisons by 20% for 6 seconds."
         },
         {
-          name: "Mutilate Critical 3-Combo Point Generation",
+          name: "Seal Fate",
           type: "Synergy Mechanic",
           cast: "Passive Proc",
           status: "verified",
-          desc: "With Seal Fate's 100% combo point proc on critical strikes, a critical Mutilate awards 3 total combo points (2 base + 1 from crit), supercharging finisher cadence."
+          desc: "Your critical strikes from abilities that add combo points have a 100% chance to add an additional combo point. (at 3/3)"
         },
         {
-          name: "Kidney Shot Damage Vulnerability",
+          name: "Improved Kidney Shot",
           type: "Stun Debuff",
           cost: "25 Energy",
           cast: "Instant",
           cd: "20 sec Cooldown",
           status: "verified",
-          desc: "Stuns the target for up to 6 seconds. Targets stunned by Kidney Shot take up to 10% more damage from the Rogue's poisons and physical attacks."
+          desc: "Enemies Stunned by your Kidney Shot ability take 10% increased damage from your poisons and attacks. (at 2/2)"
         },
         {
-          name: "Poison Charge Conservation (50% Chance)",
+          name: "Improved Poisons",
           type: "Poison Mastery",
           cast: "Passive",
           status: "verified",
-          desc: "Poison applications have a 50% chance not to consume a charge, increases poison damage and application rate, and grants 30% dispel resistance to all applied poisons."
+          desc: "Increases the chance to apply Poisons to your target by 10%, and gives Poison applications a 50% chance to not consume a charge. (at 5/5)"
         },
         {
           name: "Improved Expose Armor",
@@ -167,7 +167,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           type: "Finisher Energy Refund",
           cast: "Passive",
           status: "verified",
-          desc: "Finishing moves have a 20% chance per combo point (100% at 5 CP) to restore 25 Energy, keeping the Assassination rotation fluid."
+          desc: "Your finishing moves have a 20% chance per combo point to restore 25 Energy. (at 5/5; rank 1: 4%, 25)"
         }
       ]
     },
@@ -176,13 +176,6 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       title: "Combat: Restless Blades Cooldown Cycling, Blade Flurry & Axe Mastery",
       tagline: "Rapidly reset Adrenaline Rush, Blade Flurry, Evasion, Sprint, and Vanish with every finisher, cleaving with Blade Flurry",
       talents: [
-        {
-          name: "Restless Blades (2s CDR per Combo Point)",
-          type: "Signature Combat Engine",
-          cast: "Passive",
-          status: "verified",
-          desc: "Damaging finishing moves reduce the remaining cooldown of Adrenaline Rush, Blade Flurry, Evasion, Sprint, and Vanish by 2 seconds per combo point spent (10s reduction at 5 CP!). In later beta, iterates into Flawless Execution."
-        },
         {
           name: "Blade Flurry (20% Haste & Cleave)",
           type: "Burst & Cleave Cooldown",
@@ -200,7 +193,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cd: "5 min Cooldown",
           duration: "15 sec Duration",
           status: "verified",
-          desc: "Increases Energy regeneration rate by 100% for 15 seconds. Combined with Restless Blades, the effective cooldown drops to roughly 2 to 2.5 minutes in active combat."
+          desc: "Increases your Energy regeneration rate by 100% for 15 sec."
         },
         {
           name: "Improved Kick (2s Blanket Silence)",
@@ -209,28 +202,28 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Instant",
           cd: "10 sec Cooldown",
           status: "verified",
-          desc: "Interrupts spellcasting, locking that school for 5 seconds, and gives Kick an additional 2-second blanket silence, giving Combat Rogues a hard caster lockout."
+          desc: "Gives your Kick ability a 100% chance to Silence the target for 2 sec. (at 2/2; rank 1: 50%, 2 sec)"
         },
         {
-          name: "Hack and Slash (5% Extra Attack)",
+          name: "Hack and Slash",
           type: "Weapon Mastery",
           cast: "Passive",
           status: "verified",
-          desc: "Gives you a 5% chance to get an extra attack on the same target after dealing damage with an Axe or Two-Handed weapon, rivaling classic sword procs."
+          desc: "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful\nmelee attacks have a 5% chance\nto trigger an extra attack on the\ntarget.\n\nDagger/Fist: Increases your\ncritical strike chance by 5%.\n\nMace: Your attacks ignore 15% of\nyour target's armor. (at 5/5)"
         },
         {
           name: "Weapon Expertise (Dodge/Parry Reduction)",
           type: "Expertise Scaling",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces the chance that your attacks will be dodged or parried by up to 5%, virtually eliminating glancing blow and dodge penalties against raid bosses."
+          desc: "Reduces the chance for your attacks to be Dodged or Parried by 2%. (at 2/2; rank 1: 1%)"
         },
         {
-          name: "Backstab & Mutilate Crit Synergy",
+          name: "Puncturing Wounds",
           type: "Rotational Synergies",
           cast: "Passive",
           status: "verified",
-          desc: "Increases Backstab and Mutilate critical-strike chance by up to 15%, and gives Backstab up to a 45% chance to generate an extra combo point."
+          desc: "Increases the critical strike chance of your Backstab by 30% and your Mutilate by 15%, and gives Backstab a 45% chance to add an additional Combo Point. (at 3/3)"
         },
         {
           name: "Riposte (Weapon Disarm & Damage)",
@@ -254,15 +247,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Passive",
           duration: "10 sec Buff",
           status: "verified",
-          desc: "Rupture periodic damage ticks reduce the Energy cost of your next Hemorrhage or Backstab within 10 seconds by 3, stacking up to 5 times (up to 15 Energy cost discount!)."
+          desc: "25 Energy, 20 yd range, Instant, 10 sec cooldown. Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt up to a maximum increased by Attack Power and Critical Strike chance."
         },
         {
-          name: "Serrated Strike (+50% Rupture Damage)",
+          name: "Serrated Blades",
           type: "Bleed Amplification Strike",
           cost: "35 Energy",
           cast: "Instant",
           status: "verified",
-          desc: "Strikes the target for 100% weapon damage (145% with a dagger) and causes the target to take 50% more Rupture damage from the Rogue! Also adds passive armor penetration and +30% Rupture damage."
+          desc: "Causes your attacks to ignore 9% of your target's Armor and increases the damage dealt by your Rupture ability by 30%. (at 3/3)"
         },
         {
           name: "Dirty Deeds (Frontal Garrote & -20% Cost)",
@@ -280,13 +273,6 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "When activated, this ability immediately finishes the cooldown on your Evasion, Sprint, Vanish, Cold Blood, Shadowstep, and Blind abilities."
         },
         {
-          name: "Sub-35% Execute Damage",
-          type: "Execution Passive",
-          cast: "Passive",
-          status: "verified",
-          desc: "Sinister Strike, Ghostly Strike, and Hemorrhage deal 10% more damage against targets below 35% health, providing high Subtlety execute throughput."
-        },
-        {
           name: "Ghostly Strike (15% Dodge & Strike)",
           type: "Evasive Strike",
           cost: "40 Energy",
@@ -296,18 +282,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 seconds. Awards 1 combo point and triggers Setup."
         },
         {
-          name: "Elusiveness (50% Sap/Blind Cost & CDR)",
+          name: "Elusiveness",
           type: "Control Efficiency",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces the Energy cost of Sap and Blind by 50%, while reducing the cooldown of Vanish and Blind by up to 90 seconds."
+          desc: "Reduces the cooldown of your Vanish and Blind abilities by 90 sec. (at 2/2; rank 1: 45 sec)"
         },
         {
           name: "Initiative (Bonus Opener Combo Points)",
           type: "Combo Acceleration",
           cast: "Passive",
           status: "verified",
-          desc: "Gives you a 75% chance to add an additional combo point to your target when using Ambush, Garrote, or Cheap Shot from stealth."
+          desc: "Gives you a 100% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability. (at 3/3; rank 1: 33%)"
         }
       ]
     },
@@ -320,26 +306,26 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           {
             name: "Berserking (Flat 10% Attack/Cast Speed)",
             status: "verified",
-            statusLabel: "Verified in Beta",
-            desc: "Increases melee attack speed and spellcasting speed by a flat 10% for 15 seconds, without scaling from missing health, providing consistent on-demand burst."
+            statusLabel: "Reported in Beta",
+            desc: "Increases your spellcasting and attack speed by 10% for 15 sec."
           },
           {
-            name: "Cannibalize / Ritual Rest (50% Max HP Heal)",
+            name: "Rapid Regeneration (50% Max HP over 6s)",
             status: "verified",
-            statusLabel: "Verified in Beta",
-            desc: "Active racial channeling 50% of maximum health over 6 seconds. Movement, taking damage, or actions cancel it immediately, and activation breaks Stealth."
+            statusLabel: "Reported in Beta",
+            desc: "Regenerate 50% of your maximum Health over 6 sec. Any movement, action, or damage taken cancels the effect."
           },
           {
             name: "Beast Slaying (+5% Damage to Beasts)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Passive racial granting +5% damage to all Beast-type enemies, boosting leveling and dungeon speed in beast-heavy zones."
           },
           {
-            name: "Troll Regeneration (+10% & In-Combat)",
+            name: "Regeneration (+20% & In-Combat)",
             status: "verified",
-            statusLabel: "Verified in Beta",
-            desc: "Passive health regeneration increased by 10%, with 10% of total health regeneration continuing during combat."
+            statusLabel: "Reported in Beta",
+            desc: "Health regeneration rate increased by 20%, and 20% of total Health regeneration continues during combat."
           }
         ]
       },
@@ -556,12 +542,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Agility > Melee Hit (to 5%) > Strength > Stamina",
             bestWeapon: "Slow Main-Hand Sword (Cruel Barb) + Fast Off-Hand (Thief's Blade)",
             talents: [
-              { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Energy cost of Sinister Strike by 5, allowing attacks at a baseline 40 Energy cost." },
+              { name: "Efficient Strikes", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 5. (at 2/2)" },
               { name: "Lightning Reflexes", points: "3/5", tree: "Combat (Tier 1)", desc: "Increases your Dodge chance by 3%, aiding solo survivability against dungeon elites." },
               { name: "Precision", points: "3/3", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 3%, neutralizing miss penalties against +3 level mobs." },
-              { name: "Deflection", points: "1/3", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 1%, triggering Riposte counters if unlocked." }
+              { name: "Deflection", points: "1/3", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 2%." }
             ],
-            legacyNotes: "Extra points obtained through Legacy Discovery unlock Riposte (10 Energy disarm + burst strike) and 5/5 Dual Wield Specialization.",
+            legacyNotes: "Extra points obtained through the Legacy Talented perk unlock Riposte (10 Energy disarm + burst strike) and 5/5 Dual Wield Specialization.",
             rotation: [
               { label: "Opener", desc: "Stealth -> Cheap Shot for 4-second stun or Garrote against high-armor targets (Sap no longer breaks stealth!)." },
               { label: "Slice and Dice Upkeep", desc: "Sinister Strike x2 -> Slice and Dice (1-2 combo points) to boost auto-attack speed by 30%." },
@@ -576,8 +562,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Armor Set", item: "Defias Leather (Chest/Legs/Gloves)", source: "Deadmines Defias Bosses", stats: "+10 Attack Power bonus" }
             ],
             campingPerk: {
-              name: "Shadowed Agility (+5% Agility)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Shadow Stalker' 2-hour +5% Agility buff."
+              name: "Fish Bowl (Fishing camp object)",
+              desc: "Craft a Fish Bowl."
             },
             classQuestNote: "Level 20 Rogue unlocks the Poisons questline (Instant & Crippling Poison) and Thistle Tea recipe (100 Energy restore)."
           },
@@ -593,11 +579,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Slow High-End Damage Dagger (Meteor Shard / Shadowfang)",
             talents: [
               { name: "Opportunity", points: "2/2", tree: "Subtlety (Tier 1)", desc: "Increases damage dealt with Backstab, Garrote, and Ambush by 20%." },
-              { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Sinister Strike Energy cost to 40 for when you cannot get behind targets." },
+              { name: "Efficient Strikes", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Sinister Strike Energy cost to 40 for when you cannot get behind targets." },
               { name: "Puncturing Wounds", points: "3/3", tree: "Combat (Tier 2)", desc: "Reduces the Energy cost of Backstab to 41, matching Sinister Strike efficiency!" },
               { name: "Remorseless Attacks", points: "1/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, your next Sinister Strike, Backstab, or Ambush has +20% crit chance." }
             ],
-            legacyNotes: "Extra Legacy points unlock 5/5 Lethality (+30% crit damage bonus) and Cold Blood (guaranteed 100% crit).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Lethality (+30% crit damage bonus) and Cold Blood (guaranteed 100% crit).",
             rotation: [
               { label: "Opener", desc: "Stealth -> Ambush from behind for massive physical hit." },
               { label: "Gouge-Backstab Loop", desc: "Gouge enemy -> walk behind during incapacitate -> Backstab -> Eviscerate." }
@@ -607,8 +593,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Off Hand", item: "Tail Spike", source: "Wailing Caverns (Skum)", stats: "+4 Agi, 13.9 DPS" }
             ],
             campingPerk: {
-              name: "Lethal Edge (+5% Melee Crit)",
-              desc: "Resting beside an active Campfire grants +5% melee critical strike chance for 1 hour."
+              name: "Camp Chair (Skinning camp object)",
+              desc: "Craft a Camp Chair."
             },
             classQuestNote: "Level 20 unlocks Crippling Poison to prevent fleeing dungeon runners."
           },
@@ -628,7 +614,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Remorseless Attacks", points: "2/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, grants +40% critical strike chance on your next strike." },
               { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of Evasion and Vanish by 45 sec." }
             ],
-            legacyNotes: "Extra Legacy points unlock Ghostly Strike (15% dodge + strike) and Preparation (instant cooldown reset).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Ghostly Strike (15% dodge + strike) and Preparation (instant cooldown reset).",
             rotation: [
               { label: "Chain Kill Loop", desc: "Kill mob -> Remorseless Attacks (+40% crit) active -> Ambush next target with ~60% crit chance -> Eviscerate -> Repeat." }
             ],
@@ -637,8 +623,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Chest", item: "Tunic of Westfall", source: "Deadmines Quest", stats: "+11 Agi, +5 Sta" }
             ],
             campingPerk: {
-              name: "Silent Camouflage (+20% Stealth Speed)",
-              desc: "Camp rest bonus increases stealth movement speed by an additional 20% for 2 hours."
+              name: "Camp Tent (Leatherworking camp object)",
+              desc: "Craft a Camp Tent."
             },
             classQuestNote: "Vanish and Pickpocket quests grant valuable lockboxes and poison ingredients."
           }
@@ -660,16 +646,16 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Agility > Melee Hit (to 5%) > Strength > Stamina",
             bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Thief's Blade",
             talents: [
-              { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces the Energy cost of your Sinister Strike ability by 5." },
+              { name: "Efficient Strikes", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces the Energy cost of your Sinister Strike ability by 5." },
               { name: "Lightning Reflexes", points: "3/5", tree: "Combat (Tier 1)", desc: "Increases your Dodge chance by 3%." },
               { name: "Deflection", points: "2/3", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 2%." },
               { name: "Precision", points: "3/3", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 3%." },
               { name: "Riposte", points: "1/1", tree: "Combat (Tier 3 Keystone)", desc: "A strike that becomes active after parrying an opponent's attack. Deals 150% weapon damage and disarms the target for 6 sec on a 6s cooldown." },
               { name: "Dual Wield Specialization", points: "5/5", tree: "Combat (Tier 4)", desc: "Increases the damage done by your off-hand weapon by 50%." },
               { name: "Blade Flurry", points: "1/1", tree: "Combat (Tier 5 Keystone)", desc: "Increases attack speed by 20% and causes your attacks to strike an additional nearby opponent for 15 sec on a 2-minute cooldown." },
-              { name: "Endurance", points: "2/2", tree: "Combat (Tier 3)", desc: "Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min." }
+              { name: "Endurance", points: "2/2", tree: "Combat (Tier 3)", desc: "Reduces the cooldown of your Sprint and Evasion abilities by 60%." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Hack and Slash (5% chance to get an extra swing) and Weapon Expertise.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Hack and Slash (5% chance to get an extra swing) and Weapon Expertise.",
             rotation: [
               { label: "Stealth Pull & CC", desc: "Sap elite caster (Sap no longer breaks stealth in Forever!) -> Open with Cheap Shot." },
               { label: "Blade Flurry Burst", desc: "Pop Blade Flurry immediately on multi-mob pulls; all Sinister Strikes and white hits cleave to 2 targets." },
@@ -682,8 +668,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Chest", item: "Excavator's Tunic", source: "Excavation Site: Wetlands", stats: "+12 Agi, +8 Sta" }
             ],
             campingPerk: {
-              name: "Shadowed Agility (+5% Agility)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Shadow Stalker' 2-hour +5% Agility buff."
+              name: "Fish Bowl (Fishing camp object)",
+              desc: "Craft a Fish Bowl."
             },
             classQuestNote: "Level 30 Rogues train Lockpicking rank 3 (opening heavy iron lockboxes) and upgraded Sprint."
           },
@@ -700,13 +686,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Malice", points: "5/5", tree: "Assassination (Tier 1)", desc: "Increases your critical strike chance by 5%." },
               { name: "Ruthlessness", points: "3/3", tree: "Assassination (Tier 2)", desc: "Gives your finishing moves a 60% chance to add a combo point to your target." },
-              { name: "Murder", points: "2/2", tree: "Assassination (Tier 2)", desc: "Increases all damage dealt against Humanoid, Giant, Beast and Dragonkin targets by 2%." },
+              { name: "Murder", points: "2/2", tree: "Assassination (Tier 2)", desc: "Increases all damage dealt by 4% against Humanoid and Giant targets." },
               { name: "Relentless Strikes", points: "1/1", tree: "Assassination (Tier 3 Keystone)", desc: "Your finishing moves have a 20% chance per combo point to restore 25 Energy." },
-              { name: "Lethality", points: "5/5", tree: "Assassination (Tier 3)", desc: "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Mutilate abilities by 30%." },
+              { name: "Lethality", points: "5/5", tree: "Assassination (Tier 3)", desc: "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 20%. (at 2/2; rank 1: 10%)" },
               { name: "Improved Poisons", points: "4/5", tree: "Assassination (Tier 4)", desc: "Increases the chance to apply poisons to your target by 8% (synergizes with AP-scaling poisons)." },
               { name: "Cold Blood", points: "1/1", tree: "Assassination (Tier 5 Keystone)", desc: "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100% on a 3-minute cooldown." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Seal Fate (100% chance for an extra combo point on crit) and Vigor (+10 Max Energy).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Seal Fate (100% chance for an extra combo point on crit) and Vigor (+10 Max Energy).",
             rotation: [
               { label: "Poison Primer", desc: "Ensure Instant Poison is active on main-hand and Deadly Poison on off-hand." },
               { label: "Mutilate Burst", desc: "Mutilate strikes deal +20% bonus damage on poisoned targets; generate rapid combo points." },
@@ -719,8 +705,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Gloves", item: "Cobrahn's Grasp", source: "Wailing Caverns", stats: "+6 Agi, +3 Sta" }
             ],
             campingPerk: {
-              name: "Lethal Edge (+5% Melee Crit)",
-              desc: "Resting beside an active Campfire grants +5% melee critical strike chance for 1 hour."
+              name: "Camp Chair (Skinning camp object)",
+              desc: "Craft a Camp Chair."
             },
             classQuestNote: "Level 30 unlocks upgraded Instant Poison rank 2 and Deadly Poison rank 1."
           },
@@ -737,13 +723,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             talents: [
               { name: "Master of Deception", points: "3/3", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth." },
               { name: "Camouflage", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Increases your speed while stealthed by 15% and reduces Stealth cooldown by 5 sec." },
-              { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of your Vanish and Blind abilities by 1.5 min and Cloak/Evasion by 45 sec." },
+              { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of your Vanish and Blind abilities by 90 sec." },
               { name: "Ghostly Strike", points: "1/1", tree: "Subtlety (Tier 3 Keystone)", desc: "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec on a 20s cooldown." },
               { name: "Serrated Blades", points: "3/3", tree: "Subtlety (Tier 4)", desc: "Causes your attacks to ignore up to 300 of your target's armor and increases Rupture damage by 30%." },
-              { name: "Initiative", points: "3/3", tree: "Subtlety (Tier 3)", desc: "Gives you a 75% chance to add an additional combo point to your target when using Ambush, Garrote, or Cheap Shot." },
+              { name: "Initiative", points: "3/3", tree: "Subtlety (Tier 3)", desc: "Gives you a 100% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability." },
               { name: "Preparation", points: "1/1", tree: "Subtlety (Tier 5 Keystone)", desc: "When activated, this ability immediately finishes the cooldown on your other Rogue abilities on a 10-minute cooldown." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Hemorrhage (debuff that increases physical damage taken by target) and Premeditation.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Hemorrhage (debuff that increases physical damage taken by target) and Premeditation.",
             rotation: [
               { label: "Opener & Control", desc: "Cheap Shot -> Initiative grants bonus CP -> Ghostly Strike for immediate +15% dodge -> Rupture bleed." },
               { label: "Preparation Double-Down", desc: "In PvP or elite pinches, pop Preparation to instantly reset Evasion, Vanish, and Sprint for a second full round of defensives!" }
@@ -754,8 +740,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Back", item: "Tiger Hunter Cape", source: "Stranglethorn Vale Quest", stats: "+7 Agi, +4 Sta" }
             ],
             campingPerk: {
-              name: "Silent Camouflage (+20% Stealth Speed)",
-              desc: "Camp rest bonus increases stealth movement speed by an additional 20% for 2 hours."
+              name: "Camp Tent (Leatherworking camp object)",
+              desc: "Craft a Camp Tent."
             },
             classQuestNote: "Level 30 unlocks upgraded Vanish rank 2 and Blind powder reagents."
           }

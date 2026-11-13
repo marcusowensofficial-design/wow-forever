@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Hunter Class Deep Dive Dataset
- * Primary Source: Sodapoppin BlizzCon 2026 Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "Hunter Gets Some Big Changes in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  */
 
 if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
@@ -13,70 +13,70 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "role": "Ranged / Melee DPS",
   "specs": "Survival (Melee/Traps) • Marksmanship (Ranged/Lone Wolf) • Beast Mastery (Pets/Hawks)",
   "hasData": true,
-  "videoTitle": "Hunter Gets Some Big Changes in WoW Forever",
+  "videoTitle": "Sodapoppin: Hunter Gets Some Big Changes in WoW Forever",
   "videoUrl": "https://www.youtube.com/watch?v=9RdIJQQpggM&t=449s",
-  "sourceAttribution": "Sodapoppin Hands-On BlizzCon Early Access Demo & Closed Beta Forensics",
+  "sourceAttribution": "Sodapoppin video \"Hunter Gets Some Big Changes in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
   "coreRules": [
     {
       "title": "Pet Ability Retention Fixed",
       "status": "verified",
-      "statusLabel": "Phase 2 Beta Update (Oct 2026)",
+      "statusLabel": "Beta Change (Oct 2026)",
       "badge": "Pet Mechanics Fix",
       "desc": "Resolved the critical bug where tamed pets spontaneously forgot trained abilities (Bite, Claw, Dash, Growl) upon zoning into instanced dungeons or being dismissed."
     },
     {
       "title": "Aggressive Pet Stance Restored",
       "status": "verified",
-      "statusLabel": "Phase 2 Beta Update (Oct 2026)",
+      "statusLabel": "Beta Change (Oct 2026)",
       "badge": "Pet UI Restoration",
       "desc": "Aggressive Stance has been officially restored to the Hunter pet action bar and spellbook, giving pet commanders full tactical autonomy in outdoor combat."
     },
     {
       "title": "In-Combat Freezing Trap",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Major QoL",
       "desc": "Hunters can now drop Freezing Trap directly while in combat. The cumbersome macro requirement of Feign Death -> Drop Combat -> Place Trap is completely eliminated, dramatically smoothing PvP and dungeon crowd control."
     },
     {
       "title": "8-Yard Dead Zone Retained",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Classic Pillar",
       "desc": "The classic 8-yard dead zone (where neither ranged shots nor melee attacks can occur without adjusting distance) is retained to preserve classic spacing tactics and PvP counterplay."
     },
     {
       "title": "Disengage as Threat Reduction",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Classic Mechanic",
       "desc": "Disengage remains a melee threat-reduction tool rather than modern retail's backward acrobatics leap. Hunters must manage positioning rather than relying on an instant escape button."
     },
     {
       "title": "Ammunition & Quivers Still Required",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Authenticity",
       "desc": "Physical ammunition (arrows and bullets) and quivers/ammo pouches remain in full effect. Heavy quivers and arrow counts were clearly visible in the inventory during the demo, retaining Hunter RPG flavor."
     },
     {
       "title": "Dual Active Trap Limit (Fire & Ice) & AP Scaling",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Balance Rule",
       "desc": "Hunters may now have 1 active Fire Trap (Immolation, Explosive) and 1 active Ice Trap (Freezing, Frost) simultaneously (was 1 trap among all types). Additionally, Fire traps now scale dynamically with Attack Power."
     },
     {
       "title": "Direct Pet Movement Command",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Micro Control",
       "desc": "Hunters can directly command pets to move to a designated target location on the ground, allowing precise pre-pull placement, line-of-sight baiting, and trap routing."
     },
     {
       "title": "Dedicated Reagent Bag Slot",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Inventory QoL",
       "desc": "An additional dedicated reagent bag slot is visible in the character inventory, freeing up general container space for adventuring gear and ammunition."
     },
@@ -90,7 +90,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Native Cooldown Manager: Hunter Essentials",
       "status": "verified",
-      "statusLabel": "Verified in Beta (Oct 8)",
+      "statusLabel": "Reported in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
       "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Aimed Shot (6s), Arcane Shot (6s), Multi-Shot (10s), Strider Kick (8s melee strike), Mongoose Bite (5s dodge proc), and Concussive Shot (12s). Major Defensives & Bursts: Bestial Wrath (2m), Rapid Fire (3m), Deterrence (5m), Feign Death (30s), Intimidation (1m), Scatter Shot (30s), and shared Trap cooldowns (30s). Active Procs & Buffs: Lock and Load procs, Pet Frenzy stacks (1–5), Improved Aspect of the Hawk haste buff, and Aspect state monitoring."
     }
@@ -109,11 +109,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "A brand new rotational melee strike dealing 100% weapon damage on an 8-second cooldown. Fills a major gap in the Melee Hunter's active button rotation."
       },
       {
-        "name": "Mongoose Bite Bleed",
+        "name": "Lacerating Strikes",
         "type": "Talent Enhancement",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Adds a 21-second bleed effect equal to 40% of the Mongoose Bite damage dealt. Transforms Mongoose Bite from a simple reactive hit into a devastating sustained damage bleed."
+        "desc": "Your Mongoose Bite also causes the target to Bleed for damage equal to 40% of the damage done by Mongoose Bite over 21 sec"
       },
       {
         "name": "Counterattack",
@@ -128,7 +128,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "type": "Defensive Passive",
         "cast": "Passive (5 Ranks)",
         "status": "verified",
-        "desc": "Increases your Parry chance by up to 10% (2% per rank). Core foundation for unlocking Counterattack and Mongoose Bite triggers."
+        "desc": "Increases your Parry chance by 5%. (at 5/5; rank 1: 1%)"
       },
       {
         "name": "Deterrence",
@@ -140,33 +140,26 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "When activated, increases your Dodge and Parry chance by 25% for 10 seconds. Essential emergency survival button against melee burst."
       },
       {
-        "name": "Wing Clip Immobilize",
+        "name": "Improved Wing Clip",
         "type": "Utility Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Gives your Wing Clip ability a 7% chance to completely immobilize the target for 5 seconds."
+        "desc": "Gives your Wing Clip ability a 20% chance to immobilize the target for 5 sec. (at 3/3)"
       },
       {
-        "name": "Trap Specialization",
+        "name": "Clever Traps",
         "type": "Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Increases the duration of Freezing and Frost Traps by 30%, and increases the damage dealt by Immolation and Explosive Traps by 15%."
+        "desc": "Increases the duration of Freezing and Frost trap effects by 30% and the damage of Immolation and Explosive trap effects by 30%. (at 2/2)"
       },
       {
-        "name": "Melee Critical & Off-Hand Mastery",
+        "name": "Predator's Edge",
         "type": "Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Increases melee critical-strike damage by 30% and increases off-hand weapon damage by 50%. Cementing dual-wielding Melee Hunter as a high-DPS build."
+        "desc": "Increases your melee ability critical strike damage by 30% and your Off Hand weapon damage by 50%. (at 5/5)"
       },
-      {
-        "name": "Survival Resource Conservation",
-        "type": "Mana Sustain Talent",
-        "cast": "Passive",
-        "status": "verified",
-        "desc": "Reduces trap and melee ability mana costs by up to 60%, and gives critical strikes a 6% chance to maintain 100% mana regeneration while casting."
-      }
     ]
   },
   "marksmanship": {
@@ -200,25 +193,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Short-range shot that deals 50% weapon damage and disorients the target for 4 seconds. Any damage taken breaks the effect."
       },
       {
-        "name": "Sting Enhancements",
+        "name": "Improved Stings",
         "type": "Talent Cluster",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Provides direct damage increases to Serpent Sting, reduces the cooldown of Viper Sting (mana drain), and extends the duration of Scorpid Sting (strength/agility debuff)."
+        "desc": "Increases the damage of your Serpent Sting ability by 20%, reduces the cooldown of your Viper Sting ability by 6 sec, and increases the duration of your Scorpid Sting ability by 45 sec. (at 3/3)"
       },
       {
-        "name": "Marksmanship Mana Sustain",
+        "name": "Rapid Recuperation",
         "type": "Regeneration Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Grants 25% mana regeneration after Serpent Sting hits a target, and 50% mana regeneration after consuming the Rapid Killing buff."
+        "desc": "Afflicting a target with Serpent Sting allows 50% of your Mana Regeneration to continue while casting for 15 sec, increased to 100% when Rapid Killing is consumed. (at 2/2)"
       },
       {
-        "name": "Aimed Shot & Multi-Shot Damage Scaling",
+        "name": "Barrage",
         "type": "Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Substantial direct damage multipliers for both Aimed Shot (single-target burst) and Multi-Shot (cleave and AoE)."
+        "desc": "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 15%. (at 3/3)"
       }
     ]
   },
@@ -236,57 +229,43 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Calls down a loyal hawk to relentlessly attack your current target for 18 seconds. Up to two hawks can be active simultaneously, sharing a cooldown with Arcane Shot."
       },
       {
-        "name": "Aspect of the Hawk Haste Proc",
+        "name": "Deadly Aspects",
         "type": "Aspect Enhancement",
         "cast": "Passive Proc",
         "status": "verified",
-        "desc": "While Aspect of the Hawk is active, normal ranged auto-attacks have a chance to trigger 30% increased ranged attack speed for a short duration."
+        "desc": "While Aspect of the Hawk is active, Auto Shot has a 10% chance of increasing ranged attack speed by 30% for 12 sec. While Aspect of the Beast is active, all melee auto attacks have a 10% chance of increasing melee attack speed by 30% for 12 sec. (at 5/5)"
       },
       {
-        "name": "Aspect of the Beast Melee Haste Proc",
+        "name": "Deadly Aspects",
         "type": "Aspect Enhancement",
         "cast": "Passive Proc",
         "status": "verified",
-        "desc": "While Aspect of the Beast is active, melee auto-attacks have a chance to trigger increased melee attack speed, harmonizing with Melee Hunter builds."
+        "desc": "While Aspect of the Hawk is active, Auto Shot has a 10% chance of increasing ranged attack speed by 30% for 12 sec. While Aspect of the Beast is active, all melee auto attacks have a 10% chance of increasing melee attack speed by 30% for 12 sec. (at 5/5)"
       },
       {
-        "name": "Bestial Wrath / Pet Enrage",
+        "name": "Bestial Wrath",
         "type": "Signature Cooldown",
         "cast": "Instant",
         "cd": "2 min Cooldown",
         "duration": "18 sec Duration",
         "status": "verified",
-        "desc": "Sends the pet into a berserk rage, granting 50% additional damage and making the pet completely immune to all crowd control effects unless it is killed."
+        "desc": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
       },
       {
-        "name": "Intimidation Crit Synergy",
+        "name": "Intimidation",
         "type": "Control Cooldown",
         "cast": "Instant",
         "cd": "1 min Cooldown",
         "status": "verified",
-        "desc": "Commands the pet to intimidate the target on its next attack, stunning it for 3 seconds while also granting a 100% critical-strike chance effect."
+        "desc": "Command your pet to Stun the target for 3 sec on its next successful attack, which also gains 100% increased critical strike chance. Generates high threat."
       },
       {
-        "name": "Pet Disarm",
-        "type": "Pet Utility Ability",
-        "cast": "Instant",
-        "status": "verified",
-        "desc": "Specialized pet command/talent that physically disarms an enemy combatant by snatching their weapon for several seconds."
-      },
-      {
-        "name": "Trap Entrapment",
+        "name": "Entrapment",
         "type": "Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "When a trap triggers, affected enemies are rooted in place for 5 seconds, providing supreme kiting distance."
+        "desc": "When your traps are triggered, all affected targets are Entrapped, preventing them from moving for 5 sec. (at 5/5)"
       },
-      {
-        "name": "Pack Bond",
-        "type": "Talent",
-        "cast": "Passive",
-        "status": "verified",
-        "desc": "Increases all Hunter damage by 1% while a pet is actively summoned and by your side."
-      }
     ]
   },
   "meleeToolkit": [
@@ -314,7 +293,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         {
           "name": "Plains Running Speed Ramp",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Plains Running grants 2% movement speed per stack while continually moving outdoors, up to a maximum increase of 60%. Mounted movement speed bonus removed. Requires moving a minimum distance per second to maintain; stutter-stepping no longer maintains the effect."
         },
         {
@@ -326,25 +305,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         {
           "name": "Anti-Exploit: Displacement Verification",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Autorunning into walls does not generate stacks, and a minimum displacement per second is enforced to prevent micro-stutter exploits."
         },
         {
           "name": "War Stomp",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Instant AoE stun that affects up to 5 enemies for 2 seconds with an 8-yard radius on a reduced 90-second cooldown (was 2 minutes)."
         },
         {
           "name": "Tauren Endurance",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Grants +5% total Health (critical damage and hit chance modifiers removed)."
         },
         {
           "name": "Tauren Cultivation",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Cooldown reduced to 15 minutes (was 60 minutes). Allows gathering duplicate herb resources from cultivated nodes; picking wild herb nodes still requires Herbalism."
         }
       ]
@@ -390,7 +369,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Demo & Talent Tree Datamining"
     },
     {
-      "feature": "Mongoose Bite Bleed",
+      "feature": "Lacerating Strikes",
       "category": "Survival (Melee)",
       "details": "21-second bleed equal to 40% of Mongoose Bite damage",
       "status": "Verified in Closed Beta",
@@ -551,10 +530,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "bestWeapon": "Two-Handed Axe/Mace or Dual-Wield (Smite's Mighty Hammer / Cruel Barb)",
           "talents": [
             { "name": "Improved Tracking", "points": "5/5", "tree": "Survival (Tier 1)", "desc": "While tracking Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids, or Undead, all damage you deal to the tracked creature type is increased by 5%." },
-            { "name": "Savage Strikes", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases critical strike chance of Raptor Strike and Mongoose Bite by 20%." },
+            { "name": "Savage Strikes", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases the critical strike chance of all your melee abilities by 4%. (at 2/2; rank 1: 2%)" },
             { "name": "Deflection", "points": "1/5", "tree": "Survival (Tier 2)", "desc": "Increases parry chance by 1%, setting up Mongoose Bite and Counterattack procs." }
           ],
-          "legacyNotes": "Use Legacy Discovery bonus points to max 5/5 Deflection and unlock Counterattack (5-sec root & physical burst).",
+          "legacyNotes": "Use bonus points from the Legacy Talented perk to max 5/5 Deflection and unlock Counterattack (5-sec root & physical burst).",
           "rotation": [
             { "label": "Opener", "desc": "Drop Freezing Trap in-combat directly beneath target -> Wing Clip to establish melee supremacy." },
             { "label": "Core Melee Loop", "desc": "Raptor Strike on cooldown -> Strider Kick (instant 100% weapon dmg) -> Mongoose Bite immediately on parry." },
@@ -569,8 +548,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Ranged", "item": "Venomstrike", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "12.3 DPS, Chance on Hit: 31-45 Poison" }
           ],
           "campingPerk": {
-            "name": "Trapper's Focus (+5% Agility)",
-            "desc": "Resting inside a Camping Tent or Cozy Sleeping Bag grants a 2-hour +5% Agility buff and 10% faster trap arming."
+            "name": "Fish Bowl (Fishing camp object)",
+            "desc": "Craft a Fish Bowl."
           },
           "classQuestNote": "Level 20 Hunter unlocks Aspect of the Cheetah and Dual-Wielding trainer quest, enabling double 1-handed weapons."
         },
@@ -584,11 +563,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Agility > Ranged AP > Intellect > Stamina",
           "bestWeapon": "Bow or Gun (Venomstrike / Dwarven Blunderbuss)",
           "talents": [
-            { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the mana cost of all Shots and Stings by 10%, sustaining boss DPS." },
-            { "name": "Lethal Shots", "points": "5/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged critical strike chance by 5%." },
-            { "name": "Concussive Barrage", "points": "1/5", "tree": "Marksmanship (Tier 3)", "desc": "Gives Chimera/Auto shots a 4% chance to daze the target for 4 seconds." }
+            { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the Mana cost of your Shots, Stings, and melee abilities by 15%." },
+            { "name": "Lethal Attacks", "points": "5/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your critical strike chance with all attacks by 5%. (at 5/5)" },
           ],
-          "legacyNotes": "Extra Legacy points unlock 5/5 Improved Arcane Shot and Mortal Shots (+30% ranged crit damage).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock 5/5 Improved Arcane Shot and Mortal Shots (+30% ranged crit damage).",
           "rotation": [
             { "label": "Opener", "desc": "Hunter's Mark -> baseline Aimed Shot cast from 35 yards -> Serpent Sting." },
             { "label": "Rotational Cycle", "desc": "Auto Shot swing timer clipping -> Arcane Shot -> Multi-Shot on cooldown." },
@@ -601,8 +579,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Legs", "item": "Chausses of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Agility, +5 Stamina" }
           ],
           "campingPerk": {
-            "name": "Eagle Sight (+5% Ranged Crit)",
-            "desc": "Camp rest bonus increases maximum shot range by 3 yards and grants +5% Ranged Critical Strike chance."
+            "name": "Camp Chair (Skinning camp object)",
+            "desc": "Craft a Camp Chair."
           },
           "classQuestNote": "Level 20 Hunter unlocks Tranquilizing Shot preview and upgraded Heavy Quivers (+12% Ranged Attack Speed)."
         },
@@ -616,11 +594,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Agility > Stamina > Spirit",
           "bestWeapon": "Bow / Polearm with Pet Support Stats",
           "talents": [
-            { "name": "Endurance Training", "points": "5/5", "tree": "Beast Mastery (Tier 1)", "desc": "Increases the health of your pets by 15% and your health by 5%." },
+            { "name": "Endurance Training", "points": "5/5", "tree": "Beast Mastery (Tier 1)", "desc": "Increases the Health and Armor of your pets by 15%." },
             { "name": "Thick Hide", "points": "5/5", "tree": "Beast Mastery (Tier 2)", "desc": "Increases the armor rating of your pets by 30%, holding dungeon trash effortlessly." },
             { "name": "Bestial Swiftness", "points": "1/1", "tree": "Beast Mastery (Tier 3)", "desc": "Increases outdoor movement speed of your pets by 30%." }
           ],
-          "legacyNotes": "Extra Legacy points push towards Unleashed Fury (+20% pet damage) and Ferocity (+15% pet crit).",
+          "legacyNotes": "Extra points from the Legacy Talented perk push towards Unleashed Fury (+20% pet damage) and Ferocity (+15% pet crit).",
           "rotation": [
             { "label": "Pull", "desc": "Direct pet ground-click command into pack -> Hunter's Mark -> Growl." },
             { "label": "Sustained DPS", "desc": "Auto Shot -> Serpent Sting -> keep Mend Pet rolling to sustain pet tanking." }
@@ -630,8 +608,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Boots", "item": "Footpads of the Fang", "source": "Wailing Caverns (Lord Pythas)", "stats": "+4 Agi, +4 Sta, +4 Int" }
           ],
           "campingPerk": {
-            "name": "Bond of the Pack (+10% Pet Damage)",
-            "desc": "Camping grants a bonded aura that raises Pet Attack Power and health regeneration by 15."
+            "name": "Fish Bowl (Fishing camp object)",
+            "desc": "Craft a Fish Bowl."
           },
           "classQuestNote": "Level 20 Beast Mastery quest unlocks Summon Hawk (aerial scout & blind utility) and Call Pet slot 2."
         }
@@ -649,20 +627,20 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "role": "Melee Agility DPS & Combat Trapper",
           "buildUrl": "/talents/hunter?b=--0550032311010221&l=30&tl=5",
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/--0550032311010221",
-          "tagline": "Unprecedented melee dominance with Counterattack (5s root on parry), 20% Raptor/Mongoose crit, Mongoose Bite rolling bleeds, and in-combat Freezing Trap drops.",
+          "tagline": "Unprecedented melee dominance with Counterattack (5s root on parry), +4% melee ability crit (Savage Strikes), Mongoose Bite rolling bleeds, and in-combat Freezing Trap drops.",
           "statPriority": "Agility > Melee Attack Power > Stamina > Melee Hit",
           "bestWeapon": "Corpsemaker (RFK) / Strike of the Hydra (BFD) / Outlaw Sabre + Cruel Barb",
           "talents": [
             { "name": "Deflection", "points": "5/5", "tree": "Survival (Tier 1)", "desc": "Increases your Parry chance by 5%, setting up Counterattack and reactive strikes." },
-            { "name": "Entrapment", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 25% chance to entrap targets for 5 sec." },
+            { "name": "Entrapment", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "When your traps are triggered, all affected targets are Entrapped, preventing them from moving for 5 sec." },
             { "name": "Improved Wing Clip", "points": "3/3", "tree": "Survival (Tier 2)", "desc": "Gives your Wing Clip ability a 20% chance to immobilize the target for 5 sec." },
             { "name": "Clever Traps", "points": "2/2", "tree": "Survival (Tier 3)", "desc": "Increases the duration of Freezing and Frost Traps by 30% and trap damage by 30%." },
-            { "name": "Surefooted", "points": "3/3", "tree": "Survival (Tier 3)", "desc": "Increases hit chance by 3% and reduces movement impairing effects duration by 15%." },
-            { "name": "Deterrence", "points": "1/1", "tree": "Survival (Tier 3 Keystone)", "desc": "When activated, increases your Dodge and Parry chance by 25% for 10 sec on a 5 min cooldown." },
+            { "name": "Surefooted", "points": "3/3", "tree": "Survival (Tier 3)", "desc": "Increases your hit chance by 3% and reduces the duration of movement impairing effects on you by 30%." },
+            { "name": "Deterrence", "points": "1/1", "tree": "Survival (Tier 3 Keystone)", "desc": "When activated, increases your Dodge and Parry chance by 25% for 10 sec." },
             { "name": "Counterattack", "points": "1/1", "tree": "Survival (Tier 4 Keystone)", "desc": "A strike that becomes active after parrying an attack. Deals physical damage and immobilizes for 5 sec." },
             { "name": "Strider Kick", "points": "1/1", "tree": "Survival (Tier 5 Keystone)", "desc": "Instant rotational melee strike dealing 100% weapon damage on an 8s cooldown." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Survivalist (+10% total health) and Killer Instinct (+3% all crit chance).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Survivalist (+10% total health) and Killer Instinct (+3% all crit chance).",
           "rotation": [
             { "label": "Trap Opener", "desc": "Drop Freezing Trap in-combat directly beneath target -> Wing Clip to lock them into melee range." },
             { "label": "Parry & Counter", "desc": "On parry proc, immediately fire Counterattack to immobilize target for 5 sec." },
@@ -676,8 +654,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Shoulders", "item": "Forest Tracker Shoulders", "source": "Blackfathom Deeps", "stats": "+8 Agi, +6 Sta" }
           ],
           "campingPerk": {
-            "name": "Trapper's Focus (+5% Agility)",
-            "desc": "Resting inside a Camping Tent or Cozy Sleeping Bag grants a 2-hour +5% Agility buff and 10% faster trap arming."
+            "name": "Fish Bowl (Fishing camp object)",
+            "desc": "Craft a Fish Bowl."
           },
           "classQuestNote": "Level 30 Hunter trains heavy mail armor at trainer and unlocks upgraded Aspect of the Cheetah."
         },
@@ -692,15 +670,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Agility > Ranged AP > Ranged Hit > Intellect",
           "bestWeapon": "Master Hunter's Bow (BFD) / Venomstrike / Excavator's Boomstick",
           "talents": [
-            { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the Mana cost of your Shots and Stings by 10%." },
-            { "name": "Lethal Attacks", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Increases your ranged critical strike chance by 5%." },
-            { "name": "Careful Aim", "points": "1/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged attack power by an amount equal to 10% of your total Intellect." },
-            { "name": "Hawk Eye", "points": "3/3", "tree": "Marksmanship (Tier 3)", "desc": "Increases the range of your ranged weapons by 6 yards (out to 41 yards total!)." },
+            { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the Mana cost of your Shots, Stings, and melee abilities by 15%." },
+            { "name": "Lethal Attacks", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Increases your critical strike chance with all attacks by 5%. (at 5/5)" },
+            { "name": "Careful Aim", "points": "1/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your Attack Power by 20% of your Intellect." },
+            { "name": "Hawk Eye", "points": "3/3", "tree": "Marksmanship (Tier 3)", "desc": "Increases the range of your ranged weapons by 6 yards." },
             { "name": "Mortal Shots", "points": "5/5", "tree": "Marksmanship (Tier 4)", "desc": "Increases the critical strike damage bonus of your ranged weapon abilities by 30%." },
             { "name": "Scatter Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec on an instant cast (30s cooldown)." },
             { "name": "Barrage", "points": "1/3", "tree": "Marksmanship (Tier 4)", "desc": "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 5%." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+20 to +100 Ranged Attack Power to whole raid) and 3/3 Barrage (5/10/15%).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Trueshot Aura (+20 Ranged Attack Power to party and raid) and 3/3 Barrage (5/10/15%).",
           "rotation": [
             { "label": "41-Yard Opener", "desc": "Hunter's Mark -> Cast Aimed Shot from maximum 41-yard range -> Serpent Sting." },
             { "label": "Auto-Shot Weaving", "desc": "Clip Auto Shot swing timer with Multi-Shot and Arcane Shot; Mortal Shots adds +30% critical damage." },
@@ -713,8 +691,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Legs", "item": "Triprunner Dungarees", "source": "Gnomeregan Quest", "stats": "+18 Agility, +2 Strength" }
           ],
           "campingPerk": {
-            "name": "Eagle Sight (+5% Ranged Crit)",
-            "desc": "Camp rest bonus increases maximum shot range by 3 yards and grants +5% Ranged Critical Strike chance."
+            "name": "Camp Chair (Skinning camp object)",
+            "desc": "Craft a Camp Chair."
           },
           "classQuestNote": "Level 30 Hunter unlocks upgraded Rapid Fire ranks and Concussive Shot rank 2."
         },
@@ -729,14 +707,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Agility > Stamina > Pet Attack Power > Intellect",
           "bestWeapon": "Master Hunter's Bow / Venomstrike",
           "talents": [
-            { "name": "Endurance Training", "points": "5/5", "tree": "Beast Mastery (Tier 1)", "desc": "Increases the health of your pets by 15% and your health by 5%." },
+            { "name": "Endurance Training", "points": "5/5", "tree": "Beast Mastery (Tier 1)", "desc": "Increases the Health and Armor of your pets by 15%." },
             { "name": "Thick Hide", "points": "3/3", "tree": "Beast Mastery (Tier 2)", "desc": "Increases the armor rating of your pets by 30%." },
             { "name": "Improved Revive Pet", "points": "2/2", "tree": "Beast Mastery (Tier 2)", "desc": "Revive Pet takes 6 sec less to cast and consumes 40% less mana." },
-            { "name": "Unleashed Fury", "points": "5/5", "tree": "Beast Mastery (Tier 3)", "desc": "Increases the damage dealt by your pets by 20%." },
-            { "name": "Ferocity", "points": "5/5", "tree": "Beast Mastery (Tier 4)", "desc": "Increases the critical strike chance of your pets by 15%." },
+            { "name": "Unleashed Fury", "points": "5/5", "tree": "Beast Mastery (Tier 3)", "desc": "Increases the damage done by your pets and hawks by 15%." },
+            { "name": "Ferocity", "points": "5/5", "tree": "Beast Mastery (Tier 4)", "desc": "Increases the critical strike chance of your pets and hawks by 10%." },
             { "name": "Intimidation", "points": "1/1", "tree": "Beast Mastery (Tier 5 Keystone)", "desc": "Command your pet to intimidate the target on the next melee attack, stunning them for 3 sec on a 1-minute cooldown." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Bestial Wrath (+50% pet damage and crowd-control immunity) and Frenzy (+30% pet attack speed).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Bestial Wrath (+50% pet damage and crowd-control immunity) and Frenzy (+30% pet attack speed).",
           "rotation": [
             { "label": "Pet Assault", "desc": "Send pet in on restored Aggressive mode -> Hunter's Mark -> Cast Intimidation on elite casters for 3s stun." },
             { "label": "Hawk Scout Weave", "desc": "Summon Hawk blinds secondary targets while pet tears through primary mob with +20% Unleashed Fury damage." },
@@ -748,8 +726,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Belt", "item": "Belt of the Fang", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "+3 Agi, +3 Sta, +2 Int" }
           ],
           "campingPerk": {
-            "name": "Bond of the Pack (+10% Pet Damage)",
-            "desc": "Camping grants a bonded aura that raises Pet Attack Power and health regeneration by 15%."
+            "name": "Fish Bowl (Fishing camp object)",
+            "desc": "Craft a Fish Bowl."
           },
           "classQuestNote": "Level 30 Hunter trains mail armor and Beast Lore rank 2."
         }
@@ -784,7 +762,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         "name": "Sonic Blast",
         "rank": "Rank 2",
-        "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.",
+        "desc": "Emits a piercing shriek, inflicting 84 Nature damage and increasing the casting time of all spells by 30% for 20 sec.",
         "cost": "80 Focus",
         "cd": "30 sec cooldown"
       },
@@ -803,7 +781,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         "name": "Mine!",
         "rank": "Rank 3",
-        "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
+        "desc": "Grabs an enemy's weapon with its talons, causing 44 damage and disarming them for 3 sec.",
         "cost": "20 Focus",
         "cd": "1 min cooldown"
       },
@@ -821,7 +799,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         "name": "Dismember",
         "rank": "Rank 2",
-        "desc": "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.",
+        "desc": "Viciously bites enemy appendages for 54 damage and reduces the effectiveness of any healing by 25% for 6 sec.",
         "cost": "35 Focus",
         "cd": "6 sec cooldown"
       },

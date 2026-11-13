@@ -243,7 +243,7 @@ function renderCampBuilder() {
   const matrix = window.WOW_CAMPING_MATRIX || [];
   const kitDefs = [
     { tier: 1, name: 'Basic Campfire Kit', maxStations: 3, levelReq: 1, skill: 1 },
-    { tier: 2, name: 'Journeyman Campfire Kit', maxStations: 5, levelReq: 20, skill: 140 },
+    { tier: 2, name: 'Journeyman Campfire Kit', maxStations: 5, levelReq: 20, skill: 90 },
     { tier: 3, name: 'Expert Campfire Kit', maxStations: 10, levelReq: 40, skill: 220 }
   ];
 

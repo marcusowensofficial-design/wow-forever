@@ -387,7 +387,8 @@ function FDJ.RefreshDungeonPrep()
                 row:SetScript("OnClick", function(self)
                     if not self.item or not self.item[1] then return end
                     local itemID = self.item[1]
-                    local _, link = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+                    local _, link
+                    if FDJ.ItemInfo then _, link = FDJ.ItemInfo(itemID) end
                     if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID) then
                         return
                     end
@@ -503,7 +504,8 @@ function FDJ.RefreshDungeonPrep()
             row:SetScript("OnClick", function(self)
                 if not self.item or not self.item[1] then return end
                 local itemID = self.item[1]
-                local _, link = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+                local _, link
+                if FDJ.ItemInfo then _, link = FDJ.ItemInfo(itemID) end
                 if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID) then
                     return
                 end

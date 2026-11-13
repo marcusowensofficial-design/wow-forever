@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Warrior Class Deep Dive Dataset
- * Primary Source: Sodapoppin Level-38 Human Warrior Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "WoW Forever Warrior Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  * Video URL: https://www.youtube.com/watch?v=NxlK8bDPSrw
  */
 
@@ -14,9 +14,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     role: "Tank / Melee DPS",
     specs: "Arms (Spearing Strike/Weaponmaster) • Fury (Raging Blows/Dual-Wield Scaling) • Protection (Defensive Charge/Shield Bash Silence)",
     hasData: true,
-    videoTitle: "WoW Forever Warrior Class Deep Dive & Human Racials",
+    videoTitle: "Sodapoppin: WoW Forever Warrior Class Deep Dive",
     videoUrl: "https://www.youtube.com/watch?v=NxlK8bDPSrw",
-    sourceAttribution: "Sodapoppin Level-38 Human Warrior BlizzCon Early Access Demo & Closed Beta Forensics",
+    sourceAttribution: "Sodapoppin video \"WoW Forever Warrior Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
     summary: "WoW Forever preserves the iconic weight and stance-dancing rhythm of the Classic Warrior while delivering surgical quality-of-life upgrades: baseline Tactical Mastery (10 Rage retained) and Victory Rush, a consolidated Weaponmaster talent tree, the anti-mount Spearing Strike in Arms, massive dual-wield scaling with Raging Blows in Fury, and Defensive Stance Charge with Shield Bash silencing in Protection.",
 
     subTabs: [
@@ -34,77 +34,77 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Basic Attack Crits Generate +100% Rage",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Rage Engine Overhaul",
         desc: "All basic attack critical strikes now generate +100% bonus Rage (up from +75% in the initial test pass), completely eliminating classic Warrior rage starvation and turbocharging burst rotations across Arms, Fury, and Protection."
       },
       {
         title: "Spearing Strike Battle Stance Requirement",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Spearing Strike QoL",
         desc: "Spearing Strike now requires Battle Stance rather than requiring a two-handed weapon. One-handed weapon and shield warriors can now utilize Spearing Strike for dismounting runners and locking down fleeing targets."
       },
       {
         title: "Instant-Tap Rend & Sunder Armor",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Threat & Tagging Fix",
         desc: "Rend and Sunder Armor now deal an instant packet of initial damage upon application, instantly tagging outdoor mobs and giving tanks immediate pull threat before tick intervals."
       },
       {
         title: "Dual Wield & Off-Hand Rage Fixes",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Combat Mechanic Fix",
         desc: "Fixed the legacy off-hand Heroic Strike hit-table queuing bug; dual wield off-hand hits now properly generate standard rage and Unbridled Wrath procs function reliably on every weapon strike."
       },
       {
         title: "Baseline Tactical Mastery (10 Rage)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Baseline Mechanic",
         desc: "Tactical Mastery is now baseline for all Warriors, retaining 10 Rage upon changing stances without requiring talent investment. Stance dancing is fluid from level 1."
       },
       {
         title: "Baseline Victory Rush",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Leveling Sustain",
         desc: "Victory Rush is baseline: deals instant physical damage and heals the Warrior for 10% of maximum health. Usable within 20 seconds of landing the killing blow on an experience or honor-yielding target."
       },
       {
         title: "3-Minute Shouts",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Major QoL",
         desc: "Battle Shout and Demoralizing Shout durations have been extended to a full 3 minutes (up from Classic's 2 minutes), drastically improving raid and dungeon uptime."
       },
       {
         title: "15-Minute Retaliation",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Cooldown Reduction",
         desc: "Retaliation's cooldown has been reduced from Classic's 30 minutes to 15 minutes, allowing more frequent use during dungeon pulls and elite encounters."
       },
       {
         title: "Shield Block (75% / 2 Charges)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Active Mitigation",
         desc: "Increases shield block chance by 75% for 7 seconds, blocking up to 2 attacks. Provides deterministic defense against crushing blows when timed correctly."
       },
       {
         title: "Taunt & Mocking Blow Cooldowns",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Core Threat",
         desc: "Taunt operates on an 8-second cooldown in Defensive Stance. Mocking Blow serves as an emergency 6-second fixate on a 2-minute cooldown in Battle Stance."
       },
       {
         title: "Charge (15-Second Cooldown)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Mobility Tool",
         desc: "Generates Rage and stuns an enemy for 1 second on a 15-second cooldown. Usable in Battle Stance (or Defensive Stance with Protection talents)."
       },
@@ -118,9 +118,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Native Cooldown Manager: Warrior Essentials",
         status: "verified",
-        statusLabel: "Verified in Beta (Oct 8)",
+        statusLabel: "Reported in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Mortal Strike (6s), Bloodthirst (6s), Shield Slam (6s), Revenge (5s), Overpower (active 5s proc window), Whirlwind (10s), and Spearing Strike (15s). Major Defensives: Shield Wall (15m), Retaliation (15m), Last Stand (8m), Berserker Rage (30s), and Pummel (10s). Active Procs & Buffs: Enrage (+25% damage), Flurry charges (1-3 with glow), Overpower Ready indicator, and Stance aura states—rendered with zero 12.0 UI taint."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Mortal Strike (6s), Bloodthirst (6s), Shield Slam (6s), Revenge (5s), Overpower (active 5s proc window), Whirlwind (10s), and Spearing Strike (20s). Major Defensives: Shield Wall (15m), Retaliation (15m), Last Stand (3m), Berserker Rage (30s), and Pummel (10s). Active Procs & Buffs: Enrage (+10% Physical damage), Flurry charges (1-3 with glow), Overpower Ready indicator, and Stance aura states—rendered with zero 12.0 UI taint."
       }
     ],
 
@@ -145,12 +145,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Replaces separate Axe, Sword, and Mace specialization talents with a single adaptive talent. Maces and Staves grant 15% armor penetration, while Swords grant extra swing procs."
         },
         {
-          name: "Rend Overpower Procs (Taste for Blood)",
+          name: "Bloodthrill",
           type: "Rotational Synergies",
           cast: "Passive Proc",
           duration: "6 sec Duration",
           status: "verified",
-          desc: "Attacking a target afflicted by Rend gives melee attacks a 10% chance to activate Overpower on that target for 6 seconds, providing constant guaranteed crits."
+          desc: "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 20% chance to allow an activation of Overpower. (at 2/2)"
         },
         {
           name: "Improved Slam (No Pushback & No Swing Reset)",
@@ -197,18 +197,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       tagline: "Whirlwind with both weapons, generate double off-hand rage, and break movement snares instantly with Berserker Rage",
       talents: [
         {
-          name: "Raging Blows (Dual-Wield Whirlwind)",
-          type: "Signature Fury Keystone",
-          cast: "Passive",
-          status: "verified",
-          desc: "Causes Whirlwind to strike with both your main-hand and off-hand weapons simultaneously, and reduces the Rage cost of Cleave by 2 for explosive AoE scaling."
-        },
-        {
-          name: "Dual Wield Specialization Overhaul",
+          name: "Dual Wield Specialization",
           type: "Dual Wield Scaling",
           cast: "Passive",
           status: "verified",
-          desc: "Increases off-hand weapon damage by 25%, off-hand Rage generation by 100%, and off-hand hit chance by 10%, resolving Classic's off-hand penalty."
+          desc: "Increases the damage done by your off-hand weapon by 25% and the Rage generated by your off-hand attacks by 50%. (at 5/5)"
         },
         {
           name: "Berserker Rage (10 Rage + Snare Removal)",
@@ -219,13 +212,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "The Warrior enters a berserker rage, instantly generating up to 10 Rage, removing all movement-impairing effects, and granting immunity to Fear and Incapacitate for 10 seconds on a 30s cooldown!"
         },
         {
-          name: "Bloodthirst & 10% Movement Speed",
+          name: "Bloodthirst",
           type: "Signature Fury Ability",
           cast: "Instant",
           cost: "30 Rage",
           cd: "6 sec Cooldown",
           status: "verified",
-          desc: "Instantly attacks the target for 35% of Attack Power plus base damage, grants +10% movement speed, and triggers Blood Craze healing."
+          desc: "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
         },
         {
           name: "Blood Craze (Self-Healing)",
@@ -236,27 +229,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Restores 1% of maximum health over 6 seconds after being critically struck or after casting Bloodthirst, providing continuous in-combat recovery."
         },
         {
-          name: "Enrage / Reactive Damage Steroid",
+          name: "Enrage",
           type: "Damage Multiplier",
           cast: "Passive Proc",
           duration: "12 sec Duration",
           status: "verified",
-          desc: "Taking any damaging hit has a 30% chance to grant 10% increased physical damage dealt for 12 seconds."
+          desc: "Gives you a 30% chance to deal 10% increased Physical damage for 12 sec after being the victim of any damaging attack. (at 5/5)"
         },
-        {
-          name: "Fury Rage Amplification (+10 Max Rage)",
-          type: "Resource Keystone",
-          cast: "Passive",
-          status: "verified",
-          desc: "Increases maximum Rage by 10 and gives a 12% chance to generate 1 extra Rage on melee hits (increased to 2 Rage when wielding a two-handed weapon)."
-        },
-        {
-          name: "Improved Cleave (Rage Reduction)",
-          type: "AoE Efficiency",
-          cast: "Passive",
-          status: "verified",
-          desc: "Directly reduces Cleave's Rage cost instead of just increasing damage, allowing frequent multi-target cleaving."
-        }
       ]
     },
 
@@ -265,25 +244,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       tagline: "The premier vanguard tank with Defensive Stance Charge, dodge/parry Rage generation, and silencing Shield Bashes",
       talents: [
         {
-          name: "Charge in Defensive Stance",
+          name: "Vanguard",
           type: "Tank Mobility Keystone",
           cast: "Passive Talent",
           status: "verified",
-          desc: "Enables Charge to be used while in Defensive Stance, removing the need to stance dance into Battle Stance before pulling trash packs and raid bosses."
+          desc: "Your Charge ability is now usable while in Defensive Stance."
         },
         {
-          name: "Shield Avoidance Rage Generation",
+          name: "Master of Defense",
           type: "Resource Sustain Keystone",
           cast: "Passive",
           status: "verified",
-          desc: "While a shield is equipped, grants up to a 100% chance to generate Rage whenever you successfully dodge or parry an attack, solving tank Rage starvation."
+          desc: "Grants you a 100% chance to generate 5 Rage when you Dodge or Parry while a shield is equipped. (at 2/2)"
         },
         {
-          name: "Shield Bash Silence",
+          name: "Improved Shield Bash",
           type: "Caster Lockdown Utility",
           cast: "Talent Enhancement",
           status: "verified",
-          desc: "Causes Shield Bash to inflict a true Silence effect on the target rather than merely an interrupt, locking out spellcasting even if the target wasn't actively channeling."
+          desc: "Gives your Shield Bash ability a 100% chance to Silence the target for 3 sec. (at 2/2)"
         },
         {
           name: "Improved Shield Wall (9.5m Cooldown)",
@@ -292,7 +271,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cd: "9.5 min Cooldown",
           duration: "10 sec Duration",
           status: "verified",
-          desc: "Reduces Shield Wall's baseline 15-minute cooldown by 5.5 minutes down to ~9.5 minutes, providing 75% damage reduction for 10 seconds."
+          desc: "Reduces the cooldown of your Shield Wall ability by 11.0 min. (at 2/2; rank 1: 5.5)"
         },
         {
           name: "Concussion Blow (5s Stun)",
@@ -314,18 +293,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Slams the target with your shield, dealing damage based on Shield Block Value, generating high threat, and dispelling 1 beneficial magic effect."
         },
         {
-          name: "One-Handed & Shield Mastery",
+          name: "Improved Revenge",
           type: "Damage & Threat Scaling",
           cast: "Passive",
           status: "verified",
-          desc: "Increases all damage dealt by 10% while a shield is equipped and significantly improves Revenge damage."
+          desc: "Increases damage dealt by your Revenge ability by 60%. (at 3/3)"
         },
         {
-          name: "Protection Stat & Rage Baseline",
+          name: "Focused Rage",
           type: "Passive Cluster",
           cast: "Passive",
           status: "verified",
-          desc: "Grants 10% additional Stamina and Strength, plus a flat 3-Rage cost reduction across all offensive abilities."
+          desc: "Reduces the Rage cost of your offensive abilities by 3. (at 3/3)"
         }
       ]
     },
@@ -338,25 +317,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           {
             name: "Will to Survive (Stun Removal)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Instantly removes all stun effects on a 3-minute cooldown. Essential PvP anti-CC tool allowing Warriors to break free without PvP trinkets."
           },
           {
             name: "Ruthless (+1% Crit)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Grants 1% critical-strike chance to all attacks and spells, maximizing Flurry and Deep Wounds procs."
           },
           {
             name: "Perception (Stealth Detection)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Greatly increases stealth detection for 20 seconds on a 3-minute cooldown. Invaluable against enemy Rogues and Druids opening in PvP."
           },
           {
             name: "The Human Spirit (+10% Spirit)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Increases total Spirit by 10%, boosting out-of-combat health regeneration between leveling pulls."
           }
         ]
@@ -471,7 +450,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Charge in Defensive Stance",
+        feature: "Vanguard",
         category: "Protection",
         details: "Allows Charge to be cast from Defensive Stance via Protection talent",
         status: "Verified in Closed Beta",
@@ -487,7 +466,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Shield Bash Silence",
+        feature: "Improved Shield Bash",
         category: "Protection",
         details: "Shield Bash inflicts true silence rather than interrupt only",
         status: "Verified in Closed Beta",
@@ -561,7 +540,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Improved Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "You retain up to 15 extra rage when changing stances, stacking with baseline 10 Rage for 25 retained Rage." },
               { name: "Deep Wounds", points: "1/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 20% of your melee weapon's average damage." }
             ],
-            legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 3/3 Deep Wounds and 2/2 Impale (+20% strike crit damage).",
+            legacyNotes: "Extra points obtained through the Legacy Talented perk should be placed into 3/3 Deep Wounds and 2/2 Impale (+20% strike crit damage).",
             rotation: [
               { label: "Charge & Open", desc: "Battle Stance Charge -> Rend immediately to start ticking critical bleeds." },
               { label: "Stance Dance Overpower", desc: "When target dodges, immediately switch to Battle Stance and fire Overpower (cannot be blocked/dodged/parried)." },
@@ -576,8 +555,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Chest", item: "Mutant Scale Breastplate", source: "Wailing Caverns", stats: "+9 Agi, +4 Sta" }
             ],
             campingPerk: {
-              name: "Warrior's Heart (+5% Total Strength)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and the 'Vigor' 2-hour +5% Strength buff."
+              name: "Sharpening Wheel (Blacksmithing camp object)",
+              desc: "Everyone sitting at your camp gains up to +34 Strength (level 60 value; does not stack with Strength of Earth Totem). Requires a Campfire."
             },
             classQuestNote: "Defensive Stance and Taunt are unlocked via class quest; level 20 unlocks preparation quests for Whirlwind Axe."
           },
@@ -596,7 +575,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a chance to generate an additional Rage point when dealing melee damage." },
               { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." }
             ],
-            legacyNotes: "Extra Legacy points unlock 5/5 Dual Wield Specialization and Enrage (+25% melee damage bonus after being crit).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Dual Wield Specialization and Enrage (+25% melee damage bonus after being crit).",
             rotation: [
               { label: "Pull & Buff", desc: "Battle Shout (now 3-minute duration) -> Charge -> Bloodrage." },
               { label: "Dual-Wield Cleave", desc: "Heroic Strike / Raging Blows priority while dual-wield swings trigger Unbridled Wrath." },
@@ -608,8 +587,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Wrist", item: "Crystalline Cuffs", source: "Wailing Caverns (Kresh)", stats: "+5 Str, +3 Sta" }
             ],
             campingPerk: {
-              name: "Battlefield Adrenaline (+10% Movement Speed)",
-              desc: "Camp resting grants a sustained 10% movement speed boost and +3% attack speed for 2 hours."
+              name: "Camp Tent (Leatherworking camp object)",
+              desc: "Craft a Camp Tent."
             },
             classQuestNote: "Dual-wielding weapons becomes available at trainer at level 20."
           },
@@ -629,7 +608,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Anticipation", points: "3/5", tree: "Protection (Tier 1)", desc: "Increases your Defense skill by 6, reducing enemy chance to land crushing blows." },
               { name: "Last Stand", points: "1/1", tree: "Protection (Tier 3)", desc: "When activated, temporarily grants you 30% of your maximum hit points for 20 sec." }
             ],
-            legacyNotes: "Extra Legacy points unlock 5/5 Toughness (+10% armor) and Improved Taunt (-2s cooldown).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Toughness (+10% armor) and Improved Taunt (-2s cooldown).",
             rotation: [
               { label: "Pull", desc: "Defensive Stance Charge -> Bloodrage -> Sunder Armor on primary target." },
               { label: "Interrupt & Lock", desc: "Shield Bash immediately against caster casts (deals damage and silences for 3s)." },
@@ -642,8 +621,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Str, +3 Sta" }
             ],
             campingPerk: {
-              name: "Bulwark of the Hearth (+10% Total Armor)",
-              desc: "Resting inside a sturdy Tent grants a 2-hour +10% Armor contribution from equipped items."
+              name: "Enchanted Lute (Enchanting camp object)",
+              desc: "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
             },
             classQuestNote: "Defensive Stance quest grants the iconic Blue-quality defensive shield and 1-Handed weapon."
           }
@@ -673,7 +652,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Two-Handed Weapon Specialization", points: "3/3", tree: "Arms (Tier 4)", desc: "Increases the physical damage you deal with two-handed melee weapons by 6%." },
               { name: "Sweeping Strikes", points: "1/1", tree: "Arms (Tier 5 Keystone)", desc: "Your next 5 melee attacks strike an additional nearby enemy. Combines with Cleave and Overpower for god-tier dungeon AoE burst!" }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Weaponmaster (extra attack swing procs).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Weaponmaster (extra attack swing procs).",
             rotation: [
               { label: "Pull & Stance Dance", desc: "Battle Stance Charge -> Instant Rend to lock aggro -> Spearing Strike to dismount or lock fleeing targets." },
               { label: "Sweeping Cleave", desc: "Activate Sweeping Strikes before pack engagement; every Cleave and Overpower hits 2 targets simultaneously." },
@@ -688,8 +667,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Shoulders", item: "Thane's Iron Pauldrons", source: "Hall of Thanes", stats: "+8 Str, +5 Sta, 114 Armor" }
             ],
             campingPerk: {
-              name: "Warrior's Heart (+5% Total Strength)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and the 'Vigor' 2-hour +5% Strength buff."
+              name: "Sharpening Wheel (Blacksmithing camp object)",
+              desc: "Everyone sitting at your camp gains up to +34 Strength (level 60 value; does not stack with Strength of Earth Totem). Requires a Campfire."
             },
             classQuestNote: "Level 30 unlocks the legendary Whirlwind Axe questline across the Alterac Mountains and Arathi Highlands."
           },
@@ -705,14 +684,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Excavation Digging Axe",
             talents: [
               { name: "Cruelty", points: "5/5", tree: "Fury (Tier 1)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
-              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives your melee weapon strikes a 40% chance to generate an additional Rage point." },
+              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon." },
               { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." },
               { name: "Blood Craze", points: "3/3", tree: "Fury (Tier 3)", desc: "Regenerates 3% of your total health over 6 sec after being the victim of a critical strike." },
-              { name: "Improved Battle Shout", points: "2/5", tree: "Fury (Tier 2)", desc: "Increases the melee attack power bonus of Battle Shout by 10% (now lasts 3 full minutes!)." },
-              { name: "Enrage", points: "4/5", tree: "Fury (Tier 4)", desc: "Gives you a 20% melee damage bonus for 12 sec up to a maximum of 12 swings after being crit." },
+              { name: "Improved Battle Shout", points: "2/5", tree: "Fury (Tier 2)", desc: "Increases the melee attack power bonus of your Battle Shout by 25%." },
+              { name: "Enrage", points: "4/5", tree: "Fury (Tier 4)", desc: "Gives you a 30% chance to deal 8% increased Physical damage for 12 sec after being the victim of any damaging attack." },
               { name: "Death Wish", points: "1/1", tree: "Fury (Tier 5 Keystone)", desc: "When activated, increases your physical damage by 20% and makes you immune to Fear effects for 30 sec." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Dual Wield Specialization and 5/5 Flurry (+30% attack speed on critical strikes).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Dual Wield Specialization and 5/5 Flurry (+30% attack speed on critical strikes).",
             rotation: [
               { label: "Pull & Battle Shout", desc: "Apply buffed 3-minute Battle Shout -> Bloodrage -> Charge into combat." },
               { label: "Death Wish Burn", desc: "Pop Death Wish on boss pulls for massive +20% damage burst and complete immunity to fear mechanics." },
@@ -726,8 +705,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Hands", item: "Gloves of the Holy", source: "City of Dalaran", stats: "+8 Str, +6 Sta" }
             ],
             campingPerk: {
-              name: "Battlefield Adrenaline (+10% Movement Speed)",
-              desc: "Camp resting grants a sustained 10% movement speed boost and +3% attack speed for 2 hours."
+              name: "Camp Tent (Leatherworking camp object)",
+              desc: "Craft a Camp Tent."
             },
             classQuestNote: "Level 30 unlocks Berserker Stance and Intercept quest in the Fray Island arena."
           },
@@ -745,16 +724,16 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Shield Specialization", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 5% and generates 1 rage on block." },
               { name: "Improved Bloodrage", points: "2/2", tree: "Protection (Tier 2)", desc: "Increases instant Rage generated by Bloodrage by 5." },
               { name: "Anticipation", points: "3/5", tree: "Protection (Tier 1)", desc: "Increases your Defense skill by 6, pushing crushing blows off the table." },
-              { name: "Toughness", points: "5/5", tree: "Protection (Tier 3)", desc: "Increases your armor value from items by 10%." },
+              { name: "Toughness", points: "5/5", tree: "Protection (Tier 3)", desc: "Increases your armor value from items by 2%." },
               { name: "Last Stand", points: "1/1", tree: "Protection (Tier 3 Keystone)", desc: "Temporarily grants 30% maximum health for 20 sec on a 10-minute cooldown." },
-              { name: "Improved Shield Block", points: "3/3", tree: "Protection (Tier 4)", desc: "Allows Shield Block to block an additional attack and increases its duration by 2 sec." },
+              { name: "Improved Shield Block", points: "3/3", tree: "Protection (Tier 4)", desc: "Allows your Shield Block ability to block an additional attack and increases the duration by 0.5 second." },
               { name: "Concussion Blow", points: "1/1", tree: "Protection (Tier 5 Keystone)", desc: "A brutal strike that stuns the opponent for 5 sec and generates immense threat on an active 45s cooldown." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 One-Handed Weapon Specialization (+10% 1H physical damage) and Shield Slam.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 One-Handed Weapon Specialization (+10% 1H physical damage) and Shield Slam.",
             rotation: [
               { label: "Pull & Lock", desc: "Defensive Stance Charge -> Bloodrage -> Instant Sunder Armor for immediate snap threat." },
               { label: "Crowd Control & Stun", desc: "Cast Concussion Blow to lock down dangerous elite mobs for 5 seconds." },
-              { label: "Shield Bash Silence", desc: "Shield Bash caster mobs immediately to silence schools for 3 seconds." },
+              { label: "Improved Shield Bash", desc: "Shield Bash caster mobs immediately to silence schools for 3 seconds." },
               { label: "Mitigation", desc: "Shield Block on cooldown; pop Last Stand during heavy boss damage spikes in Dalaran." }
             ],
             bisGear: [
@@ -765,8 +744,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Chest", item: "Excavator's Mail Hauberk", source: "Excavation Site: Wetlands", stats: "+15 Str, +10 Sta, 290 Armor" }
             ],
             campingPerk: {
-              name: "Bulwark of the Hearth (+10% Total Armor)",
-              desc: "Resting inside a sturdy Tent grants a 2-hour +10% Armor contribution from equipped items."
+              name: "Enchanted Lute (Enchanting camp object)",
+              desc: "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
             },
             classQuestNote: "Level 30 unlocks heavy mail armor training and upgraded Taunt ranks."
           }

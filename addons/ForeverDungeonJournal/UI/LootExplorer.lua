@@ -462,7 +462,8 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
         rawSlot = nil
     end
 
-    if (not rawSlot or rawSlot == "" or tonumber(rawSlot)) and itemID then
+    local hasPositiveID = itemID and itemID > 0
+    if (not rawSlot or rawSlot == "" or tonumber(rawSlot)) and hasPositiveID then
         if C_Item and C_Item.GetItemInfoInstant then
             local ok, _, _, _, equipLoc, _, classID, subclassID = pcall(C_Item.GetItemInfoInstant, itemID)
             if ok and equipLoc and equipLoc ~= "" then
@@ -514,8 +515,9 @@ local function ResolveItemSlotAndQuality(itemID, rawSlot, rawQuality)
         end
     end
 
-    if not rawQuality and itemID then
-        local _, _, liveQual = FDJ.ItemInfo and FDJ.ItemInfo(itemID)
+    if not rawQuality and hasPositiveID then
+        local _, _, liveQual
+        if FDJ.ItemInfo then _, _, liveQual = FDJ.ItemInfo(itemID) end
         if liveQual then rawQuality = liveQual end
     end
 
@@ -532,7 +534,7 @@ local masterLootByItemID = {}
 local masterDungeonCounts = {}
 
 local function RefreshMasterEntryMetadata(entry)
-    if not entry or not entry.itemID then return false end
+    if not entry or not entry.itemID or entry.itemID <= 0 then return false end
     local itemID = entry.itemID
     local changed = false
 
@@ -593,22 +595,38 @@ local function BuildMasterLootExplorerCache()
             local dCount = 0
             local dungLower = string.lower(tostring(dungeonName or ""))
 
+            local function MasterItemKey(rawItem)
+                local id = tonumber(rawItem and rawItem[1])
+                if id and id > 0 then return id end
+                local name = type(rawItem) == "table" and rawItem[2]
+                if type(name) == "string" and name ~= "" then
+                    return "id0:" .. string.lower(name)
+                end
+                return nil
+            end
+
             local function AddMasterEntry(rawItem, extra)
                 local itemID = tonumber(rawItem and rawItem[1])
-                -- ID 0 is a placeholder for an item whose ID isn't known yet; it
-                -- appears here once ItemIdLearner fills it in.
-                if not itemID or itemID <= 0 then return end
+                if not itemID or itemID < 0 then return end
+                local uniqueKey = MasterItemKey(rawItem)
+                if not uniqueKey then return end
                 local itemName = rawItem[2] or ("Item #" .. itemID)
                 local resolvedSlot, resolvedQual = ResolveItemSlotAndQuality(itemID, rawItem[3], rawItem[4])
                 local questReq = extra.questReqLevel
-                local fastReq = FDJ.GetItemReqLevelFast(itemID, questReq)
+                local fastReq = (itemID > 0) and FDJ.GetItemReqLevelFast(itemID, questReq) or questReq
+                if not fastReq and itemID <= 0 and type(rawItem.tip) == "table" and FDJ.GetItemStatsSummary then
+                    local _, tipReq = FDJ.GetItemStatsSummary(0, nil, rawItem.tip)
+                    fastReq = tipReq
+                end
 
                 local entry = {
                     itemID = itemID,
+                    uniqueKey = uniqueKey,
                     name = itemName,
                     nameLower = string.lower(tostring(itemName)),
                     rawSlotInit = rawItem[3],
                     rawQualInit = rawItem[4],
+                    tip = rawItem.tip,
                     slot = resolvedSlot,
                     sLower = string.lower(tostring(resolvedSlot or "")),
                     quality = resolvedQual,
@@ -621,6 +639,7 @@ local function BuildMasterLootExplorerCache()
                     bossIndex = extra.bossIndex,
                     isSharedLoot = extra.isShared or false,
                     isTrashLoot = extra.isTrash or false,
+                    isProbableLoot = extra.isProbable or false,
                     isQuestReward = extra.isQuestReward or false,
                     questName = extra.questName,
                     questIndex = extra.questIndex,
@@ -631,10 +650,12 @@ local function BuildMasterLootExplorerCache()
 
                 ClassifyEntrySlot(entry)
                 list[#list + 1] = entry
-                if not byItemID[itemID] then
-                    byItemID[itemID] = {}
+                if itemID > 0 then
+                    if not byItemID[itemID] then
+                        byItemID[itemID] = {}
+                    end
+                    table.insert(byItemID[itemID], entry)
                 end
-                table.insert(byItemID[itemID], entry)
                 dCount = dCount + 1
             end
 
@@ -644,31 +665,37 @@ local function BuildMasterLootExplorerCache()
                 for bIdx, boss in ipairs(dung.bosses) do
                     if not boss.recipeTab then
                         local isTrashBoss = (boss.trash == true)
-                        for _, item in ipairs(type(boss.loot) == "table" and boss.loot or {}) do
-                            if isTrashBoss then
-                                local tID = tonumber(item and item[1])
-                                if tID and not seenTrashInDungeon[tID] then
-                                    seenTrashInDungeon[tID] = true
-                                    local trashBossName = (type(item[5]) == "string" and item[5] ~= "") and item[5] or boss.name
+                        local function AddBossItemList(itemsTable, isProbable)
+                            for _, item in ipairs(type(itemsTable) == "table" and itemsTable or {}) do
+                                if isTrashBoss then
+                                    local tKey = MasterItemKey(item)
+                                    if tKey and not seenTrashInDungeon[tKey] then
+                                        seenTrashInDungeon[tKey] = true
+                                        local trashBossName = (type(item[5]) == "string" and item[5] ~= "") and item[5] or boss.name
+                                        AddMasterEntry(item, {
+                                            isTrash = true,
+                                            isProbable = isProbable,
+                                            boss = trashBossName,
+                                            bossIndex = bIdx,
+                                        })
+                                    end
+                                else
                                     AddMasterEntry(item, {
-                                        isTrash = true,
-                                        boss = trashBossName,
+                                        isProbable = isProbable,
+                                        boss = boss.name,
                                         bossIndex = bIdx,
                                     })
                                 end
-                            else
-                                AddMasterEntry(item, {
-                                    boss = boss.name,
-                                    bossIndex = bIdx,
-                                })
                             end
                         end
+                        AddBossItemList(boss.loot, false)
+                        AddBossItemList(boss.probableLoot, true)
                         local sharedLoot = (not isTrashBoss) and FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(dungeonName, boss) or nil
                         if type(sharedLoot) == "table" then
                             for _, sItem in ipairs(sharedLoot) do
-                                local sID = tonumber(sItem and sItem[1])
-                                if sID and not seenSharedInDungeon[sID] then
-                                    seenSharedInDungeon[sID] = true
+                                local sKey = MasterItemKey(sItem)
+                                if sKey and not seenSharedInDungeon[sKey] then
+                                    seenSharedInDungeon[sKey] = true
                                     AddMasterEntry(sItem, {
                                         isShared = true,
                                         boss = boss.name,
@@ -679,9 +706,9 @@ local function BuildMasterLootExplorerCache()
                         end
                         if type(boss.trash) == "table" then
                             for _, tItem in ipairs(boss.trash) do
-                                local tID = tonumber(tItem and tItem[1])
-                                if tID and not seenTrashInDungeon[tID] then
-                                    seenTrashInDungeon[tID] = true
+                                local tKey = MasterItemKey(tItem)
+                                if tKey and not seenTrashInDungeon[tKey] then
+                                    seenTrashInDungeon[tKey] = true
                                     AddMasterEntry(tItem, {
                                         isTrash = true,
                                         boss = boss.name,
@@ -704,9 +731,9 @@ local function BuildMasterLootExplorerCache()
                     for _, it in ipairs(quest.additionalRewardItems or {}) do qItems[#qItems + 1] = it end
                     for _, it in ipairs(quest.noteRewardItems or {}) do qItems[#qItems + 1] = it end
                     for _, it in ipairs(qItems) do
-                        local qItemID = tonumber(it and it[1])
-                        if qItemID and not seenQuestItems[qItemID] then
-                            seenQuestItems[qItemID] = true
+                        local qKey = MasterItemKey(it)
+                        if qKey and not seenQuestItems[qKey] then
+                            seenQuestItems[qKey] = true
                             AddMasterEntry(it, {
                                 isQuestReward = true,
                                 questName = questName,
@@ -903,8 +930,12 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
 
             if pass and bMin and bMax then
                 local req = entry.reqLevel
-                if req == nil then
+                if req == nil and itemID > 0 then
                     req = FDJ.GetItemReqLevelFast(itemID, entry.questReqLevel)
+                    entry.reqLevel = req
+                elseif req == nil and type(entry.tip) == "table" and FDJ.GetItemStatsSummary then
+                    local _, tipReq = FDJ.GetItemStatsSummary(0, nil, entry.tip)
+                    req = tipReq
                     entry.reqLevel = req
                 end
                 if req and req > 0 then
@@ -931,10 +962,10 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
             end
 
             if pass and wishlistOnly then
-                pass = (isWishlisted and isWishlisted(itemID)) and true or false
+                pass = (itemID > 0 and isWishlisted and isWishlisted(itemID)) and true or false
             end
 
-            if pass and missingOnly and type(GetItemCount) == "function" then
+            if pass and missingOnly and itemID > 0 and type(GetItemCount) == "function" then
                 local owned = GetItemCount(itemID, true)
                 if owned and owned > 0 then pass = false end
             end
@@ -962,10 +993,11 @@ function FDJ.GetFilteredLootExplorerItems(categoryFilter, slotFilter, materialFi
         moreByID = {}
         for i = 1, #results do
             local e = results[i]
-            if seen[e.itemID] then
-                moreByID[e.itemID] = (moreByID[e.itemID] or 0) + 1
+            local uKey = e.uniqueKey or e.itemID
+            if seen[uKey] then
+                moreByID[uKey] = (moreByID[uKey] or 0) + 1
             else
-                seen[e.itemID] = true
+                seen[uKey] = true
                 deduped[#deduped + 1] = e
             end
         end
@@ -2347,12 +2379,13 @@ local function GetOrCreateLootExplorerRow(frame, i)
         self:SetBackdropColor(0.24, 0.17, 0.09, 0.98)
         self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1.0)
         if self.itemData and self.itemData.itemID then
-            self.item = { self.itemData.itemID, self.itemData.name, self.itemData.slot, self.itemData.quality }
+            self.item = { self.itemData.itemID, self.itemData.name, self.itemData.slot, self.itemData.quality, tip = self.itemData.tip }
             self.fdjSourceText = self.itemData.dungeon .. "  —  " .. (self.itemData.boss or "")
             if FDJ.ShowItemTooltip then
                 FDJ.ShowItemTooltip(self)
-            else
-                local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(self.itemData.itemID)
+            elseif self.itemData.itemID > 0 then
+                local _, liveLink
+                if FDJ.ItemInfo then _, liveLink = FDJ.ItemInfo(self.itemData.itemID) end
                 GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
                 GameTooltip:SetHyperlink(liveLink or ("item:" .. tostring(self.itemData.itemID)))
                 GameTooltip:Show()
@@ -2378,10 +2411,11 @@ local function GetOrCreateLootExplorerRow(frame, i)
     row:SetScript("OnClick", function(self)
         if not self.itemData then return end
         local itemID = self.itemData.itemID
-        local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.itemData.name, self.itemData.quality)
-
-        if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID, self.itemData.name, self.itemData.quality) then
-            return
+        if itemID and itemID > 0 then
+            local link = FDJ.GetAuthoritativeItemLink and FDJ.GetAuthoritativeItemLink(itemID, self.itemData.name, self.itemData.quality)
+            if FDJ.HandleModifiedItemClick and FDJ.HandleModifiedItemClick(link, itemID, self.itemData.name, self.itemData.quality) then
+                return
+            end
         end
 
         CloseAllDropdownMenus()
@@ -2401,13 +2435,14 @@ local function GetOrCreateLootExplorerRow(frame, i)
         end
         if self.itemData.isSharedLoot then FDJ.lootSharedExpanded = true end
         if self.itemData.isTrashLoot then FDJ.lootTrashExpanded = true end
+        if self.itemData.isProbableLoot then FDJ.lootProbableExpanded = true end
         if FDJ.SelectDungeon then FDJ.SelectDungeon(self.itemData.dungeon) end
         if FDJ.SetMode then FDJ.SetMode("bosses") end
         if self.itemData.bossIndex and FDJ.SelectBoss then
             FDJ.SelectBoss(self.itemData.bossIndex)
         end
         if FDJ.SetBossSubTab then FDJ.SetBossSubTab("loot") end
-        if FDJ.FocusBossLootItem then FDJ.FocusBossLootItem(itemID) end
+        if FDJ.FocusBossLootItem then FDJ.FocusBossLootItem(itemID, self.itemData.name) end
     end)
 
     rows[i] = row
@@ -2436,27 +2471,39 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
 
         if itemIndex <= count then
             local it = items[itemIndex]
+            local hasPositiveID = (it.itemID and it.itemID > 0) and true or false
             row.itemData = it
-            row.item = { it.itemID, it.name, it.slot, it.quality }
+            row.item = { it.itemID, it.name, it.slot, it.quality, tip = it.tip }
             row.fdjSourceText = it.dungeon .. "  —  " .. (it.boss or "")
 
-            local liveName, liveLink, quality, _, reqLevel, classType, _, _, equipLoc, texture = FDJ.ItemInfo and FDJ.ItemInfo(it.itemID)
+            local liveName, liveLink, quality, _, reqLevel, classType, _, _, equipLoc, texture
+            if hasPositiveID and FDJ.ItemInfo then
+                liveName, liveLink, quality, _, reqLevel, classType, _, _, equipLoc, texture = FDJ.ItemInfo(it.itemID)
+            end
             quality = quality or it.quality or 1
             if not reqLevel or reqLevel == 0 then
-                if FDJ.GetItemReqLevel then
+                if hasPositiveID and FDJ.GetItemReqLevel then
                     reqLevel = FDJ.GetItemReqLevel(it.itemID, it.questReqLevel)
+                elseif it.reqLevel and it.reqLevel > 0 then
+                    reqLevel = it.reqLevel
                 end
             end
 
             local qc = ITEM_QUALITY_COLORS and ITEM_QUALITY_COLORS[quality] or { r = 1, g = 1, b = 1 }
-            row.icon:SetTexture(texture or (FDJ.ItemIcon and FDJ.ItemIcon(it.itemID)) or "Interface\\Icons\\INV_Misc_QuestionMark")
+            row.icon:SetTexture(texture or (hasPositiveID and FDJ.ItemIcon and FDJ.ItemIcon(it.itemID)) or "Interface\\Icons\\INV_Misc_QuestionMark")
             row.iconBorder:SetVertexColor(qc.r, qc.g, qc.b)
 
             local displayName = liveName or it.name or ("Item #" .. it.itemID)
             row.name:SetText(displayName)
             row.name:SetTextColor(qc.r, qc.g, qc.b)
 
-            local statsSummary = FDJ.GetItemStatsSummary and FDJ.GetItemStatsSummary(it.itemID)
+            local statsSummary, tipReq = nil, nil
+            if FDJ.GetItemStatsSummary then
+                statsSummary, tipReq = FDJ.GetItemStatsSummary(it.itemID, nil, it.tip)
+            end
+            if (not reqLevel or reqLevel == 0) and tipReq and tipReq > 0 then
+                reqLevel = tipReq
+            end
             if statsSummary and statsSummary ~= "" then
                 row.stats:SetText(statsSummary)
                 row.stats:SetTextColor(0.82, 0.82, 0.82)
@@ -2472,17 +2519,21 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             if it.isQuestReward then
                 slotText = slotText ~= "" and (slotText .. "  •  |cffffd200Quest|r") or "|cffffd200Quest Reward|r"
             elseif it.isTrashLoot then
-                local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
+                local dropRate = hasPositiveID and FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
                 if dropRate then
                     slotText = slotText ~= "" and (slotText .. "  •  |cffc8b080Trash (" .. dropRate .. ")|r") or ("|cffc8b080Trash (" .. dropRate .. ")|r")
                 else
                     slotText = slotText ~= "" and (slotText .. "  •  |cffc8b080Trash|r") or "|cffc8b080Trash Drop|r"
                 end
             else
-                local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
+                local dropRate = hasPositiveID and FDJ.GetItemDropRate and FDJ.GetItemDropRate(it.itemID)
                 if dropRate then
                     slotText = slotText ~= "" and (slotText .. "  •  |cffffd200" .. dropRate .. "|r") or ("|cffffd200" .. dropRate .. "|r")
                 end
+            end
+            if it.isProbableLoot then
+                local probLabel = "|cffffa040Probable|r"
+                slotText = slotText ~= "" and (slotText .. "  •  " .. probLabel) or probLabel
             end
             row.slotType:SetText(slotText)
             row.slotType:SetTextColor(0.85, 0.75, 0.55)
@@ -2497,7 +2548,7 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             else
                 row.reqLevel:SetText("")
             end
-            local moreN = leMoreSources and leMoreSources[it.itemID]
+            local moreN = leMoreSources and leMoreSources[it.uniqueKey or it.itemID]
             if moreN and moreN > 0 then
                 row.reqLevel:SetText((row.reqLevel:GetText() or "") .. "  |cff9aa0a6+" .. moreN .. " " .. T("sources") .. "|r")
             end
@@ -2513,7 +2564,7 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
             end
 
             local isOwned = false
-            if it.itemID and type(GetItemCount) == "function" then
+            if hasPositiveID and type(GetItemCount) == "function" then
                 local itemCount = GetItemCount(it.itemID, true)
                 if itemCount and itemCount > 0 then isOwned = true end
             end
@@ -2526,13 +2577,18 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
                 end
             end
 
-            local isWish = FDJ.IsWishlisted and FDJ.IsWishlisted(it.itemID)
-            if isWish then
-                row.starBtn.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
-                row.starBtn.icon:SetAlpha(1.0)
+            if hasPositiveID then
+                row.starBtn:Show()
+                local isWish = FDJ.IsWishlisted and FDJ.IsWishlisted(it.itemID)
+                if isWish then
+                    row.starBtn.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
+                    row.starBtn.icon:SetAlpha(1.0)
+                else
+                    row.starBtn.icon:SetVertexColor(0.5, 0.45, 0.35, 0.4)
+                    row.starBtn.icon:SetAlpha(0.4)
+                end
             else
-                row.starBtn.icon:SetVertexColor(0.5, 0.45, 0.35, 0.4)
-                row.starBtn.icon:SetAlpha(0.4)
+                row.starBtn:Hide()
             end
 
             row:ClearAllPoints()
@@ -2549,7 +2605,7 @@ function FDJ.UpdateLootExplorerVisibleRows(scrollOffset)
         local lookaheadEnd = math.min(count, lookaheadStart + 4)
         for idx = lookaheadStart, lookaheadEnd do
             local nextIt = items[idx]
-            if nextIt and nextIt.itemID then
+            if nextIt and nextIt.itemID and nextIt.itemID > 0 then
                 if C_Item.IsItemDataCachedByID then
                     if not C_Item.IsItemDataCachedByID(nextIt.itemID) then
                         C_Item.RequestLoadItemDataByID(nextIt.itemID)

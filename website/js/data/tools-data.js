@@ -370,11 +370,11 @@ const WOW_TOOLS_DATA = {
       { id: 273049, name: "Archmagister's Faceted Pendant", iLvl: 35, slot: "Neck", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_necklacea8.jpg", source: "City of Dalaran (Shade of Archmage)" },
       { id: 273051, name: "Violet Sorcerer's Mantle", iLvl: 35, slot: "Shoulder", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shoulder_02.jpg", source: "City of Dalaran" },
       { id: 273052, name: "Ponderous Orb", iLvl: 35, slot: "Off-hand", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_orb_04.jpg", source: "City of Dalaran" },
-      { id: 273037, name: "Felbough Arm", iLvl: 34, slot: "Two-Hand", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_spear_08.jpg", source: "Excavation Site 4" },
-      { id: 273038, name: "Garb of Fallen Felbark", iLvl: 34, slot: "Chest", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shirt_09.jpg", source: "Excavation Site 4" },
-      { id: 273039, name: "Blightleaf Rope", iLvl: 34, slot: "Waist", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_belt_10.jpg", source: "Excavation Site 4" },
+      { id: 273037, name: "Felbough Arm", iLvl: 34, slot: "Two-Hand", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_spear_08.jpg", source: "Excavation Site: Wetlands" },
+      { id: 273038, name: "Garb of Fallen Felbark", iLvl: 34, slot: "Chest", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shirt_09.jpg", source: "Excavation Site: Wetlands" },
+      { id: 273039, name: "Blightleaf Rope", iLvl: 34, slot: "Waist", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_belt_10.jpg", source: "Excavation Site: Wetlands" },
       { id: 286988, name: "Violet Sorcerer's Leggings", iLvl: 34, slot: "Legs", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_pants_cloth_18.jpg", source: "City of Dalaran" },
-      { id: 273040, name: "Spine of the Devourer", iLvl: 33, slot: "Two-Hand Staff", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_staff_07.jpg", source: "Excavation Site 4" },
+      { id: 273040, name: "Spine of the Devourer", iLvl: 33, slot: "Two-Hand Staff", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_staff_07.jpg", source: "Excavation Site: Wetlands" },
       { id: 273046, name: "Guardian's Dualblade", iLvl: 33, slot: "Two-Hand Axe", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_throwingaxe_05.jpg", source: "City of Dalaran Sentinel" },
       { id: 273055, name: "Bonepile Gaze", iLvl: 33, slot: "Shield", quality: "q3", icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shield_02.jpg", source: "City of Dalaran (Underbelly)" }
     ]
@@ -451,7 +451,7 @@ const WOW_TOOLS_DATA = {
       ]
     },
     "dungeon-03": {
-      name: "Excavation Site 4",
+      name: "Excavation Site: Wetlands",
       levelRange: "26 – 31",
       zone: "Wetlands (Above Whelgar's Excavation)",
       status: "Available at Launch",
@@ -721,7 +721,7 @@ const WOW_TOOLS_DATA = {
       ]
     },
     "dungeon-07": {
-      name: "Alcaz Island Prison",
+      name: "Alcaz Prison",
       levelRange: "48 – 54",
       zone: "Dustwallow Marsh (Offshore Fortress)",
       status: "Launch Day Content (Nov 4, 2026)",
@@ -1185,28 +1185,33 @@ In WoW Forever (Build 1.60.1), the ancient library book collection system is acc
     },
     {
       id: "guide-duel-tournament",
-      title: "$100,000 Level 30 Duel Tournament (Venruki & Durotar Ruleset)",
+      title: "The Forever Open: $100,000 Level 30 1v1 Dueling Tournament",
       category: "PvP & Tournaments",
-      source: "ForeverChanges.pro · Method.gg · Wowhead",
+      source: "Warcraft Tavern · Icy Veins · Raider.IO",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_arena_2v2_7.jpg",
-      summary: "Ruleset, arena boundaries, banned consumables, and forensic class matchup breakdown from the $100,000 Level 30 Tournament hosted by Venruki.",
-      content: `### The $100,000 Closed Beta Showcase
-Hosted on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Championship** pitted 64 of the highest-ranked North American and European gladiators against one another in Durotar, establishing the benchmark 1v1 meta.
+      summary: "Rules, results and class prizes from The Forever Open — the community 1v1 dueling tournament played on the WoW: Forever beta, won by Warlockguy.",
+      content: `### The Forever Open (Closed Beta, October 17–18, 2026)
+A community-run 1v1 dueling tournament played on Level 30 Horde characters during the WoW: Forever closed beta. Sign-ups ran through Raider.IO and drew thousands of entrants; qualifiers were played October 17 and the finals October 18, with duels broadcast on Twitch.
 
-### Tournament Format & Restrictions
+### Format & Rules
 
 | Parameter | Tournament Specification |
-| Prize Pool | **$100,000 USD** ($50K 1st, $25K 2nd, $15K 3rd, $10K 4th) |
-| Level Cap | Strictly Level 30 (21 Talent Points available) |
-| Venue | Durotar Gates ring (Outside Orgrimmar) |
-| Match Rules | Best of 3 Single Elimination; Finals Best of 5 |
-| Consumables | **BANNED:** All open-world potions, engineering bombs, and world buffs! |
-| Allowed Items | Class-conjured food/water, Healthstones, Soulstones, Mana Agates |
-| Duel Arena | 40-yard radius flagged chalk boundary; crossing triggers 5s forfeit countdown |
+| Prize Pool | **~$100,000 USD** — $50,000 to the champion, ~$5,555 to the best player of each class |
+| Level Cap | Level 30, Horde characters |
+| Arena | Open arena with no pillars or line-of-sight obstacles |
+| Match Rules | Open qualifier rounds; the top four of each class advanced; finals best-of-five |
+| Consumables | **Allowed** — no cap on potions. Only a short blacklist was banned (e.g. Flash Bomb, Slumber Sand, Goblin Sapper Charge, protection potions, outside buffs, certain pet summons) |
+
+### Results
+• **Champion:** Warlockguy (Warlock) — $50,000 grand prize.
+• **Runner-up:** Neepzen (Warlock), also the Warlock class winner.
+• **Class winners:** Minpojke (Druid), Fvp (Hunter), Azzu (Paladin), Nieze (Priest), Justwoo (Rogue), Cdew (Shaman), Mag (Warrior). The Mage prize was a four-way tie: Allyana, Teleporter, Venruk, Yonezka.
+• The consumable-heavy ruleset was one of the event's biggest talking points — players estimated more than ten consumables used per duel.
 
 ---
 
-### Class Meta Tier List & Matchup Breakdown
+### Pre-Tournament Duel Theorycraft (Community Predictions)
+*Written before the event. Note that Warlocks — rated A-Tier below — ended up taking both first and second place.*
 
 #### S-Tier (Favored Champions)
 • **Feral Druid (11/10/0):**
@@ -1215,7 +1220,7 @@ Hosted on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Ch
   - Auto-bleed kiting allows resetting via Prowl in max-range duels.
 • **Arms Warrior (21/0/0):**
   - Access to *Deep Wounds*, *Impale*, and new Classic+ ability *Spearing Strike*.
-  - Armed with *Corpsemaker* (RFK) or *Heavehammer* (Excavation Site 4), 2-shot burst potential on squishy cloth.
+  - Armed with *Corpsemaker* (RFK) or *Heavehammer* (Excavation Site: Wetlands), 2-shot burst potential on squishy cloth.
 • **Retribution Paladin (0/11/10):**
   - *Blessing of Freedom* negates slows; *Voice of Truth* gives temporary spell-school silence immunity.
   - *Hammer of Justice* (5s stun) into *Seal of Command* burst deals over 600 damage.
@@ -1257,7 +1262,7 @@ Hosted on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Ch
 ### Ways to Earn Merchant's Favor
 
 • **Filled Supply Crates:** Dropped by level 10–30 humanoids and chests. Fill with matching trade goods (e.g. 20x Copper Bar, 10x Medium Leather, 8x Minor Healing Potion) for **250–500 Favor + 1.5–3 Gold** per turn-in!
-• **Daily Dungeon Quests:** Completing Excavation Site 4, City of Dalaran, and Blackfathom Deeps daily bounties awards **4 Merchant's Favor** each.
+• **Daily Dungeon Quests:** Completing Excavation Site: Wetlands, City of Dalaran, and Blackfathom Deeps daily bounties awards **4 Merchant's Favor** each.
 • **World Rare Kills:** Slaying any of the 34 datamined world rares grants **1 Merchant's Favor** (capped at 5 daily).
 
 ---
@@ -1444,11 +1449,11 @@ In WoW Forever, open-world rare spawns are no longer trivial recolors with 8-hou
     },
     {
       id: "guide-druid-forms",
-      title: "Druid Forms Masterclass (Aquatic, Cat, Travel & Secret Viper Form)",
+      title: "Druid Forms Masterclass (Aquatic, Cat, Travel & Snake Form Appearance)",
       category: "Classes & Pets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_druid_travelform.jpg",
-      summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the hidden Sunken Temple Viper Form.",
+      summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the Embrace of the Viper Snake Form appearance.",
       content: `### Druid Shape-Shifting Progression in WoW Forever
 Druids possess unparalleled flexibility across Phase 2, with early access to full land and aquatic mobility tools.
 
@@ -1476,9 +1481,9 @@ Druids possess unparalleled flexibility across Phase 2, with early access to ful
 
 ### The Secret Serpent Form (Embrace of the Viper)
 🗺️ **Set Bonus Unlock:** *Embrace of the Viper (5/5)*
-• Collect all 5 pieces of the Embrace of the Viper set in Wailing Caverns: Armor of the Fang (Lord Cobrahn), Footpads of the Fang (Lady Anacondra), Leggings of the Fang (Lord Pythas), Belt of the Fang (Lord Serpentis), and Gloves of the Fang (trash drop).
-• Equipping all 5 items unlocks **Snake Form**: transforms you into a sleek serpent with slithering Prowl animations, aquatic snake swimming, and the *Dream Venom* proc (chance on melee attack to stun for 1 sec and deal 45 Nature damage over 15s).
-• Also unlocks Emerald, Diamondback, and Albino serpent colorations at any Barber Shop!`
+• Collect all 5 pieces of the Embrace of the Viper set in Wailing Caverns: Armor of the Fang (Lord Pythas), Footpads of the Fang (Lord Serpentis), Leggings of the Fang (Lord Cobrahn), Belt of the Fang (Lady Anacondra), and Gloves of the Fang (Druid of the Fang trash).
+• Wearing all 5 pieces changes your **Cat Form appearance into a snake** (colour depends on your race). It is cosmetic and ends if you remove any piece.
+• The 5-piece bonus adds *Dream Venom*: melee attacks have a chance to stun the target for 1 sec.`
     },
     {
       id: "guide-downranking",
@@ -1541,9 +1546,9 @@ By combining the **+3% Cozy Sleeping Bag buff**, rested tents, and dense Classic
 • Redridge: Lakeshire bridge quests, Gnoll bounties, and Yowler.
 • 🎯 Pick up Step 4 of the Sleeping Bag on Stonewrought Dam crest.
 
-#### Levels 22–30: Wetlands, Excavation Site 4 & Duskwood
+#### Levels 22–30: Wetlands, Excavation Site: Wetlands & Duskwood
 • Head to Wetlands: Complete Greenwarden quests, Digsite excavations.
-• ⚔️ Run **Excavation Site 4** dungeon for the massive *Prehistoric Prism* quest turn-ins.
+• ⚔️ Run **Excavation Site: Wetlands** dungeon for the massive *Prehistoric Prism* quest turn-ins.
 • Finish in Duskwood (Nightbane, Hermit of Duskwood, Morgan Ladimore) to hit Level 30!
 
 ---
@@ -1569,13 +1574,13 @@ By combining the **+3% Cozy Sleeping Bag buff**, rested tents, and dense Classic
     },
     {
       id: "guide-excavation-site",
-      title: "New Dungeon: Excavation Site 4 Full Walkthrough",
+      title: "New Dungeon: Excavation Site: Wetlands Full Walkthrough",
       category: "Dungeons & Raids",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_gem_opal_01.jpg",
       summary: "Boss strategies, trash skips, entrance coords, and Titan Relic quest chain for the Level 26–31 Wetlands dungeon.",
-      content: `### Overview: Excavation Site 4 (Wetlands)
-Excavation Site 4 is a brand-new Classic+ dungeon set within the archaeological cliff caves overlooking Whelgar's Excavation in central Wetlands.
+      content: `### Overview: Excavation Site: Wetlands (Wetlands)
+Excavation Site: Wetlands is a brand-new Classic+ dungeon set within the archaeological cliff caves overlooking Whelgar's Excavation in central Wetlands.
 
 | Parameter | Dungeon Profile |
 | Level Range | 26–31 (Optimal party level: 28–29) |
@@ -1782,39 +1787,31 @@ Camping is the single most powerful leveling multiplier in WoW Forever when prop
     },
     {
       id: "guide-battle-mage",
-      title: "Battle Mage: Arcane Melee & Spellblade Class Spec",
+      title: "Coldflame Saber & the \"Battle Mage\" Theory",
       category: "Classes & Pets",
-      source: "ForeverChanges.pro · Method.gg · Wowhead",
+      source: "Kami Labs · Method.gg · community testing",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg",
-      summary: "Master the new melee Spellblade spec: Mail armor proficiency, Mana Blade weapon scaling, Spellstrike, and Arcane Ward defense.",
-      content: `### The Spellblade Revolution in WoW Forever
-The **Battle Mage** is an official Classic+ specialization that transforms the traditionally fragile cloth caster into a front-line armored combatant who infuses steel weapons with raw arcane devastation.
-
-### Core Mechanics & New Abilities
-
-• **Spellstrike:** Instant melee weapon attack that deals 100% physical weapon damage plus an additional 60–90 Arcane Damage, consuming 8% base mana. Generates an Arcane Charge.
-• **Mana Blade:** Enhances your main-hand weapon for 10 minutes, converting 20% of your total Spell Power into bonus melee Attack Power and restoring 2% mana on melee hits.
-• **Arcane Ward:** Surrounds the Battle Mage in a defensive barrier that increases Parry chance by 15% and reflects 15 Arcane damage back at attackers.
-• **Mail Armor Attunement:** At Level 30, Battle Mages can equip Mail armor pieces with Intellect and Spell Damage.
+      summary: "The real Coldflame Saber recipe (Scroll of the Saber + Blade of Silverlaine) and why the community suspects a melee \"Battle Mage\" playstyle — which Blizzard has not confirmed.",
+      content: `### Is "Battle Mage" a Real Spec?
+**No.** There is no Battle Mage specialization in WoW Forever and Mage talent trees have not gained a melee tree. "Battle Mage" is a **community theory** that started when players discovered the Coldflame Saber during the beta.
 
 ---
 
-### The Comprehension System & Coldflame Saber Discovery
-Mages possess a unique secondary research skill — **Comprehension (1–300)** — used to decipher ancient scrolls scattered across Azeroth:
-• **Untranslated Scrolls:** Dropped by Syndicate rogue spellcasters in Alterac and Defias mages in Westfall.
-• **Library Deciphering:** Study at the Ironforge Library or Stormwind Academy to decipher the scrolls into powerful enchants and combat incantations.
-• **Coldflame Saber Forging:** By deciphering the *Scroll of the Saber* and combining it with the *Blade of Silverlaine* (from Baron Silverlaine in Shadowfang Keep), Mages forge the iconic **Coldflame Saber** — 1H Sword granting +32 Spell Power and +98 bonus Fire damage against Frozen targets!
+### The Coldflame Saber (Confirmed)
+1. Decipher a **Scroll of the Saber** with the Mage *Comprehension* skill (requires Comprehension 15). It is soulbound and tells you to use it on the Blade of Silverlaine. One tester needed 119 deciphers to find it.
+2. Get the **Blade of Silverlaine** from Baron Silverlaine in Shadowfang Keep (it took one group 12 resets).
+3. Use the scroll on the blade to create the **Coldflame Saber**.
+
+| Item | Stats |
+| **Blade of Silverlaine** | Level 21 one-hand sword, 17–33 damage, 2.30 speed, +6 Shadow Resistance, +28 spell power |
+| **Coldflame Saber** | Level 21 sword, 2.00 speed, +7 Intellect, +32 spell power. *Melee attacks deal 98 additional Fire damage against Frozen targets.* |
 
 ---
 
-### Phase 2 Talent Build (21 Talent Points)
-• **Tier 1 (5/5 Arcane Subtlety):** Reduces threat generated by Arcane spells by 40% and reduces target's arcane resistances.
-• **Tier 2 (5/5 Arcane Concentration):** Grants a 10% chance to enter a Clearcasting state after any damage attack.
-• **Tier 3 (1/1 Spellstrike):** Unlocks the core melee strike.
-• **Tier 4 (5/5 Blade Infusion):** Increases your melee critical strike chance by 5% and adds 10% spell damage to critical strikes.
-• **Tier 5 (5/5 Arcane Impact):** Increases critical strike chance of Arcane Explosion and Spellstrike by 6%.
+### Other Weapon Scrolls
+Comprehension also has **The Blade** (use on a Hypnotic Blade to create the Narpas Sword) and **Wit** (use on a Witchblade), plus weapon imbues such as *Imbue Iceknife* (daggers occasionally freeze) and *Imbue Spark* (swords can reset Fire Blast). Together these hint at weapon-based Mage playstyles, but none of it is a separate spec.
 
-💡 **BiS Weapons:** Acquire the forged *Coldflame Saber* (SFK) or *Kirin Tor Battle-Blade* (City of Dalaran) to maximize Spellstrike weapon scaling!`
+See the *Mage Comprehension & Scrolls* guide for the full scroll list.`
     },
     {
       id: "guide-scarlet-banner",
@@ -1851,91 +1848,36 @@ In WoW Forever, the **Scarlet Banner** introduces an immersive espionage and bou
 | **Revered** | *Inquisitor's Signet* | 8 Gold | Finger: +7 Int, +5 Sta, +8 Holy Spell Damage |`
     },
     {
-      id: "guide-booty-bay-engineering",
-      title: "Goblin Engineering & Booty Bay Buckshot Innovations",
-      category: "Economy & Professions",
-      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_bomb_04.jpg",
-      summary: "New Phase 2 schematics: High-Yield Dynamite, Flash Grenades, Gyromatic Micro-Adjuster XL, and Goblin Jumper Cables XL.",
-      content: `### The Goblin Mechanical Renaissance
-Goblin Engineering trainers in **Ratchet** and **Booty Bay** have unlocked brand-new Classic+ schematics tailored for the Level 30 cap and open-world skirmishes.
-
-### Premier Phase 2 Engineering Schematics
-
-#### 1. High-Yield Dynamite (Skill 135)
-• **Materials:** 2x Heavy Blasting Powder, 1x Silk Cloth.
-• **Effect:** Deals **160 to 220 Fire Damage** and stuns all targets in a 5-yard radius for 2 seconds (1 min CD). Outstanding for flag defense in Warsong Gulch!
-
-#### 2. Flash Grenade (Skill 140)
-• **Materials:** 1x Bronze Tube, 1x Coarse Blasting Powder, 1x Flash Powder.
-• **Effect:** Blinds the target for 4 seconds from up to 20 yards away. Does not share diminishing returns with Rogue Blind!
-
-#### 3. Goblin Jumper Cables XL (Skill 150)
-• **Materials:** 2x Iron Bar, 2x Fused Wiring, 1x Shadowgem.
-• **Effect:** Has a **50% chance** to shock a dead ally back to life with 500 health and mana (30 min CD). Essential for wipe recovery in Excavation Site 4!
-
-#### 4. Booty Bay Buckshot (Skill 125)
-• **Materials:** 1x Solid Stone, 1x Heavy Blasting Powder.
-• **Effect:** Shotgun ammunition adding **+11.5 DPS** to ranged shot weapons, usable at Level 25!`
-    },
-    {
-      id: "guide-phase2-economy",
-      title: "Phase 2 Trade Economy & Artisan Stockpiling Strategy",
-      category: "Economy & Professions",
-      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_coin_01.jpg",
-      summary: "Most valuable trade goods at level 30 cap, high-yield farming loops, and what to stockpile before Phase 3 Artisan 300 unlocks.",
-      content: `### Mastering the Closed Beta Economy
-Because Closed Beta Phase 2 caps player level at 30 and professions at 225, specific trade goods experience massive supply pinches while high-level materials can be stockpiled cheaply for Phase 3!
-
-### High-Value Phase 2 Commodities
-
-| Material | Primary Source | Current AH Demand | Farming Hotspot |
-| **Heavy Leather** | Skinning (Lvl 25–35 beasts) | **VERY HIGH** | Wetlands Crocolisks & Hillsbrad Mountain Lions |
-| **Iron Ore / Bars** | Mining (Skill 125–175) | **EXTREME** | Arathi Highlands perimeter & Thousand Needles canyons |
-| **Heavy Stone** | Mined with Iron | **HIGH** | Essential for Heavy Sharpening Stones and Dynamite |
-| **Silk Cloth** | Humanoids (Lvl 28–35) | **HIGH** | Syndicate camps in Hillsbrad & Kurzen compound |
-| **Goldthorn** | Herbalism (Skill 170) | **EXTREME** | Foothills ridges, key component for Free Action Potions |
-| **Wild Steelbloom** | Herbalism (Skill 115) | **HIGH** | Arathi mountain passes, required for Catseye Elixirs |
-
----
-
-### What to Stockpile Before Phase 3 (Artisan 300 Unlock)
-When Phase 3 launches, character level will rise to 40+, unlocking **Artisan training (225–300)**. Smart players are filling their bank alts with materials that will skyrocket in price on day one:
-
-• **Mithril Ore & Solid Stone:** Needed for 225–260 Blacksmithing and Engineering.
-• **Mageweave Cloth:** Needed for 225–260 Tailoring and First Aid bandages.
-• **Thick Leather:** Needed for 225–260 Leatherworking.
-• **Fadeleaf & Blindweed:** Essential for 225+ high-tier potions and Blinding Powder!`
-    },
-    {
       id: "guide-druid-snake-form",
-      title: "Secret Druid Snake Form: Embrace of the Viper Full Guide",
+      title: "Druid Snake Form: Embrace of the Viper Full Guide",
       category: "Classes & Pets",
-      source: "ForeverChanges.pro · Wowhead · Classic+",
+      source: "Method.gg · Icy Veins",
       icon: "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_windserpent.jpg",
-      summary: "How to unlock the custom Druid Snake Form: Wailing Caverns set drops, Dream Venom 1-second stun proc, slithering Prowl, and Barber Shop scales.",
-      content: `### Unlocking the Secret Druid Snake Form
-One of the most viral discoveries in WoW Forever is the **Druid Snake Form**, an authentic shape-shifting form with dedicated serpent animations, swimming locomotion, and stealth mechanics.
+      summary: "Equip all 5 pieces of the reimagined Embrace of the Viper set from Wailing Caverns to turn your Cat Form into a snake. Drop sources, Forever set bonuses (incl. Dream Venom) and how it works.",
+      content: `### What Snake Form Is
+Wearing all **5 pieces** of the reimagined **Embrace of the Viper** set changes your **Cat Form's appearance into a snake**. It is cosmetic: your abilities still work (and sound) like Cat Form, and each Druid race has its own snake colour.
 
-### Requirements & Set Pieces: Embrace of the Viper (5/5)
-To unlock Snake Form, Druids must assemble the complete 5-piece **Embrace of the Viper** dungeon set from Wailing Caverns:
-
-| Set Item | Boss / Source | Drop Rate | Key Stats |
-| **Armor of the Fang** | Lord Cobrahn | 25% | Chest: 81 Armor, +2 Str, +7 Agi |
-| **Footpads of the Fang** | Lady Anacondra | 28% | Feet: 55 Armor, +4 Agi, +4 Sta |
-| **Leggings of the Fang** | Lord Pythas | 25% | Legs: 74 Armor, +5 Str, +9 Agi, +4 Sta |
-| **Belt of the Fang** | Lord Serpentis | 33% | Waist: 46 Armor, +2 Str, +6 Agi |
-| **Gloves of the Fang** | Wailing Caverns Trash Mobs | BoE Rare | Hands: 48 Armor, +5 Agi |
+**It is not permanent** — unequipping any one of the five pieces returns you to the normal cat model.
 
 ---
 
-### Form Mechanics & Unique Abilities
-Equipping the full 5/5 set permanently unlocks Snake Form:
-• **Dream Venom:** Chance on hit with melee attacks to stun the target for 1 second and inflict 45 Nature damage over 15 seconds.
-• **Slithering Prowl:** In stealth, your serpent slithers silently along the terrain with custom low-profile collision.
-• **Aquatic Serpent:** When swimming in water, converts into an aquatic water-snake with increased swimming speed and amphibious breathing.
-• **Barber Shop Customization:** Once unlocked on your character, visit any capital city Barber Shop to toggle between Emerald Viper, Diamondback Rattler, and Albino Cobra scale patterns!`
+### Set Pieces (Wailing Caverns)
+| Item | Drops From |
+| **Gloves of the Fang** | Druid of the Fang (trash) |
+| **Belt of the Fang** | Lady Anacondra |
+| **Footpads of the Fang** | Lord Serpentis |
+| **Leggings of the Fang** | Lord Cobrahn |
+| **Armor of the Fang** | Lord Pythas |
+
+---
+
+### WoW Forever Set Bonuses
+• **2 pieces:** +10 Intellect
+• **3 pieces:** +10 Attack Power
+• **4 pieces:** When you take damage at or below 25% Health, restore 100 Health and Mana over 5 sec (once every 5 min).
+• **5 pieces:** Melee attacks have a chance to inflict **Dream Venom**, stunning the target for 1 sec. Testers report no internal cooldown, so it can proc back to back.
+
+💡 The set is leather and great for Feral leveling through the late teens and early 20s, so collecting it is worthwhile even before the cosmetic unlock.`
     },
     {
       id: "guide-savory-whimsyfin-delight",
@@ -2010,7 +1952,7 @@ In WoW Forever, Level 30 represents a monumental power spike for Warriors. Reach
       category: "Classes & Pets",
       source: "Wowhead · Warcraft Tavern · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_auramastery.jpg",
-      summary: "Righteous Defense taunt mechanics, Voice of Truth silence breaks, Seal of Command burst rotation, and Forsaken Paladin holy fire synergies.",
+      summary: "Hand of Reckoning taunts, Voice of Truth silence immunity, Seal of Command burst rotation, and Forsaken Paladin holy fire synergies.",
       content: `### The Holy Champion Overhaul in WoW Forever
 Paladins in WoW Forever receive critical quality-of-life adjustments that elevate them from auto-attack bots into formidable front-line commanders with reliable taunt mechanics and anti-silence utility.
 
@@ -2019,18 +1961,18 @@ Paladins in WoW Forever receive critical quality-of-life adjustments that elevat
 | Specialization | Role | Top Talent Focus | Signature Utility |
 | **Retribution (0/11/10)** | Burst DPS & PvP Juggernaut | 3/3 Conviction, 1/1 Seal of Command | Blessing of Freedom, Hammer of Justice (5s) |
 | **Holy (21/0/0)** | Infinite Mana Dungeon Healer | 5/5 Spiritual Focus, 5/5 Illumination | Flash of Light R1, Cleanse, Lay on Hands |
-| **Protection (0/16/5)** | AoE Dungeon Tank | 5/5 Redoubt, 3/3 Precision, Righteous Fury | Righteous Defense (Taunt), Holy Shield prep |
+| **Protection (0/16/5)** | AoE Dungeon Tank | 5/5 Redoubt, 3/3 Precision, Righteous Fury | Hand of Reckoning (Taunt), Holy Shield prep |
 
 ---
 
 ### Key Classic+ Upgrades
 
-#### 1. Righteous Defense (Reliable Taunt)
-• **Range:** 30 Yards | **Cooldown:** 10 Seconds | **Cost:** Negligible Mana.
-• **Mechanic:** Taunts up to 3 attacking monsters off an ally onto the Paladin. Completely solves Classic Paladin tanking viability in Excavation Site 4 and City of Dalaran!
+#### 1. Hand of Reckoning (Taunt)
+• Taunts the target to attack you (no effect if it is already attacking you). While you know it, Righteous Fury's Holy threat bonus rises to 80% and Righteous Fury returns mana when you are healed.
+• Judging Seal of Fury (*Judgement of Fury*) also taunts the target.
 
 #### 2. Voice of Truth (Level 20 Baseline Spell)
-• Learned baseline at level 20 from Paladin trainers. When casting under aura concentration, reduces silence duration by 50% and grants a 20% Holy Spell Power surge for 6 seconds following any stun dispel.
+• Learned baseline at level 20. Grants immunity to Silence and Interrupt effects for 6 sec.
 
 ---
 
@@ -2093,7 +2035,7 @@ After casting a mana-spending spell, spirit-based mana regeneration pauses for *
 
 | Wand | Item Level | DPS | How to Acquire |
 | **Gravestone Scepter** | iLvl 29 | **29.0 DPS** | Blackfathom Deeps Quest (*Blackfathom Villainy*) |
-| **Excavation Rod** | iLvl 28 | 24.5 DPS | Excavation Site 4 Questline |
+| **Excavation Rod** | iLvl 28 | 24.5 DPS | Excavation Site: Wetlands Questline |
 | **Greater Magic Wand** | iLvl 18 | 17.5 DPS | Crafted by Enchanters (Skill 75) |
 
 ---
@@ -2270,7 +2212,7 @@ Shadowfang Keep (Silverpine Forest) and The Deadmines (Westfall) have received u
 ### The Deadmines (Level 18–22)
 • **Rhahk'Zor & Sneed:** Clear surrounding goblin engineers before pulling. Sneed ejects from his shredder at 0% HP with rapid melee strikes.
 • **Gilnid & The Smelter:** Dodge molten slag pools.
-• **Edwin VanCleef:** Spawns two stealthed Defias Blackguards at 50% HP. Tank pick up adds immediately with Thunder Clap / Righteous Defense.
+• **Edwin VanCleef:** Spawns two stealthed Defias Blackguards at 50% HP. Tank pick up adds immediately with Thunder Clap / Hand of Reckoning.
 • **Notable Pre-BiS:** *Cruel Barb* (1H Sword 16.7 DPS), *Smite's Mighty Hammer* (2H Mace), *Cape of the Brotherhood*.`
     },
     {
@@ -2332,24 +2274,41 @@ Supply Crates represent one of the most lucrative and consistent gold-and-reputa
     },
     {
       id: "guide-legacy-talents",
-      title: "Legacy Discovery System & Extra Talent Points (+5 Bonus Blueprint)",
+      title: "Legacy System: 65 Account Challenges, Perk Trees & the Talented Perk",
       category: "Exploration & Secrets",
-      source: "Wowhead · Classic+ · Method.gg",
+      source: "Live client data · Warcraft Wiki",
       icon: "https://wow.zamimg.com/images/wow/icons/large/achievement_dungeon_classicdungeonmaster.jpg",
-      summary: "How to complete the 65 Legacy Challenges to unlock +2 to +5 additional talent points beyond the level 30 cap before launch.",
-      content: `### Shattering the Conventional Talent Ceiling
-In WoW Forever, character progression extends beyond simple monster killing. The **Legacy Discovery System** tracks 65 world challenges that award bonus talent points!
+      summary: "How Legacy Points work: up to 65 account-wide points from challenges, spent per character in three perk trees. The Talented perk starts talent points at level 5, so you have 26 points at level 30 (still 51 max at 60).",
+      content: `### What Legacy Is
+Legacy is WoW Forever's account-wide progression. You earn **Legacy Points** by completing account challenges, then each character spends them in its own **perk trees**.
 
-### How to Unlock the +5 Extra Talent Points at Level 30
+> **The Talented perk:** You start earning talent points at level 5 instead of level 10. That means **26 talent points at level 30** instead of 21, which is why many leveling builds on this site use 26 points. At level 60 every character is still capped at **51 talent points**, so Legacy gives no extra endgame talents.
 
-| Milestone | Points Earned | Challenges Required | Key Feat |
-| **Discovery Milestone 1** | **+1 Talent Point** | 10 Legacy Challenges | Uncover all 10 Stormwind or Orgrimmar hidden relics |
-| **Discovery Milestone 2** | **+1 Talent Point** | 20 Legacy Challenges | Slay 15 distinct World Rares |
-| **Discovery Milestone 3** | **+1 Talent Point** | 35 Legacy Challenges | Complete 40 Library Manuscripts achievement |
-| **Discovery Milestone 4** | **+1 Talent Point** | 50 Legacy Challenges | Achieve Friendly with Azeroth Commerce Authority |
-| **Discovery Milestone 5** | **+1 Talent Point** | 65 Legacy Challenges | Clear all 4 Closed Beta dungeons on challenge timer |
+---
 
-💡 **Result:** Instead of the baseline 21 talent points at Level 30, a dedicated player can enter Closed Beta Phase 2 with **up to 26 Talent Points**, unlocking hybrid capstones that opponents cannot match!`
+### Earning Points (65 Total at Launch)
+| Category | Points | How |
+| **Classes** | 27 | Reach level 25, 45 and 60 on each of the 9 classes |
+| **Tradeskills** | 18 | Reach 150, 225 and 300 in the six crafting professions |
+| **Player vs. Player** | 12 | PvP rank and battleground milestones |
+| **Dungeons** | 3 | Clear groups of the new dungeons |
+| **Raids** | 3 | Onyxia's Lair, Hyjal Summit, Barrow Deeps |
+| **Adventure** | 2 | Exploration and long questlines |
+
+---
+
+### Milestone Rewards (Innkeeper Wiley, Ratchet)
+• **15 points:** Holstered Replica Ironforge Air Rifle (toy)
+• **25 points:** Spectral Bear Cub (pet)
+• **40 points:** Spectral Bear Tabard
+• **55 points:** Reins of the Spectral Bear (mount)
+
+---
+
+### The Three Perk Trees (examples, max rank)
+• **Tradeskill Mastery:** Working Overtime (+20% skill-up chance), Bountiful Harvest (+100% Scarce materials), Master Chef, Bartering (vendor discount), Dedicated Study.
+• **World Explorer:** Well Rested, Thrill of Adventure (5% Health/Mana on killing blows, open world only), Talented (talent points from level 5), Frequent Flier (50% cheaper, 20% faster flights).
+• **Resourcefulness:** Gourmand (+100% food buff duration), Permanence (long group buffs +100%, camp benefits +50%), Reagent Economy (no vendor reagents), Diplomat (+10% reputation), For Great Honor.`
     },
     {
       id: "guide-racials-overhaul",
@@ -2423,82 +2382,54 @@ In WoW Forever, Dwarves draw upon Wildhammer stormcallers and Bronzebeard geoman
     },
     {
       id: "guide-mage-comprehension-scrolls",
-      title: "Mage Arcane Comprehension Scrolls & Leyline Focus Attunement Guide",
+      title: "Mage Comprehension & Scrolls Guide (Comprehend Scroll, Study & All Scroll Effects)",
       category: "Exploration & Secrets",
-      source: "Wowhead · Warcraft Tavern · Classic+",
+      source: "Method.gg · Warcraft Wiki",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_scroll_03.jpg",
-      summary: "Master guide to Mage Comprehension (1–300), Study (Bundle of Scrolls), 17 undeciphered scroll drops, 31 deciphered scrolls, 3 weapon transformation scrolls, and Leyline Foci.",
-      content: `### The Kirin Tor Scholarly Resurgence & How Comprehension Works
-In WoW Forever, all Mages automatically receive two spellbook abilities at level 1: **Comprehension** (passive skill scaling from **1 to 300**, increasing max skill by +5 per character level) and **Decipher** (active 5-second cast that converts an *Undeciphered* scroll into a usable Mage scroll). By pairing **Comprehension Charms** and **Study** rituals with ancient regional **Study Scrolls**, Mages decipher arcane cipher glyphs and weapon transformations.
+      summary: "How the Mage-only Comprehension skill works in WoW Forever: Comprehend Scroll at level 6, scroll tiers at skill 1/15/50/175, Study for Bundles of Scrolls, and every known scroll effect.",
+      content: `### How Comprehension Works
+• At **level 6**, Mages learn **Comprehend Scroll** from their class trainer. It adds an active ability and unlocks the Mage-only **Comprehension** skill.
+• **Undeciphered scrolls** are random drops from enemies while questing and in dungeons — there is no dedicated farm. Deciphering one turns it into a usable Mage scroll.
+• Your skill rises by 1 for each scroll you decipher, but only if the scroll is high enough for your current skill.
+• New scroll tiers open at **Comprehension 1, 15, 50 and 175** (the resulting scrolls need player level 6, 16, 25 and 46).
 
-• **Study Ritual (Level 10+):** Mages learn [Study](https://www.wowhead.com/forever/spell=1306331) (Spell #1306331), a 5-second ritual cast on a **1-hour cooldown** requiring **1x Light Feather** while standing inside a faction library (Stormwind Keep Library, Ironforge Hall of Explorers, Undercity Apothecarium/Magic Quarter, or Orgrimmar Valley of Spirits). Casting Study creates a [Bundle of Scrolls](https://www.wowhead.com/forever/item=269802) (Item #269802) containing 2–4 level-appropriate Undeciphered Scrolls.
-• **Reagent Vendors & Trainers:** Comprehension Charms can also be purchased from Mage trainers and reagent vendors in Stormwind, Ironforge, Orgrimmar, and Undercity for 7 silver each.
-
----
-
-### 1. 4-Tier Skill-Up Bracket Table (1–300)
-
-| Tier | Req Skill | Orange (100%) | Yellow | Green | Gray (0%) | Undeciphered Scroll Tier |
-|---|---|---|---|---|---|---|
-| **Tier 1** | **1** | 1–50 | 50–75 | 75–100 | 100+ | Torn, Crumpled, Singed, Smudged, Faded Scrolls |
-| **Tier 2** | **15–50** | 50–125 | 125–150 | 150–175 | 175+ | Weathered, Ragged, Waterlogged, Stained, Dog-Eared Scrolls |
-| **Tier 3** | **50–125** | 125–200 | 200–225 | 225–250 | 250+ | Charred, Scorched, Bloodstained, Dusty, Cryptic Scrolls |
-| **Tier 4** | **175+** | 175–250 | 250–275 | 275–300 | 300 | Ancient, Runed, Eldritch, Arcane-Sealed Scrolls |
+> Comprehension Charms from Season of Discovery **do not exist** in WoW Forever.
 
 ---
 
-### 2. All 17 Undeciphered Scrolls & Drop Sources
-Undeciphered scrolls drop from humanoid caster mobs across Azeroth, Lockboxes, Treasure Chests, and the Mage **Study** ([Bundle of Scrolls](https://www.wowhead.com/forever/item=269802)) ritual:
-• **Tier 1 (Req Comprehension 1, Levels 1–20):** *Undeciphered Torn Scroll*, *Undeciphered Crumpled Scroll*, *Undeciphered Smudged Scroll*, *Undeciphered Faded Scroll* — Drop from Defias Pillagers/Trappers, Kobold Geomancers, Dalaran Apprentices, Darkshore Grell, and Barrens Kolkar Wranglers.
-• **Tier 2 (Req Comprehension 15, Levels 15–30):** *Undeciphered Singed Scroll*, *Undeciphered Weathered Scroll*, *Undeciphered Waterlogged Scroll*, *Undeciphered Stained Scroll* — Drop from Shadowfang Keep, BFD, Wetlands Dragonmaw, Duskwood Necromancers, and Hillsbrad Dalaran Mages.
-• **Tier 3 (Req Comprehension 50, Levels 28–45):** *Undeciphered Ragged Scroll*, *Undeciphered Charred Scroll*, *Undeciphered Bloodstained Scroll*, *Undeciphered Dusty Scroll*, *Undeciphered Cryptic Scroll* — Drop from Scarlet Monastery (Library/Cathedral), Razorfen Downs, Uldaman, Stranglethorn Kurzen/Bloodscalp casters, and Badlands Shadowforge.
-• **Tier 4 (Req Comprehension 175, Levels 45–60):** *Undeciphered Scorched Scroll*, *Undeciphered Ancient Scroll*, *Undeciphered Runed Scroll*, *Undeciphered Eldritch Scroll* — Drop from Zul'Farrak, Sunken Temple, BRD, Scholomance, Stratholme, Dire Maul Library, and Winterspring Highborne.
+### Study & Bundles of Scrolls
+Turning in your first Library book unlocks **Study**. Once per hour, bring **1 Light Feather** to your faction's Library (**Stormwind** for Alliance, **Undercity** for Horde) and cast Study to receive a **Bundle of Scrolls** with random *already deciphered* scrolls. Study does not raise your Comprehension skill.
+
+**Scroll of Comprehension:** +15 Comprehension for 1 hour (Mage-only, stacks to 5).
 
 ---
 
-### 3. All 31 Deciphered Scrolls & The 3 Weapon Transformation Scrolls
-• **Combat & Spell Throughput Scrolls (8):** *Scroll of Arcane Potency I–III* (+Spell Damage & Healing for 30m), *Scroll of Frostbite I–II* (+Frost Crit & Chill Duration), *Scroll of Ignition I–II* (+Fire Crit & Ignite Tick Damage), *Scroll of Mind Quickening* (+Cast Speed burst for 20s).
-• **Mana & Sustain Scrolls (6):** *Scroll of Evocation Mastery* (reduces Evocation CD by 2 min on use), *Scroll of Mana Surge I–III* (restores mana + grants 15% spirit regen while casting for 15s), *Scroll of Clearcasting* (next 2 spells cost 0 mana), *Scroll of Archmage Meditation*.
-• **Utility, Group & Mobility Scrolls (8):** *Scroll of Mass Blink* (resets Blink cooldown and increases range by 10 yds), *Scroll of Prismatic Barrier I–II* (absorbs magic and physical damage), *Scroll of Ritual of Refreshment* (conjures group food/water table), *Scroll of Temporal Shift*, *Scroll of Featherfall Mastery*, *Scroll of Mirror Image*, *Scroll of Polymorph: Penguin/Turtle*.
-• **Stat & Resistance Scrolls (6):** *Scroll of Arcane Brilliance* (party-wide Intellect without reagent), *Scroll of Elemental Ward I–II* (+25 All Magic Resistances), *Scroll of Savagery*, *Scroll of Genius I–II*.
+### Scroll Effects
+| Scroll | Comp. / Lvl | Effect |
+| Imbue Lesser Flame | 1 / 6 | Staff, 1 hr: Fire damage up to +4 |
+| Imbue Chillknife | 1 / 6 | Dagger, 1 hr: occasionally chills on hit |
+| Rat Familiar | 1 / 6 | 1 hr pet: +2 Intellect |
+| Minor Evocation | 1 / 6 | Restore 300 Mana over 4 sec (8 min CD) |
+| The Saber | 15 / — | Use on Blade of Silverlaine → Coldflame Saber |
+| Imbue Frost | 15 / 16 | Staff: Frost damage up to +8 |
+| Imbue Striking | 15 / 16 | Staff: occasionally fires an Arcane Missile |
+| Imbue Iceknife | 15 / 16 | Dagger: occasionally freezes on hit |
+| Imbue Spark | 15 / 16 | Sword: melee hits can reset Fire Blast |
+| Frog Familiar | 15 / 16 | 1 hr pet: +6 Intellect |
+| Cryoblast | 15 / 16 | Frost damage in a 5 yd radius |
+| The Blade | 50 / — | Use on Hypnotic Blade → Narpas Sword |
+| Imbue Accuracy | 50 / 25 | Staff: +0.5% spell hit |
+| Imbue Flame | 50 / 25 | Staff: Fire damage up to +12 |
+| Imbue Manablade | 50 / 25 | Dagger: occasionally restores Mana |
+| Khadgar's Unlocking | 50 / 25 | Opens locks up to difficulty 125 |
+| Cat Familiar | 50 / 25 | 1 hr pet: +12 Intellect |
+| Rebuke Elemental | 50 / 25 | +15% spell damage vs Elementals for 20 sec |
+| Wit | ? / — | Use on a Witchblade |
+| Greater Cryoblast | 175 / 46 | Larger Frost AoE |
+| Imbue Greater Flame / Frost | 175 / 46 | Staff: Fire or Frost damage up to +20 |
+| Imbue Precision | 175 / 46 | Staff: +1% critical strike chance |
 
-| Weapon Transformation Scroll | Req Skill | Base Weapon Required | Resulting Mage Blade | Key Stats / Effect |
-|---|---|---|---|---|
-| **Scroll of the Coldflame** | 50 | Rare 1H Sword (Lvl 20–30 bracket) | **Coldflame Saber** | 1H Caster Sword with Frost/Fire Spell Power and icy blue-flame visual glow |
-| **Scroll of Narpas** | 125 | Mid-level 1H Sword (Lvl 35–45 bracket) | **Narpas Sword** | 1H Caster Sword with Intellect, Spirit, and +Spell Damage & Healing |
-| **Scroll of the Witchblade** | 175 | High-level 1H Blade (Lvl 50–60 bracket) | **Witchblade** | Pre-Raid 1H Caster Blade with high Spell Power, +1% Spell Crit, and Arcane proc |
-
----
-
-### 4. Ancient Study Scrolls & Cipher Drop Locations
-
-| Study Scroll | Zone / Mob Source | Deciphered Knowledge | Primary Benefit |
-| **Scroll of Arcane Insight** | Dalaran Wizards (Ambermill, Silverpine) & Defias Enchanters (Westfall) | *Arcane Surge Efficiency* | Reduces mana cost of Arcane Missiles and Arcane Explosion by 12% |
-| **Scroll of Cryomancy** | Frostmane Seers (Dun Morogh) & Venture Co. Surveyors (Loch Modan) | *Frost Channeling Attunement* | Frostbolt critical hits refund 25% base mana cost |
-| **Scroll of Pyrotechnics** | Dark Iron Incendiaries (Loch Modan) & Burning Blade Fanatics (Durotar) | *Combustion Dynamics* | Extends Fire Blast maximum casting range from 20 to 26 yards |
-| **Scroll of Spatial Transit** | Dalaran Undercroft (Alterac) & Tower of Ilgalar (Redridge) | *Blink Momentum* | Blink removes all movement slowing effects and grants +30% run speed for 2 seconds |
-
----
-
-### 3. Regional Leyline Focus Attunement Sites
-To translate advanced Level 25–30 scrolls, a Mage must stand within 15 yards of a humming **Leyline Focus Stone**:
-• **Alterac Mountains:** Subterranean conduit below the City of Dalaran purple forcefield [21, 56].
-• **Elwynn Forest:** The highest tower room in **The Tower of Azora** [65, 70].
-• **Redridge Mountains:** Upper balcony of **Stonewatch Keep** [78, 48].
-• **Ashenvale:** The celestial moonwell inside **Astranaar / Silverwind Refuge** [49, 67].
-• **Thousand Needles:** The windswept plateau top of **Highperch** [12, 33].
-
----
-
-### 4. Fast Transcription In-Game Macro
-Use this macro to quickly apply your active Comprehension Charm to an unread scroll in your primary inventory bag:
-\`\`\`lua
-/use Comprehension Charm
-/use item:208831
-/run print("|cff69ccf0[Arcane Study]|r Deciphering ancient study scroll...")
-\`\`\`
-
-💡 **Scholarly Note:** Deciphered scroll traits persist through death, dual-spec swaps, and talent respecs without requiring re-attunement!`
+*Higher-tier scroll details were gathered during the level 30 beta and may change.*`
     },
     {
       id: "guide-master-transit-routes",
@@ -2698,7 +2629,7 @@ Navigating between Kalimdor and the Eastern Kingdoms is a critical rite of passa
       category: "Classes & Pets",
       source: "Wowhead · Warcraft Tavern · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beastmastery.jpg",
-      summary: "Optimal 21-point Beast Mastery and Marksmanship talent builds, Pet Diet & Rank 4 ability training, ammo crafting, and Excavation Site 4 dungeon rotation.",
+      summary: "Optimal 21-point Beast Mastery and Marksmanship talent builds, Pet Diet & Rank 4 ability training, ammo crafting, and Excavation Site: Wetlands dungeon rotation.",
       content: `### Ranged Supremacy at the Level 30 Cap
 In Closed Beta Phase 2, Hunters excel in both solo open-world grinding and group dungeon runs thanks to 21 available talent points, Tier 2 camping stat food buffs, and Rank 4 pet abilities.
 
@@ -2734,7 +2665,7 @@ In Closed Beta Phase 2, Hunters excel in both solo open-world grinding and group
 ---
 
 ### 4. Level 30 Hunter Pre-BiS Weapon Arsenal
-• **Ranged Weapon:** *Galvanic Pulse Rifle* (Excavation Site 4 - Chief Engineer Bilgewater) or *Master Hunter's Rifle* (Stranglethorn Nesingwary chain).
+• **Ranged Weapon:** *Galvanic Pulse Rifle* (Excavation Site: Wetlands - Chief Engineer Bilgewater) or *Master Hunter's Rifle* (Stranglethorn Nesingwary chain).
 • **Melee Stat Sticks:** 2x *Cruel Barb* (Deadmines - Edwin VanCleef) or *Zephras Cleaver* (+7 Agility, +5 Stamina).
 • **Ammo:** Use *Heavy Shot* (Engineered or purchased from specialty ammo quartermasters in Ironforge/Orgrimmar).`
     },
@@ -2831,11 +2762,11 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
 | Slot | Best-in-Slot Item | Source | Key Stats |
 |---|---|---|---|
 | **Two-Hand Weapon** | **Manual Crowd Pummeler** | Gnomeregan (Crowd Pummeler 9-60) | 31.5 DPS, 3-charge +50% Attack Speed burst |
-| **Two-Hand (Alt)** | **Excavator's Heavy Mallet** | Excavation Site 4 (Wetlands) | 28.4 DPS, +12 Str, +6 Sta |
-| **Chest** | **Excavator's Tunic** | Excavation Site 4 (Foreman) | 168 Armor, +10 Agi, +8 Sta, +4 Str |
+| **Two-Hand (Alt)** | **Excavator's Heavy Mallet** | Excavation Site: Wetlands (Wetlands) | 28.4 DPS, +12 Str, +6 Sta |
+| **Chest** | **Excavator's Tunic** | Excavation Site: Wetlands (Foreman) | 168 Armor, +10 Agi, +8 Sta, +4 Str |
 | **Legs** | **Triprunner Dungarees** | Gnomeregan Quest (*The Grand Betrayal*) | 132 Armor, +18 Agi, +2 Str |
 | **Belt** | **Prowler's Leather Belt** | Camping Tanning Rack Craft (Skill 150) | 88 Armor, +8 Agi, +6 Sta, +1% Crit |
-| **One-Hand (Resto)** | **Gavel of the Crystal Lake** | Excavation Site 4 | 22.0 DPS, +14 Healing Power, +6 Int |
+| **One-Hand (Resto)** | **Gavel of the Crystal Lake** | Excavation Site: Wetlands | 22.0 DPS, +14 Healing Power, +6 Int |
 | **Two-Hand (Boomkin)** | **Rod of the Sleepwalker** | Blackfathom Deeps (Twilight Lord Kelris) | +11 Spell Damage, +7 Int, +5 Spi |
 
 ---
@@ -2852,69 +2783,36 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
     },
     {
       id: "guide-darkspear-islands-pvp",
-      title: "Darkspear Islands 15v15 Battleground Guide: Base Warfare & Decayless Honor",
+      title: "Darkspear Islands Battleground Guide (Levels 30–60)",
       category: "PvP & Tournaments",
-      source: "wowforeverguides.com · ForeverChanges.pro · Wowhead",
+      source: "Live client data · community PvP guides",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_zone_dustwallowmarsh.jpg",
-      summary: "Master the new 15v15 coastal battleground in the Level 30 queue: 4 capture bases, central Idol carrying mechanics, coastal artillery guns, and decayless Rank 14 progression.",
-      content: `### The Premier 15v15 Battleground of WoW Forever
-**Darkspear Islands** is the flagship 15v15 objective-based battleground in WoW Forever. Situated in the tropical archipelago off the coast of Dustwallow Marsh and the Barrens, it pits the **Darkspear Raiders** (Horde) directly against the **Theramore Expeditionary Force** (Alliance) in a high-octane battle for 2,000 victory resources.
+      summary: "What is confirmed about Forever's new battleground off the coast of Dustwallow Marsh: capture points with a central flag, levels 30–60, rewards, and how it fits the decay-free Rank 14 system.",
+      content: `### Overview
+**Darkspear Islands** is WoW Forever's new battleground, set on islands off the coast of **Dustwallow Marsh**. It is commonly described as a **15v15 capture-point map with a central flag**, open to levels **30–60**.
 
-### Battlefield Geography & 4 Coastal Strongholds
-
-Darkspear Islands features 4 fortress bases arranged in a diamond perimeter around a sunken coral sandbar:
-
-| Stronghold Base | Geographical Position | Tactical Role |
-|---|---|---|
-| **Ruins of Bal'lal** | Northwest Island | Open ruined ziggurat with wide line-of-sight for ranged casters |
-| **Spire of the Loa** | Northeast High Bluff | Elevated overlook controlling the eastern shipping lanes |
-| **Darkspear Hold** | Southwest Beachhead | Primary Horde landing dock with fortified stockade walls |
-| **Theramore Overlook** | Southeast Bastion | Primary Alliance forward outpost commanding southern artillery |
-
-#### Resource Accumulation Dynamics
-Resource points tick every 3 seconds based on total bases firmly controlled:
-• **1 Base Controlled:** +5 Resources per tick (~12 min to win)
-• **2 Bases Controlled:** +10 Resources per tick (~6 min to win)
-• **3 Bases Controlled:** +20 Resources per tick (~3 min to win)
-• **4 Bases Controlled (Dominance):** +40 Resources per tick (~90s to victory!)
+> Blizzard has not published a full rules breakdown (exact objectives, scoring, team size) for Darkspear Islands. Treat details below as community-reported.
 
 ---
 
-### The Central Relic: Idol of the Wild Gods (+200 Instant Points)
-
-Every 3 minutes, the **Idol of the Wild Gods** manifests on the center sandbar between the islets:
-• **Weight of the Loa:** Picking up the Idol grants your character the *Carrying the Loa* aura, reducing movement speed by **15%** and increasing damage taken by **10%** (stacking every 30 seconds).
-• **Capture Delivery:** Delivering the Idol to any **fully captured friendly stronghold flag** awards **+200 Instant Victory Points** and grants all friendly players on the map a 45-second *Tidal Vigor* buff (+5% haste).
-• **Carrier Protection Protocol:** Feral Druids (immune to disarm and able to shift snares), Protection Paladins with Blessing of Freedom, and Mages with Ice Block make elite escort escorts.
-
----
-
-### Controllable Coastal Artillery Batteries
-
-On the battlements of **Theramore Overlook** and **Darkspear Hold**, players can mount heavy brass shore cannons:
-• **Artillery Shells:** 45-yard trajectory range; deals **400–600 AoE physical damage** and knocks down charging enemy waves for 2 seconds (10s firing cooldown).
-• **Counter-Battery Tactic:** Rogues in Stealth and Cat Druids in Prowl can slip behind enemy battery parapets to assassinate gunners before team pushes.
+### Map Areas (from the live client)
+• **Ruins**
+• **Camp**
+• **Shipwreck Cove**
+• **Abandoned Tower**
 
 ---
 
-### Faction Reputations & Level 30 PvP Rewards
-
-Participating in Darkspear Islands earns reputation with **Darkspear Raiders** (Horde) or **Theramore Expeditionary Force** (Alliance):
-
-| Reputation Standing | Required Points | Signature Level 30 Reward |
-|---|---|---|
-| **Friendly** | 3,000 Rep | **Darkspear / Theramore Soldier's Cloak** (+6 Stamina, +4 Agility/Intellect) |
-| **Honored** | 6,000 Rep | **Signet of the Reef Strider** (Ring: +7 Strength, +7 Stamina) *or* **Band of the Island Skirmisher** (+7 Agi, +7 Sta) |
-| **Revered** | 12,000 Rep | **Talisman of Tidal Wrath** (Trinket: +12 Spell Power, Use: Restores 300 Mana) |
-| **Exalted** | 21,000 Rep | **Faction Crested Battle-Tabard** + Level 30 Rare PvP Weapon Blueprint |
+### Rewards
+• Reputation with the battleground's factions (the client includes **Darkspear Raiders**).
+• Battleground gear, a tabard, and Legacy progression (an *Exalted with each battleground faction* Legacy challenge exists, Darkspear Islands included).
+• A *Call to Arms: Darkspear Islands* holiday rotation boosts rewards on its weekends.
 
 ---
 
-### The Decayless 14-Rank Seasonal Honor Track
-
-WoW Forever completely abolishes the unhealthy 18-hour-a-day bracket stacking and weekly rank decay of vanilla WoW:
-• **Milestone Progression:** Reaching Rank 1 (*Scout / Private*) through Rank 14 (*High Warlord / Grand Marshal*) is an objective seasonal progression track. Honor earned is banked permanently until you reach the next rank threshold.
-• **Phase 2 Cap (Level 30):** In Phase 2, players can reach up to **Rank 5 (First Sergeant / Master Sergeant)**, unlocking 12-slot PvP battle bags and +10 Stamina rare cloaks without losing a single point on weekly resets!`
+### Honor & Rank in Forever
+• **Rank Points no longer decay.** Rank 14 needs **24,750** total Rank Points, with a weekly cap that makes it reachable from week 10 of a season.
+• **Honor** is a separate currency for gear (cap **25,000**). Spending Honor never lowers your rank.`
     },
     {
       id: "guide-camping-crafting-stations",
@@ -3104,412 +3002,10 @@ In Phase 2 Beta of WoW Forever, grinding dungeon mobs repeatedly for experience 
 1. **Level 25:** Clear Shadowfang Keep (SFK) and turn in all 4 Silverpine/Undercity quests.
 2. **Level 26–27:** Grab all 6 BFD quests in Ashenvale; run Blackfathom Deeps in a single clean sweep.
 3. **Level 28:** Complete Gnomeregan for *Triprunner Dungarees* and *Manual Crowd Pummeler*.
-4. **Level 29:** Clear Excavation Site 4 in Wetlands for weapons and high-armor pre-BiS.
+4. **Level 29:** Clear Excavation Site: Wetlands in Wetlands for weapons and high-armor pre-BiS.
 5. **Level 30:** Tackle City of Dalaran (Underbelly) for top-tier caster and melee dungeon loot!`
     }
 ,
-    {
-      id: "guide-secret-class-macros",
-      title: "The Forbidden Macro Codex: Secret Engine Mechanics & Elite Macros for Every Class",
-      category: "Classes & Specs",
-      source: "Forever Engine Mechanics · Camelot 12.0 / Classic+",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_09.jpg",
-      summary: "Master compendium of hidden client-engine exploits, hardware batching tricks, zero-loss stance dancing, and elite macros for all 9 classes in WoW Forever.",
-      content: `### The Mechanics Mortals Miss: How the WoW Engine Really Evaluates Macros
-
-Most players believe macros are just convenient keybind abbreviations. In the modern Camelot (12.0) engine running Classic+ rulesets, macros are micro-scripts executed sequentially during a single hardware input frame event. Understanding how the client batches these lines unlocks capabilities that separate standard players from elite gladiators and top-tier raiders:
-
-💡 **The Golden Rules of Engine Optimization:**
-1. **The '!' Toggle Suppression Prefix:** Prepended to togglable spells (like stealth, auto-shot, or ice block), \`!\` instructs the engine to verify activation without ever toggling the state off if pressed repeatedly.
-2. **The Swing-Timer Buffer Problem:** The #1 reason Vanish or Feign Death fails is that a queued melee or ranged white swing fires 20–50ms *after* entering stealth. Issuing \`/stopattack\` immediately before the defensive clears the hardware swing buffer.
-3. **Hardware Cursor Injection (@cursor):** Skips the client round-trip targeting reticle for area-of-effect spells (Blizzard, Freezing Trap, Rain of Fire), dropping the ability at the hardware mouse pointer with 0ms latency.
-4. **Channel Tick Preservation ([nochanneling]):** Eliminates the devastating 20–33% DPS loss caused by spamming channeled spells (Mind Flay, Drain Soul, Arcane Missiles) before their final damage ticks land.
-5. **Target-of-Target Anchor ([@targettarget]):** Allows healers and hybrid casters to interrupt, dispel, or DPS the boss through the tank without ever deselecting friendly raid frames.
-6. **Zero-GCD Aura Stripping (/cancelaura):** Instantly drops immunities, shields, or stances to eliminate threat lockout or burst-delay windows.
-
----
-
-### 1. Warrior: Zero-Loss Stance Dancing & Swing Decoupling
-
-#### A. Zero-Loss Stance & Shield Swap Interrupter
-Equips a 1H weapon and Shield and switches to Defensive Stance if in Battle/Berserker stance, or immediately fires Shield Bash if already in Defensive Stance.
-\`\`\`
-#showtooltip [stance:2] Shield Bash; [stance:1/3] Pummel
-/equipslot [nostance:2] 16 YourOneHandWeaponName
-/equipslot [nostance:2] 17 YourShieldName
-/cast [stance:1/3] Defensive Stance; Shield Bash
-/startattack
-\`\`\`
-
-#### B. Overpower Stance-Dance Reflex
-Instantly switches to Battle Stance upon a dodge proc and executes Overpower without resetting your auto-attack swing timer.
-\`\`\`
-#showtooltip Overpower
-/cast [nostance:1] Battle Stance
-/cast Overpower
-/startattack
-\`\`\`
-
-#### C. Heroic Strike & Cleave Rage De-Coupler
-Avoids starving yourself of rage when incoming damage spikes by allowing you to cancel a queued Heroic Strike with Alt.
-\`\`\`
-#showtooltip Heroic Strike
-/cast Heroic Strike
-/stopcasting [mod:alt]
-/startattack
-\`\`\`
-
-#### D. Universal Charge & Intercept Mobility Matrix
-Charges if out of combat (shifting to Battle Stance automatically), or switches to Berserker Stance and Intercepts mid-combat.
-\`\`\`
-#showtooltip [combat] Intercept; Charge
-/cast [nocombat,nostance:1] Battle Stance; [nocombat] Charge
-/cast [combat,nostance:3] Berserker Stance; [combat] Intercept
-/startattack
-\`\`\`
-
----
-
-### 2. Rogue: The Frame-Perfect Pickpocket & Swing-Buffer Vanish
-
-#### A. The 'Greedy Ghost' Instant Pickpocket + Cheap Shot
-Exploits the fact that Pick Pocket is off the global cooldown with no animation, looting the humanoid target in the exact millisecond before the stun registers.
-\`\`\`
-#showtooltip Cheap Shot
-/targetenemy [noexists]
-/cast Pick Pocket
-/cast Cheap Shot
-\`\`\`
-
-#### B. The Anti-Auto-Attack Vanish Buffer
-Guarantees Vanish sticks by flushing all buffered white-swings before activating stealth.
-\`\`\`
-#showtooltip Vanish
-/stopattack
-/cancelaura Attack
-/cast Vanish
-\`\`\`
-
-#### C. The High-Frequency Stealth Hunter & Sap Radar
-Spam this key while stealthed. It automatically targets any enemy player within 20 yards and casts Sap before they render on your screen.
-\`\`\`
-#showtooltip Sap
-/cleartarget
-/targetenemyplayer [harm][nodead]
-/cast [exists] Sap
-\`\`\`
-
-#### D. Gouge & First Aid Combat Triage
-Immediately halts melee swings to prevent breaking CC, Gouges the enemy, and begins channeling heavy bandages on yourself.
-\`\`\`
-#showtooltip Gouge
-/cast Gouge
-/stopattack
-/use [@player] Heavy Silk Bandage
-\`\`\`
-
-#### E. Mouseover Blind Peeler
-Neutralizes approaching adds or enemy healers without losing your current combo-point target.
-\`\`\`
-#showtooltip Blind
-/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Blind
-\`\`\`
-
----
-
-### 3. Mage: Reticle-Skipping & Hypothermia Guard
-
-#### A. Zero-Latency Reticle-Skip Blizzard / Flamestrike
-Bypasses the green circle targeting reticle completely, landing the AoE directly beneath your mouse cursor instantly.
-\`\`\`
-#showtooltip Blizzard
-/stopcasting
-/cast [@cursor] Blizzard
-\`\`\`
-
-#### B. Double-Tap Safe Ice Block with Alt-Cancel
-Prevents accidental double-clicking from immediately deactivating your immunity, while allowing voluntary cancellation with Alt.
-\`\`\`
-#showtooltip Ice Block
-/stopcasting
-/cast !Ice Block
-/cancelaura [mod:alt] Ice Block
-\`\`\`
-
-#### C. Omni-Interrupt Mouseover & Focus Counterspell
-Aborts your current fireball or frostbolt cast and interrupts the priority target under your mouse or focus frame without losing your DPS target.
-\`\`\`
-#showtooltip Counterspell
-/stopcasting
-/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Counterspell
-\`\`\`
-
-#### D. Arcane Power + Presence of Mind Instant Pyroblast
-Fires off-GCD Arcane Power, triggers instant-cast Presence of Mind, and launches a Pyroblast in 0.0 seconds.
-\`\`\`
-#showtooltip Pyroblast
-/cast Arcane Power
-/cast Presence of Mind
-/cast Pyroblast
-\`\`\`
-
----
-
-### 4. Hunter: The 1-Tap Trap Batch & Clipless Auto-Shot
-
-#### A. The Unbroken 1-Tap 'Feign Death + Freeze Trap'
-Forces your pet to passive to break threat, cancels queued shots, drops combat with Feign Death, and arms Freezing Trap at your cursor in one motion.
-\`\`\`
-#showtooltip Freezing Trap
-/petpassive
-/stopattack
-/cast Feign Death
-/cast [@cursor] Freezing Trap
-\`\`\`
-
-#### B. The Clipless Auto-Shot Stutter-Step Engine
-Prevents spamming Aimed Shot or Multi-Shot from canceling your auto-shot cadence.
-\`\`\`
-#showtooltip Aimed Shot
-/cast !Auto Shot
-/cast Aimed Shot
-\`\`\`
-
-#### C. Mouseover Scatter Shot Peeler
-Disorients an approaching enemy melee or casting add without dropping focus on your marked target.
-\`\`\`
-#showtooltip Scatter Shot
-/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Scatter Shot
-\`\`\`
-
-#### D. Instant Pet Dash & Bite Micro-Anchor
-Commands your pet to sprint and bite your mouseover target instantly without waiting for the server's pet AI polling tick.
-\`\`\`
-#showtooltip Dash
-/petattack [@mouseover,harm,nodead][]
-/cast Dash
-/cast Dive
-/cast Bite
-\`\`\`
-
----
-
-### 5. Priest: Tick-Preserving Channels & Tank-Anchored Dispels
-
-#### A. The Clipless Mind Flay Tick-Preserver
-Locks out button spam while Mind Flay is channeling, ensuring you never clip the third and final damage tick early.
-\`\`\`
-#showtooltip Mind Flay
-/cast [nochanneling:Mind Flay] Mind Flay
-\`\`\`
-
-#### B. Target-of-Target Offensive Dispel & Dotting
-Keeps your healing target focused on the friendly tank while dispelling enemy buffs or applying Shadow Word: Pain to whatever the tank is fighting.
-\`\`\`
-#showtooltip Dispel Magic
-/cast [@mouseover,harm,nodead][@targettarget,harm,nodead][harm,nodead] Dispel Magic
-\`\`\`
-
-#### C. Night Elf Shadowmeld + Drink Stealth Reset
-Drops combat, enters stealth, and begins drinking mana water without breaking Shadowmeld.
-\`\`\`
-#showtooltip Morning Glory Dew
-/cast !Shadowmeld
-/use Morning Glory Dew
-\`\`\`
-
-#### D. Emergency Desperate Prayer & Healthstone Panic Matrix
-Instant clutch survival macro combining racial instant heal, highest-tier healthstone, and Inner Fire re-application.
-\`\`\`
-#showtooltip Desperate Prayer
-/use Master Healthstone
-/cast Desperate Prayer
-/cast [nostance] Inner Fire
-\`\`\`
-
----
-
-### 6. Paladin: Bubble-Taunt Bleed Cleansing & Seal Weaving
-
-#### A. Zero-Threat-Drop Divine Shield Bleed Wipe
-Clears 100% mortal strikes, bleeds, and stacking dungeon debuffs and immediately cancels the bubble before boss threat shifts to your raid.
-\`\`\`
-#showtooltip Divine Shield
-/cast Divine Shield
-/cancelaura Divine Shield
-\`\`\`
-
-#### B. Swing-Preserving Judgement Weave
-Ensures casting Judgement never pauses your auto-attack swing timer or disrupts the 0.4s seal twist window.
-\`\`\`
-#showtooltip Judgement
-/cast Judgement
-/startattack
-\`\`\`
-
-#### C. Target-of-Target Cleanse & Blessing of Freedom
-Cleanses debuffs and roots off whatever ally the enemy boss is currently targeting without changing your active target.
-\`\`\`
-#showtooltip Cleanse
-/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Cleanse
-\`\`\`
-
-#### D. Divine Favor + Holy Shock Guaranteed Crit Burst
-Combines off-GCD 100% spell crit with Holy Shock for instant tank clutch saves or high-burst offensive executes.
-\`\`\`
-#showtooltip Holy Shock
-/cast Divine Favor
-/cast [@mouseover,exists][] Holy Shock
-\`\`\`
-
-#### E. Blessing of Protection Self-Cancel for Melee Warriors
-Allows Warriors and Rogues who receive Blessing of Protection to dump mortal debuffs and immediately resume auto-attacking.
-\`\`\`
-#showtooltip
-/cancelaura Blessing of Protection
-\`\`\`
-
----
-
-### 7. Warlock: Shard Farming Automation & Pet Anchor Kicks
-
-#### A. Clipless Shard Drain Soul Harvester
-Protects channel ticks and uses low-mana Rank 1 for effortless Soul Shard farming without wasting mana.
-\`\`\`
-#showtooltip Drain Soul
-/stopcasting
-/cast [nochanneling:Drain Soul] Drain Soul(Rank 1)
-\`\`\`
-
-#### B. Mouseover Felhunter Spell Lock (Pet Remains on Primary Target)
-Fires your Felhunter's interrupt at a priority caster under your mouse cursor while your pet continues meleeing and building threat on its primary target.
-\`\`\`
-#showtooltip Spell Lock
-/cast [@mouseover,harm,nodead][@focus,harm,nodead][] Spell Lock
-\`\`\`
-
-#### C. Target-of-Target Death Coil Peeler
-Instantly fires Death Coil at whatever enemy is attacking your party healer without requiring manual targeting.
-\`\`\`
-#showtooltip Death Coil
-/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][] Death Coil
-\`\`\`
-
-#### D. All-in-One Multi-Curse Modifier Hub
-Normal tap = Curse of Agony; Shift = Curse of the Elements; Alt = Curse of Tongues.
-\`\`\`
-#showtooltip
-/cast [mod:shift] Curse of the Elements; [mod:alt] Curse of Tongues; Curse of Agony
-\`\`\`
-
----
-
-### 8. Shaman: Tank-Anchor Purging & Cast-Abort Wind Shear
-
-#### A. Target-of-Target Boss Purge Engine
-Strips shields, HoTs, and Bloodlusts off the boss through the tank without losing healing frames.
-\`\`\`
-#showtooltip Purge
-/cast [@targettarget,harm,nodead][@mouseover,harm,nodead][harm,nodead] Purge
-\`\`\`
-
-#### B. Instant Cast-Abort Wind Shear
-Immediately cancels any long Healing Wave or Lightning Bolt cast to land an instant kick within 0.1s.
-\`\`\`
-#showtooltip Wind Shear
-/stopcasting
-/cast [@focus,harm,nodead][@mouseover,harm,nodead][] Wind Shear
-\`\`\`
-
-#### C. Elemental Mastery Instant Chain Lightning Nuke
-Triggers 100% crit chance, 0 mana cost, and instant cast time for an unstoppable triple-hit burst.
-\`\`\`
-#showtooltip Chain Lightning
-/stopcasting
-/cast Elemental Mastery
-/cast Chain Lightning
-\`\`\`
-
-#### D. Ghost Wolf Anti-Snare Emergency Cleanse
-Breaks movement slows and transitions into Ghost Wolf form in the same server tick.
-\`\`\`
-#showtooltip Ghost Wolf
-/cancelaura [stance:1] Ghost Wolf
-/cast !Ghost Wolf
-\`\`\`
-
----
-
-### 9. Druid: Tick-Aligned Powershifting & Swift-Shifting
-
-#### A. The Immortal 'Tick-Aligned' Powershifting Engine
-Cancels any active form and re-enters Cat Form in the exact same server tick to break movement impairing effects and gain 40 Furor Energy instantly.
-\`\`\`
-#showtooltip Cat Form
-/cancelaura [stance:1] Bear Form; [stance:2] Aquatic Form; [stance:4] Travel Form
-/cast !Cat Form
-\`\`\`
-
-#### B. Omni-Form Feral Charge Gap-Closer
-Automatically shifts into Dire Bear Form if in caster or cat form, then fires Feral Charge in one fluid sequence.
-\`\`\`
-#showtooltip Feral Charge - Bear
-/cast [nostance:1] Dire Bear Form
-/cast Feral Charge - Bear
-\`\`\`
-
-#### C. Smart Travel, Aquatic & Mount Selector
-Intelligently casts Aquatic Form if swimming, Cat Form if indoors, Travel Form if in combat outdoors, or summons your mount if out of combat.
-\`\`\`
-#showtooltip
-/cast [swimming] Aquatic Form; [indoors] Cat Form; [combat,outdoors] Travel Form; [outdoors] Swift Mistsaber; Travel Form
-\`\`\`
-
-#### D. Nature's Swiftness Swift-Shift Healer Save
-Immediately cancels cast, triggers Nature's Swiftness, and lands an instant max-rank Healing Touch on your mouseover or target-of-target ally.
-\`\`\`
-#showtooltip Nature's Swiftness
-/stopcasting
-/cast Nature's Swiftness
-/cast [@mouseover,help,nodead][@targettarget,help,nodead][@player] Healing Touch
-\`\`\`
-
----
-
-### 10. Universal Meta Engine & CVar Optimizers
-
-#### A. Client Latency Buffer & Camera Zoom Override
-Unclamps camera distance beyond the standard interface slider and tunes the client SpellQueueWindow to match human reaction time (150ms).
-\`\`\`
-/console cameraDistanceMaxZoomFactor 2.6
-/console SpellQueueWindow 150
-/console autoLootDefault 1
-/console floatingCombatTextCombatDamageDirectionalScale 0
-\`\`\`
-
-#### B. Universal Trinket & Racial Burst Stacker
-Fires on-use trinkets (slots 13 and 14) and racial power cooldowns simultaneously without interfering with your main rotational ability.
-\`\`\`
-#showtooltip
-/use 13
-/use 14
-/cast [race:Orc] Blood Fury; [race:Troll] Berserking
-/cast Mortal Strike
-\`\`\`
-
-#### C. Self-Targeted Bandage Lock
-Applies first aid directly to your character without deselecting your hostile target or breaking combat tracking.
-\`\`\`
-#showtooltip Heavy Silk Bandage
-/use [@player] Heavy Silk Bandage
-\`\`\`
-
-#### D. Zero-Taint Raid Marker Radial Key
-Toggles the Skull raid target marker on your mouseover or target with zero UI taint.
-\`\`\`
-/tm 8
-\`\`\``
-    },
     {
       id: "guide-hall-of-thanes",
       title: "New Dungeon: Hall of the Thanes (Deep Ironforge Catacombs Walkthrough)",
@@ -3703,7 +3199,7 @@ In Vanilla WoW, levels 30 to 50 suffered from disjointed quest deserts and endle
 
 | Level Bracket | Primary Recommended Zones | New WoW Forever Dungeon Integration | Key Quests & Milestones |
 | :--- | :--- | :--- | :--- |
-| **30–35** | Shimmering Flats, Northern STV, Desolace | Excavation Site 4 (Wetlands) & Dalaran (Alterac) | Mirage Raceway speedway, Nesingwary Camp |
+| **30–35** | Shimmering Flats, Northern STV, Desolace | Excavation Site: Wetlands (Wetlands) & Dalaran (Alterac) | Mirage Raceway speedway, Nesingwary Camp |
 | **35–40** | Arathi Highlands, Badlands, Swamp of Sorrows | **The Drowned City** (Level 35–42 / Sunken Coast) | 40-yard mount purchase (90 Gold), Mail/Plate proficiencies |
 | **40–45** | Badlands, Tanaris, Feralas | **Krol'dok Stronghold** (Level 40–46 / Riverglades) | Uldaman quest chain, Gadgetzan desert hub |
 | **45–50** | The Hinterlands, Searing Gorge, Tanaris | Zul'Farrak & Maraudon | Revantusk Village (H) / Aerie Peak (A) elite quests |
@@ -3741,57 +3237,42 @@ In Vanilla WoW, levels 30 to 50 suffered from disjointed quest deserts and endle
     },
     {
       id: "guide-tier1-raids-attunements",
-      title: "Tier 1 Raids & Attunements Guide: Barrow Deeps (10m), Hyjal Summit (20m) & Onyxia (40m)",
+      title: "Tier 1 Raids Guide: Barrow Deeps (10m), Hyjal Summit (20m) & Onyxia (40m) — December 9",
       category: "Dungeons & Raids",
-      source: "Warcraft Tavern · Method.gg · Blizzard Official",
+      source: "Blizzard roadmap · Warcraft Wiki · community raid guides",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_fire_incinerate.jpg",
-      summary: "Comprehensive attunement walkthroughs, encounter profiles, entrance coordinates, resistance thresholds, and zero-World-Buff tuning for the December 9 raid unlocks.",
+      summary: "What is confirmed about the three raids opening December 9: sizes, boss counts, locations, attunements (only Onyxia needs one) and the no-World-Buffs rule.",
       content: `### Overview: Tier 1 Raids (Unlocking Wednesday, December 9, 2026)
-World of Warcraft: Forever launches its endgame raid calendar on December 9 with a dynamic trio of raid sizes tailored for different guild rosters: a 10-player tactical raid, a 20-player progression raid, and a 40-player dragon lair.
+Three raids open together on December 9:
 
-| Raid Instance | Team Size | Boss Count | Entrance Location | Primary Resistance Threshold | Key Attunement Prerequisite |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **The Barrow Deeps** | 10-Player | 8 Bosses | Mount Hyjal / Blackmaw Hold | **Nature & Shadow (120+)** | *Barrow Warden's Signet* (Moonglade questline) |
-| **Hyjal Summit** | 20-Player | 13 Bosses | Nordrassil Roots (Winterspring portal) | **Fire & Arcane (140+)** | *Fragment of the World Tree* (Timbermaw Exalted) |
-| **Onyxia's Lair** | 40-Player | 1 Boss | Dustwallow Marsh (\`52.8, 76.1\`) | **Fire Resistance (150+ unbuffed)** | **Drakefire Amulet** (Classic epic questline) |
-
----
-
-### The Strict Zero-World-Buff Invariant
-In WoW Forever, **World Buffs are disabled inside raid instances**:
-• Rallying Cry of the Dragonslayer, Songflower Serenade, Warchief's Blessing, and Darkmoon Faire buffs are automatically purged upon crossing instance portals.
-• Boss encounters are balanced around player gear, consumables (flasks, elixirs, sharpening stones), and personal rotation precision—eliminating the grueling 3-hour pre-raid buff chore.
+| Raid | Size | Bosses | Location | Attunement |
+| :--- | :--- | :--- | :--- | :--- |
+| **The Barrow Deeps** | 10-player | 8 | Mount Hyjal | None announced |
+| **Hyjal Summit** | 20-player | 13 | Mount Hyjal | None announced |
+| **Onyxia's Lair** | 40-player | 1 | Dustwallow Marsh | **Drakefire Amulet** (faction attunement questline) |
 
 ---
 
-### Detailed Raid Breakdowns & Attunement Pipelines
+### No World Buffs in Raids
+World buffs still work in the open world, but they have **no effect inside raid instances**. Raids are tuned around your gear, consumables and play rather than pre-raid world-buff routing.
 
-#### 1. The Barrow Deeps (10-Player / 8 Bosses)
-• **Lore & Environment:** Situated within the subterranean barrows beneath Mount Hyjal where Illidan Stormrage was imprisoned for 10,000 years. Defiled by rogue Night Elf wardens and corrupted shadowsatyr commanders.
-• **Instance Entrance:** Enter via the subterranean caverns of Blackmaw Hold on the Winterspring / Felwood border.
-• **Attunement Questline — "The Slumbering Sentinels":**
-  1. *Keeper of the Grove Call:* Speak with Keeper Remulos in Moonglade (\`36.2, 41.8\`).
-  2. *Subterranean Infiltration:* Recover 4x *Barrow Keystone Shards* from elite furbolg chieftains in Felwood.
-  3. *Trial of the Ancients:* Defeat the corrupt tree ancient in Winterspring to receive the **Barrow Warden's Signet**.
+---
 
-#### 2. Hyjal Summit (20-Player / 13 Bosses)
-• **Lore & Environment:** The burning advance guard of the Burning Legion marches upon the World Tree Nordrassil. Features 13 distinct encounters across the Alliance Base, Horde Encampment, and Night Elf Grove.
-• **Key Mechanics:** Wave-based garrison defenses, infernal drop zones, and heavy fire resistance checks against demonic pit commanders.
-• **Attunement Questline — "Echoes of Eternity":**
-  1. Reach **Honored** standing with the Timbermaw Furbolgs.
-  2. Complete the *Vials of Eternity* investigative breadcrumb across Karazhan Crypts and Scholomance.
-  3. Cleanse the waters of the Moonwell in Moonglade to forge the **Fragment of the World Tree**.
+### Attunements
+• **Barrow Deeps & Hyjal Summit:** Current reporting says neither raid has an attunement questline at launch, and there is no confirmed requirement to clear Barrow Deeps before Hyjal Summit.
+• **Onyxia's Lair:** Still requires the **Drakefire Amulet**, earned through the faction-specific attunement questline. Start it before December 9 so your raid is ready on day one.
 
-#### 3. Onyxia's Lair (40-Player / Dustwallow Marsh)
-• **Alliance Drakefire Amulet Attunement (Marshal Windsor):**
-  1. *Dragonkin Menace:* Morgan's Vigil, Burning Steppes (Helendis Riverhorn).
-  2. *Blackrock Depths Jailbreak:* Rescue Marshal Windsor from the BRD cell blocks and lead him to the entrance.
-  3. *The Great Masquerade:* Escort Windsor through the gates of Stormwind to unmask Lady Katrana Prestor as the Broodmother Onyxia!
-  4. *Dragon's Eye:* Slay General Drakkisath in Upper Blackrock Spire to obtain the final gem and claim your **Drakefire Amulet**.
-• **Horde Drakefire Amulet Attunement (Rexxar & Occulus):**
-  1. *Warlord's Command:* Highlord Omokk, War Master Voone, and Overlord Wyrmthalak in LBRS.
-  2. *Champion of the Horde:* Search the desolation of Desolace for Rexxar and his bear Misha.
-  3. *Eyes of the Beast:* Travel to the dragon barrows in Dustwallow Marsh and defeat black wyrms to forge the Horde **Drakefire Amulet**.`
+---
+
+### What Is Not Known Yet
+Blizzard has not published boss abilities, loot tables or resistance requirements for Barrow Deeps or Hyjal Summit. This guide will be updated as soon as the raids are live.
+
+---
+
+### Prep Checklist
+1. Finish the Onyxia attunement (Drakefire Amulet).
+2. Collect pre-raid gear from the level 55–60 dungeons (Blackmaw Hold, The Shaper's Terrace, Blackrock Depths, LBRS).
+3. Stock up on flasks, elixirs and food — they still work inside raids even though world buffs do not.`
     },
     {
       id: "guide-early-name-reservation",
@@ -3958,8 +3439,8 @@ Built specifically for the **Camelot 12.0 engine** (Interface 16001), our 6 comp
 | :--- | :--- | :--- | :--- | :--- |
 | **ForeverPlates** | v2.2.2 | 608 KB | High-contrast unit nameplates, execute coloring, threat outlines | \`/fp\` or \`/foreverplates\` |
 | **Foreverplatescastbars** | v2.3.0 | 372 KB | Sub-pixel calibrated spell castbars with interrupt immunity shields | \`/fpc\` |
-| **ForeverLiquid** | v1.4.0 | 155 KB | Floating HUD tracking XP/hr, 5/hr dungeon lockouts, Mount Fund ETA | \`/liquid\` or \`/fl\` |
-| **ForeverDungeonJournal** | v1.7.5 | 58.7 MB | Boss abilities, loot tables, sub-pixel maps, and **/fj import** BiS lists | \`/fj\` or \`/journal\` |
+| **ForeverLiquid** | v1.4.1 | 157 KB | Floating HUD tracking XP/hr, 5/hr dungeon lockouts, Mount Fund ETA | \`/liquid\` or \`/fl\` |
+| **ForeverDungeonJournal** | v1.7.6 | 63.6 MB | Boss abilities, loot tables, sub-pixel maps, and **/fj import** BiS lists | \`/fj\` or \`/journal\` |
 | **ForeverBlessings** | v1.1.0 | 13 KB | Paladin 15-minute blessing grid with 1-click intelligent rebuffing | \`/fb\` or \`/blessings\` |
 | **EchoTwist** | v1.0.0 | 28 KB | Shaman 9-second Windfury / Grace of Air totem twisting visualizer | \`/et\` or \`/echotwist\` |
 
@@ -4022,7 +3503,7 @@ World of Warcraft: Forever streamlines this into a **single, unified Hit Chance 
 
 #### 2. Taunts & Utility Reliability (Zero Miss Taunts)
 • In Classic, Warrior *Taunt* and Druid *Growl* were treated as magical spells that rolled against a 17% spell-miss rate on raid bosses, causing catastrophic raid wipes when a tank swap missed!
-• In WoW Forever, **Taunt, Growl, and Righteous Defense scale directly with your Unified Hit stat**. A tank equipped with the standard **8% physical hit cap** will **never miss a taunt** on any raid boss!
+• In WoW Forever, Hit on gear applies to melee, ranged, and spells alike, so the same Hit that helps your attacks also helps taunts (Taunt, Growl, Hand of Reckoning) land. Blizzard has not published taunt hit formulas.
 
 #### 3. Normalized Glancing Blows & Racial Purge
 • In original Classic, melee physical strikes suffered a 40% glancing blow damage penalty that could only be reduced with +5 weapon skill racials (Human Swords, Orc Axes).
@@ -4039,7 +3520,7 @@ World of Warcraft: Forever streamlines this into a **single, unified Hit Chance 
       category: "Classes & Specs",
       source: "Zockify · Wowhead · Warcraft Tavern",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_magic_lesserinvisibilty.jpg",
-      summary: "Everything you need to know about Dual Spec in WoW Forever: Level 40 trainer unlock, 50 gold investment, keybind/action bar swapping, and the 5 gold respec cap.",
+      summary: "Everything you need to know about Dual Spec in WoW Forever: Level 40 trainer unlock, 50 gold investment, keybind/action bar swapping, and how respec fees decay over time.",
       content: `### Overview: Dual Talent Specialization
 One of the most transformative quality-of-life additions in World of Warcraft: Forever is the introduction of **Dual Specialization**. It eliminates the crippling economic friction that previously forced hybrid healers and tanks to abandon group content or spend hundreds of gold every week just to farm or PvP.
 
@@ -4065,12 +3546,10 @@ One of the most transformative quality-of-life additions in World of Warcraft: F
 
 ---
 
-### Respec Fee Cap: Strictly 5 Gold Maximum
-To encourage continuous talent experimentation throughout leveling and endgame progression:
-• Classic's punishing 50 Gold respec ceiling has been abolished.
-• In WoW Forever, the **maximum talent reset fee is strictly capped at 5 Gold**.
-• Respec fees start at **1 Gold**, scale up by 1 Gold per reset to a maximum of 5 Gold, and decay back toward 1 Gold over time.
-• This ensures that whether you want to test deep Frost vs Arcane Power, or swap between Resto Shaman and Enhancement Shaman, the cost remains accessible and player-friendly!`
+### Respec Fees
+• Dual Spec costs **50 gold** from your class trainer at level 40.
+• You can swap specs any time outside combat and battlegrounds.
+• Each spec's respec fee slowly decays back toward **1 gold** over time, so experimenting stays affordable.`
     },
     {
       id: "guide-zones-by-level-gathering",

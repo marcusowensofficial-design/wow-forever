@@ -21,7 +21,9 @@ FDJ.BOSS_LEVELS = {
         ["Venomridge"] = "61",
         ["Thunderhoof"] = "61",
         ["Direhorn Matriarch"] = "61",
+        ["Cinder"] = "61",
         ["Bolt"] = "62",
+        ["Snowtalon"] = "62",
         ["Vitrix"] = "62",
         ["Izha'Rel and Tor'Rel"] = "61",
         ["Nanaya"] = "62",
@@ -36,6 +38,7 @@ FDJ.BOSS_LEVELS = {
         ["Unbound Spirit"] = "59",
         ["Moontouched Wanderer"] = "55",
         ["Gortek the Apprentice"] = "55",
+        ["Tunnelweb Matriarch"] = "55",
     },
     ["Alcaz Prison"] = {
         ["Overseer Wrex"] = "50",
@@ -51,6 +54,7 @@ FDJ.BOSS_LEVELS = {
         ["Nar'gurk"] = "44",
         ["Bossman Toof"] = "42",
         ["Overlord Mugg"] = "45",
+        ["Kroog"] = "41", -- in-game screenshot, 12 Nov 2026
     },
     ["Gnomeregan"] = {
         ["Grubbis"] = "32",
@@ -93,15 +97,20 @@ FDJ.BOSS_LEVELS = {
         ["Revelosh"] = "40",
         ["The Lost Dwarves"] = "41",
         ["Ironaya"] = "40",
+        ["Obsidian Sentinel"] = "42",
         ["Ancient Stone Keeper"] = "44",
         ["Galgann Firehammer"] = "45",
         ["Grimlok"] = "45",
         ["Archaedas"] = "47",
     },
     ["Zul'Farrak"] = {
+        ["Theka the Martyr"] = "46",
         ["Antu'sul"] = "48",
         ["Witch Doctor Zum'rah"] = "46",
+        ["Nekrum Gutchewer"] = "45",
         ["Shadowpriest Sezz'ziz"] = "47",
+        ["Sergeant Bly"] = "45",
+        ["Hydromancer Velratha"] = "46",
         ["Gahz'rilla"] = "46",
         ["Zerillis"] = "45",
         ["Sandarr Dunereaver"] = "45",
@@ -110,14 +119,16 @@ FDJ.BOSS_LEVELS = {
         ["Chief Ukorz Sandscalp"] = "48",
     },
     ["Sunken Temple"] = {
-        ["Atal'alarion"] = "50",
         ["Dreamscythe"] = "53",
         ["Weaver"] = "51",
+        ["Morphaz"] = "52",
+        ["Hazzas"] = "53",
+        ["Atal'alarion"] = "50",
+        ["Dreamscythe & Weaver"] = "51-53",
         ["Avatar of Hakkar"] = "55",
         ["Jammal'an the Prophet"] = "54",
         ["Ogom the Wretched"] = "53",
-        ["Morphaz"] = "52",
-        ["Hazzas"] = "53",
+        ["Morphaz & Hazzas"] = "52-53",
         ["Shade of Eranikus"] = "55",
     },
     ["Scholomance"] = {
@@ -147,6 +158,7 @@ FDJ.BOSS_LEVELS = {
         ["Princess Theradras"] = "51",
     },
     ["Dire Maul: East"] = {
+        ["Pusillin"] = "57",
         ["Zevrim Thornhoof"] = "57",
         ["Hydrospawn"] = "57",
         ["Lethtendris"] = "57",
@@ -175,6 +187,7 @@ FDJ.BOSS_LEVELS = {
         ["Hearthsinger Forresten"] = "57",
         ["The Unforgiven"] = "57",
         ["Timmy the Cruel"] = "58",
+        ["Malor the Zealous"] = "60",
         ["Postmaster Malown"] = "60",
         ["Cannon Master Willey"] = "60",
         ["Archivist Galford"] = "60",
@@ -209,6 +222,7 @@ FDJ.BOSS_LEVELS = {
         ["Hurley Blackbreath"] = "55",
         ["Phalanx"] = "55",
         ["Ribbly Screwspigot"] = "53",
+        ["Theldren"] = "60",
         ["Plugger Spazzring"] = "55",
         ["Ambassador Flamelash"] = "57",
         ["Panzor the Invincible"] = "57",
@@ -217,7 +231,7 @@ FDJ.BOSS_LEVELS = {
         ["Princess Moira Bronzebeard"] = "58",
         ["Emperor Dagran Thaurissan"] = "59",
     },
-    ["Blackrock Depths"] = {
+    ["Upper Blackrock Spire"] = {
         ["Pyroguard Emberseer"] = "60",
         ["Solakar Flamewreath"] = "60",
         ["Jed Runewatcher"] = "59",
@@ -228,13 +242,13 @@ FDJ.BOSS_LEVELS = {
         ["Lord Valthalak"] = "62",
         ["General Drakkisath"] = "62",
     },
-    ["Blackrock Depths"] = {
-        ["Spirestone Butcher"] = "59",
-        ["Spirestone Battle Lord"] = "59",
-        ["Spirestone Lord Magus"] = "59",
-        ["Highlord Omokk"] = "62",
-        ["Shadow Hunter Vosh'gajin"] = "60",
-        ["War Master Voone"] = "60",
+    ["Lower Blackrock Spire"] = {
+        ["Spirestone Butcher"] = "57",
+        ["Spirestone Battle Lord"] = "58",
+        ["Spirestone Lord Magus"] = "58",
+        ["Highlord Omokk"] = "59",
+        ["Shadow Hunter Vosh'gajin"] = "58",
+        ["War Master Voone"] = "59",
         ["Mother Smolderweb"] = "59",
         ["Crystal Fang"] = "60",
         ["Urok Doomhowl"] = "60",
@@ -243,7 +257,7 @@ FDJ.BOSS_LEVELS = {
         ["Halycon"] = "59",
         ["Gizrul the Slavener"] = "60",
         ["Ghok Bashguud"] = "59",
-        ["Overlord Wyrmthalak"] = "63",
+        ["Overlord Wyrmthalak"] = "60",
     },
     ["Razorfen Downs"] = {
         ["Tuten'kash"] = "40",
@@ -525,6 +539,7 @@ FDJ.STATIC_DISPLAY_IDS = {
 
     -- Dire Maul: East
     [11490] = 11335,  -- Zevrim Thornhoof
+    [14354] = 7552,   -- Pusillin
     [13280] = 5489,   -- Hydrospawn
     [14327] = 14378,  -- Lethtendris
     [11492] = 14416,  -- Alzzin the Wildshaper
@@ -552,6 +567,7 @@ FDJ.STATIC_DISPLAY_IDS = {
     [10558] = 10482,  -- Hearthsinger Forresten
     [10516] = 10771,  -- The Unforgiven
     [10808] = 571,    -- Timmy the Cruel
+    [11032] = 10458,  -- Malor the Zealous
     [11143] = 10669,  -- Postmaster Malown
     [10997] = 10674,  -- Cannon Master Willey
     [10811] = 10544,  -- Archivist Galford
@@ -613,9 +629,13 @@ FDJ.STATIC_DISPLAY_IDS = {
     [2748] = 5988,  -- Archaedas
 
     -- Zul'Farrak
+    [7272] = 6696,  -- Theka the Martyr
     [8127] = 7353,  -- Antu'sul
     [7271] = 6434,  -- Witch Doctor Zum'rah
+    [7796] = 6690,  -- Nekrum Gutchewer
     [7275] = 6441,  -- Shadowpriest Sezz'ziz
+    [7604] = 6433,  -- Sergeant Bly (Wowhead Forever model)
+    [7795] = 6685,  -- Hydromancer Velratha
     [7273] = 7271,  -- Gahz'rilla
     [10082] = 9293,  -- Zerillis
     [10080] = 9291,  -- Sandarr Dunereaver
@@ -643,7 +663,9 @@ FDJ.STATIC_DISPLAY_IDS = {
     [258964] = 141215,  -- Nar'gurk
     [264773] = 14424,   -- Bossman Toof
     [258968] = 141218,  -- Overlord Mugg
+    [262716] = 17273,   -- Kroog (rare)
     -- Alcaz Prison
+    [255391] = 7914,    -- Overseer Wrex
     [255997] = 4973,    -- Tidemistress Ca'zass
     [257016] = 2317,    -- Katerina the Cleaner
     [256236] = 140092,  -- The Questioner
@@ -669,6 +691,15 @@ FDJ.STATIC_DISPLAY_IDS = {
     [269104] = 12235,   -- Moontouched Wanderer
     [269111] = 145808,  -- Gortek the Apprentice
 }
+
+-- 1.9.4: Primeval Elemental (The Drowned City) has no NPC ID of its own yet:
+-- its picture from the client's "Staging Area" copy, like Deathless Marrow.
+do
+    local drowned = FDJ.DB and FDJ.DB["The Drowned City"]
+    for _, boss in ipairs((drowned and drowned.bosses) or {}) do
+        if boss.name == "Primeval Elemental" and not boss.npcID and not boss.portraitNpcID then boss.portraitNpcID = 270887 end
+    end
+end
 
 -- Trash mobs named as the source of a trash drop: name -> creature display ID
 -- (Wowhead Forever NPC pages). Used to draw their portraits on the loot row.
@@ -697,6 +728,7 @@ FDJ.TRASH_MOB_DISPLAY_IDS = {
     ["Dark Caster"] = 7555, -- npc 255072
     ["Fallen Mage"] = 9783, -- npc 255066
     ["Kirin Tor Necromancer"] = 145809, -- npc 269134
+    ["Fragmented Sentry"] = 130102, -- npc 246664
     -- Scarlet Monastery
     ["Scarlet Defender"] = 2462, -- npc 4298
     ["Scarlet Myrmidon"] = 2514, -- npc 4295
@@ -704,4 +736,17 @@ FDJ.TRASH_MOB_DISPLAY_IDS = {
     ["Scarlet Centurion"] = 2499, -- npc 4301
     -- The Drowned City
     ["Risen Sentry"] = 145398, -- npc 258792
+    ["Champion of the Deep"] = 145404, -- npc 258797
+    ["Brinescale Sorceress"] = 4975, -- npc 258804
+    ["Makrura Snapper"] = 2426, -- npc 258897
+    -- Krol'dok Stronghold
+    ["Twilight Grunt"] = 140001, -- npc 258042
+    ["Twilight Lieutenant"] = 143142, -- npc 258104
+    ["Redridge Prisoner"] = 487, -- npc 257900
+    -- Alcaz Prison
+    ["Alcaz Chaplain"] = 138722, -- npc 255262
+    ["Alcaz Jailer"] = 138843, -- npc 255377 and 271784
+    ["Strashaz Soldier"] = 4764, -- npc 255995
+    ["Slavering Hound"] = 6195, -- npc 255267
+    ["Defias Truthfinder"] = 144356, -- npc 255271
 }

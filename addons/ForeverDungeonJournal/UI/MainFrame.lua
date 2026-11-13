@@ -912,6 +912,9 @@ FDJ.SetScale = function(scale)
     if f then
         f:SetScale(scale)
     end
+    if FDJ.SyncPopupScale then
+        FDJ.SyncPopupScale()
+    end
 end
 
 SelectDungeon = function(name)
@@ -2147,6 +2150,14 @@ local function CreateMainFrame()
     tacticsScroll:SetScrollChild(frame.bossTacticsContent)
     tacticsScroll:Hide()
 
+    frame.noLootMessage = right:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    frame.noLootMessage:SetPoint("TOPLEFT", lootScroll, "TOPLEFT", 16, -24)
+    frame.noLootMessage:SetPoint("TOPRIGHT", lootScroll, "TOPRIGHT", -16, -24)
+    frame.noLootMessage:SetJustifyH("CENTER")
+    frame.noLootMessage:SetWordWrap(true)
+    frame.noLootMessage:SetTextColor(0.35, 0.24, 0.12)
+    frame.noLootMessage:Hide()
+
     frame.tacticsOverviewHeader = frame.bossTacticsContent:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
     frame.tacticsOverviewHeader:SetText(L("OVERVIEW") or "Overview")
 
@@ -2636,6 +2647,19 @@ local function CreateMainFrame()
     frame.questDetailText:SetWordWrap(true)
     ApplyQuestFont(frame.questDetailText, "QuestFont", "GameFontHighlight")
 
+    frame.questWarningText = frame.questDetailContent:CreateFontString(
+        nil,
+        "OVERLAY"
+    )
+    frame.questWarningText:SetPoint("TOPLEFT", 0, 0)
+    frame.questWarningText:SetWidth(365)
+    frame.questWarningText:SetJustifyH("LEFT")
+    frame.questWarningText:SetJustifyV("TOP")
+    frame.questWarningText:SetWordWrap(true)
+    ApplyQuestFont(frame.questWarningText, "QuestFont", "GameFontHighlight")
+    frame.questWarningText:SetTextColor(0.75, 0.10, 0.08)
+    frame.questWarningText:Hide()
+
     local function MakeQuestSectionHeader(label)
         local fs = frame.questDetailContent:CreateFontString(nil, "OVERLAY")
 
@@ -2898,15 +2922,16 @@ local function CreateMainFrame()
         -- open the first incomplete prerequisite; if every step is complete,
         -- open the final prerequisite.
         local target = nil
+        -- acceptOnly steps count as done once they are in the log.
         for _, step in ipairs(chain) do
-            if step.id and IsQuestInLog(step.id) then
+            if step.id and not step.acceptOnly and IsQuestInLog(step.id) then
                 target = step
                 break
             end
         end
         if not target then
             for _, step in ipairs(chain) do
-                if not (step.id and IsQuestFinished(step.id)) then
+                if not (step.id and (IsQuestFinished(step.id) or (step.acceptOnly and IsQuestInLog(step.id)))) then
                     target = step
                     break
                 end

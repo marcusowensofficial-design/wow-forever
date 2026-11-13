@@ -110,7 +110,8 @@ if __name__ == '__main__':
     all_files = sorted(glob.glob('**/*.lua', recursive=True))
     total_issues = 0
     for f in all_files:
-        if 'tools' in f or 'scratch' in f:
+        norm = f.replace('\\', '/')
+        if norm.startswith(('tools/', 'scratch/', '_merge_preview/')):
             continue
         issues = audit_file_globals(f)
         if issues:

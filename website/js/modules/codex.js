@@ -180,11 +180,11 @@ function renderDungeonTimelineSlider() {
   const newForeverDungeons = [
     { id: "dungeon-01", name: "Hall of Thanes", min: 13, max: 18, zone: "Ironforge", isNew: true },
     { id: "dungeon-02", name: "Ruins of Lordaeron", min: 15, max: 20, zone: "Tirisfal", isNew: true },
-    { id: "dungeon-03", name: "Excavation Site 4", min: 26, max: 31, zone: "Wetlands", isNew: true },
+    { id: "dungeon-03", name: "Excavation Site: Wetlands", min: 26, max: 31, zone: "Wetlands", isNew: true },
     { id: "dungeon-04", name: "City of Dalaran", min: 28, max: 33, zone: "Alterac", isNew: true },
     { id: "dungeon-05", name: "The Drowned City", min: 35, max: 40, zone: "Stranglethorn", isNew: true },
     { id: "dungeon-06", name: "Krol'dok Stronghold", min: 40, max: 45, zone: "Riverglades", isNew: true },
-    { id: "dungeon-07", name: "Alcaz Island Prison", min: 48, max: 53, zone: "Dustwallow", isNew: true },
+    { id: "dungeon-07", name: "Alcaz Prison", min: 48, max: 53, zone: "Dustwallow", isNew: true },
     { id: "dungeon-08", name: "Blackmaw Hold", min: 55, max: 60, zone: "Azshara", isNew: true },
     { id: "dungeon-09", name: "Shaper's Terrace", min: 58, max: 60, zone: "Un'Goro", isNew: true }
   ];
@@ -687,16 +687,14 @@ function renderEngineSpecs() {
       <div class="spec-row"><span>Memory:</span> <strong>${min.ram}</strong></div>
       <div class="spec-row"><span>Graphics:</span> <strong>${min.gpu}</strong></div>
       <div class="spec-row"><span>Storage:</span> <strong style="color: #ef4444;">${min.storage}</strong></div>
-      <div class="spec-row"><span>Target:</span> <strong>${min.target}</strong></div>
     </div>
     <div class="spec-card recommended">
-      <h4 style="color: #38bdf8; font-size: 1.1rem; margin-bottom: 0.8rem;">Recommended (Ray-Tracing Target)</h4>
+      <h4 style="color: #38bdf8; font-size: 1.1rem; margin-bottom: 0.8rem;">Recommended Specifications</h4>
       <div class="spec-row"><span>OS:</span> <strong>${rec.os}</strong></div>
       <div class="spec-row"><span>Processor:</span> <strong>${rec.cpu}</strong></div>
       <div class="spec-row"><span>Memory:</span> <strong>${rec.ram}</strong></div>
       <div class="spec-row"><span>Graphics:</span> <strong>${rec.gpu}</strong></div>
       <div class="spec-row"><span>Storage:</span> <strong style="color: #10b981;">${rec.storage}</strong></div>
-      <div class="spec-row"><span>Target:</span> <strong>${rec.target}</strong></div>
     </div>
   `;
 }

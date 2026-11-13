@@ -101,8 +101,15 @@ function initBetaDurationTracker() {
     }
   }
   if (daysBadge) daysBadge.textContent = isPostBeta ? 'Beta Complete' : `${daysRemaining} Days Left`;
-  if (phase2DayBadge) phase2DayBadge.textContent = isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of ${totalDays}`;
-  if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? '' : ` • Day ${daysElapsed} of ${totalDays}`;
+  // After global launch, count days since launch instead of freezing on the beta tally.
+  const launch = new Date(targets.globalLaunch || "2026-11-04T15:00:00-08:00").getTime();
+  const daysSinceLaunch = now >= launch ? Math.floor((now - launch) / (1000 * 60 * 60 * 24)) + 1 : 0;
+  if (phase2DayBadge) {
+    phase2DayBadge.textContent = daysSinceLaunch ? `Realms Online • Day ${daysSinceLaunch}` : (isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of ${totalDays}`);
+  }
+  if (topTickerDayBadge) {
+    topTickerDayBadge.textContent = daysSinceLaunch ? ` • Day ${daysSinceLaunch} since launch` : (isPostBeta ? '' : ` • Day ${daysElapsed} of ${totalDays}`);
+  }
   if (weekStatusText) weekStatusText.textContent = isPostBeta ? 'Completed (5 of 5 Weeks)' : (daysElapsed > 35 ? `Week 5 of 5 (Extended)` : `Week ${currentWeek} of 5`);
 }
 

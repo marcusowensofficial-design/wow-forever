@@ -78,17 +78,66 @@ FDJ.DUNGEON_MAPS = {
         },
     },
 
-    -- No boss positions known yet.
+    -- Boss positions: OMGmacros's numbered map on Discord (12 Nov 2026), via DungeonJournal 2.0.4.
     ["The Drowned City"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DrownedCityMap", texBottom = 683 / 1024 } },
         entrance = { floor = 1, x = 0.846, y = 0.521, angle = 0 }, -- the swirl in Sunken Hollow
-        bosses = {},
+        bosses = {
+            { name = "Zul'Alai",            floor = 1, x = 0.697, y = 0.572 },
+            -- In the round flooded room east of Var'Taka (OMGmacros's update, same
+            -- thread): reached by swimming, from the pool to the south or from
+            -- the big basin; the 2nd boss for most groups.
+            { name = "Primeval Elemental",  floor = 1, x = 0.618, y = 0.672 },
+            { name = "Var'Taka",            floor = 1, x = 0.514, y = 0.689 },
+            { name = "Captain Dreadrise",   floor = 1, x = 0.546, y = 0.344 }, -- he paths around there
+            { name = "Deathless Marrow",    floor = 1, x = 0.349, y = 0.536 },
+            { name = "Min'loth the Serpent", floor = 1, x = 0.196, y = 0.539 },
+        },
     },
-    -- Announced dungeons (no boss data yet): the map is their only page.
+    -- Boss positions: falling/Ekiroth's numbered map on Discord (12 Nov 2026), via DungeonJournal 2.0.4.
     ["Krol'dok Stronghold"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\KroldokMap", texBottom = 683 / 1024 } },
         entrance = { floor = 1, x = 0.205, y = 0.807, angle = 180 }, -- the swirl where the trail comes in (south-west)
+        bosses = {
+            { name = "Slavecrusher Grox",          floor = 1, x = 0.331, y = 0.703 },
+            { name = "Twilight Commander Zarmok",  floor = 1, x = 0.392, y = 0.734 },
+            { name = "War Handler Ashka",          floor = 1, x = 0.621, y = 0.527 },
+            { name = "Nar'gurk",                   floor = 1, x = 0.411, y = 0.579 },
+            { name = "Bossman Toof",               floor = 1, x = 0.617, y = 0.432 },
+            { name = "Overlord Mugg",              floor = 1, x = 0.688, y = 0.242 },
+        },
+    },
+    ["Alcaz Prison"] = {
+        -- Level 1: Main Unit (the entrance); Level 2: Maximum Security Unit.
+        floors = {
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\AlcazPrisonMap", texBottom = 683 / 1024 },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\AlcazPrisonMap2", texBottom = 683 / 1024 },
+        },
+        entrance = { floor = 1, x = 0.353, y = 0.160, angle = 180 }, -- the swirl at the top of the stairs (label on the left, clear of "Main Unit")
         bosses = {},
+    },
+    ["Scholomance"] = {
+        entrance = { floor = 1, x = 0.390, y = 0.652, angle = 0 },
+        floors = {
+            { uiMapID = 306, tiles = "Interface\\WorldMap\\ScholomanceOLD\\ScholomanceOLD1_" },
+            { uiMapID = 307, tiles = "Interface\\WorldMap\\ScholomanceOLD\\ScholomanceOLD2_" },
+            { uiMapID = 308, tiles = "Interface\\WorldMap\\ScholomanceOLD\\ScholomanceOLD3_" },
+            { uiMapID = 309, tiles = "Interface\\WorldMap\\ScholomanceOLD\\ScholomanceOLD4_" },
+        },
+        bosses = {
+            { name = "Kirtonos the Herald",      floor = 2, x = 0.495, y = 0.043 },
+            { name = "Marduk Blackpool",         floor = 2, x = 0.444, y = 0.639 },
+            { name = "Vectus",                   floor = 2, x = 0.482, y = 0.662 },
+            { name = "Rattlegore",               floor = 3, x = 0.313, y = 0.646 },
+            { name = "Instructor Malicia",       floor = 3, x = 0.721, y = 0.706 },
+            { name = "Doctor Theolen Krastinov", floor = 3, x = 0.889, y = 0.462 },
+            { name = "Lorekeeper Polkelt",       floor = 3, x = 0.720, y = 0.225 },
+            { name = "Ras Frostwhisper",         floor = 4, x = 0.406, y = 0.884 },
+            { name = "The Ravenian",             floor = 4, x = 0.675, y = 0.521 },
+            { name = "Lord Alexei Barov",        floor = 4, x = 0.844, y = 0.308 },
+            { name = "Lady Illucia Barov",       floor = 4, x = 0.670, y = 0.061 },
+            { name = "Darkmaster Gandling",      floor = 4, x = 0.682, y = 0.302 },
+        },
     },
     ["Shaper's Terrace"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ShapersTerraceMap", texBottom = 683 / 1024 } },
@@ -279,15 +328,25 @@ FDJ.DUNGEON_MAPS = {
     ["Excavation Site: Wetlands"] = {
         floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ExcavationSiteMap", texBottom = 683 / 1024 } },
         entrance = { floor = 1, x = 0.888, y = 0.258, angle = 180, labelPos = "top" }, -- the swirl at the right of the map
+        -- insidequest: quest NPCs inside (Warcraft Tavern's screenshots):
+        -- Ardin Grassman up on the wooden tower by the Relic Guardian (just
+        -- beside its portrait), Daewyn Songblade's body in a tent at the Lost
+        -- Dig Site, by the dig and the bones.
         turnins = {
-            { npc = "Daewyn Songblade", floor = 1, x = 0.440, y = 0.580 },
+            { npc = "Ardin Grassman", x = 0.262, y = 0.668 },
+            { npc = "Daewyn Songblade", x = 0.074, y = 0.497 },
         },
         -- Boss spots as marked by Exehn on the map (2026-10-06).
+        -- questmob: Highland Horror is not a boss but the quest's target
+        -- (Horrors in the Highland): its portrait carries the game's quest
+        -- badge (the yellow ! of a quest mob's target portrait). Where
+        -- Exehn fought it (2026-11-09): the path north of the Lost Dig Site
+        -- (Wowhead has no spot for it).
         bosses = {
             { name = "Saltspine",       x = 0.550, y = 0.361 },
             { name = "Shadetooth",      x = 0.305, y = 0.484 },
-            { name = "Highland Horror", x = 0.510, y = 0.440 },
             { name = "Relic Guardian",  x = 0.324, y = 0.687 },
+            { name = "Highland Horror", x = 0.082, y = 0.405, npcID = 260808, quest = 95646 },
         },
     },
     ["Ragefire Chasm"] = {
@@ -323,19 +382,28 @@ FDJ.DUNGEON_MAPS = {
         },
     },
     ["Wailing Caverns"] = {
-        floors = { { uiMapID = 279, tiles = "Interface\\WorldMap\\WailingCaverns\\WailingCaverns1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s2", x0 = 0.1786, y0 = 0.3783, x1 = 0.1998, y1 = 0.4186 } } } }, -- hides one printed skull west of Lady Anacondra
+        -- The game's own map of Wailing Caverns is the one from patch 4.1,
+        -- after Blizzard cut the eastern maze out of the dungeon. Forever has
+        -- the whole original cave, so the journal shows its own copy of the
+        -- full map from before that patch (Media\\Maps\\WailingCavernsFull,
+        -- 1002x668 in a 1024x1024 texture). The west half is the same on both,
+        -- so its pins did not move.
+        floors = { { uiMapID = 279, tiles = "Interface\\WorldMap\\WailingCaverns\\WailingCaverns1_",
+            texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\Maps\\WailingCavernsFull", texRight = 1002 / 1024, texBottom = 668 / 1024 } },
         entrance = { floor = 1, x = 0.465, y = 0.590, angle = 200 },
         -- Route: Anacondra on the west side of the first big chamber, drop
         -- into the ravine west to Cobrahn, back through the river (Kresh),
-        -- then east: Pythas, Skum, the Faerie Dragon's caves and the Crag of
-        -- the Everliving where Serpentis stands right before Verdan. Mutanus
-        -- appears at Naralex after the escort.
+        -- then into the eastern maze: Pythas up in the Winding Chasm, Skum by
+        -- the pool in the far south-east, the Faerie Dragon's caves, and the
+        -- rooms by the Crag of the Everliving where Serpentis stands right
+        -- before Verdan. Mutanus appears at Naralex after the escort.
+        -- Pythas and Skum sit on the full map's printed skulls in the east.
         bosses = {
             { name = "Lady Anacondra",        x = 0.310, y = 0.430 },
             { name = "Kresh",                 x = 0.385, y = 0.350 },
             { name = "Lord Cobrahn",          x = 0.155, y = 0.570 },
-            { name = "Lord Pythas",           x = 0.620, y = 0.657 },
-            { name = "Skum",                  x = 0.622, y = 0.734 },
+            { name = "Lord Pythas",           x = 0.856, y = 0.289 },
+            { name = "Skum",                  x = 0.927, y = 0.792 },
             { name = "Deviate Faerie Dragon", x = 0.580, y = 0.600 },
             { name = "Lord Serpentis",        x = 0.615, y = 0.535 },
             { name = "Verdan the Everliving", x = 0.545, y = 0.460 },

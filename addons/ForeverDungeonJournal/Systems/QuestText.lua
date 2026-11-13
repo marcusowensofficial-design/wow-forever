@@ -1067,7 +1067,8 @@ do
         local chain = FDJ.QUEST_PREREQ_CHAINS and FDJ.QUEST_PREREQ_CHAINS[quest.id]
         if type(chain) ~= "table" then return nil end
         for _, step in ipairs(chain) do
-            if type(step) == "table" and type(step.id) == "number" and InLog(step.id) and not TurnedIn(step.id) then
+            if type(step) == "table" and type(step.id) == "number" and not step.acceptOnly
+                and InLog(step.id) and not TurnedIn(step.id) then
                 return step
             end
         end
@@ -1271,10 +1272,13 @@ do
             if type(step) == "table" then
                 local id = step.id
                 local details = (id and FDJ.QUEST_PREREQ_DETAILS and FDJ.QUEST_PREREQ_DETAILS[id]) or {}
-                local entry = { step = step, index = index, details = details, name = Field(id, "name", step.name or "") }
+                local name = Field(id, "name", step.name or "")
+                if step.acceptOnly and FDJ.L then name = name .. "  " .. FDJ.L("CHAIN_ACCEPT_ONLY") end
+                local entry = { step = step, index = index, details = details, name = name }
                 if step.itemStep or type(id) ~= "number" then
                     entry.state = "item"
-                elseif TurnedIn(id) then
+                elseif TurnedIn(id) or (step.acceptOnly and InLog(id)) then
+                    -- acceptOnly: being in the log is enough to unlock the next step.
                     entry.state = "done"
                 elseif InLog(id) then
                     current = true
@@ -2358,15 +2362,22 @@ do
                 info.state == "ready" and math.max(ICON_X, (textX - 3) / 2) or ICON_X, -7)
             local item = row.use ~= nil and info.startItem or nil
             if row.use then
+                local inCombat = InCombatLockdown and InCombatLockdown()
                 if item then
-                    row.use.itemID = item
-                    row.use:SetAttribute("item", "item:" .. item)
+                    if not inCombat then
+                        row.use.itemID = item
+                        row.use:SetAttribute("item", "item:" .. item)
+                        row.use:SetShown(true)
+                    else
+                        row.use.itemID = item
+                    end
                     local icon = (C_Item and C_Item.GetItemIconByID and C_Item.GetItemIconByID(item))
                         or (GetItemIcon and GetItemIcon(item)) or "Interface\\Icons\\INV_Misc_QuestionMark"
                     row.use.icon:SetTexture(icon)
                     row.use.icon:SetDesaturated(info.low == true)
+                elseif not inCombat then
+                    row.use:SetShown(false)
                 end
-                row.use:SetShown(item ~= nil)
             end
             row.icon:SetShown(not questButton and not item)
             row.icon:SetTexture(info.icon)
@@ -2858,7 +2869,7 @@ do
 
     -- ---------------------------------------------------------------- events
     local events = CreateFrame("Frame")
-    for _, event in ipairs({ "PLAYER_LOGIN", "PLAYER_ENTERING_WORLD", "QUEST_LOG_UPDATE",
+    for _, event in ipairs({ "PLAYER_LOGIN", "PLAYER_ENTERING_WORLD", "PLAYER_REGEN_ENABLED", "QUEST_LOG_UPDATE",
         "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "UNIT_QUEST_LOG_CHANGED",
         "PLAYER_LEVEL_UP", "QUEST_DATA_LOAD_RESULT", "BAG_UPDATE_DELAYED", "QUEST_DETAIL" }) do
         pcall(events.RegisterEvent, events, event)

@@ -358,9 +358,12 @@ function FDJ.CreateGlobalSearchUI(frame)
     local function FindVisibleSearchItemButton(result)
         if not result or not result.itemID then return nil end
         if result.mode == "bosses" then
+            local targetID = tonumber(result.itemID)
             for _, row in ipairs(FDJ.lootRows or {}) do
-                if row:IsShown() and row.item and tonumber(row.item[1]) == tonumber(result.itemID) then
-                    return row, frame.lootScroll, frame.lootContent
+                if row:IsShown() and row.item and tonumber(row.item[1]) == targetID then
+                    if targetID ~= 0 or not result.itemName or row.item[2] == result.itemName then
+                        return row, frame.lootScroll, frame.lootContent
+                    end
                 end
             end
         elseif result.mode == "quests" then
@@ -435,8 +438,8 @@ function FDJ.CreateGlobalSearchUI(frame)
         end
     end
     FDJ.OpenSearchResult = OpenSearchResult
-    FDJ.FocusBossLootItem = function(itemID)
-        FocusSearchItem({ kind = "item", mode = "bosses", itemID = itemID })
+    FDJ.FocusBossLootItem = function(itemID, itemName)
+        FocusSearchItem({ kind = "item", mode = "bosses", itemID = itemID, itemName = itemName })
     end
 
     local function EnsureSearchRow(index)
@@ -483,7 +486,8 @@ function FDJ.CreateGlobalSearchUI(frame)
             tooltip:Hide()
             tooltip:SetOwner(self, "ANCHOR_NONE")
             if tooltip.ClearLines then tooltip:ClearLines() end
-            local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(result.itemID)
+            local _, liveLink
+            if FDJ.ItemInfo then _, liveLink = FDJ.ItemInfo(result.itemID) end
             tooltip:SetHyperlink(liveLink or ("item:" .. result.itemID))
             tooltip:Show()
             tooltip:ClearAllPoints()
@@ -694,7 +698,8 @@ function FDJ.ShareWishlistToParty()
     local currentLine = header
 
     for _, it in ipairs(filtered) do
-        local _, link = FDJ.ItemInfo and FDJ.ItemInfo(it.itemID)
+        local _, link
+        if FDJ.ItemInfo then _, link = FDJ.ItemInfo(it.itemID) end
         local itemText = link or ("[" .. (it.name or "Item") .. "]")
         local addition = " " .. itemText
         if #currentLine + #addition > 240 then
@@ -1030,7 +1035,8 @@ function FDJ.RefreshWishlistPanel()
                     tooltip:Hide()
                     tooltip:SetOwner(self, "ANCHOR_NONE")
                     if tooltip.ClearLines then tooltip:ClearLines() end
-                    local _, liveLink = FDJ.ItemInfo and FDJ.ItemInfo(self.itemData.itemID)
+                    local _, liveLink
+                    if FDJ.ItemInfo then _, liveLink = FDJ.ItemInfo(self.itemData.itemID) end
                     tooltip:SetHyperlink(liveLink or ("item:" .. self.itemData.itemID))
                     tooltip:Show()
                     FDJ.PositionPrimaryItemTooltip(self)
@@ -1050,7 +1056,8 @@ function FDJ.RefreshWishlistPanel()
             local it = items[i]
             row.itemData = it
 
-            local _, liveLink, quality, _, _, _, _, _, _, texture = FDJ.ItemInfo and FDJ.ItemInfo(it.itemID)
+            local _, liveLink, quality, _, _, _, _, _, _, texture
+            if FDJ.ItemInfo then _, liveLink, quality, _, _, _, _, _, _, texture = FDJ.ItemInfo(it.itemID) end
             texture = texture or (FDJ.ItemIcon and FDJ.ItemIcon(it.itemID))
             row.icon:SetTexture(texture)
 
@@ -1059,7 +1066,8 @@ function FDJ.RefreshWishlistPanel()
             row.name:SetTextColor(r, g, b)
             row.iconBorder:SetVertexColor(r, g, b)
 
-            local summary, reqLvl = FDJ.GetItemStatsSummary and FDJ.GetItemStatsSummary(it.itemID, liveLink)
+            local summary, reqLvl
+            if FDJ.GetItemStatsSummary then summary, reqLvl = FDJ.GetItemStatsSummary(it.itemID, liveLink) end
             row.stats:SetText(summary or "")
 
             local slotStr = it.slot or ""

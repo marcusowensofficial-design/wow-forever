@@ -3456,6 +3456,9 @@ function FL:UpdateDashboard()
                         local mTotal = drop.marketTotalValue or (mUnit * count)
                         local cutNote = (ForeverLiquidDB.profile and ForeverLiquidDB.profile.ahDeductCut ~= false) and " (-5% cut)" or ""
                         GameTooltip:AddDoubleLine(string.format("|cff00ccffForeverMarket Buyout%s:|r", cutNote), string.format("%s / %s", FL.FormatMoney(mUnit, true), FL.FormatMoney(mTotal, true)), 0, 0.8, 1, 1, 1, 1)
+                        if drop.marketSuffixFallback then
+                            GameTooltip:AddLine("|cffff9933Est. from cheapest suffix (this suffix not on AH)|r")
+                        end
                         if mTotal > vTotal then
                             local profit = mTotal - vTotal
                             local pct = vTotal > 0 and math.floor(((mTotal - vTotal) / vTotal) * 100) or 0

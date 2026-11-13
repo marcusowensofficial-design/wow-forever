@@ -114,10 +114,10 @@
             </div>
           </div>
           <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0.5rem 0 0.8rem; line-height: 1.55;">
-            In <strong>WoW: Forever Closed Beta Phase 2</strong>, the level cap expands to <strong>Level 30</strong> with today's patch, unlocking up to <strong>21 talent points</strong> (levels 10–30). Additional talent points (+2 to +5) can also be unlocked early via <strong>Legacy Discovery Milestones</strong>. Below are the optimal leveling, dungeon speed-clearing, and PvP specs datamined and verified from beta testers.
+            These are <strong>Level 20 and Level 30 leveling builds</strong> from the beta. A level 30 character has <strong>21 talent points</strong>, or <strong>26</strong> with the Legacy <em>Talented</em> perk (talent points from level 5 instead of 10). For level 60 builds, see the Talents tab.
           </p>
           <div style="font-size: 0.78rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-            <span>⚠️ <em>Beta Notice: Talent tree positions, spell values, and weapon scaling are actively tuned weekly before the official November 4th launch.</em></span>
+            <span>⚠️ <em>Built during the beta. Talent values were re-checked against the live game on November 13, 2026, but some leveling advice may have shifted since launch.</em></span>
           </div>
         </div>
 
@@ -223,7 +223,7 @@
             ${currentSpec.legacyNotes ? `
               <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 0.9rem; margin-top: 1rem; font-size: 0.82rem; color: #bae6fd;">
                 <strong style="color: #38bdf8; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem;">
-                  <span>✨</span> Legacy Discovery Extra Points (+2 to +5):
+                  <span>✨</span> Extra points from the Legacy Talented perk (up to +5 by level 30):
                 </strong>
                 ${escapeHtml(currentSpec.legacyNotes)}
               </div>
@@ -256,7 +256,7 @@
             <!-- Dungeon BiS Gear -->
             <div class="build-feature-box">
               <h4>
-                <span>🛡️</span> Level ${activeLevel === '30' ? '25–33 (Dalaran, Excavation Site 4, RFK, BFD)' : '15–20 (SFK, Deadmines, WC)'} Dungeon Pre-BiS Targets
+                <span>🛡️</span> Level ${activeLevel === '30' ? '25–33 (Dalaran, Excavation Site: Wetlands, RFK, BFD)' : '15–20 (SFK, Deadmines, WC)'} Dungeon Pre-BiS Targets
               </h4>
               <div class="dungeon-bis-table-wrap">
                 <table class="dungeon-bis-table">

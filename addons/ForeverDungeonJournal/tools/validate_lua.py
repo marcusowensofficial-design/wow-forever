@@ -1,29 +1,31 @@
 import re
 import os
 
+LONG_OPEN_RE = re.compile(r"\[(=*)\[")
+
+
 def strip_comments_and_strings(content):
     i = 0
     n = len(content)
     result = []
     line = 1
     col = 1
-    
+
     while i < n:
         char = content[i]
-        
+
         # Check long comment --[[ ... ]] or short comment -- ...
-        if content[i:i+2] == "--":
+        if char == "-" and i + 1 < n and content[i + 1] == "-":
             i += 2
             col += 2
-            long_match = re.match(r"^\[(=*)\[", content[i:])
+            long_match = LONG_OPEN_RE.match(content, i)
             if long_match:
                 eq_len = len(long_match.group(1))
                 end_pat = "]" + "=" * eq_len + "]"
                 end_idx = content.find(end_pat, i + len(long_match.group(0)))
                 if end_idx == -1:
                     raise SyntaxError(f"Unfinished long comment starting at line {line}, col {col}")
-                comment_text = content[i-2:end_idx + len(end_pat)]
-                newlines = comment_text.count("\n")
+                newlines = content.count("\n", i - 2, end_idx + len(end_pat))
                 result.append("\n" * newlines)
                 line += newlines
                 i = end_idx + len(end_pat)
@@ -37,22 +39,22 @@ def strip_comments_and_strings(content):
                 col = 1
                 i = eol + 1
             continue
-            
+
         # Check long string [=[ ... ]=]
-        long_str_match = re.match(r"^\[(=*)\[", content[i:])
-        if long_str_match and (i == 0 or content[i-1] in " \t\n\r,=({["):
-            eq_len = len(long_str_match.group(1))
-            end_pat = "]" + "=" * eq_len + "]"
-            i += len(long_str_match.group(0))
-            end_idx = content.find(end_pat, i)
-            if end_idx == -1:
-                raise SyntaxError(f"Unfinished long string starting at line {line}, col {col}")
-            str_text = content[i:end_idx]
-            newlines = str_text.count("\n")
-            result.append(" \"\" " + ("\n" * newlines))
-            line += newlines
-            i = end_idx + len(end_pat)
-            continue
+        if char == "[":
+            long_str_match = LONG_OPEN_RE.match(content, i)
+            if long_str_match and (i == 0 or content[i - 1] in " \t\n\r,=({["):
+                eq_len = len(long_str_match.group(1))
+                end_pat = "]" + "=" * eq_len + "]"
+                i += len(long_str_match.group(0))
+                end_idx = content.find(end_pat, i)
+                if end_idx == -1:
+                    raise SyntaxError(f"Unfinished long string starting at line {line}, col {col}")
+                newlines = content.count("\n", i, end_idx)
+                result.append(' "" ' + ("\n" * newlines))
+                line += newlines
+                i = end_idx + len(end_pat)
+                continue
 
         # Single or double quote strings
         if char in ('"', "'"):
@@ -204,32 +206,17 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         files = sys.argv[1:]
     else:
-        files = [
-            "Core/Bootstrap.lua",
-            "Core/Journal.lua",
-            "Data/BossTactics.lua",
-            "Data/Dungeons.lua",
-            "Data/DungeonMaps.lua",
-            "Data/Bosses.lua",
-            "Data/QuestMaps.lua",
-            "Systems/MapMarkers.lua",
-            "Localization/Localization.lua",
-            "Data/DungeonRoutes.lua",
-            "UI/ThemeData.lua",
-            "UI/Utilities.lua",
-            "UI/Minimap.lua",
-            "UI/Portraits.lua",
-            "UI/Tooltips.lua",
-            "UI/DungeonMapsTab.lua",
-            "UI/SearchWishlist.lua",
-            "UI/LootExplorer.lua",
-            "UI/HomeTab.lua",
-            "UI/BossTab.lua",
-            "UI/QuestsTab.lua",
-            "UI/MainFrame.lua",
-            "Data/DungeonPreparation.lua",
-            "UI/DungeonPrep.lua",
-        ]
+        toc_path = "ForeverDungeonJournal.toc"
+        files = []
+        if os.path.exists(toc_path):
+            with open(toc_path, "r", encoding="utf-8") as toc_f:
+                for raw in toc_f:
+                    line = raw.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    rel = line.replace("\\", "/")
+                    if rel.endswith(".lua"):
+                        files.append(rel)
     all_ok = True
     for f in files:
         if os.path.exists(f):
@@ -237,9 +224,10 @@ if __name__ == "__main__":
                 all_ok = False
         else:
             print(f"Skipping missing file: {f}")
-            
+
     if all_ok:
-        print("\nAll files passed syntax and structure validation successfully!")
+        print(f"\nAll {len(files)} files passed syntax and structure validation successfully!")
     else:
         print("\nSome files failed validation.")
+        sys.exit(1)
 

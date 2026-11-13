@@ -117,7 +117,7 @@ FDJ.QUEST_PREREQ_CHAINS = {
     -- Rig Wars only needs to be accepted/in progress to make Chief Engineer
     -- Scooty available; it does not need to be completed first.
     [2843] = {
-        { id = 2841, name = "Rig Wars" },
+        { id = 2841, name = "Rig Wars", standalone = true, acceptOnly = true }, -- also listed on its own (players looked for it); "(accept only)" in the chain list
         { id = 2842, name = "Chief Engineer Scooty" },
     },
 
@@ -570,6 +570,9 @@ FDJ.QUEST_PREREQ_CHAINS = {
     [5125] = {
         { id = 5122, name = "The Medallion of Faith" },
     },
+    [93404] = {
+        { id = 93594, name = "Word of the Woods", level = 43, requires = 35 },
+    },
 }
 
 FDJ.QUEST_PREREQ_DETAILS = {
@@ -617,6 +620,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
         objective = "Find Hammertoe Grez in Uldaman.",
         pickup = "Prospector Ryedol, Badlands",
         turnin = "Hammertoe Grez, Uldaman excavation (outside the instance)",
+        description = "This is his WoW Classic (2019) spot and he may have moved in Forever: if he is not here, check the Wowhead comments or coordinates. Enter the Uldaman excavation cave. In the big hall go forward (jump down or go around) and head down, deeper into the cave. Hug the wall on your right: just before the Dig One hall you make a 180-degree turn to the right, and Hammertoe Grez is there. Level ~36 elites stand along the way.",
     },
     [738] = {
         level = 38, requires = 30,
@@ -637,6 +641,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
         objective = "Find Hammertoe's Amulet and return it to him in Uldaman.",
         pickup = "Hammertoe Grez, Uldaman excavation (outside the instance)",
         turnin = "Hammertoe Grez, Uldaman excavation (outside the instance)",
+        description = "This is his WoW Classic (2019) spot and he may have moved in Forever: if he is not here, check the Wowhead comments or coordinates. Enter the Uldaman excavation cave. In the big hall go forward (jump down or go around) and head down, deeper into the cave. Hug the wall on your right: just before the Dig One hall you make a 180-degree turn to the right, and Hammertoe Grez is there. Level ~36 elites stand along the way.",
     },
     [723] = {
         startsInDungeon = true,
@@ -1362,7 +1367,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
         objective = "Speak with Eitrigg in Orgrimmar. When you have discussed matters with Eitrigg, seek council from Thrall. You recall having seen Eitrigg in Thrall's chamber.",
         pickup = "Warlord Goretooth, Badlands",
         turnin = "Thrall, Orgrimmar",
-        map = { mapID = 1418, x = 0.030, y = 0.476, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
+        map = { mapID = 1418, x = 0.058, y = 0.474, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
     },
     [4974] = {
         level = 60, requires = 55,
@@ -1920,7 +1925,8 @@ FDJ.QUEST_PREREQ_DETAILS = {
     },
 
     -- Gnomeregan prerequisite steps.
-    [2926] = { level = 27, requires = 20, objective = "Use the Empty Leaden Collection Phial on a living Irradiated Invader or Irradiated Pillager, then return the full phial to Ozzie Togglevolt.", pickup = "Ozzie Togglevolt, Kharanos, Dun Morogh", turnin = "Ozzie Togglevolt, Kharanos, Dun Morogh", description = "Required before The Only Cure is More Green Glow.", map = { mapID = 1426, x = 0.450, y = 0.490, label = "Ozzie Togglevolt — Kharanos", detail = "Start Gnogaine here" } },
+    [2926] = {
+        requiredItems = { {9284, "Full Leaden Collection Phial", 1, "Use the Vial on an Irradiated Invader just outside the instance", map = { mapID = 1426, x = 0.243, y = 0.398, label = "Irradiated Invaders — outside Gnomeregan", detail = "Use the Vial on an Irradiated Invader just outside the instance" }} }, level = 27, requires = 20, objective = "Use the Empty Leaden Collection Phial on a living Irradiated Invader or Irradiated Pillager, then return the full phial to Ozzie Togglevolt.", pickup = "Ozzie Togglevolt, Kharanos, Dun Morogh", turnin = "Ozzie Togglevolt, Kharanos, Dun Morogh", description = "Required before The Only Cure is More Green Glow.", map = { mapID = 1426, x = 0.450, y = 0.490, label = "Ozzie Togglevolt — Kharanos", detail = "Start Gnogaine here" } },
     [2841] = { level = 35, requires = 25, objective = "Accept Rig Wars from Nogg. You do not need to complete it before continuing to Chief Engineer Scooty.", pickup = "Nogg, Valley of Honor, Orgrimmar", turnin = "Nogg, Orgrimmar", description = "Rig Wars must be in progress to unlock the transporter chain in Forever.", note = "Accept Rig Wars first; completion is not required for Chief Engineer Scooty.", warning = "Accept Rig Wars before Chief Engineer Scooty. If Rig Wars disappears, abandon Chief Engineer Scooty and it will reappear.", map = { mapID = 1454, x = 0.760, y = 0.250, label = "Nogg — Valley of Honor, Orgrimmar", detail = "Accept Rig Wars here" } },
     [2842] = { level = 35, requires = 20, objective = "Speak with Scooty in Booty Bay.", pickup = "Sovik, Valley of Honor, Orgrimmar", turnin = "Scooty, Booty Bay, Stranglethorn Vale", description = "Required before Gnomer-gooooone!", map = { mapID = 1454, x = 0.756, y = 0.252, label = "Sovik — Valley of Honor, Orgrimmar", detail = "Start Chief Engineer Scooty here" } },
 
@@ -1937,7 +1943,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [1489] = { level = 16, requires = 10, objective = "Speak with Hamuul Runetotem on Elder Rise in Thunder Bluff.", pickup = "Tonga Runetotem, The Crossroads", turnin = "Hamuul Runetotem, Elder Rise, Thunder Bluff", description = "Tonga sends you to Hamuul after Altered Beings." },
     [1490] = { level = 16, requires = 10, objective = "Speak with Nara Wildmane in Thunder Bluff.", pickup = "Hamuul Runetotem, Elder Rise, Thunder Bluff", turnin = "Nara Wildmane, Thunder Bluff", description = "Nara Wildmane is the final prerequisite before Leaders of the Fang becomes available." },
 
-    [153]  = { level = 15, requires = 9, objective = "Bring 15 Red Leather Bandanas to Scout Galiaan at Sentinel Hill.", pickup = "Scout Galiaan, Sentinel Hill, Westfall", turnin = "Scout Galiaan, Sentinel Hill, Westfall", description = "Required before Red Silk Bandanas.", map = { mapID = 1436, x = 0.566, y = 0.473, label = "Scout Galiaan — Sentinel Hill", detail = "Start Red Leather Bandanas here" } },
+    [153]  = { level = 15, requires = 9, objective = "Bring 15 Red Leather Bandanas to Scout Galiaan at Sentinel Hill.", pickup = "Scout Galiaan, Sentinel Hill, Westfall", turnin = "Scout Galiaan, Sentinel Hill, Westfall", description = "Required before Red Silk Bandanas.", map = { mapID = 1436, x = 0.540, y = 0.528, label = "Scout Galiaan — Sentinel Hill", targetName = "Scout Galiaan", detail = "Start Red Leather Bandanas here: Sentinel Hill (54.0, 52.8). Some players find him just outside the inn, around 53, 52" } },
     [65]   = { level = 18, requires = 14, objective = "Talk to Wiley the Black in Lakeshire.", pickup = "Gryan Stoutmantle, Sentinel Hill, Westfall", turnin = "Wiley the Black, Lakeshire, Redridge Mountains", description = "First step of the required Defias Brotherhood chain.", map = { mapID = 1436, x = 0.562, y = 0.476, label = "Gryan Stoutmantle — Sentinel Hill", detail = "Start The Defias Brotherhood here" } },
     [132]  = { level = 18, requires = 14, objective = "Take Wiley's Note back to Gryan Stoutmantle in Westfall.", pickup = "Wiley the Black, Lakeshire, Redridge Mountains", turnin = "Gryan Stoutmantle, Sentinel Hill, Westfall", description = "Second step of the Defias Brotherhood chain." },
     [135]  = { level = 18, requires = 14, objective = "Take Wiley's Note to Master Mathias Shaw in Stormwind.", pickup = "Gryan Stoutmantle, Sentinel Hill, Westfall", turnin = "Master Mathias Shaw, Old Town, Stormwind", description = "Shaw investigates the connection between the Defias and the Stonemasons." },
@@ -1947,17 +1953,17 @@ FDJ.QUEST_PREREQ_DETAILS = {
 
     [2041] = { level = 15, requires = 15, objective = "Speak with Shoni the Shilent in Stormwind.", pickup = "Gnoarn, Tinker Town, Ironforge", turnin = "Shoni the Shilent, Dwarven District, Stormwind", description = "This leads directly into Underground Assault.", map = { mapID = 1455, x = 0.692, y = 0.505, label = "Gnoarn — Tinker Town", detail = "Start Speak with Shoni here" } },
 
-    [92742] = { level = 12, requires = 9, objective = "Use the Well Water Sample Kit at the Jansen Stead and Molsen Farm wells.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "First quest of the Toxic Soil chain.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Start Testing the Wells here" } },
-    [92744] = { level = 12, requires = 9, objective = "Collect 7 Longshore Murloc Gills along the Westfall shoreline.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Second quest of the Toxic Soil chain.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Alba Fairmoon is inside the Sentinel Hill inn" }},
-    [92745] = { level = 14, requires = 9, objective = "Slay 4 Kobold Diggers in Jangolode Mine and 6 Riverpaw Miners in Gold Coast Quarry.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Investigate whether Westfall's mines are causing the contamination.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Alba Fairmoon is inside the Sentinel Hill inn" }},
-    [92747] = { level = 16, requires = 9, objective = "Collect 8 Suspicious Industrial Supplies from Moonbrook.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "The supplies are found in the caves leading toward the Deadmines entrance.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Alba Fairmoon is inside the Sentinel Hill inn" }},
-    [92748] = { level = 16, requires = 9, objective = "Travel to the Dwarven District in Stormwind and find an engineer who can help with explosives.", pickup = ALBA_FAIRMOON_LOCATION, turnin = "Sprite Jumpsprocket, Dwarven District, Stormwind", description = "Begins the explosives portion of the Toxic Soil chain.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Alba Fairmoon is inside the Sentinel Hill inn" }},
+    [92742] = { level = 12, requires = 9, objective = "Use the Well Water Sample Kit at the Jansen Stead and Molsen Farm wells.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "First quest of the Toxic Soil chain.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Start Testing the Wells here. Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" } },
+    [92744] = { level = 12, requires = 9, objective = "Collect 7 Longshore Murloc Gills along the Westfall shoreline.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Second quest of the Toxic Soil chain.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" }},
+    [92745] = { level = 14, requires = 9, objective = "Slay 4 Kobold Diggers in Jangolode Mine and 6 Riverpaw Miners in Gold Coast Quarry.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Investigate whether Westfall's mines are causing the contamination.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" }},
+    [92747] = { level = 16, requires = 9, objective = "Collect 8 Suspicious Industrial Supplies from Moonbrook.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "The supplies are found in the caves leading toward the Deadmines entrance.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" }},
+    [92748] = { level = 16, requires = 9, objective = "Travel to the Dwarven District in Stormwind and find an engineer who can help with explosives.", pickup = ALBA_FAIRMOON_LOCATION, turnin = "Sprite Jumpsprocket, Dwarven District, Stormwind", description = "Begins the explosives portion of the Toxic Soil chain.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" }},
     [92749] = { level = 16, requires = 9, objective = "Obtain 10 Rough Dynamite from crafting, trading, or the auction house, then return to Sprite Jumpsprocket in the Dwarven District of Stormwind.", pickup = "Sprite Jumpsprocket, Dwarven District, Stormwind", turnin = "Sprite Jumpsprocket, Dwarven District, Stormwind", description = "Rough Dynamite can be crafted, traded or bought from the auction house.", note = "Rough Dynamite can be crafted, traded or bought from the auction house." },
     [92750] = { level = 16, requires = 9, objective = "Talk to Stormwind Intelligence about acquiring a remote detonator.", pickup = "Sprite Jumpsprocket, Dwarven District, Stormwind", turnin = "Stormwind Intelligence, Stormwind", description = "You need a remote detonator for the planned explosion." },
     [92751] = { level = 16, requires = 9, objective = "Bring the Remote Detonator Kit back to Sprite Jumpsprocket in the Dwarven District.", pickup = "Jasper Fel, SI:7, Old Town, Stormwind", turnin = "Sprite Jumpsprocket, Dwarven District, Stormwind", description = "Returns the remote detonator to the engineer." },
     [92752] = { level = 16, requires = 9, objective = "Return to Alba Fairmoon at the Sentinel Hill inn in Westfall with the completed explosives.", pickup = "Sprite Jumpsprocket, Dwarven District, Stormwind", turnin = ALBA_FAIRMOON_LOCATION, description = "Final preparation before Destruction in Deadmines." },
     [92753] = { level = 18, requires = 9, objective = "Find the forge in the Deadmines and plant the Extra-Destructive Explosives beside it.", pickup = "Extra-Destructive Explosives quest-start item", startItem = {254553, "Extra-Destructive Explosives", 1, "Supplied by Sprite Jumpsprocket during Explosive Consultation; plant it at the Deadmines forge"}, turnin = ALBA_FAIRMOON_LOCATION, description = "Plant the explosives at the forge, then return to Alba Fairmoon." },
-    [92819] = { level = 18, requires = 9, objective = "Use the detonator.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Final step of the Toxic Soil chain.", map = { mapID = 1436, x = 0.530, y = 0.533, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Alba Fairmoon is inside the Sentinel Hill inn" }},
+    [92819] = { level = 18, requires = 9, objective = "Use the detonator.", pickup = ALBA_FAIRMOON_LOCATION, turnin = ALBA_FAIRMOON_LOCATION, description = "Final step of the Toxic Soil chain.", map = { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" }},
 
     -- The Stockade prerequisite chains.
     [303] = { level = 30, requires = 25, objective = "Kill 10 Dark Iron Dwarves, 5 Dark Iron Tunnelers, 5 Dark Iron Saboteurs and 5 Dark Iron Demolitionists at Dun Modr.", pickup = "Motley Garmason, Dun Modr, Wetlands", turnin = "Motley Garmason, Dun Modr, Wetlands", description = "Complete The Dark Iron War to unlock The Fury Runs Deep.", map = { mapID = 1437, x = 0.496, y = 0.182, label = "Motley Garmason — Dun Modr", detail = "Start The Dark Iron War here" } },
@@ -1968,7 +1974,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [5727] = { level = 12, requires = 9, objective = "Speak with Neeru Fireblade in the Cleft of Shadow, then return to Thrall.", pickup = "Thrall, Valley of Wisdom, Orgrimmar", turnin = "Thrall, Valley of Wisdom, Orgrimmar", description = "Neeru is in the Cleft of Shadow near the Ragefire Chasm entrance." },
 
     [3765] = { level = 24, requires = 18, objective = "Travel to Gershala Nightwhisper in Auberdine, Darkshore.", pickup = "Argos Nightwhisper, The Park, Stormwind", turnin = "Gershala Nightwhisper, Auberdine, Darkshore", description = "Optional Alliance breadcrumb leading to Researching the Corruption.", map = { mapID = 1453, x = 0.363, y = 0.674, label = "Argos Nightwhisper — The Park", detail = "Argos Nightwhisper is in The Park, beside the moonwell area." } },
-    [1198] = { level = 24, requires = 18, objective = "Seek out Argent Guard Thaelrid inside Blackfathom Deeps.", pickup = "Dawnwatcher Shaedlass, Darnassus", turnin = "Argent Guard Thaelrid, inside Blackfathom Deeps", description = "Required before the Alliance version of Blackfathom Villainy.", map = { mapID = 1457, x = 0.550, y = 0.240, label = "Dawnwatcher Shaedlass — Darnassus", detail = "Start In Search of Thaelrid here" } },
+    [1198] = { level = 24, requires = 18, objective = "Seek out Argent Guard Thaelrid inside Blackfathom Deeps.", pickup = "Dawnwatcher Shaedlass, Darnassus", turnin = "Argent Guard Thaelrid, inside Blackfathom Deeps", description = "Optional lead-in to the Alliance version of Blackfathom Villainy: hand it in before accepting Blackfathom Villainy, or it can no longer be completed.", map = { mapID = 1457, x = 0.550, y = 0.240, label = "Dawnwatcher Shaedlass — Darnassus", detail = "Start In Search of Thaelrid here" } },
     [6564] = { level = 22, requires = 17, objective = "Bring the Damp Note to Je'neu Sancrea in Ashenvale.", pickup = "Damp Note", startItem = {16790, "Damp Note", 1, "Drops from Blackfathom Tide Priestess in the entrance tunnels leading to Blackfathom Deeps."}, turnin = "Je'neu Sancrea, Zoram'gar Outpost, Ashenvale" },
     -- Data Rescue punch card steps (item steps, not quests).
     [2930001] = { level = 30, requires = 25, objective = "Kill mobs in the outer Gnomeregan area until a White Punch Card drops.", pickup = "Caverndeep Pillagers, Caverndeep Invaders, Irradiated Invaders and Addled Lepers, outside the instance", turnin = "Keep the card for Matrix Punchograph 3005-A", description = "Random drop; you usually get it during your first clear of the outer area.", startItem = {9279, "White Punch Card", 1, "Random drop from mobs outside the Gnomeregan instance"}, map = { mapID = 1426, x = 0.243, y = 0.393, label = "Gnomeregan — outer area", detail = "White Punch Cards drop from the mobs here" } },
@@ -1977,10 +1983,48 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [2930004] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-C with the Blue Punch Card to get a Red Punch Card.", pickup = "Matrix Punchograph 3005-C, upper platform of the Launch Bay with Electrocutioner 6000", turnin = "You receive a Red Punch Card", description = "On Electrocutioner 6000's platform.", startItem = {9281, "Red Punch Card", 1, "From Matrix Punchograph 3005-C"} },
     [2930005] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-D with the Red Punch Card to get the Prismatic Punch Card, then bring it to Master Mechanic Castpipe in Ironforge.", pickup = "Matrix Punchograph 3005-D, west side of the lower level of the Engineering Labs", turnin = "Master Mechanic Castpipe, Tinker Town, Ironforge", description = "Take the elevator down; the terminal is in the first passage on the right.", startItem = {9316, "Prismatic Punch Card", 1, "From Matrix Punchograph 3005-D"} },
 
+    [93594] = {
+        level = 43,
+        requires = 35,
+        -- Temporary instruction page until the complete hub-unlock chain is verified.
+        hubPlaceholder = true,
+        objective = "Need to unlock |cffffd36bShen'dralas|r quest hub.\nUpdating soon with full details",
+        -- Evenshade's Overlook: documented location of Mordent Evenshade.
+        -- This marks a known Shen'dralas questing landmark, not a verified
+        -- exact pickup NPC for Word of the Woods.
+        hubMap = {
+            mapID = 2652, x = 0.350, y = 0.466,
+            label = "Shen'dralas quest hub - Evenshade's Overlook",
+            detail = "Evenshade's Overlook, Shen'dralas (35.0, 46.6); temporary hub marker",
+        },
+    },
 }
 
 -- Pre-quests that also start a dungeon quest elsewhere in the journal reuse
 -- that quest's giver location for their Show on Map button.
+-- Baros Alexston (City Hall): the hand-checked spot, so the Wowhead Forever
+-- spawn at 49.0, 30.2 (Data/QuestLocations.lua) is not used for these steps.
+do
+    local baros
+    for _, spot in ipairs(FDJ.TURNIN_SPOTS or {}) do
+        if spot.targetName == "Baros Alexston" then baros = spot break end
+    end
+    local details = FDJ.QUEST_PREREQ_DETAILS
+    if baros and details then
+        if details[373] then details[373].turninMap = baros end -- The Unsent Letter
+        if details[389] then details[389].map = details[389].map or baros end -- Bazil Thredd
+    end
+    -- Wiley the Black (Lakeshire) and Scout Galiaan (Sentinel Hill) also take
+    -- hand-ins: point those at the same hand-checked spots and notes.
+    if details and FDJ.QUEST_START_MAPS and FDJ.QUEST_START_MAPS[132] and details[65] then
+        details[65].turninMap = FDJ.QUEST_START_MAPS[132]
+    end
+    if details and details[153] then
+        details[153].turninMap = { mapID = 1436, x = 0.540, y = 0.528, label = "Scout Galiaan — Sentinel Hill", targetName = "Scout Galiaan",
+            detail = "Sentinel Hill (54.0, 52.8). Some players find him just outside the inn, around 53, 52" }
+    end
+end
+
 for id, details in pairs(FDJ.QUEST_PREREQ_DETAILS) do
     if not details.map and FDJ.QUEST_START_MAPS and FDJ.QUEST_START_MAPS[id] then
         details.map = FDJ.QUEST_START_MAPS[id]
@@ -1997,7 +2041,8 @@ for _, dungeon in pairs(FDJ.DB or {}) do
             local chain = quest.id and FDJ.QUEST_PREREQ_CHAINS[quest.id]
             if chain then
                 for _, step in ipairs(chain) do
-                    if step.id and step.id ~= quest.id then steps[step.id] = true end
+                    -- standalone steps (Rig Wars) stay in the main list as well.
+                    if step.id and step.id ~= quest.id and not step.standalone then steps[step.id] = true end
                 end
             end
         end

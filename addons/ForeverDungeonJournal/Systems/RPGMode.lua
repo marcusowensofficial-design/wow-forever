@@ -167,6 +167,9 @@ local SKETCHES = {
     [2041] = true, [2043] = true, [7971] = true, [5988] = true, [6439] = true, [12292] = true,
     [7806] = true, [8807] = true, [8711] = true, [10115] = true, [14416] = true, [11256] = true,
     [11583] = true, [10691] = true, [10729] = true, [11070] = true,
+    -- From DungeonJournal 2.0.4: Min'loth the Serpent, Overlord Mugg, Blazeroar,
+    -- Avatar of Hakkar, Varrox Bleakhoof, Nanaya (display IDs in Data/Bosses.lua).
+    [142322] = true, [141218] = true, [6374] = true, [8053] = true, [130447] = true, [143832] = true,
 }
 local function SketchFor(name)
     Build()

@@ -985,6 +985,15 @@ function FDJ.ImportWishlist(rawString)
                 if C_Item and C_Item.RequestLoadItemDataByID then
                     pcall(C_Item.RequestLoadItemDataByID, id)
                 end
+                -- Also add into the account-wide per-character wishlist used by BossTab stars & Wishlist drawer.
+                if FDJ.IsWishlisted and FDJ.ToggleWishlist and not FDJ.IsWishlisted(id) then
+                    FDJ.ToggleWishlist(id)
+                elseif ForeverDungeonJournalDB and FDJ.GetCharKey then
+                    ForeverDungeonJournalDB.wishlists = ForeverDungeonJournalDB.wishlists or {}
+                    local ck = FDJ.GetCharKey()
+                    ForeverDungeonJournalDB.wishlists[ck] = ForeverDungeonJournalDB.wishlists[ck] or {}
+                    ForeverDungeonJournalDB.wishlists[ck][id] = true
+                end
                 importedCount = importedCount + 1
             end
         end
@@ -998,6 +1007,8 @@ function FDJ.ImportWishlist(rawString)
             RefreshWindow(frame.favouritesWindow)
         end
     end
+    if FDJ.RefreshWishlistDrawer then FDJ.RefreshWishlistDrawer() end
+    if FDJ.UpdateBossTabLoot then FDJ.UpdateBossTabLoot() end
 
     print(string.format("|cffd8a83cForever Dungeon Journal|r |cff00ff7fSuccessfully imported %d BiS wishlist items!|r Boss drops are now starred |cffffd100★|r in your journal.", importedCount))
 end

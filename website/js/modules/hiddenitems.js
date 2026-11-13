@@ -143,7 +143,7 @@ function renderHiddenItemsUI() {
 
     <!-- RECENTLY REVEALED DROPS -->
     <div style="background: rgba(13, 17, 26, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
-      <h4 style="color: var(--text-gold); font-size: 1.1rem; margin: 0 0 1rem;">Recent Phase 2 Confirmed Drops (Excavation Site 4 & Dalaran)</h4>
+      <h4 style="color: var(--text-gold); font-size: 1.1rem; margin: 0 0 1rem;">Recent Phase 2 Confirmed Drops (Excavation Site: Wetlands & Dalaran)</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem;">
         ${dataset.recentReveals.map(item => `
           <div style="display: flex; gap: 0.75rem; align-items: center; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); padding: 0.6rem 0.8rem; border-radius: 6px;">

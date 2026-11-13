@@ -200,6 +200,7 @@ FDJ.DB = {
         requires = 15,
         turnin = "Ebru, above the entrance to Wailing Caverns, The Barrens",
     }, {
+        startsInDungeon = true,
         note = "The direct quest has no item reward. Its follow-up, In Nightmares, later offers:",
         objective = "Travel to Ratchet to find someone who can identify the Glowing Shard, then deliver it as directed.",
         rewardSummary = "",
@@ -212,7 +213,6 @@ FDJ.DB = {
         requires = 15,
         name = "The Glowing Shard",
         faction = "Both",
-        startsInDungeon = true,
         pickup = "Item start: Glowing Shard, dropped by Mutanus the Devourer (boss) inside Wailing Caverns. Mutanus appears only during the optional Naralex event: after all 4 Lords of the Fang are dead, escort the Disciple of Naralex to the ritual stone and protect him through the waves of adds until Mutanus is summoned. Then take the shard to Sputtervalve in Ratchet, and on to Falla Sagewind above the dungeon.",
         level = 26,
         startItem = {10441, "Glowing Shard", 1, "Dropped by: Mutanus the Devourer"},
@@ -305,7 +305,7 @@ FDJ.DB = {
                 aliases = { "Lord Serpentis" },
                 loot = {
                     {6469, "Venomstrike", "Ranged, Bow", 3},
-                    {5970, "Serpent Gloves", "Hands, Cloth", 2},
+                    {5970, "Serpent Gloves", "Hands, Cloth", 3},
                     {10411, "Footpads of the Fang", "Feet, Leather", 3},
                     {6459, "Savage Trodders", "Feet, Mail", 3},
                     -- Seen dropping (Discord, Nov 2026); Wowhead Forever lists Lord Serpentis as its only source.
@@ -319,7 +319,7 @@ FDJ.DB = {
                 loot = {
                     {6630, "Seedcloud Buckler", "Off Hand, Shield", 3},
                     {6631, "Living Root", "Two-Hand, Staff", 3},
-                    {6629, "Sporid Cape", "Back, Cloth", 2},
+                    {6629, "Sporid Cape", "Back, Cloth", 3},
                 },
             },
             {
@@ -337,11 +337,10 @@ FDJ.DB = {
                 name = "Deviate Faerie Dragon",
                 npcID = 5912,
                 aliases = { "Deviate Faerie Dragon" },
-                loot = {
+                loot = {{252779, "Pattern: Defender's Leather Gloves", "Recipe, Leatherworking", 3}, 
                     {5243, "Firebelcher", "Ranged, Wand", 3},
                     {6632, "Feyscale Cloak", "Back, Cloth", 3},
                     {252781, "Pattern: Stormrider's Leather Gloves", "Recipe, Leatherworking", 3},
-                    {252779, "Pattern: Defender's Leather Gloves", "Recipe, Leatherworking", 3},
                 },
                 description = "Rare spawn.",
                 rare = true,
@@ -389,7 +388,7 @@ FDJ.DB = {
         rewardHeader = "Chain reward — follow-up",
         liveXPFallback = 1650,
         rewardChoice = true,
-        requires = 16,
+        requires = 15, -- Blizzard hotfix, 6 Nov 2026
         name = "Unending Torment",
         faction = "Horde",
         pickup = "Item start: Abominable Head, dropped by The Baron (boss) inside Ruins of Lordaeron",
@@ -707,12 +706,10 @@ DB["The Deadmines"] = {
         },
         name = "The Unsent Letter",
         faction = "Alliance",
-        startsInDungeon = true,
-        pickup = "Use An Unsent Letter, looted from Edwin VanCleef (boss) inside The Deadmines.",
+        pickup = "Use An Unsent Letter, looted from Edwin VanCleef.",
         level = 22,
         startItem = {2874, "An Unsent Letter", 1, "Looted from Edwin VanCleef"},
         turnin = "Baros Alexston, City Hall, Cathedral Square, Stormwind",
-    }, {
     }, {
         classOnly = "PALADIN",
         warning = "This is a chain quest with a step in The Deadmines",
@@ -749,7 +746,7 @@ DB["The Deadmines"] = {
     bosses = {{
             name = "Rhahk'Zor",
             aliases = {"Rhahk'Zor"},
-            loot = {{872, "Rockslicer", "Two-Hand, Axe", 3}, {5187, "Rhahk'Zor's Hammer", "Two-Hand, Mace", 3}, {273289, "Ogre Loincloth", "Legs, Cloth", 3}, {251362, "Plans: Protector's Gloves", "Recipe, Blacksmithing", 3}, {251364, "Plans: Crusader's Gloves", "Recipe, Blacksmithing", 3}, {253906, "Pattern: Filigreed Flame Gown", "Recipe, Tailoring", 3}, {252773, "Pattern: Defender's Leather Armor", "Recipe, Leatherworking", 3}},
+            loot = {{252773, "Pattern: Defender's Leather Armor", "Recipe, Leatherworking", 3}, {872, "Rockslicer", "Two-Hand, Axe", 3}, {5187, "Rhahk'Zor's Hammer", "Two-Hand, Mace", 3}, {273289, "Ogre Loincloth", "Legs, Cloth", 3}, {251362, "Plans: Protector's Gloves", "Recipe, Blacksmithing", 3}, {251364, "Plans: Crusader's Gloves", "Recipe, Blacksmithing", 3}, {253906, "Pattern: Filigreed Flame Gown", "Recipe, Tailoring", 3}},
             npcID = 644,
         }, {
             name = "Miner Johnson",
@@ -766,12 +763,16 @@ DB["The Deadmines"] = {
         }, {
             name = "Sneed",
             aliases = {"Sneed"},
+            -- He comes out of his Shredder once it is destroyed: the
+            -- Dungeon Tracker counts the Shredder killed with him (it has no
+            -- boss event of its own).
+            killedBefore = { "Sneed's Shredder", 642 },
             loot = {{5194, "Taskmaster Axe", "Two-Hand, Axe", 3}, {5195, "Gold-flecked Gloves", "Hands, Cloth", 3}, {273293, "Bandsaw Wristbands", "Wrist, Mail", 3}, {273092, "Blueprint: Repair Bot", "Engineering", 2}, {251360, "Plans: Veteran's Gloves", "Recipe, Blacksmithing", 3}, {251364, "Plans: Crusader's Gloves", "Recipe, Blacksmithing", 3}, {253902, "Pattern: Filigreed Pristine Gown", "Recipe, Tailoring", 3}},
             npcID = 643,
         }, {
             name = "Gilnid",
             aliases = {"Gilnid"},
-            loot = {{1156, "Lavishly Jeweled Ring", "Finger", 3}, {5199, "Smelting Pants", "Legs, Leather", 3}, {273297, "Goblin Hammer", "Main Hand, Mace", 3}, {252777, "Pattern: Brawler's Leather Gloves", "Recipe, Leatherworking", 3}, {252778, "Pattern: Trapper's Leather Gloves", "Recipe, Leatherworking", 3}, {252780, "Pattern: Totemic Leather Gloves", "Recipe, Leatherworking", 3}, {252782, "Pattern: Wisdom's Leather Gloves", "Recipe, Leatherworking", 3}, {253904, "Pattern: Filigreed Silky Gown", "Recipe, Tailoring", 3}, {253906, "Pattern: Filigreed Flame Gown", "Recipe, Tailoring", 3}, {273086, "Blueprint: Anvil", "Blueprint", 2}, {251340, "Plans: Veteran's Chain Shirt", "Recipe, Blacksmithing", 3}},
+            loot = {{251340, "Plans: Veteran's Chain Shirt", "Recipe, Blacksmithing", 3}, {1156, "Lavishly Jeweled Ring", "Finger", 3}, {5199, "Smelting Pants", "Legs, Leather", 3}, {273297, "Goblin Hammer", "Main Hand, Mace", 3}, {252777, "Pattern: Brawler's Leather Gloves", "Recipe, Leatherworking", 3}, {252778, "Pattern: Trapper's Leather Gloves", "Recipe, Leatherworking", 3}, {252780, "Pattern: Totemic Leather Gloves", "Recipe, Leatherworking", 3}, {252782, "Pattern: Wisdom's Leather Gloves", "Recipe, Leatherworking", 3}, {253904, "Pattern: Filigreed Silky Gown", "Recipe, Tailoring", 3}, {253906, "Pattern: Filigreed Flame Gown", "Recipe, Tailoring", 3}, {273086, "Blueprint: Anvil", "Blueprint", 2}},
             npcID = 1763,
         }, {
             name = "Mr. Smite",
@@ -899,16 +900,20 @@ DB["Blackfathom Deeps"] = {
         requires = 20,
         turnin = "Argent Guard Manados, Craftsmen's Terrace, Darnassus",
     }, {
+        startQuestLink = {
+            id = 1198,
+            name = "In Search of Thaelrid",
+        },
         objective = "Defeat Twilight Lord Kelris and recover the Head of Kelris.",
         rewardSummary = "65s  •  Argent Dawn +200  •  Darnassus +200",
         id = 1200,
         rewardChoice = true,
         liveXPFallback = 3300,
         rewardItems = {{7001, "Gravestone Scepter", 3}, {7002, "Arctic Buckler", 3}, {270031, "Dark Ritual Leggings", 3}, {270032, "Cultist's Armguards", 3}},
-        startQuestLink = {
-            id = 1198,
-            name = "In Search of Thaelrid",
-        },
+        -- No startQuestLink ("Requires: In Search of Thaelrid"): Thaelrid
+        -- gives it without the breadcrumb (a player in Forever, Nov 2026).
+        -- Its warning: accepting it first loses In Search of Thaelrid.
+        warning = "Warning: Accept after completing In Search of Thaelrid, or you will lose that quest.",
         name = "Blackfathom Villainy",
         faction = "Alliance",
         pickup = "Argent Guard Thaelrid, inside Blackfathom Deeps",
@@ -1078,7 +1083,7 @@ DB["Blackfathom Deeps"] = {
             name = "Lady Sarevess",
             npcID = 4831,
             aliases = {"Lady Sarevess"},
-            loot = {{888, "Naga Battle Gloves", "Hands, Leather", 3}, {3078, "Naga Heartpiercer", "Ranged, Bow", 2}, {11121, "Darkwater Talwar", "Main Hand, Sword", 2}, {252798, "Pattern: Brawler's Leather Hood", "Leatherworking Recipe", 3}, {251382, "Plans: Protector's Silvered Chain Helm", "Recipe, Blacksmithing", 3}, {251383, "Plans: Acolyte's Silvered Chain Helm", "Recipe, Blacksmithing", 3}, {253944, "Pattern: Filigreed Shadow Leggings", "Recipe, Tailoring", 3}},
+            loot = {{888, "Naga Battle Gloves", "Hands, Leather", 3}, {3078, "Naga Heartpiercer", "Ranged, Bow", 3}, {11121, "Darkwater Talwar", "Main Hand, Sword", 3}, {252798, "Pattern: Brawler's Leather Hood", "Leatherworking Recipe", 3}, {251382, "Plans: Protector's Silvered Chain Helm", "Recipe, Blacksmithing", 3}, {251383, "Plans: Acolyte's Silvered Chain Helm", "Recipe, Blacksmithing", 3}, {253944, "Pattern: Filigreed Shadow Leggings", "Recipe, Tailoring", 3}},
         },
         {
             name = "Gelihast",
@@ -1383,7 +1388,7 @@ DB["Shadowfang Keep"] = {
             npcID = 3914,
             aliases = {"Rethilgore"},
             loot = {
-                {5254, "Rugged Spaulders", "Shoulder, Leather", 2},
+                {5254, "Rugged Spaulders", "Shoulder, Leather", 3},
                 {273457, "Sorcerer Collar", "Neck", 3},
                 {273456, "Cell Keeper's Claws", "Main Hand, Fist Weapon", 3},
             },
@@ -1392,7 +1397,7 @@ DB["Shadowfang Keep"] = {
             name = "Fel Steed / Shadow Charger",
             npcID = 3864,
             aliases = {"Fel Steed", "Shadow Charger", "Fel Steed / Shadow Charger"},
-            loot = {
+            loot = {{251342, "Plans: Protector's Chain Shirt", "Recipe, Blacksmithing", 3}, 
                 {6341, "Eerie Stable Lantern", "Held In Off-hand", 3},
                 {932, "Fel Steed Saddlebags", "Bag", 2},
                 {251341, "Plans: Guard's Chain Shirt", "Recipe, Blacksmithing", 3},
@@ -1415,7 +1420,6 @@ DB["Shadowfang Keep"] = {
                 {253940, "Pattern: Filigreed Silky Leggings", "Recipe, Tailoring", 3},
                 {253946, "Pattern: Filigreed Pearly Leggings", "Recipe, Tailoring", 3},
                 {253948, "Pattern: Filigreed Shining Leggings", "Recipe, Tailoring", 3},
-                {251342, "Plans: Protector's Chain Shirt", "Recipe, Blacksmithing", 3},
             },
         },
         {
@@ -1426,17 +1430,17 @@ DB["Shadowfang Keep"] = {
                 {1292, "Butcher's Cleaver", "One-Hand, Axe", 3},
                 {6226, "Bloody Apron", "Chest, Cloth", 3},
                 {6633, "Butcher's Slicer", "One-Hand, Sword", 3},
+                {273096, "Blueprint: Tanning Rack", "Blueprint", 2}, -- Wowhead Forever: Razorclaw the Butcher 192/2533; seen dropping (KramS, Discord)
             },
         },
         {
             name = "Baron Silverlaine",
             npcID = 3887,
             aliases = {"Baron Silverlaine"},
-            loot = {
+            loot = {{252794, "Pattern: Defender's Leather Pants", "Recipe, Leatherworking", 3}, 
                 {6321, "Silverlaine's Family Seal", "Finger", 3},
                 {6323, "Baron's Scepter", "Main Hand, Mace", 3},
                 {273637, "Blade of Silverlaine", "Main Hand, Sword", 3},
-                {252794, "Pattern: Defender's Leather Pants", "Recipe, Leatherworking", 3},
             },
         },
         {
@@ -1477,7 +1481,7 @@ DB["Shadowfang Keep"] = {
             npcID = 4627,
             aliases = {"Arugal's Voidwalker", "Arugal’s Voidwalker"},
             loot = {
-                {5943, "Rift Bracers", "Wrist, Mail", 3},
+                {5943, "Rift Bracers", "Wrist, Mail", 2},
             },
         },
         {
@@ -1505,11 +1509,10 @@ DB["Shadowfang Keep"] = {
             name = "Archmage Arugal",
             npcID = 4275,
             aliases = {"Archmage Arugal"},
-            loot = {
+            loot = {{251382, "Plans: Protector's Silvered Chain Helm", "Recipe, Blacksmithing", 3}, 
                 {6324, "Robes of Arugal", "Chest, Cloth", 3},
                 {6392, "Belt of Arugal", "Waist, Cloth", 3},
                 {6220, "Meteor Shard", "One-Hand, Dagger", 3},
-                {251382, "Plans: Protector's Silvered Chain Helm", "Recipe, Blacksmithing", 3},
             },
         },
         {
@@ -1667,7 +1670,7 @@ FDJ.DB["The Stockade"] = {
             name = "Dextren Ward",
             npcID = 1663,
             aliases = {"Dextren Ward"},
-            loot = {
+            loot = {{252823, "Pattern: Totemic Leather Leggings", "Recipe, Leatherworking", 3}, 
                 {273817, "Graverobber's Shovel", "Two-Hand, Mace", 3},
                 {273819, "Boneslicer", "Two-Hand, Polearm", 3},
                 {273820, "Nightskulker Ring", "Finger", 3},
@@ -1675,7 +1678,6 @@ FDJ.DB["The Stockade"] = {
                 {251376, "Plans: Guard's Silvered Chain Leggings", "Recipe, Blacksmithing", 3},
                 {252820, "Pattern: Brawler's Leather Legguards", "Recipe, Leatherworking", 3},
                 {252821, "Pattern: Trapper's Leather Legguards", "Recipe, Leatherworking", 3},
-                {252823, "Pattern: Totemic Leather Leggings", "Recipe, Leatherworking", 3},
             },
         },
         {
@@ -1725,6 +1727,14 @@ FDJ.DB["Excavation Site: Wetlands"] = {
     description = "A Titan dig site trapped in time above Whelgar's Excavation, where errant Titan constructs have stopped obeying anyone. Areas inside: Lost Marsh, Stalker's Thicket, Site of the Guardian and Lost Dig Site.",
     icon = "Interface\\Icons\\INV_Pick_02",
     quests = {{
+        turninMap = {
+            y = 0.592,
+            mapID = 1437,
+            label = "Deathstalker Agent — Wetlands",
+            targetName = "Deathstalker Agent",
+            detail = "Hills above the Dragonmaw camp near Thelgen Rock (uphill path starts at 52.3, 66.0 next to the meeting stone)",
+            x = 0.514,
+        },
         note = "Prerequisite: Dragonmaw Rumors (from Zaruk in Hammerfall, Arathi Highlands at 74.4, 35.6). Cross the Thandol Span into Wetlands, follow the road south past Dun Modr, turn off near Thelgen Rock next to the meeting stone, and take the uphill path starting at 52.3, 66.0 to reach the Deathstalker Agent at 51.4, 59.2 overlooking the Dragonmaw camp. Recover the Dragonmaw Dispatch from Dragonmaw forces inside the dungeon.",
         objective = "Defeat 2 Dragonmaw Saboteurs and 4 Dragonmaw Warders, recover the Dragonmaw Dispatch, and report to the Deathstalker Agent outside the dungeon.",
         rewardSummary = "",
@@ -1733,14 +1743,6 @@ FDJ.DB["Excavation Site: Wetlands"] = {
         liveXPFallback = 7158,
         rewardChoice = true,
         startMap = {
-            y = 0.592,
-            mapID = 1437,
-            label = "Deathstalker Agent — Wetlands",
-            targetName = "Deathstalker Agent",
-            detail = "Hills above the Dragonmaw camp near Thelgen Rock (uphill path starts at 52.3, 66.0 next to the meeting stone)",
-            x = 0.514,
-        },
-        turninMap = {
             y = 0.592,
             mapID = 1437,
             label = "Deathstalker Agent — Wetlands",
@@ -1850,12 +1852,12 @@ FDJ.DB["Excavation Site: Wetlands"] = {
         requires = 24,
         turnin = "Caitlin Grassman, Menethil Harbor",
     }, {
+        startsInDungeon = true,
         id = 98824,
         name = "Prehistoric Prism",
         level = 31,
         requires = 24,
         faction = "Alliance",
-        startsInDungeon = true,
         pickup = "Starts inside Excavation Site: Wetlands. Relic Guardian (boss) drops the Titan Relic, which starts Lost Relic Carry. Turn that in to Prospector Whelgar, Whelgar's Excavation Site, Wetlands; he then gives you this quest. Do not travel to him without the Titan Relic.",
         objective = "Deliver the Titan Relic to High Explorer Magellas in the Hall of Explorers.",
         turnin = "High Explorer Magellas, Hall of Explorers, Ironforge",
@@ -1864,12 +1866,12 @@ FDJ.DB["Excavation Site: Wetlands"] = {
         rewardChoice = true,
         rewardItems = {{271716, "Explorer's League Dustcover", 3}, {271767, "Healer's Staff", 3}, {271766, "Heavehammer", 3}},
     }, {
+        startsInDungeon = true,
         id = 98823,
         name = "Earthen Echo",
         level = 31,
         requires = 24,
         faction = "Horde",
-        startsInDungeon = true,
         pickup = "Starts inside Excavation Site: Wetlands. Relic Guardian (boss) drops the Titan Relic, which starts Elder Knowledge. Turn that in to Bashana Runetotem, Elder Rise, Thunder Bluff; she then gives you this quest. Do not travel to her without the Titan Relic.",
         startMap = { mapID = 1456, x = 0.708, y = 0.334, label = "Bashana Runetotem — Thunder Bluff (turn-in for Elder Knowledge, then she offers this quest)", targetName = "Bashana Runetotem" },
         objective = "Deliver the Titan Relic to Muln Earthfury on Skywatcher Plateau in northwest Mulgore.",
@@ -1893,19 +1895,6 @@ FDJ.DB["Excavation Site: Wetlands"] = {
         rewardItems = {{271769, "Daewyn's Girdle", 3}, {271768, "Songblade Stabilizer", 3}},
     }},
     bosses = {
-        {
-            name = "Highland Horror",
-            npcID = 260324,
-            customIcon = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\HighlandHorrorPortrait.tga",
-            aliases = {"Highland Horror"},
-            description = "An ancient overgrown bog monstrosity awakened in the marshy excavation.",
-            loot = {
-                {271667, "Ironwood Destroyer", "Two-Hand, Mace", 3},
-                {271670, "Curl of Life", "Neck", 3},
-                {271664, "Hornbeam Heft", "Main Hand, Axe", 3},
-                {271668, "Root Core of the Horror", "Quest Item", 1},
-            },
-        },
         {
             name = "Saltspine",
             npcID = 260322,
@@ -1941,6 +1930,18 @@ FDJ.DB["Excavation Site: Wetlands"] = {
                 {270866, "Titan Relic", "Quest Item", 1},
                 {273097, "Blueprint: Rock Garden", "Blueprint", 2},
             },
+        }, {
+            name = "Highland Horror",
+            npcID = 260324,
+            customIcon = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\HighlandHorrorPortrait.tga",
+            aliases = {"Highland Horror"},
+            description = "An ancient overgrown bog monstrosity awakened in the marshy excavation.",
+            loot = {
+                {271667, "Ironwood Destroyer", "Two-Hand, Mace", 3},
+                {271670, "Curl of Life", "Neck", 3},
+                {271664, "Hornbeam Heft", "Main Hand, Axe", 3},
+                {270180, "Horrible Rootcore", "Quest Item", 1},
+            },
         },
     },
 }
@@ -1963,7 +1964,7 @@ FDJ.DB["City of Dalaran"] = {
         rewardSummary = "",
         rewardChoice = true,
         rewardItems = {{279835, "Vine Pruner's Cloak", 3}, {279836, "Thorn Protecting Girdle", 3}},
-        note = "Quest data is recorded in the beta; dungeon access may be unavailable.",
+        
         startMap = { mapID = 1453, x = 0.314, y = 0.628, label = "Shylamiir — Stormwind City", targetName = "Shylamiir" }, -- The Park; Forever harbor-layout map (Classic was 0.149, 0.496)
     }, {
         id = 92489,
@@ -1978,13 +1979,13 @@ FDJ.DB["City of Dalaran"] = {
         rewardSummary = "1g",
         rewardChoice = true,
         rewardItems = {{251962, "Violet Sash", 3}, {279849, "Runebound Gloves", 3}},
-        note = "Quest data is recorded in the beta; dungeon access may be unavailable.",
+        
         startMap = { mapID = 1453, x = 0.488, y = 0.876, label = "High Sorcerer Andromath — Stormwind City", targetName = "High Sorcerer Andromath" }, -- Wizard's Sanctum; Forever harbor-layout map (Classic was 0.375, 0.817)
     }, {
         id = 92457,
         name = "Starving Arcane",
         level = 33,
-        requires = 24,
+        requires = 24, -- its pre-quest An Alarming Request needs 30
         faction = "Alliance",
         pickup = "Image of Archmage Modera, Lordamere Lake near Dalaran",
         objective = "Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran.",
@@ -2042,7 +2043,7 @@ FDJ.DB["City of Dalaran"] = {
         rewardSummary = "",
         rewardChoice = true,
         rewardItems = {{279845, "Item 279845", 3}, {279846, "Item 279846", 3}},
-        note = "Quest data is recorded in the beta; dungeon access may be unavailable.",
+        
     }, {
         id = 96988,
         name = "Source of Power",
@@ -2050,13 +2051,13 @@ FDJ.DB["City of Dalaran"] = {
         requires = 24,
         faction = "Horde",
         pickup = "Doctor Martin Felben, Undercity",
-        objective = "Collect 6 Cracked Sentry Cores from the constructs in Dalaran.",
+        objective = "Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity.",
         turnin = "Doctor Martin Felben, Undercity",
-        liveXPFallback = 3950,
+        liveXPFallback = 9400,
         rewardSummary = "",
         rewardChoice = true,
-        rewardItems = {{279847, "Unstable Power Core", 3}, {279848, "Construct Cloak", 3}},
-        note = "Quest data is recorded in the beta; dungeon access may be unavailable.",
+        rewardItems = {{279847, "Unstable Power Core", 2}, {279848, "Construct Cloak", 2}},
+        
         startMap = { mapID = 1458, x = 0.466, y = 0.741, label = "Doctor Martin Felben — Undercity", targetName = "Doctor Martin Felben" },
     }, {
         id = 96986,
@@ -2064,15 +2065,16 @@ FDJ.DB["City of Dalaran"] = {
         level = 33,
         requires = 24,
         faction = "Horde",
-        pickup = "Melisara, Tarren Mill, Hillsbrad Foothills",
-        objective = "Defeat Atrexis the Grave Knight in the Dalaran Underbelly.",
-        turnin = "Melisara, Tarren Mill, Hillsbrad Foothills",
-        liveXPFallback = 3950,
+        pickup = "Melisara, in front of the chapel, Tarren Mill, Hillsbrad Foothills (62.6, 20.6)",
+        objective = "Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill.",
+        turnin = "Melisara, in front of the chapel, Tarren Mill, Hillsbrad Foothills (62.6, 20.6)",
+        note = "Separate quest from Melisara, not part of the Dalaran attunement chain.",
+        liveXPFallback = 9400,
         rewardSummary = "1g",
         rewardChoice = true,
-        rewardItems = {{251963, "Gravewalker Boots", 3}, {251965, "Undead Knight's Bracers", 3}},
-        note = "Quest data is recorded in the beta; dungeon access may be unavailable.",
-        startMap = { mapID = 1424, x = 0.626, y = 0.206, label = "Melisara — Tarren Mill", targetName = "Melisara" },
+        rewardItems = {{251963, "Gravewalker Boots", 2}, {251965, "Undead Knight's Bracers", 2}},
+        
+        startMap = { mapID = 1424, x = 0.6261, y = 0.2064, label = "Melisara — in front of the chapel, Tarren Mill", targetName = "Melisara" },
     }},
     bosses = {
         {
@@ -2178,6 +2180,8 @@ FDJ.DB["City of Dalaran"] = {
                 {286987, "Violet Sorcerer's Sandals", "Feet, Cloth", 3, "Dark Caster / Kirin Tor Necromancer"},
                 {286989, "Violet Sorcerer's Wraps", "Hands, Cloth", 3, "Kirin Tor Necromancer / Fallen Mage"},
                 {286988, "Violet Sorcerer's Leggings", "Legs, Cloth", 3, "Fallen Mage / Dark Caster"},
+                -- Seen dropping from a Fragmented Sentry (Discord, Nov 2026).
+                {286995, "Guardian's Emblem", "Neck", 3, "Fragmented Sentry"},
             },
         },
     },
@@ -2205,6 +2209,7 @@ FDJ.DB["Gnomeregan"] = {
         id = 2926,
         name = "Gnogaine",
         faction = "Alliance",
+        requiredItems = { {9284, "Full Leaden Collection Phial", 1, "Use the Vial on an Irradiated Invader just outside the instance", map = { mapID = 1426, x = 0.243, y = 0.398, label = "Irradiated Invaders — outside Gnomeregan", detail = "Use the Vial on an Irradiated Invader just outside the instance" }} },
         pickup = "Ozzie Togglevolt, Kharanos, Dun Morogh",
         level = 27,
         requires = 20,
@@ -2216,6 +2221,8 @@ FDJ.DB["Gnomeregan"] = {
         id = 2962,
         name = "The Only Cure is More Green Glow",
         faction = "Alliance",
+        -- Given by Ozzie when the quest is accepted (Wowhead Forever item 9364).
+        providedItem = {9364, "Heavy Leaden Collection Phial", 1, "Use on an alive Irradiated Slime or Corrosive Lurker"},
         pickup = "Ozzie Togglevolt, Kharanos, Dun Morogh",
         level = 30,
         requires = 20,
@@ -2425,7 +2432,7 @@ FDJ.DB["Gnomeregan"] = {
                 {9491, "Hotshot Pilot's Gloves", "Hands, Cloth", 3, "Gnomeregan trash (rare)"},
                 {9509, "Petrolspill Leggings", "Legs, Leather", 3, "Gnomeregan trash (rare)"},
                 {9510, "Caverndeep Trudgers", "Feet, Mail", 3, "Gnomeregan trash (rare)"},
-                {9487, "Hi-tech Supergun", "Ranged, Gun", 3, "Gnomeregan trash (rare)"},
+                {9487, "Hi-Tech Supergun", "Ranged, Gun", 3, "Gnomeregan trash (rare)"},
                 {9485, "Vibroblade", "One-Hand, Axe", 3, "Gnomeregan trash (rare)"},
                 {9488, "Oscillating Power Hammer", "One-Hand, Mace", 3, "Gnomeregan trash (rare)"},
                 {9486, "Supercharger Battle Axe", "Two-Hand, Axe", 3, "Gnomeregan trash (rare)"},
@@ -2490,6 +2497,7 @@ FDJ.DB["Razorfen Kraul"] = {
         level = 34,
         requires = 29,
         turnin = "Falfindel Waywarder, Thalanaar, Feralas",
+        additionalRewardItems = {{274084, "Quilboar Blaster", 3}},
         liveXPFallback = 3350,
     }, {
         objective = "Bring Razorflank's Heart to Auld Stonespire in Thunder Bluff.",
@@ -2537,24 +2545,25 @@ FDJ.DB["Razorfen Kraul"] = {
             npcID = 6168,
             aliases = {"Roogug"},
             description = "A quilboar geomancer near the start of the Kraul.",
-            loot = {
+            loot = {{252825, "Pattern: Wisdom's Leather Leggings", "Recipe, Leatherworking", 3}, {251354, "Plans: Crusader's Chain Helm", "Recipe, Blacksmithing", 3}, 
                 {274155, "Geomancer Headdress", "Head, Leather", 3},
                 {274149, "Thornweaver Drape", "Back, Cloth", 3},
                 {274152, "Roogug's Severed Head", "Trinket", 3},
-                {252825, "Pattern: Wisdom's Leather Leggings", "Recipe, Leatherworking", 3},
-                {251354, "Plans: Crusader's Chain Helm", "Recipe, Blacksmithing", 3},
+                {6841, "Vial of Phlogiston", "Quest Item", 1, tip = {
+                    "Quest Item",
+                    "Warrior quests Fire Hardened Mail and Brutal Armor",
+                }},
             },
         },
         {
             name = "Aggem Thorncurse",
             npcID = 4424,
             aliases = {"Aggem Thorncurse"},
-            loot = {
+            loot = {{253986, "Pattern: Filigreed Shining Circlet", "Recipe, Tailoring", 3}, 
                 {6681, "Thornspike", "One-Hand, Dagger", 3},
                 {274158, "Death Prophet Spine", "Two-Hand, Staff", 3},
                 {274159, "Thorncursed Grips", "Hands, Leather", 3},
                 {252820, "Pattern: Brawler's Leather Legguards", "Recipe, Leatherworking", 3},
-                {253986, "Pattern: Filigreed Shining Circlet", "Recipe, Tailoring", 3},
             },
         },
         {
@@ -2571,13 +2580,12 @@ FDJ.DB["Razorfen Kraul"] = {
             name = "Overlord Ramtusk",
             npcID = 4420,
             aliases = {"Overlord Ramtusk"},
-            loot = {
+            loot = {{251350, "Plans: Veteran's Chain Helm", "Recipe, Blacksmithing", 3}, 
                 {6687, "Corpsemaker", "Two-Hand, Axe", 3},
                 {6686, "Tusken Helm", "Head, Mail", 3},
                 {274161, "Quillord Mail Leggings", "Legs, Mail", 3},
                 {251379, "Plans: Crusader's Silvered Chain Leggings", "Recipe, Blacksmithing", 3},
                 {252821, "Pattern: Trapper's Leather Legguards", "Recipe, Leatherworking", 3},
-                {251350, "Plans: Veteran's Chain Helm", "Recipe, Blacksmithing", 3},
             },
         },
         {
@@ -2602,6 +2610,13 @@ FDJ.DB["Razorfen Kraul"] = {
                 {6692, "Pronged Reaver", "One-Hand, Axe", 3},
                 {273103, "Blueprint: Arcane Salvager", "Blueprint", 2},
                 {17008, "Small Scroll", "Quest Item", 1},
+                {274463, "Tattered Note", "Quest Item", 1, tip = {
+                    "Quest Item",
+                    "Unique",
+                    "Classes: Shaman",
+                    "Requires Level 30",
+                    "Shaman quest Elemental Aid",
+                }},
             },
         },
         {
@@ -2836,6 +2851,52 @@ FDJ.DB["Scarlet Monastery: Library"] = {
         turnin = "Dorn Plainstalker, Thousand Needles",
         liveXPFallback = 4200,
     }, {
+        -- Also in the Armory and the Cathedral: Houndmaster Loksey, one of
+        -- the four kills, is in the Library.
+        objective = "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity.",
+        rewardSummary = "",
+        id = 1048,
+        startMap = { mapID = 1458, x = 0.5620, y = 0.9260, label = "Varimathras — Royal Quarter, Undercity", targetName = "Varimathras" },
+        name = "Into The Scarlet Monastery",
+        faction = "Horde",
+        pickup = "Varimathras, Undercity",
+        level = 42,
+        requires = 33,
+        rewardChoice = true,
+        rewardItems = {{6802, "Sword of Omen", 3}, {6803, "Prophetic Cane", 3}, {10711, "Dragon's Blood Necklace", 3}},
+        note = "Herod is in the Armory; Loksey in the Library; Mograine and Whitemane in the Cathedral.",
+        turnin = "Varimathras, Undercity",
+        liveXPFallback = 5150,
+    }, {
+        note = "Introductory step leading to In the Name of the Light.",
+        warning = "OPTIONAL, not required",
+        objective = "Speak with Brother Anton in Desolace.",
+        rewardSummary = "",
+        id = 6141,
+        name = "Brother Anton",
+        hideFromMainList = true,
+        faction = "Alliance",
+        pickup = "Brother Crowley, Cathedral of Light, Stormwind",
+        level = 39,
+        requires = 34,
+        turnin = "Brother Anton, Nijel's Point, Desolace",
+        liveXPFallback = 300,
+    }, {
+        objective = "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Raleigh the Devout in Southshore.",
+        rewardSummary = "",
+        id = 1053,
+        name = "In the Name of the Light",
+        faction = "Alliance",
+        pickup = "Raleigh the Devout, Southshore",
+        level = 40,
+        requires = 34,
+        rewardChoice = true,
+        rewardItems = {{6829, "Sword of Serenity", 3}, {6830, "Bonebiter", 3}, {6831, "Black Menace", 3}, {11262, "Orb of Lorica", 3}},
+        note = "Herod is in the Armory; Loksey in the Library; Mograine and Whitemane in the Cathedral.\n\nOptional introductory quest:",
+        noteQuestLink = { id = 6141, name = "Brother Anton" },
+        turnin = "Raleigh the Devout, Southshore",
+        liveXPFallback = 4700,
+    }, {
         objective = "Bring 20 Hearts of Zeal from the Scarlet Monastery to Master Apothecary Faranell.",
         rewardSummary = "",
         id = 1113,
@@ -2863,6 +2924,23 @@ FDJ.DB["Scarlet Monastery: Library"] = {
         note = "Rogue class quest after The Horn of Xelthos; C's next letter (around level 30) sends you back to the Dead Drop. Wear the Scarlet Initiate's Uniform in every wing: stealth or attacking removes it.",
         turnin = "Dead Drop, Pyrewood Village, Silverpine Forest",
         liveXPFallback = 6900,
+    }, {
+        -- Wowhead Forever quest 1951 (reported on Discord by Phoen1x).
+        classOnly = "MAGE",
+        objective = "Bring the book Rituals of Power to Tabetha in Dustwallow Marsh.",
+        rewardSummary = "",
+        id = 1951,
+        name = "Rituals of Power",
+        faction = "Both",
+        pickup = "Magus Tirth, Shimmering Flats, Thousand Needles",
+        startMap = { mapID = 1441, x = 0.782, y = 0.758, label = "Magus Tirth — Shimmering Flats", targetName = "Magus Tirth" },
+        level = 40,
+        requires = 30,
+        note = "Mage class quest.",
+        turnin = "Tabetha, Dustwallow Marsh",
+        turninMap = { mapID = 1445, x = 0.460, y = 0.570, label = "Tabetha — Dustwallow Marsh", targetName = "Tabetha" },
+        liveXPFallback = 6300,
+        requiredItem = {7274, "Rituals of Power", 1, 1, "On a bookshelf in the last hallway before Arcanist Doan, Scarlet Monastery Library"},
     }},
     bosses = {
         {
@@ -2874,6 +2952,7 @@ FDJ.DB["Scarlet Monastery: Library"] = {
                 {7756, "Dog Training Gloves", "Hands, Leather", 3},
                 {3456, "Dog Whistle", "Trinket", 3},
                 {7710, "Loksey's Training Stick", "Two-Hand, Staff", 3},
+                {274292, "Houndmaster Boomerang", "Thrown", 3},
             },
         },
         {
@@ -2887,6 +2966,7 @@ FDJ.DB["Scarlet Monastery: Library"] = {
                 {274293, "Spellsever Crossbow", "Ranged, Crossbow", 3},
                 {7712, "Mantle of Doan", "Shoulder, Cloth", 2},
                 {7711, "Robe of Doan", "Chest, Cloth", 2},
+                {274294, "Library Walkers", "Feet, Cloth", 2},
                 {7146, "The Scarlet Key", "Key", 2},
             },
         },
@@ -2982,6 +3062,7 @@ FDJ.DB["Scarlet Monastery: Armory"] = {
                 {7719, "Raging Berserker's Helm", "Head, Mail", 3},
                 {7717, "Ravager", "Two-Hand, Axe", 3},
                 {10330, "Scarlet Leggings", "Legs, Mail", 3},
+                {274295, "Band of Crimson Light", "Finger", 3},
             },
         },
         {
@@ -3162,7 +3243,9 @@ FDJ.DB["Razorfen Downs"] = {
         pickup = "Andrew Brownell, Undercity",
         level = 42,
         requires = 37,
-        rewardItems = {{10823, "Vanquisher's Sword", 3}, {10824, "Amberglow Talisman", 3}},
+        rewardChoice = true,
+        rewardItems = {{10824, "Amberglow Talisman", 3}, {270081, "Purified Ring", 3}},
+        additionalRewardItems = {{10823, "Vanquisher's Sword", 3}},
         turnin = "Andrew Brownell, Undercity",
         liveXPFallback = 4300,
     }, {
@@ -3174,7 +3257,9 @@ FDJ.DB["Razorfen Downs"] = {
         pickup = "Archbishop Benedictus, Stormwind",
         level = 42,
         requires = 39,
-        rewardItems = {{10823, "Vanquisher's Sword", 3}, {10824, "Amberglow Talisman", 3}},
+        rewardChoice = true,
+        rewardItems = {{10824, "Amberglow Talisman", 3}, {270081, "Purified Ring", 3}},
+        additionalRewardItems = {{10823, "Vanquisher's Sword", 3}},
         turnin = "Archbishop Benedictus, Stormwind",
         liveXPFallback = 4300,
     },
@@ -3239,6 +3324,8 @@ FDJ.DB["Razorfen Downs"] = {
             loot = {
                 {10772, "Glutton's Cleaver", "One-Hand, Axe", 3},
                 {10774, "Fleshhide Shoulders", "Shoulder, Leather", 3},
+                {274385, "Abomination Chain", "Neck", 3}, -- confirmed (a player, Nov 2026)
+                {251402, "Plans: Justicar's Boots", "Recipe, Blacksmithing", 3}, -- confirmed (a player, Nov 2026)
             },
         },
         {
@@ -3266,6 +3353,7 @@ FDJ.DB["Razorfen Downs"] = {
                 {10764, "Deathchill Armor", "Chest, Mail", 3},
                 {10765, "Bonefingers", "Hands, Leather", 3},
                 {10761, "Coldrage Dagger", "One-Hand, Dagger", 3},
+                {274381, "Coldbringer Spine", "Two-Hand, Staff", 3}, -- seen dropping (Nov 2026)
             },
         },
     },
@@ -3303,7 +3391,9 @@ FDJ.DB["Uldaman"] = {
         level = 40,
         requires = 35,
         rewardChoice = true,
-        rewardItems = {{9626, "Dwarven Charge", 2}, {9627, "Explorer's League Lodestar", 2}},
+        -- Guardian Staff: the third choice, new in Forever (Wowhead Forever,
+        -- quest 2240; Codemonkey, Discord "The Hidden Chamber", 11 Nov 2026).
+        rewardItems = {{9626, "Dwarven Charge", 2}, {9627, "Explorer's League Lodestar", 2}, {270078, "Guardian Staff", 2}},
         note = "Optional introductory quest:",
         noteQuestLink = { id = 2398, name = "The Lost Dwarves" },
         turnin = "Prospector Stormpike, Ironforge",
@@ -3313,6 +3403,7 @@ FDJ.DB["Uldaman"] = {
         objective = "Find Hammertoe Grez in Uldaman.",
         rewardSummary = "",
         id = 721,
+        note = "This is his WoW Classic (2019) spot and he may have moved in Forever: if he is not here, check the Wowhead comments or coordinates. Enter the Uldaman excavation cave. In the big hall go forward (jump down or go around) and head down, deeper into the cave. Hug the wall on your right: just before the Dig One hall you make a 180-degree turn to the right, and Hammertoe Grez is there. Level ~36 elites stand along the way.",
         name = "A Sign of Hope",
         faction = "Alliance",
         pickup = "Prospector Ryedol, Badlands",
@@ -3325,6 +3416,7 @@ FDJ.DB["Uldaman"] = {
         objective = "Find Hammertoe's Amulet and return it to him in Uldaman.",
         rewardSummary = "",
         id = 722,
+        note = "This is his WoW Classic (2019) spot and he may have moved in Forever: if he is not here, check the Wowhead comments or coordinates. Enter the Uldaman excavation cave. In the big hall go forward (jump down or go around) and head down, deeper into the cave. Hug the wall on your right: just before the Dig One hall you make a 180-degree turn to the right, and Hammertoe Grez is there. Level ~36 elites stand along the way.",
         name = "Amulet of Secrets",
         faction = "Alliance",
         pickup = "Hammertoe Grez, Uldaman excavation (outside the instance)",
@@ -3634,6 +3726,23 @@ FDJ.DB["Uldaman"] = {
                 {9407, "Stoneweaver Leggings", "Legs, Cloth", 3},
                 {9409, "Ironaya's Bracers", "Wrist, Mail", 3},
                 {9408, "Ironshod Bludgeon", "Two-Hand, Staff", 3},
+                -- Wowhead Forever: Ironaya 20/210; confirmed by a player's tooltip
+                -- (German client). With the Axe of Lingering Dread (Obsidian
+                -- Sentinel) it makes the Pendulum of Doom.
+                {274484, "Axe of Inevitable Ruin", "Two-Hand, Axe", 3},
+            },
+        },
+        {
+            name = "Obsidian Sentinel",
+            npcID = 7023,
+            aliases = {"Obsidian Sentinel"},
+            description = "Level 42 mechanical guardian near the back entrance to Uldaman, after Ironaya. Drops the Obsidian Power Source for the Mage quest Power in Uldaman.",
+            loot = {
+                {274430, "Rock Sentinel Slicer", "Two-Hand, Axe", 3},
+                {274428, "Dark Golem Breastplate", "Chest, Plate", 3},
+                {274425, "White Obsidian Wand", "Ranged, Wand", 3},
+                {274485, "Axe of Lingering Dread", "Two-Hand, Axe", 3},
+                {251400, "Plans: Warder's Boots", "Recipe, Blacksmithing", 3}, -- Recipes & Patterns tab; drop source Obsidian Sentinel
             },
         },
         {
@@ -3644,6 +3753,7 @@ FDJ.DB["Uldaman"] = {
             loot = {
                 {9410, "Cragfists", "Hands, Plate", 3},
                 {9411, "Rockshard Pauldrons", "Shoulder, Mail", 3},
+                {274431, "Sandstorm Staff", "Two-Hand, Staff", 3}, -- Wowhead Forever: Ancient Stone Keeper 61/179
             },
         },
         {
@@ -3678,6 +3788,38 @@ FDJ.DB["Uldaman"] = {
                 {11118, "Archaedic Stone", "Finger", 3, "", "RANDOM_ENCHANT"},
                 {9413, "The Rockpounder", "Two-Hand, Mace", 3},
                 {9418, "Stoneslayer", "Two-Hand, Sword", 3},
+                {274432, "Stone Keeper Spire", "Two-Hand, Staff", 3}, -- Player-confirmed Archaedas drop (Nov 2026)
+            },
+        },
+        {
+            name = "Trash Drops",
+            trash = true,
+            loot = {
+                -- Classic-derived Uldaman zone drops. Not all have been confirmed live in Forever.
+                -- Pendulum of Doom intentionally FIRST (same-quality items retain data order).
+                {9425, "Pendulum of Doom", "Two-Hand, Axe", 3},
+                {9431, "Papal Fez", "Head, Cloth", 3},
+                {9396, "Legguards of the Vault", "Legs, Mail", 3},
+                {9393, "Beacon of Hope", "Held In Off-Hand", 3},
+                {9429, "Miner's Hat of the Deep", "Head, Cloth", 3},
+                {9424, "Ginn-su Sword", "One-Hand, Sword", 3},
+                {9427, "Stonevault Bonebreaker", "One-Hand, Mace", 3},
+                {9426, "Monolithic Bow", "Ranged, Bow", 3},
+                {9422, "Shadowforge Bushmaster", "Ranged, Gun", 3},
+                {9465, "Digmaster 5000", "One-Hand, Axe", 3},
+                {9423, "The Jackhammer", "Two-Hand, Mace", 3},
+                {9391, "The Shoveler", "Two-Hand, Mace", 3},
+                {9392, "Annealed Blade", "One-Hand, Sword", 3},
+                {9383, "Obsidian Cleaver", "Two-Hand, Axe", 3},
+                {9381, "Earthen Rod", "Ranged, Wand", 3},
+                {9386, "Excavator's Brand", "One-Hand, Mace", 3},
+                {9384, "Stonevault Shiv", "One-Hand, Dagger", 3},
+                {9430, "Spaulders of a Lost Age", "Shoulder, Mail", 3},
+                {9432, "Skullplate Bracers", "Wrist, Plate", 3},
+                {9397, "Energy Cloak", "Back", 3},
+                {9420, "Adventurer's Pith Helmet", "Head, Leather", 3},
+                {9406, "Spirewind Fetter", "Chest, Leather", 3},
+                {9428, "Unearthed Bands", "Wrist, Leather", 3},
             },
         },
     },
@@ -3842,8 +3984,72 @@ FDJ.DB["Zul'Farrak"] = {
         turnin = "Master Gadrin, Sen'jin Village, Durotar",
         liveXPFallback = 4850,
     },
+    {
+        -- Wowhead Forever quest 82084 (reported on Discord by Vakos and
+        -- Phoen1x). Alliance: Garion Wendell in Stormwind; Horde: Owen Thadd
+        -- in Undercity (Data/QuestUpdates.lua picks the player's own at login).
+        classOnly = "MAGE",
+        objective = "Track down and collect the spellbook materials requested by the librarian.",
+        rewardSummary = "",
+        id = 82084,
+        name = "A Lesson in Literacy",
+        faction = "Both",
+        pickup = "Garion Wendell, Stormwind (Alliance) or Owen Thadd, Undercity (Horde)",
+        startMap = { mapID = 1453, x = 0.488, y = 0.866, label = "Garion Wendell — Stormwind", targetName = "Garion Wendell" },
+        level = 45,
+        requires = 42,
+        rewardItems = {{221344, "Personal Spellbook", 3}},
+        note = "Mage class quest.",
+        turnin = "Garion Wendell, Stormwind (Alliance) or Owen Thadd, Undercity (Horde)",
+        liveXPFallback = 3900,
+        requiredItems = {
+            {221359, "Pristine Owlbeast Quill", 1, "Dropped by Vicious, Primitive and Savage Owlbeasts in The Hinterlands", map = { mapID = 1425, x = 0.540, y = 0.452, label = "Owlbeasts — The Hinterlands", detail = "Dropped by Vicious, Primitive and Savage Owlbeasts in The Hinterlands" }},
+            {221361, "Zukk'ash Resin", 1, "Dropped by the Zukk'ash silithid in Feralas, south of Camp Mojache (around 73, 63)", count = 5, map = { mapID = 1444, x = 0.730, y = 0.630, label = "Zukk'ash silithid — Feralas", detail = "Dropped by the Zukk'ash silithid south of Camp Mojache (around 73, 63)" }},
+            {221360, "Farraki Papyrus", 1, "Dropped by the Zul'Farrak Zombies that rise from the graves in Zul'Farrak", count = 8},
+        },
+    },
     },
     bosses = {
+        {
+            -- Player-confirmed Forever drop (screenshot, 10 Nov 2026).
+            name = "Theka the Martyr",
+            npcID = 7272,
+            aliases = {"Theka the Martyr"},
+            description = "Undead Sandfury boss. Drops the First Mosh'aru Tablet for The Prophecy of Mosh'aru.",
+            loot = {
+                -- Player-confirmed Forever drop; item ID verified on Wowhead Forever.
+                {274641, "Theka's Last Breath", "Trinket", 3, tip = {
+                    "Binds when picked up",
+                    "Unique-Equipped",
+                    "Trinket",
+                    "|cff1eff00Equip: Restores 6 Mana per 5 sec.|r",
+                    "|cff1eff00Use: Transform all enemies within 10 yds into scarabs, slowing movement speed by 45% for 10 sec. Qiraji and Silithid targets are stunned for 5 sec. (7 Min Cooldown)|r",
+                    "Requires Level 42",
+                    "Sell Price: 88|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 62|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {274639, "Sacrificial Chain Vest", "Chest, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Chest", "Mail"},
+                    "284 Armor",
+                    "+6 Intellect",
+                    "+16 Spirit",
+                    "|cff1eff00Equip: +34 Attack Power.|r",
+                    "Requires Level 42",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 31|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 93|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Player-confirmed Forever drop (screenshot, 10 Nov 2026).
+                {274638, "Sandfury Pauldrons", "Shoulder, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Shoulder", "Mail"},
+                    "213 Armor",
+                    "+7 Intellect",
+                    "+11 Spirit",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 15.|r",
+                    "Requires Level 42",
+                    "Sell Price: 99|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 1|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
         {
             name = "Antu'sul",
             npcID = 8127,
@@ -3864,6 +4070,48 @@ FDJ.DB["Zul'Farrak"] = {
             loot = {
                 {18082, "Zum'rah's Vexing Cane", "Two-Hand, Staff", 3},
                 {18083, "Jumanza Grips", "Hands, Cloth", 3}, -- Wowhead Forever's drop table
+                -- Player-confirmed Forever drop; item ID verified on Wowhead Forever.
+                {274642, "Blood Ritual Ring", "Finger", 3, tip = {
+                    "Binds when picked up",
+                    "Unique-Equipped",
+                    "Finger",
+                    "+13 Stamina",
+                    "|cff1eff00Equip: Increased Defense +3.|r",
+                    "Requires Level 43",
+                    "Sell Price: 96|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
+            -- Player-confirmed Forever drop (screenshot, 10 Nov 2026).
+            name = "Nekrum Gutchewer",
+            npcID = 7796,
+            aliases = {"Nekrum Gutchewer"},
+            description = "Encountered alongside Shadowpriest Sezz'ziz during the Zul'Farrak pyramid event. Also drops Nekrum's Medallion for the Alliance quest.",
+            loot = {
+                -- Player-confirmed Forever drop (screenshot, 10 Nov 2026).
+                {274644, "Undying Headdress", "Head, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Head", "Mail"},
+                    "235 Armor",
+                    "+17 Stamina",
+                    "+8 Intellect",
+                    "|cff1eff00Equip: +26 Attack Power.|r",
+                    "|cff1eff00Equip: Restores 8 health per 5 sec.|r",
+                    "Requires Level 43",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 9|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 37|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {274645, "Desert Ziggurat Drape", "Back", 3, tip = {
+                    "Binds when picked up",
+                    "Back",
+                    "34 Armor",
+                    "+9 Stamina",
+                    "+7 Fire Resistance",
+                    "+7 Nature Resistance",
+                    "Requires Level 43",
+                    "Sell Price: 72|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 86|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {274643, "Gutcutter Hatchet", "Thrown", 3}, -- Wowhead Forever: Nekrum Gutchewer 51/151
             },
         },
         {
@@ -3879,6 +4127,49 @@ FDJ.DB["Zul'Farrak"] = {
             },
         },
         {
+            name = "Sergeant Bly",
+            npcID = 7604,
+            aliases = {"Sergeant Bly"},
+            description = "After the pyramid event, speak to Weegli Blastfuse to open the gate, then confront Bly about the Divino-matic Rod to fight him and his companions. Drops the rod for the Divino-matic Rod quest.",
+            loot = {
+                -- Boss-specific drops verified on Wowhead Forever (NPC 7604).
+                {274646, "Arch of the Covenant", "Ranged, Bow", 3},
+                {274647, "Farraki Kris", "Main Hand, Dagger", 3},
+                {274648, "The Desert Rose", "Trinket", 3, tip = {
+                    "Binds when picked up",
+                    "Unique-Equipped",
+                    "Trinket",
+                    "|cff1eff00Equip: Increases mount speed by 7% in Desert areas.|r",
+                    "Requires Level 42",
+                    "Sell Price: 90|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 95|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {8548, "Divino-matic Rod", "Quest Item", 1, tip = {
+                    "Quest Item",
+                    "Unique",
+                }},
+                {252896, "Pattern: Stalker's Mail Boots", "Recipe, Leatherworking", 3},
+            },
+        },
+        {
+            -- Player-confirmed Forever drop (screenshot, 10 Nov 2026).
+            name = "Hydromancer Velratha",
+            npcID = 7795,
+            aliases = {"Hydromancer Velratha"},
+            description = "Patrols near the pool and the Gong of Zul'Farrak. Drops the Tiara of the Deep and Second Mosh'aru Tablet for their quests.",
+            loot = {
+                {274653, "Deep Ritual Girdle", "Waist, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Waist", "Mail"},
+                    "163 Armor",
+                    "+11 Strength",
+                    "+12 Spirit",
+                    "|cff1eff00Equip: Increases healing done by up to 16 and damage done by up to 6 for all magical spells and effects.|r",
+                    "Requires Level 43",
+                    "Sell Price: 76|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 97|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
             name = "Gahz'rilla",
             npcID = 7273,
             aliases = {"Gahz'rilla"},
@@ -3886,6 +4177,7 @@ FDJ.DB["Zul'Farrak"] = {
             loot = {
                 {9467, "Gahz'rilla Fang", "One-Hand, Dagger", 3},
                 {9469, "Gahz'rilla Scale Armor", "Chest, Mail", 3},
+                {274657, "Hydra Leather Legs", "Legs, Leather", 3}, -- Wowhead Forever: Gahz'rilla 51/130
             },
         },
         {
@@ -3895,6 +4187,18 @@ FDJ.DB["Zul'Farrak"] = {
             aliases = {"Zerillis"},
             description = "Rare spawn, patrols the sand dunes outside the temple.",
             loot = {
+                -- Player-confirmed Zerillis drop (screenshot, 10 Nov 2026).
+                {274658, "Dune Hacker", "Main Hand, Axe", 3, tip = {
+                    "Binds when picked up",
+                    {"Main Hand", "Axe"},
+                    {"34 - 63 Damage", "Speed 2.30"},
+                    "(21.1 damage per second)",
+                    "+10 Stamina",
+                    "+10 Nature Resistance",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 54.|r",
+                    "Requires Level 42",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 19|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 3|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 {12470, "Sandstalker Ankleguards", "Feet, Leather", 3},
             },
         },
@@ -3904,7 +4208,11 @@ FDJ.DB["Zul'Farrak"] = {
             rare = true,
             aliases = {"Sandarr Dunereaver"},
             description = "Rare spawn, on the sand dunes outside the temple.",
-            loot = {},
+            loot = {
+                -- Wowhead Forever: Sandarr Dunereaver 9/18 and 8/18.
+                {274660, "Sandarr's Shoulders", "Shoulder, Mail", 3},
+                {274659, "Bloodsand Belt", "Waist, Plate", 3},
+            },
         },
         {
             name = "Dustwraith",
@@ -3914,13 +4222,28 @@ FDJ.DB["Zul'Farrak"] = {
             description = "Rare spawn, near the top of the pyramid.",
             loot = {
                 {12471, "Desertwalker Cane", "Held In Off-hand", 3}, -- Wowhead Forever
+                {12469, "Mutilator", "Two-Hand, Sword", 3}, -- Wowhead Forever: Dustwraith 11/20
+            },
+        },
+        {
+            -- 2.0.4: a boss of his own, before Chief Ukorz Sandscalp (one
+            -- fight with him). His own loot: Wowhead Forever, Ruuzlu 54/150
+            -- and 35/150. Embrace of the Lycan (Ruuzlu 51/150, the Chief
+            -- 14/147) stays on the Chief's page.
+            name = "Ruuzlu",
+            npcID = 7797,
+            aliases = {"Ruuzlu"},
+            description = "Fought together with Chief Ukorz Sandscalp, on the top of the temple.",
+            loot = {
+                {274654, "Sandfury Guillotine", "Two-Hand, Axe", 3},
+                {274655, "Peacekeeper Wand", "Ranged, Wand", 3},
             },
         },
         {
             name = "Chief Ukorz Sandscalp",
             npcID = 7267,
-            -- Ruuzlu (fought with him) has no page of his own. In the
-            -- Character Logs the fight ends once both are dead.
+            -- Ruuzlu (fought with him) has his own page (2.0.4). In the
+            -- Character Logs the Chief's fight ends once both are dead.
             aliases = {"Chief Ukorz Sandscalp"},
             killWith = { {"Ruuzlu", 7797} },
             description = "Final boss, on the top of the temple. One fight together with Ruuzlu.",
@@ -3961,14 +4284,31 @@ FDJ.DB["The Drowned City"] = {
             {270311, "The Fourth Tablet of I'lalai", 1, "Rubbing of the fourth tablet, inside the Drowned City"},
         },
     }, {
+        -- Follow-up to The Drowned City (Wowhead Forever quest 96078; a
+        -- player, Nov 2026).
+        id = 96078,
+        name = "A Tale Spun Around the Fire",
+        level = 40,
+        requires = 30,
+        faction = "Horde",
+        pickup = "Kin'weelay, Grom'gol Base Camp, Stranglethorn Vale",
+        objective = "Take the tablet etchings to Master Gadrin in Sen'jin Village in Durotar.",
+        turnin = "Master Gadrin, Sen'jin Village, Durotar",
+        liveXPFallback = 2350,
+        rewardSummary = "35s",
+        rewards = "Choose: Ceremonial Mallet, Sacrificial Sword or I'lalai Flayer\nAlso: Translated Tale of I'lalai, Tale of I'lalai in Zandali\n2,350 XP • 35s",
+        rewardItems = {{279885, "Ceremonial Mallet", 3}, {279886, "Sacrificial Sword", 3}, {279887, "I'lalai Flayer", 3}},
+        rewardChoice = true,
+    }, {
         id = 95776,
         name = "The Only Good Brinescale...",
         level = 38,
         requires = 30,
         faction = "Horde",
-        pickup = "Grom'gol Base Camp, Stranglethorn Vale (quest giver not known yet)",
+        pickup = "Commander Aggro'gosh, Grom'gol Base Camp, Stranglethorn Vale",
         objective = "Kill Var'Taka in the Drowned City.",
-        turnin = "Grom'gol Base Camp, Stranglethorn Vale (not known yet)",
+        turnin = "Commander Aggro'gosh, Grom'gol Base Camp, Stranglethorn Vale",
+        note = "Commander Aggro'gosh offers it once Enemies in the Water and Locating the Lost City (Kin'weelay) are both handed in.",
         liveXPFallback = 9500,
         rewardSummary = "",
         rewardChoice = true,
@@ -4002,31 +4342,96 @@ FDJ.DB["The Drowned City"] = {
         level = 40,
         requires = 30,
         faction = "Alliance",
-        pickup = "Not known yet",
+        pickup = "Loremaster Dibbs, Southshore, Hillsbrad Foothills",
         objective = "Collect 5 I'lalai Fetishes from the trolls in the Drowned City.",
-        turnin = "Not known yet",
+        turnin = "Loremaster Dibbs, Southshore, Hillsbrad Foothills",
         rewardSummary = "",
         requiredItem = {270343, "I'lalai Fetish", 1, 5, "Dropped by the trolls in the Drowned City"},
     }, {
+        -- Follow-up to Take Two With Water (Wowhead Forever quest 95799).
+        id = 95799,
+        name = "Findings for the Explorer's League",
+        level = 40,
+        requires = 30,
+        faction = "Alliance",
+        pickup = "Loremaster Dibbs, Southshore, Hillsbrad Foothills",
+        objective = "Take Dibbs' I'lalai Translations to Historian Karnik in Ironforge.",
+        turnin = "Historian Karnik, Hall of Explorers, Ironforge",
+        liveXPFallback = 2350,
+        rewardSummary = "35s  •  Stormwind +75  •  Ironforge +50",
+        rewards = "Choose: Ancient Voodoo Pouch or Intrepid Explorer's Chainmail\nAlso: Translated Tale of I'lalai\n2,350 XP • 35s • Stormwind +75 • Ironforge +50",
+        rewardItems = {{279880, "Ancient Voodoo Pouch", 2}, {279881, "Intrepid Explorer's Chainmail", 2}},
+        rewardChoice = true,
+    }, {
+        -- Follow-up to Magics of the Drowned City (Wowhead Forever quest 95798).
+        id = 95798,
+        name = "The Web of Magic",
+        level = 40,
+        requires = 30,
+        faction = "Alliance",
+        pickup = "Loremaster Dibbs, Southshore, Hillsbrad Foothills",
+        objective = "Take the I'lalai Fetish to Abra Cadabra in Dalaran.",
+        turnin = "Abra Cadabra, Dalaran",
+        liveXPFallback = 2350,
+        rewardSummary = "35s  •  Stormwind +75",
+        rewards = "Choose: Rune-Etched Epaulets or Apprentice Sorcerer's Slacks\n2,350 XP • 35s • Stormwind +75",
+        rewardItems = {{279879, "Rune-Etched Epaulets", 2}, {279878, "Apprentice Sorcerer's Slacks", 2}},
+        rewardChoice = true,
+        note = "The Kirin Tor only let noteworthy visitors into Dalaran.",
+    }, {
         -- The Alliance side of Ancient Gurubashi Idol (Wowhead Forever quest
-        -- 97130). Wowhead has no giver yet; the quest text names Archmage
-        -- Lan'dalock of the Kirin Tor, who stands in Dalaran.
+        -- 97130). Archmage Timear gives it, outside where the Violet Hold
+        -- stood in Dalaran (a player, Nov 2026); the same NPC also
+        -- accepts the turn-in (confirmed by player screenshot, Nov 10, 2026).
         id = 97130,
         name = "Ancient Gurubashi Secrets",
         level = 40,
         requires = 34,
         faction = "Alliance",
-        pickup = "Not known yet (a Kirin Tor mage who works with Archmage Lan'dalock in Dalaran)",
+        pickup = "Archmage Timear, outside where the Violet Hold stood, Dalaran, Alterac Mountains",
         objective = "Recover an Ancient Gurubashi Idol from the Drowned City.",
-        turnin = "Not known yet",
+        turnin = "Archmage Timear, outside where the Violet Hold stood, Dalaran, Alterac Mountains",
         liveXPFallback = 10450,
         rewardSummary = "50s  •  Kirin Tor +300  •  Stormwind +150",
         requiredItem = {276894, "Ancient Gurubashi Idol", 1, 1, "From the most powerful priest in the Drowned City"},
+    }, {
+        -- Krazek's two quests for the Steamwheedle Cartel (Wowhead Forever;
+        -- both factions). The Saltseer Captain has no giver listed there;
+        -- players confirm Krazek gives both (Nov 2026).
+        id = 95789,
+        name = "Shady Saltseers",
+        level = 40,
+        requires = 34,
+        faction = "Both",
+        pickup = "Krazek, Booty Bay, Stranglethorn Vale",
+        objective = "Collect 10 Voodoo-Infused Artifacts from the Saltseer pirates in the Drowned City.",
+        turnin = "Krazek, Booty Bay, Stranglethorn Vale",
+        liveXPFallback = 10450,
+        rewardSummary = "1g  •  Booty Bay +100  •  Ratchet +50  •  Gadgetzan +50  •  Everlook +50",
+        rewards = "Choose: Rusted Troll War Belt or Saltseer's Helm\n10,450 XP • 1g • Booty Bay +100 • Ratchet +50 • Gadgetzan +50 • Everlook +50",
+        rewardItems = {{279882, "Rusted Troll War Belt", 2}, {279930, "Saltseer's Helm", 2}},
+        rewardChoice = true,
+        requiredItem = {270333, "Voodoo-Infused Artifact", 1, 10, "Dropped by the Saltseer pirates in the Drowned City"},
+    }, {
+        id = 95791,
+        name = "The Saltseer Captain",
+        level = 40,
+        requires = 34,
+        faction = "Both",
+        pickup = "Krazek, Booty Bay, Stranglethorn Vale",
+        objective = "Slay Captain Dreadrise and 3 Saltseer Coroners in the Drowned City.",
+        turnin = "Krazek, Booty Bay, Stranglethorn Vale",
+        liveXPFallback = 10450,
+        rewardSummary = "Booty Bay +100  •  Ratchet +50  •  Gadgetzan +50  •  Everlook +50",
+        rewards = "Choose: Mutinous Cuffs or South Seas Shroud\n10,450 XP • Booty Bay +100 • Ratchet +50 • Gadgetzan +50 • Everlook +50",
+        rewardItems = {{279883, "Mutinous Cuffs", 2}, {279884, "South Seas Shroud", 2}},
+        rewardChoice = true,
     }},
     bosses = {
         {
+                portraitNpcID = 270882,
             name = "Zul'Alai",
-            portraitNpcID = 270882, -- the client's "Staging Area" copy, for the picture only
+            npcID = 258905, -- Wowhead Forever (1.7.5); 270882 is the client's "Staging Area" copy
             aliases = {"Zul'Alai"},
             description = "First boss, an undead troll. Enrages near death and hits the whole group hard.",
             loot = {},
@@ -4039,8 +4444,9 @@ FDJ.DB["The Drowned City"] = {
             loot = {},
         },
         {
+                portraitNpcID = 270884,
             name = "Captain Dreadrise",
-            portraitNpcID = 270884, -- the client's "Staging Area" copy, for the picture only
+            npcID = 260042, -- the quest The Saltseer Captain's target (Wowhead Forever); 270884 is the client's "Staging Area" copy
             aliases = {"Captain Dreadrise"},
             loot = {},
         },
@@ -4052,9 +4458,10 @@ FDJ.DB["The Drowned City"] = {
             loot = {},
         },
         {
+                portraitNpcID = 270888,
             -- A rare, seen dropping Gill's Gills (Nov 2026).
             name = "Gill",
-            portraitNpcID = 270888, -- the client's "Staging Area" copy, for the picture only
+            npcID = 264177, -- Wowhead Forever (1.7.5); 270888 is the client's "Staging Area" copy
             aliases = {"Gill"},
             rare = true,
             loot = {
@@ -4070,10 +4477,7 @@ FDJ.DB["The Drowned City"] = {
             rare = true,
             loot = {
                 {286662, "Deep-Dweller's Grips", "Hands, Cloth", 3},
-            },
-            probableLoot = {
-                -- not seen dropping yet; the name fits Umbra
-                {286658, "Umbral Scaled Belt", "Waist, Mail", 3},
+                {286658, "Umbral Scaled Belt", "Waist, Mail", 3}, -- confirmed (Nov 2026)
             },
         },
         {
@@ -4104,6 +4508,11 @@ FDJ.DB["The Drowned City"] = {
             loot = {
                 -- Seen dropping from a Risen Sentry (elite undead troll trash, Nov 2026).
                 {287002, "Risen Sentry's Links", "Legs, Mail", 3, "Risen Sentry"},
+                -- Reported as a Drowned City trash drop (Nov 2026); exact mob not confirmed.
+                {286997, "Depth-Risen Leggings", "Legs, Cloth", 3},
+                -- Wowhead Forever: Risen Sentry 1/2310, Champion of the Deep 1/1051,
+                -- Brinescale Sorceress 1/1153, Makrura Snapper 2/228 (binds when equipped).
+                {287005, "Sword of Dismemberment", "Two-Hand, Sword", 3, "Risen Sentry / Champion of the Deep / Brinescale Sorceress / Makrura Snapper"},
             },
         },
     },
@@ -4129,12 +4538,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 45,
         requires = 40,
         faction = "Horde",
-        pickup = "Krom'rosh, Riverglades (exact spot not known yet)",
+        pickup = "Krom'rosh, Rog'mar, Riverglades (59.4, 45.5)",
         objective = "Infiltrate Krol'dok Stronghold and return to Krom'rosh with proof of their leader's demise.",
         turnin = "Krom'rosh, Riverglades",
-        liveXPFallback = 13000,
+        liveXPFallback = 11500,
         rewardSummary = "1g 30s",
-        rewards = "Choose: Rock on Stick, Bigger Rock on Bigger Stick or Stick No Rock\n13,000 XP • 1g 30s",
+        rewards = "Choose: Rock on Stick, Bigger Rock on Bigger Stick or Stick No Rock\n11,500 XP • 1g 30s",
         rewardItems = {{279852, "Rock on Stick", 3}, {279480, "Bigger Rock on Bigger Stick", 3}, {279853, "Stick No Rock", 3}},
         rewardChoice = true,
         requiredItem = {267086, "Eye of Mugg", 1, 1, "From Overlord Mugg, the last boss of Krol'dok Stronghold"},
@@ -4144,12 +4553,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 44,
         requires = 39,
         faction = "Horde",
-        pickup = "Riverglades (giver not known yet)",
+        pickup = "Tran'gul, Rog'mar, Riverglades (59.4, 44.0)",
         objective = "Recover the Tome of Twilight from Krol'dok Stronghold.",
-        turnin = "Riverglades (not known yet)",
-        liveXPFallback = 12450,
+        turnin = "Tran'gul, Rog'mar, Riverglades",
+        liveXPFallback = 11050,
         rewardSummary = "",
-        rewards = "Choose: Indoctrinated Choker or Convert's Bindings\n12,450 XP",
+        rewards = "Choose: Indoctrinated Choker or Convert's Bindings\n11,050 XP",
         rewardItems = {{279859, "Indoctrinated Choker", 2}, {279860, "Convert's Bindings", 2}},
         rewardChoice = true,
         requiredItem = {267104, "Tome of Twilight", 1, 1, "In Krol'dok Stronghold (the Alliance quest of the same name takes it from Nar'gurk)"},
@@ -4159,12 +4568,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 42,
         requires = 38,
         faction = "Horde",
-        pickup = "Riverglades (giver not known yet)",
+        pickup = "Da'grosh, Twilight's Shroud, Riverglades (33.4, 38.0)",
         objective = "Collect 15 Cultist Ears from the Twilight's Hammer in Krol'dok Stronghold.",
-        turnin = "Riverglades (not known yet)",
-        liveXPFallback = 9250,
+        turnin = "Da'grosh, Twilight's Shroud, Riverglades",
+        liveXPFallback = 8200,
         rewardSummary = "",
-        rewards = "Semblance of Twilight\n9,250 XP",
+        rewards = "Semblance of Twilight\n8,200 XP",
         rewardItems = {{267090, "Semblance of Twilight", 2}},
         requiredItem = {267091, "Cultist Ear", 1, 15, "Dropped by the Twilight's Hammer cultists in Krol'dok Stronghold"},
     }, {
@@ -4173,12 +4582,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 45,
         requires = 40,
         faction = "Alliance",
-        pickup = "Commander Demar Brant, Farholde Keep, Riverglades (exact spot not known yet)",
+        pickup = "Commander Demar Brant, Farholde Keep, Riverglades (66.6, 81.0)",
         objective = "Infiltrate Krol'dok Stronghold and return to Commander Brant with proof of their leader's demise.",
         turnin = "Commander Demar Brant, Farholde Keep, Riverglades",
-        liveXPFallback = 13000,
+        liveXPFallback = 11500,
         rewardSummary = "1g 30s  •  Brotherhood of the Horse +150",
-        rewards = "Choose: Rock on Stick, Stick No Rock or Bigger Rock on Bigger Stick\n13,000 XP • 1g 30s • Brotherhood of the Horse +150",
+        rewards = "Choose: Rock on Stick, Stick No Rock or Bigger Rock on Bigger Stick\n11,500 XP • 1g 30s • Brotherhood of the Horse +150",
         rewardItems = {{279852, "Rock on Stick", 3}, {279853, "Stick No Rock", 3}, {279480, "Bigger Rock on Bigger Stick", 3}},
         rewardChoice = true,
         requiredItem = {267086, "Eye of Mugg", 1, 1, "From Overlord Mugg, the last boss of Krol'dok Stronghold"},
@@ -4188,10 +4597,10 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 42,
         requires = 38,
         faction = "Alliance",
-        pickup = "Farholde Keep, Riverglades (giver not known yet)",
+        pickup = "Sergeant Riftan, Farholde Lookouts, Twilight's Shroud, Riverglades (30.6, 49.0)",
         objective = "Collect 8 Twilight Bangles from the Twilight's Hammer in Krol'dok Stronghold.",
-        turnin = "Farholde Keep, Riverglades (not known yet)",
-        liveXPFallback = 11500,
+        turnin = "Sergeant Riftan, Farholde Lookouts, Twilight's Shroud, Riverglades",
+        liveXPFallback = 10200,
         rewardSummary = "Brotherhood of the Horse +150",
         requiredItem = {267234, "Twilight Bangle", 1, 8, "Dropped by the Twilight's Hammer cultists in Krol'dok Stronghold"},
     }, {
@@ -4200,12 +4609,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
         level = 44,
         requires = 39,
         faction = "Alliance",
-        pickup = "Ashe Amberhall, Riverglades (exact spot not known yet)",
+        pickup = "Ashe Amberhall, Farholde Keep, Riverglades (66.6, 81.0)",
         objective = "Kill Nar'gurk in Krol'dok Stronghold and recover any valuable information.",
-        turnin = "Ashe Amberhall, Riverglades",
-        liveXPFallback = 12450,
+        turnin = "Ashe Amberhall, Farholde Keep, Riverglades",
+        liveXPFallback = 11050,
         rewardSummary = "Brotherhood of the Horse +150",
-        rewards = "Choose: Twilight Initiate's Belt or Torn Cultist Cloak\n12,450 XP • Brotherhood of the Horse +150",
+        rewards = "Choose: Twilight Initiate's Belt or Torn Cultist Cloak\n11,050 XP • Brotherhood of the Horse +150",
         rewardItems = {{279854, "Twilight Initiate's Belt", 2}, {279855, "Torn Cultist Cloak", 2}},
         rewardChoice = true,
         requiredItem = {267104, "Tome of Twilight", 1, 1, "From Nar'gurk in Krol'dok Stronghold"},
@@ -4218,18 +4627,19 @@ FDJ.DB["Krol'dok Stronghold"] = {
         pickup = "Ranath Nightstride, in the inn in Dalaran, Alterac Mountains",
         objective = "Travel to Krol'dok Stronghold and slay Zalfan Moonshadow.",
         turnin = "Ranath Nightstride, in the inn in Dalaran, Alterac Mountains",
-        liveXPFallback = 13000,
+        liveXPFallback = 11500,
         rewardSummary = "65s  •  Kirin Tor +250  •  Brotherhood of the Horse +150",
-        note = "Zalfan Moonshadow, a highborne among the Twilight's Hammer inside the stronghold; where he stands is not known yet.",
+        note = "Zalfan Moonshadow, a highborne among the Twilight's Hammer inside the stronghold: groups meet him after Tunk, on the way to the bridge.",
     }, {
         -- The key quests (Wowhead Forever 94980/94981, 94973/94974): a
         -- Krol'dok Moulding looted inside starts the first.
         id = 94981,
         name = "Key Ingredients",
+        warning = "The key from this quest unlocks the upper side of the dungeon.",
         level = 41,
         requires = 38,
         faction = "Alliance",
-        pickup = "Alphonse Dumas, Farholde Keep, Riverglades",
+        pickup = "Alphonse Dumas, Farholde Keep, Riverglades (64.4, 82.0)",
         objective = "Bring 4 Thick Leather and 12 Iron Bars to Alphonse Dumas.",
         turnin = "Alphonse Dumas, Farholde Keep, Riverglades",
         liveXPFallback = 3300,
@@ -4243,11 +4653,12 @@ FDJ.DB["Krol'dok Stronghold"] = {
     }, {
         id = 94974,
         name = "Key Ingredients",
+        warning = "The key from this quest unlocks the upper side of the dungeon.",
         level = 41,
         requires = 38,
         faction = "Horde",
-        pickup = "Kreza Darkthorn, Rog'mar, Riverglades",
-        objective = "Bring 4 Thick Leather and 12 Iron Bar to Kreza Darkthorn.",
+        pickup = "Kreza Darkthorn, Rog'mar, Riverglades (59.8, 46.0)",
+        objective = "Bring 4 Thick Leather and 12 Iron Bars to Kreza Darkthorn.",
         turnin = "Kreza Darkthorn, Rog'mar, Riverglades",
         liveXPFallback = 3300,
         rewardSummary = "55s",
@@ -4256,23 +4667,22 @@ FDJ.DB["Krol'dok Stronghold"] = {
             {4304, "Thick Leather", 1, "Leatherworking material: skinning, trade or the auction house (4 needed)"},
             {3575, "Iron Bar", 1, "Smelted from Iron Ore: mining, trade or the auction house (12 needed)"},
         },
-        note = "Keep any Krol'dok Moulding you loot: it starts the quest before this one.",
+        note = "Kill Tunk inside Krol'dok Stronghold for Krol'dok Moulding: it starts the quest before this one.",
     }, {
-        -- Wowhead Forever 94998. Probably the last step after Twilight
-        -- Mementos and Lingering Essence (a reported chain; Wowhead links
-        -- only the first two).
+        note = "Follows Lingering Essence.",
+        -- Wowhead Forever 94998: the last step of its series Twilight
+        -- Mementos > Lingering Essence > Curios of Curiosity.
         id = 94998,
         name = "Curios of Curiosity",
         level = 42,
         requires = 38,
         faction = "Alliance",
-        pickup = "Ashe Amberhall, Farholde Keep, Riverglades (probably)",
+        pickup = "Ashe Amberhall, Farholde Keep, Riverglades (66.6, 81.0)",
         objective = "Bring the Satchel of Mementos to Melanie Sable.",
-        turnin = "Melanie Sable (where she stands is not known yet)",
+        turnin = "Melanie Sable, Farholde Keep, Riverglades (66.2, 83.2)",
         liveXPFallback = 3450,
         rewardSummary = "55s  •  Brotherhood of the Horse +100",
         rewardItems = {{279850, "Curio-Adorned Necklace", 3}},
-        note = "Probably follows Lingering Essence (not confirmed yet).",
     }},
     bosses = {
         {
@@ -4304,7 +4714,8 @@ FDJ.DB["Krol'dok Stronghold"] = {
             aliases = {"War Handler Ashka", "Handler Ashka"},
             loot = {
                 {275001, "Bloodied Gutslicer", "Two-Hand, Sword", 3},
-                {275002, "War Handler's Gaze", "Head", 3}, -- confirmed (Nov 2026)
+                {275002, "War Handler's Gaze", "Head, Leather", 3}, -- confirmed (Nov 2026)
+                {275003, "Worgbinder's Treads", "Feet, Plate", 3}, -- player loot screenshot (Nov 2026)
             },
         },
         {
@@ -4328,31 +4739,43 @@ FDJ.DB["Krol'dok Stronghold"] = {
             },
         },
         {
+            -- 2.0.3: rare elite (Wowhead Forever: Kroog 262716, "Rare
+            -- Elite"; seen near Bossman Toof and Overlord Mugg).
+            name = "Kroog",
+            npcID = 262716,
+            rare = true,
+            aliases = {"Kroog"},
+            description = "Rare spawn.",
+            loot = {
+                -- Wowhead Forever: Kroog 8/11 and 3/11.
+                {279863, "Black Horn Necklace", "Neck", 3},
+                {279857, "Kroog's Backscratcher", "One-Hand, Dagger", 3},
+            },
+        },
+        {
             -- Final boss. The game's data calls him Overseer Mugg.
             name = "Overlord Mugg",
             npcID = 258968,
             aliases = {"Overlord Mugg", "Overseer Mugg"},
-            loot = {
+            loot = {{271721, "Krol'dok Ogre Key", "Key", 1}, 
                 {275009, "Emblem of Slamming", "Trinket", 3},
                 {275007, "Mugg's Jabber", "One-Hand, Fist Weapon", 3},
+                {275008, "Mugg's Crosser", "One-Hand, Fist Weapon", 3}, -- drop confirmed by Meteora, 2026-11-11
                 {275010, "Strongly Scented Hood", "Head, Cloth", 3}, -- seen dropping (a player, Nov 2026)
-            },
-            -- Named for him, in the dungeon's batch of item IDs; not seen yet.
-            probableLoot = {
-                {275008, "Mugg's Crosser", "One-Hand, Fist Weapon", 3},
             },
         },
         {
-            -- The dungeon's own armor set (Krol'dok Battlegear): the chest and
-            -- the helmet drop from Nar'gurk; where the other pieces drop is
-            -- not known yet.
+            -- Krol'dok trash loot (exact mob source not yet verified for all).
             name = "Trash Drops",
             trash = true,
-            loot = {},
-            probableLoot = {
+            loot = {
+                {287008, "Ogre Magi's Mantle", "Shoulder, Cloth", 3},
                 {287014, "Krol'dok Warplate Pauldrons", "Shoulder, Plate", 3},
                 {287012, "Krol'dok Warplate Gauntlets", "Hands, Plate", 3},
                 {287013, "Krol'dok Warplate Legplates", "Legs, Plate", 3},
+                {287010, "Outrider's Gloves", "Hands, Leather", 3},
+                -- Wowhead Forever: Twilight Grunt 3/1408, Twilight Lieutenant 1/416, Redridge Prisoner 1/254.
+                {287007, "Stretched Footpads", "Feet, Cloth", 3, "Twilight Grunt / Twilight Lieutenant / Redridge Prisoner"},
             },
         },
     },
@@ -4362,8 +4785,9 @@ FDJ.DB["Alcaz Prison"] = {
     -- Seen in the game (a stream, 2026-11-07): the bosses' levels, one drop
     -- each and the Horde quest Thrall Needs to Know. Boss list: the game's
     -- DungeonEncounter data (map 2994); The Questioner comes second (a
-    -- player, Nov 2026). NPC IDs from Wowhead Forever; Overseer Wrex's is not
-    -- known yet (he is found by name). Loot only partly known.
+    -- player, Nov 2026). NPC IDs from Wowhead Forever. Boss loot: every item
+    -- is on its Wowhead Forever item page as dropped by that boss (checked
+    -- 2026-11-11, with the "Alcaz Prison Boss & Loot Audit").
     -- Quests still being found: "Full Quests TBD" on its Quests tab.
     fullQuestsTBD = true,
     fullItemsTBD = true,
@@ -4382,21 +4806,22 @@ FDJ.DB["Alcaz Prison"] = {
         level = 53,
         requires = 46,
         faction = "Alliance",
-        pickup = "Dalaran, Alterac Mountains (giver not known yet)",
+        pickup = "Archmage Lan'dalock, at the Violet Hold entrance in Dalaran, Alterac Mountains (15.4, 73.8)",
         objective = "Recover Zarla's Journal from the depths of Alcaz Prison.",
-        turnin = "Not known yet",
-        liveXPFallback = 14410,
+        turnin = "Archmage Lan'dalock, at the Violet Hold entrance in Dalaran, Alterac Mountains",
+        liveXPFallback = 14400,
         rewardSummary = "80s  •  Kirin Tor +300  •  Stormwind +150",
         requiredItem = {276890, "Zarla's Journal", 1, 1, "From Blazeroar in Alcaz Prison"},
-        note = "Reported to start in Dalaran; who gives it is not known yet.",
     }},
     bosses = {
         {
             name = "Overseer Wrex",
+            npcID = 255391, -- Wowhead Forever
+            displayID = 7914, -- Overseer Wrex creature display, for boss portrait
             aliases = {"Overseer Wrex", "Wrex"},
             loot = {
-                -- Seen in-game (Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Grips of Control", "Hands, Plate", 3, tip = {
+                -- Seen in-game (Nov 2026); Wowhead Forever: Overseer Wrex 11/31.
+                {276733, "Grips of Control", "Hands, Plate", 3, tip = {
                     "Binds when picked up",
                     {"Hands", "Plate"},
                     "342 Armor",
@@ -4407,6 +4832,7 @@ FDJ.DB["Alcaz Prison"] = {
                     "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 11|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 47|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
                 {276734, "Wrex's Pinky Ring", "Finger", 3}, -- seen dropping (Nov 2026)
+                {276732, "Alcaz Willcrusher", "Two-Hand, Mace", 3}, -- confirmed in-game Loot Rolls from Overseer Wrex (Nov 2026)
             },
         },
         {
@@ -4417,6 +4843,7 @@ FDJ.DB["Alcaz Prison"] = {
                 {276742, "Girdle of Extracted Answers", "Waist, Plate", 3},
                 {276743, "Fingerbreaker Stamp", "Trinket", 3}, -- seen dropping (Nov 2026)
                 {276741, "Defias Enforcer's Shoulderpads", "Shoulder, Leather", 3}, -- seen dropping (Nov 2026)
+                {274029, "Ornate Shackle Key", "Quest Item", 1}, -- The Man in the Iron Chains (Wowhead Forever: The Questioner)
             },
         },
         {
@@ -4424,8 +4851,8 @@ FDJ.DB["Alcaz Prison"] = {
             npcID = 255997,
             aliases = {"Tidemistress Ca'zass", "Ca'zass"},
             loot = {
-                -- Seen in-game (Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Tidesong Wand", "Ranged, Wand", 3, tip = {
+                -- Seen in-game (Nov 2026); Wowhead Forever: Tidemistress Ca'zass 14/48.
+                {276735, "Tidesong Wand", "Ranged, Wand", 3, tip = {
                     "Binds when picked up",
                     {"Ranged", "Wand"},
                     {"71 - 133 Frost Damage", "Speed 2.00"},
@@ -4437,10 +4864,8 @@ FDJ.DB["Alcaz Prison"] = {
                     "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 39|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 26|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
                 {276736, "Seascale Bracers", "Wrist, Mail", 3}, -- seen dropping (Nov 2026)
-            },
-            -- Named after her; nobody has seen it drop yet.
-            probableLoot = {
-                {276737, "Cloak of the Tidemistress", "Back", 3},
+                {276737, "Cloak of the Tidemistress", "Back", 3}, -- Wowhead Forever: Tidemistress Ca'zass 21/48
+                {273883, "Ca'zass's Head", "Quest Item", 1}, -- A Little Payback / A Bit of Wet Work
             },
         },
         {
@@ -4448,8 +4873,8 @@ FDJ.DB["Alcaz Prison"] = {
             npcID = 257016,
             aliases = {"Katerina the Cleaner", "Katerina"},
             loot = {
-                -- Seen in-game (Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Cutthroat Chestguard", "Chest, Mail", 3, tip = {
+                -- Seen in-game (Nov 2026); Wowhead Forever: Katerina the Cleaner 21/39.
+                {276739, "Cutthroat Chestguard", "Chest, Mail", 3, tip = {
                     "Binds when picked up",
                     {"Chest", "Mail"},
                     "322 Armor",
@@ -4459,6 +4884,8 @@ FDJ.DB["Alcaz Prison"] = {
                     "Requires Level 49",
                     "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 18|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 22|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
+                {276738, "Katerina's Shanker", "One-Hand, Dagger", 3}, -- Wowhead Forever: Katerina the Cleaner 10/39
+                {276740, "Sentimental Locket", "Neck", 3}, -- Wowhead Forever: Katerina the Cleaner 8/39
             },
         },
         {
@@ -4466,24 +4893,32 @@ FDJ.DB["Alcaz Prison"] = {
             name = "Blazeroar",
             npcID = 255702,
             aliases = {"Blazeroar"},
-            loot = {},
+            -- Wowhead Forever: Blazeroar (16/50, 16/50, 18/50; the journal 4/50).
+            loot = {
+                {276744, "Zarla's Snack Pouch", "Trinket", 3},
+                {276745, "Beastbond Robe", "Chest, Cloth", 3},
+                {276746, "Defias Enforcer's Legguards", "Legs, Leather", 3},
+                {276890, "Zarla's Journal", "Quest Item", 1}, -- The Dragon's Journal
+            },
         },
         {
             -- Defias Enforcer's Prowlers seen dropping from the trash (Nov
-            -- 2026). The rest: items numbered with the drops above, at the
-            -- same item levels, and the other pieces of the Defias
-            -- Enforcer's Garb (its Shoulderpads drop from The Questioner);
-            -- which boss drops them is not known yet.
+            -- 2026). Wowhead Forever: the Prowlers from Alcaz Chaplain, Alcaz
+            -- Jailer and Strashaz Soldier, the Mask from Slavering Hound,
+            -- Strashaz Soldier and Alcaz Jailer, Compound Gloves from Defias
+            -- Truthfinder. The Chest (the last piece of the Defias Enforcer's
+            -- Garb) has no drop recorded yet.
+            -- Sentimental Locket and the Legguards drop from Katerina the
+            -- Cleaner and Blazeroar (listed there).
             name = "Trash Drops",
             trash = true,
             loot = {
-                {287021, "Defias Enforcer's Prowlers", "Feet, Leather", 3},
+                {287021, "Defias Enforcer's Prowlers", "Feet, Leather", 3, "Alcaz Chaplain / Alcaz Jailer / Strashaz Soldier"},
+                {287019, "Defias Enforcer's Mask", "Head, Leather", 3, "Slavering Hound / Strashaz Soldier / Alcaz Jailer"},
+                {287018, "Compound Gloves", "Hands, Cloth", 3, "Defias Truthfinder"}, -- Wowhead Forever: Defias Truthfinder, Alcaz Prison
             },
             probableLoot = {
-                {276740, "Sentimental Locket", "Neck", 3},
-                {287019, "Defias Enforcer's Mask", "Head, Leather", 3},
                 {287020, "Defias Enforcer's Chest", "Chest, Leather", 3},
-                {276746, "Defias Enforcer's Legguards", "Legs, Leather", 3},
             },
         },
     },
@@ -4535,33 +4970,33 @@ FDJ.DB["Blackmaw Hold"] = {
         level = 59,
         requires = 52,
         faction = "Alliance",
-        pickup = "Not known yet (probably a mage in Dalaran)",
+        pickup = "Archmage Timear, Dalaran, Alterac Mountains",
         objective = "Obtain a Blackmaw Ritual Totem from Elder Shaman Bloodmane in Blackmaw Hold.",
-        turnin = "Not known yet",
+        turnin = "Archmage Timear, Dalaran, Alterac Mountains",
         liveXPFallback = 12800,
         rewardSummary = "90s  •  Kirin Tor +300  •  Darnassus +150",
         requiredItem = {276893, "Blackmaw Ritual Totem", 1, 1, "From Elder Shaman Bloodmane in Blackmaw Hold"},
-        note = "Quest giver not known yet.",
+        
     }, {
         id = 97198,
         name = "Blackmaw Magic",
         level = 59,
         requires = 52,
         faction = "Horde",
-        pickup = "Not known yet (perhaps Alaana Stormwalker, Mulgore)",
+        pickup = "Muln Earthfury, Skywatcher Plateau, Mulgore",
         objective = "Obtain a Blackmaw Ritual Totem from Elder Shaman Bloodmane in Blackmaw Hold.",
-        turnin = "Not known yet",
+        turnin = "Not confirmed yet",
         liveXPFallback = 16100,
         rewardSummary = "90s  •  Earthen Ring +300  •  Thunder Bluff +150",
         requiredItem = {276893, "Blackmaw Ritual Totem", 1, 1, "From Elder Shaman Bloodmane in Blackmaw Hold"},
-        note = "Quest giver not known yet.",
+        
     }, {
         id = 92069,
         name = "Claws That Rend, Tusks that Gore",
         level = 58,
         requires = 45,
         faction = "Both",
-        pickup = "Ogtinc, Azshara (42.4, 42.6) (probably)",
+        pickup = "Ogtinc, Azshara (42.4, 42.6)",
         objective = "Bring the Claws of the Great Bear and the Tusks of the Unbroken to Ogtinc in Azshara.",
         turnin = "Ogtinc, Azshara (42.4, 42.6)",
         liveXPFallback = 12400,
@@ -4573,6 +5008,23 @@ FDJ.DB["Blackmaw Hold"] = {
             {249696, "Tusks of the Unbroken", 1, "From Bonesnout the Unbroken in Blackmaw Hold"},
         },
         note = "Withermaw and Bonesnout are on different paths: take both.",
+    }, {
+        -- Item-start quest seen in game, 10 Nov 2026. Quest #92070 is
+        -- initiated by Feathered Charm Necklace (item #249698). The reward
+        -- is confirmed by the in-game quest offer screenshot; the owner's
+        -- identity and exact hand-in location have not yet been confirmed.
+        id = 92070,
+        name = "A Lost Memento",
+        level = 55, -- Wowhead Forever (2.0.3); the necklace requires level 47
+        requires = 47,
+        faction = "Both",
+        pickup = "Item start: Feathered Charm Necklace, looted in Blackmaw Hold",
+        startsInDungeon = true,
+        startItem = {249698, "Feathered Charm Necklace", 1, "Looted in Blackmaw Hold; specific drop source not yet confirmed"},
+        objective = "Find the owner of the Feathered Charm Necklace.",
+        turnin = "The necklace's original Blackmaw owner (location not yet confirmed)",
+        rewardItems = {{279893, "Nama's Cherished Necklace", 3}},
+        note = "Item-start quest. The necklace is a handmade furbolg keepsake. The exact NPC and hand-in location are still being verified.",
     }},
     bosses = {
         {
@@ -4580,8 +5032,19 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247206,
             aliases = {"Impaan the Imprisoner", "Impaan"},
             loot = {
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Flameslash Crescent", "Two-Hand, Axe", 3, tip = {
+                -- Confirmed Impaan drop from player screenshot, 10 Nov 2026; verified Forever item ID.
+                {280057, "Robes of Dark Summons", "Chest, Cloth", 3, tip = {
+                    "Binds when picked up",
+                    {"Chest", "Cloth"},
+                    "84 Armor",
+                    "+14 Stamina",
+                    "|cff1eff00Equip: Improves your chance to hit by 1.8%.|r",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 21.|r",
+                    "Requires Level 54",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 56|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280056, "Flameslash Crescent", "Two-Hand, Axe", 3, tip = {
                     "Binds when picked up",
                     {"Two-Hand", "Axe"},
                     {"145 - 219 Damage", "Speed 3.60"},
@@ -4593,8 +5056,8 @@ FDJ.DB["Blackmaw Hold"] = {
                     "Requires Level 54",
                     "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 74|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 57|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
-                -- Seen in-game (Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Impish Chain Hood", "Head, Mail", 3, tip = {
+                -- Seen in-game (Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280058, "Impish Chain Hood", "Head, Mail", 3, tip = {
                     "Binds when picked up",
                     {"Head", "Mail"},
                     "284 Armor",
@@ -4611,8 +5074,20 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247198,
             aliases = {"Bonesnout the Unbroken", "Bonesnout"},
             loot = {
-                -- Seen in-game (Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Lucky Shovelnose Tuft", "Trinket", 3, tip = {
+                -- Confirmed in-game (10 Nov 2026); Forever item ID verified.
+                {280059, "Tuskblade Halberd", "Two-Hand, Polearm", 3, tip = {
+                    "Binds when picked up",
+                    {"Two-Hand", "Polearm"},
+                    {"148 - 222 Damage", "Speed 3.60"},
+                    "(51.4 damage per second)",
+                    "+18 Stamina",
+                    "+14 Agility",
+                    "|cff1eff00Equip: Reduces chance to be Dodged or Parried by 2.0%.|r",
+                    "Requires Level 55",
+                    "Sell Price: 6|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 10|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 14|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen in-game (Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280060, "Lucky Shovelnose Tuft", "Trinket", 3, tip = {
                     "Binds when picked up",
                     "Unique-Equipped",
                     "Trinket",
@@ -4622,6 +5097,7 @@ FDJ.DB["Blackmaw Hold"] = {
                     "Requires Level 55",
                     "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 95|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 98|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
+                {280061, "Spike Crested Bracers", "Wrist, Plate", 3}, -- Wowhead Forever: Bonesnout the Unbroken 2/9
             },
         },
         {
@@ -4665,6 +5141,40 @@ FDJ.DB["Blackmaw Hold"] = {
             rare = true,
             loot = {
                 {280077, "Fist of Revelation", "One-Hand, Fist Weapon", 3},
+                -- Gortek rare drop, screenshot 10 Nov 2026.
+                {280078, "Apprentice's Protective Treads", "Feet, Leather", 3, tip = {
+                    "Binds when picked up",
+                    {"Feet", "Leather"},
+                    "112 Armor",
+                    "+11 Agility",
+                    "+12 Stamina",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "Requires Level 52",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 56|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 43|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
+            -- Rare elite spider, level 55, confirmed in-game (10 Nov 2026).
+            -- NPC #250034: Wowhead Forever.
+            name = "Tunnelweb Matriarch",
+            npcID = 250034,
+            aliases = {"Tunnelweb Matriarch"},
+            description = "Rare spawn.",
+            rare = true,
+            loot = {
+                {280085, "Tunnelweb Pincer", "One-Hand, Dagger", 3, tip = {
+                    "Binds when picked up",
+                    {"One-Hand", "Dagger"},
+                    {"42 - 78 Damage", "Speed 1.60"},
+                    "(37.5 damage per second)",
+                    "+7 Agility",
+                    "+8 Stamina",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.4%.|r",
+                    "Requires Level 52",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 38|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 27|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {280086, "Octofinger Gauntlets", "Hands, Plate", 3}, -- Wowhead Forever: Tunnelweb Matriarch 2/2
             },
         },
         {
@@ -4672,6 +5182,31 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247195,
             aliases = {"Withermaw"},
             loot = {
+                -- Confirmed Withermaw drop from player screenshot, 10 Nov 2026; verified Forever item ID.
+                {280063, "Bloodfur Bulwark", "Off Hand, Shield", 3, tip = {
+                    "Binds when picked up",
+                    {"Off Hand", "Shield"},
+                    "2057 Armor",
+                    "38 Block",
+                    "+10 Stamina",
+                    "|cff1eff00Equip: Increases your chance to Block attacks with a shield by 2.0%.|r",
+                    "|cff1eff00Equip: Increases the Block Value of your shield by 15.|r",
+                    "Requires Level 55",
+                    "Sell Price: 3|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 17|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Confirmed in-game (10 Nov 2026).
+                {280062, "Cloak of the Fleshborer", "Back, Cloth", 3, tip = {
+                    "Binds when picked up",
+                    {"Back", "Cloth"},
+                    "43 Armor",
+                    "+6 Strength",
+                    "+6 Agility",
+                    "+6 Stamina",
+                    "+6 Intellect",
+                    "+6 Spirit",
+                    "Requires Level 55",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 48|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 -- Seen in-game (Nov 2026); item ID not known yet (0, filled in
                 -- by ItemIdLearner). The tooltip was cut off: armor type,
                 -- required level and sell price not seen.
@@ -4689,8 +5224,8 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247209,
             aliases = {"Elder Shaman Bloodmane", "Bloodmane"},
             loot = {
-                -- Seen in-game (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Veilpiercer Girdle", "Waist, Leather", 3, tip = {
+                -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280070, "Veilpiercer Girdle", "Waist, Leather", 3, tip = {
                     "Binds when picked up",
                     {"Waist", "Leather"},
                     "97 Armor",
@@ -4702,7 +5237,7 @@ FDJ.DB["Blackmaw Hold"] = {
                     "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 37|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 96|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
                 -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Shamanic Wristguards", "Wrist, Mail", 3, tip = {
+                {280069, "Shamanic Wristguards", "Wrist, Mail", 3, tip = {
                     "Binds when picked up",
                     {"Wrist", "Mail"},
                     "157 Armor",
@@ -4721,8 +5256,8 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247207,
             aliases = {"Blackmaw Behemoth"},
             loot = {
-                -- Seen in-game (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Behemoth Bones", "Trinket", 3, tip = {
+                -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280065, "Behemoth Bones", "Trinket", 3, tip = {
                     "Binds when picked up",
                     "Unique-Equipped",
                     "Trinket",
@@ -4731,8 +5266,8 @@ FDJ.DB["Blackmaw Hold"] = {
                     "Requires Level 56",
                     "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 9|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 62|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Trousers of the Ebon Giant", "Legs, Cloth", 3, tip = {
+                -- Seen dropping (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280066, "Trousers of the Ebon Giant", "Legs, Cloth", 3, tip = {
                     "Binds when picked up",
                     {"Legs", "Cloth"},
                     "76 Armor",
@@ -4742,6 +5277,17 @@ FDJ.DB["Blackmaw Hold"] = {
                     "Requires Level 56",
                     "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 10|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 37|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
+                -- Seen dropping (a player's screenshot, 11 Nov 2026); Wowhead Forever item 280067.
+                {280067, "Blackmaw Chain Belt", "Waist, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Waist", "Mail"},
+                    "202 Armor",
+                    "+17 Agility",
+                    "+12 Stamina",
+                    "|cff1eff00Equip: Increases your chance to Dodge an attack by 1.0%.|r",
+                    "Requires Level 56",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 58|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 36|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
             },
         },
         {
@@ -4749,8 +5295,19 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247231,
             aliases = {"Unbound Spirit"},
             loot = {
-                -- Seen in-game (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Burnished Pridescales", "Chest, Plate", 3, tip = {
+                -- Confirmed from Unbound Spirit, screenshot 10 Nov 2026.
+                {280072, "Cowl of Dark Ambition", "Head, Cloth", 3, tip = {
+                    "Binds when picked up",
+                    {"Head", "Cloth"},
+                    "70 Armor",
+                    "+18 Stamina",
+                    "+16 Intellect",
+                    "|cff1eff00Equip: Increases damage done by magical spells and effects by up to 21.|r",
+                    "Requires Level 56",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 49|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 71|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280073, "Burnished Pridescales", "Chest, Plate", 3, tip = {
                     "Binds when picked up",
                     {"Chest", "Plate"},
                     "637 Armor",
@@ -4772,8 +5329,19 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247234,
             aliases = {"Varrox Bleakhoof", "Varrox"},
             loot = {
-                -- Seen in-game (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {0, "Bleak Eye Shoulderplates", "Shoulder, Plate", 3, tip = {
+                -- Confirmed from Varrox, screenshot 10 Nov 2026.
+                {280076, "Horns of Varrox", "Head, Leather", 3, tip = {
+                    "Binds when picked up",
+                    {"Head", "Leather"},
+                    "141 Armor",
+                    "+18 Stamina",
+                    "+12 Shadow Resistance",
+                    "|cff1eff00Equip: +48 Attack Power.|r",
+                    "Requires Level 57",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 0|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 5|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
+                {280075, "Bleak Eye Shoulderplates", "Shoulder, Plate", 3, tip = {
                     "Binds when picked up",
                     {"Shoulder", "Plate"},
                     "485 Armor",
@@ -4804,9 +5372,54 @@ FDJ.DB["Blackmaw Hold"] = {
             name = "Trash Drops",
             trash = true,
             loot = {
+                -- Confirmed on Blackmaw Hold trash (10 Nov 2026);
+                -- exact furbolg mob name not yet confirmed.
+                {287032, "Den Champion's Binding", "Waist, Plate", 3, "Blackmaw Hold trash", tip = {
+                    "Binds when equipped",
+                    {"Waist", "Plate"},
+                    "336 Armor",
+                    "+16 Strength",
+                    "+8 Spirit",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 14.|r",
+                    "Requires Level 52",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 43|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Confirmed in Blackmaw Hold trash, 10 Nov 2026 (specific mobs TBD).
+                -- Epic Blacksmithing plans. Shown in the dungeon-wide
+                -- Recipes & Patterns tab, sourced from Blackmaw Hold trash.
+                {251453, "Plans: Breastplate of Salvation", "Recipe, Blacksmithing", 4, "Blackmaw Hold trash", tip = {
+                    "Binds when picked up",
+                    "Requires Blacksmithing (300)",
+                    "|cff1eff00Use: Teaches you how to craft Breastplate of Salvation.|r",
+                    "Sell Price: 50|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t",
+                }},
+                -- Confirmed BoE trash loot, 10 Nov 2026.
+                {287034, "Grove Subjugator's Blade", "One-Hand, Dagger", 3, "Blackmaw Hold trash", tip = {
+                    "Binds when equipped",
+                    {"One-Hand", "Dagger"},
+                    {"33 - 62 Damage", "Speed 1.80"},
+                    "(26.4 damage per second)",
+                    "+6 Stamina",
+                    "-10 Spirit",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 68.|r",
+                    "Requires Level 55",
+                    "|cffffd100To subjugate a soul takes a toll on one's own.|r",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 81|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 25|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {287028, "Tormented Cuffs", "Wrist, Cloth", 3, "Blackmaw Hold trash", tip = {
+                    "Binds when equipped",
+                    {"Wrist", "Cloth"},
+                    "36 Armor",
+                    "+13 Stamina",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 9.|r",
+                    "|cff1eff00Equip: Restores 14 Health per 5 sec.|r",
+                    "Requires Level 53",
+                    "Sell Price: 94|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 34|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 -- Seen dropping from a Legashi Ritualist (Nov 2026); item ID
                 -- not known yet (0, filled in by ItemIdLearner).
-                {0, "Satyr's Touch", "Ranged, Wand", 3, "Legashi Ritualist", tip = {
+                {287036, "Satyr's Touch", "Ranged, Wand", 3, "Legashi Ritualist", tip = {
                     "Binds when equipped",
                     {"Ranged", "Wand"},
                     {"111 Damage", "Speed 1.90"},
@@ -4831,7 +5444,8 @@ FDJ.DB["Shaper's Terrace"] = {
     location = "Un'Goro Crater",
     -- Quests: Horde players' quest logs (Nov 2026); Crystalline Elements is
     -- on Wowhead Forever (95928, its giver's spawn and rewards). The other
-    -- two have stand-in IDs (Data/QuestUpdates.lua, dalaranquests).
+    -- five (three Alliance, two Horde) are in Data/QuestUpdates.lua
+    -- (dalaranquests, shapersquests).
     description = "An ancient titan facility in the northern hills of Un'Goro Crater, overlooking dinosaurs, tar pits and powerful crystals. Collect power crystals across Un'Goro and use them at the consoles inside the terrace.",
     icon = "Interface\\Icons\\INV_Misc_Gem_Crystal_02",
     quests = {{
@@ -4843,7 +5457,7 @@ FDJ.DB["Shaper's Terrace"] = {
         pickup = "Mayena Earthseeker, Mulgore (34.8, 22.2)",
         objective = "Bring Mayena Earthseeker a Moist Crystal, a Charged Crystal, a Noxious Crystal and a Fiery Crystal from Shaper's Terrace.",
         turnin = "Mayena Earthseeker, Mulgore (34.8, 22.2)",
-        liveXPFallback = 17655,
+        liveXPFallback = 17650,
         rewardSummary = "Orgrimmar +50  •  Earthen Ring +100",
         rewardItems = {{279904, "Crystalline Pauldrons", 3}, {279906, "Potent Treads", 3}},
         rewardChoice = true,
@@ -4919,6 +5533,18 @@ FDJ.DB["Shaper's Terrace"] = {
             npcID = 261812,
             aliases = {"Thunderhoof"},
             loot = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280018, "Hammer of Thundering Hooves", "Two-Hand, Mace", 3, tip = {
+                    "Binds when picked up",
+                    {"Two-Hand", "Mace"},
+                    {"142 - 214 Damage", "Speed 3.30"},
+                    "(53.9 damage per second)",
+                    "+24 Strength",
+                    "+17 Stamina",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "Requires Level 58",
+                    "Sell Price: 6|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 80|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
                 {280020, "Deep Jungle Rifle", "Ranged, Gun", 3, tip = {
                     "Binds when picked up",
@@ -4949,6 +5575,17 @@ FDJ.DB["Shaper's Terrace"] = {
             npcID = 262127,
             aliases = {"Direhorn Matriarch"},
             loot = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280045, "Regal Direhorn Drape", "Back, Cloth", 3, tip = {
+                    "Binds when picked up",
+                    "Back",
+                    "45 Armor",
+                    "+11 Stamina",
+                    "|cff1eff00Equip: +18 Attack Power.|r",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 12.|r",
+                    "Requires Level 58",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 73|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 35|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
                 {280022, "Scaleguard Scimitar", "One-Hand, Sword", 3, tip = {
                     "Binds when picked up",
@@ -4976,10 +5613,53 @@ FDJ.DB["Shaper's Terrace"] = {
             },
         },
         {
+            -- Player-confirmed Shaper's Terrace boss and drop (screenshot, 10 Nov 2026).
+            name = "Cinder",
+            npcID = 261974,
+            aliases = {"Cinder"},
+            loot = {
+                {280029, "Cinderedge Crescent", "One-Hand, Axe", 3, tip = {
+                    "Binds when picked up",
+                    {"One-Hand", "Axe"},
+                    {"69 - 129 Damage", "Speed 2.40"},
+                    "(41.2 damage per second)",
+                    "+10 Stamina",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
+                    "|cff1eff00Equip: +14 Attack Power.|r",
+                    "Requires Level 58",
+                    "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 86|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 36|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen in a Loot Roll from Cinder (player screenshot, 12 Nov 2026);
+                -- Wowhead Forever: Cinder 5/7. Vitrix drops it too.
+                {280028, "Heartflame Gauntlets", "Hands, Plate", 3, tip = {
+                    "Binds when picked up",
+                    {"Hands", "Plate"},
+                    "410 Armor",
+                    "+14 Intellect",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "|cff1eff00Equip: Increases damage done by Holy spells and effects by up to 18.|r",
+                    "Requires Level 58",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 5|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 67|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
             name = "Bolt",
             npcID = 262081,
             aliases = {"Bolt"},
             loot = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280031, "Sparklance Wand", "Ranged, Wand", 3, tip = {
+                    "Binds when picked up",
+                    {"Ranged", "Wand"},
+                    {"76 - 142 Nature Damage", "Speed 1.70"},
+                    "(64.1 damage per second)",
+                    "+4 Spirit",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
+                    "|cff1eff00Equip: Increases damage done by Nature spells and effects by up to 7.|r",
+                    "Requires Level 58",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 42|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 96|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
                 -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
                 {280032, "Bolt's Charged Eyeball", "Trinket", 3, tip = {
                     "Binds when picked up",
@@ -4992,15 +5672,60 @@ FDJ.DB["Shaper's Terrace"] = {
             },
         },
         {
+            -- Player-confirmed Snowtalon drop, 10 Nov 2026 (screenshot).
+            -- Encounter NPC ID is verified on Wowhead Forever.
+            name = "Snowtalon",
+            npcID = 262297,
+            aliases = {"Snowtalon"},
+            loot = {
+                {280026, "Albinofur Grips", "Hands, Mail", 3},
+                -- Seen in a Loot Roll from Snowtalon (player screenshot, 12 Nov 2026).
+                {280027, "Crownroar Chestplate", "Chest, Plate", 3, tip = {
+                    "Binds when picked up",
+                    {"Chest", "Plate"},
+                    "657 Armor",
+                    "+21 Spirit",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "|cff1eff00Equip: Increases healing done by up to 40 and damage done by up to 13 for all magical spells and effects.|r",
+                    "Requires Level 58",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 51|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
             name = "Vitrix",
             npcID = 272561,
             aliases = {"Vitrix"},
             loot = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280031, "Sparklance Wand", "Ranged, Wand", 3, tip = {
+                    "Binds when picked up",
+                    {"Ranged", "Wand"},
+                    {"76 - 142 Nature Damage", "Speed 1.70"},
+                    "(64.1 damage per second)",
+                    "+4 Spirit",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
+                    "|cff1eff00Equip: Increases damage done by Arcane spells and effects by up to 7.|r",
+                    "Requires Level 58",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 42|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 96|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen in a Loot Roll from Vitrix (player screenshot, 12 Nov 2026).
+                -- Cinder drops it too (Wowhead Forever: Cinder 5/7).
+                {280028, "Heartflame Gauntlets", "Hands, Plate", 3, tip = {
+                    "Binds when picked up",
+                    {"Hands", "Plate"},
+                    "410 Armor",
+                    "+14 Intellect",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "|cff1eff00Equip: Increases damage done by Holy spells and effects by up to 18.|r",
+                    "Requires Level 58",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 5|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 67|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
             },
-            -- The batch's two items no boss is known to drop yet (Wowhead
-            -- Forever 280026-280027): a guess, Vitrix has none listed.
+            -- Crownroar Chestplate: seen dropping from Snowtalon (12 Nov 2026);
+            -- still listed here as probable until it's known whether Vitrix
+            -- drops it too.
             probableLoot = {
-                {280026, "Albinofur Grips", "Hands, Mail", 3},
                 {280027, "Crownroar Chestplate", "Chest, Plate", 3},
             },
         },
@@ -5450,8 +6175,7 @@ FDJ.DB["Sunken Temple"] = {
         liveXPFallback = 6350,
     },
     },
-    bosses = {
-        {
+    bosses = {{
             name = "Atal'alarion",
             npcID = 8580,
             aliases = {"Atal'alarion"},
@@ -5461,37 +6185,43 @@ FDJ.DB["Sunken Temple"] = {
                 {10798, "Atal'alarion's Tusk Ring", "Waist, Plate", 3},
                 {10799, "Headspike", "Two-Hand, Polearm", 3},
             },
-        },
-        {
+        }, {
             name = "Dreamscythe",
             npcID = 5721,
             aliases = {"Dreamscythe"},
             description = "Green dragon on the upper balcony, together with Weaver.",
-            loot = {
+            loot = {{10795, "Drakeclaw Band", "Finger", 3, "", "RANDOM_ENCHANT"}, {10796, "Drakestone", "Held In Off-hand", 3, "", "RANDOM_ENCHANT"}, {10797, "Firebreather", "One-Hand, Sword", 3}, {12463, "Drakefang Butcher", "Two-Hand, Sword", 3}, {12464, "Bloodfire Talons", "Hands, Leather", 3}, 
                 {12465, "Nightfall Drape", "Back", 3},
                 {12466, "Dawnspire Cord", "Waist, Cloth", 3},
                 {12243, "Smoldering Claw", "Two-Hand, Polearm", 3},
             },
-        },
-        {
+        }, {
             name = "Weaver",
             npcID = 5720,
             aliases = {"Weaver"},
             description = "Green dragon on the upper balcony, together with Dreamscythe.",
-            loot = {
+            loot = {{10795, "Drakeclaw Band", "Finger", 3, "", "RANDOM_ENCHANT"}, {10796, "Drakestone", "Held In Off-hand", 3, "", "RANDOM_ENCHANT"}, {10797, "Firebreather", "One-Hand, Sword", 3}, {12463, "Drakefang Butcher", "Two-Hand, Sword", 3}, {12464, "Bloodfire Talons", "Hands, Leather", 3}, 
                 {12465, "Nightfall Drape", "Back", 3},
                 {12466, "Dawnspire Cord", "Waist, Cloth", 3},
                 {12243, "Smoldering Claw", "Two-Hand, Polearm", 3},
             },
-        },
-        {
+        }, {
             name = "Avatar of Hakkar",
             npcID = 8443,
             aliases = {"Avatar of Hakkar"},
             description = "Summoned at the central altar with the Filled Egg of Hakkar (The God Hakkar).",
-            loot = {},
-        },
-        {
+            loot = {{12462, "Embrace of the Wind Serpent", "Chest, Cloth", 4, tip = {
+                    "Binds when picked up",
+                    {"Chest", "Cloth"},
+                    "86 Armor",
+                    "+10 Intellect",
+                    "+30 Spirit",
+                    "+10 Nature Resistance",
+                    "|cff1eff00Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.|r",
+                    "Requires Level 50",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 2|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 3|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }}, {10838, "Might of Hakkar", "Main Hand, Mace", 3}, {10842, "Windscale Sarong", "Legs, Leather", 3}, {10843, "Featherskin Cape", "Back", 3}, {10844, "Spire of Hakkar", "Two-Hand, Staff", 3}, {10845, "Warrior's Embrace", "Chest, Plate", 3}, {10846, "Bloodshot Greaves", "Feet, Mail", 3}, {10663, "Essence of Hakkar", "Quest Item", 1}, },
+        }, {
             name = "Jammal'an the Prophet",
             npcID = 5710,
             aliases = {"Jammal'an the Prophet"},
@@ -5501,8 +6231,7 @@ FDJ.DB["Sunken Temple"] = {
                 {10807, "Kilt of the Atal'ai Prophet", "Legs, Cloth", 3},
                 {10808, "Gloves of the Atal'ai Prophet", "Hands, Cloth", 3},
             },
-        },
-        {
+        }, {
             name = "Ogom the Wretched",
             npcID = 5711,
             aliases = {"Ogom the Wretched"},
@@ -5512,30 +6241,27 @@ FDJ.DB["Sunken Temple"] = {
                 {10803, "Blade of the Wretched", "Main Hand, Sword", 3},
                 {10805, "Eater of the Dead", "Main Hand, Axe", 3},
             },
-        },
-        {
+        }, {
             name = "Morphaz",
             npcID = 5719,
             aliases = {"Morphaz"},
             description = "Green dragon in the lower halls, guarding the way to Eranikus.",
-            loot = {
+            loot = {{10795, "Drakeclaw Band", "Finger", 3, "", "RANDOM_ENCHANT"}, {10796, "Drakestone", "Held In Off-hand", 3, "", "RANDOM_ENCHANT"}, {10797, "Firebreather", "One-Hand, Sword", 3}, {12463, "Drakefang Butcher", "Two-Hand, Sword", 3}, {12464, "Bloodfire Talons", "Hands, Leather", 3}, {20019, "Tooth of Morphaz", "Quest Item", 1}, {20022, "Azure Key", "Quest Item", 1}, {20025, "Blood of Morphaz", "Quest Item", 1}, {20085, "Arcane Shard", "Quest Item", 1}, 
                 {12465, "Nightfall Drape", "Back", 3},
                 {12466, "Dawnspire Cord", "Waist, Cloth", 3},
                 {12243, "Smoldering Claw", "Two-Hand, Polearm", 3},
             },
-        },
-        {
+        }, {
             name = "Hazzas",
             npcID = 5722,
             aliases = {"Hazzas"},
             description = "Green dragon in the lower halls, guarding the way to Eranikus.",
-            loot = {
+            loot = {{10795, "Drakeclaw Band", "Finger", 3, "", "RANDOM_ENCHANT"}, {10796, "Drakestone", "Held In Off-hand", 3, "", "RANDOM_ENCHANT"}, {10797, "Firebreather", "One-Hand, Sword", 3}, {12463, "Drakefang Butcher", "Two-Hand, Sword", 3}, {12464, "Bloodfire Talons", "Hands, Leather", 3}, 
                 {12465, "Nightfall Drape", "Back", 3},
                 {12466, "Dawnspire Cord", "Waist, Cloth", 3},
                 {12243, "Smoldering Claw", "Two-Hand, Polearm", 3},
             },
-        },
-        {
+        }, {
             name = "Shade of Eranikus",
             npcID = 5709,
             aliases = {"Shade of Eranikus"},
@@ -5548,8 +6274,7 @@ FDJ.DB["Sunken Temple"] = {
                 {10828, "Dire Nail", "One-Hand, Dagger", 3},
                 {10837, "Tooth of Eranikus", "Main Hand, Axe", 3},
             },
-        },
-    },
+        }},
 }
 
 FDJ.DB["Scholomance"] = {
@@ -5719,12 +6444,17 @@ FDJ.DB["Scholomance"] = {
             aliases = {"Kirtonos the Herald"},
             description = "Summoned on the porch with the Blood of Innocents (Kirtonos the Herald).",
             loot = {
+                -- Kirtonos boss-specific drops (Forever Wowhead NPC 10506).
+                -- Excludes global BoE/world-drop loot and generic reagents.
                 {13960, "Heart of the Fiend", "Neck", 3},
                 {13967, "Windreaver Greaves", "Feet, Mail", 3},
                 {13969, "Loomguard Armbraces", "Wrist, Mail", 3},
                 {14024, "Frightalon", "One-Hand, Dagger", 3},
                 {13957, "Gargoyle Slashers", "Hands, Leather", 3},
                 {16734, "Boots of Valor", "Feet, Plate", 3},
+                {13955, "Stoneform Shoulders", "Shoulder, Plate", 3},
+                {13956, "Clutch of Andros", "Waist, Cloth", 3},
+                {13983, "Gravestone War Axe", "Two-Hand, Axe", 3},
             },
         },
         {
@@ -5802,6 +6532,33 @@ FDJ.DB["Scholomance"] = {
             description = "One of the six bosses in the side rooms; all six must die to summon Gandling.",
             loot = {
                 {16710, "Shadowcraft Bracers", "Wrist, Leather", 3},
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
+                {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
+                {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
+                {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
+                {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
             },
         },
         {
@@ -5811,6 +6568,34 @@ FDJ.DB["Scholomance"] = {
             description = "The Butcher, in the side rooms. Burn the Sarkhoff remains after killing him.",
             loot = {
                 {16684, "Magister's Gloves", "Hands, Cloth", 3},
+                {14617, "Sawbones Shirt", "Shirt", 1},
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
+                {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
+                {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
+                {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
+                {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
             },
         },
         {
@@ -5820,6 +6605,33 @@ FDJ.DB["Scholomance"] = {
             description = "One of the six bosses in the side rooms.",
             loot = {
                 {16705, "Dreadmist Wraps", "Wrist, Cloth", 3},
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
+                {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
+                {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
+                {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
+                {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
             },
         },
         {
@@ -5829,6 +6641,33 @@ FDJ.DB["Scholomance"] = {
             description = "One of the six bosses in the side rooms.",
             loot = {
                 {16716, "Wildheart Belt", "Waist, Leather", 3},
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
+                {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
+                {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
+                {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
+                {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
             },
         },
         {
@@ -5837,16 +6676,34 @@ FDJ.DB["Scholomance"] = {
             aliases = {"Lord Alexei Barov"},
             description = "One of the six bosses in the side rooms. Drops a Barov deed.",
             loot = {
-                {14626, "Necropile Robe", "Chest, Cloth", 3},
-                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {16722, "Lightforge Bracers", "Wrist, Plate", 3},
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
                 {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
                 {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
                 {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
                 {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
-                {18684, "Dimly Opalescent Ring", "Finger", 3},
-                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
-                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
-                {16722, "Lightforge Bracers", "Wrist, Plate", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
             },
         },
         {
@@ -5854,7 +6711,35 @@ FDJ.DB["Scholomance"] = {
             npcID = 10502,
             aliases = {"Lady Illucia Barov"},
             description = "One of the six bosses in the side rooms. Drops a Barov deed.",
-            loot = {},
+            loot = {
+                {23201, "Libram of Divinity", "Relic, Libram", 3},
+                {23200, "Totem of Sustaining", "Relic, Totem", 3},
+                {18680, "Ancient Bone Bow", "Ranged, Bow", 3},
+                {14614, "Bloodmail Belt", "Waist, Mail", 3},
+                {14616, "Bloodmail Boots", "Feet, Mail", 3},
+                {14615, "Bloodmail Gauntlets", "Hands, Mail", 3},
+                {14611, "Bloodmail Hauberk", "Chest, Mail", 3},
+                {14612, "Bloodmail Legguards", "Legs, Mail", 3},
+                {18681, "Burial Shawl", "Shoulder, Cloth", 3},
+                {14637, "Cadaverous Armor", "Chest, Leather", 3},
+                {14636, "Cadaverous Belt", "Waist, Leather", 3},
+                {14640, "Cadaverous Gloves", "Hands, Leather", 3},
+                {14638, "Cadaverous Leggings", "Legs, Leather", 3},
+                {14641, "Cadaverous Walkers", "Feet, Leather", 3},
+                {14624, "Deathbone Chestplate", "Chest, Plate", 3},
+                {14622, "Deathbone Gauntlets", "Hands, Plate", 3},
+                {14620, "Deathbone Girdle", "Waist, Plate", 3},
+                {14623, "Deathbone Legguards", "Legs, Plate", 3},
+                {14621, "Deathbone Sabatons", "Feet, Plate", 3},
+                {18684, "Dimly Opalescent Ring", "Finger", 3},
+                {18682, "Ghoul Skin Leggings", "Legs, Leather", 3},
+                {18683, "Hammer of the Vesper", "One-Hand, Mace", 3},
+                {14631, "Necropile Boots", "Feet, Cloth", 3},
+                {14629, "Necropile Cuffs", "Wrist, Cloth", 3},
+                {14632, "Necropile Leggings", "Legs, Cloth", 3},
+                {14633, "Necropile Mantle", "Shoulder, Cloth", 3},
+                {14626, "Necropile Robe", "Chest, Cloth", 3},
+            },
         },
         {
             name = "Darkmaster Gandling",
@@ -6034,6 +6919,34 @@ FDJ.DB["Maraudon"] = {
         note = "Kill Princess Theradras in the inner cavern.",
         turnin = "Keeper Marandis, Nijel's Point, Desolace",
         liveXPFallback = 6100,
+    },
+    {
+        id = 93404,
+        name = "Rot and Regret",
+        faction = "Both",
+        level = 49,
+        requires = 35,
+        pickup = "Woodwyrd, Forlorn Gardens, Shen'dralas (south of Desolace)",
+        objective = "Venture into Maraudon and recover a Vial of Earth Song Water. Use it to extinguish Woodwyrd, then return to Woodwyrd at the Forlorn Gardens.",
+        turnin = "Woodwyrd, Forlorn Gardens, Shen'dralas (south of Desolace)",
+        rewardChoice = true,
+        rewardItems = {{272186, "Overgrown Cuffs", 3}, {272187, "Thornplated Cord", 3}},
+        liveXPFallback = 11100,
+        note = "The quest tracks two objectives: 1 Vial of Earth Song Water and Woodwyrd extinguished. Complete Word of the Woods to encounter Woodwyrd at the Forlorn Gardens. Recover the vial inside Maraudon, then return to Woodwyrd.",
+    },
+    {
+        id = 96776,
+        name = "An'she's Radiance",
+        faction = "Horde",
+        level = 51,
+        requires = 43,
+        pickup = "Olana Brighthoof, Skywatcher Plateau, Mulgore",
+        objective = "Recover the crystal known as An'she's Radiance from Maraudon and return it to Olana Brighthoof in Mulgore.",
+        turnin = "Olana Brighthoof, Skywatcher Plateau, Mulgore",
+        rewardSummary = "75s",
+        rewardItems = {},
+        liveXPFallback = 11900,
+        note = "Beyond Earth Song Falls, find the chamber of brilliant white crystals guarded by giants. Retrieve An'she's Radiance from the crystal near the highest part of the chamber. Rewards 300 Earthen Ring and 200 Thunder Bluff reputation.",
     },
     {
         objective = "Seek out Remulos in Moonglade and give him the Seed of Life.",
@@ -6274,6 +7187,19 @@ FDJ.DB["Dire Maul: East"] = {
     },
     bosses = {
         {
+            -- The imp you chase through the wing (a player saw him drop the
+            -- Obsidian Bauble and the recipe, Nov 2026). First, as he is met
+            -- first. IDs: Wowhead Forever.
+            name = "Pusillin",
+            npcID = 14354,
+            aliases = {"Pusillin"},
+            description = "The imp you chase through the Warpwood Quarter; he fights at the end and drops the Crescent Key.",
+            loot = {
+                {18316, "Obsidian Bauble", "Off Hand", 3},
+                {18267, "Recipe: Runn Tum Tuber Surprise", "Recipe, Cooking", 2},
+            },
+        },
+        {
             name = "Zevrim Thornhoof",
             npcID = 11490,
             aliases = {"Zevrim Thornhoof"},
@@ -6281,7 +7207,8 @@ FDJ.DB["Dire Maul: East"] = {
             loot = {
                 {18313, "Helm of Awareness", "Head, Plate", 3},
                 {18323, "Satyr's Bow", "Ranged, Bow", 3},
-                {18319, "Fervent Helm", "Head, Mail", 3},
+                -- It drops with a random enchantment ("of Frost Resistance"...).
+                {18319, "Fervent Helm", "Head, Mail", 3, "", "RANDOM_ENCHANT"},
             },
         },
         {
@@ -6457,16 +7384,9 @@ FDJ.DB["Dire Maul: West"] = {
             loot = {
                 {18390, "Tanglemoss Leggings", "Legs, Leather", 3},
                 {18393, "Warpwood Binding", "Waist, Mail", 3},
-            },
-        },
-        {
-            name = "Illyanna Ravenoak",
-            npcID = 11488,
-            aliases = {"Illyanna Ravenoak"},
-            description = "Hunter with her bear Ferra, on the pylon terraces.",
-            loot = {
-                {18383, "Force Imbued Gauntlets", "Hands, Plate", 3},
-                {18386, "Padre's Trousers", "Legs, Cloth", 3},
+                {18352, "Petrified Bark Shield", "Off Hand, Shield", 3},
+                -- Seen dropping (a player, Nov 2026).
+                {18353, "Stoneflower Staff", "Two-Hand, Staff", 3},
             },
         },
         {
@@ -6491,6 +7411,16 @@ FDJ.DB["Dire Maul: West"] = {
             },
         },
         {
+            name = "Illyanna Ravenoak",
+            npcID = 11488,
+            aliases = {"Illyanna Ravenoak"},
+            description = "Hunter with her bear Ferra, on the pylon terraces.",
+            loot = {
+                {18383, "Force Imbued Gauntlets", "Hands, Plate", 3},
+                {18386, "Padre's Trousers", "Legs, Cloth", 3},
+            },
+        },
+        {
             name = "Immol'thar",
             npcID = 11496,
             aliases = {"Immol'thar"},
@@ -6511,8 +7441,14 @@ FDJ.DB["Dire Maul: West"] = {
         {
             name = "Lord Hel'nurath",
             npcID = 14506,
+            -- Warlock-summoned (Dreadsteed of Xoroth): kept in the journal,
+            -- left off the Dungeon Tracker and not needed to complete a run.
+            trackerHidden = true,
+            optional = true,
             aliases = {"Lord Hel'nurath"},
             description = "Summoned by warlocks in the pentagram near Immol'thar (Dreadsteed of Xoroth).",
+            -- Red line under his name on the loot page.
+            lootNote = "LOOT_NOTE_HELNURATH",
             loot = {
                 {18755, "Xorothian Firestick", "Ranged, Gun", 3},
                 {18756, "Dreadguard's Protector", "Off Hand, Shield", 3},
@@ -6855,7 +7791,7 @@ FDJ.DB["Dire Maul: North"] = {
             aliases = {"Stomper Kreeg"},
             description = "Drunk ogre brewer; after the Tribute Run he sells the Gordok brews.",
             loot = {
-                {18425, "Kreeg's Mug", "Held In Off-hand", 2},
+                {18425, "Kreeg's Mug", "Held In Off-hand", 3},
             },
         },
         {
@@ -6922,6 +7858,46 @@ FDJ.DB["Dire Maul: North"] = {
                 {18520, "Barbarous Blade", "Two-Hand, Sword", 3},
                 {18522, "Band of the Ogre King", "Finger", 3},
                 {18523, "Brightly Glowing Stone", "Held In Off-hand", 3},
+            },
+        },
+        {
+            -- Non-killable loot container. Keep it on the Bosses page after
+            -- King Gordok, but exclude it from the run tracker and boss kills.
+            name = "Gordok Tribute Chest",
+            trash = true,
+            lootChest = true,
+            description = "Tribute chest awarded by Mizzle the Crafty after King Gordok is defeated. The tribute improves when Gordok guards and Captain Kromcrush are spared. Equipment pool is based on Classic-derived Forever reference data; individual drops still need live verification.",
+            loot = {
+                -- Epic (first for highest-value item visibility).
+                {18538, "Treant's Bane", "Two-Hand, Axe", 4},
+                -- Rare equipment.
+                {18528, "Cyclone Spaulders", "Shoulder, Leather", 3},
+                {18529, "Elemental Plate Girdle", "Waist, Plate", 3},
+                {18500, "Tarnished Elven Ring", "Finger", 3},
+                {18537, "Counterattack Lodestone", "Trinket", 3},
+                {18533, "Gordok Bracers of Power", "Wrist, Plate", 3},
+                {18495, "Redoubt Cloak", "Back", 3},
+                {18534, "Rod of the Ogre Magi", "Two-Hand, Staff", 3},
+                {18499, "Barrier Shield", "Off Hand, Shield", 3},
+                {18532, "Mindsurge Robe", "Chest, Cloth", 3},
+                {18530, "Ogre Forged Hauberk", "Chest, Mail", 3},
+                {18531, "Unyielding Maul", "Two-Hand, Mace", 3},
+                -- Uncommon equipment.
+                {18479, "Carrion Scorpid Helm", "Head, Mail", 2},
+                {18480, "Scarab Plate Helm", "Head, Plate", 2},
+                {18478, "Hyena Hide Jerkin", "Chest, Leather", 2},
+                {18476, "Mud Stained Boots", "Feet, Leather", 2},
+                {18475, "Oddly Magical Belt", "Waist, Cloth", 2},
+                {18482, "Ogre Toothpick Shooter", "Ranged, Bow", 2},
+                {18477, "Shaggy Leggings", "Legs, Leather", 2},
+                {18481, "Skullcracking Mace", "Two-Hand, Mace", 2},
+                -- Schematic is automatically indexed on Recipes & Patterns.
+                {18655, "Schematic: Major Recombobulator", "Recipe, Engineering", 2},
+                -- Consumables recorded on the Wowhead Forever chest object.
+                {13446, "Major Healing Potion", "Consumable, Potion", 1},
+                {13444, "Major Mana Potion", "Consumable, Potion", 1},
+                {8766, "Morning Glory Dew", "Consumable, Drink", 1},
+                {8952, "Roasted Quail", "Consumable, Food", 1},
             },
         },
     },
@@ -7114,9 +8090,30 @@ FDJ.DB["Stratholme: Living"] = {
             },
         },
         {
+            -- Forever boss loot verified against Wowhead NPC 11032 (2026-11-11).
+            -- Optional: a run is complete without him.
+            name = "Malor the Zealous",
+            npcID = 11032,
+            aliases = {"Malor the Zealous"},
+            optional = true,
+            description = "In the Scarlet Bastion, past Timmy. Optional: next to him stands Malor's Strongbox with the Medallion of Faith for The Medallion of Faith (Aurius, at the start of the Undead side).",
+            loot = {
+                {276398, "Scarlet Malice", "One-Hand, Mace", 3},
+                {276399, "Plate of the Scarlet Bastion", "Chest, Plate", 3},
+                {12845, "Medallion of Faith", "Quest Item", 1, tip = {
+                    "Quest Item",
+                    "From Malor's Strongbox, next to Malor the Zealous",
+                    "The Medallion of Faith (Aurius, Stratholme)",
+                }},
+            },
+        },
+        {
             name = "Postmaster Malown",
             npcID = 11143,
             aliases = {"Postmaster Malown"},
+            -- 2.0.3: only there when the group opens the mailboxes: a Live run is
+            -- complete without him (it never finished before).
+            optional = true,
             description = "Summoned by opening the three mailboxes with the Key to the City.",
             loot = {
                 {13392, "The Postmaster's Seal", "Finger", 3},
@@ -7353,7 +8350,7 @@ FDJ.DB["Stratholme: Undead"] = {
                 {18728, "Anastari Heirloom", "Neck", 3},
                 {18730, "Shadowy Laced Handwraps", "Hands, Cloth", 3},
                 {18729, "Screeching Bow", "Ranged, Bow", 3},
-                {13514, "Wail of the Banshee", "Miscellaneous", 3}, -- Wowhead Forever
+                {13514, "Wail of the Banshee", "Miscellaneous", 2}, -- Wowhead Forever
             },
         },
         {
@@ -7759,6 +8756,7 @@ FDJ.DB["Blackrock Depths"] = {
         rewardSummary = "",
         id = 7848,
         name = "Attunement to the Core",
+        unavailable = true, -- notavailable (2.0.4): not in WoW Forever for now
         faction = "Both",
         pickup = "Lothos Riftwaker, Blackrock Mountain",
         level = 60,
@@ -7838,6 +8836,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Gorosh the Dervish",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9027,
             aliases = {"Gorosh the Dervish"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7850,6 +8849,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Grizzle",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9028,
             aliases = {"Grizzle"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7863,6 +8863,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Eviscerator",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9029,
             aliases = {"Eviscerator"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7875,6 +8876,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Ok'thor the Breaker",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9030,
             aliases = {"Ok'thor the Breaker"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7887,6 +8889,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Anub'shiah",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9031,
             aliases = {"Anub'shiah"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7899,6 +8902,7 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Hedrum the Creeper",
+            fightGroup = "Ring of Law", -- Dungeon Tracker: one entry for the fight
             npcID = 9032,
             aliases = {"Hedrum the Creeper"},
             description = "Ring of Law: one of six possible challengers.",
@@ -7907,6 +8911,25 @@ FDJ.DB["Blackrock Depths"] = {
                 {11634, "Silkweb Gloves", "Hands, Cloth", 3},
                 {11635, "Hookfang Shanker", "One-Hand, Dagger", 3},
                 {11729, "Savage Gladiator Helm", "Head, Mail", 3},
+            },
+        },
+        {
+            -- Ring of Law challenger summoned with the Banner of Provocation
+            -- (Classic 1.10, the Dungeon Set 2 quests). Optional: not on the
+            -- Dungeon Tracker, not needed to complete a run.
+            name = "Theldren",
+            npcID = 16059,
+            rare = true,
+            rareLabel = "0.5 Quest Event", -- same label as Lord Valthalak (UBRS)
+            aliases = {"Theldren"},
+            description = "Ring of Law: use the Banner of Provocation in the arena to challenge him and his gladiators. Lefty's Brass Knuckle and Malgen's Long Bow come from the Arena Spoils chest after the fight.",
+            summonItem = 21986,
+            trackerHidden = true,
+            loot = {
+                {22330, "Shroud of Arcane Mastery", "Back", 3},
+                {22305, "Ironweave Mantle", "Shoulder, Cloth", 3},
+                {22317, "Lefty's Brass Knuckle", "One-Hand, Fist Weapon", 3},
+                {22318, "Malgen's Long Bow", "Ranged, Bow", 3},
             },
         },
         {
@@ -7948,6 +8971,21 @@ FDJ.DB["Blackrock Depths"] = {
             },
         },
         {
+            -- Non-killable loot container (like the Gordok Tribute Chest):
+            -- on the Bosses page, not on the Dungeon Tracker.
+            name = "Secret Safe",
+            trash = true,
+            lootChest = true,
+            chestLabel = "Loot Chest",
+            description = "In the Black Vault: open all 12 lockers with Relic Coffer Keys (they drop in Blackrock Depths) and Watchman Doomgrip appears. Defeat him and the Secret Safe opens; it holds one of these.",
+            loot = {
+                {22205, "Black Steel Bindings", "Wrist, Plate", 3},
+                {22255, "Magma Forged Band", "Finger", 3},
+                {22256, "Mana Shaping Handwraps", "Hands, Cloth", 3},
+                {22254, "Wand of Eternal Light", "Ranged, Wand", 3},
+            },
+        },
+        {
             name = "Lord Incendius",
             npcID = 9017,
             aliases = {"Lord Incendius"},
@@ -7957,6 +8995,7 @@ FDJ.DB["Blackrock Depths"] = {
                 {11765, "Pyremail Wristguards", "Wrist, Mail", 3},
                 {11766, "Flameweave Cuffs", "Wrist, Cloth", 3},
                 {11767, "Emberplate Armguards", "Wrist, Plate", 3},
+                {11768, "Incendic Bracers", "Wrist, Cloth", 2},
             },
         },
         {
@@ -8018,6 +9057,7 @@ FDJ.DB["Blackrock Depths"] = {
                 {11744, "Bloodfist", "Main Hand, Fist Weapon", 3},
                 {22212, "Golem Fitted Pauldrons", "Shoulder, Mail", 3},
                 {11746, "Golem Skull Helm", "Head, Plate", 3},
+                {11743, "Rockfist", "One-Hand, Fist Weapon", 2},
             },
         },
         {
@@ -8026,6 +9066,10 @@ FDJ.DB["Blackrock Depths"] = {
             aliases = {"Ribbly Screwspigot"},
             description = "Grim Guzzler. Kill him for Yuka Screwspigot's bounty.",
             loot = {
+                -- Ribbly-only drops on Wowhead Forever (Nov 2026): Knapsack 15%, Bandolier 10%, Quiver 9%.
+                {11742, "Wayfarer's Knapsack", "Bag", 2},
+                {2662, "Ribbly's Quiver", "Quiver", 2},
+                {2663, "Ribbly's Bandolier", "Ammo Pouch", 2},
                 {11612, "Plans: Dark Iron Plate", "Recipe, Blacksmithing", 3},
             },
         },
@@ -8049,6 +9093,7 @@ FDJ.DB["Blackrock Depths"] = {
                 {11814, "Molten Fists", "Hands, Mail", 3},
                 {11809, "Flame Wrath", "Two-Hand, Polearm", 3},
                 {11832, "Burst of Knowledge", "Trinket", 3},
+                {11808, "Circle of Flame", "Head, Cloth", 4},
             },
         },
         {
@@ -8072,9 +9117,12 @@ FDJ.DB["Blackrock Depths"] = {
             loot = {
                 {11920, "Wraith Scythe", "Main Hand, Axe", 3},
                 {11921, "Impervious Giant", "Two-Hand, Mace", 3},
-                {11922, "Blood-etched Blade", "One-Hand, Dagger", 3},
+                {11922, "Blood-Etched Blade", "One-Hand, Dagger", 3},
                 {11926, "Deathdealer Breastplate", "Chest, Mail", 3},
                 {11927, "Legplates of the Eternal Guardian", "Legs, Plate", 3},
+                {11923, "The Hammer of Grace", "Main Hand, Mace", 3},
+                {11925, "Ghostshroud", "Head, Leather", 3},
+                {11929, "Haunting Specter Leggings", "Legs, Cloth", 3},
             },
         },
         {
@@ -8092,6 +9140,9 @@ FDJ.DB["Blackrock Depths"] = {
         },
         {
             name = "Princess Moira Bronzebeard",
+            -- Can be saved: not needed to complete a run; on the tracker only once killed.
+            optional = true,
+            trackerOnlyIfKilled = true,
             npcID = 8929,
             aliases = {"Princess Moira Bronzebeard"},
             description = "Heals the Emperor. Don't kill her if you are on the Royal Rescue or Fate of the Kingdom quest.",
@@ -8108,6 +9159,7 @@ FDJ.DB["Blackrock Depths"] = {
             aliases = {"Emperor Dagran Thaurissan"},
             description = "Final boss, on the throne of the Imperial Seat.",
             loot = {
+                {11684, "Ironfoe", "Main Hand, Mace", 4},
                 {11815, "Hand of Justice", "Trinket", 3},
                 {11924, "Robes of the Royal Crown", "Chest, Cloth", 3},
                 {11928, "Thaurissan's Royal Scepter", "Held In Off-hand", 3},
@@ -8118,6 +9170,27 @@ FDJ.DB["Blackrock Depths"] = {
                 {11934, "Emperor's Seal", "Finger", 3},
                 {22204, "Wristguards of Renown", "Wrist, Leather", 3},
                 {22207, "Sash of the Grand Hunt", "Waist, Mail", 3},
+            },
+        },
+        {
+            -- Only Blackrock Depths zone drops (any mob inside). Generic
+            -- world greens and blues are intentionally excluded.
+            name = "Trash Drops",
+            trash = true,
+            loot = {
+                {12549, "Braincage", "Head, Mail", 3},
+                {12542, "Funeral Pyre Vestment", "Chest, Cloth", 3},
+                {12546, "Aristocratic Cuffs", "Wrist, Cloth", 3},
+                {12550, "Runed Golem Shackles", "Wrist, Plate", 3},
+                {12547, "Mar Alom's Grip", "Hands, Leather", 3},
+                {12555, "Battlechaser's Greaves", "Feet, Plate", 3},
+                {12551, "Stoneshield Cloak", "Back", 3},
+                {12552, "Blisterbane Wrap", "Back", 3},
+                {12527, "Ribsplitter", "Main Hand, Axe", 3},
+                {12535, "Doomforged Straightedge", "One-Hand, Sword", 3},
+                {12531, "Searing Needle", "One-Hand, Dagger", 3},
+                {12528, "The Judge's Gavel", "Two-Hand, Mace", 3},
+                {12532, "Spire of the Stoneshaper", "Two-Hand, Staff", 3},
             },
         },
     },
@@ -8455,6 +9528,8 @@ FDJ.DB["Upper Blackrock Spire"] = {
             name = "Lord Valthalak",
             npcID = 16042,
             rare = true,
+            rareLabel = "0.5 Quest Event",
+            trackerHidden = true, -- Quest-summoned boss: keep in the journal, omit from Dungeon Tracker.
             aliases = {"Lord Valthalak"},
             description = "Summoned with the Brazier of Beckoning from the Dungeon Set 2 quests.",
             loot = {

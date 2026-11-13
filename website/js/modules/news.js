@@ -13,6 +13,7 @@ function initNewsHub() {
   allNewsItems = [...customNews, ...WOW_FOREVER_DATA.newsFeed];
 
   renderNewsGrid(allNewsItems);
+  renderHubRecentUpdates(WOW_FOREVER_DATA.newsFeed);
 
   const filterChips = document.querySelectorAll('.filter-chip[data-source]');
   filterChips.forEach(chip => {
@@ -81,6 +82,32 @@ function initNewsHub() {
       if (e.target === modalBackdrop) modalBackdrop.classList.remove('open');
     });
   }
+}
+
+/**
+ * Fills the homepage "Recent Updates" card from the three newest news entries,
+ * so the landing page always mirrors the news feed instead of hardcoded HTML.
+ */
+function renderHubRecentUpdates(feed) {
+  const list = document.querySelector('.hub-update-list');
+  if (!list || !Array.isArray(feed) || feed.length === 0) return;
+  const TAG_STYLES = { blizzard: 'tag-blue', wowhead: 'tag-purple', tavern: 'tag-purple' };
+  const newest = [...feed]
+    .map((item, i) => ({ item, i, t: Date.parse(String(item.date).replace(/\s*\(.*\)$/, '')) || 0 }))
+    .sort((a, b) => (b.t - a.t) || (a.i - b.i))
+    .slice(0, 3)
+    .map(x => x.item);
+  list.innerHTML = newest.map(item => {
+    const shortDate = String(item.date).replace(/\s*\(.*\)$/, '').replace(/,\s*\d{4}$/, '').replace(/^(\w{3})\w*/, '$1');
+    // "WoW: Forever Hotfixes — November 11, 2026: Judgement…" → "Judgement…" (the date column already shows the day)
+    const title = String(item.title).replace(/^.*?—\s*[A-Z][a-z]+ \d{1,2}, \d{4}:\s*/, '');
+    return `
+                <a class="hub-update-item" data-target-tab="news">
+                  <span class="hub-update-tag ${TAG_STYLES[item.sourceType] || 'tag-blue'}">${escapeHtml(item.tag || 'News')}</span>
+                  <span class="hub-update-title" title="${escapeHtml(item.title)}">${escapeHtml(title)}</span>
+                  <span class="hub-update-date">${escapeHtml(shortDate)}</span>
+                </a>`;
+  }).join('');
 }
 
 function applyNewsFilters() {

@@ -191,13 +191,13 @@ function buildSearchIndex() {
       targetId: 'card-forevercastbars'
     },
     {
-      title: 'ForeverLiquid (v1.4.0) — Cyberpunk Neon Fluid XP & Gold Ledger HUD',
+      title: 'ForeverLiquid (v1.4.1) — Cyberpunk Neon Fluid XP & Gold Ledger HUD',
       icon: '🧪',
       desc: '20-bubble fluid XP bar, live gold/hr cashflow ledger, mount fund ETA, and 5-instance/hr lockout radar (/fl).',
       targetId: 'card-foreverliquid'
     },
     {
-      title: 'ForeverDungeonJournal (v1.7.5) — Classic+ Encounter Atlas & BiS Wishlist',
+      title: 'ForeverDungeonJournal (v1.7.6) — Classic+ Encounter Atlas & BiS Wishlist',
       icon: '📖',
       desc: 'All 13 Classic+ dungeons, 3D boss viewer, calibrated maps, and /fj import in-game BiS wishlist starring.',
       targetId: 'card-foreverjournal'
@@ -374,7 +374,7 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
-    title: 'Excavation Site 4 (Level 26–31 Dungeon)',
+    title: 'Excavation Site: Wetlands (Level 26–31 Dungeon)',
     category: 'Phase 2 Dungeon',
     icon: '⛏️',
     desc: 'Wetlands Titan dig site with 4 bosses and Classic+ loot.',

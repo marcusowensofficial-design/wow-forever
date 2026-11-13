@@ -1,5 +1,10 @@
 # ForeverLiquid Changelog
 
+## v1.4.1 — Suffix-aware AH pricing
+- Loot is now priced by its exact random suffix (of the Eagle, of the Monkey, ...) using ForeverMarket 1.1.0's per-suffix data, instead of one price shared by every suffix.
+- If that suffix has never been seen on the AH, the cheapest suffix of the item is used and the loot tooltip says so ("Est. from cheapest suffix").
+- Still works with older ForeverMarket versions and with the saved ForeverMarketDB directly.
+
 ## v1.4.0 "Insight" — plan and what shipped
 
 ### Findings from the code review

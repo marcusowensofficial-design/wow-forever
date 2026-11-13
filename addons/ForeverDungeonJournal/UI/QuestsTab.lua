@@ -927,6 +927,20 @@ local function UpdateFactionButtons()
     frame.hordeQuestButton:SetShown(not single)
 end
 
+local function IsQuestLost(quest, complete, inLog)
+    if type(quest) ~= "table" or type(quest.lostIf) ~= "table" then return false end
+    if complete or inLog then return false end
+    for _, blockerID in ipairs(quest.lostIf) do
+        if type(blockerID) == "number" then
+            if (FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(blockerID)) or IsQuestFinished(blockerID) then
+                return true
+            end
+        end
+    end
+    return false
+end
+FDJ.IsQuestLost = IsQuestLost
+
 local function BuildVisibleQuestIndexes()
     wipe(FDJ.visibleQuestIndexes)
 
@@ -994,6 +1008,7 @@ RefreshQuestList = function()
             button.fdjRPGHidden = rpgHidden
             local complete = IsQuestFinished(quest.id)
             local inLog = IsQuestInLog(quest.id)
+            local lost = IsQuestLost(quest, complete, inLog)
             local ready = complete and inLog and not (FDJ.QuestTurnedIn and FDJ.QuestTurnedIn(quest.id))
 
             button.questIndex = questIndex
@@ -1137,7 +1152,10 @@ RefreshQuestList = function()
                     end
 
                     local prefix = tostring(chainIndex) .. ". "
-                    if step.id and IsQuestFinished(step.id) then
+                    -- acceptOnly steps (Rig Wars) unlock the next step as soon
+                    -- as they are in the quest log; they need not be handed in.
+                    local acceptOnlyMet = step.acceptOnly and step.id and IsQuestInLog(step.id)
+                    if step.id and (IsQuestFinished(step.id) or acceptOnlyMet) then
                         if row.statusIcon then
                             row.statusIcon:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
                             row.statusIcon:SetTexCoord(0, 1, 0, 1)
@@ -1149,7 +1167,8 @@ RefreshQuestList = function()
                     else
                         row.text:SetTextColor(0.78, 0.74, 0.66)
                     end
-                    row.text:SetText(prefix .. QuestField(step.id, "name", step.name))
+                    local suffix = step.acceptOnly and ("  " .. L("CHAIN_ACCEPT_ONLY")) or ""
+                    row.text:SetText(prefix .. QuestField(step.id, "name", step.name) .. suffix)
 
                     -- Put the prerequisite tick literally beside its title.
                     -- Example: "1. Underground Map  ✓"
@@ -1240,7 +1259,7 @@ RefreshQuestList = function()
                 button.hordeIcon:Hide()
                 if button.classIcon then button.classIcon:Hide() end
             end
-            if button.icon and button.icon.SetDesaturated then button.icon:SetDesaturated(rpgHidden) end
+            if button.icon and button.icon.SetDesaturated then button.icon:SetDesaturated(rpgHidden or lost) end
             if ready and button.turnIn then
                 button.allianceIcon:Hide()
                 button.hordeIcon:Hide()
@@ -1271,6 +1290,9 @@ RefreshQuestList = function()
 
             if complete then
                 button.name:SetTextColor(0.30, 1.00, 0.36)
+            elseif lost and not rpgHidden then
+                button.name:SetTextColor(0.50, 0.46, 0.40)
+                button.meta:SetTextColor(0.45, 0.41, 0.36)
             end
 
             button:Show()
@@ -1489,6 +1511,23 @@ function FDJ.PlaceStepItemButtons(items, startIndex, cursorY, width)
     return cursorY
 end
 
+local function PlaceQuestWarning(questID, rawWarning, detailWidth, cursorY)
+    if not frame or not frame.questWarningText then return cursorY end
+    frame.questWarningText:SetWidth(detailWidth)
+    local text = questID and QuestField(questID, "warning", rawWarning) or rawWarning
+    if type(text) == "string" and text ~= "" then
+        frame.questWarningText:ClearAllPoints()
+        frame.questWarningText:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+        frame.questWarningText:SetText(FreeText(text))
+        frame.questWarningText:SetTextColor(0.75, 0.10, 0.08)
+        frame.questWarningText:Show()
+        return cursorY + (frame.questWarningText:GetStringHeight() or 20) + 10
+    end
+    frame.questWarningText:SetText("")
+    frame.questWarningText:Hide()
+    return cursorY
+end
+
 -- The step page's "Find <NPC>" button (objectiveMap), made the first time a
 -- step needs it. Every other quest page hides it.
 local function EnsureObjectiveMapButton()
@@ -1660,7 +1699,7 @@ local function RefreshPrerequisiteQuestDetail(step)
     frame.questRewardHeader:SetText("")
     frame.questRewardSummary:SetText("")
 
-    local cursorY = 0
+    local cursorY = PlaceQuestWarning(questID, details.warning, detailWidth, 0)
     frame.questObjectiveHeader:ClearAllPoints()
     frame.questObjectiveHeader:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
     frame.questObjectiveHeader:Show()
@@ -1962,6 +2001,7 @@ RefreshQuestDetail = function()
             frame.noQuestMessage:Show()
         end
         frame.questDetailText:SetText("")
+        if frame.questWarningText then frame.questWarningText:SetText(""); frame.questWarningText:Hide() end
         if frame.questStartsText then frame.questStartsText:SetText("") end
         if frame.questNotesText then frame.questNotesText:SetText("") end
         if frame.questObjectiveHeader then frame.questObjectiveHeader:Hide() end
@@ -2003,9 +2043,15 @@ RefreshQuestDetail = function()
     local rewardWidth = math.floor((detailWidth - 10) / 2)
     local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
     local complete = IsQuestFinished(quest.id)
+    local inLog = IsQuestInLog(quest.id)
+    local lost = IsQuestLost(quest, complete, inLog)
 
     frame.selectedQuestName:SetText(QuestField(quest.id, "name", quest.name))
-    frame.selectedQuestName:SetTextColor(1.00, 0.78, 0.16)
+    if lost then
+        frame.selectedQuestName:SetTextColor(0.55, 0.50, 0.44)
+    else
+        frame.selectedQuestName:SetTextColor(1.00, 0.78, 0.16)
+    end
     frame.selectedQuestName:SetShadowColor(0, 0, 0, 1)
     frame.selectedQuestName:SetShadowOffset(1, -1)
 
@@ -2074,7 +2120,7 @@ RefreshQuestDetail = function()
 
     -- Keep the body text identical to Blizzard's parchment quest text. Only
     -- the section labels use white outlined text for visibility.
-    local cursorY = 0
+    local cursorY = PlaceQuestWarning(quest.id, quest.warning, detailWidth, 0)
 
     local function PlaceHeader(header, y)
         header:ClearAllPoints()

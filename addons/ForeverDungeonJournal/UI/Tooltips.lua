@@ -261,26 +261,35 @@ end
 
 FDJ.itemStatsSummaryCache = FDJ.itemStatsSummaryCache or {}
 
-function FDJ.GetItemStatsSummary(itemID, link)
+function FDJ.GetItemStatsSummary(itemID, link, fallbackTip)
     if not itemID then return nil, nil end
     itemID = tonumber(itemID)
     if not itemID then return nil, nil end
 
-    local cached = FDJ.itemStatsSummaryCache[itemID]
-    if cached then
-        return cached.summary, cached.reqLevel
+    local isPositiveID = itemID > 0
+    if not isPositiveID and type(fallbackTip) ~= "table" then
+        return "", nil
     end
 
-    link = link or ("item:" .. tostring(itemID))
+    if isPositiveID then
+        local cached = FDJ.itemStatsSummaryCache[itemID]
+        if cached then
+            return cached.summary, cached.reqLevel
+        end
+    end
+
+    link = link or (isPositiveID and ("item:" .. tostring(itemID)) or nil)
 
     local stats = nil
-    if C_Item and type(C_Item.GetItemStats) == "function" then
-        local ok, s = pcall(C_Item.GetItemStats, link)
-        if ok and type(s) == "table" and next(s) then stats = s end
-    end
-    if not stats and type(GetItemStats) == "function" then
-        local ok, s = pcall(GetItemStats, link)
-        if ok and type(s) == "table" and next(s) then stats = s end
+    if isPositiveID and link then
+        if C_Item and type(C_Item.GetItemStats) == "function" then
+            local ok, s = pcall(C_Item.GetItemStats, link)
+            if ok and type(s) == "table" and next(s) then stats = s end
+        end
+        if not stats and type(GetItemStats) == "function" then
+            local ok, s = pcall(GetItemStats, link)
+            if ok and type(s) == "table" and next(s) then stats = s end
+        end
     end
 
     local dpsText = nil
@@ -319,34 +328,44 @@ function FDJ.GetItemStatsSummary(itemID, link)
     local scannedReqLevel = nil
     local equipEffect = nil
 
-    if C_TooltipInfo and type(C_TooltipInfo.GetItemByID) == "function" then
-        local ok, data = pcall(C_TooltipInfo.GetItemByID, itemID)
-        if ok and type(data) == "table" and type(data.lines) == "table" then
-            for idx = 2, #data.lines do
-                local line = data.lines[idx]
-                local text = line and line.leftText
-                if type(text) == "string" and text ~= "" then
-                    table.insert(tooltipLines, text)
+    if not isPositiveID and type(fallbackTip) == "table" then
+        for _, line in ipairs(fallbackTip) do
+            local raw = (type(line) == "table") and ((line[1] or "") .. " " .. (line[2] or "")) or line
+            if type(raw) == "string" and raw ~= "" then
+                local clean = raw:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
+                table.insert(tooltipLines, clean)
+            end
+        end
+    else
+        if C_TooltipInfo and type(C_TooltipInfo.GetItemByID) == "function" then
+            local ok, data = pcall(C_TooltipInfo.GetItemByID, itemID)
+            if ok and type(data) == "table" and type(data.lines) == "table" then
+                for idx = 2, #data.lines do
+                    local line = data.lines[idx]
+                    local text = line and line.leftText
+                    if type(text) == "string" and text ~= "" then
+                        table.insert(tooltipLines, text)
+                    end
                 end
             end
         end
-    end
 
-    if #tooltipLines == 0 and FDJ.qualityScanTooltip then
-        FDJ.qualityScanTooltip:Hide()
-        FDJ.qualityScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-        if FDJ.qualityScanTooltip.ClearLines then FDJ.qualityScanTooltip:ClearLines() end
-        local ok = pcall(FDJ.qualityScanTooltip.SetHyperlink, FDJ.qualityScanTooltip, link)
-        if ok then
-            for idx = 2, 12 do
-                local line = _G["ForeverDungeonJournalQualityScanTooltipTextLeft" .. idx]
-                local text = line and line.GetText and line:GetText()
-                if type(text) == "string" and text ~= "" then
-                    table.insert(tooltipLines, text)
+        if #tooltipLines == 0 and FDJ.qualityScanTooltip then
+            FDJ.qualityScanTooltip:Hide()
+            FDJ.qualityScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+            if FDJ.qualityScanTooltip.ClearLines then FDJ.qualityScanTooltip:ClearLines() end
+            local ok = pcall(FDJ.qualityScanTooltip.SetHyperlink, FDJ.qualityScanTooltip, link)
+            if ok then
+                for idx = 2, 12 do
+                    local line = _G["ForeverDungeonJournalQualityScanTooltipTextLeft" .. idx]
+                    local text = line and line.GetText and line:GetText()
+                    if type(text) == "string" and text ~= "" then
+                        table.insert(tooltipLines, text)
+                    end
                 end
             end
+            FDJ.qualityScanTooltip:Hide()
         end
-        FDJ.qualityScanTooltip:Hide()
     end
 
     for _, text in ipairs(tooltipLines) do
@@ -436,7 +455,7 @@ function FDJ.GetItemStatsSummary(itemID, link)
     end
 
     local summaryText = table.concat(parts, "  |cff666666•|r  ")
-    if summaryText ~= "" or scannedReqLevel then
+    if isPositiveID and (summaryText ~= "" or scannedReqLevel) then
         FDJ.itemStatsSummaryCache[itemID] = { summary = summaryText, reqLevel = scannedReqLevel }
     end
     return summaryText, scannedReqLevel

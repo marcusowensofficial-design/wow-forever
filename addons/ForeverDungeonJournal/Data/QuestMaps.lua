@@ -8,7 +8,7 @@ FDJ.QUEST_START_MAPS = {
     -- Hall of Thanes quest givers.
     [96394] = { mapID = 1455, x = 0.333, y = 0.481, label = "Afadra Dunwall — top of Old Ironforge", targetName = "Afadra Dunwall", detail = "Top of Old Ironforge, outside the dungeon" },
     [96393] = { mapID = 1426, x = 0.647, y = 0.584, label = "Earthseer Farsen — Gol'Bolar Quarry, Dun Morogh", targetName = "Earthseer Farsen" },
-    [96403] = { mapID = 1455, x = 0.435, y = 0.520, label = "Thom Filch — Hall of Thanes portal, Ironforge", targetName = "Thom Filch" },
+    [96403] = { mapID = 1455, x = 0.326, y = 0.446, label = "Thom Filch — Hall of Thanes portal, Ironforge", targetName = "Thom Filch", detail = "Just across the short bridge in front of the Hall of Thanes portal, tucked behind a column (about 32.6, 44.6)" },
 
     -- Ruins of Lordaeron quest givers / entrance.
     [92401] = { mapID = 1421, x = 0.4450, y = 0.4300, label = "Tabitha Heartweaver — The Sepulcher" },
@@ -31,10 +31,11 @@ FDJ.QUEST_START_MAPS = {
     [6521] = { mapID = 1458, x = 0.5620, y = 0.9260, label = "Varimathras — Royal Quarter, Undercity" },
 
     -- The Stockade quest givers.
-    [386] = { mapID = 1433, x = 0.212, y = 0.466, label = "Guard Berton — Lakeshire" },
+    [386] = { mapID = 1433, x = 0.212, y = 0.466, label = "Guard Berton — Lakeshire", targetName = "Guard Berton", detail = "By the mailbox, left of the inn entrance in Lakeshire (21.2, 46.6)" },
     [377] = { mapID = 1431, x = 0.720, y = 0.478, label = "Councilman Millstipe — Darkshire" },
     [387] = { mapID = 1453, x = 0.518, y = 0.693, label = "Warden Thelwater — The Stockade", targetName = "Warden Thelwater" },
-    [388] = { mapID = 1453, x = 0.736, y = 0.466, label = "Nikova Raskol — Old Town" },
+    [388] = { mapID = 1453, x = 0.744, y = 0.600, label = "Nikova Raskol — Old Town", targetName = "Nikova Raskol",
+        patrol = { { 0.734, 0.554 }, { 0.763, 0.602 }, { 0.761, 0.637 }, { 0.737, 0.622 }, { 0.722, 0.608 } } },
     [378] = { mapID = 1437, x = 0.496, y = 0.182, label = "Motley Garmason — Dun Modr" },
     [391] = { mapID = 1453, x = 0.518, y = 0.693, label = "Warden Thelwater — The Stockade", targetName = "Warden Thelwater" },
 
@@ -101,7 +102,7 @@ FDJ.QUEST_START_MAPS = {
     [1394] = { mapID = 1458, x = 0.574, y = 0.654, label = "Parqual Fintallas — Undercity", targetName = "Parqual Fintallas" },
     [1445] = { mapID = 1435, x = 0.480, y = 0.550, label = "Fel'zerul — Swamp of Sorrows", targetName = "Fel'zerul" },
     [1446] = { mapID = 1425, x = 0.336, y = 0.752, label = "Atal'ai Exile — The Hinterlands", targetName = "Atal'ai Exile" },
-    [1475] = { mapID = 1453, x = 0.668, y = 0.434, label = "Brohann Caskbelly — Stormwind", targetName = "Brohann Caskbelly" },
+    [1475] = { mapID = 1453, x = 0.695, y = 0.404, label = "Brohann Caskbelly — Stormwind", targetName = "Brohann Caskbelly" },
     [2200] = { mapID = 1455, x = 0.360, y = 0.034, label = "Talvash del Kissel — Ironforge", targetName = "Talvash del Kissel" },
     [2202] = { mapID = 1418, x = 0.024, y = 0.460, label = "Jarkal Mossmeld — Badlands", targetName = "Jarkal Mossmeld" },
     [2283] = { mapID = 1454, x = 0.594, y = 0.368, label = "Dran Droffers — Orgrimmar", targetName = "Dran Droffers" },
@@ -132,7 +133,7 @@ FDJ.QUEST_START_MAPS = {
     [4082] = { mapID = 1418, x = 0.040, y = 0.468, label = "KILL ON SIGHT poster — Kargath, Badlands", targetName = "KILL ON SIGHT" },
     [4123] = { mapID = 1428, x = 0.652, y = 0.238, label = "Maxwort Uberglint — Burning Steppes", targetName = "Maxwort Uberglint" },
     [4126] = { mapID = 1426, x = 0.468, y = 0.524, label = "Ragnar Thunderbrew — Dun Morogh", targetName = "Ragnar Thunderbrew" },
-    [4132] = { mapID = 1418, x = 0.030, y = 0.476, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
+    [4132] = { mapID = 1418, x = 0.058, y = 0.474, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
     [4134] = { mapID = 1418, x = 0.030, y = 0.476, label = "Shadowmage Vivian Lagrave — Badlands", targetName = "Shadowmage Vivian Lagrave" },
     [4136] = { mapID = 1428, x = 0.660, y = 0.220, label = "Yuka Screwspigot — Burning Steppes", targetName = "Yuka Screwspigot" },
     [4241] = { mapID = 1428, x = 0.846, y = 0.688, label = "Marshal Maxwell — Burning Steppes", targetName = "Marshal Maxwell" },
@@ -146,7 +147,7 @@ FDJ.QUEST_START_MAPS = {
     [4771] = { mapID = 1423, x = 0.737, y = 0.505, label = "Betina Bigglezink — Eastern Plaguelands", targetName = "Betina Bigglezink" },
     [4862] = { mapID = 1428, x = 0.658, y = 0.220, label = "Kibler — Burning Steppes", targetName = "Kibler" },
     [4866] = { mapID = 1428, x = 0.650, y = 0.236, label = "Ragged John — Burning Steppes", targetName = "Ragged John" },
-    [4903] = { mapID = 1418, x = 0.030, y = 0.476, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
+    [4903] = { mapID = 1418, x = 0.058, y = 0.474, label = "Warlord Goretooth — Badlands", targetName = "Warlord Goretooth" },
     [4974] = { mapID = 1454, x = 0.320, y = 0.378, label = "Thrall — Orgrimmar", targetName = "Thrall" },
     [5081] = { mapID = 1428, x = 0.846, y = 0.688, label = "Marshal Maxwell — Burning Steppes", targetName = "Marshal Maxwell" },
     [5102] = { mapID = 1428, x = 0.846, y = 0.688, label = "Marshal Maxwell — Burning Steppes", targetName = "Marshal Maxwell" },
@@ -175,25 +176,26 @@ FDJ.QUEST_START_MAPS = {
     [7041] = { mapID = 1443, x = 0.684, y = 0.088, label = "Talendria — Desolace", targetName = "Talendria" },
     [7064] = { mapID = 1443, x = 0.268, y = 0.776, label = "Selendra — Desolace", targetName = "Selendra" },
     [7065] = { mapID = 1443, x = 0.638, y = 0.106, label = "Keeper Marandis — Desolace", targetName = "Keeper Marandis" },
-    [7067] = { mapID = 1443, x = 0.434, y = 0.848, label = "Centaur Pariah — Desolace", targetName = "Centaur Pariah" },
+    [7067] = { mapID = 1443, x = 0.515, y = 0.874, label = "Centaur Pariah — Desolace", targetName = "Centaur Pariah" },
     [7068] = { mapID = 1454, x = 0.388, y = 0.854, label = "Uthel'nay — Orgrimmar", targetName = "Uthel'nay" },
-    [7070] = { mapID = 1445, x = 0.452, y = 0.244, label = "Archmage Tervosh — Dustwallow Marsh", targetName = "Archmage Tervosh" },
+    -- Wowhead Forever (confirmed Nov 2026): Theramore Isle mage tower.
+    [7070] = { mapID = 1445, x = 0.660, y = 0.490, label = "Archmage Tervosh — Theramore mage tower, Dustwallow Marsh", targetName = "Archmage Tervosh", detail = "Centre of Theramore Isle, in the mage tower (66.0, 49.0)" },
     [7441] = { mapID = 1444, x = 0.768, y = 0.374, label = "Azj'Tordin — Feralas", targetName = "Azj'Tordin" },
     [7481] = { mapID = 1444, x = 0.744, y = 0.440, label = "Sage Korolusk — Feralas", targetName = "Sage Korolusk" },
     [7482] = { mapID = 1444, x = 0.310, y = 0.442, label = "Scholar Runethorn — Feralas", targetName = "Scholar Runethorn" },
     [7488] = { mapID = 1444, x = 0.304, y = 0.460, label = "Latronicus Moonspear — Feralas", targetName = "Latronicus Moonspear" },
     [7489] = { mapID = 1444, x = 0.760, y = 0.438, label = "Talo Thornhoof — Feralas", targetName = "Talo Thornhoof" },
-    [92456] = { mapID = 1453, x = 0.404, y = 0.652, label = "Shylamiir — Stormwind", targetName = "Shylamiir" },
+    [92456] = { mapID = 1453, x = 0.312, y = 0.628, label = "Shylamiir — Stormwind", targetName = "Shylamiir" },
     [92457] = { mapID = 1421, x = 0.684, y = 0.452, label = "Image of Archmage Modera — Silverpine Forest", targetName = "Image of Archmage Modera" },
     [92458] = { mapID = 1421, x = 0.684, y = 0.452, label = "Image of Archmage Modera — Silverpine Forest", targetName = "Image of Archmage Modera" },
     [92489] = { mapID = 1453, x = 0.488, y = 0.874, label = "High Sorcerer Andromath — Stormwind", targetName = "High Sorcerer Andromath" },
     [95646] = { mapID = 1437, x = 0.562, y = 0.404, label = "Rethiel the Greenwarden — Wetlands", targetName = "Rethiel the Greenwarden" },
     [95682] = { mapID = 1437, x = 0.514, y = 0.592, label = "Deathstalker Agent — Wetlands", targetName = "Deathstalker Agent", detail = "Hills above the Dragonmaw camp near Thelgen Rock (uphill path starts at 52.3, 66.0 next to the meeting stone)" },
     [95697] = { mapID = 1454, x = 0.574, y = 0.534, label = "Borstan — Orgrimmar", targetName = "Borstan" },
-    [95772] = { mapID = 1433, x = 0.256, y = 0.464, label = "Dorin Songblade — Redridge Mountains", targetName = "Dorin Songblade" },
+    [95772] = { mapID = 1433, x = 0.256, y = 0.466, label = "Dorin Songblade — Redridge Mountains", targetName = "Dorin Songblade" },
     [96800] = { mapID = 1416, x = 0.094, y = 0.626, label = "Magus Olvek — Alterac Mountains", targetName = "Magus Olvek" },
     [96984] = { mapID = 1421, x = 0.684, y = 0.452, label = "Image of Archmage Modera — Silverpine Forest", targetName = "Image of Archmage Modera" },
-    [96986] = { mapID = 1424, x = 0.624, y = 0.204, label = "Melisara — Hillsbrad Foothills", targetName = "Melisara" },
+    [96986] = { mapID = 1424, x = 0.6261, y = 0.2064, label = "Melisara — in front of the chapel, Tarren Mill", targetName = "Melisara" },
     [96988] = { mapID = 1458, x = 0.458, y = 0.732, label = "Doctor Martin Felben — Undercity", targetName = "Doctor Martin Felben" },
     [98815] = { mapID = 1437, x = 0.084, y = 0.558, label = "James Halloran — Wetlands", targetName = "James Halloran" },
     [98823] = { mapID = 1456, x = 0.702, y = 0.336, label = "Bashana Runetotem — Thunder Bluff", targetName = "Bashana Runetotem", detail = "Turn in Elder Knowledge here (needs the Titan Relic from Relic Guardian in Excavation Site: Wetlands). She then offers Earthen Echo." },
@@ -226,13 +228,13 @@ FDJ.QUEST_START_MAPS = {
     [7647] = { mapID = 1453, x = 0.494, y = 0.476, label = "Lord Grayson Shadowbreaker — Stormwind", targetName = "Lord Grayson Shadowbreaker" },
     [7668] = { mapID = 1454, x = 0.384, y = 0.360, label = "Sagorne Creststrider — Orgrimmar", targetName = "Sagorne Creststrider" },
     [5463] = { mapID = 1423, x = 0.739, y = 0.490, label = "Leonid Barthalomew the Revered — Eastern Plaguelands", targetName = "Leonid Barthalomew the Revered" },
-    [707] = { mapID = 1455, x = 0.738, y = 0.130, label = "Prospector Stormpike — Ironforge", targetName = "Prospector Stormpike" },
+    [707] = { mapID = 1455, x = 0.747, y = 0.117, label = "Prospector Stormpike — Ironforge", targetName = "Prospector Stormpike" },
     [8415] = { mapID = 1453, x = 0.494, y = 0.476, label = "Lord Grayson Shadowbreaker — Stormwind", targetName = "Lord Grayson Shadowbreaker" },
     [5281] = { mapID = 1423, x = 0.718, y = 0.544, label = "Caretaker Alen — Eastern Plaguelands", targetName = "Caretaker Alen" },
     [5961] = { mapID = 1458, x = 0.580, y = 0.916, label = "Lady Sylvanas Windrunner — Undercity", targetName = "Lady Sylvanas Windrunner" },
-    [722] = { mapID = 1418, x = 0.443, y = 0.120, label = "Hammertoe Grez — Uldaman excavation (outside the instance)", detail = "Hammertoe is in the outer excavation caves, before the instance portal" },
+    [722] = { mapID = 1418, x = 0.443, y = 0.120, label = "Hammertoe Grez — Uldaman excavation (outside the instance)", detail = "Outer excavation caves, before the instance portal. This is his WoW Classic (2019) spot and he may have moved in Forever: if he is not here, check the Wowhead comments or coordinates. Enter the Uldaman excavation cave. In the big hall go forward (jump down or go around) and head down, deeper into the cave. Hug the wall on your right: just before the Dig One hall you make a 180-degree turn to the right, and Hammertoe Grez is there. Level ~36 elites stand along the way." },
     -- Starter locations from the Forever starter-location guide (safety net).
-    [132] = { mapID = 1433, x = 0.214, y = 0.454, label = "Wiley the Black — Redridge Mountains", targetName = "Wiley the Black", detail = "Wiley the Black: Lakeshire inn, Redridge Mountains" },
+    [132] = { mapID = 1433, x = 0.214, y = 0.452, label = "Wiley the Black — Lakeshire, Redridge Mountains", targetName = "Wiley the Black", detail = "He moves between the Lakeshire buildings: 21.4, 45.2 or 26.6, 45.2" },
     [135] = { mapID = 1436, x = 0.563, y = 0.475, label = "Gryan Stoutmantle — Westfall", targetName = "Gryan Stoutmantle", detail = "Gryan Stoutmantle: Sentinel Hill, Westfall" },
     [141] = { mapID = 1453, x = 0.783, y = 0.707, label = "Master Mathias Shaw — Stormwind", targetName = "Master Mathias Shaw", detail = "Master Mathias Shaw: SI:7, Old Town, Stormwind" },
     [142] = { mapID = 1436, x = 0.563, y = 0.475, label = "Gryan Stoutmantle — Westfall", targetName = "Gryan Stoutmantle", detail = "Gryan Stoutmantle: Sentinel Hill, Westfall" },
@@ -262,6 +264,7 @@ FDJ.QUEST_START_MAPS = {
     [92750] = { mapID = 1453, x = 0.619, y = 0.306, label = "Sprite Jumpsprocket — Stormwind", targetName = "Sprite Jumpsprocket", detail = "Sprite Jumpsprocket: Dwarven District, Stormwind" },
     [92751] = { mapID = 1453, x = 0.803, y = 0.701, label = "Jasper Fel — Stormwind", targetName = "Jasper Fel", detail = "Jasper Fel: SI:7, Old Town, Stormwind" },
     [92752] = { mapID = 1453, x = 0.619, y = 0.306, label = "Sprite Jumpsprocket — Stormwind", targetName = "Sprite Jumpsprocket", detail = "Sprite Jumpsprocket: Dwarven District, Stormwind" },
+    [96776] = { mapID = 1412, x = 0.338, y = 0.237, label = "Olana Brighthoof - Skywatcher Plateau, Mulgore", targetName = "Olana Brighthoof", detail = "Olana Brighthoof: Camp Gev'rek, Skywatcher Plateau, Mulgore (33.8, 23.7)" },
 }
 
 -- BEGIN turninspots
@@ -274,8 +277,11 @@ FDJ.TURNIN_SPOTS = {
     { mapID = 1453, x = 0.562, y = 0.540, label = "Orphan Matron Nightingale — Cathedral Square, Stormwind", targetName = "Orphan Matron Nightingale" },
     { mapID = 1458, x = 0.733, y = 0.326, label = "Oran Snakewrithe — Magic Quarter, Undercity", targetName = "Oran Snakewrithe" },
     -- The Deadmines
-    { mapID = 1453, x = 0.536, y = 0.652, label = "Baros Alexston — City Hall, Cathedral Square, Stormwind", targetName = "Baros Alexston" },
-    { mapID = 1436, x = 0.526, y = 0.538, label = "Alba Fairmoon — Sentinel Hill inn, Westfall", targetName = "Alba Fairmoon" },
+    -- City Hall is east/north-east of the Cathedral, next to the Argent Dawn
+    -- building. Wowhead Forever also lists a spawn at 49.0, 30.2 (fallback
+    -- until confirmed in game).
+    { mapID = 1453, x = 0.576, y = 0.478, label = "Baros Alexston — City Hall, Cathedral Square, Stormwind", targetName = "Baros Alexston", detail = "City Hall, east of the Cathedral next to the Argent Dawn building (57.6, 47.8). Not there? Check 49.0, 30.2." },
+    { mapID = 1436, x = 0.524, y = 0.530, label = "Alba Fairmoon — Sentinel Hill inn, Westfall", targetName = "Alba Fairmoon", detail = "Inside the Sentinel Hill inn (52.4, 53.0); she may stand at 52.6, 53.2 during her quests" },
     -- Excavation Site: Wetlands
     { mapID = 1437, x = 0.119, y = 0.588, label = "Caitlin Grassman — Menethil Harbor, Wetlands", targetName = "Caitlin Grassman" },
     { mapID = 1455, x = 0.772, y = 0.118, label = "High Explorer Magellas — Hall of Explorers, Ironforge", targetName = "High Explorer Magellas" },
@@ -367,7 +373,13 @@ FDJ.MAP_QUEST_PINS = {
         } },
     },
     ["Excavation Site: Wetlands"] = {
-        { floor = 1, x = 0.440, y = 0.580, spots = {
+        { floor = 1, x = 0.262, y = 0.668, spots = {
+            { name = "Ardin Grassman", quests = {
+                { id = 95647, name = "Lost in the Thicket Things", dungeon = "Excavation Site: Wetlands", main = 95809, acts = { "end" } },
+                { id = 95809, name = "Heartwoven", dungeon = "Excavation Site: Wetlands", acts = { "start" } },
+            } },
+        } },
+        { floor = 1, x = 0.074, y = 0.497, spots = {
             { name = "Daewyn Songblade", quests = {
                 { id = 95772, name = "Songblade Search", dungeon = "Excavation Site: Wetlands", acts = { "end" } },
                 { id = 95795, name = "Fallen in the Fen", dungeon = "Excavation Site: Wetlands", acts = { "start" } },

@@ -18,6 +18,7 @@ local toggle, backdrop
 -- True while the journal is open on a boss page that was opened from a boss
 -- pin on the world map: the world map keeps showing the dungeon map.
 local keepWithJournal = false
+local pendingCombatRefresh = false
 
 local function Enabled()
     ForeverDungeonJournalDB = ForeverDungeonJournalDB or {}
@@ -28,6 +29,10 @@ local function Journal() return _G.ForeverDungeonJournalFrame end
 
 local function Detach()
     if not attached then return end
+    if InCombatLockdown and InCombatLockdown() then
+        pendingCombatRefresh = true
+        return
+    end
     attached = false
     local journal = Journal()
     local panel = journal and journal.dungeonMapPanel
@@ -44,6 +49,10 @@ local function Detach()
 end
 
 local function Attach(dungeonName)
+    if InCombatLockdown and InCombatLockdown() then
+        pendingCombatRefresh = true
+        return false
+    end
     local journal = Journal()
     local panel = journal and journal.dungeonMapPanel
     local mapData = FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[dungeonName]
@@ -254,6 +263,10 @@ local function UpdateToggle(dungeonName)
 end
 
 function FDJ.RefreshWorldMapOverlay()
+    if InCombatLockdown and InCombatLockdown() then
+        pendingCombatRefresh = true
+        return
+    end
     if not WorldMapFrame or not WorldMapFrame:IsShown() then Detach() return end
     local dungeonName = FDJ.CurrentDungeon and FDJ.CurrentDungeon()
     -- rpgpartial: RPG Mode keeps the dungeon map locked until 20% of the trash.
@@ -287,7 +300,15 @@ end
 local watcher = CreateFrame("Frame")
 watcher:RegisterEvent("PLAYER_LOGIN")
 watcher:RegisterEvent("PLAYER_ENTERING_WORLD")
+watcher:RegisterEvent("PLAYER_REGEN_ENABLED")
 watcher:SetScript("OnEvent", function(_, event)
+    if event == "PLAYER_REGEN_ENABLED" then
+        if pendingCombatRefresh then
+            pendingCombatRefresh = false
+            Safe()
+        end
+        return
+    end
     if event == "PLAYER_ENTERING_WORLD" then
         wantWorld = false -- each dungeon visit starts on the dungeon map
         if WorldMapFrame and WorldMapFrame:IsShown() then Safe() end

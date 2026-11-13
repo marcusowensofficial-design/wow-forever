@@ -109,7 +109,7 @@ function renderBiSApp() {
     <!-- Midway Leveling BiS Context Callout -->
     <div class="bis-leveling-callout" style="background: rgba(14, 116, 144, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px; padding: 0.6rem 1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
       <div style="font-size: 0.86rem; color: #cbd5e1;">
-        <strong style="color: #38bdf8;">⚡ Midway Leveling Power Spike:</strong> Curated Level 25–30 equipment benchmarks (Excavation Site 4, Dalaran, RFK, Gnomeregan) to optimize your 21-point talent capstone dungeon grinding. Level 60 Pre-Raid BiS database launches November 4!
+        <strong style="color: #38bdf8;">⚡ Midway Leveling Power Spike:</strong> Curated Level 25–30 equipment benchmarks (Excavation Site: Wetlands, Dalaran, RFK, Gnomeregan) to optimize your 21-point talent capstone dungeon grinding. Level 60 Pre-Raid BiS database launches November 4!
       </div>
     </div>
 
@@ -284,7 +284,7 @@ function renderBiSApp() {
           <h4><span>💡</span> WoW Forever Beta Itemization</h4>
           <p>
             In WoW Forever Build 1.60.1, level 30 characters gain access to newly re-itemized content from the 
-            <strong>City of Dalaran (Level 26–32)</strong> and <strong>Excavation Site 4 (Level 27–34)</strong>, 
+            <strong>City of Dalaran (Level 26–32)</strong> and <strong>Excavation Site: Wetlands (Level 27–34)</strong>, 
             along with classic favorites like <em>Razorfen Kraul</em>, <em>Gnomeregan</em>, and <em>SM Graveyard</em>.
           </p>
           <div class="bis-tip-item">

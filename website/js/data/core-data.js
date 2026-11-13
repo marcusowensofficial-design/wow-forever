@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of November 9, 2026 (Live build 1.60.1.70707)
+ * Up-to-date as of November 13, 2026 (Live build 1.60.1.70707)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -22,7 +22,7 @@ const WOW_FOREVER_DATA = {
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 9, 2026"
+    "lastUpdated": "November 13, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -41,14 +41,14 @@ const WOW_FOREVER_DATA = {
       "dates": "October 1 – October 23, 2026",
       "duration": "23 Days (Extended to Oct 23, 10:00 AM PDT)",
       "cap": 30,
-      "highlights": "Level cap increased to 30! Extended through Oct 23 at 10:00 AM PDT. Excavation Site 4 (Wetlands), City of Dalaran (Alterac), Ashenvale & Hillsbrad open world PvP, Warsong Gulch 20–29 bracket, Tier 2 Camping (Ironwood & Silk Tents)."
+      "highlights": "Level cap increased to 30 on October 1. New dungeon Excavation Site: Wetlands (26–31) plus Razorfen Downs and Uldaman opened for testing. Extended through Oct 23 at 10:00 AM PDT."
     },
     "stressTest": {
       "title": "Open Beta Stress Test (All Battle.net Accounts)",
-      "dates": "October 21 – October 22, 2026",
-      "duration": "Extended Window (No Invite / Active Sub Required)",
+      "dates": "October 21, 2026 (2:00 PM PDT, ~4 hours)",
+      "duration": "~4 Hours (Any WoW Account, No Subscription Required)",
       "cap": 30,
-      "highlights": "Stress testing server infrastructure and dynamic megarealm layering ahead of global launch. Free for all Battle.net accounts without invite or active subscription."
+      "highlights": "Four-hour stress test on the regional launch hardware, open to any WoW account. The closed beta was offline during the test and stress-test characters were deleted afterwards."
     },
     "nameReservation": {
       "title": "Early Name Reservation & Character Creation",
@@ -91,7 +91,7 @@ const WOW_FOREVER_DATA = {
       "heroTitle": "Phase 2: LIVE NOW",
       "heroBadge": "Day {daysElapsed} of 37",
       "headline": "Beta Phase 2 Extended: The Level 30 Cap Expansion",
-      "subline": "Beta Phase 2 has been extended through Friday, October 23 at 10:00 AM PDT! Level 30 cap active with Excavation Site 4 & the City of Dalaran.",
+      "subline": "Beta Phase 2 has been extended through Friday, October 23 at 10:00 AM PDT! Level 30 cap active with Excavation Site: Wetlands & the City of Dalaran.",
       "milestonesTitle": "Beta Phase 2 Milestones",
       "squadBracket": "Beta Phase 2 (Cap 30 - Live Now!)"
     },
@@ -198,50 +198,121 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
-      "id": "news-79",
-      "title": "Darkmoon Faire Is Live in WoW: Forever",
+      "id": "news-85",
+      "title": "What's Next for WoW: Forever — Tier 1 Raids Dec 9, Hardcore This Winter, New Raids in 2027",
+      "source": "Blizzard Roadmap Recap",
+      "sourceType": "blizzard",
+      "author": "WoW Forever Portal",
+      "date": "November 12, 2026",
+      "tag": "Roadmap",
+      "url": "https://www.icy-veins.com/wow-forever/roadmap",
+      "summary": "Blizzard's published roadmap: three raids open December 9, the Hardcore ruleset arrives this winter, and spring and summer 2027 each bring new raids, dungeons and a PvP season refresh. Blizzard notes timing is subject to change.",
+      "content": `Where WoW: Forever goes after launch, per Blizzard's roadmap (timing subject to change):
+
+• **December 9, 2026 — Tier 1 Raids:** Barrow Deeps (10-player), Hyjal Summit (20-player) and Onyxia's Lair (40-player). World Buffs do not work in raids.
+• **Winter 2026/27 — Hardcore ruleset:** Confirmed for after launch; no date announced yet.
+• **Early 2027:** Updated Skyborne character models and Druid forms. Blizzard has said a Shaman talent rework would come via a patch in early 2027 at the earliest.
+• **Spring 2027:** Two new raids (10- and 20-player), two dungeons, a new questing area, a legendary questline and a PvP season refresh.
+• **Summer 2027:** A revamped iconic raid plus a new raid, expanded world content, two dungeons, a PvP season refresh, and profession & Legacy updates.
+• **Shop note:** The limited Warcraft Forever Collection stays in the Battle.net Shop until January 11, 2027.`
+    },
+    {
+      "id": "news-84",
+      "title": "Faction Balance Limits on PvP Rulesets; Auction House Deposit Change Pushed to November 17",
+      "source": "Blizzard Official Forums",
+      "sourceType": "blizzard",
+      "author": "Kaivax (Community Manager)",
+      "date": "November 11, 2026",
+      "tag": "Realm Operations",
+      "url": "https://eu.forums.blizzard.com/en/wow/t/641169",
+      "summary": "Blizzard is restricting the larger faction on specific PvP rulesets (Horde on NA PvP, Alliance on EU RP-PvP) and pushed the Auction House minimum-deposit change to the November 17/18 weekly maintenance.",
+      "content": `Several realm-operations updates landed this week:
+
+• **Faction balance (Nov 10–11):** Blizzard is limiting the larger faction on certain PvP rulesets — Horde on the North American PvP rulesets and Alliance on the European Roleplay-PvP ruleset. Kaivax stated the goal is to get "as close to a 50/50 faction balance as possible."
+• **Auction House deposit:** A hotfix that would have lowered the minimum AH deposit from 1 silver to 1 copper was withdrawn. It is now planned for weekly maintenance on November 17 (Americas) / November 18 (Europe). Until then the minimum deposit stays at 1 silver.
+• **Item Restoration** was disabled on November 11 while Blizzard investigates a critical bug.
+• **Twitch Drop:** The launch Twitch Drop campaign ended November 13. The Pouch of Violet Dust toy is slated to be removed from collections in early December.`
+    },
+    {
+      "id": "news-83",
+      "title": "WoW: Forever Hotfixes — November 11, 2026: Judgement Becomes a Ranged Attack, Tailoring Bag Fixes & Riverglades Damage Cuts",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 11, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Paladin Judgement now uses Ranged hit and no longer procs melee effects, Hunter Volley stops on movement, Tailoring bag recipes corrected, and Riverglades Twilight elites hit far less hard.",
+      "content": `Hotfixes deployed November 11, 2026:
+
+• **Classes:**
+  - **Paladin:** *Judgement* is now a Ranged Attack — it uses Ranged hit chance and no longer triggers melee procs. *Unsealed Fury* (Retribution) no longer echoes Windfury Totem attacks.
+  - **Hunter:** *Volley* no longer activates procs and stops channeling when you move.
+  - **Druid (Feral):** *Rend and Tear* now applies to Pounce Bleed.
+  - **Priest:** *Confounding Flash* (Gnome) and *Twilight Focus* work in Shadowform.
+  - **Shaman:** *Flametongue Totem* Rank 2 works.
+• **Professions — Tailoring bags corrected:** Red Mageweave Bag (5 bolts, 14 slots), Green Silk Pack (5 bolts, 12 slots), Black Silk Pack (6 bolts, 12 slots), Green & Red Woolen Bag (5 bolts, 10 slots).
+• **Riverglades:** Twilight Enforcer's Smash greatly reduced, Executioner Morg's damage lowered, Twilight Forgemaster's Mark of Flames now +50 damage (was 1,000).
+• **Items:** Bloody Claws of Attack grant +1 Fist skill; Earthen Silk Slippers no longer give excess spell damage.
+• **World:** Mounting works again in named areas of Shen'dralas.`
+    },
+    {
+      "id": "news-82",
+      "title": "WoW: Forever Hotfixes — November 10, 2026: Enhancement Shaman Rework, Affliction Soul Siphon & Hunter Pet Health Fix",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 10, 2026",
+      "tag": "Class Balancing",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "The promised class tuning shipped: Stormstrike and Maelstrom Weapon reworked, Affliction DoTs now feed Soul Siphon, Warlock demons sturdier, Hunter pet health corrected to 115%, racial vendor mounts now Bind-on-Pickup, and most level 48+ quests award gold.",
+      "content": `The class tuning Blizzard previewed shipped with the November 10 hotfixes:
+
+• **Enhancement Shaman:** *Stormstrike* lowered to 100% weapon damage with an 8 sec cooldown. *Maelstrom Weapon* now grants a flat 20% cast time and mana cost reduction per stack with a rank-based 6–10 procs per minute. *Mental Dexterity* Intellect-to-AP ratio lowered. Weapon imbues and weapon totems can now be active together.
+• **Affliction Warlock:** *Soul Siphon* boosts Drain Life, Drain Soul and Wrack by 4/8/12% per Corruption, Siphon Life or Bane of Agony on the target (max 36%). *Wrack* damage lowered 30%, but it now speeds up those DoT ticks while channeled.
+• **Warlock demons:** Imp Firebolt (ranks 1–4) and Imp health increased; Voidwalker, Incubus and Succubus base health +~15%.
+• **Hunter:** Pet health corrected to 115% of normal (a bug had it at 150%). Arcane Shot and Summon Hawk cost 11% of base mana; Hawk melee damage +~80%.
+• **Druid:** Omen of Clarity works after a spec swap; Nature's Swiftness also makes Wild Growth instant.
+• **Warrior (Arms):** Sweeping Strikes keeps its charges if no second target is hit.
+• **Items & Economy:** Racial vendor mounts are now Bind-on-Pickup. Rage of the Storm (Shaman quest reward) now has Strength instead of Intellect. Most quests level 48+ now also reward gold.
+• **Professions:** Journeyman Campfire Kit needs Cooking 90 (was 140); Coarse Grinding Stone skill-ups extended to 90; Swiftstrike Shot and Swiftfeather Arrow no longer Bind-on-Pickup.`
+    },
+    {
+      "id": "news-81",
+      "title": "WoW: Forever Hotfixes — November 9, 2026: Dungeon XP +50%, Drowned City Damage Cut & Zone Population Lowered",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 9, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Experience from all dungeon enemy kills increased by 50%, The Drowned City's Deathless Marrow trash toned down, mounting disabled inside Stratholme, and player caps lowered in congested zones.",
+      "content": `Hotfixes deployed November 9, 2026:
+
+• **Dungeons:** Experience from all enemy kills in dungeons **increased by 50%**.
+  - *The Drowned City:* Creatures no longer deal ~30% extra damage. Deathless Marrow health −25%, Deathless Sorcerer Fireball −25%, Deathless Watcher Charge −50%, Deathless Guardian Shield Slam used ~50% less often.
+  - *Blackrock Depths:* Throne room doors reopen after a wipe on Emperor Thaurissan.
+  - *Stratholme:* Mounting inside is no longer possible.
+  - *The Shaper's Terrace:* Vitrix, Snowtalon and Cinder drop correct loot.
+• **Classes:** Feral Charge (Cat) enters combat immediately; Natural Instinct applies to Lacerate and Pounce. Flamestrike ground ticks no longer consume Clearcasting. Consecration keeps its bonus after targets despawn. Power Infusion persists on allies. Incinerate removed from non-Destruction Warlocks.
+• **Items:** Pouch of Violet Dust Camp Benefits aura gets its extra hour. Waylaid Crates and Craftsman's Writs now drop inside dungeons. Nifty Stopwatch no longer shares a cooldown with movement abilities.
+• **World:** Population lowered in congested zones (PvP ruleset reduced further). Un'Goro Young Diemetradons now level 51–52.
+• **Quests:** Players below 60 can loot Hyjal Owl Nests for "Feathers in Flight."`
+    },
+    {
+      "id": "news-80",
+      "title": "Darkmoon Faire Is Live in WoW: Forever (November 9–16)",
       "source": "Wowhead",
       "sourceType": "wowhead",
       "author": "Wowhead News Team",
       "date": "November 9, 2026",
       "tag": "Live Event",
-      "url": "https://www.wowhead.com/forever",
-      "summary": "Wowhead reports the Darkmoon Faire is now live on WoW: Forever realms and has posted a guide.",
-      "content": `Wowhead posted a November 9, 2026 guide titled *Darkmoon Faire is Live!* for WoW: Forever.
+      "url": "https://www.wowhead.com/forever/news",
+      "summary": "The first Darkmoon Faire of WoW: Forever runs November 9 through November 16, 2026.",
+      "content": `The first Darkmoon Faire on WoW: Forever live realms opened November 9 and runs through **November 16, 2026**.
 
-• Only the headline was available when this entry was written - see the Wowhead Forever guide for rewards, quests and schedule.`
-    },
-    {
-      "id": "news-78",
-      "title": "Class Tuning Incoming November 10: Hunter Pets, Voidwalkers, Affliction Warlock and Enhancement Shaman",
-      "source": "Blizzard Official Forums",
-      "sourceType": "blizzard",
-      "author": "Blizzard Entertainment",
-      "date": "November 10, 2026",
-      "tag": "Class Balancing",
-      "url": "https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-november-10/2404092",
-      "summary": "Blizzard announced hotfix class tuning for November 10: sturdier Hunter pets and Voidwalkers, Affliction DoTs worth casting alongside Wrack, and Strength as the top Enhancement Shaman stat.",
-      "content": `Blizzard announced class tuning hotfixes for Tuesday, November 10, 2026. No time of day or numbers had been published when this entry was written.
-
-• **Hunter pets & Voidwalkers:** Durability will move closer to Classic Era levels, with stats adjusted as needed.
-• **Affliction Warlock:** Siphon Life, Corruption and Bane of Agony should become worth casting alongside Wrack, without changing total damage output.
-• **Enhancement Shaman:** Strength becomes the strongest stat. Best items carry Strength or Attack Power plus some Intellect and/or Spell Power, so leveling Enhancement Shamans should collect Strength and Attack Power gear.
-• Blizzard says it may tune classes on Tuesdays as new issues surface.`
-    },
-    {
-      "id": "news-77",
-      "title": "Blizzard Posts 'Dungeon Enemy XP Increased' for WoW: Forever Live Realms",
-      "source": "Warcraft Tavern",
-      "sourceType": "tavern",
-      "author": "Warcraft Tavern",
-      "date": "November 8, 2026",
-      "tag": "Live Realm Update",
-      "url": "https://www.warcrafttavern.com/forever/",
-      "summary": "Blizzard published a November 8 update raising the experience granted by dungeon enemy kills. Exact values were not available when this entry was written - check the Blizzard post for numbers.",
-      "content": `A November 8, 2026 Blizzard post titled *Dungeon Enemy XP Increased* raises the experience earned from killing enemies inside dungeons on live realms.
-
-• Exact percentages and affected dungeon ranges were not confirmed when this entry was written.
-• Earlier in the beta (October 8), Blizzard had already raised base dungeon kill XP by 20% and fixed mixed-level groups earning very little XP per kill.`
+• Turn in Darkmoon tickets and play the Faire games while it is in town.
+• Check Wowhead's Forever guides for the prize list and which Darkmoon buff to pick for your class.`
     },
     {
       "id": "news-76",
@@ -251,7 +322,7 @@ const WOW_FOREVER_DATA = {
       "author": "Wowhead News Team",
       "date": "November 7, 2026",
       "tag": "Launch Coverage",
-      "url": "https://www.wowhead.com/forever",
+      "url": "https://www.wowhead.com/forever/news",
       "summary": "Blizzard says WoW: Forever is the largest launch in World of Warcraft history, and the race to Level 60 finished about three days after launch.",
       "content": `Launch-week coverage from Wowhead:
 
@@ -261,40 +332,19 @@ const WOW_FOREVER_DATA = {
     {
       "id": "news-75",
       "title": "Blizzard Flags Upcoming Class Tuning for Shamans, Warlocks and Hunter Pets",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Wowhead News Team",
-      "date": "November 6, 2026",
-      "tag": "Class Balancing",
-      "url": "https://www.wowhead.com/forever",
-      "summary": "Blizzard has identified problems with Shamans, Warlocks and Hunter pets and plans a tuning pass. Warlock PvE buffs already shipped in the November 7 hotfixes.",
-      "content": `Blizzard said it has identified class and Hunter pet issues it intends to address:
-
-• Classes named: Shaman and Warlock, plus Hunter pets.
-• The November 7 live hotfixes already include Warlock PvE damage increases (see the November 7 hotfix entry).
-• Further tuning details had not been published when this entry was written.`
-    },
-    {
-      "id": "news-74",
-      "title": "WoW: Forever Live Hotfixes — November 7, 2026: Tanning Rack Skill Floor, Warlock PvE Buffs & Tabard Fix",
-      "source": "Blizzard Official Hotfixes",
+      "source": "Blizzard Official Forums",
       "sourceType": "blizzard",
       "author": "Blizzard Entertainment",
-      "date": "November 7, 2026",
-      "tag": "Official Hotfix",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-7-2026",
-      "summary": "Tanning Rack Leatherworking crafting requirement lowered to 125 (was 140), Warlock Unstable Affliction and Rain of Fire PvE damage increased by 20%, and Rexxar tabard rendering resolved.",
-      "content": `Blizzard deployed hotfixes to WoW: Forever live realms on November 7, 2026:
+      "date": "November 6, 2026",
+      "tag": "Class Balancing",
+      "url": "https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-november-10/2404092",
+      "summary": "Blizzard identified problems with Shamans, Warlocks and Hunter pets and scheduled a tuning pass — it shipped with the November 10 hotfixes.",
+      "content": `Blizzard said it has identified class and Hunter pet issues it intends to address:
 
-• **Professions & Camping:**
-  - **Leatherworking:** Lowered the crafting requirement for the *Tanning Rack* camping station to Skill 125 (down from 140) to smooth early outdoor profession progression.
-
-• **Class Balancing (PvE):**
-  - **Warlock:** *Unstable Affliction* and *Rain of Fire* direct/periodic damage increased by 20% in PvE encounters.
-  - **Trickster:** *Fazed* damage bonus normalized to 5% (down from 7%).
-
-• **Items & Display:**
-  - Resolved an issue where equipping certain player tabards suppressed the *Rexxar* armor set appearance.`
+• **Hunter pets & Voidwalkers:** Durability moved closer to Classic Era levels.
+• **Affliction Warlock:** Siphon Life, Corruption and Bane of Agony made worth casting alongside Wrack, without changing total damage output.
+• **Enhancement Shaman:** Strength becomes the strongest stat — leveling Enhancement Shamans should collect Strength and Attack Power gear.
+• Blizzard says it may tune classes on Tuesdays as new issues surface. See the November 10 hotfix entry for the final numbers.`
     },
     {
       "id": "news-73",
@@ -304,7 +354,7 @@ const WOW_FOREVER_DATA = {
       "author": "Blizzard Entertainment",
       "date": "November 6, 2026",
       "tag": "Official Hotfix",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-6-2026",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
       "summary": "Voidwalker base health increased by ~40 across all levels, Swiftmend tooltip clarified (no longer consumes HoTs), Maraudon Zaetar's Spirit spawn resolved, and The Drowned City portal fixed.",
       "content": `A major wave of hotfixes was deployed to live realms on November 6, 2026:
 
@@ -313,7 +363,7 @@ const WOW_FOREVER_DATA = {
   - **Druid:** *Bloom* now reliably heals its target. Corrected tooltip descriptions on *Bear Form* and *Ravage*. Fixed *Swiftmend* tooltip to remove erroneous mentions of consuming the active HoT.
   - **Warrior:** *Reckless Swings* tooltip now explicitly confirms that activation triggers *Gore Drinker*.
   - **Rogue:** *Shank* tooltips properly display Rank 1 and Rank 2 and correctly display combo point generation while *Boot Knife* is talented.
-  - **Mage:** Corrected *Arcane Blast* debuff duration to 18 seconds. Fixed an issue where relogging caused Mages to lose the *Study* quest spell.
+  - **Mage:** Corrected *Arcane Blast* debuff duration to 18 seconds. Removed the *Research* spell — only *Study* is granted after the quest.
   - **System:** *Cooldown Manager* now dynamically factors in diminishing returns and racial CC reductions (Orc Hardiness). Fixed *Quick and the Dead* Legacy Talent activation.
 
 • **Dungeons & Quests:**
@@ -328,7 +378,7 @@ const WOW_FOREVER_DATA = {
       "author": "Blizzard Entertainment",
       "date": "November 5, 2026",
       "tag": "Official Hotfix",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-hotfixes-november-5-2026",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
       "summary": "Plainsrunning disabled during BG prep and canceled upon flag pickup in Warsong Gulch. NPC respawn pacing adjusted across Durotar and Dustwallow; Mild Spices vendor price set to 1c.",
       "content": `The first post-launch hotfix wave deployed on November 5, 2026:
 
@@ -350,7 +400,7 @@ const WOW_FOREVER_DATA = {
       "author": "Blizzard Entertainment",
       "date": "November 4, 2026",
       "tag": "Official Global Launch",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-global-launch-live",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news",
       "summary": "World of Warcraft: Forever launches worldwide today, November 4, 2026 at 3:00 PM PST! Full 1–60 progression, 29 revamped dungeons, open-world Camping survival, dynamic megarealm sharding, and Build 1.60.1.70707 unlock simultaneously across all regions.",
       "content": `The wait is over: *World of Warcraft: Forever* officially deploys worldwide today, **November 4, 2026, at 3:00 PM PST (23:00 UTC)**!
 
@@ -370,7 +420,7 @@ const WOW_FOREVER_DATA = {
 
 • **Day-One Progression Scope:**
   - Level Cap: Level 60 unlocked from minute one across both Kalimdor and Eastern Kingdoms.
-  - Dungeons: All 29 revamped leveling and endgame dungeons accessible immediately, including *Excavation Site 4*, *Ruins of Lordaeron*, *Hall of Thanes*, and the *City of Dalaran*.
+  - Dungeons: All 29 revamped leveling and endgame dungeons accessible immediately, including *Excavation Site: Wetlands*, *Ruins of Lordaeron*, *Hall of Thanes*, and the *City of Dalaran*.
   - Class Tuning Freeze: Build 1.60.1.70707 serves as the stable competitive progression baseline; class tuning is frozen through Tier 1 raid unlocks on December 9, 2026.`
     },
     {
@@ -381,8 +431,8 @@ const WOW_FOREVER_DATA = {
       "author": "Blizzard Entertainment",
       "date": "November 3, 2026",
       "tag": "Official Launch Primer",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/wow-forever-whats-new-and-what-feels-familiar",
-      "summary": "On launch eve, Blizzard details toggleable Experience Presets (Enhanced vs Classic), confirmed ~50 GB preload availability on Battle.net, native controller navigation, and an official class tuning freeze until Tier 1 raids open on December 9.",
+      "url": "https://worldofwarcraft.blizzard.com/news/24315821/",
+      "summary": "On launch eve Blizzard published 'WoW: Forever—What's New and What Feels Familiar', and confirmed it does not plan major class tuning before Tier 1 raids open on December 9.",
       "content": `On November 3, 2026, Blizzard Entertainment published its comprehensive pre-launch primer titled *"WoW: Forever—What’s New and What Feels Familiar"*, outlining day-one player options:
 
 • **Experience Presets at Character Creation:**
@@ -402,12 +452,12 @@ const WOW_FOREVER_DATA = {
     {
       "id": "news-69",
       "title": "Hunter Class Buffs on WoW: Forever (Live Hotfix)",
-      "source": "Wowhead News & Live Hotfixes",
+      "source": "Blizzard Official Forums",
       "sourceType": "wowhead",
       "author": "Squishei & Wowhead Desk",
       "date": "November 3, 2026",
       "tag": "Hunter Hotfix & Tuning",
-      "url": "https://www.wowhead.com/forever/news/hunter-class-buffs-live-hotfix-aspect-of-the-hawk-trueshot-aura",
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696",
       "summary": "Live server hotfixes have been applied to WoW: Forever, partially reverting recent nerfs and significantly increasing direct damage across Hunter shots, Aspect of the Hawk, and Trueshot Aura.",
       "content": `Blizzard has deployed live hotfixes to WoW: Forever, substantially buffing Hunter direct shot damage and group utility:
 
@@ -440,10 +490,10 @@ const WOW_FOREVER_DATA = {
       "source": "Blizzard Official Development Notes",
       "sourceType": "blizzard",
       "author": "Blizzard Entertainment",
-      "date": "November 2, 2026",
+      "date": "November 3, 2026",
       "tag": "Official Patch 1.60.1 Notes",
-      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-launch-build/",
-      "summary": "Blizzard has published the comprehensive official launch development notes and class tuning for WoW: Forever, standardizing power budgets, overhauling class talent trees, introducing Shank and Poised, and completing Gamepad 1.0 support.",
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696",
+      "summary": "Blizzard has published the comprehensive official launch development notes and class tuning for WoW: Forever, standardizing power budgets, overhauling class talent trees, introducing Shank and Poised, and bringing Gamepad support to a functional beta state.",
       "content": `Official development notes for the global launch of World of Warcraft: Forever (Build 1.60.1):
 
 • **Universal Combat & Systems Changes:**
@@ -628,26 +678,7 @@ Narrated by celebrated British comedian and actor Bill Bailey appearing as a bea
 • **Episode 3: The Depths of Stranglethorn & Wetlands** — Forensic analysis of Murloc tribal vocalizations (*"Aaaaaughibbrgubugbugrguburgle!"*), aggressive crocolisks, and the territorial rivalries of Stranglethorn raptors.
 
 *World of Warcraft: Forever* launches globally on Wednesday, November 4, 2026.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/planet-azeroth-mockumentary-bill-bailey"
-    },
-    {
-      "id": "news-61",
-      "title": "Community Manager Kaivax Deploys Hotfix for Over-Restrictive Name Filter Bug ('con' Substring) & Megaserver Queue Stability",
-      "source": "Blizzard Official / Community Manager Blue Post",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "October 28, 2026",
-      "tag": "Hotfixes & Platform Tuning",
-      "summary": "Following opening-day queues, Blizzard deployed regional rolling hotfixes to address an erroneous profanity filter rejection that blocked non-profane names containing 'con' substrings (such as Falcon, Bacon, and Conflag), while optimizing regional megaserver authentication flow.",
-      "content": `We’ve just completed rolling realm restarts and backend hotfixes across all regional WoW Forever megaservers (Americas, Europe, Korea, and Taiwan) to address issues encountered during the first 24 hours of Early Name Reservation.
-
-**Name Reservation Hotfix Details:**
-• **Naming Filter Over-Restriction Fixed:** Resolved an issue with the automated character naming validation engine that erroneously triggered the *"That name is restricted"* error on legitimate, non-profane character names containing the letter string **'c-o-n'** (for example: *Falcon*, *Bacon*, *Conflag*, *Connor*, *Constantine*). Players whose desired names were rejected under this condition can now successfully retry and claim them.
-• **Login Queue & Authentication Pipeline:** Deployed concurrency load balancing across the Battle.net character creation proxy to eliminate transient "No realms available" disconnects during peak evening reservation hours.
-• **RP Ruleset Validation:** Refined roleplaying filter dictionaries to prevent naming collisions while preserving fantasy naming conventions on the Roleplaying and RP-PvP megaservers.
-
-Early Character Name Reservation remains active for all pre-purchase edition holders through Tuesday, November 3, 2026 at 10:00 AM PST.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-name-reservation-hotfixes-october-28"
+      "url": "https://www.icy-veins.com/wow-forever/news/planet-azeroth-episode-1-wow-forever-nature-documentary-trailer/"
     },
     {
       "id": "news-60",
@@ -668,7 +699,7 @@ Early Character Name Reservation remains active for all pre-purchase edition hol
 • **Reservation Window:** Live now through Tuesday, November 3, 2026 at 10:00 AM PST (18:00 UTC).
 
 Global Launch officially takes place on Wednesday, November 4, 2026 at 3:00 PM PST.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/early-name-reservation-now-live-wow-forever"
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news"
     },
     {
       "id": "news-59",
@@ -695,7 +726,7 @@ Additional updates to Racial Abilities and Talents include:
 • Skyborne Clarification:
   - Charged persists through death, and is removed upon entering a raid.
   - Attuned persists through death, and is removed upon entering a raid.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-racial-abilities-and-traits-update-part-2"
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-58",
@@ -731,29 +762,24 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   - Using Read Leyline at a Ley Line now also grants "Attuned" for 1 hour. While Attuned, the benefit of Read Leyline is increased to 100% regeneration increase. Attuned persists through death.
   - Skysight is now a 15% increased movement speed (was 10%), with a 15-second duration.
   - Using Skysight at an elemental convergence now also grants "Charged" for 1 hour. While Charged, the benefit of Skysight is a 30% movement speed increase. Charged persists through death.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/wow-forever-racial-abilities-and-traits-update"
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-57",
-      "title": "WoW Forever Closed Beta Concludes with Global Wipe: Blizzard Commences Infrastructure Prep for October 27 Name Reservation",
-      "source": "Blizzard Official & Server Operations",
-      "sourceType": "blizzard",
-      "author": "Josh \"Aggrend\" Greenfield & Realm Operations",
-      "date": "October 23, 2026 (10:00 AM PDT)",
-      "tag": "Beta Concluded & Launch Prep",
-      "summary": "Following 37 days of intensive community playtesting and the climactic 'Twilight of the First Realm' invasion, closed beta realms have officially powered down. A comprehensive database reset is underway ahead of early name reservations on October 27.",
-      "content": `At 10:00 AM PDT on Friday, October 23, 2026, Blizzard operations officially brought down the World of Warcraft: Forever closed beta megarealms, concluding a historic 37-day public playtest across two milestone caps and a high-concurrency open stress test:
-• 250,000+ Player Reports & Telemetry Logged:
-  - Over 250,000 bug reports, balance tickets, and combat log traces were ingested throughout Beta Phase 1 (Level 20 cap) and Phase 2 (Level 30 cap).
-  - Data gathered directly drove the final tuning pass on the Camelot 12.0 ray-tracing pipeline, racial trait adjustments, and modern cooldown UI integration.
-• Comprehensive Character Wipe Underway:
-  - In accordance with launch protocol, all characters, guilds, bank storage, and temporary beta items created during the test window are undergoing a complete server-side database wipe.
-  - No character progress or gold carries over into the live game environment.
-• What Comes Next — Pre-Launch Timeline:
-  - Tuesday, October 27 at 10:00 AM PDT: Early Character Name Reservation and appearance customization opens across all rulesets (PvP, PvE, RP, Hardcore). Players may lock in up to 3 character names per Battle.net account.
-  - Wednesday, November 4 at 15:00 PST: World of Warcraft: Forever officially launches worldwide! Full 1–60 leveling, 29 revamped dungeons, and open-world survival camping unlock globally.
-  - Wednesday, December 9 at 10:00 AM PST: Tier 1 Raids unlock (The Barrow Deeps 10m, Hyjal Summit 20m, and Onyxia's Lair 40m).`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-closed-beta-concludes-launch-prep"
+      "title": "WoW: Forever Closed Beta Ends with a 24-Hour Finale Celebration; All Characters Wiped",
+      "source": "Warcraft Tavern",
+      "sourceType": "tavern",
+      "author": "Warcraft Tavern",
+      "date": "October 23, 2026",
+      "tag": "Beta Concluded",
+      "summary": "The closed beta shut down at 10:00 AM PDT on October 23 after a 24-hour finale that filled the starting zones with beta-only bosses, NPCs and loot.",
+      "content": `The WoW: Forever closed beta closed for good on Friday, October 23, 2026 at 10:00 AM PDT.
+
+• **Finale:** For the final 24 hours, Blizzard pushed a beta-only update to the starting zones — Zephras Isle, Dun Morogh, Elwynn Forest, Teldrassil, Durotar, Tirisfal Glades and Mulgore — with new items, NPCs and bosses that will not appear in the live game.
+• **Wipe:** All beta characters and progress were deleted ahead of launch.
+• **Your stats:** Blizzard published a Beta recap page where testers could view stats from their time in the beta.
+• **Next up:** Early name reservation on October 27, then launch on November 4.`,
+      "url": "https://www.warcrafttavern.com/forever/news/shenanigans-are-ensuing-in-the-wow-forever-beta-finale-celebration/"
     },
     {
       "id": "news-56",
@@ -803,86 +829,36 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "news-54",
-      "title": "Closed Beta Extended Through Friday, October 23 at 10:00 AM PDT: Blizzard Grants Additional 48 Hours for Testing & Reschedules End-of-Beta Finale",
-      "source": "Blizzard Official / Blue Post",
+      "title": "Closed Beta Extended Through Friday, October 23 at 10:00 AM PDT; Name Reservations Open October 27",
+      "source": "Blizzard Official",
       "sourceType": "blizzard",
-      "author": "Executive Producer Holly Longdale & Josh \"Aggrend\" Greenfield",
-      "date": "October 21, 2026 (09:30 AM PDT)",
-      "tag": "Beta Schedule & Extension",
-      "summary": "Blizzard officially extends the WoW: Forever closed beta through Friday, October 23 at 10:00 AM PDT, granting players approximately 34 extra hours of Level 30 cap testing, Hallow's End activities, and rescheduling the 'Twilight of the First Realm' finale.",
-      "content": `Blizzard operations announced this morning that the World of Warcraft: Forever Closed Beta has been officially extended through Friday, October 23, 2026 at 10:00 AM PDT (19:00 CEST):
-• 34-Hour Test Window Extension:
-  - Originally scheduled to conclude at 23:59 PDT on October 21, test realms will remain fully online through Friday, October 23 at 10:00 AM PDT.
-  - The development team cited massive player turnout, rich feedback following Build 1.60.1.70425 talent/racial overhauls, and the desire to give players ample time to experience the Level 30 Hallow's End holiday event and dungeon pre-BiS loops.
-• Rescheduled End-of-Beta Finale — 'Twilight of the First Realm':
-  - The catastrophic end-of-beta world boss invasions (featuring colossal avatars of Ragnaros, Onyxia, and Mal'Ganis attacking Stormwind, Orgrimmar, and Southshore) will now commence Thursday evening, October 22 at 18:00 PDT and persist through the Friday morning shutdown.
-  - Slaying an invading world boss awards the account-wide 'Vanguard of the Living World' commemorative feat of strength on live realms.
-• Character Wipe & Launch Schedule Intact:
-  - Test megarealms will go dark at 10:00 AM PDT on Friday, October 23, initiating the comprehensive database wipe of all beta characters and guild rosters.
-  - Early Character Name Reservation remains firmly locked for Tuesday, October 27 at 10:00 AM PDT, leading directly into the global launch on Wednesday, November 4 at 15:00 PST.
-• Open Stress Testing Extended:
-  - All Battle.net accounts without active beta access or active subscriptions may continue logging into open stress test shards throughout Thursday, October 22.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-beta-extended-to-october-23"
-    },
-    {
-      "id": "news-53",
-      "title": "Hallow's End Phase 2 Telemetry: Shade of the Headless Rider Defeated, 16-Slot Pumpkin Bag Farming & Wickerman Buff Stacking Verified",
-      "source": "Wowhead Seasonal Desk",
-      "sourceType": "wowhead",
-      "author": "Wowhead Playtest Desk",
-      "date": "October 20, 2026",
-      "tag": "World Events & Holidays",
-      "summary": "Over 80,000 players battle the Level 30 Shade of the Headless Rider in Scarlet Monastery Graveyard as testers confirm the +10% XP/Rep Wickerman buff stacks with the Cozy Sleeping Bag for late-beta speed-leveling.",
-      "content": `With Hallow's End fully underway across Beta Phase 2 megarealms, data logs and community trackers highlight high engagement around the final seasonal holiday:
-• Scarlet Monastery Graveyard Headless Rider:
-  - Thousands of 5-man groups have summoned the Level 30 Shade of the Headless Rider inside the courtyard, testing encounter pacing and mob add spawns.
-  - Drops for the 3 rare iLvl 35 signet rings (+8 Stamina, +12 Attack Power / +9 Spell Power) have shown balanced item budgets, and the cosmetic 'Hallowed Pumpkin Lantern' off-hand has become a staple across capital cities.
-• Invocation of the Wickerman Buff Stacking:
-  - Field testing confirms that 'Invocation of the Wickerman' (+25% Stamina/Spirit regen, +10% Experience/Reputation for 2 hours) cleanly stacks with the Cozy Sleeping Bag (+3% per stack up to 4 stacks) and regional Camp Benefits (+5% kill XP).
-  - Leveling players have leveraged this triple-stack synergy to power alt characters from Level 20 to 30 in record time.
-• 16-Slot Pumpkin Bag Rates:
-  - Innkeeper trick-or-treating telemetry indicates an approximate 8.5% drop rate on the coveted 16-slot Pumpkin Bag from hourly treat bags.`,
-      "url": "https://www.wowhead.com/forever/news/hallows-end-phase-2-telemetry-headless-rider-pumpkin-bags"
+      "author": "Blizzard Entertainment",
+      "date": "October 21, 2026",
+      "tag": "Beta Schedule",
+      "summary": "Blizzard extended the WoW: Forever closed beta so it now closes Friday, October 23 at 10:00 AM PDT, and announced early character name reservations for October 27.",
+      "content": `Blizzard announced on X that the closed beta would stay open longer than planned:
+
+• **New end time:** Friday, October 23 at 10:00 AM PDT (1:00 PM EDT / 6:00 PM BST).
+• **Name reservation:** Early character name reservation opens October 27 and runs until November 3, ahead of the November 4 launch.`,
+      "url": "https://www.techradar.com/gaming/good-news-for-world-of-warcraft-forever-players-blizzard-has-extended-the-beta-and-is-opening-wow-name-reservations-ahead-of-the-games-november-launch"
     },
     {
       "id": "news-52",
-      "title": "Venruki $100,000 Duel Championship Grand Finals: Snutz Crowned Champion in 7-Game Epic, Level 30 Duel Meta Final Review",
-      "source": "Method.gg & Warcraft Tavern",
-      "sourceType": "method",
-      "author": "Venruki & Method Esports Desk",
-      "date": "October 19, 2026",
-      "tag": "Esports & Competitive Meta",
-      "summary": "Snutz captures the inaugural $100,000 WoW Forever Duel Championship with a thrilling 4-3 Grand Finals victory over Mes outside the Gates of Orgrimmar, cementing Affliction Warlock and Arms Warrior atop the Level 30 1v1 pantheon.",
-      "content": `The inaugural $100,000 Level 30 Duel Championship concluded Sunday evening in dramatic fashion before a peak concurrent audience of 98,000 viewers:
-• Championship Grand Finals:
-  - Snutz (Affliction Warlock) defeated Mes (Arms Warrior) 4-3 in a tense Best-of-7 series decided inside the Durotar chalk ring.
-  - Mes pushed Snutz to the brink with Spearing Strike gap-closers and Overpower burst, but Snutz's calculated Drain Life attrition and Curse of Exhaustion kiting sealed game 7 with only 12% health remaining.
-• Key Meta Takeaways from the 64-Player Field:
-  - Build 1.60.1.70425 Racial Overhauls: Alliance gladiators with Human 'Ruthless' (+2% all crit) and Dwarf 'Earth Fury' (+2% crit bonus) accounted for 6 of the Top 8 slots, validating the retirement of legacy weapon specialization racials.
-  - Hybrid Viability: Bean (Feral Druid) took 3rd place, demonstrating that 21-point feral capstones combined with Travel Form powershifting offer unprecedented sustained pressure at Level 30.
-• Broadcast Success:
-  - Tournament organizer Venruki praised the stability of the dedicated duel arena phase, noting zero crashes or latency spikes during all 63 matches.`,
-      "url": "https://www.method.gg/wow-classic/venruki-100k-duel-championship-grand-finals-recap"
-    },
-    {
-      "id": "news-51",
-      "title": "Venruki $100,000 Duel Championship Day 2: Durotar Arena Addition, Final 8 Bracket & 2-Hour High-Value Trade Hold Anti-RMT Safeguards",
-      "source": "Warcraft Tavern & Method.gg",
+      "title": "Warlockguy Wins The Forever Open 1v1 Dueling Tournament; Warlocks Take First and Second",
+      "source": "Warcraft Tavern",
       "sourceType": "tavern",
-      "author": "Venruki & Blizzard Integrity Desk",
-      "date": "October 17, 2026",
-      "tag": "Esports & Competitive Meta",
-      "summary": "Day 2 of Venruki's $100k duel tournament introduces dedicated Durotar arena staging while Blizzard activates a mandatory 2-hour trade hold on high-value items and gold transfers as anti-RMT safeguards.",
-      "content": `The penultimate day of Venruki's $100,000 Level 30 Duel Championship brought crucial arena improvements and anti-exploit enforcement:
-• Dedicated Durotar Duel Arena:
-  - Blizzard operations spawned physical barricades and referee boundaries outside Orgrimmar to eliminate spectator interference and guarantee flawless duel line-of-sight.
-  - Spectators and duelists alike praised the reduced server latency and dedicated combat phase zone.
-• 2-Hour High-Value Trade Hold Anti-RMT Safeguards:
-  - Blizzard deployed an aggressive live integrity protection: any high-value trade or excessive gold transfer triggers a 2-hour escrow hold with automated flag checks.
-  - Ensures tournament stakes and public realm economies remain strictly insulated from third-party gold sellers and illicit wagering.
-• Final 8 Championship Bracket:
-  - Snutz (Warlock), Mes (Warrior), Bean (Druid), and Sonii (Paladin) advance to Championship Sunday, demonstrating master-class cooldown usage at the Level 30 cap.`,
-      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-duel-championship-day-2-anti-rmt/"
+      "author": "Warcraft Tavern",
+      "date": "October 19, 2026",
+      "tag": "Esports & PvP",
+      "url": "https://www.warcrafttavern.com/forever/news/warlockguy-wins-the-wow-forever-open-1v1-dueling-tournament/",
+      "summary": "Warlockguy won The Forever Open, the community 1v1 dueling tournament held on the WoW: Forever beta, taking the $50,000 grand prize after a best-of-five final against fellow Warlock Neepzen.",
+      "content": `The Forever Open — a community-run 1v1 dueling tournament played on the WoW: Forever beta — wrapped up on October 19, 2026.
+
+• **Champion:** Warlockguy (Warlock) won the $50,000 grand prize in a best-of-five final.
+• **Runner-up:** Neepzen (Warlock), who also took the Warlock class prize.
+• **Class prizes ($5,555 each):** Minpojke (Druid), Fvp (Hunter), Azzu (Paladin), Nieze (Priest), Justwoo (Rogue), Cdew (Shaman), Mag (Warrior). The Mage prize ended in a four-way tie between Allyana, Teleporter, Venruk and Yonezka.
+• The event began with a $50,000 prize pool that later grew to roughly $100,000 in total. It drew thousands of sign-ups, and its consumable-heavy ruleset was debated by well-known PvP players during the event.
+• Full results are posted on the Raider.IO tournament page.`
     },
     {
       "id": "news-50",
@@ -904,83 +880,17 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "url": "https://wowforevertools.com/news/beta-build-70450-stability-hotfix/"
     },
     {
-      "id": "news-49",
-      "title": "Venruki $100,000 Duel Championship Day 1 Kicks Off: Opening Round Upsets, Ruthless Human & Earth Fury Dwarf Meta in Durotar",
-      "source": "Warcraft Tavern & Method.gg",
-      "sourceType": "tavern",
-      "author": "Venruki & Method Esports Desk",
-      "date": "October 17, 2026",
-      "tag": "Esports & Competitive Meta",
-      "summary": "The $100,000 Level 30 Duel Championship is officially underway outside Orgrimmar, with 64 gladiators battling inside the chalk ring as the newly overhauled racial abilities and Build 1.60.1.70425 class rebalances redefine competitive 1v1 pacing.",
-      "content": `The opening day of Venruki's $100,000 Level 30 Duel Championship has kicked off outside the Gates of Orgrimmar before a live Twitch audience of over 85,000 concurrent viewers:
-• Marquee Day 1 Matchup Highlights:
-  - Snutz (Affliction Drain Warlock) def. Whaazz (Subtlety Stunlock Rogue) 2-1: In an epic game 3 duel, Snutz survived a 14-second stunlock chain with 84 health remaining before Siphon Life and Death Coil attrition turned the tide.
-  - Mes (Arms Spearing Strike Warrior) def. Ziqo (Battle Mage) 2-0: Mes utilized Deep Wounds bleed tick timing and Shield Block to mitigate Shatter combos.
-  - Bean (Feral Powershift Druid) def. Pikaboo (Combat/Subtlety Hybrid) 2-1: Travel Form kiting inside the 40-yard chalk circle outlasted Rogue cooldown resets.
-• Racial & Rebalance Meta Analysis:
-  - The permanent removal of weapon specialization racials in Build 1.60.1.70425 has dramatically reshaped tournament loadouts.
-  - Alliance competitors utilizing Human 'Ruthless' (+2% all crit) and Dwarf 'Earth Fury' (+2% crit bonus) displayed lethal burst potential against Horde endurance setups.
-  - Shaman gladiators leveraging Lava Burst at Row 5 produced the highest single-GCD damage spikes of the tournament.
-• Championship Sunday Schedule:
-  - Upper Bracket Quarterfinals, Lower Bracket elimination rounds, and the Best-of-7 Grand Finals will broadcast tomorrow, Sunday, October 18 at 10:00 PDT on Twitch.tv/Venruki.`,
-      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-duel-championship-day-1-recap/"
-    },
-    {
-      "id": "news-48",
-      "title": "Tradeskill Compendium: Complete 1-300 Leveling Roadmaps, Reagent Acquisition Engine & 48 Classic Gathering Circuit Maps Live",
-      "source": "Wowhead Tradeskill Wire",
-      "sourceType": "wowhead",
-      "author": "Wowhead Professions & Economy Team",
-      "date": "October 17, 2026",
-      "tag": "Professions & Economy",
-      "summary": "All 13 primary and secondary professions receive comprehensive 1-300 leveling roadmaps, hybrid vendor and mob-drop reagent acquisition trees, and 48 classic terrain gathering route maps with curved flightpaths ahead of November 4 launch.",
-      "content": `Ahead of the November 4 global launch, Wowhead and the community tradeskill guild network have deployed the definitive Level 1–300 Professions Engine:
-• Complete 1–300 Step-by-Step Leveling Guides:
-  - Master leveling roadmaps across all 13 professions (Blacksmithing, Engineering, Alchemy, Leatherworking, Tailoring, Enchanting, Mining, Herbalism, Skinning, Cooking, First Aid, Fishing, and Survival).
-  - Exact material shopping lists, optimal orange/yellow craft spans, and minimal-waste training tiers from Apprentice through Artisan.
-• Interactive Classic Gathering Circuit Maps:
-  - 48 hand-calibrated classic zone route maps featuring smooth Bezier curved vectors optimized for Herbalism, Mining, and Skinning.
-  - High-density node loops covering Elwynn, Durotar, Westfall, Barrens, Hillsbrad Foothills, Arathi Highlands, and Stranglethorn Vale.
-• Hybrid Reagent Acquisition Engine:
-  - Full coordinate breakdowns for 80+ specialty tradeskill vendors (fluxes, thread, vials, bleaching powder, and limited-stock recipes).
-  - Mob drop rate tables and dedicated fishing waters tabs separating inland freshwater pools from coastal saltwater yields.
-• Launch Preparation Tips:
-  - Economic guidance on day-one gathering specializations and deterministic Merchant's Favor quartermaster investments.`,
-      "url": "https://www.wowhead.com/forever/news/tradeskill-compendium-1-300-leveling-roadmaps-gathering-circuits"
-    },
-    {
-      "id": "news-47",
-      "title": "Beta Build 1.60.1.70425 Post-Deployment Hotfixes: Shaman Lava Burst & Water Shield Polish, Dark Inspiration Persistence & Megarealm Capacity",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "October 17, 2026",
-      "tag": "Patch Notes & Hotfixes",
-      "summary": "Blizzard operations deploy server-side hotfixes across all beta realms, refining Shaman spell interactions, fixing Priest Dark Inspiration persistence through resurrection, and expanding realm capacity for weekend tournament traffic and tomorrow's Hallow's End launch.",
-      "content": `Blizzard engineers rolled out targeted server hotfixes this morning across all active test megarealms following telemetry from Thursday's Build 1.60.1.70425 deployment:
-• Class Mechanics & Spell Tuning:
-  - Shaman: Fixed an interaction where Water Shield charges did not consistently replenish on certain Nature spell critical strikes. Smoothed damage progression for Lava Burst across ranks 1–4.
-  - Priest: Corrected an issue where the Dark Inspiration 5-rank spell damage aura could drop upon resurrection or cross-zone teleportation.
-  - Paladin: Revoke threat reduction now registers immediately on threat-tracking frames without requiring a target cycle.
-  - Racials: Verified that Human 'Ruthless' (+2% crit) and Dwarf 'Earth Fury' (+2% crit damage/healing bonus) scale accurately with off-hand weapon swings and hybrid healing spells.
-• Megarealm Infrastructure & Spectator Tuning:
-  - Scaled public test realm capacity and reduced input queuing latency outside the Gates of Orgrimmar to accommodate high spectator traffic during the Venruki $100k Tournament.
-• Seasonal Event Deployment:
-  - Staged encounter data and loot tables for the Level 30 'Shade of the Headless Rider' in Scarlet Monastery Graveyard, scheduled to unlock tomorrow, Sunday, October 18 at 10:00 PDT for Hallow's End!`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1601-70425-hotfixes-oct17"
-    },
-    {
       "id": "news-46",
       "title": "In-Game Companion Addon Suite Maintenance Update: ForeverPlates v2.1.1, ForeverLiquid v1.3.1 & ForeverDungeonJournal v1.6.2 Released",
-      "source": "WoW Forever Addon Engineering",
-      "sourceType": "blizzard",
+      "source": "WoW Forever Portal — Addon Suite",
+      "sourceType": "custom",
       "author": "Lead UI Architect Exehn & Marcus",
       "date": "October 16, 2026",
       "tag": "Addon Development & UI Tools",
       "summary": "Maintenance update for the official companion addon suite rolling out for Camelot 12.0 engine and TOC 16001 standards, delivering combat nameplate stability, rested XP velocity calibration, and modularized dungeon journal maps.",
       "content": `A synchronized maintenance update has been packaged and published for the official WoW Forever companion addon suite:
 • ForeverPlates (v2.1.1):
-  - Calibrated unit nameplate anchoring to prevent micro-stutter during high-density AoE trash packs in Excavation Site 4 and City of Dalaran.
+  - Calibrated unit nameplate anchoring to prevent micro-stutter during high-density AoE trash packs in Excavation Site: Wetlands and City of Dalaran.
   - Refined threat boundary coloring and off-screen clamping vectors.
 • Foreverplatescastbars (v2.2.1):
   - Fixed sub-pixel castbar border clipping and aligned target spell icons with classic 1px borders.
@@ -989,433 +899,116 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   - Mount Savings Fund countdown updated to track 100g and 1000g milestone targets simultaneously.
 • ForeverDungeonJournal (v1.6.2):
   - Verified modular 64-file architecture with TOC 16001 compatibility for the Camelot 12.0 client engine.
-  - Updated sub-pixel map coordinates for the Dalaran Underbelly entrance and Relic Guardian encounter in Excavation Site 4.
+  - Updated sub-pixel map coordinates for the Dalaran Underbelly entrance and Relic Guardian encounter in Excavation Site: Wetlands.
 • Compliance & Verification:
   - 100% pass on all 120 automated TOC, Lua syntax, and FrameXML integrity audits, ensuring zero combat taint under 12.0 secret value constraints.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/companion-addon-suite-v211-release-oct16"
+      "url": ""
     },
     {
       "id": "news-45",
-      "title": "Beta Build 1.60.1.70425 Deployed: Sixteenth Beta Build Delivers 128 System Updates, Major Talent Tree Rebalancing & Racial Ability Overhaul",
-      "source": "Blizzard Official / Blue Post",
+      "title": "Beta Development Notes (Oct 16): Weapon-Skill Racials Replaced, Tauren & Skyborne Reworked, 0.5s Wand Windup",
+      "source": "Blizzard Official Forums",
       "sourceType": "blizzard",
-      "author": "Community Manager Kaivax & Lead Systems Designer",
-      "date": "October 15, 2026",
-      "tag": "Patch Notes & Class Tuning",
-      "summary": "The sixteenth official WoW Forever beta client build (1.60.1.70425) rolls out today, delivering 128 datamined updates across all classes: complete reworks to Shaman, Mage, Priest, and Warlock talent trees, retirement of weapon specialization racials in favor of Ruthless, Earth Fury, and Savage, and raid-wide utility for Battle Shout and Shaman stat totems.",
-      "content": `Blizzard operations deployed Beta Build 1.60.1.70425 (Sixteenth Beta Build) across all public test megarealms today, October 15, 2026. This monumental update synchronizes 128 balance and systems adjustments cataloged by Talents Forever:
+      "author": "Kaivax (Community Manager)",
+      "date": "October 16, 2026",
+      "tag": "Development Notes",
+      "summary": "A sweeping racial pass: Human Sword Specialization became Ruthless, Dwarf Mace Specialization became Earth Fury, Orc Axe Specialization became Savage, and Tauren, Troll, Gnome and Skyborne racials were retuned.",
+      "content": `Highlights from the October 16, 2026 development-notes update:
 
-• Section 1: Talent Tree Overhauls (69 Talent Modifications):
-  - Shaman (Elemental Rebuild & Restoration Quality-of-Life):
-    * Elemental Mastery restored to its rightful place as the 31-point capstone talent (Row 7).
-    * Lava Burst moved to Row 5 (4 ranks, 21-point capstone) with its prerequisite requirement removed, enabling Level 30 Elemental Shamans to access this signature burst spell.
-    * Prerequisite chain updated: Elemental Fury now requires Lightning Overload (Row 5), which requires Elemental Alacrity (Row 2).
-    * Elemental Alacrity repositioned to Row 2; Elemental Warding moved to Row 3.
-    * Call of Thunder permanently removed from the Elemental talent tree.
-    * Earthbound repositioned to Row 4; Improved Fire Nova renamed to Trial by Fire.
-    * Restoration: Swapped Tidal Focus (now Row 2) and Totemic Focus (now Row 1) to streamline early healing efficiency.
-  - Mage (Arcane & Fire Realignment):
-    * New talent Arcane Wrath added to Row 4 (1 rank).
-    * Missile Barrage relocated to Row 1 (2 ranks) for rapid early-game rotation empowerment.
-    * Wake of Fire renamed to Improved Fire Blast.
-    * Rescaled Fire Power to 3 ranks and Critical Mass to 5 ranks.
-    * Winter's Chill and Ice Lance updated to guarantee unresisted debuff application.
-  - Priest (Shadow & Discipline Restructuring):
-    * New talent Dark Inspiration added to Row 4 (5 ranks), replacing Improved Fade.
-    * Shadow Affinity permanently removed.
-    * Improved Mind Blast and Mental Strength moved to Row 2.
-    * Improved Power Word: Shield relocated to Row 3.
-    * Vampiric Embrace cooldown slashed to 30 seconds.
-  - Warlock (Affliction Range & Mobility):
-    * Malediction replaced by Grim Reach (Row 4, 2 ranks, increasing Affliction spell range by 10/20%).
-    * Shadow Mastery and Destructive Reach updated.
-  - Paladin, Hunter, Druid & Warrior:
-    * Reckoning updated: stores up to 4 extra charges and triggers on weapon swing.
-    * Tuning passes to Shield Specialization, Champion of the Light, Rapid Recuperation, Predator's Edge, Furor, and Bloodthrill.
+• **Weapon-skill racials replaced:** Human *Sword Specialization* → *Ruthless* (+2% crit). Dwarf *Mace Specialization* → *Earth Fury* (+2% crit damage and healing). Orc *Axe Specialization* → *Savage* (+1% crit).
+• **Orc:** *Blood Fury* cooldown raised to 3 min (was 2). *Shatter Curse* reduces magic damage taken by 5% (was 15%).
+• **Tauren:** *Endurance* now +2% crit damage/healing (was 1% hit). *Cultivation* cooldown 15 min (was 60). *War Stomp* 90 sec (was 2 min).
+• **Others:** Troll *Regeneration* 20% (was 10%). Gnome *Eureka!* became an 8-second buff. Night Elf *Quickness* now stacks with other speed effects. Skyborne *Wind Blessed* haste 3% (was 1%) and *Walk on Air* 90 sec cooldown.
+• **Ranged:** Wands and Auto Shot now need 0.5 sec of standing still before firing.
 
-• Section 2: Racial Abilities Rework (12 Major Adjustments):
-  - Removal of Legacy Weapon Racials: Sword Specialization (Human), Mace Specialization (Dwarf), and Axe Specialization (Orc) have been permanently retired to eliminate weapon-type pigeonholing.
-  - Modern Universal Replacement Racials:
-    * Human: 'Ruthless' (+2% critical strike chance with all spells and physical attacks).
-    * Dwarf: 'Earth Fury' (+2% critical strike bonus to damage and healing).
-    * Orc: 'Savage' (+1% critical strike chance with all spells and abilities).
-    * Skyborne: 'Read Leyline' (2-second cast, 2-minute cooldown; grants +100% mana/health regeneration for 30s, extended to 15m near active leylines).
-  - Racial Mechanical Refinements:
-    * Gnome: Eureka! revamped into an 8-second active buff with no charges that amplifies damage, healing, and Power Word: Shield absorb values.
-    * Refined mechanics for Blood Fury, Shatter Curse, Cultivation, Endurance, Plainsrunning, War Stomp, Regeneration, and Touch of the Grave.
-
-• Section 3: Spells, Baseline Abilities & Raid Utility (47 System Changes):
-  - Battle Shout is now Raid-wide (40 yards).
-  - Shaman Stat Totems (Windfury, Grace of Air, Strength of Earth, Flametongue) are now Raid-wide, and mutual exclusivity between Grace of Air and Windfury/Flametongue has been removed.
-  - Paladin Salvation & Mass Salvation now replace passive threat blessings, accompanied by the new threat-clearing utility spell Revoke.
-  - Righteous Fury baseline Holy threat amplification increased to 90%.
-  - Devouring Plague cooldown reduced to 24s; Shadow Word: Death cooldown reduced to 18s.
-  - Chain Lightning mana cost reduced by 35%; Fire Nova tuned; Stormstrike base mana cost set to 8%; Water Shield charges now trigger on all spell critical strikes.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1601-70425-patch-notes-oct15"
+Several of these were walked back in the October 26 racial pass.`,
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-44",
-      "title": "Final Week of Closed Beta Begins: End-of-Beta World Finale Announced for October 21 & Global Launch Name Reservation Details",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Executive Producer Holly Longdale & Kaivax",
-      "date": "October 15, 2026",
-      "tag": "Official Announcement",
-      "summary": "With 6 days remaining in the 35-day Closed Beta, Blizzard announces the 'Twilight of the First Realm' End-of-Beta finale event for October 21 and confirms the pre-launch character wipe and ruleset name reservation timeline ahead of November 4.",
-      "content": `As World of Warcraft: Forever enters the 5th and final week of Closed Beta (Day 29 of 35), Blizzard has published the closing beta schedule and launch transition roadmap:
-• End-of-Beta Finale Event — 'Twilight of the First Realm' (October 21, 18:00 PDT):
-  - Colossal Ragnaros, Onyxia, and Dreadlord Mal'Ganis world bosses will invade Stormwind, Orgrimmar, Southshore, and the Dalaran perimeter during the final 6 hours of Beta.
-  - Participating at Level 30 during the finale awards the account-wide 'Vanguard of the Living World' commemorative feat of strength on live realms.
-• Server Reset & Launch Preparation (October 22 – November 3):
-  - All Beta characters, banks, and test realms will be wiped at 23:59 PDT on October 21.
-  - Global Character Name Reservation opens October 30 at 10:00 PDT for active subscribers across the 3 launch megarealm rulesets (Normal PvE, PvP, and Roleplay).
-• Global Launch Confirmation:
-  - World of Warcraft: Forever launches globally on November 4, 2026 at 15:00 PST with the full Level 60 cap, 9 new Forever dungeons, and 16 account-wide Legacy Points.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-final-beta-week-and-launch-schedule"
-    },
-    {
-      "id": "news-43",
-      "title": "Hallow's End Arrives October 18 in Closed Beta: Wickerman Embers (+10% XP/Rep), Scarlet Graveyard Specter & Pumpkin Treat Bags",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Wowhead Seasonal Events Team",
-      "date": "October 14, 2026",
-      "tag": "World Events & Holidays",
-      "summary": "Hallow's End goes live across all Beta megarealms this Sunday, October 18, featuring the Classic+ Headless Specter encounter in Scarlet Monastery Graveyard, 16-slot Pumpkin Bags, and the +25% Stamina/Spirit Wickerman festival buff.",
-      "content": `The final seasonal test event of Closed Beta — Hallow's End — activates this Sunday, October 18 at 10:00 PDT:
-• Classic+ Scarlet Monastery Graveyard Event:
-  - A specially scaled Level 30 'Shade of the Headless Rider' can be summoned once daily inside the Scarlet Monastery Graveyard courtyard during Hallow's End.
-  - Drops 3 guaranteed Rare (iLvl 35) signet rings (+8 Stamina, +12 Attack Power or +9 Spell Power) and the 'Hallowed Pumpkin Lantern' off-hand.
-• Invocation of the Wickerman (Tirisfal Glades & Southshore Border):
-  - Visiting the burning Wickerman ceremony at dusk grants 'Invocation of the Wickerman' (+25% Stamina & Spirit regeneration and +10% Experience/Reputation for 2 hours), stacking with the Cozy Sleeping Bag!
-• Innkeeper Trick-or-Treating & 16-Slot Pumpkin Bags:
-  - Speak with capital and town innkeepers every 60 minutes for Treat Bags containing Hallowed Wands, weighted Jack-o'-Lanterns, and a heightened beta drop rate on the 16-Slot Pumpkin Bag.`,
-      "url": "https://www.wowhead.com/forever/news/hallows-end-october-18-beta-preview-wickerman-rewards"
-    },
-    {
-      "id": "news-42",
-      "title": "Venruki $100k Duel Championship Gear Lock-In Complete: Final BiS Loadouts & Matchup Odds Ahead of Saturday Kickoff",
-      "source": "Warcraft Tavern & Method.gg",
-      "sourceType": "tavern",
-      "author": "Warcraft Tavern Competitive Desk",
-      "date": "October 13, 2026",
-      "tag": "Esports & Competitive Meta",
-      "summary": "All 64 competitors have locked in their final Level 30 equipment profiles for this weekend's $100,000 Durotar Duel Championship, with 88% of casters equipping Lorekeeper's Binding and melee gladiators favoring Enchant Weapon - Revelation.",
-      "content": `Equipment inspection lock-in has concluded for all 64 competitors ahead of Saturday's $100,000 Level 30 Duel Championship (October 17–18):
-• Universal BiS Trends Across the 64-Player Field:
-  - Lorekeeper's Binding (+7 All Stats Ring from 40/40 Library Books) is equipped by 56 of the 64 tournament qualifiers (87.5% adoption rate).
-  - Rank 4 Sergeant's Cloak and Insignia trinket are mandatory across every single profile following Phase 2 Honor cap completion.
-  - Enchant Weapon - Revelation (45 Merchant's Favor) is the #1 weapon enchant among Hybrid Paladins, Feral Druids, and Battle Mages.
-• Marquee Opening Round Matchups (Saturday, Oct 17 at 10:00 PDT):
-  - Snutz (Affliction Drain Warlock) vs. Whaazz (Subtlety Stunlock Rogue)
-  - Ziqo (Battle Mage / Coldflame Saber) vs. Mes (Arms Spearing Strike Warrior)
-  - Bean (Feral Powershift Druid) vs. Pikaboo (Combat/Subtlety Hybrid Rogue)`,
-      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-tournament-gear-lock-in-analysis/"
-    },
-    {
-      "id": "news-41",
-      "title": "Hotfix Build 1.60.6.72140: Excavation Site 4 Threat Reset Window Increased, Dalaran Spell Reflect Reduction & Warsong Overtime Tuning",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "October 12, 2026",
-      "tag": "Maintenance & Hotfixes",
-      "summary": "Blizzard deploys server hotfixes today addressing Relic Guardian threat mechanics in Excavation Site 4, reducing Overseer Kaelen's spell reflection in City of Dalaran, and introducing diminishing returns to flag carrier survival stalls in Warsong Gulch.",
-      "content": `Blizzard operations deployed server hotfix Build 1.60.6.72140 across all beta megarealms this morning following Phase 2 encounter feedback:
-• Excavation Site 4 Boss Tuning:
-  - Relic Guardian: The internal cooldown between 'Threat Protocol Reset' casts was increased from 20 seconds to 30 seconds, giving tanks sufficient GCD recovery time to taunt before burst DPS take lethal damage.
-  - Titan Relic Quest Item: Now drops with 100% certainty for every eligible party member on the kill rather than requiring individual group rolls.
-• City of Dalaran (Alterac Mountains) Adjustments:
-  - Overseer Kaelen: 'Arcane Barrier' spell reflection was lowered from 50% down to 35% damage return, reducing caster self-kill spikes during execute windows.
-  - Violet Leyline Crystals: Leyline resonance power buff duration inside the catacombs was increased from 10 minutes to 15 minutes.
-• Warsong Gulch Flag Carrier Balancing:
-  - Added escalating physical vulnerability (+10% damage taken per stack) after 5 stacks of Focused Assault to prevent prolonged Feral Druid bear stall matches in overtime.
-• Profession & Downranking Tooltip Polish:
-  - Corrected reagent cost displays for 150+ Blacksmithing and Engineering crafts, ensuring live inventory counts accurately reflect required bars and fluxes.`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-hotfixes-build-72140-oct12"
-    },
-    {
-      "id": "news-40",
-      "title": "Venruki $100,000 Level 30 Duel Championship: Official 64-Player Bracket & Seeding Revealed for October 17–18",
-      "source": "Method.gg & Warcraft Tavern",
-      "sourceType": "method",
-      "author": "Method Esports & Venruki",
-      "date": "October 11, 2026",
-      "tag": "Esports & Competitive Meta",
-      "summary": "Host Venruki and tournament organizers reveal the official 64-gladiator bracket for the upcoming $100,000 Level 30 Duel Championship outside Orgrimmar, detailing class breakdown, seeding matchups, and chalk-ring tournament rules.",
-      "content": `The championship bracket for the $100,000 Level 30 Duel Championship hosted by Venruki has been officially unveiled:
-• Tournament Schedule & Broadcast: Streaming live October 17–18, 2026 starting at 10:00 PDT on Twitch.tv/Venruki with casting desk commentary from Cdew and Ziqo.
-• 64-Player Class Distribution Breakdown:
-  - Feral Druid: 14 gladiators (dominant bracket favorite with Travel Form and Frenzied Regeneration).
-  - Arms Warrior: 12 gladiators (leveraging Mortal Strike, Deep Wounds, and Spearing Strike).
-  - Retribution Paladin: 10 gladiators (Voice of Truth silence immunity and 5s Hammer of Justice).
-  - Frost Mage: 9 gladiators (Cold Snap double Ice Block and Shatter burst).
-  - Subtlety Rogue: 8 gladiators (14-second stunlock control chains).
-  - Affliction Warlock: 6 gladiators (Siphon Life and Fear attrition).
-  - Elemental Shaman: 3 gladiators (Lava Burst overload burst).
-  - Shadow Priest: 2 gladiators (Mind Blast and SW:P attrition).
-• Ring Rules & Sanctions:
-  - Duels occur inside a 40-yard chalk circle at the Durotar Gates. Exiting the circle for more than 5 seconds results in an automatic match loss.
-  - Zero open-world consumables (no potions, healthstones, or engineering gadgets). Only class-conjured items permitted.`,
-      "url": "https://www.method.gg/wow-classic/venruki-100k-duel-tournament-bracket-reveal"
-    },
-    {
-      "id": "news-39",
-      "title": "Phase 2 Trade Economy Telemetry: 150,000 Supply Crates Logged, Pack Kodo Mount Surge & Phase 3 Stockpile Trends",
-      "source": "Wowhead Economy Wire",
-      "sourceType": "wowhead",
-      "author": "Wowhead Economy Team",
-      "date": "October 10, 2026",
-      "tag": "Economy & Market Analysis",
-      "summary": "Telemetry across Beta megarealms logs over 150,000 Supply Crate hand-ins at Three Corners and Crossroads, driving Heavy Leather and Iron Bar market spikes while players stockpile Phase 3 Artisan reagents.",
-      "content": `Telemetry analysis from the second week of Beta Phase 2 highlights a roaring deterministic economy powered by Merchant's Favor:
-• Supply Crate Ingestion Milestone:
-  - Over 150,000 Supply Crates have been filled and redeemed at the Azeroth Commerce Authority (Redridge Mountains) and Durotar Supply Logistics (The Barrens).
-  - Top Redeemed Quartermaster Items: The 14-Slot Kirin Tor Satchel (Account-Bound) accounts for 42% of total Favor spent, followed by the Pack Kodo Ground Mount (6,000 Favor, 28%) and blue Level 28–30 pre-BiS weapons (18%).
-• Commodity Market Fluctuations:
-  - Heavy Leather: Reached peak demand as leatherworkers craft camping field stations, stabilizing at 18 Silver per piece.
-  - Iron Bars & Heavy Stone: Heavy Blasting Powder and dynamite manufacturing for Warsong Gulch keep Iron prices elevated across all realm auction houses.
-• Phase 3 Stockpiling Strategy:
-  - Forward-thinking guilds have begun filling bank alts with Mithril Ore, Mageweave Cloth, and Thick Leather ahead of the anticipated Phase 3 Level 35 Artisan tradeskill expansion.`,
-      "url": "https://www.wowhead.com/forever/news/phase-2-economy-telemetry-supply-crates-pack-kodo"
-    },
-    {
-      "id": "news-38",
-      "title": "Warcraft Tavern Field Report: First Realm 40/40 Library Books Completed & Lorekeeper's Binding Ring Claimed",
+      "title": "Open Stress Test Set for October 21; Closed Beta Closes October 23",
       "source": "Warcraft Tavern",
       "sourceType": "tavern",
-      "author": "Warcraft Tavern Exploration Team",
-      "date": "October 9, 2026",
-      "tag": "Exploration & Secrets",
-      "summary": "An intrepid guild expedition team on the NA megarealm achieves the world's first complete collection of all 40 hidden library books across Stormwind, Ironforge, Undercity, and Dalaran, unlocking the +7 All Stats Lorekeeper's Binding ring.",
-      "content": `The mystery of Azeroth's hidden ancient tomes has reached a historic milestone:
-• 40/40 Tomes Discovered: An exploration guild team successfully mapped and collected all 40 hidden manuscripts across Stormwind Royal Library, Ironforge Hall of Explorers, Undercity Apothecarium, and the Dalaran Underbelly sewer intake.
-• Scholar of the First Realm Unlocked:
-  - Claimed the unique server feat of strength achievement 'Scholar of the First Realm'.
-  - Awarded the coveted 'Lorekeeper's Binding' (Rare Ring: +7 Strength, +7 Agility, +7 Stamina, +7 Intellect, +7 Spirit) — currently the highest item-budget ring in Phase 2.
-• Interactive Guide Released:
-  - Warcraft Tavern published complete coordinate markers, interact-key guidance, and navigation paths for all 40 tomes to assist leveling players in claiming the 10, 20, and 30-book milestone accessories.`,
-      "url": "https://www.warcrafttavern.com/forever/news/first-realm-40-library-books-lorekeepers-binding/"
+      "author": "Warcraft Tavern",
+      "date": "October 20, 2026",
+      "tag": "Beta Schedule",
+      "summary": "Any WoW account can join a four-hour stress test on October 21 on the launch hardware; the closed beta returns afterwards and shuts down for good on October 23 at 10:00 AM PDT.",
+      "content": `Blizzard set the final pre-launch test schedule:
+
+• **Stress test:** October 21 from 2:00 PM PDT for about four hours, running on the regional hardware planned for launch. Any player with a WoW account could join — no subscription required.
+• The closed beta went offline during the stress test, and stress-test characters were deleted afterwards.
+• **Beta end:** The beta came back for a few more days and closed at 10:00 AM PDT on Friday, October 23. All characters and progress were wiped before launch.`,
+      "url": "https://www.warcrafttavern.com/forever/news/wow-forever-stress-test-times-beta-end-date-announced/"
     },
     {
       "id": "news-36",
-      "title": "Beta Build 1.60.6 Deployed: Blizzard Expands Native Cooldown Manager Across All Classes, Elevating Essential Cooldown & Buff Tracking Without UI Taint",
-      "source": "Blizzard Official / Patch Notes",
+      "title": "Beta Development Notes (Oct 8): Dungeon Creature XP +20%, Classic-Style Party XP & 16 Legacy Points for All Testers",
+      "source": "Blizzard Official Forums",
       "sourceType": "blizzard",
-      "author": "Lead Systems Designer & UI Team",
+      "author": "Kaivax (Community Manager)",
       "date": "October 8, 2026",
-      "tag": "Major Engine & UI Patch",
-      "summary": "Beta Build 1.60.6.71890 rolls out across megarealms today, delivering the highly anticipated expansion of Blizzard's native Cooldown Manager to all 9 classes with Edit Mode customization, proc tracking, and zero in-combat UI taint.",
-      "content": `Blizzard Entertainment has deployed client Build 1.60.6.71890 for World of Warcraft: Forever closed beta, bringing a monumental expansion to the game's native combat user interface:
-• Native Cooldown Manager Expanded Across All Classes: Originally tested in prototype builds for select classes, Blizzard's built-in 'Essential Cooldowns & Buffs Manager' is now fully active across all 9 classes (Warrior, Paladin, Hunter, Rogue, Priest, Shaman, Mage, Warlock, and Druid).
-• Built Directly into Default UI & HUD Edit Mode: Players can freely reposition, rescale, snap, and customize their Essential Cooldown dock above action bars or beneath the Personal Resource Display.
-• Comprehensive Rotational & Defensive Tracking:
-  - Rotational Abilities: Tracks key rotational cooldowns (such as Mortal Strike, Bloodthirst, Shield Slam, Holy Strike, Consecration, Aimed Shot, Strider Kick, Mutilate, Penance, Mind Blast, Stormstrike 8s CD, Lava Burst, Fire Blast, Shadowburn, and Swiftmend).
-  - Signature Defensives & Bursts: Monitors major survival cooldowns (Shield Wall, Retaliation, Divine Shield, Lay on Hands, Bestial Wrath, Deterrence, Vanish, Preparation, Pain Suppression, Power Infusion, Bloodlust, Ice Block, and Innervate).
-  - Procs & Buff Uptimes: Displays active buff states with stacks and glowing visual highlights (Overpower ready procs, Flurry charges, The Art of War, Lock and Load, Slice and Dice timers, Surge of Light, Maelstrom Weapon 1–5 stacks, Fingers of Frost, Hot Streak, Nightfall/Shadow Trance, and Eclipse transitions).
-• Immune to 12.0 <secret value> Taint: Because the Cooldown Manager executes within Blizzard's secure C++ FrameXML engine core, it formats text and renders cooldown swipes natively (via FontString:SetFormattedText and CooldownFrame_SetAura). It completely avoids the fatal Lua arithmetic errors that break third-party WeakAuras during combat encounters!`,
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1606-patch-notes-cooldown-manager-oct8"
-    },
-    {
-      "id": "news-37",
-      "title": "Systems Theorycrafting: How Blizzard's Native Cooldown Manager Complements Companion Addons & Bypasses 12.0 Secret Value Constraints",
-      "source": "Method.gg / Addon Engineering Wire",
-      "sourceType": "method",
-      "author": "Method Addon & Systems Lab",
-      "date": "October 8, 2026",
-      "tag": "Addon Architecture & Theorycrafting",
-      "summary": "Technical deep dive into why addon authors should embrace Blizzard's internal Cooldown Manager for combat rotation clarity instead of rebuilding complex Lua aura frameworks, and how secret values protect against automation.",
-      "content": `Following today's release of Beta Build 1.60.6, the addon development and theorycrafting community has conducted an architectural audit of the new Cooldown Manager:
-• Symbiotic Addon Architecture: Addon developers are advised not to build redundant combat cooldown timers or complex aura-math engines. With In-Combat Addon Disarmament active, attempts to calculate combat aura durations in Lua crash due to 12.0 <secret value> restrictions. Leaving rotational combat widgets to Blizzard's native manager guarantees zero-taint stability.
-• Specialization of Companion Addons: Custom in-house addons thrive by focusing on their core strengths:
-  - ForeverPlates & Forever Nameplates Castbars: High-visibility pixel nameplates, latency tolerance markers, and dynamic threat coloring.
-  - ForeverLiquid: Immersion 20-bubble liquid reservoir, leveling/rep velocity, mount savings countdown, and 5-instance/hour lockout monitor.
-  - ForeverDungeonJournal: Comprehensive encounter guides, loot tables, sub-pixel calibrated maps, and boss tactics.
-  - ForeverBlessings: 60-minute Paladin blessing coordinator, class assignment matrix, and live missing buff alerts.
-  - EchoTwist: High-precision Windfury proc alerts, 0.4s golden Seal Twisting cadence indicator, and sub-pixel melee swing timer.
-• Non-Intrusive Cosmetic Skinning: Addons can safely skin Blizzard's Cooldown Manager frames (adding crisp 1px borders via WHITE8X8 or Cyberpunk palette tints via BackdropTemplate and hooksecurefunc) without modifying combat logic or incurring execution taint.
-• AI & Automation Boundary: Blizzard's secret value system intentionally locks out AI combat rotation bots and automated priority solvers. Cooldown numbers and aura durations are rendered purely via C-side formatting, making them human visual aids rather than queryable Lua APIs.`,
-      "url": "https://www.method.gg/wow-classic/native-cooldown-manager-architecture-wow-forever"
+      "tag": "Development Notes",
+      "summary": "Creature XP in dungeons raised about 20%, party XP reverted to the Classic Era formula, and every beta tester granted the Legacy Challenge (16 Legacy Points).",
+      "content": `Highlights from the October 8, 2026 development-notes update:
+
+• **Dungeon XP:** Creature experience inside dungeons increased by roughly 20%.
+• **Party XP:** Reverted to the Classic Era calculation, where only each player's own level matters — fixing mixed-level groups earning very little per kill.
+• **Legacy:** The Legacy Challenge was granted to all beta players (16 Legacy Points). Legacy respecs cost 1 silver, with the price dropping by one respec per hour.
+• **Rage:** Rage gained from damage taken was rebalanced.`,
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-35",
       "title": "Companion Addon Suite Expansion: ForeverLiquid (Liquid XP/Rep/Ledger HUD) & ForeverDungeonJournal v1.0.7 Released for Beta",
-      "source": "WoW Forever Addon Engineering / Community Spotlight",
-      "sourceType": "blizzard",
+      "source": "WoW Forever Portal — Addon Suite",
+      "sourceType": "custom",
       "author": "Lead UI Architect Exehn & Marcus",
       "date": "October 5, 2026",
       "tag": "Addon Development & UI Tools",
       "summary": "Official release of ForeverLiquid v1.3.0 featuring a 20-bubble Classic liquid reservoir HUD, 6 selectable cyberpunk themes, real-time gold cashflow ledger, mount savings fund countdown, and Blizzard 5/hr lockout monitor alongside the modular ForeverDungeonJournal v1.0.7 with 5 dungeon routes & boss tactics.",
-      "content": "A major companion addon expansion has arrived for WoW Forever Beta Phase 2 players with the release of ForeverLiquid v1.3.0 and the modular ForeverDungeonJournal v1.0.7:\n• ForeverLiquid (v1.3.0): The ultimate cyberpunk liquid HUD engineered specifically for WoW Forever (Camelot 12.0 engine, TOC 16001). Features include:\n  - Classic 20-Bubble (5%) Liquid Reservoir: Fluid status bar with animated wave shimmer, rested XP overlay, and glowing 5% divider ticks.\n  - 6 Selectable Cyberpunk Themes: Matrix (Emerald), Cyber Void (Violet), Sunwell Core (Gold), Blood Knight (Crimson), Glacial Frost (Cyan), Carbon Minimal (Titanium).\n  - Obsidian Drawer (4 Tabs): Live Leveling/Rep Velocity, Mount Savings Fund Tracker (100g/1000g goals with live ETA countdown), Cashflow Ledger (Gross Income vs Repairs/Flight/Vendor expenses), Recent Loot Feed, Blizzard 5-Instance/Hour Lockout Monitor, and Alt Roster 2.0 with dynamic offline rested XP prediction.\n  - Camelot 12.0 Engine Guard: Completely eliminates the 12.0 FrameXML <secret number> comparison bug in TextStatusBar.lua:110 via recursive tree guarding and CharacterMicroButton delegation.\n• ForeverDungeonJournal (v1.0.7 / v1.3.0 Architecture): Fully modularized into specialized runtime components, adding full boss tactics, spell IDs, role-specific guidance (Tank/Healer/DPS), announcement macros, and cross-faction travel routes for all 5 leveling dungeons (Deadmines, Wailing Caverns, Shadowfang Keep, Blackfathom Deeps, The Stockade) alongside Excavation Site 4, City of Dalaran, Hall of Thanes, and Ruins of Lordaeron.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/companion-addons-foreverliquid-foreverjournal-oct5"
-    },
-    {
-      "id": "news-34",
-      "title": "Beta Phase 2 First Weekend Telemetry: Excavation Site 4 Saboteur Encounters, Dalaran Violet Vaults & Level 30 Pre-BiS Meta",
-      "source": "Wowhead & Warcraft Tavern",
-      "sourceType": "wowhead",
-      "author": "Wowhead Theorycrafting Team",
-      "date": "October 3, 2026",
-      "tag": "Dungeons & Theorycrafting",
-      "summary": "Following the first 48 hours of Level 30 cap progression, players uncover powerful Excavation Site 4 Titan relics, Kirin Tor vault secrets under Dalaran, and the dominance of 21-point capstones in the Warsong Gulch 20–29 bracket.",
-      "content": "Telemetry analysis from the first weekend of Phase 2 testing reveals significant progression milestones and meta shifts across beta megarealms:\n• Excavation Site 4 (Wetlands): Sentinel Archeus has emerged as a premier gear check. The rare caster trinket 'Archeus Core Talisman' (+14 Arcane/Nature spell damage + mana on cast) is currently ranked best-in-slot for Balance Druids and Arcane Mages. Dark Iron Saboteurs require focused crowd control due to high-damage explosive dynamite volleys.\n• City of Dalaran - Under Siege (Alterac Mountains): The Kirin Tor subterranean vaults present complex encounter mechanics: Shade of the Archmage's channeled Blizzard demands rapid positional rotation, while the Arcane Anomaly's 'Mana Singularity' forces mana users to spread beyond 15 yards to avoid group-wide detonation.\n• 21-Point Talent Spike: The expansion to 21 talent points has radically altered class dynamics. Arms Warriors wielding Mortal Strike, Rogues with Preparation resets, and Paladins utilizing Consecration / Holy Shock are dominating the active 20–29 Warsong Gulch battleground bracket.\n• Tier 2 Camping in High Demand: Groups entering Excavation Site 4 and Dalaran are actively seeking Survivalists with Ironwood Campfires for the +10% primary stat feast buff and 90-minute campfire aura.",
-      "url": "https://www.wowhead.com/forever/news/phase-2-first-weekend-telemetry-excavation-site-4-dalaran"
-    },
-    {
-      "id": "news-33",
-      "title": "Hotfix Build 1.60.5.71210: Dark Iron Saboteur Respawn Tuning & Brewfest Final Weekend Alert",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "October 2, 2026",
-      "tag": "Maintenance & Hotfixes",
-      "summary": "Blizzard deploys server hotfixes adjusting Saboteur density in Excavation Site 4, smoothing Alterac Mountain terrain collisions, and issuing a reminder that Brewfest activities conclude on Tuesday, October 6.",
-      "content": "Blizzard deployed client hotfix Build 1.60.5.71210 following player feedback during Phase 2 opening hours:\n• Excavation Site 4 Saboteur Tuning: The respawn interval for Dark Iron Saboteur patrols inside the excavation trenches has been lengthened from 90 seconds to 180 seconds, ensuring wiping groups have adequate time to recover without being cornered at the entrance.\n• City of Dalaran Geometry Polish: Resolved terrain collision snags along the southern Kirin Tor gate in Alterac Mountains where players could become stuck while navigating toward the dungeon portal.\n• Brewfest Final Notice: Brewfest celebration grounds outside Ironforge and Orgrimmar will officially pack up at 23:59 realm time on Tuesday, October 6. Players are advised to turn in outstanding Brewfest Prize Tokens for commemorative steins and trinkets before maintenance.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-hotfixes-build-71210-oct2"
+      "content": `A major companion addon expansion has arrived for WoW Forever Beta Phase 2 players with the release of ForeverLiquid v1.3.0 and the modular ForeverDungeonJournal v1.0.7:
+• ForeverLiquid (v1.3.0): The ultimate cyberpunk liquid HUD engineered specifically for WoW Forever (Camelot 12.0 engine, TOC 16001). Features include:
+  - Classic 20-Bubble (5%) Liquid Reservoir: Fluid status bar with animated wave shimmer, rested XP overlay, and glowing 5% divider ticks.
+  - 6 Selectable Cyberpunk Themes: Matrix (Emerald), Cyber Void (Violet), Sunwell Core (Gold), Blood Knight (Crimson), Glacial Frost (Cyan), Carbon Minimal (Titanium).
+  - Obsidian Drawer (4 Tabs): Live Leveling/Rep Velocity, Mount Savings Fund Tracker (100g/1000g goals with live ETA countdown), Cashflow Ledger (Gross Income vs Repairs/Flight/Vendor expenses), Recent Loot Feed, Blizzard 5-Instance/Hour Lockout Monitor, and Alt Roster 2.0 with dynamic offline rested XP prediction.
+  - Camelot 12.0 Engine Guard: Completely eliminates the 12.0 FrameXML <secret number> comparison bug in TextStatusBar.lua:110 via recursive tree guarding and CharacterMicroButton delegation.
+• ForeverDungeonJournal (v1.0.7 / v1.3.0 Architecture): Fully modularized into specialized runtime components, adding full boss tactics, spell IDs, role-specific guidance (Tank/Healer/DPS), announcement macros, and cross-faction travel routes for all 5 leveling dungeons (Deadmines, Wailing Caverns, Shadowfang Keep, Blackfathom Deeps, The Stockade) alongside Excavation Site: Wetlands, City of Dalaran, Hall of Thanes, and Ruins of Lordaeron.`,
+      "url": ""
     },
     {
       "id": "news-32",
-      "title": "Phase 2 Deploys Today: Level Cap Raised to 30, Patch 1.60.5 Maintenance & Content Unlock",
-      "source": "Blizzard Official / Blue Post",
+      "title": "Beta Phase 2 Begins October 1: Level Cap Raised to 30, Excavation Site: Wetlands, Razorfen Downs & Uldaman",
+      "source": "Blizzard Official Forums",
       "sourceType": "blizzard",
-      "author": "Lead Designer Josh \"Aggrend\" Greenfield",
+      "author": "Kaivax (Community Manager)",
       "date": "October 1, 2026",
-      "tag": "Maintenance & Patch Notes",
-      "summary": "Blizzard announces Beta Phase 2 goes live today, October 1, 2026! Realm maintenance later today deploys Build 1.60.5.71180, raising the level cap to 30, opening Excavation Site 4 and City of Dalaran, and activating the 20–29 Warsong Gulch bracket.",
-      "content": "Blizzard operations announced that Beta Phase 2 is launching today, October 1, 2026, following a brief scheduled maintenance window scheduled for 14:00–16:00 PDT:\n• Level Cap Raised to 30: The level cap immediately increases from 20 to 30 across all beta megarealms upon realm startup. Existing Level 20 characters will begin accumulating experience immediately toward Level 30 without requiring character resets.\n• Client Build 1.60.5.71180: Deploys performance optimizations for ray-traced lighting, memory handling during multi-zone shard transfers, and upgraded 12.0 Lua API bindings for addon authors.\n• Two New Leveling Dungeons:\n  - Excavation Site 4 (Level 24–30): Located deep in the Wetlands marshes, featuring Dark Iron saboteurs, Titan constructs, and Sentinel Archeus.\n  - City of Dalaran - Under Siege (Level 28–34): Located in Alterac Mountains, delving into the Kirin Tor subterranean vaults and arcane anomalies before the violet bubble was constructed.\n• Warsong Gulch 20–29 Bracket: The 20–29 battleground queue is now live, featuring updated Phase 2 PvP insignias and honor calculations.\n• Tier 2 Camping Blueprints: Survivalists can now acquire Ironwood Campfires (+10% stat boost bowls, 90-minute aura) and Silk Tents from profession trainers starting at Level 20 with 75 skill.\n• Wave 4 Beta Invitations: Another batch of beta invitations has been dispatched to accommodate the higher level zones and dungeon testing concurrency.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-phase-2-level-30-cap-patch-1605-oct1"
-    },
-    {
-      "id": "news-31",
-      "title": "Wowhead Patch 1.60.5 Datamining: Excavation Site 4 Loot Tables, Level 30 Talent Builds & Dalaran Mechanics",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Wowhead Datamining Team",
-      "date": "October 1, 2026",
-      "tag": "Datamining & Patch Notes",
-      "summary": "Full datamining breakdown of today's Phase 2 client patch: Titan-forged weapon procs in Excavation Site 4, Kirin Tor vault encounters in Dalaran, Level 21–30 talent allocations, and 150 profession caps.",
-      "content": "Datamining of client build 1.60.5.71180 deployed for today's Phase 2 level cap unlock reveals critical itemization and class mechanics:\n• Excavation Site 4 Loot Tables:\n  - Archeus Core Talisman: Rare caster trinket granting +14 Arcane/Nature spell damage and mana restoration on spell cast.\n  - Titan-Forged Greaves: Heavy plate boots with +7 Strength, +6 Stamina, and +1% Hit.\n  - Relic Smasher: 2H Mace with high top-end damage and a 2% chance on hit to trigger an Earth Ward.\n• City of Dalaran (Alterac Mountains) Boss Abilities:\n  - Arcane Anomaly: Casts Mana Singularity, draining mana from ranged casters and empowering nearby constructs.\n  - Shade of the Archmage: Channels Blizzard and Mass Invisibility, requiring precise positioning and group crowd control.\n• Level 21–30 Talent Expansion: Players now have access to 21 total talent points (up from 11), unlocking pivotal 21-point capstones like Mortal Strike (Warrior), Preparation (Rogue), Consecration/Holy Shock (Paladin), and Shadowform (Priest).\n• Profession Cap 150 (Expert): Trainers across Ironforge, Stormwind, Orgrimmar, and Undercity now train Expert recipes (75–150), enabling Iron weapons, Silk bandages, and Greater Healing Potions.",
-      "url": "https://www.wowhead.com/forever/news/patch-1605-datamining-excavation-site-4-loot-level-30-talents"
-    },
-    {
-      "id": "news-30",
-      "title": "Tuesday Maintenance & Build 1.60.4 Hotfixes: Hall of Thanes Tuning, Warsong Honor Rollover & Shard Consolidation",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "September 29, 2026",
-      "tag": "Maintenance & Patch Notes",
-      "summary": "Blizzard completes Tuesday weekly maintenance and rolls out Build 1.60.4 hotfixes: Hall of Thanes boss ability adjustments, the first Phase 1 Warsong Gulch honor rollover, dynamic shard layering optimizations, and Harvest Festival conclusion notices.",
-      "content": "Blizzard operations completed scheduled Tuesday weekly maintenance across all North American and European WoW Forever beta megarealms, deploying client hotfix Build 1.60.4.70615:\n• Hall of Thanes Encounter Tuning: High Thane Thauris' 'Shattering Stomp' physical vulnerability debuff duration was reduced from 45 seconds down to 30 seconds to ease spike damage taken by Level 20 tanks. In addition, Ironforge Sentry patrol speed was reduced by 15% to prevent accidental multi-pulls during hallway clearing.\n• Phase 1 Warsong Gulch Honor Rollover: The beta realms processed their first weekly honor calculations for the Level 10–19 Warsong Gulch bracket. Active skirmishers can now inspect their initial rank standings (Private / Scout) and purchase rank-appropriate PvP insignias from faction vendors.\n• Dynamic Shard Consolidation: Starting zones (Zephras Isle, Tirisfal Glades, Elwynn Forest, and Dun Morogh) received enhanced clustering logic to automatically group party members and guildmates onto matching shards upon zone transitions.\n• Harvest Festival Notice: Festive food offerings and honorific quests outside Ironforge and Orgrimmar conclude at 23:59 realm time tonight (September 29). Brewfest activities remain active through October 6.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-weekly-maintenance-hotfixes-sep29"
-    },
-    {
-      "id": "news-29",
-      "title": "Warcraft Tavern Phase 2 Economy Guide: Essential Reagents & Materials to Stockpile Before October 8",
-      "source": "Warcraft Tavern",
-      "sourceType": "tavern",
-      "author": "Warcraft Tavern Trade Team",
-      "date": "September 29, 2026",
-      "tag": "Economy & Gathering",
-      "summary": "With 9 days remaining until the Level 30 cap unlock, Warcraft Tavern outlines top trade goods, gathering routes, and profession bottlenecks to farm during Phase 1 for maximum launch efficiency.",
-      "content": "With the Phase 2 countdown ticking down to 9 days remaining, Warcraft Tavern published its economy and material stockpiling handbook for players preparing for the October 8 Level 30 cap expansion:\n• Key Trade Goods to Hoard:\n  - Heavy Leather & Medium Leather: Leatherworkers and Survivalists capping skill at 75 will require significant quantities of Heavy Leather to immediately craft Tier 2 Silk Tents and medium combat armor upon Level 20+ trainer availability.\n  - Iron Ore & Heavy Stone: Wetlands (The Green Belt) and Stonetalon Mountains offer rich Iron nodes. Blacksmiths require iron bars for introductory Level 25 weapons and Excavation Site 4 key components.\n  - Silk Cloth: Primary bottleneck for 100–150 Tailoring and the Robes of Arcana quest chains across Duskwood and Darkshore.\n• Tier 2 Camping Preparation: Survivalists are advised to stockpile Hardened Timber and Wild Camping Supplies to immediately craft Tier 2 Ironwood Campfires (granting +10% primary stat fish buffs and 90-minute campfire auras).\n• Dungeon Attunements: Blizzard confirmed introductory investigation quests for Excavation Site 4 will start in Menethil Harbor (Alliance) and Hammerfall (Horde) at Level 24.",
-      "url": "https://www.warcrafttavern.com/forever/guides/phase-2-economy-stockpile-guide/"
-    },
-    {
-      "id": "news-28",
-      "title": "Developer Update: +15% Open-World Elite Quest EXP Buff & Anti-Dungeon Boosting Clarification",
-      "source": "Blizzard Official / Blue Post",
-      "sourceType": "blizzard",
-      "author": "Lead Designer Josh \"Aggrend\" Greenfield",
-      "date": "September 28, 2026",
-      "tag": "Game Rules & Balancing",
-      "summary": "Blizzard introduces a permanent +15% experience boost to all outdoor elite quest chains to encourage open-world exploration over repetitive dungeon spamming, while reaffirming strict anti-boosting XP penalties.",
-      "content": "In a detailed developer dispatch posted on September 28, Lead Designer Josh \"Aggrend\" Greenfield addressed player leveling patterns observed across the first 12 days of closed beta:\n• +15% Outdoor Elite Quest EXP: To incentivize venturing into high-danger open-world zones rather than grinding Deadmines or Hall of Thanes exclusively, all outdoor elite quest objectives across both continents (including Redridge elite chains, Darrow Hill, Loch Modan Trogg strongholds, and Stonetalon peak quests) now grant +15% more base experience.\n• Anti-Dungeon Boosting Diminishing Returns: Blizzard reiterated that characters grouped with party members significantly higher in level receive virtually zero XP from mob kills. The team is committed to preserving the organic group-finding and outdoor world experience of Classic+.\n• Open-World Group Dynamics: Field reports indicate open-world party formations for elite quests have surged across Westfall, Darkshore, Silverpine, and The Barrens as a result of these adjustments.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-dev-update-open-world-exp-tuning-sep28"
-    },
-    {
-      "id": "news-27",
-      "title": "Mobalytics Beta Census: 68% Reach Level 20 Cap; Skyborne & Undead Paladins Surge",
-      "source": "Mobalytics / Meta Analytics",
-      "sourceType": "mobalytics",
-      "author": "Mobalytics Analytics Team",
-      "date": "September 28, 2026",
-      "tag": "Census & Demographics",
-      "summary": "Mobalytics analytics reveal that 68% of active beta testers have reached the Level 20 cap. Warriors and Paladins dominate class choices, while the new Skyborne race represents 22.4% of all characters created.",
-      "content": "Mobalytics telemetry gathered from over 250,000 player hours across the WoW Forever closed beta highlights the evolving character demographic breakdown as of September 28:\n• 68% Level 20 Completion: More than two-thirds of active beta accounts have reached the Level 20 Phase 1 cap, focusing their gameplay on dungeon pre-BiS farming, Warsong Gulch skirmishes, and profession grinding.\n• Class Popularity Census:\n  - Warrior: 18.2% (Top overall class, driven by Arms scaling and strong tank viability)\n  - Paladin: 15.4% (Massive surge driven by the debut of Undead Paladins on Horde and Forsaken Charger mounts)\n  - Hunter: 14.0% (Dominated by Beast Mastery levelers and Skyborne archers)\n  - Mage: 11.8% (High AoE clear speed in Hall of Thanes)\n  - Rogue: 11.2% (Strong PvP burst and stealth utility)\n  - Priest: 10.1% (Undisputed king of Level 20 dungeon and Warsong Gulch healing)\n  - Warlock: 7.6% (Consistent pet-based leveling with zero reagent requirements)\n  - Druid: 6.8% (Popular among Skyborne Druid testers)\n  - Shaman: 4.9% (Wildhammer Dwarf Shamans gaining momentum)\n• Skyborne Phenomenon: The new Skyborne race alone accounts for 22.4% of all newly created characters, marking the highest initial adoption rate of any allied or standalone race in WoW history.",
-      "url": "https://mobalytics.gg/wow-forever/beta-census-demographics-sep28"
-    },
-    {
-      "id": "news-26",
-      "title": "Warcraft Tavern Phase 2 Preview: Level 20–30 Route, Wetlands Excavation Site 4 & Dalaran Guide",
-      "source": "Warcraft Tavern",
-      "sourceType": "tavern",
-      "author": "Warcraft Tavern Leveling Team",
-      "date": "September 27, 2026",
-      "tag": "Leveling & Dungeons",
-      "summary": "Warcraft Tavern publishes its strategic guide for Phase 2's Level 30 cap unlock on October 8, detailing pre-quest turn-in routes, Excavation Site 4 dungeon mechanics, and Tier 2 Camping upgrades.",
-      "content": "With only 10 days remaining until Beta Phase 2 unlocks the Level 30 cap on October 8, Warcraft Tavern has released a comprehensive roadmap for players preparing their leveling trajectories:\n• Pre-Quest Turn-In Stacking: Detailed routes for banking 20 completed quests across Redridge Mountains, Duskwood, Stonetalon Mountains, and Ashenvale to immediately jump from Level 20 toward Level 22 upon Phase 2 launch.\n• Excavation Site 4 (Level 24–30): Preview of the Wetlands titan dig site dungeon. Players will battle corrupted Ironband miners, earthen constructs, and a shadowy titan relic boss ('Archon Kaelen') dropping mail, leather, and two-handed polearms with unique proc effects.\n• City of Dalaran (Alterac Mountains): Deep dive into the violet barrier perimeter and the subterranean Kirin Tor archives dungeon, featuring arcane anomalies and anti-magic elite mechanics.\n• Tier 2 Camping Upgrades: Survivalists can collect Ironwood Campfire frames and Silk Tents starting at Level 20 (with 75 profession skill), unlocking +10% stat fish bowls and 90-minute campfire auras.",
-      "url": "https://www.warcrafttavern.com/forever/guides/phase-2-leveling-route-excavation-site-4/"
-    },
-    {
-      "id": "news-25",
-      "title": "Wowhead Beta Build 1.60.3 Datamining: Level 30 Spells, Secret Value Addon Protections & Dual Spec",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Wowhead Datamining Team",
-      "date": "September 27, 2026",
-      "tag": "Datamining & Patch Notes",
-      "summary": "Datamining of client build 1.60.3.70420 reveals datamined Level 30 class abilities, refined 12.0 secret value Lua APIs for addon authors, and full UI string confirmations for Level 40 Dual Spec.",
-      "content": "Wowhead datamining of the latest WoW Forever beta build (1.60.3.70420) has uncovered crucial upcoming features and systems code:\n• Secret Value Addon Protections: Blizzard engineers added dedicated C++ helper utilities (`issecure()`, `C_AddOns` API namespace, and secure text formatters) to resolve in-combat UI taint for custom nameplates and castbars. Addon developers can now safely display decoupled castbars and friendly target auras without triggering fatal Lua execution halts.\n• Datamined Level 30 Class Abilities:\n  - Warriors: Berserker Stance questline ('The Island of Fray') and Whirlwind weapon rewards datamined with updated Classic+ weapon stats.\n  - Paladins: Blessing of Kings confirmed baseline at Level 20/30 rather than deep Retribution/Protection.\n  - Druids: Travel Form (40% outdoor movement speed) questline unlocked in Moonglade.\n  - Mages: Ice Block baseline and Teleport spell additions.\n  - Shamans: Windfury Weapon imbue ranks tuned for 2H maces and axes.\n• Dual Talent Specialization: Client strings confirm Dual Spec unlocks at Level 40 for a one-time fee of 50 gold, storing talent distribution, action bar button placements, and keybind profiles.",
-      "url": "https://www.wowhead.com/forever/news/beta-build-1603-datamining-level-30-spells-dual-spec-addon-apis"
-    },
-    {
-      "id": "news-24",
-      "title": "Mobalytics Phase 1 Meta Tier List: Level 20 Speedrun Comps & Warsong Gulch Rankings",
-      "source": "Mobalytics / Meta Analytics",
-      "sourceType": "mobalytics",
-      "author": "Mobalytics Theorycrafting",
-      "date": "September 26, 2026",
-      "tag": "PvP & Systems",
-      "summary": "Mobalytics releases its first comprehensive meta tier list for Phase 1 Level 20 cap, ranking top dungeon speedrun compositions, single-target DPS, and 10-19 / 20 bracket Warsong Gulch performers.",
-      "content": "Analyzing performance metrics across 120,000 dungeon encounters and 15,000 battleground matches, Mobalytics has published the official Beta Phase 1 Meta Tier List:\n• Dungeon Speedrun & DPS Tier List:\n  - S-Tier (DPS): Arms Warrior (dominant Cleave/Sweeping Strikes with Smite's Mighty Hammer or Cruel Barb), Beast Mastery Hunter (pet scaling + Aspect of the Hawk burst), Fire Mage (Ignite AoE cleave in Hall of Thanes trash pulls).\n  - A-Tier (DPS): Combat Rogue (consistent Sinister Strike energy cycling), Destruction Warlock (Shadowburn burst), Enhancement Shaman (Flametongue/Rockbiter burst).\n  - S-Tier (Tanks): Protection Paladin (Consecration AoE threat leads all clear speeds) and Protection Warrior (reliable single-target taunt and Shield Slam mitigation).\n  - S-Tier (Healers): Discipline Priest (Power Word: Shield + Penance) and Holy Paladin (unmatched mana efficiency with Flash of Light).\n• Warsong Gulch (10–19 / 20 Bracket) Tier List:\n  - S-Tier: Discipline Priest (flag runner survival), Affliction Warlock (multi-dot attrition), Subtlety Rogue (flag disruption & Sprint resets).\n  - A-Tier: Arms Warrior, Beast Mastery Hunter, Frost Mage.",
-      "url": "https://mobalytics.gg/wow-forever/tier-lists/beta-phase-1-level-20-meta"
-    },
-    {
-      "id": "news-23",
-      "title": "Blizzard Operations: Phase 2 Level 30 Cap Locked for Oct 8; Wave 3 Beta Invites Dispatched",
-      "source": "Blizzard Official",
-      "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "September 25, 2026",
-      "tag": "Beta Schedule",
-      "summary": "Blizzard confirms Beta Phase 2 launches on Thursday, October 8 at 10:00 AM PDT, unlocking Level 30 cap, Excavation Site 4, City of Dalaran, and sending out Wave 3 beta invitations.",
-      "content": "In a community update on the official forums, Community Manager Kaivax provided operational timelines for the next milestone of the closed beta test:\n• Phase 2 Unlock Date Confirmed: Phase 2 will officially commence on Thursday, October 8, 2026 at 10:00 AM PDT (19:00 CEST). The level cap will increase from 20 to 30 immediately without requiring character resets.\n• Phase 2 Content Scope:\n  - Level 24–30 Dungeon: Excavation Site 4 (Wetlands).\n  - Level 26–32 Dungeon: City of Dalaran (Subterranean Kirin Tor Vaults in Alterac Mountains).\n  - Warsong Gulch 20–29 Bracket unlocked.\n  - Ashenvale and Hillsbrad Foothills open-world PvP hot spots.\n• Wave 3 Beta Invitations: To prepare servers for increased player concurrency, Blizzard has dispatched a third massive wave of beta invites to opted-in Battle.net accounts and Skyborne Epic Pack holders.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-phase-2-announcement-wave-3-invites"
-    },
-    {
-      "id": "news-22",
-      "title": "Warcraft Tavern Pre-BiS Compendium: Top Level 20 Gear Drops for Hall of Thanes & Ruins of Lordaeron",
-      "source": "Warcraft Tavern",
-      "sourceType": "tavern",
-      "author": "Warcraft Tavern Gear Team",
-      "date": "September 24, 2026",
-      "tag": "Loot & Drops",
-      "summary": "Complete loot tables and pre-BiS itemization lists for Level 20 characters, spotlighting new Classic+ weapons and armor from Hall of Thanes and Ruins of Lordaeron alongside classic dungeon staples.",
-      "content": "Warcraft Tavern has assembled the definitive Level 20 pre-BiS gear compendium for all 9 classes in Beta Phase 1:\n• Hall of Thanes Highlights (Level 13–18):\n  - Thane's Runic Ring: +4 Strength, +3 Stamina (Best-in-slot melee DPS and tank finger item).\n  - Ironforge Sentry Shield: High armor shield with block value and +5 Stamina.\n  - Molten Core Fragment (Trinket): On-use +12 Fire spell damage for 20 seconds.\n• Ruins of Lordaeron Highlights (Level 15–20):\n  - Blighted Dagger: Fast 1.40 attack speed with chance on hit to inflict plague damage (BiS offhand for Rogues and Hunters).\n  - Gravekeeper's Robes: +6 Intellect, +5 Spirit, +4 Spell Power (Top caster chestpiece).\n  - Pauldrons of the Fallen Order: Rare Level 20 mail shoulders with +5 Strength, +4 Agility.\n• Classic Dungeon Staples: Deadmines (Cruel Barb, Smite's Mighty Hammer, Blackened Defias armor), Shadowfang Keep (Shadowfang, Silverlaine's Family Seal, Commander's Crest), and Wailing Caverns (Armor of the Fang set).",
-      "url": "https://www.warcrafttavern.com/forever/guides/level-20-pre-bis-gear-compendium/"
+      "tag": "Beta Phase 2",
+      "summary": "Following maintenance on October 1, the beta level cap rose to 30 and the new dungeon Excavation Site: Wetlands opened alongside Razorfen Downs and Uldaman.",
+      "content": `Beta Phase 2 went live with the October 1, 2026 maintenance (European testers saw realms return early on October 2):
+
+• **Level cap:** Raised to 30.
+• **Dungeons:** New *Excavation Site: Wetlands* (26–31) added; Razorfen Downs (25+) and Uldaman (30+) opened for testing.
+• **Experience:** Dungeon quests now grant 50% less bonus experience beyond normal quest values.
+• **PvP:** Honor costs for PvP gear raised ~50%; Honor cap raised from 15,000 to 25,000.
+• **Classes:** Feral Druid and Warrior talent trees reworked. *Hot Streak* renamed *Heating Up*; *Combustion* returned to 3 charges (was 4).`,
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-19",
-      "title": "Tuesday Maintenance & Beta Build 1.60.2: Addon Persistence C++ Fix, Druid Bear Form Armor & Ray-Tracing Passes",
-      "source": "Blizzard Official / Patch Notes",
+      "title": "Beta Development Notes (Sept 24): Racial Fixes, Hot Streak & Wake of Fire Durations, 1-Silver Talent Respecs",
+      "source": "Blizzard Official Forums",
       "sourceType": "blizzard",
-      "author": "Blizzard Quality Assurance",
-      "date": "September 22, 2026",
-      "tag": "Beta Patch Notes",
-      "summary": "Weekly maintenance deploys client build 1.60.2.70114, resolving the C++ SavedVariables disk flush bug, fixing Druid Bear Form armor multiplication, and smoothing DX12 ray-tracing stutters in major cities.",
-      "content": "Blizzard Entertainment has deployed the first scheduled Tuesday weekly maintenance build (1.60.2.70114) for the World of Warcraft: Forever closed beta:\n• Addon SavedVariables Restored: Fixed a client-side C++ file I/O bug where addon SavedVariables tables failed to flush to disk upon /reload or game exit. Addon developers no longer require emergency snapshot restoration workarounds.\n• 12.0 Lua Security & Secret Values: Blizzard engineers reiterated that WoW Forever operates on the Retail 12.0 (Camelot) engine. In-combat protective boundaries (<secret number> and <secret string>) are fully active; addon developers must utilize C++ SetFormattedText methods and isolated data registries to avoid fatal UI taint.\n• Bear Form Armor Multiplier Fix: Addressed an unintended calculation where Druid Bear Form armor multipliers were exponentially compounding flat consumable bonuses (like Elixir of Superior Defense) rather than adding them post-multiplier.\n• Capital City DX12 Shadow Optimization: Performance optimization pass for ray-traced shadows in Orgrimmar (Valley of Strength) and Stormwind (Trade District), eliminating stuttering in high player density areas.\n• Phase 1 Testing On Schedule: Phase 1 Level 20 cap testing enters Day 6 with smooth server concurrency.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1602-patch-notes-sep22"
+      "author": "Kaivax (Community Manager)",
+      "date": "September 24, 2026",
+      "tag": "Development Notes",
+      "summary": "Kaivax's first beta development-notes update: Gnome Eureka! reworked, Touch of the Grave no longer breaks crowd control, Hot Streak and Wake of Fire last longer, and talent respecs cost 1 silver for the beta.",
+      "content": `Highlights from the September 24, 2026 update to the WoW Forever Beta Development Notes:
+
+• **Racials:** Gnome *Eureka!* became a 10% discount on Mana, Rage or Energy abilities. Tauren *Cultivation* now has a level requirement per herb. Undead *Touch of the Grave* no longer breaks crowd control and no longer triggers from spells without a damage component.
+• **Durations:** *Wake of Fire* raised to 30 sec (was 20). *Hot Streak* raised to 20 sec (was 15).
+• **Cooldowns:** Paladin *Holy Strike* lowered to 10 sec (was 12). Warrior *Slam* raised to 18 sec (was 15).
+• **Beta QoL:** Talent respecs temporarily cost 1 silver. Gamepad flyouts and options were added.`,
+      "url": "https://us.forums.blizzard.com/en/wow/t/2360696"
     },
     {
       "id": "news-20",
@@ -1426,68 +1019,28 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 22, 2026",
       "tag": "World Events",
       "summary": "Brewfest officially opens outside Ironforge and Orgrimmar, featuring keg delivery runs, Ram Racing, Wolpertinger pets, and festival grounds adapted for Level 20 beta characters.",
-      "content": "Following the conclusion of Pirates' Day on September 20, the annual Brewfest celebration is now fully active across all WoW Forever beta megarealms from September 20 through October 6:\n• Festival Grounds: Alliance players can visit the festival grounds outside the gates of Ironforge, while Horde players celebrate outside Orgrimmar in Durotar.\n• Ram Racing & Barking: Daily quests for Barking for Brewfest and keg courier runs with rental rams are fully testable, rewarding Brewfest Prize Tokens.\n• Collectibles & Toys: Beta testers are farming tokens for the Wolpertinger pet, Brewfest Steins, and seasonal holiday clothing.\n• Level 20 Scaling Discussions: Blizzard is monitoring whether special holiday encounter scaling will be enabled for Coren Direbrew or if high-level boss drops will remain locked until Phase 2/3.",
-      "url": "https://www.wowhead.com/forever/news/brewfest-2026-event-guide-beta-level-20"
-    },
-    {
-      "id": "news-21",
-      "title": "Phase 1 Theorycrafting Surge: Level 20 Warsong Gulch Skirmishes & Pre-BiS Dungeon Routes",
-      "source": "Method.gg / Beta Theorycrafting",
-      "sourceType": "method",
-      "author": "Method Theorycrafting Team",
-      "date": "September 22, 2026",
-      "tag": "PvP & Systems",
-      "summary": "Over 65% of closed beta testers have reached the Level 20 cap, sparking intense Warsong Gulch battleground skirmishes, 16-point Legacy talent builds, and dungeon pre-BiS optimization.",
-      "content": "As Beta Phase 1 enters Day 6, the community meta has rapidly coalesced around max-level 20 optimization:\n• Level 20 Warsong Gulch (10–19 / 20 Bracket): Intense faction skirmishes highlight the impact of classic racials alongside modern class mechanics. Beast Mastery Hunters, Discipline Priests, and Arms Warriors are emerging as early front-runners.\n• 16-Point Legacy Milestones: Testers are heavily validating utility bonuses in the Legacy talent system, confirming that movement speed, mount speed, and camping perks drastically accelerate world navigation.\n• Dungeon Pre-BiS Farming: Deadmines (Defias set, Smite's Mighty Hammer, Cruel Barb), Wailing Caverns (Armor of the Fang), and Shadowfang Keep (Silverlaine's Family Seal, Shadowfang) are running continuously as players prepare for Phase 2's Level 30 cap unlock on October 8.",
-      "url": "https://www.method.gg/wow-classic/beta-phase-1-level-20-meta-dungeon-routes"
+      "content": `Following the conclusion of Pirates' Day on September 20, the annual Brewfest celebration is now fully active across all WoW Forever beta megarealms from September 20 through October 6:
+• Festival Grounds: Alliance players can visit the festival grounds outside the gates of Ironforge, while Horde players celebrate outside Orgrimmar in Durotar.
+• Ram Racing & Barking: Daily quests for Barking for Brewfest and keg courier runs with rental rams are fully testable, rewarding Brewfest Prize Tokens.
+• Collectibles & Toys: Beta testers are farming tokens for the Wolpertinger pet, Brewfest Steins, and seasonal holiday clothing.
+• Level 20 Scaling Discussions: Blizzard is monitoring whether special holiday encounter scaling will be enabled for Coren Direbrew or if high-level boss drops will remain locked until Phase 2/3.`,
+      "url": "https://www.wowhead.com/forever/news"
     },
     {
       "id": "news-16",
       "title": "Beta Weekend Surge: Aggrend Reports Record Turnout as Rolling Megarealm Restarts & EU Routing Deploy",
-      "source": "Blizzard Official / Twitter",
+      "source": "Blizzard Official / GamesRadar",
       "sourceType": "blizzard",
       "author": "Lead Designer Josh \"Aggrend\" Greenfield",
       "date": "September 21, 2026",
       "tag": "Beta Operations",
       "summary": "Aggrend reports player turnout has been the \"craziest in 17 years at Blizzard\" as engineering teams deploy rolling restarts to stabilize megarealms and release EU cross-region latency routing.",
-      "content": "Following the first weekend of the World of Warcraft: Forever closed beta, lead producer and designer Josh \"Aggrend\" Greenfield addressed the community regarding unprecedented participation numbers:\n• \"Craziest Turnout in 17 Years\": Aggrend confirmed that player concurrency and login volume shattered all internal forecasts, creating heavy demand on the realmless megarealm infrastructure.\n• Rolling Server Restarts: Blizzard operations deployed rolling server restarts on September 21 (including quick 15-minute maintenance windows) to recalibrate dynamic sharding boundaries, flush memory caches, and relieve congestion in starting hubs.\n• EU Routing Optimization: A dedicated blue post confirmed European routing enhancements, optimizing network packet flow for EU players connecting to North American beta megarealms with reduced latency and packet drop.\n• Test Window Progression: Phase 1 continues with the Level 20 cap through October 8, when Phase 2 unlocks the Level 30 cap and the City of Dalaran.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-operations-turnout-eu-routing"
-    },
-    {
-      "id": "news-17",
-      "title": "Field Testing Dispatch: 60-Minute Camp Benefits, +8% All-Stat Fish Bowl & +5% Kill XP Cooking Buffs Verified",
-      "source": "Method.gg / Beta Playtest",
-      "sourceType": "method",
-      "author": "Beta Theorycrafting Team",
-      "date": "September 20, 2026",
-      "tag": "Professions & Systems",
-      "summary": "Live in-game testing verifies full 'Camp Benefits' buff behavior: 60-minute duration, 1-hour Tent rested cooldown, Tier 1 Fish Bowl +8% All Stats, and +5% monster kill EXP on Well Fed meals.",
-      "content": "In-depth open-world playtesting in Durotar and The Barrens has verified exact numbers and mechanics for the new Camping & Campfire integration:\n• \"Camp Benefits\" 60-Minute Aura: Resting near an upgraded campfire applies the unified 'Camp Benefits' buff that persists for a full 60 minutes across outdoor zones.\n• The Tent (Rested XP Mechanics): Entering a crafted Camp Tent grants immediate rest experience in the field with a strict 1-hour cooldown: \"You received a small amount of rest experience. You can only receive this effect once per 1 hour.\"\n• Fishing Tier 1 Fish Bowl: Confirmed to grant all resting party members a flat +8% increase to all primary attributes (Strength, Agility, Stamina, Intellect, Spirit) for 60 minutes right at Tier 1!\n• Blacksmithing Sharpening Wheel: Confirmed to grant +6 Strength directly to equipped weapons for 60 minutes.\n• Cooking +5% Kill XP: Food recipes in the revised Cooking panel (such as 'Herb Baked Egg' under Stamina Food) now grant 15-minute Well Fed buffs that feature: \"Additionally, experience gained from kills is increased by 5%.\"\n• Intro Questlines: Discovered 'Camping 101: Skinning' in Razor Hill alongside new regional quests including 'Forgotten Loa Idols' and 'Practical Prey'.",
-      "url": "https://www.method.gg/wow-classic/camping-system-verified-numbers-buffs"
-    },
-    {
-      "id": "news-18",
-      "title": "Beta Known Issues Tracker: Addon Persistence Bug, Capital City FPS & Alt Mail Delivery Slated for Next Build",
-      "source": "Blizzard Official / Wowhead",
-      "sourceType": "blizzard",
-      "author": "Blizzard Quality Assurance",
-      "date": "September 20, 2026",
-      "tag": "Bug Tracker",
-      "summary": "Blizzard QA updates the Known Issues tracker for Build 1.60.1.69913, detailing pending fixes for SavedVariables disk flushing, Orgrimmar/Stormwind FPS drops, and cross-character mail.",
-      "content": "Blizzard Quality Assurance has updated the public bug tracker for WoW Forever Beta (Build 1.60.1.69913) with roughly eight core technical issues slated for resolution in the next iterative client build:\n• Addon SavedVariables Not Persisting: The client currently fails to flush addon configuration tables to disk upon /reload or normal game exit, requiring addon developers to implement snapshot restoration workarounds. A client-side C++ file I/O fix is queued for the next patch.\n• Capital City Frame Drops: Heavy stuttering and frame dips in Orgrimmar Valley of Strength and Stormwind Trade District are tied to modern DX12 shadow rendering on high-density NPC and player crowds.\n• Character-to-Character Alt Mail: Players have reported being unable to send mail to other characters on the same account under specific megarealm routing conditions.\n• macOS Client Visual Anomalies: Texture flickering on Apple Silicon hardware in coastal zones is currently being patched.\n• Next Build Window: A new beta build is scheduled to deploy early this week to push these engine and interface stability updates.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-known-issues-tracker-sep20"
-    },
-    {
-      "id": "news-15",
-      "title": "Beta Day 2 Dispatch: Early Hotfixes, Bear Form Armor Stacking Bug & Legacy Turn-in Fixes",
-      "source": "Warcraft Tavern / Blizzard Official",
-      "sourceType": "blizzard",
-      "author": "Community Dispatch",
-      "date": "September 19, 2026",
-      "tag": "Beta Patch Notes",
-      "summary": "Blizzard and community trackers report early Beta Day 2 hotfixes targeting Druid Bear Form armor multiplication, On-Next-Attack queue latency, and Innkeeper Wiley milestone turn-ins.",
-      "content": "Forty-eight hours into the World of Warcraft: Forever closed beta, Blizzard and community testing teams have logged the first round of live tuning and hotfixes:\n• Bear Form & Consumable Stacking: Investigating an unintended calculation where Druid Bear Form armor multipliers are exponentially multiplying flat consumable armor bonuses (such as Elixir of Superior Defense) rather than adding them after form calculation.\n• \"On-Next-Attack\" Queue Latency: Fixes in progress for queueing desyncs on abilities like Heroic Strike and Raptor Strike during global cooldown transitions.\n• Innkeeper Wiley Milestone Turn-In: Resolved an issue in Ratchet where players unlocking the 15-point Legacy tier were unable to purchase or receive the 'Holstered Replica Ironforge Air Rifle' toy.\n• Action Bar Cooldown Swipe: Client-side fix incoming for UI cooldown timers occasionally freezing or displaying incorrect decimal second values on the modern graphics renderer.",
-      "url": "https://www.warcrafttavern.com/forever/news/beta-day-2-hotfixes-known-issues"
+      "content": `Following the first weekend of the World of Warcraft: Forever closed beta, lead producer and designer Josh "Aggrend" Greenfield addressed the community regarding unprecedented participation numbers:
+• "Craziest Turnout in 17 Years": Aggrend confirmed that player concurrency and login volume shattered all internal forecasts, creating heavy demand on the realmless megarealm infrastructure.
+• Rolling Server Restarts: Blizzard operations deployed rolling server restarts on September 21 (including quick 15-minute maintenance windows) to recalibrate dynamic sharding boundaries, flush memory caches, and relieve congestion in starting hubs.
+• EU Routing Optimization: A dedicated blue post confirmed European routing enhancements, optimizing network packet flow for EU players connecting to North American beta megarealms with reduced latency and packet drop.
+• Test Window Progression: Phase 1 continues with the Level 20 cap until October 1, when Phase 2 raises the cap to 30.`,
+      "url": "https://www.gamesradar.com/games/world-of-warcraft/the-craziest-numbers-ive-seen-in-17-years-working-at-blizzard-wow-forever-devs-seem-genuinely-shocked-the-beta-is-so-popular-as-they-explain-why-their-mmo-servers-keep-breaking/"
     },
     {
       "id": "news-12",
@@ -1497,45 +1050,45 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "author": "Lead Systems Designer",
       "date": "September 18, 2026",
       "tag": "Quality of Life",
-      "summary": "Vendor reagents eliminated for all class abilities (no more Soul Shard or Ankh bags), while long-duration group buffs now last 50% longer (45 to 90 mins).",
-      "content": "Blizzard has announced two massive quality-of-life changes arriving in WoW: Forever:\n• Reagent-Free Class Abilities: Abilities that historically required vendor-bought reagents no longer require them. Shamans cast Reincarnation without Ankhs; Warlocks don't need bags clogged with 28 Soul Shards; Rogues use Blind and Vanish without buying powder; Paladins buff without Symbols of Kings; Druids rebirth without seeds; Mages and Priests cast without feathers, runes, or fish oil.\n• 50% Longer Buff Durations: All long-duration group and raid buffs (Arcane Intellect, Mark of the Wild, Power Word: Fortitude, Class Blessings) now last between 45 and 90 minutes. Raid groups will no longer suffer constant mid-boss buff dropouts!",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/qol-reagents-buffs"
-    },
-    {
-      "id": "news-13",
-      "title": "Tradeskill Power: All 9 Primary Professions Gain Unique Combat Passives & 600 New Recipes",
-      "source": "Method.gg",
-      "sourceType": "method",
-      "author": "Method Theorycrafting",
-      "date": "September 17, 2026",
-      "tag": "Professions & Systems",
-      "summary": "Every primary tradeskill provides permanent character power: Mining (+5% HP), Herbalism (+Resistances & Heal), Skinning (+Crit), Alchemy (Mixology 2x Flasks), and Blacksmithing (+AP).",
-      "content": "Professions are no longer optional side-hobbies in WoW Forever; they are core pillars of character identity:\n• Unique Combat Passives:\n  - Mining: 'Toughness' grants a flat +5% total Health bonus.\n  - Herbalism: 'Nature's Ward' grants +10 Magic Resistances and an on-use heal.\n  - Skinning: 'Master of Anatomy' grants +1.5% Critical Strike rating.\n  - Blacksmithing: 'Weapon Honing' grants weapon attack power and extra socketing.\n  - Alchemy: 'Mixology' doubles flask duration and boosts potion yields.\n  - Tailoring: 'Spirit Weaving' increases Spirit and mana restoration.\n  - Leatherworking: 'Fur Lining' grants armor reinforcement and stamina.\n  - Enchanting: 'Ring Enchants' grants primary stat finger enchants.\n  - Engineering: Epic goggles and high-tech utility gizmos.\n• 600+ New Blueprints: Discovered from dungeon bosses, world chests, and Camping interactions.",
-      "url": "https://www.method.gg/wow-classic/all-9-profession-passives-wow-forever"
+      "summary": "Vendor-bought reagents are removed from class abilities, and long-duration stat buffs (Fortitude, Divine Spirit, Arcane Intellect, Mark of the Wild) last 1 hour instead of 30 minutes.",
+      "content": `Blizzard has announced two massive quality-of-life changes arriving in WoW: Forever:
+• Reagent-Free Class Abilities: Abilities that historically required vendor-bought reagents no longer require them. Shamans cast Reincarnation without Ankhs; Warlocks don't need bags clogged with 28 Soul Shards; Rogues use Blind and Vanish without buying powder; Paladins buff without Symbols of Kings; Druids rebirth without seeds; Mages and Priests cast without feathers, runes, or fish oil.
+• 50% Longer Buff Durations: All long-duration group and raid buffs (Arcane Intellect, Mark of the Wild, Power Word: Fortitude, Class Blessings) now last 1 hour instead of 30 minutes, so groups refresh them far less often.`,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news"
     },
     {
       "id": "news-14",
-      "title": "Game Editions & Pricing: Included in Standard WoW Sub; Skyborne Epic Pack Detailed",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Wowhead Staff",
-      "date": "September 16, 2026",
-      "tag": "Pricing & Editions",
-      "summary": "World of Warcraft: Forever is 100% free with any active WoW subscription at launch. The optional Skyborne Epic Pack ($59.99) includes instant beta access, mount, transmog, and 30 days game time.",
-      "content": "Blizzard's launch and access model for World of Warcraft: Forever explained:\n• Standard Access: Included at NO additional box cost for all active World of Warcraft subscribers on November 4, 2026.\n• Skyborne Epic Pack ($59.99 USD):\n  - Immediate guaranteed Closed Beta access (plus 3 Invite-a-Friend beta keys).\n  - 30 Days of WoW Game Time included.\n  - Exclusive Ground Mount: Veteran Adventurer's Loyal Companion (armored canine).\n  - Transmog Set: Veteran Adventurer's Outdoor Wear.\n  - 4 Vanity Pets: Zergling, Panda, Diablo, and Pachimari.\n  - High Elf Lordaeron Crest & Shen'dorei Faction Tabards.",
-      "url": "https://www.wowhead.com/forever/news/editions-and-pricing-guide"
+      "title": "Game Editions & Pricing: Included with a WoW Subscription; Skyborne Requires a Pack",
+      "source": "Warcraft Tavern",
+      "sourceType": "tavern",
+      "author": "Warcraft Tavern",
+      "date": "September 12, 2026",
+      "tag": "Editions",
+      "summary": "WoW: Forever is included with any WoW subscription or Game Time. The Skyborne race needs the Skyborne Heroic Pack ($29.99) or higher; guaranteed beta access came with the Epic Pack ($59.99) and Warcraft Forever Collection ($79.99).",
+      "content": `Edition breakdown announced alongside the BlizzCon reveal:
+
+• **Base game:** Included with an active WoW subscription or Game Time (PC and Mac).
+• **Skyborne Heroic Pack ($29.99):** Unlocks the Skyborne race and the Zephras Isle starting experience. No beta access.
+• **Skyborne Epic Pack ($59.99):** Everything in Heroic plus guaranteed beta access.
+• **Warcraft Forever Collection ($79.99):** Top digital tier, including guaranteed beta access. Available in the Battle.net Shop until January 11, 2027.`,
+      "url": "https://www.warcrafttavern.com/forever/news/world-of-warcraft-forever-editions-skyborne-race-unlock-beta-access/"
     },
     {
       "id": "news-11",
-      "title": "Official Beta Schedule Revealed: 35 Days of Testing Across 2 Phased Waves",
+      "title": "WoW: Forever Closed Beta Opens September 17 with a Level 20 Cap",
       "source": "Blizzard Official",
       "sourceType": "blizzard",
-      "author": "Community Manager Kaivax",
-      "date": "September 18, 2026 (02:00 PM PDT)",
+      "author": "Blizzard Entertainment",
+      "date": "September 17, 2026",
       "tag": "Beta Schedule",
-      "summary": "Blizzard confirms the WoW: Forever Beta will run for exactly 35 days (5 weeks) from Sept 17 through Oct 21. Phase 1 runs for 21 days (Cap 20), followed by Phase 2 (Cap 30).",
-      "content": "The World of Warcraft: Forever Beta test schedule is officially locked in:\n• Total Duration: Exactly 35 days (5 full weeks), running from September 17 through October 21, 2026.\n• Phase 1 (Sept 17 – Oct 8 | 21 Days): Level cap strictly set at 20. Access to Zephras Isle, early classic zones, Hall of Thanes, Ruins of Lordaeron, and the 10-19 Warsong Gulch bracket.\n• Phase 2 (Oct 8 – Oct 21 | 14 Days): Level cap increases to 30. Unlocks Excavation Site 4 in Wetlands, City of Dalaran in Alterac Mountains, and 20-29 PvP.\n• Server Wipe & Launch (Oct 22 – Nov 4): All beta progress will be wiped on October 21. The team will spend 14 days on final stability tuning before the November 4 global launch!",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-schedule-duration"
+      "summary": "The closed beta opened September 17 with a Level 20 cap, Hall of Thanes and Ruins of Lordaeron as the new dungeons, and the Skyborne starting zone on Zephras Isle.",
+      "content": `The WoW: Forever closed beta opened on September 17, 2026, five days after the BlizzCon reveal.
+
+• **Phase 1 (Sept 17 – Oct 1):** Level 20 cap. New dungeons Hall of Thanes (13–18) and Ruins of Lordaeron (15–20) were available to test.
+• **Phase 2 (from Oct 1):** Level cap raised to 30 (see the October 1 entry).
+• **Access:** Guaranteed beta access came with the Skyborne Epic Pack and Warcraft Forever Collection; additional invites went out in waves.
+• The beta ultimately closed on October 23 at 10:00 AM PDT after a short extension.`,
+      "url": "https://warcraft.wiki.gg/wiki/World_of_Warcraft:_Forever"
     },
     {
       "id": "news-01",
@@ -1546,7 +1099,14 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 16, 2026",
       "tag": "Comprehensive Guide",
       "summary": "Full compendium of all confirmed features: Nov 4 launch, Skyborne race, 9 dungeons, Dual Talents, 16 Legacy Points, anti-dungeon-spam XP curve, and world buff raid restrictions.",
-      "content": "Here is the master summary of everything Blizzard has confirmed for WoW: Forever:\n• Launch: November 4, 2026. Permanent level 60 cap with horizontal progression and 1,000+ new quests.\n• No Server Barriers: Choose a Ruleset (PvE, PvP, Roleplay, or Hardcore in late winter). No dead servers.\n• Quality of Life: Dual Talent Specialization at Level 40, Barbershop (hair, beard, skin color), In-game Damage Meter, Retail Ping System, and Native Controller Support right out of the gate.\n• Economy & Integrity: NO WoW Tokens. NO character level boosts. Guild banks ready on Day 1.\n• World Buff Overhaul: World buffs function out in the open world, but are disabled inside raids. No Chronoboons or 2-hour pre-buff routes required!\n• Dungeon XP vs Open World: Dungeon mob XP is drastically lowered to kill dungeon spamming. First-time dungeon quests yield massive rewards, with repeatable weekly boss 'chase drops' to keep dungeons exciting.\n• Raids at Launch: Molten Core is replaced by Barrow Deeps (10-man) and Hyjal Summit (20-man), alongside Onyxia's Lair.",
+      "content": `Here is the master summary of everything Blizzard has confirmed for WoW: Forever:
+• Launch: November 4, 2026. Permanent level 60 cap with horizontal progression and 1,000+ new quests.
+• No Server Barriers: Choose a Ruleset (PvE, PvP, Roleplay, or Hardcore in late winter). No dead servers.
+• Quality of Life: Dual Talent Specialization at Level 40, Barbershop (hair, beard, skin color), In-game Damage Meter, Retail Ping System, and Native Controller Support right out of the gate.
+• Economy & Integrity: NO WoW Tokens. NO character level boosts. Guild banks ready on Day 1.
+• World Buff Overhaul: World buffs function out in the open world, but are disabled inside raids. No Chronoboons or 2-hour pre-buff routes required!
+• Dungeon XP vs Open World: Dungeon mob XP is drastically lowered to kill dungeon spamming. First-time dungeon quests yield massive rewards, with repeatable weekly boss 'chase drops' to keep dungeons exciting.
+• Raids at Launch: Molten Core is replaced by Barrow Deeps (10-man) and Hyjal Summit (20-man), alongside Onyxia's Lair.`,
       "url": "https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827"
     },
     {
@@ -1557,9 +1117,13 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "author": "Lead Engine Programmer",
       "date": "September 15, 2026",
       "tag": "Engine & Graphics",
-      "summary": "Proprietary software/hardware ray-traced global illumination running smoothly on GTX 10-series/RDNA1 cards, dynamic sun shadows, and SD/HD animation toggles.",
-      "content": "World of Warcraft: Forever upgrades the classic world with a modernized graphics engine while preserving the 2004 aesthetic soul:\n• Custom Ray-Traced Global Illumination: Real-time environmental lighting and shifting mountain shadows based on sun height without requiring high-end DXR cards.\n• Atmospheric Enhancements: Volumetric ground fog, extended draw distance (bye-bye flat fog wall), and fluid water foam physics in Elwynn and Loch Modan.\n• Visual Freedom Toggles: In System Options, players can freely toggle between 'Classic 2004 Visuals' and 'Forever Ray-Traced Modern', as well as mix-and-match SD character models with modern spell effects or HD models with classic animations!\n• SSD Requirement: A Solid State Drive is mandatory for seamless asset streaming.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/engine-tech"
+      "summary": "Blizzard built its own ray-traced global illumination for Forever and added an SD/HD character model choice. Ray-traced shadows were pulled during the beta to return later, and minimum GPU requirements rose.",
+      "content": `World of Warcraft: Forever upgrades the classic world with a modernized graphics engine while preserving the 2004 aesthetic soul:
+• Custom Ray-Traced Global Illumination: Real-time environmental lighting and shifting mountain shadows based on sun height without requiring high-end DXR cards.
+• Atmospheric Enhancements: Volumetric ground fog, extended draw distance (bye-bye flat fog wall), and fluid water foam physics in Elwynn and Loch Modan.
+• Visual Freedom Toggles: In System Options, players can freely toggle between 'Classic 2004 Visuals' and 'Forever Ray-Traced Modern', as well as mix-and-match SD character models with modern spell effects or HD models with classic animations!
+• SSD Requirement: A Solid State Drive is mandatory for seamless asset streaming.`,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news"
     },
     {
       "id": "news-09",
@@ -1570,20 +1134,11 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 15, 2026",
       "tag": "Addons & Combat",
       "summary": "Blizzard confirms computational combat-solver addons and automated WeakAuras scripts will be disabled during boss fights to preserve player execution.",
-      "content": "Blizzard has taken a firm stance on addon bloat in WoW: Forever:\n• In-Combat Disarmament: Addons that perform complex combat calculations, auto-assign raid markers, decipher encrypted boss telegraphs, or auto-cleanse debuffs will have their Lua APIs restricted during encounter combat.\n• Built-In Replacements: To ensure a clean experience, Blizzard built native tools directly into the UI: an in-game Damage/Healing meter, cooldown trackers, modern raid frames, and the retail Ping wheel.\n• Permitted Addons: Standard UI skinning, bag reorganizers, auction house helpers, and chat mods continue to function normally outside and inside combat.",
+      "content": `Blizzard has taken a firm stance on addon bloat in WoW: Forever:
+• In-Combat Disarmament: Addons that perform complex combat calculations, auto-assign raid markers, decipher encrypted boss telegraphs, or auto-cleanse debuffs will have their Lua APIs restricted during encounter combat.
+• Built-In Replacements: To ensure a clean experience, Blizzard built native tools directly into the UI: an in-game Damage/Healing meter, cooldown trackers, modern raid frames, and the retail Ping wheel.
+• Permitted Addons: Standard UI skinning, bag reorganizers, auction house helpers, and chat mods continue to function normally outside and inside combat.`,
       "url": "https://www.method.gg/news/addon-disarmament-wow-forever"
-    },
-    {
-      "id": "news-10",
-      "title": "Seasonal PvP & Rank 14 Overhaul: No More 18-Hour Decay Grinds",
-      "source": "Wowhead",
-      "sourceType": "wowhead",
-      "author": "Perculia",
-      "date": "September 14, 2026",
-      "tag": "PvP Systems",
-      "summary": "Rank 14 is modernized into a milestone-based seasonal track aligned with raid tiers, alongside Darkspear Islands 15v15 and PvP faction locks.",
-      "content": "The legendary Rank 14 grind has been completely re-engineered for World of Warcraft: Forever:\n• Milestone Track: Unhealthy 18-hour-a-day bracket stacking and harsh weekly rank decay are abolished. Progression to Grand Marshal / High Warlord is tied to an objective seasonal milestone track that resets each tier.\n• Retuned Rank 14 Gear: PvP weapons and armor have been updated with Classic+ stats and Expertise rating to remain competitive with raid drops.\n• Faction Locking: On the PvP ruleset, players are locked to a single faction (no cross-faction alts on the same ruleset), preserving intense faction rivalry.\n• New 15v15 Battleground: Darkspear Islands introduces coastal artillery cannon control and central flag capture.",
-      "url": "https://www.wowhead.com/forever/news/pvp-rank-14-overhaul"
     },
     {
       "id": "news-02",
@@ -1594,7 +1149,14 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 16, 2026",
       "tag": "Racials & Balance",
       "summary": "Method evaluates the complete rework of racial abilities across all races, removing the mandatory Human sword/mace supremacy and adding unique perks.",
-      "content": "Blizzard has completely redone racial abilities for World of Warcraft: Forever:\n• Human: The old +5 Sword/Mace skill is gone, replaced by 'Diplomatic Resolve' (+Spirit, +Reputation, and +Expertise rating regardless of weapon type).\n• Undead: Paladins unlock a unique custom spectral warhorse mount ('Forsaken Charger'), while Will of the Forsaken and Cannibalize receive updated visual animations.\n• Dwarf: Wildhammer shamans gain 'Earthen Resilience', while Stoneform now scales with Stamina.\n• Gnome: 'Expansive Mind' now grants +5% Intellect AND +3% Spell Critical Strike chance.\n• Orc: Blood Fury no longer inflicts a healing debuff, granting +Spell Damage alongside Attack Power.\n• Troll: Berserking has been normalized to a flat haste bonus that scales gracefully without requiring 1% health gaming.\n• Skyborne: Features 'Gale Step' (10-yard forward dash clearing roots), 'Windborne Grace' (slow fall), and 'Zephyr Attunement' (+Nature/Arcane res).",
+      "content": `Blizzard has completely redone racial abilities for World of Warcraft: Forever:
+• Human: The old +5 Sword/Mace skill is gone, replaced by 'Diplomatic Resolve' (+Spirit, +Reputation, and +Expertise rating regardless of weapon type).
+• Undead: Paladins unlock a unique custom spectral warhorse mount ('Forsaken Charger'), while Will of the Forsaken and Cannibalize receive updated visual animations.
+• Dwarf: Wildhammer shamans gain 'Earthen Resilience', while Stoneform now scales with Stamina.
+• Gnome: 'Expansive Mind' now grants +5% Intellect AND +3% Spell Critical Strike chance.
+• Orc: Blood Fury no longer inflicts a healing debuff, granting +Spell Damage alongside Attack Power.
+• Troll: Berserking has been normalized to a flat haste bonus that scales gracefully without requiring 1% health gaming.
+• Skyborne: Features 'Gale Step' (10-yard forward dash clearing roots), 'Windborne Grace' (slow fall), and 'Zephyr Attunement' (+Nature/Arcane res).`,
       "url": "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever"
     },
     {
@@ -1606,7 +1168,10 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 16, 2026",
       "tag": "Itemization",
       "summary": "How Blizzard solved Classic's itemization rot: Bonus spell damage on hybrid gear, weapon skill converted to Expertise, and melee/spell hit rating streamlined.",
-      "content": "In WoW Forever, gear itemization has undergone a comprehensive renaissance:\n1. Expertise System: Weapon skill bonuses from gear (like Edgemaster's Handguards) now grant universal Expertise Rating, allowing any race to wield any weapon class effectively.\n2. Unified Spell Power: 'Healing Spells' and 'Damage Spells' have been merged into unified Spell Power on pre-60 items, revitalizing hybrid leveling.\n3. Every Boss Has Chase Drops: Every dungeon and raid boss drops rare, specialized utility items or crafting blueprints, guaranteeing long-term replay value.",
+      "content": `In WoW Forever, gear itemization has undergone a comprehensive renaissance:
+1. Expertise System: Weapon skill bonuses from gear (like Edgemaster's Handguards) now grant universal Expertise Rating, allowing any race to wield any weapon class effectively.
+2. Unified Spell Power: 'Healing Spells' and 'Damage Spells' have been merged into unified Spell Power on pre-60 items, revitalizing hybrid leveling.
+3. Every Boss Has Chase Drops: Every dungeon and raid boss drops rare, specialized utility items or crafting blueprints, guaranteeing long-term replay value.`,
       "url": "https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more"
     },
     {
@@ -1618,7 +1183,11 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 13, 2026",
       "tag": "QoL Features",
       "summary": "Video demonstration of the retail ping system functioning inside the Classic+ client, allowing effortless non-verbal party callouts and marker pings.",
-      "content": "Content creator MrGM shared exclusive footage of World of Warcraft: Forever's accessibility and UI modernizations:\n• Ping System: Pressing the ping hotkey brings up the radial wheel (Attack, Assist, On My Way, Danger) that places real-time 3D markers in the game world and minimap.\n• Native Controller Support: Full plug-and-play Xbox, PlayStation, and Steam Deck controller keybinding layout right from character creation.\n• Built-in Damage & Healing Meter: Blizzard has integrated an official, lightweight combat log parser into the default interface.\n• Discord Integration: Connects directly with Discord to display party status, rich presence, and voice channel overlays.",
+      "content": `Content creator MrGM shared exclusive footage of World of Warcraft: Forever's accessibility and UI modernizations:
+• Ping System: Pressing the ping hotkey brings up the radial wheel (Attack, Assist, On My Way, Danger) that places real-time 3D markers in the game world and minimap.
+• Native Controller Support: Full plug-and-play Xbox, PlayStation, and Steam Deck controller keybinding layout right from character creation.
+• Built-in Damage & Healing Meter: Blizzard has integrated an official, lightweight combat log parser into the default interface.
+• Discord Integration: Connects directly with Discord to display party status, rich presence, and voice channel overlays.`,
       "url": "https://x.com/MrGMYT/status/2099139797524902295/video/1"
     },
     {
@@ -1630,7 +1199,11 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 14, 2026",
       "tag": "Talents",
       "summary": "Icy Veins launches their 60-point talent calculator for WoW: Forever. Dual Talent Specialization confirmed to be unlocked at Level 40 for a one-time gold fee.",
-      "content": "Dual Talent Specialization is officially confirmed for World of Warcraft: Forever!\n• Availability: Unlocks at Level 40 from your class trainer for a reasonable one-time gold fee.\n• Swap Mechanics: Switch specs in any rest area or while resting at a player campfire.\n• Hybrid Viability: Makes switching between Tank/DPS (Paladins, Warriors, Druids) and Healer/DPS (Priests, Shamans, Paladins) effortless without paying 50g per respec.\n• Revamped Trees: Full 31-point cap trees reimagined with new defensive passives, mana sustain talents, and hybrid scaling.",
+      "content": `Dual Talent Specialization is officially confirmed for World of Warcraft: Forever!
+• Availability: Unlocks at Level 40 from your class trainer for a reasonable one-time gold fee.
+• Swap Mechanics: Switch specs in any rest area or while resting at a player campfire.
+• Hybrid Viability: Makes switching between Tank/DPS (Paladins, Warriors, Druids) and Healer/DPS (Priests, Shamans, Paladins) effortless without paying 50g per respec.
+• Revamped Trees: Full 31-point cap trees reimagined with new defensive passives, mana sustain talents, and hybrid scaling.`,
       "url": "https://www.icy-veins.com/wow-forever/talent-calculator"
     },
     {
@@ -1642,7 +1215,13 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 15, 2026",
       "tag": "Legacy System",
       "summary": "Wowhead unveils the 16-point Legacy Calculator. Account-wide progression points spent across Professions, Adventure, and Resourcefulness perk trees.",
-      "content": "The Legacy System provides permanent horizontal account value:\n• 16 Points at Launch: Earned through leveling alts, completing zone storylines, mastering professions, exploration milestones, and PvP ranks.\n• Three Perk Trees:\n  1. Professions: Yield bonuses, skill book discovery rates, reduced failure chances on engineering.\n  2. Adventure: Rested XP accumulation speed (+25%), flight path travel speed (+15%), rare mob tracking.\n  3. Resourcefulness: Vendor repair discounts, +2 bank bag slots, campfire duration extension.\n• Points are shared account-wide, but each character customizes their allocation independently.",
+      "content": `The Legacy System provides permanent horizontal account value:
+• 16 Points at Launch: Earned through leveling alts, completing zone storylines, mastering professions, exploration milestones, and PvP ranks.
+• Three Perk Trees:
+  1. Professions: Yield bonuses, skill book discovery rates, reduced failure chances on engineering.
+  2. Adventure: Rested XP accumulation speed (+25%), flight path travel speed (+15%), rare mob tracking.
+  3. Resourcefulness: Vendor repair discounts, +2 bank bag slots, campfire duration extension.
+• Points are shared account-wide, but each character customizes their allocation independently.`,
       "url": "https://www.wowhead.com/forever/legacy-calculator"
     },
     {
@@ -1654,8 +1233,13 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "date": "September 14, 2026",
       "tag": "Game Rules",
       "summary": "Radical community-first design decisions: World buffs disabled in raids, dungeon XP nerfed to encourage questing, and Stormwind Harbor reinstated.",
-      "content": "Key design pillars detailed by the game directors:\n1. No World Buffs in Raids: Rallying Cry of the Dragonslayer, Fengus' Ferocity, and Songflower work exclusively OUTSIDE of raid instances. You no longer need to spend 2 hours gathering buffs or fear dying and losing damage.\n2. Anti-Dungeon Boosting: Mob kill XP inside instances is significantly lower. Players are incentivized to quest through the 1,000+ new quests in revamped zones.\n3. Meeting Stones as LFG Hubs: Meeting stones do not summon players (preserving travel immersion), but clicking them opens the built-in LFG tool to find or form a group.\n4. Stormwind Harbor: The harbor has been backported, providing a direct ferry route to Darkshore and Auberdine, ending the painful 30-minute swim or Menethil run for low-level night elves and humans.\n5. Gathering Skill Books: Discoverable skill tomes drop from world quests and rare mobs that permanently grant +5 to +15 skill in Mining, Herbalism, and Skinning.",
-      "url": "https://news.blizzard.com/en-us/world-of-warcraft/gameplay-philosophies"
+      "content": `Key design pillars detailed by the game directors:
+1. No World Buffs in Raids: Rallying Cry of the Dragonslayer, Fengus' Ferocity, and Songflower work exclusively OUTSIDE of raid instances. You no longer need to spend 2 hours gathering buffs or fear dying and losing damage.
+2. Anti-Dungeon Boosting: Mob kill XP inside instances is significantly lower. Players are incentivized to quest through the 1,000+ new quests in revamped zones.
+3. Meeting Stones as LFG Hubs: Meeting stones do not summon players (preserving travel immersion), but clicking them opens the built-in LFG tool to find or form a group.
+4. Stormwind Harbor: The harbor has been backported, providing a direct ferry route to Darkshore and Auberdine, ending the painful 30-minute swim or Menethil run for low-level night elves and humans.
+5. Gathering Skill Books: Discoverable skill tomes drop from world quests and rare mobs that permanently grant +5 to +15 skill in Mining, Herbalism, and Skinning.`,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news"
     }
   ],
   "gameplayRulesAndQoL": [
@@ -1664,7 +1248,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "title": "No World Buffs in Raids",
       "icon": "⚡",
       "badge": "Raid Integrity",
-      "desc": "World buffs work out in the world, but are disabled inside raid instances. No Chronoboons, no 2-hour pre-buff routes, and no griefing dispels in Booty Bay."
+      "desc": "World buffs work out in the open world but have no effect inside raid instances, so there is no pre-raid world-buff routing."
     },
     {
       "id": "no-tokens-no-boosts",
@@ -1678,14 +1262,14 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "title": "Dual Talent Specialization",
       "icon": "🔄",
       "badge": "Confirmed at Lvl 40",
-      "desc": "Unlocked at Level 40 for a one-time gold fee. Switch between specs in rest areas or around any player campfire."
+      "desc": "Unlocked at Level 40 from your class trainer for 50 gold. Swap specs any time outside combat and battlegrounds; each spec's respec fee slowly drops toward 1 gold over time."
     },
     {
       "id": "anti-dungeon-spam",
       "title": "Anti-Dungeon Spam XP",
       "icon": "📜",
       "badge": "World Questing",
-      "desc": "Mob kill XP inside dungeons is low. First-time dungeon quests yield massive rewards, with repeatable weekly boss chase drops."
+      "desc": "Forever is tuned around open-world questing. Dungeon quests grant less bonus XP than in the beta, but dungeon kill XP has been raised twice (about +20% on Oct 8, then +50% on Nov 9)."
     },
     {
       "id": "in-combat-disarmament",
@@ -1699,21 +1283,21 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "title": "Seasonal Rank 14 Track",
       "icon": "⚔️",
       "badge": "Healthy PvP",
-      "desc": "No more 18-hour-a-day decay grind! Reach Rank 14 via an objective seasonal milestone progression track that resets each tier."
+      "desc": "Rank Points no longer decay: Rank 14 needs 24,750 total Rank Points, with a weekly cap that makes it reachable from week 10 of a season. Honor is a separate currency for gear (cap 25,000)."
     },
     {
       "id": "hardcore-transfer",
       "title": "Hardcore & Mortal Safety Net",
       "icon": "💀",
       "badge": "Winter Ruleset",
-      "desc": "True permanent character death with Mak'gora duels. When your Hardcore champion falls, claim a free transfer to PvE or PvP rulesets!"
+      "desc": "A permadeath Hardcore ruleset is confirmed for winter 2026/27. Blizzard has not yet published its full rules."
     },
     {
       "id": "ray-tracing-graphics",
       "title": "Custom Ray-Tracing Engine",
       "icon": "✨",
       "badge": "Visual Overhaul",
-      "desc": "Dynamic real-time sun shadows, volumetric fog, and flowing foam water physics, with instant SD/HD model and 2004 animation toggles."
+      "desc": "Blizzard's own ray-traced global illumination relights Azeroth. Choose SD (Classic) or HD character models, both using Classic animations. Ray-traced shadows were pulled during the beta to return later."
     },
     {
       "id": "sw-harbor",
@@ -1745,24 +1329,24 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "reagent-free-spells",
-      "title": "Reagent-Free Class Abilities",
+      "title": "Reagent Economy (Legacy Perk)",
       "icon": "🎒",
       "badge": "Bag Space Overhaul",
-      "desc": "Vendor-bought reagents are eliminated! Spells no longer consume Ankhs, 28 Soul Shards, Flash Powder, Symbols of Kings, Wild Berries, or Teleport Runes."
+      "desc": "The Reagent Economy Legacy perk makes your class abilities stop requiring vendor-bought reagents (Ankhs, Flash Powder, Symbols of Kings, Teleport Runes and similar)."
     },
     {
       "id": "buff-duration-50",
-      "title": "50% Longer Raid Buffs",
+      "title": "Longer Group Buffs",
       "icon": "⏳",
       "badge": "Group Quality of Life",
-      "desc": "All long-duration group and raid buffs (Arcane Intellect, Mark of the Wild, Fortitude, Blessings) now last 45 to 90 minutes. No mid-dungeon expiration."
+      "desc": "Power Word: Fortitude and Arcane Intellect now last 1 hour. The Permanence Legacy perk makes long party/raid buffs last up to 100% longer and camp resting benefits 50% longer."
     },
     {
       "id": "profession-passives",
-      "title": "All 9 Profession Combat Passives",
+      "title": "Profession Camp Objects",
       "icon": "⚒️",
       "badge": "Tradeskill Power",
-      "desc": "Every primary profession grants permanent character power: Mining (+5% HP), Herbalism (+Resistances & Heal), Skinning (+Crit), Alchemy (Mixology 2x Flasks), etc."
+      "desc": "At skill 20 every profession unlocks a camp object that buffs everyone sitting at your campfire: Lodestone (Attack Power), Incense Candle (Intellect), Camp Chair (+2% crit), Fish Bowl (+8% stats) and more."
     },
     {
       "id": "legacy-cosmetics-track",
@@ -1791,45 +1375,61 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "cost": "$29.99 USD",
       "description": "Expansion pack unlocking the playable Skyborne race, Zephras Isle starting zone, exclusive mount, and cosmetic transmog set.",
       "perks": [
-        "Playable Skyborne neutral race (Levels 1–60)",
+        "Playable Skyborne race: Alliance-aligned High Order and Horde-aligned Windshapers (Levels 1–60)",
         "Zephras Isle starting zone access (Levels 1–12)",
-        "Exclusive Ground Mount: Cerulean Prideclaw",
-        "Cosmetic Transmog Ensemble: Shen'dorei Skyseer's Garb",
-        "Early Name Reservation access"
+        "Ground Mount: Cerulean Prideclaw (WoW: Forever & Modern WoW)",
+        "Transmog: Shen'dorei Skyseer's Garb + Veteran Adventurer's Rucksack (back)",
+        "Toy: Shen'dorei Windwell",
+        "Skyborne Housing Decor (Modern WoW, requires Midnight)",
+        "Early Name Reservation access",
+        "1 Invite-A-Friend Launch Code (no beta access or game time)"
       ]
     },
     "epicPack": {
       "name": "Skyborne Epic Pack",
-      "badge": "Collector's Digital Bundle",
+      "badge": "Includes Beta Access",
       "cost": "$59.99 USD",
-      "description": "Ultimate digital bundle including everything in the Heroic Pack plus 30 days game time, invite codes, exclusive companion pets, and faction tabards.",
+      "description": "Everything in the Heroic Pack plus closed beta access, 30 days of game time, an extra mount, a transmog set, four pets and two tabards.",
       "perks": [
         "Includes everything in the Skyborne Heroic Pack",
-        "30 Days of World of Warcraft Game Time included",
-        "Three (3) Invite-A-Friend Launch & Beta Keys",
-        "Exclusive Ground Mount: Veteran Adventurer's Loyal Companion (Canine Hound)",
-        "Transmog Ensemble: Veteran Adventurer's Outdoor Wear",
-        "Four (4) Vanity Pets: Zergling, Panda, Diablo, and Pachimari",
-        "Faction Tabards: High Elf Lordaeron Crest & Shen'dorei Sun-Embroidered Tabards"
+        "WoW: Forever closed beta access (Sept 17 – Oct 23, 2026)",
+        "30 Days of World of Warcraft Game Time",
+        "Ground Mount: Veteran Adventurer's Loyal Companion",
+        "Transmog: Veteran Adventurer's Outdoor Wear",
+        "Pets (WoW: Forever only): Zergling, Panda, Diablo, and Pachimari",
+        "Tabards (WoW: Forever only): Lordaeron and Shen'dorei",
+        "3 Invite-A-Friend Launch Codes total"
+      ]
+    },
+    "collection": {
+      "name": "Warcraft Forever Collection",
+      "badge": "Limited — until Jan 11, 2027",
+      "cost": "$79.99 USD",
+      "description": "Everything in the Epic Pack plus Warcraft III: Reforged and its Forsaken Kingdom expansion. A limited BlizzCon 2026 edition sold through January 11, 2027.",
+      "perks": [
+        "Includes everything in the Skyborne Epic Pack",
+        "Warcraft III: Reforged + Forsaken Kingdom expansion",
+        "Forsaken & Human Figurine Decor (Modern WoW housing, requires Midnight)",
+        "3 Invite-A-Friend Launch Codes total"
       ]
     }
   },
   "engineSpecs": {
     "minimum": {
       "os": "Windows 10 64-bit",
-      "cpu": "4-Core Processor (3.0 GHz)",
+      "cpu": "See Blizzard's Battle.net Shop listing for exact CPU models",
       "ram": "8 GB RAM",
-      "gpu": "DirectX 12 capable 4 GB VRAM (GTX 1060 / AMD RX 5500 / Iris Xe)",
-      "storage": "SSD Strictly Required (Solid State Drive)",
-      "target": "1080p @ 30–60 FPS (Fair/Low Settings)"
+      "gpu": "DirectX 12 GPU with 4 GB VRAM — NVIDIA GTX 10 series / AMD RDNA 1 or newer (older architectures are no longer supported)",
+      "storage": "128 GB free space on an SSD",
+      "target": "Official minimum spec"
     },
     "recommended": {
       "os": "Windows 11 64-bit",
-      "cpu": "8-Core Modern Processor (e.g. Ryzen 7 5800X / Intel i7-12700K)",
-      "ram": "16 GB High-Speed RAM",
-      "gpu": "DirectX 12 Ray-Tracing capable 8 GB VRAM (RTX 3070 / 4070 / RX 6800)",
-      "storage": "NVMe M.2 SSD",
-      "target": "1440p / 4K @ 60–144 FPS with Ray-Traced Global Illumination"
+      "cpu": "8 performance cores with 5.2 GHz boost (e.g. Intel Core Ultra Series 2 / AMD Ryzen Zen 5)",
+      "ram": "16 GB RAM",
+      "gpu": "DirectX 12 GPU with 8 GB VRAM",
+      "storage": "128 GB free space on an SSD",
+      "target": "Official recommended spec"
     }
   },
   "fullDungeonProgressionCurve": [
@@ -1877,7 +1477,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "level": "24 – 29",
-      "name": "Excavation Site 4",
+      "name": "Excavation Site: Wetlands",
       "zone": "Wetlands",
       "isNew": true,
       "betaActive": true
@@ -1968,7 +1568,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "level": "48 – 54",
-      "name": "Alcaz Island Prison",
+      "name": "Alcaz Prison",
       "zone": "Dustwallow Marsh",
       "isNew": true,
       "betaActive": false
@@ -2381,8 +1981,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   ],
   "skyborneRace": {
     "name": "The Skyborne",
-    "origin": "Zephras Isle (Floating realm in upper Kalimdor skies)",
-    "factionOption": "Neutral (Aligns with Alliance or Horde at Level 10)",
+    "origin": "Zephras Isle (linked to both factions by the Valanaar Skydocks)",
+    "factionOption": "Chosen at character creation: High Order (Alliance) or Windshaper (Horde)",
     "allianceTitle": "High Order Skyborne",
     "hordeTitle": "Windshaper Skyborne",
     "classes": [
@@ -2393,7 +1993,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "Mage (Alliance High Order Exclusive)",
       "Shaman (Horde Windshaper Exclusive)"
     ],
-    "lore": "Descendants of high elves and elemental wind-weavers who took sanctuary on Zephras Isle during the Great Sundering. Their return to Azeroth marks the rekindling of ancient forgotten pacts.",
+    "lore": "A brand-new playable race whose story begins on Zephras Isle. Requires the Skyborne Heroic Pack or higher.",
     "racialsAlliance": [
       {
         "name": "Walk on Air",
@@ -2403,7 +2003,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "name": "Read Leyline",
         "type": "Active • 15s • 2m CD",
-        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used while Innervate is active and is replaced by Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death, removed upon entering a raid)."
+        "effect": "Increases Mana and Health regeneration by 50% for 15 sec (2 min cooldown). Cannot be used alongside Innervate. Using at a Ley Line grants Attuned for 1 hour, boosting the benefit to 100% regeneration (persists through death, removed upon entering a raid)."
       },
       {
         "name": "Wind Blessed",
@@ -2464,7 +2064,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   "priestRacials": {
     "baseline": {
       "name": "Fear Ward",
-      "desc": "Wards the friendly target against Fear. The next Fear effect used against the target will fail, consuming the ward. Lasts 10 min. (✦ Baseline for ALL Priests in WoW: Forever!)"
+      "desc": "Wards the friendly target against Fear. The next Fear effect used against the target will fail, using up the ward. Lasts 3 min, 3 min cooldown. (✦ Baseline for ALL Priests in WoW: Forever!)"
     },
     "races": [
       {
@@ -2475,12 +2075,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
           {
             "name": "Chastise",
             "type": "Active (Instant)",
-            "desc": "Chastise the target, dealing Holy damage and disorienting them for up to 3 sec."
+            "desc": "Deals Holy damage and immobilizes the target for up to 2 sec. Only works against Humanoids. Very low threat. 2 min cooldown."
           },
           {
             "name": "Desperate Prayer",
             "type": "Active (Instant)",
-            "desc": "Instantly heals the caster for a large amount of health without consuming mana. 10 min cooldown."
+            "desc": "Instantly heals the caster. 10 min cooldown."
           }
         ]
       },
@@ -2492,12 +2092,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
           {
             "name": "Confounding Flash",
             "type": "Active (Instant)",
-            "desc": "Flashes bright geometric prism-light, reducing the target's chance to hit and disorienting nearby foes."
+            "desc": "Confuses nearby enemies for 3 sec. Any damage breaks the effect. 2 min cooldown. Works in Shadowform (Nov 11 hotfix)."
           },
           {
             "name": "Contingency Plan",
-            "type": "Active / Reactive",
-            "desc": "Instantly restores 25% Mana and shields the Gnome when taking lethal damage or dropping below 20% Health."
+            "type": "Active (Ally Ward)",
+            "desc": "Places a Holy ward on an ally for 30 sec. The next time they drop below 35% Health they gain an absorb shield and a heal over 15 sec. 10 min cooldown."
           }
         ]
       },
@@ -2508,13 +2108,13 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "spells": [
           {
             "name": "Divine Grace",
-            "type": "Passive / Buff",
-            "desc": "Reduces the cast time and mana cost of your next Holy spell after casting a direct heal."
+            "type": "Active (Instant Heal)",
+            "desc": "Instantly heals a friendly target below 50% Health and removes Weakened Soul. Cannot be cast on yourself. 10 min cooldown."
           },
           {
             "name": "Feedback",
-            "type": "Active Buff",
-            "desc": "The priest's weapon is imbued with divine resonance: physical attacks burn enemy mana and deal Shadow damage."
+            "type": "Active (15s)",
+            "desc": "For 15 sec, any spell cast successfully against you burns the attacker's Mana and deals Shadow damage equal to the Mana burned. 3 min cooldown."
           }
         ]
       },
@@ -2525,13 +2125,13 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "spells": [
           {
             "name": "Elune's Grace",
-            "type": "Active (3 min CD)",
-            "desc": "Reduces ranged damage taken by 20% and increases Dodge chance by 20% for 15 sec."
+            "type": "Active (5 min CD)",
+            "desc": "Reduces the chance you are hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times. 5 min cooldown."
           },
           {
             "name": "Starshards",
             "type": "Channeled (6s)",
-            "desc": "Rains celestial starshards down upon the target, dealing heavy Arcane damage over 6 sec."
+            "desc": "Rains starshards on the target, dealing Arcane damage over 6 sec. 30 sec cooldown."
           }
         ]
       },
@@ -2543,12 +2143,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
           {
             "name": "Hex of Weakness",
             "type": "Active Curse",
-            "desc": "Weakens the target, reducing physical attack damage and reducing healing received by 20% for 2 min."
+            "desc": "Reduces the target's melee attack power and the effectiveness of healing on it by 20% for 2 min."
           },
           {
             "name": "Shadowguard",
             "type": "Active (Instant)",
-            "desc": "Surrounds the caster with 3 shadow globes. Melee, ranged, and spell attacks against the caster cause Shadow damage."
+            "desc": "Surrounds the caster with shadows (3 charges, 10 min). Spell, melee, or ranged attacks that hit you strike the attacker for Shadow damage."
           }
         ]
       },
@@ -2560,12 +2160,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
           {
             "name": "Dark Sacrifice",
             "type": "Active",
-            "desc": "Sacrifices a portion of the priest's health to empower dark magic or restore mana to an ally through agonizing light."
+            "desc": "Drains your own Health over 15 sec to restore Mana. 10 min cooldown."
           },
           {
             "name": "Touch of Weakness",
             "type": "Active Buff",
-            "desc": "The next melee attack against the caster causes Shadow damage and reduces the attacker's attack power for 2 min."
+            "desc": "The next melee attack against you deals Shadow damage to the attacker and reduces their melee attack power for 2 min."
           }
         ]
       }
@@ -2573,34 +2173,22 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
   },
   "campingKits": [
     {
-      "name": "Basic Campfire Kit",
-      "desc": "Initial campfire kit usable by all adventurers to create basic campsites.",
+      "name": "Basic Campfire",
+      "desc": "Builds a basic campfire that allows cooking and the placement of up to 3 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features.",
       "levelReq": 1,
-      "maxStations": 1
-    },
-    {
-      "name": "Journeyman Campfire Kit",
-      "desc": "Enhanced campfire kit allowing placement of 2 concurrent profession features (45 min duration).",
-      "levelReq": 20,
-      "maxStations": 2
-    },
-    {
-      "name": "Ironwood Campfire Blueprint",
-      "desc": "Phase 2 Beta Blueprint: 25-yard aura radius, 60-min duration, 2 station slots with +15% enhanced party buff efficiency.",
-      "levelReq": 25,
-      "maxStations": 2
-    },
-    {
-      "name": "Silk Encampment Tent",
-      "desc": "Crafted via Tailoring (125). Shelters party members, accelerating Rested XP to 200% and compounding with Cozy Sleeping Bag for +5% stacking monster kill XP for 2 hours.",
-      "levelReq": 25,
-      "maxStations": 1
-    },
-    {
-      "name": "Expert Campfire Kit",
-      "desc": "Master encampment kit supporting 3 concurrent profession features and longer rest buffs.",
-      "levelReq": 40,
       "maxStations": 3
+    },
+    {
+      "name": "Journeyman Campfire",
+      "desc": "Builds a journeyman campfire that allows cooking and the placement of up to 5 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features. Requires Cooking 90 (lowered from 140 on Nov 10).",
+      "levelReq": 20,
+      "maxStations": 5
+    },
+    {
+      "name": "Expert Campfire",
+      "desc": "Builds an expert campfire that allows cooking and the placement of up to 10 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features.",
+      "levelReq": 25,
+      "maxStations": 10
     }
   ],
   "campingObjects": [
@@ -2608,23 +2196,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Alchemy",
       "type": "Primary",
       "icon": "🧪",
-      "mirroredBuff": "Blessing of Wisdom (~8% Mana Regen)",
-      "mirroredClass": "Paladin",
+      "mirroredBuff": "Mana Well: up to 29 Mana every 5 sec",
+      "mirroredClass": "Does not stack with Blessing of Wisdom",
       "objects": [
         {
           "name": "Mana Well",
           "tier": 1,
-          "desc": "Restores mana over time to resting allies."
+          "desc": "Constructs a mana well that allows you and others sitting nearby to regenerate 29 Mana every 5 sec, mutually exclusive with Blessing of Wisdom."
         },
         {
           "name": "Fermenter",
           "tier": 2,
-          "desc": "Brew specialty camp concoctions and elixirs on-site."
+          "desc": "Places a fermenter that allows the creation of certain reagents, and provides all of the benefits of a Mana Well."
         },
         {
           "name": "Alchemy Laboratory",
           "tier": 3,
-          "desc": "Full field laboratory allowing flask and advanced potion brewing without Scholomance/BWL labs."
+          "desc": "Places an Alchemy Laboratory usable for recipes that require it, and provides all of the benefits of a Mana Well."
         }
       ]
     },
@@ -2632,23 +2220,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Blacksmithing",
       "type": "Primary",
       "icon": "🔨",
-      "mirroredBuff": "Strength of Earth Totem (~8% Strength/AP)",
-      "mirroredClass": "Shaman",
+      "mirroredBuff": "Sharpening Wheel: up to +34 Strength",
+      "mirroredClass": "Does not stack with Strength of Earth Totem",
       "objects": [
         {
           "name": "Sharpening Wheel",
           "tier": 1,
-          "desc": "Field sharpening wheel granting +6 Strength (or scaling with weapon tier) for 60 minutes."
+          "desc": "Constructs a sharpening wheel that grants you and others sitting nearby 34 increased Strength, mutually exclusive with Strength of Earth Totem."
         },
         {
           "name": "Anvil",
           "tier": 2,
-          "desc": "Portable anvil allowing blacksmiths to forge and repair gear on-site in the open world."
+          "desc": "Places an anvil, and provides all of the benefits of a Sharpening Wheel."
         },
         {
           "name": "Master Forge",
           "tier": 3,
-          "desc": "High-heat forge granting party members +10% Attack Power for 1 hour."
+          "desc": "Places a Master Forge usable for recipes that require it, and provides all of the benefits of a Sharpening Wheel."
         }
       ]
     },
@@ -2656,23 +2244,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Enchanting",
       "type": "Primary",
       "icon": "✨",
-      "mirroredBuff": "Mark of the Wild (~8% Stats & Res)",
-      "mirroredClass": "Druid",
+      "mirroredBuff": "Enchanted Lute: up to +308 Armor, +13 all stats, +22 all resistances",
+      "mirroredClass": "Does not stack with Mark of the Wild",
       "objects": [
         {
           "name": "Enchanted Lute",
           "tier": 1,
-          "desc": "Plays soothing magical chords, increasing stat recovery."
+          "desc": "Summons an enchanted lute that allows you and others sitting nearby to gain 308 Armor, 13 to all stats, and 22 to all resistances (level 60 values), mutually exclusive with Mark of the Wild."
         },
         {
           "name": "Arcane Salvager",
           "tier": 2,
-          "desc": "Disenchants items on-site with a bonus chance to yield rare essences."
+          "desc": "Places an Arcane Salvager that enables more efficient disenchanting, and provides all the benefits of an Enchanted Lute."
         },
         {
           "name": "Arcane Forge",
           "tier": 3,
-          "desc": "Grants party members +All Stats and Magic Resistances for 1 hour."
+          "desc": "Places an Arcane Forge usable for recipes that require it, and provides all the benefits of an Enchanted Lute."
         }
       ]
     },
@@ -2680,23 +2268,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Engineering",
       "type": "Primary",
       "icon": "⚙️",
-      "mirroredBuff": "Field Utility & Zero Gadget Malfunction",
-      "mirroredClass": "General",
+      "mirroredBuff": "Reagent Bot: buy reagents (Repair Bot also repairs gear)",
+      "mirroredClass": "Unique",
       "objects": [
         {
           "name": "Reagent Bot",
           "tier": 1,
-          "desc": "Vendors common components and basic ammo/food."
+          "desc": "Summons a Reagent Bot that allows you and others nearby to purchase reagents."
         },
         {
           "name": "Repair Bot",
           "tier": 2,
-          "desc": "Provides full field equipment repairs for party members."
+          "desc": "Summons a Repair Bot that allows you and others nearby to buy reagents and repair gear."
         },
         {
           "name": "Anarchist's Workbench",
           "tier": 3,
-          "desc": "Craft explosives on-site and grants 0% malfunction rate on engineering gadgets in raids."
+          "desc": "Places an Anarchist's Workbench usable for recipes that require it."
         }
       ]
     },
@@ -2704,23 +2292,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "First Aid",
       "type": "Secondary",
       "icon": "🩹",
-      "mirroredBuff": "Power Word: Fortitude (~8% Stamina)",
-      "mirroredClass": "Priest",
+      "mirroredBuff": "First Aid Kit: up to +56 Stamina",
+      "mirroredClass": "Does not stack with Power Word: Fortitude",
       "objects": [
         {
           "name": "First Aid Kit",
           "tier": 1,
-          "desc": "Provides field bandages and minor health recovery."
+          "desc": "Unpacks a first aid kit that allows you and others sitting nearby to gain 56 increased Stamina, mutually exclusive with Power Word: Fortitude."
         },
         {
           "name": "Toxin Study",
           "tier": 2,
-          "desc": "Grants immunity to natural poisons encountered while resting."
+          "desc": "Places a Toxin Study that contains healing potions and anti-venom, and provides all of the benefits of a First Aid Kit."
         },
         {
           "name": "Plague Doctor's Laboratory",
           "tier": 3,
-          "desc": "Increases party Stamina by +8% and provides disease cleansing."
+          "desc": "Places a Plague Doctor's Laboratory that contains healing potions and poultices, and provides all of the benefits of a First Aid Kit."
         }
       ]
     },
@@ -2728,23 +2316,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Fishing",
       "type": "Secondary",
       "icon": "🎣",
-      "mirroredBuff": "Blessing of Kings (~8% All Attributes)",
-      "mirroredClass": "Paladin",
+      "mirroredBuff": "Fish Bowl: +8% all stats",
+      "mirroredClass": "Does not stack with Blessing of Kings",
       "objects": [
         {
           "name": "Fish Bowl",
           "tier": 1,
-          "desc": "Stores live bait and grants party members +8% to all primary stats for 60 minutes."
+          "desc": "Places a small fish bowl that allows you and others sitting nearby to gain 8% increased stats, mutually exclusive with Blessing of Kings."
         },
         {
           "name": "Fishing Rack",
           "tier": 2,
-          "desc": "Dries catches into stamina-boosting rations."
+          "desc": "Places a Fishing Rack that grants the ability to catch uncommon fish for 1 hour, provides Fishing Skill lures, and provides all of the benefits of a Fish Bowl."
         },
         {
           "name": "Fishing Hut",
           "tier": 3,
-          "desc": "Grants party members an 8% increase to all primary attributes for 1 hour."
+          "desc": "Places a Fishing Hut that grants the ability to catch rare fish for 1 hour, provides Fishing Skill lures, and provides all of the benefits of a Fish Bowl."
         }
       ]
     },
@@ -2752,23 +2340,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Herbalism",
       "type": "Primary",
       "icon": "🌿",
-      "mirroredBuff": "Arcane Intellect (~8% Intellect)",
-      "mirroredClass": "Mage",
+      "mirroredBuff": "Incense Candle: up to +25 Intellect",
+      "mirroredClass": "Does not stack with Arcane Intellect",
       "objects": [
         {
           "name": "Incense Candle",
           "tier": 1,
-          "desc": "Burns calming herbal aroma, boosting spirit."
+          "desc": "Ignites an incense candle that allows you and others sitting nearby to gain 25 increased Intellect, mutually exclusive with Arcane Intellect."
         },
         {
           "name": "Greenhouse",
           "tier": 2,
-          "desc": "Cultivates rare herbs while resting in the campsite."
+          "desc": "Places a Greenhouse that will grow herbs over time from seeds planted, and provides all of the benefits of an Incense Candle."
         },
         {
           "name": "Seed Hybridizer",
           "tier": 3,
-          "desc": "Grants party members +8% Intellect and +10 Magic Resistances for 1 hour."
+          "desc": "Places a Seed Hybridizer that allows seeds to be multiplied or combined into rarer tiers, and provides all of the benefits of an Incense Candle."
         }
       ]
     },
@@ -2776,23 +2364,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Leatherworking",
       "type": "Primary",
       "icon": "🛡️",
-      "mirroredBuff": "Physical Damage Reduction & Armor",
-      "mirroredClass": "General",
+      "mirroredBuff": "Camp Tent: Rested XP raised to 5% of a level",
+      "mirroredClass": "Unique",
       "objects": [
         {
           "name": "Camp Tent",
           "tier": 1,
-          "desc": "Provides canvas shelter granting a burst of rested experience (can only be received once per 1 hour)."
+          "desc": "Builds a tent that allows you and others sitting nearby to increase Rested experience to 5% of a level. No effect if Rested experience already exceeds that value."
         },
         {
           "name": "Tanning Rack",
           "tier": 2,
-          "desc": "Allows processing heavy leathers and hides on-site."
+          "desc": "Places a Tanning Rack that allows the creation of certain reagents, and provides all of the benefits of a Camp Tent."
         },
         {
           "name": "Sewing Machine",
           "tier": 3,
-          "desc": "Reinforces party armor, providing +8% physical damage reduction for 1 hour."
+          "desc": "Places a Sewing Machine usable for recipes that require it, and provides all of the benefits of a Camp Tent."
         }
       ]
     },
@@ -2800,23 +2388,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Mining",
       "type": "Primary",
       "icon": "⛏️",
-      "mirroredBuff": "Blessing of Might (~8% Attack Power)",
-      "mirroredClass": "Paladin",
+      "mirroredBuff": "Lodestone: up to +90 melee Attack Power",
+      "mirroredClass": "Does not stack with Blessing of Might",
       "objects": [
         {
           "name": "Lodestone",
           "tier": 1,
-          "desc": "Tracks nearby metal veins and increases mining yield."
+          "desc": "Erects a lodestone that allows you and others sitting nearby to gain 90 increased melee Attack Power, mutually exclusive with Blessing of Might."
         },
         {
           "name": "Rock Garden",
           "tier": 2,
-          "desc": "Excavates rough stones and gems while resting."
+          "desc": "Places a Rock Garden that spawns a common mining node over time, and provides all the benefits of a Lodestone."
         },
         {
           "name": "Molten Foundry",
           "tier": 3,
-          "desc": "Smelts ores in the field and grants party members +Attack Power for 1 hour."
+          "desc": "Places a Molten Foundry usable for recipes that require it, and provides all the benefits of a Lodestone."
         }
       ]
     },
@@ -2824,23 +2412,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Skinning",
       "type": "Primary",
       "icon": "🔪",
-      "mirroredBuff": "Moonkin Aura (~2% Crit Chance)",
-      "mirroredClass": "Druid",
+      "mirroredBuff": "Camp Chair: +2% crit with spells and attacks",
+      "mirroredClass": "Does not stack with Moonkin Aura",
       "objects": [
         {
           "name": "Camp Chair",
           "tier": 1,
-          "desc": "A cozy hide chair granting resting comfort."
+          "desc": "Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks, mutually exclusive with Moonkin Aura."
         },
         {
           "name": "Field Guide",
           "tier": 2,
-          "desc": "Documents beast weaknesses, granting +5% beast damage."
+          "desc": "Places a Field Guide that allows players to read it and gain Track Beasts, and provides all the benefits of a Camp Chair."
         },
         {
           "name": "Trapper's Workbench",
           "tier": 3,
-          "desc": "Grants party members +2% Critical Strike chance for 1 hour."
+          "desc": "Places a Trapper's Workbench containing 1 trap, and provides all the benefits of a Camp Chair."
         }
       ]
     },
@@ -2848,23 +2436,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Tailoring",
       "type": "Primary",
       "icon": "🧵",
-      "mirroredBuff": "Divine Spirit (~8% Spirit & Mana)",
-      "mirroredClass": "Priest",
+      "mirroredBuff": "Faction Banner: up to +32 Spirit (your faction only)",
+      "mirroredClass": "Does not stack with Divine Spirit",
       "objects": [
         {
           "name": "Faction Banner",
           "tier": 1,
-          "desc": "Inspires resting party members with faction pride."
+          "desc": "Unrolls a banner that allows you and other members of your faction sitting nearby to gain 32 increased Spirit, mutually exclusive with Divine Spirit."
         },
         {
           "name": "Spinning Wheel",
           "tier": 2,
-          "desc": "Spins thread and bolts in the field without needing a loom."
+          "desc": "Places a Spinning Wheel that allows the creation of certain reagents, and provides all the benefits of a Faction Banner."
         },
         {
           "name": "Loom",
           "tier": 3,
-          "desc": "Grants party members +8% Spirit and bonus mana regeneration for 1 hour."
+          "desc": "Places a Loom usable for recipes that require it, and provides all the benefits of a Faction Banner."
         }
       ]
     },
@@ -2872,23 +2460,28 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "profession": "Cooking",
       "type": "Secondary",
       "icon": "🍳",
-      "mirroredBuff": "Well Fed (+Stats, +6 MP5 & +5% Kill XP)",
-      "mirroredClass": "General",
+      "mirroredBuff": "Campfire + Cookie's Feast (Stamina food)",
+      "mirroredClass": "Unique",
       "objects": [
         {
-          "name": "Basic Campfire & Spit",
-          "tier": 1,
-          "desc": "Cook everyday stamina meals; Well Fed meals grant +5% bonus experience from monster kills."
+          "name": "Basic Campfire",
+          "tier": "Basic",
+          "desc": "Builds a basic campfire that allows cooking and the placement of up to 3 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features."
         },
         {
-          "name": "Iron Cauldron & Sagefish Braiser",
-          "tier": 2,
-          "desc": "Prepares Level 25-30 banquets including Bristle Whisker Catfish (+Stamina) and Sagefish Delight (+6 MP5 party food)."
+          "name": "Journeyman Campfire",
+          "tier": "Journeyman (Cooking 90)",
+          "desc": "Builds a journeyman campfire that allows cooking and the placement of up to 5 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features."
         },
         {
-          "name": "Master Encampment Feast Table",
-          "tier": 3,
-          "desc": "Provides high-tier raid feasts granting +Stamina and primary stats to all raid members."
+          "name": "Expert Campfire",
+          "tier": "Expert",
+          "desc": "Builds an expert campfire that allows cooking and the placement of up to 10 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features."
+        },
+        {
+          "name": "Cookie's Feast",
+          "tier": "Feast",
+          "desc": "Lay out Cookie's Feast that contains Stamina-boosting food."
         }
       ]
     }
@@ -2898,97 +2491,97 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "name": "Mining",
       "type": "Gathering",
       "icon": "⛏️",
-      "passiveName": "Toughness",
-      "passiveEffect": "Increases maximum Health by a flat 5%, scaling dynamically with total Stamina.",
-      "campBonus": "Can place Deepstone Crucible / Lodestone: party members gain +15 Mining skill and 10% armor."
+      "passiveName": "Lodestone — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains up to +90 melee Attack Power (scales with level; does not stack with Blessing of Might).",
+      "campBonus": "Upgrade: Rock Garden — keeps the Lodestone bonus and spawns a common mining node over time."
     },
     {
       "name": "Herbalism",
       "type": "Gathering",
       "icon": "🌿",
-      "passiveName": "Nature's Ward & Lifeblood",
-      "passiveEffect": "Increases all Magic Resistances by +10 and grants an on-use 2-minute heal recovering health over 6 seconds.",
-      "campBonus": "Can place Incense Candle: party members gain +15 Intellect and 10% movement speed."
+      "passiveName": "Incense Candle — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains up to +25 Intellect (scales with level; does not stack with Arcane Intellect).",
+      "campBonus": "Tauren can also use Cultivation to duplicate herb nodes without Herbalism."
     },
     {
       "name": "Skinning",
       "type": "Gathering",
       "icon": "🔪",
-      "passiveName": "Master of Anatomy",
-      "passiveEffect": "Increases Critical Strike rating by 1.5% across all physical and magical abilities.",
-      "campBonus": "Can place Drying Rack / Trapper's Workbench: party members gain +10 Agility and +2% Critical Strike."
+      "passiveName": "Camp Chair — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains +2% critical strike chance with spells and attacks (does not stack with Moonkin Aura).",
+      "campBonus": "Skinning also feeds Leatherworking camp upgrades such as the Tanning Rack."
     },
     {
       "name": "Blacksmithing",
       "type": "Production",
       "icon": "🔨",
-      "passiveName": "Weapon Honing & Sockets",
-      "passiveEffect": "Permanent +16 Attack Power or +12 Spell Damage weapon buff, plus bonus socket in bracers.",
-      "campBonus": "Can place Sharpening Wheel / Portable Anvil: party members gain +8-10% Attack Power for 1 hour."
+      "passiveName": "Sharpening Wheel — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains up to +34 Strength (scales with level; does not stack with Strength of Earth Totem).",
+      "campBonus": "All camp features share a 1-hour cooldown and need a Campfire nearby."
     },
     {
       "name": "Alchemy",
       "type": "Production",
       "icon": "🧪",
-      "passiveName": "Mixology & Elixir Mastery",
-      "passiveEffect": "100% increased duration on all Flasks and Elixirs, plus 25% increased health and mana from healing potions.",
-      "campBonus": "Can place Mana Well / Fermenter: party members gain +8% Mana Regen (mirrors Blessing of Wisdom)."
+      "passiveName": "Mana Well — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp regenerates up to 29 Mana every 5 sec (scales with level).",
+      "campBonus": "All camp features share a 1-hour cooldown and need a Campfire nearby."
     },
     {
       "name": "Tailoring",
       "type": "Production",
       "icon": "🧵",
-      "passiveName": "Spirit Weaving & Spellthread",
-      "passiveEffect": "Increases Spirit by +15 and grants chance on spellcast to restore 200 mana or energy.",
-      "campBonus": "Can place Silk Encampment Tent / Loom: party members gain +8% Spirit and 200% accelerated Rested XP."
+      "passiveName": "Faction Banner — camp object at skill 20",
+      "passiveEffect": "Everyone of your faction sitting at your camp gains up to +32 Spirit (scales with level).",
+      "campBonus": "Upgrade: Spinning Wheel — keeps the Faction Banner bonus and lets you create certain reagents."
     },
     {
       "name": "Leatherworking",
       "type": "Production",
       "icon": "🛡️",
-      "passiveName": "Fur Lining & Reinforcements",
-      "passiveEffect": "Exclusive bracer and chest lining granting +100 Armor and +15 Stamina.",
-      "campBonus": "Can place Camp Tent / Tanning Rack: party members gain +8% physical damage reduction."
+      "passiveName": "Camp Tent — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp has Rested experience raised to 5% of a level (no effect if already higher).",
+      "campBonus": "Upgrade: Tanning Rack (Leatherworking 125) — keeps the Camp Tent bonus and lets you create certain reagents."
     },
     {
       "name": "Enchanting",
       "type": "Production",
       "icon": "✨",
-      "passiveName": "Ring Enchantments",
-      "passiveEffect": "Exclusive enchantments on finger slots: +8 All Stats, +14 Spell Power, or +24 Attack Power.",
-      "campBonus": "Can place Enchanted Lute / Arcane Forge: party members gain +8% All Stats and Resistances (mirrors Mark of the Wild)."
+      "passiveName": "Enchanted Lute — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains up to +308 Armor plus bonus stats and resistances (scales with level; does not stack with Mark of the Wild).",
+      "campBonus": "All camp features share a 1-hour cooldown and need a Campfire nearby."
     },
     {
       "name": "Engineering",
       "type": "Production",
       "icon": "⚙️",
-      "passiveName": "Tinkers & Goggles",
-      "passiveEffect": "Access to high-powered epic helm goggles, parachute cloak tinkers, and rocket boots with 0% backfire chance in raids.",
-      "campBonus": "Can place Reagent Bot / Field Repair Bot: on-site repairs and zero engineering gadget malfunctions."
+      "passiveName": "Reagent Bot — camp object at skill 20",
+      "passiveEffect": "Summons a Reagent Bot at camp so you and others nearby can buy reagents.",
+      "campBonus": "All camp features share a 1-hour cooldown and need a Campfire nearby."
     },
     {
       "name": "Cooking",
       "type": "Secondary",
       "icon": "🍖",
-      "passiveName": "Well Fed Experience Surge",
-      "passiveEffect": "Beneficial food buffs grant +5% bonus experience from monster kills, and Well Fed durations double when eaten at camp.",
-      "campBonus": "Can place Basic Campfire Kit & Cookie's Feast: party members gain +Stamina and outdoor cooking hub."
+      "passiveName": "Cookie's Feast — camp object at skill 20",
+      "passiveEffect": "Lays out Stamina-boosting food for everyone at camp. Cooking also provides the campfire itself.",
+      "campBonus": "Journeyman Campfire Kit needs Cooking 90 (lowered from 140 on Nov 10)."
     },
     {
       "name": "First Aid",
       "type": "Secondary",
       "icon": "🩹",
-      "passiveName": "Field Medic & Potion Crafting",
-      "passiveEffect": "Enables crafting of instant Healing Potions and specialized Anti-Venoms; Heavy Runecloth Bandages heal for 2,000 HP.",
-      "campBonus": "Can place First Aid Kit / Plague Doctor's Lab: party members gain +56 Stamina and triage stations."
+      "passiveName": "First Aid Kit — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains up to +56 Stamina (scales with level; does not stack with Power Word: Fortitude).",
+      "campBonus": "Upgrade: Toxin Study — keeps the First Aid Kit bonus and holds healing potions and anti-venom."
     },
     {
       "name": "Fishing",
       "type": "Secondary",
       "icon": "🎣",
-      "passiveName": "Master Angler & Water Breathing",
-      "passiveEffect": "Access to special fish-based consumables, rare school tracking, and high-efficiency stat buffs for cooking.",
-      "campBonus": "Can place Fish Bowl / Fishing Hut: party members gain +8% All Stats and rare bait caches."
+      "passiveName": "Fish Bowl — camp object at skill 20",
+      "passiveEffect": "Everyone sitting at your camp gains +8% to all stats (does not stack with Blessing of Kings).",
+      "campBonus": "All camp features share a 1-hour cooldown and need a Campfire nearby."
     }
   ],
   "statCapsAndMechanics": {
@@ -3040,8 +2633,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     ],
     "rules": [
       {
-        "title": "Healing-to-Spell Damage Conversion (+33.3%)",
-        "desc": "All equipment granting Bonus Healing automatically converts +33.3% (+1/3) of that value into Bonus Spell Damage. Healers wearing healing gear automatically deal viable offensive spell damage for solo leveling and open-world farming without carrying a secondary DPS gear set."
+        "title": "Healing Gear Also Has Spell Power",
+        "desc": "In Forever, Bonus Healing gear also carries Spell Power, so healers can deal reasonable damage while leveling and farming without a second gear set. Blizzard has not published an exact ratio."
       },
       {
         "title": "Unified Critical Strike",
@@ -3056,8 +2649,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "desc": "Spell coefficients plateau after the spell rank learned at Level 20. Downranking spells learned at or after Level 20 retains high spell power scaling, but ranks learned prior to Level 20 suffer heavy coefficient penalties."
       },
       {
-        "title": "Guaranteed Boss Loot & Automatic Transmog",
-        "desc": "Every dungeon and raid boss drops a guaranteed Rare (Blue) item. Any item looted automatically unlocks its appearance in your account transmog collection if you are an eligible wearer."
+        "title": "Transmog Included",
+      "desc": "Forever includes the modern transmog system: appearances you collect are saved to your account collection."
       }
     ]
   },
@@ -3069,7 +2662,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "role": "Tank / Melee DPS",
       "strength": "1 Str = 2 Melee AP • 20 Str = 1 Block Value",
       "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 1 Ranged AP • 1 Agi = 2 Armor",
-      "intellect": "Increases weapon skill acquisition rate",
+      "intellect": "No direct benefit (weapon skill was replaced by Expertise in Forever)",
       "stamina": "1 Sta = 10 Health",
       "spirit": "Out-of-combat Health regen",
       "highlights": [
@@ -3123,7 +2716,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "role": "Melee Physical DPS",
       "strength": "1 Str = 1 Melee AP",
       "agility": "1 Agi = 1 Melee AP • 1 Agi = 1 Ranged AP • 29 Agi = 1% Crit • 14.5 Agi = 1% Dodge (Best Dodge in game!) • 1 Agi = 2 Armor",
-      "intellect": "Increases weapon skill acquisition rate",
+      "intellect": "No direct benefit (weapon skill was replaced by Expertise in Forever)",
       "stamina": "1 Sta = 10 Health",
       "spirit": "Out-of-combat Health regen",
       "highlights": [
@@ -3143,12 +2736,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
       "intellect": "1 Int = 15 Mana • ~59.5 Int = 1% Spell Crit",
       "stamina": "1 Sta = 10 Health",
-      "spirit": "Tier 1 Stat: Meditation talents enable 100% in-combat Mana Regen; Spiritual Guidance converts Spirit into Bonus Spell Damage & Healing!",
+      "spirit": "Meditation lets 50% of Mana regen continue while casting; Spiritual Guidance adds spell healing (up to 25% of Spirit) and spell damage from Spirit.",
       "highlights": [
         "Spirit fuels in-combat Mana regeneration & bonus Spell Power",
         "15 Mana per 1 Intellect",
         "~59.5 Intellect = 1% Spell Critical Strike",
-        "+33.3% Healing converted directly to offensive Spell Damage"
+        "Healing gear in Forever also carries Spell Power"
       ],
       "summary": "Spirit is premier: fuels in-combat mana regeneration and spell power conversion. Intellect provides base mana pool and spell crit (~59.5 Int per 1% Spell Crit)."
     },
@@ -3255,7 +2848,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "bullets": [
           "<strong>Maximum Mana:</strong> Each point of Intellect grants <strong>15 additional Mana</strong>. Summoned Warlock pets also receive this bonus.",
           "<strong>Spell Critical Strike:</strong> Caster classes gain 1% Spell Crit per <strong>54–60 Intellect</strong>. Paladins require the least (~54), while Warlocks require the most (~60.6).",
-          "<strong>Weapon Skill:</strong> Intellect slightly accelerates your chance to improve weapon skills during melee and ranged combat."
+          "<strong>Weapon Skill → Expertise:</strong> In Forever, Weapon Skill items were heavily reduced and racial weapon-skill bonuses removed; Expertise works much like it did in The Burning Crusade."
         ]
       },
       {
@@ -3274,7 +2867,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "role": "Primary Stat",
         "bullets": [
           "<strong>Health & Mana Regeneration:</strong> Governs out-of-combat regeneration and regeneration outside the 5-second casting rule.",
-          "<strong>Universal Healer In-Combat Regen:</strong> In WoW Forever, <strong>all healer specs</strong> have in-combat Mana Regeneration talents available (Meditation-style), making Spirit a premium healer stat!",
+          "<strong>In-Combat Regen:</strong> Talents such as Priest <em>Meditation</em>, Mage <em>Arcane Meditation</em> and Druid <em>Reflection</em> let 50% of Spirit-based Mana regeneration continue while casting.",
           "Priests gain direct Bonus Spell Damage & Healing from Spirit via Spiritual Guidance."
         ]
       }
@@ -3284,7 +2877,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "name": "Critical Strike Chance",
         "icon": "🎯",
         "bullets": [
-          "<strong>Unified on Gear:</strong> Critical Strike is no longer strictly separated into melee vs. spell crit on items. Gear grants unified 'Critical Strike Chance'.",
+          "<strong>Unified on Gear:</strong> In Forever, Hit and Critical Strike chance on items apply to melee, ranged, and spells alike.",
           "<strong>Bonus Damage Multipliers:</strong> By default, melee Critical Strikes deal <strong>100% bonus damage</strong> (2x), and spell Critical Strikes deal <strong>50% bonus damage</strong> (1.5x).",
           "<strong>Talent Overrides:</strong> Talents such as Druid <em>Vengeance</em>, Priest <em>Shadowform</em>, and Paladin <em>Conviction / Holy Power</em> modify and amplify critical strike damage."
         ]
@@ -3302,9 +2895,9 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
         "name": "Haste",
         "icon": "⚡",
         "bullets": [
-          "<strong>Phase 2 Beta Scaling:</strong> Multiplicatively reduces melee/ranged weapon swing timers and spell cast times across all classes.",
-          "<strong>Racial & Passive Sources:</strong> Present on the Skyborne passive <em>Wind Blessed</em> (+1% Haste), Troll racial <em>Berserking</em>, and select Phase 2 enchants and trinkets.",
-          "<strong>Talent Synergies:</strong> Stacks with class flurry talents (Warrior/Shaman <em>Flurry</em>, Rogue <em>Blade Flurry</em>, Paladin <em>Vengeance Haste</em>)."
+          "<strong>Effect:</strong> Reduces melee and ranged swing timers and spell cast times.",
+          "<strong>Racial & Passive Sources:</strong> Skyborne passive <em>Wind Blessed</em> (+2% Haste), Troll racial <em>Berserking</em>, and select enchants and trinkets.",
+          "<strong>Talent Synergies:</strong> Stacks with attack-speed talents such as Warrior/Shaman <em>Flurry</em> and Rogue <em>Blade Flurry</em>."
         ]
       }
     ],
@@ -3403,12 +2996,11 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       ]
     },
     {
-      "category": "Paladin & Shaman Class Mounts",
+      "category": "Paladin Class Mount",
       "icon": "🛡️",
       "badge": "Class Identity",
       "mounts": [
-        "Summon Forsaken Charger (Undead Paladin unique skeletal warhorse)",
-        "Armored War Ram of the Storm (Wildhammer Dwarf Shaman)"
+        "Summon Forsaken Charger (Undead Paladin unique skeletal warhorse)"
       ]
     },
     {
@@ -3416,7 +3008,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "icon": "🏆",
       "badge": "Account Progression",
       "mounts": [
-        "Reins of the Spectral Bear (55 Legacy Points seasonal milestone)",
+        "Reins of the Spectral Bear (55 Legacy Points)",
         "Swift Hyjal Stag (Mount Hyjal open world explorer)",
         "Veteran Adventurer's Loyal Companion (Skyborne Epic Pack hound)"
       ]
@@ -3506,7 +3098,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "dungeon-03",
-      "name": "Excavation Site 4",
+      "name": "Excavation Site: Wetlands",
       "type": "5-Man Dungeon",
       "levelRange": "26 – 31",
       "zone": "Wetlands (Eastern Kingdoms)",
@@ -3610,7 +3202,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "dungeon-07",
-      "name": "Alcaz Island Prison",
+      "name": "Alcaz Prison",
       "type": "5-Man Dungeon",
       "levelRange": "48 – 54",
       "zone": "Dustwallow Marsh",
@@ -3731,23 +3323,23 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     {
       "name": "Zephras Isle",
       "level": "1 – 12",
-      "continent": "Kalimdor Skywall Skies",
-      "description": "A breathtaking cluster of floating islands suspended high above the western seas of Kalimdor. Home to the newly revealed Skyborne elves.",
-      "features": "Wind currents for rapid gliding, Skywall elemental spires, cloud-strider bird sanctuaries, and the neutral capital Zephras Haven."
+      "continent": "Zephras Isle (its own landmass)",
+      "description": "The Skyborne starting zone. The Valanaar Skydocks link it to Alliance and Horde lands.",
+      "features": "Valanaar and the Valanaar Skydocks, Shen'dar Village, Thendal Village, Falaath Village, Windsong Lake, Shadowgale Forest, the Skywall and the Sanctum of Storms."
     },
     {
       "name": "Riverglades",
       "level": "30 – 45",
       "continent": "Eastern Kingdoms",
-      "description": "A vast, lush wetland and forest river-delta spanning between the Arathi Highlands and Loch Modan. Filled with over 150 brand new quests.",
-      "features": "Contested territory with Alliance expedition outposts, Horde lumber camps, Krol'dok Ogre Stronghold, and scenic waterway boating."
+      "description": "A new Eastern Kingdoms zone on the coast of the Forbidding Sea, home to the Krol'dok Stronghold dungeon.",
+      "features": "Farholde Keep, Powderfuse Port, Terral's Watch, Windstead, Turner's Logging Camp, Twilight's Shroud and Krol'dok Stronghold."
     },
     {
-      "name": "Mount Hyjal (Renewed)",
+      "name": "Mount Hyjal",
       "level": "55 – 60",
       "continent": "Kalimdor",
-      "description": "The sacred ancestral mountain of the night elves, now accessible as an open-world endgame progression zone after Archimonde's defeat.",
-      "features": "Emerald Dragon portals, Twilight Cultist camps, Barrow Deeps dungeon entrance, and Nordrassil healing rituals."
+      "description": "The night elves' sacred mountain, opened as a level 55–60 zone and home to the Barrow Deeps and Hyjal Summit raids.",
+      "features": "Summit of Eternity, Shrine of Aviana, Cradle of Tranquility, Malorne's Retreat, Elderwild and Felblood Scar."
     }
   ],
   "gameSystems": [
@@ -3758,20 +3350,20 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "summary": "Rest, repair, gain 1-hour buffs, and foster social cooperation in the open world.",
       "details": [
         "Evolves the basic Cooking Fire into a cooperative hub in any outdoor zone.",
-        "Up to 3 player-crafted profession items can be placed around a campfire (1 per player).",
-        "Buff examples: Blacksmith's Anvil (+10% Melee/Ranged AP), Weaver's Loom (+Spirit & Mana Regen), Leatherworker's Stretcher (+Armor & Stamina).",
-        "Over 600 new profession recipes added across all primary and secondary tradeskills."
+        "A Basic Campfire Kit has room for 3 camp objects. All camp features share a 1-hour cooldown.",
+        "Buff examples: Lodestone (Mining, up to +90 Attack Power), Sharpening Wheel (Blacksmithing, up to +34 Strength), First Aid Kit (up to +56 Stamina).",
+        "Camp objects do not stack with the matching class buff (e.g. Fish Bowl vs Blessing of Kings)."
       ]
     },
     {
       "id": "legacy",
-      "name": "Account-Wide Legacy Progression (16 Points at Launch)",
+      "name": "Account-Wide Legacy Progression",
       "icon": "🏆",
       "summary": "A non-power progression system rewarding alt-leveling and completionist achievements.",
       "details": [
-        "Earn 16 Legacy Points at launch by leveling different classes, mastering professions, exploration, and PvP.",
+        "Earn up to 65 Legacy Points from account challenges: leveling each class, profession milestones, PvP, dungeons, raids and exploration.",
         "Legacy Points are account-wide, but each character customizes their own perk allocation.",
-        "Three distinct trees: Adventure (rested XP boost, flight path speed, gathering tracker), Profession (crafting yield, speed), and Resourcefulness (vendor discount, bag slot bonus)."
+        "Three trees: Tradeskill Mastery (skill-ups, yields, vendor discounts), World Explorer (rested XP, cheaper and faster flights, earlier talents) and Resourcefulness (longer food and group buffs, Reagent Economy, reputation and Honor gains)."
       ]
     },
     {
@@ -3813,22 +3405,20 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "name": "Seasonal Rank 14 Progression",
       "icon": "⚔️",
       "badge": "PvP Overhaul",
-      "summary": "Milestone-based Rank 14 track that resets each tier with no weekly decay grind.",
+      "summary": "Rank Points no longer decay; Rank 14 needs 24,750 Rank Points with a weekly cap.",
       "details": [
-        "No more 18-hour-a-day bracket stacking: reach High Warlord / Grand Marshal through clear seasonal objectives.",
-        "Rank 14 weapons retuned with modern Expertise and unified spell damage stats.",
-        "Darkspear Islands 15v15 battleground and strict faction-locking on PvP rulesets."
+        "Honor and Rank are separate: Honor buys gear (cap 25,000) and spending it never lowers your rank.",
+                "New Darkspear Islands battleground (levels 30–60) off the coast of Dustwallow Marsh."
       ]
     },
     {
       "id": "hardcore-ruleset",
       "name": "Hardcore Ruleset & Safety Net",
       "icon": "💀",
-      "summary": "Permadeath with Mak'gora duels, with free mortal transfer upon death.",
+      "summary": "Permadeath ruleset arriving winter 2026/27; details to be announced.",
       "details": [
-        "Coming in the later winter update. Features permanent character death and Soul of Iron.",
-        "Mak'gora (Duel to the Death) rewards cosmetic Ear Trophies.",
-        "Upon character death, players are granted a FREE transfer to continue playing as a mortal on Normal or PvP rulesets!"
+        "Confirmed for winter 2026/27 with permanent character death. Full rules not yet published.",
+                "Blizzard has not yet announced what happens to characters after death."
       ]
     }
   ],
@@ -3856,9 +3446,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "rules": [
         "Contested zones are permanently PvP-flagged for authentic open-world warfare.",
         "Strict single-faction account restriction: an account can only create characters of one faction on this ruleset.",
-        "Reworked Rank 14 Honor System: No weekly decay, predictable milestone progression.",
-        "World PvP objectives in Hillsbrad, Silithus, and Eastern Plaguelands award honor tokens.",
-        "Faction balance enforced through dynamic login queues and layering."
+        "Reworked Rank 14: Rank Points no longer decay (24,750 RP for Rank 14, with a weekly cap).",
+        "Faction balance: since Nov 10, Blizzard limits the larger faction on some PvP rulesets (Horde on NA PvP)."
       ]
     },
     {
@@ -3869,9 +3458,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "status": "Available at Launch (Nov 4, 2026)",
       "rules": [
         "Strict character naming rules and immersive community guidelines enforced.",
-        "Dedicated tavern and campsite gathering zones with spatial roleplay chat layers.",
-        "Open-world adventuring with opt-in PvP rules similar to Normal megarealms.",
-        "Enhanced emotes, camping interactions, and community storytelling support."
+        "Same region-wide megarealm structure as the other rulesets, with an RP-focused community.",
+        "Open-world adventuring with opt-in PvP rules similar to Normal megarealms."
       ]
     },
     {
@@ -3883,8 +3471,8 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "rules": [
         "Combines strict immersive roleplay naming conventions with permanent contested zone PvP flagging.",
         "Strict single-faction account restriction: an account can only create characters of one faction on this ruleset.",
-        "Tavern gathering hubs and contested territories with spatial roleplay chat layers.",
-        "Reworked Rank 14 Honor System with zero weekly decay and world PvP objectives."
+        "Since Nov 10, Blizzard limits new Alliance characters on the EU Roleplay-PvP ruleset to improve faction balance.",
+        "Reworked Rank 14: Rank Points no longer decay."
       ]
     },
     {
@@ -3892,12 +3480,10 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       "name": "Hardcore Megarealm",
       "badge": "Permadeath",
       "icon": "💀",
-      "status": "Arriving Winter 2026",
+      "status": "Arriving Winter 2026/27",
       "rules": [
         "Permanent death: Dying means your character cannot resurrect on the Hardcore megarealm.",
-        "Free character transfer upon death to the Normal (PvE) Megarealm to keep your progress.",
-        "Mak'gora: Official duels to the death supported with cosmetic ear trophy bounties.",
-        "Dungeon lockout restrictions: 24-hour dungeon lockout per dungeon while leveling under 60."
+        "Full ruleset details (transfers, duels, lockouts) have not been published yet."
       ]
     }
   ],
@@ -3929,7 +3515,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "cls": "Priest",
         "name": "Divine Spirit",
-        "desc": "Grants party-wide Spirit buff without requiring 31 points in Discipline."
+        "desc": "Trained baseline from level 30 instead of being a Discipline talent."
       },
       {
         "cls": "Priest",
@@ -3939,7 +3525,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "cls": "Paladin",
         "name": "Blessing of Kings",
-        "desc": "10% all-stat blessing is baseline, no longer requiring 31 Retribution/Prot."
+        "desc": "Trained baseline from level 20 instead of being a Protection talent."
       },
       {
         "cls": "Paladin",
@@ -3949,7 +3535,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "cls": "Paladin",
         "name": "Consecration",
-        "desc": "Baseline Holy AoE damage ability for all Paladins, no longer an 11-point Holy talent."
+        "desc": "Baseline Holy AoE ability trained from level 1, no longer a Holy talent."
       },
       {
         "cls": "Paladin",
@@ -3984,7 +3570,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
       {
         "cls": "Shaman",
         "name": "Totemic Call",
-        "desc": "Learned at level 22 (renamed from Totemic Projection, 30s CD) instantly teleporting all active totems to the Shaman's location."
+        "desc": "Trained at level 22. Instantly moves your active totems to your location."
       }
     ]
   },
@@ -4041,7 +3627,7 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-11",
-      "text": "Enter Wetlands and conquer Level 24–30 Dungeon: Excavation Site 4",
+      "text": "Enter Wetlands and conquer Level 24–30 Dungeon: Excavation Site: Wetlands",
       "cat": "Dungeons"
     },
     {
@@ -4076,12 +3662,12 @@ At the same time, we're doing a tuning pass on some of the remaining passive bon
     },
     {
       "id": "step-18",
-      "text": "Equip & configure ForeverLiquid (v1.4.0) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
+      "text": "Equip & configure ForeverLiquid (v1.4.1) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
       "cat": "Addons & Tools"
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.7.5) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.7.6) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {

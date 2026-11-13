@@ -106,6 +106,12 @@ function FDJ.NormalizeDungeonName(name)
     if n:find("krol'dok", 1, true) or n:find("kroldok", 1, true) then
         return "Krol'dok Stronghold"
     end
+    if n:find("alcaz", 1, true) then
+        return "Alcaz Prison"
+    end
+    if n:find("blackmaw", 1, true) then
+        return "Blackmaw Hold"
+    end
     if n:find("shaper's terrace", 1, true) or n:find("shapers terrace", 1, true) then
         return "Shaper's Terrace"
     end
@@ -122,11 +128,19 @@ FDJ.INSTANCE_ID_TO_DUNGEON = {
     [189] = "Scarlet Monastery", [2999] = "Ruins of Lordaeron", [2959] = "City of Dalaran",
     [2998] = "Excavation Site: Wetlands", [3065] = "Hall of Thanes", [129] = "Razorfen Downs",
     [70] = "Uldaman", [209] = "Zul'Farrak", [109] = "Sunken Temple", [289] = "Scholomance",
-    [349] = "Maraudon", [230] = "Blackrock Depths",
+    [349] = "Maraudon", [230] = "Blackrock Depths", [229] = "Blackrock Spire",
+    [329] = "Stratholme", [429] = "Dire Maul",
 }
 FDJ.SCARLET_WING_MAPS = {
     [302] = "Scarlet Monastery: Graveyard", [303] = "Scarlet Monastery: Library",
     [304] = "Scarlet Monastery: Armory", [305] = "Scarlet Monastery: Cathedral",
+}
+
+local MULTI_WING_PARENTS = {
+    ["Scarlet Monastery"] = true,
+    ["Blackrock Spire"] = "Lower Blackrock Spire",
+    ["Stratholme"] = "Stratholme: Living",
+    ["Dire Maul"] = "Dire Maul: East",
 }
 
 function FDJ.CurrentDungeon()
@@ -139,8 +153,22 @@ function FDJ.CurrentDungeon()
         local instanceID = select(8, GetInstanceInfo())
         if not IsSecret(instanceID) then
             local byID = FDJ.INSTANCE_ID_TO_DUNGEON[tonumber(instanceID) or -1]
-            if byID and byID ~= "Scarlet Monastery" and FDJ.DB and FDJ.DB[byID] then
-                return byID
+            if byID then
+                if MULTI_WING_PARENTS[byID] then
+                    if byID ~= "Scarlet Monastery" and FDJ.WingFromText then
+                        local sz = GetSubZoneText and GetSubZoneText()
+                        local wing = not IsSecret(sz) and FDJ.WingFromText(sz)
+                        if wing and FDJ.DB and FDJ.DB[wing] then return wing end
+                        local rz = GetRealZoneText and GetRealZoneText()
+                        wing = not IsSecret(rz) and FDJ.WingFromText(rz)
+                        if wing and FDJ.DB and FDJ.DB[wing] then return wing end
+                        if FDJ.DB and FDJ.DB[MULTI_WING_PARENTS[byID]] then
+                            return MULTI_WING_PARENTS[byID]
+                        end
+                    end
+                elseif FDJ.DB and FDJ.DB[byID] then
+                    return byID
+                end
             end
         end
     end
@@ -314,7 +342,8 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
 
     local langArg = msg:match("^lang%s+(%S+)$") or msg:match("^language%s+(%S+)$")
     if langArg then
-        local active, saved = FDJ.SetLanguage and FDJ.SetLanguage(langArg)
+        local active, saved
+        if FDJ.SetLanguage then active, saved = FDJ.SetLanguage(langArg) end
         if FDJ.ApplyLocalization then FDJ.ApplyLocalization() end
         local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
         if frame then
@@ -417,7 +446,7 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         print("  |cffffffff/fj import <ids>|r - Import BiS wishlist from website (e.g. |cff00ff00/fj import 270227,2281|r)")
         print("  |cffffffff/fj <dungeon>|r - Jump directly to dungeon (e.g. |cff00ff00rfc|r, |cff00ff00dm|r, |cff00ff00wc|r, |cff00ff00sfk|r, |cff00ff00bfd|r, |cff00ff00stocks|r, |cff00ff00gnomer|r, |cff00ff00rfk|r, |cff00ff00smgy|r, |cff00ff00smlib|r, |cff00ff00dalaran|r, |cff00ff00excavation|r)")
         print("  |cffffffff/fj wp [dungeon]|r - Set entrance waypoint & map pin (e.g. |cff00ff00/fj wp dm|r)")
-        print("  |cffffffff/fj wing <graveyard|library>|r - Select Scarlet Monastery wing")
+        print("  |cffffffff/fj wing <graveyard|library|armory|cathedral>|r - Select Scarlet Monastery wing")
         print("  |cffffffff/fj worldmap|r - Toggle dungeon overlay on World Map")
         print("  |cffffffff/fj fav|r - Toggle favourite items window")
         print("  |cffffffff/fj filter|r - Toggle class/spec loot filter")
@@ -534,6 +563,8 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         elseif q == "scholo" or q == "scholomance" then return "Scholomance"
         elseif q == "drowned" or q == "drownedcity" then return "The Drowned City"
         elseif q == "kroldok" or q == "krol'dok" then return "Krol'dok Stronghold"
+        elseif q == "alcaz" or q == "alcazprison" then return "Alcaz Prison"
+        elseif q == "blackmaw" or q == "blackmawhold" then return "Blackmaw Hold"
         elseif q == "shapers" or q == "shapersterrace" then return "Shaper's Terrace"
         end
         return FDJ.NormalizeDungeonName and FDJ.NormalizeDungeonName(q) or nil
@@ -637,7 +668,7 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
         elseif GetAddOnMetadata then
             addonVersion = GetAddOnMetadata("ForeverDungeonJournal", "Version")
         end
-        addonVersion = (addonVersion and tostring(addonVersion)) or "1.7.1"
+        addonVersion = (addonVersion and tostring(addonVersion)) or "1.7.5"
         print("|cffd8a83cForever Dungeon Journal|r |cffffffffv" .. addonVersion .. "|r loaded. Type |cffffffff/fj|r.")
         return
     end
@@ -707,7 +738,8 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
     end
 
     if event == "PLAYER_ENTERING_WORLD" then
-        local inInstance, instanceType = IsInInstance and IsInInstance()
+        local inInstance, instanceType
+        if IsInInstance then inInstance, instanceType = IsInInstance() end
         local currentMapID = C_Map and C_Map.GetBestMapForUnit and C_Map.GetBestMapForUnit("player")
         if not inInstance or instanceType == "none" then
             if FDJ.ResetDefeatedBosses then FDJ.ResetDefeatedBosses() end

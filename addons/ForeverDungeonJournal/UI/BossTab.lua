@@ -1547,14 +1547,16 @@ function FDJ.RefreshLoot()
     frame.lootContent:SetHeight(math.max(1, totalH))
     FDJ.UpdateScrollBarVisibility(frame.lootScroll, totalH)
 
-    if frame.noLootMessage then
+    if frame.noLootMessage and FDJ.selectedBossSubTab ~= "tactics" then
         local totalRecorded = (#(boss.loot or {})) + sharedCount + probableCount
         local totalVisible = #filteredLoot + #filteredShared + #filteredProbable
         if totalVisible == 0 and totalRecorded > 0 then
             frame.noLootMessage:SetText(L("NO_LOOT_MATCHES_FILTER") or "No loot matches current filters.")
             frame.noLootMessage:Show()
         elseif totalRecorded == 0 and not isStockade then
-            frame.noLootMessage:SetText(L("NO_LOOT_RECORDED") or "No loot recorded.")
+            local emptyText = boss.noLootNote or L("NO_LOOT_RECORDED")
+                or "No loot recorded yet. No database website (including Wowhead Forever) has loot drop information for this encounter yet."
+            frame.noLootMessage:SetText(emptyText)
             frame.noLootMessage:Show()
         else
             frame.noLootMessage:Hide()

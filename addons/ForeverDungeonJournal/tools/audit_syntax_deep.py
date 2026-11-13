@@ -1,43 +1,60 @@
 import re
 import glob
 
+
+def _inside_string(line, target_pos):
+    in_quote = None
+    escaped = False
+    for idx in range(target_pos):
+        ch = line[idx]
+        if escaped:
+            escaped = False
+            continue
+        if in_quote and ch == '\\':
+            escaped = True
+            continue
+        if in_quote:
+            if ch == in_quote:
+                in_quote = None
+        elif ch in ('"', "'"):
+            in_quote = ch
+    return in_quote is not None
+
+
 def check_file(path):
     with open(path, 'r', encoding='utf-8') as f:
-        content = f.read()
+        lines = f.read().splitlines()
 
     errors = []
-    
-    # Check for identifier immediately followed by a dot and digits (like y0.3937 or x1.234)
-    for m in re.finditer(r'\b([a-zA-Z_]\w*)\s*\.\s*(\d+)', content):
-        token = m.group(0)
-        # exclude version numbers in comments or strings if any, or known patterns like v1.0
-        start = m.start()
-        line_num = content[:start].count('\n') + 1
-        line_content = content.split('\n')[line_num - 1]
-        if line_content.strip().startswith('--'):
-            continue
-        if '"' in line_content or "'" in line_content:
-            # check if token is inside quotes
-            prefix = line_content[:m.start() - content[:start].rfind('\n')]
-            quotes = prefix.count('"') + prefix.count("'")
-            if quotes % 2 != 0:
-                continue
-        errors.append(f"{path}:{line_num}: suspicious '{token}' in '{line_content.strip()}'")
+    ident_dot_digit_re = re.compile(r'\b([a-zA-Z_]\w*)\s*\.\s*(\d+)')
+    double_comma_re = re.compile(r',\s*,')
 
-    # Check for consecutive commas or missing values like `{ , }` or `, ,`
-    for m in re.finditer(r',\s*,', content):
-        start = m.start()
-        line_num = content[:start].count('\n') + 1
-        line_content = content.split('\n')[line_num - 1]
-        if not line_content.strip().startswith('--'):
-            errors.append(f"{path}:{line_num}: double comma in '{line_content.strip()}'")
+    for line_num, line_content in enumerate(lines, 1):
+        stripped = line_content.strip()
+        if stripped.startswith('--'):
+            continue
+
+        # Check for identifier immediately followed by a dot and digits (like y0.3937 or x1.234)
+        for m in ident_dot_digit_re.finditer(line_content):
+            token = m.group(0)
+            if _inside_string(line_content, m.start()):
+                continue
+            errors.append(f"{path}:{line_num}: suspicious '{token}' in '{stripped}'")
+
+        # Check for consecutive commas or missing values like `{ , }` or `, ,`
+        if ',,' in line_content or ', ,' in line_content or double_comma_re.search(line_content):
+            if '"' not in line_content and "'" not in line_content:
+                errors.append(f"{path}:{line_num}: double comma in '{stripped}'")
 
     return errors
 
+
 all_errors = []
-for p in glob.glob('**/*.lua', recursive=True):
-    errs = check_file(p)
-    all_errors.extend(errs)
+for p in sorted(glob.glob('**/*.lua', recursive=True)):
+    norm = p.replace('\\', '/')
+    if norm.startswith(('tools/', 'scratch/', '_merge_preview/')):
+        continue
+    all_errors.extend(check_file(p))
 
 if all_errors:
     print(f"Found {len(all_errors)} syntax issues:")

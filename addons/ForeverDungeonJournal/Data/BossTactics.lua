@@ -3802,4 +3802,294 @@ FDJ.BOSS_TACTICS = {
             },
         },
     },
+
+    ["Krol'dok Stronghold"] = {
+        ["Slavecrusher Grox"] = {
+            overview = "Patrols the Krol'dok mines, gains 30% attack speed for 30 sec from [Bloodlust], periodically knocks down the tank for 2 sec with [Knockdown], and calls nearby non-elite Redridge Prisoners with [Force Compliance]. Clear nearby gnolls before pulling.\nCallout: \"Clear the pull area. Prisoners first; watch the tank during Bloodlust.\"",
+            roleTips = {
+                tank = "Pull into your cleared area. Establish threat on Grox, then collect incoming prisoners so they do not overwhelm the healer. Reserve mitigation for [Bloodlust], especially when [Knockdown] overlaps.",
+                healer = "Keep the tank healthy before [Knockdown] prevents them from acting. Expect heavier sustained tank damage during [Bloodlust], plus possible party damage while prisoners are being collected.",
+                melee = "Switch to the prisoners immediately, kill them quickly, then return to Grox. Avoid chasing adds into uncleared mine packs.",
+                ranged = "Help eliminate prisoners before they reach the healer. Keep your fighting position inside the cleared area rather than retreating deeper into the mines.",
+                dps = "Melee: Switch to the prisoners immediately, kill them quickly, then return to Grox. Avoid chasing adds into uncleared mine packs.\nRanged: Help eliminate prisoners before they reach the healer. Keep your fighting position inside the cleared area rather than retreating deeper into the mines.",
+            },
+            abilities = {
+                { id = 0, name = "Bloodlust", icon = "Interface\\Icons\\spell_nature_bloodlust", desc = "Increases attack speed by 30% for 30 sec." },
+                { id = 0, name = "Knockdown", icon = "Interface\\Icons\\Ability_Warrior_PunishingBlow", desc = "Periodically knocks down the tank for 2 sec." },
+                { id = 0, name = "Force Compliance", icon = "Interface\\Icons\\Ability_GolemThunderClap", desc = "Calls nearby low-health, non-elite Redridge Prisoners into the fight." },
+            },
+        },
+        ["Twilight Commander Zarmok"] = {
+            overview = "Patrols among Twilight's Hammer enemies; clear those enemies before engaging. Hits the tank with [Strike], deals massive damage within 8 yards via [Rending Whirl], and also uses [Enrage]. Keep non-melee outside 8 yards and minimize melee exposure.\nCallout: \"Ranged outside eight yards. Melee out for Whirl.\"",
+            roleTips = {
+                tank = "Fight in cleared space, away from nearby packs. Watch your health around [Strike] and prepare to reposition if needed for [Rending Whirl]; avoid dragging him onto ranged players.",
+                healer = "Stay more than 8 yards from the boss. Prioritize the tank while watching for melee players caught by [Rending Whirl]. Maintain space to reposition without entering another pack.",
+                melee = "Treat the 8-yard [Rending Whirl] as the main danger. Disengage when it is coming rather than trading your life for extra swings; return once it is safe.",
+                ranged = "Remain beyond 8 yards throughout the fight. Maintain that distance if the tank moves the boss, and avoid positioning against uncleared enemies.",
+                dps = "Melee: Treat the 8-yard [Rending Whirl] as the main danger. Disengage when it is coming rather than trading your life for extra swings; return once it is safe.\nRanged: Remain beyond 8 yards throughout the fight. Maintain that distance if the tank moves the boss, and avoid positioning against uncleared enemies.",
+            },
+            abilities = {
+                { id = 0, name = "Strike", icon = "Interface\\Icons\\ability_rogue_ambush", desc = "Heavy weapon strike against the tank." },
+                { id = 0, name = "Rending Whirl", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Deals massive damage to all players within 8 yards." },
+                { id = 0, name = "Enrage", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Enrages the commander during the encounter." },
+            },
+        },
+        ["War Handler Ashka"] = {
+            overview = "Engages alongside two wolves, Snarlfang and Terrorhowl. Uses [Strike] on the tank and directs the wolves onto a random party member for 10 sec with [Command: Kill!]. Kill the wolves first one at a time and use stuns to reduce their pressure.\nCallout: \"Wolves first, one at a time. Call the fixate; stun the wolves.\"",
+            roleTips = {
+                tank = "Engage Ashka and the wolves, but expect [Command: Kill!] to send the wolves after someone else. Keep Ashka controlled while the party kills a marked wolf, then the second.",
+                healer = "Watch the [Command: Kill!] target, not just the tank. Be ready to shift healing immediately when the wolves focus a party member.",
+                melee = "Focus one wolf at a time. Coordinate stuns to reduce damage during the fixate rather than spending all your control at once.",
+                ranged = "Focus the marked wolf alongside melee. If targeted, move within the cleared fighting area and keep the wolves accessible to your group instead of running into additional enemies.",
+                dps = "Melee: Focus one wolf at a time. Coordinate stuns to reduce damage during the fixate rather than spending all your control at once.\nRanged: Focus the marked wolf alongside melee. If targeted, move within the cleared fighting area and keep the wolves accessible to your group instead of running into additional enemies.",
+            },
+            abilities = {
+                { id = 0, name = "Command: Kill!", icon = "Interface\\Icons\\Ability_Gouge", desc = "Directs Snarlfang and Terrorhowl onto a random party member for 10 sec." },
+                { id = 0, name = "Strike", icon = "Interface\\Icons\\ability_rogue_ambush", desc = "Weapon strike against the tank." },
+            },
+        },
+        ["Nar'gurk"] = {
+            overview = "Accompanied by a Shadowhide Curseweaver and two Twilight Warlocks (use Polymorph, Sap, or Fear on escorts where possible, otherwise kill them first). Casts [Shadow Bolt Volley] and uses [Convert] to mind-control a player until the party drops them to 50% health.\nCallout: \"Control the escorts. Convert target to fifty, then stop.\"",
+            roleTips = {
+                tank = "Agree on crowd-control targets before the pull. Hold Nar'gurk and any uncontrolled escorts without dragging them through controlled enemies.",
+                healer = "Prepare for party damage from [Shadow Bolt Volley]. During [Convert], coordinate with DPS so healing does not work against lowering the controlled player to 50%; resume healing them once control breaks.",
+                melee = "Kill uncontrolled escorts first. On [Convert], switch to controlled damage against the affected player and stop as soon as control breaks—do not continue your full burst rotation.",
+                ranged = "Maintain assigned crowd control and avoid breaking it with area damage. Help bring converted players to 50% promptly, then return to the kill target.",
+                dps = "Melee: Kill uncontrolled escorts first. On [Convert], switch to controlled damage against the affected player and stop as soon as control breaks—do not continue your full burst rotation.\nRanged: Maintain assigned crowd control and avoid breaking it with area damage. Help bring converted players to 50% promptly, then return to the kill target.",
+            },
+            abilities = {
+                { id = 0, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Inflicts Shadow damage to the party." },
+                { id = 0, name = "Convert", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Controls a party member until the group brings that player down to 50% health." },
+            },
+        },
+        ["Bossman Toof"] = {
+            overview = "Bridge gauntlet followed by a boss fight with two Shaman escorts. Engaging the initial Centurions starts periodic waves of two Brutes, plus an approach pack of two Centurions and one Shaman. Clear a Brute wave right before pulling Toof; he uses [Mortal Strike], [Thunderclap], and [Demoralizing Shout].\nCallout: \"Finish the wave, then pull. Control Shamans; no boss tunnel.\"",
+            roleTips = {
+                tank = "Advance deliberately, not continuously. Pick up Brute waves and avoid stacking a wave, an approach pack, and the boss together. Start Toof just after a wave is handled, with his Shamans controlled or assigned as kill targets.",
+                healer = "Treat the bridge as sustained combat with limited breathing room. Call for recovery before the boss pull. During [Mortal Strike], anticipate difficulty recovering the tank and coordinate defensive cooldowns rather than waiting until they are nearly dead.",
+                melee = "Prioritize active Shamans, then finish other adds before committing to Toof. Use stuns to reduce overlapping damage. A Rogue can use Distract on approaching Brutes to buy time during the approach.",
+                ranged = "Watch for incoming Brute waves and announce them early. Maintain assigned crowd control on the boss's Shamans, and help finish adds instead of tunneling Toof.",
+                dps = "Melee: Prioritize active Shamans, then finish other adds before committing to Toof. Use stuns to reduce overlapping damage. A Rogue can use Distract on approaching Brutes to buy time during the approach.\nRanged: Watch for incoming Brute waves and announce them early. Maintain assigned crowd control on the boss's Shamans, and help finish adds instead of tunneling Toof.",
+            },
+            abilities = {
+                { id = 0, name = "Mortal Strike", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Heavy strike that reduces healing received on the tank." },
+                { id = 0, name = "Thunderclap", icon = "Interface\\Icons\\spell_nature_thunderclap", desc = "Damages and slows nearby players." },
+                { id = 0, name = "Demoralizing Shout", icon = "Interface\\Icons\\Ability_GolemThunderClap", desc = "Reduces attack power of nearby players." },
+            },
+        },
+        ["Overlord Mugg"] = {
+            overview = "Starts with two Krol'dok Centurions—control or kill them one at a time before pushing Mugg. Leaps to random players with [Crushing Slam] for AoE damage and knockback, and speeds up via [Mugg's Fury], swapping weapons until ending on [Set of Mauls] (+50% damage).\nCallout: \"Centurions first. Spread for leaps; defensives for Mauls.\"",
+            roleTips = {
+                tank = "Keep Mugg and uncontrolled Centurions managed while DPS clears escorts. After a leap, re-establish positioning without pulling the boss through the group. Save meaningful mitigation for the harder-hitting final [Set of Mauls] weapon phase.",
+                healer = "Expect random-player damage and knockbacks from [Crushing Slam] alongside escalating tank pressure. Preserve enough mana and cooldowns for [Set of Mauls]; do not spend everything recovering avoidable early damage.",
+                melee = "Kill uncontrolled Centurions first and avoid breaking controlled ones with cleave. Once the escorts are resolved, focus Mugg. Avoid unnecessary clustering with other party members when positioning allows.",
+                ranged = "Spread away from other players to limit [Crushing Slam] splash and knockback. Use cleared space and avoid positions where a knockback could send you toward additional enemies. Save burst for after the escorts are handled.",
+                dps = "Melee: Kill uncontrolled Centurions first and avoid breaking controlled ones with cleave. Once the escorts are resolved, focus Mugg. Avoid unnecessary clustering with other party members when positioning allows.\nRanged: Spread away from other players to limit [Crushing Slam] splash and knockback. Use cleared space and avoid positions where a knockback could send you toward additional enemies. Save burst for after the escorts are handled.",
+            },
+            abilities = {
+                { id = 0, name = "Crushing Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Jumps to a random player, damaging and knocking back that player and others nearby." },
+                { id = 0, name = "Mugg's Fury", icon = "Interface\\Icons\\ability_ghoulfrenzy", desc = "Increases Mugg's attack speed as the fight progresses and he changes weapons." },
+                { id = 0, name = "Set of Mauls", icon = "Interface\\Icons\\Ability_Smash", desc = "Final weapon stage that increases Mugg's damage by 50%." },
+            },
+        },
+        ["Trash Drops"] = {
+            overview = "|cffffd200[Dungeon Trash & Patrol Briefing]|r\nBefore each pull, settle the first kill target, crowd-control assignments, and where the group will stand. Clear space deliberately to avoid multi-pack overlaps and wandering three-enemy patrols.",
+            roleTips = {
+                tank = "Watch roads for three-enemy [Twilight Outrider] patrols and use line of sight to pull them away from other packs; a 10-sec Hooked Net can strand you (Blessing of Freedom helps). Avoid tanking multiple [Twilight Grunt] mobs together.",
+                healer = "Anticipate heavy melee damage from [Twilight Grunt] Sunder Armor and Bladestorm, plus [Krol'dok Shaman] Lightning Bolt and Bloodlust pressure if Shamans are not burned first.",
+                melee = "Respect [Twilight Grunt] 8-yard Bladestorm (especially when multiple are active). Kill [Krol'dok Shaman] targets first, stun/slow fleeing [Twilight Peon] runners immediately, and kick or stun dangerous casts.",
+                ranged = "Stun or crowd-control [Twilight Grunt] packs, focus down [Krol'dok Shaman] targets first, and snare or stun fleeing [Twilight Peon] runners before they alert nearby enemies.",
+                dps = "Melee: Respect [Twilight Grunt] 8-yard Bladestorm, kill [Krol'dok Shaman] targets first, and stun/slow fleeing [Twilight Peon] runners immediately.\nRanged: Stun or CC [Twilight Grunt] packs, focus [Krol'dok Shaman] targets first, and stop fleeing [Twilight Peon] runners before they pull extra enemies.",
+            },
+            abilities = {
+                { id = 0, name = "Twilight Grunt", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Stun or crowd-control these enemies. Bladestorm damages players within 8 yards and Sunder Armor increases tank pressure." },
+                { id = 0, name = "Twilight Outrider Patrol", icon = "Interface\\Icons\\ability_ensnare", desc = "Three-enemy road patrol; use line of sight to pull clear. Their 10-sec Hooked Net can strand the tank (Paladin Blessing of Freedom helps)." },
+                { id = 0, name = "Twilight Peon", icon = "Interface\\Icons\\Ability_MeleeDamage", desc = "Stop runners immediately with stuns or slows; they move quickly to alert other enemies." },
+                { id = 0, name = "Krol'dok Shaman / Centurion", icon = "Interface\\Icons\\spell_nature_bloodlust", desc = "Kill Shamans first to cut Lightning Bolt and Bloodlust pressure. Centurions add Mortal Strike, Thunderclap, and Demoralizing Shout." },
+            },
+        },
+    },
+    -- Alcaz Prison (new in Forever, live 2026-11-04). Only what early-run
+    -- guides report; nothing here is guessed. Sources (checked 2026-11-12):
+    -- Mobalytics "Alcaz Prison Dungeon Guide" (PhaseShifter, updated
+    -- 2026-11-12) and ConquestCapped "WoW Forever Alcaz Prison Guide"
+    -- (updated 2026-11-08). Full boss abilities are still unreported; add
+    -- named spells only once a source lists them.
+    ["Alcaz Prison"] = {
+        ["Overseer Wrex"] = {
+            overview = "Level 50. Found in a side room with six to eight Alcaz Jailers and Defias Bounty Hunters. When engaged he calls the whole room into the fight, so pull him back into the corridor and control the extra enemies. He drops the Overseer's Keyring that opens the locked door to the lower floor. Full abilities not yet reported.",
+            roleTips = {
+                tank = "Pull Wrex out of his room and into the corridor, not into the next room. Pick up the extra Jailers and Bounty Hunters.",
+                healer = "Expect incoming damage from several enemies at once. Keep the tank alive while they gather the extra enemies.",
+                dps = "Crowd-control the extra Jailers where possible (they are humanoids, so Polymorph and Sap work). Help kill the extra enemies while keeping damage on Wrex.",
+            },
+            abilities = {},
+        },
+        ["The Questioner"] = {
+            overview = "Level 51 humanoid elite, the prison's torturer. Players report a much larger health pool than the other bosses, so the fight runs considerably longer. Groups have met him second, though the game's encounter list puts him fourth. Abilities not yet reported.",
+            roleTips = {
+                tank = "Hold threat for the whole encounter and be ready for a long fight.",
+                healer = "Conserve mana; you will be healing through a prolonged fight.",
+                dps = "Save damage cooldowns for this encounter and keep your damage steady throughout.",
+            },
+            abilities = {},
+        },
+        ["Tidemistress Ca'zass"] = {
+            overview = "Level 50. Fights alongside naga adds (Strashaz Enchantresses) that repeatedly cast [Polymorph] on players. She casts [Blizzard] on the group, so move out of it.",
+            roleTips = {
+                tank = "Hold threat on Ca'zass and her adds, and help keep the naga adds under control.",
+                healer = "Watch for players turned by [Polymorph]. Expect group damage from [Blizzard].",
+                dps = "Kill the naga adds first, or interrupt [Polymorph] with Kick or Counterspell. A Grounding Totem can absorb spells. Move out of [Blizzard].",
+            },
+            abilities = {
+                { id = 0, name = "Blizzard", icon = "Interface\\Icons\\Spell_Frost_IceStorm", desc = "Cast by Ca'zass on the group. Move out of the area." },
+                { id = 0, name = "Polymorph", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Cast repeatedly by her Strashaz Enchantress adds. Interruptible (Kick, Counterspell)." },
+            },
+        },
+        ["Katerina the Cleaner"] = {
+            overview = "Level 52, reported with two Alcaz Chaplains. Deals heavy fire damage to the whole group, and the room fills with fire effects that make her actions hard to read. Chained prisoners stand around the room: leave them alone until the fight is over (in one run a prisoner freed mid-fight broke the pull). Named abilities not yet reported.",
+            roleTips = {
+                tank = "Hold threat on Katerina, keep the fight controlled, and do not interact with the chained prisoners.",
+                healer = "Drink to full mana before the pull. Expect heavy group-wide fire damage and keep the whole group up.",
+                dps = "Burn Katerina fast to end the fight quickly. Do not free any chained prisoners during the fight.",
+            },
+            abilities = {},
+        },
+        ["Blazeroar"] = {
+            overview = "Level 53 final boss. First appears as the prisoner Zarla Ober, who offers a quest to recover a shackle, then transforms into a red dragon. In the first reported run, fire spells had no effect on her, so fire-heavy groups should expect a slower kill. A hidden room behind her holds the Perfumed Note for the Horde chain. Other abilities not yet reported.",
+            roleTips = {
+                tank = "Hold threat on Blazeroar. No specific tank mechanics have been reliably documented yet.",
+                healer = "Keep the group alive. No specific healing mechanics have been reliably documented yet.",
+                dps = "Do not use fire damage; it was reported to have no effect. Fire Mages should switch to Frostbolt.",
+            },
+            abilities = {},
+        },
+        ["Trash Drops"] = {
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nEvery mob inside is an elite; going in at level 50 or higher is recommended. Pull every room back into the corridor. The Defias and naga are humanoids, so Polymorph and Sap work on them.",
+            roleTips = {
+                tank = "Pull each room into the corridor. Do not kite the hounds: they charge players who run, so fight them where they stand.",
+                healer = "Every mob is an elite, so drink between pulls. Do not run from the hounds; they charge runners.",
+                dps = "Bring interrupts and crowd control; Polymorph and Sap work on the Defias and naga. Do not run from the hounds.",
+            },
+            abilities = {},
+        },
+    },
+    -- Blackmaw Hold (new in Forever). No role guide exists yet (checked
+    -- 2026-11-12: Mobalytics has none; MMOnster says "tactics follow after
+    -- the first runs"). Run reports: ConquestCapped "WoW Forever Blackmaw
+    -- Hold Guide" (2026-11-08). Varrox's spells: Daybreak Forever
+    -- "Discoveries" (client spell data, datamined, not yet seen in a
+    -- reported run). Bosses with no reported info are left out on purpose.
+    ["Blackmaw Hold"] = {
+        ["Withermaw"] = {
+            overview = "Level 58 elite beast, on a different route from Bonesnout (take both routes: Claws That Rend, Tusks that Gore needs a drop from each). No abilities recorded yet. Unconfirmed: if it is the rotting bear from Blizzard's preview, it leaves lava pools on the ground.",
+            roleTips = {
+                tank = "No tank mechanics documented yet. If lava pools appear (unconfirmed), move the fight out of them.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet. If lava pools appear (unconfirmed), stay out of them.",
+            },
+            abilities = {},
+        },
+        ["Impaan the Imprisoner"] = {
+            overview = "Level 57 elite demon. No abilities recorded yet.",
+            roleTips = {
+                tank = "No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet.",
+            },
+            abilities = {},
+        },
+        ["Elder Shaman Bloodmane"] = {
+            overview = "Elder shaman of the Blackmaw clan; carries the Blackmaw Ritual Totem for Blackmaw Magic. Level and abilities not recorded yet.",
+            roleTips = {
+                tank = "No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "Furbolg shamans are casters, so bring interrupts. No boss-specific mechanics documented yet.",
+            },
+            abilities = {},
+        },
+        ["Bonesnout the Unbroken"] = {
+            overview = "Level 58 elite undead boar. Legashi Ritualists around it empower the boar, making its tusks deadlier and its hide harder to break (per Blizzard's preview). Drops the Tusks of the Unbroken quest item. Other abilities not recorded yet.",
+            roleTips = {
+                tank = "Make sure the Legashi Ritualists are killed or crowd-controlled before you pull the boar.",
+                healer = "Expect a harder fight if any Ritualist is left empowering the boar.",
+                dps = "Kill or crowd-control the Legashi Ritualists first, then the boar.",
+            },
+            abilities = {},
+        },
+        ["Varrox Bleakhoof"] = {
+            overview = "Level 60 elite demon; his kill completes Blackmaw Hold for Master Spelunker. Drops the Head of Varrox Bleakhoof. Abilities below come from the game's spell data (datamined), not yet confirmed by a reported run: [Crimson Wrest] pulls the whole party to him, and [Nightmare Detonation] marks every player for 10 sec, then hits within 10 yards and leaves a shadow pool. The datamine notes the marks overlap if players don't spread before Crimson Wrest pulls them together.",
+            roleTips = {
+                tank = "During [Crimson Wrest] everyone, you included, walks to Varrox and cannot act for 6 sec. Move out of shadow pools.",
+                healer = "[Crimson Wrest] stops you casting for 6 sec. Expect Shadow damage when [Nightmare Detonation] marks expire, more if marked players are stacked.",
+                dps = "Spread out when marked by [Nightmare Detonation] and do not stand in the shadow pools it leaves.",
+            },
+            abilities = {
+                { id = 0, name = "Crimson Wrest", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Datamined. 2 sec cast, whole room: for 6 sec every player is forced to walk towards Varrox, unable to act, and slowed by 60%." },
+                { id = 0, name = "Nightmare Detonation", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Datamined (tied to Varrox by spell ID block, not by name). 2 sec cast marks every player for 10 sec; on expiry 50 Shadow damage within 10 yards and a shadow pool dealing 20 Shadow damage per sec." },
+            },
+        },
+        ["Blackmaw Behemoth"] = {
+            overview = "Elite beast. Level and abilities not recorded yet.",
+            roleTips = {
+                tank = "No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet.",
+            },
+            abilities = {},
+        },
+        ["Unbound Spirit"] = {
+            overview = "Elite elemental, last in the game's encounter list. The fight has not been described yet.",
+            roleTips = {
+                tank = "No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet.",
+            },
+            abilities = {},
+        },
+        ["Moontouched Wanderer"] = {
+            overview = "Level 55 rare elite beast. It does not always spawn; kill it whenever you find it. No abilities recorded yet.",
+            roleTips = {
+                tank = "No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet.",
+            },
+            abilities = {},
+        },
+        ["Trash Drops"] = {
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nCollect the quests before entering (the givers are in the capitals, Dalaran and Azshara) and plan one long session. Take both routes: Withermaw and Bonesnout are on different paths. Blackmaw Shamans and Blackmaw Totemics appear among the warriors, so many packs have casters.",
+            roleTips = {
+                tank = "Many packs include Blackmaw Shamans and Totemics; pull casters to you with line of sight.",
+                healer = "Plan for a long session; the dungeon has several routes.",
+                dps = "Bring interrupts for the caster-heavy packs (Blackmaw Shamans and Totemics).",
+            },
+            abilities = {},
+        },
+    },
+    -- Shaper's Terrace (new in Forever). No role guide exists yet (checked
+    -- 2026-11-12). Sources: MMOnster "Shaper's Terrace" (2026-11-10) and
+    -- Daybreak Forever "Launch day: every boss in the five new dungeons"
+    -- (2026-11-04, client data). Bosses with no reported info are left out.
+    ["Shaper's Terrace"] = {
+        ["Nanaya"] = {
+            overview = "Final boss: a giant in titan armour; her kill completes Shaper's Terrace for Master Spelunker. The game's spell data (datamined) shows she slams the ground and stuns everyone nearby. No run has reported her tactics yet.",
+            roleTips = {
+                tank = "Expect a ground slam that stuns everyone near her (datamined). No other tank mechanics documented yet.",
+                healer = "Stay out of her slam range if you can; it stuns everyone nearby (datamined).",
+                dps = "Ranged: stay out of her slam range; it stuns everyone nearby (datamined).\nMelee: you will be in range of her stunning slam (datamined); no other mechanics documented yet.",
+            },
+            abilities = {
+                { id = 0, name = "Ground Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Datamined; exact spell name not published. Slams the ground and stuns everyone nearby." },
+            },
+        },
+        ["Cinder"] = {
+            overview = "Elite red-and-orange raptor. Spawns after someone uses the Archival Panel (a November 9 hotfix fixed this spawn). Drops loot and higher-level skinning materials. Abilities not reported yet.",
+            roleTips = {
+                tank = "Use the Archival Panel only when the group is ready; it spawns Cinder. No tank mechanics documented yet.",
+                healer = "No healing mechanics documented yet.",
+                dps = "No DPS mechanics documented yet.",
+            },
+            abilities = {},
+        },
+    },
 }

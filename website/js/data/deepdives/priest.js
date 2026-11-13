@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Priest Class Deep Dive Dataset
- * Primary Source: Sodapoppin Level-38 Night Elf Priest Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "A Deep Dive Into the New Priest Class in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  * Video URL: https://www.youtube.com/watch?v=TQiUy-g_TJ4
  */
 
@@ -14,9 +14,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     role: "Healer / Ranged DPS",
     specs: "Discipline (Penance/Soul Warding) • Holy (Prayer of Mending/Litany of Light) • Shadow (Shadowform/Devouring Plague)",
     hasData: true,
-    videoTitle: "WoW Forever Priest Class Deep Dive & Night Elf Racials",
+    videoTitle: "Sodapoppin: A Deep Dive Into the New Priest Class in WoW Forever",
     videoUrl: "https://www.youtube.com/watch?v=TQiUy-g_TJ4",
-    sourceAttribution: "Sodapoppin Level-38 Night Elf Priest BlizzCon Early Access Demo & Closed Beta Forensics",
+    sourceAttribution: "Sodapoppin video \"A Deep Dive Into the New Priest Class in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
     summary: "WoW Forever brings an expansive revitalization to the Priest: Penance and cooldown-free Power Word: Shield (Soul Warding) in Discipline, Prayer of Mending (5 bounces) and alternating-heal mana sustain (Litany of Light) in Holy, critical-strike DoTs and 50% mana reduction in Shadowform, and universal access to Devouring Plague and Fear Ward across all Priest races.",
 
     subTabs: [
@@ -34,49 +34,49 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Devouring Plague Critical Scaling",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Shadow Modernization",
         desc: "Devouring Plague periodic ticks can now critically strike, scaling directly with Shadow Spell Power and critical damage multipliers across all Priest races."
       },
       {
         title: "Inner Focus Periodic Spell Fix",
         status: "verified",
-        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        statusLabel: "Beta Change (Oct 2026)",
         badge: "Discipline Fix",
         desc: "Inner Focus (+25% critical effect chance, 100% mana cost reduction) no longer loses its charge to background periodic damage ticks, ensuring it applies properly to the intended active cast."
       },
       {
         title: "Universal Devouring Plague",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Racial Decoupling",
         desc: "Devouring Plague is no longer exclusive to Undead Priests! In WoW Forever, it is a baseline class spell accessible to all Priest races with a 1-minute cooldown."
       },
       {
         title: "Universal Fear Ward",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Racial Decoupling",
         desc: "Fear Ward is no longer exclusive to Dwarf Priests. It is a shared class ability across all Priest races with a 3-minute duration and 3-minute cooldown."
       },
       {
         title: "Critical Strike DoTs",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "DoT Modernization",
         desc: "Priest damage-over-time spells (Shadow Word: Pain, Devouring Plague, Holy Fire periodic ticks) can now critically strike, greatly enhancing overall sustained throughput."
       },
       {
         title: "Baseline Divine Spirit",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Baseline Buff",
         desc: "Divine Spirit is moved from deep Discipline talents into the baseline class trainer toolkit, providing the iconic Spirit buff to all Priests regardless of specialization."
       },
       {
         title: "Tree Capstone Tradeoff (Penance vs PoM)",
         status: "verified",
-        statusLabel: "Verified in Beta",
+        statusLabel: "Reported in Beta",
         badge: "Build Architecture",
         desc: "Penance (Discipline) and Prayer of Mending (Holy) reside on distinct talent branches, requiring dedicated talent investment so a hybrid build cannot trivially take both."
       },
@@ -97,9 +97,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Native Cooldown Manager: Priest Essentials",
         status: "verified",
-        statusLabel: "Verified in Beta (Oct 8)",
+        statusLabel: "Reported in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Penance (10s), Mind Blast (8s/5.5s), Power Word: Shield (monitored alongside Weakened Soul duration), Prayer of Mending (10s), and Circle of Healing (6s). Major Defensives & Bursts: Power Infusion (3m), Pain Suppression (2m), Psychic Scream (30s), Silence (45s), Inner Focus (3m), and Desperate Prayer (10m). Active Procs & Buffs: Surge of Light (instant Flash Heal / Smite procs with highlight), Spirit Tap active regen window, Shadow Weaving stacks (1–5), and Inner Fire charges."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Penance (10s), Mind Blast (8s/5.5s), Power Word: Shield (monitored alongside Weakened Soul duration), Prayer of Mending (10s), and Circle of Healing (6s). Major Defensives & Bursts: Power Infusion (3m), Pain Suppression (3m), Psychic Scream (30s), Silence (45s), Inner Focus (3m), and Desperate Prayer (10m). Active Procs & Buffs: Surge of Light (instant Flash Heal / Smite procs with highlight), Spirit Tap active regen window, Shadow Weaving stacks (1–5), and Inner Fire charges."
       }
     ],
 
@@ -123,26 +123,26 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Permanently removes the 4-second cooldown from Power Word: Shield! Targets still receive the 15-second Weakened Soul debuff, enabling rapid shielding across multiple party/raid members."
         },
         {
-          name: "Divine Aegis (50% Critical Absorb)",
+          name: "Divine Aegis",
           type: "Absorb Keystone",
           cast: "Passive Proc",
           duration: "12 sec Duration",
           status: "verified",
-          desc: "Critical healing strikes create an absorb shield on the target equal to 50% of the amount healed, protecting against subsequent physical and magical spikes."
+          desc: "Your non-periodic critical heals create a protective shield on the target, absorbing 15% of the amount healed. Shields up to 1200 damage and lasts 12 sec. (at 3/3; rank 1: 5%, 1200, 12 sec)"
         },
         {
-          name: "Holy Fire Smite/Penance Synergy",
+          name: "Power in Light",
           type: "Offensive Discipline Synergy",
           cast: "Passive",
           status: "verified",
-          desc: "Smite and Penance deal 10% additional damage when striking targets afflicted by your Holy Fire damage-over-time effect."
+          desc: "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain. (at 5/5)"
         },
         {
-          name: "Weakened Soul Healing Acceleration",
+          name: "Renewed Hope",
           type: "Rotational Synergies",
           cast: "Passive",
           status: "verified",
-          desc: "Direct heals cast on targets affected by Weakened Soul gain increased critical-strike chance and reduce the remaining duration of that target's Weakened Soul."
+          desc: "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec. (at 5/5)"
         },
         {
           name: "Power Infusion",
@@ -162,11 +162,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Suffering a melee or ranged critical hit grants Focused Casting for 6 seconds, preventing cast-time loss from damage and adding 20% interrupt resistance."
         },
         {
-          name: "Discipline Passives & Shield Power",
+          name: "Improved Power Word: Shield",
           type: "Passive Stat Cluster",
           cast: "Passive",
           status: "verified",
-          desc: "Increases wand damage by up to 25%, overall damage and healing by 5%, Power Word: Shield absorb strength by 20%, and provides up to 18% Holy spell hit chance."
+          desc: "Increases the damage absorbed by your Power Word: Shield by 20%. (at 3/3)"
         }
       ]
     },
@@ -191,19 +191,19 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Casting a healing spell different from your previous heal restores mana equal to 10% of the new spell's base mana cost, rewarding dynamic, non-repetitive triage casting."
         },
         {
-          name: "Spirit-to-Spell Conversion",
+          name: "Spiritual Guidance",
           type: "Throughput Scaling Keystone",
           cast: "Passive",
           status: "verified",
-          desc: "Increases spell healing by up to 5% of your total Spirit, and increases spell damage by up to 1% of total Spirit, reinforcing Spirit as Holy's premier stat."
+          desc: "Increases your spell healing by up to 25% of your total Spirit and your spell damage by up to 8% of your total Spirit. (at 5/5)"
         },
         {
-          name: "Blessed Recovery / Reactive Self-Heal",
+          name: "Blessed Recovery",
           type: "Defensive Sustain",
           cast: "Passive Proc",
           duration: "6 sec Duration",
           status: "verified",
-          desc: "After suffering a critical hit or an attack exceeding 30% of your maximum health, heals for 25% of the damage taken over 6 seconds. This heal refreshes and carries over remaining amounts."
+          desc: "After being struck by a melee or ranged critical hit, or suffering more than 30% of your maximum Health from a single attack, heal 25% of the damage taken over 6 sec. Refreshing this effect carries over any remaining healing. (at 3/3)"
         },
         {
           name: "Inspiration (+25% Target Armor)",
@@ -214,25 +214,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Non-periodic critical heals increase the target's armor by 25% for 15 seconds, providing critical physical damage reduction to tanks."
         },
         {
-          name: "Holy Nova Free-Cast Procs",
-          type: "AoE Synergy",
-          cast: "Passive Proc",
-          status: "verified",
-          desc: "Increases periodic Holy damage by 5% and gives periodic Holy damage a 10% chance to make your next Holy Nova cost 0 mana."
-        },
-        {
-          name: "Range & Radius Amplification",
+          name: "Holy Reach",
           type: "Utility Enhancements",
           cast: "Passive",
           status: "verified",
-          desc: "Increases Smite and Holy Fire range by up to 6 yards, and enlarges the effective radius of Prayer of Healing and Holy Nova."
+          desc: "Increases the range of your Smite and Holy Fire spells and the radius of your Prayer of Healing and Holy Nova spells by 20%. (at 2/2)"
         },
         {
-          name: "Holy Cast Time & Renew Buffs",
+          name: "Holy Specialization",
           type: "Throughput Foundations",
           cast: "Passive Cluster",
           status: "verified",
-          desc: "Reduces cast times of core Holy spells, increases Holy spell critical-strike chance, strengthens Renew healing, and reduces spell damage taken."
+          desc: "Increases the critical effect chance of your Holy spells by 5%. (at 5/5)"
         }
       ]
     },
@@ -249,13 +242,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Assumes Shadowform: increases Shadow damage by 10%, reduces Shadow-spell mana costs by 50%, doubles the critical-strike damage bonus of Shadow spells, and reduces physical damage taken by 15%. Cannot cast Holy healing spells while active."
         },
         {
-          name: "Spreading Devouring Plague",
+          name: "Devouring Contagion",
           type: "Rotational Keystone",
           cast: "Instant",
           cd: "1 min Cooldown",
           duration: "24 sec Duration",
           status: "verified",
-          desc: "Afflicts the target with a disease dealing massive Shadow damage and healing the Priest. Talents reduce its mana cost by up to 50%; if the target dies while affected, it jumps to a nearby enemy within 10 yards!"
+          desc: "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to 2 nearby enemies within 10 yds for the remaining duration. (at 2/2)"
         },
         {
           name: "Improved Mind Flay (Ramping Damage & Range)",
@@ -263,15 +256,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Channeled (3 sec)",
           range: "30 Yards",
           status: "verified",
-          desc: "Extends Mind Flay range by 10 yards (to 30 yards). Each instance of Mind Flay damage deals 10/20% more damage than its previous instance."
+          desc: "Each instance of damage of Mind Flay deals 20% more damage than its previous instance of damage. (at 2/2; rank 1: 10%)"
         },
         {
-          name: "Vampiric Embrace & Spirit Tap Procs",
+          name: "Vampiric Embrace",
           type: "Sustained Party Healing",
           cast: "Instant",
           duration: "30 sec Duration",
           status: "verified",
-          desc: "Afflicts the target for 30 seconds; heals party members for 20% of the Priest's Shadow spell damage. Also gives Spirit Tap a chance to trigger on death even if the Priest does not receive the killing blow."
+          desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec."
         },
         {
           name: "Silence (45s CD / 3s Lockout)",
@@ -288,7 +281,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Passive Proc",
           duration: "15 sec Duration",
           status: "verified",
-          desc: "Shadow damage spells have a 100% chance to cause the target to take 3% increased Shadow damage per stack, stacking up to 5 times (+15% Shadow damage)."
+          desc: "Your Shadow damage spells have a 100% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times. (at 3/3; rank 1: 33%, 2%, 15 sec, 5)"
         },
         {
           name: "Spirit Tap & Blackout",
@@ -298,11 +291,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Spirit Tap grants 100% mana regeneration while casting on kills; Blackout gives Shadow damage spells a 10% chance to stun the target for 3 seconds."
         },
         {
-          name: "Darkness & Range Foundations",
+          name: "Shadow Reach",
           type: "Core Shadow Talents",
           cast: "Passive",
           status: "verified",
-          desc: "Increases Shadow spell damage, extends offensive Shadow range by 20%, reduces threat generated by 25%, and reduces Mind Blast cooldown by 2.5s."
+          desc: "Increases the range of your offensive Shadow spells by 20%. (at 2/2)"
         }
       ]
     },
@@ -315,31 +308,31 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           {
             name: "In-Combat Shadowmeld (Threat Drop)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Can be activated in combat on a 2-minute cooldown. While it does not drop combat completely, it causes enemies to immediately stop targeting and attacking the Priest."
           },
           {
             name: "Elune's Light (+10% Crit Burst)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Active racial granting +10% critical-strike chance for all spells and attacks for 15 seconds on a 2-minute cooldown. Excellent for burst Penance or Holy Nova."
           },
           {
             name: "Elune's Grace (50% Miss Rate)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Reduces the chance of being hit by melee and ranged attacks by 50% for 15 seconds or until 3 attacks miss, providing powerful anti-physical survival."
           },
           {
             name: "Starshards (Arcane Channel)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Channeled Arcane spell dealing Arcane damage over 6 seconds. Gives Night Elf Priests an extra direct damage channel outside of the Shadow school."
           },
           {
             name: "Quickness (+1% Dodge & +2% Move Speed)",
             status: "verified",
-            statusLabel: "Verified in Beta",
+            statusLabel: "Reported in Beta",
             desc: "Passive racial granting 1% permanent dodge chance and a permanent 2% movement speed increase on foot."
           }
         ]
@@ -545,11 +538,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Spirit > Intellect > Spell Power > Stamina",
             bestWeapon: "Highest DPS Wand (Necromantic Wand / Gravestone Scepter)",
             talents: [
-              { name: "Wand Specialization", points: "5/5", tree: "Discipline (Tier 1)", desc: "Increases your damage with Wands by 25%. Coupled with 30% SP wand scaling, out-damages hard casts at 0 mana!" },
+              { name: "Wand Specialization", points: "5/5", tree: "Discipline (Tier 1)", desc: "Increases your damage with Wands by 25%. (at 2/2; rank 1: 13%)" },
               { name: "Silent Resolve", points: "5/5", tree: "Discipline (Tier 1)", desc: "Reduces threat generated by your spells by 20%, keeping aggro firmly on dungeon tanks." },
               { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25%." }
             ],
-            legacyNotes: "Extra points obtained through Legacy Discovery unlock 5/5 Mental Agility (10% instant spell mana reduction) and Soul Warding (cooldown-free Power Word: Shield).",
+            legacyNotes: "Extra points obtained through the Legacy Talented perk unlock 5/5 Mental Agility (10% instant spell mana reduction) and Soul Warding (cooldown-free Power Word: Shield).",
             rotation: [
               { label: "Pull Sequence", desc: "Power Word: Shield -> Holy Fire or Smite opener -> Shadow Word: Pain." },
               { label: "Wand Down (5-Second Rule)", desc: "Auto-wand target until dead. Because no mana is spent for >5 sec, Spirit regeneration runs at 100% rate." },
@@ -564,8 +557,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Back", item: "Mantle of the Penitent", source: "Ruins of Lordaeron", stats: "+4 Spi, +3 Sta" }
             ],
             campingPerk: {
-              name: "Meditation of the Light (+10% Total Spirit)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Purified Spirit' 2-hour +10% Spirit buff."
+              name: "Faction Banner (Tailoring camp object)",
+              desc: "Everyone of your faction sitting at your camp gains up to +32 Spirit (level 60 value; does not stack with Divine Spirit). Requires a Campfire."
             },
             classQuestNote: "Level 20 Priest unlocks Desperate Prayer and Fear Ward (now baseline across all races)."
           },
@@ -584,7 +577,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Darkness", points: "5/5", tree: "Shadow (Tier 2)", desc: "Increases your Shadow spell damage by 10%." },
               { name: "Shadow Focus", points: "1/5", tree: "Shadow (Tier 2)", desc: "Reduces the chance for targets to resist your Shadow spells by 2%." }
             ],
-            legacyNotes: "Extra Legacy points unlock Mind Flay at level 20+1 and Improved Mind Flay (80% slow!).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Mind Flay at level 20+1 and Improved Mind Flay (each Mind Flay tick deals up to 20% more than the last).",
             rotation: [
               { label: "Opener", desc: "Mind Blast from max range -> Shadow Word: Pain -> Devouring Plague." },
               { label: "Execute", desc: "Switch to Wand at low health to ensure Spirit Tap kill trigger proc." }
@@ -595,8 +588,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron", stats: "+3 Shadow SP" }
             ],
             campingPerk: {
-              name: "Shadow Trance (+5% Shadow Damage)",
-              desc: "Resting in a tent grants +5% increased Shadow spell damage and 15% reduced threat for 2 hours."
+              name: "Fish Bowl (Fishing camp object)",
+              desc: "Craft a Fish Bowl."
             },
             classQuestNote: "Level 20 unlocks universal Devouring Plague for all priest races."
           },
@@ -615,7 +608,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Divine Fury", points: "5/5", tree: "Holy (Tier 2)", desc: "Reduces the cast time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.5 sec." },
               { name: "Desperate Prayer", points: "1/1", tree: "Holy (Tier 3)", desc: "Instantly heals the caster for a large amount on a 10-minute cooldown; costs 0 mana." }
             ],
-            legacyNotes: "Extra Legacy points unlock Inspiration (25% armor buff on heal crits) and Prayer of Mending.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Inspiration (25% armor buff on heal crits) and Prayer of Mending.",
             rotation: [
               { label: "Tank Upkeep", desc: "Keep Renew rolling on tank; pre-cast downranked Heal rank 1." },
               { label: "Emergency Save", desc: "Flash Heal -> Desperate Prayer if focused by dungeon adds." }
@@ -626,8 +619,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Ring", item: "Thane's Healing Band", source: "Hall of Thanes", stats: "+6 Healing, +4 Spirit" }
             ],
             campingPerk: {
-              name: "Grace of the Camp (+10% Healing Done)",
-              desc: "Camp resting grants +10% bonus to all healing output and reduced pushback for 2 hours."
+              name: "Mana Well (Alchemy camp object)",
+              desc: "Craft a Mana Well."
             },
             classQuestNote: "Level 20 unlocks the Holy Vestments questline and racial priest blessing."
           }
@@ -654,12 +647,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Improved Shadow Word: Pain", points: "2/2", tree: "Shadow (Tier 2)", desc: "Increases the duration of your Shadow Word: Pain spell by 6 sec." },
               { name: "Shadow Reach", points: "2/2", tree: "Shadow (Tier 2)", desc: "Increases the range of your offensive Shadow spells by 20% (36-yard range)." },
               { name: "Mind Flay", points: "1/1", tree: "Shadow (Tier 3 Keystone)", desc: "Assaults the target's mind with Shadow energy, dealing Shadow damage and slowing movement by 50% over 3 sec." },
-              { name: "Improved Mind Flay", points: "2/2", tree: "Shadow (Tier 3)", desc: "Increases the periodic damage dealt by your Mind Flay spell by 10% and extends its duration by 1 sec." },
+              { name: "Improved Mind Flay", points: "2/2", tree: "Shadow (Tier 3)", desc: "Each instance of damage of Mind Flay deals 20% more damage than its previous instance of damage." },
               { name: "Dark Inspiration", points: "5/5", tree: "Shadow (Tier 4)", desc: "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 15% for 10 sec." },
-              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts target with Shadow energy, healing all party members for 20% of any single-target Shadow damage you deal for 1 min." },
-              { name: "Shadow Weaving", points: "3/3", tree: "Shadow (Tier 4)", desc: "Shadow damage spells have a 100% chance to cause the target to be vulnerable to Shadow damage by 3% for 15 sec (stacks 5 times)." }
+              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec." },
+              { name: "Shadow Weaving", points: "3/3", tree: "Shadow (Tier 4)", desc: "Your Shadow damage spells have a 100% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Silence (5-second ranged spell silence) and Shadow Focus for spell hit rating.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Silence (5-second ranged spell silence) and Shadow Focus for spell hit rating.",
             rotation: [
               { label: "Vampiric Embrace Primer", desc: "Apply Vampiric Embrace to primary target for continuous group healing." },
               { label: "Critical DoT Spreading", desc: "Devouring Plague (now critically strikes!) -> Shadow Word: Pain -> Mind Blast on cooldown." },
@@ -673,8 +666,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron", stats: "+3 Shadow Spell Power" }
             ],
             campingPerk: {
-              name: "Shadow Trance (+5% Shadow Damage)",
-              desc: "Resting in a tent grants +5% increased Shadow spell damage and 15% reduced threat for 2 hours."
+              name: "Fish Bowl (Fishing camp object)",
+              desc: "Craft a Fish Bowl."
             },
             classQuestNote: "Universal Devouring Plague upgrades and Shadow cosmetic aura available at level 30 trainers."
           },
@@ -693,12 +686,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your total Intellect by 10%." },
               { name: "Mental Agility", points: "2/3", tree: "Discipline (Tier 3)", desc: "Reduces the Mana cost of your instant cast spells by 7%." },
               { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3 Keystone)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases critical chance by 25%." },
-              { name: "Improved Power Word: Shield", points: "3/3", tree: "Discipline (Tier 3)", desc: "Increases the damage absorbed by your Power Word: Shield by 15%." },
-              { name: "Meditation", points: "3/3", tree: "Discipline (Tier 3)", desc: "Allows 15% of your Mana regeneration to continue while casting." },
+              { name: "Improved Power Word: Shield", points: "3/3", tree: "Discipline (Tier 3)", desc: "Increases the damage absorbed by your Power Word: Shield by 20%." },
+              { name: "Meditation", points: "3/3", tree: "Discipline (Tier 3)", desc: "Allows 50% of your Mana regeneration to continue while casting." },
               { name: "Soul Warding", points: "1/1", tree: "Discipline (Tier 4 Keystone)", desc: "Reduces the cooldown of your Power Word: Shield by 4 sec, removing the cooldown completely." },
               { name: "Penance", points: "1/1", tree: "Discipline (Tier 5 Keystone)", desc: "Launches a volley of holy light at the target, inflicting Holy damage to an enemy, or healing an ally instantly and every 1 sec for 2 sec." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Renewed Hope, Divine Aegis, and Power Infusion in post-30 tiers.",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Renewed Hope, Divine Aegis, and Power Infusion in post-30 tiers.",
             rotation: [
               { label: "Shield Vanguard", desc: "Power Word: Shield on tank prior to pull; Mental Agility lowers instant shield mana cost." },
               { label: "Power Infusion Steroid", desc: "Cast Power Infusion on your top Mage/Warlock or yourself during boss burn windows." },
@@ -710,8 +703,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Finger", item: "Thane's Healing Band", source: "Hall of Thanes", stats: "+6 Healing, +4 Spirit" }
             ],
             campingPerk: {
-              name: "Meditation of the Light (+10% Total Spirit)",
-              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Purified Spirit' 2-hour +10% Spirit buff."
+              name: "Faction Banner (Tailoring camp object)",
+              desc: "Everyone of your faction sitting at your camp gains up to +32 Spirit (level 60 value; does not stack with Divine Spirit). Requires a Campfire."
             },
             classQuestNote: "Divine Spirit and Prayer of Fortitude upgraded at Level 30 trainers."
           },
@@ -732,9 +725,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Blessed Recovery", points: "3/3", tree: "Holy (Tier 3)", desc: "After being struck by a melee or ranged critical strike, heal 25% of the damage taken over 6 sec." },
               { name: "Inspiration", points: "3/3", tree: "Holy (Tier 3)", desc: "Increases your target's armor value from items by 25% for 15 sec after getting a critical effect from Flash Heal, Heal, Greater Heal, or Prayer of Healing." },
               { name: "Improved Healing", points: "3/3", tree: "Holy (Tier 4)", desc: "Reduces the Mana cost of your Lesser Heal, Heal, and Greater Heal spells by 15%." },
-              { name: "Spirit of Redemption", points: "1/1", tree: "Holy (Tier 5 Keystone)", desc: "Upon death, the priest becomes the Spirit of Redemption for 10 sec, unable to move, attack or be targeted, but able to cast any healing spell completely free of mana cost." }
+              { name: "Spirit of Redemption", points: "1/1", tree: "Holy (Tier 5 Keystone)", desc: "Upon death, the priest becomes the Spirit of Redemption for 15 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the priest dies." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Prayer of Mending (5-bounce reactive group triage) and Spiritual Guidance (+25% Spirit to spell power).",
+            legacyNotes: "Extra points from the Legacy Talented perk unlock Prayer of Mending (5-bounce reactive group triage) and Spiritual Guidance (+25% Spirit to spell power).",
             rotation: [
               { label: "Armor Buff Maintenance", desc: "Cast Heal or Flash Heal targeting the tank; critical strikes proc Inspiration (+25% armor) to drastically mitigate physical boss hits." },
               { label: "Holy Nova AoE", desc: "Spam Holy Nova during dense dungeon trash packs in Excavation Site; deals AoE holy damage while healing the melee core with zero threat!" },
@@ -746,8 +739,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { slot: "Ring", item: "Thane's Healing Band", source: "Hall of Thanes", stats: "+6 Healing, +4 Spirit" }
             ],
             campingPerk: {
-              name: "Grace of the Camp (+10% Healing Done)",
-              desc: "Camp resting grants +10% bonus to all healing output and reduced pushback for 2 hours."
+              name: "Mana Well (Alchemy camp object)",
+              desc: "Craft a Mana Well."
             },
             classQuestNote: "Holy Vestments rank 2 and Mass Dispel preparation quests available at level 30."
           }

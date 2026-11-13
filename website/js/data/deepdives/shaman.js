@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Shaman Class Deep Dive Dataset
- * Primary Source: Sodapoppin Level-38 Dwarf Shaman Hands-On Early Access Demo & Closed Beta Forensics
+ * Primary Source: Sodapoppin video "WoW Forever Shaman Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
  */
 
 if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
@@ -13,10 +13,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "role": "Healer / Melee & Ranged DPS / Off-Tank",
   "specs": "Enhancement (Melee/Off-Tank) • Elemental (Caster DPS) • Restoration (Healer)",
   "hasData": true,
-  "videoTitle": "WoW Forever Shaman Class Deep Dive",
+  "videoTitle": "Sodapoppin: WoW Forever Shaman Class Deep Dive",
   "videoUrl": "https://www.youtube.com/watch?v=WfB5HLAZxwg",
-  "sourceAttribution": "Sodapoppin Level-38 Dwarf Shaman BlizzCon Early Access Demo & Closed Beta Forensics",
-  "summary": "WoW Forever introduces historic milestones for the Shaman: Dwarf Shamans (Wildhammer) bringing Bloodlust and Windfury to the Alliance, a 6-second Stormstrike dealing 150% weapon damage, Spirit Weapons dual-threat scaling for 5-man dungeon tanking, indoor Ghost Wolf, 60-minute weapon imbues, Call of the Ancestors 4-totem dropping, Totemic Call, and rotation upgrades like Call of Thunder and Riptide.",
+  "sourceAttribution": "Sodapoppin video \"WoW Forever Shaman Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+  "summary": "WoW Forever introduces historic milestones for the Shaman: Dwarf Shamans bringing Bloodlust and Windfury to the Alliance, Stormstrike (100% weapon damage on an 8-second cooldown after the Nov 10 hotfix), Spirit Weapons dual-threat scaling for 5-man dungeon tanking, indoor Ghost Wolf, 60-minute weapon imbues, Call of the Ancestors 4-totem dropping, Totemic Call, and rotation upgrades like Call of Thunder and Riptide.",
   "subTabs": [
     {
       "id": "overview",
@@ -68,21 +68,21 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Call of the Ancestors: 4-Totem Drop",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Major QoL",
       "desc": "Allows the Shaman to simultaneously place up to four totems (Earth, Fire, Water, Air) in a single global cooldown, supporting customizable saved totem loadout sets for instant situational deployment in PvE and PvP."
     },
     {
       "title": "60-Minute Weapon Imbues",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Major QoL",
       "desc": "Weapon imbues (Rockbiter, Windfury, Flametongue, Frostbrand) now have a full 60-minute duration, eliminating the frustrating 5-minute recast tax from classic 2004."
     },
     {
       "title": "Indoor Ghost Wolf & 2s Reduction",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Mobility",
       "desc": "Ghost Wolf can now be cast indoors across all zones and dungeons. Furthermore, the cast time can be reduced by 2 seconds through talents, making Ghost Wolf an instant-cast form."
     },
@@ -96,21 +96,21 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Comprehensive Weapon Proficiencies",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Arsenal",
       "desc": "Visible proficiencies include One-Handed Maces, Two-Handed Maces, One-Handed Axes, Two-Handed Axes, Daggers, Staves, and Fist/Unarmed weapons, alongside Shields for defense."
     },
     {
       "title": "2H Axes & Maces Baseline (Talent Removed)",
       "status": "verified",
-      "statusLabel": "Verified in Beta (Oct 2026)",
+      "statusLabel": "Reported in Beta (Oct 2026)",
       "badge": "Baseline Weapon Master",
       "desc": "The 'Two-Handed Axes and Maces' talent has been removed from the Enhancement tree. Shamans now learn 2H axes and maces directly from capital weapon masters as a baseline skill! Enhancement embraces slow 2H weapon swings for devastating Windfury burst, alongside 1H + Shield for off-tanking."
     },
     {
       "title": "Fire Nova Spell Rework (No Totem Required)",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Spell Overhaul",
       "desc": "Fire Nova Totem has been completely replaced by the direct Fire Nova spell. Casting Fire Nova causes a searing burst of fire damage to pulse directly from whichever Fire Totem you currently have active."
     },
@@ -124,7 +124,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Dedicated Reagent Bag Slot",
       "status": "verified",
-      "statusLabel": "Verified in Beta",
+      "statusLabel": "Reported in Beta",
       "badge": "Inventory QoL",
       "desc": "Equip an extra 6th bag purely for tradeskill and profession reagents, allowing Shamans to carry quest items and consumables without bag bloat."
     },
@@ -138,9 +138,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Native Cooldown Manager: Shaman Essentials",
       "status": "verified",
-      "statusLabel": "Verified in Beta (Oct 8)",
+      "statusLabel": "Reported in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
-      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (buffed 6s CD with 150% weapon damage), Totemic Call (30s), shared Shock spells (5-6s), Riptide (12s HoT), and Chain Lightning (2.5s cast). Major Defensives & Bursts: Bloodlust / Heroism (5m), Lightning Mastery (3m, renamed from Elemental Mastery), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
+      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (8s CD, 100% weapon damage after the Nov 10 hotfix), Totemic Call (30s), shared Shock spells (5-6s), Riptide (12s HoT), and Chain Lightning (2.5s cast). Major Defensives & Bursts: Bloodlust / Heroism (5m), Lightning Mastery (3m, renamed from Elemental Mastery), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
     },
     {
       "title": "Totemic Recall Added Baseline",
@@ -152,7 +152,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "title": "Two-Handed Enhancement Swing Timing Fix",
       "status": "verified",
-      "statusLabel": "Phase 2 Engine Fix",
+      "statusLabel": "Beta Fix",
       "badge": "Combat Engine",
       "desc": "Spell-shock casting no longer inadvertently resets or pauses the 2H weapon swing timer in Phase 2, allowing seamless weaving of instant Shocks and Stormstrike between massive slow weapon strikes."
     },
@@ -193,18 +193,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Unleashes ancient elemental fury, increasing melee attack speed by 30% and spellcasting speed by 30% for 25 seconds. Serves as a major offensive power spike."
       },
       {
-        "name": "Maelstrom Weapon / Lightning Reduction",
+        "name": "Maelstrom Weapon",
         "type": "Melee-to-Spell Synergy",
         "cast": "Passive Proc",
         "status": "verified",
-        "desc": "Melee attacks have a chance to trigger a stacking buff reducing the cast time and mana cost of your next Lightning Bolt by 20% per stack, up to 5 stacks (granting a 100% instant, free Lightning Bolt)."
+        "desc": "When you deal damage with a melee attack, you have a chance (10 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix) (at 5/5)"
       },
       {
-        "name": "Shock & Lightning Shield Mana Reduction",
+        "name": "Shamanistic Focus",
         "type": "Resource Conservation",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Reduces the mana cost of all Shock spells (Earth Shock, Flame Shock, Frost Shock) and Lightning Shield by up to 45%, solving classic Enhancement mana starvation."
+        "desc": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
       },
       {
         "name": "Spirit Weapons",
@@ -225,14 +225,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "type": "Mobility Talent",
         "cast": "Passive (2 Ranks)",
         "status": "verified",
-        "desc": "Reduces the cast time of Ghost Wolf by 1.0/2.0 seconds, allowing for instant-cast indoor wolf transformations for unmatched kiting and dungeon repositioning."
+        "desc": "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors. (at 2/2; rank 1: 1.0 sec)"
       },
       {
-        "name": "Core Enhancement Retentions",
+        "name": "Earth's Grasp",
         "type": "Baseline Stat Modifiers",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Enhancement retains bonuses to Stoneclaw Totem health, Earthbind Totem radius, melee/spell crit, Intellect-to-Attack Power scaling, Lightning Shield damage, and Dodge."
+        "desc": "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%. (at 2/2)"
       }
     ]
   },
@@ -241,34 +241,34 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "tagline": "Viable 5-man dungeon tanking through Rockbiter threat, parry mitigation, and Earth Shock interrupts — but no player-targeted taunt for raids",
     "tools": [
       {
-        "name": "Spirit Weapons Threat Stance",
+        "name": "Spirit Weapons",
         "status": "verified",
-        "statusLabel": "Verified in Beta",
-        "desc": "The cornerstone of Shaman tanking: grants Parry chance, and when Rockbiter Weapon is active, boosts weapon-attack threat generation by +30%."
+        "statusLabel": "Reported in Beta",
+        "desc": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active."
       },
       {
         "name": "Rockbiter Weapon",
         "status": "verified",
-        "statusLabel": "Verified in Beta",
+        "statusLabel": "Reported in Beta",
         "desc": "Imbues your weapon with earth power, increasing Attack Power and causing every melee strike to generate significant extra threat."
       },
       {
         "name": "Earth Shock",
         "status": "verified",
-        "statusLabel": "Verified in Beta",
+        "statusLabel": "Reported in Beta",
         "desc": "Instant nature spell that interrupts enemy casting, locks out that spell school, and deals high damage with a built-in high threat multiplier. Note: It is NOT a taunt."
       },
       {
         "name": "Stoneclaw Totem",
         "status": "verified",
-        "statusLabel": "Verified in Beta",
+        "statusLabel": "Reported in Beta",
         "desc": "Pulses threat within 8 yards, forcing nearby hostile creatures to attack the totem. Extremely useful for grouping trash, but cannot withstand boss melee hits."
       },
       {
-        "name": "Windwall Totem Mitigation",
+        "name": "Guardian Totems",
         "status": "verified",
-        "statusLabel": "Verified in Beta",
-        "desc": "Reduces physical damage taken from ranged and melee attacks by a flat amount (32 damage reduction shown in demo tooltip at level 38)."
+        "statusLabel": "Reported in Beta",
+        "desc": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec. (at 2/2)"
       },
       {
         "name": "Raid Tanking Verdict",
@@ -291,32 +291,32 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Replaces Lava Burst in the Elemental tree. Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
       },
       {
-        "name": "Elemental Overload",
+        "name": "Lightning Overload",
         "type": "Double-Cast Mastery",
         "cast": "Passive (9% Chance)",
         "status": "verified",
-        "desc": "Gives Lightning Bolt and Chain Lightning a 9% chance to instantly trigger a second, duplicate cast at the same target for 50% damage with zero mana cost and zero threat."
+        "desc": "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat. (at 3/3)"
       },
       {
-        "name": "Cast Time Reductions",
+        "name": "Elemental Alacrity",
         "type": "Haste Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Reduces the cast times of Lightning Bolt and Chain Lightning by up to 0.5 seconds, making Lightning Bolt a fast 2.5s cast."
+        "desc": "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.50 sec. (at 3/3)"
       },
       {
-        "name": "Shock Cooldown & Pushback Reduction",
+        "name": "Reverberation",
         "type": "Spell Weaving Talent",
         "cast": "Passive",
         "status": "verified",
-        "desc": "Shortens the cooldown of all Shock spells by 1 second and reduces the casting pushback from damage taken by up to 70%."
+        "desc": "Reduces the cooldown of your Shock spells by 1.0 sec. (at 5/5)"
       },
       {
-        "name": "Clearcasting (Elemental Focus)",
+        "name": "Elemental Focus",
         "type": "Resource Management",
         "cast": "Passive (10% Chance)",
         "status": "verified",
-        "desc": "Offensive spell critical strikes have a 10% chance to enter a Clearcasting state, reducing the mana cost of your next 2 damage spells by 100%."
+        "desc": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
       },
       {
         "name": "Elemental Mana Solution Analysis",
@@ -349,11 +349,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "desc": "Surrounds the Shaman with 3 globes of water. When struck by a critical hit from a spell, melee, or ranged attack, a globe is consumed to instantly restore 2% of total mana (short lockout between triggers). Does not grant passive Mp5."
       },
       {
-        "name": "Restoration Core Passives",
+        "name": "Tidal Mastery",
         "type": "Healing Enhancements",
         "cast": "Passive Cluster",
         "status": "verified",
-        "desc": "Includes increased healing spell critical-strike chance, shorter Healing Wave cast times, reduced healing threat generation, lower healing mana costs, and spell-hit bonuses."
+        "desc": "Increases the critical effect chance of your healing spells by 5%. (at 5/5)"
       },
       {
         "name": "Earth Shield Status",
@@ -379,25 +379,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         {
           "name": "Stoneform",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Instantly removes and grants full immunity to bleed, poison, and disease effects, while also reducing physical damage taken by 10% for 8 seconds. Extraordinary synergy for Shaman tanking and PvP."
         },
         {
           "name": "Artisan's Precision",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Increases hit chance with spells and attacks by 1%. Provides valuable spell and melee hit consistency for Shaman shocks, totems, and weapon strikes!"
         },
         {
           "name": "Find Treasure",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Allows the Dwarf Shaman to sense nearby treasure, displaying chests and containers as dots on the minimap."
         },
         {
           "name": "Big Game Hunter",
           "status": "verified",
-          "statusLabel": "Verified in Beta",
+          "statusLabel": "Reported in Beta",
           "desc": "Increases all damage dealt to Beasts by 5%, providing strong leveling throughput in beast-heavy zones."
         }
       ]
@@ -451,7 +451,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Spirit Weapons Threat Stance",
+      "feature": "Spirit Weapons",
       "category": "Tanking",
       "details": "+Parry chance; -30% threat without Rockbiter, +30% threat with Rockbiter",
       "status": "Verified in Closed Beta",
@@ -515,7 +515,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Elemental Overload",
+      "feature": "Lightning Overload",
       "category": "Elemental",
       "details": "9% chance for free duplicate Lightning Bolt / Chain Lightning at 50% dmg, 0 threat",
       "status": "Verified in Closed Beta",
@@ -566,11 +566,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Strength > Agility > Attack Power > Intellect",
           "bestWeapon": "Slow Two-Handed Mace / Axe (Smite's Mighty Hammer / Axe of Orgrimmar)",
           "talents": [
-            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your maximum Mana by 5%." },
+            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your Intellect by 10%." },
             { "name": "Thundering Strikes", "points": "5/5", "tree": "Enhancement (Tier 2)", "desc": "Improves your chance to get a critical strike with melee weapons by 5%." },
-            { "name": "Enhancing Totems", "points": "1/2", "tree": "Enhancement (Tier 2)", "desc": "Increases the effect of your Strength of Earth and Grace of Air Totems by 8%." }
+            { "name": "Enhancing Totems", "points": "1/2", "tree": "Enhancement (Tier 2)", "desc": "Increases the effect of your Strength of Earth and Grace of Air Totems by 15%." }
           ],
-          "legacyNotes": "Extra points obtained through Legacy Discovery unlock Flurry (+30% attack speed on crits) and 8-second Stormstrike.",
+          "legacyNotes": "Extra points obtained through the Legacy Talented perk unlock Flurry (+30% attack speed on crits) and 8-second Stormstrike.",
           "rotation": [
             { "label": "Imbue & Totem", desc: "Imbue weapon with Rockbiter Weapon (60-minute duration) -> drop Strength of Earth and Searing Totem." },
             { "label": "Rotational Strike", desc: "Melee auto-attack swing -> Earth Shock on cooldown -> Lightning Shield refresh." },
@@ -583,8 +583,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Gloves", item: "Cobrahn's Grasp", source: "Wailing Caverns", stats: "+6 Agi, +3 Sta" }
           ],
           "campingPerk": {
-            "name": "Totemic Guidance (+5% Strength & Intellect)",
-            "desc": "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Ancestral Blessing' 2-hour +5% Str/Int buff."
+            "name": "Incense Candle (Herbalism camp object)",
+            "desc": "Everyone sitting at your camp gains up to +25 Intellect (level 60 value; does not stack with Arcane Intellect). Requires a Campfire."
           },
           "classQuestNote": "Level 20 Shaman unlocks the Water Totem questline and Ghost Wolf indoor shifting."
         },
@@ -598,11 +598,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Stamina > Armor > Strength > Agility",
           "bestWeapon": "One-Hand Mace/Axe + Shield (Commander's Crest / Kresh's Back)",
           "talents": [
-            { "name": "Shield Specialization", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your chance to block attacks with a shield by 5% and increases block value by 25%." },
-            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases maximum mana pool by 5% to fuel high-threat shocks." },
+            { "name": "Shield Specialization", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases the amount of damage absorbed by your shield by 20%." },
+            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your Intellect by 10%." },
             { "name": "Guardian Totems", "points": "1/2", "tree": "Enhancement (Tier 2)", "desc": "Increases armor provided by Stoneskin Totem and reduces Grounding Totem cooldown." }
           ],
-          "legacyNotes": "Extra Legacy points unlock Spirit Weapons (parry chance and 20% threat bonus on Rockbiter).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Spirit Weapons (parry chance and +30% threat with Rockbiter).",
           "rotation": [
             { "label": "Pull & Hold", desc: "Rockbiter Weapon -> Earth Shock max rank (massive threat multiplier) -> Stoneskin Totem drop." },
             { "label": "Mitigation", desc: "Shield Block on physical hits; use Stoneform (Dwarf) or War Stomp (Tauren) for pack control." }
@@ -613,8 +613,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Chest", item: "Totemic Vestments", source: "Ruins of Lordaeron", stats: "+7 Str, +6 Sta" }
           ],
           "campingPerk": {
-            "name": "Earthen Wall (+10% Shield Block Value)",
-            "desc": "Camp rest bonus increases Shield Block Value by 10% and Stoneskin Totem armor by 15% for 2 hours."
+            "name": "Enchanted Lute (Enchanting camp object)",
+            "desc": "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
           },
           "classQuestNote": "Water Totem questline grants Healing Stream Totem and Mana Spring Totem."
         },
@@ -629,10 +629,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "bestWeapon": "Two-Handed Staff (Staff of Orgrimmar / Emberstone Staff)",
           "talents": [
             { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Reduces the Mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
-            { "name": "Conduction", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
+            { "name": "Concussion", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%. (at 5/5)" },
             { "name": "Earth's Grasp", "points": "1/2", "tree": "Elemental (Tier 2)", "desc": "Increases the health of your Stoneclaw Totem and the radius of your Earthbind Totem by 25%." }
           ],
-          "legacyNotes": "Extra Legacy points unlock Reverberation (reduced Shock CD) and Elemental Focus (Clearcasting).",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Reverberation (reduced Shock CD) and Elemental Focus (Clearcasting).",
           "rotation": [
             { "label": "Opener", desc: "Max range Lightning Bolt -> Flame Shock DoT -> Earthbind Totem kiting." },
             { "label": "Burst", desc: "Lightning Bolt -> Earth Shock finisher on closing targets." }
@@ -642,8 +642,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Chest", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
           ],
           "campingPerk": {
-            "name": "Fury of the Elements (+5% Spell Crit)",
-            "desc": "Resting beside an active Campfire grants +5% spell critical strike chance with Nature and Fire spells for 1 hour."
+            "name": "Camp Chair (Skinning camp object)",
+            "desc": "Craft a Camp Chair."
           },
           "classQuestNote": "Level 20 unlocks Fire Nova Totem and Water Totem mastery."
         },
@@ -659,9 +659,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "talents": [
             { "name": "Tidal Focus", "points": "5/5", "tree": "Restoration (Tier 1)", "desc": "Reduces the Mana cost of your healing spells by 5%." },
             { "name": "Totemic Focus", "points": "5/5", "tree": "Restoration (Tier 2)", "desc": "Reduces the Mana cost of your totems by 25%." },
-            { "name": "Nature's Guidance", "points": "1/3", "tree": "Restoration (Tier 2)", "desc": "Increases your chance to hit with melee attacks and spells by 1%." }
+            { "name": "Nature's Guidance", "points": "1/3", "tree": "Restoration (Tier 2)", "desc": "Improves your chance to hit by 3%." }
           ],
-          "legacyNotes": "Extra Legacy points unlock Healing Focus (anti-pushback) and Nature's Swiftness.",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Healing Focus (anti-pushback) and Nature's Swiftness.",
           "rotation": [
             { "label": "Totem Setup", desc: "Drop Healing Stream Totem and Stoneskin Totem before pulls." },
             { "label": "Direct Heals", desc: "Downranked Healing Wave rank 2/3 for sustained party preservation." }
@@ -671,8 +671,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Chest", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
           ],
           "campingPerk": {
-            "name": "Spring of Life (+10% Healing)",
-            "desc": "Camp rest grants +10% bonus healing done and +12 MP5 for 2 hours."
+            "name": "Mana Well (Alchemy camp object)",
+            "desc": "Craft a Mana Well."
           },
           "classQuestNote": "Level 20 completes Water Totem mastery for all four fundamental totems."
         }
@@ -693,15 +693,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Strength > Agility > Attack Power > Hit Rating > Intellect",
           "bestWeapon": "Slow Two-Handed Mace or Axe (Corpsemaker 3.8 speed)",
           "talents": [
-            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases maximum Mana by 5% to sustain high-frequency shocks and totems." },
+            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your Intellect by 10%." },
             { "name": "Thundering Strikes", "points": "5/5", "tree": "Enhancement (Tier 2)", "desc": "Improves your chance to get a critical strike with melee weapons by 5%." },
-            { "name": "Improved Ghost Wolf", "points": "2/2", "tree": "Enhancement (Tier 2)", "desc": "Reduces the cast time of Ghost Wolf by 2 sec, making it instant-cast indoors!" },
+            { "name": "Improved Ghost Wolf", "points": "2/2", "tree": "Enhancement (Tier 2)", "desc": "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors." },
             { "name": "Spirit Weapons", "points": "1/1", "tree": "Enhancement (Tier 3)", "desc": "Grants a chance to parry melee attacks and reduces threat generated by 30%." },
             { "name": "Flurry", "points": "5/5", "tree": "Enhancement (Tier 4)", "desc": "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike." },
             { "name": "Stormstrike", "points": "1/1", "tree": "Enhancement (Tier 5)", "desc": "Snappy 8-second cooldown melee strike that boosts the target's next 2 Nature damage hits by 20%." },
             { "name": "Elemental Devastation", "points": "2/3", "tree": "Elemental (Tier 2)", "desc": "Offensive spell crits increase your melee critical strike chance by 6% for 10 seconds." }
           ],
-          "legacyNotes": "Legacy Discovery points enable Elemental Focus Clearcasting and Shamanistic Rage mana batteries.",
+          "legacyNotes": "Talented perk points (Legacy) enable Elemental Focus Clearcasting and Shamanistic Rage mana batteries.",
           "rotation": [
             { "label": "Opener", "desc": "Windfury / Rockbiter Weapon -> Call of the Ancestors 4-totem drop -> Charge into melee." },
             { "label": "Rotational Burst", "desc": "Stormstrike (8s CD) -> Earth Shock weave (amplified +20% by Stormstrike) -> Flurry proc." },
@@ -714,8 +714,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Trinket", "item": "Insignia of the Horde / Alliance", "source": "PvP Officer (Warsong Gulch)", "stats": "Removes Stun, Charm, and Fear effects" }
           ],
           "campingPerk": {
-            "name": "Fury of the Wildhammer (+6% Attack & Spell Crit)",
-            "desc": "Setting camp at a Cozy Fire provides +6% critical strike chance across both physical attacks and nature spells for 2 hours."
+            "name": "Camp Chair (Skinning camp object)",
+            "desc": "Craft a Camp Chair."
           },
           "classQuestNote": "Level 30 unlocks Air Totem mastery (Windfury Totem and Grace of Air Totem) and Windfury Weapon imbue."
         },
@@ -730,8 +730,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "statPriority": "Stamina > Armor > Strength > Block Value > Agility",
           "bestWeapon": "One-Hand Mace/Axe + Shield (Thermaplugg's Central Core / Tortusk Shield)",
           "talents": [
-            { "name": "Shield Specialization", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases block chance by 5% and block value by 25%." },
-            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases maximum Mana pool by 5% to support repeated high-threat Earth Shocks." },
+            { "name": "Shield Specialization", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases the amount of damage absorbed by your shield by 20%." },
+            { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your Intellect by 10%." },
             { "name": "Thundering Strikes", "points": "5/5", "tree": "Enhancement (Tier 2)", "desc": "Improves melee critical strike chance by 5% for threat generation." },
             { "name": "Spirit Weapons", "points": "1/1", "tree": "Enhancement (Tier 3)", "desc": "Unlocks Parry mitigation and amplifies Rockbiter Weapon threat generation by 30%." },
             { "name": "Anticipation", "points": "4/5", "tree": "Enhancement (Tier 3)", "desc": "Increases Defense skill by 8, reducing chance to be critically struck." },
@@ -750,8 +750,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Chest", "item": "Mail Combat Armor", "source": "Excavation Site: Wetlands", "stats": "224 Armor, +12 Str, +8 Sta" }
           ],
           "campingPerk": {
-            "name": "Earthen Bastion (+15% Shield Block & +200 Armor)",
-            "desc": "Camp rest grants +15% Shield Block Value and +200 flat armor for 2 hours in dungeons."
+            "name": "Enchanted Lute (Enchanting camp object)",
+            "desc": "Everyone sitting at your camp gains up to +308 Armor, +13 to all stats and +22 to all resistances (level 60 values; does not stack with Mark of the Wild)."
           },
           "classQuestNote": "Air Totem questline grants Grounding Totem, indispensable for deflecting boss magical burst."
         },
@@ -771,10 +771,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Reverberation", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Reduces the cooldown of your Shock spells by 1 second (down to a rapid 5-second CD)." },
             { "name": "Elemental Focus", "points": "1/1", "tree": "Elemental (Tier 3)", "desc": "Spell crits enter a Clearcasting state, reducing the mana cost of your next damage spell by 100%!" },
             { "name": "Elemental Warding", "points": "3/3", "tree": "Elemental (Tier 3)", "desc": "Reduces damage taken from Fire, Frost, and Nature effects by 10%." },
-            { "name": "Earthbound", "points": "1/1", "tree": "Elemental (Tier 4)", "desc": "Increases the radius of your Earthbind Totem by 50% and health of your Stoneclaw Totem by 50%." },
+            { "name": "Earthbound", "points": "1/1", "tree": "Elemental (Tier 4)", "desc": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast." },
             { "name": "Call of Thunder", "points": "1/1", "tree": "Elemental (Tier 5)", "desc": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%." }
           ],
-          "legacyNotes": "Extra Legacy points unlock Elemental Devastation and Lightning Mastery cast time reduction.",
+          "legacyNotes": "Extra points from the Legacy Talented perk unlock Elemental Devastation and Lightning Mastery cast time reduction.",
           "rotation": [
             { "label": "Opener", "desc": "Max range Lightning Bolt -> Flame Shock DoT -> Searing Totem drop." },
             { "label": "Clearcasting Engine", "desc": "Lightning Bolt crit procs Elemental Focus -> Free Chain Lightning or Earth Shock finisher." },
@@ -786,8 +786,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Wand / Relic", "item": "Totem of the Storm", "source": "Dalaran Classic+ Vendor (Merchant's Favor)", "stats": "+12 Lightning Bolt Damage" }
           ],
           "campingPerk": {
-            "name": "Fury of the Storm (+7% Nature & Fire Crit)",
-            "desc": "Camp rest grants +7% spell critical strike chance with Nature and Fire spells for 2 hours."
+            "name": "Camp Chair (Skinning camp object)",
+            "desc": "Craft a Camp Chair."
           },
           "classQuestNote": "Level 30 unlocks Chain Lightning and Fire Nova rank 2."
         },
@@ -822,8 +822,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "slot": "Neck", "item": "Glowing Green Talisman", "source": "Gnomeregan World Drop", "stats": "+8 Int, +4 Sta" }
           ],
           "campingPerk": {
-            "name": "Spring of Life (+12% Healing & +15 MP5)",
-            "desc": "Camp rest grants +12% bonus healing done and +15 MP5 for 2 hours in dungeons."
+            "name": "Mana Well (Alchemy camp object)",
+            "desc": "Craft a Mana Well."
           },
           "classQuestNote": "Level 30 completes Air Totem mastery, unlocking Grounding and Windfury totems."
         }

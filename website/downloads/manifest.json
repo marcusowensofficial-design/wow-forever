@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-12T14:09:03.678Z",
+  "generatedAt": "2026-11-13T20:41:39.233Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
-    "sizeKb": 59883,
-    "sha256": "92df228710115a049f44a894c0ebf4fe9a65327c4ccc131fb5bc2023ec11626e",
+    "sizeKb": 64817,
+    "sha256": "7e190c9c757d67d1ff01aff8c4fa906f26c6f29fb3fa2e1e69385cca0179f33f",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -14,7 +14,7 @@
       "version": "2.2.2",
       "filename": "ForeverPlates-v2.2.2.zip",
       "sizeKb": 608,
-      "sha256": "3602d8a15e343d7d946de28ef4eee8d671bd0a76deb627b5897a80aff8e4abb4",
+      "sha256": "190f1403e072b31eff3634af0c1d885ffcd079faa6bd27ca0ae716ccb19388ad",
       "downloadPath": "downloads/ForeverPlates-v2.2.2.zip"
     },
     {
@@ -22,39 +22,39 @@
       "version": "2.3.0",
       "filename": "Foreverplatescastbars-v2.3.0.zip",
       "sizeKb": 372,
-      "sha256": "3b25d26578380fb234d40392f06197e269432cd5f2672fa73d1007bb46ef00d9",
+      "sha256": "d2adfd8b4c3fb79df3e1caf6b0cfbaa8b049df2f5f652779fb14eb10115bccd0",
       "downloadPath": "downloads/Foreverplatescastbars-v2.3.0.zip"
     },
     {
       "name": "ForeverLiquid",
-      "version": "1.4.0",
-      "filename": "ForeverLiquid-v1.4.0.zip",
-      "sizeKb": 155,
-      "sha256": "9cbc9af2912258f2d91f5940605f2997efabbf4921a8f4bafb2a3f7b31fe1df0",
-      "downloadPath": "downloads/ForeverLiquid-v1.4.0.zip"
+      "version": "1.4.1",
+      "filename": "ForeverLiquid-v1.4.1.zip",
+      "sizeKb": 157,
+      "sha256": "6b0a482803dc37c4b631cc93421afb55d25da134b5bfa0d152e3241a06116b94",
+      "downloadPath": "downloads/ForeverLiquid-v1.4.1.zip"
     },
     {
       "name": "ForeverDungeonJournal",
-      "version": "1.7.5",
-      "filename": "ForeverDungeonJournal-v1.7.5.zip",
-      "sizeKb": 58707,
-      "sha256": "a9fde70fdd03e993db5ca1ca2287622c995cadca4fdf68532f2b9b27d189aa6f",
-      "downloadPath": "downloads/ForeverDungeonJournal-v1.7.5.zip"
+      "version": "1.7.6",
+      "filename": "ForeverDungeonJournal-v1.7.6.zip",
+      "sizeKb": 63638,
+      "sha256": "55709d82581658fa842302d0e834a71d3a52a7462217cbbb06dc1df858657ebc",
+      "downloadPath": "downloads/ForeverDungeonJournal-v1.7.6.zip"
     },
     {
       "name": "ForeverBlessings",
       "version": "1.1.0",
       "filename": "ForeverBlessings-v1.1.0.zip",
       "sizeKb": 13,
-      "sha256": "b0616dc918096103c3234803086d950764a0844d0ee767f9b57faaf804b0d202",
+      "sha256": "a32abcc628b802584b90121ddbbad5cf1a7081d4f990342af20bfd608127e7e0",
       "downloadPath": "downloads/ForeverBlessings-v1.1.0.zip"
     },
     {
       "name": "EchoTwist",
       "version": "1.0.0",
       "filename": "EchoTwist-v1.0.0.zip",
-      "sizeKb": 28,
-      "sha256": "b9d028eed91c2a6bc6167fbbbf483f88cf9b1e231c3478e4007b0dd0409da873",
+      "sizeKb": 29,
+      "sha256": "8585ca62398a36795a667562d1722241825560f91af6dd98710f1bbe060d436c",
       "downloadPath": "downloads/EchoTwist-v1.0.0.zip"
     }
   ]

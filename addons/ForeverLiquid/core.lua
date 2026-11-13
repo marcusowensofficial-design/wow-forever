@@ -2215,10 +2215,36 @@ function FL:GetMarketItemPrice(itemID, itemLink)
     end
 
     local rawBuyout, qty, lastSeen, listings, name = nil, 1, 0, 1, nil
+    -- suffixFallback = true when the item has random suffixes ("of the Eagle", ...)
+    -- but this exact suffix has no AH data, so the cheapest suffix price is used.
+    local suffixFallback = false
 
-    -- 1. Check ForeverMarket public API if available
-    if _G.ForeverMarket and _G.ForeverMarket.GetItemPrice then
-        rawBuyout, qty, lastSeen, listings, name = _G.ForeverMarket:GetItemPrice(itemID)
+    -- Random suffix ID lives in field 7 of the itemString:
+    -- item:itemID:enchant:gem1:gem2:gem3:gem4:suffixID:...
+    local suffixID = 0
+    if type(itemLink) == "string" then
+        local itemString = itemLink:match("item:([%-%d:]+)")
+        if itemString then
+            local i = 0
+            for f in (itemString .. ":"):gmatch("([^:]*):") do
+                i = i + 1
+                if i == 7 then suffixID = tonumber(f) or 0 break end
+            end
+        end
+    end
+
+    -- 1. Check ForeverMarket public API if available (suffix-aware since FM 1.1.0)
+    local FM = _G.ForeverMarket
+    if FM and FM.GetItemPriceByLink and itemLink then
+        rawBuyout, qty, lastSeen, listings, name = FM:GetItemPriceByLink(itemLink)
+        local variants = FM.GetItemVariants and FM:GetItemVariants(itemID)
+        if variants and (suffixID == 0 or not rawBuyout) then
+            -- Suffix unknown, or this suffix has never been listed: use cheapest suffix
+            rawBuyout, qty, lastSeen, listings, name = FM:GetItemPrice(itemID)
+            suffixFallback = rawBuyout ~= nil
+        end
+    elseif FM and FM.GetItemPrice then
+        rawBuyout, qty, lastSeen, listings, name = FM:GetItemPrice(itemID)
     end
 
     -- 2. Fallback check _G.ForeverMarketDB directly
@@ -2229,6 +2255,8 @@ function FL:GetMarketItemPrice(itemID, itemLink)
         local bucket = _G.ForeverMarketDB.realms[key]
         if bucket and bucket.items and bucket.items[itemID] then
             local rec = bucket.items[itemID]
+            local v = suffixID ~= 0 and type(rec.variants) == "table" and rec.variants[tostring(suffixID)]
+            if v and v.minBuyout then rec = v elseif rec.hasVariants then suffixFallback = true end
             rawBuyout = rec.minBuyout
             qty = rec.qty or 1
             lastSeen = rec.lastSeen or 0
@@ -2238,6 +2266,8 @@ function FL:GetMarketItemPrice(itemID, itemLink)
             for _, b in pairs(_G.ForeverMarketDB.realms) do
                 if b and b.items and b.items[itemID] then
                     local rec = b.items[itemID]
+                    local v = suffixID ~= 0 and type(rec.variants) == "table" and rec.variants[tostring(suffixID)]
+                    if v and v.minBuyout then rec = v elseif rec.hasVariants then suffixFallback = true end
                     rawBuyout = rec.minBuyout
                     qty = rec.qty or 1
                     lastSeen = rec.lastSeen or 0
@@ -2259,7 +2289,7 @@ function FL:GetMarketItemPrice(itemID, itemLink)
         finalBuyout = math.max(1, math.floor(rawBuyout * 0.95))
     end
 
-    return finalBuyout, qty, lastSeen, listings, name, rawBuyout
+    return finalBuyout, qty, lastSeen, listings, name, rawBuyout, suffixFallback
 end
 
 function FL:GetResolvedItemIcon(drop)
@@ -2553,7 +2583,8 @@ function FL:ResolveDrop(drop)
     drop.vendorUnitPrice = vendorUnitPrice
     drop.vendorTotalValue = vendorUnitPrice * (drop.count or 1)
 
-    local marketUnitPrice, marketQty, marketLastSeen, marketListings, _, rawBuyout = FL:GetMarketItemPrice(itemID, drop.link)
+    local marketUnitPrice, marketQty, marketLastSeen, marketListings, _, rawBuyout, suffixFallback = FL:GetMarketItemPrice(itemID, drop.link)
+    drop.marketSuffixFallback = suffixFallback or nil
     if marketUnitPrice and marketUnitPrice > 0 then
         drop.marketUnitPrice = marketUnitPrice
         drop.marketRawBuyout = rawBuyout

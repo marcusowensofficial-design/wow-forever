@@ -2,7 +2,7 @@
 ## Title: |cff00ff7fForever|r|cffffffffLiquid|r
 ## Notes: Ultra-sleek, high-tech neon liquid XP, Reputation, Gold, Bag & Loot session tracker for WoW Forever.
 ## Author: Marco & Antigravity
-## Version: 1.4.0
+## Version: 1.4.1
 ## SavedVariables: ForeverLiquidDB
 ## LoadSavedVariablesFirst: true
 ## IconTexture: Interface\Icons\INV_Potion_93

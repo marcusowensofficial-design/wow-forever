@@ -195,6 +195,33 @@ function FDJ.BuildBossLookups()
                         }
                     end
                 end
+                if boss.killWith then
+                    for _, companion in ipairs(boss.killWith) do
+                        local compName, compNpcID
+                        if type(companion) == "table" then
+                            compName = companion[1] or companion.name
+                            compNpcID = companion[2] or companion.npcID
+                        elseif type(companion) == "number" then
+                            compNpcID = companion
+                        elseif type(companion) == "string" then
+                            compName = companion
+                        end
+                        if compNpcID and not FDJ.bossByNpcID[compNpcID] then
+                            FDJ.bossByNpcID[compNpcID] = {
+                                dungeon = dungeonName,
+                                bossIndex = bIdx,
+                                name = boss.name,
+                            }
+                        end
+                        if compName and compName ~= "" and not FDJ.bossByName[compName:lower()] then
+                            FDJ.bossByName[compName:lower()] = {
+                                dungeon = dungeonName,
+                                bossIndex = bIdx,
+                                name = boss.name,
+                            }
+                        end
+                    end
+                end
             end
         end
     end
