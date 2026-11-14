@@ -1,0 +1,216 @@
+/**
+ * WoW Forever 1-300 crafting routes (source spec).
+ *
+ * Every range, craft count and "to be safe" count below comes from Wowhead's
+ * WoW Forever profession planner ("Easiest" mode, data updated 2026-11-04),
+ * captured 2026-11-14. Practicality rules applied on top of "Easiest":
+ *   - Blacksmithing: Cenarion Circle / Argent Dawn reputation plans removed
+ *     (Bold Dirk finishes 279-300 instead).
+ *   - Enchanting: Enchant Gloves - Minor Haste (56 Large Radiant Shards) removed.
+ *   - Engineering: Rose Colored Goggles (40 Star Ruby) and Delicate Arcanite
+ *     Converter (15 Arcanite Bar) removed.
+ *   - Tailoring keeps Cenarion Circle plans: the planner proves no rep-free
+ *     recipe carries Tailoring past 295, so the guide flags the rep instead.
+ *   - Arcanite Skeleton Key (11 Arcanite Bars) is kept on purpose: removing it
+ *     forces ~65 Big Black Maces (1,040 Mithril Bars).
+ *
+ * Step tuple: [from, to, recipeName, crafts, craftsSafe, source, advice]
+ *   source: null = "Learned from the trainer"
+ * Rank entries: { rank, details } are inserted where the planner says to train.
+ * Tool entries: { tool: name, at, advice } = one-off craft kept in bags.
+ * Note entries: { note: title, from, to, text } = non-recipe skill step.
+ */
+'use strict';
+
+const T = null; // trainer
+
+module.exports = {
+  alchemy: [
+    { rank: 'Apprentice' },
+    [1, 12, 'Minor Arcane Elixir', 11, 12, T, ''],
+    [12, 62, 'Elixir of Minor Defense', 50, 52, T, ''],
+    { rank: 'Journeyman' },
+    [62, 76, 'Minor Mana Potion', 15, 18, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [76, 89, 'Elixir of Minor Fortitude', 14, 16, T, ''],
+    [89, 100, 'Rage Potion', 12, 14, 'Recipe sold by Defias Profiteer (Westfall) — limited stock, restocks over time', ''],
+    [100, 137, 'Holy Protection Potion', 37, 39, 'Recipe sold by Kzixx (Duskwood) — limited stock, restocks over time', 'Swiftthistle comes from Mageroyal/Briarthorn nodes; buy extra on the auction house.'],
+    { rank: 'Expert' },
+    [137, 162, 'Elixir of Lesser Defense', 25, 27, T, 'Train Expert (skill 125, level 20) before you reach 150.'],
+    [162, 187, 'Mana Potion', 25, 27, T, ''],
+    [187, 212, 'Elixir of Agility', 25, 27, T, ''],
+    { rank: 'Artisan' },
+    [212, 227, 'Catseye Draught', 15, 17, T, 'Train Artisan (skill 200, level 35) before you reach 225.'],
+    [227, 232, 'Viridian Dye', 5, 5, T, 'Needs a Fermenter nearby — the Alchemy camp object you learn at 140 (Leaded Vial, Kingsblood, Swiftthistle).'],
+    [232, 257, "Draught of Detect Undead", 27, 29, T, ''],
+    [257, 300, 'Major Discolored Healing Potion', 44, 46, 'Taught by the Odd Child in Westfall (Alliance) or Apothecary Renferrel at the Sepulcher, Silverpine Forest (Horde) after a short questline', 'Murloc Eye and Plaguebloom are the bottleneck — start banking them early.'],
+  ],
+
+  blacksmithing: [
+    { rank: 'Apprentice' },
+    [1, 28, 'Rough Sharpening Stone', 29, 32, T, ''],
+    [28, 61, 'Rough Grinding Stone', 37, 40, T, ''],
+    [61, 69, 'Coarse Grinding Stone', 12, 16, T, 'Buy a Blacksmith Hammer from a trade supplies vendor now — every item from here on needs it. Forever lets you learn this stone early (yellow 50, grey 90).'],
+    { rank: 'Journeyman' },
+    [69, 80, 'Copper Chain Belt', 12, 14, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [80, 100, 'Rough Bronze Leggings', 20, 20, T, ''],
+    [100, 109, 'Heavy Sharpening Stone', 13, 17, T, ''],
+    [109, 125, 'Rough Bronze Leggings', 16, 17, T, ''],
+    [125, 129, 'Iron Buckle', 6, 10, T, 'Makes 2 per craft — keep them for Leatherworkers or vendor.'],
+    [129, 140, 'Bronze Warhammer', 11, 11, T, 'Strong Flux is sold by trade supplies vendors.'],
+    { rank: 'Expert' },
+    [140, 175, 'Green Iron Bracers', 37, 40, T, 'Train Expert (skill 125, level 20) before you reach 150. At 140, craft your camp Anvil once for a free point.'],
+    [175, 182, 'Solid Sharpening Stone', 11, 15, T, ''],
+    [182, 205, 'Heavy Mithril Gauntlet', 23, 25, T, ''],
+    [205, 211, 'Mithril Plate Pants', 7, 9, T, ''],
+    [211, 225, 'Heavy Mithril Breastplate', 14, 14, T, ''],
+    { rank: 'Artisan' },
+    [225, 235, 'Dense Weightstone', 15, 22, T, 'Train Artisan (skill 200, level 35) before you reach 225.'],
+    [235, 246, 'Heavy Mithril Boots', 23, 33, T, ''],
+    [246, 250, 'Big Black Mace', 13, 22, T, 'Low odds (≈3.4 crafts per point) — only 4 points, so stop at 250.'],
+    [250, 257, 'Arcanite Skeleton Key', 11, 15, T, 'Arcanite Bars come from an Alchemist\'s daily transmute — order 11 early. Skipping this step costs ~50 extra Big Black Maces.'],
+    [257, 270, 'Ebon Shiv', 20, 24, 'Plans sold by Magnus Frostwake (Western Plaguelands)', 'No other non-reputation recipe covers 260–270, so this step is unavoidable.'],
+    [270, 275, 'Bold Dirk', 5, 5, 'Plans sold by Pexmit (Mount Hyjal)', 'Forever recipe. Azerothium Bars are smelted from Pitchblende (Mining 275).'],
+    [275, 279, 'Ornate Thorium Handaxe', 4, 5, 'Plans sold by Magnus Frostwake (Western Plaguelands)', ''],
+    [279, 300, 'Bold Dirk', 24, 27, 'Plans sold by Pexmit (Mount Hyjal)', 'Shortcut if you have Cenarion Circle rep and access to a 300 Blacksmith\'s Master Forge: Goregasher Grips (Friendly) and Goregasher Support (Honored) from Vargus in Silithus cover 285–299 in ~16 crafts with no Azerothium at all.'],
+  ],
+
+  enchanting: [
+    { rank: 'Apprentice' },
+    { tool: 'Runed Copper Rod', at: 1, advice: 'Every enchant up to 132 needs it in your bags. Mote of Magic is sold by enchanting supply vendors.' },
+    [1, 2, 'Dust to Motes', 1, 1, T, 'Makes 3 Motes of Magic.'],
+    { note: 'Disenchant green (Uncommon) items', from: 2, to: 20, text: 'Forever change: each green or better item you disenchant is a guaranteed skill point up to 20 (the chance drops after 20 and stops at 60). Keep all dust and essences for the next steps.' },
+    { rank: 'Journeyman' },
+    [20, 79, 'Enchant Chest - Inferior Stamina', 60, 62, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [79, 103, 'Enchant Chest - Minor Absorption', 26, 29, T, ''],
+    [103, 132, 'Enchant 2H Weapon - Minor Impact', 29, 29, T, ''],
+    { tool: 'Runed Silver Rod', at: 132, advice: 'Learnable from 100. Needed for the next enchants up to 164.' },
+    { rank: 'Expert' },
+    [132, 164, 'Enchant Bracer - Lesser Stamina', 33, 34, T, 'Train Expert (skill 125, level 20) before you reach 150.'],
+    { tool: 'Runed Golden Rod', at: 164, advice: 'Learnable from 150. Needed up to 214.' },
+    [164, 189, 'Enchant Boots - Lesser Agility', 26, 27, T, ''],
+    [189, 214, 'Enchant Chest - Greater Intellect', 26, 28, T, ''],
+    { tool: 'Runed Truesilver Rod', at: 214, advice: 'Learnable from 200. Every enchant to 300 below needs it.' },
+    { rank: 'Artisan' },
+    [214, 239, 'Enchant Gloves - Agility', 26, 28, T, 'Train Artisan (skill 200, level 35) before you reach 225.'],
+    [239, 280, 'Enchant Boots - Agility', 54, 62, T, 'Short on Greater Nether Essence? Switch to Enchant Shield - Greater Stamina as soon as you reach 265 (it is orange from 265).'],
+    [280, 300, 'Enchant Shield - Greater Stamina', 23, 27, 'Formula sold by Daniel Bartlett (Undercity) or Mythrin\'dir (Darnassus) — limited stock', 'Wowhead\'s fastest plan uses Enchant Gloves - Minor Haste here instead, but that needs 56 Large Radiant Shards.'],
+  ],
+
+  engineering: [
+    { rank: 'Apprentice' },
+    [1, 30, 'Rough Blasting Powder', 32, 35, T, ''],
+    [30, 51, 'Handful of Copper Bolts', 22, 24, T, 'Buy a Blacksmith Hammer from a trade supplies vendor and keep it in your bags.'],
+    [51, 75, 'Copper Tube', 24, 24, T, ''],
+    { rank: 'Journeyman' },
+    [75, 90, 'Coarse Blasting Powder', 16, 18, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [90, 123, 'Silver Contact', 36, 40, T, 'Makes 5 per craft.'],
+    [123, 125, 'Sandpaper', 2, 2, T, ''],
+    [125, 135, 'Heavy Blasting Powder', 13, 16, T, ''],
+    [135, 140, 'Sandpaper', 7, 9, T, ''],
+    { tool: 'Arclight Spanner', at: 140, advice: 'Most later schematics need it as a tool.' },
+    [140, 145, 'Whirring Bronze Gizmo', 7, 10, T, ''],
+    [145, 150, 'Bronze Framework', 5, 6, T, ''],
+    { rank: 'Expert' },
+    [150, 170, 'Gold Power Core', 27, 31, T, 'Train Expert (skill 125, level 20) before you reach 150. Makes 3 per craft — keep them for Gyrochronatoms.'],
+    [170, 175, 'Gyrochronatom', 5, 6, T, ''],
+    [175, 185, 'Solid Blasting Powder', 13, 16, T, ''],
+    [185, 195, 'Gyrochronatom', 19, 26, T, ''],
+    [195, 215, 'Mithril Tube', 27, 32, T, ''],
+    { rank: 'Artisan' },
+    [215, 245, 'Mithril Casing', 53, 63, T, 'Train Artisan (skill 200, level 35) before you reach 225.'],
+    { tool: 'Gyromatic Micro-Adjustor', at: 245, advice: 'Needed for lenses, goggles and scopes.' },
+    [245, 250, 'Mithril Gyro-Shot', 5, 6, T, ''],
+    [250, 258, 'Dense Blasting Powder', 13, 19, T, ''],
+    [258, 260, 'Green Lens', 2, 2, T, ''],
+    [260, 290, 'Thorium Widget', 33, 36, 'Schematic sold by Sovik (Orgrimmar) or Gearcutter Cogspinner (Ironforge) — limited stock', ''],
+    [290, 300, 'Thorium Tube', 10, 12, "Schematic sold by Kor'gar (Riverglades) or Xizzer Fizzbolt (Winterspring)", 'Wowhead\'s fastest plan uses Rose Colored Goggles (40 Star Ruby) and the Delicate Arcanite Converter (15 Arcanite Bar) instead — skipped here for cost.'],
+  ],
+
+  leatherworking: [
+    { rank: 'Apprentice' },
+    [1, 40, 'Light Armor Kit', 41, 43, T, ''],
+    [40, 59, 'Cured Light Hide', 21, 24, T, 'Salt is sold by trade supplies vendors.'],
+    [59, 75, 'Embossed Leather Gloves', 16, 17, T, ''],
+    { rank: 'Journeyman' },
+    [75, 98, 'Cured Medium Hide', 26, 29, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [98, 105, 'Gray Leather Boots', 7, 8, T, ''],
+    [105, 125, 'Nimble Leather Gloves', 20, 21, T, 'Elixir of Minor Agility comes from Alchemists or the auction house. At 125, craft your Tanning Rack camp object once — you need it at 225.'],
+    [125, 139, 'Cured Heavy Hide', 14, 16, T, ''],
+    { rank: 'Expert' },
+    [139, 154, 'Heavy Armor Kit', 17, 20, T, 'Train Expert (skill 125, level 20) before you reach 150.'],
+    [154, 164, 'Raptor Hide Belt', 10, 11, 'Pattern sold by Androd Fadran (Arathi Highlands) — limited stock', ''],
+    [164, 175, 'Frost Leather Cloak', 11, 11, T, ''],
+    [175, 200, 'Thick Armor Kit', 25, 27, T, ''],
+    [200, 211, 'Nightscape Headband', 15, 19, T, ''],
+    [211, 225, 'Nightscape Boots', 14, 14, T, ''],
+    { rank: 'Artisan' },
+    [225, 232, 'Cured Rugged Hide', 10, 15, T, 'Train Artisan (skill 200, level 35) before you reach 225. Makes 2 per craft and needs a Tanning Rack nearby — keep the extras for Heavy Scorpid Helms.'],
+    [232, 235, 'Rugged Armor Kit', 4, 7, T, ''],
+    [235, 267, 'Wicked Leather Gauntlets', 37, 42, 'Pattern sold by Werg Thickblade (Tirisfal Glades) or Leonard Porter (Western Plaguelands) — limited stock', ''],
+    [267, 288, 'Runic Leather Headband', 21, 22, 'Pattern sold by Jase Farlane (Eastern Plaguelands) — limited stock', ''],
+    [288, 300, 'Heavy Scorpid Helm', 15, 19, 'Pattern sold by Zannok Hidepiercer (Silithus) — limited stock', ''],
+  ],
+
+  tailoring: [
+    { rank: 'Apprentice' },
+    [1, 38, 'Bolt of Linen Cloth', 41, 46, T, ''],
+    [38, 55, 'Linen Belt', 17, 18, T, ''],
+    { rank: 'Journeyman' },
+    [55, 78, 'Bolt of Woolen Cloth', 26, 29, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    [78, 100, 'Woolen Cape', 31, 37, T, ''],
+    [100, 116, 'Bolt of Silk Cloth', 18, 21, T, ''],
+    [116, 125, 'Bright Yellow Shirt', 10, 12, 'Pattern sold by Danielle Zipstitch (Duskwood) — limited stock', ''],
+    [125, 132, 'Azure Silk Hood', 7, 7, T, ''],
+    [132, 138, "Lesser Wizard's Robe", 7, 9, T, ''],
+    [138, 140, 'Earthen Vest', 2, 2, T, ''],
+    [140, 149, 'Bolt of Mageweave', 11, 14, T, 'At 140, craft your Spinning Wheel camp object once — Robe of Power needs it.'],
+    { rank: 'Expert' },
+    [149, 158, 'Earthen Vest', 9, 10, T, 'Train Expert (skill 125, level 20) before you reach 150.'],
+    [158, 170, 'Robe of Power', 12, 12, T, 'Needs a Spinning Wheel nearby.'],
+    [170, 180, 'Black Mageweave Vest', 10, 10, T, ''],
+    [180, 190, 'Orange Mageweave Shirt', 11, 13, T, ''],
+    [190, 205, 'Black Mageweave Gloves', 17, 19, T, ''],
+    [205, 214, 'Bolt of Runecloth', 11, 14, T, ''],
+    { rank: 'Artisan' },
+    [214, 234, 'Runecloth Belt', 21, 23, T, 'Train Artisan (skill 200, level 35) before you reach 225.'],
+    [234, 245, 'Runecloth Cloak', 11, 12, 'Pattern sold by Darnall (Moonglade) — limited stock', ''],
+    [245, 249, 'Runecloth Gloves', 4, 5, 'Pattern sold by Qia (Winterspring)', ''],
+    [249, 254, 'Runecloth Boots', 5, 6, 'Pattern sold by Darnall (Moonglade) — limited stock', ''],
+    [254, 285, 'Runecloth Cuffs', 43, 49, 'Pattern sold by Pexmit (Mount Hyjal)', 'Forever recipe. 5 bolts per craft (~1,075 Runecloth for this step) — farm Runecloth from the start of 50s content.'],
+    [285, 292, 'Venomspew Gloves', 7, 8, 'Pattern sold by Mishta (Silithus) — requires Friendly with Cenarion Circle', 'Two gates here. Reputation: without Cenarion Circle plans no vendor recipe takes Tailoring past 295. Station: these need a Loom, a camp object only a 300 Tailor can place — join a 300 Tailor\'s camp (guild or trade chat). The only Loom-free finish uses world-drop patterns and ~1,230 extra Runecloth.'],
+    [292, 299, 'Venomspew Cord', 9, 13, 'Pattern sold by Mishta (Silithus) — requires Honored with Cenarion Circle', 'Needs a Loom.'],
+    [299, 300, 'Venomspew Footpads', 4, 11, 'Pattern sold by Mishta (Silithus) — requires Honored with Cenarion Circle', 'Needs a Loom. Low odds (≈5 crafts per point).'],
+  ],
+
+  cooking: [
+    { rank: 'Apprentice' },
+    [1, 54, 'Charred Wolf Meat', 54, 55, T, 'Cook at a campfire: the Basic Campfire Kit is your first Cooking recipe (1 Simple Wood, Flint and Tinder in your bags).'],
+    { rank: 'Journeyman' },
+    [54, 101, 'Coyote Steak', 48, 50, T, 'Train Journeyman (skill 50, level 10) before you reach 75.'],
+    { rank: 'Expert' },
+    [101, 153, 'Bristle Whisker Catfish', 54, 57, 'Recipe sold by Derak Nightfall (Hillsbrad Foothills) and other fish vendors', 'Read the Expert Cookbook (skill 125) before you reach 150.'],
+    [153, 175, 'Goblin Deviled Clams', 23, 25, T, 'Hot Spices are sold by cooking supply vendors.'],
+    { rank: 'Artisan' },
+    [175, 226, 'Mithril Headed Trout', 52, 55, 'Recipe sold by Lindea Rabonne (Hillsbrad Foothills) and other fish vendors', 'Finish the Artisan quest (level 35) before you reach 225.'],
+    [226, 285, 'Spotted Yellowtail', 66, 70, 'Recipe sold by Gikkix (Tanaris)', ''],
+    [285, 300, 'Nightfin Soup', 16, 18, 'Recipe sold by Gikkix (Tanaris)', 'Wowhead\'s fastest plan finishes with Poached Sunscale Salmon, but that needs an Iron Oven — a camp object only a 300 cook can place. Nightfin Soup works at any campfire for just 3 more crafts.'],
+  ],
+
+  'first-aid': [
+    { rank: 'Apprentice' },
+    [1, 40, 'Linen Bandage', 41, 43, T, ''],
+    [40, 68, 'Heavy Linen Bandage', 32, 35, T, ''],
+    { rank: 'Journeyman' },
+    [68, 80, 'Lesser Healing Potion', 12, 12, T, 'Train Journeyman (skill 50, level 10) before you reach 75. Forever moved healing potions to First Aid.'],
+    [80, 110, 'Wool Bandage', 38, 44, T, ''],
+    [110, 150, 'Healing Potion', 43, 46, T, ''],
+    { rank: 'Expert' },
+    [150, 180, 'Silk Bandage', 40, 46, T, 'Read Expert First Aid - Under Wraps (skill 125) before you reach 150.'],
+    [180, 210, 'Heavy Silk Bandage', 41, 47, "Manual sold by Deneb Walker (Arathi Highlands) or Balai Lok'Wein (Dustwallow Marsh)", ''],
+    { rank: 'Artisan' },
+    [210, 240, 'Mageweave Bandage', 40, 46, "Manual sold by Deneb Walker (Arathi Highlands) or Balai Lok'Wein (Dustwallow Marsh)", 'Finish the Artisan quest Triage (level 35) before you reach 225.'],
+    [240, 260, 'Heavy Mageweave Bandage', 24, 27, 'Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)', ''],
+    [260, 290, 'Runecloth Bandage', 41, 47, 'Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)', ''],
+    [290, 300, 'Heavy Runecloth Bandage', 11, 12, 'Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)', ''],
+  ],
+};

@@ -1772,7 +1772,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in First Aid",
-    "summary": "Crafted by First Aid (Skill 135).",
+    "summary": "Crafted by First Aid (Skill 110).",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=929#created-by-spell",
     "craftedBy": [
@@ -1782,7 +1782,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "spell_holy_sealofsacrifice",
         "recipeId": 929,
         "recipeName": "Healing Potion",
-        "learn": 135,
+        "learn": 110,
         "source": "Trainer"
       }
     ]
@@ -6502,6 +6502,27 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "2456": {
+    "id": 2456,
+    "name": "Minor Rejuvenation Potion",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Alchemy",
+    "summary": "Crafted by Alchemy (Skill 40).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2456#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "recipeId": 2456,
+        "recipeName": "Minor Rejuvenation Potion",
+        "learn": 40,
+        "source": "Trainer"
+      }
+    ]
+  },
   "2457": {
     "id": 2457,
     "name": "Elixir of Minor Agility",
@@ -10190,6 +10211,48 @@ window.WOW_REAGENT_SOURCES = {
         "recipeId": 2842,
         "recipeName": "Silver Bar",
         "learn": 75,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "2863": {
+    "id": 2863,
+    "name": "Coarse Sharpening Stone",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 40).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2863#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 2863,
+        "recipeName": "Coarse Sharpening Stone",
+        "learn": 40,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "2870": {
+    "id": 2870,
+    "name": "Shining Silver Breastplate",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 120).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2870#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 2870,
+        "recipeName": "Shining Silver Breastplate",
+        "learn": 120,
         "source": "Trainer"
       }
     ]
@@ -15036,6 +15099,27 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "4253": {
+    "id": 4253,
+    "name": "Toughened Leather Gloves",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Leatherworking",
+    "summary": "Crafted by Leatherworking (Skill 110).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=4253#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "leatherworking",
+        "profName": "Leatherworking",
+        "profIcon": "trade_leatherworking",
+        "recipeId": 4253,
+        "recipeName": "Toughened Leather Gloves",
+        "learn": 110,
+        "source": "Trainer"
+      }
+    ]
+  },
   "4255": {
     "id": 4255,
     "name": "Green Leather Armor",
@@ -15532,6 +15616,27 @@ window.WOW_REAGENT_SOURCES = {
         "id": 19425,
         "name": "Mysterious Lockbox",
         "pct": 11.2
+      }
+    ]
+  },
+  "4320": {
+    "id": 4320,
+    "name": "Spidersilk Boots",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Tailoring",
+    "summary": "Crafted by Tailoring (Skill 100).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=4320#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "tailoring",
+        "profName": "Tailoring",
+        "profIcon": "trade_tailoring",
+        "recipeId": 4320,
+        "recipeName": "Spidersilk Boots",
+        "learn": 100,
+        "source": "Trainer"
       }
     ]
   },
@@ -17323,6 +17428,16 @@ window.WOW_REAGENT_SOURCES = {
       "Dun Morogh",
       "Wetlands"
     ]
+  },
+  "4471": {
+    "id": 4471,
+    "name": "Flint and Tinder",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (Trade Vendors)",
+    "summary": "Purchased from Trade Supplies, Cooking, or General Goods vendors in major cities and towns.",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=4471#sold-by"
   },
   "4536": {
     "id": 4536,
@@ -23197,6 +23312,16 @@ window.WOW_REAGENT_SOURCES = {
       "Hillsbrad Foothills"
     ]
   },
+  "6365": {
+    "id": 6365,
+    "name": "Strong Fishing Pole",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6365#dropped-by"
+  },
   "6370": {
     "id": 6370,
     "name": "Blackmouth Oil",
@@ -23805,6 +23930,16 @@ window.WOW_REAGENT_SOURCES = {
       "The Barrens"
     ]
   },
+  "6529": {
+    "id": 6529,
+    "name": "Shiny Bauble",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6529#dropped-by"
+  },
   "6530": {
     "id": 6530,
     "name": "Nightcrawlers",
@@ -24071,6 +24206,37 @@ window.WOW_REAGENT_SOURCES = {
       "Elwynn Forest",
       "Durotar",
       "Zephras Isle"
+    ]
+  },
+  "6532": {
+    "id": 6532,
+    "name": "Bright Baubles",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6532#dropped-by"
+  },
+  "6533": {
+    "id": 6533,
+    "name": "Aquadynamic Fish Attractor",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 150).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6533#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 6533,
+        "recipeName": "Aquadynamic Fish Attractor",
+        "learn": 150,
+        "source": "Trainer"
+      }
     ]
   },
   "6662": {
@@ -31603,6 +31769,27 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "10588": {
+    "id": 10588,
+    "name": "Goblin Rocket Helmet",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 245).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=10588#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 10588,
+        "recipeName": "Goblin Rocket Helmet",
+        "learn": 245,
+        "source": "Trainer"
+      }
+    ]
+  },
   "10592": {
     "id": 10592,
     "name": "Catseye Draught",
@@ -37455,6 +37642,46 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "12726": {
+    "id": 12726,
+    "name": "Feralas Ahi",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12726#dropped-by"
+  },
+  "12727": {
+    "id": 12727,
+    "name": "Misty Reed Mahi Mahi",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12727#dropped-by"
+  },
+  "12728": {
+    "id": 12728,
+    "name": "Sar'theris Striker",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12728#dropped-by"
+  },
+  "12729": {
+    "id": 12729,
+    "name": "Savage Coast Blue Sailfin",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12729#dropped-by"
+  },
   "12735": {
     "id": 12735,
     "name": "Frayed Abomination Stitching",
@@ -37681,6 +37908,111 @@ window.WOW_REAGENT_SOURCES = {
         "id": 175964,
         "name": "Skin of Shadow",
         "pct": 100
+      }
+    ]
+  },
+  "12784": {
+    "id": 12784,
+    "name": "Arcanite Reaper",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12784#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 12784,
+        "recipeName": "Arcanite Reaper",
+        "learn": 300,
+        "source": "Drop: Bannok Grimaxe (Blackrock Spire)"
+      }
+    ]
+  },
+  "12790": {
+    "id": 12790,
+    "name": "Arcanite Champion",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12790#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 12790,
+        "recipeName": "Arcanite Champion",
+        "learn": 300,
+        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
+      }
+    ]
+  },
+  "12794": {
+    "id": 12794,
+    "name": "Masterwork Stormhammer",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12794#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 12794,
+        "recipeName": "Masterwork Stormhammer",
+        "learn": 300,
+        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
+      }
+    ]
+  },
+  "12796": {
+    "id": 12796,
+    "name": "Hammer of the Titans",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12796#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 12796,
+        "recipeName": "Hammer of the Titans",
+        "learn": 300,
+        "source": "Drop: Maleki the Pallid (Stratholme)"
+      }
+    ]
+  },
+  "12797": {
+    "id": 12797,
+    "name": "Frostguard",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12797#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 12797,
+        "recipeName": "Frostguard",
+        "learn": 300,
+        "source": "Plans: Frostguard"
       }
     ]
   },
@@ -38517,6 +38849,27 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "13458": {
+    "id": 13458,
+    "name": "Greater Nature Protection Potion",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Alchemy",
+    "summary": "Crafted by Alchemy (Skill 290).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=13458#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "recipeId": 13458,
+        "recipeName": "Greater Nature Protection Potion",
+        "learn": 290,
+        "source": "Drop: Rotting Behemoth (Western Plaguelands)"
+      }
+    ]
+  },
   "13463": {
     "id": 13463,
     "name": "Dreamfoil",
@@ -38667,6 +39020,27 @@ window.WOW_REAGENT_SOURCES = {
         "recipeName": "Flask of Supreme Power",
         "learn": 300,
         "source": "Drop: Ras Frostwhisper (Scholomance)"
+      }
+    ]
+  },
+  "13513": {
+    "id": 13513,
+    "name": "Flask of Chromatic Resistance",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Alchemy",
+    "summary": "Crafted by Alchemy (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=13513#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "recipeId": 13513,
+        "recipeName": "Flask of Chromatic Resistance",
+        "learn": 300,
+        "source": "Drop: Gyth (Blackrock Spire)"
       }
     ]
   },
@@ -42437,6 +42811,16 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "16583": {
+    "id": 16583,
+    "name": "Demonic Figurine",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=16583#dropped-by"
+  },
   "17010": {
     "id": 17010,
     "name": "Fiery Core",
@@ -43305,16 +43689,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
-  "17057": {
-    "id": 17057,
-    "name": "Shiny Fish Scales",
-    "primaryType": "skinned",
-    "ctaIcon": "🔪",
-    "ctaText": "Click here to see where to get Shiny Fish Scales",
-    "summary": "Looted from coastal Murlocs, Makrura, and Threshadons or skinned from level 11–30 aquatic beasts.",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=17057#skinned-from"
-  },
   "17194": {
     "id": 17194,
     "name": "Holiday Spices",
@@ -43674,6 +44048,27 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
+  "18168": {
+    "id": 18168,
+    "name": "Force Reactive Disk",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=18168#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 18168,
+        "recipeName": "Force Reactive Disk",
+        "learn": 300,
+        "source": "Schematic: Force Reactive Disk"
+      }
+    ]
+  },
   "18240": {
     "id": 18240,
     "name": "Ogre Tannin",
@@ -43693,6 +44088,27 @@ window.WOW_REAGENT_SOURCES = {
         "id": 179499,
         "name": "Ogre Tannin Basket",
         "pct": 100
+      }
+    ]
+  },
+  "18251": {
+    "id": 18251,
+    "name": "Core Armor Kit",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Leatherworking",
+    "summary": "Crafted by Leatherworking (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=18251#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "leatherworking",
+        "profName": "Leatherworking",
+        "profIcon": "trade_leatherworking",
+        "recipeId": 18251,
+        "recipeName": "Core Armor Kit",
+        "learn": 300,
+        "source": "Pattern: Core Armor Kit"
       }
     ]
   },
@@ -43846,6 +44262,27 @@ window.WOW_REAGENT_SOURCES = {
       "Undercity",
       "Thunder Bluff",
       "Elwynn Forest"
+    ]
+  },
+  "18262": {
+    "id": 18262,
+    "name": "Elemental Sharpening Stone",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 300).",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=18262#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 18262,
+        "recipeName": "Elemental Sharpening Stone",
+        "learn": 300,
+        "source": "Plans: Elemental Sharpening Stone"
+      }
     ]
   },
   "18512": {
@@ -45683,6 +46120,146 @@ window.WOW_REAGENT_SOURCES = {
       ]
     }
   },
+  "20867": {
+    "id": 20867,
+    "name": "Onyx Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20867#dropped-by"
+  },
+  "20868": {
+    "id": 20868,
+    "name": "Lambent Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20868#dropped-by"
+  },
+  "20870": {
+    "id": 20870,
+    "name": "Jasper Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20870#dropped-by"
+  },
+  "20871": {
+    "id": 20871,
+    "name": "Obsidian Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20871#dropped-by"
+  },
+  "20872": {
+    "id": 20872,
+    "name": "Vermillion Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20872#dropped-by"
+  },
+  "20873": {
+    "id": 20873,
+    "name": "Alabaster Idol",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20873#dropped-by"
+  },
+  "20874": {
+    "id": 20874,
+    "name": "Idol of the Sun",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20874#dropped-by"
+  },
+  "20875": {
+    "id": 20875,
+    "name": "Idol of Night",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20875#dropped-by"
+  },
+  "20876": {
+    "id": 20876,
+    "name": "Idol of Death",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20876#dropped-by"
+  },
+  "20877": {
+    "id": 20877,
+    "name": "Idol of the Sage",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20877#dropped-by"
+  },
+  "20878": {
+    "id": 20878,
+    "name": "Idol of Rebirth",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20878#dropped-by"
+  },
+  "20879": {
+    "id": 20879,
+    "name": "Idol of Life",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20879#dropped-by"
+  },
+  "20881": {
+    "id": 20881,
+    "name": "Idol of Strife",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20881#dropped-by"
+  },
+  "20882": {
+    "id": 20882,
+    "name": "Idol of War",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": false,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=20882#dropped-by"
+  },
   "21024": {
     "id": 21024,
     "name": "Chimaerok Tenderloin",
@@ -45971,6 +46548,406 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=23567#dropped-by"
   },
+  "211422": {
+    "id": 211422,
+    "name": "Shard of the Void",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=211422#dropped-by"
+  },
+  "213369": {
+    "id": 213369,
+    "name": "Faintly Glowing Leather",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Leatherworking",
+    "summary": "Crafted by Leatherworking (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213369#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "leatherworking",
+        "profName": "Leatherworking",
+        "profIcon": "trade_leatherworking",
+        "recipeId": 213369,
+        "recipeName": "Faintly Glowing Leather",
+        "learn": 200,
+        "source": "Pattern: Faintly Glowing Leather"
+      }
+    ]
+  },
+  "213370": {
+    "id": 213370,
+    "name": "Irradiated Leather Scraps",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213370#dropped-by"
+  },
+  "213371": {
+    "id": 213371,
+    "name": "Crate of Tainted Gniodine Solution",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213371#dropped-by"
+  },
+  "213372": {
+    "id": 213372,
+    "name": "Insulating Gniodine",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Alchemy",
+    "summary": "Crafted by Alchemy (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213372#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "recipeId": 213372,
+        "recipeName": "Insulating Gniodine",
+        "learn": 200,
+        "source": "Pattern: Insulating Gniodine"
+      }
+    ]
+  },
+  "213373": {
+    "id": 213373,
+    "name": "Reflective Scrapmetal",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213373#dropped-by"
+  },
+  "213376": {
+    "id": 213376,
+    "name": "Low-Background Truesilver Plates",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213376#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 213376,
+        "recipeName": "Low-Background Truesilver Plates",
+        "learn": 200,
+        "source": "Plans: Low-Background Truesilver Plates"
+      }
+    ]
+  },
+  "213378": {
+    "id": 213378,
+    "name": "Unstable Microfilament",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213378#dropped-by"
+  },
+  "213379": {
+    "id": 213379,
+    "name": "Hyperconductive Arcano-Filament",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Tailoring",
+    "summary": "Crafted by Tailoring (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213379#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "tailoring",
+        "profName": "Tailoring",
+        "profIcon": "trade_tailoring",
+        "recipeId": 213379,
+        "recipeName": "Hyperconductive Arcano-Filament",
+        "learn": 200,
+        "source": "Pattern: Hyperconductive Arcano-Filament"
+      }
+    ]
+  },
+  "213381": {
+    "id": 213381,
+    "name": "Pile of Tarnished Gears",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213381#dropped-by"
+  },
+  "213383": {
+    "id": 213383,
+    "name": "Polished Truesilver Gears",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=213383#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 213383,
+        "recipeName": "Polished Truesilver Gears",
+        "learn": 200,
+        "source": "Pattern: Polished Truesilver Gears"
+      }
+    ]
+  },
+  "215430": {
+    "id": 215430,
+    "name": "Gnomeregan Fallout",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=215430#dropped-by"
+  },
+  "220688": {
+    "id": 220688,
+    "name": "Inert Mantle of Nightmares",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=220688#dropped-by"
+  },
+  "220689": {
+    "id": 220689,
+    "name": "Void-Powered Vambraces",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=220689#dropped-by"
+  },
+  "221021": {
+    "id": 221021,
+    "name": "Nightmare Seed",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=221021#dropped-by"
+  },
+  "221312": {
+    "id": 221312,
+    "name": "Flask of Atal'ai Mojo",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=221312#dropped-by"
+  },
+  "227813": {
+    "id": 227813,
+    "name": "Drinkable Stratholme Holy Water",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=227813#dropped-by"
+  },
+  "234003": {
+    "id": 234003,
+    "name": "Obsidian-Infused Thorium Bar",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Mining",
+    "summary": "Crafted by Mining (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234003#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "recipeId": 234003,
+        "recipeName": "Smelt Obsidian-Infused Thorium Bar",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "234004": {
+    "id": 234004,
+    "name": "Obsidian Grinding Stone",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Blacksmithing",
+    "summary": "Crafted by Blacksmithing (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234004#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "recipeId": 234004,
+        "recipeName": "Obsidian Grinding Stone",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "234005": {
+    "id": 234005,
+    "name": "Obsidian Blasting Powder",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234005#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 234005,
+        "recipeName": "Obsidian Blasting Powder",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "234006": {
+    "id": 234006,
+    "name": "Monstrous Silithid Chitin",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234006#dropped-by"
+  },
+  "234007": {
+    "id": 234007,
+    "name": "Spiked Silithid Chitin",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234007#dropped-by"
+  },
+  "234008": {
+    "id": 234008,
+    "name": "Qiraji Silk",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234008#dropped-by"
+  },
+  "234009": {
+    "id": 234009,
+    "name": "Bolt of Qiraji Silk",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Tailoring",
+    "summary": "Crafted by Tailoring (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234009#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "tailoring",
+        "profName": "Tailoring",
+        "profIcon": "trade_tailoring",
+        "recipeId": 234009,
+        "recipeName": "Bolt of Qiraji Silk",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
+  },
+  "234010": {
+    "id": 234010,
+    "name": "Ancient Sandworm Bile",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234010#dropped-by"
+  },
+  "234011": {
+    "id": 234011,
+    "name": "Qiraji Stalker Venom",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234011#dropped-by"
+  },
+  "234012": {
+    "id": 234012,
+    "name": "Hive Thistle",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=234012#dropped-by"
+  },
+  "236656": {
+    "id": 236656,
+    "name": "Frozen Rune",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=236656#dropped-by"
+  },
+  "238737": {
+    "id": 238737,
+    "name": "Tinkerbox",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Engineering",
+    "summary": "Crafted by Engineering (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=238737#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "recipeId": 238737,
+        "recipeName": "Tinkerbox",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
+  },
   "238786": {
     "id": 238786,
     "name": "Item #238786",
@@ -46001,13 +46978,33 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=238788#dropped-by"
   },
+  "239016": {
+    "id": 239016,
+    "name": "Holy Salts",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=239016#dropped-by"
+  },
+  "239017": {
+    "id": 239017,
+    "name": "Exquisite Spices",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=239017#dropped-by"
+  },
   "247786": {
     "id": 247786,
     "name": "Mote of Magic",
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Enchanting",
-    "summary": "Crafted by Enchanting (Skill 10).",
+    "summary": "Crafted by Enchanting (Skill 1).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=247786#created-by-spell",
     "craftedBy": [
@@ -46017,7 +47014,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_engraving",
         "recipeId": 247786,
         "recipeName": "Mote of Magic",
-        "learn": 10,
+        "learn": 1,
         "source": "Trainer"
       }
     ]
@@ -46601,7 +47598,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 230).",
+    "summary": "Crafted by Alchemy (Skill 215).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249431#created-by-spell",
     "craftedBy": [
@@ -46611,7 +47608,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_alchemy",
         "recipeId": 249431,
         "recipeName": "Viridian Dye",
-        "learn": 230,
+        "learn": 215,
         "source": "Trainer"
       }
     ]
@@ -46622,7 +47619,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 130).",
+    "summary": "Crafted by Engineering (Skill 120).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249432#created-by-spell",
     "craftedBy": [
@@ -46632,7 +47629,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_engineering",
         "recipeId": 249432,
         "recipeName": "Sandpaper",
-        "learn": 130,
+        "learn": 120,
         "source": "Trainer"
       }
     ]
@@ -46719,6 +47716,16 @@ window.WOW_REAGENT_SOURCES = {
     "summary": "Fished from enchanted and coastal waters in Darkshore, Ashenvale, The Barrens, and Riverglades.",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=251524#fished-in"
+  },
+  "252948": {
+    "id": 252948,
+    "name": "Cleansed Felbloom",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=252948#dropped-by"
   },
   "255007": {
     "id": 255007,
@@ -47202,6 +48209,16 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=273131#dropped-by"
   },
+  "273295": {
+    "id": 273295,
+    "name": "Seasonal Fish Steaks",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see where to get this reagent",
+    "summary": "",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273295#dropped-by"
+  },
   "274030": {
     "id": 274030,
     "name": "Malleable Essence of Nature",
@@ -47212,6 +48229,27 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=274030#dropped-by"
   },
+  "279948": {
+    "id": 279948,
+    "name": "Rock Garden",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Mining",
+    "summary": "Crafted by Mining (Skill 140).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279948#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "recipeId": 279948,
+        "recipeName": "Rock Garden",
+        "learn": 140,
+        "source": "Blueprint: Rock Garden"
+      }
+    ]
+  },
   "279952": {
     "id": 279952,
     "name": "Molten Foundry",
@@ -47220,7 +48258,228 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see how to build Molten Foundry (Mining 300)",
     "summary": "Skill 300 Mining Master Campfire Station required nearby to smelt endgame Azerothium and Legionite.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=279952#created-by-spell"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279952#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "recipeId": 279952,
+        "recipeName": "Molten Foundry",
+        "learn": 300,
+        "source": "Blueprint: Molten Foundry"
+      }
+    ]
+  },
+  "279960": {
+    "id": 279960,
+    "name": "Lodestone",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Mining",
+    "summary": "Crafted by Mining (Skill 20).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279960#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "recipeId": 279960,
+        "recipeName": "Lodestone",
+        "learn": 20,
+        "source": "Trainer · 1s (Forever price)"
+      }
+    ]
+  },
+  "279961": {
+    "id": 279961,
+    "name": "Journeyman Campfire Kit",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Cooking",
+    "summary": "Crafted by Cooking (Skill 90).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279961#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "cooking",
+        "profName": "Cooking",
+        "profIcon": "inv_misc_food_15",
+        "recipeId": 279961,
+        "recipeName": "Journeyman Campfire Kit",
+        "learn": 90,
+        "source": "Blueprint: Journeyman Campfire"
+      }
+    ]
+  },
+  "279962": {
+    "id": 279962,
+    "name": "Incense Candle",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Herbalism",
+    "summary": "Crafted by Herbalism (Skill 20).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279962#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "herbalism",
+        "profName": "Herbalism",
+        "profIcon": "trade_herbalism",
+        "recipeId": 279962,
+        "recipeName": "Incense Candle",
+        "learn": 20,
+        "source": "Trainer · 90c (Forever price)"
+      }
+    ]
+  },
+  "279964": {
+    "id": 279964,
+    "name": "Greenhouse",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Herbalism",
+    "summary": "Crafted by Herbalism (Skill 140).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279964#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "herbalism",
+        "profName": "Herbalism",
+        "profIcon": "trade_herbalism",
+        "recipeId": 279964,
+        "recipeName": "Greenhouse",
+        "learn": 140,
+        "source": "Blueprint: Greenhouse"
+      }
+    ]
+  },
+  "279965": {
+    "id": 279965,
+    "name": "Fishing Rack",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Fishing",
+    "summary": "Crafted by Fishing (Skill 140).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279965#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "fishing",
+        "profName": "Fishing",
+        "profIcon": "trade_fishing",
+        "recipeId": 279965,
+        "recipeName": "Fishing Rack",
+        "learn": 140,
+        "source": "Blueprint: Fishing Rack"
+      }
+    ]
+  },
+  "279967": {
+    "id": 279967,
+    "name": "Fish Bowl",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Fishing",
+    "summary": "Crafted by Fishing (Skill 20).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279967#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "fishing",
+        "profName": "Fishing",
+        "profIcon": "trade_fishing",
+        "recipeId": 279967,
+        "recipeName": "Fish Bowl",
+        "learn": 20,
+        "source": "Trainer · 1s (Forever price)"
+      }
+    ]
+  },
+  "279969": {
+    "id": 279969,
+    "name": "Field Guide",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Skinning",
+    "summary": "Crafted by Skinning (Skill 140).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279969#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "skinning",
+        "profName": "Skinning",
+        "profIcon": "inv_misc_pelt_wolf_01",
+        "recipeId": 279969,
+        "recipeName": "Field Guide",
+        "learn": 140,
+        "source": "Blueprint: Field Guide"
+      }
+    ]
+  },
+  "279974": {
+    "id": 279974,
+    "name": "Expert Campfire Kit",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Cooking",
+    "summary": "Crafted by Cooking (Skill 200).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279974#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "cooking",
+        "profName": "Cooking",
+        "profIcon": "inv_misc_food_15",
+        "recipeId": 279974,
+        "recipeName": "Expert Campfire Kit",
+        "learn": 200,
+        "source": "Blueprint: Expert Campfire"
+      }
+    ]
+  },
+  "279979": {
+    "id": 279979,
+    "name": "Camp Chair",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Skinning",
+    "summary": "Crafted by Skinning (Skill 20).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279979#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "skinning",
+        "profName": "Skinning",
+        "profIcon": "inv_misc_pelt_wolf_01",
+        "recipeId": 279979,
+        "recipeName": "Camp Chair",
+        "learn": 20,
+        "source": "Trainer · 1s (Forever price)"
+      }
+    ]
+  },
+  "279981": {
+    "id": 279981,
+    "name": "Basic Campfire Kit",
+    "primaryType": "crafted",
+    "ctaIcon": "🔨",
+    "ctaText": "Click here to see how to craft this in Cooking",
+    "summary": "Crafted by Cooking (Skill 1).",
+    "isForeverNew": true,
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279981#created-by-spell",
+    "craftedBy": [
+      {
+        "profSlug": "cooking",
+        "profName": "Cooking",
+        "profIcon": "inv_misc_food_15",
+        "recipeId": 279981,
+        "recipeName": "Basic Campfire Kit",
+        "learn": 1,
+        "source": "Trainer"
+      }
+    ]
   }
 };
 
@@ -47324,7 +48583,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "Increases spell damage by up to 5 for 30 min.",
         "isNew": true,
-        "learn": 10,
+        "learn": 1,
         "yellow": 10,
         "green": 12,
         "grey": 15,
@@ -51105,7 +52364,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "\tOther \"Crafted by alchemists.\" Sell Price: 3s 75c",
         "isNew": true,
-        "learn": 230,
+        "learn": 215,
         "yellow": 230,
         "green": 250,
         "grey": 270,
@@ -52072,8 +53331,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 290,
-        "green": 330,
-        "grey": 350,
+        "green": 310,
+        "grey": 330,
         "reagents": [
           {
             "id": 8925,
@@ -54771,8 +56030,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -54782,17 +56041,60 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 64,
+          "to": 12,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "21%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "3.67%"
+          },
+          "itemId": 247754,
+          "recipeName": "Minor Arcane Elixir",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 11,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 1,
+            "yellow": 10,
+            "green": 12,
+            "grey": 15
+          },
+          "reagents": [
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 12,
+          "to": 62,
+          "bar": {
+            "iLeft": "4%",
+            "iWidth": "16.67%"
           },
           "itemId": 5997,
           "recipeName": "Elixir of Minor Defense",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 65,
+          "crafts": 50,
+          "craftsSafe": 52,
+          "colors": {
+            "orange": 1,
+            "yellow": 55,
+            "green": 75,
+            "grey": 95
+          },
           "reagents": [
             {
               "itemId": 765,
@@ -54818,62 +56120,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 64,
-          "to": 75,
-          "bar": {
-            "iLeft": "21%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 2455,
-          "recipeName": "Minor Mana Potion",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 13,
-          "reagents": [
-            {
-              "itemId": 785,
-              "name": "Mageroyal",
-              "count": 1,
-              "icon": "inv_jewelry_talisman_03",
-              "quality": 1
-            },
-            {
-              "itemId": 2447,
-              "name": "Peacebloom",
-              "count": 1,
-              "icon": "inv_misc_flower_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3371,
-              "name": "Empty Vial",
-              "count": 1,
-              "icon": "inv_potion_84",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Journeyman",
           "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — including Lilyssia Nightbreeze (SW), Vosur Brakthel (IF /way 66.6, 55.2), Yelmak (Org), or Forever town trainers in Zephras Isle & Riverglades."
         },
         {
           "type": "step",
-          "from": 75,
-          "to": 80,
+          "from": 62,
+          "to": 76,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "20.67%",
+            "iWidth": "4.67%"
           },
           "itemId": 2455,
           "recipeName": "Minor Mana Potion",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 8,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 15,
+          "craftsSafe": 18,
+          "colors": {
+            "orange": 25,
+            "yellow": 65,
+            "green": 85,
+            "grey": 105
+          },
           "reagents": [
             {
               "itemId": 785,
@@ -54900,24 +56170,37 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 80,
-          "to": 96,
+          "from": 76,
+          "to": 89,
           "bar": {
-            "iLeft": "26.333333333333332%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "25.33%",
+            "iWidth": "4.33%"
           },
-          "itemId": 6370,
-          "recipeName": "Blackmouth Oil",
+          "itemId": 2458,
+          "recipeName": "Elixir of Minor Fortitude",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 31,
+          "advice": "",
+          "crafts": 14,
+          "craftsSafe": 16,
+          "colors": {
+            "orange": 50,
+            "yellow": 80,
+            "green": 100,
+            "grey": 120
+          },
           "reagents": [
             {
-              "itemId": 6358,
-              "name": "Oily Blackmouth",
+              "itemId": 2449,
+              "name": "Earthroot",
               "count": 2,
-              "icon": "inv_misc_monsterhead_04",
+              "icon": "inv_misc_herb_07",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
               "quality": 1
             },
             {
@@ -54931,30 +56214,36 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 96,
+          "from": 89,
           "to": 100,
           "bar": {
-            "iLeft": "31.666666666666668%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "29.67%",
+            "iWidth": "3.67%"
           },
-          "itemId": 3383,
-          "recipeName": "Elixir of Wisdom",
-          "source": "Learned from the trainer",
+          "itemId": 5631,
+          "recipeName": "Rage Potion",
+          "source": "Recipe sold by Defias Profiteer (Westfall) — limited stock, restocks over time",
           "advice": "",
-          "crafts": 4,
+          "crafts": 12,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 60,
+            "yellow": 90,
+            "green": 110,
+            "grey": 130
+          },
           "reagents": [
             {
-              "itemId": 785,
-              "name": "Mageroyal",
+              "itemId": 5635,
+              "name": "Sharp Claw",
               "count": 1,
-              "icon": "inv_jewelry_talisman_03",
+              "icon": "inv_misc_monsterclaw_03",
               "quality": 1
             },
             {
               "itemId": 2450,
               "name": "Briarthorn",
-              "count": 2,
+              "count": 1,
               "icon": "inv_misc_root_01",
               "quality": 1
             },
@@ -54970,61 +56259,36 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 100,
-          "to": 130,
+          "to": 137,
           "bar": {
-            "iLeft": "33%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "33.33%",
+            "iWidth": "12.33%"
           },
-          "itemId": 6372,
-          "recipeName": "Swim Speed Potion",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 30,
+          "itemId": 6051,
+          "recipeName": "Holy Protection Potion",
+          "source": "Recipe sold by Kzixx (Duskwood) — limited stock, restocks over time",
+          "advice": "Swiftthistle comes from Mageroyal/Briarthorn nodes; buy extra on the auction house.",
+          "crafts": 37,
+          "craftsSafe": 39,
+          "colors": {
+            "orange": 100,
+            "yellow": 130,
+            "green": 150,
+            "grey": 170
+          },
           "reagents": [
+            {
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "count": 1,
+              "icon": "inv_misc_herb_01",
+              "quality": 1
+            },
             {
               "itemId": 2452,
               "name": "Swiftthistle",
               "count": 1,
               "icon": "inv_misc_herb_04",
-              "quality": 1
-            },
-            {
-              "itemId": 6370,
-              "name": "Blackmouth Oil",
-              "count": 1,
-              "icon": "inv_drink_12",
-              "quality": 1
-            },
-            {
-              "itemId": 3371,
-              "name": "Empty Vial",
-              "count": 1,
-              "icon": "inv_potion_84",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 130,
-          "to": 150,
-          "bar": {
-            "iLeft": "43%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 6371,
-          "recipeName": "Fire Oil",
-          "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 20,
-          "reagents": [
-            {
-              "itemId": 6359,
-              "name": "Firefin Snapper",
-              "count": 2,
-              "icon": "inv_misc_monsterhead_01",
               "quality": 1
             },
             {
@@ -55043,176 +56307,30 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 150,
-          "to": 166,
+          "from": 137,
+          "to": 162,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "45.67%",
+            "iWidth": "8.33%"
           },
-          "itemId": 6371,
-          "recipeName": "Fire Oil",
+          "itemId": 3389,
+          "recipeName": "Elixir of Lesser Defense",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 31,
+          "advice": "Train Expert (skill 125, level 20) before you reach 150.",
+          "crafts": 25,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 130,
+            "yellow": 155,
+            "green": 175,
+            "grey": 195
+          },
           "reagents": [
             {
-              "itemId": 6359,
-              "name": "Firefin Snapper",
-              "count": 2,
-              "icon": "inv_misc_monsterhead_01",
-              "quality": 1
-            },
-            {
-              "itemId": 3371,
-              "name": "Empty Vial",
+              "itemId": 3355,
+              "name": "Wild Steelbloom",
               "count": 1,
-              "icon": "inv_potion_84",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 166,
-          "to": 175,
-          "bar": {
-            "iLeft": "55%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 6373,
-          "recipeName": "Elixir of Fire Power",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 11,
-          "reagents": [
-            {
-              "itemId": 6371,
-              "name": "Fire Oil",
-              "count": 2,
-              "icon": "inv_potion_38",
-              "quality": 1
-            },
-            {
-              "itemId": 3356,
-              "name": "Kingsblood",
-              "count": 1,
-              "icon": "inv_misc_herb_03",
-              "quality": 1
-            },
-            {
-              "itemId": 3372,
-              "name": "Leaded Vial",
-              "count": 1,
-              "icon": "inv_potion_85",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 175,
-          "to": 190,
-          "bar": {
-            "iLeft": "58%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 247241,
-          "recipeName": "Greater Discolored Healing Potion",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 19,
-          "reagents": [
-            {
-              "itemId": 3372,
-              "name": "Leaded Vial",
-              "count": 1,
-              "icon": "inv_potion_85",
-              "quality": 1
-            },
-            {
-              "itemId": 3356,
-              "name": "Kingsblood",
-              "count": 1,
-              "icon": "inv_misc_herb_03",
-              "quality": 1
-            },
-            {
-              "itemId": 730,
-              "name": "Murloc Eye",
-              "count": 1,
-              "icon": "inv_misc_eye_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 190,
-          "to": 209,
-          "bar": {
-            "iLeft": "63%",
-            "iWidth": "6.333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 5633,
-          "recipeName": "Great Rage Potion",
-          "source": "Recipe sold by Ulthir (Alliance) or Hagrus (Horde)",
-          "advice": "",
-          "crafts": 22,
-          "reagents": [
-            {
-              "itemId": 5637,
-              "name": "Large Fang",
-              "count": 1,
-              "icon": "inv_misc_bone_08",
-              "quality": 1
-            },
-            {
-              "itemId": 3356,
-              "name": "Kingsblood",
-              "count": 1,
-              "icon": "inv_misc_herb_03",
-              "quality": 1
-            },
-            {
-              "itemId": 3372,
-              "name": "Leaded Vial",
-              "count": 1,
-              "icon": "inv_potion_85",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Ulthir (Alliance) / Hagrus (Horde)",
-            "location": "Darnassus /way 56.0, 24.6 (A) · Orgrimmar /way 46.0, 45.6 (H)",
-            "cost": "20s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Elixir of Agility (185–210, 1x Stranglekelp + 1x Goldthorn) or Lesser Invisibility Potion (165–205) if the vendor recipe is camped."
-        },
-        {
-          "type": "step",
-          "from": 209,
-          "to": 225,
-          "bar": {
-            "iLeft": "69.33333333333333%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 6052,
-          "recipeName": "Nature Protection Potion",
-          "source": "Recipe sold by Logannas (Alliance) or Bronk (Horde) and 2 more",
-          "advice": "",
-          "crafts": 20,
-          "reagents": [
-            {
-              "itemId": 3357,
-              "name": "Liferoot",
-              "count": 1,
-              "icon": "inv_misc_root_02",
+              "icon": "inv_misc_flower_01",
               "quality": 1
             },
             {
@@ -55229,14 +56347,95 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_potion_85",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Logannas (A) / Bronk (H) / Glyx Brewright (Neutral)",
-            "location": "Feathermoon, Feralas /way 32.6, 44.0 (A) · Camp Mojache, Feralas /way 76.0, 43.4 (H) · Booty Bay /way 28.2, 78.0",
-            "cost": "20s",
-            "supply": "Limited (1)"
+          ]
+        },
+        {
+          "type": "step",
+          "from": 162,
+          "to": 187,
+          "bar": {
+            "iLeft": "54%",
+            "iWidth": "8.33%"
           },
-          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–235, 1x Sungrass + 1x Khadgar's Whisker) or Catseye Elixir (200–225) learned directly from the trainer."
+          "itemId": 3827,
+          "recipeName": "Mana Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 25,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 160,
+            "yellow": 180,
+            "green": 200,
+            "grey": 220
+          },
+          "reagents": [
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "count": 1,
+              "icon": "inv_misc_herb_11",
+              "quality": 1
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "count": 1,
+              "icon": "inv_misc_herb_03",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 187,
+          "to": 212,
+          "bar": {
+            "iLeft": "62.33%",
+            "iWidth": "8.33%"
+          },
+          "itemId": 8949,
+          "recipeName": "Elixir of Agility",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 25,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 185,
+            "yellow": 205,
+            "green": 225,
+            "grey": 245
+          },
+          "reagents": [
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "count": 1,
+              "icon": "inv_misc_herb_11",
+              "quality": 1
+            },
+            {
+              "itemId": 3821,
+              "name": "Goldthorn",
+              "count": 1,
+              "icon": "inv_misc_herb_15",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "rank",
@@ -55245,31 +56444,37 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 225,
-          "to": 237,
+          "from": 212,
+          "to": 227,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "4%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "70.67%",
+            "iWidth": "5%"
           },
-          "itemId": 6052,
-          "recipeName": "Nature Protection Potion",
-          "source": "Recipe sold by Logannas (Alliance) or Bronk (Horde) and 2 more",
-          "advice": "",
-          "crafts": 26,
+          "itemId": 10592,
+          "recipeName": "Catseye Draught",
+          "source": "Learned from the trainer",
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225.",
+          "crafts": 15,
+          "craftsSafe": 17,
+          "colors": {
+            "orange": 200,
+            "yellow": 220,
+            "green": 240,
+            "grey": 260
+          },
           "reagents": [
             {
-              "itemId": 3357,
-              "name": "Liferoot",
+              "itemId": 3821,
+              "name": "Goldthorn",
               "count": 1,
-              "icon": "inv_misc_root_02",
+              "icon": "inv_misc_herb_15",
               "quality": 1
             },
             {
-              "itemId": 3820,
-              "name": "Stranglekelp",
+              "itemId": 3818,
+              "name": "Fadeleaf",
               "count": 1,
-              "icon": "inv_misc_herb_11",
+              "icon": "inv_misc_herb_12",
               "quality": 1
             },
             {
@@ -55279,29 +56484,65 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_potion_85",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Logannas (A) / Bronk (H) / Glyx Brewright (Neutral)",
-            "location": "Feathermoon, Feralas /way 32.6, 44.0 (A) · Camp Mojache, Feralas /way 76.0, 43.4 (H) · Booty Bay /way 28.2, 78.0",
-            "cost": "20s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–235, 1x Sungrass + 1x Khadgar's Whisker) or Catseye Elixir (200–225) learned directly from the trainer."
+          ]
         },
         {
           "type": "step",
-          "from": 237,
-          "to": 250,
+          "from": 227,
+          "to": 232,
           "bar": {
-            "iLeft": "78.66666666666667%",
-            "iWidth": "4.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "75.67%",
+            "iWidth": "1.67%"
+          },
+          "itemId": 249431,
+          "recipeName": "Viridian Dye",
+          "source": "Learned from the trainer",
+          "advice": "Needs a Fermenter nearby — the Alchemy camp object you learn at 140 (Leaded Vial, Kingsblood, Swiftthistle).",
+          "crafts": 5,
+          "craftsSafe": 5,
+          "colors": {
+            "orange": 215,
+            "yellow": 230,
+            "green": 250,
+            "grey": 270
+          },
+          "reagents": [
+            {
+              "itemId": 249274,
+              "name": "Stranglevine",
+              "count": 2,
+              "icon": "inv_herbalism_70_nightmaredreamleaf",
+              "quality": 2
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "count": 1,
+              "icon": "inv_potion_86",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 232,
+          "to": 257,
+          "bar": {
+            "iLeft": "77.33%",
+            "iWidth": "8.33%"
           },
           "itemId": 9154,
           "recipeName": "Draught of Detect Undead",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 14,
+          "crafts": 27,
+          "craftsSafe": 29,
+          "colors": {
+            "orange": 230,
+            "yellow": 245,
+            "green": 265,
+            "grey": 285
+          },
           "reagents": [
             {
               "itemId": 8836,
@@ -55321,167 +56562,64 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 250,
-          "to": 260,
-          "bar": {
-            "iLeft": "83%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 13423,
-          "recipeName": "Stonescale Oil",
-          "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 30,
-          "reagents": [
-            {
-              "itemId": 13422,
-              "name": "Stonescale Eel",
-              "count": 1,
-              "icon": "inv_misc_fish_11",
-              "quality": 1
-            },
-            {
-              "itemId": 3372,
-              "name": "Leaded Vial",
-              "count": 1,
-              "icon": "inv_potion_85",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 260,
-          "to": 265,
-          "bar": {
-            "iLeft": "86.33333333333333%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 9233,
-          "recipeName": "Draught of Detect Demon",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 5,
-          "reagents": [
-            {
-              "itemId": 8846,
-              "name": "Gromsblood",
-              "count": 2,
-              "icon": "inv_misc_herb_16",
-              "quality": 1
-            },
-            {
-              "itemId": 8925,
-              "name": "Crystal Vial",
-              "count": 1,
-              "icon": "inv_potion_86",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 265,
-          "to": 295,
-          "bar": {
-            "iLeft": "88%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 13445,
-          "recipeName": "Elixir of Greater Defense",
-          "source": "Recipe sold by Soolie Berryfizz (Alliance) or Kor'geld (Horde)",
-          "advice": "",
-          "crafts": 34,
-          "reagents": [
-            {
-              "itemId": 13423,
-              "name": "Stonescale Oil",
-              "count": 2,
-              "icon": "inv_potion_68",
-              "quality": 1
-            },
-            {
-              "itemId": 8838,
-              "name": "Sungrass",
-              "count": 1,
-              "icon": "inv_misc_herb_18",
-              "quality": 1
-            },
-            {
-              "itemId": 8925,
-              "name": "Crystal Vial",
-              "count": 1,
-              "icon": "inv_potion_86",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Soolie Berryfizz (Alliance) / Kor'geld (Horde)",
-            "location": "Tinker Town, Ironforge /way 66.6, 54.6 (A) · The Drag, Orgrimmar /way 56.0, 34.0 (H)",
-            "cost": "18s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Superior Mana Potion (260–290, 2x Sungrass + 2x Blindweed) or Elixir of Detect Demon (250–275, 2x Gromsblood) from the Artisan trainer."
-        },
-        {
-          "type": "step",
-          "from": 295,
+          "from": 257,
           "to": 300,
           "bar": {
-            "iLeft": "98%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "85.67%",
+            "iWidth": "14.33%"
           },
-          "itemId": 13444,
-          "recipeName": "Major Mana Potion",
-          "source": "Recipe sold by Magnus Frostwake (Western Plaguelands)",
-          "advice": "",
-          "crafts": 5,
+          "itemId": 241650,
+          "recipeName": "Major Discolored Healing Potion",
+          "source": "Taught by the Odd Child in Westfall (Alliance) or Apothecary Renferrel at the Sepulcher, Silverpine Forest (Horde) after a short questline",
+          "advice": "Murloc Eye and Plaguebloom are the bottleneck — start banking them early.",
+          "crafts": 44,
+          "craftsSafe": 46,
+          "colors": {
+            "orange": 250,
+            "yellow": 290,
+            "green": 310,
+            "grey": 330
+          },
           "reagents": [
-            {
-              "itemId": 13463,
-              "name": "Dreamfoil",
-              "count": 3,
-              "icon": "inv_misc_herb_dreamfoil",
-              "quality": 1
-            },
-            {
-              "itemId": 13467,
-              "name": "Icecap",
-              "count": 2,
-              "icon": "inv_misc_herb_icecap",
-              "quality": 1
-            },
             {
               "itemId": 8925,
               "name": "Crystal Vial",
               "count": 1,
-              "icon": "inv_potion_86",
+              "icon": "inv_misc_questionmark",
+              "quality": 1
+            },
+            {
+              "itemId": 13466,
+              "name": "Plaguebloom",
+              "count": 1,
+              "icon": "inv_misc_questionmark",
+              "quality": 1
+            },
+            {
+              "itemId": 730,
+              "name": "Murloc Eye",
+              "count": 1,
+              "icon": "inv_misc_questionmark",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Magnus Frostwake",
-            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence to see vendor)",
-            "cost": "3g",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Greater Arcane Elixir (285–300, 3x Dreamfoil + 1x Mountain Silversage) or Purification Potion (285–300, 2x Icecap + 2x Plaguebloom) from the trainer."
+          ]
         }
       ],
       "guideCallouts": [
         {
           "icon": "🧪",
-          "title": "Endgame Zone Flasks: Barrow Deeps & Mount Hyjal",
-          "text": "Forever Alchemists can brew specialized raid flasks: Flask of Natural Accuracy (+5% Hit, item=274273), Flask of Natural Aggression (+4% Crit, item=274274), Flask of Natural Precision (+5% Expertise, item=274275), and Flask of Natural Swiftness (+5% Haste, item=274276) — all granting +60 Stamina and persisting through death in Mount Hyjal, Hyjal Summit, and the Barrow Deeps."
+          "title": "Forever Zone Flasks: Mount Hyjal, Hyjal Summit & the Barrow Deeps",
+          "text": "Flask of Natural Accuracy, Aggression, Precision and Swiftness (items 274273–274276, level 55) each give +30 Stamina for 2 hours and persist through death. Inside Mount Hyjal, Hyjal Summit and the Barrow Deeps they add 2% Hit, 2% Critical Strike, 2% less chance to be dodged/parried, or 2% Haste respectively."
         },
         {
-          "icon": "🐾",
-          "title": "Combat Mobility & Burst Healing: Predatory Senses & Discolored Potions",
-          "text": "Craft Potion of Predatory Senses (item=250327, +10% movement speed & stealth detection for 1 hr), Swiftness Potion (+50% run speed for 15 sec), and Discolored Healing Potions (Lesser through Superior for instant burst heals with a minor damage-over-time symptom)."
+          "icon": "⚗️",
+          "title": "Camp Objects & Forever Potions",
+          "text": "Mana Well (skill 20) and Fermenter (skill 140) are your camp objects — the Fermenter is also the station for Viridian Dye at 227. Forever adds Discolored Healing Potions (big heals with a damage-over-time drawback; the Major one is taught by the Odd Child in Westfall or Apothecary Renferrel in Silverpine) and Potion of Predatory Senses (stand still to see stealthed enemies' heat trails for 1.5 min)."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -55777,7 +56915,7 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
@@ -55788,144 +56926,21 @@ window.WOW_PROFESSIONS_DATA = {
               "name": "Empty Vial",
               "icon": "inv_potion_84",
               "quality": 1,
-              "count": 202
+              "count": 139
             },
             {
               "itemId": 3372,
               "name": "Leaded Vial",
               "icon": "inv_potion_85",
               "quality": 1,
-              "count": 72
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 765,
-              "name": "Silverleaf",
-              "icon": "inv_misc_herb_10",
-              "quality": 1,
-              "count": 65
-            },
-            {
-              "itemId": 2447,
-              "name": "Peacebloom",
-              "icon": "inv_misc_flower_02",
-              "quality": 1,
-              "count": 86
-            },
-            {
-              "itemId": 785,
-              "name": "Mageroyal",
-              "icon": "inv_jewelry_talisman_03",
-              "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 6358,
-              "name": "Oily Blackmouth",
-              "icon": "inv_misc_monsterhead_04",
-              "quality": 1,
-              "count": 62
-            },
-            {
-              "itemId": 2450,
-              "name": "Briarthorn",
-              "icon": "inv_misc_root_01",
-              "quality": 1,
-              "count": 8
-            },
-            {
-              "itemId": 2452,
-              "name": "Swiftthistle",
-              "icon": "inv_misc_herb_04",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 6359,
-              "name": "Firefin Snapper",
-              "icon": "inv_misc_monsterhead_01",
-              "quality": 1,
-              "count": 102
-            },
-            {
-              "itemId": 3356,
-              "name": "Kingsblood",
-              "icon": "inv_misc_herb_03",
-              "quality": 1,
-              "count": 52
-            },
-            {
-              "itemId": 730,
-              "name": "Murloc Eye",
-              "icon": "inv_misc_eye_01",
-              "quality": 1,
-              "count": 19
-            },
-            {
-              "itemId": 5637,
-              "name": "Large Fang",
-              "icon": "inv_misc_bone_08",
-              "quality": 1,
-              "count": 22
-            },
-            {
-              "itemId": 3357,
-              "name": "Liferoot",
-              "icon": "inv_misc_root_02",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 3820,
-              "name": "Stranglekelp",
-              "icon": "inv_misc_herb_11",
-              "quality": 1,
-              "count": 20
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 6370,
-              "name": "Blackmouth Oil",
-              "icon": "inv_drink_12",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 6371,
-              "name": "Fire Oil",
-              "icon": "inv_potion_38",
-              "quality": 1,
-              "count": 22
-            }
-          ]
-        },
-        {
-          "title": "From a trade supplies vendor",
-          "note": "Always in stock, for a few coins.",
-          "items": [
-            {
-              "itemId": 3372,
-              "name": "Leaded Vial",
-              "icon": "inv_potion_85",
-              "quality": 1,
-              "count": 60
+              "count": 90
             },
             {
               "itemId": 8925,
               "name": "Crystal Vial",
               "icon": "inv_potion_86",
               "quality": 1,
-              "count": 58
+              "count": 76
             }
           ]
         },
@@ -55934,73 +56949,123 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 3357,
-              "name": "Liferoot",
-              "icon": "inv_misc_root_02",
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "icon": "inv_misc_flower_02",
               "quality": 1,
-              "count": 26
+              "count": 90
             },
             {
               "itemId": 3820,
               "name": "Stranglekelp",
               "icon": "inv_misc_herb_11",
               "quality": 1,
-              "count": 26
+              "count": 75
+            },
+            {
+              "itemId": 765,
+              "name": "Silverleaf",
+              "icon": "inv_misc_herb_10",
+              "quality": 1,
+              "count": 50
+            },
+            {
+              "itemId": 13466,
+              "name": "Plaguebloom",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 44
+            },
+            {
+              "itemId": 730,
+              "name": "Murloc Eye",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 44
+            },
+            {
+              "itemId": 3821,
+              "name": "Goldthorn",
+              "icon": "inv_misc_herb_15",
+              "quality": 1,
+              "count": 40
+            },
+            {
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "icon": "inv_misc_herb_01",
+              "quality": 1,
+              "count": 37
+            },
+            {
+              "itemId": 2452,
+              "name": "Swiftthistle",
+              "icon": "inv_misc_herb_04",
+              "quality": 1,
+              "count": 37
+            },
+            {
+              "itemId": 2449,
+              "name": "Earthroot",
+              "icon": "inv_misc_herb_07",
+              "quality": 1,
+              "count": 28
             },
             {
               "itemId": 8836,
               "name": "Arthas' Tears",
               "icon": "inv_misc_herb_13",
               "quality": 1,
-              "count": 14
+              "count": 27
             },
             {
-              "itemId": 13422,
-              "name": "Stonescale Eel",
-              "icon": "inv_misc_fish_11",
+              "itemId": 3355,
+              "name": "Wild Steelbloom",
+              "icon": "inv_misc_flower_01",
               "quality": 1,
-              "count": 34
+              "count": 25
             },
             {
-              "itemId": 8846,
-              "name": "Gromsblood",
-              "icon": "inv_misc_herb_16",
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "icon": "inv_misc_herb_03",
               "quality": 1,
-              "count": 10
+              "count": 25
             },
             {
-              "itemId": 8838,
-              "name": "Sungrass",
-              "icon": "inv_misc_herb_18",
-              "quality": 1,
-              "count": 34
-            },
-            {
-              "itemId": 13463,
-              "name": "Dreamfoil",
-              "icon": "inv_misc_herb_dreamfoil",
+              "itemId": 785,
+              "name": "Mageroyal",
+              "icon": "inv_jewelry_talisman_03",
               "quality": 1,
               "count": 15
             },
             {
-              "itemId": 13467,
-              "name": "Icecap",
-              "icon": "inv_misc_herb_icecap",
+              "itemId": 3818,
+              "name": "Fadeleaf",
+              "icon": "inv_misc_herb_12",
               "quality": 1,
-              "count": 10
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
+              "count": 15
+            },
             {
-              "itemId": 13423,
-              "name": "Stonescale Oil",
-              "icon": "inv_potion_68",
+              "itemId": 5635,
+              "name": "Sharp Claw",
+              "icon": "inv_misc_monsterclaw_03",
               "quality": 1,
-              "count": 68
+              "count": 12
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 12
+            },
+            {
+              "itemId": 249274,
+              "name": "Stranglevine",
+              "icon": "inv_herbalism_70_nightmaredreamleaf",
+              "quality": 2,
+              "count": 10
             }
           ]
         }
@@ -57783,8 +58848,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 50,
         "yellow": 50,
-        "green": 62,
-        "grey": 75,
+        "green": 70,
+        "grey": 90,
         "reagents": [
           {
             "id": 2836,
@@ -60753,7 +61818,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand mace, level 20",
         "effect": "Binds when equipped Two-Hand\tMace 47 - 71 Damage\tSpeed 3.50 (16.9 damage per second) +6 Stamina +6 Strength Requires Level 20 Sell Price: 19s 44c",
         "isNew": false,
-        "learn": 125,
+        "learn": 100,
         "yellow": 155,
         "green": 170,
         "grey": 185,
@@ -65605,7 +66670,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 40",
         "effect": "+12 Dodge Rating",
         "isNew": false,
-        "learn": 180,
+        "learn": 185,
         "yellow": 205,
         "green": 215,
         "grey": 225,
@@ -67229,7 +68294,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand dagger, level 46",
         "effect": "Binds when equipped One-Hand\tDagger 36 - 67 Damage\tSpeed 1.70 (30.3 damage per second) +9 Agility Requires Level 46 Sell Price: 2g 48s 92c",
         "isNew": false,
-        "learn": 230,
+        "learn": 255,
         "yellow": 255,
         "green": 267,
         "grey": 280,
@@ -69279,7 +70344,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand axe, level 50",
         "effect": "Binds when picked up One-Hand\tAxe 43 - 81 Damage\tSpeed 1.90 (32.6 damage per second) +10 Strength Requires Level 50 Sell Price: 3g 30s 79c",
         "isNew": false,
-        "learn": 250,
+        "learn": 275,
         "yellow": 275,
         "green": 287,
         "grey": 300,
@@ -78054,8 +79119,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -78065,17 +79130,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 25,
+          "to": 28,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "8%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "9%"
           },
           "itemId": 2862,
           "recipeName": "Rough Sharpening Stone",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 26,
+          "crafts": 29,
+          "craftsSafe": 32,
+          "colors": {
+            "orange": 1,
+            "yellow": 15,
+            "green": 35,
+            "grey": 55
+          },
           "reagents": [
             {
               "itemId": 2835,
@@ -78088,18 +79159,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 25,
-          "to": 75,
+          "from": 28,
+          "to": 61,
           "bar": {
-            "iLeft": "8%",
-            "iWidth": "16.666666666666668%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "9.33%",
+            "iWidth": "11%"
           },
           "itemId": 3470,
           "recipeName": "Rough Grinding Stone",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 74,
+          "advice": "",
+          "crafts": 37,
+          "craftsSafe": 40,
+          "colors": {
+            "orange": 25,
+            "yellow": 45,
+            "green": 65,
+            "grey": 85
+          },
           "reagents": [
             {
               "itemId": 2835,
@@ -78111,25 +79188,25 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "rank",
-          "rank": "Journeyman",
-          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — Stormwind Dwarven District, The Great Forge in Ironforge, or Valley of Honor in Orgrimmar."
-        },
-        {
           "type": "step",
-          "isIntermediateGrindingStone": true,
-          "from": 75,
-          "to": 90,
+          "from": 61,
+          "to": 69,
           "bar": {
-            "iLeft": "24.67%",
-            "iWidth": "5.00%",
-            "eLeft": "74.67%"
+            "iLeft": "20.33%",
+            "iWidth": "2.67%"
           },
           "itemId": 3478,
           "recipeName": "Coarse Grinding Stone",
-          "source": "Learned from the trainer (Skill 65)",
-          "advice": "Keep all 92! Craft your Coarse Grinding Stones right at 75 while they grant skill points — you need 44 for Patterned Bronze Bracers, 18 for Silvered Bronze Boots, and 30 for Silvered Bronze Gauntlets.",
-          "crafts": 92,
+          "source": "Learned from the trainer",
+          "advice": "Buy a Blacksmith Hammer from a trade supplies vendor now — every item from here on needs it. Forever lets you learn this stone early (yellow 50, grey 90).",
+          "crafts": 12,
+          "craftsSafe": 16,
+          "colors": {
+            "orange": 50,
+            "yellow": 50,
+            "green": 70,
+            "grey": 90
+          },
           "reagents": [
             {
               "itemId": 2836,
@@ -78141,19 +79218,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — Stormwind Dwarven District, The Great Forge in Ironforge, or Valley of Honor in Orgrimmar."
+        },
+        {
           "type": "step",
-          "from": 75,
-          "to": 85,
+          "from": 69,
+          "to": 80,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "23%",
+            "iWidth": "3.67%"
           },
           "itemId": 2851,
           "recipeName": "Copper Chain Belt",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 14,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 12,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 30,
+            "yellow": 70,
+            "green": 90,
+            "grey": 110
+          },
           "reagents": [
             {
               "itemId": 2840,
@@ -78166,31 +79254,30 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 85,
+          "from": 80,
           "to": 100,
           "bar": {
-            "iLeft": "28%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "26.67%",
+            "iWidth": "6.67%"
           },
-          "itemId": 2854,
-          "recipeName": "Runed Copper Bracers",
+          "itemId": 2865,
+          "recipeName": "Rough Bronze Leggings",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 18,
+          "crafts": 20,
+          "craftsSafe": 20,
+          "colors": {
+            "orange": 80,
+            "yellow": 120,
+            "green": 135,
+            "grey": 150
+          },
           "reagents": [
             {
-              "itemId": 2840,
-              "name": "Copper Bar",
-              "count": 10,
-              "icon": "inv_ingot_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3470,
-              "name": "Rough Grinding Stone",
-              "count": 3,
-              "icon": "inv_stone_grindingstone_01",
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 6,
+              "icon": "inv_ingot_bronze",
               "quality": 1
             }
           ]
@@ -78198,17 +79285,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 100,
-          "to": 104,
+          "to": 109,
           "bar": {
-            "iLeft": "33%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "33.33%",
+            "iWidth": "3%"
           },
           "itemId": 2871,
           "recipeName": "Heavy Sharpening Stone",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 5,
+          "crafts": 13,
+          "craftsSafe": 17,
+          "colors": {
+            "orange": 100,
+            "yellow": 100,
+            "green": 107,
+            "grey": 115
+          },
           "reagents": [
             {
               "itemId": 2838,
@@ -78221,73 +79314,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 104,
-          "to": 118,
+          "from": 109,
+          "to": 125,
           "bar": {
-            "iLeft": "34.333333333333336%",
-            "iWidth": "4.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "36.33%",
+            "iWidth": "5.33%"
           },
-          "itemId": 3486,
-          "recipeName": "Heavy Grinding Stone",
+          "itemId": 2865,
+          "recipeName": "Rough Bronze Leggings",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 27,
-          "reagents": [
-            {
-              "itemId": 2838,
-              "name": "Heavy Stone",
-              "count": 3,
-              "icon": "inv_stone_12",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 118,
-          "to": 137,
-          "bar": {
-            "iLeft": "39%",
-            "iWidth": "6.333333333333333%",
-            "eLeft": "74.66666666666667%"
+          "advice": "",
+          "crafts": 16,
+          "craftsSafe": 17,
+          "colors": {
+            "orange": 80,
+            "yellow": 120,
+            "green": 135,
+            "grey": 150
           },
-          "itemId": 2868,
-          "recipeName": "Patterned Bronze Bracers",
-          "source": "Learned from the trainer",
-          "advice": "Uses 44 of the Coarse Grinding Stones crafted at 75–90.",
-          "crafts": 22,
-          "reagents": [
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 5,
-              "icon": "inv_ingot_bronze",
-              "quality": 1
-            },
-            {
-              "itemId": 3478,
-              "name": "Coarse Grinding Stone",
-              "count": 2,
-              "icon": "inv_stone_grindingstone_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 137,
-          "to": 144,
-          "bar": {
-            "iLeft": "45.333333333333336%",
-            "iWidth": "2.3333333333333335%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 3482,
-          "recipeName": "Silvered Bronze Boots",
-          "source": "Learned from the trainer",
-          "advice": "Uses 18 of the Coarse Grinding Stones crafted at 75–90.",
-          "crafts": 9,
           "reagents": [
             {
               "itemId": 2841,
@@ -78295,118 +79339,59 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 6,
               "icon": "inv_ingot_bronze",
               "quality": 1
-            },
-            {
-              "itemId": 2842,
-              "name": "Silver Bar",
-              "count": 1,
-              "icon": "inv_ingot_01",
-              "quality": 2
-            },
-            {
-              "itemId": 3478,
-              "name": "Coarse Grinding Stone",
-              "count": 2,
-              "icon": "inv_stone_grindingstone_02",
-              "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 144,
-          "to": 150,
+          "from": 125,
+          "to": 129,
           "bar": {
-            "iLeft": "47.666666666666664%",
-            "iWidth": "2%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "41.67%",
+            "iWidth": "1.33%"
           },
-          "itemId": 3483,
-          "recipeName": "Silvered Bronze Gauntlets",
+          "itemId": 7071,
+          "recipeName": "Iron Buckle",
           "source": "Learned from the trainer",
-          "advice": "Uses the remaining Coarse Grinding Stones crafted at 75–90.",
-          "crafts": 8,
+          "advice": "Makes 2 per craft — keep them for Leatherworkers or vendor.",
+          "crafts": 6,
+          "craftsSafe": 10,
+          "colors": {
+            "orange": 125,
+            "yellow": 125,
+            "green": 127,
+            "grey": 130
+          },
           "reagents": [
             {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 8,
-              "icon": "inv_ingot_bronze",
-              "quality": 1
-            },
-            {
-              "itemId": 2842,
-              "name": "Silver Bar",
+              "itemId": 3575,
+              "name": "Iron Bar",
               "count": 1,
-              "icon": "inv_ingot_01",
-              "quality": 2
-            },
-            {
-              "itemId": 3478,
-              "name": "Coarse Grinding Stone",
-              "count": 2,
-              "icon": "inv_stone_grindingstone_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "rank",
-          "rank": "Expert",
-          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.0, 43.0, A), Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H), or Basil Frye in Undercity (/way 59.6, 29.0, H)."
-        },
-        {
-          "type": "step",
-          "from": 150,
-          "to": 154,
-          "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 3483,
-          "recipeName": "Silvered Bronze Gauntlets",
-          "source": "Learned from the trainer",
-          "advice": "Uses the remaining Coarse Grinding Stones crafted at 75–90.",
-          "crafts": 7,
-          "reagents": [
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 8,
-              "icon": "inv_ingot_bronze",
-              "quality": 1
-            },
-            {
-              "itemId": 2842,
-              "name": "Silver Bar",
-              "count": 1,
-              "icon": "inv_ingot_01",
-              "quality": 2
-            },
-            {
-              "itemId": 3478,
-              "name": "Coarse Grinding Stone",
-              "count": 2,
-              "icon": "inv_stone_grindingstone_02",
+              "icon": "inv_ingot_iron",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 154,
-          "to": 162,
+          "from": 129,
+          "to": 140,
           "bar": {
-            "iLeft": "51%",
-            "iWidth": "2.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "43%",
+            "iWidth": "3.67%"
           },
           "itemId": 7956,
           "recipeName": "Bronze Warhammer",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 9,
+          "advice": "Strong Flux is sold by trade supplies vendors.",
+          "crafts": 11,
+          "craftsSafe": 11,
+          "colors": {
+            "orange": 100,
+            "yellow": 155,
+            "green": 170,
+            "grey": 185
+          },
           "reagents": [
             {
               "itemId": 2841,
@@ -78432,19 +79417,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.0, 43.0, A) or Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H)."
+        },
+        {
           "type": "step",
-          "from": 162,
+          "from": 140,
           "to": 175,
           "bar": {
-            "iLeft": "53.666666666666664%",
-            "iWidth": "4.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "46.67%",
+            "iWidth": "11.67%"
           },
           "itemId": 3835,
           "recipeName": "Green Iron Bracers",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 16,
+          "advice": "Train Expert (skill 125, level 20) before you reach 150. At 140, craft your camp Anvil once for a free point.",
+          "crafts": 37,
+          "craftsSafe": 40,
+          "colors": {
+            "orange": 140,
+            "yellow": 165,
+            "green": 177,
+            "grey": 190
+          },
           "reagents": [
             {
               "itemId": 3575,
@@ -78465,17 +79461,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 175,
-          "to": 185,
+          "to": 182,
           "bar": {
-            "iLeft": "58%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "58.33%",
+            "iWidth": "2.33%"
           },
           "itemId": 7964,
           "recipeName": "Solid Sharpening Stone",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 30,
+          "crafts": 11,
+          "craftsSafe": 15,
+          "colors": {
+            "orange": 175,
+            "yellow": 175,
+            "green": 180,
+            "grey": 185
+          },
           "reagents": [
             {
               "itemId": 7912,
@@ -78488,49 +79490,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 185,
-          "to": 197,
+          "from": 182,
+          "to": 205,
           "bar": {
-            "iLeft": "61.333333333333336%",
-            "iWidth": "4%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 6040,
-          "recipeName": "Golden Scale Bracers",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 16,
-          "reagents": [
-            {
-              "itemId": 3859,
-              "name": "Steel Bar",
-              "count": 5,
-              "icon": "inv_ingot_steel",
-              "quality": 1
-            },
-            {
-              "itemId": 3486,
-              "name": "Heavy Grinding Stone",
-              "count": 2,
-              "icon": "inv_stone_grindingstone_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 197,
-          "to": 206,
-          "bar": {
-            "iLeft": "65.33333333333333%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "60.67%",
+            "iWidth": "7.67%"
           },
           "itemId": 7919,
           "recipeName": "Heavy Mithril Gauntlet",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 10,
+          "crafts": 23,
+          "craftsSafe": 25,
+          "colors": {
+            "orange": 180,
+            "yellow": 200,
+            "green": 210,
+            "grey": 220
+          },
           "reagents": [
             {
               "itemId": 3860,
@@ -78550,87 +79527,60 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "isIntermediateGrindingStone": true,
-          "from": 200,
-          "to": 206,
+          "from": 205,
+          "to": 211,
           "bar": {
-            "iLeft": "66.33%",
-            "iWidth": "2.00%",
-            "eLeft": "74.67%"
+            "iLeft": "68.33%",
+            "iWidth": "2%"
           },
-          "itemId": 7966,
-          "recipeName": "Solid Grinding Stone",
-          "source": "Learned from the trainer (Skill 200)",
-          "advice": "Keep all 12! Craft 12 Solid Grinding Stones right at 200 for guaranteed skill-ups — 8 are required for Steel Plate Helm (206–213) and 4 for Ebon Shiv (246–250).",
-          "crafts": 12,
-          "reagents": [
-            {
-              "itemId": 7912,
-              "name": "Solid Stone",
-              "count": 4,
-              "icon": "inv_stone_10",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 206,
-          "to": 213,
-          "bar": {
-            "iLeft": "68.33333333333333%",
-            "iWidth": "2.3333333333333335%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 7922,
-          "recipeName": "Steel Plate Helm",
-          "source": "Learned from the trainer",
-          "advice": "Uses 8 of the Solid Grinding Stones crafted at 200.",
-          "crafts": 8,
-          "reagents": [
-            {
-              "itemId": 3859,
-              "name": "Steel Bar",
-              "count": 14,
-              "icon": "inv_ingot_steel",
-              "quality": 1
-            },
-            {
-              "itemId": 7966,
-              "name": "Solid Grinding Stone",
-              "count": 1,
-              "icon": "inv_stone_grindingstone_04",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 213,
-          "to": 225,
-          "bar": {
-            "iLeft": "70.66666666666667%",
-            "iWidth": "4%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 7931,
-          "recipeName": "Mithril Coif",
+          "itemId": 7920,
+          "recipeName": "Mithril Plate Pants",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 12,
+          "crafts": 7,
+          "craftsSafe": 9,
+          "colors": {
+            "orange": 185,
+            "yellow": 205,
+            "green": 215,
+            "grey": 225
+          },
           "reagents": [
             {
               "itemId": 3860,
               "name": "Mithril Bar",
-              "count": 10,
+              "count": 12,
               "icon": "inv_ingot_06",
               "quality": 1
-            },
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 211,
+          "to": 225,
+          "bar": {
+            "iLeft": "70.33%",
+            "iWidth": "4.67%"
+          },
+          "itemId": 7930,
+          "recipeName": "Heavy Mithril Breastplate",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 14,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 205,
+            "yellow": 225,
+            "green": 235,
+            "grey": 245
+          },
+          "reagents": [
             {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "count": 6,
-              "icon": "inv_fabric_mageweave_01",
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 16,
+              "icon": "inv_ingot_06",
               "quality": 1
             }
           ]
@@ -78645,15 +79595,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 225,
           "to": 235,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "75%",
+            "iWidth": "3.33%"
           },
-          "itemId": 12404,
-          "recipeName": "Dense Sharpening Stone",
+          "itemId": 12643,
+          "recipeName": "Dense Weightstone",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 17,
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225.",
+          "crafts": 15,
+          "craftsSafe": 22,
+          "colors": {
+            "orange": 225,
+            "yellow": 230,
+            "green": 232,
+            "grey": 235
+          },
           "reagents": [
             {
               "itemId": 12365,
@@ -78669,15 +79625,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 235,
           "to": 246,
           "bar": {
-            "iLeft": "78%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "78.33%",
+            "iWidth": "3.67%"
           },
           "itemId": 7933,
           "recipeName": "Heavy Mithril Boots",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 25,
+          "crafts": 23,
+          "craftsSafe": 33,
+          "colors": {
+            "orange": 210,
+            "yellow": 230,
+            "green": 240,
+            "grey": 250
+          },
           "reagents": [
             {
               "itemId": 3860,
@@ -78700,15 +79662,116 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 246,
           "to": 250,
           "bar": {
-            "iLeft": "81.66666666666667%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "82%",
+            "iWidth": "1.33%"
+          },
+          "itemId": 7945,
+          "recipeName": "Big Black Mace",
+          "source": "Learned from the trainer",
+          "advice": "Low odds (≈3.4 crafts per point) — only 4 points, so stop at 250.",
+          "crafts": 13,
+          "craftsSafe": 22,
+          "colors": {
+            "orange": 205,
+            "yellow": 230,
+            "green": 242,
+            "grey": 255
+          },
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 16,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 7971,
+              "name": "Black Pearl",
+              "count": 1,
+              "icon": "inv_misc_gem_pearl_01",
+              "quality": 2
+            },
+            {
+              "itemId": 1210,
+              "name": "Shadowgem",
+              "count": 4,
+              "icon": "inv_misc_gem_amethyst_01",
+              "quality": 2
+            },
+            {
+              "itemId": 7966,
+              "name": "Solid Grinding Stone",
+              "count": 1,
+              "icon": "inv_stone_grindingstone_04",
+              "quality": 1
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 2,
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 250,
+          "to": 257,
+          "bar": {
+            "iLeft": "83.33%",
+            "iWidth": "2.33%"
+          },
+          "itemId": 15872,
+          "recipeName": "Arcanite Skeleton Key",
+          "source": "Learned from the trainer",
+          "advice": "Arcanite Bars come from an Alchemist's daily transmute — order 11 early. Skipping this step costs ~50 extra Big Black Maces.",
+          "crafts": 11,
+          "craftsSafe": 15,
+          "colors": {
+            "orange": 250,
+            "yellow": 250,
+            "green": 255,
+            "grey": 260
+          },
+          "reagents": [
+            {
+              "itemId": 12360,
+              "name": "Arcanite Bar",
+              "count": 1,
+              "icon": "inv_misc_stonetablet_05",
+              "quality": 2
+            },
+            {
+              "itemId": 12644,
+              "name": "Dense Grinding Stone",
+              "count": 1,
+              "icon": "inv_stone_grindingstone_05",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 257,
+          "to": 270,
+          "bar": {
+            "iLeft": "85.67%",
+            "iWidth": "4.33%"
           },
           "itemId": 7947,
           "recipeName": "Ebon Shiv",
           "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
-          "advice": "Uses 4 Solid Grinding Stones crafted earlier at 200.",
-          "crafts": 4,
+          "advice": "No other non-reputation recipe covers 260–270, so this step is unavoidable.",
+          "crafts": 20,
+          "craftsSafe": 24,
+          "colors": {
+            "orange": 255,
+            "yellow": 255,
+            "green": 267,
+            "grey": 280
+          },
           "reagents": [
             {
               "itemId": 3860,
@@ -78745,115 +79808,177 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_misc_leatherscrap_08",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Magnus Frostwake",
-            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence)",
-            "cost": "1g 60s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Mithril Coif (yellow up to 250) or Heavy Mithril Helm from the Artisan trainer."
+          ]
         },
         {
           "type": "step",
-          "isIntermediateGrindingStone": true,
-          "from": 250,
-          "to": 256,
+          "from": 270,
+          "to": 275,
           "bar": {
-            "iLeft": "83.00%",
-            "iWidth": "2.00%",
-            "eLeft": "74.67%"
+            "iLeft": "90%",
+            "iWidth": "1.67%"
           },
-          "itemId": 12644,
-          "recipeName": "Dense Grinding Stone",
-          "source": "Learned from the trainer (Skill 250)",
-          "advice": "Keep all 380! Craft your Dense Grinding Stones immediately at 250 to get free skill points up to ~256 before consuming them in Arcanite Skeleton Key (20x) and Huge Thorium Battleaxe (360x).",
-          "crafts": 380,
+          "itemId": 250616,
+          "recipeName": "Bold Dirk",
+          "source": "Plans sold by Pexmit (Mount Hyjal)",
+          "advice": "Forever recipe. Azerothium Bars are smelted from Pitchblende (Mining 275).",
+          "crafts": 5,
+          "craftsSafe": 5,
+          "colors": {
+            "orange": 270,
+            "yellow": 290,
+            "green": 300,
+            "grey": 310
+          },
           "reagents": [
             {
-              "itemId": 12365,
-              "name": "Dense Stone",
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 30,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            },
+            {
+              "itemId": 7082,
+              "name": "Essence of Air",
               "count": 4,
-              "icon": "inv_misc_stonetablet_07",
+              "icon": "spell_nature_earthbind",
+              "quality": 2
+            },
+            {
+              "itemId": 249726,
+              "name": "Azerothium Bar",
+              "count": 10,
+              "icon": "inv_ingot_livingsteel",
+              "quality": 2
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_02",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 250,
-          "to": 259,
+          "from": 275,
+          "to": 279,
           "bar": {
-            "iLeft": "83%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "91.67%",
+            "iWidth": "1.33%"
           },
-          "itemId": 15872,
-          "recipeName": "Arcanite Skeleton Key",
-          "source": "Learned from the trainer",
-          "advice": "Uses 20 Dense Grinding Stones crafted at 250.",
-          "crafts": 20,
+          "itemId": 12773,
+          "recipeName": "Ornate Thorium Handaxe",
+          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
+          "advice": "",
+          "crafts": 4,
+          "craftsSafe": 5,
+          "colors": {
+            "orange": 275,
+            "yellow": 275,
+            "green": 287,
+            "grey": 300
+          },
           "reagents": [
             {
-              "itemId": 12360,
-              "name": "Arcanite Bar",
-              "count": 1,
-              "icon": "inv_misc_stonetablet_05",
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 20,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            },
+            {
+              "itemId": 12799,
+              "name": "Large Opal",
+              "count": 2,
+              "icon": "inv_misc_gem_opal_01",
               "quality": 2
             },
             {
               "itemId": 12644,
               "name": "Dense Grinding Stone",
-              "count": 1,
-              "icon": "inv_stone_grindingstone_05",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 259,
-          "to": 300,
-          "bar": {
-            "iLeft": "86%",
-            "iWidth": "13.666666666666666%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 12775,
-          "recipeName": "Huge Thorium Battleaxe",
-          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
-          "advice": "Uses 360 Dense Grinding Stones crafted at 250.",
-          "crafts": 60,
-          "reagents": [
-            {
-              "itemId": 12359,
-              "name": "Thorium Bar",
-              "count": 40,
-              "icon": "inv_ingot_07",
-              "quality": 1
-            },
-            {
-              "itemId": 12644,
-              "name": "Dense Grinding Stone",
-              "count": 6,
+              "count": 2,
               "icon": "inv_stone_grindingstone_05",
               "quality": 1
             },
             {
               "itemId": 8170,
               "name": "Rugged Leather",
-              "count": 6,
+              "count": 4,
               "icon": "inv_misc_leatherscrap_02",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Magnus Frostwake",
-            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence)",
-            "cost": "2g",
-            "supply": "Unlimited"
+          ]
+        },
+        {
+          "type": "step",
+          "from": 279,
+          "to": 300,
+          "bar": {
+            "iLeft": "93%",
+            "iWidth": "7%"
           },
-          "trainerAlternative": "Trainer Backup: Craft Imperial Plate Bracers (265–295, Derotain Mudsipper in Gadgetzan) or Radiant Belt / Thorium Boots."
+          "itemId": 250616,
+          "recipeName": "Bold Dirk",
+          "source": "Plans sold by Pexmit (Mount Hyjal)",
+          "advice": "Shortcut if you have Cenarion Circle rep and access to a 300 Blacksmith's Master Forge: Goregasher Grips (Friendly) and Goregasher Support (Honored) from Vargus in Silithus cover 285–299 in ~16 crafts with no Azerothium at all.",
+          "crafts": 24,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 270,
+            "yellow": 290,
+            "green": 300,
+            "grey": 310
+          },
+          "reagents": [
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 30,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            },
+            {
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "count": 4,
+              "icon": "spell_nature_earthbind",
+              "quality": 2
+            },
+            {
+              "itemId": 249726,
+              "name": "Azerothium Bar",
+              "count": 10,
+              "icon": "inv_ingot_livingsteel",
+              "quality": 2
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            }
+          ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "⚒️",
+          "title": "Camp Objects: Sharpening Wheel, Anvil & Master Forge",
+          "text": "Sharpening Wheel at 20 (1 Rough Stone, 1 Copper Bar) and Anvil at 140 (5 Bronze Bar, 2 Coarse Grinding Stone, 2 Medium Leather) are one-off crafts worth a skill point each. The Master Forge at 300 (Golem Heart, 5 Thorium Bar, 2 Rugged Leather) is required for the strongest Forever plans."
+        },
+        {
+          "icon": "⛏️",
+          "title": "Plan for the 250–300 Metal Bill",
+          "text": "The last 50 points need ~11 Arcanite Bars (an Alchemist's daily transmute), Truesilver for Ebon Shivs, and about 900 Thorium Bars plus ~290 Azerothium Bars for Bold Dirks. Azerothium is smelted from Pitchblende at Mining 275, so Mining is the natural partner. At 200 (level 40) you can specialise as Armorsmith or Weaponsmith; the route above works for both."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -79437,25 +80562,25 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "Complete trade goods, stone, and ores needed to power-level Blacksmithing from 1 to 300.",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
           "note": "Always in stock, for a few coins.",
           "items": [
             {
-              "itemId": 3466,
-              "name": "Strong Flux",
-              "icon": "inv_misc_ammo_gunpowder_01",
-              "quality": 1,
-              "count": 9
-            },
-            {
               "itemId": 2605,
               "name": "Green Dye",
               "icon": "inv_potion_12",
               "quality": 1,
-              "count": 16
+              "count": 37
+            },
+            {
+              "itemId": 3466,
+              "name": "Strong Flux",
+              "icon": "inv_misc_ammo_gunpowder_01",
+              "quality": 1,
+              "count": 11
             }
           ]
         },
@@ -79464,211 +80589,178 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 2835,
-              "name": "Rough Stone",
-              "icon": "inv_stone_06",
-              "quality": 1,
-              "count": 174
-            },
-            {
-              "itemId": 2840,
-              "name": "Copper Bar",
-              "icon": "inv_ingot_02",
-              "quality": 1,
-              "count": 264
-            },
-            {
-              "itemId": 2838,
-              "name": "Heavy Stone",
-              "icon": "inv_stone_12",
-              "quality": 1,
-              "count": 101
-            },
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "icon": "inv_ingot_bronze",
-              "quality": 1,
-              "count": 356
-            },
-            {
-              "itemId": 2836,
-              "name": "Coarse Stone",
-              "icon": "inv_stone_09",
-              "quality": 1,
-              "count": 184
-            },
-            {
-              "itemId": 2842,
-              "name": "Silver Bar",
-              "icon": "inv_ingot_01",
-              "quality": 2,
-              "count": 24
-            },
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1,
-              "count": 9
-            },
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "icon": "inv_ingot_iron",
-              "quality": 1,
-              "count": 96
-            },
-            {
-              "itemId": 7912,
-              "name": "Solid Stone",
-              "icon": "inv_stone_10",
-              "quality": 1,
-              "count": 62
-            },
-            {
-              "itemId": 3859,
-              "name": "Steel Bar",
-              "icon": "inv_ingot_steel",
-              "quality": 1,
-              "count": 192
-            },
-            {
               "itemId": 3860,
               "name": "Mithril Bar",
               "icon": "inv_ingot_06",
               "quality": 1,
-              "count": 180
-            },
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1,
-              "count": 112
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 3470,
-              "name": "Rough Grinding Stone",
-              "icon": "inv_stone_grindingstone_01",
-              "quality": 1,
-              "count": 54
-            },
-            {
-              "itemId": 3478,
-              "name": "Coarse Grinding Stone",
-              "icon": "inv_stone_grindingstone_02",
-              "quality": 1,
-              "count": 92
-            },
-            {
-              "itemId": 3486,
-              "name": "Heavy Grinding Stone",
-              "icon": "inv_stone_grindingstone_03",
-              "quality": 1,
-              "count": 32
-            },
-            {
-              "itemId": 7966,
-              "name": "Solid Grinding Stone",
-              "icon": "inv_stone_grindingstone_04",
-              "quality": 1,
-              "count": 8
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 12365,
-              "name": "Dense Stone",
-              "icon": "inv_misc_stonetablet_07",
-              "quality": 1,
-              "count": 1537
-            },
-            {
-              "itemId": 3860,
-              "name": "Mithril Bar",
-              "icon": "inv_ingot_06",
-              "quality": 1,
-              "count": 398
-            },
-            {
-              "itemId": 4304,
-              "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1,
-              "count": 108
-            },
-            {
-              "itemId": 6037,
-              "name": "Truesilver Bar",
-              "icon": "inv_ingot_08",
-              "quality": 2,
-              "count": 24
-            },
-            {
-              "itemId": 7910,
-              "name": "Star Ruby",
-              "icon": "inv_misc_gem_ruby_02",
-              "quality": 2,
-              "count": 8
-            },
-            {
-              "itemId": 7912,
-              "name": "Solid Stone",
-              "icon": "inv_stone_10",
-              "quality": 1,
-              "count": 16
-            },
-            {
-              "itemId": 12360,
-              "name": "Arcanite Bar",
-              "icon": "inv_misc_stonetablet_05",
-              "quality": 2,
-              "count": 20
+              "count": 1216
             },
             {
               "itemId": 12359,
               "name": "Thorium Bar",
               "icon": "inv_ingot_07",
               "quality": 1,
-              "count": 2400
+              "count": 950
+            },
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "icon": "inv_ingot_bronze",
+              "quality": 1,
+              "count": 304
+            },
+            {
+              "itemId": 249726,
+              "name": "Azerothium Bar",
+              "icon": "inv_ingot_livingsteel",
+              "quality": 2,
+              "count": 290
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_iron",
+              "quality": 1,
+              "count": 228
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1,
+              "count": 158
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 143
             },
             {
               "itemId": 8170,
               "name": "Rugged Leather",
               "icon": "inv_misc_leatherscrap_02",
               "quality": 1,
-              "count": 360
+              "count": 132
+            },
+            {
+              "itemId": 6037,
+              "name": "Truesilver Bar",
+              "icon": "inv_ingot_08",
+              "quality": 2,
+              "count": 120
+            },
+            {
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "icon": "spell_nature_earthbind",
+              "quality": 2,
+              "count": 116
+            },
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 103
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 92
+            },
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1,
+              "count": 91
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "icon": "inv_ingot_02",
+              "quality": 1,
+              "count": 72
+            },
+            {
+              "itemId": 1210,
+              "name": "Shadowgem",
+              "icon": "inv_misc_gem_amethyst_01",
+              "quality": 2,
+              "count": 52
+            },
+            {
+              "itemId": 7910,
+              "name": "Star Ruby",
+              "icon": "inv_misc_gem_ruby_02",
+              "quality": 2,
+              "count": 40
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_12",
+              "quality": 1,
+              "count": 13
+            },
+            {
+              "itemId": 7971,
+              "name": "Black Pearl",
+              "icon": "inv_misc_gem_pearl_01",
+              "quality": 2,
+              "count": 13
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 11
+            },
+            {
+              "itemId": 12360,
+              "name": "Arcanite Bar",
+              "icon": "inv_misc_stonetablet_05",
+              "quality": 2,
+              "count": 11
+            },
+            {
+              "itemId": 12799,
+              "name": "Large Opal",
+              "icon": "inv_misc_gem_opal_01",
+              "quality": 2,
+              "count": 8
             }
           ]
         },
         {
           "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "note": "Extra components the route crafts for itself; their raw materials are already counted above.",
           "items": [
             {
               "itemId": 7966,
               "name": "Solid Grinding Stone",
               "icon": "inv_stone_grindingstone_04",
               "quality": 1,
-              "count": 4
+              "count": 33
             },
             {
               "itemId": 12644,
               "name": "Dense Grinding Stone",
               "icon": "inv_stone_grindingstone_05",
               "quality": 1,
-              "count": 380
+              "count": 19
             }
           ]
         }
@@ -79868,9 +80960,9 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Rods",
         "effect": "Binds when picked up \tEnchanting Sell Price: 24c",
         "isNew": false,
-        "learn": 5,
+        "learn": 1,
         "yellow": 5,
-        "green": 25,
+        "green": 7,
         "grey": 10,
         "reagents": [
           {
@@ -79900,9 +80992,9 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Relics",
         "effect": "\tEnchanting \"Available from enchanting vendors.\"",
         "isNew": true,
-        "learn": 10,
+        "learn": 1,
         "yellow": 10,
-        "green": 30,
+        "green": 12,
         "grey": 15,
         "reagents": [
           {
@@ -80636,7 +81728,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Rods",
         "effect": "Binds when picked up \tEnchanting Sell Price: 24c",
         "isNew": false,
-        "learn": 130,
+        "learn": 100,
         "yellow": 130,
         "green": 150,
         "grey": 170,
@@ -81979,7 +83071,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Rods",
         "effect": "Binds when picked up \tEnchanting Sell Price: 5s",
         "isNew": false,
-        "learn": 175,
+        "learn": 150,
         "yellow": 175,
         "green": 195,
         "grey": 215,
@@ -82853,7 +83945,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Rods",
         "effect": "Binds when picked up \tEnchanting Sell Price: 12s 50c",
         "isNew": false,
-        "learn": 220,
+        "learn": 200,
         "yellow": 220,
         "green": 240,
         "grey": 260,
@@ -89555,9 +90647,9 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "title": "LEVELING FROM 1 TO 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -89569,15 +90661,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 1,
           "to": 1,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "0.6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "0.33%"
           },
           "itemId": 6218,
           "recipeName": "Make a Runed Copper Rod",
-          "source": "Every enchant from here on needs it in your bags.",
-          "advice": "",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Every enchant up to 132 needs it in your bags. Mote of Magic is sold by enchanting supply vendors.",
           "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 1,
+            "yellow": 5,
+            "green": 7,
+            "grey": 10
+          },
           "reagents": [
             {
               "itemId": 6217,
@@ -89598,41 +90696,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 25,
+          "to": 2,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "8%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "0.33%"
           },
-          "itemId": null,
-          "recipeName": "Enchant Bracer - Inferior Stamina",
+          "itemId": 247786,
+          "recipeName": "Dust to Motes",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 31,
-          "reagents": [
-            {
-              "itemId": 247786,
-              "name": "Mote of Magic",
-              "count": 1,
-              "icon": "inv_elemental_mote_mana",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 25,
-          "to": 75,
-          "bar": {
-            "iLeft": "8%",
-            "iWidth": "16.666666666666668%",
-            "eLeft": "74.66666666666667%"
+          "advice": "Makes 3 Motes of Magic.",
+          "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 1,
+            "yellow": 10,
+            "green": 12,
+            "grey": 15
           },
-          "itemId": null,
-          "recipeName": "Enchant Chest - Inferior Stamina",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 51,
           "reagents": [
             {
               "itemId": 10940,
@@ -89640,6 +90720,34 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 1,
               "icon": "inv_enchant_duststrange",
               "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 2,
+          "to": 20,
+          "bar": {
+            "iLeft": "0.67%",
+            "iWidth": "6%"
+          },
+          "title": "Disenchant green (Uncommon) items",
+          "zones": "Forever change: each green or better item you disenchant is a guaranteed skill point up to 20 (the chance drops after 20 and stops at 60). Keep all dust and essences for the next steps.",
+          "icons": [
+            {
+              "itemId": 10940,
+              "icon": "inv_enchant_duststrange",
+              "name": "Strange Dust"
+            },
+            {
+              "itemId": 10938,
+              "icon": "inv_enchant_essencemagicsmall",
+              "name": "Lesser Magic Essence"
+            },
+            {
+              "itemId": 10978,
+              "icon": "inv_enchant_shardglimmeringsmall",
+              "name": "Small Glimmering Shard"
             }
           ]
         },
@@ -89650,18 +90758,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 75,
-          "to": 91,
+          "from": 20,
+          "to": 79,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "6.67%",
+            "iWidth": "19.67%"
           },
           "itemId": null,
           "recipeName": "Enchant Chest - Inferior Stamina",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 24,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 60,
+          "craftsSafe": 62,
+          "colors": {
+            "orange": 15,
+            "yellow": 70,
+            "green": 90,
+            "grey": 110
+          },
           "reagents": [
             {
               "itemId": 10940,
@@ -89674,73 +90788,91 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 91,
-          "to": 121,
+          "from": 79,
+          "to": 103,
           "bar": {
-            "iLeft": "30%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "26.33%",
+            "iWidth": "8%"
           },
           "itemId": null,
-          "recipeName": "Enchant Bracer - Minor Stamina",
+          "recipeName": "Enchant Chest - Minor Absorption",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 39,
-          "reagents": [
-            {
-              "itemId": 10940,
-              "name": "Strange Dust",
-              "count": 2,
-              "icon": "inv_enchant_duststrange",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 121,
-          "to": 130,
-          "bar": {
-            "iLeft": "40%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+          "crafts": 26,
+          "craftsSafe": 29,
+          "colors": {
+            "orange": 40,
+            "yellow": 90,
+            "green": 110,
+            "grey": 130
           },
-          "itemId": null,
-          "recipeName": "Enchant Shield - Minor Stamina",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 9,
           "reagents": [
             {
-              "itemId": 10998,
-              "name": "Lesser Astral Essence",
+              "itemId": 10938,
+              "name": "Lesser Magic Essence",
               "count": 1,
-              "icon": "inv_enchant_essenceastralsmall",
+              "icon": "inv_enchant_essencemagicsmall",
               "quality": 2
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 103,
+          "to": 132,
+          "bar": {
+            "iLeft": "34.33%",
+            "iWidth": "9.67%"
+          },
+          "itemId": null,
+          "recipeName": "Enchant 2H Weapon - Minor Impact",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 29,
+          "craftsSafe": 29,
+          "colors": {
+            "orange": 100,
+            "yellow": 130,
+            "green": 150,
+            "grey": 170
+          },
+          "reagents": [
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 1,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
             },
             {
-              "itemId": 10940,
-              "name": "Strange Dust",
+              "itemId": 10978,
+              "name": "Small Glimmering Shard",
               "count": 1,
-              "icon": "inv_enchant_duststrange",
-              "quality": 1
+              "icon": "inv_enchant_shardglimmeringsmall",
+              "quality": 3
             }
           ]
         },
         {
           "type": "step",
-          "from": 130,
-          "to": 130,
+          "from": 132,
+          "to": 132,
           "bar": {
-            "iLeft": "43%",
-            "iWidth": "0.6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "44%",
+            "iWidth": "0.33%"
           },
           "itemId": 6339,
           "recipeName": "Make a Runed Silver Rod",
-          "source": "Every enchant from here on needs it in your bags.",
-          "advice": "",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Learnable from 100. Needed for the next enchants up to 164.",
           "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 100,
+            "yellow": 130,
+            "green": 150,
+            "grey": 170
+          },
           "reagents": [
             {
               "itemId": 6338,
@@ -89773,48 +90905,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 130,
-          "to": 150,
-          "bar": {
-            "iLeft": "43%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": null,
-          "recipeName": "Enchant Bracer - Lesser Stamina",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 20,
-          "reagents": [
-            {
-              "itemId": 11083,
-              "name": "Soul Dust",
-              "count": 1,
-              "icon": "inv_enchant_dustsoul",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Expert",
           "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Kitta Firewind at Tower of Azora, Elwynn Forest (/way 64.8, 70.6, A) or Hgarth in Sun Rock Retreat, Stonetalon Mountains (/way 49.2, 57.2, H)."
         },
         {
           "type": "step",
-          "from": 150,
-          "to": 173,
+          "from": 132,
+          "to": 164,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "7.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "44%",
+            "iWidth": "10.67%"
           },
           "itemId": null,
           "recipeName": "Enchant Bracer - Lesser Stamina",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 29,
+          "advice": "Train Expert (skill 125, level 20) before you reach 150.",
+          "crafts": 33,
+          "craftsSafe": 34,
+          "colors": {
+            "orange": 130,
+            "yellow": 155,
+            "green": 175,
+            "grey": 195
+          },
           "reagents": [
             {
               "itemId": 11083,
@@ -89827,18 +90941,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 173,
-          "to": 173,
+          "from": 164,
+          "to": 164,
           "bar": {
-            "iLeft": "57.333333333333336%",
-            "iWidth": "0.6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "54.67%",
+            "iWidth": "0.33%"
           },
           "itemId": 11130,
           "recipeName": "Make a Runed Golden Rod",
-          "source": "Every enchant from here on needs it in your bags.",
-          "advice": "",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Learnable from 150. Needed up to 214.",
           "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 150,
+            "yellow": 175,
+            "green": 195,
+            "grey": 215
+          },
           "reagents": [
             {
               "itemId": 11128,
@@ -89872,18 +90992,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 173,
-          "to": 194,
+          "from": 164,
+          "to": 189,
           "bar": {
-            "iLeft": "57.333333333333336%",
-            "iWidth": "7%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "54.67%",
+            "iWidth": "8.33%"
           },
           "itemId": null,
           "recipeName": "Enchant Boots - Lesser Agility",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 24,
+          "crafts": 26,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 160,
+            "yellow": 180,
+            "green": 200,
+            "grey": 220
+          },
           "reagents": [
             {
               "itemId": 11083,
@@ -89896,42 +91022,54 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 194,
-          "to": 218,
+          "from": 189,
+          "to": 214,
           "bar": {
-            "iLeft": "64.33333333333333%",
-            "iWidth": "8%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "63%",
+            "iWidth": "8.33%"
           },
           "itemId": null,
-          "recipeName": "Enchant Bracer - Strength",
+          "recipeName": "Enchant Chest - Greater Intellect",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 30,
+          "crafts": 26,
+          "craftsSafe": 28,
+          "colors": {
+            "orange": 185,
+            "yellow": 205,
+            "green": 225,
+            "grey": 245
+          },
           "reagents": [
             {
-              "itemId": 11137,
-              "name": "Vision Dust",
+              "itemId": 11134,
+              "name": "Lesser Mystic Essence",
               "count": 1,
-              "icon": "inv_enchant_dustvision",
-              "quality": 1
+              "icon": "inv_enchant_essencemysticalsmall",
+              "quality": 2
             }
           ]
         },
         {
           "type": "step",
-          "from": 218,
-          "to": 218,
+          "from": 214,
+          "to": 214,
           "bar": {
-            "iLeft": "72.33333333333333%",
-            "iWidth": "0.6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "71.33%",
+            "iWidth": "0.33%"
           },
           "itemId": 11145,
           "recipeName": "Make a Runed Truesilver Rod",
-          "source": "Every enchant from here on needs it in your bags.",
-          "advice": "",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Learnable from 200. Every enchant to 300 below needs it.",
           "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 200,
+            "yellow": 220,
+            "green": 240,
+            "grey": 260
+          },
           "reagents": [
             {
               "itemId": 11144,
@@ -89964,48 +91102,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 218,
-          "to": 225,
-          "bar": {
-            "iLeft": "72.33333333333333%",
-            "iWidth": "2.3333333333333335%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": null,
-          "recipeName": "Enchant Cloak - Greater Defense",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 7,
-          "reagents": [
-            {
-              "itemId": 11137,
-              "name": "Vision Dust",
-              "count": 1,
-              "icon": "inv_enchant_dustvision",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Artisan",
           "details": "Learned from Annora deep inside Uldaman, Badlands (/way 36.6, 31.2 inside instance, Neutral, Skill 200 & Level 35 — clear scorpids around her to unlock), up to 300."
         },
         {
           "type": "step",
-          "from": 225,
-          "to": 262,
+          "from": 214,
+          "to": 239,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "12.333333333333334%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "71.33%",
+            "iWidth": "8.33%"
           },
           "itemId": null,
           "recipeName": "Enchant Gloves - Agility",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 68,
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225.",
+          "crafts": 26,
+          "craftsSafe": 28,
+          "colors": {
+            "orange": 210,
+            "yellow": 230,
+            "green": 250,
+            "grey": 270
+          },
           "reagents": [
             {
               "itemId": 11137,
@@ -90018,49 +91138,54 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 262,
-          "to": 277,
+          "from": 239,
+          "to": 280,
           "bar": {
-            "iLeft": "87%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "79.67%",
+            "iWidth": "13.67%"
           },
           "itemId": null,
-          "recipeName": "Enchant Bracer - Greater Strength",
+          "recipeName": "Enchant Boots - Agility",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 20,
+          "advice": "Short on Greater Nether Essence? Switch to Enchant Shield - Greater Stamina as soon as you reach 265 (it is orange from 265).",
+          "crafts": 54,
+          "craftsSafe": 62,
+          "colors": {
+            "orange": 235,
+            "yellow": 255,
+            "green": 275,
+            "grey": 295
+          },
           "reagents": [
             {
-              "itemId": 11176,
-              "name": "Dream Dust",
+              "itemId": 11175,
+              "name": "Greater Nether Essence",
               "count": 1,
-              "icon": "inv_enchant_dustdream",
-              "quality": 1
-            },
-            {
-              "itemId": 11174,
-              "name": "Lesser Nether Essence",
-              "count": 2,
-              "icon": "inv_enchant_essencenethersmall",
+              "icon": "inv_enchant_essencenetherlarge",
               "quality": 2
             }
           ]
         },
         {
           "type": "step",
-          "from": 277,
+          "from": 280,
           "to": 300,
           "bar": {
-            "iLeft": "92%",
-            "iWidth": "7.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "93.33%",
+            "iWidth": "6.67%"
           },
-          "itemId": 11224,
+          "itemId": 16217,
           "recipeName": "Enchant Shield - Greater Stamina",
-          "source": "Formula sold by Mythrin'dir (Alliance) or Daniel Bartlett (Horde)",
-          "advice": "",
-          "crafts": 27,
+          "source": "Formula sold by Daniel Bartlett (Undercity) or Mythrin'dir (Darnassus) — limited stock",
+          "advice": "Wowhead's fastest plan uses Enchant Gloves - Minor Haste here instead, but that needs 56 Large Radiant Shards.",
+          "crafts": 23,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 265,
+            "yellow": 285,
+            "green": 305,
+            "grey": 325
+          },
           "reagents": [
             {
               "itemId": 11176,
@@ -90069,14 +91194,24 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_enchant_dustdream",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Mythrin'dir (Alliance) / Daniel Bartlett (Horde)",
-            "location": "Craftsmen's Terrace, Darnassus /way 60.8, 19.6 (A) · Trade Quarter, Undercity /way 64.2, 37.8 (H)",
-            "cost": "1g 20s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Buy Formula: Enchant Cloak - Superior Defense (Unlimited supply from Lorelae Wintersong in Moonglade /way 48.6, 40.2, 8x Illusion Dust) for 285–300."
+          ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "✨",
+          "title": "Forever Change: Disenchanting Levels You to 20",
+          "text": "Every green or better item you disenchant is a guaranteed skill point up to 20; after that the chance falls off and stops at 60. Keep every dust and essence — the next steps use them. Your camp objects are the Enchanted Lute (skill 20) and the Arcane Salvager (skill 140, makes disenchanting more efficient)."
+        },
+        {
+          "icon": "🪄",
+          "title": "Rods Are Tools, Not Steps",
+          "text": "Each Runed Rod (Copper → Silver → Golden → Truesilver) is a one-time craft you keep in your bags. Buy the plain rod from a Blacksmith or the auction house before the step that needs it so you never stall mid-bracket."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -90462,7 +91597,7 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
@@ -90482,18 +91617,60 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
+              "itemId": 11176,
+              "name": "Dream Dust",
+              "icon": "inv_enchant_dustdream",
+              "quality": 1,
+              "count": 138
+            },
+            {
               "itemId": 10940,
               "name": "Strange Dust",
               "icon": "inv_enchant_duststrange",
               "quality": 1,
-              "count": 176
+              "count": 93
             },
             {
-              "itemId": 10998,
-              "name": "Lesser Astral Essence",
-              "icon": "inv_enchant_essenceastralsmall",
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 11175,
+              "name": "Greater Nether Essence",
+              "icon": "inv_enchant_essencenetherlarge",
               "quality": 2,
-              "count": 9
+              "count": 54
+            },
+            {
+              "itemId": 10938,
+              "name": "Lesser Magic Essence",
+              "icon": "inv_enchant_essencemagicsmall",
+              "quality": 2,
+              "count": 30
+            },
+            {
+              "itemId": 10978,
+              "name": "Small Glimmering Shard",
+              "icon": "inv_enchant_shardglimmeringsmall",
+              "quality": 3,
+              "count": 29
+            },
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "icon": "inv_enchant_dustvision",
+              "quality": 1,
+              "count": 27
+            },
+            {
+              "itemId": 11134,
+              "name": "Lesser Mystic Essence",
+              "icon": "inv_enchant_essencemysticalsmall",
+              "quality": 2,
+              "count": 26
             },
             {
               "itemId": 6338,
@@ -90503,25 +91680,11 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 1
             },
             {
-              "itemId": 10938,
-              "name": "Lesser Magic Essence",
-              "icon": "inv_enchant_essencemagicsmall",
-              "quality": 2,
-              "count": 4
-            },
-            {
               "itemId": 1210,
               "name": "Shadowgem",
               "icon": "inv_misc_gem_amethyst_01",
               "quality": 2,
               "count": 1
-            },
-            {
-              "itemId": 11083,
-              "name": "Soul Dust",
-              "icon": "inv_enchant_dustsoul",
-              "quality": 1,
-              "count": 74
             },
             {
               "itemId": 11128,
@@ -90545,13 +91708,6 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 1
             },
             {
-              "itemId": 11137,
-              "name": "Vision Dust",
-              "icon": "inv_enchant_dustvision",
-              "quality": 1,
-              "count": 38
-            },
-            {
               "itemId": 11144,
               "name": "Truesilver Rod",
               "icon": "inv_staff_11",
@@ -90571,46 +91727,6 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_enchant_essencemysticallarge",
               "quality": 2,
               "count": 1
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 247786,
-              "name": "Mote of Magic",
-              "icon": "inv_elemental_mote_mana",
-              "quality": 1,
-              "count": 32
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 11137,
-              "name": "Vision Dust",
-              "icon": "inv_enchant_dustvision",
-              "quality": 1,
-              "count": 68
-            },
-            {
-              "itemId": 11176,
-              "name": "Dream Dust",
-              "icon": "inv_enchant_dustdream",
-              "quality": 1,
-              "count": 182
-            },
-            {
-              "itemId": 11174,
-              "name": "Lesser Nether Essence",
-              "icon": "inv_enchant_essencenethersmall",
-              "quality": 2,
-              "count": 40
             }
           ]
         }
@@ -92497,7 +93613,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "\tParts \"Crafted by engineers.\" Sell Price: 2s 50c",
         "isNew": true,
-        "learn": 130,
+        "learn": 120,
         "yellow": 130,
         "green": 142,
         "grey": 155,
@@ -102060,8 +103176,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -102073,15 +103189,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 1,
           "to": 30,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "9.666666666666666%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "9.67%"
           },
           "itemId": 4357,
           "recipeName": "Rough Blasting Powder",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 33,
+          "crafts": 32,
+          "craftsSafe": 35,
+          "colors": {
+            "orange": 1,
+            "yellow": 20,
+            "green": 30,
+            "grey": 40
+          },
           "reagents": [
             {
               "itemId": 2835,
@@ -102095,17 +103217,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 30,
-          "to": 59,
+          "to": 51,
           "bar": {
-            "iLeft": "9.666666666666666%",
-            "iWidth": "9.666666666666666%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "10%",
+            "iWidth": "7%"
           },
           "itemId": 4359,
           "recipeName": "Handful of Copper Bolts",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 50,
+          "advice": "Buy a Blacksmith Hammer from a trade supplies vendor and keep it in your bags.",
+          "crafts": 22,
+          "craftsSafe": 24,
+          "colors": {
+            "orange": 30,
+            "yellow": 45,
+            "green": 52,
+            "grey": 60
+          },
           "reagents": [
             {
               "itemId": 2840,
@@ -102118,18 +103246,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 59,
+          "from": 51,
           "to": 75,
           "bar": {
-            "iLeft": "19.333333333333332%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "17%",
+            "iWidth": "8%"
           },
           "itemId": 4361,
           "recipeName": "Copper Tube",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 16,
+          "crafts": 24,
+          "craftsSafe": 24,
+          "colors": {
+            "orange": 50,
+            "yellow": 80,
+            "green": 95,
+            "grey": 110
+          },
           "reagents": [
             {
               "itemId": 2840,
@@ -102155,17 +103289,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 75,
-          "to": 95,
+          "to": 90,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "25%",
+            "iWidth": "5%"
           },
           "itemId": 4364,
           "recipeName": "Coarse Blasting Powder",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 40,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 16,
+          "craftsSafe": 18,
+          "colors": {
+            "orange": 75,
+            "yellow": 85,
+            "green": 90,
+            "grey": 95
+          },
           "reagents": [
             {
               "itemId": 2836,
@@ -102178,56 +103318,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 95,
-          "to": 106,
+          "from": 90,
+          "to": 123,
           "bar": {
-            "iLeft": "31.333333333333332%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4363,
-          "recipeName": "Copper Modulator",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 14,
-          "reagents": [
-            {
-              "itemId": 4359,
-              "name": "Handful of Copper Bolts",
-              "count": 2,
-              "icon": "inv_misc_gear_06",
-              "quality": 1
-            },
-            {
-              "itemId": 2840,
-              "name": "Copper Bar",
-              "count": 1,
-              "icon": "inv_ingot_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "count": 2,
-              "icon": "inv_fabric_linen_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 106,
-          "to": 111,
-          "bar": {
-            "iLeft": "35%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "30%",
+            "iWidth": "11%"
           },
           "itemId": 4404,
           "recipeName": "Silver Contact",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 5,
+          "advice": "Makes 5 per craft.",
+          "crafts": 36,
+          "craftsSafe": 40,
+          "colors": {
+            "orange": 90,
+            "yellow": 110,
+            "green": 125,
+            "grey": 140
+          },
           "reagents": [
             {
               "itemId": 2842,
@@ -102240,76 +103348,37 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 111,
-          "to": 120,
-          "bar": {
-            "iLeft": "36.666666666666664%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 6712,
-          "recipeName": "Practice Lock",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 10,
-          "reagents": [
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 1,
-              "icon": "inv_ingot_bronze",
-              "quality": 1
-            },
-            {
-              "itemId": 4359,
-              "name": "Handful of Copper Bolts",
-              "count": 2,
-              "icon": "inv_misc_gear_06",
-              "quality": 1
-            },
-            {
-              "itemId": 2880,
-              "name": "Weak Flux",
-              "count": 1,
-              "icon": "inv_misc_ammo_gunpowder_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 120,
+          "from": 123,
           "to": 125,
           "bar": {
-            "iLeft": "39.666666666666664%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "41%",
+            "iWidth": "0.67%"
           },
-          "itemId": 4370,
-          "recipeName": "Large Copper Bomb",
+          "itemId": 249432,
+          "recipeName": "Sandpaper",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 8,
+          "crafts": 2,
+          "craftsSafe": 2,
+          "colors": {
+            "orange": 120,
+            "yellow": 130,
+            "green": 142,
+            "grey": 155
+          },
           "reagents": [
             {
-              "itemId": 2840,
-              "name": "Copper Bar",
-              "count": 3,
-              "icon": "inv_ingot_02",
-              "quality": 1
+              "itemId": 249425,
+              "name": "Bauxite",
+              "count": 2,
+              "icon": "inv_ore_manticytenugget",
+              "quality": 2
             },
             {
-              "itemId": 4364,
-              "name": "Coarse Blasting Powder",
-              "count": 4,
-              "icon": "inv_misc_dust_02",
-              "quality": 1
-            },
-            {
-              "itemId": 4404,
-              "name": "Silver Contact",
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
               "count": 1,
-              "icon": "inv_ingot_04",
+              "icon": "inv_fabric_linen_02",
               "quality": 1
             }
           ]
@@ -102319,15 +103388,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 125,
           "to": 135,
           "bar": {
-            "iLeft": "41.333333333333336%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "41.67%",
+            "iWidth": "3.33%"
           },
           "itemId": 4377,
           "recipeName": "Heavy Blasting Powder",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 14,
+          "advice": "",
+          "crafts": 13,
+          "craftsSafe": 16,
+          "colors": {
+            "orange": 125,
+            "yellow": 125,
+            "green": 135,
+            "grey": 145
+          },
           "reagents": [
             {
               "itemId": 2838,
@@ -102341,17 +103416,90 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 135,
-          "to": 146,
+          "to": 140,
           "bar": {
-            "iLeft": "44.666666666666664%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "45%",
+            "iWidth": "1.67%"
+          },
+          "itemId": 249432,
+          "recipeName": "Sandpaper",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 7,
+          "craftsSafe": 9,
+          "colors": {
+            "orange": 120,
+            "yellow": 130,
+            "green": 142,
+            "grey": 155
+          },
+          "reagents": [
+            {
+              "itemId": 249425,
+              "name": "Bauxite",
+              "count": 2,
+              "icon": "inv_ore_manticytenugget",
+              "quality": 2
+            },
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 140,
+          "to": 140,
+          "bar": {
+            "iLeft": "46.67%",
+            "iWidth": "0.33%"
+          },
+          "itemId": 6219,
+          "recipeName": "Make a Arclight Spanner",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Most later schematics need it as a tool.",
+          "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 50,
+            "yellow": 70,
+            "green": 80,
+            "grey": 90
+          },
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 6,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 140,
+          "to": 145,
+          "bar": {
+            "iLeft": "46.67%",
+            "iWidth": "1.67%"
           },
           "itemId": 4375,
           "recipeName": "Whirring Bronze Gizmo",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 16,
+          "advice": "",
+          "crafts": 7,
+          "craftsSafe": 10,
+          "colors": {
+            "orange": 125,
+            "yellow": 125,
+            "green": 150,
+            "grey": 175
+          },
           "reagents": [
             {
               "itemId": 2841,
@@ -102371,18 +103519,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 146,
+          "from": 145,
           "to": 150,
           "bar": {
-            "iLeft": "48.333333333333336%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "48.33%",
+            "iWidth": "1.67%"
           },
           "itemId": 4382,
           "recipeName": "Bronze Framework",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 5,
+          "craftsSafe": 6,
+          "colors": {
+            "orange": 145,
+            "yellow": 145,
+            "green": 170,
+            "grey": 195
+          },
           "reagents": [
             {
               "itemId": 2841,
@@ -102415,93 +103569,90 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 150,
-          "to": 160,
+          "to": 170,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "50%",
+            "iWidth": "6.67%"
           },
-          "itemId": 6533,
-          "recipeName": "Aquadynamic Fish Attractor",
+          "itemId": 10558,
+          "recipeName": "Gold Power Core",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 14,
+          "advice": "Train Expert (skill 125, level 20) before you reach 150. Makes 3 per craft — keep them for Gyrochronatoms.",
+          "crafts": 27,
+          "craftsSafe": 31,
+          "colors": {
+            "orange": 150,
+            "yellow": 150,
+            "green": 170,
+            "grey": 190
+          },
           "reagents": [
             {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 2,
-              "icon": "inv_ingot_bronze",
+              "itemId": 3577,
+              "name": "Gold Bar",
+              "count": 1,
+              "icon": "inv_ingot_03",
+              "quality": 2
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 170,
+          "to": 175,
+          "bar": {
+            "iLeft": "56.67%",
+            "iWidth": "1.67%"
+          },
+          "itemId": 4389,
+          "recipeName": "Gyrochronatom",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 5,
+          "craftsSafe": 6,
+          "colors": {
+            "orange": 170,
+            "yellow": 170,
+            "green": 190,
+            "grey": 210
+          },
+          "reagents": [
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "count": 1,
+              "icon": "inv_ingot_iron",
               "quality": 1
             },
             {
-              "itemId": 6530,
-              "name": "Nightcrawlers",
+              "itemId": 10558,
+              "name": "Gold Power Core",
               "count": 1,
-              "icon": "inv_misc_monstertail_03",
-              "quality": 1
-            },
-            {
-              "itemId": 4364,
-              "name": "Coarse Blasting Powder",
-              "count": 1,
-              "icon": "inv_misc_dust_02",
+              "icon": "inv_battery_02",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 160,
-          "to": 175,
-          "bar": {
-            "iLeft": "53%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4386,
-          "recipeName": "Ice Deflector",
-          "source": "Schematic sold by Rizz Loosebolt (Alterac Mountains)",
-          "advice": "",
-          "crafts": 15,
-          "reagents": [
-            {
-              "itemId": 4375,
-              "name": "Whirring Bronze Gizmo",
-              "count": 1,
-              "icon": "inv_gizmo_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3829,
-              "name": "Frost Oil",
-              "count": 1,
-              "icon": "inv_potion_20",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Rizz Loosebolt",
-            "location": "Growless Cave, Alterac Mountains /way 47.4, 35.2",
-            "cost": "18s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Explosive Sheep (150–175, 2x Bronze Framework + 1x Whirring Bronze Gizmo + 2x Heavy Blasting Powder + 2x Wool Cloth) from the trainer."
-        },
-        {
-          "type": "step",
           "from": 175,
-          "to": 195,
+          "to": 185,
           "bar": {
-            "iLeft": "58%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "58.33%",
+            "iWidth": "3.33%"
           },
           "itemId": 10505,
           "recipeName": "Solid Blasting Powder",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 72,
+          "advice": "",
+          "crafts": 13,
+          "craftsSafe": 16,
+          "colors": {
+            "orange": 175,
+            "yellow": 175,
+            "green": 185,
+            "grey": 195
+          },
           "reagents": [
             {
               "itemId": 7912,
@@ -102514,18 +103665,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 195,
-          "to": 200,
+          "from": 185,
+          "to": 195,
           "bar": {
-            "iLeft": "64.66666666666667%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "61.67%",
+            "iWidth": "3.33%"
           },
-          "itemId": 4390,
-          "recipeName": "Iron Grenade",
+          "itemId": 4389,
+          "recipeName": "Gyrochronatom",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 12,
+          "crafts": 19,
+          "craftsSafe": 26,
+          "colors": {
+            "orange": 170,
+            "yellow": 170,
+            "green": 190,
+            "grey": 210
+          },
           "reagents": [
             {
               "itemId": 3575,
@@ -102535,117 +103692,40 @@ window.WOW_PROFESSIONS_DATA = {
               "quality": 1
             },
             {
-              "itemId": 4377,
-              "name": "Heavy Blasting Powder",
+              "itemId": 10558,
+              "name": "Gold Power Core",
               "count": 1,
-              "icon": "inv_misc_dust_06",
-              "quality": 1
-            },
-            {
-              "itemId": 4306,
-              "name": "Silk Cloth",
-              "count": 1,
-              "icon": "inv_fabric_silk_01",
+              "icon": "inv_battery_02",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 200,
-          "to": 205,
+          "from": 195,
+          "to": 215,
           "bar": {
-            "iLeft": "66.33333333333333%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "65%",
+            "iWidth": "6.67%"
           },
-          "itemId": 10713,
-          "recipeName": "Plans: Inlaid Mithril Cylinder",
+          "itemId": 10559,
+          "recipeName": "Mithril Tube",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 5,
-          "reagents": [
-            {
-              "itemId": 10648,
-              "name": "Blank Parchment",
-              "count": 1,
-              "icon": "inv_misc_note_02",
-              "quality": 1
-            },
-            {
-              "itemId": 10647,
-              "name": "Engineer's Ink",
-              "count": 1,
-              "icon": "inv_potion_65",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 205,
-          "to": 210,
-          "bar": {
-            "iLeft": "68%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+          "crafts": 27,
+          "craftsSafe": 32,
+          "colors": {
+            "orange": 195,
+            "yellow": 195,
+            "green": 215,
+            "grey": 235
           },
-          "itemId": 11590,
-          "recipeName": "Mechanical Repair Kit",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 7,
           "reagents": [
             {
               "itemId": 3860,
               "name": "Mithril Bar",
-              "count": 1,
+              "count": 3,
               "icon": "inv_ingot_06",
-              "quality": 1
-            },
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "count": 1,
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1
-            },
-            {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
-              "count": 1,
-              "icon": "inv_misc_powder_black",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 210,
-          "to": 225,
-          "bar": {
-            "iLeft": "69.66666666666667%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 10512,
-          "recipeName": "Hi-Impact Mithril Slugs",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 19,
-          "reagents": [
-            {
-              "itemId": 3860,
-              "name": "Mithril Bar",
-              "count": 1,
-              "icon": "inv_ingot_06",
-              "quality": 1
-            },
-            {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
-              "count": 1,
-              "icon": "inv_misc_powder_black",
               "quality": 1
             }
           ]
@@ -102657,31 +103737,60 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 225,
+          "from": 215,
           "to": 245,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "71.67%",
+            "iWidth": "10%"
           },
-          "itemId": 10512,
-          "recipeName": "Hi-Impact Mithril Slugs",
+          "itemId": 10561,
+          "recipeName": "Mithril Casing",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 62,
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225.",
+          "crafts": 53,
+          "craftsSafe": 63,
+          "colors": {
+            "orange": 215,
+            "yellow": 215,
+            "green": 235,
+            "grey": 255
+          },
           "reagents": [
             {
               "itemId": 3860,
               "name": "Mithril Bar",
-              "count": 1,
+              "count": 3,
               "icon": "inv_ingot_06",
               "quality": 1
-            },
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 245,
+          "to": 245,
+          "bar": {
+            "iLeft": "81.67%",
+            "iWidth": "0.33%"
+          },
+          "itemId": 10498,
+          "recipeName": "Make a Gyromatic Micro-Adjustor",
+          "source": "Learned from the trainer · tool, keep it in your bags",
+          "advice": "Needed for lenses, goggles and scopes.",
+          "crafts": 1,
+          "craftsSafe": 1,
+          "colors": {
+            "orange": 175,
+            "yellow": 175,
+            "green": 195,
+            "grey": 215
+          },
+          "reagents": [
             {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
-              "count": 1,
-              "icon": "inv_misc_powder_black",
+              "itemId": 3859,
+              "name": "Steel Bar",
+              "count": 4,
+              "icon": "inv_ingot_steel",
               "quality": 1
             }
           ]
@@ -102691,15 +103800,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 245,
           "to": 250,
           "bar": {
-            "iLeft": "81.33333333333333%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "81.67%",
+            "iWidth": "1.67%"
           },
           "itemId": 10513,
           "recipeName": "Mithril Gyro-Shot",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 6,
+          "crafts": 5,
+          "craftsSafe": 6,
+          "colors": {
+            "orange": 245,
+            "yellow": 245,
+            "green": 265,
+            "grey": 285
+          },
           "reagents": [
             {
               "itemId": 3860,
@@ -102722,15 +103837,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 250,
           "to": 258,
           "bar": {
-            "iLeft": "83%",
-            "iWidth": "2.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "83.33%",
+            "iWidth": "2.67%"
           },
           "itemId": 15992,
           "recipeName": "Dense Blasting Powder",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 15,
+          "crafts": 13,
+          "craftsSafe": 19,
+          "colors": {
+            "orange": 250,
+            "yellow": 250,
+            "green": 255,
+            "grey": 260
+          },
           "reagents": [
             {
               "itemId": 12365,
@@ -102744,48 +103865,81 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 258,
-          "to": 262,
+          "to": 260,
           "bar": {
-            "iLeft": "85.66666666666667%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "86%",
+            "iWidth": "0.67%"
           },
-          "itemId": 10513,
-          "recipeName": "Mithril Gyro-Shot",
+          "itemId": 10504,
+          "recipeName": "Green Lens",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 7,
+          "crafts": 2,
+          "craftsSafe": 2,
+          "colors": {
+            "orange": 245,
+            "yellow": 265,
+            "green": 275,
+            "grey": 285
+          },
           "reagents": [
             {
-              "itemId": 3860,
-              "name": "Mithril Bar",
-              "count": 2,
-              "icon": "inv_ingot_06",
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 8,
+              "icon": "inv_misc_leatherscrap_08",
               "quality": 1
             },
             {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
+              "itemId": 1529,
+              "name": "Jade",
+              "count": 3,
+              "icon": "inv_misc_gem_stone_01",
+              "quality": 2
+            },
+            {
+              "itemId": 7909,
+              "name": "Aquamarine",
+              "count": 3,
+              "icon": "inv_misc_gem_crystal_02",
+              "quality": 2
+            },
+            {
+              "itemId": 10286,
+              "name": "Heart of the Wild",
               "count": 2,
-              "icon": "inv_misc_powder_black",
+              "icon": "inv_misc_herb_08",
+              "quality": 1
+            },
+            {
+              "itemId": 8153,
+              "name": "Wildvine",
+              "count": 2,
+              "icon": "inv_misc_herb_03",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 262,
-          "to": 288,
+          "from": 260,
+          "to": 290,
           "bar": {
-            "iLeft": "87%",
-            "iWidth": "8.666666666666666%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "86.67%",
+            "iWidth": "10%"
           },
           "itemId": 15994,
           "recipeName": "Thorium Widget",
-          "source": "Schematic sold by Gearcutter Cogspinner (Alliance) or Sovik (Horde)",
+          "source": "Schematic sold by Sovik (Orgrimmar) or Gearcutter Cogspinner (Ironforge) — limited stock",
           "advice": "",
-          "crafts": 28,
+          "crafts": 33,
+          "craftsSafe": 36,
+          "colors": {
+            "orange": 260,
+            "yellow": 280,
+            "green": 290,
+            "grey": 300
+          },
           "reagents": [
             {
               "itemId": 12359,
@@ -102801,29 +103955,28 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_fabric_purplefire_01",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Gearcutter Cogspinner (Alliance) / Sovik (Horde)",
-            "location": "Tinker Town, Ironforge /way 68.0, 44.0 (A) · Valley of Honor, Orgrimmar /way 75.6, 25.6 (H)",
-            "cost": "1g 60s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Gyrofreeze Ice Reflector (260–280) or Thorium Rifle / Thorium Shells from the Artisan trainer."
+          ]
         },
         {
           "type": "step",
-          "from": 288,
+          "from": 290,
           "to": 300,
           "bar": {
-            "iLeft": "95.66666666666667%",
-            "iWidth": "4%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "96.67%",
+            "iWidth": "3.33%"
           },
           "itemId": 16000,
           "recipeName": "Thorium Tube",
-          "source": "Schematic sold by Xizzer Fizzbolt (Winterspring)",
-          "advice": "",
-          "crafts": 13,
+          "source": "Schematic sold by Kor'gar (Riverglades) or Xizzer Fizzbolt (Winterspring)",
+          "advice": "Wowhead's fastest plan uses Rose Colored Goggles (40 Star Ruby) and the Delicate Arcanite Converter (15 Arcanite Bar) instead — skipped here for cost.",
+          "crafts": 10,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 275,
+            "yellow": 295,
+            "green": 305,
+            "grey": 315
+          },
           "reagents": [
             {
               "itemId": 12359,
@@ -102832,26 +103985,24 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_ingot_07",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Xizzer Fizzbolt",
-            "location": "Everlook, Winterspring /way 60.8, 38.6",
-            "cost": "1g 60s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Thorium Shells (285–300, 2x Thorium Bar + 1x Dense Blasting Powder) or Hi-Explosive Bomb from the trainer."
+          ]
         }
       ],
       "guideCallouts": [
         {
-          "icon": "⚙️",
-          "title": "Desolace Mobility: Hoof-Shaped Foot Pedal (/way 35.6, 92.0) & Centaur War",
-          "text": "At Engineering 140, craft the Hoof-Shaped Foot Pedal (item=269902, Schematic found in Desolace at /way 35.6, 92.0). It transforms you into a centaur for 20 min, granting +30% movement speed while in Desolace that persists through combat! Engineers can also build the Centaur Banner Deployment Device (item=269900) to plant clan banners during the Desolace Centaur Clan War."
+          "icon": "🦄",
+          "title": "Desolace Mobility: Hoof-Shaped Foot Pedal & Centaur War",
+          "text": "The Hoof-Shaped Foot Pedal (item 269902) turns you into a centaur for 20 minutes or until combat; inside Desolace you also run 30% faster and the form persists through combat. The Centaur Banner Deployment Device (item 269900, toy) plants your chosen clan banner during the Desolace centaur war."
         },
         {
-          "icon": "🚀",
-          "title": "Forever Engineering Tech: SAF-T Nitro Boosts & Field Devices",
-          "text": "Engineers gain elite survival gadgets: SAF-T Nitro Boosts (item=260828, up to 160% sprint burst), Minor Recombobulator (polymorph dispel with instant health/mana recovery), and campsite deployables like Blueprint: Repair Bot to keep party runs going without resetting dungeons."
+          "icon": "🤖",
+          "title": "Camp Objects & Forever Gadgets",
+          "text": "Reagent Bot (skill 20) and Repair Bot (skill 140) let everyone at your camp buy reagents and repair. SAF-T Nitro Boosts (item 260828) are a cloth belt with 3 charges of a 160% speed burst. Gnomish or Goblin specialisation unlocks at skill 200."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -103138,7 +104289,7 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
@@ -103149,28 +104300,7 @@ window.WOW_PROFESSIONS_DATA = {
               "name": "Weak Flux",
               "icon": "inv_misc_ammo_gunpowder_02",
               "quality": 1,
-              "count": 26
-            },
-            {
-              "itemId": 6530,
-              "name": "Nightcrawlers",
-              "icon": "inv_misc_monstertail_03",
-              "quality": 1,
-              "count": 14
-            },
-            {
-              "itemId": 10648,
-              "name": "Blank Parchment",
-              "icon": "inv_misc_note_02",
-              "quality": 1,
-              "count": 5
-            },
-            {
-              "itemId": 10647,
-              "name": "Engineer's Ink",
-              "icon": "inv_potion_65",
-              "quality": 1,
-              "count": 5
+              "count": 24
             }
           ]
         },
@@ -103179,60 +104309,137 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 2835,
-              "name": "Rough Stone",
-              "icon": "inv_stone_06",
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
               "quality": 1,
-              "count": 33
+              "count": 250
+            },
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "icon": "inv_ingot_07",
+              "quality": 1,
+              "count": 159
             },
             {
               "itemId": 2840,
               "name": "Copper Bar",
               "icon": "inv_ingot_02",
               "quality": 1,
-              "count": 120
-            },
-            {
-              "itemId": 2836,
-              "name": "Coarse Stone",
-              "icon": "inv_stone_09",
-              "quality": 1,
-              "count": 46
-            },
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "icon": "inv_fabric_linen_01",
-              "quality": 1,
-              "count": 28
+              "count": 76
             },
             {
               "itemId": 2842,
               "name": "Silver Bar",
               "icon": "inv_ingot_01",
               "quality": 2,
-              "count": 5
+              "count": 36
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 33
+            },
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 32
+            },
+            {
+              "itemId": 3577,
+              "name": "Gold Bar",
+              "icon": "inv_ingot_03",
+              "quality": 2,
+              "count": 27
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1,
+              "count": 26
             },
             {
               "itemId": 2841,
               "name": "Bronze Bar",
               "icon": "inv_ingot_bronze",
               "quality": 1,
-              "count": 80
+              "count": 24
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_iron",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 249425,
+              "name": "Bauxite",
+              "icon": "inv_ore_manticytenugget",
+              "quality": 2,
+              "count": 18
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09",
+              "quality": 1,
+              "count": 16
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1,
+              "count": 16
             },
             {
               "itemId": 2838,
               "name": "Heavy Stone",
               "icon": "inv_stone_12",
               "quality": 1,
-              "count": 14
+              "count": 13
             },
             {
               "itemId": 2592,
               "name": "Wool Cloth",
               "icon": "inv_fabric_wool_01",
               "quality": 1,
-              "count": 21
+              "count": 12
+            },
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "icon": "inv_fabric_linen_02",
+              "quality": 1,
+              "count": 9
+            },
+            {
+              "itemId": 1529,
+              "name": "Jade",
+              "icon": "inv_misc_gem_stone_01",
+              "quality": 2,
+              "count": 6
+            },
+            {
+              "itemId": 7909,
+              "name": "Aquamarine",
+              "icon": "inv_misc_gem_crystal_02",
+              "quality": 2,
+              "count": 6
             },
             {
               "itemId": 2319,
@@ -103242,148 +104449,25 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 5
             },
             {
-              "itemId": 3829,
-              "name": "Frost Oil",
-              "icon": "inv_potion_20",
+              "itemId": 3859,
+              "name": "Steel Bar",
+              "icon": "inv_ingot_steel",
               "quality": 1,
-              "count": 15
+              "count": 4
             },
             {
-              "itemId": 7912,
-              "name": "Solid Stone",
-              "icon": "inv_stone_10",
+              "itemId": 10286,
+              "name": "Heart of the Wild",
+              "icon": "inv_misc_herb_08",
               "quality": 1,
-              "count": 144
+              "count": 4
             },
             {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "icon": "inv_ingot_iron",
+              "itemId": 8153,
+              "name": "Wildvine",
+              "icon": "inv_misc_herb_03",
               "quality": 1,
-              "count": 12
-            },
-            {
-              "itemId": 4306,
-              "name": "Silk Cloth",
-              "icon": "inv_fabric_silk_01",
-              "quality": 1,
-              "count": 12
-            },
-            {
-              "itemId": 3860,
-              "name": "Mithril Bar",
-              "icon": "inv_ingot_06",
-              "quality": 1,
-              "count": 26
-            },
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1,
-              "count": 7
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 4359,
-              "name": "Handful of Copper Bolts",
-              "icon": "inv_misc_gear_06",
-              "quality": 1,
-              "count": 48
-            },
-            {
-              "itemId": 4364,
-              "name": "Coarse Blasting Powder",
-              "icon": "inv_misc_dust_02",
-              "quality": 1,
-              "count": 46
-            },
-            {
-              "itemId": 4404,
-              "name": "Silver Contact",
-              "icon": "inv_ingot_04",
-              "quality": 1,
-              "count": 8
-            },
-            {
-              "itemId": 4375,
-              "name": "Whirring Bronze Gizmo",
-              "icon": "inv_gizmo_02",
-              "quality": 1,
-              "count": 15
-            },
-            {
-              "itemId": 4377,
-              "name": "Heavy Blasting Powder",
-              "icon": "inv_misc_dust_06",
-              "quality": 1,
-              "count": 12
-            },
-            {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
-              "icon": "inv_misc_powder_black",
-              "quality": 1,
-              "count": 26
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 3860,
-              "name": "Mithril Bar",
-              "icon": "inv_ingot_06",
-              "quality": 1,
-              "count": 88
-            },
-            {
-              "itemId": 7912,
-              "name": "Solid Stone",
-              "icon": "inv_stone_10",
-              "quality": 1,
-              "count": 176
-            },
-            {
-              "itemId": 12365,
-              "name": "Dense Stone",
-              "icon": "inv_misc_stonetablet_07",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 12359,
-              "name": "Thorium Bar",
-              "icon": "inv_ingot_07",
-              "quality": 1,
-              "count": 162
-            },
-            {
-              "itemId": 14047,
-              "name": "Runecloth",
-              "icon": "inv_fabric_purplefire_01",
-              "quality": 1,
-              "count": 28
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 10505,
-              "name": "Solid Blasting Powder",
-              "icon": "inv_misc_powder_black",
-              "quality": 1,
-              "count": 88
+              "count": 4
             }
           ]
         }
@@ -129755,8 +130839,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -129766,41 +130850,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 36,
+          "to": 40,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "11.666666666666666%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 2318,
-          "recipeName": "Light Leather",
-          "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 50,
-          "reagents": [
-            {
-              "itemId": 2934,
-              "name": "Ruined Leather Scraps",
-              "count": 3,
-              "icon": "inv_misc_pelt_bear_ruin_05",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 36,
-          "to": 45,
-          "bar": {
-            "iLeft": "11.666666666666666%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "13%"
           },
           "itemId": 2304,
           "recipeName": "Light Armor Kit",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 14,
+          "crafts": 41,
+          "craftsSafe": 43,
+          "colors": {
+            "orange": 1,
+            "yellow": 30,
+            "green": 45,
+            "grey": 60
+          },
           "reagents": [
             {
               "itemId": 2318,
@@ -129813,49 +130879,61 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 45,
-          "to": 49,
+          "from": 40,
+          "to": 59,
           "bar": {
-            "iLeft": "14.666666666666666%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "13.33%",
+            "iWidth": "6.33%"
           },
-          "itemId": 2302,
-          "recipeName": "Handstitched Leather Boots",
+          "itemId": 4231,
+          "recipeName": "Cured Light Hide",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 6,
+          "advice": "Salt is sold by trade supplies vendors.",
+          "crafts": 21,
+          "craftsSafe": 24,
+          "colors": {
+            "orange": 30,
+            "yellow": 50,
+            "green": 60,
+            "grey": 70
+          },
           "reagents": [
             {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "count": 2,
-              "icon": "inv_misc_leatherscrap_03",
+              "itemId": 783,
+              "name": "Light Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_wolf_ruin_02",
               "quality": 1
             },
             {
-              "itemId": 2320,
-              "name": "Coarse Thread",
+              "itemId": 4289,
+              "name": "Salt",
               "count": 1,
-              "icon": "inv_fabric_linen_03",
+              "icon": "inv_misc_dust_02",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 49,
+          "from": 59,
           "to": 75,
           "bar": {
-            "iLeft": "16%",
-            "iWidth": "8.666666666666666%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "19.67%",
+            "iWidth": "5.33%"
           },
           "itemId": 4239,
           "recipeName": "Embossed Leather Gloves",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 27,
+          "crafts": 16,
+          "craftsSafe": 17,
+          "colors": {
+            "orange": 40,
+            "yellow": 70,
+            "green": 85,
+            "grey": 100
+          },
           "reagents": [
             {
               "itemId": 2318,
@@ -129881,72 +130959,104 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 75,
-          "to": 85,
+          "to": 98,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "25%",
+            "iWidth": "7.67%"
           },
-          "itemId": 2319,
-          "recipeName": "Medium Leather",
+          "itemId": 4233,
+          "recipeName": "Cured Medium Hide",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 30,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 26,
+          "craftsSafe": 29,
+          "colors": {
+            "orange": 75,
+            "yellow": 90,
+            "green": 97,
+            "grey": 105
+          },
           "reagents": [
             {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "count": 4,
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 85,
-          "to": 106,
-          "bar": {
-            "iLeft": "28%",
-            "iWidth": "7%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4246,
-          "recipeName": "Fine Leather Belt",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 35,
-          "reagents": [
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "count": 6,
-              "icon": "inv_misc_leatherscrap_03",
+              "itemId": 4232,
+              "name": "Medium Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_boar_ruin_02",
               "quality": 1
             },
             {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "count": 2,
-              "icon": "inv_fabric_linen_03",
+              "itemId": 4289,
+              "name": "Salt",
+              "count": 1,
+              "icon": "inv_misc_dust_02",
               "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 106,
+          "from": 98,
+          "to": 105,
+          "bar": {
+            "iLeft": "32.67%",
+            "iWidth": "2.33%"
+          },
+          "itemId": 2315,
+          "recipeName": "Gray Leather Boots",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 7,
+          "craftsSafe": 8,
+          "colors": {
+            "orange": 75,
+            "yellow": 100,
+            "green": 112,
+            "grey": 125
+          },
+          "reagents": [
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4340,
+              "name": "Gray Dye",
+              "count": 1,
+              "icon": "inv_drink_10",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 105,
           "to": 125,
           "bar": {
             "iLeft": "35%",
-            "iWidth": "6.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iWidth": "6.67%"
           },
           "itemId": 7285,
           "recipeName": "Nimble Leather Gloves",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Elixir of Minor Agility comes from Alchemists or the auction house. At 125, craft your Tanning Rack camp object once — you need it at 225.",
           "crafts": 20,
+          "craftsSafe": 21,
+          "colors": {
+            "orange": 95,
+            "yellow": 120,
+            "green": 132,
+            "grey": 145
+          },
           "reagents": [
             {
               "itemId": 2457,
@@ -129974,17 +131084,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 125,
-          "to": 145,
+          "to": 139,
           "bar": {
-            "iLeft": "41.333333333333336%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "41.67%",
+            "iWidth": "4.67%"
           },
           "itemId": 4236,
           "recipeName": "Cured Heavy Hide",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 40,
+          "advice": "",
+          "crafts": 14,
+          "craftsSafe": 16,
+          "colors": {
+            "orange": 125,
+            "yellow": 135,
+            "green": 140,
+            "grey": 145
+          },
           "reagents": [
             {
               "itemId": 4235,
@@ -130003,63 +131119,31 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 145,
-          "to": 150,
-          "bar": {
-            "iLeft": "48%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4247,
-          "recipeName": "Hillman's Leather Gloves",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 6,
-          "reagents": [
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "count": 14,
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1
-            },
-            {
-              "itemId": 2321,
-              "name": "Fine Thread",
-              "count": 4,
-              "icon": "inv_fabric_wool_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Expert",
           "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Telonis in Darnassus (/way 64.4, 21.6, A) or Una in Thunder Bluff (/way 41.8, 42.6, H)."
         },
         {
           "type": "step",
-          "from": 150,
-          "to": 159,
+          "from": 139,
+          "to": 154,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "46.33%",
+            "iWidth": "5%"
           },
-          "itemId": 4257,
-          "recipeName": "Green Leather Belt",
+          "itemId": 4265,
+          "recipeName": "Heavy Armor Kit",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 10,
+          "advice": "Train Expert (skill 125, level 20) before you reach 150.",
+          "crafts": 17,
+          "craftsSafe": 20,
+          "colors": {
+            "orange": 125,
+            "yellow": 145,
+            "green": 155,
+            "grey": 165
+          },
           "reagents": [
-            {
-              "itemId": 4236,
-              "name": "Cured Heavy Hide",
-              "count": 1,
-              "icon": "inv_misc_pelt_wolf_02",
-              "quality": 1
-            },
             {
               "itemId": 4234,
               "name": "Heavy Leather",
@@ -130073,83 +131157,37 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 1,
               "icon": "inv_fabric_wool_02",
               "quality": 1
-            },
-            {
-              "itemId": 2605,
-              "name": "Green Dye",
-              "count": 1,
-              "icon": "inv_potion_12",
-              "quality": 1
-            },
-            {
-              "itemId": 7071,
-              "name": "Iron Buckle",
-              "count": 1,
-              "icon": "inv_misc_armorkit_12",
-              "quality": 1
             }
           ]
         },
         {
           "type": "step",
-          "from": 159,
-          "to": 165,
+          "from": 154,
+          "to": 164,
           "bar": {
-            "iLeft": "52.666666666666664%",
-            "iWidth": "2%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "51.33%",
+            "iWidth": "3.33%"
           },
-          "itemId": 4259,
-          "recipeName": "Green Leather Bracers",
-          "source": "Learned from the trainer",
+          "itemId": 4456,
+          "recipeName": "Raptor Hide Belt",
+          "source": "Pattern sold by Androd Fadran (Arathi Highlands) — limited stock",
           "advice": "",
-          "crafts": 6,
+          "crafts": 10,
+          "craftsSafe": 11,
+          "colors": {
+            "orange": 140,
+            "yellow": 160,
+            "green": 170,
+            "grey": 180
+          },
           "reagents": [
             {
-              "itemId": 4236,
-              "name": "Cured Heavy Hide",
-              "count": 2,
-              "icon": "inv_misc_pelt_wolf_02",
+              "itemId": 4461,
+              "name": "Raptor Hide",
+              "count": 4,
+              "icon": "inv_misc_monsterscales_01",
               "quality": 1
             },
-            {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "count": 6,
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1
-            },
-            {
-              "itemId": 2605,
-              "name": "Green Dye",
-              "count": 1,
-              "icon": "inv_potion_12",
-              "quality": 1
-            },
-            {
-              "itemId": 2321,
-              "name": "Fine Thread",
-              "count": 1,
-              "icon": "inv_fabric_wool_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 165,
-          "to": 197,
-          "bar": {
-            "iLeft": "54.666666666666664%",
-            "iWidth": "10.666666666666666%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 5966,
-          "recipeName": "Guardian Gloves",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 38,
-          "reagents": [
             {
               "itemId": 4234,
               "name": "Heavy Leather",
@@ -130158,10 +131196,91 @@ window.WOW_PROFESSIONS_DATA = {
               "quality": 1
             },
             {
-              "itemId": 4236,
-              "name": "Cured Heavy Hide",
-              "count": 1,
-              "icon": "inv_misc_pelt_wolf_02",
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 164,
+          "to": 175,
+          "bar": {
+            "iLeft": "54.67%",
+            "iWidth": "3.67%"
+          },
+          "itemId": 7377,
+          "recipeName": "Frost Leather Cloak",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 11,
+          "craftsSafe": 11,
+          "colors": {
+            "orange": 155,
+            "yellow": 175,
+            "green": 185,
+            "grey": 195
+          },
+          "reagents": [
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "count": 6,
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 7067,
+              "name": "Elemental Earth",
+              "count": 2,
+              "icon": "inv_ore_iron_01",
+              "quality": 1
+            },
+            {
+              "itemId": 7070,
+              "name": "Elemental Water",
+              "count": 2,
+              "icon": "inv_potion_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 175,
+          "to": 200,
+          "bar": {
+            "iLeft": "58.33%",
+            "iWidth": "8.33%"
+          },
+          "itemId": 8173,
+          "recipeName": "Thick Armor Kit",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 25,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 175,
+            "yellow": 195,
+            "green": 205,
+            "grey": 215
+          },
+          "reagents": [
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 5,
+              "icon": "inv_misc_leatherscrap_08",
               "quality": 1
             },
             {
@@ -130175,18 +131294,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 197,
-          "to": 213,
+          "from": 200,
+          "to": 211,
           "bar": {
-            "iLeft": "65.33333333333333%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "66.67%",
+            "iWidth": "3.67%"
           },
           "itemId": 8176,
           "recipeName": "Nightscape Headband",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 24,
+          "crafts": 15,
+          "craftsSafe": 19,
+          "colors": {
+            "orange": 180,
+            "yellow": 200,
+            "green": 210,
+            "grey": 220
+          },
           "reagents": [
             {
               "itemId": 4304,
@@ -130206,44 +131331,36 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 213,
+          "from": 211,
           "to": 225,
           "bar": {
-            "iLeft": "70.66666666666667%",
-            "iWidth": "4%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "70.33%",
+            "iWidth": "4.67%"
           },
-          "itemId": 8218,
-          "recipeName": "Thick Leather Ammo Pouch",
+          "itemId": 8197,
+          "recipeName": "Nightscape Boots",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 13,
+          "crafts": 14,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 210,
+            "yellow": 230,
+            "green": 240,
+            "grey": 250
+          },
           "reagents": [
             {
               "itemId": 4304,
               "name": "Thick Leather",
-              "count": 10,
+              "count": 16,
               "icon": "inv_misc_leatherscrap_08",
               "quality": 1
             },
             {
-              "itemId": 8172,
-              "name": "Cured Thick Hide",
-              "count": 1,
-              "icon": "inv_misc_pelt_bear_01",
-              "quality": 1
-            },
-            {
-              "itemId": 8951,
-              "name": "Elixir of Defense",
-              "count": 1,
-              "icon": "inv_potion_65",
-              "quality": 1
-            },
-            {
-              "itemId": 4291,
-              "name": "Silken Thread",
-              "count": 6,
+              "itemId": 8343,
+              "name": "Heavy Silken Thread",
+              "count": 2,
               "icon": "inv_fabric_silk_02",
               "quality": 1
             }
@@ -130257,17 +131374,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 225,
-          "to": 233,
+          "to": 232,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "2.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "75%",
+            "iWidth": "2.33%"
           },
           "itemId": 15407,
           "recipeName": "Cured Rugged Hide",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 15,
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225. Makes 2 per craft and needs a Tanning Rack nearby — keep the extras for Heavy Scorpid Helms.",
+          "crafts": 10,
+          "craftsSafe": 15,
+          "colors": {
+            "orange": 225,
+            "yellow": 225,
+            "green": 230,
+            "grey": 235
+          },
           "reagents": [
             {
               "itemId": 8171,
@@ -130287,18 +131410,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 233,
-          "to": 236,
+          "from": 232,
+          "to": 235,
           "bar": {
-            "iLeft": "77.33333333333333%",
-            "iWidth": "1%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "77.33%",
+            "iWidth": "1%"
           },
           "itemId": 15564,
           "recipeName": "Rugged Armor Kit",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 6,
+          "crafts": 4,
+          "craftsSafe": 7,
+          "colors": {
+            "orange": 225,
+            "yellow": 225,
+            "green": 235,
+            "grey": 245
+          },
           "reagents": [
             {
               "itemId": 8170,
@@ -130311,18 +131440,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 236,
-          "to": 258,
+          "from": 235,
+          "to": 267,
           "bar": {
-            "iLeft": "78.33333333333333%",
-            "iWidth": "7.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "78.33%",
+            "iWidth": "10.67%"
           },
           "itemId": 15083,
           "recipeName": "Wicked Leather Gauntlets",
-          "source": "Pattern sold by Leonard Porter (Alliance) or Werg Thickblade (Horde)",
+          "source": "Pattern sold by Werg Thickblade (Tirisfal Glades) or Leonard Porter (Western Plaguelands) — limited stock",
           "advice": "",
-          "crafts": 23,
+          "crafts": 37,
+          "craftsSafe": 42,
+          "colors": {
+            "orange": 235,
+            "yellow": 255,
+            "green": 265,
+            "grey": 275
+          },
           "reagents": [
             {
               "itemId": 8170,
@@ -130345,42 +131480,41 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Leonard Porter (Alliance) / Werg Thickblade (Horde)",
-            "location": "Chillwind Camp, Western Plaguelands /way 43.0, 84.4 (A) · The Bulwark, Tirisfal Glades /way 83.2, 69.6 (H)",
-            "cost": "1g 60s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Nightscape Boots (235–255, 16x Thick Leather + 2x Heavy Silken Thread) learned directly from the Artisan trainer."
+          ]
         },
         {
           "type": "step",
-          "from": 258,
-          "to": 280,
+          "from": 267,
+          "to": 288,
           "bar": {
-            "iLeft": "85.66666666666667%",
-            "iWidth": "7.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "89%",
+            "iWidth": "7%"
           },
-          "itemId": 15071,
-          "recipeName": "Frostsaber Boots",
-          "source": "Pattern sold by Qia (Winterspring)",
+          "itemId": 15094,
+          "recipeName": "Runic Leather Headband",
+          "source": "Pattern sold by Jase Farlane (Eastern Plaguelands) — limited stock",
           "advice": "",
-          "crafts": 26,
+          "crafts": 21,
+          "craftsSafe": 22,
+          "colors": {
+            "orange": 265,
+            "yellow": 285,
+            "green": 295,
+            "grey": 305
+          },
           "reagents": [
             {
               "itemId": 8170,
               "name": "Rugged Leather",
-              "count": 4,
+              "count": 14,
               "icon": "inv_misc_leatherscrap_02",
               "quality": 1
             },
             {
-              "itemId": 15422,
-              "name": "Frostsaber Leather",
-              "count": 6,
-              "icon": "inv_misc_pelt_06",
+              "itemId": 14047,
+              "name": "Runecloth",
+              "count": 10,
+              "icon": "inv_fabric_purplefire_01",
               "quality": 1
             },
             {
@@ -130390,29 +131524,28 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Qia",
-            "location": "Everlook, Winterspring /way 61.2, 37.2",
-            "cost": "1g 80s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Wicked Leather Bracers (265–285) or continue Nightscape Boots + Rugged Armor Kit from the Artisan trainer."
+          ]
         },
         {
           "type": "step",
-          "from": 280,
+          "from": 288,
           "to": 300,
           "bar": {
-            "iLeft": "93%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "96%",
+            "iWidth": "4%"
           },
           "itemId": 15080,
           "recipeName": "Heavy Scorpid Helm",
-          "source": "Pattern sold by Zannok Hidepiercer (Silithus)",
+          "source": "Pattern sold by Zannok Hidepiercer (Silithus) — limited stock",
           "advice": "",
-          "crafts": 24,
+          "crafts": 15,
+          "craftsSafe": 19,
+          "colors": {
+            "orange": 270,
+            "yellow": 290,
+            "green": 300,
+            "grey": 310
+          },
           "reagents": [
             {
               "itemId": 8170,
@@ -130442,14 +131575,24 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Zannok Hidepiercer",
-            "location": "Staghelm Point, Silithus /way 81.2, 18.6",
-            "cost": "2g 50s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Runic Leather Headband (280–300, sold by Jase Farlane at Light's Hope Chapel, EPL /way 74.8, 51.8) or Wicked Leather Headband."
+          ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "⛺",
+          "title": "Camp Objects: Camp Tent & Tanning Rack",
+          "text": "The Camp Tent (skill 20, 5 Light Leather) is the only camp object that grants rested XP — sit by it for up to 5% of a level. The Tanning Rack (skill 125, 5 Medium Leather, 3 Fine Thread, 2 Simple Wood) replaces it and is required to cure Rugged Hides at 225, so craft one before Artisan."
+        },
+        {
+          "icon": "🐉",
+          "title": "Specialisations at 225",
+          "text": "At skill 225 (level 40) choose Dragonscale, Elemental or Tribal Leatherworking from their specialist trainers. The 1–300 route above uses no specialisation-locked patterns."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -131213,46 +132356,67 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
           "note": "Always in stock, for a few coins.",
           "items": [
             {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "icon": "inv_fabric_linen_03",
-              "quality": 1,
-              "count": 130
-            },
-            {
               "itemId": 2321,
               "name": "Fine Thread",
               "icon": "inv_fabric_wool_02",
               "quality": 1,
-              "count": 60
+              "count": 93
             },
             {
               "itemId": 4289,
               "name": "Salt",
               "icon": "inv_misc_dust_02",
               "quality": 1,
-              "count": 180
+              "count": 89
             },
             {
-              "itemId": 2605,
-              "name": "Green Dye",
-              "icon": "inv_potion_12",
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "icon": "spell_shadow_antimagicshell",
               "quality": 1,
-              "count": 16
+              "count": 73
             },
             {
               "itemId": 4291,
               "name": "Silken Thread",
               "icon": "inv_fabric_silk_02",
               "quality": 1,
-              "count": 164
+              "count": 55
+            },
+            {
+              "itemId": 2325,
+              "name": "Black Dye",
+              "icon": "inv_potion_63",
+              "quality": 1,
+              "count": 37
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "icon": "inv_fabric_linen_03",
+              "quality": 1,
+              "count": 32
+            },
+            {
+              "itemId": 8343,
+              "name": "Heavy Silken Thread",
+              "icon": "inv_fabric_silk_02",
+              "quality": 1,
+              "count": 28
+            },
+            {
+              "itemId": 4340,
+              "name": "Gray Dye",
+              "icon": "inv_drink_10",
+              "quality": 1,
+              "count": 7
             }
           ]
         },
@@ -131261,18 +132425,88 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 2934,
-              "name": "Ruined Leather Scraps",
-              "icon": "inv_misc_pelt_bear_ruin_05",
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
               "quality": 1,
-              "count": 150
+              "count": 730
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1,
+              "count": 424
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 210
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1,
+              "count": 191
+            },
+            {
+              "itemId": 15408,
+              "name": "Heavy Scorpid Scale",
+              "icon": "inv_misc_monsterscales_03",
+              "quality": 1,
+              "count": 180
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 148
             },
             {
               "itemId": 2318,
               "name": "Light Leather",
               "icon": "inv_misc_leatherscrap_03",
               "quality": 1,
-              "count": 387
+              "count": 89
+            },
+            {
+              "itemId": 4461,
+              "name": "Raptor Hide",
+              "icon": "inv_misc_monsterscales_01",
+              "quality": 1,
+              "count": 40
+            },
+            {
+              "itemId": 4232,
+              "name": "Medium Hide",
+              "icon": "inv_misc_pelt_boar_ruin_02",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 7067,
+              "name": "Elemental Earth",
+              "icon": "inv_ore_iron_01",
+              "quality": 1,
+              "count": 22
+            },
+            {
+              "itemId": 7070,
+              "name": "Elemental Water",
+              "icon": "inv_potion_03",
+              "quality": 1,
+              "count": 22
+            },
+            {
+              "itemId": 783,
+              "name": "Light Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_02",
+              "quality": 1,
+              "count": 21
             },
             {
               "itemId": 2457,
@@ -131282,168 +132516,25 @@ window.WOW_PROFESSIONS_DATA = {
               "count": 20
             },
             {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1,
-              "count": 174
-            },
-            {
               "itemId": 4235,
               "name": "Heavy Hide",
               "icon": "inv_misc_pelt_wolf_ruin_03",
               "quality": 1,
-              "count": 60
+              "count": 14
             },
-            {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1,
-              "count": 238
-            },
-            {
-              "itemId": 7071,
-              "name": "Iron Buckle",
-              "icon": "inv_misc_armorkit_12",
-              "quality": 1,
-              "count": 10
-            },
-            {
-              "itemId": 4304,
-              "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1,
-              "count": 250
-            },
-            {
-              "itemId": 8951,
-              "name": "Elixir of Defense",
-              "icon": "inv_potion_65",
-              "quality": 1,
-              "count": 13
-            },
-            {
-              "itemId": 8169,
-              "name": "Thick Hide",
-              "icon": "inv_misc_pelt_bear_ruin_01",
-              "quality": 1,
-              "count": 13
-            },
-            {
-              "itemId": 8150,
-              "name": "Deeprock Salt",
-              "icon": "inv_misc_dust_02",
-              "quality": 1,
-              "count": 13
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1,
-              "count": 50
-            },
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 4236,
-              "name": "Cured Heavy Hide",
-              "icon": "inv_misc_pelt_wolf_02",
-              "quality": 1,
-              "count": 60
-            },
-            {
-              "itemId": 8172,
-              "name": "Cured Thick Hide",
-              "icon": "inv_misc_pelt_bear_01",
-              "quality": 1,
-              "count": 13
-            }
-          ]
-        },
-        {
-          "title": "From a trade supplies vendor",
-          "note": "Always in stock, for a few coins.",
-          "items": [
-            {
-              "itemId": 2325,
-              "name": "Black Dye",
-              "icon": "inv_potion_63",
-              "quality": 1,
-              "count": 23
-            },
-            {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "icon": "spell_shadow_antimagicshell",
-              "quality": 1,
-              "count": 73
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
             {
               "itemId": 8171,
               "name": "Rugged Hide",
               "icon": "inv_misc_pelt_bear_ruin_02",
               "quality": 1,
-              "count": 15
+              "count": 10
             },
             {
               "itemId": 15409,
               "name": "Refined Deeprock Salt",
               "icon": "inv_misc_dust_01",
               "quality": 1,
-              "count": 15
-            },
-            {
-              "itemId": 8170,
-              "name": "Rugged Leather",
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1,
-              "count": 510
-            },
-            {
-              "itemId": 15422,
-              "name": "Frostsaber Leather",
-              "icon": "inv_misc_pelt_06",
-              "quality": 1,
-              "count": 156
-            },
-            {
-              "itemId": 15408,
-              "name": "Heavy Scorpid Scale",
-              "icon": "inv_misc_monsterscales_03",
-              "quality": 1,
-              "count": 288
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 15407,
-              "name": "Cured Rugged Hide",
-              "icon": "inv_misc_pelt_bear_03",
-              "quality": 1,
-              "count": 24
+              "count": 10
             }
           ]
         }
@@ -131893,7 +132984,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth waist, level 4",
         "effect": "Waist\tCloth 9 Armor Requires Level 4 Sell Price: 22c",
         "isNew": false,
-        "learn": 10,
+        "learn": 15,
         "yellow": 50,
         "green": 67,
         "grey": 85,
@@ -152599,8 +153690,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -152610,17 +153701,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 32,
+          "to": 38,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "10.333333333333334%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "12.33%"
           },
           "itemId": 2996,
           "recipeName": "Bolt of Linen Cloth",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 33,
+          "advice": "",
+          "crafts": 41,
+          "craftsSafe": 46,
+          "colors": {
+            "orange": 1,
+            "yellow": 25,
+            "green": 37,
+            "grey": 50
+          },
           "reagents": [
             {
               "itemId": 2589,
@@ -152633,111 +153730,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 32,
-          "to": 36,
-          "bar": {
-            "iLeft": "10.333333333333334%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4344,
-          "recipeName": "Brown Linen Shirt",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 4,
-          "reagents": [
-            {
-              "itemId": 2996,
-              "name": "Bolt of Linen Cloth",
-              "count": 1,
-              "icon": "inv_fabric_linen_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "count": 1,
-              "icon": "inv_fabric_linen_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 36,
-          "to": 41,
-          "bar": {
-            "iLeft": "11.666666666666666%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 10045,
-          "recipeName": "Simple Linen Pants",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 5,
-          "reagents": [
-            {
-              "itemId": 2996,
-              "name": "Bolt of Linen Cloth",
-              "count": 1,
-              "icon": "inv_fabric_linen_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "count": 1,
-              "icon": "inv_fabric_linen_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 41,
-          "to": 46,
-          "bar": {
-            "iLeft": "13.333333333333334%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 2568,
-          "recipeName": "Brown Linen Vest",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 5,
-          "reagents": [
-            {
-              "itemId": 2996,
-              "name": "Bolt of Linen Cloth",
-              "count": 1,
-              "icon": "inv_fabric_linen_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "count": 1,
-              "icon": "inv_fabric_linen_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 46,
+          "from": 38,
           "to": 55,
           "bar": {
-            "iLeft": "15%",
-            "iWidth": "3%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "12.67%",
+            "iWidth": "5.67%"
           },
           "itemId": 7026,
           "recipeName": "Linen Belt",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 10,
+          "crafts": 17,
+          "craftsSafe": 18,
+          "colors": {
+            "orange": 15,
+            "yellow": 50,
+            "green": 67,
+            "grey": 85
+          },
           "reagents": [
             {
               "itemId": 2996,
@@ -152751,30 +153761,6 @@ window.WOW_PROFESSIONS_DATA = {
               "name": "Coarse Thread",
               "count": 1,
               "icon": "inv_fabric_linen_03",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 55,
-          "to": 75,
-          "bar": {
-            "iLeft": "18%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 2997,
-          "recipeName": "Bolt of Woolen Cloth",
-          "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 21,
-          "reagents": [
-            {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "count": 3,
-              "icon": "inv_fabric_wool_01",
               "quality": 1
             }
           ]
@@ -152786,18 +153772,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 75,
-          "to": 85,
+          "from": 55,
+          "to": 78,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "18.33%",
+            "iWidth": "7.67%"
           },
           "itemId": 2997,
           "recipeName": "Bolt of Woolen Cloth",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 44,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 26,
+          "craftsSafe": 29,
+          "colors": {
+            "orange": 55,
+            "yellow": 70,
+            "green": 77,
+            "grey": 85
+          },
           "reagents": [
             {
               "itemId": 2592,
@@ -152810,18 +153802,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 85,
+          "from": 78,
           "to": 100,
           "bar": {
-            "iLeft": "28%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "26%",
+            "iWidth": "7.33%"
           },
           "itemId": 2584,
           "recipeName": "Woolen Cape",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 24,
+          "crafts": 31,
+          "craftsSafe": 37,
+          "colors": {
+            "orange": 55,
+            "yellow": 80,
+            "green": 97,
+            "grey": 115
+          },
           "reagents": [
             {
               "itemId": 2997,
@@ -152842,17 +153840,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 100,
-          "to": 120,
+          "to": 116,
           "bar": {
-            "iLeft": "33%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "33.33%",
+            "iWidth": "5.33%"
           },
           "itemId": 4305,
           "recipeName": "Bolt of Silk Cloth",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 40,
+          "advice": "",
+          "crafts": 18,
+          "craftsSafe": 21,
+          "colors": {
+            "orange": 100,
+            "yellow": 110,
+            "green": 115,
+            "grey": 120
+          },
           "reagents": [
             {
               "itemId": 4306,
@@ -152865,24 +153869,169 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 120,
-          "to": 124,
+          "from": 116,
+          "to": 125,
           "bar": {
-            "iLeft": "39.666666666666664%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "38.67%",
+            "iWidth": "3%"
           },
-          "itemId": 4314,
-          "recipeName": "Double-Stitched Woolen Shoulders",
-          "source": "Learned from the trainer",
+          "itemId": 4332,
+          "recipeName": "Bright Yellow Shirt",
+          "source": "Pattern sold by Danielle Zipstitch (Duskwood) — limited stock",
           "advice": "",
-          "crafts": 6,
+          "crafts": 10,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 110,
+            "yellow": 120,
+            "green": 125,
+            "grey": 130
+          },
           "reagents": [
             {
-              "itemId": 2997,
-              "name": "Bolt of Woolen Cloth",
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 1,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 4341,
+              "name": "Yellow Dye",
+              "count": 1,
+              "icon": "inv_potion_12",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 125,
+          "to": 132,
+          "bar": {
+            "iLeft": "41.67%",
+            "iWidth": "2.33%"
+          },
+          "itemId": 7048,
+          "recipeName": "Azure Silk Hood",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 7,
+          "craftsSafe": 7,
+          "colors": {
+            "orange": 120,
+            "yellow": 130,
+            "green": 135,
+            "grey": 140
+          },
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 2,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 6260,
+              "name": "Blue Dye",
+              "count": 2,
+              "icon": "inv_potion_15",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 132,
+          "to": 138,
+          "bar": {
+            "iLeft": "44%",
+            "iWidth": "2%"
+          },
+          "itemId": 5766,
+          "recipeName": "Lesser Wizard's Robe",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 7,
+          "craftsSafe": 9,
+          "colors": {
+            "orange": 110,
+            "yellow": 130,
+            "green": 145,
+            "grey": 160
+          },
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 2,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3182,
+              "name": "Spider's Silk",
+              "count": 2,
+              "icon": "spell_nature_web",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 138,
+          "to": 140,
+          "bar": {
+            "iLeft": "46%",
+            "iWidth": "0.67%"
+          },
+          "itemId": 7051,
+          "recipeName": "Earthen Vest",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 2,
+          "craftsSafe": 2,
+          "colors": {
+            "orange": 135,
+            "yellow": 155,
+            "green": 170,
+            "grey": 185
+          },
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
               "count": 3,
-              "icon": "inv_fabric_wool_03",
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 7067,
+              "name": "Elemental Earth",
+              "count": 1,
+              "icon": "inv_ore_iron_01",
               "quality": 1
             },
             {
@@ -152896,56 +154045,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 124,
-          "to": 140,
-          "bar": {
-            "iLeft": "41%",
-            "iWidth": "5.333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4318,
-          "recipeName": "Gloves of Meditation",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 22,
-          "reagents": [
-            {
-              "itemId": 2997,
-              "name": "Bolt of Woolen Cloth",
-              "count": 4,
-              "icon": "inv_fabric_wool_03",
-              "quality": 1
-            },
-            {
-              "itemId": 2321,
-              "name": "Fine Thread",
-              "count": 3,
-              "icon": "inv_fabric_wool_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3383,
-              "name": "Elixir of Wisdom",
-              "count": 1,
-              "icon": "inv_potion_06",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
           "from": 140,
-          "to": 150,
+          "to": 149,
           "bar": {
-            "iLeft": "46.333333333333336%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "46.67%",
+            "iWidth": "3%"
           },
           "itemId": 4339,
           "recipeName": "Bolt of Mageweave",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 17,
+          "advice": "At 140, craft your Spinning Wheel camp object once — Robe of Power needs it.",
+          "crafts": 11,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 140,
+            "yellow": 145,
+            "green": 147,
+            "grey": 150
+          },
           "reagents": [
             {
               "itemId": 4338,
@@ -152963,18 +154080,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 150,
-          "to": 168,
+          "from": 149,
+          "to": 158,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "49.67%",
+            "iWidth": "3%"
           },
-          "itemId": 7053,
-          "recipeName": "Azure Silk Cloak",
-          "source": "Pattern sold by Brienna Starglow (Alliance) or Jun'ha (Horde)",
-          "advice": "",
-          "crafts": 20,
+          "itemId": 7051,
+          "recipeName": "Earthen Vest",
+          "source": "Learned from the trainer",
+          "advice": "Train Expert (skill 125, level 20) before you reach 150.",
+          "crafts": 9,
+          "craftsSafe": 10,
+          "colors": {
+            "orange": 135,
+            "yellow": 155,
+            "green": 170,
+            "grey": 185
+          },
           "reagents": [
             {
               "itemId": 4305,
@@ -152984,55 +154107,10 @@ window.WOW_PROFESSIONS_DATA = {
               "quality": 1
             },
             {
-              "itemId": 6260,
-              "name": "Blue Dye",
-              "count": 2,
-              "icon": "inv_potion_15",
-              "quality": 1
-            },
-            {
-              "itemId": 2321,
-              "name": "Fine Thread",
-              "count": 2,
-              "icon": "inv_fabric_wool_02",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Brienna Starglow (Alliance) / Jun'ha (Horde)",
-            "location": "Thalanaar, Thousand Needles /way 5.4, 92.6 (A) · Hammerfall, Arathi Highlands /way 72.8, 36.6 (H)",
-            "cost": "15s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Dark Silk Shirt (155–170) or Silk Headband (160–175, 3x Bolt of Silk Cloth + 2x Fine Thread) learned from the Expert trainer."
-        },
-        {
-          "type": "step",
-          "from": 168,
-          "to": 172,
-          "bar": {
-            "iLeft": "55.666666666666664%",
-            "iWidth": "1.3333333333333333%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 7058,
-          "recipeName": "Crimson Silk Vest",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 5,
-          "reagents": [
-            {
-              "itemId": 4305,
-              "name": "Bolt of Silk Cloth",
-              "count": 4,
-              "icon": "inv_fabric_silk_03",
-              "quality": 1
-            },
-            {
-              "itemId": 2604,
-              "name": "Red Dye",
-              "count": 2,
-              "icon": "inv_potion_11",
+              "itemId": 7067,
+              "name": "Elemental Earth",
+              "count": 1,
+              "icon": "inv_ore_iron_01",
               "quality": 1
             },
             {
@@ -153046,31 +154124,58 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 172,
-          "to": 180,
+          "from": 158,
+          "to": 170,
           "bar": {
-            "iLeft": "57%",
-            "iWidth": "2.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "52.67%",
+            "iWidth": "4%"
           },
-          "itemId": 7062,
-          "recipeName": "Crimson Silk Pantaloons",
+          "itemId": 7054,
+          "recipeName": "Robe of Power",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 8,
+          "advice": "Needs a Spinning Wheel nearby.",
+          "crafts": 12,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 155,
+            "yellow": 175,
+            "green": 190,
+            "grey": 205
+          },
           "reagents": [
             {
-              "itemId": 4305,
-              "name": "Bolt of Silk Cloth",
-              "count": 4,
-              "icon": "inv_fabric_silk_03",
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "count": 2,
+              "icon": "inv_fabric_mageweave_03",
               "quality": 1
             },
             {
-              "itemId": 2604,
-              "name": "Red Dye",
+              "itemId": 7067,
+              "name": "Elemental Earth",
               "count": 2,
-              "icon": "inv_potion_11",
+              "icon": "inv_ore_iron_01",
+              "quality": 1
+            },
+            {
+              "itemId": 7070,
+              "name": "Elemental Water",
+              "count": 2,
+              "icon": "inv_potion_03",
+              "quality": 1
+            },
+            {
+              "itemId": 7068,
+              "name": "Elemental Fire",
+              "count": 2,
+              "icon": "spell_fire_fire",
+              "quality": 1
+            },
+            {
+              "itemId": 7069,
+              "name": "Elemental Air",
+              "count": 2,
+              "icon": "spell_nature_tranquility",
               "quality": 1
             },
             {
@@ -153084,18 +154189,61 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 180,
-          "to": 191,
+          "from": 170,
+          "to": 180,
           "bar": {
-            "iLeft": "59.666666666666664%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "56.67%",
+            "iWidth": "3.33%"
+          },
+          "itemId": 9998,
+          "recipeName": "Black Mageweave Vest",
+          "source": "Learned from the trainer",
+          "advice": "",
+          "crafts": 10,
+          "craftsSafe": 10,
+          "colors": {
+            "orange": 170,
+            "yellow": 185,
+            "green": 200,
+            "grey": 215
+          },
+          "reagents": [
+            {
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "count": 2,
+              "icon": "inv_fabric_mageweave_03",
+              "quality": 1
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "count": 3,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 180,
+          "to": 190,
+          "bar": {
+            "iLeft": "60%",
+            "iWidth": "3.33%"
           },
           "itemId": 10056,
           "recipeName": "Orange Mageweave Shirt",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 14,
+          "crafts": 11,
+          "craftsSafe": 13,
+          "colors": {
+            "orange": 180,
+            "yellow": 185,
+            "green": 190,
+            "grey": 195
+          },
           "reagents": [
             {
               "itemId": 4339,
@@ -153122,18 +154270,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 191,
+          "from": 190,
           "to": 205,
           "bar": {
-            "iLeft": "63.333333333333336%",
-            "iWidth": "4.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "63.33%",
+            "iWidth": "5%"
           },
           "itemId": 10003,
           "recipeName": "Black Mageweave Gloves",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 16,
+          "crafts": 17,
+          "craftsSafe": 19,
+          "colors": {
+            "orange": 180,
+            "yellow": 195,
+            "green": 210,
+            "grey": 225
+          },
           "reagents": [
             {
               "itemId": 4339,
@@ -153154,17 +154308,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 205,
-          "to": 215,
+          "to": 214,
           "bar": {
-            "iLeft": "68%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "68.33%",
+            "iWidth": "3%"
           },
           "itemId": 14048,
           "recipeName": "Bolt of Runecloth",
           "source": "Learned from the trainer",
-          "advice": "Keep them: later steps use them.",
-          "crafts": 17,
+          "advice": "",
+          "crafts": 11,
+          "craftsSafe": 14,
+          "colors": {
+            "orange": 205,
+            "yellow": 210,
+            "green": 212,
+            "grey": 215
+          },
           "reagents": [
             {
               "itemId": 14047,
@@ -153176,55 +154336,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 215,
-          "to": 225,
-          "bar": {
-            "iLeft": "71.33333333333333%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 13856,
-          "recipeName": "Runecloth Belt",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 10,
-          "reagents": [
-            {
-              "itemId": 14048,
-              "name": "Bolt of Runecloth",
-              "count": 3,
-              "icon": "inv_fabric_purplefire_02",
-              "quality": 1
-            },
-            {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "count": 1,
-              "icon": "spell_shadow_antimagicshell",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Artisan",
           "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Timothy Worthington in Theramore Isle, Dustwallow Marsh (/way 66.2, 51.6, A) or Daryl Stack in Tarren Mill, Hillsbrad Foothills (/way 63.6, 20.8, H)."
         },
         {
           "type": "step",
-          "from": 225,
-          "to": 236,
+          "from": 214,
+          "to": 234,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "3.6666666666666665%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "71.33%",
+            "iWidth": "6.67%"
           },
           "itemId": 13856,
           "recipeName": "Runecloth Belt",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 14,
+          "advice": "Train Artisan (skill 200, level 35) before you reach 225.",
+          "crafts": 21,
+          "craftsSafe": 23,
+          "colors": {
+            "orange": 210,
+            "yellow": 225,
+            "green": 240,
+            "grey": 255
+          },
           "reagents": [
             {
               "itemId": 14048,
@@ -153244,18 +154379,68 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 236,
-          "to": 251,
+          "from": 234,
+          "to": 245,
           "bar": {
-            "iLeft": "78.33333333333333%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "78%",
+            "iWidth": "3.67%"
+          },
+          "itemId": 13860,
+          "recipeName": "Runecloth Cloak",
+          "source": "Pattern sold by Darnall (Moonglade) — limited stock",
+          "advice": "",
+          "crafts": 11,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 220,
+            "yellow": 240,
+            "green": 255,
+            "grey": 270
+          },
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 4,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14227,
+              "name": "Ironweb Spider Silk",
+              "count": 1,
+              "icon": "spell_nature_web",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 245,
+          "to": 249,
+          "bar": {
+            "iLeft": "81.67%",
+            "iWidth": "1.33%"
           },
           "itemId": 13863,
           "recipeName": "Runecloth Gloves",
           "source": "Pattern sold by Qia (Winterspring)",
           "advice": "",
-          "crafts": 16,
+          "crafts": 4,
+          "craftsSafe": 5,
+          "colors": {
+            "orange": 230,
+            "yellow": 245,
+            "green": 260,
+            "grey": 275
+          },
           "reagents": [
             {
               "itemId": 14048,
@@ -153278,29 +154463,79 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Qia",
-            "location": "Everlook, Winterspring /way 61.2, 37.2",
-            "cost": "1g 60s",
-            "supply": "Limited (1)"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Black Mageweave Headband / Shoulders (230–255) from the trainer, then switch to Runecloth Belt (255–275, Trainer)."
+          ]
         },
         {
           "type": "step",
-          "from": 251,
-          "to": 287,
+          "from": 249,
+          "to": 254,
           "bar": {
-            "iLeft": "83.33333333333333%",
-            "iWidth": "12%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "83%",
+            "iWidth": "1.67%"
+          },
+          "itemId": 13864,
+          "recipeName": "Runecloth Boots",
+          "source": "Pattern sold by Darnall (Moonglade) — limited stock",
+          "advice": "",
+          "crafts": 5,
+          "craftsSafe": 6,
+          "colors": {
+            "orange": 235,
+            "yellow": 250,
+            "green": 265,
+            "grey": 280
+          },
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 4,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14227,
+              "name": "Ironweb Spider Silk",
+              "count": 2,
+              "icon": "spell_nature_web",
+              "quality": 1
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 254,
+          "to": 285,
+          "bar": {
+            "iLeft": "84.67%",
+            "iWidth": "10.33%"
           },
           "itemId": 254123,
           "recipeName": "Runecloth Cuffs",
           "source": "Pattern sold by Pexmit (Mount Hyjal)",
-          "advice": "",
-          "crafts": 53,
+          "advice": "Forever recipe. 5 bolts per craft (~1,075 Runecloth for this step) — farm Runecloth from the start of 50s content.",
+          "crafts": 43,
+          "craftsSafe": 49,
+          "colors": {
+            "orange": 250,
+            "yellow": 265,
+            "green": 280,
+            "grey": 295
+          },
           "reagents": [
             {
               "itemId": 14048,
@@ -153323,29 +154558,79 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Pexmit",
-            "location": "Elderwild / Nordrassil, Mount Hyjal (Forever Exclusive Vendor)",
-            "cost": "1g 80s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Runecloth Belt (255–275, 3x Bolt of Runecloth + 1x Rune Thread) and Brightcloth Cloak (275–295) learned from the Artisan trainer."
+          ]
         },
         {
           "type": "step",
-          "from": 287,
-          "to": 300,
+          "from": 285,
+          "to": 292,
           "bar": {
-            "iLeft": "95.33333333333333%",
-            "iWidth": "4.333333333333333%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "95%",
+            "iWidth": "2.33%"
           },
-          "itemId": 18486,
-          "recipeName": "Mooncloth Robe",
-          "source": "Pattern sold by Shen'dralar Provisioner (Dire Maul)",
-          "advice": "",
-          "crafts": 15,
+          "itemId": 275604,
+          "recipeName": "Venomspew Gloves",
+          "source": "Pattern sold by Mishta (Silithus) — requires Friendly with Cenarion Circle",
+          "advice": "Two gates here. Reputation: without Cenarion Circle plans no vendor recipe takes Tailoring past 295. Station: these need a Loom, a camp object only a 300 Tailor can place — join a 300 Tailor's camp (guild or trade chat). The only Loom-free finish uses world-drop patterns and ~1,230 extra Runecloth.",
+          "crafts": 7,
+          "craftsSafe": 8,
+          "colors": {
+            "orange": 285,
+            "yellow": 290,
+            "green": 292,
+            "grey": 295
+          },
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 4,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14343,
+              "name": "Small Brilliant Shard",
+              "count": 1,
+              "icon": "inv_enchant_shardbrilliantsmall",
+              "quality": 3
+            },
+            {
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "count": 3,
+              "icon": "spell_nature_earthbind",
+              "quality": 2
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 6,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 292,
+          "to": 299,
+          "bar": {
+            "iLeft": "97.33%",
+            "iWidth": "2.33%"
+          },
+          "itemId": 275605,
+          "recipeName": "Venomspew Cord",
+          "source": "Pattern sold by Mishta (Silithus) — requires Honored with Cenarion Circle",
+          "advice": "Needs a Loom.",
+          "crafts": 9,
+          "craftsSafe": 13,
+          "colors": {
+            "orange": 290,
+            "yellow": 295,
+            "green": 297,
+            "grey": 300
+          },
           "reagents": [
             {
               "itemId": 14048,
@@ -153355,34 +154640,95 @@ window.WOW_PROFESSIONS_DATA = {
               "quality": 1
             },
             {
-              "itemId": 14342,
-              "name": "Mooncloth",
-              "count": 4,
-              "icon": "inv_fabric_moonrag_01",
-              "quality": 1
+              "itemId": 14343,
+              "name": "Small Brilliant Shard",
+              "count": 1,
+              "icon": "inv_enchant_shardbrilliantsmall",
+              "quality": 3
             },
             {
-              "itemId": 13926,
-              "name": "Golden Pearl",
-              "count": 2,
-              "icon": "inv_misc_gem_pearl_04",
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "count": 3,
+              "icon": "spell_nature_earthbind",
               "quality": 2
             },
             {
               "itemId": 14341,
               "name": "Rune Thread",
-              "count": 2,
+              "count": 6,
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Shen'dralar Provisioner",
-            "location": "Dire Maul North Library, Feralas",
-            "cost": "4g",
-            "supply": "Limited (1)"
+          ]
+        },
+        {
+          "type": "step",
+          "from": 299,
+          "to": 300,
+          "bar": {
+            "iLeft": "99.67%",
+            "iWidth": "0.33%"
           },
-          "trainerAlternative": "Trainer Backup: Craft Brightcloth Cloak (275–295, 4x Bolt of Runecloth + 2x Gold Bar) or Runecloth Gloves up to 290+ without needing Mooncloth cooldowns."
+          "itemId": 275606,
+          "recipeName": "Venomspew Footpads",
+          "source": "Pattern sold by Mishta (Silithus) — requires Honored with Cenarion Circle",
+          "advice": "Needs a Loom. Low odds (≈5 crafts per point).",
+          "crafts": 4,
+          "craftsSafe": 11,
+          "colors": {
+            "orange": 295,
+            "yellow": 295,
+            "green": 297,
+            "grey": 300
+          },
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 5,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14343,
+              "name": "Small Brilliant Shard",
+              "count": 1,
+              "icon": "inv_enchant_shardbrilliantsmall",
+              "quality": 3
+            },
+            {
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "count": 3,
+              "icon": "spell_nature_earthbind",
+              "quality": 2
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 6,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "⚠️",
+          "title": "285–300 Needs Cenarion Circle Rep and a Loom",
+          "text": "Wowhead's planner confirms that no vendor pattern takes Tailoring past 295 without Cenarion Circle reputation (Friendly for Venomspew Gloves, Honored for the Cord and Footpads), and those patterns need a Loom — a camp object only a 300 Tailor can place. Start Silithus quests early and arrange a Loom with your guild."
+        },
+        {
+          "icon": "🧵",
+          "title": "Camp Objects & the Runecloth Bill",
+          "text": "Faction Banner at 20 and Spinning Wheel at 140 (needed for Robe of Power at 158). From 205 to 300 you will spin roughly 2,300 Runecloth into bolts, mostly for Runecloth Cuffs — farm Runecloth throughout your 50s."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -154020,65 +155366,65 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
           "note": "Always in stock, for a few coins.",
           "items": [
             {
-              "itemId": 2320,
-              "name": "Coarse Thread",
-              "icon": "inv_fabric_linen_03",
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "icon": "spell_shadow_antimagicshell",
               "quality": 1,
-              "count": 24
+              "count": 204
             },
             {
               "itemId": 2321,
               "name": "Fine Thread",
               "icon": "inv_fabric_wool_02",
               "quality": 1,
-              "count": 152
-            },
-            {
-              "itemId": 6260,
-              "name": "Blue Dye",
-              "icon": "inv_potion_15",
-              "quality": 1,
-              "count": 40
-            },
-            {
-              "itemId": 2604,
-              "name": "Red Dye",
-              "icon": "inv_potion_11",
-              "quality": 1,
-              "count": 26
+              "count": 84
             },
             {
               "itemId": 4291,
               "name": "Silken Thread",
               "icon": "inv_fabric_silk_02",
               "quality": 1,
-              "count": 16
-            },
-            {
-              "itemId": 6261,
-              "name": "Orange Dye",
-              "icon": "inv_potion_35",
-              "quality": 1,
-              "count": 14
+              "count": 54
             },
             {
               "itemId": 8343,
               "name": "Heavy Silken Thread",
               "icon": "inv_fabric_silk_02",
               "quality": 1,
-              "count": 46
+              "count": 45
             },
             {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "icon": "spell_shadow_antimagicshell",
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "icon": "inv_fabric_linen_03",
+              "quality": 1,
+              "count": 17
+            },
+            {
+              "itemId": 6260,
+              "name": "Blue Dye",
+              "icon": "inv_potion_15",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 6261,
+              "name": "Orange Dye",
+              "icon": "inv_potion_35",
+              "quality": 1,
+              "count": 11
+            },
+            {
+              "itemId": 4341,
+              "name": "Yellow Dye",
+              "icon": "inv_potion_12",
               "quality": 1,
               "count": 10
             }
@@ -154089,154 +155435,136 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "icon": "inv_fabric_linen_01",
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
               "quality": 1,
-              "count": 66
-            },
-            {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "icon": "inv_fabric_wool_01",
-              "quality": 1,
-              "count": 390
-            },
-            {
-              "itemId": 4306,
-              "name": "Silk Cloth",
-              "icon": "inv_fabric_silk_01",
-              "quality": 1,
-              "count": 448
-            },
-            {
-              "itemId": 3383,
-              "name": "Elixir of Wisdom",
-              "icon": "inv_potion_06",
-              "quality": 1,
-              "count": 22
+              "count": 2300
             },
             {
               "itemId": 4338,
               "name": "Mageweave Cloth",
               "icon": "inv_fabric_mageweave_01",
               "quality": 1,
-              "count": 230
+              "count": 445
             },
             {
-              "itemId": 14047,
-              "name": "Runecloth",
-              "icon": "inv_fabric_purplefire_01",
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "icon": "inv_fabric_silk_01",
               "quality": 1,
-              "count": 150
-            }
-          ]
-        },
-        {
-          "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
-          "items": [
-            {
-              "itemId": 2996,
-              "name": "Bolt of Linen Cloth",
-              "icon": "inv_fabric_linen_02",
-              "quality": 1,
-              "count": 24
+              "count": 284
             },
             {
-              "itemId": 2997,
-              "name": "Bolt of Woolen Cloth",
-              "icon": "inv_fabric_wool_03",
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
               "quality": 1,
-              "count": 130
+              "count": 93
             },
             {
-              "itemId": 4305,
-              "name": "Bolt of Silk Cloth",
-              "icon": "inv_fabric_silk_03",
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
               "quality": 1,
-              "count": 112
-            },
-            {
-              "itemId": 4339,
-              "name": "Bolt of Mageweave",
-              "icon": "inv_fabric_mageweave_03",
-              "quality": 1,
-              "count": 46
-            },
-            {
-              "itemId": 14048,
-              "name": "Bolt of Runecloth",
-              "icon": "inv_fabric_purplefire_02",
-              "quality": 1,
-              "count": 30
-            }
-          ]
-        },
-        {
-          "title": "From a trade supplies vendor",
-          "note": "Always in stock, for a few coins.",
-          "items": [
-            {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "icon": "spell_shadow_antimagicshell",
-              "quality": 1,
-              "count": 113
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 14047,
-              "name": "Runecloth",
-              "icon": "inv_fabric_purplefire_01",
-              "quality": 1,
-              "count": 2305
-            },
-            {
-              "itemId": 8170,
-              "name": "Rugged Leather",
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1,
-              "count": 64
+              "count": 82
             },
             {
               "itemId": 14227,
               "name": "Ironweb Spider Silk",
               "icon": "spell_nature_web",
               "quality": 1,
-              "count": 53
+              "count": 64
             },
             {
-              "itemId": 14342,
-              "name": "Mooncloth",
-              "icon": "inv_fabric_moonrag_01",
-              "quality": 1,
+              "itemId": 7082,
+              "name": "Essence of Air",
+              "icon": "spell_nature_earthbind",
+              "quality": 2,
               "count": 60
             },
             {
-              "itemId": 13926,
-              "name": "Golden Pearl",
-              "icon": "inv_misc_gem_pearl_04",
-              "quality": 2,
-              "count": 30
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1,
+              "count": 36
+            },
+            {
+              "itemId": 7067,
+              "name": "Elemental Earth",
+              "icon": "inv_ore_iron_01",
+              "quality": 1,
+              "count": 35
+            },
+            {
+              "itemId": 7070,
+              "name": "Elemental Water",
+              "icon": "inv_potion_03",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 7068,
+              "name": "Elemental Fire",
+              "icon": "spell_fire_fire",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 7069,
+              "name": "Elemental Air",
+              "icon": "spell_nature_tranquility",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 14343,
+              "name": "Small Brilliant Shard",
+              "icon": "inv_enchant_shardbrilliantsmall",
+              "quality": 3,
+              "count": 20
+            },
+            {
+              "itemId": 3182,
+              "name": "Spider's Silk",
+              "icon": "spell_nature_web",
+              "quality": 1,
+              "count": 14
             }
           ]
         },
         {
           "title": "Made along the way",
-          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "note": "Extra components the route crafts for itself; their raw materials are already counted above.",
           "items": [
             {
               "itemId": 14048,
               "name": "Bolt of Runecloth",
               "icon": "inv_fabric_purplefire_02",
               "quality": 1,
-              "count": 461
+              "count": 449
+            },
+            {
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "icon": "inv_fabric_mageweave_03",
+              "quality": 1,
+              "count": 78
+            },
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "icon": "inv_fabric_silk_03",
+              "quality": 1,
+              "count": 53
+            },
+            {
+              "itemId": 2997,
+              "name": "Bolt of Woolen Cloth",
+              "icon": "inv_fabric_wool_03",
+              "quality": 1,
+              "count": 5
             }
           ]
         }
@@ -154880,21 +156208,9 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "title": "Leveling from 1 to 300 (Smelting Bypass & Vein Mining)",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "In WoW Forever, you can bypass open-world vein farming from 1 to 140 and 155 to 185 purely by smelting ore at any forge! Only 140–155 and 185–300 require mining veins in the open world.",
-      "guideCallouts": [
-        {
-          "icon": "🔥",
-          "title": "1–185 Smelting Bypass Trick, Smelting Pants (-25% Cast Time) & Miner's Cape",
-          "text": "Smelting grants skill-ups from 1–140 (Copper → Tin → Bronze → Silver → Iron) and 155–185 (Gold). Between 140 and 155, all smelting recipes are grey or locked, so you must mine 15 points in the open world (or equip a Mining Pick +5 and Enchant Gloves - Advanced Mining +5). Equip Smelting Pants (item=5199) from Gilnid in Deadmines to reduce smelting time by 25%! You can also equip Miner's Cape (item=5444, Miner Johnson in Deadmines) for +2 Mining."
-        },
-        {
-          "icon": "⛏️",
-          "title": "Forever Exclusives: Mining for Dummies, Rockslicer & Scarce Ores",
-          "text": "Complete your racial starter zone quest for the book \"Mining for Dummies\" (or visit starter trainers in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle, or Riverglades). Non-miners can use Rockslicer (item=872, 30 charges from Rhahk'Zor in Deadmines) to gather Copper/Tin/Silver/Iron without the Mining skill. Watch for Scarce materials (Pyrite, Bauxite, Pitchblende) and new endgame bars: Azerothium Bar (275), Heavy Thorium Bar (300), and Legionite Bar!"
-        }
-      ],
+      "title": "Leveling from 1 to 300 (Veins + Smelting)",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Gathering professions level by harvesting nodes: a node gives a point every time while it is orange or yellow for you, and less often as it turns green. Skill requirements below are from Wowhead's WoW Forever node data, including the new Forever nodes. Smelting is a bonus: each smelt is listed only for the range where it is orange or yellow.",
       "steps": [
         {
           "type": "rank",
@@ -154902,19 +156218,48 @@ window.WOW_PROFESSIONS_DATA = {
           "details": "Learned from \"Mining for Dummies\" starter quest book or trainers in Stormwind (Gelman Stonehand /way 51.0, 17.2), Ironforge (Geofram Bouldertoe /way 50.2, 26.0), Orgrimmar (Makaru /way 73.0, 26.8), Thunder Bluff (Brek Stonehoof /way 34.4, 57.8), Undercity (Brom Killian /way 55.8, 37.0), Zephras Isle, & Riverglades."
         },
         {
+          "type": "gather-step",
+          "from": 1,
+          "to": 65,
+          "bar": {
+            "iLeft": "0.33%",
+            "iWidth": "21.33%"
+          },
+          "title": "Mine Copper Veins (1)",
+          "zones": "Any starter zone — Forever adds Poor Copper Veins in Elwynn Forest, Durotar and Mulgore. Drops Copper Ore and Rough Stone. Level by mining nodes, by smelting (steps below), or a mix of both depending on ore prices.",
+          "icons": [
+            {
+              "itemId": 2770,
+              "name": "Copper Ore",
+              "icon": "inv_ore_copper_01"
+            },
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06"
+            }
+          ]
+        },
+        {
           "type": "step",
           "from": 1,
           "to": 65,
           "bar": {
-            "iLeft": "0.00%",
-            "iWidth": "21.33%",
-            "eLeft": "74.67%"
+            "iLeft": "0.33%",
+            "iWidth": "21.33%"
           },
           "itemId": 2840,
-          "recipeName": "Smelt Copper (Smelting Bypass)",
-          "source": "Learned automatically with Apprentice Mining (Orange 1 · Yellow 25 · Green 47 · Grey 70)",
-          "advice": "Keep at least 60 Copper Bars to smelt Bronze at 75–100! Can be done entirely at a capital city forge.",
+          "recipeName": "Smelt Copper",
+          "source": "Learned from your Mining trainer",
+          "advice": "Smelting route: 130 Copper Ore. Keep 60 Copper Bars for Bronze at 75. Orange to 25, yellow to 47, then green.",
           "crafts": 130,
+          "craftsSafe": 141,
+          "colors": {
+            "orange": 1,
+            "yellow": 25,
+            "green": 47,
+            "grey": 70
+          },
           "reagents": [
             {
               "itemId": 2770,
@@ -154927,25 +156272,19 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "gather-step",
-          "from": 1,
-          "to": 65,
+          "from": 20,
+          "to": 20,
           "bar": {
-            "iLeft": "0.00%",
-            "iWidth": "21.33%",
-            "eLeft": "74.67%"
+            "iLeft": "6.67%",
+            "iWidth": "0.33%"
           },
-          "title": "Open-World Vein Route: Copper Vein (Skill 1+)",
-          "zones": "Best density in Durotar, Mulgore, Dun Morogh, Elwynn Forest, Darkshore, Tirisfal Glades, Zephras Isle & Riverglades. Drops Copper Ore, Rough Stone & Pyrite (Scarce).",
+          "title": "Craft your camp object once: Lodestone (skill 20)",
+          "zones": "A one-off recipe worth a skill point — 1 Rough Stone, 1 Copper Bar.",
           "icons": [
             {
-              "itemId": 2770,
-              "icon": "inv_ore_copper_01",
-              "name": "Copper Ore"
-            },
-            {
-              "itemId": 2835,
-              "icon": "inv_stone_06",
-              "name": "Rough Stone"
+              "itemId": 279960,
+              "name": "Lodestone",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -154955,19 +156294,48 @@ window.WOW_PROFESSIONS_DATA = {
           "details": "Learned at Skill 50 (Level 10) from any Mining trainer, up to 150. Unlocks Smelt Tin (65), Smelt Bronze (65), Smelt Silver (75), and Smelt Iron (125)."
         },
         {
+          "type": "gather-step",
+          "from": 65,
+          "to": 125,
+          "bar": {
+            "iLeft": "21.67%",
+            "iWidth": "20%"
+          },
+          "title": "Mine Copper, Tin (65) & Silver (75) Veins",
+          "zones": "Ashenvale, Redridge Mountains, The Barrens and Thousand Needles. Incendicite (Wetlands) and Lesser Bloodstone (Arathi) are quest ores at 65/75.",
+          "icons": [
+            {
+              "itemId": 2771,
+              "name": "Tin Ore",
+              "icon": "inv_ore_tin_01"
+            },
+            {
+              "itemId": 2775,
+              "name": "Silver Ore",
+              "icon": "inv_stone_16"
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09"
+            }
+          ]
+        },
+        {
           "type": "step",
           "from": 65,
           "to": 75,
           "bar": {
-            "iLeft": "21.33%",
-            "iWidth": "3.33%",
-            "eLeft": "74.67%"
+            "iLeft": "21.67%",
+            "iWidth": "3.33%"
           },
           "itemId": 3576,
-          "recipeName": "Smelt Tin (Smelting Bypass)",
-          "source": "Learned from Mining Trainer at Skill 65 (Green 65 · Grey 75)",
-          "advice": "Keep all 60 Tin Bars! You will combine them 1:1 with your 60 Copper Bars in the very next step.",
+          "recipeName": "Smelt Tin",
+          "source": "Learned from your Mining trainer",
+          "advice": "Smelting route: 60 Tin Ore. Tin is green from the start and grey at 75 — you smelt 60 mainly for the Bronze bars.",
           "crafts": 60,
+          "craftsSafe": 65,
+          "colors": null,
           "reagents": [
             {
               "itemId": 2771,
@@ -154983,15 +156351,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 75,
           "to": 100,
           "bar": {
-            "iLeft": "24.67%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
+            "iLeft": "25%",
+            "iWidth": "8.33%"
           },
           "itemId": 2841,
-          "recipeName": "Smelt Bronze (Smelting Bypass)",
-          "source": "Learned from Mining Trainer at Skill 65 (Yellow 65 · Green 90 · Grey 115)",
-          "advice": "Each craft produces 2 Bronze Bars using the Copper and Tin Bars you smelted from 1 to 75.",
+          "recipeName": "Smelt Bronze",
+          "source": "Learned from your Mining trainer",
+          "advice": "Uses the 60 Copper Bars and 60 Tin Bars from the previous steps.",
           "crafts": 60,
+          "craftsSafe": 65,
+          "colors": {
+            "orange": 65,
+            "yellow": 65,
+            "green": 90,
+            "grey": 115
+          },
           "reagents": [
             {
               "itemId": 2840,
@@ -155014,51 +156388,28 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 100,
           "to": 125,
           "bar": {
-            "iLeft": "33.00%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
+            "iLeft": "33.33%",
+            "iWidth": "8.33%"
           },
           "itemId": 2842,
-          "recipeName": "Smelt Silver (Smelting Bypass)",
-          "source": "Learned from Mining Trainer at Skill 75 (Orange 75 · Yellow 100 · Green 112 · Grey 125)",
-          "advice": "Smelt Silver carries you cleanly to 125 so you can learn Smelt Iron.",
+          "recipeName": "Smelt Silver",
+          "source": "Learned from your Mining trainer",
+          "advice": "Smelting route: 70 Silver Ore (scarce — buy it or mine instead).",
           "crafts": 70,
+          "craftsSafe": 76,
+          "colors": {
+            "orange": 75,
+            "yellow": 100,
+            "green": 112,
+            "grey": 125
+          },
           "reagents": [
             {
               "itemId": 2775,
               "name": "Silver Ore",
               "count": 1,
               "icon": "inv_stone_16",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "gather-step",
-          "from": 65,
-          "to": 125,
-          "bar": {
-            "iLeft": "21.33%",
-            "iWidth": "20.00%",
-            "eLeft": "74.67%"
-          },
-          "title": "Open-World Vein Route: Tin Vein (65+) & Silver Vein (75+)",
-          "zones": "Best density in The Barrens, Hillsbrad Foothills, Wetlands, Redridge Mountains, Duskwood & Stonetalon Mountains. Drops Tin Ore, Silver Ore & Coarse Stone.",
-          "icons": [
-            {
-              "itemId": 2771,
-              "icon": "inv_ore_tin_01",
-              "name": "Tin Ore"
-            },
-            {
-              "itemId": 2775,
-              "icon": "inv_stone_16",
-              "name": "Silver Ore"
-            },
-            {
-              "itemId": 2836,
-              "icon": "inv_stone_09",
-              "name": "Coarse Stone"
+              "quality": 2
             }
           ]
         },
@@ -155068,19 +156419,53 @@ window.WOW_PROFESSIONS_DATA = {
           "details": "Learned at Skill 125 (Level 20) from Mining trainers — including Dalaran in Alterac Mountains (/way 25.0, 41.2) and capital city masters, up to 225."
         },
         {
+          "type": "gather-step",
+          "from": 125,
+          "to": 175,
+          "bar": {
+            "iLeft": "41.67%",
+            "iWidth": "16.67%"
+          },
+          "title": "Mine Iron Deposits (125), Cold Iron Deposits (125, Forever) & Gold Veins (155)",
+          "zones": "Arathi Highlands, Desolace, Stranglethorn Vale and Thousand Needles; Forever adds Cold Iron Deposits in Duskwood. Tin Veins stop giving points at 165. Nothing smelts for points between 140 and 155, so mine through that gap.",
+          "icons": [
+            {
+              "itemId": 2772,
+              "name": "Iron Ore",
+              "icon": "inv_ore_iron_01"
+            },
+            {
+              "itemId": 2776,
+              "name": "Gold Ore",
+              "icon": "inv_ore_copper_01"
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_12"
+            }
+          ]
+        },
+        {
           "type": "step",
           "from": 125,
           "to": 140,
           "bar": {
-            "iLeft": "41.33%",
-            "iWidth": "5.00%",
-            "eLeft": "74.67%"
+            "iLeft": "41.67%",
+            "iWidth": "5%"
           },
           "itemId": 3575,
-          "recipeName": "Smelt Iron (Smelting Bypass)",
-          "source": "Learned from Mining Trainer at Skill 125 (Orange 125 · Yellow 130 · Green 135 · Grey 140)",
-          "advice": "Smelt Iron turns grey at 140! Stop smelting at 140 and mine veins in the open world from 140 to 155.",
+          "recipeName": "Smelt Iron",
+          "source": "Learned from your Mining trainer",
+          "advice": "Smelting route: 35 Iron Ore. Grey at 140.",
           "crafts": 35,
+          "craftsSafe": 38,
+          "colors": {
+            "orange": 125,
+            "yellow": 130,
+            "green": 135,
+            "grey": 140
+          },
           "reagents": [
             {
               "itemId": 2772,
@@ -155094,24 +156479,18 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 140,
-          "to": 155,
+          "to": 140,
           "bar": {
-            "iLeft": "46.33%",
-            "iWidth": "5.00%",
-            "eLeft": "74.67%"
+            "iLeft": "46.67%",
+            "iWidth": "0.33%"
           },
-          "title": "⚠️ MANDATORY WORLD MINING (140–155): Iron, Tin & Silver Veins",
-          "zones": "No smelting recipe grants skill points between 140 and 155! Mine Iron Deposits (125), Silver Veins (75), or Tin Veins (65) in Arathi Highlands, Alterac Mountains, Thousand Needles, Desolace & Stranglethorn Vale until 155.",
+          "title": "Craft your camp object once: Rock Garden (skill 140)",
+          "zones": "A one-off recipe worth a skill point — 2 Heavy Stone, 1 Iron Ore, 1 Silver Bar.",
           "icons": [
             {
-              "itemId": 2772,
-              "icon": "inv_ore_iron_01",
-              "name": "Iron Ore"
-            },
-            {
-              "itemId": 2838,
-              "icon": "inv_stone_12",
-              "name": "Heavy Stone"
+              "itemId": 279948,
+              "name": "Rock Garden",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -155120,15 +156499,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 155,
           "to": 185,
           "bar": {
-            "iLeft": "51.33%",
-            "iWidth": "10.00%",
-            "eLeft": "74.67%"
+            "iLeft": "51.67%",
+            "iWidth": "10%"
           },
           "itemId": 3577,
-          "recipeName": "Smelt Gold (Smelting Bypass)",
-          "source": "Learned from Mining Trainer at Skill 155 (Orange 155 · Yellow 170 · Green 177 · Grey 185)",
-          "advice": "Last smelting skill-up bracket! Note: Smelt Steel (learned at 165, 1x Iron Bar + 1x Coal) and Smelt Mithril (learned at 175) are learned already grey/non-skilling in Forever, though occasionally grant 1 point on first craft.",
+          "recipeName": "Smelt Gold",
+          "source": "Learned from your Mining trainer",
+          "advice": "Smelting route: 60 Gold Ore. The last smelt that levels you — past 185 only mining nodes give points.",
           "crafts": 60,
+          "craftsSafe": 65,
+          "colors": {
+            "orange": 155,
+            "yellow": 170,
+            "green": 177,
+            "grey": 185
+          },
           "reagents": [
             {
               "itemId": 2776,
@@ -155144,22 +156529,26 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 175,
           "to": 225,
           "bar": {
-            "iLeft": "58.00%",
-            "iWidth": "16.67%",
-            "eLeft": "74.67%"
+            "iLeft": "58.33%",
+            "iWidth": "16.67%"
           },
-          "title": "Open-World Vein Route: Mithril Deposit (175+) & Gold Vein (155+)",
-          "zones": "Mine Mithril Deposits from 175 to 230 in Badlands, Tanaris, The Hinterlands, Searing Gorge & Desolace. Yields Mithril Ore, Solid Stone, Aquamarine & Star Ruby.",
+          "title": "Mine Gold, Mithril (175), Fool's Gold Veins (175, Forever) & Truesilver (230)",
+          "zones": "Azshara, Tanaris and the Hinterlands; Forever adds Fool's Gold Veins in Ashenvale. Silver Veins stop giving points around here.",
           "icons": [
             {
               "itemId": 3858,
-              "icon": "inv_ore_mithril_02",
-              "name": "Mithril Ore"
+              "name": "Mithril Ore",
+              "icon": "inv_ore_mithril_02"
+            },
+            {
+              "itemId": 7911,
+              "name": "Truesilver Ore",
+              "icon": "inv_ore_truesilver_01"
             },
             {
               "itemId": 7912,
-              "icon": "inv_stone_10",
-              "name": "Solid Stone"
+              "name": "Solid Stone",
+              "icon": "inv_stone_10"
             }
           ]
         },
@@ -155171,36 +156560,70 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 225,
-          "to": 300,
+          "to": 275,
           "bar": {
-            "iLeft": "74.67%",
-            "iWidth": "25.00%",
-            "eLeft": "74.67%"
+            "iLeft": "75%",
+            "iWidth": "16.67%"
           },
-          "title": "Truesilver (230+), Small Thorium (245+) & Rich Thorium Veins (275+)",
-          "zones": "225–245: Mithril & Truesilver Deposits (Badlands, Tanaris, Hinterlands) · 245–275: Small Thorium Veins (Un'Goro Crater, Blasted Lands, Searing Gorge, Burning Steppes) · 275–300: Rich Thorium Veins (Winterspring, Eastern Plaguelands, Silithus, Azshara & Mount Hyjal). Drops Thorium Ore, Dense Stone, Arcane Crystal & Pitchblende.",
+          "title": "Mine Mithril, Truesilver, Dark Iron (230), Small Thorium & Starsilver Veins (245, Forever)",
+          "zones": "Un'Goro Crater, Silithus, Burning Steppes, Searing Gorge, Blasted Lands and Felwood; Forever adds Starsilver Veins in the Hinterlands.",
           "icons": [
             {
-              "itemId": 7911,
-              "icon": "inv_ore_truesilver_01",
-              "name": "Truesilver Ore"
-            },
-            {
               "itemId": 10620,
-              "icon": "inv_ore_thorium_02",
-              "name": "Thorium Ore"
+              "name": "Thorium Ore",
+              "icon": "inv_ore_thorium_02"
             },
             {
               "itemId": 12365,
-              "icon": "inv_misc_stonetablet_07",
-              "name": "Dense Stone"
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 275,
+          "to": 300,
+          "bar": {
+            "iLeft": "91.67%",
+            "iWidth": "8.33%"
+          },
+          "title": "Mine Rich Thorium Veins (275) & Heavy Thorium Veins (300, Forever)",
+          "zones": "Rich Thorium in Winterspring, Eastern Plaguelands, Azshara, Silithus and Zul'Gurub; Forever's Heavy Thorium Veins are in Mount Hyjal. Pitchblende from these nodes smelts into Azerothium Bars at 275.",
+          "icons": [
+            {
+              "itemId": 10620,
+              "name": "Thorium Ore",
+              "icon": "inv_ore_thorium_02"
             },
             {
               "itemId": 12363,
-              "icon": "inv_misc_gem_topaz_01",
-              "name": "Arcane Crystal"
+              "name": "Arcane Crystal",
+              "icon": "inv_misc_gem_crystal_01"
+            },
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07"
             }
           ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🔥",
+          "title": "Smelting Facts for Forever",
+          "text": "Smelt Copper is orange to 25 and yellow to 47; Bronze is good 65–90; Silver is orange 75–100; Iron 125–135; Gold 155–177. Steel, Mithril, Truesilver, Dark Iron, Thorium and Azerothium give exactly one point when learned and none after. Nothing smelts for points between 140 and 155. Smelting Pants (Gilnid, Deadmines) speed up Copper, Tin, Bronze and Silver smelting by 25%."
+        },
+        {
+          "icon": "🪨",
+          "title": "Forever Ores & Camp Objects",
+          "text": "New Forever nodes: Cold Iron Deposits (125, Duskwood), Fool's Gold Veins (175, Ashenvale), Starsilver Veins (245, Hinterlands) and Heavy Thorium Veins (300, Mount Hyjal). Pitchblende smelts into Azerothium Bars at 275; Heavy Thorium Bars at 300. Camp objects: Lodestone (20), Rock Garden (140, spawns a mining node over time) and Molten Foundry (300). Miner's Cape (Miner Johnson, Deadmines) gives +2 Mining."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -155579,21 +157002,9 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "title": "Leveling from 1 to 300 (Herb Zones & Gathering Route)",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "Keep Find Herbs active on your minimap at all times. In WoW Forever, starter valleys spawn Wilted Peacebloom and Stunted Silverleaf so you can skill up from Level 1!",
-      "guideCallouts": [
-        {
-          "icon": "🍵",
-          "title": "Forever +25 Herbalism Skill Boosts & Tauren Cultivation Rework",
-          "text": "Drink Goldthorn Tea (item=10841) for a +15 Herbalism skill boost in Forever! Stack it with Herbalist's Gloves (+5) and Enchant Gloves - Advanced Herbalism (+5) to harvest nodes 25 points early. For Tauren, Cultivation now duplicates a nearby herb node instead of giving +15 flat skill!"
-        },
-        {
-          "icon": "🌱",
-          "title": "Starter Book \"Wild Harvest\", Herb Seeds & Scarce Herbs",
-          "text": "Complete your starter zone quest for the book \"Wild Harvest\" (item=247841) or train in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle & Riverglades. Gathering herbs in Forever yields Commonplace, Uncommon, Unusual & Scarce Herb Seeds (for Camp Greenhouses), Scarce herbs (Frilled Lichen, Rosecap, Stranglevine), and new 290–300 endgame herbs (Marefoil, Demonsage, Death Lotus)!"
-        }
-      ],
+      "title": "Leveling from 1 to 300 (Herb Brackets)",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Gathering professions level by harvesting nodes: a node gives a point every time while it is orange or yellow for you, and less often as it turns green. Skill requirements below are from Wowhead's WoW Forever node data, including the new Forever nodes.",
       "steps": [
         {
           "type": "rank",
@@ -155603,26 +157014,46 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 1,
-          "to": 50,
+          "to": 70,
           "bar": {
-            "iLeft": "0.00%",
-            "iWidth": "16.33%",
-            "eLeft": "74.67%"
+            "iLeft": "0.33%",
+            "iWidth": "23%"
           },
-          "title": "Wilted Peacebloom (1), Peacebloom (1), Silverleaf (1) & Earthroot (15)",
-          "zones": "Starter valleys (Wilted Peacebloom & Stunted Silverleaf) plus Elwynn Forest, Dun Morogh, Teldrassil, Durotar, Mulgore, Tirisfal Glades, Zephras Isle & Riverglades.",
+          "title": "Peacebloom & Silverleaf (1 · green 65), Earthroot (15 · green 80)",
+          "zones": "Any starter zone — even the starting areas have Wilted Peacebloom and Stunted Silverleaf. The \"Wild Harvest\" quest reward teaches Herbalism (+2 skill).",
           "icons": [
             {
-              "icon": "inv_misc_flower_02",
-              "name": "Peacebloom"
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "icon": "inv_misc_flower_02"
             },
             {
-              "icon": "inv_misc_herb_10",
-              "name": "Silverleaf"
+              "itemId": 765,
+              "name": "Silverleaf",
+              "icon": "inv_misc_herb_10"
             },
             {
-              "icon": "inv_misc_herb_07",
-              "name": "Earthroot"
+              "itemId": 2449,
+              "name": "Earthroot",
+              "icon": "inv_misc_herb_07"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 20,
+          "to": 20,
+          "bar": {
+            "iLeft": "6.67%",
+            "iWidth": "0.33%"
+          },
+          "title": "Craft your camp object once: Incense Candle (skill 20)",
+          "zones": "A one-off recipe worth a skill point — 1 Peacebloom, 1 Silverleaf.",
+          "icons": [
+            {
+              "itemId": 279962,
+              "name": "Incense Candle",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -155633,57 +157064,62 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "gather-step",
-          "from": 50,
-          "to": 100,
+          "from": 70,
+          "to": 115,
           "bar": {
-            "iLeft": "16.33%",
-            "iWidth": "16.67%",
-            "eLeft": "74.67%"
+            "iLeft": "23.33%",
+            "iWidth": "15%"
           },
-          "title": "Mageroyal (50), Briarthorn (70) & Stranglekelp (85)",
-          "zones": "Most abundant in The Barrens, Westfall, Darkshore, Silverpine Forest, Loch Modan & Redridge Mountains. Drops Commonplace Herb Seeds & Frilled Lichen (Scarce).",
+          "title": "Mageroyal (50 · green 115), Briarthorn (70 · green 135) & Stranglekelp (85 · green 150)",
+          "zones": "Darkshore, Loch Modan and Silverpine Forest. Stranglekelp only grows underwater.",
           "icons": [
             {
-              "icon": "inv_jewelry_talisman_03",
-              "name": "Mageroyal"
+              "itemId": 785,
+              "name": "Mageroyal",
+              "icon": "inv_jewelry_talisman_03"
             },
             {
-              "icon": "inv_misc_root_01",
-              "name": "Briarthorn"
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01"
             },
             {
-              "icon": "inv_misc_herb_11",
-              "name": "Stranglekelp"
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "icon": "inv_misc_herb_11"
             }
           ]
         },
         {
           "type": "gather-step",
-          "from": 100,
-          "to": 150,
+          "from": 115,
+          "to": 170,
           "bar": {
-            "iLeft": "33.00%",
-            "iWidth": "16.67%",
-            "eLeft": "74.67%"
+            "iLeft": "38.33%",
+            "iWidth": "18.33%"
           },
-          "title": "Bruiseweed (100), Wild Steelbloom (115), Grave Moss (120) & Kingsblood (125)",
-          "zones": "Most abundant in Hillsbrad Foothills, Wetlands, Stonetalon Mountains, Ashenvale, Duskwood (Grave Moss in crypts) & Southern Barrens.",
+          "title": "Bruiseweed (100), Wild Steelbloom (115), Grave Moss (120), Kingsblood & Nightmare Moss (125), Liferoot (150)",
+          "zones": "Hillsbrad Foothills, Wetlands and Stonetalon Mountains; Grave Moss near crypts and graveyards. Forever adds Nightmare Moss in Duskwood.",
           "icons": [
             {
-              "icon": "inv_misc_herb_01",
-              "name": "Bruiseweed"
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "icon": "inv_misc_herb_01"
             },
             {
-              "icon": "inv_misc_flower_01",
-              "name": "Wild Steelbloom"
+              "itemId": 3355,
+              "name": "Wild Steelbloom",
+              "icon": "inv_misc_flower_01"
             },
             {
-              "icon": "inv_misc_dust_02",
-              "name": "Grave Moss"
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "icon": "inv_misc_herb_03"
             },
             {
-              "icon": "inv_misc_herb_03",
-              "name": "Kingsblood"
+              "itemId": 3357,
+              "name": "Liferoot",
+              "icon": "inv_misc_root_02"
             }
           ]
         },
@@ -155694,31 +157130,47 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "gather-step",
-          "from": 150,
-          "to": 205,
+          "from": 140,
+          "to": 140,
           "bar": {
-            "iLeft": "49.67%",
-            "iWidth": "18.33%",
-            "eLeft": "74.67%"
+            "iLeft": "46.67%",
+            "iWidth": "0.33%"
           },
-          "title": "Liferoot (150), Fadeleaf (160), Goldthorn (170), Khadgar's Whisker (185) & Wintersbite (195)",
-          "zones": "Stranglethorn Vale (riverbanks for Liferoot), Arathi Highlands (Goldthorn), Alterac Mountains (Wintersbite) & Swamp of Sorrows (Fadeleaf/Khadgar's Whisker).",
+          "title": "Camp object: Greenhouse (skill 140)",
+          "zones": "Not a trainer recipe — the blueprint drops from Shadetooth at the Excavation Site in the Wetlands. It grows herbs from the seeds you gather.",
           "icons": [
             {
-              "icon": "inv_misc_root_02",
-              "name": "Liferoot"
+              "itemId": 279964,
+              "name": "Greenhouse",
+              "icon": "inv_misc_bag_10"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 170,
+          "to": 205,
+          "bar": {
+            "iLeft": "56.67%",
+            "iWidth": "11.67%"
+          },
+          "title": "Kingsblood, Liferoot, Fadeleaf (160), Goldthorn (170) & Khadgar's Whisker (185)",
+          "zones": "Stranglethorn Vale and Arathi Highlands.",
+          "icons": [
+            {
+              "itemId": 3818,
+              "name": "Fadeleaf",
+              "icon": "inv_misc_herb_12"
             },
             {
-              "icon": "inv_misc_herb_12",
-              "name": "Fadeleaf"
+              "itemId": 3821,
+              "name": "Goldthorn",
+              "icon": "inv_misc_herb_15"
             },
             {
-              "icon": "inv_misc_herb_15",
-              "name": "Goldthorn"
-            },
-            {
-              "icon": "inv_misc_herb_08",
-              "name": "Khadgar's Whisker"
+              "itemId": 3358,
+              "name": "Khadgar's Whisker",
+              "icon": "inv_misc_herb_08"
             }
           ]
         },
@@ -155727,24 +157179,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 205,
           "to": 225,
           "bar": {
-            "iLeft": "68.00%",
-            "iWidth": "6.67%",
-            "eLeft": "74.67%"
+            "iLeft": "68.33%",
+            "iWidth": "6.67%"
           },
-          "title": "Firebloom (205), Purple Lotus (210) & Arthas' Tears (220)",
-          "zones": "Tanaris & Searing Gorge / Badlands (Firebloom), Ashenvale / Azshara / Hinterlands ruins (Purple Lotus), and Razorfen Downs / Western Plaguelands (Arthas' Tears).",
+          "title": "Wintersbite (195), Firebloom & Dreamroot (205, Forever), Purple Lotus (210)",
+          "zones": "Alterac Mountains (Wintersbite only grows in its snow), Tanaris and Searing Gorge; Forever adds Dreamroot in Ashenvale.",
           "icons": [
             {
-              "icon": "inv_misc_herb_19",
-              "name": "Firebloom"
+              "itemId": 4625,
+              "name": "Firebloom",
+              "icon": "inv_misc_herb_19"
             },
             {
-              "icon": "inv_misc_herb_17",
-              "name": "Purple Lotus"
-            },
-            {
-              "icon": "inv_misc_herb_13",
-              "name": "Arthas' Tears"
+              "itemId": 8831,
+              "name": "Purple Lotus",
+              "icon": "inv_misc_herb_17"
             }
           ]
         },
@@ -155756,66 +157205,80 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 225,
-          "to": 270,
+          "to": 260,
           "bar": {
-            "iLeft": "74.67%",
-            "iWidth": "15.00%",
-            "eLeft": "74.67%"
+            "iLeft": "75%",
+            "iWidth": "11.67%"
           },
-          "title": "Sungrass (230), Blindweed (235), Ghost Mushroom (245), Gromsblood (250) & Golden Sansam (260)",
-          "zones": "Swamp of Sorrows (Blindweed rivers), The Hinterlands (Sungrass + Ghost Mushroom in Skulk Rock), Felwood & Blasted Lands (Gromsblood), Feralas & Un'Goro Crater.",
+          "title": "Arthas' Tears (220), Sungrass (230), Blindweed (235), Ghost Mushroom (245), Gromsblood, Moonroot & Star Lotus (250)",
+          "zones": "Felwood, the Plaguelands, Feralas, the Hinterlands, Swamp of Sorrows and Un'Goro Crater. Forever adds Moonroot in Feralas and Star Lotus in the Hinterlands.",
           "icons": [
             {
-              "icon": "inv_misc_herb_18",
-              "name": "Sungrass"
+              "itemId": 8836,
+              "name": "Arthas' Tears",
+              "icon": "inv_misc_herb_13"
             },
             {
-              "icon": "inv_misc_herb_14",
-              "name": "Blindweed"
+              "itemId": 8838,
+              "name": "Sungrass",
+              "icon": "inv_misc_herb_18"
             },
             {
-              "icon": "inv_mushroom_08",
-              "name": "Ghost Mushroom"
-            },
-            {
-              "icon": "inv_misc_herb_16",
-              "name": "Gromsblood"
-            },
-            {
-              "icon": "inv_misc_herb_sansamroot",
-              "name": "Golden Sansam"
+              "itemId": 8846,
+              "name": "Gromsblood",
+              "icon": "inv_misc_herb_16"
             }
           ]
         },
         {
           "type": "gather-step",
-          "from": 270,
+          "from": 260,
           "to": 300,
           "bar": {
-            "iLeft": "89.67%",
-            "iWidth": "10.00%",
-            "eLeft": "74.67%"
+            "iLeft": "86.67%",
+            "iWidth": "13.33%"
           },
-          "title": "Dreamfoil (270), Mountain Silversage (280), Plaguebloom (285), Icecap (290) + Forever Herbs (290–300)",
-          "zones": "Un'Goro Crater, Azshara, Eastern Plaguelands, Winterspring & Mount Hyjal. Includes Forever endgame herbs: Marefoil (290), Demonsage (300) & Death Lotus (300) alongside Black Lotus (300)!",
+          "title": "Golden Sansam (260), Dreamfoil (270), Mountain Silversage (280), Plaguebloom (285), Icecap (290), Black Lotus & Demonsage (300)",
+          "zones": "Felwood, Un'Goro Crater, Azshara, Eastern Plaguelands, Silithus and Winterspring; Demonsage grows in Mount Hyjal. Goldthorn Tea (+15 for 15 min) lets you pick these earlier.",
           "icons": [
             {
-              "icon": "inv_misc_herb_dreamfoil",
-              "name": "Dreamfoil"
+              "itemId": 13464,
+              "name": "Golden Sansam",
+              "icon": "inv_misc_herb_sansamroot"
             },
             {
-              "icon": "inv_misc_herb_mountainsilversage",
-              "name": "Mountain Silversage"
+              "itemId": 13463,
+              "name": "Dreamfoil",
+              "icon": "inv_misc_herb_dreamfoil"
             },
             {
-              "icon": "inv_misc_herb_plaguebloom",
-              "name": "Plaguebloom"
+              "itemId": 13465,
+              "name": "Mountain Silversage",
+              "icon": "inv_misc_herb_mountainsilversage"
             },
             {
-              "icon": "inv_misc_herb_icecap",
-              "name": "Icecap"
+              "itemId": 13467,
+              "name": "Icecap",
+              "icon": "inv_misc_herb_icecap"
             }
           ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🍵",
+          "title": "Pick Herbs Early: Goldthorn Tea & Gloves",
+          "text": "Goldthorn Tea (item 10841, level 25) gives +15 Herbalism for 15 minutes once you have sat drinking for 10 seconds, plus 5% kill experience. Combine it with Herbalist's Gloves (+5) and Enchant Gloves - Advanced Herbalism (+5) to pick nodes 25 points early. Tauren Cultivation now duplicates a nearby herb node instead of giving +15 skill."
+        },
+        {
+          "icon": "🌱",
+          "title": "Forever Herbs, Seeds & Camp Objects",
+          "text": "New Forever herb nodes: Nightmare Moss (125, Duskwood), Dreamroot (205, Ashenvale), Moonroot (250, Feralas), Star Lotus (250, Hinterlands) and Demonsage (300, Mount Hyjal). Marefoil and Death Lotus are new endgame herbs whose node locations are still unconfirmed; Enchant Gloves - Lotus Claw gives a small chance of Death Lotus from any herb in Hyjal. Herbs also drop seeds and Scarce materials (Frilled Lichen, Rosecap, Stranglevine). Camp objects: Incense Candle (20), Greenhouse (140, blueprint from Shadetooth in the Wetlands) and Seed Hybridizer (300). The Bountiful Harvest perk adds 20% Scarce materials per rank."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -156417,7 +157880,7 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "leveling": {
       "title": "Leveling from 1 to 300 (Beast Level Formula & Zones)",
-      "capNote": "Complete 1–300 Artisan Roadmap",
+      "capNote": "Verified for WoW Forever · Nov 2026",
       "desc": "Always keep a Skinning Knife in your bags (does not need to be equipped). In WoW Forever, starter zone beasts (Level 1–10) are skinnable right out of the gate!",
       "guideCallouts": [
         {
@@ -156426,9 +157889,14 @@ window.WOW_PROFESSIONS_DATA = {
           "text": "• Beasts Level 1–10: Requires Skinning Skill 1 · • Beasts Level 11–20: (Monster Level - 10) × 10 (e.g., Lvl 12 = Skill 20, Lvl 15 = Skill 50, Lvl 20 = Skill 100) · • Beasts Level 21+: Monster Level × 5 (e.g., Lvl 25 = Skill 125, Lvl 35 = Skill 175, Lvl 45 = Skill 225, Lvl 60 = Skill 300)."
         },
         {
-          "icon": "🦌",
-          "title": "Forever Exclusives: Cartilage Shapers (+4), Pelt Collecting, Pristine & Fel Pelts",
-          "text": "Learn Apprentice Skinning via the starter quest book \"Pelt Collecting for Beginners\" (item=247846) or starter trainers in Zephras Isle, Riverglades, Goldshire, Kharanos, Razor Hill & Brill. Equip Cartilage Shapers (item=273054, leather gloves from early dungeon drops) for +4 Skinning to access beast brackets earlier! At endgame, boost skill with Finkle's Skinner (+10) or Zulian Slicer (+10) + Enchant Gloves - Skinning (+5) to harvest Scarce Pristine Leather and endgame Fel Hides."
+          "icon": "🔪",
+          "title": "Forever Skinning Gear & Camp Objects",
+          "text": "Learn Apprentice Skinning from the starter book \"Pelt Collecting for Beginners\" (item 247846, +2 skill). Cartilage Shapers (item 273054, +4 Skinning, level 28 gloves from Lyn the Ignored) let you skin beasts early; Finkle's Skinner and Zulian Slicer add +10 at endgame. Camp objects: Camp Chair (20), Field Guide (140, grants Track Beasts) and Trapper's Workbench (300)."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ],
       "steps": [
@@ -156466,6 +157934,24 @@ window.WOW_PROFESSIONS_DATA = {
               "name": "Light Hide",
               "icon": "inv_misc_pelt_wolf_ruin_02",
               "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 20,
+          "to": 20,
+          "bar": {
+            "iLeft": "6.67%",
+            "iWidth": "0.33%"
+          },
+          "title": "Craft your camp object once: Camp Chair (skill 20)",
+          "zones": "A one-off recipe worth a skill point — 3 Light Leather, 2 Simple Wood.",
+          "icons": [
+            {
+              "itemId": 279979,
+              "name": "Camp Chair",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -156509,6 +157995,24 @@ window.WOW_PROFESSIONS_DATA = {
               "name": "Heavy Leather",
               "icon": "inv_misc_leatherscrap_07",
               "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 140,
+          "to": 140,
+          "bar": {
+            "iLeft": "46.67%",
+            "iWidth": "0.33%"
+          },
+          "title": "Craft your camp object once: Field Guide (skill 140)",
+          "zones": "A one-off recipe worth a skill point — 3 Medium Leather, 2 Slimy Murloc Scale, 1 Fine Thread.",
+          "icons": [
+            {
+              "itemId": 279969,
+              "name": "Field Guide",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -161140,8 +162644,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -161151,57 +162655,32 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 50,
+          "to": 54,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "16.333333333333332%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "17.67%"
           },
-          "itemId": 2681,
-          "recipeName": "Roasted Boar Meat",
+          "itemId": 2679,
+          "recipeName": "Charred Wolf Meat",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 50,
+          "advice": "Cook at a campfire: the Basic Campfire Kit is your first Cooking recipe (1 Simple Wood, Flint and Tinder in your bags).",
+          "crafts": 54,
+          "craftsSafe": 55,
+          "colors": {
+            "orange": 1,
+            "yellow": 45,
+            "green": 65,
+            "grey": 85
+          },
           "reagents": [
             {
-              "itemId": 769,
-              "name": "Chunk of Boar Meat",
+              "itemId": 2672,
+              "name": "Stringy Wolf Meat",
               "count": 1,
               "icon": "inv_misc_food_14",
               "quality": 1
             }
           ]
-        },
-        {
-          "type": "step",
-          "from": 50,
-          "to": 75,
-          "bar": {
-            "iLeft": "16.333333333333332%",
-            "iWidth": "8.333333333333334%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4592,
-          "recipeName": "Longjaw Mud Snapper",
-          "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Naal Mistrunner (Horde) and 6 more",
-          "advice": "",
-          "crafts": 25,
-          "reagents": [
-            {
-              "itemId": 6289,
-              "name": "Raw Longjaw Mud Snapper",
-              "count": 1,
-              "icon": "inv_misc_fish_32",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Tharynn Bouden / Tansy Puddlefizz (A) · Naal Mistrunner (H)",
-            "location": "Goldshire /way 41.8, 67.0 & Ironforge /way 47.8, 6.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
-            "cost": "4s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Smoked Bear Meat (40–85) or Boiled Clams / Crab Cake (50–100) taught by the Cooking trainer."
         },
         {
           "type": "rank",
@@ -161210,65 +162689,33 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 75,
-          "to": 100,
+          "from": 54,
+          "to": 101,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "8.333333333333334%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "18%",
+            "iWidth": "15.67%"
           },
-          "itemId": 4592,
-          "recipeName": "Longjaw Mud Snapper",
-          "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Naal Mistrunner (Horde) and 6 more",
-          "advice": "",
-          "crafts": 27,
+          "itemId": 2684,
+          "recipeName": "Coyote Steak",
+          "source": "Learned from the trainer",
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75.",
+          "crafts": 48,
+          "craftsSafe": 50,
+          "colors": {
+            "orange": 50,
+            "yellow": 90,
+            "green": 110,
+            "grey": 130
+          },
           "reagents": [
             {
-              "itemId": 6289,
-              "name": "Raw Longjaw Mud Snapper",
+              "itemId": 2673,
+              "name": "Coyote Meat",
               "count": 1,
-              "icon": "inv_misc_fish_32",
+              "icon": "inv_misc_food_69",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Tharynn Bouden / Tansy Puddlefizz (A) · Naal Mistrunner (H)",
-            "location": "Goldshire /way 41.8, 67.0 & Ironforge /way 47.8, 6.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
-            "cost": "4s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Smoked Bear Meat (40–85) or Boiled Clams / Crab Cake (50–100) taught by the Cooking trainer."
-        },
-        {
-          "type": "step",
-          "from": 100,
-          "to": 150,
-          "bar": {
-            "iLeft": "33%",
-            "iWidth": "16.666666666666668%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 4593,
-          "recipeName": "Bristle Whisker Catfish",
-          "source": "Recipe sold by Catherine Leland (Alliance) or Naal Mistrunner (Horde) and 5 more",
-          "advice": "",
-          "crafts": 52,
-          "reagents": [
-            {
-              "itemId": 6308,
-              "name": "Raw Bristle Whisker Catfish",
-              "count": 1,
-              "icon": "inv_misc_fish_30",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Catherine Leland (Alliance) · Naal Mistrunner (Horde)",
-            "location": "Canals, Stormwind /way 55.0, 69.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
-            "cost": "12s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Seasoned Wolf Kabob (100–150, Stormwind chef quest) or Big Bear Steak (110–150)."
+          ]
         },
         {
           "type": "rank",
@@ -161277,18 +162724,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 150,
-          "to": 157,
+          "from": 101,
+          "to": 153,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "2.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "33.67%",
+            "iWidth": "17.33%"
           },
           "itemId": 4593,
           "recipeName": "Bristle Whisker Catfish",
-          "source": "Recipe sold by Catherine Leland (Alliance) or Naal Mistrunner (Horde) and 5 more",
-          "advice": "",
-          "crafts": 11,
+          "source": "Recipe sold by Derak Nightfall (Hillsbrad Foothills) and other fish vendors",
+          "advice": "Read the Expert Cookbook (skill 125) before you reach 150.",
+          "crafts": 54,
+          "craftsSafe": 57,
+          "colors": {
+            "orange": 100,
+            "yellow": 140,
+            "green": 160,
+            "grey": 180
+          },
           "reagents": [
             {
               "itemId": 6308,
@@ -161297,83 +162750,44 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_misc_fish_30",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Catherine Leland (Alliance) · Naal Mistrunner (Horde)",
-            "location": "Canals, Stormwind /way 55.0, 69.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
-            "cost": "12s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Seasoned Wolf Kabob (100–150, Stormwind chef quest) or Big Bear Steak (110–150)."
+          ]
         },
         {
           "type": "step",
-          "from": 157,
+          "from": 153,
           "to": 175,
           "bar": {
-            "iLeft": "52%",
-            "iWidth": "6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "51%",
+            "iWidth": "7.33%"
           },
-          "itemId": 12209,
-          "recipeName": "Lean Wolf Steak",
-          "source": "Recipe sold by Super-Seller 680 (Desolace)",
-          "advice": "",
-          "crafts": 20,
+          "itemId": 5527,
+          "recipeName": "Goblin Deviled Clams",
+          "source": "Learned from the trainer",
+          "advice": "Hot Spices are sold by cooking supply vendors.",
+          "crafts": 23,
+          "craftsSafe": 25,
+          "colors": {
+            "orange": 125,
+            "yellow": 165,
+            "green": 185,
+            "grey": 205
+          },
           "reagents": [
             {
-              "itemId": 1015,
-              "name": "Lean Wolf Flank",
+              "itemId": 5504,
+              "name": "Tangy Clam Meat",
               "count": 1,
-              "icon": "inv_misc_food_14",
+              "icon": "inv_misc_food_51",
               "quality": 1
             },
             {
-              "itemId": 2678,
-              "name": "Mild Spices",
+              "itemId": 2692,
+              "name": "Hot Spices",
               "count": 1,
-              "icon": "inv_misc_food_wheat_02",
+              "icon": "inv_misc_food_legion_dalapenopepper",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Super-Seller 680 (Gizelton Caravan)",
-            "location": "Kormek's Hut, Northern Desolace /way 60.6, 51.8 (When caravan stops in north)",
-            "cost": "16s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Zero-Spice Backup: Keep cooking Bristle Whisker Catfish all the way from 150 to 175 (green 150–175), or Curiously Tasty Omelet (130–175)."
-        },
-        {
-          "type": "step",
-          "from": 175,
-          "to": 225,
-          "bar": {
-            "iLeft": "58%",
-            "iWidth": "16.666666666666668%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 8364,
-          "recipeName": "Mithril Head Trout",
-          "source": "Recipe sold by Heldan Galesong (Alliance) or Shankys (Horde) and 7 more",
-          "advice": "",
-          "crafts": 52,
-          "reagents": [
-            {
-              "itemId": 8365,
-              "name": "Raw Mithril Head Trout",
-              "count": 1,
-              "icon": "inv_misc_fish_02",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Tansy Puddlefizz / Heldan Galesong (A) · Shankys (H)",
-            "location": "Mystic Ward, Ironforge /way 47.8, 6.6 (A) · Cleft of Shadow, Orgrimmar /way 70.0, 30.6 (H)",
-            "cost": "22s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Backup: Craft Roast Raptor or Carrion Surprise (175–225, sold by Corporal Bluth in Rebel Camp, STV /way 38.0, 3.0 or Keena in Hammerfall, Arathi)."
+          ]
         },
         {
           "type": "rank",
@@ -161382,77 +162796,117 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 225,
-          "to": 285,
+          "from": 175,
+          "to": 226,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "20%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "58.33%",
+            "iWidth": "17%"
           },
-          "itemId": 13930,
-          "recipeName": "Filet of Redgill",
-          "source": "Recipe sold by Kelsey Yance (Stranglethorn Vale)",
-          "advice": "",
-          "crafts": 68,
+          "itemId": 8364,
+          "recipeName": "Mithril Headed Trout",
+          "source": "Recipe sold by Lindea Rabonne (Hillsbrad Foothills) and other fish vendors",
+          "advice": "Finish the Artisan quest (level 35) before you reach 225.",
+          "crafts": 52,
+          "craftsSafe": 55,
+          "colors": {
+            "orange": 175,
+            "yellow": 215,
+            "green": 235,
+            "grey": 255
+          },
           "reagents": [
             {
-              "itemId": 13758,
-              "name": "Raw Redgill",
+              "itemId": 8365,
+              "name": "Raw Mithril Head Trout",
               "count": 1,
-              "icon": "inv_misc_fish_06",
+              "icon": "inv_misc_fish_02",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Kelsey Yance",
-            "location": "Old Port Authority, Booty Bay (Stranglethorn Vale) /way 28.2, 74.4",
-            "cost": "1g 60s",
-            "supply": "Unlimited"
+          ]
+        },
+        {
+          "type": "step",
+          "from": 226,
+          "to": 285,
+          "bar": {
+            "iLeft": "75.33%",
+            "iWidth": "19.67%"
           },
-          "trainerAlternative": "Backup: Craft Spotted Yellowtail or Monster Omelet (225–285, sold by Gikkix in Steamwheedle Port, Tanaris /way 66.6, 22.0)."
+          "itemId": 6887,
+          "recipeName": "Spotted Yellowtail",
+          "source": "Recipe sold by Gikkix (Tanaris)",
+          "advice": "",
+          "crafts": 66,
+          "craftsSafe": 70,
+          "colors": {
+            "orange": 225,
+            "yellow": 265,
+            "green": 285,
+            "grey": 305
+          },
+          "reagents": [
+            {
+              "itemId": 4603,
+              "name": "Raw Spotted Yellowtail",
+              "count": 1,
+              "icon": "inv_misc_fish_01",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "step",
           "from": 285,
           "to": 300,
           "bar": {
-            "iLeft": "94.66666666666667%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "95%",
+            "iWidth": "5%"
           },
-          "itemId": 13932,
-          "recipeName": "Poached Sunscale Salmon",
+          "itemId": 13931,
+          "recipeName": "Nightfin Soup",
           "source": "Recipe sold by Gikkix (Tanaris)",
-          "advice": "",
-          "crafts": 17,
+          "advice": "Wowhead's fastest plan finishes with Poached Sunscale Salmon, but that needs an Iron Oven — a camp object only a 300 cook can place. Nightfin Soup works at any campfire for just 3 more crafts.",
+          "crafts": 16,
+          "craftsSafe": 18,
+          "colors": {
+            "orange": 250,
+            "yellow": 290,
+            "green": 310,
+            "grey": 330
+          },
           "reagents": [
             {
-              "itemId": 13760,
-              "name": "Raw Sunscale Salmon",
+              "itemId": 13759,
+              "name": "Raw Nightfin Snapper",
               "count": 1,
-              "icon": "inv_misc_fish_19",
+              "icon": "inv_misc_fish_23",
+              "quality": 1
+            },
+            {
+              "itemId": 159,
+              "name": "Refreshing Spring Water",
+              "count": 1,
+              "icon": "inv_drink_07",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Gikkix",
-            "location": "Steamwheedle Port, Tanaris /way 66.6, 22.0",
-            "cost": "2g",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Backup: Craft Smoked Desert Dumplings (285–300, Cenarion Hold quest in Silithus) or Nightfin Soup (250–295)."
+          ]
         }
       ],
       "guideCallouts": [
         {
-          "icon": "🍖",
-          "title": "Forever Cooking Perks: +5% Kill XP, Cookie's Stirring Rod (+25% Speed) & Wastewanderer Rations",
-          "text": "Every cooked food in WoW Forever grants Well Fed (+5% Experience from monster kills) in addition to stat buffs. Equip Cookie's Stirring Rod (Wand, Deadmines) to increase Cooking speed by 25%! To maximize uptime, equip Wastewanderer Rations (Trinket, item=277950) — it slows Well Fed metabolism by 50% (doubled to 100% in Wastelands/Tanaris/Desolace/Silithus). Look out for zone-speed dishes like Westfall Stew (+15% speed in Westfall) and Sweetpaw Jam (+15% speed in Hyjal)!"
+          "icon": "🔥",
+          "title": "Cooking Builds the Camp",
+          "text": "Cooks make the campfires every other camp object needs: Basic Campfire Kit at skill 1 (holds 3 objects), Journeyman Campfire (blueprint at 90, 5 objects) and Expert Campfire (220, 10 objects). Cookie's Feast (140) and the Iron Oven (300) are the cook's camp objects."
         },
         {
-          "icon": "🐟",
-          "title": "Alternative 1–225 Zero-Spice Fish Route (Sold by Coastal Vendors or Fished)",
-          "text": "1–50: Brilliant Smallfish (~52x, recipe from Catherine Leland in SW /way 55.0, 69.6 or Sewa Mistrunner in TB /way 55.8, 47.6) · 50–100: Longjaw Mud Snapper (~55x) · 100–175: Bristle Whisker Catfish (~120x) · 175–225: Mithril Head Trout (~55x). Requires 0 Spices!"
+          "icon": "🍲",
+          "title": "Forever Cooking Perks",
+          "text": "Many Forever dishes and drinks add +5% experience from kills while Well Fed. Wastewanderer Rations (trinket, item 277950) make Well Fed last 50% longer, and twice as long in wasteland zones."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -161532,18 +162986,25 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "Meats and fish required to power-level Cooking from 1 to 300.",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
           "note": "Always in stock, for a few coins.",
           "items": [
             {
-              "itemId": 2678,
-              "name": "Mild Spices",
-              "icon": "inv_misc_food_wheat_02",
+              "itemId": 2692,
+              "name": "Hot Spices",
+              "icon": "inv_misc_food_legion_dalapenopepper",
               "quality": 1,
-              "count": 20
+              "count": 23
+            },
+            {
+              "itemId": 159,
+              "name": "Refreshing Spring Water",
+              "icon": "inv_drink_07",
+              "quality": 1,
+              "count": 16
             }
           ]
         },
@@ -161552,32 +163013,25 @@ window.WOW_PROFESSIONS_DATA = {
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
             {
-              "itemId": 769,
-              "name": "Chunk of Boar Meat",
-              "icon": "inv_misc_food_14",
+              "itemId": 4603,
+              "name": "Raw Spotted Yellowtail",
+              "icon": "inv_misc_fish_01",
               "quality": 1,
-              "count": 50
+              "count": 66
             },
             {
-              "itemId": 6289,
-              "name": "Raw Longjaw Mud Snapper",
-              "icon": "inv_misc_fish_32",
+              "itemId": 2672,
+              "name": "Stringy Wolf Meat",
+              "icon": "inv_misc_food_14",
               "quality": 1,
-              "count": 52
+              "count": 54
             },
             {
               "itemId": 6308,
               "name": "Raw Bristle Whisker Catfish",
               "icon": "inv_misc_fish_30",
               "quality": 1,
-              "count": 63
-            },
-            {
-              "itemId": 1015,
-              "name": "Lean Wolf Flank",
-              "icon": "inv_misc_food_14",
-              "quality": 1,
-              "count": 20
+              "count": 54
             },
             {
               "itemId": 8365,
@@ -161585,26 +163039,27 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_misc_fish_02",
               "quality": 1,
               "count": 52
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 13758,
-              "name": "Raw Redgill",
-              "icon": "inv_misc_fish_06",
-              "quality": 1,
-              "count": 68
             },
             {
-              "itemId": 13760,
-              "name": "Raw Sunscale Salmon",
-              "icon": "inv_misc_fish_19",
+              "itemId": 2673,
+              "name": "Coyote Meat",
+              "icon": "inv_misc_food_69",
               "quality": 1,
-              "count": 17
+              "count": 48
+            },
+            {
+              "itemId": 5504,
+              "name": "Tangy Clam Meat",
+              "icon": "inv_misc_food_51",
+              "quality": 1,
+              "count": 23
+            },
+            {
+              "itemId": 13759,
+              "name": "Raw Nightfin Snapper",
+              "icon": "inv_misc_fish_23",
+              "quality": 1,
+              "count": 16
             }
           ]
         }
@@ -161838,7 +163293,7 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "leveling": {
       "title": "Leveling from 1 to 300 (Water Brackets & Nat Pagle Quest)",
-      "capNote": "Complete 1–300 Artisan Roadmap",
+      "capNote": "Verified for WoW Forever · Nov 2026",
       "desc": "Fishing levels with every successful catch. Higher skill waters prevent hooked fish from getting away. Train Artisan at Skill 225 and Level 35 via Nat Pagle in Dustwallow Marsh.",
       "steps": [
         {
@@ -161867,6 +163322,24 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 6289,
               "name": "Raw Longjaw Mud Snapper",
               "icon": "inv_misc_fish_02"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 20,
+          "to": 20,
+          "bar": {
+            "iLeft": "6.67%",
+            "iWidth": "0.33%"
+          },
+          "title": "Craft your camp object once: Fish Bowl (skill 20)",
+          "zones": "A one-off recipe worth a skill point — 1 Raw Brilliant Smallfish, 1 Empty Vial.",
+          "icons": [
+            {
+              "itemId": 279967,
+              "name": "Fish Bowl",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -161901,6 +163374,24 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 6358,
               "name": "Oily Blackmouth",
               "icon": "inv_misc_fish_04"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 140,
+          "to": 140,
+          "bar": {
+            "iLeft": "46.67%",
+            "iWidth": "0.33%"
+          },
+          "title": "Craft your camp object once: Fishing Rack (skill 140)",
+          "zones": "A one-off recipe worth a skill point — 2 Simple Wood, 1 Crystal Vial, 2 Raw Mithril Head Trout.",
+          "icons": [
+            {
+              "itemId": 279965,
+              "name": "Fishing Rack",
+              "icon": "inv_misc_bag_10"
             }
           ]
         },
@@ -162034,11 +163525,23 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_misc_fish_05"
             },
             {
-              "itemId": 13760,
-              "name": "Winter Squid",
+              "itemId": 13755,
+              "name": "Raw Winter Squid",
               "icon": "inv_misc_fish_13"
             }
           ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🎣",
+          "title": "Skill Comes From Catches, Not Zones",
+          "text": "Fishing skill depends only on how many fish you land — the zone does not change catches per point. Below 25 use a Shiny Bauble; from 25 you catch everything in starter zones. Fish where your catch rate is 100% (capitals to 150, Dustwallow Marsh or Stranglethorn to 225, then Tanaris) and use lures or a better pole when it drops. The Luremaster legacy perk gives a 25% chance of an extra fish while a lure is active. Camp objects: Fish Bowl (20), Fishing Rack (140) and Fishing Hut (300)."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -162604,7 +164107,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "level 3",
         "effect": "Restores 140 to 180 health.",
         "isNew": true,
-        "learn": 85,
+        "learn": 55,
         "yellow": 85,
         "green": 105,
         "grey": 125,
@@ -162764,7 +164267,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "level 12",
         "effect": "Restores 280 to 360 health.",
         "isNew": true,
-        "learn": 135,
+        "learn": 110,
         "yellow": 135,
         "green": 155,
         "grey": 175,
@@ -163437,8 +164940,8 @@ window.WOW_PROFESSIONS_DATA = {
     "gatheringNodes": [],
     "leveling": {
       "title": "Leveling from 1 to 300",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
+      "capNote": "Verified for WoW Forever · Nov 2026",
+      "desc": "Fastest practical route, built from Wowhead's WoW Forever skill-up data (updated Nov 4, 2026). Each step shows the recipe's skill colors (orange → yellow → green → grey), the average number of crafts, and a \"to be safe\" count that covers 9 in 10 players. Recipes locked behind reputation, a skill-300 station or ultra-rare materials are swapped for practical ones; the 💡 note says when a faster alternative exists.",
       "steps": [
         {
           "type": "rank",
@@ -163448,17 +164951,23 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "step",
           "from": 1,
-          "to": 41,
+          "to": 40,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "13.333333333333334%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.33%",
+            "iWidth": "13%"
           },
           "itemId": 1251,
           "recipeName": "Linen Bandage",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 43,
+          "crafts": 41,
+          "craftsSafe": 43,
+          "colors": {
+            "orange": 1,
+            "yellow": 30,
+            "green": 45,
+            "grey": 60
+          },
           "reagents": [
             {
               "itemId": 2589,
@@ -163471,18 +164980,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 41,
-          "to": 55,
+          "from": 40,
+          "to": 68,
           "bar": {
-            "iLeft": "13.333333333333334%",
-            "iWidth": "4.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "13.33%",
+            "iWidth": "9.33%"
           },
           "itemId": 2581,
           "recipeName": "Heavy Linen Bandage",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 15,
+          "crafts": 32,
+          "craftsSafe": 35,
+          "colors": {
+            "orange": 40,
+            "yellow": 50,
+            "green": 75,
+            "grey": 100
+          },
           "reagents": [
             {
               "itemId": 2589,
@@ -163494,124 +165009,30 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "step",
-          "from": 55,
-          "to": 75,
-          "bar": {
-            "iLeft": "18%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 118,
-          "recipeName": "Minor Healing Potion",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 28,
-          "reagents": [
-            {
-              "itemId": 3371,
-              "name": "Empty Vial",
-              "count": 1,
-              "icon": "inv_potion_84",
-              "quality": 1
-            },
-            {
-              "itemId": 2678,
-              "name": "Mild Spices",
-              "count": 1,
-              "icon": "inv_misc_food_wheat_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2447,
-              "name": "Peacebloom",
-              "count": 1,
-              "icon": "inv_misc_flower_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
           "type": "rank",
           "rank": "Journeyman",
           "details": "Learned from any First Aid trainer (Skill 50, Level 10), up to 150 — also unlocks Lesser Healing Potion (55), Simple Poultice (90), Healing Potion (110), and Woolen Tourniquet (120)."
         },
         {
           "type": "step",
-          "from": 75,
+          "from": 68,
           "to": 80,
           "bar": {
-            "iLeft": "24.666666666666668%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 118,
-          "recipeName": "Minor Healing Potion",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 12,
-          "reagents": [
-            {
-              "itemId": 3371,
-              "name": "Empty Vial",
-              "count": 1,
-              "icon": "inv_potion_84",
-              "quality": 1
-            },
-            {
-              "itemId": 2678,
-              "name": "Mild Spices",
-              "count": 1,
-              "icon": "inv_misc_food_wheat_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2447,
-              "name": "Peacebloom",
-              "count": 1,
-              "icon": "inv_misc_flower_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 80,
-          "to": 85,
-          "bar": {
-            "iLeft": "26.333333333333332%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 3530,
-          "recipeName": "Wool Bandage",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 6,
-          "reagents": [
-            {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "count": 1,
-              "icon": "inv_fabric_wool_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 85,
-          "to": 90,
-          "bar": {
-            "iLeft": "28%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "22.67%",
+            "iWidth": "4%"
           },
           "itemId": 858,
           "recipeName": "Lesser Healing Potion",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 6,
+          "advice": "Train Journeyman (skill 50, level 10) before you reach 75. Forever moved healing potions to First Aid.",
+          "crafts": 12,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 55,
+            "yellow": 85,
+            "green": 105,
+            "grey": 125
+          },
           "reagents": [
             {
               "itemId": 3371,
@@ -163638,61 +165059,29 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 90,
-          "to": 130,
+          "from": 80,
+          "to": 110,
           "bar": {
-            "iLeft": "29.666666666666668%",
-            "iWidth": "13.333333333333334%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "26.67%",
+            "iWidth": "10%"
           },
-          "itemId": 255716,
-          "recipeName": "Simple Poultice",
+          "itemId": 3530,
+          "recipeName": "Wool Bandage",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 59,
-          "reagents": [
-            {
-              "itemId": 3174,
-              "name": "Spider Ichor",
-              "count": 1,
-              "icon": "inv_misc_slime_01",
-              "quality": 1
-            },
-            {
-              "itemId": 2678,
-              "name": "Mild Spices",
-              "count": 1,
-              "icon": "inv_misc_food_wheat_02",
-              "quality": 1
-            },
-            {
-              "itemId": 2723,
-              "name": "Bottle of Dalaran Noir",
-              "count": 1,
-              "icon": "inv_drink_10",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 130,
-          "to": 135,
-          "bar": {
-            "iLeft": "43%",
-            "iWidth": "1.6666666666666667%",
-            "eLeft": "74.66666666666667%"
+          "crafts": 38,
+          "craftsSafe": 44,
+          "colors": {
+            "orange": 80,
+            "yellow": 80,
+            "green": 115,
+            "grey": 150
           },
-          "itemId": 3531,
-          "recipeName": "Heavy Wool Bandage",
-          "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 7,
           "reagents": [
             {
               "itemId": 2592,
               "name": "Wool Cloth",
-              "count": 2,
+              "count": 1,
               "icon": "inv_fabric_wool_01",
               "quality": 1
             }
@@ -163700,18 +165089,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 135,
+          "from": 110,
           "to": 150,
           "bar": {
-            "iLeft": "44.666666666666664%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "36.67%",
+            "iWidth": "13.33%"
           },
           "itemId": 929,
           "recipeName": "Healing Potion",
           "source": "Learned from the trainer",
           "advice": "",
-          "crafts": 19,
+          "crafts": 43,
+          "craftsSafe": 46,
+          "colors": {
+            "orange": 110,
+            "yellow": 135,
+            "green": 155,
+            "grey": 175
+          },
           "reagents": [
             {
               "itemId": 3372,
@@ -163746,15 +165141,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 150,
           "to": 180,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "50%",
+            "iWidth": "10%"
           },
           "itemId": 6450,
           "recipeName": "Silk Bandage",
           "source": "Learned from the trainer",
-          "advice": "",
-          "crafts": 42,
+          "advice": "Read Expert First Aid - Under Wraps (skill 125) before you reach 150.",
+          "crafts": 40,
+          "craftsSafe": 46,
+          "colors": {
+            "orange": 150,
+            "yellow": 150,
+            "green": 180,
+            "grey": 210
+          },
           "reagents": [
             {
               "itemId": 4306,
@@ -163770,15 +165171,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 180,
           "to": 210,
           "bar": {
-            "iLeft": "59.666666666666664%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "60%",
+            "iWidth": "10%"
           },
           "itemId": 6451,
           "recipeName": "Heavy Silk Bandage",
-          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "source": "Manual sold by Deneb Walker (Arathi Highlands) or Balai Lok'Wein (Dustwallow Marsh)",
           "advice": "",
-          "crafts": 42,
+          "crafts": 41,
+          "craftsSafe": 47,
+          "colors": {
+            "orange": 180,
+            "yellow": 180,
+            "green": 210,
+            "grey": 240
+          },
           "reagents": [
             {
               "itemId": 4306,
@@ -163787,45 +165194,7 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_fabric_silk_01",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
-            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
-            "cost": "22s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Greater Healing Potion (155–215, 1x Goldthorn + 1x Liferoot + 1x Leaded Vial) or Leather Tourniquet (200–225) from the trainer."
-        },
-        {
-          "type": "step",
-          "from": 210,
-          "to": 225,
-          "bar": {
-            "iLeft": "69.66666666666667%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
-          },
-          "itemId": 8544,
-          "recipeName": "Mageweave Bandage",
-          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
-          "advice": "",
-          "crafts": 18,
-          "reagents": [
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "count": 1,
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
-            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
-            "cost": "50s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–240) or Superior Poultice (210–240) taught by the First Aid trainer."
+          ]
         },
         {
           "type": "rank",
@@ -163834,18 +165203,24 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": 225,
+          "from": 210,
           "to": 240,
           "bar": {
-            "iLeft": "74.66666666666667%",
-            "iWidth": "5%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "70%",
+            "iWidth": "10%"
           },
           "itemId": 8544,
           "recipeName": "Mageweave Bandage",
-          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
-          "advice": "",
-          "crafts": 24,
+          "source": "Manual sold by Deneb Walker (Arathi Highlands) or Balai Lok'Wein (Dustwallow Marsh)",
+          "advice": "Finish the Artisan quest Triage (level 35) before you reach 225.",
+          "crafts": 40,
+          "craftsSafe": 46,
+          "colors": {
+            "orange": 210,
+            "yellow": 210,
+            "green": 240,
+            "grey": 270
+          },
           "reagents": [
             {
               "itemId": 4338,
@@ -163854,29 +165229,28 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_fabric_mageweave_01",
               "quality": 1
             }
-          ],
-          "vendorDetails": {
-            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
-            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
-            "cost": "50s",
-            "supply": "Unlimited"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–240) or Superior Poultice (210–240) taught by the First Aid trainer."
+          ]
         },
         {
           "type": "step",
           "from": 240,
           "to": 260,
           "bar": {
-            "iLeft": "79.66666666666667%",
-            "iWidth": "6.666666666666667%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "80%",
+            "iWidth": "6.67%"
           },
           "itemId": 8545,
           "recipeName": "Heavy Mageweave Bandage",
-          "source": "Learned from the trainer",
-          "advice": "Learned at 240 by talking again to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
-          "crafts": 25,
+          "source": "Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)",
+          "advice": "",
+          "crafts": 24,
+          "craftsSafe": 27,
+          "colors": {
+            "orange": 240,
+            "yellow": 240,
+            "green": 270,
+            "grey": 300
+          },
           "reagents": [
             {
               "itemId": 4338,
@@ -163892,15 +165266,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 260,
           "to": 290,
           "bar": {
-            "iLeft": "86.33333333333333%",
-            "iWidth": "10%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "86.67%",
+            "iWidth": "10%"
           },
           "itemId": 14529,
           "recipeName": "Runecloth Bandage",
-          "source": "Learned from the trainer",
-          "advice": "Learned at 260 by returning to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
-          "crafts": 42,
+          "source": "Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)",
+          "advice": "",
+          "crafts": 41,
+          "craftsSafe": 47,
+          "colors": {
+            "orange": 260,
+            "yellow": 260,
+            "green": 290,
+            "grey": 320
+          },
           "reagents": [
             {
               "itemId": 14047,
@@ -163916,15 +165296,21 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 290,
           "to": 300,
           "bar": {
-            "iLeft": "96.33333333333333%",
-            "iWidth": "3.3333333333333335%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "96.67%",
+            "iWidth": "3.33%"
           },
           "itemId": 14530,
           "recipeName": "Heavy Runecloth Bandage",
-          "source": "Learned from the trainer",
-          "advice": "Learned at 290 by returning to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
+          "source": "Taught by Doctor Gustaf VanHowzen (Theramore) or Doctor Gregory Victor (Hammerfall)",
+          "advice": "",
           "crafts": 11,
+          "craftsSafe": 12,
+          "colors": {
+            "orange": 290,
+            "yellow": 290,
+            "green": 320,
+            "grey": 350
+          },
           "reagents": [
             {
               "itemId": 14047,
@@ -163939,13 +165325,18 @@ window.WOW_PROFESSIONS_DATA = {
       "guideCallouts": [
         {
           "icon": "🩹",
-          "title": "Forever First Aid Rework: Healing Potions, Poultices & Tourniquets",
-          "text": "In WoW Forever, First Aid crafts Healing Potions (Minor at 1, Lesser at 55, Healing at 110, Greater at 155, Superior at 215, Major at 275), Anti-Disease Poultices (Simple 90, Clever 140, Superior 210, Powerful 280), and Anti-Bleed Tourniquets (Woolen 120, Leather 200, Surgical 265) alongside Bandages!"
+          "title": "Forever First Aid: Potions, Poultices & Tourniquets",
+          "text": "First Aid now makes healing potions (Minor, Lesser at 55, Healing at 110 and up), disease-curing poultices, anti-venoms and bleed tourniquets as well as bandages. The route above mixes potions in where they level faster than bandages."
         },
         {
-          "icon": "🧶",
-          "title": "Alternative 1–300 Pure Cloth Bandage Route (Zero Herbs/Vials)",
-          "text": "Prefer using only cloth? 1–40: Linen Bandage (~50x) · 40–80: Heavy Linen Bandage (~50x) · 80–115: Wool Bandage (~60x) · 115–150: Heavy Wool Bandage (~50x) · 150–180: Silk Bandage (~42x) · 180–210: Heavy Silk Bandage (~42x) · 210–240: Mageweave Bandage (~42x) · 240–260: Heavy Mageweave Bandage (~25x) · 260–290: Runecloth Bandage (~42x) · 290–300: Heavy Runecloth Bandage (~15x)."
+          "icon": "🧺",
+          "title": "Camp Objects & a Cloth-Only Alternative",
+          "text": "First Aid Kit (skill 20), Toxin Study (140) and Plague Doctor's Laboratory (300). Prefer cloth only? Linen 1–40, Heavy Linen 40–80, Wool 80–115, Heavy Wool 115–150, then the same bandage route above from 150."
+        },
+        {
+          "icon": "🏆",
+          "title": "Forever Skill-Up Boosters: Legacy Perks & Camp Objects",
+          "text": "Legacy perk Working Overtime raises your chance to gain a skill point from every tradeskill by 4% per rank (5 ranks). Dedicated Study raises your lowest profession by 1 once a day. Every profession also teaches camp objects at skill 20 and 140 (and a third at 300): each one is a recipe, so craft it once for an extra skill point."
         }
       ]
     },
@@ -163970,46 +165361,39 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "shopping": {
       "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "Cloth, herbs, and vials required to power-level First Aid from 1 to 300.",
+      "subtitle": "Totals for the average craft counts in the 1–300 route. Buy ~10% extra, or use the \"to be safe\" counts on each step.",
       "groups": [
         {
           "title": "From a trade supplies vendor",
           "note": "Always in stock, for a few coins.",
           "items": [
             {
-              "itemId": 3371,
-              "name": "Empty Vial",
-              "icon": "inv_potion_84",
-              "quality": 1,
-              "count": 46
-            },
-            {
-              "itemId": 2678,
-              "name": "Mild Spices",
-              "icon": "inv_misc_food_wheat_02",
-              "quality": 1,
-              "count": 111
-            },
-            {
-              "itemId": 2723,
-              "name": "Bottle of Dalaran Noir",
-              "icon": "inv_drink_10",
-              "quality": 1,
-              "count": 59
-            },
-            {
               "itemId": 3372,
               "name": "Leaded Vial",
               "icon": "inv_potion_85",
               "quality": 1,
-              "count": 19
+              "count": 43
             },
             {
               "itemId": 2692,
               "name": "Hot Spices",
               "icon": "inv_misc_food_legion_dalapenopepper",
               "quality": 1,
-              "count": 19
+              "count": 43
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "icon": "inv_potion_84",
+              "quality": 1,
+              "count": 12
             }
           ]
         },
@@ -164017,81 +165401,54 @@ window.WOW_PROFESSIONS_DATA = {
           "title": "Gathered, looted or bought from other players",
           "note": "The bulk of the cost: farm it or look at the auction house.",
           "items": [
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "icon": "inv_fabric_linen_01",
-              "quality": 1,
-              "count": 73
-            },
-            {
-              "itemId": 2447,
-              "name": "Peacebloom",
-              "icon": "inv_misc_flower_02",
-              "quality": 1,
-              "count": 40
-            },
-            {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "icon": "inv_fabric_wool_01",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 2450,
-              "name": "Briarthorn",
-              "icon": "inv_misc_root_01",
-              "quality": 1,
-              "count": 6
-            },
-            {
-              "itemId": 3174,
-              "name": "Spider Ichor",
-              "icon": "inv_misc_slime_01",
-              "quality": 1,
-              "count": 59
-            },
-            {
-              "itemId": 2453,
-              "name": "Bruiseweed",
-              "icon": "inv_misc_herb_01",
-              "quality": 1,
-              "count": 19
-            },
             {
               "itemId": 4306,
               "name": "Silk Cloth",
               "icon": "inv_fabric_silk_01",
               "quality": 1,
-              "count": 126
+              "count": 122
+            },
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
+              "quality": 1,
+              "count": 105
             },
             {
               "itemId": 4338,
               "name": "Mageweave Cloth",
               "icon": "inv_fabric_mageweave_01",
               "quality": 1,
-              "count": 18
-            }
-          ]
-        },
-        {
-          "title": "Gathered, looted or bought from other players",
-          "note": "The bulk of the cost: farm it or look at the auction house.",
-          "items": [
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1,
-              "count": 74
+              "count": 88
             },
             {
               "itemId": 14047,
               "name": "Runecloth",
               "icon": "inv_fabric_purplefire_01",
               "quality": 1,
-              "count": 64
+              "count": 63
+            },
+            {
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "icon": "inv_misc_herb_01",
+              "quality": 1,
+              "count": 43
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
+              "quality": 1,
+              "count": 38
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 12
             }
           ]
         }
@@ -165395,528 +166752,111 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "title": "Leveling from 1 to 300 (Campfires & Field Stations)",
-      "capNote": "Complete 1–300 Artisan Roadmap",
-      "desc": "At each stage, craft campfire kits, pitch wilderness shelters, and construct portable field workstations to advance your Camping skill. Check off each craft as you progress in-game.",
+      "title": "Camping Unlock Roadmap (No Skill to Level)",
+      "capNote": "Camping is a system, not a profession",
+      "desc": "Camping has no skill bar or trainer. Track the campfires and camp objects your professions unlock instead.",
       "steps": [
         {
           "type": "rank",
-          "rank": "Apprentice Camping",
-          "details": "Learned at Level 5 from Wilderness Camp Trainers outside racial starter towns (Goldshire, Kharanos, Dolanaar, Razor Hill, Bloodhoof Village, Brill, Zephras Isle, Riverglades) via the quest \"The Great Outdoors\", up to 75."
+          "rank": "Camping has no skill bar",
+          "details": "Camping is a Forever world system, not a profession: there is no Camping trainer and nothing to level. A cook places a campfire, players who know other professions add their camp objects, and anyone sitting by the fire for a minute gets every object's buff for an hour. Use this checklist to track what you have unlocked."
         },
         {
-          "type": "step",
+          "type": "gather-step",
           "from": 1,
-          "to": 25,
+          "to": 1,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
+            "iLeft": "0.33%",
+            "iWidth": "0.33%"
           },
-          "itemId": 279981,
-          "recipeName": "Basic Campfire Kit",
-          "source": "Learned from Camping Trainer after 'The Great Outdoors'",
-          "advice": "Craft and deploy Basic Campfire Kits. Simple Wood and Flint & Tinder can be bought from any general supplies vendor.",
-          "crafts": 28,
-          "reagents": [
+          "title": "Learn the Basic Campfire Kit (Cooking 1)",
+          "zones": "Around level 5 the quest \"The Great Outdoors\" sends you to a cooking trainer. Basic Campfire Kit: 1 Simple Wood with Flint and Tinder in your bags (both sold by the trainer). Holds 3 camp objects and burns for 15 minutes.",
+          "icons": [
             {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 1,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
+              "itemId": 279981,
+              "name": "Basic Campfire Kit",
+              "icon": "inv_camelot_camping_welcomingcampfire"
             }
           ]
         },
         {
-          "type": "step",
-          "from": 25,
-          "to": 50,
+          "type": "gather-step",
+          "from": 20,
+          "to": 20,
           "bar": {
-            "iLeft": "8.33%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
+            "iLeft": "6.67%",
+            "iWidth": "0.33%"
           },
-          "itemId": 279950,
-          "recipeName": "Lean-to Shelter",
-          "source": "Learned from Camping Trainer (Skill 25)",
-          "advice": "Pitch Lean-tos across outdoor wilderness zones. Grants +50% Rested XP speed and the Windbreak (+2 Stamina) buff.",
-          "crafts": 28,
-          "reagents": [
-            {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 4,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            },
-            {
-              "itemId": 2320,
-              "name": "Rough String",
-              "count": 2,
-              "icon": "inv_fabric_linen_03",
-              "quality": 1
-            }
-          ]
+          "title": "First camp object for each profession you know (skill 20)",
+          "zones": "Alchemy: Mana Well · Blacksmithing: Sharpening Wheel · Enchanting: Enchanted Lute · Engineering: Reagent Bot · First Aid: First Aid Kit · Fishing: Fish Bowl · Herbalism: Incense Candle · Leatherworking: Camp Tent · Mining: Lodestone · Skinning: Camp Chair · Tailoring: Faction Banner · Tailoring: Faction Banner. Each profession hands you a quest that teaches it.",
+          "icons": []
         },
         {
-          "type": "step",
-          "from": 50,
-          "to": 65,
-          "bar": {
-            "iLeft": "16.67%",
-            "iWidth": "5%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279967,
-          "recipeName": "Field Tanning Rack",
-          "source": "Learned from Camping Trainer (Skill 40)",
-          "advice": "Deploys a mobile pelt curing station for Leatherworkers to convert scraps into Light and Medium Leather in the field.",
-          "crafts": 18,
-          "reagents": [
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "count": 4,
-              "icon": "inv_misc_leatherscrap_01",
-              "quality": 1
-            },
-            {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 2,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 65,
-          "to": 75,
-          "bar": {
-            "iLeft": "21.67%",
-            "iWidth": "3.33%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279951,
-          "recipeName": "Linen Wall Tent",
-          "source": "Learned from Camping Trainer (Skill 50)",
-          "advice": "Pitch Linen Wall Tents for +100% Rested XP speed and the Warmth (+4 Stamina & Spirit) aura.",
-          "crafts": 12,
-          "reagents": [
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "count": 8,
-              "icon": "inv_fabric_linen_01",
-              "quality": 1
-            },
-            {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 4,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "rank",
-          "rank": "Journeyman Camping",
-          "details": "Learned at Level 15 (Skill 50) from major city Camp Trainers (Stormwind, Ironforge, Darnassus, Orgrimmar, Thunder Bluff, Undercity), up to 150."
-        },
-        {
-          "type": "step",
-          "from": 75,
+          "type": "gather-step",
+          "from": 90,
           "to": 90,
           "bar": {
-            "iLeft": "25%",
-            "iWidth": "5%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279951,
-          "recipeName": "Linen Wall Tent",
-          "source": "Learned from Camping Trainer (Skill 50)",
-          "advice": "Remains yellow from 75 to 85. Crafting Linen Wall Tents is significantly cheaper than early spinning wheels.",
-          "crafts": 20,
-          "reagents": [
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "count": 8,
-              "icon": "inv_fabric_linen_01",
-              "quality": 1
-            },
-            {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 4,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 90,
-          "to": 105,
-          "bar": {
             "iLeft": "30%",
-            "iWidth": "5%",
-            "eLeft": "74.67%"
+            "iWidth": "0.33%"
           },
-          "itemId": 279968,
-          "recipeName": "Field Spinning Wheel",
-          "source": "Learned from Camping Trainer (Skill 65)",
-          "advice": "Enables Tailors to spin wool and silk into bolts in the field without capital looms.",
-          "crafts": 18,
-          "reagents": [
+          "title": "Journeyman Campfire (Cooking, blueprint at 90)",
+          "zones": "Uses 1 Star Wood and holds 5 camp objects.",
+          "icons": [
             {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "count": 6,
-              "icon": "inv_fabric_wool_01",
-              "quality": 1
-            },
-            {
-              "itemId": 4470,
-              "name": "Simple Wood",
-              "count": 4,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            },
-            {
-              "itemId": 4234,
-              "name": "Medium Leather",
-              "count": 2,
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1
+              "itemId": 279961,
+              "name": "Journeyman Campfire Kit",
+              "icon": "inv_camelot_camping_welcomingcampfire"
             }
           ]
         },
         {
-          "type": "step",
-          "from": 105,
-          "to": 125,
-          "bar": {
-            "iLeft": "35%",
-            "iWidth": "6.67%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279970,
-          "recipeName": "Portable Blacksmithing Anvil",
-          "source": "Learned from Camping Trainer (Skill 90)",
-          "advice": "Deploys a fold-out bronze anvil allowing Blacksmiths and Engineers to forge gear next to mining veins.",
-          "crafts": 24,
-          "reagents": [
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "count": 4,
-              "icon": "inv_ingot_05",
-              "quality": 1
-            },
-            {
-              "itemId": 2835,
-              "name": "Heavy Stone",
-              "count": 2,
-              "icon": "inv_stone_06",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 125,
+          "type": "gather-step",
+          "from": 140,
           "to": 140,
           "bar": {
-            "iLeft": "41.67%",
-            "iWidth": "5%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279961,
-          "recipeName": "Journeyman Campfire Kit",
-          "source": "Blueprint: Journeyman Campfire (Lord Serpentis, Wailing Caverns)",
-          "advice": "Increases campfire capacity to 5 stations with 45-min duration. Requires Star Wood from vendors.",
-          "crafts": 18,
-          "reagents": [
-            {
-              "itemId": 11291,
-              "name": "Star Wood",
-              "count": 1,
-              "icon": "inv_tradeskillitem_03",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Lord Serpentis (Blueprint Drop)",
-            "location": "Wailing Caverns (The Barrens)",
-            "cost": "Boss Drop",
-            "supply": "Dungeon Drop"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Portable Blacksmithing Anvil (105–135) and Silk Trail Pavilion (learned at Skill 100 from Camping Trainer) straight to 150."
-        },
-        {
-          "type": "step",
-          "from": 140,
-          "to": 150,
-          "bar": {
             "iLeft": "46.67%",
-            "iWidth": "3.33%",
-            "eLeft": "74.67%"
+            "iWidth": "0.33%"
           },
-          "itemId": 279952,
-          "recipeName": "Silk Trail Pavilion",
-          "source": "Learned from Camping Trainer (Skill 100)",
-          "advice": "Grants +200% Rested XP speed and the Full Rested (+3% All Stats) party aura. Reaches Phase 1 cap!",
-          "crafts": 12,
-          "reagents": [
+          "title": "Second camp objects (skill 140, Leatherworking 125)",
+          "zones": "Alchemy: Fermenter · Blacksmithing: Anvil · Enchanting: Arcane Salvager · Engineering: Repair Bot · First Aid: Toxin Study · Fishing: Fishing Rack · Herbalism: Greenhouse · Leatherworking: Tanning Rack · Mining: Rock Garden · Skinning: Field Guide · Tailoring: Spinning Wheel. Each replaces the first object and keeps its buff.",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 220,
+          "to": 220,
+          "bar": {
+            "iLeft": "73.33%",
+            "iWidth": "0.33%"
+          },
+          "title": "Expert Campfire (Cooking 220)",
+          "zones": "Uses 1 Thick Logs and holds 10 camp objects.",
+          "icons": [
             {
-              "itemId": 4306,
-              "name": "Silk Cloth",
-              "count": 12,
-              "icon": "inv_fabric_silk_01",
-              "quality": 1
-            },
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "count": 4,
-              "icon": "inv_ingot_02",
-              "quality": 1
+              "itemId": 279974,
+              "name": "Expert Campfire Kit",
+              "icon": "inv_camelot_camping_welcomingcampfire"
             }
           ]
         },
         {
-          "type": "rank",
-          "rank": "Expert Camping",
-          "details": "Learned at Level 25 (Skill 125) from Wilderness Survival Masters — Stromgarde Keep in Arathi Highlands (/way 27.2, 58.6, Alliance) or Brackenwall Village in Dustwallow Marsh (/way 36.6, 30.8, Horde), up to 225."
-        },
-        {
-          "type": "step",
-          "from": 150,
-          "to": 175,
-          "bar": {
-            "iLeft": "50%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279971,
-          "recipeName": "Field Alchemy Cauldron",
-          "source": "Learned from Expert Trainer (Skill 120)",
-          "advice": "Provides party-wide boiling cauldron with 5 potion charges that refresh for the group.",
-          "crafts": 28,
-          "reagents": [
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "count": 4,
-              "icon": "inv_ingot_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3820,
-              "name": "Stranglekelp",
-              "count": 2,
-              "icon": "inv_misc_herb_08",
-              "quality": 1
-            },
-            {
-              "itemId": 2452,
-              "name": "Briarthorn",
-              "count": 2,
-              "icon": "inv_misc_root_01",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 175,
-          "to": 200,
-          "bar": {
-            "iLeft": "58.33%",
-            "iWidth": "8.33%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279960,
-          "recipeName": "Cookie's Feast",
-          "source": "Blueprint: Cookie's Feast (Cookie, The Deadmines)",
-          "advice": "Community feast granting Well Fed +5% monster kill EXP for everyone in the camp.",
-          "crafts": 28,
-          "reagents": [
-            {
-              "itemId": 12202,
-              "name": "Lean Wolf Flank",
-              "count": 5,
-              "icon": "inv_misc_food_14",
-              "quality": 1
-            },
-            {
-              "itemId": 159,
-              "name": "Refreshing Spring Water",
-              "count": 5,
-              "icon": "inv_drink_01",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Cookie (Blueprint Drop)",
-            "location": "The Deadmines (Westfall)",
-            "cost": "Boss Drop",
-            "supply": "Dungeon Drop"
-          },
-          "trainerAlternative": "Trainer Backup: Continue crafting Field Alchemy Cauldron (150–195) or Field Leatherworking Bench learned from the Expert Survival Master."
-        },
-        {
-          "type": "step",
-          "from": 200,
-          "to": 225,
-          "bar": {
-            "iLeft": "66.67%",
-            "iWidth": "8%",
-            "eLeft": "74.67%"
-          },
-          "itemId": 279974,
-          "recipeName": "Expert Campfire Kit",
-          "source": "Blueprint: Expert Campfire (Scarlet Monastery / Razorfen Kraul Drops)",
-          "advice": "Deploys an encampment campfire holding up to 10 stations with 60-min burn time. Expert Cap reached (225)!",
-          "crafts": 28,
-          "reagents": [
-            {
-              "itemId": 272941,
-              "name": "Thick Logs",
-              "count": 1,
-              "icon": "inv_tradeskillitem_01",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Scarlet Monastery / Razorfen Kraul Mobs",
-            "location": "Tirisfal Glades / Southern Barrens Dungeons",
-            "cost": "Dungeon Drop",
-            "supply": "Dungeon Drop"
-          },
-          "trainerAlternative": "Trainer Backup: Craft Field Engineering Workbench or Heavy Canvas Command Tent from the Expert Survival Master (Arathi / Dustwallow)."
-        },
-        {
-          "type": "rank",
-          "rank": "Artisan Camping (225–300)",
-          "details": "Learned at Level 35 (Skill 200+) from Wilderness Survival Grandmasters — Deneb Walker in Stromgarde Keep, Arathi Highlands (/way 27.2, 58.6, Alliance) or Karrina Mekeda in Brackenwall Village, Dustwallow Marsh (/way 36.6, 30.8, Horde), or Master Survivalist Shurome in Emerald Sanctuary, Felwood (/way 51.4, 82.0, Neutral), up to 300."
-        },
-        {
-          "type": "step",
-          "from": 225,
-          "to": 250,
-          "bar": {
-            "iLeft": "75.00%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
-          },
-          "itemId": 279975,
-          "recipeName": "Mageweave Expedition Pavilion",
-          "source": "Learned from Artisan Wilderness Master (Skill 225)",
-          "advice": "High-capacity outdoor rest shelter. Grants +200% rested XP generation speed and shelter for up to 5 party members.",
-          "crafts": 25,
-          "reagents": [
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "count": 16,
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1
-            },
-            {
-              "itemId": 8343,
-              "name": "Heavy Silken Thread",
-              "count": 4,
-              "icon": "inv_fabric_silk_02",
-              "quality": 1
-            },
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "count": 2,
-              "icon": "inv_ingot_02",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "from": 250,
-          "to": 275,
-          "bar": {
-            "iLeft": "83.33%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
-          },
-          "itemId": 279977,
-          "recipeName": "Ironwood Campfire Kit",
-          "source": "Blueprint: Ironwood Campfire (Winterspring / Felwood Timbermaw Vendors)",
-          "advice": "Burns white-hot Ironwood fuel. Required as the heat source for high-tier Tier 3 and Tier 4 field workstations (Master Forge, Arcane Forge, Alchemy Laboratory).",
-          "crafts": 25,
-          "reagents": [
-            {
-              "itemId": 11292,
-              "name": "Ironwood",
-              "count": 1,
-              "icon": "inv_tradeskillitem_03",
-              "quality": 1
-            },
-            {
-              "itemId": 3857,
-              "name": "Coal",
-              "count": 2,
-              "icon": "inv_ore_coal_01",
-              "quality": 1
-            }
-          ],
-          "vendorDetails": {
-            "npc": "Timbermaw Post Vendor / Dalaran Supplies",
-            "location": "Felwood / Dalaran",
-            "cost": "2g 50s",
-            "supply": "Unlimited"
-          }
-        },
-        {
-          "type": "step",
-          "from": 275,
+          "type": "gather-step",
+          "from": 300,
           "to": 300,
           "bar": {
-            "iLeft": "91.67%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
+            "iLeft": "100%",
+            "iWidth": "0.33%"
           },
-          "itemId": 279978,
-          "recipeName": "Runecloth Encampment Pavilion",
-          "source": "Blueprint: Runecloth Pavilion (Cenarion Circle Quartermaster, Silithus / Moonglade)",
-          "advice": "Endgame Master rest pavilion. Unlocks full camp functionality and satisfies station requirements for all 12 Tier 3/4 workstations up to Skill 300.",
-          "crafts": 25,
-          "reagents": [
-            {
-              "itemId": 14048,
-              "name": "Bolt of Runecloth",
-              "count": 6,
-              "icon": "inv_fabric_purplefire_02",
-              "quality": 1
-            },
-            {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "count": 2,
-              "icon": "inv_fabric_mageweave_02",
-              "quality": 1
-            },
-            {
-              "itemId": 12359,
-              "name": "Thorium Bar",
-              "count": 4,
-              "icon": "inv_ingot_07",
-              "quality": 1
-            }
-          ]
+          "title": "Master stations (skill 300)",
+          "zones": "Alchemy: Alchemy Laboratory · Blacksmithing: Master Forge · Enchanting: Arcane Forge · Engineering: Anarchist's Workbench · Fishing: Fishing Hut · Herbalism: Seed Hybridizer · Leatherworking: Sewing Machine · Mining: Molten Foundry · Skinning: Trapper's Workbench · First Aid: Plague Doctor's Laboratory · Tailoring: Loom. Several late recipes need these stations (Iron Oven, Loom, Master Forge), so leveling players must use a 300 player's camp.",
+          "icons": []
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🏕️",
+          "title": "How a Camp Works",
+          "text": "A cook places a campfire; every other player can add one camp object from a profession they know. Sit or craft by the fire for a minute to receive every object's buff for an hour. Your camp objects share a one-hour cooldown (the Field Guide legacy perk shortens it), and no other campfire can stand within 100 yards."
         }
       ]
     },
@@ -166666,198 +167606,46 @@ window.WOW_PROFESSIONS_DATA = {
       ]
     },
     "shopping": {
-      "title": "Reagent Shopping List (1 to 300)",
-      "subtitle": "Materials required to power-level Camping from 1 to 300 including all portable station shelters.",
+      "title": "Campfire Supplies",
+      "subtitle": "Camping has no skill to level — these are the campfire fuels a cook needs. Each profession's camp object reagents are listed on that profession's page.",
       "groups": [
         {
-          "title": "From Trade Goods & General Vendors",
-          "note": "Always in stock for modest silver coins.",
+          "title": "From a cooking or trade supplies vendor",
+          "note": "Basic Campfire Kit fuel and the tool to light it.",
           "items": [
             {
               "itemId": 4470,
               "name": "Simple Wood",
               "icon": "inv_tradeskillitem_01",
               "quality": 1,
-              "count": 376
+              "count": 10
             },
             {
-              "itemId": 2320,
-              "name": "Rough String",
-              "icon": "inv_fabric_linen_03",
+              "itemId": 4471,
+              "name": "Flint and Tinder",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1,
-              "count": 56
-            },
+              "count": 1
+            }
+          ]
+        },
+        {
+          "title": "Higher-tier campfire fuel",
+          "note": "Journeyman and Expert campfires.",
+          "items": [
             {
               "itemId": 11291,
               "name": "Star Wood",
               "icon": "inv_tradeskillitem_03",
               "quality": 1,
-              "count": 18
-            },
-            {
-              "itemId": 159,
-              "name": "Refreshing Spring Water",
-              "icon": "inv_drink_01",
-              "quality": 1,
-              "count": 140
-            }
-          ]
-        },
-        {
-          "title": "Gathered, Crafted or Auction House Reagents",
-          "note": "Cloth, leather, ores, and herbs farmable across early zones.",
-          "items": [
-            {
-              "itemId": 2589,
-              "name": "Linen Cloth",
-              "icon": "inv_fabric_linen_01",
-              "quality": 1,
-              "count": 256
-            },
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_01",
-              "quality": 1,
-              "count": 72
-            },
-            {
-              "itemId": 2592,
-              "name": "Wool Cloth",
-              "icon": "inv_fabric_wool_01",
-              "quality": 1,
-              "count": 108
-            },
-            {
-              "itemId": 4234,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1,
-              "count": 36
-            },
-            {
-              "itemId": 2841,
-              "name": "Bronze Bar",
-              "icon": "inv_ingot_05",
-              "quality": 1,
-              "count": 96
-            },
-            {
-              "itemId": 2835,
-              "name": "Heavy Stone",
-              "icon": "inv_stone_06",
-              "quality": 1,
-              "count": 48
-            },
-            {
-              "itemId": 4306,
-              "name": "Silk Cloth",
-              "icon": "inv_fabric_silk_01",
-              "quality": 1,
-              "count": 144
-            },
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "icon": "inv_ingot_02",
-              "quality": 1,
-              "count": 160
-            },
-            {
-              "itemId": 3820,
-              "name": "Stranglekelp",
-              "icon": "inv_misc_herb_08",
-              "quality": 1,
-              "count": 56
-            },
-            {
-              "itemId": 2452,
-              "name": "Briarthorn",
-              "icon": "inv_misc_root_01",
-              "quality": 1,
-              "count": 56
-            },
-            {
-              "itemId": 12202,
-              "name": "Lean Wolf Flank",
-              "icon": "inv_misc_food_14",
-              "quality": 1,
-              "count": 140
+              "count": 5
             },
             {
               "itemId": 272941,
               "name": "Thick Logs",
               "icon": "inv_tradeskillitem_01",
               "quality": 1,
-              "count": 28
-            }
-          ]
-        },
-        {
-          "title": "From Trade Goods & General Vendors (Artisan 225 to 300)",
-          "note": "Thread, wood, and coal purchased from trade suppliers.",
-          "items": [
-            {
-              "itemId": 8343,
-              "name": "Heavy Silken Thread",
-              "icon": "inv_fabric_silk_02",
-              "quality": 1,
-              "count": 100
-            },
-            {
-              "itemId": 11292,
-              "name": "Ironwood",
-              "icon": "inv_tradeskillitem_03",
-              "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 3857,
-              "name": "Coal",
-              "icon": "inv_ore_coal_01",
-              "quality": 1,
-              "count": 50
-            },
-            {
-              "itemId": 14341,
-              "name": "Rune Thread",
-              "icon": "inv_fabric_mageweave_02",
-              "quality": 1,
-              "count": 50
-            }
-          ]
-        },
-        {
-          "title": "Gathered, Crafted or Auction House Reagents (Artisan 225 to 300)",
-          "note": "Cloth, metal, and crafted bolts required for high-tier pavilions.",
-          "items": [
-            {
-              "itemId": 4338,
-              "name": "Mageweave Cloth",
-              "icon": "inv_fabric_mageweave_01",
-              "quality": 1,
-              "count": 400
-            },
-            {
-              "itemId": 3575,
-              "name": "Iron Bar",
-              "icon": "inv_ingot_02",
-              "quality": 1,
-              "count": 50
-            },
-            {
-              "itemId": 14048,
-              "name": "Bolt of Runecloth",
-              "icon": "inv_fabric_purplefire_02",
-              "quality": 1,
-              "count": 150
-            },
-            {
-              "itemId": 12359,
-              "name": "Thorium Bar",
-              "icon": "inv_ingot_07",
-              "quality": 1,
-              "count": 100
+              "count": 5
             }
           ]
         }

@@ -1291,6 +1291,34 @@
   margin-top: 0.15rem;
 }
 
+.step-crafts-safe {
+  font-size: 0.68rem;
+  color: #cbd5e1;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+.step-skill-colors {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.skill-color-chip {
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.35);
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-color-chip.sc-orange { color: #ff8040; }
+.skill-color-chip.sc-yellow { color: #ffff00; }
+.skill-color-chip.sc-green { color: #40bf40; }
+.skill-color-chip.sc-grey { color: #9d9d9d; }
+
 .step-reagents-col {
   display: flex;
   align-items: center;

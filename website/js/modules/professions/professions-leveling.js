@@ -90,7 +90,7 @@
           quality: cf.quality || 2,
           effect: `${cf.desc || ''} (Holds ${cf.capacity || 3} stations)`,
           learn: cf.skillReq || (item.from !== undefined ? `${item.from}–${item.to}` : '1'),
-          source: cf.blueprint ? cf.blueprint.text : (item.source || 'Camping Trainer'),
+          source: cf.blueprint ? cf.blueprint.text : (item.source || 'Camp recipe'),
           reagents: item.reagents || cf.reagents || null,
           id: item.itemId || null,
           targetSubtab: 'guide',
@@ -107,7 +107,7 @@
           quality: cleanName.includes('silk') ? 3 : 2,
           effect: item.advice ? `${item.advice} (${bf.object}: ${bf.gives})` : bf.gives,
           learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : `${bf.profName || 'Camping'} ${bf.skillReq || ''}`.trim(),
-          source: item.source || 'Camping Trainer',
+          source: item.source || 'Camp recipe',
           reagents: item.reagents || bf.reagents || null,
           id: item.itemId || null,
           targetSubtab: 'buffs',
@@ -184,6 +184,17 @@
       targetSubtab: 'recipes',
       recipeObj: null
     };
+  }
+
+  // Skill-up color thresholds: orange = guaranteed point, yellow/green = chance, grey = none.
+  function renderSkillColors(c) {
+    if (!c || c.grey == null) return '';
+    const chip = (cls, val, label) => `<span class="skill-color-chip ${cls}" title="${label} from ${val}">${val}</span>`;
+    return `
+      <div class="step-skill-colors" aria-label="Skill colors: orange ${c.orange}, yellow ${c.yellow}, green ${c.green}, grey ${c.grey}">
+        ${chip('sc-orange', c.orange, 'Orange (guaranteed point)')}${chip('sc-yellow', c.yellow, 'Yellow (high chance)')}${chip('sc-green', c.green, 'Green (low chance)')}${chip('sc-grey', c.grey, 'Grey (no points)')}
+      </div>
+    `;
   }
 
   function renderLevelingTab(container, prof) {
@@ -320,6 +331,7 @@
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
                   </div>
+                  ${renderSkillColors(item.colors)}
                 </div>
                 <div class="step-info-col">
                   <div class="step-recipe-header">
@@ -345,6 +357,7 @@
                 <div class="step-crafts-col">
                   <div class="step-crafts-count">~${craftsNum}</div>
                   <div class="step-crafts-label">crafts</div>
+                  ${item.craftsSafe && item.craftsSafe > craftsNum ? `<div class="step-crafts-safe" title="Covers 9 in 10 players">${item.craftsSafe} to be safe</div>` : ''}
                 </div>
                 <div class="step-reagents-col">
                   ${(item.reagents || []).map(mat => {
