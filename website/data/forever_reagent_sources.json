@@ -5,7 +5,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in First Aid",
-    "summary": "Crafted by First Aid (Skill 55).",
+    "summary": "Crafted by First Aid (Skill 1).",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=118#created-by-spell",
     "craftedBy": [
@@ -15,7 +15,7 @@
         "profIcon": "spell_holy_sealofsacrifice",
         "recipeId": 118,
         "recipeName": "Minor Healing Potion",
-        "learn": 55,
+        "learn": 1,
         "source": "Trainer"
       }
     ]
@@ -6461,7 +6461,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 40).",
+    "summary": "Crafted by Alchemy (Skill 15).",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=2454#created-by-spell",
     "craftedBy": [
@@ -6471,7 +6471,7 @@
         "profIcon": "trade_alchemy",
         "recipeId": 2454,
         "recipeName": "Elixir of Minor Strength",
-        "learn": 40,
+        "learn": 15,
         "source": "Trainer"
       }
     ]
@@ -15094,27 +15094,6 @@
       }
     ]
   },
-  "4253": {
-    "id": 4253,
-    "name": "Toughened Leather Gloves",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Leatherworking",
-    "summary": "Crafted by Leatherworking (Skill 110).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4253#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "leatherworking",
-        "profName": "Leatherworking",
-        "profIcon": "trade_leatherworking",
-        "recipeId": 4253,
-        "recipeName": "Toughened Leather Gloves",
-        "learn": 110,
-        "source": "Trainer"
-      }
-    ]
-  },
   "4255": {
     "id": 4255,
     "name": "Green Leather Armor",
@@ -15611,27 +15590,6 @@
         "id": 19425,
         "name": "Mysterious Lockbox",
         "pct": 11.2
-      }
-    ]
-  },
-  "4320": {
-    "id": 4320,
-    "name": "Spidersilk Boots",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Tailoring",
-    "summary": "Crafted by Tailoring (Skill 100).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4320#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "tailoring",
-        "profName": "Tailoring",
-        "profIcon": "trade_tailoring",
-        "recipeId": 4320,
-        "recipeName": "Spidersilk Boots",
-        "learn": 100,
-        "source": "Trainer"
       }
     ]
   },
@@ -23307,16 +23265,6 @@
       "Hillsbrad Foothills"
     ]
   },
-  "6365": {
-    "id": 6365,
-    "name": "Strong Fishing Pole",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6365#dropped-by"
-  },
   "6370": {
     "id": 6370,
     "name": "Blackmouth Oil",
@@ -23925,16 +23873,6 @@
       "The Barrens"
     ]
   },
-  "6529": {
-    "id": 6529,
-    "name": "Shiny Bauble",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6529#dropped-by"
-  },
   "6530": {
     "id": 6530,
     "name": "Nightcrawlers",
@@ -24201,37 +24139,6 @@
       "Elwynn Forest",
       "Durotar",
       "Zephras Isle"
-    ]
-  },
-  "6532": {
-    "id": 6532,
-    "name": "Bright Baubles",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6532#dropped-by"
-  },
-  "6533": {
-    "id": 6533,
-    "name": "Aquadynamic Fish Attractor",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 150).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6533#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 6533,
-        "recipeName": "Aquadynamic Fish Attractor",
-        "learn": 150,
-        "source": "Trainer"
-      }
     ]
   },
   "6662": {
@@ -37647,36 +37554,6 @@
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12726#dropped-by"
   },
-  "12727": {
-    "id": 12727,
-    "name": "Misty Reed Mahi Mahi",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12727#dropped-by"
-  },
-  "12728": {
-    "id": 12728,
-    "name": "Sar'theris Striker",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12728#dropped-by"
-  },
-  "12729": {
-    "id": 12729,
-    "name": "Savage Coast Blue Sailfin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12729#dropped-by"
-  },
   "12735": {
     "id": 12735,
     "name": "Frayed Abomination Stitching",
@@ -37903,111 +37780,6 @@
         "id": 175964,
         "name": "Skin of Shadow",
         "pct": 100
-      }
-    ]
-  },
-  "12784": {
-    "id": 12784,
-    "name": "Arcanite Reaper",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12784#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12784,
-        "recipeName": "Arcanite Reaper",
-        "learn": 300,
-        "source": "Drop: Bannok Grimaxe (Blackrock Spire)"
-      }
-    ]
-  },
-  "12790": {
-    "id": 12790,
-    "name": "Arcanite Champion",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12790#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12790,
-        "recipeName": "Arcanite Champion",
-        "learn": 300,
-        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
-      }
-    ]
-  },
-  "12794": {
-    "id": 12794,
-    "name": "Masterwork Stormhammer",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12794#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12794,
-        "recipeName": "Masterwork Stormhammer",
-        "learn": 300,
-        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
-      }
-    ]
-  },
-  "12796": {
-    "id": 12796,
-    "name": "Hammer of the Titans",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12796#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12796,
-        "recipeName": "Hammer of the Titans",
-        "learn": 300,
-        "source": "Drop: Maleki the Pallid (Stratholme)"
-      }
-    ]
-  },
-  "12797": {
-    "id": 12797,
-    "name": "Frostguard",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12797#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12797,
-        "recipeName": "Frostguard",
-        "learn": 300,
-        "source": "Plans: Frostguard"
       }
     ]
   },
@@ -38844,27 +38616,6 @@
       }
     ]
   },
-  "13458": {
-    "id": 13458,
-    "name": "Greater Nature Protection Potion",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 290).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=13458#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "alchemy",
-        "profName": "Alchemy",
-        "profIcon": "trade_alchemy",
-        "recipeId": 13458,
-        "recipeName": "Greater Nature Protection Potion",
-        "learn": 290,
-        "source": "Drop: Rotting Behemoth (Western Plaguelands)"
-      }
-    ]
-  },
   "13463": {
     "id": 13463,
     "name": "Dreamfoil",
@@ -39015,27 +38766,6 @@
         "recipeName": "Flask of Supreme Power",
         "learn": 300,
         "source": "Drop: Ras Frostwhisper (Scholomance)"
-      }
-    ]
-  },
-  "13513": {
-    "id": 13513,
-    "name": "Flask of Chromatic Resistance",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=13513#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "alchemy",
-        "profName": "Alchemy",
-        "profIcon": "trade_alchemy",
-        "recipeId": 13513,
-        "recipeName": "Flask of Chromatic Resistance",
-        "learn": 300,
-        "source": "Drop: Gyth (Blackrock Spire)"
       }
     ]
   },
@@ -44043,27 +43773,6 @@
       }
     ]
   },
-  "18168": {
-    "id": 18168,
-    "name": "Force Reactive Disk",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18168#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 18168,
-        "recipeName": "Force Reactive Disk",
-        "learn": 300,
-        "source": "Schematic: Force Reactive Disk"
-      }
-    ]
-  },
   "18240": {
     "id": 18240,
     "name": "Ogre Tannin",
@@ -44083,27 +43792,6 @@
         "id": 179499,
         "name": "Ogre Tannin Basket",
         "pct": 100
-      }
-    ]
-  },
-  "18251": {
-    "id": 18251,
-    "name": "Core Armor Kit",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Leatherworking",
-    "summary": "Crafted by Leatherworking (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18251#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "leatherworking",
-        "profName": "Leatherworking",
-        "profIcon": "trade_leatherworking",
-        "recipeId": 18251,
-        "recipeName": "Core Armor Kit",
-        "learn": 300,
-        "source": "Pattern: Core Armor Kit"
       }
     ]
   },
@@ -44257,27 +43945,6 @@
       "Undercity",
       "Thunder Bluff",
       "Elwynn Forest"
-    ]
-  },
-  "18262": {
-    "id": 18262,
-    "name": "Elemental Sharpening Stone",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18262#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 18262,
-        "recipeName": "Elemental Sharpening Stone",
-        "learn": 300,
-        "source": "Plans: Elemental Sharpening Stone"
-      }
     ]
   },
   "18512": {
@@ -46115,146 +45782,6 @@
       ]
     }
   },
-  "20867": {
-    "id": 20867,
-    "name": "Onyx Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20867#dropped-by"
-  },
-  "20868": {
-    "id": 20868,
-    "name": "Lambent Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20868#dropped-by"
-  },
-  "20870": {
-    "id": 20870,
-    "name": "Jasper Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20870#dropped-by"
-  },
-  "20871": {
-    "id": 20871,
-    "name": "Obsidian Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20871#dropped-by"
-  },
-  "20872": {
-    "id": 20872,
-    "name": "Vermillion Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20872#dropped-by"
-  },
-  "20873": {
-    "id": 20873,
-    "name": "Alabaster Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20873#dropped-by"
-  },
-  "20874": {
-    "id": 20874,
-    "name": "Idol of the Sun",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20874#dropped-by"
-  },
-  "20875": {
-    "id": 20875,
-    "name": "Idol of Night",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20875#dropped-by"
-  },
-  "20876": {
-    "id": 20876,
-    "name": "Idol of Death",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20876#dropped-by"
-  },
-  "20877": {
-    "id": 20877,
-    "name": "Idol of the Sage",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20877#dropped-by"
-  },
-  "20878": {
-    "id": 20878,
-    "name": "Idol of Rebirth",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20878#dropped-by"
-  },
-  "20879": {
-    "id": 20879,
-    "name": "Idol of Life",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20879#dropped-by"
-  },
-  "20881": {
-    "id": 20881,
-    "name": "Idol of Strife",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20881#dropped-by"
-  },
-  "20882": {
-    "id": 20882,
-    "name": "Idol of War",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20882#dropped-by"
-  },
   "21024": {
     "id": 21024,
     "name": "Chimaerok Tenderloin",
@@ -46768,150 +46295,6 @@
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=227813#dropped-by"
   },
-  "234003": {
-    "id": 234003,
-    "name": "Obsidian-Infused Thorium Bar",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Mining",
-    "summary": "Crafted by Mining (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234003#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "mining",
-        "profName": "Mining",
-        "profIcon": "trade_mining",
-        "recipeId": 234003,
-        "recipeName": "Smelt Obsidian-Infused Thorium Bar",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234004": {
-    "id": 234004,
-    "name": "Obsidian Grinding Stone",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234004#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 234004,
-        "recipeName": "Obsidian Grinding Stone",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234005": {
-    "id": 234005,
-    "name": "Obsidian Blasting Powder",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234005#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 234005,
-        "recipeName": "Obsidian Blasting Powder",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234006": {
-    "id": 234006,
-    "name": "Monstrous Silithid Chitin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234006#dropped-by"
-  },
-  "234007": {
-    "id": 234007,
-    "name": "Spiked Silithid Chitin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234007#dropped-by"
-  },
-  "234008": {
-    "id": 234008,
-    "name": "Qiraji Silk",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234008#dropped-by"
-  },
-  "234009": {
-    "id": 234009,
-    "name": "Bolt of Qiraji Silk",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Tailoring",
-    "summary": "Crafted by Tailoring (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234009#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "tailoring",
-        "profName": "Tailoring",
-        "profIcon": "trade_tailoring",
-        "recipeId": 234009,
-        "recipeName": "Bolt of Qiraji Silk",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234010": {
-    "id": 234010,
-    "name": "Ancient Sandworm Bile",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234010#dropped-by"
-  },
-  "234011": {
-    "id": 234011,
-    "name": "Qiraji Stalker Venom",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234011#dropped-by"
-  },
-  "234012": {
-    "id": 234012,
-    "name": "Hive Thistle",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234012#dropped-by"
-  },
   "236656": {
     "id": 236656,
     "name": "Frozen Rune",
@@ -46928,7 +46311,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 1).",
+    "summary": "Crafted by Engineering (Skill 250).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=238737#created-by-spell",
     "craftedBy": [
@@ -46938,7 +46321,7 @@
         "profIcon": "trade_engineering",
         "recipeId": 238737,
         "recipeName": "Tinkerbox",
-        "learn": 1,
+        "learn": 250,
         "source": "Trainer"
       }
     ]
@@ -47266,7 +46649,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 50).",
+    "summary": "Crafted by Alchemy (Skill 40).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249409#created-by-spell",
     "craftedBy": [
@@ -47276,7 +46659,7 @@
         "profIcon": "trade_alchemy",
         "recipeId": 249409,
         "recipeName": "Cerulean Dye",
-        "learn": 50,
+        "learn": 40,
         "source": "Trainer"
       }
     ]
@@ -47287,7 +46670,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 50).",
+    "summary": "Crafted by Alchemy (Skill 40).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249410#created-by-spell",
     "craftedBy": [
@@ -47297,7 +46680,7 @@
         "profIcon": "trade_alchemy",
         "recipeId": 249410,
         "recipeName": "Sulfuric Acid",
-        "learn": 50,
+        "learn": 40,
         "source": "Trainer"
       }
     ]
@@ -47572,7 +46955,7 @@
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 130).",
+    "summary": "Crafted by Alchemy (Skill 120).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249430#created-by-spell",
     "craftedBy": [
@@ -47582,7 +46965,7 @@
         "profIcon": "trade_alchemy",
         "recipeId": 249430,
         "recipeName": "Magenta Dye",
-        "learn": 130,
+        "learn": 120,
         "source": "Trainer"
       }
     ]
@@ -47711,16 +47094,6 @@
     "summary": "Fished from enchanted and coastal waters in Darkshore, Ashenvale, The Barrens, and Riverglades.",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=251524#fished-in"
-  },
-  "252948": {
-    "id": 252948,
-    "name": "Cleansed Felbloom",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=252948#dropped-by"
   },
   "255007": {
     "id": 255007,

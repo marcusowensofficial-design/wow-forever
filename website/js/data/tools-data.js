@@ -945,59 +945,49 @@ const WOW_TOOLS_DATA = {
   guides: [
     {
       id: "guide-sleeping-bag",
-      title: "Cozy Sleeping Bag Guide (+3% XP Buff & Student Fodder)",
+      title: "Cozy Sleeping Bag Guide (XP Buff Questline & Student Fodder)",
       category: "Leveling & Quests",
-      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      source: "Wowhead Forever Cozy Sleeping Bag guide · Wowhead item tooltips (211527, 216619)",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
-      summary: "Rest in the Cozy Sleeping Bag for 3 minutes to gain a stacking +3% experience bonus for 2 hours, plus 4x Student Fodder consumable rested charges.",
-      content: `### Overview: The Ultimate Classic+ Leveling Artifact
-The **Cozy Sleeping Bag** is the premier open-world utility item in WoW Forever. When deployed outdoors or inside player-pitched tents, it grants stacking experience acceleration and accelerates rested experience gain.
+      summary: "A level-14 questline across both continents that rewards the Cozy Sleeping Bag: lie in it for up to 3 minutes for a 1%-per-minute XP buff (max 3%) that lasts an hour, plus Student Fodder along the way.",
+      content: `### What the Cozy Sleeping Bag Does
+The **Cozy Sleeping Bag** (first seen in Season of Discovery) puts down a sleeping bag. Lie in it to get **+1% experience for every minute you rest, up to 3%**. The buff lasts **1 hour**, and you also count as rested while you lie in the bag.
 
-💡 **Core Mechanic:** Channel the sleeping bag for 3 minutes (1 min per stack). You earn the **Well-Rested** aura granting **+3% Experience** from monster kills and quest turn-ins for 2 full hours (7,200 seconds)!
+| Item Attribute | Value |
+|---|---|
+| Item | Cozy Sleeping Bag (item 211527) |
+| Item Level | 40 · Binds when picked up · Unique |
+| Use | Unfurl a sleeping bag. Rest in it for at least 1 minute for an XP bonus that stacks up to 3 times. |
+| Cooldown | 1 hour |
+| Quest requirement | Level 14 to start the chain |
 
-| Item Attribute | Specification |
-| Name | Cozy Sleeping Bag |
-| Item Level | 40 (Requires Level 14 to start quest) |
-| Cooldown | 60 Minutes |
-| Duration on Ground | 20 Minutes (party members can share!) |
-| Rested Buff | +1% XP per minute rested (max 3 stacks = +3% XP) |
-| Buff Duration | 2 Hours (persists through death) |
+The chain also hands out **Student Fodder** (item 216619, 5 in total across the chain). It is a stack-of-30 food with a 5-minute cooldown, and in Forever it **regenerates health**.
 
 ---
 
-### Complete 5-Step Cross-Continent Walkthrough
+### Questline Walkthrough
+Alliance and Horde start at opposite ends, then share the rest of the route. Wowhead's route assumes these flight paths: **Horde** Orgrimmar, Crossroads, Kargath. **Alliance** Booty Bay, Thelsamar, Refuge Point.
 
-#### Step 1: "...and that note you found" (Level 14 Req)
-🗺️ **Alliance Start:** Alexston Farmstead, Westfall (\`37.4, 50.6\`) — Click the *Burned-Out Remains* in the scorched wheat field.
-🗺️ **Horde Start:** Field of Giants, The Barrens (\`46.4, 73.9\`) — Click the *Burned-Out Remains* beside the ruined watchtower.
-• **Objective:** Loot the charred traveler's journal note to accept the cross-continent breadcrumb.
-• **Reward:** Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir.
+#### Step 1–2: "...and that note you found" → "Stepping Stones"
+• **Alliance:** In Westfall, go to the Alexston Farmstead (\`37, 50\`) and click the *Burned-Out Remains* in the cart wreckage to accept *...and that note you found*. Turn it in at the burnt tower in The Barrens, south of Camp Taurajo (\`46, 74\`), and accept *Stepping Stones* from the wooden board.
+• **Horde:** Same two spots in reverse. Start at the burnt tower in The Barrens (\`46, 74\`), then turn in at the Alexston Farmstead in Westfall (\`37, 50\`) and accept *Stepping Stones*.
 
-#### Step 2: "Stepping Stones" (Opposite Continent)
-🗺️ **Alliance Turn-in:** Journey across the sea to The Barrens (\`46.4, 73.9\`) to inspect the Horde Burned Remains.
-🗺️ **Horde Turn-in:** Take the Zeppelin to Tirisfal / Grom'gol and travel to Westfall (\`37.4, 50.6\`) to inspect the Alliance Burned Remains.
-• **Objective:** Inspect the nailed plank at the opposing camp to decipher the mountain climber's coordinates.
-• **Reward:** 2x 12-Slot Specialty Bags (*Sturdy Lunchbox* & *Old Toolbox*) + Simple Wood & Flint.
+#### Step 3: "Scramble" (Stonetalon Mountains)
+• Take the path northeast of Sun Rock Retreat (\`50.9, 52.3\`) to the abandoned camp (\`40.6, 52.4\`). Click the *Pocket Litter* on top of a box to complete *Stepping Stones*, then accept *Scramble*.
+• *Optional:* click the campfire in the camp to complete *Rekindle* with the Simple Wood and Flint and Tinder you just received.
+• Climb the hill straight north, then jump across to the *Mound of Dirt* (\`39.6, 49.8\`) to complete *Scramble* and accept *Wet Job*.
 
-#### Step 3: "Scramble & Wet Job" (Stonetalon Mountains)
-🗺️ **Coords:** Stonetalon Mountain Trail (\`50.9, 52.3\` -> Camp at \`40.7, 52.4\` -> Dirt Mound at \`39.6, 49.9\`).
-• **Objective:** Head north of Sun Rock Retreat along the cliff ledge. Loot the *Pocket Litter* at the abandoned tent, then carefully jump the chasm onto the *Mound of Dirt*.
-• **Reward:** Choice of Thrown/Ranged Weapon (*Silver Star* / *Moonsight Rifle* / *Precision Bow*) + **4x Student Fodder**!
+#### Step 4: "Wet Job" (Loch Modan)
+• At the Loch Modan dam (\`49.4, 12.9\`), jump onto the carved heads facing the Wetlands and click the *Eagle Figurine* to complete *Wet Job*. Then accept *Eagle's Fist*. (The dam is a long trip for Horde, so be careful.)
 
-#### Step 4: "Eagle's Fist" (Loch Modan)
-🗺️ **Coords:** Stonewrought Dam, Loch Modan (\`49.4, 12.9\`).
-• **Objective:** Walk along the crest of Stonewrought Dam. Look down toward the Wetlands chasm and drop down onto the massive dwarven architectural relief carvings to retrieve the *Carved Eagle Figurine*.
-• **Reward:** Hickory Pipe + Rumsey Rum Light (+5 Stamina).
-
-#### Step 5: "This Must Be The Place" (Thoradin's Wall)
-🗺️ **Coords:** Thoradin's Wall, Hillsbrad/Arathi Border (\`87.4, 49.7\` Cart -> \`22.4, 24.2\` Wall Ramparts).
-• **Objective:** Leap from the broken supply cart south of Durnholde Keep onto the wall battlements. Follow the upper parapet into the guard room and loot the *Hastily Rolled-Up Satchel*.
-• **Final Reward:** **Cozy Sleeping Bag** + 8x Student Fodder + 4,200 XP!
+#### Step 5: "Eagle's Fist" → "This Must Be The Place" (Thoradin's Wall)
+• On the Hillsbrad side of Thoradin's Wall, use the cart (\`87.3, 49.6\`) to climb into the wall. Go through the room and look outside to the right for the hanging *Messenger Bag*. Click it to complete *Eagle's Fist* and accept *This Must Be The Place*.
+• Click the *Hastily Rolled-Up Satchel* below the bag to finish the chain and receive the **Cozy Sleeping Bag**.
 
 ---
 
 ### Camp Synergy
-💡 Pair it with a campfire: a Leatherworker's **Camp Tent** (skill 20) tops your rested XP up to 5% of a level once per hour while you sit by it.`
+💡 Pair it with a campfire: a Leatherworker's **Camp Tent** (skill 20) tops your rested XP up to 5% of a level while you sit by it. All camp features share a 1-hour cooldown.`
     },
     {
       id: "guide-hunter-pets",
@@ -1720,7 +1710,7 @@ Several late leveling recipes **require** a 300 station — Master Forge (Blacks
 • **Reagent Economy** — class abilities no longer need vendor reagents, and your Tier 1 camp objects cost no reagents.
 
 ### The Cozy Sleeping Bag
-The Cozy Sleeping Bag returns in Forever as a separate questline reward that boosts leveling experience while you rest; party members can share it. See Wowhead's Cozy Sleeping Bag guide for the quest steps.`
+The Cozy Sleeping Bag returns in Forever as a separate questline reward that gives +1% XP per minute you lie in it (up to 3%) for 1 hour. See Wowhead's Cozy Sleeping Bag guide for the quest steps.`
     },
     {
       id: "guide-battle-mage",
@@ -2097,9 +2087,8 @@ In WoW Forever, Rested Experience is a deeply customizable system rather than a 
 ---
 
 ### Student Fodder Rules
-• Awarded during Steps 3 and 5 of the Cozy Sleeping Bag questline (total of 12 charges).
-• Consuming 1 **Student Fodder** instantly grants **4 bars (20%) of Rested Experience**!
-💡 **Optimal Strategy:** Save your Student Fodder for levels 28 and 29 where raw monster experience is at its highest per bar!`
+• The Cozy Sleeping Bag questline hands out 5 Student Fodder in total.
+• In Forever, **Student Fodder** regenerates health (5-minute cooldown, stacks to 30). It does not grant rested experience.`
     },
     {
       id: "guide-blackfathom-deeps",
@@ -2151,35 +2140,44 @@ Shadowfang Keep (Silverpine Forest) and The Deadmines (Westfall) have received u
     },
     {
       id: "guide-professions-1-225",
-      title: "Artisan Professions Fast-Leveling Guide (1–225 Routes & Material Budgets)",
+      title: "Crafting Professions 1–225 Quick Routes (Alchemy, Blacksmithing, Tailoring)",
       category: "Economy & Professions",
-      source: "Wowhead · Warcraft Tavern · Classic+",
+      source: "Professions tab 1–300 routes (built from Wowhead's WoW Forever profession planner)",
       icon: "https://render.worldofwarcraft.com/us/icons/56/trade_blacksmithing.jpg",
-      summary: "Most cost-efficient 1 to 225 crafting paths for Alchemy, Blacksmithing, Engineering, Leatherworking, and Tailoring at the Level 30 cap.",
-      content: `### Maximizing Crafting Power at the Level 30 Cap
-In Closed Beta Phase 2, professions are capped at **Expert 225**. Crafting high-tier blue gear gives players a massive statistical edge in dungeons and PvP duels.
+      summary: "The 1 to 225 part of the site's Forever leveling routes for Alchemy, Blacksmithing and Tailoring, in short form. Full routes with craft counts are in the Professions tab.",
+      content: `### Forever Changes the Classic Routes
+Forever reshuffles many recipes. The biggest change is that **healing potions moved from Alchemy to First Aid**, so the old Classic "spam healing potions" Alchemy route no longer works. The routes below are the 1–225 part of the Professions tab's 1–300 guides, which come from Wowhead's Forever profession planner. Open the Professions tab for craft counts, reagents and skill colors.
 
-### Fast 1–225 Recipe Paths
+### 1–225 Recipe Paths
 
 #### Alchemy (1–225)
-• **1–60:** Minor Healing Potion (Peacebloom + Silverleaf).
-• **60–110:** Lesser Healing Potion (Minor Healing + Briarthorn).
-• **110–140:** Healing Potion (Bruiseweed + Briarthorn).
-• **140–185:** Greater Healing Potion (Liferoot + Kingsblood).
-• **185–225:** Elixir of Agility & Superior Healing Potion (Goldthorn + Sungrass).
+• **1–12:** Minor Arcane Elixir
+• **12–62:** Elixir of Minor Defense
+• **62–76:** Minor Mana Potion
+• **76–89:** Elixir of Minor Fortitude
+• **89–100:** Rage Potion
+• **100–137:** Holy Protection Potion
+• **137–162:** Elixir of Lesser Defense
+• **162–187:** Mana Potion
+• **187–212:** Elixir of Agility
+• **212–227:** Catseye Draught
 
 #### Blacksmithing (1–225)
-• **1–75:** Rough Sharpening Stones & Rough Grinding Stones.
-• **75–125:** Coarse Grinding Stones & Runed Copper Belt.
-• **125–160:** Heavy Grinding Stones & Patterned Bronze Bracers.
-• **160–200:** Solid Grinding Stones & Green Iron Hauberk.
-• **200–225:** Golden Scale Bracers & Steel Breastplate.
+• **1–28:** Rough Sharpening Stone · **28–61:** Rough Grinding Stone
+• **61–69:** Coarse Grinding Stone · **69–80:** Copper Chain Belt
+• **80–100:** Rough Bronze Leggings · **100–109:** Heavy Sharpening Stone · **109–125:** Rough Bronze Leggings
+• **125–129:** Iron Buckle · **129–140:** Bronze Warhammer · **140–175:** Green Iron Bracers
+• **175–182:** Solid Sharpening Stone · **182–205:** Heavy Mithril Gauntlet
+• **205–211:** Mithril Plate Pants · **211–225:** Heavy Mithril Breastplate
 
 #### Tailoring (1–225)
-• **1–75:** Bolt of Linen Cloth & Linen Belt.
-• **75–105:** Bolt of Woolen Cloth & Woolen Boots.
-• **105–145:** Bolt of Silk Cloth & Azure Silk Hood.
-• **145–225:** Silk Headband & Crimson Silk Vest.`
+• **1–38:** Bolt of Linen Cloth · **38–55:** Linen Belt
+• **55–78:** Bolt of Woolen Cloth · **78–100:** Woolen Cape
+• **100–116:** Bolt of Silk Cloth · **116–125:** Bright Yellow Shirt
+• **125–132:** Azure Silk Hood · **132–138:** Lesser Wizard's Robe · **138–149:** Earthen Vest / Bolt of Mageweave
+• **149–158:** Earthen Vest · **158–170:** Robe of Power · **170–180:** Black Mageweave Vest
+• **180–190:** Orange Mageweave Shirt · **190–205:** Black Mageweave Gloves
+• **205–214:** Bolt of Runecloth · **214–234:** Runecloth Belt`
     },
     {
       id: "guide-supply-crates-rep",
@@ -2750,66 +2748,54 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
     },
     {
       id: "guide-camping-crafting-stations",
-      title: "Camping Crafting Stations: Tanning Rack, Spinning Wheel & 122 Outdoor Recipes",
+      title: "Camping Crafting Stations: Tanning Rack & Spinning Wheel",
       category: "Economy & Professions",
-      source: "data/forever_camping_recipes.json · core-data.js · ForeverChanges.pro",
+      source: "Wowhead Forever item tooltips · datamined camping matrix · data/forever_vendors.json",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_pelt_wolf_01.jpg",
-      summary: "Definitive field guide to deployable profession stations: 122 outdoor-locked Leatherworking and Tailoring recipes, rare dungeon blueprints, group party buffs, and Pristine Leather farming.",
-      content: `### The Revolution of Wilderness Crafting
-In WoW Forever, crafting is no longer confined to capital city anvils and looms. Forever's camping system adds **camp stations** — profession camp objects such as the Tanning Rack and Spinning Wheel — and some recipes can only be crafted with the matching station placed beside a campfire. (Camping itself is a system, not a tradeskill: the stations come from your Leatherworking, Tailoring and other professions.)
+      summary: "What the skill-140 tier camp stations for Leatherworking and Tailoring actually do, where their blueprints come from, and how they replace your skill-20 camp object.",
+      content: `### What a Camp Station Is
+Forever's camping system lets each profession add camp objects to a campfire. At skill 20 Leatherworking adds the **Camp Tent** and Tailoring the **Faction Banner**. The next tier is a crafting station: the **Tanning Rack** and the **Spinning Wheel**. (Camping is a system, not a tradeskill. The stations come from your Leatherworking and Tailoring.)
 
-### 1. The Tanning Rack (Leatherworking Station)
-
-• **Profession Requirement:** Leatherworking (Skill 125+; hotfixed down from 140 on Nov 7).
-• **Blueprint Source:** Rare drop from **Razorclaw the Butcher** in Shadowfang Keep (~1 in 900 drop rate).
-• **Deployment Reagents:** 5x Medium Leather, 3x Fine Thread, 2x Simple Wood.
-• **Field Duration:** Lasts **15 minutes** in the world (Replaces standard Camp Tent; grants standard tent rest bonuses + 1-hour cooldown).
-• **Exclusive Party Aura:** While deployed, all party members within 30 yards gain **+8% Physical Damage Reduction**!
-
-#### Top Tanning Rack Signature Recipes (48 Total)
-
-| Recipe Name | Skill Req | Key Reagents | Item Specification |
-|---|---|---|---|
-| **Defender's Leather Kilt** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Elixir of Minor Fortitude | 108 Armor, +8 Stamina, +6 Strength |
-| **Totemic Leather Leggings** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Sulfuric Acid | 108 Armor, +7 Int, +5 Spi, +6 Nature Spell Dmg |
-| **Brawler's Leather Legguards** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Shadowgem | 108 Armor, +8 Agility, +5 Stamina |
-| **Trapper's Leather Legguards** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Deviate Scale | 108 Armor, +6 Agi, +6 Sta, +4 Spirit |
-| **Prowler's Leather Belt** | Skill 150 | 8x Heavy Leather, 2x Cured Med Hide, 1x Jade | 82 Armor, +7 Agi, +5 Sta, +1% Melee Crit |
-| **Wolfshead Helm (Rework)** | Skill 165 | 18x Thick Leather, 2x Thick Wolfhide, 4x Heavy Thread | Reworked for smooth energy: Shifting restores 40 Energy and 15 Rage! |
+Both stations follow the general camp rules: they **need a campfire nearby**, and **all of your camp features share one 1-hour cooldown**. Neither one gives a party aura of its own. Each keeps the buff of the object it replaces.
 
 ---
 
-### 2. The Field Spinning Wheel (Tailoring Station)
+### 1. Tanning Rack (Leatherworking)
 
-• **Profession Requirement:** Tailoring (Skill 140+).
-• **Blueprint Source:** Dropped by **Unstable Sentinel** in City of Dalaran dungeon.
-• **Deployment Reagents:** 5x Bolt of Silk Cloth, 3x Fine Thread, 2x Simple Wood.
-• **Field Duration:** Lasts **15 minutes** (Replaces Faction Banner; grants standard rest bonuses + 1-hour cooldown).
-• **Exclusive Party Aura:** While deployed, all party members within 30 yards gain **+8% Spirit and +200% accelerated Rested XP gain**!
-
-#### Top Spinning Wheel Signature Recipes (74 Total)
-
-| Recipe Name | Skill Req | Key Reagents | Item Specification |
-|---|---|---|---|
-| **Pristine Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Pristine Leather, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +9 Intellect, +7 Stamina, +11 Spell Power |
-| **Silky Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Spider's Silk, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +10 Healing Power, +8 Spirit, +4 Int |
-| **Flame Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Fire Oil, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +14 Fire Spell Damage, +5 Int |
-| **Gilded Slippers** | Skill 140 | 8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Gold Bar | 48 Armor, +8 Int, +6 Sta, +7 Spell Power |
-| **Gilded Handwraps** | Skill 165 | 12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Gold Bar | 42 Armor, +7 Int, +5 Sta, +9 Spell Power |
-| **Gilded Cord** | Skill 190 | 28x Bolt of Mageweave, 6x Magenta Dye, 4x Cerulean Dye, 12x Gold Bar | 52 Armor, +11 Int, +8 Sta, +12 Spell Power |
-| **Nethergeld Shoulders** | Skill 195 | 16x Bolt of Mageweave, 4x Magenta Dye, 8x Gold Bar, 2x Greater Nether Essence | 58 Armor, +10 Int, +7 Spi, +14 Spell Power |
+| | |
+|---|---|
+| **Requires** | Leatherworking (125) |
+| **Blueprint** | *Blueprint: Tanning Rack* (item 273096). Dropped by **Razorclaw the Butcher** in Shadowfang Keep (Wowhead drop chance ~7.7%). The Happy Camper camp vendor sells it for 15s. |
+| **Reagents** | 5x Medium Leather, 3x Fine Thread, 2x Simple Wood |
+| **Effect** | Places a Tanning Rack that allows the creation of certain reagents, and provides all of the benefits of a Camp Tent (rested XP topped up to 5% of a level). |
+| **Placement** | May be placed over a Camp Tent to replace it. |
 
 ---
 
-### 3. Pristine Leather Harvest Mechanics
+### 2. Spinning Wheel (Tailoring)
 
-Notice that many of the most powerful Tanning Rack and Spinning Wheel recipes require **Pristine Leather**:
-• **The Harvesting Rule:** Pristine Leather drops exclusively from beasts between **Levels 10 and 25** outside starter zones when skinned by a skinner who is **Level 25 or below**.
-• **Top Farming Spots:**
-  - *Mudrock Crocolisks & Snapjaws* in Wetlands (\`55.0, 68.0\`).
-  - *Ghostpaw Alphas & Stags* in Ashenvale (\`42.0, 60.0\`).
-  - *Savannah Patriarchs & Thunderhawks* in The Barrens (\`46.0, 50.0\`).
-• **Economic Value:** On the Auction House, a single Pristine Leather commands 35–50 silver due to constant demand from Level 30 BiS crafters!`
+| | |
+|---|---|
+| **Requires** | Tailoring (140) |
+| **Blueprint** | *Blueprint: Spinning Wheel* (item 273099). Dropped by **Unstable Sentinel** in the City of Dalaran dungeon (Wowhead drop chance ~6.6%). The Happy Camper also sells it for 15s. |
+| **Reagents** | 2x Simple Wood, 5x Bolt of Silk Cloth, 3x Fine Thread |
+| **Effect** | Places a Spinning Wheel that allows the creation of certain reagents, and provides all the benefits of a Faction Banner (the Spirit buff). |
+| **Placement** | May be placed over a Faction Banner to replace it. |
+
+---
+
+### 3. What the Stations Do *Not* Do
+• The stations make **reagents**. Forever's new leather and cloth gear (Defender's Leather Kilt, Prowler's Leather Belt, Pristine Leggings, the Gilded set and others) shows **no station requirement** in its Wowhead recipe tooltip. You craft that gear the normal way.
+• The recipes that **do** need a station need the skill-300 ones: the Leatherworking **Sewing Machine** and the Tailoring **Loom** ("usable for recipes that require it").
+• Many of the new Forever patterns use **Pristine Leather**, a Scarce crafting reagent (item 249427). Check the Wowhead item page for where it drops.
+
+---
+
+### Station Ladder
+| Profession | Skill 20 | Skill 125/140 | Skill 300 |
+|---|---|---|---|
+| **Leatherworking** | Camp Tent | Tanning Rack (125) | Sewing Machine |
+| **Tailoring** | Faction Banner | Spinning Wheel (140) | Loom |`
     },
     {
       id: "guide-zephras-isle-zone",
@@ -2901,7 +2887,7 @@ In Phase 2 Beta of WoW Forever, grinding dungeon mobs repeatedly for experience 
 
 #### 6. Shadowfang Keep (Levels 22–30) · Silverpine Forest
 • **Quests (4 Total):** *Arugal Must Die* (Deth'ryll Terrace), *The Book of Ur* (Undercity Magic Quarter), *Deathstalkers in Shadowfang*.
-• **Bonus:** **Razorclaw the Butcher** drops the rare blueprint for the **Camping Tanning Rack** (~1:900).
+• **Bonus:** **Razorclaw the Butcher** drops *Blueprint: Tanning Rack* (Leatherworking 125 camp station; Wowhead drop chance ~7.7%).
 
 #### 7. Blackfathom Deeps (Levels 24–32) · Zoram Strand, Ashenvale
 • **Quests (6 Total):** *Researching the Corruption* (Auberdine / Sun Rock Retreat), *Blackfathom Villainy* (Bashana Runetotem), *Twilight Falls*, *The Essence of Aku'mai*.
@@ -3325,30 +3311,29 @@ Reaching skill level 225 is only the halfway mark in WoW Forever's trade economy
 
 | Profession | Artisan Master Trainer Location | Level & Skill Req | Key Specialization Choices |
 | :--- | :--- | :--- | :--- |
-| **Enchanting** | **Annora** (Inside Uldaman Dungeon, Badlands) | Level 35 / Skill 200 | Ring Enchants (+4 All Stats, +12 Spell Power) |
+| **Enchanting** | **Annora** (Inside Uldaman Dungeon, Badlands) | Level 35 / Skill 200 | No specialization |
 | **Blacksmithing** | Brikk Keencraft (Booty Bay, Stranglethorn) | Level 35 / Skill 200 | **Armorsmith** vs **Weaponsmith** (Sword/Axe/Hammer) |
 | **Engineering** | Buzzek Bracketswing (Tanaris / Gadgetzan) | Level 30 / Skill 200 | **Gnomish** (Trinkets & Utility) vs **Goblin** (Explosives) |
 | **Leatherworking** | Drakk Stonehand (Hinterlands) / Hahrana (Feralas) | Level 35 / Skill 200 | **Dragonscale** (Mail) / **Elemental** / **Tribal** |
-| **Alchemy** | Kylanna Windwhisper (Feralas) / Rogvar (Swamp) | Level 35 / Skill 200 | Transmutes (Arcanite Bar) & Flask Discovery |
-| **Tailoring** | Timothy Worthington (Dustwallow) / Daryl Stack (Hillsbrad) | Level 35 / Skill 200 | Mooncloth Cleansing, Shadoweave, Spellfire |
-| **Cooking** | Dirk Taggert (Gadgetzan, Tanaris) | Level 35 / Skill 225 | *Clamlette Surprise* quest (12 Giant Clam Meat) |
-| **First Aid** | Trauma Physician (Theramore A / Hammerfall H) | Level 35 / Skill 225 | *Triage* quest (Save 15 wounded soldiers) |
+| **Alchemy** | Kylanna Windwhisper (Feralas) / Rogvar (Swamp of Sorrows) / Master Mycologist Shurome (Emerald Sanctuary) | Level 35 / Skill 200 | No specialization (transmutes and flasks) |
+| **Tailoring** | Timothy Worthington (Dustwallow) / Daryl Stack (Hillsbrad) | Level 35 / Skill 200 | No specialization |
+| **Cooking** | Dirge Quikcleave (Gadgetzan, Tanaris) | Level 35 / Skill 225 | *Clamlette Surprise* quest (12 Giant Egg, 10 Zesty Clam Meat, 20 Alterac Swiss) |
+| **First Aid** | Doctor Gustaf VanHowzen (Theramore, A) / Doctor Gregory Victor (Hammerfall, H) | Level 35 / Skill 225 | *Triage* quest |
 
 ---
 
 ### Step-by-Step Walkthrough: Finding Annora in Uldaman (Enchanting)
 Unlike every other profession, **Artisan Enchanting (225–300)** can only be learned from **Annora**, an elusive NPC located inside the Uldaman dungeon instance:
-1. Form a group of Level 38–42 players and enter Uldaman via the Badlands.
-2. Clear down through the subterranean trogg tunnels to the scorpion chambers (/way \`36.6, 31.2\` inside instance).
-3. Clear all surrounding scorpids and burrowers before speaking with Annora. If scorpids agro onto her, she enters combat and cannot train players!
-4. Bring at least **15 Vision Dust**, **4 Greater Nether Essence**, and **20 gold** to purchase your 225–250 recipes immediately.
+1. Enter Uldaman from the Badlands. She teaches both factions.
+2. Make your way to the area between the **Map Chamber** and the **Temple Hall**.
+3. Annora only appears after you clear the scorpion trash around her (about 10 non-elite mobs of level 35–36).
 
 ---
 
 ### Major Endgame Specializations & Economic Impact
 
 #### 1. Blacksmithing: Armorsmith vs Weaponsmith
-• **Armorsmith:** Crafts high-defense plate armor, including the *Helm of the Great Chief* and *Breastplate of Bloodthirst*. Indispensable for main raid tanks.
+• **Armorsmith:** Unlocks the specialized plate armor plans.
 • **Weaponsmith:** Specializes further into **Master Axesmith** (*Nightfall* spell-debuff axe), **Master Swordsmith** (*Blackguard* 1H agility sword), or **Master Hammersmith** (*The Unstoppable Force*).
 
 #### 2. Engineering: Goblin vs Gnomish
@@ -3357,7 +3342,7 @@ Unlike every other profession, **Artisan Enchanting (225–300)** can only be le
 
 #### 3. Alchemy Transmutation Cooldowns
 • At skill 275, Alchemists unlock **Transmute: Arcanite Bar** (1x Thorium Bar + 1x Arcane Crystal).
-• In WoW Forever, this transmutation operates on a **48-hour universal cooldown**, making your daily transmute slot worth 10–15 gold in passive daily profit!`
+• Transmutes have a cooldown; check the recipe tooltip in game for the current Forever value.`
     },
     {
       id: "guide-companion-addons-suite",
@@ -3660,7 +3645,7 @@ These items provide unique quality-of-life perks that dramatically accelerate cr
 ---
 
 ### Campsite Deployable Crafting Stations
-Through the **Camping Tradeskill**, players can place dedicated crafting and gathering stations in the field:
+Through the **camping system** (not a tradeskill), players can place profession stations beside a campfire:
 • **Blueprint: Anvil** (Item ID: 273086) — Provides the benefits of a Blacksmithing Anvil and Sharpening Wheel anywhere outdoors.
 • **Blueprint: Tanning Rack** (Item ID: 273096) — Enables in-field leatherworking reagent cures.
 • **Blueprint: Spinning Wheel** (Item ID: 273099) — Enables tailoring cloth spinning without visiting capital looms.

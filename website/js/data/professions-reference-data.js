@@ -22,8 +22,8 @@
     "faction": "Alliance",
     "rank": "Journeyman",
     "zone": "Ironforge",
-    "coords": "66.6, 55.2",
-    "macro": "/way Ironforge 66.6 55.2",
+    "coords": "67.2, 54.2",
+    "macro": "/way Ironforge 67.2 54.2",
     "notes": "Tinker Town"
   },
   {
@@ -35,7 +35,7 @@
     "zone": "Darnassus",
     "coords": "55.0, 24.0",
     "macro": "/way Darnassus 55.0 24.0",
-    "notes": "Temple Gardens"
+    "notes": "Craftsmen's Terrace"
   },
   {
     "name": "Yelmak",
@@ -55,8 +55,8 @@
     "faction": "Horde",
     "rank": "Journeyman",
     "zone": "Thunder Bluff",
-    "coords": "46.8, 33.4",
-    "macro": "/way Thunder Bluff 46.8 33.4",
+    "coords": "47.0, 33.0",
+    "macro": "/way Thunder Bluff 47.0 33.0",
     "notes": "Lower Rise"
   },
   {
@@ -132,8 +132,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Ironforge",
-    "coords": "51.0, 43.0",
-    "macro": "/way Ironforge 51.0 43.0",
+    "coords": "51.4, 42.2",
+    "macro": "/way Ironforge 51.4 42.2",
     "notes": "The Great Forge"
   },
   {
@@ -152,10 +152,10 @@
     "profession": "blacksmithing",
     "profName": "Blacksmithing",
     "faction": "Horde",
-    "rank": "Journeyman",
+    "rank": "Expert",
     "zone": "Undercity",
-    "coords": "61.2, 30.4",
-    "macro": "/way Undercity 61.2 30.4",
+    "coords": "61.2, 29.2",
+    "macro": "/way Undercity 61.2 29.2",
     "notes": "War Quarter"
   },
   {
@@ -163,10 +163,10 @@
     "profession": "blacksmithing",
     "profName": "Blacksmithing",
     "faction": "Horde",
-    "rank": "Expert",
+    "rank": "Journeyman",
     "zone": "Undercity",
-    "coords": "59.6, 29.0",
-    "macro": "/way Undercity 59.6 29.0",
+    "coords": "59.2, 29.4",
+    "macro": "/way Undercity 59.2 29.4",
     "notes": "War Quarter"
   },
   {
@@ -187,8 +187,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Ironforge",
-    "coords": "50.2, 42.8",
-    "macro": "/way Ironforge 50.2 42.8",
+    "coords": "49.0, 43.6",
+    "macro": "/way Ironforge 49.0 43.6",
     "notes": "Armorsmith Specialization"
   },
   {
@@ -198,8 +198,8 @@
     "faction": "Horde",
     "rank": "Artisan",
     "zone": "Orgrimmar",
-    "coords": "79.8, 23.8",
-    "macro": "/way Orgrimmar 79.8 23.8",
+    "coords": "79.4, 23.4",
+    "macro": "/way Orgrimmar 79.4 23.4",
     "notes": "Armorsmith Specialization"
   },
   {
@@ -209,8 +209,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Ironforge",
-    "coords": "50.8, 45.2",
-    "macro": "/way Ironforge 50.8 45.2",
+    "coords": "49.4, 44.8",
+    "macro": "/way Ironforge 49.4 44.8",
     "notes": "Weaponsmith Specialization"
   },
   {
@@ -220,8 +220,8 @@
     "faction": "Horde",
     "rank": "Artisan",
     "zone": "Orgrimmar",
-    "coords": "79.6, 23.6",
-    "macro": "/way Orgrimmar 79.6 23.6",
+    "coords": "79.4, 23.4",
+    "macro": "/way Orgrimmar 79.4 23.4",
     "notes": "Weaponsmith Specialization"
   },
   {
@@ -231,20 +231,20 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "53.0, 74.2",
-    "macro": "/way Stormwind City 53.0 74.2",
-    "notes": "Mage Quarter"
+    "coords": "43.0, 64.2",
+    "macro": "/way Stormwind City 43.0 64.2",
+    "notes": "Mage Quarter, canal-side building"
   },
   {
-    "name": "Gimrizz Shadowcog",
+    "name": "Gimble Thistlefuzz",
     "profession": "enchanting",
     "profName": "Enchanting",
     "faction": "Alliance",
     "rank": "Journeyman",
     "zone": "Ironforge",
-    "coords": "59.8, 36.4",
-    "macro": "/way Ironforge 59.8 36.4",
-    "notes": "The Great Forge"
+    "coords": "60.0, 45.2",
+    "macro": "/way Ironforge 60.0 45.2",
+    "notes": "Thistlefuzz Arcanery, The Great Forge"
   },
   {
     "name": "Kitta Firewind",
@@ -253,8 +253,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Tower of Azora, Elwynn Forest",
-    "coords": "64.8, 70.4",
-    "macro": "/way Elwynn Forest 64.8 70.4",
+    "coords": "64.8, 70.6",
+    "macro": "/way Elwynn Forest 64.8 70.6",
     "notes": "Top of the Tower"
   },
   {
@@ -264,9 +264,9 @@
     "faction": "Horde",
     "rank": "Apprentice",
     "zone": "Orgrimmar",
-    "coords": "54.0, 56.4",
-    "macro": "/way Orgrimmar 54.0 56.4",
-    "notes": "The Drag"
+    "coords": "53.8, 38.4",
+    "macro": "/way Orgrimmar 53.8 38.4",
+    "notes": "Godan's Runeworks, The Drag"
   },
   {
     "name": "Hgarth",
@@ -297,8 +297,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "62.8, 32.0",
-    "macro": "/way Stormwind City 62.8 32.0",
+    "coords": "62.2, 30.6",
+    "macro": "/way Stormwind City 62.2 30.6",
     "notes": "Dwarven District"
   },
   {
@@ -308,8 +308,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Ironforge",
-    "coords": "68.4, 44.0",
-    "macro": "/way Ironforge 68.4 44.0",
+    "coords": "68.8, 45.2",
+    "macro": "/way Ironforge 68.8 45.2",
     "notes": "Tinker Town"
   },
   {
@@ -319,8 +319,8 @@
     "faction": "Horde",
     "rank": "Expert",
     "zone": "Orgrimmar",
-    "coords": "75.8, 25.2",
-    "macro": "/way Orgrimmar 75.8 25.2",
+    "coords": "76.0, 25.0",
+    "macro": "/way Orgrimmar 76.0 25.0",
     "notes": "Valley of Honor"
   },
   {
@@ -330,8 +330,8 @@
     "faction": "Neutral",
     "rank": "Artisan",
     "zone": "Gadgetzan, Tanaris",
-    "coords": "52.2, 27.8",
-    "macro": "/way Tanaris 52.2 27.8",
+    "coords": "52.2, 27.6",
+    "macro": "/way Tanaris 52.2 27.6",
     "notes": "Artisan Master"
   },
   {
@@ -341,8 +341,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Ironforge",
-    "coords": "69.8, 50.0",
-    "macro": "/way Ironforge 69.8 50.0",
+    "coords": "70.6, 50.4",
+    "macro": "/way Ironforge 70.6 50.4",
     "notes": "Gnomish Engineering Specialization"
   },
   {
@@ -390,15 +390,15 @@
     "notes": "Goldshire"
   },
   {
-    "name": "Fenthwick",
+    "name": "Fimble Finespindle",
     "profession": "leatherworking",
     "profName": "Leatherworking",
     "faction": "Alliance",
-    "rank": "Journeyman",
+    "rank": "Expert",
     "zone": "Ironforge",
-    "coords": "40.2, 31.8",
-    "macro": "/way Ironforge 40.2 31.8",
-    "notes": "The Commons"
+    "coords": "39.4, 33.0",
+    "macro": "/way Ironforge 39.4 33.0",
+    "notes": "The Great Forge"
   },
   {
     "name": "Telonis",
@@ -407,8 +407,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Darnassus",
-    "coords": "64.6, 21.4",
-    "macro": "/way Darnassus 64.6 21.4",
+    "coords": "64.4, 21.4",
+    "macro": "/way Darnassus 64.4 21.4",
     "notes": "Craftsmen's Terrace"
   },
   {
@@ -418,8 +418,8 @@
     "faction": "Horde",
     "rank": "Apprentice",
     "zone": "Orgrimmar",
-    "coords": "60.0, 54.4",
-    "macro": "/way Orgrimmar 60.0 54.4",
+    "coords": "62.8, 44.4",
+    "macro": "/way Orgrimmar 62.8 44.4",
     "notes": "The Drag"
   },
   {
@@ -429,8 +429,8 @@
     "faction": "Horde",
     "rank": "Expert",
     "zone": "Thunder Bluff",
-    "coords": "41.8, 42.6",
-    "macro": "/way Thunder Bluff 41.8 42.6",
+    "coords": "41.4, 42.6",
+    "macro": "/way Thunder Bluff 41.4 42.6",
     "notes": "Middle Rise"
   },
   {
@@ -462,8 +462,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Azshara",
-    "coords": "37.4, 65.6",
-    "macro": "/way Azshara 37.4 65.6",
+    "coords": "37.4, 65.4",
+    "macro": "/way Azshara 37.4 65.4",
     "notes": "Dragonscale Specialization"
   },
   {
@@ -473,8 +473,8 @@
     "faction": "Horde",
     "rank": "Artisan",
     "zone": "Badlands",
-    "coords": "62.6, 57.6",
-    "macro": "/way Badlands 62.6 57.6",
+    "coords": "62.4, 57.4",
+    "macro": "/way Badlands 62.4 57.4",
     "notes": "Dragonscale Specialization"
   },
   {
@@ -484,8 +484,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Searing Gorge",
-    "coords": "63.8, 75.8",
-    "macro": "/way Searing Gorge 63.8 75.8",
+    "coords": "63.2, 75.4",
+    "macro": "/way Searing Gorge 63.2 75.4",
     "notes": "Elemental Specialization"
   },
   {
@@ -500,37 +500,26 @@
     "notes": "Elemental Specialization"
   },
   {
-    "name": "Pratt McGrubben",
+    "name": "Caryssia Moonhunter",
     "profession": "leatherworking",
     "profName": "Leatherworking",
     "faction": "Alliance",
     "rank": "Artisan",
-    "zone": "Feathermoon, Feralas",
-    "coords": "30.6, 42.6",
-    "macro": "/way Feralas 30.6 42.6",
-    "notes": "Tribal Specialization"
+    "zone": "Feralas",
+    "coords": "89.4, 46.6",
+    "macro": "/way Feralas 89.4 46.6",
+    "notes": "Tribal Specialization (coords from Classic, unconfirmed in Forever)"
   },
   {
-    "name": "Jangdor Swiftstrider",
+    "name": "Se'Jib",
     "profession": "leatherworking",
     "profName": "Leatherworking",
     "faction": "Horde",
     "rank": "Artisan",
-    "zone": "Camp Mojache, Feralas",
-    "coords": "74.4, 43.0",
-    "macro": "/way Feralas 74.4 43.0",
+    "zone": "Stranglethorn Vale",
+    "coords": "36.4, 34.0",
+    "macro": "/way Stranglethorn Vale 36.4 34.0",
     "notes": "Tribal Specialization"
-  },
-  {
-    "name": "Sellag",
-    "profession": "tailoring",
-    "profName": "Tailoring",
-    "faction": "Alliance",
-    "rank": "Apprentice",
-    "zone": "Stormwind City",
-    "coords": "43.4, 73.6",
-    "macro": "/way Stormwind City 43.4 73.6",
-    "notes": "Mage Quarter"
   },
   {
     "name": "Jormund Stonebrow",
@@ -599,25 +588,14 @@
     "notes": "Artisan Master"
   },
   {
-    "name": "Meilosh",
-    "profession": "tailoring",
-    "profName": "Tailoring",
-    "faction": "Neutral",
-    "rank": "Artisan",
-    "zone": "Timbermaw Hold, Felwood",
-    "coords": "65.6, 2.8",
-    "macro": "/way Felwood 65.6 2.8",
-    "notes": "Timbermaw Neutral Master"
-  },
-  {
     "name": "Gelman Stonehand",
     "profession": "mining",
     "profName": "Mining",
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "51.0, 17.2",
-    "macro": "/way Stormwind City 51.0 17.2",
+    "coords": "59.0, 37.6",
+    "macro": "/way Stormwind City 59.0 37.6",
     "notes": "Dwarven District"
   },
   {
@@ -627,8 +605,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Ironforge",
-    "coords": "50.2, 26.0",
-    "macro": "/way Ironforge 50.2 26.0",
+    "coords": "50.4, 26.0",
+    "macro": "/way Ironforge 50.4 26.0",
     "notes": "The Great Forge"
   },
   {
@@ -638,8 +616,8 @@
     "faction": "Horde",
     "rank": "Apprentice",
     "zone": "Orgrimmar",
-    "coords": "73.0, 26.8",
-    "macro": "/way Orgrimmar 73.0 26.8",
+    "coords": "73.0, 26.4",
+    "macro": "/way Orgrimmar 73.0 26.4",
     "notes": "Valley of Honor"
   },
   {
@@ -649,31 +627,31 @@
     "faction": "Horde",
     "rank": "Expert",
     "zone": "Undercity",
-    "coords": "55.8, 37.0",
-    "macro": "/way Undercity 55.8 37.0",
+    "coords": "56.0, 37.0",
+    "macro": "/way Undercity 56.0 37.0",
     "notes": "War Quarter"
   },
   {
-    "name": "Dalaran Mining Master",
-    "profession": "mining",
-    "profName": "Mining",
-    "faction": "Neutral",
-    "rank": "Expert",
-    "zone": "Dalaran, Alterac Mountains",
-    "coords": "25.0, 41.2",
-    "macro": "/way Alterac Mountains 25.0 41.2",
-    "notes": "Forever Custom Dalaran Trainer"
-  },
-  {
-    "name": "Elderwild Miner",
+    "name": "Pikkle",
     "profession": "mining",
     "profName": "Mining",
     "faction": "Neutral",
     "rank": "Artisan",
-    "zone": "Mount Hyjal",
-    "coords": "39.2, 23.0",
-    "macro": "/way Mount Hyjal 39.2 23.0",
-    "notes": "Artisan Master"
+    "zone": "Gadgetzan, Tanaris",
+    "coords": "51.0, 28.0",
+    "macro": "/way Tanaris 51.0 28.0",
+    "notes": "Neutral Mining trainer"
+  },
+  {
+    "name": "Grungle",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Powderfuse Port, Riverglades",
+    "coords": "77.6, 51.8",
+    "macro": "/way Riverglades 77.6 51.8",
+    "notes": "Forever Neutral Mining trainer"
   },
   {
     "name": "Tannysa",
@@ -682,8 +660,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "53.0, 84.8",
-    "macro": "/way Stormwind City 53.0 84.8",
+    "coords": "44.8, 77.0",
+    "macro": "/way Stormwind City 44.8 77.0",
     "notes": "Mage Quarter"
   },
   {
@@ -693,8 +671,8 @@
     "faction": "Alliance",
     "rank": "Expert",
     "zone": "Ironforge",
-    "coords": "55.6, 59.0",
-    "macro": "/way Ironforge 55.6 59.0",
+    "coords": "55.6, 58.0",
+    "macro": "/way Ironforge 55.6 58.0",
     "notes": "The Great Forge"
   },
   {
@@ -715,31 +693,31 @@
     "faction": "Horde",
     "rank": "Expert",
     "zone": "Undercity",
-    "coords": "54.4, 49.8",
-    "macro": "/way Undercity 54.4 49.8",
+    "coords": "54.8, 50.2",
+    "macro": "/way Undercity 54.8 50.2",
     "notes": "The Apothecarium"
   },
   {
-    "name": "Dalaran Herbalist",
+    "name": "Edward Egan",
     "profession": "herbalism",
     "profName": "Herbalism",
-    "faction": "Neutral",
+    "faction": "Alliance",
     "rank": "Expert",
     "zone": "Dalaran, Alterac Mountains",
-    "coords": "21.8, 63.6",
-    "macro": "/way Alterac Mountains 21.8 63.6",
-    "notes": "Forever Custom Dalaran Trainer"
+    "coords": "18.4, 63.2",
+    "macro": "/way Alterac Mountains 18.4 63.2",
+    "notes": "Forever Dalaran Herbalism trainer"
   },
   {
-    "name": "Elderwild Herbalist",
+    "name": "Flora Silverwind",
     "profession": "herbalism",
     "profName": "Herbalism",
     "faction": "Neutral",
     "rank": "Artisan",
-    "zone": "Mount Hyjal",
-    "coords": "46.8, 25.0",
-    "macro": "/way Mount Hyjal 46.8 25.0",
-    "notes": "Artisan Master"
+    "zone": "Booty Bay, Stranglethorn Vale",
+    "coords": "27.6, 77.6",
+    "macro": "/way Stranglethorn Vale 27.6 77.6",
+    "notes": "Neutral Herbalism trainer"
   },
   {
     "name": "Maris Granger",
@@ -748,8 +726,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "72.2, 62.2",
-    "macro": "/way Stormwind City 72.2 62.2",
+    "coords": "67.8, 49.0",
+    "macro": "/way Stormwind City 67.8 49.0",
     "notes": "Old Town"
   },
   {
@@ -772,7 +750,7 @@
     "zone": "Orgrimmar",
     "coords": "63.2, 45.2",
     "macro": "/way Orgrimmar 63.2 45.2",
-    "notes": "Valley of Honor"
+    "notes": "The Drag"
   },
   {
     "name": "Killian Hagey",
@@ -781,31 +759,31 @@
     "faction": "Horde",
     "rank": "Expert",
     "zone": "Undercity",
-    "coords": "70.6, 58.6",
-    "macro": "/way Undercity 70.6 58.6",
+    "coords": "71.0, 59.4",
+    "macro": "/way Undercity 71.0 59.4",
     "notes": "Rogues' Quarter"
   },
   {
-    "name": "Dalaran Skinner",
+    "name": "Kulleg Stonehorn",
     "profession": "skinning",
     "profName": "Skinning",
-    "faction": "Neutral",
+    "faction": "Horde",
     "rank": "Expert",
-    "zone": "Dalaran, Alterac Mountains",
-    "coords": "12.2, 74.6",
-    "macro": "/way Alterac Mountains 12.2 74.6",
-    "notes": "Forever Custom Dalaran Trainer"
+    "zone": "Camp Mojache, Feralas",
+    "coords": "74.4, 43.0",
+    "macro": "/way Feralas 74.4 43.0",
+    "notes": "Town Skinning trainer"
   },
   {
-    "name": "Elderwild Skinner",
+    "name": "Jayla",
     "profession": "skinning",
     "profName": "Skinning",
-    "faction": "Neutral",
+    "faction": "Alliance",
     "rank": "Artisan",
-    "zone": "Mount Hyjal",
-    "coords": "41.2, 43.4",
-    "macro": "/way Mount Hyjal 41.2 43.4",
-    "notes": "Artisan Master"
+    "zone": "Silverwind Refuge, Ashenvale",
+    "coords": "50.0, 67.2",
+    "macro": "/way Ashenvale 50.0 67.2",
+    "notes": "Town Skinning trainer"
   },
   {
     "name": "Stephen Ryback",
@@ -814,8 +792,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "77.2, 53.2",
-    "macro": "/way Stormwind City 77.2 53.2",
+    "coords": "78.2, 53.0",
+    "macro": "/way Stormwind City 78.2 53.0",
     "notes": "Pig and Whistle Tavern"
   },
   {
@@ -825,9 +803,9 @@
     "faction": "Alliance",
     "rank": "Journeyman",
     "zone": "Ironforge",
-    "coords": "60.0, 36.8",
-    "macro": "/way Ironforge 60.0 36.8",
-    "notes": "The Military Ward"
+    "coords": "60.4, 38.0",
+    "macro": "/way Ironforge 60.4 38.0",
+    "notes": "The Great Forge"
   },
   {
     "name": "Shandrina",
@@ -835,10 +813,10 @@
     "profName": "Cooking",
     "faction": "Alliance",
     "rank": "Expert",
-    "zone": "Mystral Lake, Ashenvale",
-    "coords": "50.2, 67.0",
-    "macro": "/way Ashenvale 50.2 67.0",
-    "notes": "Teaches Expert Cookbook"
+    "zone": "Ashenvale",
+    "coords": "49.6, 67.0",
+    "macro": "/way Ashenvale 49.6 67.0",
+    "notes": "Sells the Expert Cookbook; northeast of Talondeep Path"
   },
   {
     "name": "Zamja",
@@ -880,8 +858,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "52.6, 45.4",
-    "macro": "/way Stormwind City 52.6 45.4",
+    "coords": "42.8, 26.6",
+    "macro": "/way Stormwind City 42.8 26.6",
     "notes": "Cathedral of Light"
   },
   {
@@ -901,10 +879,10 @@
     "profName": "First Aid",
     "faction": "Horde",
     "rank": "Apprentice",
-    "zone": "Orgrimmar",
+    "zone": "Razor Hill, Durotar",
     "coords": "54.0, 42.0",
-    "macro": "/way Orgrimmar 54.0 42.0",
-    "notes": "Valley of Spirits"
+    "macro": "/way Durotar 54.0 42.0",
+    "notes": "Razor Hill"
   },
   {
     "name": "Balai Lok'Wein",
@@ -924,8 +902,8 @@
     "faction": "Alliance",
     "rank": "Artisan",
     "zone": "Theramore Isle, Dustwallow",
-    "coords": "67.8, 51.2",
-    "macro": "/way Dustwallow Marsh 67.8 51.2",
+    "coords": "67.6, 48.8",
+    "macro": "/way Dustwallow 67.6 48.8",
     "notes": "Triage Quest Master"
   },
   {
@@ -946,8 +924,8 @@
     "faction": "Alliance",
     "rank": "Apprentice",
     "zone": "Stormwind City",
-    "coords": "54.6, 69.2",
-    "macro": "/way Stormwind City 54.6 69.2",
+    "coords": "55.0, 69.6",
+    "macro": "/way Stormwind City 55.0 69.6",
     "notes": "Canals near Trade District"
   },
   {
@@ -957,8 +935,8 @@
     "faction": "Horde",
     "rank": "Apprentice",
     "zone": "Orgrimmar",
-    "coords": "69.8, 41.0",
-    "macro": "/way Orgrimmar 69.8 41.0",
+    "coords": "69.8, 29.6",
+    "macro": "/way Orgrimmar 69.8 29.6",
     "notes": "Valley of Honor"
   },
   {
@@ -968,8 +946,8 @@
     "faction": "Neutral",
     "rank": "Expert",
     "zone": "Booty Bay, Stranglethorn",
-    "coords": "27.4, 76.8",
-    "macro": "/way Stranglethorn Vale 27.4 76.8",
+    "coords": "27.4, 77.0",
+    "macro": "/way Stranglethorn Vale 27.4 77.0",
     "notes": "Sells Expert Fishing - The Bass and You"
   },
   {
@@ -982,50 +960,6 @@
     "coords": "58.6, 60.0",
     "macro": "/way Dustwallow Marsh 58.6 60.0",
     "notes": "Nat Pagle, Angler Extreme quest"
-  },
-  {
-    "name": "Elden Trailblazer",
-    "profession": "camping",
-    "profName": "Camping",
-    "faction": "Alliance",
-    "rank": "Apprentice",
-    "zone": "Stormwind Camp Outpost",
-    "coords": "61.4, 72.8",
-    "macro": "/way Stormwind City 61.4 72.8",
-    "notes": "Campfire Trainer"
-  },
-  {
-    "name": "Kurgah Flamekeeper",
-    "profession": "camping",
-    "profName": "Camping",
-    "faction": "Horde",
-    "rank": "Apprentice",
-    "zone": "Razor Hill Camp",
-    "coords": "53.2, 43.6",
-    "macro": "/way Durotar 53.2 43.6",
-    "notes": "Campfire Trainer"
-  },
-  {
-    "name": "Campmaster Theron",
-    "profession": "camping",
-    "profName": "Camping",
-    "faction": "Neutral",
-    "rank": "Expert",
-    "zone": "Zephras Isle Outpost",
-    "coords": "48.0, 62.0",
-    "macro": "/way Zephras Isle 48.0 62.0",
-    "notes": "Station Blueprint Expert"
-  },
-  {
-    "name": "Arch-Survivalist Orin",
-    "profession": "camping",
-    "profName": "Camping",
-    "faction": "Neutral",
-    "rank": "Artisan",
-    "zone": "Mount Hyjal Expedition",
-    "coords": "40.8, 26.2",
-    "macro": "/way Mount Hyjal 40.8 26.2",
-    "notes": "Master Camp Upgrades"
   }
 ];
   window.CONTAINERS_DATA = {
@@ -1776,460 +1710,479 @@
   }
 };
   window.SPECIALIZATIONS_DATA = {
-  "engineering": {
-    "phaseNote": "⚡ Available in Phase 2 Beta at Character Level 30 & Skill 200!",
-    "isBetaActive": true,
-    "specs": [
-      {
-        "id": "gnomish",
-        "name": "Gnomish Engineering",
-        "icon": "inv_misc_wrench_01",
-        "archetype": "Gadgets, Crowd Control & Tactical Device Synergy",
-        "trainer": "Tinkmaster Overspark in Ironforge (/way 69.8, 50.0) or Oglethorpe Obnoticus in Booty Bay (/way 28.2, 76.2)",
-        "questName": "The Pledge of Secrecy › Show Your Work",
-        "questTurnIns": [
-          {
-            "name": "Mithril Tube",
-            "count": 6,
-            "icon": "inv_musket_01"
-          },
-          {
-            "name": "Precise Scope",
-            "count": 1,
-            "icon": "inv_misc_spyglass_02"
-          },
-          {
-            "name": "Advanced Target Dummy",
-            "count": 2,
-            "icon": "inv_gizmo_01"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Gnomish Death Ray",
-            "id": "4388",
-            "icon": "inv_gizmo_08",
-            "effect": "Channels terrifying death ray into target for massive burst damage.",
-            "quality": 3
-          },
-          {
-            "name": "Gnomish Battle Chicken",
-            "id": "10725",
-            "icon": "spell_magic_polymorphchicken",
-            "effect": "Summons mechanical pet that grants +5% attack speed aura to nearby party members.",
-            "quality": 3
-          },
-          {
-            "name": "Gnomish Mind Control Cap",
-            "id": "10726",
-            "icon": "inv_helmet_49",
-            "effect": "Mind controls enemy humanoid player or mob for up to 30 sec.",
-            "quality": 2
-          },
-          {
-            "name": "Gnomish Rocket Boots",
-            "id": "10724",
-            "icon": "inv_boots_02",
-            "effect": "Massive movement speed burst for escaping or chasing in PvP.",
-            "quality": 2
-          },
-          {
-            "name": "Gnomish Net-o-Matic Projector",
-            "id": "10720",
-            "icon": "inv_misc_net_01",
-            "effect": "Roots target in place for 10 sec at 30 yd range.",
-            "quality": 2
-          },
-          {
-            "name": "Gnomish Shrink Ray",
-            "id": "10716",
-            "icon": "inv_gizmo_04",
-            "effect": "Shrinks target, reducing their melee attack power by 250.",
-            "quality": 2
-          },
-          {
-            "name": "Ultrasafe Transporter: Gadgetzan",
-            "id": "18984",
-            "icon": "inv_misc_enggizmos_13",
-            "effect": "Teleports maker directly to Gadgetzan, Tanaris.",
-            "quality": 2
-          }
-        ]
-      },
-      {
-        "id": "goblin",
-        "name": "Goblin Engineering",
-        "icon": "inv_misc_bomb_04",
-        "archetype": "Heavy Explosives, Massive AoE Burst & High-Damage Combat Sappers",
-        "trainer": "Nixx Sprocketspring in Gadgetzan, Tanaris (/way 52.4, 27.2) or Vazario Linkgrease in Ratchet (/way 62.6, 36.2)",
-        "questName": "The Pledge of Secrecy › Show Your Work",
-        "questTurnIns": [
-          {
-            "name": "Solid Blasting Powder",
-            "count": 20,
-            "icon": "inv_misc_powder_black"
-          },
-          {
-            "name": "Iron Grenade",
-            "count": 20,
-            "icon": "inv_misc_bomb_08"
-          },
-          {
-            "name": "Big Iron Bomb",
-            "count": 5,
-            "icon": "inv_misc_bomb_01"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Goblin Sapper Charge",
-            "id": "10646",
-            "icon": "inv_misc_bomb_02",
-            "effect": "Explodes instantly dealing 450 to 750 Fire damage to all nearby enemies (and 375 to self). Mandatory for dungeon speedruns!",
-            "quality": 2
-          },
-          {
-            "name": "Goblin Rocket Boots",
-            "id": "7189",
-            "icon": "inv_boots_02",
-            "effect": "Increases run speed by 70% for 20 sec (chance to explode).",
-            "quality": 2
-          },
-          {
-            "name": "The Big One",
-            "id": "10586",
-            "icon": "inv_misc_bomb_04",
-            "effect": "Inflicts 340 to 460 Fire damage and stuns all enemies in 10 yd radius for 5 sec.",
-            "quality": 2
-          },
-          {
-            "name": "Goblin Dragon Gun",
-            "id": "10727",
-            "icon": "inv_musket_04",
-            "effect": "Cone of fire dealing 400 to 600 Fire damage over 10 sec.",
-            "quality": 3
-          },
-          {
-            "name": "Goblin Rocket Helmet",
-            "id": "10588",
-            "icon": "inv_helmet_49",
-            "effect": "Charges target and incapacitates them for 30 sec.",
-            "quality": 2
-          },
-          {
-            "name": "Goblin Mortar",
-            "id": "10577",
-            "icon": "inv_musket_01",
-            "effect": "Launches artillery shell dealing 383 to 517 Fire damage with 3 sec stun.",
-            "quality": 2
-          },
-          {
-            "name": "Dimensional Ripper - Everlook",
-            "id": "18986",
-            "icon": "inv_misc_enggizmos_13",
-            "effect": "Teleports maker directly to Everlook, Winterspring.",
-            "quality": 2
-          }
-        ]
-      }
-    ]
-  },
-  "blacksmithing": {
-    "phaseNote": "🔒 Phase 3 Unlock: Character Level 40 & Skill 200+ (Pre-farm materials now!)",
-    "isBetaActive": false,
-    "specs": [
-      {
-        "id": "armorsmith",
-        "name": "Armorsmithing",
-        "icon": "inv_chest_plate04",
-        "archetype": "Plate & Mail Defense, Disarm Immunity & Raid Tanking Armor",
-        "trainer": "Grumnus Steelshaper in Ironforge (/way 50.2, 42.8) or Okothos Ironrager in Orgrimmar (/way 79.8, 23.8)",
-        "questName": "The Art of the Armorsmith",
-        "questTurnIns": [
-          {
-            "name": "Ornate Mithril Helm",
-            "count": 4,
-            "icon": "inv_helmet_24"
-          },
-          {
-            "name": "Ornate Mithril Boots",
-            "count": 2,
-            "icon": "inv_boots_plate_01"
-          },
-          {
-            "name": "Ornate Mithril Breastplate",
-            "count": 1,
-            "icon": "inv_chest_plate04"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Truesilver Gauntlets",
-            "icon": "inv_gauntlets_10",
-            "effect": "Grants immunity to Disarm and +20 Strength.",
-            "quality": 3
-          },
-          {
-            "name": "Breastplate of the Earthshaker",
-            "icon": "inv_chest_plate06",
-            "effect": "Defensive plate chestpiece with bonus armor and stamina.",
-            "quality": 3
-          },
-          {
-            "name": "Helm of the Great Chief",
-            "icon": "inv_helmet_01",
-            "effect": "Stamina and armor tanking helmet.",
-            "quality": 3
-          },
-          {
-            "name": "Invulnerable Mail",
-            "icon": "inv_chest_chain_03",
-            "effect": "Grants 20 sec invulnerability to physical damage on hit.",
-            "quality": 4
-          },
-          {
-            "name": "Stronghold Gauntlets",
-            "icon": "inv_gauntlets_26",
-            "effect": "Immunity to Disarm, +1% Parry, +1% Crit.",
-            "quality": 4
-          }
-        ]
-      },
-      {
-        "id": "weaponsmith",
-        "name": "Weaponsmithing (Swords, Axes & Hammers)",
-        "icon": "inv_sword_27",
-        "archetype": "Endgame Raid Weapons, Nightfall Debuff & Master Weapon Specializations",
-        "trainer": "Ironus Coldsteel in Ironforge (/way 50.8, 45.2) or Borgosh Corebender in Orgrimmar (/way 79.6, 23.6)",
-        "questName": "The Way of the Weaponsmith",
-        "questTurnIns": [
-          {
-            "name": "Moonsteel Broadsword",
-            "count": 4,
-            "icon": "inv_sword_04"
-          },
-          {
-            "name": "Massive Iron Axe",
-            "count": 4,
-            "icon": "inv_axe_06"
-          },
-          {
-            "name": "Big Black Mace",
-            "count": 2,
-            "icon": "inv_mace_01"
-          },
-          {
-            "name": "Heavy Mithril Axe",
-            "count": 2,
-            "icon": "inv_axe_07"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Nightfall (Axe)",
-            "icon": "inv_axe_12",
-            "effect": "Equip: Chance on hit to increase spell damage taken by target by 15% for 5 sec (Raid Staple!).",
-            "quality": 4
-          },
-          {
-            "name": "Arcanite Reaper (Axe)",
-            "icon": "inv_axe_09",
-            "effect": "Legendary 3.8 speed mortal strike powerhouse with +62 AP.",
-            "quality": 3
-          },
-          {
-            "name": "Arcanite Champion (Sword)",
-            "icon": "inv_sword_39",
-            "effect": "Chance on hit heals for 270 to 450 and increases Strength by 120.",
-            "quality": 3
-          },
-          {
-            "name": "Hammer of the Titans (Mace)",
-            "icon": "inv_hammer_04",
-            "effect": "Chance on hit stuns target for 3 sec and increases Strength by 15.",
-            "quality": 3
-          },
-          {
-            "name": "Blackguard (Master Swordsmith)",
-            "icon": "inv_sword_27",
-            "effect": "Fast 1-handed tank/DPS sword with +1% Parry and Stamina.",
-            "quality": 4
-          },
-          {
-            "name": "Annihilator (Master Axesmith)",
-            "icon": "inv_axe_04",
-            "effect": "Lowers target armor by 200, stacks up to 3 times for entire raid.",
-            "quality": 3
-          }
-        ]
-      }
-    ]
-  },
-  "leatherworking": {
-    "phaseNote": "🔒 Phase 3 Unlock: Character Level 40 & Skill 225 (Pre-farm materials now!)",
-    "isBetaActive": false,
-    "specs": [
-      {
-        "id": "dragonscale",
-        "name": "Dragonscale Leatherworking",
-        "icon": "inv_misc_monsterscales_03",
-        "archetype": "Mail Armor for Hunters & Elemental/Enhancement Shamans",
-        "trainer": "Peter Galen in Azshara (/way 37.4, 65.6, A) or Thorkaf Dragoneye in Badlands (/way 62.6, 57.6, H)",
-        "questName": "Dragonscale Leatherworking",
-        "questTurnIns": [
-          {
-            "name": "Tough Scorpid Breastplate",
-            "count": 2,
-            "icon": "inv_chest_chain_03"
-          },
-          {
-            "name": "Tough Scorpid Gloves",
-            "count": 2,
-            "icon": "inv_gauntlets_04"
-          },
-          {
-            "name": "Worn Dragonscale",
-            "count": 10,
-            "icon": "inv_misc_monsterscales_03"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Dragonscale Gauntlets",
-            "icon": "inv_gauntlets_05",
-            "effect": "Intellect & Agility mail gloves for physical damage dealers.",
-            "quality": 3
-          },
-          {
-            "name": "Blue Dragonscale Breastplate",
-            "icon": "inv_chest_chain_14",
-            "effect": "High Intellect and MP5 mail chestpiece for Shamans.",
-            "quality": 3
-          },
-          {
-            "name": "Black Dragonscale Set",
-            "icon": "inv_pants_03",
-            "effect": "Provides massive Fire Resistance, Hit rating, and Attack Power.",
-            "quality": 3
-          },
-          {
-            "name": "Red Dragonscale Breastplate",
-            "icon": "inv_chest_chain_11",
-            "effect": "Fire Resistance mail armor for Molten Core raiding.",
-            "quality": 3
-          }
-        ]
-      },
-      {
-        "id": "elemental",
-        "name": "Elemental Leatherworking",
-        "icon": "spell_fire_fireball",
-        "archetype": "Agility, Stamina & Fire/Nature Resistance Gear for Rogues and Druids",
-        "trainer": "Sarah Tanner in Searing Gorge (/way 63.8, 75.8, A) or Brumn Winterhoof in Arathi Highlands (/way 28.2, 45.0, H)",
-        "questName": "Elemental Leatherworking",
-        "questTurnIns": [
-          {
-            "name": "Globe of Water",
-            "count": 2,
-            "icon": "inv_misc_gem_sapphire_02"
-          },
-          {
-            "name": "Heart of Fire",
-            "count": 2,
-            "icon": "spell_fire_fire"
-          },
-          {
-            "name": "Breath of Wind",
-            "count": 2,
-            "icon": "spell_nature_cyclone"
-          },
-          {
-            "name": "Core of Earth",
-            "count": 2,
-            "icon": "inv_misc_gem_opal_01"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Helm of Fire",
-            "icon": "inv_helmet_22",
-            "effect": "Leather helm dealing fire damage to attackers on hit.",
-            "quality": 3
-          },
-          {
-            "name": "Living Breastplate",
-            "icon": "inv_chest_leather_08",
-            "effect": "High Nature Resistance and passive health regeneration.",
-            "quality": 3
-          },
-          {
-            "name": "Stormshroud Armor Set",
-            "icon": "inv_chest_leather_03",
-            "effect": "Grants chance on hit to restore 30 Energy or 40 Mana.",
-            "quality": 3
-          },
-          {
-            "name": "Volcanic Armor Set",
-            "icon": "inv_pants_06",
-            "effect": "Premium Fire Resistance set for Rogues and Druids.",
-            "quality": 3
-          }
-        ]
-      },
-      {
-        "id": "tribal",
-        "name": "Tribal Leatherworking",
-        "icon": "inv_misc_monsterfang_01",
-        "archetype": "The Premier Physical DPS Spec: Devilsaur, Wolfshead Helm & Corehound Belt",
-        "trainer": "Pratt McGrubben in Feathermoon Stronghold, Feralas (/way 30.6, 42.6, A) or Jangdor Swiftstrider in Camp Mojache, Feralas (/way 74.4, 43.0, H)",
-        "questName": "Tribal Leatherworking",
-        "questTurnIns": [
-          {
-            "name": "Wild Leather Vest",
-            "count": 1,
-            "icon": "inv_chest_leather_04"
-          },
-          {
-            "name": "Wild Leather Helmet",
-            "count": 1,
-            "icon": "inv_helmet_14"
-          },
-          {
-            "name": "Wildvine",
-            "count": 11,
-            "icon": "inv_misc_herb_03"
-          }
-        ],
-        "crafts": [
-          {
-            "name": "Wolfshead Helm",
-            "icon": "inv_helmet_04",
-            "effect": "When you shapeshift into Cat Form you gain 20 Energy, or 5 Rage in Bear Form (Permanent Feral Druid BiS!).",
-            "quality": 3
-          },
-          {
-            "name": "Devilsaur Gauntlets & Leggings",
-            "icon": "inv_gauntlets_04",
-            "effect": "Set Bonus: Increases your chance to hit by 2% and Attack Power by 46.",
-            "quality": 3
-          },
-          {
-            "name": "Corehound Belt",
-            "icon": "inv_belt_03",
-            "effect": "Epic leather belt granting massive Intellect and MP5.",
-            "quality": 4
-          },
-          {
-            "name": "Hide of the Wild",
-            "icon": "inv_misc_cape_16",
-            "effect": "Epic healing cloak with +42 Healing and mana regen.",
-            "quality": 4
-          }
-        ]
-      }
-    ]
-  }
-};
+    "engineering": {
+      "phaseNote": "Specialize at Engineering 200 (level 30) through the trainer quest chain. Wowhead confirms the specialization lock on the Ultrasafe Transporter (Gnomish) and Dimensional Ripper (Goblin); check other schematics before buying.",
+      "isBetaActive": false,
+      "specs": [
+        {
+          "id": "gnomish",
+          "name": "Gnomish Engineering",
+          "icon": "inv_misc_wrench_01",
+          "archetype": "Gadgets, Crowd Control & Tactical Device Synergy",
+          "trainer": "Tinkmaster Overspark in Ironforge (/way 69.8, 50.0) or Oglethorpe Obnoticus in Booty Bay (/way 28.2, 76.2)",
+          "questName": "The Pledge of Secrecy › Show Your Work",
+          "questTurnIns": [
+            {
+              "name": "Mithril Tube",
+              "count": 6,
+              "icon": "inv_musket_01"
+            },
+            {
+              "name": "Precise Scope",
+              "count": 1,
+              "icon": "inv_misc_spyglass_02"
+            },
+            {
+              "name": "Advanced Target Dummy",
+              "count": 2,
+              "icon": "inv_gizmo_01"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Gnomish Death Ray",
+              "id": "4388",
+              "icon": "inv_gizmo_08",
+              "effect": "Trinket: charges from your own health, then blasts your target. Double damage to Gnomes.",
+              "quality": 3
+            },
+            {
+              "name": "Gnomish Battle Chicken",
+              "id": "10725",
+              "icon": "spell_magic_polymorphchicken",
+              "effect": "Trinket (Engineering 230): summons a Battle Chicken that fights for you for 1.5 min.",
+              "quality": 3
+            },
+            {
+              "name": "Gnomish Mind Control Cap",
+              "id": "10726",
+              "icon": "inv_helmet_49",
+              "effect": "Try to control a humanoid's mind for 20 sec — it can backfire.",
+              "quality": 2
+            },
+            {
+              "name": "Gnomish Rocket Boots",
+              "id": "10724",
+              "icon": "inv_boots_02",
+              "effect": "Big run-speed boost for 20 sec; the gyros don't always behave.",
+              "quality": 2
+            },
+            {
+              "name": "Gnomish Net-o-Matic Projector",
+              "id": "10720",
+              "icon": "inv_misc_net_01",
+              "effect": "Nets the target for 10 sec — sometimes catches you instead.",
+              "quality": 2
+            },
+            {
+              "name": "Gnomish Shrink Ray",
+              "id": "10716",
+              "icon": "inv_gizmo_04",
+              "effect": "Shrinks the target, cutting its attack power by 250 (usually).",
+              "quality": 2
+            },
+            {
+              "name": "Ultrasafe Transporter: Gadgetzan",
+              "id": "18984",
+              "icon": "inv_misc_enggizmos_13",
+              "effect": "Teleports you to Gadgetzan (Engineering 260, Gnomish only, 4-hr cooldown).",
+              "quality": 2
+            }
+          ]
+        },
+        {
+          "id": "goblin",
+          "name": "Goblin Engineering",
+          "icon": "inv_misc_bomb_04",
+          "archetype": "Heavy Explosives, Massive AoE Burst & High-Damage Combat Sappers",
+          "trainer": "Nixx Sprocketspring in Gadgetzan, Tanaris (/way 52.4, 27.2) or Vazario Linkgrease in Ratchet (/way 62.6, 36.2)",
+          "questName": "The Pledge of Secrecy › Show Your Work",
+          "questTurnIns": [
+            {
+              "name": "Solid Blasting Powder",
+              "count": 20,
+              "icon": "inv_misc_powder_black"
+            },
+            {
+              "name": "Iron Grenade",
+              "count": 20,
+              "icon": "inv_misc_bomb_08"
+            },
+            {
+              "name": "Big Iron Bomb",
+              "count": 5,
+              "icon": "inv_misc_bomb_01"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Goblin Sapper Charge",
+              "id": "10646",
+              "icon": "inv_misc_bomb_02",
+              "effect": "450–750 Fire damage to all nearby enemies — and 375–625 to you.",
+              "quality": 2
+            },
+            {
+              "name": "Goblin Rocket Boots",
+              "id": "7189",
+              "icon": "inv_boots_02",
+              "effect": "Big run-speed boost for 20 sec; prone to explode.",
+              "quality": 2
+            },
+            {
+              "name": "The Big One",
+              "id": "10586",
+              "icon": "inv_misc_bomb_04",
+              "effect": "340–460 Fire damage and a 5-sec stun in 10 yards (damage breaks the stun).",
+              "quality": 2
+            },
+            {
+              "name": "Goblin Dragon Gun",
+              "id": "10727",
+              "icon": "inv_musket_04",
+              "effect": "Cone of fire: 66–74 Fire damage per second for 10 sec, double against Beasts — if it doesn't explode.",
+              "quality": 3
+            },
+            {
+              "name": "Goblin Rocket Helmet",
+              "id": "10588",
+              "icon": "inv_helmet_49",
+              "effect": "Charge an enemy and knock it silly for 30 sec (stuns you briefly too).",
+              "quality": 2
+            },
+            {
+              "name": "Goblin Mortar",
+              "id": "10577",
+              "icon": "inv_musket_01",
+              "effect": "393–531 Fire damage and a 3-sec stun in 5 yards; 6 charges.",
+              "quality": 2
+            },
+            {
+              "name": "Dimensional Ripper - Everlook",
+              "id": "18986",
+              "icon": "inv_misc_enggizmos_13",
+              "effect": "Teleports you to Everlook (Engineering 260, Goblin only).",
+              "quality": 2
+            }
+          ]
+        }
+      ]
+    },
+    "blacksmithing": {
+      "phaseNote": "Specialize at Blacksmithing 200 (level 40) as an Armorsmith or Weaponsmith; Weaponsmiths can then become a Master Axesmith, Hammersmith or Swordsmith. Craft lists below are Wowhead's Forever specialization-only plans.",
+      "isBetaActive": false,
+      "specs": [
+        {
+          "id": "armorsmith",
+          "name": "Armorsmithing",
+          "icon": "inv_chest_plate04",
+          "archetype": "Plate & Mail Defense, Disarm Immunity & Raid Tanking Armor",
+          "trainer": "Grumnus Steelshaper in Ironforge (/way 50.2, 42.8) or Okothos Ironrager in Orgrimmar (/way 79.8, 23.8)",
+          "questName": "The Art of the Armorsmith",
+          "questTurnIns": [
+            {
+              "name": "Ornate Mithril Helm",
+              "count": 4,
+              "icon": "inv_helmet_24"
+            },
+            {
+              "name": "Ornate Mithril Boots",
+              "count": 2,
+              "icon": "inv_boots_plate_01"
+            },
+            {
+              "name": "Ornate Mithril Breastplate",
+              "count": 1,
+              "icon": "inv_chest_plate04"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Stronghold Gauntlets",
+              "icon": "inv_gauntlets_30",
+              "quality": 4,
+              "effect": "Immune to Disarm, +1% Parry, +1% crit, +18 Stamina (Blacksmithing 300)."
+            },
+            {
+              "name": "Lionheart Helm",
+              "icon": "inv_helmet_36",
+              "quality": 4,
+              "effect": "+18 Strength, +2% hit, +2% crit."
+            },
+            {
+              "name": "Titanic Leggings",
+              "icon": "inv_pants_04",
+              "quality": 4,
+              "effect": "+30 Strength, +2% hit, +1% crit."
+            },
+            {
+              "name": "Enchanted Thorium Breastplate",
+              "icon": "inv_chest_plate10",
+              "quality": 3,
+              "effect": "+12 Strength, +26 Stamina, +9 Defense."
+            },
+            {
+              "name": "Fiery Plate Gauntlets",
+              "icon": "inv_gauntlets_03",
+              "quality": 3,
+              "effect": "Adds 4 Fire damage to your weapon attacks, +10 Fire Resistance."
+            },
+            {
+              "name": "Dark Iron Plate",
+              "icon": "inv_chest_plate08",
+              "quality": 3,
+              "effect": "+200 Armor, +19 Fire Resistance (made at a Black Anvil)."
+            }
+          ]
+        },
+        {
+          "id": "weaponsmith",
+          "name": "Weaponsmithing (Swords, Axes & Hammers)",
+          "icon": "inv_sword_27",
+          "archetype": "Endgame Raid Weapons, Nightfall Debuff & Master Weapon Specializations",
+          "trainer": "Ironus Coldsteel in Ironforge (/way 50.8, 45.2) or Borgosh Corebender in Orgrimmar (/way 79.6, 23.6)",
+          "questName": "The Way of the Weaponsmith",
+          "questTurnIns": [
+            {
+              "name": "Moonsteel Broadsword",
+              "count": 4,
+              "icon": "inv_sword_04"
+            },
+            {
+              "name": "Massive Iron Axe",
+              "count": 4,
+              "icon": "inv_axe_06"
+            },
+            {
+              "name": "Big Black Mace",
+              "count": 2,
+              "icon": "inv_mace_01"
+            },
+            {
+              "name": "Heavy Mithril Axe",
+              "count": 2,
+              "icon": "inv_axe_07"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Nightfall",
+              "icon": "inv_axe_12",
+              "effect": "Master Axesmith. Chance on hit: target takes 15% more spell damage for 5 sec.",
+              "quality": 4
+            },
+            {
+              "name": "Arcanite Reaper",
+              "icon": "inv_axe_09",
+              "effect": "Master Axesmith. Epic two-handed axe: +62 Attack Power, +13 Stamina.",
+              "quality": 3
+            },
+            {
+              "name": "Arcanite Champion",
+              "icon": "inv_sword_39",
+              "effect": "Master Swordsmith. Chance on hit: heal 270–450 and +120 Strength for 30 sec.",
+              "quality": 3
+            },
+            {
+              "name": "Hammer of the Titans",
+              "icon": "inv_hammer_04",
+              "effect": "Master Hammersmith. +15 Strength; chance on hit to stun for 3 sec.",
+              "quality": 3
+            },
+            {
+              "name": "Blackguard",
+              "icon": "inv_sword_27",
+              "effect": "Master Swordsmith. Fast one-hand sword: +12 Stamina, +1% Parry.",
+              "quality": 4
+            },
+            {
+              "name": "Annihilator",
+              "icon": "inv_axe_04",
+              "effect": "Master Axesmith. +14 Attack Power; chance on hit to cut armor by 165, stacking 3 times.",
+              "quality": 3
+            }
+          ]
+        }
+      ]
+    },
+    "leatherworking": {
+      "phaseNote": "Specialize at Leatherworking 225 (level 40) as Dragonscale, Elemental or Tribal. Requirements shown are from Wowhead's Forever pattern data.",
+      "isBetaActive": false,
+      "specs": [
+        {
+          "id": "dragonscale",
+          "name": "Dragonscale Leatherworking",
+          "icon": "inv_misc_monsterscales_03",
+          "archetype": "Mail Armor for Hunters & Elemental/Enhancement Shamans",
+          "trainer": "Peter Galen in Azshara (/way 37.4, 65.6, A) or Thorkaf Dragoneye in Badlands (/way 62.6, 57.6, H)",
+          "questName": "Dragonscale Leatherworking",
+          "questTurnIns": [
+            {
+              "name": "Tough Scorpid Breastplate",
+              "count": 2,
+              "icon": "inv_chest_chain_03"
+            },
+            {
+              "name": "Tough Scorpid Gloves",
+              "count": 2,
+              "icon": "inv_gauntlets_04"
+            },
+            {
+              "name": "Worn Dragonscale",
+              "count": 10,
+              "icon": "inv_misc_monsterscales_03"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Dragonscale Gauntlets",
+              "icon": "inv_gauntlets_05",
+              "effect": "Mail gloves: +6 Agility, +7 Stamina, +1% crit.",
+              "quality": 3
+            },
+            {
+              "name": "Blue Dragonscale Breastplate",
+              "icon": "inv_chest_chain_14",
+              "effect": "Leatherworking 260: +28 Intellect, +8 spell power, Arcane Resistance.",
+              "quality": 3
+            },
+            {
+              "name": "Black Dragonscale Breastplate",
+              "icon": "inv_pants_03",
+              "effect": "Leatherworking 265: +50 Attack Power, +12 Fire Resistance; part of the Black Dragon Mail set.",
+              "quality": 3
+            },
+            {
+              "name": "Red Dragonscale Breastplate",
+              "icon": "inv_chest_chain_11",
+              "effect": "Leatherworking 290: up to +57 healing, +20 Fire Resistance.",
+              "quality": 3
+            }
+          ]
+        },
+        {
+          "id": "elemental",
+          "name": "Elemental Leatherworking",
+          "icon": "spell_fire_fireball",
+          "archetype": "Agility, Stamina & Fire/Nature Resistance Gear for Rogues and Druids",
+          "trainer": "Sarah Tanner in Searing Gorge (/way 63.8, 75.8, A) or Brumn Winterhoof in Arathi Highlands (/way 28.2, 45.0, H)",
+          "questName": "Elemental Leatherworking",
+          "questTurnIns": [
+            {
+              "name": "Globe of Water",
+              "count": 2,
+              "icon": "inv_misc_gem_sapphire_02"
+            },
+            {
+              "name": "Heart of Fire",
+              "count": 2,
+              "icon": "spell_fire_fire"
+            },
+            {
+              "name": "Breath of Wind",
+              "count": 2,
+              "icon": "spell_nature_cyclone"
+            },
+            {
+              "name": "Core of Earth",
+              "count": 2,
+              "icon": "inv_misc_gem_opal_01"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Helm of Fire",
+              "icon": "inv_helmet_22",
+              "effect": "+17 Agility, +10 Stamina; Use: hurl a fireball for 286–376 Fire damage plus a burn.",
+              "quality": 3
+            },
+            {
+              "name": "Living Breastplate",
+              "icon": "inv_chest_leather_08",
+              "effect": "Leatherworking 290: +25 Spirit, up to +26 healing, Nature Resistance.",
+              "quality": 3
+            },
+            {
+              "name": "Stormshroud Armor",
+              "icon": "inv_chest_leather_03",
+              "effect": "Leatherworking 260: +1% dodge, +2% crit; part of the Stormshroud set.",
+              "quality": 3
+            },
+            {
+              "name": "Volcanic Breastplate",
+              "icon": "inv_pants_06",
+              "effect": "Leatherworking 260: +20 Fire Resistance; the 3-piece Volcanic set adds a fire-damage proc.",
+              "quality": 3
+            },
+            {
+              "name": "Invulnerable Mail",
+              "icon": "inv_chest_chain_07",
+              "quality": 4,
+              "effect": "Leatherworking 295: 5% chance when struck to become immune to melee damage for 3 sec."
+            }
+          ]
+        },
+        {
+          "id": "tribal",
+          "name": "Tribal Leatherworking",
+          "icon": "inv_misc_monsterfang_01",
+          "archetype": "The Premier Physical DPS Spec: Devilsaur, Wolfshead Helm & Corehound Belt",
+          "trainer": "Caryssia Moonhunter in Feralas (/way 89.4, 46.6, A) or Se'Jib in Stranglethorn Vale (/way 36.4, 34.0, H)",
+          "questName": "Tribal Leatherworking",
+          "questTurnIns": [
+            {
+              "name": "Wild Leather Vest",
+              "count": 1,
+              "icon": "inv_chest_leather_04"
+            },
+            {
+              "name": "Wild Leather Helmet",
+              "count": 1,
+              "icon": "inv_helmet_14"
+            },
+            {
+              "name": "Wildvine",
+              "count": 11,
+              "icon": "inv_misc_herb_03"
+            }
+          ],
+          "crafts": [
+            {
+              "name": "Wolfshead Helm",
+              "icon": "inv_helmet_04",
+              "effect": "Druid only (Forever version): +5 Rage from Enrage and +5 Energy from Shifting Power.",
+              "quality": 3
+            },
+            {
+              "name": "Devilsaur Gauntlets & Leggings",
+              "icon": "inv_gauntlets_04",
+              "effect": "Leatherworking 265: +28 Attack Power, +1% crit; the 2-piece Devilsaur set improves your chance to hit.",
+              "quality": 3
+            },
+            {
+              "name": "Corehound Belt",
+              "icon": "inv_belt_03",
+              "effect": "Leatherworking 300: +16 Intellect, up to +62 healing, Fire Resistance.",
+              "quality": 4
+            },
+            {
+              "name": "Hide of the Wild",
+              "icon": "inv_misc_cape_16",
+              "effect": "Leatherworking 300: cloak with up to +42 healing, +10 Intellect.",
+              "quality": 4
+            },
+            {
+              "name": "Helm of the Great Chief",
+              "icon": "inv_helmet_24",
+              "quality": 3,
+              "effect": "Leatherworking 290: mail helm with up to +30 healing and +12 Spirit."
+            }
+          ]
+        }
+      ]
+    }
+  };
+
   window.PAIRING_WIZARD_DATA = [
   {
     "roleId": "tank",

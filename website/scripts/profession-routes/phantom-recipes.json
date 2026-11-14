@@ -1,0 +1,835 @@
+{
+ "note": "Recipes whose crafted item does not exist in WoW Forever (Wowhead Forever tooltip: not found) and that are absent from Wowhead Forever profession spell lists, checked 2026-11-14. Mostly Season of Discovery imports.",
+ "recipes": [
+  {
+   "slug": "alchemy",
+   "id": 233977,
+   "name": "Elixir of Alacrity"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233967,
+   "name": "Elixir of the Honey Badger"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233969,
+   "name": "Elixir of the Ironside"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233968,
+   "name": "Elixir of the Mage-Lord"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233964,
+   "name": "Flask of Ancient Knowledge"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233962,
+   "name": "Flask of Madness"
+  },
+  {
+   "slug": "alchemy",
+   "id": 233966,
+   "name": "Flask of Unyielding Sorrow"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 210773,
+   "name": "Mantle of the Second War"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 238291,
+   "name": "Scarlet Soldier's Protectors"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 238290,
+   "name": "Scarlet Soldier's Chestplate"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 238288,
+   "name": "Scarlet Soldier's Helmet"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 238289,
+   "name": "Scarlet Soldier's Spaulders"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227880,
+   "name": "Finely-Enchanted Battlehammer"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 12779,
+   "name": "Rune Edge"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227871,
+   "name": "Tempered Dark Iron Plate"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227865,
+   "name": "Fiery Plate Gauntlets of the Hidden Technique"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227870,
+   "name": "Tempest Gauntlets"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227887,
+   "name": "Hardened Frostguard"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227876,
+   "name": "Invincible Mail"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 228125,
+   "name": "Refined Arcanite Champion"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227845,
+   "name": "Refined Arcanite Reaper"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227850,
+   "name": "Sageblade of the Archmagus"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227886,
+   "name": "Skyrider's Masterwork Stormhammer"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227885,
+   "name": "Stronger-hold Gauntlets"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227872,
+   "name": "Warcrest of the Great Chief"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227881,
+   "name": "Tranquility"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227857,
+   "name": "Desecration"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 234004,
+   "name": "Obsidian Grinding Stone"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 227884,
+   "name": "Deadly Heartseeker"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 234487,
+   "name": "Dreamscale Visor"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233490,
+   "name": "Obsidian Champion"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233801,
+   "name": "Obsidian Defender"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233796,
+   "name": "Obsidian Destroyer"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 234428,
+   "name": "Obsidian Heartseeker"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233491,
+   "name": "Obsidian Reaver"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233798,
+   "name": "Obsidian Sageblade"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233797,
+   "name": "Obsidian Stormhammer"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233492,
+   "name": "Razorspike Battleplate"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233795,
+   "name": "Razorspike Headcage"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 233793,
+   "name": "Razorspike Shoulderplate"
+  },
+  {
+   "slug": "blacksmithing",
+   "id": 228230,
+   "name": "Refined Hammer of the Titans"
+  },
+  {
+   "slug": "cooking",
+   "id": 252683,
+   "name": "Cleansing Stew"
+  },
+  {
+   "slug": "enchanting",
+   "id": 211848,
+   "name": "Blackfathom Mana Oil"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant Chest - Retricutioner"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant Weapon - Dismantle"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant 2H Weapon - Grand Arcanist"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant 2H Weapon - Grand Inquisitor"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant Weapon - Grand Crusader"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant Shield - Law of Nature"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233996,
+   "name": "Enchanted Repellent"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233995,
+   "name": "Scroll: Wrath of the Swarm"
+  },
+  {
+   "slug": "enchanting",
+   "id": null,
+   "name": "Enchant Chest - Living Stats"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234002,
+   "name": "Enchanted Mushroom"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234000,
+   "name": "Enchanted Prayer Tome"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233993,
+   "name": "Enchanted Stopwatch"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234001,
+   "name": "Enchanted Totem"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234469,
+   "name": "Idol of Feline Ferocity"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234474,
+   "name": "Idol of Sidereal Wrath"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234468,
+   "name": "Idol of Ursin Power"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234477,
+   "name": "Libram of Righteousness"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234476,
+   "name": "Libram of Sanctity"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234475,
+   "name": "Libram of the Exorcist"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233992,
+   "name": "Lodestone of Retaliation"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233994,
+   "name": "Ruby-Encrusted Broach"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233990,
+   "name": "Speedstone"
+  },
+  {
+   "slug": "enchanting",
+   "id": 233991,
+   "name": "Tear of the Dreamer"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234479,
+   "name": "Totem of Flowing Magma"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234480,
+   "name": "Totem of Pyroclastic Thunder"
+  },
+  {
+   "slug": "enchanting",
+   "id": 234478,
+   "name": "Totem of Thunderous Strikes"
+  },
+  {
+   "slug": "engineering",
+   "id": 10580,
+   "name": "Goblin \"Boom\" Box"
+  },
+  {
+   "slug": "engineering",
+   "id": 10723,
+   "name": "Gnomish Ham Radio"
+  },
+  {
+   "slug": "engineering",
+   "id": 10585,
+   "name": "Goblin Radio"
+  },
+  {
+   "slug": "engineering",
+   "id": 236871,
+   "name": "Creepy Censor Sensors"
+  },
+  {
+   "slug": "engineering",
+   "id": 233984,
+   "name": "Arcane Megabomb"
+  },
+  {
+   "slug": "engineering",
+   "id": 233987,
+   "name": "G00 DV-1B3 Generator"
+  },
+  {
+   "slug": "engineering",
+   "id": 234005,
+   "name": "Obsidian Blasting Powder"
+  },
+  {
+   "slug": "engineering",
+   "id": 233986,
+   "name": "Obsidian Bomb"
+  },
+  {
+   "slug": "engineering",
+   "id": 233985,
+   "name": "The Fumigator"
+  },
+  {
+   "slug": "engineering",
+   "id": 233988,
+   "name": "Tuned Force Reactive Disk"
+  },
+  {
+   "slug": "engineering",
+   "id": 227849,
+   "name": "Fiery Core Sharpshooter Rifle"
+  },
+  {
+   "slug": "engineering",
+   "id": 235529,
+   "name": "Obsidian Scope"
+  },
+  {
+   "slug": "engineering",
+   "id": 234434,
+   "name": "Obsidian Shotgun"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 211502,
+   "name": "Void-Touched Leather Gauntlets"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 211423,
+   "name": "Void-Touched Leather Gloves"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 215166,
+   "name": "Glowing Gneuro-Linked Cowl"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 215114,
+   "name": "Glowing Hyperconductive Scale Coif"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 215381,
+   "name": "Gneuro-Conductive Channeler's Hood"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 215382,
+   "name": "Rad-Resistant Scale Hood"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220743,
+   "name": "Cacophonous Chain Shoulderguards"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220745,
+   "name": "Membrane of Dark Neurosis"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220747,
+   "name": "Paranoia Mantle"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220741,
+   "name": "Screaming Chain Pauldrons"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220748,
+   "name": "Shoulderpads of Obsession"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220742,
+   "name": "Shrieking Spaulders"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 220744,
+   "name": "Wailing Chain Mantle"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238285,
+   "name": "Scarlet Huntsman's Clasp"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238283,
+   "name": "Scarlet Huntsman's Wristguards"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238277,
+   "name": "Scarlet Infiltrator's Belt"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238275,
+   "name": "Scarlet Infiltrator's Bracers"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238287,
+   "name": "Scarlet Huntsman's Boots"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238284,
+   "name": "Scarlet Huntsman's Handguards"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238276,
+   "name": "Scarlet Infiltrator's Gloves"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238279,
+   "name": "Scarlet Infiltrator's Shoes"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227879,
+   "name": "Living Green Dragonscale Breastplate"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238286,
+   "name": "Scarlet Huntsman's Legguards"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238278,
+   "name": "Scarlet Infiltrator's Trousers"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227877,
+   "name": "Living Green Dragonscale Leggings"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227867,
+   "name": "Masterwork Volcanic Leggings"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227878,
+   "name": "Living Green Dragonscale Gauntlets"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238926,
+   "name": "Scarlet Ammo Pouch"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238925,
+   "name": "Scarlet Quiver"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238282,
+   "name": "Scarlet Huntsman's Chain"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238280,
+   "name": "Scarlet Huntsman's Coif"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238281,
+   "name": "Scarlet Huntsman's Pauldrons"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238272,
+   "name": "Scarlet Infiltrator's Bandana"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238273,
+   "name": "Scarlet Infiltrator's Shoulderpads"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 238274,
+   "name": "Scarlet Infiltrator's Vest"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227855,
+   "name": "Synthetic Gordok Ogre Suit"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227875,
+   "name": "Honed Blue Dragonscale Breastplate"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227868,
+   "name": "Masterwork Volcanic Breastplate"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227848,
+   "name": "Devilcore Gauntlets"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227851,
+   "name": "Hardened Black Dragonscale Breastplate"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227873,
+   "name": "Honed Blue Dragonscale Shoulders"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227869,
+   "name": "Brilliant Chromatic Cloak"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227847,
+   "name": "Devilcore Leggings"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227882,
+   "name": "Girdle of Arcane Insight"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227852,
+   "name": "Hardened Black Dragonscale Leggings"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227853,
+   "name": "Hardened Black Dragonscale Shoulders"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227854,
+   "name": "Mastercrafted Shifting Cloak"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227866,
+   "name": "Masterwork Volcanic Shoulders"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227883,
+   "name": "Swift Flight Vambraces"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 234482,
+   "name": "Dreamscale Kilt"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 233802,
+   "name": "Glowing Chitin Armor Kit"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 227874,
+   "name": "Honed Blue Dragonscale Leggings"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 233808,
+   "name": "Razorbramble Cowl"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 233813,
+   "name": "Razorbramble Leathers"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 233804,
+   "name": "Razorbramble Shoulderpads"
+  },
+  {
+   "slug": "leatherworking",
+   "id": 233803,
+   "name": "Sharpened Chitin Armor Kit"
+  },
+  {
+   "slug": "mining",
+   "id": 234003,
+   "name": "Smelt Obsidian-Infused Thorium Bar"
+  },
+  {
+   "slug": "tailoring",
+   "id": 210795,
+   "name": "Extraplanar Spidersilk Boots"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238267,
+   "name": "Scarlet Augur's Cuffs"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238269,
+   "name": "Scarlet Augur's Strap"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238268,
+   "name": "Scarlet Augur's Mitts"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238271,
+   "name": "Scarlet Augur's Soles"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238270,
+   "name": "Scarlet Augur's Leggings"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238264,
+   "name": "Scarlet Augur's Hood"
+  },
+  {
+   "slug": "tailoring",
+   "id": 238265,
+   "name": "Scarlet Augur's Mantle"
+  },
+  {
+   "slug": "tailoring",
+   "id": 227855,
+   "name": "Synthetic Gordok Ogre Suit"
+  },
+  {
+   "slug": "tailoring",
+   "id": 227864,
+   "name": "Incandescent Mooncloth Leggings"
+  },
+  {
+   "slug": "tailoring",
+   "id": 228476,
+   "name": "Embroidered Belt of the Archmage"
+  },
+  {
+   "slug": "tailoring",
+   "id": 227863,
+   "name": "Incandescent Mooncloth Circlet"
+  },
+  {
+   "slug": "tailoring",
+   "id": 227861,
+   "name": "Incandescent Mooncloth Robe"
+  },
+  {
+   "slug": "tailoring",
+   "id": 227860,
+   "name": "Incandescent Mooncloth Vest"
+  },
+  {
+   "slug": "tailoring",
+   "id": 234009,
+   "name": "Bolt of Qiraji Silk"
+  },
+  {
+   "slug": "tailoring",
+   "id": 236705,
+   "name": "Frosty Gloves"
+  },
+  {
+   "slug": "tailoring",
+   "id": 236706,
+   "name": "Frosty Vest"
+  },
+  {
+   "slug": "tailoring",
+   "id": 236704,
+   "name": "Frosty Wrists"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233826,
+   "name": "Vampiric Cowl"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233837,
+   "name": "Vampiric Robe"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233833,
+   "name": "Vampiric Shawl"
+  },
+  {
+   "slug": "tailoring",
+   "id": 234484,
+   "name": "Dreamscale Bracers"
+  },
+  {
+   "slug": "tailoring",
+   "id": 234485,
+   "name": "Dreamscale Mitts"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233958,
+   "name": "Qiraji Silk Cape"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233959,
+   "name": "Qiraji Silk Cloak"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233960,
+   "name": "Qiraji Silk Drape"
+  },
+  {
+   "slug": "tailoring",
+   "id": 233956,
+   "name": "Qiraji Silk Scarf"
+  }
+ ]
+}

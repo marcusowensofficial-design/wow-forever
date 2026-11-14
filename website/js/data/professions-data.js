@@ -10,7 +10,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in First Aid",
-    "summary": "Crafted by First Aid (Skill 55).",
+    "summary": "Crafted by First Aid (Skill 1).",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=118#created-by-spell",
     "craftedBy": [
@@ -20,7 +20,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "spell_holy_sealofsacrifice",
         "recipeId": 118,
         "recipeName": "Minor Healing Potion",
-        "learn": 55,
+        "learn": 1,
         "source": "Trainer"
       }
     ]
@@ -6466,7 +6466,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 40).",
+    "summary": "Crafted by Alchemy (Skill 15).",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=2454#created-by-spell",
     "craftedBy": [
@@ -6476,7 +6476,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_alchemy",
         "recipeId": 2454,
         "recipeName": "Elixir of Minor Strength",
-        "learn": 40,
+        "learn": 15,
         "source": "Trainer"
       }
     ]
@@ -15099,27 +15099,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
-  "4253": {
-    "id": 4253,
-    "name": "Toughened Leather Gloves",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Leatherworking",
-    "summary": "Crafted by Leatherworking (Skill 110).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4253#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "leatherworking",
-        "profName": "Leatherworking",
-        "profIcon": "trade_leatherworking",
-        "recipeId": 4253,
-        "recipeName": "Toughened Leather Gloves",
-        "learn": 110,
-        "source": "Trainer"
-      }
-    ]
-  },
   "4255": {
     "id": 4255,
     "name": "Green Leather Armor",
@@ -15616,27 +15595,6 @@ window.WOW_REAGENT_SOURCES = {
         "id": 19425,
         "name": "Mysterious Lockbox",
         "pct": 11.2
-      }
-    ]
-  },
-  "4320": {
-    "id": 4320,
-    "name": "Spidersilk Boots",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Tailoring",
-    "summary": "Crafted by Tailoring (Skill 100).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4320#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "tailoring",
-        "profName": "Tailoring",
-        "profIcon": "trade_tailoring",
-        "recipeId": 4320,
-        "recipeName": "Spidersilk Boots",
-        "learn": 100,
-        "source": "Trainer"
       }
     ]
   },
@@ -23312,16 +23270,6 @@ window.WOW_REAGENT_SOURCES = {
       "Hillsbrad Foothills"
     ]
   },
-  "6365": {
-    "id": 6365,
-    "name": "Strong Fishing Pole",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6365#dropped-by"
-  },
   "6370": {
     "id": 6370,
     "name": "Blackmouth Oil",
@@ -23930,16 +23878,6 @@ window.WOW_REAGENT_SOURCES = {
       "The Barrens"
     ]
   },
-  "6529": {
-    "id": 6529,
-    "name": "Shiny Bauble",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6529#dropped-by"
-  },
   "6530": {
     "id": 6530,
     "name": "Nightcrawlers",
@@ -24206,37 +24144,6 @@ window.WOW_REAGENT_SOURCES = {
       "Elwynn Forest",
       "Durotar",
       "Zephras Isle"
-    ]
-  },
-  "6532": {
-    "id": 6532,
-    "name": "Bright Baubles",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6532#dropped-by"
-  },
-  "6533": {
-    "id": 6533,
-    "name": "Aquadynamic Fish Attractor",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 150).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6533#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 6533,
-        "recipeName": "Aquadynamic Fish Attractor",
-        "learn": 150,
-        "source": "Trainer"
-      }
     ]
   },
   "6662": {
@@ -37652,36 +37559,6 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12726#dropped-by"
   },
-  "12727": {
-    "id": 12727,
-    "name": "Misty Reed Mahi Mahi",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12727#dropped-by"
-  },
-  "12728": {
-    "id": 12728,
-    "name": "Sar'theris Striker",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12728#dropped-by"
-  },
-  "12729": {
-    "id": 12729,
-    "name": "Savage Coast Blue Sailfin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12729#dropped-by"
-  },
   "12735": {
     "id": 12735,
     "name": "Frayed Abomination Stitching",
@@ -37908,111 +37785,6 @@ window.WOW_REAGENT_SOURCES = {
         "id": 175964,
         "name": "Skin of Shadow",
         "pct": 100
-      }
-    ]
-  },
-  "12784": {
-    "id": 12784,
-    "name": "Arcanite Reaper",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12784#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12784,
-        "recipeName": "Arcanite Reaper",
-        "learn": 300,
-        "source": "Drop: Bannok Grimaxe (Blackrock Spire)"
-      }
-    ]
-  },
-  "12790": {
-    "id": 12790,
-    "name": "Arcanite Champion",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12790#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12790,
-        "recipeName": "Arcanite Champion",
-        "learn": 300,
-        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
-      }
-    ]
-  },
-  "12794": {
-    "id": 12794,
-    "name": "Masterwork Stormhammer",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12794#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12794,
-        "recipeName": "Masterwork Stormhammer",
-        "learn": 300,
-        "source": "Drop: Goraluk Anvilcrack (Blackrock Spire)"
-      }
-    ]
-  },
-  "12796": {
-    "id": 12796,
-    "name": "Hammer of the Titans",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12796#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12796,
-        "recipeName": "Hammer of the Titans",
-        "learn": 300,
-        "source": "Drop: Maleki the Pallid (Stratholme)"
-      }
-    ]
-  },
-  "12797": {
-    "id": 12797,
-    "name": "Frostguard",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12797#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 12797,
-        "recipeName": "Frostguard",
-        "learn": 300,
-        "source": "Plans: Frostguard"
       }
     ]
   },
@@ -38849,27 +38621,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
-  "13458": {
-    "id": 13458,
-    "name": "Greater Nature Protection Potion",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 290).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=13458#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "alchemy",
-        "profName": "Alchemy",
-        "profIcon": "trade_alchemy",
-        "recipeId": 13458,
-        "recipeName": "Greater Nature Protection Potion",
-        "learn": 290,
-        "source": "Drop: Rotting Behemoth (Western Plaguelands)"
-      }
-    ]
-  },
   "13463": {
     "id": 13463,
     "name": "Dreamfoil",
@@ -39020,27 +38771,6 @@ window.WOW_REAGENT_SOURCES = {
         "recipeName": "Flask of Supreme Power",
         "learn": 300,
         "source": "Drop: Ras Frostwhisper (Scholomance)"
-      }
-    ]
-  },
-  "13513": {
-    "id": 13513,
-    "name": "Flask of Chromatic Resistance",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=13513#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "alchemy",
-        "profName": "Alchemy",
-        "profIcon": "trade_alchemy",
-        "recipeId": 13513,
-        "recipeName": "Flask of Chromatic Resistance",
-        "learn": 300,
-        "source": "Drop: Gyth (Blackrock Spire)"
       }
     ]
   },
@@ -44048,27 +43778,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ]
   },
-  "18168": {
-    "id": 18168,
-    "name": "Force Reactive Disk",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18168#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 18168,
-        "recipeName": "Force Reactive Disk",
-        "learn": 300,
-        "source": "Schematic: Force Reactive Disk"
-      }
-    ]
-  },
   "18240": {
     "id": 18240,
     "name": "Ogre Tannin",
@@ -44088,27 +43797,6 @@ window.WOW_REAGENT_SOURCES = {
         "id": 179499,
         "name": "Ogre Tannin Basket",
         "pct": 100
-      }
-    ]
-  },
-  "18251": {
-    "id": 18251,
-    "name": "Core Armor Kit",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Leatherworking",
-    "summary": "Crafted by Leatherworking (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18251#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "leatherworking",
-        "profName": "Leatherworking",
-        "profIcon": "trade_leatherworking",
-        "recipeId": 18251,
-        "recipeName": "Core Armor Kit",
-        "learn": 300,
-        "source": "Pattern: Core Armor Kit"
       }
     ]
   },
@@ -44262,27 +43950,6 @@ window.WOW_REAGENT_SOURCES = {
       "Undercity",
       "Thunder Bluff",
       "Elwynn Forest"
-    ]
-  },
-  "18262": {
-    "id": 18262,
-    "name": "Elemental Sharpening Stone",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 300).",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=18262#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 18262,
-        "recipeName": "Elemental Sharpening Stone",
-        "learn": 300,
-        "source": "Plans: Elemental Sharpening Stone"
-      }
     ]
   },
   "18512": {
@@ -46120,146 +45787,6 @@ window.WOW_REAGENT_SOURCES = {
       ]
     }
   },
-  "20867": {
-    "id": 20867,
-    "name": "Onyx Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20867#dropped-by"
-  },
-  "20868": {
-    "id": 20868,
-    "name": "Lambent Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20868#dropped-by"
-  },
-  "20870": {
-    "id": 20870,
-    "name": "Jasper Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20870#dropped-by"
-  },
-  "20871": {
-    "id": 20871,
-    "name": "Obsidian Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20871#dropped-by"
-  },
-  "20872": {
-    "id": 20872,
-    "name": "Vermillion Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20872#dropped-by"
-  },
-  "20873": {
-    "id": 20873,
-    "name": "Alabaster Idol",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20873#dropped-by"
-  },
-  "20874": {
-    "id": 20874,
-    "name": "Idol of the Sun",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20874#dropped-by"
-  },
-  "20875": {
-    "id": 20875,
-    "name": "Idol of Night",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20875#dropped-by"
-  },
-  "20876": {
-    "id": 20876,
-    "name": "Idol of Death",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20876#dropped-by"
-  },
-  "20877": {
-    "id": 20877,
-    "name": "Idol of the Sage",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20877#dropped-by"
-  },
-  "20878": {
-    "id": 20878,
-    "name": "Idol of Rebirth",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20878#dropped-by"
-  },
-  "20879": {
-    "id": 20879,
-    "name": "Idol of Life",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20879#dropped-by"
-  },
-  "20881": {
-    "id": 20881,
-    "name": "Idol of Strife",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20881#dropped-by"
-  },
-  "20882": {
-    "id": 20882,
-    "name": "Idol of War",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=20882#dropped-by"
-  },
   "21024": {
     "id": 21024,
     "name": "Chimaerok Tenderloin",
@@ -46773,150 +46300,6 @@ window.WOW_REAGENT_SOURCES = {
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=227813#dropped-by"
   },
-  "234003": {
-    "id": 234003,
-    "name": "Obsidian-Infused Thorium Bar",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Mining",
-    "summary": "Crafted by Mining (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234003#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "mining",
-        "profName": "Mining",
-        "profIcon": "trade_mining",
-        "recipeId": 234003,
-        "recipeName": "Smelt Obsidian-Infused Thorium Bar",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234004": {
-    "id": 234004,
-    "name": "Obsidian Grinding Stone",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Blacksmithing",
-    "summary": "Crafted by Blacksmithing (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234004#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "blacksmithing",
-        "profName": "Blacksmithing",
-        "profIcon": "trade_blacksmithing",
-        "recipeId": 234004,
-        "recipeName": "Obsidian Grinding Stone",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234005": {
-    "id": 234005,
-    "name": "Obsidian Blasting Powder",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234005#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "engineering",
-        "profName": "Engineering",
-        "profIcon": "trade_engineering",
-        "recipeId": 234005,
-        "recipeName": "Obsidian Blasting Powder",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234006": {
-    "id": 234006,
-    "name": "Monstrous Silithid Chitin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234006#dropped-by"
-  },
-  "234007": {
-    "id": 234007,
-    "name": "Spiked Silithid Chitin",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234007#dropped-by"
-  },
-  "234008": {
-    "id": 234008,
-    "name": "Qiraji Silk",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234008#dropped-by"
-  },
-  "234009": {
-    "id": 234009,
-    "name": "Bolt of Qiraji Silk",
-    "primaryType": "crafted",
-    "ctaIcon": "🔨",
-    "ctaText": "Click here to see how to craft this in Tailoring",
-    "summary": "Crafted by Tailoring (Skill 1).",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234009#created-by-spell",
-    "craftedBy": [
-      {
-        "profSlug": "tailoring",
-        "profName": "Tailoring",
-        "profIcon": "trade_tailoring",
-        "recipeId": 234009,
-        "recipeName": "Bolt of Qiraji Silk",
-        "learn": 1,
-        "source": "Trainer"
-      }
-    ]
-  },
-  "234010": {
-    "id": 234010,
-    "name": "Ancient Sandworm Bile",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234010#dropped-by"
-  },
-  "234011": {
-    "id": 234011,
-    "name": "Qiraji Stalker Venom",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234011#dropped-by"
-  },
-  "234012": {
-    "id": 234012,
-    "name": "Hive Thistle",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=234012#dropped-by"
-  },
   "236656": {
     "id": 236656,
     "name": "Frozen Rune",
@@ -46933,7 +46316,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Engineering",
-    "summary": "Crafted by Engineering (Skill 1).",
+    "summary": "Crafted by Engineering (Skill 250).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=238737#created-by-spell",
     "craftedBy": [
@@ -46943,7 +46326,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_engineering",
         "recipeId": 238737,
         "recipeName": "Tinkerbox",
-        "learn": 1,
+        "learn": 250,
         "source": "Trainer"
       }
     ]
@@ -47271,7 +46654,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 50).",
+    "summary": "Crafted by Alchemy (Skill 40).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249409#created-by-spell",
     "craftedBy": [
@@ -47281,7 +46664,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_alchemy",
         "recipeId": 249409,
         "recipeName": "Cerulean Dye",
-        "learn": 50,
+        "learn": 40,
         "source": "Trainer"
       }
     ]
@@ -47292,7 +46675,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 50).",
+    "summary": "Crafted by Alchemy (Skill 40).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249410#created-by-spell",
     "craftedBy": [
@@ -47302,7 +46685,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_alchemy",
         "recipeId": 249410,
         "recipeName": "Sulfuric Acid",
-        "learn": 50,
+        "learn": 40,
         "source": "Trainer"
       }
     ]
@@ -47577,7 +46960,7 @@ window.WOW_REAGENT_SOURCES = {
     "primaryType": "crafted",
     "ctaIcon": "🔨",
     "ctaText": "Click here to see how to craft this in Alchemy",
-    "summary": "Crafted by Alchemy (Skill 130).",
+    "summary": "Crafted by Alchemy (Skill 120).",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249430#created-by-spell",
     "craftedBy": [
@@ -47587,7 +46970,7 @@ window.WOW_REAGENT_SOURCES = {
         "profIcon": "trade_alchemy",
         "recipeId": 249430,
         "recipeName": "Magenta Dye",
-        "learn": 130,
+        "learn": 120,
         "source": "Trainer"
       }
     ]
@@ -47716,16 +47099,6 @@ window.WOW_REAGENT_SOURCES = {
     "summary": "Fished from enchanted and coastal waters in Darkshore, Ashenvale, The Barrens, and Riverglades.",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=251524#fished-in"
-  },
-  "252948": {
-    "id": 252948,
-    "name": "Cleansed Felbloom",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
-    "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=252948#dropped-by"
   },
   "255007": {
     "id": 255007,
@@ -48498,8 +47871,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "spell_arcane_manatap"
     },
     "stats": {
-      "recipeCount": 197,
-      "newInForever": 88,
+      "recipeCount": 190,
+      "newInForever": 81,
       "favorRecipes": 30
     },
     "groups": [
@@ -48513,13 +47886,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Elixirs",
         "label": "Elixirs",
         "icon": "inv_potion_32",
-        "count": 74
+        "count": 70
       },
       {
         "key": "Flasks",
         "label": "Flasks",
         "icon": "inv_potion_62",
-        "count": 14
+        "count": 11
       },
       {
         "key": "Transmutes",
@@ -48734,8 +48107,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2447,
@@ -49030,7 +48403,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "\tOther \"Crafted by alchemists.\" Sell Price: 1s 25c",
         "isNew": true,
-        "learn": 50,
+        "learn": 40,
         "yellow": 50,
         "green": 70,
         "grey": 90,
@@ -49062,7 +48435,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "\tOther \"Crafted by alchemists.\" Sell Price: 1s 25c",
         "isNew": true,
-        "learn": 50,
+        "learn": 40,
         "yellow": 50,
         "green": 70,
         "grey": 90,
@@ -49211,7 +48584,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "Increases Strength by 4 for 1 hr.",
         "isNew": false,
-        "learn": 40,
+        "learn": 15,
         "yellow": 55,
         "green": 75,
         "grey": 95,
@@ -49823,8 +49196,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 100,
-        "green": 140,
-        "grey": 160,
+        "green": 120,
+        "grey": 140,
         "reagents": [
           {
             "id": 2449,
@@ -50165,7 +49538,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "\tOther \"Crafted by alchemists.\" Sell Price: 2s 50c",
         "isNew": true,
-        "learn": 130,
+        "learn": 120,
         "yellow": 130,
         "green": 142,
         "grey": 155,
@@ -50458,8 +49831,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 3372,
@@ -51151,7 +50524,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "level 35",
         "effect": "Increases Spell Healing by 44 for 30 sec.",
         "isNew": true,
-        "learn": 185,
+        "learn": 180,
         "yellow": 185,
         "green": 187,
         "grey": 190,
@@ -51692,8 +51065,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 200,
         "yellow": 200,
-        "green": 220,
-        "grey": 240,
+        "green": 210,
+        "grey": 220,
         "reagents": [
           {
             "id": 3372,
@@ -51834,8 +51207,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 205,
-        "green": 210,
-        "grey": 230,
+        "green": 207,
+        "grey": 210,
         "reagents": [
           {
             "id": 3818,
@@ -52107,8 +51480,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 213371,
@@ -52923,8 +52296,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -52962,8 +52335,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -53001,8 +52374,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -54132,7 +53505,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Trinket, level 45",
         "effect": "Increases the effects that healing and mana potions have on the wearer by 20%.",
         "isNew": false,
-        "learn": 275,
+        "learn": 300,
         "yellow": 315,
         "green": 322,
         "grey": 330,
@@ -55579,328 +54952,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Recipe: Flask of Natural Swiftness"
       },
       {
-        "id": 233977,
-        "spellId": 1213571,
-        "name": "Elixir of Alacrity",
-        "icon": "inv_potion_112",
-        "quality": 1,
-        "cat": "Elixirs",
-        "kind": "Alchemy",
-        "effect": "Crafted Elixir of Alacrity",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 13463,
-            "count": 2,
-            "name": "Dreamfoil",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 2,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233967,
-        "spellId": 1213559,
-        "name": "Elixir of the Honey Badger",
-        "icon": "inv_potion_109",
-        "quality": 1,
-        "cat": "Elixirs",
-        "kind": "Alchemy",
-        "effect": "Crafted Elixir of the Honey Badger",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 13465,
-            "count": 2,
-            "name": "Mountain Silversage",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 2,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233969,
-        "spellId": 1213565,
-        "name": "Elixir of the Ironside",
-        "icon": "inv_potion_108",
-        "quality": 1,
-        "cat": "Elixirs",
-        "kind": "Alchemy",
-        "effect": "Crafted Elixir of the Ironside",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 13467,
-            "count": 2,
-            "name": "Icecap",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 2,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233968,
-        "spellId": 1213563,
-        "name": "Elixir of the Mage-Lord",
-        "icon": "inv_potion_110",
-        "quality": 1,
-        "cat": "Elixirs",
-        "kind": "Alchemy",
-        "effect": "Crafted Elixir of the Mage-Lord",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 13466,
-            "count": 2,
-            "name": "Plaguebloom",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 2,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233964,
-        "spellId": 1213546,
-        "name": "Flask of Ancient Knowledge",
-        "icon": "inv_alchemy_endlessflask_04",
-        "quality": 1,
-        "cat": "Flasks",
-        "kind": "Alchemy",
-        "effect": "Crafted Flask of Ancient Knowledge",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 16203,
-            "count": 1,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 13512,
-            "count": 1,
-            "name": "Flask of Supreme Power",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233962,
-        "spellId": 1213552,
-        "name": "Flask of Madness",
-        "icon": "inv_alchemy_endlessflask_06",
-        "quality": 1,
-        "cat": "Flasks",
-        "kind": "Alchemy",
-        "effect": "Crafted Flask of Madness",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 16203,
-            "count": 1,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 1,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 13513,
-            "count": 1,
-            "name": "Flask of Chromatic Resistance",
-            "icon": "inv_potion_48",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233966,
-        "spellId": 1213544,
-        "name": "Flask of Unyielding Sorrow",
-        "icon": "inv_alchemy_endlessflask_03",
-        "quality": 1,
-        "cat": "Flasks",
-        "kind": "Alchemy",
-        "effect": "Crafted Flask of Unyielding Sorrow",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 16203,
-            "count": 1,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 1,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 13511,
-            "count": 1,
-            "name": "Flask of Distilled Wisdom",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8925,
-            "count": 1,
-            "name": "Crystal Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 19931,
         "spellId": 24266,
         "name": "Gurubashi Mojo Madness",
@@ -56036,7 +55087,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any capital or town Alchemy trainer (e.g., Lilyssia Nightbreeze in Stormwind /way 55.6, 85.8 · Tally Berryfizz in Ironforge /way 66.6, 55.2 · Yelmak in Orgrimmar /way 56.6, 33.2), up to 75. Note: Odd Child (A) & Apothecary Renferrel (H) teach Discolored Healing Potion."
+          "details": "Learned from any Alchemy trainer (e.g., Lilyssia Nightbreeze in Stormwind /way 55.6, 85.8 · Vosur Brakthel in Ironforge /way 67.0, 54.2 · Whuut in Orgrimmar /way 56.0, 33.8 · Doctor Martin Felben in Undercity /way 46.6, 74.6), up to 75. Zephras Isle has Apprentice trainers in Shen'dar Village and Valanaar."
         },
         {
           "type": "step",
@@ -56122,7 +55173,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — including Lilyssia Nightbreeze (SW), Vosur Brakthel (IF /way 66.6, 55.2), Yelmak (Org), or Forever town trainers in Zephras Isle & Riverglades."
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — Lilyssia Nightbreeze (Stormwind), Tally Berryfizz (Ironforge /way 67.2, 54.2), Kylanna in Silverwind Refuge, Ashenvale (/way 50.0, 67.0), Yelmak (Orgrimmar /way 56.6, 33.2), Bena Winterhoof (Thunder Bluff), Doctor Marsh (Undercity), Serge Hinott in Tarren Mill, or Jaxin Chong in Booty Bay (/way 28.0, 78.0, Neutral)."
         },
         {
           "type": "step",
@@ -57158,8 +56209,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_stone_grindingstone_01"
     },
     "stats": {
-      "recipeCount": 508,
-      "newInForever": 264,
+      "recipeCount": 474,
+      "newInForever": 231,
       "favorRecipes": 62
     },
     "groups": [
@@ -57167,49 +56218,49 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "One-hand",
         "label": "One-hand weapons",
         "icon": "inv_sword_04",
-        "count": 65
+        "count": 56
       },
       {
         "key": "Two-hand",
         "label": "Two-hand weapons",
         "icon": "inv_axe_09",
-        "count": 50
+        "count": 42
       },
       {
         "key": "Shield",
         "label": "Shields",
         "icon": "inv_shield_04",
-        "count": 4
+        "count": 3
       },
       {
         "key": "Head",
         "label": "Head",
         "icon": "inv_helmet_24",
-        "count": 39
+        "count": 36
       },
       {
         "key": "Shoulder",
         "label": "Shoulders",
         "icon": "inv_shoulder_02",
-        "count": 36
+        "count": 34
       },
       {
         "key": "Chest",
         "label": "Chest",
         "icon": "inv_chest_chain_05",
-        "count": 58
+        "count": 54
       },
       {
         "key": "Wrist",
         "label": "Bracers",
         "icon": "inv_bracer_07",
-        "count": 22
+        "count": 21
       },
       {
         "key": "Hands",
         "label": "Gloves",
         "icon": "inv_gauntlets_04",
-        "count": 58
+        "count": 56
       },
       {
         "key": "Waist",
@@ -57233,13 +56284,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Stones",
         "label": "Sharpening, weight and grinding stones",
         "icon": "inv_stone_sharpeningstone_02",
-        "count": 18
+        "count": 17
       },
       {
         "key": "Attachments",
         "label": "Shield spikes, chain and spurs",
         "icon": "inv_misc_armorkit_02",
-        "count": 10
+        "count": 7
       },
       {
         "key": "Other",
@@ -57390,7 +56441,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 4",
         "effect": "Binds when equipped Legs\tMail 94 Armor +1 Stamina Requires Level 4 Sell Price: 67c",
         "isNew": false,
-        "learn": 1,
+        "learn": 15,
         "yellow": 50,
         "green": 70,
         "grey": 90,
@@ -57456,8 +56507,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2835,
@@ -58512,7 +57563,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 13",
         "effect": "Binds when equipped Chest\tMail 162 Armor +4 Strength +3 Stamina Requires Level 13 Sell Price: 6s 30c",
         "isNew": false,
-        "learn": 55,
+        "learn": 80,
         "yellow": 95,
         "green": 115,
         "grey": 135,
@@ -58910,7 +57961,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 15",
         "effect": "+5 Spell Damage +16 Healing",
         "isNew": true,
-        "learn": 85,
+        "learn": 80,
         "yellow": 85,
         "green": 85,
         "grey": 85,
@@ -58949,7 +58000,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 15",
         "effect": "+9 Spell Power",
         "isNew": true,
-        "learn": 85,
+        "learn": 80,
         "yellow": 85,
         "green": 85,
         "grey": 85,
@@ -59027,7 +58078,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 15",
         "effect": "+5 Defense Rating +5 Spell Power",
         "isNew": true,
-        "learn": 85,
+        "learn": 80,
         "yellow": 85,
         "green": 85,
         "grey": 85,
@@ -59066,7 +58117,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 15",
         "effect": "Binds when picked up Chest\tMail 184 Armor +4 Agility +5 Stamina +7 Strength Requires Level 15 Sell Price: 9s 74c",
         "isNew": true,
-        "learn": 85,
+        "learn": 80,
         "yellow": 85,
         "green": 85,
         "grey": 85,
@@ -59650,7 +58701,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand sword, level 14",
         "effect": "Binds when equipped Two-Hand\tSword 33 - 50 Damage\tSpeed 3.30 (12.6 damage per second) +6 Stamina Requires Level 14 Sell Price: 14s 98c",
         "isNew": false,
-        "learn": 65,
+        "learn": 70,
         "yellow": 110,
         "green": 130,
         "grey": 150,
@@ -59696,7 +58747,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 20",
         "effect": "+7 Spell Damage +21 Healing",
         "isNew": true,
-        "learn": 100,
+        "learn": 95,
         "yellow": 100,
         "green": 100,
         "grey": 100,
@@ -59735,7 +58786,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 20",
         "effect": "+11 Spell Power",
         "isNew": true,
-        "learn": 100,
+        "learn": 95,
         "yellow": 100,
         "green": 100,
         "grey": 100,
@@ -59774,7 +58825,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 20",
         "effect": "+7 Defense Rating",
         "isNew": true,
-        "learn": 100,
+        "learn": 95,
         "yellow": 100,
         "green": 100,
         "grey": 100,
@@ -59813,7 +58864,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 20",
         "effect": "+7 Defense Rating +6 Spell Power",
         "isNew": true,
-        "learn": 100,
+        "learn": 95,
         "yellow": 100,
         "green": 100,
         "grey": 100,
@@ -59884,7 +58935,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 20",
         "effect": "Binds when picked up Legs\tMail 176 Armor +5 Agility +7 Stamina +9 Strength Requires Level 20 Sell Price: 18s 95c",
         "isNew": true,
-        "learn": 100,
+        "learn": 95,
         "yellow": 100,
         "green": 100,
         "grey": 100,
@@ -60323,7 +59374,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand dagger, level 15",
         "effect": "Binds when equipped One-Hand\tDagger 13 - 25 Damage\tSpeed 1.90 (10.0 damage per second) +3 Stamina Requires Level 15 Sell Price: 14s 26c",
         "isNew": false,
-        "learn": 75,
+        "learn": 80,
         "yellow": 110,
         "green": 125,
         "grey": 140,
@@ -60415,7 +59466,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand dagger, level 20",
         "effect": "Binds when equipped One-Hand\tDagger 16 - 30 Damage\tSpeed 1.80 (12.8 damage per second) +4 Agility Requires Level 20 Sell Price: 27s 31c",
         "isNew": false,
-        "learn": 100,
+        "learn": 125,
         "yellow": 130,
         "green": 145,
         "grey": 160,
@@ -60475,7 +59526,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail shoulder, level 20",
         "effect": "Binds when equipped Shoulder\tMail 137 Armor +3 Strength +3 Stamina +3 Spirit Requires Level 20 Sell Price: 12s 84c",
         "isNew": false,
-        "learn": 100,
+        "learn": 125,
         "yellow": 130,
         "green": 145,
         "grey": 160,
@@ -60610,7 +59661,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 21",
         "effect": "Binds when equipped Chest\tMail 186 Armor +5 Strength +5 Stamina +4 Spirit Requires Level 21 Sell Price: 18s 31c",
         "isNew": false,
-        "learn": 105,
+        "learn": 130,
         "yellow": 135,
         "green": 150,
         "grey": 165,
@@ -61265,7 +60316,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand mace, level 23",
         "effect": "Binds when equipped One-Hand\tMace 24 - 46 Damage\tSpeed 2.40 (14.6 damage per second) +3 Strength +3 Stamina Requires Level 23 Sell Price: 36s 93c",
         "isNew": false,
-        "learn": 115,
+        "learn": 140,
         "yellow": 145,
         "green": 160,
         "grey": 175,
@@ -61389,7 +60440,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail feet, level 24",
         "effect": "Binds when equipped Feet\tMail 134 Armor +7 Stamina +3 Strength Requires Level 24 Sell Price: 17s 67c",
         "isNew": false,
-        "learn": 120,
+        "learn": 145,
         "yellow": 150,
         "green": 165,
         "grey": 180,
@@ -61435,7 +60486,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand mace, level 25",
         "effect": "Binds when equipped One-Hand\tMace 30 - 57 Damage\tSpeed 2.80 (15.5 damage per second) +5 Strength Requires Level 25 Sell Price: 45s 52c",
         "isNew": false,
-        "learn": 120,
+        "learn": 145,
         "yellow": 150,
         "green": 165,
         "grey": 180,
@@ -61570,7 +60621,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 25",
         "effect": "+8 Spell Damage +25 Healing",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -61609,7 +60660,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 25",
         "effect": "+14 Spell Power",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -61648,7 +60699,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 25",
         "effect": "Binds when picked up Head\tMail 177 Armor +12 Agility +11 Stamina Requires Level 25 Sell Price: 24s 80c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -61687,7 +60738,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 25",
         "effect": "+8 Defense Rating",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -61726,7 +60777,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 25",
         "effect": "Binds when picked up Head\tMail 177 Armor +11 Stamina +12 Strength Requires Level 25 Sell Price: 24s 71c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -61910,7 +60961,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail hands, level 25",
         "effect": "Binds when equipped Hands\tMail 124 Armor +6 Stamina +5 Strength Requires Level 25 Sell Price: 12s 95c",
         "isNew": false,
-        "learn": 125,
+        "learn": 150,
         "yellow": 155,
         "green": 170,
         "grey": 185,
@@ -62009,7 +61060,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Attached to an item for good",
         "effect": "Attaches an Iron Spike to your shield that deals damage every time you block with it.",
         "isNew": false,
-        "learn": 125,
+        "learn": 150,
         "yellow": 155,
         "green": 170,
         "grey": 185,
@@ -62377,7 +61428,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 26",
         "effect": "Binds when equipped Legs\tMail 176 Armor +7 Strength +6 Stamina +6 Spirit Requires Level 26 Sell Price: 28s 42c",
         "isNew": false,
-        "learn": 130,
+        "learn": 155,
         "yellow": 155,
         "green": 167,
         "grey": 180,
@@ -62416,7 +61467,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand mace, level 26",
         "effect": "+24 Spell Power",
         "isNew": false,
-        "learn": 130,
+        "learn": 155,
         "yellow": 155,
         "green": 167,
         "grey": 180,
@@ -62547,7 +61598,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 27",
         "effect": "Binds when equipped Chest\tMail 204 Armor +12 Strength Requires Level 27 Sell Price: 33s 30c",
         "isNew": false,
-        "learn": 135,
+        "learn": 160,
         "yellow": 160,
         "green": 172,
         "grey": 185,
@@ -62579,7 +61630,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail shoulder, level 27",
         "effect": "Binds when equipped Shoulder\tMail 153 Armor +6 Strength +6 Agility Requires Level 27 Sell Price: 25s",
         "isNew": false,
-        "learn": 135,
+        "learn": 160,
         "yellow": 160,
         "green": 172,
         "grey": 185,
@@ -62625,7 +61676,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail shoulder, level 27",
         "effect": "Binds when equipped Shoulder\tMail 153 Armor +7 Stamina +4 Strength Requires Level 27 Sell Price: 25s 71c",
         "isNew": false,
-        "learn": 135,
+        "learn": 160,
         "yellow": 160,
         "green": 172,
         "grey": 185,
@@ -62664,7 +61715,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand sword, level 27",
         "effect": "Binds when equipped One-Hand\tSword 21 - 39 Damage\tSpeed 1.80 (16.7 damage per second) +5 Stamina Requires Level 27 Sell Price: 54s 68c",
         "isNew": false,
-        "learn": 135,
+        "learn": 160,
         "yellow": 160,
         "green": 172,
         "grey": 185,
@@ -62719,8 +61770,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 2841,
@@ -62795,7 +61846,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Attached to an item for good",
         "effect": "Attaches a counterweight to a two-handed sword, mace, axe or polearm making it 3% faster.",
         "isNew": false,
-        "learn": 140,
+        "learn": 165,
         "yellow": 165,
         "green": 177,
         "grey": 190,
@@ -62887,7 +61938,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand mace, level 29",
         "effect": "+4 Spell Power",
         "isNew": false,
-        "learn": 145,
+        "learn": 170,
         "yellow": 170,
         "green": 182,
         "grey": 195,
@@ -62947,7 +61998,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 29",
         "effect": "Binds when equipped Legs\tMail 184 Armor +11 Strength +5 Stamina Requires Level 29 Sell Price: 38s 82c",
         "isNew": false,
-        "learn": 145,
+        "learn": 170,
         "yellow": 170,
         "green": 182,
         "grey": 195,
@@ -63103,59 +62154,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
-      },
-      {
-        "id": 210773,
-        "spellId": 427061,
-        "name": "Mantle of the Second War",
-        "icon": "inv_shoulder_28",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Mail Armor",
-        "effect": "Crafted Mantle of the Second War",
-        "isNew": true,
-        "learn": 150,
-        "yellow": 140,
-        "green": 160,
-        "grey": 180,
-        "reagents": [
-          {
-            "id": 2841,
-            "count": 20,
-            "name": "Bronze Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 1206,
-            "count": 2,
-            "name": "Moss Agate",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 1705,
-            "count": 2,
-            "name": "Lesser Moonstone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 5500,
-            "count": 2,
-            "name": "Iridescent Pearl",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 2842,
-            "count": 4,
-            "name": "Silver Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Mantle of the Second War"
       },
       {
         "id": 250560,
@@ -63362,7 +62360,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 30",
         "effect": "Binds when equipped Head\tMail 173 Armor +9 Agility +9 Strength Requires Level 30 Sell Price: 33s 37c",
         "isNew": false,
-        "learn": 150,
+        "learn": 175,
         "yellow": 175,
         "green": 187,
         "grey": 200,
@@ -63401,7 +62399,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail shoulder, level 30",
         "effect": "Binds when equipped Shoulder\tMail 160 Armor +7 Strength +6 Stamina Requires Level 30 Sell Price: 31s 6c",
         "isNew": false,
-        "learn": 150,
+        "learn": 175,
         "yellow": 175,
         "green": 187,
         "grey": 200,
@@ -63486,7 +62484,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand sword, level 30",
         "effect": "+4 Attack Power",
         "isNew": false,
-        "learn": 150,
+        "learn": 175,
         "yellow": 175,
         "green": 187,
         "grey": 200,
@@ -63578,7 +62576,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail feet, level 31",
         "effect": "Binds when equipped Feet\tMail 149 Armor +7 Strength +7 Agility Requires Level 31 Sell Price: 37s",
         "isNew": false,
-        "learn": 155,
+        "learn": 180,
         "yellow": 180,
         "green": 192,
         "grey": 205,
@@ -63624,7 +62622,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand sword, level 31",
         "effect": "+12 Spell Power",
         "isNew": false,
-        "learn": 155,
+        "learn": 180,
         "yellow": 180,
         "green": 192,
         "grey": 205,
@@ -63677,7 +62675,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail hands, level 32",
         "effect": "Binds when equipped Hands\tMail 137 Armor +11 Strength Requires Level 32 Sell Price: 27s 11c",
         "isNew": false,
-        "learn": 160,
+        "learn": 185,
         "yellow": 185,
         "green": 197,
         "grey": 210,
@@ -63755,7 +62753,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand axe, level 32",
         "effect": "Binds when equipped Two-Hand\tAxe 71 - 108 Damage\tSpeed 3.50 (25.6 damage per second) +11 Strength +7 Stamina Requires Level 32 Sell Price: 1g 12s 48c",
         "isNew": false,
-        "learn": 160,
+        "learn": 185,
         "yellow": 185,
         "green": 197,
         "grey": 210,
@@ -63808,7 +62806,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail feet, level 32",
         "effect": "Binds when equipped Feet\tMail 151 Armor +11 Stamina Requires Level 32 Sell Price: 39s 37c",
         "isNew": false,
-        "learn": 160,
+        "learn": 185,
         "yellow": 185,
         "green": 197,
         "grey": 210,
@@ -63939,7 +62937,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand axe, level 33",
         "effect": "Chance on hit: Blasts a target for 30 Frost damage.",
         "isNew": false,
-        "learn": 165,
+        "learn": 190,
         "yellow": 190,
         "green": 202,
         "grey": 215,
@@ -63992,7 +62990,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail head, level 33",
         "effect": "Binds when equipped Head\tMail 181 Armor +10 Strength +10 Stamina Requires Level 33 Sell Price: 44s 5c",
         "isNew": false,
-        "learn": 165,
+        "learn": 190,
         "yellow": 190,
         "green": 202,
         "grey": 215,
@@ -64123,7 +63121,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand dagger, level 34",
         "effect": "+39 Fire Spell Damage",
         "isNew": false,
-        "learn": 165,
+        "learn": 190,
         "yellow": 190,
         "green": 202,
         "grey": 215,
@@ -64169,7 +63167,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Attached to an item for good",
         "effect": "Attaches a chain to your weapon, making it impossible to disarm.",
         "isNew": false,
-        "learn": 165,
+        "learn": 190,
         "yellow": 190,
         "green": 202,
         "grey": 215,
@@ -64247,7 +63245,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail chest, level 35",
         "effect": "Binds when equipped Chest\tMail 231 Armor +14 Strength +6 Stamina Requires Level 35 Sell Price: 65s 58c",
         "isNew": false,
-        "learn": 170,
+        "learn": 195,
         "yellow": 195,
         "green": 207,
         "grey": 220,
@@ -64294,9 +63292,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Leggings",
         "isNew": true,
         "learn": 170,
-        "yellow": 195,
-        "green": 220,
-        "grey": 240,
+        "yellow": 170,
+        "green": 182,
+        "grey": 195,
         "reagents": [
           {
             "id": 3575,
@@ -64373,8 +63371,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 175,
-        "green": 205,
-        "grey": 225,
+        "green": 190,
+        "grey": 205,
         "reagents": [
           {
             "id": 2870,
@@ -64559,7 +63557,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand sword, level 35",
         "effect": "+14 Critical Strike Rating Chance on hit: Launches a bolt of frost at the enemy causing 40 to 60 Frost damage and slowing movement speed by 50% for 5 sec.",
         "isNew": false,
-        "learn": 175,
+        "learn": 200,
         "yellow": 200,
         "green": 212,
         "grey": 225,
@@ -64619,7 +63617,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail feet, level 35",
         "effect": "Binds when equipped Feet\tMail 159 Armor +8 Strength +8 Stamina Requires Level 35 Sell Price: 49s 77c",
         "isNew": false,
-        "learn": 175,
+        "learn": 200,
         "yellow": 200,
         "green": 212,
         "grey": 225,
@@ -64666,9 +63664,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Shoulders",
         "isNew": true,
         "learn": 175,
-        "yellow": 200,
-        "green": 225,
-        "grey": 245,
+        "yellow": 175,
+        "green": 187,
+        "grey": 200,
         "reagents": [
           {
             "id": 3859,
@@ -64994,7 +63992,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand axe, level 35",
         "effect": "+10 Spell Power",
         "isNew": false,
-        "learn": 175,
+        "learn": 200,
         "yellow": 200,
         "green": 212,
         "grey": 225,
@@ -65214,7 +64212,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Hands\tMail 146 Armor +11 Strength +4 Stamina Requires Level 36 Sell Price: 36s 89c",
         "isNew": false,
         "learn": 180,
-        "yellow": 200,
+        "yellow": 205,
         "green": 210,
         "grey": 220,
         "reagents": [
@@ -65313,9 +64311,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Moonsteel Broadsword",
         "isNew": true,
         "learn": 180,
-        "yellow": 205,
-        "green": 230,
-        "grey": 250,
+        "yellow": 180,
+        "green": 192,
+        "grey": 205,
         "reagents": [
           {
             "id": 3859,
@@ -65398,7 +64396,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Legs\tPlate 297 Armor +11 Stamina +120 Armor Requires Level 40 Sell Price: 53s 87c",
         "isNew": false,
         "learn": 185,
-        "yellow": 205,
+        "yellow": 210,
         "green": 215,
         "grey": 225,
         "reagents": [
@@ -65430,7 +64428,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Wrist\tMail 106 Armor +7 Spirit +6 Stamina Requires Level 40 Sell Price: 41s 3c",
         "isNew": false,
         "learn": 190,
-        "yellow": 210,
+        "yellow": 215,
         "green": 220,
         "grey": 230,
         "reagents": [
@@ -65462,7 +64460,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Attaches a Mithril Spike to your shield that deals damage every time you block with it.",
         "isNew": false,
         "learn": 190,
-        "yellow": 210,
+        "yellow": 215,
         "green": 220,
         "grey": 230,
         "reagents": [
@@ -65547,9 +64545,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Coif",
         "isNew": true,
         "learn": 190,
-        "yellow": 215,
-        "green": 240,
-        "grey": 260,
+        "yellow": 190,
+        "green": 202,
+        "grey": 215,
         "reagents": [
           {
             "id": 3859,
@@ -65717,7 +64715,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Critical Strike Rating",
         "isNew": false,
         "learn": 195,
-        "yellow": 215,
+        "yellow": 220,
         "green": 225,
         "grey": 235,
         "reagents": [
@@ -65900,7 +64898,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand axe, level 39",
         "effect": "Binds when equipped One-Hand\tAxe 43 - 81 Damage\tSpeed 2.40 (25.8 damage per second) +8 Agility Requires Level 39 Sell Price: 1g 46s 59c",
         "isNew": false,
-        "learn": 195,
+        "learn": 220,
         "yellow": 220,
         "green": 232,
         "grey": 245,
@@ -65947,9 +64945,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Cuirass",
         "isNew": true,
         "learn": 195,
-        "yellow": 220,
-        "green": 245,
-        "grey": 265,
+        "yellow": 195,
+        "green": 207,
+        "grey": 220,
         "reagents": [
           {
             "id": 3859,
@@ -66172,8 +65170,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 200,
         "yellow": 200,
-        "green": 220,
-        "grey": 240,
+        "green": 210,
+        "grey": 220,
         "reagents": [
           {
             "id": 6037,
@@ -66430,7 +65428,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+12 Dodge Rating",
         "isNew": false,
         "learn": 200,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -66515,9 +65513,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Boots",
         "isNew": true,
         "learn": 200,
-        "yellow": 225,
-        "green": 250,
-        "grey": 270,
+        "yellow": 200,
+        "green": 212,
+        "grey": 225,
         "reagents": [
           {
             "id": 3859,
@@ -66560,7 +65558,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand sword, level 40",
         "effect": "Binds when equipped One-Hand\tSword 46 - 87 Damage\tSpeed 2.50 (26.6 damage per second) +6 Strength +4 Agility Requires Level 40 Sell Price: 1g 58s 91c",
         "isNew": false,
-        "learn": 200,
+        "learn": 225,
         "yellow": 225,
         "green": 237,
         "grey": 250,
@@ -66696,9 +65694,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Crafted Golden Scale Gauntlets",
         "isNew": true,
         "learn": 205,
-        "yellow": 225,
-        "green": 245,
-        "grey": 265,
+        "yellow": 205,
+        "green": 210,
+        "grey": 220,
         "reagents": [
           {
             "id": 3859,
@@ -66848,7 +65846,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Shoulder\tMail 194 Armor +10 Spirit +10 Stamina Requires Level 42 Sell Price: 86s 61c",
         "isNew": false,
         "learn": 210,
-        "yellow": 230,
+        "yellow": 235,
         "green": 240,
         "grey": 250,
         "reagents": [
@@ -66887,7 +65885,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Attaches spurs to your boots that increase your mounted movement speed slightly.",
         "isNew": false,
         "learn": 210,
-        "yellow": 230,
+        "yellow": 235,
         "green": 240,
         "grey": 250,
         "reagents": [
@@ -67321,7 +66319,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate head, level 43",
         "effect": "+15 Spell Power",
         "isNew": true,
-        "learn": 235,
+        "learn": 215,
         "yellow": 235,
         "green": 245,
         "grey": 255,
@@ -67367,7 +66365,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand sword, level 43",
         "effect": "Binds when equipped One-Hand\tSword 34 - 63 Damage\tSpeed 1.70 (28.5 damage per second) +8 Agility Requires Level 43 Sell Price: 2g 92c",
         "isNew": false,
-        "learn": 215,
+        "learn": 240,
         "yellow": 240,
         "green": 252,
         "grey": 265,
@@ -67428,8 +66426,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Head\tPlate 369 Armor +15 Stamina +100 Armor Requires Level 42 Sell Price: 57s 90c",
         "isNew": false,
         "learn": 220,
-        "yellow": 230,
-        "green": 240,
+        "yellow": 220,
+        "green": 245,
         "grey": 250,
         "reagents": [
           {
@@ -67551,7 +66549,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand mace, level 44",
         "effect": "+4 Defense Rating",
         "isNew": false,
-        "learn": 220,
+        "learn": 245,
         "yellow": 245,
         "green": 257,
         "grey": 270,
@@ -67658,7 +66656,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Legs\tMail 208 Armor +17 Strength Requires Level 40 Sell Price: 77s 39c",
         "isNew": false,
         "learn": 210,
-        "yellow": 225,
+        "yellow": 230,
         "green": 235,
         "grey": 245,
         "reagents": [
@@ -67691,8 +66689,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 3860,
@@ -67737,8 +66735,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 3860,
@@ -67782,7 +66780,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Chest\tPlate 480 Armor +15 Stamina +8 Arcane Resistance +8 Fire Resistance +8 Frost Resistance +8 Nature Resistance +8 Shadow Resistance Requires Level 45 Sell Price: 92s 39c",
         "isNew": false,
         "learn": 225,
-        "yellow": 245,
+        "yellow": 250,
         "green": 255,
         "grey": 265,
         "reagents": [
@@ -67821,7 +66819,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Waist\tPlate 270 Armor +12 Stamina +6 Fire Resistance +6 Frost Resistance +6 Arcane Resistance +6 Nature Resistance +6 Shadow Resistance Requires Level 45 Sell Price: 46s 36c",
         "isNew": false,
         "learn": 225,
-        "yellow": 245,
+        "yellow": 250,
         "green": 255,
         "grey": 265,
         "reagents": [
@@ -68263,7 +67261,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Wrist\tPlate 214 Armor +8 Stamina +5 Arcane Resistance +5 Fire Resistance +5 Frost Resistance +5 Nature Resistance +5 Shadow Resistance Requires Level 46 Sell Price: 49s 98c",
         "isNew": false,
         "learn": 230,
-        "yellow": 250,
+        "yellow": 255,
         "green": 260,
         "grey": 270,
         "reagents": [
@@ -68380,7 +67378,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Critical Strike Rating +12 Dodge Rating",
         "isNew": false,
         "learn": 220,
-        "yellow": 235,
+        "yellow": 240,
         "green": 245,
         "grey": 255,
         "reagents": [
@@ -68493,7 +67491,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Waist\tMail 159 Armor +7 Stamina +12 Shadow Resistance +12 Frost Resistance Requires Level 47 Sell Price: 75s 95c",
         "isNew": false,
         "learn": 235,
-        "yellow": 255,
+        "yellow": 260,
         "green": 265,
         "grey": 275,
         "reagents": [
@@ -68525,7 +67523,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+12 Dodge Rating Removes existing Immobilizing effects and makes you immune to Immobilizing effects for 5 sec.",
         "isNew": false,
         "learn": 225,
-        "yellow": 240,
+        "yellow": 245,
         "green": 250,
         "grey": 260,
         "reagents": [
@@ -68578,7 +67576,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Critical Strike Rating",
         "isNew": false,
         "learn": 225,
-        "yellow": 240,
+        "yellow": 245,
         "green": 250,
         "grey": 260,
         "reagents": [
@@ -68702,7 +67700,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chance on hit: Stuns target for 8 sec.",
         "isNew": false,
         "learn": 240,
-        "yellow": 260,
+        "yellow": 265,
         "green": 270,
         "grey": 280,
         "reagents": [
@@ -68734,7 +67732,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Waist\tPlate 285 Armor +12 Strength +11 Stamina Requires Level 47 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 55s 33c",
         "isNew": false,
         "learn": 240,
-        "yellow": 260,
+        "yellow": 265,
         "green": 270,
         "grey": 280,
         "reagents": [
@@ -68773,7 +67771,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Shoulder\tPlate 380 Armor +12 Strength +11 Stamina Requires Level 47 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 86s 46c",
         "isNew": false,
         "learn": 240,
-        "yellow": 260,
+        "yellow": 265,
         "green": 270,
         "grey": 280,
         "reagents": [
@@ -69264,7 +68262,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Chest\tMail 303 Armor +13 Stamina +12 Fire Resistance +130 Armor Requires Level 51 Sell Price: 1g 92s 55c",
         "isNew": false,
         "learn": 245,
-        "yellow": 265,
+        "yellow": 270,
         "green": 275,
         "grey": 285,
         "reagents": [
@@ -69296,7 +68294,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Wrist\tPlate 225 Armor +9 Strength +8 Stamina Requires Level 49 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 60s 44c",
         "isNew": false,
         "learn": 245,
-        "yellow": 265,
+        "yellow": 270,
         "green": 275,
         "grey": 285,
         "reagents": [
@@ -69328,7 +68326,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Chest\tMail 293 Armor +16 Frost Resistance +16 Shadow Resistance Requires Level 49 Sell Price: 1g 70s 3c",
         "isNew": false,
         "learn": 245,
-        "yellow": 265,
+        "yellow": 270,
         "green": 275,
         "grey": 285,
         "reagents": [
@@ -69443,8 +68441,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -69528,8 +68526,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -69560,8 +68558,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -69776,31 +68774,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Plans: Warder's Gloves"
       },
       {
-        "id": 238291,
-        "spellId": 1224635,
-        "name": "Scarlet Soldier's Protectors",
-        "icon": "inv_bracer_26b",
-        "quality": 3,
-        "cat": "Wrist",
-        "kind": "Plate Armor",
-        "effect": "Crafted Scarlet Soldier's Protectors",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 16,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Scarlet Soldier's Protectors"
-      },
-      {
         "id": 238293,
         "spellId": 1224637,
         "name": "Scarlet Soldier's Waistguard",
@@ -69812,8 +68785,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 260,
-        "green": 305,
-        "grey": 325,
+        "green": 282,
+        "grey": 305,
         "reagents": [
           {
             "id": 12811,
@@ -69843,7 +68816,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chance on hit: Reduces targets armor by 300 for 20 sec.",
         "isNew": false,
         "learn": 250,
-        "yellow": 270,
+        "yellow": 275,
         "green": 280,
         "grey": 290,
         "reagents": [
@@ -69980,7 +68953,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate waist, level 50",
         "effect": "+10 Spell Damage +30 Healing",
         "isNew": true,
-        "learn": 270,
+        "learn": 250,
         "yellow": 270,
         "green": 280,
         "grey": 290,
@@ -70193,7 +69166,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Attaches a Thorium Spike to your shield that deals damage every time you block with it.",
         "isNew": false,
         "learn": 250,
-        "yellow": 270,
+        "yellow": 275,
         "green": 280,
         "grey": 290,
         "reagents": [
@@ -70284,7 +69257,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand axe, level 50",
         "effect": "+14 Critical Strike Rating",
         "isNew": false,
-        "learn": 250,
+        "learn": 275,
         "yellow": 275,
         "green": 287,
         "grey": 300,
@@ -70423,7 +69396,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Shoulder\tPlate 414 Armor +10 Stamina +10 Fire Resistance +100 Armor Requires Level 53 Sell Price: 1g 7s 76c",
         "isNew": false,
         "learn": 255,
-        "yellow": 275,
+        "yellow": 280,
         "green": 285,
         "grey": 295,
         "reagents": [
@@ -70487,7 +69460,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Feet\tPlate 367 Armor +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance +7 Arcane Resistance Requires Level 51 Sell Price: 1g 3s 36c",
         "isNew": false,
         "learn": 255,
-        "yellow": 275,
+        "yellow": 280,
         "green": 285,
         "grey": 295,
         "reagents": [
@@ -70526,7 +69499,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Head\tPlate 434 Armor +18 Stamina +10 Arcane Resistance +10 Fire Resistance +10 Frost Resistance +10 Nature Resistance +10 Shadow Resistance Requires Level 51 Sell Price: 1g 3s 72c",
         "isNew": false,
         "learn": 255,
-        "yellow": 275,
+        "yellow": 280,
         "green": 285,
         "grey": 295,
         "reagents": [
@@ -70564,7 +69537,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand sword, level 51",
         "effect": "Chance on hit: Burns the enemy for 200 damage over 30 sec.",
         "isNew": false,
-        "learn": 255,
+        "learn": 280,
         "yellow": 280,
         "green": 292,
         "grey": 305,
@@ -70617,7 +69590,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand mace, level 51",
         "effect": "+21 Parry Rating +20 Hit Rating",
         "isNew": false,
-        "learn": 255,
+        "learn": 280,
         "yellow": 280,
         "green": 292,
         "grey": 305,
@@ -70670,7 +69643,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand axe, level 51",
         "effect": "+2 Two-Handed Axes Skill",
         "isNew": false,
-        "learn": 255,
+        "learn": 280,
         "yellow": 280,
         "green": 292,
         "grey": 305,
@@ -70810,8 +69783,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 260,
         "yellow": 270,
-        "green": 305,
-        "grey": 325,
+        "green": 287,
+        "grey": 305,
         "reagents": [
           {
             "id": 12811,
@@ -70842,8 +69815,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 260,
         "yellow": 270,
-        "green": 305,
-        "grey": 325,
+        "green": 287,
+        "grey": 305,
         "reagents": [
           {
             "id": 12811,
@@ -70873,7 +69846,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when picked up Chest\tPlate 617 Armor +12 Stamina +19 Fire Resistance +200 Armor Requires Level 54 Sell Price: 1g 94s 28c",
         "isNew": false,
         "learn": 260,
-        "yellow": 280,
+        "yellow": 285,
         "green": 290,
         "grey": 300,
         "reagents": [
@@ -70905,7 +69878,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "When struck has a 3% chance of stealing 240 life from the attacker over 4 sec.",
         "isNew": false,
         "learn": 260,
-        "yellow": 280,
+        "yellow": 285,
         "green": 290,
         "grey": 300,
         "reagents": [
@@ -70951,7 +69924,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Hands\tMail 192 Armor +9 Stamina +12 Frost Resistance +12 Shadow Resistance Requires Level 52 Sell Price: 1g 2s 42c",
         "isNew": false,
         "learn": 260,
-        "yellow": 280,
+        "yellow": 285,
         "green": 290,
         "grey": 300,
         "reagents": [
@@ -71035,7 +70008,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand mace, level 52",
         "effect": "Chance on hit: Dispels a magic effect on the current foe.",
         "isNew": false,
-        "learn": 260,
+        "learn": 285,
         "yellow": 285,
         "green": 297,
         "grey": 310,
@@ -71096,7 +70069,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+44 Healing +15 Spell Damage",
         "isNew": false,
         "learn": 265,
-        "yellow": 285,
+        "yellow": 290,
         "green": 295,
         "grey": 305,
         "reagents": [
@@ -71142,7 +70115,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Adds 4 Fire damage to your weapon attack.",
         "isNew": false,
         "learn": 265,
-        "yellow": 285,
+        "yellow": 290,
         "green": 295,
         "grey": 305,
         "reagents": [
@@ -71188,7 +70161,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Waist\tPlate 341 Armor +21 Strength +9 Stamina Requires Level 53 Sell Price: 93s 65c",
         "isNew": false,
         "learn": 265,
-        "yellow": 285,
+        "yellow": 290,
         "green": 295,
         "grey": 305,
         "reagents": [
@@ -71227,7 +70200,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Feet\tMail 215 Armor +9 Stamina +15 Frost Resistance +15 Shadow Resistance Requires Level 53 Sell Price: 1g 64s 21c",
         "isNew": false,
         "learn": 265,
-        "yellow": 285,
+        "yellow": 290,
         "green": 295,
         "grey": 305,
         "reagents": [
@@ -71258,7 +70231,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Two-hand sword, level 53",
         "effect": "Binds when picked up Two-Hand\tSword 131 - 197 Damage\tSpeed 3.30 (49.7 damage per second) +30 Strength +30 Stamina Requires Level 53 Sell Price: 5g 68s 8c",
         "isNew": false,
-        "learn": 265,
+        "learn": 290,
         "yellow": 290,
         "green": 302,
         "grey": 315,
@@ -71325,7 +70298,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "One-hand mace, level 53",
         "effect": "Chance on hit: Hurls a fiery ball that causes 200 to 256 Fire damage and an additional 36 damage over 6 sec.",
         "isNew": false,
-        "learn": 265,
+        "learn": 290,
         "yellow": 290,
         "green": 302,
         "grey": 315,
@@ -71525,8 +70498,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 270,
         "yellow": 280,
-        "green": 305,
-        "grey": 325,
+        "green": 292,
+        "grey": 305,
         "reagents": [
           {
             "id": 12938,
@@ -71687,7 +70660,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Wrist\tPlate 294 Armor +7 Stamina +18 Fire Resistance +100 Armor Requires Level 54 Sell Price: 1g 26s 37c",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -71726,7 +70699,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Waist\tMail 214 Armor +10 Stamina +9 Intellect +8 Spirit +24 Fire Resistance Requires Level 54 Sell Price: 1g 86s 10c",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -71765,7 +70738,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Feet\tPlate 386 Armor +13 Strength +12 Stamina Requires Level 54 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 1g 20s 62c",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -71804,7 +70777,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Head\tPlate 456 Armor +18 Strength +17 Stamina Requires Level 54 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 1g 21s 6c",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -71836,7 +70809,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Head\tMail 258 Armor +9 Stamina +18 Frost Resistance +18 Shadow Resistance Requires Level 54 Sell Price: 1g 70s 34c",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -71964,7 +70937,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Chest\tPlate 570 Armor +18 Strength +17 Stamina Requires Level 55 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 1g 62s 4c",
         "isNew": false,
         "learn": 275,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -71996,7 +70969,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Feet\tPlate 392 Armor +14 Stamina +10 Fire Resistance +10 Nature Resistance Requires Level 55 Sell Price: 1g 22s 93c",
         "isNew": false,
         "learn": 275,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -72035,7 +71008,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Shoulder\tPlate 427 Armor +14 Stamina +10 Fire Resistance +10 Nature Resistance Requires Level 55 Sell Price: 1g 22s 47c",
         "isNew": false,
         "learn": 275,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -72074,7 +71047,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Legs\tPlate 499 Armor +19 Stamina +10 Arcane Resistance +10 Fire Resistance +10 Frost Resistance +10 Nature Resistance +10 Shadow Resistance Requires Level 55 Sell Price: 1g 73s 76c",
         "isNew": false,
         "learn": 275,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -72094,116 +71067,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Krellack (Silithus)"
-      },
-      {
-        "id": 238290,
-        "spellId": 1224633,
-        "name": "Scarlet Soldier's Chestplate",
-        "icon": "inv_chest_plate08",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Plate Armor",
-        "effect": "Crafted Scarlet Soldier's Chestplate",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12359,
-            "count": 24,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Scarlet Soldier's Chestplate"
-      },
-      {
-        "id": 238288,
-        "spellId": 1224631,
-        "name": "Scarlet Soldier's Helmet",
-        "icon": "inv_helmet_12",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Plate Armor",
-        "effect": "Crafted Scarlet Soldier's Helmet",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 2,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12359,
-            "count": 24,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Scarlet Soldier's Helmet"
-      },
-      {
-        "id": 238289,
-        "spellId": 1224632,
-        "name": "Scarlet Soldier's Spaulders",
-        "icon": "inv_shoulder_29",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Plate Armor",
-        "effect": "Crafted Scarlet Soldier's Spaulders",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12359,
-            "count": 20,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Scarlet Soldier's Spaulders"
       },
       {
         "id": 250594,
@@ -72247,7 +71110,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate legs, level 56",
         "effect": "Binds when equipped Legs\tPlate 507 Armor +18 Strength +18 Stamina Requires Level 56 Imperial Plate (0/8) (2) Set: Increased Defense +7. (3) Set: Improves your chance to hit by 1.0%. (4) Set: Imperial discipline prevents your movement speed from being reduced below 80%. (5) Set: +20 Strength. (6) Set: Improves your chance to get a critical strike by 1.0%. Sell Price: 1g 79s 23c",
         "isNew": false,
-        "learn": 280,
+        "learn": 300,
         "yellow": 300,
         "green": 310,
         "grey": 320,
@@ -72279,7 +71142,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 56",
         "effect": "Binds when equipped Legs\tMail 286 Armor +12 Stamina +18 Frost Resistance +18 Shadow Resistance Requires Level 56 Sell Price: 2g 53s 30c",
         "isNew": false,
-        "learn": 280,
+        "learn": 300,
         "yellow": 300,
         "green": 310,
         "grey": 320,
@@ -72311,7 +71174,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate head, level 56",
         "effect": "Binds when equipped Head\tPlate 471 Armor +19 Stamina +14 Fire Resistance +14 Nature Resistance Requires Level 56 Sell Price: 1g 29s 56c",
         "isNew": false,
-        "learn": 280,
+        "learn": 300,
         "yellow": 300,
         "green": 310,
         "grey": 320,
@@ -72346,105 +71209,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Strashaz Warrior (Dustwallow Marsh)"
-      },
-      {
-        "id": 227880,
-        "spellId": 461733,
-        "name": "Finely-Enchanted Battlehammer",
-        "icon": "inv_hammer_05",
-        "quality": 3,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Maces",
-        "effect": "Crafted Finely-Enchanted Battlehammer",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 305,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 20,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 6,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12364,
-            "count": 2,
-            "name": "Huge Emerald",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12804,
-            "count": 4,
-            "name": "Powerful Mojo",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Finely-Enchanted Battlehammer"
-      },
-      {
-        "id": 12779,
-        "spellId": 16980,
-        "name": "Rune Edge",
-        "icon": "inv_axe_17",
-        "quality": 2,
-        "cat": "One-hand",
-        "kind": "One-Handed Axes",
-        "effect": "Crafted Rune Edge",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 285,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 30,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12799,
-            "count": 2,
-            "name": "Large Opal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12644,
-            "count": 2,
-            "name": "Dense Grinding Stone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
       },
       {
         "id": 275625,
@@ -72548,7 +71312,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate chest, level 57",
         "effect": "Binds when equipped Chest\tPlate 588 Armor +18 Stamina +15 Fire Resistance +15 Nature Resistance Requires Level 57 Sell Price: 1g 82s 5c",
         "isNew": false,
-        "learn": 285,
+        "learn": 300,
         "yellow": 305,
         "green": 315,
         "grey": 325,
@@ -72587,7 +71351,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate legs, level 57",
         "effect": "Binds when equipped Legs\tPlate 515 Armor +19 Stamina +14 Fire Resistance +14 Nature Resistance Requires Level 57 Sell Price: 1g 82s 72c",
         "isNew": false,
-        "learn": 285,
+        "learn": 300,
         "yellow": 305,
         "green": 315,
         "grey": 325,
@@ -72615,38 +71379,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Scarlet Smith (Western Plaguelands)"
-      },
-      {
-        "id": 227871,
-        "spellId": 461667,
-        "name": "Tempered Dark Iron Plate",
-        "icon": "inv_chest_plate08",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Plate Armor",
-        "effect": "Crafted Tempered Dark Iron Plate",
-        "isNew": true,
-        "learn": 285,
-        "yellow": 305,
-        "green": 325,
-        "grey": 345,
-        "reagents": [
-          {
-            "id": 11371,
-            "count": 20,
-            "name": "Dark Iron Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7077,
-            "count": 8,
-            "name": "Heart of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Tempered Dark Iron Plate"
       },
       {
         "id": 275626,
@@ -72741,52 +71473,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Plans: Goregasher Support"
       },
       {
-        "id": 227865,
-        "spellId": 461651,
-        "name": "Fiery Plate Gauntlets of the Hidden Technique",
-        "icon": "inv_gauntlets_03",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Plate Armor",
-        "effect": "Crafted Fiery Plate Gauntlets of the Hidden Technique",
-        "isNew": true,
-        "learn": 290,
-        "yellow": 310,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 20,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 6,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 2,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7910,
-            "count": 4,
-            "name": "Star Ruby",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Fiery Plate Gauntlets of the Hidden Technique"
-      },
-      {
         "id": 12633,
         "spellId": 16724,
         "name": "Whitesoul Helm",
@@ -72796,7 +71482,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate head, level 55",
         "effect": "+35 Healing +12 Spell Damage",
         "isNew": false,
-        "learn": 290,
+        "learn": 300,
         "yellow": 310,
         "green": 320,
         "grey": 330,
@@ -72932,52 +71618,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Plans: Goregasher Stompers"
       },
       {
-        "id": 227870,
-        "spellId": 461737,
-        "name": "Tempest Gauntlets",
-        "icon": "inv_gauntlets_30",
-        "quality": 3,
-        "cat": "Hands",
-        "kind": "Mail Armor",
-        "effect": "Crafted Tempest Gauntlets",
-        "isNew": true,
-        "learn": 295,
-        "yellow": 315,
-        "green": 335,
-        "grey": 355,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 20,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 4,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 4,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12361,
-            "count": 4,
-            "name": "Blue Sapphire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Tempest Gauntlets"
-      },
-      {
         "id": 18262,
         "spellId": 22757,
         "name": "Elemental Sharpening Stone",
@@ -72988,9 +71628,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Increase critical chance on a melee weapon by 2% for 30 minutes.",
         "isNew": false,
         "learn": 300,
-        "yellow": 275,
-        "green": 285,
-        "grey": 295,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
         "reagents": [
           {
             "id": 7067,
@@ -73020,7 +71660,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Attack Power Chance on hit: Reduces an enemy's armor by 165. Stacks up to 3 times.",
         "isNew": false,
         "learn": 300,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -73080,7 +71720,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+15 Parry Rating",
         "isNew": false,
         "learn": 300,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -73133,7 +71773,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chance on hit: Sends a shadowy bolt at the enemy causing 125 to 275 Shadow damage.",
         "isNew": false,
         "learn": 300,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -73186,7 +71826,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chance on hit: Spell damage taken by target increased by 15% for 5 sec.",
         "isNew": false,
         "learn": 300,
-        "yellow": 295,
+        "yellow": 300,
         "green": 305,
         "grey": 315,
         "reagents": [
@@ -75232,38 +73872,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Plans: Handguards of Glory"
       },
       {
-        "id": 227887,
-        "spellId": 461730,
-        "name": "Hardened Frostguard",
-        "icon": "inv_sword_11",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "One-Handed Swords",
-        "effect": "Crafted Hardened Frostguard",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12797,
-            "count": 1,
-            "name": "Frostguard",
-            "icon": "inv_sword_11",
-            "quality": 3
-          },
-          {
-            "id": 18262,
-            "count": 10,
-            "name": "Elemental Sharpening Stone",
-            "icon": "inv_stone_02",
-            "quality": 2
-          }
-        ],
-        "source": "Plans: Hardened Frostguard"
-      },
-      {
         "id": 12783,
         "spellId": 16995,
         "name": "Heartseeker",
@@ -75467,52 +74075,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Plans: Icebane Gauntlets"
-      },
-      {
-        "id": 227876,
-        "spellId": 461735,
-        "name": "Invincible Mail",
-        "icon": "inv_chest_chain_07",
-        "quality": 4,
-        "cat": "Chest",
-        "kind": "Mail Armor",
-        "effect": "Crafted Invincible Mail",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 30,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12364,
-            "count": 6,
-            "name": "Huge Emerald",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12800,
-            "count": 6,
-            "name": "Azerothian Diamond",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Invincible Mail"
       },
       {
         "id": 22198,
@@ -76569,70 +75131,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Bony Construct (Naxxramas)"
       },
       {
-        "id": 228125,
-        "spellId": 461669,
-        "name": "Refined Arcanite Champion",
-        "icon": "inv_sword_39",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Swords",
-        "effect": "Crafted Refined Arcanite Champion",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12790,
-            "count": 1,
-            "name": "Arcanite Champion",
-            "icon": "inv_sword_39",
-            "quality": 3
-          },
-          {
-            "id": 18262,
-            "count": 10,
-            "name": "Elemental Sharpening Stone",
-            "icon": "inv_stone_02",
-            "quality": 2
-          }
-        ],
-        "source": "Plans: Refined Arcanite Champion"
-      },
-      {
-        "id": 227845,
-        "spellId": 461675,
-        "name": "Refined Arcanite Reaper",
-        "icon": "inv_axe_09",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Axes",
-        "effect": "Crafted Refined Arcanite Reaper",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12784,
-            "count": 1,
-            "name": "Arcanite Reaper",
-            "icon": "inv_axe_09",
-            "quality": 3
-          },
-          {
-            "id": 18262,
-            "count": 10,
-            "name": "Elemental Sharpening Stone",
-            "icon": "inv_stone_02",
-            "quality": 2
-          }
-        ],
-        "source": "Plans: Refined Arcanite Reaper"
-      },
-      {
         "id": 273951,
         "spellId": 1292988,
         "name": "Sabatons of Glory",
@@ -76725,52 +75223,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Razzashi Broodwidow (Zul'Gurub)"
       },
       {
-        "id": 227850,
-        "spellId": 461743,
-        "name": "Sageblade of the Archmagus",
-        "icon": "inv_sword_51",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "One-Handed Swords",
-        "effect": "Crafted Sageblade of the Archmagus",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 12,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 13512,
-            "count": 2,
-            "name": "Flask of Supreme Power",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Sageblade of the Archmagus"
-      },
-      {
         "id": 273946,
         "spellId": 1292983,
         "name": "Shoulders of Glory",
@@ -76815,45 +75267,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Plans: Shoulders of Glory"
-      },
-      {
-        "id": 227886,
-        "spellId": 461647,
-        "name": "Skyrider's Masterwork Stormhammer",
-        "icon": "inv_hammer_04",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "One-Handed Maces",
-        "effect": "Crafted Skyrider's Masterwork Stormhammer",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12794,
-            "count": 1,
-            "name": "Masterwork Stormhammer",
-            "icon": "inv_hammer_04",
-            "quality": 3
-          },
-          {
-            "id": 18262,
-            "count": 10,
-            "name": "Elemental Sharpening Stone",
-            "icon": "inv_stone_02",
-            "quality": 2
-          },
-          {
-            "id": 12360,
-            "count": 15,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Skyrider's Masterwork Stormhammer"
       },
       {
         "id": 250599,
@@ -76946,59 +75359,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Plans: Stormcarver"
-      },
-      {
-        "id": 227885,
-        "spellId": 461671,
-        "name": "Stronger-hold Gauntlets",
-        "icon": "inv_gauntlets_30",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Plate Armor",
-        "effect": "Crafted Stronger-hold Gauntlets",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 15,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 20,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7076,
-            "count": 10,
-            "name": "Essence of Earth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12361,
-            "count": 4,
-            "name": "Blue Sapphire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12799,
-            "count": 4,
-            "name": "Large Opal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Stronger-hold Gauntlets"
       },
       {
         "id": 12639,
@@ -77153,59 +75513,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Hive'Zora Reaver (Silithus)"
       },
       {
-        "id": 227872,
-        "spellId": 461739,
-        "name": "Warcrest of the Great Chief",
-        "icon": "inv_helmet_24",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Mail Armor",
-        "effect": "Crafted Warcrest of the Great Chief",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 40,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 4,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8168,
-            "count": 60,
-            "name": "Jet Black Feather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12799,
-            "count": 6,
-            "name": "Large Opal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12364,
-            "count": 2,
-            "name": "Huge Emerald",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Plans: Warcrest of the Great Chief"
-      },
-      {
         "id": 17193,
         "spellId": 21161,
         "name": "Sulfuron Hammer",
@@ -77284,8 +75591,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 325,
-        "green": 350,
-        "grey": 370,
+        "green": 337,
+        "grey": 350,
         "reagents": [
           {
             "id": 17203,
@@ -77340,158 +75647,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Plans: Sulfuron Hammer"
       },
       {
-        "id": 227881,
-        "spellId": 461718,
-        "name": "Tranquility",
-        "icon": "inv_mace_02",
-        "quality": 3,
-        "cat": "One-hand",
-        "kind": "One-Handed Maces",
-        "effect": "Crafted Tranquility",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 310,
-        "green": 335,
-        "grey": 355,
-        "reagents": [
-          {
-            "id": 12655,
-            "count": 6,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12360,
-            "count": 2,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12804,
-            "count": 4,
-            "name": "Powerful Mojo",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12799,
-            "count": 2,
-            "name": "Large Opal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12361,
-            "count": 2,
-            "name": "Blue Sapphire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12364,
-            "count": 1,
-            "name": "Huge Emerald",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 227857,
-        "spellId": 461714,
-        "name": "Desecration",
-        "icon": "inv_sword_07",
-        "quality": 3,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Swords",
-        "effect": "Crafted Desecration",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12359,
-            "count": 40,
-            "name": "Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12360,
-            "count": 2,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12662,
-            "count": 16,
-            "name": "Demonic Rune",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12808,
-            "count": 8,
-            "name": "Essence of Undeath",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12361,
-            "count": 2,
-            "name": "Blue Sapphire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12644,
-            "count": 2,
-            "name": "Dense Grinding Stone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234004,
-        "spellId": 1213643,
-        "name": "Obsidian Grinding Stone",
-        "icon": "inv_stone_sharpeningstone_07",
-        "quality": 1,
-        "cat": "Stones",
-        "kind": "Blacksmithing",
-        "effect": "Crafted Obsidian Grinding Stone",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 22202,
-            "count": 5,
-            "name": "Small Obsidian Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 234086,
         "spellId": 1214257,
         "name": "Black Grasp of the Destroyer",
@@ -77501,10 +75656,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail Armor",
         "effect": "Crafted Black Grasp of the Destroyer",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22203,
@@ -77531,126 +75686,6 @@ window.WOW_PROFESSIONS_DATA = {
             "id": 13512,
             "count": 1,
             "name": "Flask of Supreme Power",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 227884,
-        "spellId": 461716,
-        "name": "Deadly Heartseeker",
-        "icon": "inv_sword_17",
-        "quality": 3,
-        "cat": "One-hand",
-        "kind": "Daggers",
-        "effect": "Crafted Deadly Heartseeker",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 10,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12655,
-            "count": 10,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 2,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7910,
-            "count": 6,
-            "name": "Star Ruby",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12800,
-            "count": 6,
-            "name": "Azerothian Diamond",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12799,
-            "count": 6,
-            "name": "Large Opal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12644,
-            "count": 4,
-            "name": "Dense Grinding Stone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234487,
-        "spellId": 1214309,
-        "name": "Dreamscale Visor",
-        "icon": "inv_helmet_01",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Plate Armor",
-        "effect": "Crafted Dreamscale Visor",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 20,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8146,
-            "count": 8,
-            "name": "Wicked Claw",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20381,
-            "count": 8,
-            "name": "Dreamscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12803,
-            "count": 4,
-            "name": "Living Essence",
             "icon": "inv_misc_questionmark",
             "quality": 1
           }
@@ -77706,10 +75741,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Heavy Obsidian Belt",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22202,
@@ -77752,10 +75787,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Icebane Bracers",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 236656,
@@ -77798,10 +75833,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Icebane Breastplate",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 236656,
@@ -77844,10 +75879,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Icebane Gauntlets",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 236656,
@@ -77890,10 +75925,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Belt",
         "isNew": false,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -77922,10 +75957,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Belt",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -77961,10 +75996,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Breastplate",
         "isNew": false,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -78007,10 +76042,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Breastplate",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -78053,10 +76088,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Gloves",
         "isNew": false,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -78092,10 +76127,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Ironvine Gloves",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 12655,
@@ -78131,10 +76166,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Shields",
         "effect": "Crafted Jagged Obsidian Shield",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22203,
@@ -78209,10 +76244,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail Armor",
         "effect": "Crafted Light Obsidian Belt",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22202,
@@ -78239,246 +76274,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 233490,
-        "spellId": 1213498,
-        "name": "Obsidian Champion",
-        "icon": "inv_sword_39",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Swords",
-        "effect": "Crafted Obsidian Champion",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 40,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20872,
-            "count": 4,
-            "name": "Vermillion Idol",
-            "icon": "inv_qirajidol_vermillion",
-            "quality": 3
-          },
-          {
-            "id": 20879,
-            "count": 2,
-            "name": "Idol of Life",
-            "icon": "inv_qirajidol_life",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233801,
-        "spellId": 1213506,
-        "name": "Obsidian Defender",
-        "icon": "inv_axe_12",
-        "quality": 4,
-        "cat": "Shield",
-        "kind": "One-Handed Axes",
-        "effect": "Crafted Obsidian Defender",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20872,
-            "count": 3,
-            "name": "Vermillion Idol",
-            "icon": "inv_qirajidol_vermillion",
-            "quality": 3
-          },
-          {
-            "id": 20871,
-            "count": 3,
-            "name": "Obsidian Idol",
-            "icon": "inv_qirajidol_obsidian",
-            "quality": 3
-          },
-          {
-            "id": 20874,
-            "count": 2,
-            "name": "Idol of the Sun",
-            "icon": "inv_qirajidol_sun",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233796,
-        "spellId": 1213500,
-        "name": "Obsidian Destroyer",
-        "icon": "inv_hammer_25",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Maces",
-        "effect": "Crafted Obsidian Destroyer",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 40,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234004,
-            "count": 8,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20873,
-            "count": 4,
-            "name": "Alabaster Idol",
-            "icon": "inv_qirajidol_alabaster",
-            "quality": 3
-          },
-          {
-            "id": 20872,
-            "count": 4,
-            "name": "Vermillion Idol",
-            "icon": "inv_qirajidol_vermillion",
-            "quality": 3
-          },
-          {
-            "id": 20875,
-            "count": 2,
-            "name": "Idol of Night",
-            "icon": "inv_qirajidol_night",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234428,
-        "spellId": 1214137,
-        "name": "Obsidian Heartseeker",
-        "icon": "inv_sword_17",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "Daggers",
-        "effect": "Crafted Obsidian Heartseeker",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20871,
-            "count": 3,
-            "name": "Obsidian Idol",
-            "icon": "inv_qirajidol_obsidian",
-            "quality": 3
-          },
-          {
-            "id": 20867,
-            "count": 3,
-            "name": "Onyx Idol",
-            "icon": "inv_qirajidol_onyx",
-            "quality": 3
-          },
-          {
-            "id": 20876,
-            "count": 2,
-            "name": "Idol of Death",
-            "icon": "inv_qirajidol_death",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 234460,
         "spellId": 1214274,
         "name": "Obsidian Mail Tunic",
@@ -78488,10 +76283,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail Armor",
         "effect": "Crafted Obsidian Mail Tunic",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22203,
@@ -78532,377 +76327,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 233491,
-        "spellId": 1213492,
-        "name": "Obsidian Reaver",
-        "icon": "inv_axe_09",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Axes",
-        "effect": "Crafted Obsidian Reaver",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 40,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20873,
-            "count": 4,
-            "name": "Alabaster Idol",
-            "icon": "inv_qirajidol_alabaster",
-            "quality": 3
-          },
-          {
-            "id": 20882,
-            "count": 2,
-            "name": "Idol of War",
-            "icon": "inv_qirajidol_war",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233798,
-        "spellId": 1213504,
-        "name": "Obsidian Sageblade",
-        "icon": "inv_sword_51",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "One-Handed Swords",
-        "effect": "Crafted Obsidian Sageblade",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234004,
-            "count": 3,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20871,
-            "count": 3,
-            "name": "Obsidian Idol",
-            "icon": "inv_qirajidol_obsidian",
-            "quality": 3
-          },
-          {
-            "id": 20877,
-            "count": 2,
-            "name": "Idol of the Sage",
-            "icon": "inv_qirajidol_sage",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233797,
-        "spellId": 1213502,
-        "name": "Obsidian Stormhammer",
-        "icon": "inv_hammer_04",
-        "quality": 4,
-        "cat": "One-hand",
-        "kind": "One-Handed Maces",
-        "effect": "Crafted Obsidian Stormhammer",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 5,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 20871,
-            "count": 3,
-            "name": "Obsidian Idol",
-            "icon": "inv_qirajidol_obsidian",
-            "quality": 3
-          },
-          {
-            "id": 20878,
-            "count": 2,
-            "name": "Idol of Rebirth",
-            "icon": "inv_qirajidol_rebirth",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233492,
-        "spellId": 1213490,
-        "name": "Razorspike Battleplate",
-        "icon": "inv_chest_chain_14",
-        "quality": 4,
-        "cat": "Attachments",
-        "kind": "Plate Armor",
-        "effect": "Crafted Razorspike Battleplate",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 20,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 4,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8146,
-            "count": 10,
-            "name": "Wicked Claw",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234006,
-            "count": 8,
-            "name": "Monstrous Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_13",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233795,
-        "spellId": 1213481,
-        "name": "Razorspike Headcage",
-        "icon": "inv_helmet_06",
-        "quality": 4,
-        "cat": "Attachments",
-        "kind": "Plate Armor",
-        "effect": "Crafted Razorspike Headcage",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 15,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 3,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8146,
-            "count": 10,
-            "name": "Wicked Claw",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234006,
-            "count": 4,
-            "name": "Monstrous Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_13",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233793,
-        "spellId": 1213484,
-        "name": "Razorspike Shoulderplate",
-        "icon": "inv_shoulder_16",
-        "quality": 4,
-        "cat": "Attachments",
-        "kind": "Plate Armor",
-        "effect": "Crafted Razorspike Shoulderplate",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 15,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 3,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8146,
-            "count": 10,
-            "name": "Wicked Claw",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234006,
-            "count": 4,
-            "name": "Monstrous Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_13",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 228230,
-        "spellId": 461712,
-        "name": "Refined Hammer of the Titans",
-        "icon": "inv_hammer_09",
-        "quality": 4,
-        "cat": "Two-hand",
-        "kind": "Two-Handed Maces",
-        "effect": "Crafted Refined Hammer of the Titans",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12796,
-            "count": 1,
-            "name": "Hammer of the Titans",
-            "icon": "inv_hammer_09",
-            "quality": 3
-          },
-          {
-            "id": 18262,
-            "count": 10,
-            "name": "Elemental Sharpening Stone",
-            "icon": "inv_stone_02",
-            "quality": 2
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 235040,
         "spellId": 1215507,
         "name": "Thick Obsidian Breastplate",
@@ -78912,10 +76336,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Plate Armor",
         "effect": "Crafted Thick Obsidian Breastplate",
         "isNew": true,
-        "learn": 1,
+        "learn": 300,
         "yellow": 320,
-        "green": 340,
-        "grey": 360,
+        "green": 330,
+        "grey": 340,
         "reagents": [
           {
             "id": 22203,
@@ -79068,8 +76492,8 @@ window.WOW_PROFESSIONS_DATA = {
         "quality": 3,
         "learn": 250,
         "yellow": 270,
-        "green": 290,
-        "grey": 310,
+        "green": 280,
+        "grey": 290,
         "isNew": true,
         "effect": "Teaches how to craft Prefect's Waistguard (Plate Belt with +12 Intellect, +8 Spirit, +14 Spell Power).",
         "reagents": [
@@ -79125,7 +76549,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Blacksmithing trainer (e.g., Therum Deepforge in Stormwind /way 63.8, 37.8 · Bengus Deepforge in Ironforge /way 51.0, 43.0 · Saru Steelfury in Orgrimmar /way 82.2, 23.0), up to 75."
+          "details": "Learned from any Blacksmithing trainer (e.g., Therum Deepforge in Stormwind's Dwarven District · Bengus Deepforge in Ironforge /way 51.4, 42.2 · Saru Steelfury in Orgrimmar /way 82.2, 23.0 · Basil Frye in Undercity /way 59.2, 29.4), up to 75."
         },
         {
           "type": "step",
@@ -79419,7 +76843,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.0, 43.0, A) or Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H)."
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.4, 42.2, A), Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H) or James Van Brunt in Undercity (/way 61.2, 29.2, H)."
         },
         {
           "type": "step",
@@ -79588,7 +77012,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "Learned from Brikk Keencraft in Booty Bay, Stranglethorn Vale (/way 29.0, 75.4, Neutral, Skill 200 & Level 35), up to 300. Specializations at Skill 200 & Lvl 40: Armorsmith (Grumnus Steelshaper in IF /way 50.2, 42.8 · Okothos Ironrager in Org /way 79.8, 23.8) or Weaponsmith (Ironus Coldsteel in IF /way 50.8, 45.2 · Borgosh Corebender in Org /way 79.6, 23.6)."
+          "details": "Learned from Brikk Keencraft in Booty Bay, Stranglethorn Vale (/way 29.0, 75.4, Neutral, Skill 200 & Level 35), up to 300. Armorsmith specialization: Grumnus Steelshaper in Ironforge (/way 49.0, 43.6) or Okothos Ironrager in Orgrimmar (/way 79.4, 23.4). Weaponsmith: Ironus Coldsteel in Ironforge (/way 49.4, 44.8) or Borgosh Corebender in Orgrimmar (/way 79.4, 23.4)."
         },
         {
           "type": "step",
@@ -80853,8 +78277,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_10_enchanting2_magicswirl_bronze"
     },
     "stats": {
-      "recipeCount": 263,
-      "newInForever": 112,
+      "recipeCount": 236,
+      "newInForever": 85,
       "favorRecipes": 40
     },
     "groups": [
@@ -80862,13 +78286,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Bracer",
         "label": "Bracer",
         "icon": "inv_bracer_07",
-        "count": 48
+        "count": 39
       },
       {
         "key": "Chest",
         "label": "Chest",
         "icon": "inv_chest_cloth_04",
-        "count": 21
+        "count": 19
       },
       {
         "key": "Cloak",
@@ -80880,19 +78304,19 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Weapon",
         "label": "Weapon",
         "icon": "inv_sword_04",
-        "count": 27
+        "count": 25
       },
       {
         "key": "2H Weapon",
         "label": "2H Weapon",
         "icon": "trade_engraving",
-        "count": 18
+        "count": 16
       },
       {
         "key": "Shield",
         "label": "Shield",
         "icon": "inv_shield_04",
-        "count": 15
+        "count": 14
       },
       {
         "key": "Boots",
@@ -80928,13 +78352,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Oils",
         "label": "Oils",
         "icon": "inv_potion_101",
-        "count": 8
+        "count": 7
       },
       {
         "key": "Relics",
         "label": "Relics",
         "icon": "inv_relics_libramofhope",
-        "count": 44
+        "count": 34
       },
       {
         "key": "Wands & Staves",
@@ -81019,7 +78443,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 10,
         "yellow": 10,
-        "green": 30,
+        "green": 12,
         "grey": 15,
         "reagents": [
           {
@@ -81098,8 +78522,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "\tOther Requires Level 5 Use: While applied to target weapon it increases spell damage and healing by up to 8. Lasts for 30 minutes. Sell Price: 1s",
         "isNew": false,
         "learn": 5,
-        "yellow": 30,
-        "green": 50,
+        "yellow": 45,
+        "green": 47,
         "grey": 65,
         "reagents": [
           {
@@ -81136,7 +78560,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Wands & Staves",
         "effect": "Binds when equipped Ranged\tWand 12 - 22 Arcane Damage\tSpeed 1.50 (11.3 damage per second) Requires Level 5 Equip: +1 Spell Power Sell Price: 1s 10c",
         "isNew": false,
-        "learn": 75,
+        "learn": 10,
         "yellow": 75,
         "green": 95,
         "grey": 115,
@@ -81194,8 +78618,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 40,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 4470,
@@ -81406,7 +78830,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Wands & Staves",
         "effect": "Binds when equipped Ranged\tWand 22 - 41 Arcane Damage\tSpeed 1.80 (17.5 damage per second) Requires Level 13 Equip: +2 Spell Power Sell Price: 2s",
         "isNew": false,
-        "learn": 110,
+        "learn": 70,
         "yellow": 110,
         "green": 130,
         "grey": 150,
@@ -81516,7 +78940,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloak Enchant",
         "effect": "Armor +10",
         "isNew": false,
-        "learn": 90,
+        "learn": 70,
         "yellow": 110,
         "green": 130,
         "grey": 150,
@@ -81620,45 +79044,6 @@ window.WOW_PROFESSIONS_DATA = {
             "name": "Small Glimmering Shard",
             "icon": "inv_enchant_shardglimmeringsmall",
             "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 211848,
-        "spellId": 430409,
-        "name": "Blackfathom Mana Oil",
-        "icon": "inv_potion_99",
-        "quality": 2,
-        "cat": "Oils",
-        "kind": "Enchanting",
-        "effect": "Crafted Blackfathom Mana Oil",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 100,
-        "green": 120,
-        "grey": 140,
-        "reagents": [
-          {
-            "id": 3372,
-            "count": 1,
-            "name": "Leaded Vial",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10939,
-            "count": 1,
-            "name": "Greater Magic Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10940,
-            "count": 5,
-            "name": "Strange Dust",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
           }
         ],
         "source": "Trainer"
@@ -81924,8 +79309,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 120,
         "yellow": 120,
-        "green": 160,
-        "grey": 180,
+        "green": 140,
+        "grey": 160,
         "reagents": [
           {
             "id": 4470,
@@ -82321,8 +79706,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 140,
-        "green": 160,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 11137,
@@ -82972,7 +80357,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 150,
         "yellow": 160,
-        "green": 180,
+        "green": 170,
         "grey": 180,
         "reagents": [
           {
@@ -83172,7 +80557,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Wands & Staves",
         "effect": "Binds when equipped Ranged\tWand 23 - 43 Arcane Damage\tSpeed 1.30 (25.4 damage per second) +4 Intellect Requires Level 26 Sell Price: 4s 50c",
         "isNew": false,
-        "learn": 175,
+        "learn": 155,
         "yellow": 175,
         "green": 195,
         "grey": 215,
@@ -83450,8 +80835,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 175,
         "yellow": 195,
-        "green": 235,
-        "grey": 255,
+        "green": 215,
+        "grey": 235,
         "reagents": [
           {
             "id": 11291,
@@ -83698,10 +81083,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Enchanting",
         "effect": "Crafted Greater Mystic Wand",
         "isNew": true,
-        "learn": 125,
+        "learn": 175,
         "yellow": 195,
-        "green": 235,
-        "grey": 255,
+        "green": 215,
+        "grey": 235,
         "reagents": [
           {
             "id": 11291,
@@ -83808,7 +81193,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 200,
         "yellow": 210,
-        "green": 230,
+        "green": 220,
         "grey": 230,
         "reagents": [
           {
@@ -85083,77 +82468,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": null,
-        "spellId": 435903,
-        "name": "Enchant Chest - Retricutioner",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "Chest",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant Chest - Retricutioner",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 200,
-        "green": 240,
-        "grey": 260,
-        "reagents": [
-          {
-            "id": 11177,
-            "count": 1,
-            "name": "Small Radiant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 11176,
-            "count": 2,
-            "name": "Dream Dust",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant Chest - Retricutioner"
-      },
-      {
-        "id": null,
-        "spellId": 435481,
-        "name": "Enchant Weapon - Dismantle",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "Weapon",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant Weapon - Dismantle",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 200,
-        "green": 235,
-        "grey": 255,
-        "reagents": [
-          {
-            "id": 11174,
-            "count": 4,
-            "name": "Lesser Nether Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 5637,
-            "count": 2,
-            "name": "Large Fang",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 11177,
-            "count": 2,
-            "name": "Small Radiant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant Weapon - Dismantle"
-      },
-      {
         "id": 217308,
         "spellId": 439156,
         "name": "Sigil of Innovation",
@@ -85718,7 +83032,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 250,
         "yellow": 250,
-        "green": 270,
+        "green": 255,
         "grey": 260,
         "reagents": [
           {
@@ -85750,7 +83064,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 250,
         "yellow": 250,
-        "green": 270,
+        "green": 255,
         "grey": 260,
         "reagents": [
           {
@@ -85782,8 +83096,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 11176,
@@ -85807,7 +83121,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 250,
         "yellow": 260,
-        "green": 280,
+        "green": 270,
         "grey": 280,
         "reagents": [
           {
@@ -85985,7 +83299,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Relics",
         "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: Your casts of Greater Heal, Healing Touch, Healing Wave, or Holy Light in combat grant up to 40 increased healing and up to 13 increased damage for 15 sec. Sell Price: 15s",
         "isNew": true,
-        "learn": 285,
+        "learn": 265,
         "yellow": 285,
         "green": 305,
         "grey": 325,
@@ -86138,7 +83452,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Relics",
         "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: +9 Hit Rating Use: Increases Frost and Shadow spell damage done by up to 29 for 15 sec. This effect is doubled in Snowy areas. (5 Min Cooldown) Sell Price: 15s",
         "isNew": true,
-        "learn": 285,
+        "learn": 265,
         "yellow": 285,
         "green": 305,
         "grey": 325,
@@ -86177,7 +83491,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Relics",
         "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: +2 Weapon Damage Use: Increases Attack Power by 55 for 15 sec. This effect is doubled in Volcanic areas. (5 Min Cooldown) Sell Price: 15s",
         "isNew": true,
-        "learn": 285,
+        "learn": 265,
         "yellow": 285,
         "green": 305,
         "grey": 325,
@@ -86358,7 +83672,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 275,
         "yellow": 285,
-        "green": 305,
+        "green": 295,
         "grey": 305,
         "reagents": [
           {
@@ -86397,7 +83711,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 275,
         "yellow": 285,
-        "green": 305,
+        "green": 295,
         "grey": 305,
         "reagents": [
           {
@@ -86544,8 +83858,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 280,
         "yellow": 280,
-        "green": 300,
-        "grey": 320,
+        "green": 290,
+        "grey": 300,
         "reagents": [
           {
             "id": 11178,
@@ -86611,144 +83925,6 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "id": null,
-        "spellId": 1231139,
-        "name": "Enchant 2H Weapon - Grand Arcanist",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "2H Weapon",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant 2H Weapon - Grand Arcanist",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 305,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 14344,
-            "count": 10,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 4,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 4,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant 2H Weapon - Grand Arcanist"
-      },
-      {
-        "id": null,
-        "spellId": 1232172,
-        "name": "Enchant 2H Weapon - Grand Inquisitor",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "2H Weapon",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant 2H Weapon - Grand Inquisitor",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 305,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 14344,
-            "count": 10,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 6,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 4,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant 2H Weapon - Grand Inquisitor"
-      },
-      {
-        "id": null,
-        "spellId": 1231128,
-        "name": "Enchant Weapon - Grand Crusader",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "Weapon",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant Weapon - Grand Crusader",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 305,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 14344,
-            "count": 5,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 2,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant Weapon - Grand Crusader"
-      },
-      {
-        "id": null,
         "spellId": 1231164,
         "name": "Enchant Weapon - Grand Sorcerer",
         "icon": "135913",
@@ -86759,8 +83935,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 280,
         "yellow": 305,
-        "green": 310,
-        "grey": 330,
+        "green": 307,
+        "grey": 310,
         "reagents": [
           {
             "id": 14344,
@@ -87439,7 +84615,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 300,
-        "green": 320,
+        "green": 300,
         "grey": 300,
         "reagents": [
           {
@@ -87478,7 +84654,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 320,
         "grey": 330,
         "reagents": [
           {
@@ -87517,7 +84693,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 320,
         "grey": 330,
         "reagents": [
           {
@@ -87556,7 +84732,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -87602,7 +84778,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -87648,7 +84824,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -87740,7 +84916,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -87786,7 +84962,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -87832,7 +85008,7 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 310,
-        "green": 330,
+        "green": 317,
         "grey": 325,
         "reagents": [
           {
@@ -88918,8 +86094,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 320,
-        "green": 360,
-        "grey": 380,
+        "green": 340,
+        "grey": 360,
         "reagents": [
           {
             "id": 20725,
@@ -88957,8 +86133,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 320,
-        "green": 360,
-        "grey": 380,
+        "green": 340,
+        "grey": 360,
         "reagents": [
           {
             "id": 20725,
@@ -89041,8 +86217,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 320,
-        "green": 360,
-        "grey": 380,
+        "green": 340,
+        "grey": 360,
         "reagents": [
           {
             "id": 14344,
@@ -89080,8 +86256,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 300,
         "yellow": 320,
-        "green": 360,
-        "grey": 380,
+        "green": 340,
+        "grey": 360,
         "reagents": [
           {
             "id": 14344,
@@ -89106,66 +86282,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Enchant Shield - Excellent Stamina"
-      },
-      {
-        "id": null,
-        "spellId": 463871,
-        "name": "Enchant Shield - Law of Nature",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "Shield",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant Shield - Law of Nature",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 14344,
-            "count": 4,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 16203,
-            "count": 12,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 4,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 4,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7076,
-            "count": 1,
-            "name": "Essence of Earth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchant Shield - Law of Nature"
       },
       {
         "id": 16252,
@@ -89455,53 +86571,14 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Formula: Blackrock Spire"
       },
       {
-        "id": 233996,
-        "spellId": 1213610,
-        "name": "Enchanted Repellent",
-        "icon": "inv_potion_101",
-        "quality": 1,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchanted Repellent",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234011,
-            "count": 3,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 3,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 16204,
-            "count": 2,
-            "name": "Illusion Dust",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Enchanted Repellent"
-      },
-      {
         "id": 249529,
         "name": "Idol of the Dream",
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
-        "yellow": 315,
-        "green": 330,
-        "grey": 345,
+        "yellow": 320,
+        "green": 340,
+        "grey": 360,
         "isNew": true,
         "effect": "Crafts an Idol of the Dream relic for Druids (+Rejuvenation & Healing Touch).",
         "reagents": [
@@ -89537,9 +86614,9 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
-        "yellow": 315,
-        "green": 330,
-        "grey": 345,
+        "yellow": 320,
+        "green": 340,
+        "grey": 360,
         "isNew": true,
         "effect": "Crafts a Libram of Holy Alacrity relic for Paladins (+Holy Light cast speed & spell crit).",
         "reagents": [
@@ -89570,46 +86647,14 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Relics"
       },
       {
-        "id": 233995,
-        "spellId": 1213607,
-        "name": "Scroll: Wrath of the Swarm",
-        "icon": "inv_scroll_14",
-        "quality": 3,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Scroll: Wrath of the Swarm",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 16203,
-            "count": 1,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14047,
-            "count": 1,
-            "name": "Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scroll: Wrath of the Swarm"
-      },
-      {
         "id": 249532,
         "name": "Totem of Thunder",
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
-        "yellow": 315,
-        "green": 330,
-        "grey": 345,
+        "yellow": 320,
+        "green": 340,
+        "grey": 360,
         "isNew": true,
         "effect": "Crafts a Totem of Thunder relic for Shamans (+Lightning Bolt & Chain Lightning spell damage).",
         "reagents": [
@@ -89675,8 +86720,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 320,
-        "green": 360,
-        "grey": 380,
+        "green": 340,
+        "grey": 360,
         "reagents": [
           {
             "id": 14344,
@@ -89724,911 +86769,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": null,
-        "spellId": 1213616,
-        "name": "Enchant Chest - Living Stats",
-        "icon": "135913",
-        "quality": 1,
-        "cat": "Chest",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchant Chest - Living Stats",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 16204,
-            "count": 8,
-            "name": "Illusion Dust",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 16203,
-            "count": 5,
-            "name": "Greater Eternal Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 13458,
-            "count": 10,
-            "name": "Greater Nature Protection Potion",
-            "icon": "inv_potion_22",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 2,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 2,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234002,
-        "spellId": 1213635,
-        "name": "Enchanted Mushroom",
-        "icon": "creature_sporemushroom",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchanted Mushroom",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 20,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 4,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 4,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234000,
-        "spellId": 1213628,
-        "name": "Enchanted Prayer Tome",
-        "icon": "inv_relics_libramoftruth",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchanted Prayer Tome",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234008,
-            "count": 10,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233993,
-        "spellId": 1213600,
-        "name": "Enchanted Stopwatch",
-        "icon": "inv_misc_pocketwatch_02",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchanted Stopwatch",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234003,
-            "count": 3,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234005,
-            "count": 6,
-            "name": "Obsidian Blasting Powder",
-            "icon": "inv_misc_ammo_gunpowder_06",
-            "quality": 1
-          },
-          {
-            "id": 14344,
-            "count": 4,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 2459,
-            "count": 3,
-            "name": "Swiftness Potion",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234001,
-        "spellId": 1213633,
-        "name": "Enchanted Totem",
-        "icon": "inv_relics_totemoflife",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Enchanted Totem",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234469,
-        "spellId": 1216022,
-        "name": "Idol of Feline Ferocity",
-        "icon": "inv_relics_idolofferocity",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Idol of Feline Ferocity",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 20,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 4,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 4,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234474,
-        "spellId": 1216020,
-        "name": "Idol of Sidereal Wrath",
-        "icon": "inv_relics_idolofrejuvenation",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Idol of Sidereal Wrath",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 20,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 4,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 4,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234468,
-        "spellId": 1216024,
-        "name": "Idol of Ursin Power",
-        "icon": "inv_relics_idolofferocity",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Idol of Ursin Power",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 2,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 20,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 4,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 4,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234477,
-        "spellId": 1216005,
-        "name": "Libram of Righteousness",
-        "icon": "inv_relics_libramofhope",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Libram of Righteousness",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234008,
-            "count": 10,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234476,
-        "spellId": 1216010,
-        "name": "Libram of Sanctity",
-        "icon": "inv_relics_libramofgrace",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Libram of Sanctity",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234008,
-            "count": 10,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234475,
-        "spellId": 1216007,
-        "name": "Libram of the Exorcist",
-        "icon": "inv_relics_libramoftruth",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Libram of the Exorcist",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234008,
-            "count": 10,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233992,
-        "spellId": 1213598,
-        "name": "Lodestone of Retaliation",
-        "icon": "inv_stone_08",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Lodestone of Retaliation",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 10,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 5,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 4,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234011,
-            "count": 10,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233994,
-        "spellId": 1213603,
-        "name": "Ruby-Encrusted Broach",
-        "icon": "inv_jewelry_necklace_15",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Ruby-Encrusted Broach",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 10,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 5,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 6,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 10,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233990,
-        "spellId": 1213593,
-        "name": "Speedstone",
-        "icon": "inv_pet_scorchedstone",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Speedstone",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234006,
-            "count": 10,
-            "name": "Monstrous Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_13",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 10,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 6,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234004,
-            "count": 6,
-            "name": "Obsidian Grinding Stone",
-            "icon": "inv_stone_sharpeningstone_07",
-            "quality": 1
-          },
-          {
-            "id": 2452,
-            "count": 20,
-            "name": "Swiftthistle",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233991,
-        "spellId": 1213595,
-        "name": "Tear of the Dreamer",
-        "icon": "inv_elemental_crystal_life",
-        "quality": 4,
-        "cat": "Bracer",
-        "kind": "Enchanting",
-        "effect": "Crafted Tear of the Dreamer",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 234006,
-            "count": 10,
-            "name": "Monstrous Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_13",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 10,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 4,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 10,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234479,
-        "spellId": 1216018,
-        "name": "Totem of Flowing Magma",
-        "icon": "inv_relics_totemofrage",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Totem of Flowing Magma",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234480,
-        "spellId": 1216014,
-        "name": "Totem of Pyroclastic Thunder",
-        "icon": "inv_relics_totemofrebirth",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Totem of Pyroclastic Thunder",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234478,
-        "spellId": 1216016,
-        "name": "Totem of Thunderous Strikes",
-        "icon": "inv_relics_totemofrage",
-        "quality": 4,
-        "cat": "Relics",
-        "kind": "Enchanting",
-        "effect": "Crafted Totem of Thunderous Strikes",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 360,
-        "grey": 380,
-        "reagents": [
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 10,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 2,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 12810,
-            "count": 3,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 271624,
         "name": "Enchanting Certification",
         "icon": "inv_scroll_15",
@@ -90654,7 +86794,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Enchanting trainer (e.g., Lucan Cordell in Stormwind /way 53.0, 74.2 · Gimble Thistlefuzz in Ironforge /way 60.0, 45.4 · Godan in Orgrimmar /way 53.8, 38.6 · Lavinia Crowe in Undercity /way 62.4, 60.8), up to 75."
+          "details": "Learned from any Enchanting trainer (e.g., Lucan Cordell in Stormwind /way 43.0, 64.2 · Gimble Thistlefuzz in Ironforge /way 60.0, 45.2 · Godan in Orgrimmar /way 53.8, 38.4 · Lavinia Crowe in Undercity /way 62.6, 61.4), up to 75."
         },
         {
           "type": "step",
@@ -90754,7 +86894,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Forever trainers in Zephras Isle & Riverglades."
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Alanna Raveneye in Teldrassil, Vance Undergloom in Brill, or Xylinnia Starshine in Feathermoon Stronghold, Feralas."
         },
         {
           "type": "step",
@@ -91104,7 +87244,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "Learned from Annora deep inside Uldaman, Badlands (/way 36.6, 31.2 inside instance, Neutral, Skill 200 & Level 35 — clear scorpids around her to unlock), up to 300."
+          "details": "Learned from Annora <Master Enchanter> deep inside Uldaman, Badlands (both factions, Skill 200 & Level 35). She sits between the Map Chamber and the Temple Hall and only appears after you clear the scorpids around her. Up to 300."
         },
         {
           "type": "step",
@@ -91819,8 +87959,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_misc_enggizmos_13"
     },
     "stats": {
-      "recipeCount": 276,
-      "newInForever": 107,
+      "recipeCount": 263,
+      "newInForever": 97,
       "favorRecipes": 29
     },
     "groups": [
@@ -91828,19 +87968,19 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Explosives",
         "label": "Bombs and explosives",
         "icon": "inv_misc_bomb_02",
-        "count": 44
+        "count": 42
       },
       {
         "key": "Devices",
         "label": "Trinkets and devices",
         "icon": "inv_gizmo_01",
-        "count": 75
+        "count": 69
       },
       {
         "key": "Head",
         "label": "Goggles and helms",
         "icon": "inv_helmet_47",
-        "count": 25
+        "count": 24
       },
       {
         "key": "Gear",
@@ -91852,7 +87992,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Guns",
         "label": "Guns and scopes",
         "icon": "inv_weapon_rifle_01",
-        "count": 19
+        "count": 16
       },
       {
         "key": "Ammo",
@@ -91876,7 +88016,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Parts",
         "label": "Parts",
         "icon": "inv_misc_gear_01",
-        "count": 36
+        "count": 35
       },
       {
         "key": "Other",
@@ -91993,8 +88133,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 4359,
@@ -93691,7 +89831,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth feet",
         "effect": "These dangerous looking boots significantly increase your run speed for 20 sec. They are prone to explode however, so use with caution.",
         "isNew": false,
-        "learn": 130,
+        "learn": 225,
         "yellow": 245,
         "green": 255,
         "grey": 265,
@@ -93746,8 +89886,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 135,
         "yellow": 135,
-        "green": 145,
-        "grey": 165,
+        "green": 140,
+        "grey": 145,
         "reagents": [
           {
             "id": 4382,
@@ -93870,8 +90010,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 4375,
@@ -94564,7 +90704,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Jumper Cables will sometimes be able to shock a dead player back to life. Cannot be used when in combat.",
         "isNew": false,
         "learn": 165,
-        "yellow": 160,
+        "yellow": 165,
         "green": 180,
         "grey": 200,
         "reagents": [
@@ -95211,8 +91351,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 175,
         "yellow": 180,
-        "green": 185,
-        "grey": 205,
+        "green": 182,
+        "grey": 185,
         "reagents": [
           {
             "id": 4363,
@@ -95973,8 +92113,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 200,
         "yellow": 200,
-        "green": 220,
-        "grey": 240,
+        "green": 210,
+        "grey": 220,
         "reagents": [
           {
             "id": 6037,
@@ -96159,7 +92299,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Blacksmithing",
         "effect": "\tBlacksmithing Requires Blacksmithing (200) \"Teaches you how to make an Inlaid Mithril Cylinder.  This item is used by Gnomish Engineers.\" Sell Price: 5s",
         "isNew": false,
-        "learn": 200,
+        "learn": 205,
         "yellow": 205,
         "green": 205,
         "grey": 205,
@@ -97404,8 +93544,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 10505,
@@ -97528,8 +93668,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 10505,
@@ -97567,8 +93707,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 213383,
@@ -97677,8 +93817,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 240,
-        "grey": 260,
+        "green": 232,
+        "grey": 240,
         "reagents": [
           {
             "id": 213376,
@@ -98282,52 +94422,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 10580,
-        "spellId": 12720,
-        "name": "Goblin \"Boom\" Box",
-        "icon": "inv_box_01",
-        "quality": 1,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted Goblin \"Boom\" Box",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 235,
-        "green": 255,
-        "grey": 275,
-        "reagents": [
-          {
-            "id": 10561,
-            "count": 1,
-            "name": "Mithril Casing",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10505,
-            "count": 2,
-            "name": "Solid Blasting Powder",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10558,
-            "count": 1,
-            "name": "Gold Power Core",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 3860,
-            "count": 2,
-            "name": "Mithril Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 10562,
         "spellId": 12619,
         "name": "Hi-Explosive Bomb",
@@ -98496,98 +94590,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Schematic: EZ-Thro Tru-Trigger"
-      },
-      {
-        "id": 10723,
-        "spellId": 12904,
-        "name": "Gnomish Ham Radio",
-        "icon": "spell_holy_dizzy",
-        "quality": 1,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted Gnomish Ham Radio",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 240,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 10561,
-            "count": 1,
-            "name": "Mithril Casing",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 3860,
-            "count": 2,
-            "name": "Mithril Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 4389,
-            "count": 1,
-            "name": "Gyrochronatom",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10560,
-            "count": 1,
-            "name": "Unstable Trigger",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 10585,
-        "spellId": 12722,
-        "name": "Goblin Radio",
-        "icon": "spell_holy_dizzy",
-        "quality": 1,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted Goblin Radio",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 240,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 10561,
-            "count": 1,
-            "name": "Mithril Casing",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 3860,
-            "count": 2,
-            "name": "Mithril Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 4389,
-            "count": 1,
-            "name": "Gyrochronatom",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 10560,
-            "count": 1,
-            "name": "Unstable Trigger",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
       },
       {
         "id": 260809,
@@ -99058,8 +95060,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -99111,8 +95113,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -99164,8 +95166,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -99217,8 +95219,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 255,
-        "green": 260,
-        "grey": 280,
+        "green": 257,
+        "grey": 260,
         "reagents": [
           {
             "id": 15994,
@@ -99383,38 +95385,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 236871,
-        "spellId": 1221012,
-        "name": "Creepy Censor Sensors",
-        "icon": "inv_gizmo_newgoggles",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Engineering",
-        "effect": "Crafted Creepy Censor Sensors",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 275,
-        "green": 280,
-        "grey": 300,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 8,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12800,
-            "count": 2,
-            "name": "Azerothian Diamond",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Creepy Censor Sensors"
-      },
-      {
         "id": 238737,
         "spellId": 1226206,
         "name": "Tinkerbox",
@@ -99424,10 +95394,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinkerbox",
         "isNew": true,
-        "learn": 1,
+        "learn": 250,
         "yellow": 260,
-        "green": 280,
-        "grey": 300,
+        "green": 270,
+        "grey": 280,
         "reagents": [
           {
             "id": 10561,
@@ -99937,10 +95907,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinkerbox: Magnetic Displacement",
         "isNew": true,
-        "learn": 1,
+        "learn": 260,
         "yellow": 270,
-        "green": 290,
-        "grey": 310,
+        "green": 280,
+        "grey": 290,
         "reagents": [
           {
             "id": 238737,
@@ -99976,10 +95946,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinkerbox: Nitro Boosts",
         "isNew": true,
-        "learn": 1,
+        "learn": 260,
         "yellow": 270,
-        "green": 290,
-        "grey": 310,
+        "green": 280,
+        "grey": 290,
         "reagents": [
           {
             "id": 238737,
@@ -100015,10 +95985,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinkerbox: Teleport",
         "isNew": true,
-        "learn": 1,
+        "learn": 260,
         "yellow": 270,
-        "green": 290,
-        "grey": 310,
+        "green": 280,
+        "grey": 290,
         "reagents": [
           {
             "id": 238737,
@@ -100710,10 +96680,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinker: Magnetic Displacement",
         "isNew": true,
-        "learn": 1,
+        "learn": 280,
         "yellow": 280,
-        "green": 285,
-        "grey": 305,
+        "green": 282,
+        "grey": 285,
         "reagents": [
           {
             "id": 238737,
@@ -100749,10 +96719,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinker: Nitro Boosts",
         "isNew": true,
-        "learn": 1,
+        "learn": 280,
         "yellow": 280,
-        "green": 285,
-        "grey": 305,
+        "green": 282,
+        "grey": 285,
         "reagents": [
           {
             "id": 238737,
@@ -100788,10 +96758,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Engineering",
         "effect": "Crafted Tinker: Teleport",
         "isNew": true,
-        "learn": 1,
+        "learn": 280,
         "yellow": 280,
-        "green": 285,
-        "grey": 305,
+        "green": 282,
+        "grey": 285,
         "reagents": [
           {
             "id": 238737,
@@ -101347,7 +97317,7 @@ window.WOW_PROFESSIONS_DATA = {
         "learn": 300,
         "yellow": 305,
         "green": 305,
-        "grey": 325,
+        "grey": 305,
         "reagents": [
           {
             "id": 16006,
@@ -102697,413 +98667,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Schematic: Ultrasafe Rechargeable Battery"
       },
       {
-        "id": 233984,
-        "spellId": 1213573,
-        "name": "Arcane Megabomb",
-        "icon": "inv_misc_runedorb_01",
-        "quality": 1,
-        "cat": "Explosives",
-        "kind": "Engineering",
-        "effect": "Crafted Arcane Megabomb",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 16006,
-            "count": 1,
-            "name": "Delicate Arcanite Converter",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20725,
-            "count": 1,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14047,
-            "count": 1,
-            "name": "Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233987,
-        "spellId": 1213586,
-        "name": "G00 DV-1B3 Generator",
-        "icon": "inv_misc_weathermachine_01",
-        "quality": 3,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted G00 DV-1B3 Generator",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 234005,
-            "count": 20,
-            "name": "Obsidian Blasting Powder",
-            "icon": "inv_misc_ammo_gunpowder_06",
-            "quality": 1
-          },
-          {
-            "id": 234012,
-            "count": 30,
-            "name": "Hive Thistle",
-            "icon": "inv_misc_spineleaf-_01",
-            "quality": 1
-          },
-          {
-            "id": 234009,
-            "count": 8,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 234011,
-            "count": 8,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234010,
-            "count": 8,
-            "name": "Ancient Sandworm Bile",
-            "icon": "inv_misc_organ_10",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 8,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234005,
-        "spellId": 1213646,
-        "name": "Obsidian Blasting Powder",
-        "icon": "inv_misc_ammo_gunpowder_06",
-        "quality": 1,
-        "cat": "Parts",
-        "kind": "Engineering",
-        "effect": "Crafted Obsidian Blasting Powder",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 22202,
-            "count": 2,
-            "name": "Small Obsidian Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233986,
-        "spellId": 1213578,
-        "name": "Obsidian Bomb",
-        "icon": "ability_vehicle_demolisherflamecatapult",
-        "quality": 1,
-        "cat": "Explosives",
-        "kind": "Engineering",
-        "effect": "Crafted Obsidian Bomb",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 234005,
-            "count": 3,
-            "name": "Obsidian Blasting Powder",
-            "icon": "inv_misc_ammo_gunpowder_06",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 1,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 234008,
-            "count": 1,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          },
-          {
-            "id": 12365,
-            "count": 1,
-            "name": "Dense Stone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233985,
-        "spellId": 1213576,
-        "name": "The Fumigator",
-        "icon": "spell_fire_felflamestrike",
-        "quality": 1,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted The Fumigator",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 234011,
-            "count": 1,
-            "name": "Qiraji Stalker Venom",
-            "icon": "ability_creature_poison_04",
-            "quality": 1
-          },
-          {
-            "id": 234005,
-            "count": 2,
-            "name": "Obsidian Blasting Powder",
-            "icon": "inv_misc_ammo_gunpowder_06",
-            "quality": 1
-          },
-          {
-            "id": 14047,
-            "count": 1,
-            "name": "Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233988,
-        "spellId": 1213588,
-        "name": "Tuned Force Reactive Disk",
-        "icon": "spell_arcane_portaldalaran",
-        "quality": 4,
-        "cat": "Devices",
-        "kind": "Engineering",
-        "effect": "Crafted Tuned Force Reactive Disk",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 18168,
-            "count": 1,
-            "name": "Force Reactive Disk",
-            "icon": "spell_arcane_portaldarnassus",
-            "quality": 4
-          },
-          {
-            "id": 234007,
-            "count": 4,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 234005,
-            "count": 5,
-            "name": "Obsidian Blasting Powder",
-            "icon": "inv_misc_ammo_gunpowder_06",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 227849,
-        "spellId": 461710,
-        "name": "Fiery Core Sharpshooter Rifle",
-        "icon": "inv_weapon_rifle_05",
-        "quality": 4,
-        "cat": "Guns",
-        "kind": "Engineering",
-        "effect": "Crafted Fiery Core Sharpshooter Rifle",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 17010,
-            "count": 4,
-            "name": "Fiery Core",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 17011,
-            "count": 2,
-            "name": "Lava Core",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12360,
-            "count": 6,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 16006,
-            "count": 2,
-            "name": "Delicate Arcanite Converter",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 16000,
-            "count": 2,
-            "name": "Thorium Tube",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 235529,
-        "spellId": 1217207,
-        "name": "Obsidian Scope",
-        "icon": "inv_misc_spyglass_03",
-        "quality": 3,
-        "cat": "Guns",
-        "kind": "Engineering",
-        "effect": "Crafted Obsidian Scope",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 16000,
-            "count": 1,
-            "name": "Thorium Tube",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12363,
-            "count": 1,
-            "name": "Arcane Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 1,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234434,
-        "spellId": 1214145,
-        "name": "Obsidian Shotgun",
-        "icon": "inv_weapon_rifle_09",
-        "quality": 4,
-        "cat": "Guns",
-        "kind": "Engineering",
-        "effect": "Crafted Obsidian Shotgun",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12360,
-            "count": 30,
-            "name": "Arcanite Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234003,
-            "count": 8,
-            "name": "Obsidian-Infused Thorium Bar",
-            "icon": "inv_ingot_titansteel_dark",
-            "quality": 2
-          },
-          {
-            "id": 20725,
-            "count": 3,
-            "name": "Nexus Crystal",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20868,
-            "count": 3,
-            "name": "Lambent Idol",
-            "icon": "inv_qirajidol_lambent",
-            "quality": 3
-          },
-          {
-            "id": 20870,
-            "count": 3,
-            "name": "Jasper Idol",
-            "icon": "inv_qirajidol_jasper",
-            "quality": 3
-          },
-          {
-            "id": 20881,
-            "count": 2,
-            "name": "Idol of Strife",
-            "icon": "inv_qirajidol_strife",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 21277,
         "spellId": 26011,
         "name": "Tranquil Mechanical Yeti",
@@ -103182,7 +98745,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Engineering trainer (e.g., Lilliam Sparkspindle in Stormwind /way 62.2, 30.6 · Springspindle Fizzlegear in Ironforge /way 68.4, 44.0 · Roxxik in Orgrimmar /way 76.0, 25.0), up to 75."
+          "details": "Learned from any Engineering trainer (e.g., Lilliam Sparkspindle in Stormwind /way 62.2, 30.6 · Springspindle Fizzlegear in Ironforge /way 68.8, 45.2 · Roxxik in Orgrimmar /way 76.0, 25.0 · the Strange Hermit on Zephras Isle /way 54.0, 39.0), up to 75."
         },
         {
           "type": "step",
@@ -103284,7 +98847,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Ratchet / Dalaran (Alterac Mountains)."
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Trixie Quikswitch in Ironforge, Nogg in Orgrimmar, or Finbus Geargrind in Darkshire, Duskwood (/way 77.4, 48.4)."
         },
         {
           "type": "step",
@@ -103564,7 +99127,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Springspindle Fizzlegear in Ironforge (/way 68.4, 44.0, A) or Roxxik in Valley of Honor, Orgrimmar (/way 76.0, 25.0, H)."
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Springspindle Fizzlegear in Ironforge (/way 68.8, 45.2, A) or Roxxik in the Valley of Honor, Orgrimmar (/way 76.0, 25.0, H)."
         },
         {
           "type": "step",
@@ -103733,7 +99296,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "Learned from Buzzek Bracketswing in Gadgetzan, Tanaris (/way 52.2, 27.6, Neutral, Skill 200 & Level 35), up to 300. Specializations at Skill 200 & Lvl 30: Gnomish Engineering (Tinkmaster Overspark in IF /way 69.8, 50.2 · Oglethorpe Obnoticus in Booty Bay /way 28.2, 76.2) or Goblin Engineering (Nixx Sprocketspring in Gadgetzan /way 52.4, 27.2). Note: Belt Tinkers unlock at 260 (consumable) & 280 (permanent)!"
+          "details": "Learned from Buzzek Bracketswing in Gadgetzan, Tanaris (/way 52.2, 27.6, Neutral, Skill 200 & Level 35) or Kaylaena Springwhisper in Mount Hyjal (Forever), up to 300. Specializations: Gnomish Engineering from Tinkmaster Overspark in Ironforge (/way 70.6, 50.4) or Oglethorpe Obnoticus in Booty Bay (/way 28.2, 76.2); Goblin Engineering from Nixx Sprocketspring in Gadgetzan (/way 52.4, 27.2). Melbin Powderfuse in Riverglades (/way 77.6, 50.8) teaches Forever goblin recipes."
         },
         {
           "type": "step",
@@ -104560,8 +100123,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_misc_leatherscrap_01"
     },
     "stats": {
-      "recipeCount": 593,
-      "newInForever": 329,
+      "recipeCount": 537,
+      "newInForever": 273,
       "favorRecipes": 82
     },
     "groups": [
@@ -104569,67 +100132,67 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Head",
         "label": "Head",
         "icon": "inv_helmet_24",
-        "count": 48
+        "count": 41
       },
       {
         "key": "Shoulder",
         "label": "Shoulders",
         "icon": "inv_shoulder_02",
-        "count": 58
+        "count": 45
       },
       {
         "key": "Back",
         "label": "Cloaks",
         "icon": "inv_misc_cape_02",
-        "count": 18
+        "count": 16
       },
       {
         "key": "Chest",
         "label": "Chest",
         "icon": "inv_chest_chain_05",
-        "count": 84
+        "count": 77
       },
       {
         "key": "Wrist",
         "label": "Bracers",
         "icon": "inv_bracer_07",
-        "count": 45
+        "count": 42
       },
       {
         "key": "Hands",
         "label": "Gloves",
         "icon": "inv_gauntlets_04",
-        "count": 90
+        "count": 84
       },
       {
         "key": "Waist",
         "label": "Belts",
         "icon": "inv_belt_03",
-        "count": 62
+        "count": 59
       },
       {
         "key": "Legs",
         "label": "Legs",
         "icon": "inv_pants_03",
-        "count": 69
+        "count": 61
       },
       {
         "key": "Feet",
         "label": "Boots",
         "icon": "inv_boots_05",
-        "count": 74
+        "count": 72
       },
       {
         "key": "Kits",
         "label": "Armor kits",
         "icon": "inv_misc_armorkit_17",
-        "count": 17
+        "count": 15
       },
       {
         "key": "Bags",
         "label": "Bags",
         "icon": "inv_misc_bag_10",
-        "count": 10
+        "count": 8
       },
       {
         "key": "Leather",
@@ -104641,7 +100204,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Other",
         "label": "Other",
         "icon": "inv_misc_note_01",
-        "count": 4
+        "count": 3
       },
       {
         "key": "Camp",
@@ -104873,8 +100436,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2318,
@@ -106844,7 +102407,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "Binds when picked up Chest\tLeather 85 Armor +7 Agility +3 Spirit +3 Stamina +5 Strength Requires Level 15 Sell Price: 8s 60c",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -106883,7 +102446,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "Binds when picked up Chest\tLeather 85 Armor +3 Agility +5 Stamina +7 Strength +33 Armor Requires Level 15 Sell Price: 8s 50c",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -106961,7 +102524,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "+8 Spell Power",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -107000,7 +102563,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "+6 Spell Power",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -107039,7 +102602,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "Binds when picked up Chest\tLeather 85 Armor +7 Agility +3 Intellect +3 Spirit +5 Stamina Requires Level 15 Sell Price: 8s 63c",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -107078,7 +102641,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather chest, level 15",
         "effect": "+5 Spell Damage +15 Healing",
         "isNew": true,
-        "learn": 80,
+        "learn": 75,
         "yellow": 80,
         "green": 80,
         "grey": 80,
@@ -108505,7 +104068,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "Binds when picked up Legs\tLeather 82 Armor +9 Agility +4 Spirit +4 Stamina +6 Strength Requires Level 20 Sell Price: 17s",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -108544,7 +104107,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "Binds when picked up Legs\tLeather 82 Armor +4 Agility +6 Stamina +9 Strength +42 Armor Requires Level 20 Sell Price: 15s 68c",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -108583,7 +104146,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "+10 Spell Power",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -108622,7 +104185,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "+7 Spell Power",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -108661,7 +104224,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "Binds when picked up Legs\tLeather 82 Armor +9 Agility +4 Intellect +4 Spirit +6 Strength Requires Level 20 Sell Price: 17s 6c",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -108700,7 +104263,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 20",
         "effect": "+7 Spell Damage +20 Healing",
         "isNew": true,
-        "learn": 105,
+        "learn": 100,
         "yellow": 105,
         "green": 105,
         "grey": 105,
@@ -109866,8 +105429,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": false,
         "learn": 125,
         "yellow": 125,
-        "green": 130,
-        "grey": 135,
+        "green": 125,
+        "grey": 150,
         "reagents": [
           {
             "id": 4234,
@@ -109896,7 +105459,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "Binds when picked up Head\tLeather 84 Armor +10 Agility +13 Stamina Requires Level 25 Sell Price: 20s 56c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -109935,7 +105498,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "Binds when picked up Head\tLeather 84 Armor +13 Stamina +12 Strength Requires Level 25 Sell Price: 20s 79c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -109974,7 +105537,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "Binds when picked up Head\tLeather 84 Armor +10 Spirit +13 Stamina Requires Level 25 Sell Price: 20s 71c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -110013,7 +105576,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "+12 Spell Power",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -110052,7 +105615,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "Binds when picked up Head\tLeather 84 Armor +10 Intellect +13 Stamina Requires Level 25 Sell Price: 20s 63c",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -110091,7 +105654,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather head, level 25",
         "effect": "+7 Spell Damage +21 Healing",
         "isNew": true,
-        "learn": 130,
+        "learn": 125,
         "yellow": 130,
         "green": 130,
         "grey": 130,
@@ -110749,10 +106312,10 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "Places a Tanning Rack that allows the creation of certain reagents, and provides all of the benefits of a Camp Tent. Requires a Campfire nearby. May be placed over a Camp Tent to replace it. All camping features share a cooldown of 1 hr.",
         "isNew": true,
-        "learn": 140,
-        "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "learn": 125,
+        "yellow": 125,
+        "green": 125,
+        "grey": 125,
         "reagents": [
           {
             "id": 2319,
@@ -111694,70 +107257,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 211502,
-        "spellId": 429869,
-        "name": "Void-Touched Leather Gauntlets",
-        "icon": "inv_gauntlets_24",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Void-Touched Leather Gauntlets",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 160,
-        "green": 185,
-        "grey": 205,
-        "reagents": [
-          {
-            "id": 211422,
-            "count": 1,
-            "name": "Shard of the Void",
-            "icon": "inv_jewelry_talisman_16",
-            "quality": 4
-          },
-          {
-            "id": 4253,
-            "count": 1,
-            "name": "Toughened Leather Gloves",
-            "icon": "inv_gauntlets_24",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 211423,
-        "spellId": 429354,
-        "name": "Void-Touched Leather Gloves",
-        "icon": "inv_gauntlets_24",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Void-Touched Leather Gloves",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 160,
-        "green": 185,
-        "grey": 205,
-        "reagents": [
-          {
-            "id": 211422,
-            "count": 1,
-            "name": "Shard of the Void",
-            "icon": "inv_jewelry_talisman_16",
-            "quality": 4
-          },
-          {
-            "id": 4253,
-            "count": 1,
-            "name": "Toughened Leather Gloves",
-            "icon": "inv_gauntlets_24",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 4262,
         "spellId": 3778,
         "name": "Gem-studded Leather Belt",
@@ -111820,7 +107319,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth cloak, level 32",
         "effect": "+6 Spell Power",
         "isNew": false,
-        "learn": 125,
+        "learn": 160,
         "yellow": 180,
         "green": 190,
         "grey": 200,
@@ -113277,7 +108776,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather wrist, level 32",
         "effect": "Binds when equipped Wrist\tLeather 46 Armor +8 Agility Requires Level 32 Sell Price: 21s 46c",
         "isNew": false,
-        "learn": 155,
+        "learn": 160,
         "yellow": 180,
         "green": 190,
         "grey": 200,
@@ -115524,7 +111023,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Critical Strike Rating",
         "isNew": false,
         "learn": 200,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -115570,7 +111069,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+6 Spell Damage +19 Healing",
         "isNew": true,
         "learn": 225,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -115676,7 +111175,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+8 Spell Power",
         "isNew": true,
         "learn": 225,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -115736,7 +111235,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+10 Spell Power",
         "isNew": true,
         "learn": 225,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -115796,7 +111295,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when picked up Wrist\tMail 131 Armor +9 Agility +6 Intellect +5 Spirit +7 Stamina Requires Level 45 Sell Price: 86s 92c",
         "isNew": true,
         "learn": 225,
-        "yellow": 220,
+        "yellow": 225,
         "green": 230,
         "grey": 240,
         "reagents": [
@@ -115943,190 +111442,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
-      },
-      {
-        "id": 215166,
-        "spellId": 435904,
-        "name": "Glowing Gneuro-Linked Cowl",
-        "icon": "inv_helmet_15",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Glowing Gneuro-Linked Cowl",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 225,
-        "green": 235,
-        "grey": 255,
-        "reagents": [
-          {
-            "id": 213379,
-            "count": 1,
-            "name": "Hyperconductive Arcano-Filament",
-            "icon": "inv_misc_thread_eternium",
-            "quality": 3
-          },
-          {
-            "id": 8172,
-            "count": 5,
-            "name": "Cured Thick Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 4291,
-            "count": 2,
-            "name": "Silken Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 213369,
-            "count": 5,
-            "name": "Faintly Glowing Leather",
-            "icon": "inv_misc_pelt_11",
-            "quality": 3
-          }
-        ],
-        "source": "Pattern: Glowing Gneuro-Linked Cowl"
-      },
-      {
-        "id": 215114,
-        "spellId": 435949,
-        "name": "Glowing Hyperconductive Scale Coif",
-        "icon": "inv_helmet_43",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Glowing Hyperconductive Scale Coif",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 225,
-        "green": 235,
-        "grey": 255,
-        "reagents": [
-          {
-            "id": 213376,
-            "count": 1,
-            "name": "Low-Background Truesilver Plates",
-            "icon": "inv_gizmo_mithrilcasing_02",
-            "quality": 3
-          },
-          {
-            "id": 5785,
-            "count": 10,
-            "name": "Thick Murloc Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 213369,
-            "count": 5,
-            "name": "Faintly Glowing Leather",
-            "icon": "inv_misc_pelt_11",
-            "quality": 3
-          },
-          {
-            "id": 213372,
-            "count": 1,
-            "name": "Insulating Gniodine",
-            "icon": "inv_potion_164",
-            "quality": 3
-          }
-        ],
-        "source": "Pattern: Glowing Hyperconductive Scale Coif"
-      },
-      {
-        "id": 215381,
-        "spellId": 435951,
-        "name": "Gneuro-Conductive Channeler's Hood",
-        "icon": "inv_helmet_42",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Gneuro-Conductive Channeler's Hood",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 225,
-        "green": 235,
-        "grey": 255,
-        "reagents": [
-          {
-            "id": 213372,
-            "count": 1,
-            "name": "Insulating Gniodine",
-            "icon": "inv_potion_164",
-            "quality": 3
-          },
-          {
-            "id": 8172,
-            "count": 5,
-            "name": "Cured Thick Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 213369,
-            "count": 5,
-            "name": "Faintly Glowing Leather",
-            "icon": "inv_misc_pelt_11",
-            "quality": 3
-          },
-          {
-            "id": 213379,
-            "count": 1,
-            "name": "Hyperconductive Arcano-Filament",
-            "icon": "inv_misc_thread_eternium",
-            "quality": 3
-          }
-        ],
-        "source": "Pattern: Gneuro-Conductive Channeler's Hood"
-      },
-      {
-        "id": 215382,
-        "spellId": 435953,
-        "name": "Rad-Resistant Scale Hood",
-        "icon": "inv_helmet_41",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Rad-Resistant Scale Hood",
-        "isNew": true,
-        "learn": 225,
-        "yellow": 225,
-        "green": 235,
-        "grey": 255,
-        "reagents": [
-          {
-            "id": 213376,
-            "count": 1,
-            "name": "Low-Background Truesilver Plates",
-            "icon": "inv_gizmo_mithrilcasing_02",
-            "quality": 3
-          },
-          {
-            "id": 8172,
-            "count": 5,
-            "name": "Cured Thick Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 213369,
-            "count": 5,
-            "name": "Faintly Glowing Leather",
-            "icon": "inv_misc_pelt_11",
-            "quality": 3
-          },
-          {
-            "id": 213372,
-            "count": 1,
-            "name": "Insulating Gniodine",
-            "icon": "inv_potion_164",
-            "quality": 3
-          }
-        ],
-        "source": "Pattern: Rad-Resistant Scale Hood"
       },
       {
         "id": 252543,
@@ -116556,7 +111871,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+18 Spell Damage +6 Healing Heal friendly target for 300 to 500.",
         "isNew": false,
         "learn": 205,
-        "yellow": 225,
+        "yellow": 230,
         "green": 235,
         "grey": 245,
         "reagents": [
@@ -116764,7 +112079,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather legs, level 41",
         "effect": "Binds when equipped Legs\tLeather 108 Armor +16 Agility +7 Stamina Requires Level 41 Sell Price: 87s 8c",
         "isNew": false,
-        "learn": 210,
+        "learn": 205,
         "yellow": 225,
         "green": 235,
         "grey": 245,
@@ -118159,7 +113474,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+11 Spell Power +10 Hit Rating",
         "isNew": false,
         "learn": 245,
-        "yellow": 265,
+        "yellow": 270,
         "green": 275,
         "grey": 285,
         "reagents": [
@@ -118354,7 +113669,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Hurls a fiery ball that causes 286 to 376 Fire damage and an additional 132 damage over 8 sec.",
         "isNew": false,
         "learn": 225,
-        "yellow": 245,
+        "yellow": 250,
         "green": 255,
         "grey": 265,
         "reagents": [
@@ -118391,328 +113706,6 @@ window.WOW_PROFESSIONS_DATA = {
             "count": 4,
             "name": "Heavy Silken Thread",
             "icon": "inv_fabric_silk_02",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220743,
-        "spellId": 446186,
-        "name": "Cacophonous Chain Shoulderguards",
-        "icon": "inv_shoulder_15",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Cacophonous Chain Shoulderguards",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15416,
-            "count": 4,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220745,
-        "spellId": 446192,
-        "name": "Membrane of Dark Neurosis",
-        "icon": "inv_shoulder_18",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Membrane of Dark Neurosis",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15407,
-            "count": 2,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 6,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220747,
-        "spellId": 446183,
-        "name": "Paranoia Mantle",
-        "icon": "inv_shoulder_18",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Paranoia Mantle",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15423,
-            "count": 8,
-            "name": "Chimera Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220741,
-        "spellId": 451706,
-        "name": "Screaming Chain Pauldrons",
-        "icon": "inv_shoulder_15",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Screaming Chain Pauldrons",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15412,
-            "count": 5,
-            "name": "Green Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220748,
-        "spellId": 446189,
-        "name": "Shoulderpads of Obsession",
-        "icon": "inv_shoulder_18",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Shoulderpads of Obsession",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 7080,
-            "count": 1,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220742,
-        "spellId": 446185,
-        "name": "Shrieking Spaulders",
-        "icon": "inv_shoulder_15",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Shrieking Spaulders",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15416,
-            "count": 8,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 8,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 220744,
-        "spellId": 446190,
-        "name": "Wailing Chain Mantle",
-        "icon": "inv_shoulder_15",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Wailing Chain Mantle",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 250,
-        "green": 260,
-        "grey": 280,
-        "reagents": [
-          {
-            "id": 221021,
-            "count": 10,
-            "name": "Nightmare Seed",
-            "icon": "inv_misc_herb_nightmareseed",
-            "quality": 2
-          },
-          {
-            "id": 220688,
-            "count": 1,
-            "name": "Inert Mantle of Nightmares",
-            "icon": "inv_shoulder_59",
-            "quality": 4
-          },
-          {
-            "id": 15412,
-            "count": 8,
-            "name": "Green Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 8,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
             "quality": 1
           }
         ],
@@ -119068,120 +114061,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Warden's Leather Gauntlets"
-      },
-      {
-        "id": 238285,
-        "spellId": 1224628,
-        "name": "Scarlet Huntsman's Clasp",
-        "icon": "inv_belt_09",
-        "quality": 3,
-        "cat": "Waist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Clasp",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 10,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Clasp"
-      },
-      {
-        "id": 238283,
-        "spellId": 1224626,
-        "name": "Scarlet Huntsman's Wristguards",
-        "icon": "inv_bracer_23a",
-        "quality": 3,
-        "cat": "Wrist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Wristguards",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 15408,
-            "count": 8,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Wristguards"
-      },
-      {
-        "id": 238277,
-        "spellId": 1224620,
-        "name": "Scarlet Infiltrator's Belt",
-        "icon": "inv_belt_37a",
-        "quality": 3,
-        "cat": "Waist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Belt",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Belt"
-      },
-      {
-        "id": 238275,
-        "spellId": 1224618,
-        "name": "Scarlet Infiltrator's Bracers",
-        "icon": "inv_bracer_02",
-        "quality": 3,
-        "cat": "Wrist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Bracers",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 8,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Bracers"
       },
       {
         "id": 252583,
@@ -120067,7 +114946,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Absorbs 600 magical damage. Lasts 2 min.",
         "isNew": false,
         "learn": 230,
-        "yellow": 250,
+        "yellow": 255,
         "green": 260,
         "grey": 270,
         "reagents": [
@@ -120113,7 +114992,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Wrist\tMail 122 Armor +8 Stamina +8 Agility Requires Level 46 Sell Price: 76s 15c",
         "isNew": false,
         "learn": 255,
-        "yellow": 250,
+        "yellow": 255,
         "green": 260,
         "grey": 270,
         "reagents": [
@@ -120606,134 +115485,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Jadefire Trickster (Felwood)"
       },
       {
-        "id": 238287,
-        "spellId": 1224630,
-        "name": "Scarlet Huntsman's Boots",
-        "icon": "inv_boots_chain_04",
-        "quality": 3,
-        "cat": "Feet",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Boots",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 10,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Boots"
-      },
-      {
-        "id": 238284,
-        "spellId": 1224627,
-        "name": "Scarlet Huntsman's Handguards",
-        "icon": "inv_gauntlets_12",
-        "quality": 3,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Handguards",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 10,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Handguards"
-      },
-      {
-        "id": 238276,
-        "spellId": 1224619,
-        "name": "Scarlet Infiltrator's Gloves",
-        "icon": "inv_gauntlets_19",
-        "quality": 3,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Gloves",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Gloves"
-      },
-      {
-        "id": 238279,
-        "spellId": 1224622,
-        "name": "Scarlet Infiltrator's Shoes",
-        "icon": "inv_boots_07",
-        "quality": 3,
-        "cat": "Feet",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Shoes",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Shoes"
-      },
-      {
         "id": 15048,
         "spellId": 19077,
         "name": "Blue Dragonscale Breastplate",
@@ -120941,45 +115692,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Blackrock Slayer (Burning Steppes)"
-      },
-      {
-        "id": 227879,
-        "spellId": 461720,
-        "name": "Living Green Dragonscale Breastplate",
-        "icon": "inv_chest_chain_06",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Living Green Dragonscale Breastplate",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 280,
-        "green": 300,
-        "grey": 320,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 20,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15412,
-            "count": 25,
-            "name": "Green Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Living Green Dragonscale Breastplate"
       },
       {
         "id": 15060,
@@ -121523,7 +116235,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+42 Attack Power",
         "isNew": false,
         "learn": 265,
-        "yellow": 285,
+        "yellow": 290,
         "green": 295,
         "grey": 305,
         "reagents": [
@@ -121789,84 +116501,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Warlord Thresh'jin (Eastern Plaguelands)"
       },
       {
-        "id": 238286,
-        "spellId": 1224629,
-        "name": "Scarlet Huntsman's Legguards",
-        "icon": "inv_pants_mail_03",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Legguards",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 280,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 12,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Legguards"
-      },
-      {
-        "id": 238278,
-        "spellId": 1224621,
-        "name": "Scarlet Infiltrator's Trousers",
-        "icon": "inv_pants_06",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Trousers",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 280,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Trousers"
-      },
-      {
         "id": 15049,
         "spellId": 19089,
         "name": "Blue Dragonscale Shoulders",
@@ -122090,91 +116724,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Heavy Scorpid Helm"
       },
       {
-        "id": 227877,
-        "spellId": 461649,
-        "name": "Living Green Dragonscale Leggings",
-        "icon": "inv_pants_05",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Living Green Dragonscale Leggings",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 290,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 20,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15412,
-            "count": 25,
-            "name": "Green Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Living Green Dragonscale Leggings"
-      },
-      {
-        "id": 227867,
-        "spellId": 461665,
-        "name": "Masterwork Volcanic Leggings",
-        "icon": "inv_pants_06",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Masterwork Volcanic Leggings",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 290,
-        "green": 310,
-        "grey": 330,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 6,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 1,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7075,
-            "count": 1,
-            "name": "Core of Earth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Masterwork Volcanic Leggings"
-      },
-      {
         "id": 12632,
         "spellId": 16661,
         "name": "Storm Gauntlets",
@@ -122185,7 +116734,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+18 Spell Power +10 Hit Rating Adds 3 Lightning damage to your melee attacks.",
         "isNew": false,
         "learn": 270,
-        "yellow": 290,
+        "yellow": 295,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -122405,45 +116954,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Wicked Leather Shoulder"
       },
       {
-        "id": 227878,
-        "spellId": 461677,
-        "name": "Living Green Dragonscale Gauntlets",
-        "icon": "inv_gauntlets_12",
-        "quality": 3,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Living Green Dragonscale Gauntlets",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 300,
-        "green": 320,
-        "grey": 340,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 20,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15412,
-            "count": 25,
-            "name": "Green Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Living Green Dragonscale Gauntlets"
-      },
-      {
         "id": 15051,
         "spellId": 19094,
         "name": "Black Dragonscale Shoulders",
@@ -122495,84 +117005,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Anvilrage Marshal (Blackrock Depths)"
-      },
-      {
-        "id": 238926,
-        "spellId": 1226690,
-        "name": "Scarlet Ammo Pouch",
-        "icon": "inv_ammo_bullet_07",
-        "quality": 4,
-        "cat": "Bags",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Ammo Pouch",
-        "isNew": true,
-        "learn": 275,
-        "yellow": 280,
-        "green": 290,
-        "grey": 310,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 24,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 2,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Ammo Pouch"
-      },
-      {
-        "id": 238925,
-        "spellId": 1226689,
-        "name": "Scarlet Quiver",
-        "icon": "classic_inv_misc_quiver_05",
-        "quality": 4,
-        "cat": "Bags",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Quiver",
-        "isNew": true,
-        "learn": 275,
-        "yellow": 280,
-        "green": 290,
-        "grey": 310,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 24,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 2,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Quiver"
       },
       {
         "id": 252559,
@@ -122755,7 +117187,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+40 Healing +14 Spell Damage",
         "isNew": false,
         "learn": 255,
-        "yellow": 275,
+        "yellow": 280,
         "green": 285,
         "grey": 295,
         "reagents": [
@@ -122789,226 +117221,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
-      },
-      {
-        "id": 238282,
-        "spellId": 1224625,
-        "name": "Scarlet Huntsman's Chain",
-        "icon": "inv_chest_chain_07",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Chain",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 12,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Chain"
-      },
-      {
-        "id": 238280,
-        "spellId": 1224623,
-        "name": "Scarlet Huntsman's Coif",
-        "icon": "inv_helmet_39",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Coif",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 2,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 12,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Coif"
-      },
-      {
-        "id": 238281,
-        "spellId": 1224624,
-        "name": "Scarlet Huntsman's Pauldrons",
-        "icon": "inv_shoulder_16",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Huntsman's Pauldrons",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15408,
-            "count": 10,
-            "name": "Heavy Scorpid Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Huntsman's Pauldrons"
-      },
-      {
-        "id": 238272,
-        "spellId": 1224615,
-        "name": "Scarlet Infiltrator's Bandana",
-        "icon": "inv_misc_bandana_03",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Bandana",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 2,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Bandana"
-      },
-      {
-        "id": 238273,
-        "spellId": 1224616,
-        "name": "Scarlet Infiltrator's Shoulderpads",
-        "icon": "inv_shoulder_08",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Shoulderpads",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Shoulderpads"
-      },
-      {
-        "id": 238274,
-        "spellId": 1224617,
-        "name": "Scarlet Infiltrator's Vest",
-        "icon": "inv_chest_leather_03",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Scarlet Infiltrator's Vest",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Infiltrator's Vest"
       },
       {
         "id": 252482,
@@ -123418,52 +117630,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 227855,
-        "spellId": 461692,
-        "name": "Synthetic Gordok Ogre Suit",
-        "icon": "inv_chest_chain_14",
-        "quality": 2,
-        "cat": "Other",
-        "kind": "Leatherworking",
-        "effect": "Crafted Synthetic Gordok Ogre Suit",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 285,
-        "green": 295,
-        "grey": 315,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 2,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 18240,
-            "count": 1,
-            "name": "Ogre Tannin",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 275610,
         "spellId": 1297126,
         "name": "Bileblister Claws",
@@ -123648,98 +117814,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Scalegut Clenchers"
       },
       {
-        "id": 227875,
-        "spellId": 461673,
-        "name": "Honed Blue Dragonscale Breastplate",
-        "icon": "inv_chest_chain_04",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Honed Blue Dragonscale Breastplate",
-        "isNew": true,
-        "learn": 285,
-        "yellow": 305,
-        "green": 325,
-        "grey": 345,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 28,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15415,
-            "count": 30,
-            "name": "Blue Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Honed Blue Dragonscale Breastplate"
-      },
-      {
-        "id": 227868,
-        "spellId": 461661,
-        "name": "Masterwork Volcanic Breastplate",
-        "icon": "inv_chest_leather_07",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Masterwork Volcanic Breastplate",
-        "isNew": true,
-        "learn": 285,
-        "yellow": 305,
-        "green": 325,
-        "grey": 345,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 8,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 1,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7076,
-            "count": 1,
-            "name": "Essence of Earth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Masterwork Volcanic Breastplate"
-      },
-      {
         "id": 15090,
         "spellId": 19102,
         "name": "Runic Leather Armor",
@@ -123856,7 +117930,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+30 Healing +15 Spell Damage",
         "isNew": false,
         "learn": 290,
-        "yellow": 290,
+        "yellow": 300,
         "green": 300,
         "grey": 310,
         "reagents": [
@@ -124143,52 +118217,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Anvilrage Captain (Blackrock Depths)"
       },
       {
-        "id": 227848,
-        "spellId": 461722,
-        "name": "Devilcore Gauntlets",
-        "icon": "inv_gauntlets_26",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Leatherworking",
-        "effect": "Crafted Devilcore Gauntlets",
-        "isNew": true,
-        "learn": 290,
-        "yellow": 310,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 30,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15417,
-            "count": 8,
-            "name": "Devilsaur Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 8,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Devilcore Gauntlets"
-      },
-      {
         "id": 15062,
         "spellId": 19097,
         "name": "Devilsaur Leggings",
@@ -124325,52 +118353,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Drop: Gordok Warlock (Dire Maul)"
-      },
-      {
-        "id": 227851,
-        "spellId": 461655,
-        "name": "Hardened Black Dragonscale Breastplate",
-        "icon": "inv_chest_plate06",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Hardened Black Dragonscale Breastplate",
-        "isNew": true,
-        "learn": 290,
-        "yellow": 310,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 40,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15416,
-            "count": 60,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Hardened Black Dragonscale Breastplate"
       },
       {
         "id": 15059,
@@ -124772,7 +118754,7 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "When struck in combat has a chance to make you invulnerable to melee damage for 3 sec. This effect can only occur once every 10 sec.",
         "isNew": false,
         "learn": 295,
-        "yellow": 295,
+        "yellow": 300,
         "green": 302,
         "grey": 310,
         "reagents": [
@@ -124877,7 +118859,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail feet, level 56",
         "effect": "+20 Attack Power",
         "isNew": false,
-        "learn": 295,
+        "learn": 300,
         "yellow": 300,
         "green": 310,
         "grey": 320,
@@ -124969,7 +118951,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Leather shoulder, level 56",
         "effect": "Binds when equipped Shoulder\tLeather 129 Armor +20 Stamina +13 Strength +11 Agility Requires Level 56 Sell Price: 2g 18s 45c",
         "isNew": false,
-        "learn": 295,
+        "learn": 300,
         "yellow": 315,
         "green": 325,
         "grey": 335,
@@ -125011,59 +118993,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Golden Mantle of the Dawn"
-      },
-      {
-        "id": 227873,
-        "spellId": 461645,
-        "name": "Honed Blue Dragonscale Shoulders",
-        "icon": "inv_shoulder_18",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Honed Blue Dragonscale Shoulders",
-        "isNew": true,
-        "learn": 295,
-        "yellow": 315,
-        "green": 335,
-        "grey": 355,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 28,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15415,
-            "count": 30,
-            "name": "Blue Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 2,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Honed Blue Dragonscale Shoulders"
       },
       {
         "id": 19049,
@@ -125167,7 +119096,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Mail legs, level 55",
         "effect": "+19 Spell Power",
         "isNew": false,
-        "learn": 290,
+        "learn": 300,
         "yellow": 310,
         "green": 320,
         "grey": 330,
@@ -125749,66 +119678,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Blue Dragonscale Helm"
       },
       {
-        "id": 227869,
-        "spellId": 461653,
-        "name": "Brilliant Chromatic Cloak",
-        "icon": "inv_misc_cape_02",
-        "quality": 4,
-        "cat": "Back",
-        "kind": "Leatherworking",
-        "effect": "Crafted Brilliant Chromatic Cloak",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 30,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12607,
-            "count": 12,
-            "name": "Brilliant Chromatic Scale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15416,
-            "count": 30,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15414,
-            "count": 30,
-            "name": "Red Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 5,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 8,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Brilliant Chromatic Cloak"
-      },
-      {
         "id": 18509,
         "spellId": 22926,
         "name": "Chromatic Cloak",
@@ -126079,105 +119948,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Dawn Armor"
-      },
-      {
-        "id": 227847,
-        "spellId": 461724,
-        "name": "Devilcore Leggings",
-        "icon": "inv_pants_wolf",
-        "quality": 4,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Devilcore Leggings",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 30,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15417,
-            "count": 20,
-            "name": "Devilsaur Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 10,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Devilcore Leggings"
-      },
-      {
-        "id": 227882,
-        "spellId": 461754,
-        "name": "Girdle of Arcane Insight",
-        "icon": "inv_belt_26",
-        "quality": 4,
-        "cat": "Waist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Girdle of Arcane Insight",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12804,
-            "count": 12,
-            "name": "Powerful Mojo",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 2,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 4,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Girdle of Arcane Insight"
       },
       {
         "id": 273931,
@@ -127100,112 +120870,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Grovekeeper Trousers"
       },
       {
-        "id": 227852,
-        "spellId": 461657,
-        "name": "Hardened Black Dragonscale Leggings",
-        "icon": "inv_pants_03",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Hardened Black Dragonscale Leggings",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 40,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15416,
-            "count": 60,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 4,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Hardened Black Dragonscale Leggings"
-      },
-      {
-        "id": 227853,
-        "spellId": 461659,
-        "name": "Hardened Black Dragonscale Shoulders",
-        "icon": "inv_shoulder_01",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Hardened Black Dragonscale Shoulders",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 44,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15416,
-            "count": 45,
-            "name": "Black Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 2,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 1,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Hardened Black Dragonscale Shoulders"
-      },
-      {
         "id": 18510,
         "spellId": 22927,
         "name": "Hide of the Wild",
@@ -127437,112 +121101,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Living Crown"
-      },
-      {
-        "id": 227854,
-        "spellId": 461690,
-        "name": "Mastercrafted Shifting Cloak",
-        "icon": "inv_misc_cape_20",
-        "quality": 4,
-        "cat": "Back",
-        "kind": "Leatherworking",
-        "effect": "Crafted Mastercrafted Shifting Cloak",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 30,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7082,
-            "count": 12,
-            "name": "Essence of Air",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12753,
-            "count": 4,
-            "name": "Skin of Shadow",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12809,
-            "count": 8,
-            "name": "Guardian Stone",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 8,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Mastercrafted Shifting Cloak"
-      },
-      {
-        "id": 227866,
-        "spellId": 461663,
-        "name": "Masterwork Volcanic Shoulders",
-        "icon": "inv_shoulder_13",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Masterwork Volcanic Shoulders",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 10,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 1,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7076,
-            "count": 1,
-            "name": "Essence of Earth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Masterwork Volcanic Shoulders"
       },
       {
         "id": 19163,
@@ -128528,59 +122086,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Spiritcaller Treads"
       },
       {
-        "id": 227883,
-        "spellId": 461706,
-        "name": "Swift Flight Vambraces",
-        "icon": "inv_bracer_05",
-        "quality": 3,
-        "cat": "Wrist",
-        "kind": "Leatherworking",
-        "effect": "Crafted Swift Flight Vambraces",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 12,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 18512,
-            "count": 8,
-            "name": "Larval Acid",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15420,
-            "count": 60,
-            "name": "Ironfeather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 4,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Swift Flight Vambraces"
-      },
-      {
         "id": 252484,
         "spellId": 1255014,
         "name": "Timbermaw Tunic",
@@ -129522,144 +123027,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 234482,
-        "spellId": 1214303,
-        "name": "Dreamscale Kilt",
-        "icon": "inv_pants_leather_11",
-        "quality": 4,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Dreamscale Kilt",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 12810,
-            "count": 12,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20381,
-            "count": 6,
-            "name": "Dreamscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12803,
-            "count": 4,
-            "name": "Living Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 6,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233802,
-        "spellId": 1213513,
-        "name": "Glowing Chitin Armor Kit",
-        "icon": "inv_misc_armorkit_06",
-        "quality": 3,
-        "cat": "Kits",
-        "kind": "Leatherworking",
-        "effect": "Crafted Glowing Chitin Armor Kit",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 5,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 3,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 18251,
-            "count": 1,
-            "name": "Core Armor Kit",
-            "icon": "inv_misc_armorkit_05",
-            "quality": 3
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 227874,
-        "spellId": 462227,
-        "name": "Honed Blue Dragonscale Leggings",
-        "icon": "inv_pants_mail_15",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Leatherworking",
-        "effect": "Crafted Honed Blue Dragonscale Leggings",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 28,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15415,
-            "count": 36,
-            "name": "Blue Dragonscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 2,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 22665,
         "spellId": 28224,
         "name": "Icy Scale Bracers",
@@ -130381,144 +123748,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 233808,
-        "spellId": 1213521,
-        "name": "Razorbramble Cowl",
-        "icon": "inv_helmet_01",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Leatherworking",
-        "effect": "Crafted Razorbramble Cowl",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 15,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234009,
-            "count": 8,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 8,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233813,
-        "spellId": 1213525,
-        "name": "Razorbramble Leathers",
-        "icon": "inv_chest_cloth_45",
-        "quality": 4,
-        "cat": "Chest",
-        "kind": "Leatherworking",
-        "effect": "Crafted Razorbramble Leathers",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 22,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 12,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234009,
-            "count": 12,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 12,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233804,
-        "spellId": 1213523,
-        "name": "Razorbramble Shoulderpads",
-        "icon": "inv_shoulder_30",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Leatherworking",
-        "effect": "Crafted Razorbramble Shoulderpads",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 15,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 234009,
-            "count": 8,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 8,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 20476,
         "spellId": 24849,
         "name": "Sandstalker Bracers",
@@ -130645,45 +123874,6 @@ window.WOW_PROFESSIONS_DATA = {
             "name": "Cured Rugged Hide",
             "icon": "inv_misc_pelt_bear_03",
             "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233803,
-        "spellId": 1213519,
-        "name": "Sharpened Chitin Armor Kit",
-        "icon": "inv_misc_armorkit_20",
-        "quality": 3,
-        "cat": "Kits",
-        "kind": "Leatherworking",
-        "effect": "Crafted Sharpened Chitin Armor Kit",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234007,
-            "count": 5,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 3,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 18251,
-            "count": 1,
-            "name": "Core Armor Kit",
-            "icon": "inv_misc_armorkit_05",
-            "quality": 3
           }
         ],
         "source": "Trainer"
@@ -130845,7 +124035,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Leatherworking trainer (e.g., Simon Tanner in Stormwind /way 71.8, 62.8 · Fimble Finespindle in Ironforge /way 39.8, 33.4 · Karolek in Orgrimmar /way 62.8, 44.6), up to 75."
+          "details": "Learned from any Leatherworking trainer (e.g., Simon Tanner in Stormwind /way 67.2, 49.4 · Fimble Finespindle in Ironforge /way 39.4, 33.0 · Adele Fielder in Goldshire /way 46.4, 62.2 · Karolek in Orgrimmar /way 62.8, 44.4), up to 75."
         },
         {
           "type": "step",
@@ -131121,7 +124311,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Telonis in Darnassus (/way 64.4, 21.6, A) or Una in Thunder Bluff (/way 41.8, 42.6, H)."
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Telonis in Darnassus (/way 64.4, 21.4, A) or Una in Thunder Bluff (/way 41.4, 42.6, H)."
         },
         {
           "type": "step",
@@ -131369,7 +124559,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Drakk Stonehand in Aerie Peak, The Hinterlands (/way 13.4, 43.4, A) or Hahrana Ironhide in Camp Mojache, Feralas (/way 74.4, 43.0, H). Specializations at 225 & Lvl 40: Dragonscale (Peter Galen in Azshara /way 37.4, 65.4 · Thorkaf Dragoneye in Badlands /way 62.6, 57.6), Elemental (Sarah Tanner in Searing Gorge /way 63.6, 75.8 · Brumn Winterhoof in Arathi /way 28.2, 45.0), or Tribal (Carys Moonhunter in Feralas /way 89.4, 46.6 · Se'Jib in STV /way 36.6, 34.2)."
+          "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Drakk Stonehand in Aerie Peak, The Hinterlands (/way 13.4, 43.4, A) or Hahrana Ironhide in Camp Mojache, Feralas (/way 74.4, 43.0, H). Specializations at 225 & Lvl 40: Dragonscale (Peter Galen in Azshara /way 37.4, 65.4 · Thorkaf Dragoneye in Badlands /way 62.4, 57.4), Elemental (Sarah Tanner in Searing Gorge /way 63.2, 75.4 · Brumn Winterhoof in Arathi /way 28.2, 45.0), or Tribal (Caryssia Moonhunter in Feralas · Se'Jib in Stranglethorn Vale /way 36.4, 34.0)."
         },
         {
           "type": "step",
@@ -132627,8 +125817,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_banner_03"
     },
     "stats": {
-      "recipeCount": 472,
-      "newInForever": 220,
+      "recipeCount": 445,
+      "newInForever": 193,
       "favorRecipes": 68
     },
     "groups": [
@@ -132636,55 +125826,55 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Head",
         "label": "Head",
         "icon": "inv_helmet_24",
-        "count": 40
+        "count": 36
       },
       {
         "key": "Shoulder",
         "label": "Shoulders",
         "icon": "inv_shoulder_02",
-        "count": 39
+        "count": 37
       },
       {
         "key": "Back",
         "label": "Cloaks",
         "icon": "inv_misc_cape_02",
-        "count": 23
+        "count": 20
       },
       {
         "key": "Chest",
         "label": "Chest",
         "icon": "inv_chest_chain_05",
-        "count": 78
+        "count": 74
       },
       {
         "key": "Wrist",
         "label": "Bracers",
         "icon": "inv_bracer_07",
-        "count": 19
+        "count": 16
       },
       {
         "key": "Hands",
         "label": "Gloves",
         "icon": "inv_gauntlets_04",
-        "count": 56
+        "count": 53
       },
       {
         "key": "Waist",
         "label": "Belts",
         "icon": "inv_belt_03",
-        "count": 43
+        "count": 41
       },
       {
         "key": "Legs",
         "label": "Legs",
         "icon": "inv_pants_03",
-        "count": 48
+        "count": 46
       },
       {
         "key": "Feet",
         "label": "Boots",
         "icon": "inv_boots_05",
-        "count": 52
+        "count": 50
       },
       {
         "key": "Shirts",
@@ -132702,13 +125892,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Cloth",
         "label": "Bolts of cloth",
         "icon": "inv_fabric_linen_02",
-        "count": 8
+        "count": 7
       },
       {
         "key": "Other",
         "label": "Other",
         "icon": "inv_misc_note_01",
-        "count": 5
+        "count": 4
       },
       {
         "key": "Camp",
@@ -133018,8 +126208,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2996,
@@ -133050,8 +126240,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 20,
         "yellow": 20,
-        "green": 22,
-        "grey": 25,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2996,
@@ -133662,7 +126852,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth waist, level 10",
         "effect": "+4 Spell Power",
         "isNew": true,
-        "learn": 50,
+        "learn": 35,
         "yellow": 55,
         "green": 55,
         "grey": 55,
@@ -133701,7 +126891,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth waist, level 10",
         "effect": "+6 Healing +2 Spell Damage",
         "isNew": true,
-        "learn": 50,
+        "learn": 35,
         "yellow": 55,
         "green": 55,
         "grey": 55,
@@ -138826,8 +132016,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 4470,
@@ -138864,9 +132054,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+13 Shadow Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -138917,9 +132107,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+13 Fire Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -138970,9 +132160,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+13 Frost Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -139023,9 +132213,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+20 Healing +7 Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -139076,9 +132266,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+13 Arcane Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -139129,9 +132319,9 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+13 Holy Spell Damage",
         "isNew": true,
         "learn": 140,
-        "yellow": 145,
-        "green": 145,
-        "grey": 145,
+        "yellow": 140,
+        "green": 140,
+        "grey": 150,
         "reagents": [
           {
             "id": 4339,
@@ -139674,38 +132864,6 @@ window.WOW_PROFESSIONS_DATA = {
             "name": "Fine Thread",
             "icon": "inv_fabric_wool_02",
             "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 210795,
-        "spellId": 429351,
-        "name": "Extraplanar Spidersilk Boots",
-        "icon": "inv_boots_05",
-        "quality": 4,
-        "cat": "Feet",
-        "kind": "Tailoring",
-        "effect": "Crafted Extraplanar Spidersilk Boots",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 150,
-        "green": 185,
-        "grey": 205,
-        "reagents": [
-          {
-            "id": 211422,
-            "count": 1,
-            "name": "Shard of the Void",
-            "icon": "inv_jewelry_talisman_16",
-            "quality": 4
-          },
-          {
-            "id": 4320,
-            "count": 1,
-            "name": "Spidersilk Boots",
-            "icon": "inv_boots_05",
-            "quality": 3
           }
         ],
         "source": "Trainer"
@@ -142900,8 +136058,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 200,
         "yellow": 200,
-        "green": 220,
-        "grey": 240,
+        "green": 210,
+        "grey": 220,
         "reagents": [
           {
             "id": 4339,
@@ -142970,8 +136128,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Gives 10 additional stamina to party members within 30 yards.",
         "isNew": false,
         "learn": 200,
-        "yellow": 215,
-        "green": 230,
+        "yellow": 200,
+        "green": 240,
         "grey": 245,
         "reagents": [
           {
@@ -143048,8 +136206,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+24 Shadow Spell Damage",
         "isNew": false,
         "learn": 200,
-        "yellow": 215,
-        "green": 230,
+        "yellow": 200,
+        "green": 245,
         "grey": 245,
         "reagents": [
           {
@@ -143321,8 +136479,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chest\tCosmetic Sell Price: 1c",
         "isNew": false,
         "learn": 205,
-        "yellow": 220,
-        "green": 235,
+        "yellow": 205,
+        "green": 250,
         "grey": 250,
         "reagents": [
           {
@@ -143367,8 +136525,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Chest\tCosmetic Sell Price: 1c",
         "isNew": false,
         "learn": 205,
-        "yellow": 220,
-        "green": 235,
+        "yellow": 205,
+        "green": 250,
         "grey": 250,
         "reagents": [
           {
@@ -145233,8 +138391,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 225,
         "yellow": 225,
-        "green": 235,
-        "grey": 255,
+        "green": 230,
+        "grey": 235,
         "reagents": [
           {
             "id": 213379,
@@ -146489,8 +139647,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+14 Fire Spell Damage Deals 25 Fire damage every 5 sec to all nearby enemies for 15 sec.",
         "isNew": false,
         "learn": 235,
-        "yellow": 250,
-        "green": 265,
+        "yellow": 235,
+        "green": 275,
         "grey": 280,
         "reagents": [
           {
@@ -147484,8 +140642,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -147576,8 +140734,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -147668,8 +140826,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 250,
-        "green": 260,
-        "grey": 280,
+        "green": 255,
+        "grey": 260,
         "reagents": [
           {
             "id": 221021,
@@ -147721,8 +140879,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 260,
-        "green": 265,
-        "grey": 285,
+        "green": 262,
+        "grey": 265,
         "reagents": [
           {
             "id": 12811,
@@ -147754,63 +140912,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Crusader's Knapsack"
-      },
-      {
-        "id": 238267,
-        "spellId": 1224610,
-        "name": "Scarlet Augur's Cuffs",
-        "icon": "inv_bracer_13",
-        "quality": 3,
-        "cat": "Wrist",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Cuffs",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 8,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Cuffs"
-      },
-      {
-        "id": 238269,
-        "spellId": 1224612,
-        "name": "Scarlet Augur's Strap",
-        "icon": "inv_belt_04",
-        "quality": 3,
-        "cat": "Waist",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Strap",
-        "isNew": true,
-        "learn": 250,
-        "yellow": 260,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 10,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Strap"
       },
       {
         "id": 254121,
@@ -148071,8 +141172,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "+8 Spell Power",
         "isNew": false,
         "learn": 255,
-        "yellow": 270,
-        "green": 285,
+        "yellow": 255,
+        "green": 290,
         "grey": 300,
         "reagents": [
           {
@@ -148460,8 +141561,8 @@ window.WOW_PROFESSIONS_DATA = {
         "effect": "Binds when equipped Bag\tSoul Bag 32 Slot Soul Bag Classes: Warlock Sell Price: 2g",
         "isNew": false,
         "learn": 245,
-        "yellow": 260,
-        "green": 275,
+        "yellow": 245,
+        "green": 285,
         "grey": 290,
         "reagents": [
           {
@@ -148494,70 +141595,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
-      },
-      {
-        "id": 238268,
-        "spellId": 1224611,
-        "name": "Scarlet Augur's Mitts",
-        "icon": "inv_gauntlets_16",
-        "quality": 3,
-        "cat": "Hands",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Mitts",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 10,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Mitts"
-      },
-      {
-        "id": 238271,
-        "spellId": 1224614,
-        "name": "Scarlet Augur's Soles",
-        "icon": "inv_boots_02",
-        "quality": 3,
-        "cat": "Feet",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Soles",
-        "isNew": true,
-        "learn": 260,
-        "yellow": 270,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 10,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Soles"
       },
       {
         "id": 254137,
@@ -148836,45 +141873,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Scarlet Interrogator (Western Plaguelands)"
       },
       {
-        "id": 238270,
-        "spellId": 1224613,
-        "name": "Scarlet Augur's Leggings",
-        "icon": "inv_pants_cloth_02",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Leggings",
-        "isNew": true,
-        "learn": 270,
-        "yellow": 280,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 12,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Leggings"
-      },
-      {
         "id": 14138,
         "spellId": 18447,
         "name": "Mooncloth Vest",
@@ -148999,77 +141997,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Drop: Huntsman Radley (Western Plaguelands)"
       },
       {
-        "id": 238264,
-        "spellId": 1224607,
-        "name": "Scarlet Augur's Hood",
-        "icon": "inv_helmet_28",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Hood",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12938,
-            "count": 1,
-            "name": "Blood of Heroes",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12811,
-            "count": 2,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 12,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Hood"
-      },
-      {
-        "id": 238265,
-        "spellId": 1224608,
-        "name": "Scarlet Augur's Mantle",
-        "icon": "inv_shoulder_05",
-        "quality": 3,
-        "cat": "Shoulder",
-        "kind": "Tailoring",
-        "effect": "Crafted Scarlet Augur's Mantle",
-        "isNew": true,
-        "learn": 280,
-        "yellow": 285,
-        "green": 305,
-        "grey": 325,
-        "reagents": [
-          {
-            "id": 12811,
-            "count": 1,
-            "name": "Righteous Orb",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 10,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Scarlet Augur's Mantle"
-      },
-      {
         "id": 238266,
         "spellId": 1224609,
         "name": "Scarlet Augur's Vestments",
@@ -149081,8 +142008,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 280,
         "yellow": 285,
-        "green": 305,
-        "grey": 325,
+        "green": 295,
+        "grey": 305,
         "reagents": [
           {
             "id": 12938,
@@ -149445,52 +142372,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
-        "id": 227855,
-        "spellId": 461692,
-        "name": "Synthetic Gordok Ogre Suit",
-        "icon": "inv_chest_chain_14",
-        "quality": 2,
-        "cat": "Other",
-        "kind": "Tailoring",
-        "effect": "Crafted Synthetic Gordok Ogre Suit",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 285,
-        "green": 295,
-        "grey": 315,
-        "reagents": [
-          {
-            "id": 8170,
-            "count": 4,
-            "name": "Rugged Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14048,
-            "count": 2,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 18240,
-            "count": 1,
-            "name": "Ogre Tannin",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 275607,
         "spellId": 1297123,
         "name": "Swarmtender's Gloves",
@@ -149838,8 +142719,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 290,
         "yellow": 300,
-        "green": 305,
-        "grey": 325,
+        "green": 302,
+        "grey": 305,
         "reagents": [
           {
             "id": 12938,
@@ -149889,7 +142770,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "Cloth shoulder, level 56",
         "effect": "+25 Spell Power",
         "isNew": false,
-        "learn": 290,
+        "learn": 300,
         "yellow": 305,
         "green": 320,
         "grey": 335,
@@ -149917,45 +142798,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Argent Shoulders"
-      },
-      {
-        "id": 227864,
-        "spellId": 461752,
-        "name": "Incandescent Mooncloth Leggings",
-        "icon": "inv_pants_13",
-        "quality": 3,
-        "cat": "Legs",
-        "kind": "Tailoring",
-        "effect": "Crafted Incandescent Mooncloth Leggings",
-        "isNew": true,
-        "learn": 290,
-        "yellow": 305,
-        "green": 335,
-        "grey": 355,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 6,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 4,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Incandescent Mooncloth Leggings"
       },
       {
         "id": 19050,
@@ -151124,73 +143966,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Core Felcloth Bag"
       },
       {
-        "id": 228476,
-        "spellId": 462282,
-        "name": "Embroidered Belt of the Archmage",
-        "icon": "inv_belt_31",
-        "quality": 4,
-        "cat": "Waist",
-        "kind": "Tailoring",
-        "effect": "Crafted Embroidered Belt of the Archmage",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 16,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 9210,
-            "count": 10,
-            "name": "Ghost Dye",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 10,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 12,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7078,
-            "count": 12,
-            "name": "Essence of Fire",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14344,
-            "count": 6,
-            "name": "Large Brilliant Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 6,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Embroidered Belt of the Archmage"
-      },
-      {
         "id": 16979,
         "spellId": 20849,
         "name": "Flarecore Gloves",
@@ -151447,144 +144222,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Pattern: Gaea's Embrace"
-      },
-      {
-        "id": 227863,
-        "spellId": 461750,
-        "name": "Incandescent Mooncloth Circlet",
-        "icon": "inv_misc_bandana_01",
-        "quality": 3,
-        "cat": "Head",
-        "kind": "Tailoring",
-        "effect": "Crafted Incandescent Mooncloth Circlet",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 4,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 6,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12800,
-            "count": 1,
-            "name": "Azerothian Diamond",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 2,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Incandescent Mooncloth Circlet"
-      },
-      {
-        "id": 227861,
-        "spellId": 461708,
-        "name": "Incandescent Mooncloth Robe",
-        "icon": "inv_chest_cloth_04",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Tailoring",
-        "effect": "Crafted Incandescent Mooncloth Robe",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 6,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 4,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 13926,
-            "count": 2,
-            "name": "Golden Pearl",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 2,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Incandescent Mooncloth Robe"
-      },
-      {
-        "id": 227860,
-        "spellId": 461747,
-        "name": "Incandescent Mooncloth Vest",
-        "icon": "inv_chest_cloth_08",
-        "quality": 3,
-        "cat": "Chest",
-        "kind": "Tailoring",
-        "effect": "Crafted Incandescent Mooncloth Vest",
-        "isNew": true,
-        "learn": 300,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 6,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 4,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Pattern: Incandescent Mooncloth Vest"
       },
       {
         "id": 227844,
@@ -152553,169 +145190,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Treads of Conviction"
       },
       {
-        "id": 234009,
-        "spellId": 1214173,
-        "name": "Bolt of Qiraji Silk",
-        "icon": "inv_fabric_purple_02",
-        "quality": 1,
-        "cat": "Cloth",
-        "kind": "Tailoring",
-        "effect": "Crafted Bolt of Qiraji Silk",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 234008,
-            "count": 5,
-            "name": "Qiraji Silk",
-            "icon": "inv_fabric_purple_01",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 236705,
-        "spellId": 1223770,
-        "name": "Frosty Gloves",
-        "icon": "inv_gauntlets_06",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Tailoring",
-        "effect": "Crafted Frosty Gloves",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 236656,
-            "count": 5,
-            "name": "Frozen Rune",
-            "icon": "inv_misc_rune_09",
-            "quality": 3
-          },
-          {
-            "id": 14048,
-            "count": 4,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 4,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 4,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 236706,
-        "spellId": 1223768,
-        "name": "Frosty Vest",
-        "icon": "inv_chest_cloth_08",
-        "quality": 4,
-        "cat": "Chest",
-        "kind": "Tailoring",
-        "effect": "Crafted Frosty Vest",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 236656,
-            "count": 7,
-            "name": "Frozen Rune",
-            "icon": "inv_misc_rune_09",
-            "quality": 3
-          },
-          {
-            "id": 14048,
-            "count": 8,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 6,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 8,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 236704,
-        "spellId": 1223772,
-        "name": "Frosty Wrists",
-        "icon": "inv_bracer_07",
-        "quality": 4,
-        "cat": "Wrist",
-        "kind": "Tailoring",
-        "effect": "Crafted Frosty Wrists",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 236656,
-            "count": 4,
-            "name": "Frozen Rune",
-            "icon": "inv_misc_rune_09",
-            "quality": 3
-          },
-          {
-            "id": 14048,
-            "count": 2,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 7080,
-            "count": 2,
-            "name": "Essence of Water",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 4,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 22658,
         "spellId": 28208,
         "name": "Glacial Cloak",
@@ -153215,462 +145689,6 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Pattern: Sylvan Vest"
       },
       {
-        "id": 233826,
-        "spellId": 1213527,
-        "name": "Vampiric Cowl",
-        "icon": "inv_helmet_52",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Tailoring",
-        "effect": "Crafted Vampiric Cowl",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 15,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 8,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233837,
-        "spellId": 1213532,
-        "name": "Vampiric Robe",
-        "icon": "inv_chest_cloth_38",
-        "quality": 4,
-        "cat": "Chest",
-        "kind": "Tailoring",
-        "effect": "Crafted Vampiric Robe",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 25,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 12,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 12,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233833,
-        "spellId": 1213530,
-        "name": "Vampiric Shawl",
-        "icon": "inv_shoulder_23",
-        "quality": 4,
-        "cat": "Shoulder",
-        "kind": "Tailoring",
-        "effect": "Crafted Vampiric Shawl",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 345,
-        "grey": 365,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 15,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 8,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234484,
-        "spellId": 1214306,
-        "name": "Dreamscale Bracers",
-        "icon": "inv_bracer_06",
-        "quality": 4,
-        "cat": "Wrist",
-        "kind": "Tailoring",
-        "effect": "Crafted Dreamscale Bracers",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 30,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20381,
-            "count": 4,
-            "name": "Dreamscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12803,
-            "count": 4,
-            "name": "Living Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 4,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 6,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 234485,
-        "spellId": 1214307,
-        "name": "Dreamscale Mitts",
-        "icon": "inv_gauntlets_23",
-        "quality": 4,
-        "cat": "Hands",
-        "kind": "Tailoring",
-        "effect": "Crafted Dreamscale Mitts",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 14048,
-            "count": 30,
-            "name": "Bolt of Runecloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 20381,
-            "count": 5,
-            "name": "Dreamscale",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12803,
-            "count": 4,
-            "name": "Living Essence",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14342,
-            "count": 4,
-            "name": "Mooncloth",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14227,
-            "count": 6,
-            "name": "Ironweb Spider Silk",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233958,
-        "spellId": 1213536,
-        "name": "Qiraji Silk Cape",
-        "icon": "inv_misc_cape_08",
-        "quality": 4,
-        "cat": "Head",
-        "kind": "Tailoring",
-        "effect": "Crafted Qiraji Silk Cape",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 9,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 8,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233959,
-        "spellId": 1213538,
-        "name": "Qiraji Silk Cloak",
-        "icon": "inv_misc_cape_22",
-        "quality": 4,
-        "cat": "Back",
-        "kind": "Tailoring",
-        "effect": "Crafted Qiraji Silk Cloak",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 9,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 8,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233960,
-        "spellId": 1213540,
-        "name": "Qiraji Silk Drape",
-        "icon": "inv_chest_cloth_16",
-        "quality": 4,
-        "cat": "Back",
-        "kind": "Tailoring",
-        "effect": "Crafted Qiraji Silk Drape",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 9,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 8,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
-        "id": 233956,
-        "spellId": 1213534,
-        "name": "Qiraji Silk Scarf",
-        "icon": "inv_misc_cape_18",
-        "quality": 4,
-        "cat": "Back",
-        "kind": "Tailoring",
-        "effect": "Crafted Qiraji Silk Scarf",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 320,
-        "green": 340,
-        "grey": 360,
-        "reagents": [
-          {
-            "id": 234009,
-            "count": 9,
-            "name": "Bolt of Qiraji Silk",
-            "icon": "inv_fabric_purple_02",
-            "quality": 1
-          },
-          {
-            "id": 234007,
-            "count": 8,
-            "name": "Spiked Silithid Chitin",
-            "icon": "inv_misc_leatherscrap_11",
-            "quality": 1
-          },
-          {
-            "id": 15407,
-            "count": 4,
-            "name": "Cured Rugged Hide",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12810,
-            "count": 8,
-            "name": "Enchanted Leather",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 14341,
-            "count": 1,
-            "name": "Rune Thread",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
-      {
         "id": 271627,
         "name": "Tailoring Certification",
         "icon": "inv_scroll_15",
@@ -153768,7 +145786,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Forever town trainers in Zephras Isle & Riverglades."
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Eldrin in Elwynn Forest, Bowen Brisboise in Tirisfal Glades, Grondal Moonbreeze in Darkshore, Kil'hala in The Barrens, or Othesia Evengale / Taleen Shimmerthread on Zephras Isle."
         },
         {
           "type": "step",
@@ -155652,8 +147670,8 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Mining ore nodes and smelting bars for blacksmiths and engineers",
     "campBuff": null,
     "stats": {
-      "recipeCount": 18,
-      "newInForever": 6,
+      "recipeCount": 17,
+      "newInForever": 5,
       "favorRecipes": 0,
       "newRecipes": 5
     },
@@ -155662,7 +147680,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Smelting",
         "label": "Smelting Bars",
         "icon": "inv_ore_copper_01",
-        "count": 15
+        "count": 14
       },
       {
         "key": "Camping",
@@ -155706,9 +147724,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "isCamp": true,
         "learn": 20,
-        "yellow": 22,
-        "green": 22,
-        "grey": 25,
+        "yellow": 20,
+        "green": 20,
+        "grey": 20,
         "reagents": [
           {
             "id": 2835,
@@ -155735,8 +147753,8 @@ window.WOW_PROFESSIONS_DATA = {
         "cat": "Smelting",
         "isNew": false,
         "learn": 65,
-        "yellow": 50,
-        "green": 62,
+        "yellow": 65,
+        "green": 65,
         "grey": 75,
         "reagents": [
           {
@@ -155835,8 +147853,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isCamp": true,
         "learn": 140,
         "yellow": 140,
-        "green": 142,
-        "grey": 145,
+        "green": 140,
+        "grey": 140,
         "reagents": [
           {
             "id": 2838,
@@ -156141,38 +148159,6 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
-      },
-      {
-        "id": 234003,
-        "spellId": 1213638,
-        "name": "Smelt Obsidian-Infused Thorium Bar",
-        "icon": "inv_ingot_titansteel_dark",
-        "quality": 2,
-        "cat": "Smelting",
-        "kind": "Mining",
-        "effect": "Crafted Smelt Obsidian-Infused Thorium Bar",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 315,
-        "green": 330,
-        "grey": 350,
-        "reagents": [
-          {
-            "id": 12655,
-            "count": 2,
-            "name": "Enchanted Thorium Bar",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 22203,
-            "count": 2,
-            "name": "Large Obsidian Shard",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
       }
     ],
     "gatheringNodes": [
@@ -156215,7 +148201,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice Mining (1–75)",
-          "details": "Learned from \"Mining for Dummies\" starter quest book or trainers in Stormwind (Gelman Stonehand /way 51.0, 17.2), Ironforge (Geofram Bouldertoe /way 50.2, 26.0), Orgrimmar (Makaru /way 73.0, 26.8), Thunder Bluff (Brek Stonehoof /way 34.4, 57.8), Undercity (Brom Killian /way 55.8, 37.0), Zephras Isle, & Riverglades."
+          "details": "Learned from the \"Mining for Dummies\" starter quest reward or trainers: Gelman Stonehand in Stormwind (/way 59.0, 37.6), Geofram Bouldertoe in Ironforge (/way 50.4, 26.0), Makaru in Orgrimmar (/way 73.0, 26.4), Brek Stonehoof in Thunder Bluff (/way 34.6, 57.6), Brom Killian in Undercity (/way 56.0, 37.0), plus Messana Crestwind and Halavuul Cragwind on Zephras Isle and Grungle in Powderfuse Port, Riverglades."
         },
         {
           "type": "gather-step",
@@ -156416,7 +148402,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert Mining (125–225)",
-          "details": "Learned at Skill 125 (Level 20) from Mining trainers — including Dalaran in Alterac Mountains (/way 25.0, 41.2) and capital city masters, up to 225."
+          "details": "Learned at Skill 125 (Level 20) from the full Mining trainers (capital cities and towns such as Thelsamar, Auberdine, Darkshire, Razor Hill and The Sepulcher), up to 225."
         },
         {
           "type": "gather-step",
@@ -156555,7 +148541,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan Mining (225–300)",
-          "details": "Learned at Skill 200 (Level 35) from Mining trainers in Capital Cities, Gadgetzan, or Mount Hyjal (/way 39.2, 23.0), up to 300. Unlocks Smelt Truesilver (230), Smelt Dark Iron (230, Blackrock Depths quest), Smelt Thorium (250), Smelt Azerothium (275, Forever New), and Smelt Heavy Thorium (300, Forever New)."
+          "details": "Learned at Skill 200 (Level 35) from the full Mining trainers — capital cities, Pikkle in Gadgetzan (/way 51.0, 28.0) or Grungle in Powderfuse Port, Riverglades (/way 77.6, 51.8) — up to 300. Unlocks Smelt Truesilver (230), Smelt Dark Iron (230, Blackrock Depths quest), Smelt Thorium (250), Smelt Azerothium (275, Forever New), and Smelt Heavy Thorium (300, Forever New)."
         },
         {
           "type": "gather-step",
@@ -156758,12 +148744,12 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "synergy": "Goes with Blacksmithing, or Engineering.",
     "shopping": {
-      "title": "Smelting & Mining Shopping List (1 to 300)",
-      "subtitle": "Exact ore quantities required to power-level Mining 1–300 via forge smelting bypass and open-world vein extraction.",
+      "title": "Ore & Bars (Mining smelting route + Blacksmithing partner)",
+      "subtitle": "Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.",
       "groups": [
         {
-          "title": "1–140 & 155–185 Smelting Bypass Ores",
-          "note": "60 Copper Bars + 60 Tin Bars from steps 1–2 are reused to smelt 60 Bronze (75–100)",
+          "title": "Ore for the 1–185 smelting route",
+          "note": "Only if you level by smelting; Bronze reuses your Copper and Tin bars.",
           "items": [
             {
               "itemId": 2770,
@@ -156796,36 +148782,140 @@ window.WOW_PROFESSIONS_DATA = {
             {
               "itemId": 2776,
               "name": "Gold Ore",
-              "icon": "inv_ore_gold_01",
+              "icon": "inv_ore_copper_01",
               "quality": 1,
               "count": 60
             }
           ]
         },
         {
-          "title": "Artisan Smelting & Extraction Ores (225 to 300)",
-          "note": "Smelted at capital forges or extracted from high-tier veins to reach 300.",
+          "title": "Bars and stone the Blacksmithing route uses",
+          "note": "Exact totals from the Blacksmithing leveling route — one ore per bar except alloys.",
           "items": [
             {
-              "itemId": 7911,
-              "name": "Truesilver Ore",
-              "icon": "inv_ore_truesilver_01",
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
+              "quality": 1,
+              "count": 1216
+            },
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "icon": "inv_ingot_07",
+              "quality": 1,
+              "count": 950
+            },
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "icon": "inv_ingot_bronze",
+              "quality": 1,
+              "count": 304
+            },
+            {
+              "itemId": 249726,
+              "name": "Azerothium Bar",
+              "icon": "inv_ingot_livingsteel",
               "quality": 2,
-              "count": 30
+              "count": 290
             },
             {
-              "itemId": 10620,
-              "name": "Thorium Ore",
-              "icon": "inv_ore_thorium_01",
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_iron",
               "quality": 1,
-              "count": 40
+              "count": 228
             },
             {
-              "itemId": 11370,
-              "name": "Dark Iron Ore",
-              "icon": "inv_ore_mithril_02",
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
               "quality": 1,
-              "count": 160
+              "count": 143
+            },
+            {
+              "itemId": 6037,
+              "name": "Truesilver Bar",
+              "icon": "inv_ingot_08",
+              "quality": 2,
+              "count": 120
+            },
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 103
+            },
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1,
+              "count": 91
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "icon": "inv_ingot_02",
+              "quality": 1,
+              "count": 72
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_12",
+              "quality": 1,
+              "count": 13
+            }
+          ]
+        },
+        {
+          "title": "Your camp objects (Lodestone and Rock Garden)",
+          "note": "One craft of each — also worth a skill point apiece.",
+          "items": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 2
+            },
+            {
+              "itemId": 2772,
+              "name": "Iron Ore",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
             }
           ]
         }
@@ -157009,7 +149099,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice Herbalism (1–75)",
-          "details": "Learned from \"Wild Harvest\" starter quest book or trainers: Tannysa in Stormwind (/way 53.0, 84.8), Reyna Stonebranch in Ironforge (/way 55.6, 59.0), Firodren Mooncaller in Darnassus (/way 48.0, 68.6), Jandi in Orgrimmar (/way 55.6, 39.6), Komin Winterhoof in Thunder Bluff (/way 49.8, 40.2), Martha Alliestar in Undercity (/way 54.4, 49.8), Zephras Isle & Riverglades."
+          "details": "Learned from the \"Wild Harvest\" starter quest reward or trainers: Tannysa in Stormwind (/way 44.8, 77.0), Reyna Stonebranch in Ironforge (/way 55.6, 58.0), Firodren Mooncaller in Darnassus (/way 48.0, 68.0), Jandi in Orgrimmar (/way 55.6, 39.6), Komin Winterhoof in Thunder Bluff (/way 49.8, 39.8), Martha Alliestar in Undercity (/way 54.8, 50.2), and Halassa Fernbreeze / Syriel Nightrain on Zephras Isle."
         },
         {
           "type": "gather-step",
@@ -157126,7 +149216,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert Herbalism (125–225)",
-          "details": "Learned at Skill 125 from capital trainers or Dalaran in Alterac Mountains (/way 21.8, 63.6), up to 225."
+          "details": "Learned at Skill 125 from the full Herbalism trainers (capital cities and towns), including Edward Egan in Dalaran, Alterac Mountains (/way 18.4, 63.2, A), up to 225."
         },
         {
           "type": "gather-step",
@@ -157200,7 +149290,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Artisan Herbalism (225–300)",
-          "details": "Learned at Skill 200 from capital trainers, Master Mycologist Shurome in Emerald Sanctuary (/way 51.4, 82.0), or Mount Hyjal (/way 46.8, 25.0), up to 300."
+          "details": "Learned at Skill 200 from the full Herbalism trainers — capital cities, Flora Silverwind in Booty Bay (/way 27.6, 77.6) or Malvor in Nighthaven, Moonglade (/way 45.6, 46.8) — up to 300."
         },
         {
           "type": "gather-step",
@@ -157513,206 +149603,158 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "synergy": "Goes with Alchemy, which uses every herb.",
     "shopping": {
-      "title": "Herb Harvesting & Reagent Checklist (1 to 300)",
-      "subtitle": "Target herb quantities recommended across all 4 tiers from starting valleys to endgame zones.",
+      "title": "Herbs to Gather (for the Alchemy 1–300 route)",
+      "subtitle": "Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.",
       "groups": [
         {
-          "title": "Apprentice & Journeyman Herbs (1 to 150)",
-          "note": "Early herbs farmable across starter valleys and level 10–25 zones.",
+          "title": "Herbs the Alchemy route uses",
+          "note": "Exact totals from the Alchemy leveling route — sell them or supply your own Alchemy.",
           "items": [
             {
               "itemId": 2447,
               "name": "Peacebloom",
-              "icon": "inv_misc_herb_01",
+              "icon": "inv_misc_flower_02",
               "quality": 1,
-              "count": 60
-            },
-            {
-              "itemId": 765,
-              "name": "Silverleaf",
-              "icon": "inv_misc_herb_03",
-              "quality": 1,
-              "count": 60
-            },
-            {
-              "itemId": 2449,
-              "name": "Earthroot",
-              "icon": "inv_misc_root_01",
-              "quality": 1,
-              "count": 40
-            },
-            {
-              "itemId": 785,
-              "name": "Mageroyal",
-              "icon": "inv_misc_herb_13",
-              "quality": 1,
-              "count": 40
-            },
-            {
-              "itemId": 2450,
-              "name": "Briarthorn",
-              "icon": "inv_misc_root_01",
-              "quality": 1,
-              "count": 40
+              "count": 90
             },
             {
               "itemId": 3820,
               "name": "Stranglekelp",
-              "icon": "inv_misc_herb_08",
+              "icon": "inv_misc_herb_11",
               "quality": 1,
-              "count": 30
+              "count": 75
             },
             {
-              "itemId": 2453,
-              "name": "Bruiseweed",
-              "icon": "inv_misc_herb_01",
+              "itemId": 765,
+              "name": "Silverleaf",
+              "icon": "inv_misc_herb_10",
               "quality": 1,
-              "count": 30
+              "count": 50
             },
             {
-              "itemId": 3355,
-              "name": "Wild Steelbloom",
-              "icon": "inv_misc_herb_07",
+              "itemId": 13466,
+              "name": "Plaguebloom",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 3356,
-              "name": "Kingsblood",
-              "icon": "inv_misc_herb_03",
-              "quality": 1,
-              "count": 30
-            }
-          ]
-        },
-        {
-          "title": "Expert Herbs (150 to 225)",
-          "note": "Mid-game herbs gathered in Stranglethorn, Arathi, Alterac, and Swamp of Sorrows.",
-          "items": [
-            {
-              "itemId": 3357,
-              "name": "Liferoot",
-              "icon": "inv_misc_root_02",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 3818,
-              "name": "Fadeleaf",
-              "icon": "inv_misc_herb_12",
-              "quality": 1,
-              "count": 30
+              "count": 44
             },
             {
               "itemId": 3821,
               "name": "Goldthorn",
               "icon": "inv_misc_herb_15",
               "quality": 1,
-              "count": 30
+              "count": 40
             },
             {
-              "itemId": 3369,
-              "name": "Khadgar's Whisker",
-              "icon": "inv_misc_herb_08",
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "icon": "inv_misc_herb_01",
               "quality": 1,
-              "count": 30
+              "count": 37
             },
             {
-              "itemId": 4625,
-              "name": "Firebloom",
-              "icon": "inv_misc_herb_19",
+              "itemId": 2452,
+              "name": "Swiftthistle",
+              "icon": "inv_misc_herb_04",
               "quality": 1,
-              "count": 20
+              "count": 37
             },
             {
-              "itemId": 8831,
-              "name": "Purple Lotus",
-              "icon": "inv_misc_herb_17",
+              "itemId": 2449,
+              "name": "Earthroot",
+              "icon": "inv_misc_herb_07",
               "quality": 1,
-              "count": 20
+              "count": 28
             },
             {
               "itemId": 8836,
               "name": "Arthas' Tears",
               "icon": "inv_misc_herb_13",
               "quality": 1,
-              "count": 20
+              "count": 27
+            },
+            {
+              "itemId": 3355,
+              "name": "Wild Steelbloom",
+              "icon": "inv_misc_flower_01",
+              "quality": 1,
+              "count": 25
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "icon": "inv_misc_herb_03",
+              "quality": 1,
+              "count": 25
+            },
+            {
+              "itemId": 785,
+              "name": "Mageroyal",
+              "icon": "inv_jewelry_talisman_03",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 3818,
+              "name": "Fadeleaf",
+              "icon": "inv_misc_herb_12",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 12
+            },
+            {
+              "itemId": 249274,
+              "name": "Stranglevine",
+              "icon": "inv_herbalism_70_nightmaredreamleaf",
+              "quality": 2,
+              "count": 10
             }
           ]
         },
         {
-          "title": "Artisan Herbs (225 to 300)",
-          "note": "Endgame herbs in Hinterlands, Felwood, Un'Goro, Western/Eastern Plaguelands & Winterspring.",
+          "title": "Your camp objects (Incense Candle and Greenhouse)",
+          "note": "One craft of each — also worth a skill point apiece.",
           "items": [
             {
-              "itemId": 8838,
-              "name": "Sungrass",
-              "icon": "inv_misc_herb_18",
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 30
+              "count": 1
             },
             {
-              "itemId": 8839,
-              "name": "Blindweed",
-              "icon": "inv_misc_herb_14",
+              "itemId": 765,
+              "name": "Silverleaf",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 30
+              "count": 1
             },
             {
-              "itemId": 8845,
-              "name": "Ghost Mushroom",
-              "icon": "inv_mushroom_08",
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 20
+              "count": 2
             },
             {
-              "itemId": 8846,
-              "name": "Gromsblood",
-              "icon": "inv_misc_herb_16",
+              "itemId": 8836,
+              "name": "Arthas' Tears",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 25
+              "count": 1
             },
             {
-              "itemId": 13464,
-              "name": "Golden Sansam",
-              "icon": "inv_misc_herb_sansamroot",
+              "itemId": 8831,
+              "name": "Purple Lotus",
+              "icon": "inv_misc_questionmark",
               "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 13463,
-              "name": "Dreamfoil",
-              "icon": "inv_misc_herb_dreamfoil",
-              "quality": 1,
-              "count": 30
-            },
-            {
-              "itemId": 13465,
-              "name": "Mountain Silversage",
-              "icon": "inv_misc_herb_mountainsilversage",
-              "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 13466,
-              "name": "Plaguebloom",
-              "icon": "inv_misc_herb_plaguebloom",
-              "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 13467,
-              "name": "Icecap",
-              "icon": "inv_misc_herb_icecap",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 13468,
-              "name": "Black Lotus",
-              "icon": "inv_misc_herb_blacklotus",
-              "quality": 2,
-              "count": 5
+              "count": 1
             }
           ]
         }
@@ -157903,37 +149945,33 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice Skinning (1–75)",
-          "details": "Learned from \"Pelt Collecting for Beginners\" starter book or trainers: Maris Granger in Stormwind (/way 72.2, 62.2), Balthus Stoneflayer in Ironforge (/way 39.8, 32.6), Thuwd in Orgrimmar (/way 63.2, 45.2), Mooranta in Thunder Bluff (/way 44.4, 43.2), Killian Hagey in Undercity (/way 70.6, 58.6), Zephras Isle & Riverglades."
+          "details": "Learned from the \"Pelt Collecting for Beginners\" starter quest reward or trainers: Maris Granger in Stormwind (/way 67.8, 49.0), Balthus Stoneflayer in Ironforge (/way 39.8, 33.0), Thuwd in Orgrimmar (/way 63.2, 45.2), Mooranta in Thunder Bluff (/way 45.2, 43.6), Killian Hagey in Undercity (/way 71.0, 59.4), and Mendalass Tattermend / Ishlee Breezewhisper on Zephras Isle."
         },
         {
           "type": "gather-step",
           "from": 1,
           "to": 75,
           "bar": {
-            "iLeft": "0.00%",
-            "iWidth": "24.67%",
-            "eLeft": "74.67%"
+            "iLeft": "0.33%",
+            "iWidth": "24.67%"
           },
-          "title": "Beasts of Level 1 to 15 (Starter & Early Zones)",
-          "zones": "Lvl 1–10 beasts require Skill 1; Lvl 15 beasts require Skill 50. Farm wolves, boars & nightsabers in Elwynn Forest, Dun Morogh, Teldrassil, Durotar, Mulgore, Tirisfal Glades, Zephras Isle & Riverglades.",
+          "title": "Any starter zone (Forever: starter-area beasts are now skinnable)",
+          "zones": "Skin everything you kill while questing; move on when beasts stop giving points. Learn Apprentice Skinning from the \"Pelt Collecting for Beginners\" quest reward or a starter trainer, and train Journeyman before you hit 75.",
           "icons": [
             {
               "itemId": 2934,
               "name": "Ruined Leather Scraps",
-              "icon": "inv_misc_pelt_bear_ruin_05",
-              "quality": 1
+              "icon": "inv_misc_pelt_bear_ruin_05"
             },
             {
               "itemId": 2318,
               "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_03"
             },
             {
               "itemId": 783,
               "name": "Light Hide",
-              "icon": "inv_misc_pelt_wolf_ruin_02",
-              "quality": 1
+              "icon": "inv_misc_pelt_wolf_ruin_02"
             }
           ]
         },
@@ -157963,38 +150001,61 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 75,
-          "to": 150,
+          "to": 125,
           "bar": {
-            "iLeft": "24.67%",
-            "iWidth": "25.00%",
-            "eLeft": "74.67%"
+            "iLeft": "25%",
+            "iWidth": "16.67%"
           },
-          "title": "Beasts of Level 15 to 30 (Formula: Lvl 11–20 = (Lvl-10)×10 · Lvl 21+ = Lvl×5)",
-          "zones": "75–125: Westfall, Loch Modan, Darkshore, The Barrens & Silverpine Forest · 125–150: Wetlands (Whelgar's Excavation / Raptors), Ashenvale, Hillsbrad Foothills, Redridge & Stonetalon Mountains.",
+          "title": "The Barrens, Loch Modan or Darkshore",
+          "zones": "Barrens beasts get higher-level from north (Crossroads) to south — skin southward as points slow down. In Loch Modan start west near Thelsamar and move east.",
           "icons": [
             {
               "itemId": 2318,
               "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_03"
             },
             {
               "itemId": 2319,
               "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_05"
             },
             {
               "itemId": 4232,
               "name": "Medium Hide",
-              "icon": "inv_misc_pelt_boar_ruin_02",
-              "quality": 1
+              "icon": "inv_misc_pelt_boar_ruin_02"
+            }
+          ]
+        },
+        {
+          "type": "rank",
+          "rank": "Expert Skinning (125–225)",
+          "details": "Learned at Skill 125 from the full Skinning trainers — capital cities or towns such as Jayla in Silverwind Refuge, Ashenvale (/way 50.0, 67.2) or Kulleg Stonehorn in Camp Mojache, Feralas (/way 74.4, 43.0) — up to 225."
+        },
+        {
+          "type": "gather-step",
+          "from": 125,
+          "to": 175,
+          "bar": {
+            "iLeft": "41.67%",
+            "iWidth": "16.67%"
+          },
+          "title": "Ashenvale, Duskwood, Hillsbrad Foothills or Wetlands",
+          "zones": "Bears and lions are dense in central Hillsbrad; in the Wetlands start near Dun Algaz and head toward Menethil Harbor. Leave a little before 175 when points slow.",
+          "icons": [
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05"
             },
             {
               "itemId": 4234,
               "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_07"
+            },
+            {
+              "itemId": 4235,
+              "name": "Heavy Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_03"
             }
           ]
         },
@@ -158017,120 +150078,63 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "rank",
-          "rank": "Expert Skinning (125–225)",
-          "details": "Learned at Skill 125 from capital trainers or Dalaran in Alterac Mountains (/way 12.2, 74.6), up to 225."
-        },
-        {
           "type": "gather-step",
-          "from": 150,
-          "to": 205,
+          "from": 175,
+          "to": 225,
           "bar": {
-            "iLeft": "49.67%",
-            "iWidth": "18.33%",
-            "eLeft": "74.67%"
+            "iLeft": "58.33%",
+            "iWidth": "16.67%"
           },
-          "title": "Beasts of Level 30 to 41 (Required Skill = Mob Level × 5)",
-          "zones": "High-density beast camps in Stranglethorn Vale (Nesingwary Tigers/Panthers/Raptors), Thousand Needles (Shimmering Flats), Arathi Highlands (Raptors), Desolace & Badlands.",
+          "title": "Arathi Highlands, Stranglethorn Vale or Thousand Needles",
+          "zones": "Arathi raptors west of Refuge Pointe (30–34) and southeast of it (36–37); Stranglethorn beasts run 30–40 from north to south; Shimmering Flats has 30–32 to the north and 33–35 to the south. Train Artisan at 200.",
           "icons": [
             {
               "itemId": 4234,
               "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1
-            },
-            {
-              "itemId": 4235,
-              "name": "Heavy Hide",
-              "icon": "inv_misc_pelt_wolf_ruin_03",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_07"
             },
             {
               "itemId": 4304,
               "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1
-            },
-            {
-              "itemId": 8167,
-              "name": "Turtle Scale",
-              "icon": "inv_misc_monsterscales_11",
-              "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "gather-step",
-          "from": 205,
-          "to": 225,
-          "bar": {
-            "iLeft": "68.00%",
-            "iWidth": "6.67%",
-            "eLeft": "74.67%"
-          },
-          "title": "Beasts of Level 41 to 45 (Skill 205–225)",
-          "zones": "Southern Stranglethorn Vale, Tanaris (Roc/Hyena packs), Feralas (Longtooth Runners/Bears), Dustwallow Marsh & Swamp of Sorrows.",
-          "icons": [
-            {
-              "itemId": 4304,
-              "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_08"
             },
             {
               "itemId": 8169,
               "name": "Thick Hide",
-              "icon": "inv_misc_pelt_bear_ruin_01",
-              "quality": 1
-            },
-            {
-              "itemId": 8167,
-              "name": "Turtle Scale",
-              "icon": "inv_misc_monsterscales_11",
-              "quality": 1
+              "icon": "inv_misc_pelt_bear_ruin_01"
             }
           ]
         },
         {
           "type": "rank",
           "rank": "Artisan Skinning (225–300)",
-          "details": "Learned at Skill 200 from capital trainers or Elderwild in Mount Hyjal (/way 41.2, 43.4), up to 300."
+          "details": "Learned at Skill 200 from the full Skinning trainers (capital cities and towns), up to 300."
         },
         {
           "type": "gather-step",
           "from": 225,
           "to": 300,
           "bar": {
-            "iLeft": "74.67%",
-            "iWidth": "25.00%",
-            "eLeft": "74.67%"
+            "iLeft": "75%",
+            "iWidth": "25%"
           },
-          "title": "Beasts of Level 45 to 60 (Formula: Mob Level × 5)",
-          "zones": "225–250 (Lvl 45–50): Tanaris, Feralas, The Hinterlands & Searing Gorge · 250–300 (Lvl 50–60): Un'Goro Crater (Devilsaurs/Diemetradons), Winterspring (Yetis/Frostsabers), Felwood (Fel Leather/Hide), Blasted Lands, Silithus & Mount Hyjal.",
+          "title": "Beasts level 45–60 (required skill = beast level × 5)",
+          "zones": "225–250: Tanaris, Feralas, the Hinterlands and Searing Gorge · 250–300: Un'Goro Crater, Winterspring, Felwood, Blasted Lands, Silithus and Mount Hyjal.",
           "icons": [
             {
               "itemId": 4304,
               "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_08"
             },
             {
               "itemId": 8170,
               "name": "Rugged Leather",
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1
+              "icon": "inv_misc_leatherscrap_02"
             },
             {
               "itemId": 8171,
               "name": "Rugged Hide",
-              "icon": "inv_misc_pelt_bear_ruin_02",
-              "quality": 1
-            },
-            {
-              "itemId": 15408,
-              "name": "Heavy Scorpid Scale",
-              "icon": "inv_misc_monsterscales_03",
-              "quality": 1
+              "icon": "inv_misc_pelt_bear_ruin_02"
             }
           ]
         }
@@ -158197,136 +150201,130 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "synergy": "Goes with Leatherworking, which uses every hide.",
     "shopping": {
-      "title": "Leather & Pelt Harvest Checklist (1 to 300)",
-      "subtitle": "Target yield counts across all beast tiers from Elwynn/Durotar to Un'Goro, Winterspring, and Mount Hyjal.",
+      "title": "Leather to Collect (for the Leatherworking 1–300 route)",
+      "subtitle": "Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.",
       "groups": [
         {
-          "title": "Apprentice & Journeyman Pelts (1 to 150)",
-          "note": "Early leather harvested from level 1–30 wildlife.",
+          "title": "Leather, hides and scales the Leatherworking route uses",
+          "note": "Exact totals from the Leatherworking leveling route.",
           "items": [
-            {
-              "itemId": 2934,
-              "name": "Ruined Leather Scraps",
-              "icon": "inv_misc_pelt_bear_ruin_05",
-              "quality": 1,
-              "count": 50
-            },
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1,
-              "count": 120
-            },
-            {
-              "itemId": 783,
-              "name": "Light Hide",
-              "icon": "inv_misc_pelt_wolf_ruin_02",
-              "quality": 1,
-              "count": 15
-            },
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1,
-              "count": 120
-            },
-            {
-              "itemId": 4232,
-              "name": "Medium Hide",
-              "icon": "inv_misc_pelt_boar_ruin_02",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1,
-              "count": 80
-            }
-          ]
-        },
-        {
-          "title": "Expert Leathers & Scales (150 to 225)",
-          "note": "Mid-game hides and scales skinned in STV, Thousand Needles, Arathi, and Desolace.",
-          "items": [
-            {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1,
-              "count": 120
-            },
-            {
-              "itemId": 4235,
-              "name": "Heavy Hide",
-              "icon": "inv_misc_pelt_wolf_ruin_03",
-              "quality": 1,
-              "count": 25
-            },
-            {
-              "itemId": 4304,
-              "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1,
-              "count": 100
-            },
-            {
-              "itemId": 8169,
-              "name": "Thick Hide",
-              "icon": "inv_misc_pelt_bear_ruin_01",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 8167,
-              "name": "Turtle Scale",
-              "icon": "inv_misc_monsterscales_11",
-              "quality": 1,
-              "count": 40
-            }
-          ]
-        },
-        {
-          "title": "Artisan Leathers & End-Game Hides (225 to 300)",
-          "note": "High-level leathers and exotic scales from Un'Goro, Winterspring, Felwood & Silithus.",
-          "items": [
-            {
-              "itemId": 4304,
-              "name": "Thick Leather",
-              "icon": "inv_misc_leatherscrap_08",
-              "quality": 1,
-              "count": 120
-            },
             {
               "itemId": 8170,
               "name": "Rugged Leather",
               "icon": "inv_misc_leatherscrap_02",
               "quality": 1,
-              "count": 150
+              "count": 730
             },
             {
-              "itemId": 8171,
-              "name": "Rugged Hide",
-              "icon": "inv_misc_pelt_bear_ruin_02",
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
               "quality": 1,
-              "count": 30
+              "count": 424
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1,
+              "count": 191
             },
             {
               "itemId": 15408,
               "name": "Heavy Scorpid Scale",
               "icon": "inv_misc_monsterscales_03",
               "quality": 1,
-              "count": 30
+              "count": 180
             },
             {
-              "itemId": 15417,
-              "name": "Devilsaur Leather",
-              "icon": "inv_misc_monsterscales_08",
-              "quality": 2,
-              "count": 20
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 148
+            },
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1,
+              "count": 89
+            },
+            {
+              "itemId": 4461,
+              "name": "Raptor Hide",
+              "icon": "inv_misc_monsterscales_01",
+              "quality": 1,
+              "count": 40
+            },
+            {
+              "itemId": 4232,
+              "name": "Medium Hide",
+              "icon": "inv_misc_pelt_boar_ruin_02",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 783,
+              "name": "Light Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_02",
+              "quality": 1,
+              "count": 21
+            },
+            {
+              "itemId": 4235,
+              "name": "Heavy Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_03",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 8171,
+              "name": "Rugged Hide",
+              "icon": "inv_misc_pelt_bear_ruin_02",
+              "quality": 1,
+              "count": 10
+            }
+          ]
+        },
+        {
+          "title": "Your camp objects (Camp Chair and Field Guide)",
+          "note": "One craft of each — also worth a skill point apiece.",
+          "items": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 3
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 2
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 3
+            },
+            {
+              "itemId": 5784,
+              "name": "Slimy Murloc Scale",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 2
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
             }
           ]
         }
@@ -158347,8 +150345,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_misc_food_15"
     },
     "stats": {
-      "recipeCount": 132,
-      "newInForever": 51,
+      "recipeCount": 131,
+      "newInForever": 50,
       "favorRecipes": 6
     },
     "groups": [
@@ -158392,7 +150390,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Plain",
         "label": "Health and mana only",
         "icon": "inv_misc_food_11",
-        "count": 15
+        "count": 14
       },
       {
         "key": "Camp",
@@ -158402,45 +150400,6 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "recipes": [
-      {
-        "id": 252683,
-        "spellId": 1255241,
-        "name": "Cleansing Stew",
-        "icon": "136192",
-        "quality": 1,
-        "cat": "Plain",
-        "kind": "Cooking",
-        "effect": "Crafted Cleansing Stew",
-        "isNew": true,
-        "learn": 1,
-        "yellow": 16,
-        "green": 36,
-        "grey": 56,
-        "reagents": [
-          {
-            "id": 252948,
-            "count": 1,
-            "name": "Cleansed Felbloom",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 5471,
-            "count": 1,
-            "name": "Stag Meat",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          },
-          {
-            "id": 12207,
-            "count": 1,
-            "name": "Giant Egg",
-            "icon": "inv_misc_questionmark",
-            "quality": 1
-          }
-        ],
-        "source": "Trainer"
-      },
       {
         "id": 279981,
         "spellId": 1229737,
@@ -158453,8 +150412,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 1,
-        "green": 3,
-        "grey": 5,
+        "green": 1,
+        "grey": 20,
         "reagents": [
           {
             "id": 4470,
@@ -159499,8 +151458,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 1,
         "yellow": 80,
-        "green": 85,
-        "grey": 105,
+        "green": 82,
+        "grey": 85,
         "reagents": [
           {
             "id": 10284,
@@ -159716,8 +151675,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 90,
         "yellow": 95,
-        "green": 100,
-        "grey": 105,
+        "green": 95,
+        "grey": 95,
         "reagents": [
           {
             "id": 11291,
@@ -160388,8 +152347,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 140,
         "yellow": 145,
-        "green": 147,
-        "grey": 150,
+        "green": 145,
+        "grey": 145,
         "reagents": [
           {
             "id": 12037,
@@ -161035,8 +152994,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 200,
         "yellow": 205,
-        "green": 212,
-        "grey": 220,
+        "green": 205,
+        "grey": 205,
         "reagents": [
           {
             "id": 272941,
@@ -161746,8 +153705,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 260,
-        "green": 280,
-        "grey": 300,
+        "green": 270,
+        "grey": 280,
         "reagents": [
           {
             "id": 12203,
@@ -161778,8 +153737,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 260,
-        "green": 280,
-        "grey": 300,
+        "green": 270,
+        "grey": 280,
         "reagents": [
           {
             "id": 12202,
@@ -161842,8 +153801,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 250,
         "yellow": 260,
-        "green": 280,
-        "grey": 300,
+        "green": 270,
+        "grey": 280,
         "reagents": [
           {
             "id": 12207,
@@ -162386,8 +154345,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 280,
         "yellow": 290,
-        "green": 310,
-        "grey": 330,
+        "green": 300,
+        "grey": 310,
         "reagents": [
           {
             "id": 13888,
@@ -162432,8 +154391,8 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "learn": 280,
         "yellow": 290,
-        "green": 310,
-        "grey": 330,
+        "green": 300,
+        "grey": 310,
         "reagents": [
           {
             "id": 4603,
@@ -162650,7 +154609,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Cooking trainer (e.g., Stephen Ryback in Stormwind /way 77.2, 53.2 · Daryl Riknussun in Ironforge /way 60.0, 36.8 · Zamja in Orgrimmar /way 57.6, 53.6), up to 75. All cooked foods grant Well Fed (+5% Kill XP) in Forever!"
+          "details": "Learned from any Cooking trainer (e.g., Stephen Ryback in Stormwind /way 78.2, 53.0 · Daryl Riknussun in Ironforge /way 60.4, 38.0 · Zamja in Orgrimmar /way 57.6, 53.6), up to 75. All cooked foods grant Well Fed (+5% Kill XP) in Forever!"
         },
         {
           "type": "step",
@@ -163299,19 +155258,18 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice Fishing (1–75)",
-          "details": "Learned for 1s from any capital city Fishing trainer (e.g. Arnold Leland in Stormwind /way 54.8, 69.6 · Grimnur Stonebrand in Ironforge /way 48.2, 6.6 · Lumak in Orgrimmar /way 69.8, 29.4 · Kah Mistrunner in Thunder Bluff /way 56.0, 46.8)."
+          "details": "Learned from any Fishing trainer (e.g. Arnold Leland in Stormwind /way 55.0, 69.6 · Grimnur Stonebrand in Ironforge /way 48.4, 6.4 · Lumak in Orgrimmar /way 69.8, 29.6 · Kah Mistrunner in Thunder Bluff /way 56.0, 46.8 · Krix in Powderfuse Port, Riverglades /way 79.2, 54.6)."
         },
         {
           "type": "gather-step",
           "from": 1,
           "to": 75,
           "bar": {
-            "iLeft": "0.00%",
-            "iWidth": "25.00%",
-            "eLeft": "100%"
+            "iLeft": "0.33%",
+            "iWidth": "24.67%"
           },
-          "title": "Capital City Ponds & Starter Coastlines (1–75)",
-          "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades, and capital moats/canals. ~75 total catches (~1 catch per point early on).",
+          "title": "Any starter zone",
+          "zones": "Use a Shiny Bauble until 25; after that you catch everything in starter zones. Skill depends only on the number of fish you land, not the zone.",
           "icons": [
             {
               "itemId": 6291,
@@ -163353,12 +155311,11 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 75,
           "to": 150,
           "bar": {
-            "iLeft": "25.00%",
-            "iWidth": "25.00%",
-            "eLeft": "100%"
+            "iLeft": "25%",
+            "iWidth": "25%"
           },
-          "title": "Secondary Coastlines & Mid-Level Waters (75–150)",
-          "zones": "Westfall, Loch Modan, Darkshore, The Barrens, Silverpine Forest, and coastal inlets. ~80 catches to advance to 150.",
+          "title": "Any capital city (Stormwind, Ironforge, Darnassus, Orgrimmar, Undercity, Thunder Bluff)",
+          "zones": "100% catch rate without lures. Read Expert Fishing - The Bass and You (Old Man Heming, Booty Bay) at 125.",
           "icons": [
             {
               "itemId": 6289,
@@ -163369,11 +155326,6 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 6308,
               "name": "Raw Bristle Whisker Catfish",
               "icon": "inv_misc_fish_03"
-            },
-            {
-              "itemId": 6358,
-              "name": "Oily Blackmouth",
-              "icon": "inv_misc_fish_04"
             }
           ]
         },
@@ -163405,12 +155357,11 @@ window.WOW_PROFESSIONS_DATA = {
           "from": 150,
           "to": 225,
           "bar": {
-            "iLeft": "50.00%",
-            "iWidth": "25.00%",
-            "eLeft": "100%"
+            "iLeft": "50%",
+            "iWidth": "25%"
           },
-          "title": "Expert Inland Waters & STV Reefs (150–225)",
-          "zones": "Hillsbrad Foothills, Ashenvale, Wetlands, Redridge Mountains, Duskwood, Alterac Mountains, Arathi Highlands, and Northern Stranglethorn. ~95 catches to reach 225.",
+          "title": "Dustwallow Marsh (easier for Alliance) or Stranglethorn Vale (easier for Horde)",
+          "zones": "You need 225 for a 100% catch rate here, so use lures or a better pole until then — or keep fishing a capital if you only want the points.",
           "icons": [
             {
               "itemId": 6308,
@@ -163437,14 +155388,13 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "gather-step",
           "from": 225,
-          "to": 250,
+          "to": 300,
           "bar": {
-            "iLeft": "75.00%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
+            "iLeft": "75%",
+            "iWidth": "25%"
           },
-          "title": "Nat Pagle Quest Fish & Coastal Waters (225–250)",
-          "zones": "Catch 4 unique quest fish: Feralas Ahi (Verdantis River /way 63.5, 53.6), Misty Reed Mahi Mahi (Swamp of Sorrows /way 90.0, 70.0), Sar'theris Striker (Desolace /way 26.0, 72.0), Savage Coast Blue Sailfin (STV /way 25.0, 26.0). Plus ~35 open water catches in Tanaris/Feralas.",
+          "title": "Artisan quest in Dustwallow Marsh, then Tanaris",
+          "zones": "Finish Nat Pagle's Artisan quest (Feralas Ahi, Misty Reed Mahi Mahi, Sar'theris Striker and Savage Coast Blue Sailfin), then fish Tanaris for Raw Summer Bass or Raw Winter Squid depending on the season. A guaranteed catch in Tanaris needs 300, so use lures until then.",
           "icons": [
             {
               "itemId": 12726,
@@ -163452,77 +155402,9 @@ window.WOW_PROFESSIONS_DATA = {
               "icon": "inv_misc_fish_06"
             },
             {
-              "itemId": 12727,
-              "name": "Misty Reed Mahi Mahi",
-              "icon": "inv_misc_fish_06"
-            },
-            {
-              "itemId": 12728,
-              "name": "Sar'theris Striker",
-              "icon": "inv_misc_fish_06"
-            },
-            {
-              "itemId": 12729,
-              "name": "Savage Coast Blue Sailfin",
-              "icon": "inv_misc_fish_06"
-            }
-          ]
-        },
-        {
-          "type": "gather-step",
-          "from": 250,
-          "to": 275,
-          "bar": {
-            "iLeft": "83.33%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
-          },
-          "title": "High-Tier Ocean & River Waters (250–275)",
-          "zones": "Feralas, The Hinterlands, Tanaris, Dustwallow Marsh, and Moonwell waters in Moonglade. ~40 catches to reach 275.",
-          "icons": [
-            {
-              "itemId": 13758,
-              "name": "Raw Redgill",
-              "icon": "inv_misc_fish_05"
-            },
-            {
-              "itemId": 13759,
-              "name": "Raw Nightfin Snapper",
-              "icon": "inv_misc_fish_04"
-            },
-            {
-              "itemId": 13422,
-              "name": "Stonescale Eel",
-              "icon": "inv_misc_fish_04"
-            }
-          ]
-        },
-        {
-          "type": "gather-step",
-          "from": 275,
-          "to": 300,
-          "bar": {
-            "iLeft": "91.67%",
-            "iWidth": "8.33%",
-            "eLeft": "100%"
-          },
-          "title": "Endgame Waters & Elemental Pools (275–300)",
-          "zones": "Azshara (Bay of Storms), Winterspring, Western Plaguelands, Un'Goro Crater, and Jaguero Isle. Requires high-bonus pole + lures (Bright Baubles / Aquadynamic Attractor). ~45 catches to achieve 300 Master Angler.",
-          "icons": [
-            {
-              "itemId": 13758,
-              "name": "Raw Redgill",
-              "icon": "inv_misc_fish_05"
-            },
-            {
-              "itemId": 13760,
-              "name": "Raw Sunscale Salmon",
-              "icon": "inv_misc_fish_05"
-            },
-            {
-              "itemId": 13889,
-              "name": "Raw Whitescale Salmon",
-              "icon": "inv_misc_fish_05"
+              "itemId": 13756,
+              "name": "Raw Summer Bass",
+              "icon": "inv_misc_fish_08"
             },
             {
               "itemId": 13755,
@@ -163756,136 +155638,81 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "shopping": {
-      "title": "Angler Gear, Tackle & Catch Checklist (1 to 300)",
-      "subtitle": "Essential poles, skill lures, Nat Pagle quest fish, and high-value cooking catches for 1–300.",
+      "title": "Fish to Catch (for the Cooking 1–300 route)",
+      "subtitle": "Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.",
       "groups": [
         {
-          "title": "Poles & Skill-Boosting Lures",
-          "note": "Sold by fishing suppliers near docks or crafted by Engineers.",
+          "title": "Fish the Cooking route uses",
+          "note": "Exact totals from the Cooking leveling route.",
           "items": [
             {
-              "itemId": 6365,
-              "name": "Strong Fishing Pole",
-              "icon": "inv_fishingpole_01",
-              "quality": 2,
-              "count": 1
-            },
-            {
-              "itemId": 6529,
-              "name": "Shiny Bauble",
-              "icon": "inv_misc_fish_02",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 6530,
-              "name": "Nightcrawlers",
-              "icon": "inv_misc_fish_02",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 6532,
-              "name": "Bright Baubles",
-              "icon": "inv_misc_fish_02",
-              "quality": 1,
-              "count": 20
-            },
-            {
-              "itemId": 6533,
-              "name": "Aquadynamic Fish Attractor",
-              "icon": "inv_misc_fish_02",
-              "quality": 2,
-              "count": 10
-            }
-          ]
-        },
-        {
-          "title": "Nat Pagle Artisan Quest Fish (Level 35 / Skill 225)",
-          "note": "Four unique quest catches required for Nat Pagle in Dustwallow Marsh.",
-          "items": [
-            {
-              "itemId": 12726,
-              "name": "Feralas Ahi",
-              "icon": "inv_misc_fish_06",
-              "quality": 1,
-              "count": 1
-            },
-            {
-              "itemId": 12727,
-              "name": "Misty Reed Mahi Mahi",
-              "icon": "inv_misc_fish_06",
-              "quality": 1,
-              "count": 1
-            },
-            {
-              "itemId": 12728,
-              "name": "Sar'theris Striker",
-              "icon": "inv_misc_fish_06",
-              "quality": 1,
-              "count": 1
-            },
-            {
-              "itemId": 12729,
-              "name": "Savage Coast Blue Sailfin",
-              "icon": "inv_misc_fish_06",
-              "quality": 1,
-              "count": 1
-            }
-          ]
-        },
-        {
-          "title": "Target Cooking Fish Catches (1 to 300)",
-          "note": "Fish caught along the route and needed for high-tier Cooking power-leveling.",
-          "items": [
-            {
-              "itemId": 6291,
-              "name": "Raw Brilliant Smallfish",
+              "itemId": 4603,
+              "name": "Raw Spotted Yellowtail",
               "icon": "inv_misc_fish_01",
               "quality": 1,
-              "count": 50
-            },
-            {
-              "itemId": 6289,
-              "name": "Raw Longjaw Mud Snapper",
-              "icon": "inv_misc_fish_02",
-              "quality": 1,
-              "count": 60
+              "count": 66
             },
             {
               "itemId": 6308,
               "name": "Raw Bristle Whisker Catfish",
-              "icon": "inv_misc_fish_03",
+              "icon": "inv_misc_fish_30",
               "quality": 1,
-              "count": 60
+              "count": 54
             },
             {
               "itemId": 8365,
               "name": "Raw Mithril Head Trout",
-              "icon": "inv_misc_fish_03",
+              "icon": "inv_misc_fish_02",
               "quality": 1,
-              "count": 60
-            },
-            {
-              "itemId": 13758,
-              "name": "Raw Redgill",
-              "icon": "inv_misc_fish_05",
-              "quality": 1,
-              "count": 70
-            },
-            {
-              "itemId": 13760,
-              "name": "Raw Sunscale Salmon",
-              "icon": "inv_misc_fish_05",
-              "quality": 1,
-              "count": 25
+              "count": 52
             },
             {
               "itemId": 13759,
               "name": "Raw Nightfin Snapper",
-              "icon": "inv_misc_fish_04",
+              "icon": "inv_misc_fish_23",
               "quality": 1,
-              "count": 30
+              "count": 16
+            }
+          ]
+        },
+        {
+          "title": "Your camp objects (Fish Bowl and Fishing Rack)",
+          "note": "One craft of each — also worth a skill point apiece.",
+          "items": [
+            {
+              "itemId": 6291,
+              "name": "Raw Brilliant Smallfish",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 2
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 8365,
+              "name": "Raw Mithril Head Trout",
+              "icon": "inv_misc_questionmark",
+              "quality": 1,
+              "count": 2
             }
           ]
         }
@@ -164018,7 +155845,7 @@ window.WOW_PROFESSIONS_DATA = {
         "kind": "",
         "effect": "Restores 70 to 90 health.",
         "isNew": true,
-        "learn": 55,
+        "learn": 1,
         "yellow": 55,
         "green": 75,
         "grey": 95,
@@ -164946,7 +156773,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any First Aid trainer (e.g., Shaina Fuller in Stormwind /way 43.0, 26.2 · Nissa Firestone in Ironforge /way 54.8, 58.6 · Arnok in Orgrimmar /way 34.0, 84.4), up to 75. Teaches Linen Bandages + Minor Healing Potion at Skill 1!"
+          "details": "Learned from any First Aid trainer (e.g., Shaina Fuller in Stormwind /way 42.8, 26.6 · Nissa Firestone in Ironforge /way 54.8, 58.6 · Arnok in Orgrimmar /way 34.0, 84.4), up to 75. Teaches Linen Bandages + Minor Healing Potion at Skill 1!"
         },
         {
           "type": "step",
@@ -165544,7 +157371,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165588,7 +157415,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165632,7 +157459,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165676,7 +157503,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165720,7 +157547,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165764,7 +157591,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 125,
         "yellow": 145,
@@ -165808,7 +157635,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 150,
         "yellow": 170,
@@ -165845,7 +157672,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 150,
         "yellow": 170,
@@ -165882,7 +157709,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 150,
         "yellow": 170,
@@ -165919,7 +157746,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 150,
         "yellow": 170,
@@ -165956,7 +157783,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 175,
         "yellow": 195,
@@ -166000,7 +157827,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 175,
         "yellow": 195,
@@ -166044,7 +157871,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 200,
         "yellow": 220,
@@ -166081,7 +157908,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 200,
         "yellow": 220,
@@ -166118,7 +157945,7 @@ window.WOW_PROFESSIONS_DATA = {
         "icon": "spell_fire_fire",
         "quality": 2,
         "cat": "Tanning Rack",
-        "effect": "Crafted at the Tanning Rack (Leatherworking 140+)",
+        "effect": "Crafted at the Tanning Rack (Leatherworking 125+)",
         "isNew": true,
         "learn": 220,
         "yellow": 240,
@@ -166932,7 +158759,7 @@ window.WOW_PROFESSIONS_DATA = {
         "quality": 2,
         "capacity": 5,
         "desc": "Holds 5 camp objects.",
-        "skillReq": "Cooking 140",
+        "skillReq": "Cooking 90",
         "reagents": [
           {
             "itemId": 11291,

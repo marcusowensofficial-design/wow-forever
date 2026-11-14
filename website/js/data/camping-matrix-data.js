@@ -26,7 +26,7 @@ window.WOW_CAMPING_MATRIX = [
   {
     "profession": "Cooking",
     "tier": 2,
-    "skillReq": 140,
+    "skillReq": 90,
     "itemId": 279961,
     "name": "Journeyman Campfire Kit",
     "isKit": true,
@@ -600,7 +600,7 @@ window.WOW_CAMPING_MATRIX = [
   {
     "profession": "Leatherworking",
     "tier": 2,
-    "skillReq": 140,
+    "skillReq": 125,
     "itemId": 279941,
     "name": "Tanning Rack",
     "isKit": false,

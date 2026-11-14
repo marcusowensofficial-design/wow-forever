@@ -15,6 +15,10 @@ const path = require('path');
 const { loadData, norm } = require('./resolve.cjs');
 const SPEC = require('./routes-spec.cjs');
 const COLORS = require('./colors-spec.cjs');
+const CATALOG_PATH = path.join(__dirname, 'catalog-colors.json');
+const CATALOG = fs.existsSync(CATALOG_PATH) ? JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8')) : {};
+const PHANTOM_PATH = path.join(__dirname, 'phantom-recipes.json');
+const PHANTOMS = fs.existsSync(PHANTOM_PATH) ? JSON.parse(fs.readFileSync(PHANTOM_PATH, 'utf8')).recipes : [];
 
 const ROOT = path.join(__dirname, '..', '..');
 const JSON_PATH = path.join(ROOT, 'data', 'forever_professions.json');
@@ -68,9 +72,62 @@ const colorObj = c => (c ? { orange: c[0], yellow: c[1], green: c[2], grey: c[3]
 const sourceIsVendor = id => (SOURCES[id] && SOURCES[id].primaryType === 'vendor');
 
 // ------------------------------------------------- rank text (fixed + reused)
+// Trainer names/coords below were checked on 2026-11-14 against Wowhead's Forever
+// profession overview guides (trainer tables) and Wowhead's Forever NPC database.
+// Blacksmithing/leatherworking have no Wowhead Forever trainer table; their NPCs were
+// checked one by one in the NPC database. Claims not found there were removed.
 const RANK_OVERRIDES = {
+  alchemy: {
+    Apprentice: 'Learned from any Alchemy trainer (e.g., Lilyssia Nightbreeze in Stormwind /way 55.6, 85.8 · Vosur Brakthel in Ironforge /way 67.0, 54.2 · Whuut in Orgrimmar /way 56.0, 33.8 · Doctor Martin Felben in Undercity /way 46.6, 74.6), up to 75. Zephras Isle has Apprentice trainers in Shen\'dar Village and Valanaar.',
+    Journeyman: 'Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — Lilyssia Nightbreeze (Stormwind), Tally Berryfizz (Ironforge /way 67.2, 54.2), Kylanna in Silverwind Refuge, Ashenvale (/way 50.0, 67.0), Yelmak (Orgrimmar /way 56.6, 33.2), Bena Winterhoof (Thunder Bluff), Doctor Marsh (Undercity), Serge Hinott in Tarren Mill, or Jaxin Chong in Booty Bay (/way 28.0, 78.0, Neutral).',
+  },
   blacksmithing: {
-    Expert: 'Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.0, 43.0, A) or Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H).',
+    Apprentice: 'Learned from any Blacksmithing trainer (e.g., Therum Deepforge in Stormwind\'s Dwarven District · Bengus Deepforge in Ironforge /way 51.4, 42.2 · Saru Steelfury in Orgrimmar /way 82.2, 23.0 · Basil Frye in Undercity /way 59.2, 29.4), up to 75.',
+    Expert: 'Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.4, 42.2, A), Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H) or James Van Brunt in Undercity (/way 61.2, 29.2, H).',
+    Artisan: 'Learned from Brikk Keencraft in Booty Bay, Stranglethorn Vale (/way 29.0, 75.4, Neutral, Skill 200 & Level 35), up to 300. Armorsmith specialization: Grumnus Steelshaper in Ironforge (/way 49.0, 43.6) or Okothos Ironrager in Orgrimmar (/way 79.4, 23.4). Weaponsmith: Ironus Coldsteel in Ironforge (/way 49.4, 44.8) or Borgosh Corebender in Orgrimmar (/way 79.4, 23.4).',
+  },
+  enchanting: {
+    Apprentice: 'Learned from any Enchanting trainer (e.g., Lucan Cordell in Stormwind /way 43.0, 64.2 · Gimble Thistlefuzz in Ironforge /way 60.0, 45.2 · Godan in Orgrimmar /way 53.8, 38.4 · Lavinia Crowe in Undercity /way 62.6, 61.4), up to 75.',
+    Journeyman: 'Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Alanna Raveneye in Teldrassil, Vance Undergloom in Brill, or Xylinnia Starshine in Feathermoon Stronghold, Feralas.',
+    Artisan: 'Learned from Annora <Master Enchanter> deep inside Uldaman, Badlands (both factions, Skill 200 & Level 35). She sits between the Map Chamber and the Temple Hall and only appears after you clear the scorpids around her. Up to 300.',
+  },
+  engineering: {
+    Apprentice: 'Learned from any Engineering trainer (e.g., Lilliam Sparkspindle in Stormwind /way 62.2, 30.6 · Springspindle Fizzlegear in Ironforge /way 68.8, 45.2 · Roxxik in Orgrimmar /way 76.0, 25.0 · the Strange Hermit on Zephras Isle /way 54.0, 39.0), up to 75.',
+    Journeyman: 'Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Trixie Quikswitch in Ironforge, Nogg in Orgrimmar, or Finbus Geargrind in Darkshire, Duskwood (/way 77.4, 48.4).',
+    Expert: 'Learned from Expert trainers (Skill 125, Level 20), up to 225 — Springspindle Fizzlegear in Ironforge (/way 68.8, 45.2, A) or Roxxik in the Valley of Honor, Orgrimmar (/way 76.0, 25.0, H).',
+    Artisan: 'Learned from Buzzek Bracketswing in Gadgetzan, Tanaris (/way 52.2, 27.6, Neutral, Skill 200 & Level 35) or Kaylaena Springwhisper in Mount Hyjal (Forever), up to 300. Specializations: Gnomish Engineering from Tinkmaster Overspark in Ironforge (/way 70.6, 50.4) or Oglethorpe Obnoticus in Booty Bay (/way 28.2, 76.2); Goblin Engineering from Nixx Sprocketspring in Gadgetzan (/way 52.4, 27.2). Melbin Powderfuse in Riverglades (/way 77.6, 50.8) teaches Forever goblin recipes.',
+  },
+  leatherworking: {
+    Apprentice: 'Learned from any Leatherworking trainer (e.g., Simon Tanner in Stormwind /way 67.2, 49.4 · Fimble Finespindle in Ironforge /way 39.4, 33.0 · Adele Fielder in Goldshire /way 46.4, 62.2 · Karolek in Orgrimmar /way 62.8, 44.4), up to 75.',
+    Expert: 'Learned from Expert trainers (Skill 125, Level 20), up to 225 — Telonis in Darnassus (/way 64.4, 21.4, A) or Una in Thunder Bluff (/way 41.4, 42.6, H).',
+    Artisan: 'Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Drakk Stonehand in Aerie Peak, The Hinterlands (/way 13.4, 43.4, A) or Hahrana Ironhide in Camp Mojache, Feralas (/way 74.4, 43.0, H). Specializations at 225 & Lvl 40: Dragonscale (Peter Galen in Azshara /way 37.4, 65.4 · Thorkaf Dragoneye in Badlands /way 62.4, 57.4), Elemental (Sarah Tanner in Searing Gorge /way 63.2, 75.4 · Brumn Winterhoof in Arathi /way 28.2, 45.0), or Tribal (Caryssia Moonhunter in Feralas · Se\'Jib in Stranglethorn Vale /way 36.4, 34.0).',
+  },
+  tailoring: {
+    Journeyman: 'Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Eldrin in Elwynn Forest, Bowen Brisboise in Tirisfal Glades, Grondal Moonbreeze in Darkshore, Kil\'hala in The Barrens, or Othesia Evengale / Taleen Shimmerthread on Zephras Isle.',
+  },
+  mining: {
+    Apprentice: 'Learned from the "Mining for Dummies" starter quest reward or trainers: Gelman Stonehand in Stormwind (/way 59.0, 37.6), Geofram Bouldertoe in Ironforge (/way 50.4, 26.0), Makaru in Orgrimmar (/way 73.0, 26.4), Brek Stonehoof in Thunder Bluff (/way 34.6, 57.6), Brom Killian in Undercity (/way 56.0, 37.0), plus Messana Crestwind and Halavuul Cragwind on Zephras Isle and Grungle in Powderfuse Port, Riverglades.',
+    Expert: 'Learned at Skill 125 (Level 20) from the full Mining trainers (capital cities and towns such as Thelsamar, Auberdine, Darkshire, Razor Hill and The Sepulcher), up to 225.',
+    Artisan: 'Learned at Skill 200 (Level 35) from the full Mining trainers — capital cities, Pikkle in Gadgetzan (/way 51.0, 28.0) or Grungle in Powderfuse Port, Riverglades (/way 77.6, 51.8) — up to 300. Unlocks Smelt Truesilver (230), Smelt Dark Iron (230, Blackrock Depths quest), Smelt Thorium (250), Smelt Azerothium (275, Forever New), and Smelt Heavy Thorium (300, Forever New).',
+  },
+  herbalism: {
+    Apprentice: 'Learned from the "Wild Harvest" starter quest reward or trainers: Tannysa in Stormwind (/way 44.8, 77.0), Reyna Stonebranch in Ironforge (/way 55.6, 58.0), Firodren Mooncaller in Darnassus (/way 48.0, 68.0), Jandi in Orgrimmar (/way 55.6, 39.6), Komin Winterhoof in Thunder Bluff (/way 49.8, 39.8), Martha Alliestar in Undercity (/way 54.8, 50.2), and Halassa Fernbreeze / Syriel Nightrain on Zephras Isle.',
+    Expert: 'Learned at Skill 125 from the full Herbalism trainers (capital cities and towns), including Edward Egan in Dalaran, Alterac Mountains (/way 18.4, 63.2, A), up to 225.',
+    Artisan: 'Learned at Skill 200 from the full Herbalism trainers — capital cities, Flora Silverwind in Booty Bay (/way 27.6, 77.6) or Malvor in Nighthaven, Moonglade (/way 45.6, 46.8) — up to 300.',
+  },
+  skinning: {
+    Apprentice: 'Learned from the "Pelt Collecting for Beginners" starter quest reward or trainers: Maris Granger in Stormwind (/way 67.8, 49.0), Balthus Stoneflayer in Ironforge (/way 39.8, 33.0), Thuwd in Orgrimmar (/way 63.2, 45.2), Mooranta in Thunder Bluff (/way 45.2, 43.6), Killian Hagey in Undercity (/way 71.0, 59.4), and Mendalass Tattermend / Ishlee Breezewhisper on Zephras Isle.',
+    Expert: 'Learned at Skill 125 from the full Skinning trainers — capital cities or towns such as Jayla in Silverwind Refuge, Ashenvale (/way 50.0, 67.2) or Kulleg Stonehorn in Camp Mojache, Feralas (/way 74.4, 43.0) — up to 225.',
+    Artisan: 'Learned at Skill 200 from the full Skinning trainers (capital cities and towns), up to 300.',
+  },
+  cooking: {
+    Apprentice: 'Learned from any Cooking trainer (e.g., Stephen Ryback in Stormwind /way 78.2, 53.0 · Daryl Riknussun in Ironforge /way 60.4, 38.0 · Zamja in Orgrimmar /way 57.6, 53.6), up to 75. All cooked foods grant Well Fed (+5% Kill XP) in Forever!',
+  },
+  fishing: {
+    Apprentice: 'Learned from any Fishing trainer (e.g. Arnold Leland in Stormwind /way 55.0, 69.6 · Grimnur Stonebrand in Ironforge /way 48.4, 6.4 · Lumak in Orgrimmar /way 69.8, 29.6 · Kah Mistrunner in Thunder Bluff /way 56.0, 46.8 · Krix in Powderfuse Port, Riverglades /way 79.2, 54.6).',
+  },
+  'first-aid': {
+    Apprentice: 'Learned from any First Aid trainer (e.g., Shaina Fuller in Stormwind /way 42.8, 26.6 · Nissa Firestone in Ironforge /way 54.8, 58.6 · Arnok in Orgrimmar /way 34.0, 84.4), up to 75. Teaches Linen Bandages + Minor Healing Potion at Skill 1!',
   },
 };
 
@@ -83,10 +140,18 @@ function existingRankDetails(slug) {
   }
   return map;
 }
+const rankDetails = slug => ({ ...existingRankDetails(slug), ...(RANK_OVERRIDES[slug] || {}) });
+// For professions whose steps are reused as-is (skinning, fishing).
+const withRankOverrides = (slug, steps) => steps.map(s => {
+  if (s.type !== 'rank') return s;
+  const key = ['Apprentice', 'Journeyman', 'Expert', 'Artisan'].find(k => s.rank.includes(k));
+  const o = key && (RANK_OVERRIDES[slug] || {})[key];
+  return o ? { ...s, details: o } : s;
+});
 
 // ------------------------------------------------------- crafting builder
 function buildCrafting(slug) {
-  const ranks = { ...existingRankDetails(slug), ...(RANK_OVERRIDES[slug] || {}) };
+  const ranks = rankDetails(slug);
   const colors = COLORS[slug] || {};
   const steps = [];
   for (const e of SPEC[slug]) {
@@ -286,7 +351,7 @@ function expectedCrafts(from, to, [, y, , g]) {
 function buildMining() {
   // Smelting counts follow Wowhead's "1-185 Mining Leveling by Smelting in Forever";
   // node brackets follow its "Leveling by Mining" table, extended to 300 with Forever nodes.
-  const ranks = existingRankDetails('mining');
+  const ranks = rankDetails('mining');
   const fixed = (from, to, name, crafts, advice, noColors) => {
     const s = smelt(from, to, name, advice);
     if (!s) return null;
@@ -318,7 +383,7 @@ function buildMining() {
 }
 
 function buildHerbalism() {
-  const ranks = existingRankDetails('herbalism');
+  const ranks = rankDetails('herbalism');
   return [
     // Brackets follow Wowhead's "Herbalism Profession Overview in Forever": Forever moves each
     // herb's yellow -> green point later than Classic, so every herb stays useful longer.
@@ -409,16 +474,44 @@ result.herbalism = { leveling: { title: 'Leveling from 1 to 300 (Herb Brackets)'
   PERKS,
 ] } };
 
+// Keep a profession's (override-corrected) rank dividers, replace its brackets.
+// Each rank goes before the first bracket starting at/after its threshold.
+function rebuildBrackets(slug, steps, brackets) {
+  const ranks = withRankOverrides(slug, steps).filter(s => s.type === 'rank');
+  const at = [0, 75, 125, 225];
+  const out = [];
+  ranks.forEach((r, i) => {
+    out.push(r);
+    for (const b of brackets) if (b.from >= at[i] && (i === ranks.length - 1 || b.from < at[i + 1])) out.push(b);
+  });
+  return out;
+}
+// Brackets 1-225 follow Wowhead's "Skinning Profession Overview in Forever"
+// (it stops at 225); 225-300 uses the standard beast level x 5 rule.
+const SKIN_BRACKETS = [
+  G(1, 75, 'Any starter zone (Forever: starter-area beasts are now skinnable)', 'Skin everything you kill while questing; move on when beasts stop giving points. Learn Apprentice Skinning from the "Pelt Collecting for Beginners" quest reward or a starter trainer, and train Journeyman before you hit 75.', [I(2934, 'Ruined Leather Scraps', 'inv_misc_pelt_bear_ruin_05'), I(2318, 'Light Leather', 'inv_misc_leatherscrap_03'), I(783, 'Light Hide', 'inv_misc_pelt_wolf_ruin_02')]),
+  G(75, 125, 'The Barrens, Loch Modan or Darkshore', 'Barrens beasts get higher-level from north (Crossroads) to south — skin southward as points slow down. In Loch Modan start west near Thelsamar and move east.', [I(2318, 'Light Leather', 'inv_misc_leatherscrap_03'), I(2319, 'Medium Leather', 'inv_misc_leatherscrap_05'), I(4232, 'Medium Hide', 'inv_misc_pelt_boar_ruin_02')]),
+  G(125, 175, 'Ashenvale, Duskwood, Hillsbrad Foothills or Wetlands', 'Bears and lions are dense in central Hillsbrad; in the Wetlands start near Dun Algaz and head toward Menethil Harbor. Leave a little before 175 when points slow.', [I(2319, 'Medium Leather', 'inv_misc_leatherscrap_05'), I(4234, 'Heavy Leather', 'inv_misc_leatherscrap_07'), I(4235, 'Heavy Hide', 'inv_misc_pelt_wolf_ruin_03')]),
+  G(175, 225, 'Arathi Highlands, Stranglethorn Vale or Thousand Needles', 'Arathi raptors west of Refuge Pointe (30–34) and southeast of it (36–37); Stranglethorn beasts run 30–40 from north to south; Shimmering Flats has 30–32 to the north and 33–35 to the south. Train Artisan at 200.', [I(4234, 'Heavy Leather', 'inv_misc_leatherscrap_07'), I(4304, 'Thick Leather', 'inv_misc_leatherscrap_08'), I(8169, 'Thick Hide', 'inv_misc_pelt_bear_ruin_01')]),
+  G(225, 300, 'Beasts level 45–60 (required skill = beast level × 5)', '225–250: Tanaris, Feralas, the Hinterlands and Searing Gorge · 250–300: Un\'Goro Crater, Winterspring, Felwood, Blasted Lands, Silithus and Mount Hyjal.', [I(4304, 'Thick Leather', 'inv_misc_leatherscrap_08'), I(8170, 'Rugged Leather', 'inv_misc_leatherscrap_02'), I(8171, 'Rugged Hide', 'inv_misc_pelt_bear_ruin_02')]),
+];
+// Brackets follow Wowhead's "Fishing Profession Overview in Forever".
+const FISH_BRACKETS = [
+  G(1, 75, 'Any starter zone', 'Use a Shiny Bauble until 25; after that you catch everything in starter zones. Skill depends only on the number of fish you land, not the zone.', [I(6291, 'Raw Brilliant Smallfish', 'inv_misc_fish_01'), I(6289, 'Raw Longjaw Mud Snapper', 'inv_misc_fish_02')]),
+  G(75, 150, 'Any capital city (Stormwind, Ironforge, Darnassus, Orgrimmar, Undercity, Thunder Bluff)', '100% catch rate without lures. Read Expert Fishing - The Bass and You (Old Man Heming, Booty Bay) at 125.', [I(6289, 'Raw Longjaw Mud Snapper', 'inv_misc_fish_02'), I(6308, 'Raw Bristle Whisker Catfish', 'inv_misc_fish_03')]),
+  G(150, 225, 'Dustwallow Marsh (easier for Alliance) or Stranglethorn Vale (easier for Horde)', 'You need 225 for a 100% catch rate here, so use lures or a better pole until then — or keep fishing a capital if you only want the points.', [I(6308, 'Raw Bristle Whisker Catfish', 'inv_misc_fish_03'), I(8365, 'Raw Mithril Head Trout', 'inv_misc_fish_03'), I(6359, 'Firefin Snapper', 'inv_misc_fish_04')]),
+  G(225, 300, 'Artisan quest in Dustwallow Marsh, then Tanaris', 'Finish Nat Pagle\'s Artisan quest (Feralas Ahi, Misty Reed Mahi Mahi, Sar\'theris Striker and Savage Coast Blue Sailfin), then fish Tanaris for Raw Summer Bass or Raw Winter Squid depending on the season. A guaranteed catch in Tanaris needs 300, so use lures until then.', [I(12726, 'Feralas Ahi', 'inv_misc_fish_06'), I(13756, 'Raw Summer Bass', 'inv_misc_fish_08'), I(13755, 'Raw Winter Squid', 'inv_misc_fish_13')]),
+];
+
 const skin = DATA.skinning.leveling;
-result.skinning = { leveling: { ...skin, capNote: CAP, steps: insertCamp('skinning', skin.steps, [{ at: 20, name: 'Camp Chair' }, { at: 140, name: 'Field Guide' }]), guideCallouts: [
+result.skinning = { leveling: { ...skin, capNote: CAP, steps: insertCamp('skinning', rebuildBrackets('skinning', skin.steps, SKIN_BRACKETS), [{ at: 20, name: 'Camp Chair' }, { at: 140, name: 'Field Guide' }]), guideCallouts: [
   skin.guideCallouts[0],
   { icon: '🔪', title: 'Forever Skinning Gear & Camp Objects', text: 'Learn Apprentice Skinning from the starter book "Pelt Collecting for Beginners" (item 247846, +2 skill). Cartilage Shapers (item 273054, +4 Skinning, level 28 gloves from Lyn the Ignored) let you skin beasts early; Finkle\'s Skinner and Zulian Slicer add +10 at endgame. Camp objects: Camp Chair (20), Field Guide (140, grants Track Beasts) and Trapper\'s Workbench (300).' },
   PERKS,
 ] } };
 
 const fish = DATA.fishing.leveling;
-const fishSteps = insertCamp('fishing', fish.steps, [{ at: 20, name: 'Fish Bowl' }, { at: 140, name: 'Fishing Rack' }])
-  .map(s => (s.icons ? { ...s, icons: s.icons.map(ic => (ic.name === 'Winter Squid' ? { ...ic, itemId: 13755, name: 'Raw Winter Squid' } : ic)) } : s));
+const fishSteps = insertCamp('fishing', rebuildBrackets('fishing', fish.steps, FISH_BRACKETS), [{ at: 20, name: 'Fish Bowl' }, { at: 140, name: 'Fishing Rack' }]);
 result.fishing = { leveling: { ...fish, capNote: CAP, steps: fishSteps, guideCallouts: [
   { icon: '🎣', title: 'Skill Comes From Catches, Not Zones', text: 'Fishing skill depends only on how many fish you land — the zone does not change catches per point. Below 25 use a Shiny Bauble; from 25 you catch everything in starter zones. Fish where your catch rate is 100% (capitals to 150, Dustwallow Marsh or Stranglethorn to 225, then Tanaris) and use lures or a better pole when it drops. The Luremaster legacy perk gives a 25% chance of an extra fish while a lure is active. Camp objects: Fish Bowl (20), Fishing Rack (140) and Fishing Hut (300).' },
   PERKS,
@@ -427,6 +520,70 @@ result.fishing = { leveling: { ...fish, capNote: CAP, steps: fishSteps, guideCal
 result.camping = { leveling: { title: 'Camping Unlock Roadmap (No Skill to Level)', capNote: 'Camping is a system, not a profession', desc: 'Camping has no skill bar or trainer. Track the campfires and camp objects your professions unlock instead.', steps: buildCamping(), guideCallouts: [
   { icon: '🏕️', title: 'How a Camp Works', text: 'A cook places a campfire; every other player can add one camp object from a profession they know. Sit or craft by the fire for a minute to receive every object\'s buff for an hour. Your camp objects share a one-hour cooldown (the Field Guide legacy perk shortens it), and no other campfire can stand within 100 yards.' },
 ] }, shopping: campingShopping() };
+
+// ------------------------------------------- gathering shopping lists
+// A gatherer's "shopping list" is what its partner craft's 1-300 route needs
+// (derived from the routes above), plus the reagents for its own camp objects.
+function gatheredItems(slug, keep) {
+  const out = [];
+  for (const g of (result[slug].shopping.groups || [])) {
+    for (const it of g.items) if (keep(it)) out.push({ ...it });
+  }
+  return out.sort((a, b) => b.count - a.count);
+}
+function campReagentGroup(profession) {
+  const items = new Map();
+  for (const m of CAMP.filter(c => c.profession === profession && c.tier <= 2)) {
+    for (const r of m.reagents || []) {
+      const src = SOURCES[r.id];
+      const cur = items.get(r.id) || { itemId: r.id, name: r.name, icon: (src && src.icon) || 'inv_misc_questionmark', quality: 1, count: 0 };
+      cur.count += r.count; items.set(r.id, cur);
+    }
+  }
+  const objs = CAMP.filter(c => c.profession === profession && c.tier <= 2).map(c => c.name).join(' and ');
+  return { title: `Your camp objects (${objs})`, note: 'One craft of each — also worth a skill point apiece.', items: [...items.values()] };
+}
+const typeOf = it => (SOURCES[it.itemId] && SOURCES[it.itemId].primaryType) || '';
+const MINING_ORE = buildMining().filter(s => s.type === 'step')
+  .flatMap(s => s.reagents.filter(r => / Ore$/.test(r.name)).map(r => ({ ...r, count: r.count * s.crafts })));
+const GATHER_SHOPPING = {
+  herbalism: {
+    title: 'Herbs to Gather (for the Alchemy 1–300 route)',
+    groups: [
+      { title: 'Herbs the Alchemy route uses', note: 'Exact totals from the Alchemy leveling route — sell them or supply your own Alchemy.', items: gatheredItems('alchemy', it => typeOf(it) === 'herb') },
+      campReagentGroup('Herbalism'),
+    ],
+  },
+  skinning: {
+    title: 'Leather to Collect (for the Leatherworking 1–300 route)',
+    groups: [
+      { title: 'Leather, hides and scales the Leatherworking route uses', note: 'Exact totals from the Leatherworking leveling route.', items: gatheredItems('leatherworking', it => typeOf(it) === 'skinned' || (/(Leather|Hide|Scale)$/.test(it.name) && !/^Cured/.test(it.name))) },
+      campReagentGroup('Skinning'),
+    ],
+  },
+  mining: {
+    title: 'Ore & Bars (Mining smelting route + Blacksmithing partner)',
+    groups: [
+      { title: 'Ore for the 1–185 smelting route', note: 'Only if you level by smelting; Bronze reuses your Copper and Tin bars.', items: MINING_ORE.map(r => ({ itemId: r.itemId, name: r.name, icon: r.icon, quality: 1, count: r.count })) },
+      { title: 'Bars and stone the Blacksmithing route uses', note: 'Exact totals from the Blacksmithing leveling route — one ore per bar except alloys.', items: gatheredItems('blacksmithing', it => / (Bar|Stone)$/.test(it.name) && !/Grinding Stone|Arcanite Bar/.test(it.name)) },
+      campReagentGroup('Mining'),
+    ],
+  },
+  fishing: {
+    title: 'Fish to Catch (for the Cooking 1–300 route)',
+    groups: [
+      { title: 'Fish the Cooking route uses', note: 'Exact totals from the Cooking leveling route.', items: gatheredItems('cooking', it => typeOf(it) === 'fished' || /^Raw /.test(it.name)) },
+      campReagentGroup('Fishing'),
+    ],
+  },
+};
+for (const [slug, s] of Object.entries(GATHER_SHOPPING)) {
+  result[slug].shopping = {
+    title: s.title,
+    subtitle: 'Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.',
+    groups: s.groups.filter(g => g.items.length),
+  };
+}
 
 // ----------------------------------------------------------------- report
 for (const [slug, v] of Object.entries(result)) {
@@ -440,8 +597,10 @@ if (errors.length) { console.log('\nERRORS\n' + errors.join('\n')); process.exit
 
 if (WRITE) {
   let colorFixes = 0;
+  let phantomRemoved = 0;
   const apply = obj => {
     colorFixes = 0;
+    phantomRemoved = 0;
     for (const [slug, v] of Object.entries(result)) {
       obj[slug].leveling = v.leveling;
       if (v.shopping) obj[slug].shopping = v.shopping;
@@ -460,6 +619,54 @@ if (WRITE) {
         }
       }
     }
+    // Whole-catalog color sync from Wowhead's Forever spell listings
+    // (catalog-colors.json: { slug: { bySpell, byItem, byName } } -> [orange, yellow, green, grey]).
+    // Wowhead writes 0 for a stage that doesn't exist; fill it from the recorded
+    // learn level (if still valid) or the next stage so we never store a 0.
+    for (const [slug, idx] of Object.entries(CATALOG)) {
+      for (const r of (obj[slug] && obj[slug].recipes) || []) {
+        const raw = (r.spellId != null && idx.bySpell[r.spellId]) || (r.id != null && idx.byItem[r.id]) || idx.byName[String(r.name).toLowerCase()];
+        if (!raw) continue;
+        const firstSet = raw.find(v => v > 0) || raw[3];
+        const o = raw[0] || (r.learn > 0 && r.learn <= firstSet ? r.learn : firstSet);
+        const y = raw[1] || o;
+        const g = raw[2] || y;
+        const c = [o, y, g, raw[3]];
+        if (r.learn !== c[0] || r.yellow !== c[1] || r.green !== c[2] || r.grey !== c[3]) {
+          [r.learn, r.yellow, r.green, r.grey] = c;
+          colorFixes++;
+        }
+      }
+    }
+    // Remove recipes that don't exist in WoW Forever (phantom-recipes.json:
+    // crafted item missing from Forever's item DB and absent from Wowhead's
+    // Forever profession spell lists — mostly Season of Discovery imports).
+    for (const ph of PHANTOMS) {
+      const p = obj[ph.slug];
+      if (!p || !p.recipes) continue;
+      const before = p.recipes.length;
+      p.recipes = p.recipes.filter(r => !(ph.id != null ? r.id === ph.id : (r.id == null && r.name === ph.name)));
+      if (p.recipes.length !== before) phantomRemoved++;
+    }
+    for (const p of Object.values(obj)) {
+      if (p.stats && Array.isArray(p.recipes)) {
+        p.stats.recipeCount = p.recipes.length;
+        p.stats.newInForever = p.recipes.filter(r => r.isNew).length;
+      }
+      for (const g of (Array.isArray(p.groups) && Array.isArray(p.recipes) ? p.groups : [])) {
+        g.count = p.recipes.filter(r => r.cat === g.key).length;
+      }
+    }
+    // Nov 10 hotfix (see core-data.js patch notes): Journeyman Campfire needs
+    // Cooking 90 (was 140); the Tanning Rack is Leatherworking 125 (was 140).
+    for (const f of (obj.camping && obj.camping.campfires) || []) {
+      if (f.name === 'Journeyman Campfire Kit') f.skillReq = 'Cooking 90';
+    }
+    for (const p of Object.values(obj)) {
+      for (const r of p.recipes || []) {
+        if (typeof r.effect === 'string') r.effect = r.effect.replace('Crafted at the Tanning Rack (Leatherworking 140+)', 'Crafted at the Tanning Rack (Leatherworking 125+)');
+      }
+    }
   };
   const json = JSON.parse(fs.readFileSync(JSON_PATH, 'utf8'));
   apply(json);
@@ -471,6 +678,6 @@ if (WRITE) {
   const js = JSON.parse(raw.slice(at + marker.length).replace(/;\s*$/, ''));
   apply(js);
   fs.writeFileSync(JS_PATH, raw.slice(0, at) + marker + JSON.stringify(js, null, 2) + ';\n', 'utf8');
-  console.log('\nWrote', path.relative(ROOT, JSON_PATH), 'and', path.relative(ROOT, JS_PATH), `(${colorFixes} recipe color corrections)`);
+  console.log('\nWrote', path.relative(ROOT, JSON_PATH), 'and', path.relative(ROOT, JS_PATH), `(${colorFixes} recipe color corrections, ${phantomRemoved} phantom recipes removed)`);
 }
 module.exports = { result };
