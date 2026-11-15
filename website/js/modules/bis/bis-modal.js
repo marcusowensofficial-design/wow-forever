@@ -67,8 +67,8 @@ function openBiSTalentModal() {
   const content = document.getElementById("bis-talent-modal-content");
   if (!modal || !content) return;
 
-  const currentClass = WOW_BIS_DATA.classes.find(c => c.id === currentBiSState.classId) || WOW_BIS_DATA.classes[0];
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const currentClass = window.activeBisData().classes.find(c => c.id === currentBiSState.classId) || window.activeBisData().classes[0];
+  const classData = window.activeBisData()[currentBiSState.classId];
   const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId) || classData.specs[0];
 
   // Delegate to full 4x7 grid Talent Tree Engine if available
@@ -569,7 +569,7 @@ function renderFloatingTooltip(card, e, tooltip) {
   const mats = card.getAttribute("data-item-mats") || "";
 
   // Look up full item from current spec
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const classData = window.activeBisData()[currentBiSState.classId];
   const currentSpec = classData ? classData.specs.find(s => s.id === currentBiSState.specId) : null;
   let fullItem = null;
   if (currentSpec && currentSpec.slots) {
@@ -860,13 +860,14 @@ function getSlotClassification(slotLabel, itemName) {
  * Format and copy current BiS list as plain text
  */
 function copyBiSListToClipboard() {
-  const currentClass = WOW_BIS_DATA.classes.find(c => c.id === currentBiSState.classId);
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const currentClass = window.activeBisData().classes.find(c => c.id === currentBiSState.classId);
+  const classData = window.activeBisData()[currentBiSState.classId];
   const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
 
-  let text = `World of Warcraft: Forever — Level 30 Beta BiS List\n`;
+  const levelTitle = window.isBisLevel60 && window.isBisLevel60() ? 'Level 60 Pre-Raid' : 'Level 30 Leveling';
+  let text = `World of Warcraft: Forever — ${levelTitle} BiS List\n`;
   text += `Class: ${currentClass.name} | Spec: ${currentSpec.name} (${currentBiSState.faction.toUpperCase()})\n`;
-  text += `Build: ${WOW_BIS_METADATA.version} (${WOW_BIS_METADATA.lastUpdated})\n\n`;
+  text += `Build: ${window.activeBisMeta().version} (${window.activeBisMeta().lastUpdated})\n\n`;
 
   if (currentSpec.slots && currentSpec.slots.length > 0) {
     currentSpec.slots.forEach(slot => {
@@ -965,7 +966,7 @@ function extractBiSItemIds(currentSpec, faction) {
  * Formats and copies `/fj import <ids>` command to clipboard for ForeverDungeonJournal
  */
 function exportBiSToJournal() {
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const classData = window.activeBisData()[currentBiSState.classId];
   if (!classData || !classData.specs) return;
   const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
   if (!currentSpec) return;

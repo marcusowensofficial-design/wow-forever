@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World of Warcraft: Forever — Launch Portal, Classic+ Codex & 1-60 Compendium</title>
-  <meta name="description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Midway Level 30 BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
+  <meta name="description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Level 60 pre-raid BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
   <meta name="theme-color" content="#07090e">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://wow.zamimg.com https://render.worldofwarcraft.com https://marcusowens.github.io https://foreverdb.net; connect-src 'self'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:type" content="website">
   <meta property="og:title" content="World of Warcraft: Forever — Launch Portal, Classic+ Codex & 1-60 Compendium">
-  <meta property="og:description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Midway Level 30 BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
+  <meta property="og:description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Level 60 pre-raid BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
   <meta property="og:site_name" content="World of Warcraft: Forever Portal">
   <meta property="og:image" content="https://marcusowens.github.io/wow-forever/images/branding/wow-forever-og-banner.png">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:image:alt" content="World of Warcraft: Forever — Classic+ Launch Portal">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="World of Warcraft: Forever — Launch Portal, Classic+ Codex & 1-60 Compendium">
-  <meta name="twitter:description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Midway Level 30 BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
+  <meta name="twitter:description" content="World of Warcraft: Forever (Classic+) launch portal, codex, Level 60 pre-raid BiS gear planner, interactive talent calculator, and in-game companion addon suite.">
   <meta name="twitter:image" content="https://marcusowens.github.io/wow-forever/images/branding/wow-forever-og-banner.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,7 +111,7 @@
           </button>
           <div class="blizzard-dropdown-menu">
             <button type="button" class="blizzard-dropdown-link" data-target-tab="bis">
-              <span class="blizzard-dropdown-icon">🛡️</span> Midway Level 30 BiS Planner
+              <span class="blizzard-dropdown-icon">🛡️</span> Level 60 Pre-Raid BiS Planner
             </button>
             <button type="button" class="blizzard-dropdown-link" data-target-tab="tierlist">
               <span class="blizzard-dropdown-icon">🏆</span> Level 30 Tier List Maker
@@ -298,7 +298,7 @@
               <span class="nav-tile-label">Classic+<br>Guides</span>
             </button>
 
-            <button type="button" class="nav-tab-btn" data-tab="bis" title="Midway Level 30 BiS Gear Planners">
+            <button type="button" class="nav-tab-btn" data-tab="bis" title="Level 60 Pre-Raid BiS Gear Planner (plus the Level 30 leveling lists)">
               <span class="nav-tile-icon">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#icon-frost-glow)" stroke="#7dd3fc"/>
@@ -306,7 +306,7 @@
                   <path d="M12 7l3 3-3 3-3-3z" fill="#fef08a"/>
                 </svg>
               </span>
-              <span class="nav-tile-label">Midway BiS<br>(Level 30)</span>
+              <span class="nav-tile-label">Pre-Raid BiS<br>(Level 60)</span>
             </button>
 
             <button type="button" class="nav-tab-btn" data-tab="talents" title="Interactive Talent Tree Calculator">
@@ -3918,8 +3918,8 @@
 
     </section>
 
-    <!-- TAB 9: MIDWAY LEVEL 30 BIS LISTS -->
-    <section id="tab-bis" class="tab-content" aria-label="Midway Level 30 BiS Lists">
+    <!-- TAB 9: BIS LISTS (LEVEL 60 PRE-RAID + LEVEL 30 LEVELING) -->
+    <section id="tab-bis" class="tab-content" aria-label="Best in Slot Lists">
       <div id="bis-container"></div>
     </section>
 
@@ -4258,6 +4258,7 @@
   <script defer src="js/data/bis-data.js?v=1.60.1-70888"></script>
   <script defer src="js/data/talents-data.js?v=20261113b"></script>
   <script defer src="js/data/talent-builds-60-data.js?v=1.60.1-70888"></script>
+  <script defer src="js/data/bis-60-data.js?v=20261115"></script>
   <script defer src="js/data/deepdives/hunter.js?v=20261113d"></script>
   <script defer src="js/data/deepdives/shaman.js?v=20261113d"></script>
   <script defer src="js/data/deepdives/mage.js?v=20261113d"></script>
@@ -4318,9 +4319,9 @@
   <script defer src="js/modules/tierlist.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/downranking.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/vendors.js?v=1.60.1-70425"></script>
-  <script defer src="js/modules/bis/bis-modal.js?v=1.60.1-70425"></script>
+  <script defer src="js/modules/bis/bis-modal.js?v=20261115"></script>
   <script defer src="js/modules/bis/bis-enhancements.js?v=1.60.1-70425"></script>
-  <script defer src="js/modules/bis.js?v=20261113b"></script>
+  <script defer src="js/modules/bis.js?v=20261115"></script>
   <script defer src="js/modules/hiddenitems.js?v=20261113b"></script>
   <script defer src="js/modules/guides/special-quests.js?v=1.60.1-70425"></script>
   <script defer src="js/modules/guides.js?v=1.60.1-70425"></script>

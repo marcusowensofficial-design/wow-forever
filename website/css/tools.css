@@ -8477,3 +8477,113 @@
   border-color: rgba(59, 130, 246, 0.4) !important;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
 }
+
+/* ---- BiS: level toggle, availability pills, list status (level 60 pre-raid lists) ---- */
+.bis-meta-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.bis-level-toggle {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 0.2rem;
+}
+
+.bis-level-btn {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-level-btn.active {
+  background: #713f12;
+  color: #fde68a;
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
+}
+
+.bis-avail-pill {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 0.15rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.bis-avail-pill.raid {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #d8b4fe;
+}
+
+.bis-avail-pill.unavailable {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  color: #fca5a5;
+}
+
+.bis-status-notice {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: rgba(234, 179, 8, 0.08);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  color: #e2e8f0;
+  font-size: 0.88rem;
+}
+
+.bis-status-notice p {
+  margin: 0.3rem 0 0;
+  line-height: 1.5;
+}
+
+.bis-status-notice a,
+.bis-info-card a,
+.bis-prep-list a {
+  color: #7dd3fc;
+}
+
+.bis-avail-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0.6rem 0;
+  text-align: center;
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+.bis-avail-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.25rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.bis-avail-num {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #6ee7b7;
+}
+
+.bis-avail-num.raid { color: #d8b4fe; }
+.bis-avail-num.unavailable { color: #fca5a5; }
+
+.bis-talent-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

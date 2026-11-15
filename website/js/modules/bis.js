@@ -19,14 +19,69 @@
 
   const escapeHtml = window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
 
+const BIS_LEVEL_KEY = 'wow_forever_bis_level';
+
 let currentBiSState = {
+  level: "60", // '60' = level 60 pre-raid lists (js/data/bis-60-data.js) | '30' = level 30 leveling lists
   classId: "warrior",
-  specId: "pve",
+  specId: "arms",
   faction: "alliance", // 'alliance' | 'horde'
   searchFilter: "",
-  sourceFilter: "all", // 'all' | 'dalaran' | 'dungeon' | 'craft' | 'quest' | 'world'
+  sourceFilter: "all", // see getSourceChips()
   customEquipped: {}
 };
+// bis-modal.js reads the shared state and dataset through these globals.
+window.currentBiSState = currentBiSState;
+
+function isLevel60() {
+  return currentBiSState.level !== '30' && !!window.WOW_BIS_DATA_60;
+}
+function activeBisData() {
+  return isLevel60() ? window.WOW_BIS_DATA_60 : window.WOW_BIS_DATA;
+}
+function activeBisMeta() {
+  return isLevel60() ? window.WOW_BIS_METADATA_60 : window.WOW_BIS_METADATA;
+}
+window.activeBisData = activeBisData;
+window.activeBisMeta = activeBisMeta;
+window.isBisLevel60 = isLevel60;
+
+function bisHash(classId, specId) {
+  return `#bis/${classId}/${specId}${isLevel60() ? '' : '/30'}`;
+}
+
+function setBiSLevel(level) {
+  currentBiSState.level = level === '30' ? '30' : '60';
+  try { localStorage.setItem(BIS_LEVEL_KEY, currentBiSState.level); } catch { /* storage unavailable */ }
+  const data = activeBisData();
+  const classData = data[currentBiSState.classId] || data[data.classes[0].id];
+  if (!classData.specs.some(s => s.id === currentBiSState.specId)) {
+    currentBiSState.specId = classData.specs[0].id;
+  }
+  currentBiSState.sourceFilter = 'all';
+}
+
+// Source filter chips. Level 60 items carry a `cat`; level 30 items are matched on their source text.
+function getSourceChips() {
+  if (isLevel60()) {
+    return [
+      ['all', 'All Sources'], ['dungeon', '⚔️ Dungeons'], ['quest', '📜 Quests'], ['craft', '🔨 Crafting'],
+      ['vendor', '🪙 Vendors & Rep'], ['pvp', '🏅 PvP Rank'], ['world', '🌍 World'], ['raid', '👑 Raid / Not Yet'],
+    ];
+  }
+  return [
+    ['all', 'All Sources'], ['dalaran', '🏰 Dalaran & ES4'], ['dungeon', '⚔️ Dungeon Bosses'], ['craft', '🔨 Crafting'],
+    ['quest', '📜 Quests'], ['world', '🌍 World Drops'],
+  ];
+}
+
+// Small badge for level 60 items that cannot be obtained yet.
+function renderAvailPill(item) {
+  if (!item || !item.avail) return '';
+  if (item.avail === 'raid') return '<span class="bis-avail-pill raid" title="Comes from a Forever raid. Raids open December 9, 2026.">👑 Raid · Dec 9</span>';
+  if (item.avail === 'unavailable') return '<span class="bis-avail-pill unavailable" title="Only drops in a Classic raid that is not in WoW Forever. Pick the next best item for this slot.">⛔ Not in Forever yet</span>';
+  return '';
+}
 
 function initBiSLists() {
   const container = document.getElementById("bis-container");
@@ -39,6 +94,9 @@ function initBiSLists() {
   } catch {
     currentBiSState.customEquipped = {};
   }
+  try {
+    if (localStorage.getItem(BIS_LEVEL_KEY) === '30') setBiSLevel('30');
+  } catch { /* storage unavailable */ }
 
   // Listen to hash changes if user navigated to #bis or #bis/class/spec
   handleBiSHashRouting();
@@ -55,17 +113,22 @@ function handleBiSHashRouting() {
   if (!hash.startsWith("#bis")) return;
 
   const parts = hash.split("/");
-  if (parts[1] && WOW_BIS_DATA[parts[1]]) {
+  // #bis/<class>/<spec> = level 60, #bis/<class>/<spec>/30 = level 30 leveling list
+  if (parts[1] && (window.WOW_BIS_DATA || {})[parts[1]]) {
+    const wanted = parts[3] === '30' ? '30' : '60';
+    if (wanted !== (isLevel60() ? '60' : '30')) setBiSLevel(wanted);
+  }
+  if (parts[1] && activeBisData()[parts[1]]) {
     currentBiSState.classId = parts[1];
     if (parts[2]) {
-      const specExists = WOW_BIS_DATA[parts[1]].specs.some(s => s.id === parts[2]);
+      const specExists = activeBisData()[parts[1]].specs.some(s => s.id === parts[2]);
       if (specExists) {
         currentBiSState.specId = parts[2];
       } else {
-        currentBiSState.specId = WOW_BIS_DATA[parts[1]].specs[0].id;
+        currentBiSState.specId = activeBisData()[parts[1]].specs[0].id;
       }
     } else {
-      currentBiSState.specId = WOW_BIS_DATA[parts[1]].specs[0].id;
+      currentBiSState.specId = activeBisData()[parts[1]].specs[0].id;
     }
     renderBiSApp();
   }
@@ -75,8 +138,8 @@ function renderBiSApp() {
   const container = document.getElementById("bis-container");
   if (!container) return;
 
-  const currentClass = WOW_BIS_DATA.classes.find(c => c.id === currentBiSState.classId) || WOW_BIS_DATA.classes[0];
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const currentClass = activeBisData().classes.find(c => c.id === currentBiSState.classId) || activeBisData().classes[0];
+  const classData = activeBisData()[currentBiSState.classId];
   if (!classData || !classData.specs || classData.specs.length === 0) return;
 
   let currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
@@ -84,16 +147,23 @@ function renderBiSApp() {
     currentSpec = classData.specs[0];
     currentBiSState.specId = currentSpec.id;
   }
+  const lvl60 = isLevel60();
+  const meta = activeBisMeta() || {};
+  const levelLabel = lvl60 ? 'Level 60' : 'Level 30';
 
   container.innerHTML = `
     <!-- Top Metadata Banner -->
     <div class="bis-meta-banner">
       <div class="bis-meta-left">
-        <span class="bis-badge-beta">⚡ MIDWAY LEVELING BiS • LEVEL 30 MILESTONE</span>
-        <span class="bis-badge-build">Build ${WOW_BIS_METADATA.version}</span>
-        <span class="bis-meta-updated">Updated: ${WOW_BIS_METADATA.lastUpdated}</span>
+        <span class="bis-badge-beta">${lvl60 ? '👑 LEVEL 60 PRE-RAID BiS' : '⚡ LEVEL 30 LEVELING BiS'}</span>
+        <span class="bis-badge-build">Build ${escapeHtml(meta.version)}</span>
+        <span class="bis-meta-updated">Updated: ${escapeHtml(meta.lastUpdated)}</span>
       </div>
       <div class="bis-meta-right">
+        <div class="bis-level-toggle" role="group" aria-label="Select list level">
+          <button type="button" class="bis-level-btn ${lvl60 ? 'active' : ''}" data-level="60" aria-pressed="${lvl60}">Level 60 Pre-Raid</button>
+          <button type="button" class="bis-level-btn ${lvl60 ? '' : 'active'}" data-level="30" aria-pressed="${!lvl60}">Level 30 Leveling</button>
+        </div>
         <!-- Faction Toggle -->
         <div class="bis-faction-toggle" role="group" aria-label="Select Faction">
           <button type="button" class="bis-faction-btn ${currentBiSState.faction === 'alliance' ? 'active' : ''}" data-faction="alliance">
@@ -106,16 +176,18 @@ function renderBiSApp() {
       </div>
     </div>
 
-    <!-- Midway Leveling BiS Context Callout -->
+    <!-- List Context Callout -->
     <div class="bis-leveling-callout" style="background: rgba(14, 116, 144, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px; padding: 0.6rem 1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
       <div style="font-size: 0.86rem; color: #cbd5e1;">
-        <strong style="color: #38bdf8;">⚡ Midway Leveling Power Spike:</strong> Curated Level 25–30 equipment benchmarks (Excavation Site: Wetlands, Dalaran, RFK, Gnomeregan) to optimize your 21-point talent capstone dungeon grinding. Level 60 Pre-Raid BiS database launches November 4!
+        ${lvl60
+          ? `<strong style="color: #38bdf8;">👑 Level 60 pre-raid gear:</strong> one list per spec, following Wowhead's Forever gear planners. Raids open <strong>December 9</strong>. Items marked <em>Raid · Dec 9</em> or <em>Not in Forever yet</em> can't be earned today, so fill those slots from the dungeon, crafted and PvP options.`
+          : `<strong style="color: #38bdf8;">⚡ Level 30 leveling gear:</strong> the beta-era list for characters around level 25–30 (Excavation Site, City of Dalaran, Razorfen Kraul, Gnomeregan). Switch to <em>Level 60 Pre-Raid</em> for max-level gear.`}
       </div>
     </div>
 
     <!-- Class Switcher Ribbon -->
     <nav class="bis-class-selector" aria-label="Choose Class">
-      ${WOW_BIS_DATA.classes.map(c => `
+      ${activeBisData().classes.map(c => `
         <button type="button" 
                 class="bis-class-tab ${c.id === currentBiSState.classId ? 'active' : ''}" 
                 data-class="${c.id}"
@@ -161,17 +233,12 @@ function renderBiSApp() {
       <div class="bis-search-box">
         <span class="bis-search-icon">🔍</span>
         <input type="text" id="bis-gear-filter-input" name="bis-gear-filter" aria-label="Filter gear by item name, boss, or dungeon" class="bis-gear-filter-input" 
-               placeholder="Filter gear by item name, boss, or dungeon (e.g. Dalaran, RFK, Graveyard, Crafting)..." 
+               placeholder="Filter gear by item name, boss, or dungeon (e.g. ${lvl60 ? 'Stratholme, Dire Maul, Tailoring' : 'Dalaran, RFK, Graveyard, Crafting'})..." 
                value="${escapeHtml(currentBiSState.searchFilter || '')}" />
         <button type="button" id="bis-gear-filter-clear" class="bis-filter-clear-btn" ${currentBiSState.searchFilter ? '' : 'hidden'}>✕</button>
       </div>
       <div class="bis-source-chips">
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'all' ? 'active' : ''}" data-filter="all">All Sources</button>
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'dalaran' ? 'active' : ''}" data-filter="dalaran">🏰 Dalaran & ES4</button>
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'dungeon' ? 'active' : ''}" data-filter="dungeon">⚔️ Dungeon Bosses</button>
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'craft' ? 'active' : ''}" data-filter="craft">🔨 Crafting</button>
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'quest' ? 'active' : ''}" data-filter="quest">📜 Quests</button>
-        <button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === 'world' ? 'active' : ''}" data-filter="world">🌍 World Drops</button>
+        ${getSourceChips().map(([key, label]) => `<button type="button" class="bis-source-chip ${currentBiSState.sourceFilter === key ? 'active' : ''}" data-filter="${key}">${label}</button>`).join('')}
       </div>
     </div>
 
@@ -181,6 +248,7 @@ function renderBiSApp() {
         <strong>🧭 Spec Itemization Priority:</strong> ${escapeHtml(currentSpec.description)}
       </div>
     ` : ''}
+    ${renderSpecStatusNotice(currentSpec, currentClass)}
 
     <!-- Main Spec Content Layout: Paper-Doll + Stat Budget & Talents -->
     <div class="bis-stage-layout">
@@ -192,9 +260,9 @@ function renderBiSApp() {
             <h3 class="bis-panel-title">
               <span style="color: ${currentClass.color};">${currentClass.name}</span>: ${currentSpec.name} Best in Slot
             </h3>
-            <p class="bis-panel-subtitle">Equipped for Level 30 Beta Cap • Weapon Preference: ${currentSpec.weaponType || 'Standard'}</p>
+            <p class="bis-panel-subtitle">${lvl60 ? 'Level 60 pre-raid gear' : 'Equipped for the level 30 beta cap'} • Weapon Preference: ${currentSpec.weaponType || 'Standard'}</p>
           </div>
-          <span class="bis-slot-count">${(currentSpec.slots && currentSpec.slots.length) || 16} Slots Ranked</span>
+          <span class="bis-slot-count">${(currentSpec.slots && currentSpec.slots.length) || 0} Slots Ranked</span>
         </div>
 
         <!-- Visual Equipment Layout -->
@@ -214,7 +282,7 @@ function renderBiSApp() {
             <div class="bis-doll-silhouette" style="--class-color: ${currentClass.color};">
               <img src="${currentClass.icon}" alt="${currentClass.name}" class="bis-silhouette-icon" />
               <div class="bis-silhouette-text">
-                <strong>Level 30 ${currentClass.name}</strong>
+                <strong>${levelLabel} ${currentClass.name}</strong>
                 <span>${currentBiSState.faction === 'alliance' ? 'Alliance (Human / Dwarf / NElf / Gnome)' : 'Horde (Orc / Undead / Tauren / Troll)'}</span>
               </div>
             </div>
@@ -243,7 +311,7 @@ function renderBiSApp() {
 
       <!-- Right Column: Live Stat Budget & Level 30 Talent Build -->
       <div class="bis-side-panel">
-        
+        ${lvl60 ? renderLevel60SidePanel(currentSpec, currentClass) : `
         <!-- Live Stat Budget Card -->
         <div class="bis-stats-card">
           <div class="bis-card-title-row">
@@ -292,6 +360,7 @@ function renderBiSApp() {
             <div><strong>Launch Build 1.60.1.70707:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
           </div>
         </div>
+        `}
 
       </div>
 
@@ -316,22 +385,22 @@ function renderBiSApp() {
       <!-- Enchants Card -->
       <div class="bis-prep-card bis-enchants-card">
         <div class="bis-prep-header">
-          <h4><span>✨</span> Recommended Enchants (Build 1.60.1.70707)</h4>
+          <h4><span>✨</span> Recommended Enchants</h4>
           <span class="bis-prep-badge">${currentSpec.enchants ? currentSpec.enchants.length : 0} Enchants</span>
         </div>
         <div class="bis-prep-list">
-          ${renderEnchantsTable(currentSpec.enchants, currentClass.name, currentSpec.name)}
+          ${lvl60 ? renderEnchantsTable(currentSpec.enchants) : renderEnchantsTable(currentSpec.enchants, currentClass.name, currentSpec.name)}
         </div>
       </div>
 
       <!-- Pre-Fight Consumables Card -->
       <div class="bis-prep-card bis-consumables-card">
         <div class="bis-prep-header">
-          <h4><span>🧪</span> Level 30 Pre-Fight Consumables & Buffs</h4>
+          <h4><span>🧪</span> ${levelLabel} Pre-Fight Consumables & Buffs</h4>
           <span class="bis-prep-badge">${currentSpec.consumables ? currentSpec.consumables.length : 0} Consumables</span>
         </div>
         <div class="bis-prep-list">
-          ${renderConsumablesTable(currentSpec.consumables)}
+          ${lvl60 && !(currentSpec.consumables || []).length ? renderLevel60ConsumablesNote(currentSpec) : renderConsumablesTable(currentSpec.consumables)}
         </div>
       </div>
     </div>
@@ -426,6 +495,87 @@ function renderItemMatsHtml(item, fallbackMats) {
 /**
  * Render individual paper-doll slot card
  */
+/**
+ * Level 60: banner for specs Wowhead has not filled in yet, or only filled with raid tier.
+ */
+function renderSpecStatusNotice(spec, cls) {
+  if (!isLevel60() || !spec || spec.status === 'listed') return '';
+  const link = spec.sourceUrl ? `<a href="${escapeHtml(spec.sourceUrl)}" target="_blank" rel="noopener">Wowhead's ${escapeHtml(spec.name)} ${escapeHtml(cls.name)} page</a>` : 'Wowhead';
+  const copy = {
+    pending: ['⏳ List not published yet', `There's no level 60 list for ${escapeHtml(spec.name)} ${escapeHtml(cls.name)} yet. ${link} says its gear planner will be filled in once max-level gear is discovered. Until then, use the stat priority above, and the Level 30 list or Weapon Paths for leveling gear.`],
+    partial: ['🧩 Partial list', `${link} only lists the Phase 1 raid tier pieces so far. Their stats are still hidden, and raids open December 9. The other slots will be added when Wowhead publishes them.`],
+    placeholder: ['⚠️ Mostly gear that isn\'t in Forever', `${link} currently fills most slots with Classic raid loot (Naxxramas, Ahn'Qiraj, Molten Core) that you can't get in Forever. Use it as a stat guide, and fill the slots marked <em>Not in Forever yet</em> from dungeon, crafted, reputation and PvP gear.`],
+  }[spec.status] || ['', ''];
+  return `
+    <div class="bis-status-notice ${spec.status}">
+      <strong>${copy[0]}</strong>
+      <p>${copy[1]}</p>
+    </div>
+  `;
+}
+
+/**
+ * Level 60 right-hand column: list provenance, availability summary and the level 60 talent build.
+ */
+function renderLevel60SidePanel(spec, cls) {
+  const items = Object.values((spec.doll && spec.doll.alliance) || {});
+  const count = k => items.filter(i => i.avail === k).length;
+  const api = window.WOW_TALENT_BUILDS_60_API;
+  const build = api && spec.talentSpecId ? api.getBuild(cls.id, spec.talentSpecId) : null;
+  const keyTalents = build && build.keyTalents ? build.keyTalents.slice(0, 4).map(escapeHtml).join(', ') : '';
+  return `
+    <div class="bis-stats-card">
+      <div class="bis-card-title-row">
+        <h4><span>📊</span> What's in this list</h4>
+      </div>
+      <div class="bis-avail-summary">
+        <div><span class="bis-avail-num">${count('available') + count('unknown')}</span><span>Can be earned now</span></div>
+        <div><span class="bis-avail-num raid">${count('raid')}</span><span>Raid · Dec 9</span></div>
+        <div><span class="bis-avail-num unavailable">${count('unavailable')}</span><span>Not in Forever yet</span></div>
+      </div>
+      <p class="bis-stat-disclaimer">Stat totals aren't calculated for level 60 yet. Wowhead calls its Forever lists speculative until more gear is discovered.</p>
+    </div>
+
+    <div class="bis-talents-card">
+      <div class="bis-card-title-row">
+        <h4><span>🌟</span> Popular Level 60 Talents</h4>
+        <span class="bis-points-badge">${build ? build.split.join(' / ') : '51 Points'}</span>
+      </div>
+      <p class="bis-talents-desc">
+        ${build ? `The most-used 51-point ${escapeHtml(build.name)} build${keyTalents ? `. Key talents: ${keyTalents}` : ''}.` : 'No popular level 60 build is recorded for this spec yet.'}
+      </p>
+      <div class="bis-talents-meta">
+        <div class="bis-talent-actions" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button type="button" class="bis-talent-btn" id="btn-view-talent-tree" ${build ? '' : 'disabled'} title="Open the popular level 60 build in the talent calculator">
+            <span>🌟</span> View Level 60 Build
+          </button>
+          <button type="button" class="bis-talent-btn bis-calc-blank-btn" id="btn-open-blank-calculator" title="Open empty talent trees to customize your own build from scratch">
+            <span>⚡</span> Talent Calculator (Blank Slate)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bis-info-card">
+      <h4><span>💡</span> Where this list comes from</h4>
+      <p>
+        Items follow the gear planner on
+        ${spec.sourceUrl ? `<a href="${escapeHtml(spec.sourceUrl)}" target="_blank" rel="noopener">Wowhead's ${escapeHtml(spec.name)} ${escapeHtml(cls.name)} BiS page</a>` : "Wowhead's BiS page"}${spec.sourceUpdated ? ` (updated ${escapeHtml(spec.sourceUpdated)})` : ''}.
+        Drop sources come from our ForeverDungeonJournal loot tables and Wowhead's item pages.
+      </p>
+      <div class="bis-tip-item">
+        <span>📅</span>
+        <div><strong>Raids open December 9:</strong> Barrow Deeps (10), Hyjal Summit (20) and Onyxia's Lair (40). Expect these lists to change once raid loot is known.</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLevel60ConsumablesNote(spec) {
+  const url = spec && spec.sourceUrl ? spec.sourceUrl.replace(/bis-gear(-\w+)?$/, '') : 'https://www.wowhead.com/forever/guides/classes';
+  return `<p class="bis-empty-text" style="color: var(--text-muted); font-size: 0.85rem; padding: 1rem;">Level 60 consumables aren't listed here yet. See the enchants &amp; consumables section of <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Wowhead's ${escapeHtml(spec ? spec.name : '')} guide</a>.</p>`;
+}
+
 function renderPaperDollSlot(slotKey, slotLabel, spec) {
   if (!spec) return '';
 
@@ -536,6 +686,8 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
          data-item-id="${itemId}"
          data-item-side="${side}"
          data-item-mats="${escapeHtml(mats)}"
+         data-item-cat="${escapeHtml((fullItem || equipped).cat || '')}"
+         data-item-avail="${escapeHtml((fullItem || equipped).avail || '')}"
          data-item-reagents="${reagentsAttr}">
       <span class="bis-slot-label">${slotLabel}</span>
       <div class="bis-slot-main">
@@ -545,6 +697,7 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
           ${stats ? `<span class="bis-item-stats">${escapeHtml(stats)}</span>` : ''}
           ${enchant && enchant !== 'None' ? `<span class="bis-item-enchant">✨ ${escapeHtml(enchant)}</span>` : ''}
           ${source ? `<span class="bis-item-source">📍 ${escapeHtml(source)}</span>` : ''}
+          ${renderAvailPill(fullItem || equipped)}
           ${matsHtml}
           ${side === 'alliance' ? `<span class="bis-side-pill alliance"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance</span>` : ''}
           ${side === 'horde' ? `<span class="bis-side-pill horde"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde</span>` : ''}
@@ -673,6 +826,8 @@ function renderSlotsAlternativesTable(spec) {
                    data-item-id="${item.itemId || ''}"
                    data-item-side="${item.side || 'both'}"
                    data-item-mats="${escapeHtml(mats)}"
+                   data-item-cat="${escapeHtml(item.cat || '')}"
+                   data-item-avail="${escapeHtml(item.avail || '')}"
                    data-item-reagents="${reagentsAttr}">
                 <span class="bis-rank-badge ${rankBadgeClass}">${rankLabel}</span>
                 <img src="${iconUrl}" alt="${escapeHtml(item.name)}" class="bis-alt-icon ${item.quality || 'q2'}" loading="lazy" />
@@ -690,6 +845,7 @@ function renderSlotsAlternativesTable(spec) {
                 </div>
                 <div class="bis-alt-source" style="display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end;">
                   <div>📍 ${escapeHtml(item.source || 'Unknown')}</div>
+                  ${renderAvailPill(item)}
                   ${matsHtml}
                   <button type="button" class="btn-bis-equip ${isEquipped ? 'is-equipped' : ''}" style="${isEquipped ? 'background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #6ee7b7;' : 'background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #cbd5e1;'} padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.76rem; cursor: pointer;" onclick="event.stopPropagation(); equipBiSItem('${slotId}', '${escapeHtml(item.name).replace(/'/g, "\\'")}')">
                     ${isEquipped ? '✓ Equipped' : '⚡ Equip Item'}
@@ -774,10 +930,10 @@ function bindBiSEvents() {
   document.querySelectorAll(".bis-class-tab").forEach(tab => {
     tab.addEventListener("click", () => {
       const cls = tab.getAttribute("data-class");
-      if (cls && WOW_BIS_DATA[cls]) {
+      if (cls && activeBisData()[cls]) {
         currentBiSState.classId = cls;
-        currentBiSState.specId = WOW_BIS_DATA[cls].specs[0].id;
-        window.location.hash = `#bis/${cls}/${currentBiSState.specId}`;
+        currentBiSState.specId = activeBisData()[cls].specs[0].id;
+        window.location.hash = bisHash(cls, currentBiSState.specId);
         renderBiSApp();
       }
     });
@@ -789,7 +945,7 @@ function bindBiSEvents() {
       const spec = pill.getAttribute("data-spec");
       if (spec) {
         currentBiSState.specId = spec;
-        window.location.hash = `#bis/${currentBiSState.classId}/${spec}`;
+        window.location.hash = bisHash(currentBiSState.classId, spec);
         renderBiSApp();
       }
     });
@@ -803,6 +959,17 @@ function bindBiSEvents() {
         currentBiSState.faction = faction;
         renderBiSApp();
       }
+    });
+  });
+
+  // Level Toggle (60 pre-raid / 30 leveling)
+  document.querySelectorAll(".bis-level-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const level = btn.getAttribute("data-level");
+      if (!level || level === currentBiSState.level) return;
+      setBiSLevel(level);
+      history.replaceState(null, '', bisHash(currentBiSState.classId, currentBiSState.specId));
+      renderBiSApp();
     });
   });
 
@@ -826,7 +993,7 @@ function bindBiSEvents() {
   const btnShare = document.getElementById("btn-share-bis-link");
   if (btnShare) {
     btnShare.addEventListener("click", () => {
-      const shareUrl = `${window.location.origin}${window.location.pathname}#bis/${currentBiSState.classId}/${currentBiSState.specId}`;
+      const shareUrl = `${window.location.origin}${window.location.pathname}${bisHash(currentBiSState.classId, currentBiSState.specId)}`;
       const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
       copyFn(shareUrl, () => {
         btnShare.innerHTML = "<span>✅</span> Link Copied!";
@@ -841,6 +1008,10 @@ function bindBiSEvents() {
   const btnTalents = document.getElementById("btn-view-talent-tree");
   if (btnTalents) {
     btnTalents.addEventListener("click", () => {
+      if (isLevel60()) {
+        openLevel60TalentModal();
+        return;
+      }
       openBiSTalentModal();
     });
   }
@@ -850,15 +1021,16 @@ function bindBiSEvents() {
   if (btnBlankCalc) {
     btnBlankCalc.addEventListener("click", () => {
       if (window.TalentTreeModule) {
-        const classData = WOW_BIS_DATA[currentBiSState.classId];
+        const classData = activeBisData()[currentBiSState.classId];
         const currentSpec = classData ? (classData.specs.find(s => s.id === currentBiSState.specId) || classData.specs[0]) : null;
         window.TalentTreeModule.openModal({
           classId: currentBiSState.classId,
           specId: currentSpec ? currentSpec.id : 'custom',
           specName: currentSpec ? `${currentSpec.name} (Custom Build)` : 'Custom Build',
           blankSlate: true,
-          buildUrl: currentSpec?.talents?.buildUrl || '',
-          maxPoints: 26
+          buildUrl: isLevel60() ? '' : (currentSpec?.talents?.buildUrl || ''),
+          capMode: isLevel60() ? 'lvl60' : 'lvl30_perk',
+          maxPoints: isLevel60() ? 51 : 26
         });
       }
     });
@@ -901,7 +1073,7 @@ function applyActiveGearFilters() {
   const query = (currentBiSState.searchFilter || '').toLowerCase();
   const sourceFilter = currentBiSState.sourceFilter || 'all';
 
-  const matchesFilter = (sourceText, nameText) => {
+  const matchesFilter = (sourceText, nameText, cat, avail) => {
     const s = (sourceText || '').toLowerCase();
     const n = (nameText || '').toLowerCase();
 
@@ -913,6 +1085,10 @@ function applyActiveGearFilters() {
 
     // Source chip check
     if (sourceFilter === 'all') return true;
+    if (isLevel60()) {
+      if (sourceFilter === 'raid') return cat === 'raid' || avail === 'raid' || avail === 'unavailable';
+      return cat === sourceFilter;
+    }
     if (sourceFilter === 'dalaran') return s.includes('dalaran') || s.includes('excavation') || s.includes('site 4');
     if (sourceFilter === 'dungeon') return s.includes('kraul') || s.includes('gnomeregan') || s.includes('graveyard') || s.includes('bfd') || s.includes('boss');
     if (sourceFilter === 'craft') return s.includes('blacksmithing') || s.includes('leatherworking') || s.includes('tailoring') || s.includes('engineering') || s.includes('craft');
@@ -928,7 +1104,7 @@ function applyActiveGearFilters() {
   document.querySelectorAll(".bis-slot-card:not(.empty)").forEach(card => {
     const src = card.getAttribute("data-item-source") || '';
     const name = card.getAttribute("data-item-name") || '';
-    const match = matchesFilter(src, name);
+    const match = matchesFilter(src, name, card.getAttribute("data-item-cat") || '', card.getAttribute("data-item-avail") || '');
 
     if (isFilterActive) {
       if (match) {
@@ -947,7 +1123,7 @@ function applyActiveGearFilters() {
   document.querySelectorAll(".bis-alt-row").forEach(row => {
     const src = row.getAttribute("data-item-source") || '';
     const name = row.getAttribute("data-item-name") || '';
-    const match = matchesFilter(src, name);
+    const match = matchesFilter(src, name, row.getAttribute("data-item-cat") || '', row.getAttribute("data-item-avail") || '');
 
     if (isFilterActive) {
       if (match) {
@@ -1164,6 +1340,21 @@ const WOW_TALENT_ICONS = {
  */
 
   // BiS Modal, Tooltips & Exporters (delegated to js/modules/bis/bis-modal.js)
+  function openLevel60TalentModal() {
+    const spec = activeBisData()[currentBiSState.classId].specs.find(s => s.id === currentBiSState.specId);
+    const api = window.WOW_TALENT_BUILDS_60_API;
+    const build = api && spec ? api.getBuild(currentBiSState.classId, spec.talentSpecId) : null;
+    if (!build || !window.TalentTreeModule) return;
+    window.TalentTreeModule.openModal({
+      classId: currentBiSState.classId,
+      specId: build.specId,
+      specName: `${build.name} (Popular Lvl 60)`,
+      capMode: 'lvl60',
+      maxPoints: 51,
+      points: build.points
+    });
+  }
+
   function openBiSTalentModal() {
     if (window.WOW_BIS_MODAL && window.WOW_BIS_MODAL.openBiSTalentModal) {
       window.WOW_BIS_MODAL.openBiSTalentModal();
@@ -1189,7 +1380,7 @@ const WOW_TALENT_ICONS = {
   }
 
 function equipBiSItem(slotId, itemName) {
-  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const classData = activeBisData()[currentBiSState.classId];
   if (!classData || !classData.specs) return;
   const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
   if (!currentSpec || !currentSpec.slots) return;
