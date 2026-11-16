@@ -104,6 +104,7 @@ const RANK_OVERRIDES = {
   },
   tailoring: {
     Journeyman: 'Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — the capital city trainers, Eldrin in Elwynn Forest, Bowen Brisboise in Tirisfal Glades, Grondal Moonbreeze in Darkshore, Kil\'hala in The Barrens, or Othesia Evengale / Taleen Shimmerthread on Zephras Isle.',
+    Expert: 'Learned at Skill 125 (Level 20), up to 225, from Georgio Bolero in Mage Quarter, Stormwind (/way 43.2, 73.6, A) or Josef Gregorian in Magic Quarter, Undercity (/way 70.6, 30.6, H). Both are Artisan Tailors, and they are also where you learn Bolt of Mageweave and the newer Forever crafts.',
   },
   mining: {
     Apprentice: 'Learned from the "Mining for Dummies" starter quest reward or trainers: Gelman Stonehand in Stormwind (/way 59.0, 37.6), Geofram Bouldertoe in Ironforge (/way 50.4, 26.0), Makaru in Orgrimmar (/way 73.0, 26.4), Brek Stonehoof in Thunder Bluff (/way 34.6, 57.6), Brom Killian in Undercity (/way 56.0, 37.0), plus Messana Crestwind and Halavuul Cragwind on Zephras Isle and Grungle in Powderfuse Port, Riverglades.',
@@ -299,7 +300,7 @@ const CALLOUTS = {
   ],
   tailoring: [
     { icon: '⚠️', title: '285–300 Needs Cenarion Circle Rep and a Loom', text: 'Wowhead\'s planner confirms that no vendor pattern takes Tailoring past 295 without Cenarion Circle reputation (Friendly for Venomspew Gloves, Honored for the Cord and Footpads), and those patterns need a Loom — a camp object only a 300 Tailor can place. Start Silithus quests early and arrange a Loom with your guild.' },
-    { icon: '🧵', title: 'Camp Objects & the Runecloth Bill', text: 'Faction Banner at 20 and Spinning Wheel at 140 (needed for Robe of Power at 158). From 205 to 300 you will spin roughly 2,300 Runecloth into bolts, mostly for Runecloth Cuffs — farm Runecloth throughout your 50s.' },
+    { icon: '🧵', title: 'Camp Objects & the Runecloth Bill', text: 'Faction Banner at 20 and Spinning Wheel at 140 (needed for Robe of Power at 158). No trainer teaches the Spinning Wheel: it comes from Blueprint: Spinning Wheel, sold by the Happy Camper for 15s or dropped by the Unstable Sentinel in Dalaran. From 205 to 300 you will spin roughly 2,300 Runecloth into bolts, mostly for Runecloth Cuffs — farm Runecloth throughout your 50s.' },
     PERKS,
   ],
   cooking: [

@@ -145714,7 +145714,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "Learned from any Tailoring trainer (e.g., Georgio Bolero in Stormwind /way 53.2, 81.4 · Jormund Stonebrow in Ironforge /way 43.2, 29.0 · Magar in Orgrimmar /way 63.6, 50.0 · Josef Gregorian in Undercity /way 70.6, 30.6), up to 75."
+          "details": "Learned from any Tailoring trainer (e.g., Georgio Bolero in Stormwind /way 43.2, 73.6 · Jormund Stonebrow in Ironforge /way 43.2, 29.0 · Magar in Orgrimmar /way 63.6, 50.0 · Josef Gregorian in Undercity /way 70.6, 30.6), up to 75."
         },
         {
           "type": "step",
@@ -146071,8 +146071,8 @@ window.WOW_PROFESSIONS_DATA = {
           },
           "itemId": 4339,
           "recipeName": "Bolt of Mageweave",
-          "source": "Learned from the trainer",
-          "advice": "At 140, craft your Spinning Wheel camp object once — Robe of Power needs it.",
+          "source": "Taught by an Artisan Tailor — Georgio Bolero in Stormwind (/way 43.2, 73.6) or Josef Gregorian in Undercity (/way 70.6, 30.6)",
+          "advice": "Expert trainers no longer teach Bolt of Mageweave; you must learn it from an Artisan Tailor. Also at 140: get Blueprint: Spinning Wheel (Happy Camper, 15s, or a drop from the Unstable Sentinel in Dalaran; no trainer teaches it) and craft the Spinning Wheel camp object once — Robe of Power needs it.",
           "crafts": 11,
           "craftsSafe": 14,
           "colors": {
@@ -146094,7 +146094,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Georgio Bolero in Mage Quarter, Stormwind (/way 53.2, 81.4, A) or Josef Gregorian in Magic Quarter, Undercity (/way 70.6, 30.6, H)."
+          "details": "Learned at Skill 125 (Level 20), up to 225, from Georgio Bolero in Mage Quarter, Stormwind (/way 43.2, 73.6, A) or Josef Gregorian in Magic Quarter, Undercity (/way 70.6, 30.6, H). Both are Artisan Tailors, and they are also where you learn Bolt of Mageweave and the newer Forever crafts."
         },
         {
           "type": "step",
@@ -146741,7 +146741,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "icon": "🧵",
           "title": "Camp Objects & the Runecloth Bill",
-          "text": "Faction Banner at 20 and Spinning Wheel at 140 (needed for Robe of Power at 158). From 205 to 300 you will spin roughly 2,300 Runecloth into bolts, mostly for Runecloth Cuffs — farm Runecloth throughout your 50s."
+          "text": "Faction Banner at 20 and Spinning Wheel at 140 (needed for Robe of Power at 158). No trainer teaches the Spinning Wheel: it comes from Blueprint: Spinning Wheel, sold by the Happy Camper for 15s or dropped by the Unstable Sentinel in Dalaran. From 205 to 300 you will spin roughly 2,300 Runecloth into bolts, mostly for Runecloth Cuffs — farm Runecloth throughout your 50s."
         },
         {
           "icon": "🏆",

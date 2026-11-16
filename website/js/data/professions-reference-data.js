@@ -537,10 +537,10 @@
     "profession": "tailoring",
     "profName": "Tailoring",
     "faction": "Alliance",
-    "rank": "Expert",
+    "rank": "Artisan",
     "zone": "Stormwind City",
-    "coords": "53.2, 81.6",
-    "macro": "/way Stormwind City 53.2 81.6",
+    "coords": "43.2, 73.6",
+    "macro": "/way Stormwind City 43.2 73.6",
     "notes": "Mage Quarter"
   },
   {
@@ -559,7 +559,7 @@
     "profession": "tailoring",
     "profName": "Tailoring",
     "faction": "Horde",
-    "rank": "Expert",
+    "rank": "Artisan",
     "zone": "Undercity",
     "coords": "70.6, 30.2",
     "macro": "/way Undercity 70.6 30.2",

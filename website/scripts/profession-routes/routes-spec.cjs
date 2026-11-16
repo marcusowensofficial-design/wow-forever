@@ -163,7 +163,7 @@ module.exports = {
     [125, 132, 'Azure Silk Hood', 7, 7, T, ''],
     [132, 138, "Lesser Wizard's Robe", 7, 9, T, ''],
     [138, 140, 'Earthen Vest', 2, 2, T, ''],
-    [140, 149, 'Bolt of Mageweave', 11, 14, T, 'At 140, craft your Spinning Wheel camp object once — Robe of Power needs it.'],
+    [140, 149, 'Bolt of Mageweave', 11, 14, 'Taught by an Artisan Tailor — Georgio Bolero in Stormwind (/way 43.2, 73.6) or Josef Gregorian in Undercity (/way 70.6, 30.6)', 'Expert trainers no longer teach Bolt of Mageweave; you must learn it from an Artisan Tailor. Also at 140: get Blueprint: Spinning Wheel (Happy Camper, 15s, or a drop from the Unstable Sentinel in Dalaran; no trainer teaches it) and craft the Spinning Wheel camp object once — Robe of Power needs it.'],
     { rank: 'Expert' },
     [149, 158, 'Earthen Vest', 9, 10, T, 'Train Expert (skill 125, level 20) before you reach 150.'],
     [158, 170, 'Robe of Power', 12, 12, T, 'Needs a Spinning Wheel nearby.'],
