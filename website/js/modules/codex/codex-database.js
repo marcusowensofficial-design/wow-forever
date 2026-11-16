@@ -931,7 +931,7 @@
             <p class="section-subtext">Search every weapon, armor piece, recipe, reagent, and boss drop extracted directly from the Build 1.60.6 game client — including ${db.newInForeverItems.toLocaleString('en-US')} brand-new Classic+ items, ${db.revealedItems.toLocaleString('en-US')} detailed items, and live BoE auction valuations.</p>
             <div style="display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem;flex-wrap:wrap;">
               <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);color:#facc15;font-size:0.75rem;font-weight:600;" title="${marketCount > 0 ? `Scanned ${scanDateStr} on ${market.activeRealm || 'PvE'}` : 'Requires ForeverMarket in-game scan'}">
-                <span>💰</span> ${marketCount > 0 ? `PvE AH: ${marketCount.toLocaleString('en-US')} Live Prices (${scanDateStr})` : 'AH Live Pricing Ready'}
+                <span>💰</span> ${marketCount > 0 ? `PvE AH: ${marketCount.toLocaleString('en-US')} Prices (scanned ${scanDateStr})` : 'AH Pricing Ready'}
               </span>
               ${flipsCount > 0 ? `
                 <button type="button" id="codex-db-flips-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:${state.onlyFlips ? 'rgba(249,115,22,0.35)' : 'rgba(249,115,22,0.14)'};border:1px solid rgba(249,115,22,0.5);color:#fb923c;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Toggle guaranteed vendor arbitrage flips">
@@ -947,7 +947,7 @@
 
         <!-- Filter Controls Bar -->
         <div style="background:rgba(15,23,42,0.75);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1rem;display:flex;flex-direction:column;gap:0.85rem;">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0.65rem;">
+          <div class="codex-db-filter-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:0.65rem;">
             <input type="search" id="codex-db-search" aria-label="Search items by name, stat, type, boss, or ID"
                    placeholder="🔍 Search name, +int, sword, VanCleef, or #ID..."
                    value="${esc(state.q)}"

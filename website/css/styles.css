@@ -8598,3 +8598,9 @@ input:checked + .toggle-slider:before {
   background: rgba(234, 179, 8, 0.35);
   box-shadow: 0 0 12px rgba(234, 179, 8, 0.3);
 }
+
+/* Item Database filters: on phones the search box takes a full row and selects shrink to fit */
+.codex-db-filter-grid > select { min-width: 0; width: 100%; }
+@media (max-width: 480px) {
+  .codex-db-filter-grid > #codex-db-search { grid-column: 1 / -1 !important; }
+}
