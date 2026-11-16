@@ -8238,6 +8238,70 @@ input:checked + .toggle-slider:before {
   border: 1px solid rgba(168, 85, 247, 0.4);
 }
 
+.vd-badge-met {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.vd-badge-gone {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.vd-badge-rep {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.4);
+}
+
+.vd-badge-disc {
+  background: rgba(234, 179, 8, 0.08);
+  color: #facc15;
+  border: 1px dashed rgba(234, 179, 8, 0.35);
+  text-transform: none;
+}
+
+.vd-req-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+}
+
+.vd-req {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.08rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.vd-teaches {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.vd-loc-note {
+  font-size: 0.72rem;
+  color: #fbbf24;
+}
+
+.vd-data-note {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  margin-top: 0.4rem;
+}
+
+.vd-show-more-wrap {
+  text-align: center;
+  margin: 1rem 0;
+}
+
 .vd-more-row {
   text-align: center;
   padding: 0.3rem 0;

@@ -58,6 +58,23 @@ async function main() {
     }));
   }
 
+  // Token costs (Marks of Honor etc.) only have Wowhead icon names, not file ids
+  const namedDir = path.join(targetDir, 'named');
+  if (!fs.existsSync(namedDir)) fs.mkdirSync(namedDir, { recursive: true });
+  for (const cost of Object.values(data.costItems || {})) {
+    const filePath = path.join(namedDir, `${cost.icon}.jpg`);
+    if (fs.existsSync(filePath) && fs.statSync(filePath).size > 100) { skipped++; continue; }
+    try {
+      const res = await fetch(`https://wow.zamimg.com/images/wow/icons/medium/${cost.icon}.jpg`);
+      if (!res.ok) { console.warn(`Icon ${cost.icon} returned status ${res.status}`); failed++; continue; }
+      fs.writeFileSync(filePath, Buffer.from(await res.arrayBuffer()));
+      downloaded++;
+    } catch (err) {
+      console.error(`Failed to download icon ${cost.icon}:`, err.message);
+      failed++;
+    }
+  }
+
   console.log(`Finished: ${downloaded} downloaded, ${skipped} already existed, ${failed} failed.`);
   const savedFiles = fs.readdirSync(targetDir).filter(f => f.endsWith('.webp'));
   console.log(`Total local icons in images/icons/vendors/: ${savedFiles.length}`);

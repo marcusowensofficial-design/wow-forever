@@ -1,11 +1,13 @@
 /**
  * World of Warcraft: Forever - Vendor & Merchant Directory Module
- * Interactive directory of 931 vendors, 1,896 items, profession recipes,
- * limited-supply goods, and zone rosters with coordinate waypoints and /tar macros.
- * 100% Self-Hosted Local Icons & Comprehensive Category Taxonomy.
+ * Interactive directory of every vendor, what they sell, recipe skill and reputation
+ * requirements, limited-supply goods, and zone rosters with /way waypoints and /tar macros.
+ * Data: js/data/vendors-data.js (scripts/scrape_foreverdb_vendors.js). Taxonomy: js/modules/vendors/vendors-taxonomy.js.
  */
 (function () {
   'use strict';
+
+  const { PROFESSION_MAP, TAXONOMY, QUICK_CHIPS, classifyItem } = window.VendorTaxonomy;
 
   const QUALITY_COLORS = {
     0: '#9d9d9d',
@@ -22,19 +24,6 @@
     Neutral: '#eab308'
   };
 
-  const PROFESSION_MAP = {
-    1: 'Leatherworking',
-    2: 'Tailoring',
-    3: 'Engineering',
-    4: 'Blacksmithing',
-    5: 'Cooking',
-    6: 'Alchemy',
-    7: 'First Aid',
-    8: 'Enchanting',
-    9: 'Fishing',
-    0: 'Books & Grimoires'
-  };
-
   const SUB_TABS = [
     { id: 'find', label: 'Find an Item', icon: '🔍' },
     { id: 'recipes', label: 'Recipes', icon: '📜' },
@@ -42,113 +31,8 @@
     { id: 'zones', label: 'By Zone', icon: '🗺️' }
   ];
 
-  // Quick Filter Chips for 1-Click Exploration
-  const QUICK_CHIPS = [
-    { id: 'all', label: 'All Items', icon: '🌐' },
-    { id: 'limited', label: 'Limited Stock', icon: '🔥' },
-    { id: 'cooking', label: 'Cooking Recipes', icon: '🍳' },
-    { id: 'books', label: 'Books & Grimoires', icon: '📖' },
-    { id: 'tailoring', label: 'Tailoring Patterns', icon: '🧵' },
-    { id: 'blacksmithing', label: 'Blacksmithing Plans', icon: '🔨' },
-    { id: 'leatherworking', label: 'Leatherworking Patterns', icon: '🥋' },
-    { id: 'alchemy', label: 'Alchemy Recipes', icon: '🧪' },
-    { id: 'engineering', label: 'Engineering Schematics', icon: '⚙️' },
-    { id: 'enchanting', label: 'Enchanting Formulas', icon: '✨' },
-    { id: 'bags', label: 'Bags & Containers', icon: '🎒' },
-    { id: 'mounts_pets', label: 'Mounts & Pets', icon: '🐎' },
-    { id: 'weapons', label: 'Weapons', icon: '⚔️' },
-    { id: 'armor', label: 'Armor & Shields', icon: '🛡️' },
-    { id: 'food', label: 'Food & Drinks', icon: '🍖' },
-    { id: 'potions', label: 'Potions & Elixirs', icon: '⚗️' },
-    { id: 'poisons', label: 'Poisons & Toxins', icon: '☠️' }
-  ];
-
-  // Comprehensive 2-Tier Taxonomy
-  const TAXONOMY = {
-    all: {
-      label: 'All Categories',
-      subcategories: [
-        { id: 'all', label: 'All Items' }
-      ]
-    },
-    recipes: {
-      label: '📜 Recipes & Grimoires',
-      subcategories: [
-        { id: 'all', label: 'All Recipes (662)' },
-        { id: 'cooking', label: 'Cooking Recipes (70)' },
-        { id: 'books', label: 'Books & Grimoires (62)' },
-        { id: 'tailoring', label: 'Tailoring Patterns (118)' },
-        { id: 'leatherworking', label: 'Leatherworking Patterns (150)' },
-        { id: 'blacksmithing', label: 'Blacksmithing Plans (81)' },
-        { id: 'alchemy', label: 'Alchemy Recipes (56)' },
-        { id: 'engineering', label: 'Engineering Schematics (53)' },
-        { id: 'enchanting', label: 'Enchanting Formulas (65)' },
-        { id: 'firstaid', label: 'First Aid Manuals (5)' },
-        { id: 'fishing', label: 'Fishing Guides (2)' }
-      ]
-    },
-    weapons: {
-      label: '⚔️ Weapons & Armaments',
-      subcategories: [
-        { id: 'all', label: 'All Weapons (194)' },
-        { id: 'weapons_1h', label: 'One-Hand Swords, Maces & Daggers' },
-        { id: 'weapons_2h', label: 'Two-Hand Swords, Axes & Maces' },
-        { id: 'weapons_ranged', label: 'Bows, Guns & Crossbows' },
-        { id: 'weapons_caster', label: 'Staves, Wands & Off-Hands' }
-      ]
-    },
-    armor: {
-      label: '🛡️ Armor & Shields',
-      subcategories: [
-        { id: 'all', label: 'All Armor & Shields (591)' },
-        { id: 'armor_cloth', label: 'Cloth Armor' },
-        { id: 'armor_leather', label: 'Leather Armor' },
-        { id: 'armor_mail', label: 'Mail Armor' },
-        { id: 'armor_plate', label: 'Plate Armor' },
-        { id: 'armor_shield', label: 'Shields' },
-        { id: 'armor_acc', label: 'Cloaks, Shirts & Accessories' }
-      ]
-    },
-    consumables: {
-      label: '🍖 Consumables & Sustenance',
-      subcategories: [
-        { id: 'all', label: 'All Consumables (218)' },
-        { id: 'cons_food', label: 'Food & Refreshing Water' },
-        { id: 'cons_potions', label: 'Potions, Elixirs & Flasks' },
-        { id: 'cons_poisons', label: 'Rogue Poisons & Toxins' },
-        { id: 'cons_scrolls', label: 'Scrolls & Buff Items' },
-        { id: 'cons_bandages', label: 'Bandages & First Aid' }
-      ]
-    },
-    bags_tools: {
-      label: '🎒 Bags, Ammo & Tools',
-      subcategories: [
-        { id: 'all', label: 'All Bags & Tools (55)' },
-        { id: 'bagstool_bags', label: 'Containers & Bags' },
-        { id: 'bagstool_quivers', label: 'Quivers & Ammo Pouches' },
-        { id: 'bagstool_ammo', label: 'Arrows & Bullets' },
-        { id: 'bagstool_tools', label: 'Tradeskill Tools & Fishing Poles' }
-      ]
-    },
-    mounts_pets: {
-      label: '🐎 Mounts & Vanity Pets',
-      subcategories: [
-        { id: 'all', label: 'All Mounts & Pets (71)' },
-        { id: 'mp_mounts', label: 'Mount Bridles & Whistles (51)' },
-        { id: 'mp_pets', label: 'Companion Vanity Pets (20)' }
-      ]
-    },
-    trade_goods: {
-      label: '🌾 Trade Supplies & Reagents',
-      subcategories: [
-        { id: 'all', label: 'All Trade Supplies (75)' },
-        { id: 'tg_tailoring', label: 'Thread, Dye & Bleach' },
-        { id: 'tg_engineering', label: 'Blasting Powder & Flux' },
-        { id: 'tg_herbs_fish', label: 'Cooking Spices, Herbs & Fish' },
-        { id: 'tg_enchanting', label: 'Enchanting Dust & Rods' }
-      ]
-    }
-  };
+  const PAGE_SIZE = 36;
+  const FALLBACK_ICON = 'images/icons/vendors/134400.webp';
 
   let state = {
     tab: 'find',
@@ -161,23 +45,24 @@
     currencyType: 'all',
     limOnly: false,
     seenOnly: false,
-    sort: 'default'
+    sort: 'default',
+    limit: PAGE_SIZE
   };
 
   let indexCache = null;
 
   function esc(str) {
-    if (!str) return '';
+    if (str === null || str === undefined || str === '') return '';
     return String(str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
   }
 
   function getIconUrl(iconId) {
     const id = Number(iconId) || 134400;
-    // Local self-hosted icon path: 100% private, zero external network traffic
     return `images/icons/vendors/${id}.webp`;
   }
 
@@ -194,90 +79,21 @@
     return parts.join(' ');
   }
 
-  function classifyItem(item) {
-    const [name, icon, quality, classId, subClassId] = item;
+  /** One faction rule for every view: neutral vendors serve both factions. */
+  function vendorMatchesFaction(v) {
+    if (state.faction === 'all') return true;
+    const side = (v.side || 'Neutral').toLowerCase();
+    if (state.faction === 'neutral') return side === 'neutral';
+    return side === state.faction || side === 'neutral';
+  }
 
-    // Recipes (Class 9)
-    if (classId === 9) {
-      const pMap = {
-        5: 'cooking',
-        0: 'books',
-        2: 'tailoring',
-        1: 'leatherworking',
-        4: 'blacksmithing',
-        6: 'alchemy',
-        3: 'engineering',
-        8: 'enchanting',
-        7: 'firstaid',
-        9: 'fishing'
-      };
-      return {
-        cat: 'recipes',
-        sub: pMap[subClassId] || 'all',
-        label: PROFESSION_MAP[subClassId] || 'Recipe'
-      };
-    }
-
-    // Weapons (Class 2)
-    if (classId === 2) {
-      if ([7, 15, 4, 0, 14, 13].includes(subClassId)) {
-        return { cat: 'weapons', sub: 'weapons_1h', label: '1H Weapon' };
-      }
-      if ([8, 1, 5, 6].includes(subClassId)) {
-        return { cat: 'weapons', sub: 'weapons_2h', label: '2H Weapon' };
-      }
-      if ([2, 3, 18, 16].includes(subClassId)) {
-        return { cat: 'weapons', sub: 'weapons_ranged', label: 'Ranged Weapon' };
-      }
-      if ([10, 19, 20].includes(subClassId)) {
-        return { cat: 'weapons', sub: 'weapons_caster', label: 'Staff / Wand / Tool' };
-      }
-      return { cat: 'weapons', sub: 'all', label: 'Weapon' };
-    }
-
-    // Armor (Class 4)
-    if (classId === 4) {
-      if (subClassId === 1) return { cat: 'armor', sub: 'armor_cloth', label: 'Cloth Armor' };
-      if (subClassId === 2) return { cat: 'armor', sub: 'armor_leather', label: 'Leather Armor' };
-      if (subClassId === 3) return { cat: 'armor', sub: 'armor_mail', label: 'Mail Armor' };
-      if (subClassId === 4) return { cat: 'armor', sub: 'armor_plate', label: 'Plate Armor' };
-      if (subClassId === 6) return { cat: 'armor', sub: 'armor_shield', label: 'Shield' };
-      return { cat: 'armor', sub: 'armor_acc', label: 'Cloak / Accessory' };
-    }
-
-    // Consumables (Class 0)
-    if (classId === 0) {
-      if (subClassId === 5) return { cat: 'consumables', sub: 'cons_food', label: 'Food & Drink' };
-      if (subClassId === 1 || subClassId === 2) return { cat: 'consumables', sub: 'cons_potions', label: 'Potion / Elixir' };
-      if (subClassId === 8) return { cat: 'consumables', sub: 'cons_poisons', label: 'Poison / Toxin' };
-      if (subClassId === 4) return { cat: 'consumables', sub: 'cons_scrolls', label: 'Scroll' };
-      if (subClassId === 7) return { cat: 'consumables', sub: 'cons_bandages', label: 'Bandage' };
-      return { cat: 'consumables', sub: 'all', label: 'Consumable' };
-    }
-
-    // Bags & Ammo (Class 1, 11, 6)
-    if (classId === 1) return { cat: 'bags_tools', sub: 'bagstool_bags', label: 'Container / Bag' };
-    if (classId === 11) return { cat: 'bags_tools', sub: 'bagstool_quivers', label: 'Quiver / Ammo Pouch' };
-    if (classId === 6) return { cat: 'bags_tools', sub: 'bagstool_ammo', label: 'Ammunition' };
-
-    // Mounts & Pets (Class 15)
-    if (classId === 15) {
-      if (subClassId === 5) return { cat: 'mounts_pets', sub: 'mp_mounts', label: 'Mount' };
-      if (subClassId === 2) return { cat: 'mounts_pets', sub: 'mp_pets', label: 'Companion Pet' };
-      if (subClassId === 1) return { cat: 'consumables', sub: 'cons_poisons', label: 'Poison Reagent' };
-      return { cat: 'mounts_pets', sub: 'all', label: 'Vanity / Item' };
-    }
-
-    // Trade Goods (Class 7)
-    if (classId === 7) {
-      if (subClassId === 5 || subClassId === 11) return { cat: 'trade_goods', sub: 'tg_tailoring', label: 'Tailoring Supply' };
-      if (subClassId === 1 || subClassId === 7) return { cat: 'trade_goods', sub: 'tg_engineering', label: 'Flux / Powder' };
-      if (subClassId === 8 || subClassId === 9) return { cat: 'trade_goods', sub: 'tg_herbs_fish', label: 'Cooking Herb / Fish' };
-      if (subClassId === 12) return { cat: 'trade_goods', sub: 'tg_enchanting', label: 'Enchanting Dust' };
-      return { cat: 'trade_goods', sub: 'all', label: 'Trade Good' };
-    }
-
-    return { cat: 'all', sub: 'all', label: 'Item' };
+  /** Vendors of an item that pass the vendor-level filters (faction, seen, limited). */
+  function visibleVendorsFor(itemId, idx) {
+    return (idx.itemVendorsMap.get(itemId) || []).filter(([v, s]) =>
+      vendorMatchesFaction(v) &&
+      (!state.seenOnly || v.fv) &&
+      (!state.limOnly || s.lim)
+    );
   }
 
   function ensureIndex() {
@@ -285,27 +101,22 @@
     const data = window.WOW_VENDORS_DATA;
     if (!data || !data.vendors || !data.items) return null;
 
-    const vendorList = Object.entries(data.vendors).map(([id, v]) => ({
-      id: Number(id),
-      ...v
-    }));
+    const vendorList = Object.entries(data.vendors).map(([id, v]) => ({ id: Number(id), ...v }));
 
     // Invert mapping: itemId -> Array of [vendor, sellDetails]
     const itemVendorsMap = new Map();
     for (const v of vendorList) {
-      if (!v.sells) continue;
-      for (const [itemId, sell] of Object.entries(v.sells)) {
+      for (const [itemId, sell] of Object.entries(v.sells || {})) {
         if (!itemVendorsMap.has(itemId)) itemVendorsMap.set(itemId, []);
         itemVendorsMap.get(itemId).push([v, sell]);
       }
     }
 
-    // Sort vendors per item: Seen in Forever first, then faction, then zone
+    // Sort vendors per item: seen in Forever first, then in Forever with Classic stock, then faction, then zone
+    const rank = v => (v.fv ? 2 : v.met ? 1 : 0);
     for (const list of itemVendorsMap.values()) {
       list.sort((a, b) => {
-        const fvA = a[0].fv ? 1 : 0;
-        const fvB = b[0].fv ? 1 : 0;
-        if (fvB !== fvA) return fvB - fvA;
+        if (rank(b[0]) !== rank(a[0])) return rank(b[0]) - rank(a[0]);
         const sideA = a[0].side || 'Neutral';
         const sideB = b[0].side || 'Neutral';
         if (sideA !== sideB) return sideA.localeCompare(sideB);
@@ -313,13 +124,28 @@
       });
     }
 
-    // Precalculate counts
+    const req = data.req || {};
+    const meta = {};
+    const catCounts = {};
     let totalLimited = 0;
     let totalRecipes = 0;
     for (const [itemId, item] of Object.entries(data.items)) {
-      if (item[3] === 9) totalRecipes++;
+      const info = classifyItem(item);
       const vendors = itemVendorsMap.get(itemId) || [];
-      if (vendors.some(([, sell]) => sell.lim)) totalLimited++;
+      const goldPrices = vendors.map(([, s]) => s.p || 0).filter(p => p > 0);
+      const r = req[itemId] || {};
+      meta[itemId] = {
+        info,
+        minPrice: goldPrices.length ? Math.min(...goldPrices) : null,
+        hasToken: vendors.some(([, s]) => s.c && s.c.length > 0),
+        hasLim: vendors.some(([, s]) => s.lim),
+        search: [item[0], r.t, r.rep && r.rep[0]].filter(Boolean).join(' ').toLowerCase()
+      };
+      catCounts[info.cat] = catCounts[info.cat] || { all: 0 };
+      catCounts[info.cat].all++;
+      catCounts[info.cat][info.sub] = (catCounts[info.cat][info.sub] || 0) + 1;
+      if (item[3] === 9) totalRecipes++;
+      if (meta[itemId].hasLim) totalLimited++;
     }
 
     const zones = Array.from(new Set(vendorList.map(v => v.zone).filter(Boolean))).sort();
@@ -328,12 +154,17 @@
       raw: data,
       vendors: vendorList,
       items: data.items,
+      req,
+      meta,
+      catCounts,
       currencies: data.currencies || {},
+      costItems: data.costItems || {},
       factions: data.factions || {},
       itemVendorsMap,
       zones,
       stats: {
         vendorCount: vendorList.length,
+        seenCount: vendorList.filter(v => v.fv).length,
         itemCount: Object.keys(data.items).length,
         recipeCount: totalRecipes,
         limitedCount: totalLimited,
@@ -344,22 +175,24 @@
     return indexCache;
   }
 
-  function renderCosts(costs, currencies, items) {
+  function renderCosts(costs, idx) {
     if (!costs || !costs.length) return '';
     return costs.map(([type, id, qty]) => {
       if (type === 'c') {
-        const cur = currencies[id];
+        const cur = idx.currencies[id];
         const name = cur ? cur.n : `Currency #${id}`;
         const desc = cur && cur.d ? ` title="${esc(cur.d)}"` : '';
-        const iconSrc = cur && cur.ic ? getIconUrl(cur.ic) : getIconUrl(134400);
-        return `<span class="vd-cost-item"${desc}><img src="${iconSrc}" class="vd-cost-icon" alt="" onerror="this.src='images/icons/vendors/134400.webp'">${qty} × ${esc(name)}</span>`;
+        const iconSrc = getIconUrl(cur && cur.ic);
+        return `<span class="vd-cost-item"${desc}><img src="${iconSrc}" class="vd-cost-icon" alt="" onerror="this.src='${FALLBACK_ICON}'">${qty} × ${esc(name)}</span>`;
       }
       if (type === 'i') {
-        const item = items[id];
-        const name = item ? item[0] : `Item #${id}`;
-        const qColor = item ? QUALITY_COLORS[item[2]] || '#f8fafc' : '#f8fafc';
-        const iconSrc = item && item[1] ? getIconUrl(item[1]) : getIconUrl(134400);
-        return `<span class="vd-cost-item"><img src="${iconSrc}" class="vd-cost-icon" alt="" onerror="this.src='images/icons/vendors/134400.webp'">${qty} × <span style="color:${qColor};font-weight:600;">${esc(name)}</span></span>`;
+        const item = idx.items[id];
+        const token = idx.costItems[id];
+        const name = item ? item[0] : token ? token.n : `Item #${id}`;
+        const quality = item ? item[2] : token ? token.q : 1;
+        const qColor = QUALITY_COLORS[quality] || '#f8fafc';
+        const iconSrc = item ? getIconUrl(item[1]) : token ? `images/icons/vendors/named/${token.icon}.jpg` : FALLBACK_ICON;
+        return `<span class="vd-cost-item"><img src="${iconSrc}" class="vd-cost-icon" alt="" onerror="this.src='${FALLBACK_ICON}'">${qty} × <span style="color:${qColor};font-weight:600;">${esc(name)}</span></span>`;
       }
       return '';
     }).filter(Boolean).join(' + ');
@@ -382,21 +215,46 @@
     }
   }
 
-  window.vdCopyMacro = function (vendorName, btn) {
-    const macro = `/tar ${vendorName}`;
-    copyToClipboard(macro, btn, 'Macro Copied!');
+  function vendorById(id) {
+    const idx = ensureIndex();
+    return idx ? idx.vendors.find(v => v.id === Number(id)) : null;
+  }
+
+  window.vdCopyMacro = function (vendorId, btn) {
+    const v = vendorById(vendorId);
+    if (v) copyToClipboard(`/tar ${v.n}`, btn, 'Macro Copied!');
   };
 
-  window.vdCopyWaypoint = function (zone, x, y, btn) {
-    const way = `/way ${zone} ${x} ${y}`;
-    copyToClipboard(way, btn, 'Waypoint Copied!');
+  window.vdCopyWaypoint = function (vendorId, btn) {
+    const v = vendorById(vendorId);
+    if (v) copyToClipboard(`/way ${v.zone} ${v.x} ${v.y} ${v.n}`, btn, 'Waypoint Copied!');
   };
 
-  function renderVendorLine(vendor, sell, currencies, items) {
+  function locationHtml(v) {
+    if (v.noWay) {
+      return `<span class="vd-loc-note" title="ForeverDB only has continent-level coordinates for this vendor">📍 ${esc(v.loc || v.zone)}</span>`;
+    }
+    return `
+      <span class="vd-coords">(${v.x}, ${v.y})</span>
+      <button type="button" class="vd-inline-btn" onclick="vdCopyWaypoint(${v.id}, this)" title="Copy /way waypoint command" aria-label="Copy waypoint">📍 /way</button>`;
+  }
+
+  function vendorStatusBadge(v) {
+    if (v.fv) return `<span class="vd-badge vd-badge-fv" title="A player's ForeverDB addon recorded this vendor's stock in WoW Forever">Seen in Forever</span>`;
+    if (v.met) return `<span class="vd-badge vd-badge-met" title="This NPC exists in WoW Forever, but the list shown is its Classic stock">In Forever · Classic stock</span>`;
+    return `<span class="vd-badge vd-badge-cl" title="Classic (CMaNGOS) data, not yet confirmed in WoW Forever">Classic Data</span>`;
+  }
+
+  function discountHtml(v, idx) {
+    const faction = v.rf && idx.factions[v.rf];
+    return faction ? `<span class="vd-badge vd-badge-disc" title="Higher reputation with this faction lowers this vendor's prices">Rep discount: ${esc(faction)}</span>` : '';
+  }
+
+  function renderVendorLine(vendor, sell, idx) {
     const sideColor = FACTION_COLORS[vendor.side] || '#94a3b8';
     const sideName = vendor.side || 'Neutral';
     const moneyStr = sell && sell.p ? formatMoney(sell.p) : '';
-    const costStr = sell && sell.c ? renderCosts(sell.c, currencies, items) : '';
+    const costStr = sell && sell.c ? renderCosts(sell.c, idx) : '';
     const priceSeparator = (moneyStr && costStr) ? ' + ' : '';
     const priceHtml = (moneyStr || costStr)
       ? `<span class="vd-price-badge">${moneyStr}${priceSeparator}${costStr}${sell.n > 1 ? ` <small class="vd-qty-sub">for ${sell.n}</small>` : ''}</span>`
@@ -405,10 +263,9 @@
     const limHtml = sell && sell.lim
       ? `<span class="vd-badge vd-badge-lim" title="Limited vendor supply; restocks over time">Limited: ${sell.lim}</span>`
       : '';
-
-    const fvHtml = vendor.fv
-      ? `<span class="vd-badge vd-badge-fv" title="Verified in WoW Forever client cache">Seen in Forever</span>`
-      : `<span class="vd-badge vd-badge-cl" title="CMaNGOS classic-db data">Classic Data</span>`;
+    const goneHtml = sell && sell.cl
+      ? `<span class="vd-badge vd-badge-gone" title="Classic sells this in limited supply, but it was missing when a player checked this vendor in Forever: sold out at the time, or removed">May be gone in Forever</span>`
+      : '';
 
     return `
       <div class="vd-vendor-row">
@@ -418,66 +275,54 @@
             ${vendor.sub ? `<span class="vd-vendor-title">&lt;${esc(vendor.sub)}&gt;</span>` : ''}
           </span>
           <span class="vd-vendor-loc">
-            <span class="vd-zone-pill">${esc(vendor.zone)}</span>
-            <span class="vd-coords">(${vendor.x}, ${vendor.y})</span>
-            <button type="button" class="vd-inline-btn" onclick="vdCopyWaypoint('${esc(vendor.zone)}', ${vendor.x}, ${vendor.y}, this)" title="Copy /way waypoint command" aria-label="Copy waypoint">
-              📍 /way
-            </button>
-            <button type="button" class="vd-inline-btn" onclick="vdCopyMacro('${esc(vendor.n)}', this)" title="Copy /target macro" aria-label="Copy target macro">
-              🎯 /tar
-            </button>
+            <span class="vd-zone-pill">${esc(vendor.zone)}${vendor.hub ? ` · ${esc(vendor.hub)}` : ''}</span>
+            ${locationHtml(vendor)}
+            <button type="button" class="vd-inline-btn" onclick="vdCopyMacro(${vendor.id}, this)" title="Copy /target macro" aria-label="Copy target macro">🎯 /tar</button>
           </span>
-          <span class="vd-vendor-faction" style="color:${sideColor};">
-            ● ${esc(sideName)}
-          </span>
+          <span class="vd-vendor-faction" style="color:${sideColor};">● ${esc(sideName)}</span>
         </div>
         <div class="vd-vendor-pricing">
           ${priceHtml}
           ${limHtml}
-          ${fvHtml}
+          ${goneHtml}
+          ${vendorStatusBadge(vendor)}
+          ${discountHtml(vendor, idx)}
         </div>
       </div>
     `;
   }
 
-  function renderItemCard(itemId, idxData, showAllVendors = false) {
-    const item = idxData.items[itemId];
+  function requirementsHtml(itemId, idx) {
+    const r = idx.req[itemId];
+    if (!r) return '';
+    const parts = [];
+    if (r.sk) parts.push(`<span class="vd-req" title="Required profession skill">🛠️ ${esc(r.sk[0])} ${r.sk[1]}</span>`);
+    if (r.sp) parts.push(`<span class="vd-req" title="Required specialization">⭐ ${esc(r.sp)}</span>`);
+    if (r.rep) parts.push(`<span class="vd-badge vd-badge-rep" title="Reputation needed to buy or use this item">${esc(r.rep[0])} · ${esc(r.rep[1])}</span>`);
+    if (r.lv && r.lv > 1) parts.push(`<span class="vd-req" title="Required character level">Lvl ${r.lv}</span>`);
+    const teaches = r.t ? `<div class="vd-teaches">Teaches: ${esc(r.t)}</div>` : '';
+    return (parts.length ? `<div class="vd-req-row">${parts.join('')}</div>` : '') + teaches;
+  }
+
+  function renderItemCard(itemId, idx, showAllVendors = false) {
+    const item = idx.items[itemId];
     if (!item) return '';
 
-    const [name, iconId, quality, classId, subClassId] = item;
+    const [name, iconId, quality] = item;
     const qColor = QUALITY_COLORS[quality] || '#f8fafc';
-    const iconSrc = getIconUrl(iconId);
-    const vendors = idxData.itemVendorsMap.get(itemId) || [];
-
-    // Filter vendors by faction if active
-    let visibleVendors = vendors;
-    if (state.faction !== 'all') {
-      visibleVendors = visibleVendors.filter(([v]) => (v.side || 'Neutral').toLowerCase() === state.faction.toLowerCase());
-      if (visibleVendors.length === 0) return '';
-    }
-    if (state.seenOnly) {
-      visibleVendors = visibleVendors.filter(([v]) => v.fv);
-      if (visibleVendors.length === 0) return '';
-    }
-    if (state.limOnly) {
-      visibleVendors = visibleVendors.filter(([, s]) => s.lim);
-      if (visibleVendors.length === 0) return '';
-    }
+    const visibleVendors = visibleVendorsFor(itemId, idx);
+    if (visibleVendors.length === 0) return '';
 
     const displayedVendors = showAllVendors ? visibleVendors : visibleVendors.slice(0, 6);
     const hasMore = visibleVendors.length > 6 && !showAllVendors;
-
-    const vendorRows = displayedVendors.map(([v, s]) =>
-      renderVendorLine(v, s, idxData.currencies, idxData.items)
-    ).join('');
-
-    const classification = classifyItem(item);
+    const vendorRows = displayedVendors.map(([v, s]) => renderVendorLine(v, s, idx)).join('');
+    const classification = idx.meta[itemId].info;
 
     return `
       <div class="vd-item-card" data-item-id="${itemId}" data-item-name="${esc(name)}" data-item-quality="q${quality}">
         <div class="vd-item-header">
           <div class="vd-item-identity" data-item-id="${itemId}" data-item-name="${esc(name)}">
-            <img src="${iconSrc}" class="vd-item-icon" alt="" style="border-color:${qColor};" onerror="this.src='images/icons/vendors/134400.webp'">
+            <img src="${getIconUrl(iconId)}" class="vd-item-icon" alt="" style="border-color:${qColor};" onerror="this.src='${FALLBACK_ICON}'">
             <div>
               <div class="vd-item-name" style="color:${qColor};">
                 <a href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;" data-item-id="${itemId}" data-item-name="${esc(name)}">
@@ -485,6 +330,7 @@
                 </a>
                 ${classification.label ? `<span class="vd-badge vd-badge-prof">${esc(classification.label)}</span>` : ''}
               </div>
+              ${requirementsHtml(itemId, idx)}
               <div class="vd-vendor-count-label">
                 Sold by ${visibleVendors.length} ${visibleVendors.length === 1 ? 'vendor' : 'vendors'}
               </div>
@@ -513,223 +359,126 @@
     card.outerHTML = renderItemCard(itemId, idx, true);
   };
 
+  /** Item-level filters. Vendor-level filters (faction, seen, limited) go through visibleVendorsFor. */
   function itemMatchesFilters(id, item, idx) {
-    const [name, icon, quality, classId, subClassId] = item;
-    const info = classifyItem(item);
-
-    // 1. Quick Chip filter
-    if (state.chip !== 'all') {
-      if (state.chip === 'limited') {
-        const vList = idx.itemVendorsMap.get(id) || [];
-        if (!vList.some(([, s]) => s.lim)) return false;
-      } else if (state.chip === 'cooking') {
-        if (!(classId === 9 && subClassId === 5)) return false;
-      } else if (state.chip === 'books') {
-        if (!(classId === 9 && subClassId === 0)) return false;
-      } else if (state.chip === 'tailoring') {
-        if (!(classId === 9 && subClassId === 2)) return false;
-      } else if (state.chip === 'leatherworking') {
-        if (!(classId === 9 && subClassId === 1)) return false;
-      } else if (state.chip === 'blacksmithing') {
-        if (!(classId === 9 && subClassId === 4)) return false;
-      } else if (state.chip === 'alchemy') {
-        if (!(classId === 9 && subClassId === 6)) return false;
-      } else if (state.chip === 'engineering') {
-        if (!(classId === 9 && subClassId === 3)) return false;
-      } else if (state.chip === 'enchanting') {
-        if (!(classId === 9 && subClassId === 8)) return false;
-      } else if (state.chip === 'bags') {
-        if (!(classId === 1 || classId === 11)) return false;
-      } else if (state.chip === 'mounts_pets') {
-        if (!(classId === 15 && (subClassId === 5 || subClassId === 2))) return false;
-      } else if (state.chip === 'weapons') {
-        if (classId !== 2) return false;
-      } else if (state.chip === 'armor') {
-        if (classId !== 4) return false;
-      } else if (state.chip === 'food') {
-        if (!(classId === 0 && subClassId === 5)) return false;
-      } else if (state.chip === 'potions') {
-        if (!(classId === 0 && (subClassId === 1 || subClassId === 2))) return false;
-      } else if (state.chip === 'poisons') {
-        if (!((classId === 0 && subClassId === 8) || (classId === 15 && subClassId === 1))) return false;
-      }
-    }
-
-    // 2. Primary Category Filter
+    const m = idx.meta[id];
     if (state.cat !== 'all') {
-      if (info.cat !== state.cat) return false;
-      // 3. Subcategory Filter
-      if (state.subCat !== 'all' && info.sub !== state.subCat) {
-        return false;
-      }
+      if (m.info.cat !== state.cat) return false;
+      if (state.subCat !== 'all' && m.info.sub !== state.subCat) return false;
     }
+    if (state.quality !== 'all' && Number(item[2]) !== Number(state.quality)) return false;
+    if (state.currencyType === 'special' && !m.hasToken) return false;
+    if (state.currencyType === 'money' && m.hasToken) return false;
+    return visibleVendorsFor(id, idx).length > 0;
+  }
 
-    // 4. Quality / Rarity Filter
-    if (state.quality !== 'all') {
-      if (Number(quality) !== Number(state.quality)) return false;
-    }
+  function queryTokens() {
+    return state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  }
 
-    // 5. Currency / Payment Filter
-    if (state.currencyType !== 'all') {
-      const vList = idx.itemVendorsMap.get(id) || [];
-      const hasSpecialCurrency = vList.some(([, s]) => s.c && s.c.length > 0);
-      if (state.currencyType === 'special' && !hasSpecialCurrency) return false;
-      if (state.currencyType === 'money' && hasSpecialCurrency) return false;
-    }
+  /** Matches item name, what a recipe teaches, required reputation, or any vendor's name/title/zone. */
+  function itemMatchesQuery(id, idx, tokens) {
+    if (tokens.length === 0) return true;
+    const text = idx.meta[id].search;
+    if (tokens.every(tok => text.includes(tok))) return true;
+    return visibleVendorsFor(id, idx).some(([v]) => {
+      const hay = `${v.n || ''} ${v.sub || ''} ${v.zone || ''} ${v.hub || ''} ${v.loc || ''}`.toLowerCase();
+      return tokens.every(tok => hay.includes(tok));
+    });
+  }
 
-    // 6. Faction Filter (Alliance, Horde, Neutral)
-    if (state.faction !== 'all') {
-      const vList = idx.itemVendorsMap.get(id) || [];
-      const hasFactionVendor = vList.some(([v]) => {
-        const side = (v.side || 'Neutral').toLowerCase();
-        if (state.faction === 'neutral') return side === 'neutral';
-        return side === state.faction.toLowerCase() || side === 'neutral';
+  function matchingIds(idx, extra) {
+    const tokens = queryTokens();
+    return Object.keys(idx.items).filter(id =>
+      (!extra || extra(id)) &&
+      itemMatchesFilters(id, idx.items[id], idx) &&
+      itemMatchesQuery(id, idx, tokens)
+    );
+  }
+
+  function sortIds(ids, idx) {
+    const byName = (a, b) => idx.items[a][0].localeCompare(idx.items[b][0]);
+    if (state.sort === 'name') return ids.sort(byName);
+    if (state.sort === 'price-asc' || state.sort === 'price-desc') {
+      // Cheapest gold price across vendors; token-only items always go last
+      const dir = state.sort === 'price-asc' ? 1 : -1;
+      return ids.sort((a, b) => {
+        const pa = idx.meta[a].minPrice;
+        const pb = idx.meta[b].minPrice;
+        if (pa === null || pb === null) return (pa === null) - (pb === null) || byName(a, b);
+        return (pa - pb) * dir || byName(a, b);
       });
-      if (!hasFactionVendor) return false;
     }
-
-    // 7. Limited Supply Filter
-    if (state.limOnly) {
-      const vList = idx.itemVendorsMap.get(id) || [];
-      const hasLim = vList.some(([, s]) => s.lim);
-      if (!hasLim) return false;
+    if (state.sort === 'vendors-desc') {
+      return ids.sort((a, b) => (idx.itemVendorsMap.get(b) || []).length - (idx.itemVendorsMap.get(a) || []).length || byName(a, b));
     }
-
-    // 8. Seen in Forever Filter
-    if (state.seenOnly) {
-      const vList = idx.itemVendorsMap.get(id) || [];
-      const hasSeen = vList.some(([v]) => v.fv === 1);
-      if (!hasSeen) return false;
+    if (state.sort === 'skill') {
+      const sk = id => (idx.req[id] && idx.req[id].sk ? idx.req[id].sk[1] : 9999);
+      return ids.sort((a, b) => sk(a) - sk(b) || byName(a, b));
     }
+    return ids;
+  }
 
-    return true;
+  function emptyState(what) {
+    return `
+      <div class="vd-empty-state">
+        <span style="font-size:2.4rem;">🔍</span>
+        <h3>No ${what} match your selected filters</h3>
+        <p>Try resetting filters or searching for something else (e.g. "Flask", "Timbermaw", "Mithril", "Booty Bay").</p>
+        <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
+      </div>`;
   }
 
   function renderFindTab(container, idx) {
-    const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
-    let matchingItemIds = [];
-
-    for (const [id, item] of Object.entries(idx.items)) {
-      if (!itemMatchesFilters(id, item, idx)) continue;
-
-      if (rawTokens.length === 0) {
-        matchingItemIds.push(id);
-        continue;
-      }
-
-      const itemName = item[0].toLowerCase();
-      const matchesItem = rawTokens.every(tok => itemName.includes(tok));
-      if (matchesItem) {
-        matchingItemIds.push(id);
-        continue;
-      }
-
-      // Check if query matches vendor name, subtitle, or zone
-      const vendors = idx.itemVendorsMap.get(id) || [];
-      const matchesVendor = vendors.some(([v]) => {
-        const vName = (v.n || '').toLowerCase();
-        const vSub = (v.sub || '').toLowerCase();
-        const vZone = (v.zone || '').toLowerCase();
-        return rawTokens.every(tok => vName.includes(tok) || vSub.includes(tok) || vZone.includes(tok));
-      });
-      if (matchesVendor) {
-        matchingItemIds.push(id);
-      }
-    }
-
-    // Apply sorting
-    if (state.sort === 'name') {
-      matchingItemIds.sort((a, b) => idx.items[a][0].localeCompare(idx.items[b][0]));
-    } else if (state.sort === 'price-asc' || state.sort === 'price-desc') {
-      matchingItemIds.sort((a, b) => {
-        const priceA = (idx.itemVendorsMap.get(a)?.[0]?.[1]?.p) || 0;
-        const priceB = (idx.itemVendorsMap.get(b)?.[0]?.[1]?.p) || 0;
-        return state.sort === 'price-asc' ? priceA - priceB : priceB - priceA;
-      });
-    } else if (state.sort === 'vendors-desc') {
-      matchingItemIds.sort((a, b) => {
-        const countA = (idx.itemVendorsMap.get(a) || []).length;
-        const countB = (idx.itemVendorsMap.get(b) || []).length;
-        return countB - countA;
-      });
-    }
-
-    const displayCount = rawTokens.length > 0 ? 60 : 36;
-    const cardsHtml = matchingItemIds.slice(0, displayCount).map(id => renderItemCard(id, idx)).filter(Boolean).join('');
-
-    const resultsSummary = rawTokens.length > 0
-      ? `<div class="vd-results-count">Found <strong>${matchingItemIds.length}</strong> items matching "${esc(state.q)}"</div>`
-      : `<div class="vd-results-count">Displaying <strong>${Math.min(matchingItemIds.length, displayCount)}</strong> of <strong>${matchingItemIds.length}</strong> items.</div>`;
+    const ids = sortIds(matchingIds(idx), idx);
+    const shown = ids.slice(0, state.limit);
+    const cardsHtml = shown.map(id => renderItemCard(id, idx)).join('');
+    const q = state.q ? ` matching "${esc(state.q)}"` : '';
 
     container.innerHTML = `
-      ${resultsSummary}
+      <div class="vd-results-count">Showing <strong>${shown.length}</strong> of <strong>${ids.length}</strong> items${q}.</div>
       <div class="vd-cards-grid">
-        ${cardsHtml.length > 0 ? cardsHtml : `
-          <div class="vd-empty-state">
-            <span style="font-size:2.4rem;">🔍</span>
-            <h3>No items match your selected filters</h3>
-            <p>Try resetting filters or searching for a different keyword (e.g. "Flask", "Pattern", "Copper", "Corina").</p>
-            <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
-          </div>
-        `}
+        ${cardsHtml || emptyState('items')}
       </div>
-      ${matchingItemIds.length > displayCount ? `
-        <div class="vd-truncated-notice">
-          Showing top ${displayCount} of ${matchingItemIds.length} items. Use the search box or subcategories to narrow results.
+      ${ids.length > shown.length ? `
+        <div class="vd-show-more-wrap">
+          <button type="button" class="vd-btn-reset" id="vd-show-more">Show ${Math.min(PAGE_SIZE, ids.length - shown.length)} more (${ids.length - shown.length} left)</button>
         </div>
       ` : ''}
     `;
+    const more = container.querySelector('#vd-show-more');
+    if (more) {
+      more.addEventListener('click', () => {
+        state.limit += PAGE_SIZE;
+        renderSubView();
+      });
+    }
   }
 
   window.vdResetFilters = function () {
-    state.chip = 'all';
-    state.cat = 'all';
-    state.subCat = 'all';
-    state.faction = 'all';
-    state.quality = 'all';
-    state.currencyType = 'all';
-    state.limOnly = false;
-    state.seenOnly = false;
-    state.q = '';
+    Object.assign(state, {
+      chip: 'all', cat: 'all', subCat: 'all', faction: 'all', quality: 'all',
+      currencyType: 'all', limOnly: false, seenOnly: false, q: '', limit: PAGE_SIZE
+    });
     window.renderVendors();
   };
 
   function renderRecipesTab(container, idx) {
-    const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
-    const recipeItemIds = Object.keys(idx.items).filter(id => {
-      const itm = idx.items[id];
-      if (itm[3] !== 9) return false;
-      return itemMatchesFilters(id, itm, idx);
-    });
-
-    const professionSections = Object.entries(PROFESSION_MAP).map(([subId, profName]) => {
-      let items = recipeItemIds.filter(id => idx.items[id][4] === Number(subId));
-      if (rawTokens.length > 0) {
-        items = items.filter(id => {
-          const name = idx.items[id][0].toLowerCase();
-          const matchesItem = rawTokens.every(tok => name.includes(tok));
-          if (matchesItem) return true;
-          const vendors = idx.itemVendorsMap.get(id) || [];
-          return vendors.some(([v]) => {
-            const vName = (v.n || '').toLowerCase();
-            const vSub = (v.sub || '').toLowerCase();
-            const vZone = (v.zone || '').toLowerCase();
-            return rawTokens.every(tok => vName.includes(tok) || vSub.includes(tok) || vZone.includes(tok));
-          });
-        });
-      }
-      items.sort((a, b) => idx.items[a][0].localeCompare(idx.items[b][0]));
-      return {
-        id: subId,
-        name: profName,
-        items
-      };
+    const recipeIds = matchingIds(idx, id => idx.items[id][3] === 9);
+    // Recipes read best in learning order: by required skill, then name
+    const skillOf = id => (idx.req[id] && idx.req[id].sk ? idx.req[id].sk[1] : 9999);
+    const sections = Object.entries(PROFESSION_MAP).map(([subId, profName]) => {
+      const items = recipeIds
+        .filter(id => idx.items[id][4] === Number(subId))
+        .sort((a, b) => skillOf(a) - skillOf(b) || idx.items[a][0].localeCompare(idx.items[b][0]));
+      return { name: profName, items };
     }).filter(sec => sec.items.length > 0);
 
-    const totalMatching = professionSections.reduce((acc, sec) => acc + sec.items.length, 0);
+    const totalMatching = sections.reduce((acc, sec) => acc + sec.items.length, 0);
+    const open = sections.length === 1 || !!state.q;
 
-    const accordionsHtml = professionSections.map(sec => `
-      <details class="vd-accordion-group" open>
+    const accordionsHtml = sections.map(sec => `
+      <details class="vd-accordion-group" ${open ? 'open' : ''}>
         <summary class="vd-accordion-summary">
           <span class="vd-accordion-title">
             <strong>${esc(sec.name)}</strong>
@@ -737,109 +486,77 @@
           </span>
           <span class="vd-accordion-arrow">▾</span>
         </summary>
-        <div class="vd-cards-grid vd-cards-compact">
-          ${sec.items.map(id => renderItemCard(id, idx)).filter(Boolean).join('')}
+        <div class="vd-cards-grid vd-cards-compact" data-lazy-recipes="${esc(sec.name)}">
+          ${open ? sec.items.map(id => renderItemCard(id, idx)).join('') : ''}
         </div>
       </details>
     `).join('');
 
     container.innerHTML = `
       <div class="vd-tab-intro">
-        <p>Complete catalogue of <strong>${totalMatching} profession recipes, formulas, patterns, and class grimoires</strong> matching your active filters across Azeroth.</p>
+        <p><strong>${totalMatching} profession recipes, formulas, patterns and class grimoires</strong> match your filters, listed in skill order with the profession skill, specialization and reputation each one needs.</p>
       </div>
-      ${accordionsHtml.length > 0 ? accordionsHtml : `
-        <div class="vd-empty-state">
-          <span style="font-size:2.4rem;">🔍</span>
-          <h3>No recipes match your selected filters</h3>
-          <p>Try resetting filters or adjusting rarity, faction, or search keyword.</p>
-          <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
-        </div>
-      `}
+      ${accordionsHtml || emptyState('recipes')}
     `;
+
+    // Render each profession's cards the first time it is opened (hundreds of cards otherwise)
+    container.querySelectorAll('details.vd-accordion-group').forEach((det, i) => {
+      det.addEventListener('toggle', () => {
+        const grid = det.querySelector('[data-lazy-recipes]');
+        if (det.open && grid && !grid.childElementCount) {
+          grid.innerHTML = sections[i].items.map(id => renderItemCard(id, idx)).join('');
+        }
+      });
+    });
   }
 
   function renderLimitedTab(container, idx) {
-    const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
-    let limitedItemIds = Object.keys(idx.items).filter(id => {
-      const itm = idx.items[id];
-      const vList = idx.itemVendorsMap.get(id) || [];
-      if (!vList.some(([, sell]) => sell.lim)) return false;
-      return itemMatchesFilters(id, itm, idx);
-    });
-
-    if (rawTokens.length > 0) {
-      limitedItemIds = limitedItemIds.filter(id => {
-        const name = idx.items[id][0].toLowerCase();
-        const matchesItem = rawTokens.every(tok => name.includes(tok));
-        if (matchesItem) return true;
-        const vendors = idx.itemVendorsMap.get(id) || [];
-        return vendors.some(([v]) => {
-          const vName = (v.n || '').toLowerCase();
-          const vSub = (v.sub || '').toLowerCase();
-          const vZone = (v.zone || '').toLowerCase();
-          return rawTokens.every(tok => vName.includes(tok) || vSub.includes(tok) || vZone.includes(tok));
-        });
-      });
-    }
-
-    limitedItemIds.sort((a, b) => idx.items[a][0].localeCompare(idx.items[b][0]));
-    const cardsHtml = limitedItemIds.map(id => renderItemCard(id, idx)).filter(Boolean).join('');
+    const ids = matchingIds(idx, id => idx.meta[id].hasLim)
+      .sort((a, b) => idx.items[a][0].localeCompare(idx.items[b][0]));
+    const cardsHtml = ids.map(id => renderItemCard(id, idx)).join('');
 
     container.innerHTML = `
       <div class="vd-tab-intro">
-        <p><strong>Limited-Supply Goods (${limitedItemIds.length} items):</strong> Exotic recipes, rare mount bridles, companion pets, and crafting goods with finite vendor inventories that restock periodically.</p>
+        <p><strong>Limited-Supply Goods (${ids.length} items):</strong> recipes, mount bridles, companion pets and crafting goods with a small vendor stock that restocks over time. Items marked "May be gone in Forever" were missing when a player checked that vendor.</p>
       </div>
       <div class="vd-cards-grid">
-        ${cardsHtml.length > 0 ? cardsHtml : `
-          <div class="vd-empty-state">
-            <span style="font-size:2.4rem;">🔍</span>
-            <h3>No limited supply items match your selected filters</h3>
-            <p>Try resetting filters or adjusting rarity, faction, or search keyword.</p>
-            <button type="button" class="vd-btn-reset" onclick="window.vdResetFilters()">Reset All Filters</button>
-          </div>
-        `}
+        ${cardsHtml || emptyState('limited-supply items')}
       </div>
     `;
   }
 
   function renderZonesTab(container, idx) {
-    const rawTokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    const tokens = queryTokens();
+    const hubsByZone = {};
+    idx.vendors.forEach(v => { if (v.hub) hubsByZone[v.zone] = `${hubsByZone[v.zone] || ''} ${v.hub}`; });
     const zonesList = idx.zones.filter(zone => {
-      if (rawTokens.length === 0) return true;
-      return rawTokens.every(tok => zone.toLowerCase().includes(tok));
+      const hay = `${zone} ${hubsByZone[zone] || ''}`.toLowerCase();
+      return tokens.every(tok => hay.includes(tok));
     });
-
-    const hasActiveFilters = state.quality !== 'all' || state.cat !== 'all' || state.chip !== 'all' || state.currencyType !== 'all' || state.limOnly;
+    const hasActiveFilters = state.quality !== 'all' || state.cat !== 'all' || state.currencyType !== 'all' || state.limOnly;
 
     const zoneAccordions = zonesList.map(zone => {
-      let zoneVendors = idx.vendors.filter(v => v.zone === zone);
-      if (state.faction !== 'all') {
-        zoneVendors = zoneVendors.filter(v => {
-          const side = (v.side || 'Neutral').toLowerCase();
-          if (state.faction === 'neutral') return side === 'neutral';
-          return side === state.faction.toLowerCase() || side === 'neutral';
-        });
-      }
-      if (state.seenOnly) {
-        zoneVendors = zoneVendors.filter(v => v.fv);
-      }
-      zoneVendors.sort((a, b) => (a.n || '').localeCompare(b.n || ''));
-      if (zoneVendors.length === 0) return '';
+      const zoneVendors = idx.vendors
+        .filter(v => v.zone === zone && vendorMatchesFaction(v) && (!state.seenOnly || v.fv))
+        .sort((a, b) => (a.n || '').localeCompare(b.n || ''));
 
       const vendorsHtml = zoneVendors.map(v => {
         const sideColor = FACTION_COLORS[v.side] || '#94a3b8';
         const sellEntries = Object.entries(v.sells || {});
-
         const filteredSells = hasActiveFilters
-          ? sellEntries.filter(([itemId]) => {
+          ? sellEntries.filter(([itemId, sell]) => {
               const itm = idx.items[itemId];
-              return itm && itemMatchesFilters(itemId, itm, idx);
+              if (!itm || (state.limOnly && !sell.lim)) return false;
+              const m = idx.meta[itemId];
+              if (state.cat !== 'all' && (m.info.cat !== state.cat || (state.subCat !== 'all' && m.info.sub !== state.subCat))) return false;
+              if (state.quality !== 'all' && Number(itm[2]) !== Number(state.quality)) return false;
+              if (state.currencyType === 'special' && !(sell.c && sell.c.length)) return false;
+              if (state.currencyType === 'money' && sell.c && sell.c.length) return false;
+              return true;
             })
           : sellEntries;
 
-        if (filteredSells.length === 0 && hasActiveFilters) {
-          return '';
-        }
+        if (filteredSells.length === 0 && hasActiveFilters) return '';
 
         const displaySells = filteredSells.slice(0, 24);
         const hasMore = filteredSells.length > 24;
@@ -848,15 +565,14 @@
           const item = idx.items[itemId];
           if (!item) return '';
           const qColor = QUALITY_COLORS[item[2]] || '#f8fafc';
-          const iconSrc = getIconUrl(item[1]);
           return `
             <a class="vd-zone-item-pill" href="https://www.wowhead.com/forever/item=${itemId}" target="_blank" rel="noopener noreferrer" data-item-id="${itemId}" data-item-name="${esc(item[0])}" data-item-quality="q${item[2]}">
-              <img src="${iconSrc}" class="vd-pill-icon" alt="" onerror="this.src='images/icons/vendors/134400.webp'">
+              <img src="${getIconUrl(item[1])}" class="vd-pill-icon" alt="" onerror="this.src='${FALLBACK_ICON}'">
               <span style="color:${qColor};">${esc(item[0])}</span>
               ${sell.lim ? `<span class="vd-lim-mini">${sell.lim}</span>` : ''}
             </a>
           `;
-        }).filter(Boolean).join('');
+        }).join('');
 
         return `
           <div class="vd-zone-vendor-card">
@@ -864,13 +580,14 @@
               <span class="vd-vendor-title-block">
                 <strong>${esc(v.n)}</strong>
                 ${v.sub ? `<span class="vd-vendor-sub">&lt;${esc(v.sub)}&gt;</span>` : ''}
+                ${v.hub ? `<span class="vd-zone-pill">${esc(v.hub)}</span>` : ''}
                 <span class="vd-faction-dot" style="color:${sideColor};">● ${esc(v.side || 'Neutral')}</span>
-                ${v.fv ? `<span class="vd-badge vd-badge-fv">Seen in Forever</span>` : ''}
+                ${vendorStatusBadge(v)}
+                ${discountHtml(v, idx)}
               </span>
               <span class="vd-loc-actions">
-                <span class="vd-coords">(${v.x}, ${v.y})</span>
-                <button type="button" class="vd-inline-btn" onclick="vdCopyWaypoint('${esc(v.zone)}', ${v.x}, ${v.y}, this)" aria-label="Copy waypoint">📍 /way</button>
-                <button type="button" class="vd-inline-btn" onclick="vdCopyMacro('${esc(v.n)}', this)" aria-label="Copy macro">🎯 /tar</button>
+                ${locationHtml(v)}
+                <button type="button" class="vd-inline-btn" onclick="vdCopyMacro(${v.id}, this)" aria-label="Copy macro">🎯 /tar</button>
               </span>
             </div>
             <div class="vd-zone-vendor-sells">
@@ -879,31 +596,33 @@
             </div>
           </div>
         `;
-      }).filter(Boolean).join('');
+      }).filter(Boolean);
+
+      if (vendorsHtml.length === 0) return '';
 
       return `
         <details class="vd-accordion-group">
           <summary class="vd-accordion-summary">
             <span class="vd-accordion-title">
               <strong>${esc(zone)}</strong>
-              <span class="vd-badge vd-badge-count">${zoneVendors.length} vendors</span>
+              <span class="vd-badge vd-badge-count">${vendorsHtml.length} vendors</span>
             </span>
             <span class="vd-accordion-arrow">▾</span>
           </summary>
           <div class="vd-zone-vendors-container">
-            ${vendorsHtml}
+            ${vendorsHtml.join('')}
           </div>
         </details>
       `;
-    }).filter(Boolean).join('');
+    }).filter(Boolean);
 
     container.innerHTML = `
       <div class="vd-tab-intro">
-        <p>Explore vendors organized across all <strong>${zonesList.length} zones</strong> in Azeroth with exact coordinate pins, faction alignment, and full merchandise rosters.</p>
+        <p>Vendors in <strong>${zoneAccordions.length} zones</strong> with coordinates, faction, reputation discounts and full merchandise lists. The search box filters zone and town names on this tab.</p>
       </div>
-      ${zoneAccordions.length > 0 ? zoneAccordions : `
+      ${zoneAccordions.join('') || `
         <div class="vd-empty-state">
-          <p>No zones match "${esc(state.q)}".</p>
+          <p>No zones match "${esc(state.q)}" with your current filters.</p>
         </div>
       `}
     `;
@@ -915,15 +634,25 @@
     const idx = ensureIndex();
     if (!idx) return;
 
-    if (state.tab === 'find') {
-      renderFindTab(container, idx);
-    } else if (state.tab === 'recipes') {
-      renderRecipesTab(container, idx);
-    } else if (state.tab === 'limited') {
-      renderLimitedTab(container, idx);
-    } else if (state.tab === 'zones') {
-      renderZonesTab(container, idx);
-    }
+    if (state.tab === 'find') renderFindTab(container, idx);
+    else if (state.tab === 'recipes') renderRecipesTab(container, idx);
+    else if (state.tab === 'limited') renderLimitedTab(container, idx);
+    else if (state.tab === 'zones') renderZonesTab(container, idx);
+  }
+
+  /** Any filter change starts the item list from the first page again. */
+  function refresh() {
+    state.limit = PAGE_SIZE;
+    renderSubView();
+  }
+
+  function withCount(label, n) {
+    return n ? `${label} (${n.toLocaleString('en-US')})` : label;
+  }
+
+  function formatDate(iso) {
+    const d = iso ? new Date(iso) : null;
+    return d && !isNaN(d) ? d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
   }
 
   window.renderVendors = function () {
@@ -941,27 +670,29 @@
       return;
     }
 
-    const { stats } = idx;
+    const { stats, catCounts } = idx;
+    const n = x => x.toLocaleString('en-US');
     const currentTaxonomy = TAXONOMY[state.cat] || TAXONOMY.all;
+    const updated = formatDate(idx.raw.sourceFetchedAt || idx.raw.generatedAt);
 
     mount.innerHTML = `
       <div class="vd-container">
-        <!-- Section Heading & Headline Stats -->
         <div class="section-heading-bar">
           <div>
-            <h2><span>🏪</span> WoW Forever Vendor Directory (${stats.vendorCount.toLocaleString('en-US')} Vendors &amp; ${stats.itemCount.toLocaleString('en-US')} Items)</h2>
-            <p class="section-subtext">Who sells what in WoW Forever, and where they stand: 931 vendors and 1,896 items, recipes and limited-supply goods included. Complete with (x, y) coordinates, faction verification, and 1-click /tar macros.</p>
+            <h2><span>🏪</span> WoW Forever Vendor Directory (${n(stats.vendorCount)} Vendors &amp; ${n(stats.itemCount)} Items)</h2>
+            <p class="section-subtext">Who sells what in WoW Forever and where they stand: ${n(stats.vendorCount)} vendors and ${n(stats.itemCount)} items, with recipe skill and reputation requirements, limited-supply goods, coordinates, and 1-click /way and /tar macros.</p>
             <div class="vd-stats-badges-row">
-              <span class="vd-stat-pill"><strong>${stats.vendorCount}</strong> Vendors</span>
-              <span class="vd-stat-pill"><strong>${stats.itemCount}</strong> Unique Items</span>
-              <span class="vd-stat-pill"><strong>${stats.recipeCount}</strong> Profession Recipes</span>
-              <span class="vd-stat-pill"><strong>${stats.limitedCount}</strong> Limited Supply</span>
-              <span class="vd-stat-pill"><strong>${stats.zoneCount}</strong> Zones</span>
+              <span class="vd-stat-pill"><strong>${n(stats.vendorCount)}</strong> Vendors</span>
+              <span class="vd-stat-pill" title="Vendors whose stock a player recorded in WoW Forever"><strong>${n(stats.seenCount)}</strong> Seen in Forever</span>
+              <span class="vd-stat-pill"><strong>${n(stats.itemCount)}</strong> Unique Items</span>
+              <span class="vd-stat-pill"><strong>${n(stats.recipeCount)}</strong> Profession Recipes</span>
+              <span class="vd-stat-pill"><strong>${n(stats.limitedCount)}</strong> Limited Supply</span>
+              <span class="vd-stat-pill"><strong>${n(stats.zoneCount)}</strong> Zones</span>
             </div>
+            <p class="vd-data-note">Vendor stock from <a href="https://foreverdb.net" target="_blank" rel="noopener noreferrer">ForeverDB</a> player scans${updated ? ` (updated ${updated})` : ''}; requirements from Wowhead Forever. Vendors marked "Classic Data" haven't been confirmed in Forever yet.</p>
           </div>
         </div>
 
-        <!-- Mode Navigation Sub-Tabs -->
         <div class="vd-subnav-bar" role="tablist" aria-label="Vendor Views">
           ${SUB_TABS.map(tab => `
             <button type="button" class="vd-subnav-btn ${state.tab === tab.id ? 'active' : ''}" data-subtab="${tab.id}" role="tab" aria-selected="${state.tab === tab.id}">
@@ -971,7 +702,6 @@
           `).join('')}
         </div>
 
-        <!-- Quick Filter Exploration Chips -->
         <div class="vd-quick-chips-wrapper">
           <div class="vd-quick-chips-label">Quick Filters:</div>
           <div class="vd-quick-chips-bar" role="group" aria-label="Quick Category Filters">
@@ -984,21 +714,19 @@
           </div>
         </div>
 
-        <!-- Interactive Search & Filter Toolbar -->
         <div class="vd-filter-toolbar">
           <div class="vd-search-box-wrapper">
             <span class="vd-search-icon">🔍</span>
-            <input type="search" id="vd-search-input" class="vd-search-input" placeholder="Search item, recipe, vendor name, or zone (e.g. Flask, Pattern, Corina, Durotar)..." value="${esc(state.q)}" aria-label="Search items and vendors">
+            <input type="search" id="vd-search-input" class="vd-search-input" placeholder="Search item, what a recipe makes, reputation, vendor or zone (e.g. Mithril, Timbermaw, Corina, Booty Bay)..." value="${esc(state.q)}" aria-label="Search items and vendors">
             ${state.q ? `<button type="button" id="vd-search-clear" class="vd-search-clear" aria-label="Clear search">✕</button>` : ''}
           </div>
 
-          <!-- Category & Subcategory 2-Tier Bar -->
           <div class="vd-taxonomy-controls">
             <div class="vd-taxonomy-group">
               <label for="vd-cat-select" class="vd-filter-label">Category:</label>
               <select id="vd-cat-select" class="vd-select" aria-label="Select Category">
                 ${Object.entries(TAXONOMY).map(([key, cat]) => `
-                  <option value="${key}" ${state.cat === key ? 'selected' : ''}>${cat.label}</option>
+                  <option value="${key}" ${state.cat === key ? 'selected' : ''}>${withCount(cat.label, key === 'all' ? 0 : (catCounts[key] || {}).all)}</option>
                 `).join('')}
               </select>
             </div>
@@ -1007,12 +735,11 @@
               <label for="vd-subcat-select" class="vd-filter-label">Subcategory:</label>
               <select id="vd-subcat-select" class="vd-select" aria-label="Select Subcategory">
                 ${currentTaxonomy.subcategories.map(sub => `
-                  <option value="${sub.id}" ${state.subCat === sub.id ? 'selected' : ''}>${sub.label}</option>
+                  <option value="${sub.id}" ${state.subCat === sub.id ? 'selected' : ''}>${withCount(sub.label, (catCounts[state.cat] || {})[sub.id])}</option>
                 `).join('')}
               </select>
             </div>
 
-            <!-- Quality Filter -->
             <div class="vd-taxonomy-group">
               <label for="vd-quality-select" class="vd-filter-label">Rarity:</label>
               <select id="vd-quality-select" class="vd-select" aria-label="Filter by Item Quality">
@@ -1025,36 +752,32 @@
               </select>
             </div>
 
-            <!-- Currency / Payment Type Filter -->
             <div class="vd-taxonomy-group">
               <label for="vd-curr-select" class="vd-filter-label">Currency:</label>
               <select id="vd-curr-select" class="vd-select" aria-label="Filter by Currency">
                 <option value="all" ${state.currencyType === 'all' ? 'selected' : ''}>All Currencies</option>
                 <option value="money" ${state.currencyType === 'money' ? 'selected' : ''}>Gold / Silver Only</option>
-                <option value="special" ${state.currencyType === 'special' ? 'selected' : ''}>Special Currencies (Favor/Honor)</option>
+                <option value="special" ${state.currencyType === 'special' ? 'selected' : ''}>Tokens (Favor, Honor, Marks, Tickets)</option>
               </select>
             </div>
           </div>
 
           <div class="vd-filter-controls">
-            <!-- Faction Pills -->
             <div class="vd-filter-group" role="group" aria-label="Faction Filter">
               <span class="vd-filter-label">Faction:</span>
               <button type="button" class="vd-pill-btn ${state.faction === 'all' ? 'active' : ''}" data-faction="all">All</button>
-              <button type="button" class="vd-pill-btn ${state.faction === 'alliance' ? 'active' : ''}" data-faction="alliance" style="--accent:#3b82f6;">Alliance</button>
-              <button type="button" class="vd-pill-btn ${state.faction === 'horde' ? 'active' : ''}" data-faction="horde" style="--accent:#ef4444;">Horde</button>
+              <button type="button" class="vd-pill-btn ${state.faction === 'alliance' ? 'active' : ''}" data-faction="alliance" style="--accent:#3b82f6;" title="Alliance and neutral vendors">Alliance</button>
+              <button type="button" class="vd-pill-btn ${state.faction === 'horde' ? 'active' : ''}" data-faction="horde" style="--accent:#ef4444;" title="Horde and neutral vendors">Horde</button>
               <button type="button" class="vd-pill-btn ${state.faction === 'neutral' ? 'active' : ''}" data-faction="neutral" style="--accent:#eab308;">Neutral</button>
             </div>
 
-            <!-- Supply Pills -->
             <div class="vd-filter-group" role="group" aria-label="Supply Filter">
               <span class="vd-filter-label">Supply:</span>
               <button type="button" class="vd-pill-btn ${!state.limOnly ? 'active' : ''}" id="vd-toggle-all-supply">All Goods</button>
               <button type="button" class="vd-pill-btn ${state.limOnly ? 'active' : ''}" id="vd-toggle-lim">Limited Stock</button>
-              <button type="button" class="vd-pill-btn ${state.seenOnly ? 'active' : ''}" id="vd-toggle-seen">Seen in Forever</button>
+              <button type="button" class="vd-pill-btn ${state.seenOnly ? 'active' : ''}" id="vd-toggle-seen" title="Only vendors whose stock was recorded in WoW Forever">Seen in Forever</button>
             </div>
 
-            <!-- Sort Dropdown -->
             <div class="vd-filter-group">
               <label for="vd-sort-select" class="vd-filter-label">Sort:</label>
               <select id="vd-sort-select" class="vd-select" aria-label="Sort order">
@@ -1062,13 +785,13 @@
                 <option value="name" ${state.sort === 'name' ? 'selected' : ''}>Name (A-Z)</option>
                 <option value="price-asc" ${state.sort === 'price-asc' ? 'selected' : ''}>Price: Low → High</option>
                 <option value="price-desc" ${state.sort === 'price-desc' ? 'selected' : ''}>Price: High → Low</option>
+                <option value="skill" ${state.sort === 'skill' ? 'selected' : ''}>Required Skill</option>
                 <option value="vendors-desc" ${state.sort === 'vendors-desc' ? 'selected' : ''}>Most Vendors</option>
               </select>
             </div>
           </div>
         </div>
 
-        <!-- Dynamic Subview Container -->
         <div id="vd-subview-container" class="vd-subview-container"></div>
       </div>
     `;
@@ -1080,7 +803,6 @@
   let debounceTimer = null;
 
   function bindEvents(mount) {
-    // Sub-tab switching
     mount.querySelectorAll('.vd-subnav-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const targetTab = btn.getAttribute('data-subtab');
@@ -1090,134 +812,84 @@
           b.classList.toggle('active', b.getAttribute('data-subtab') === targetTab);
           b.setAttribute('aria-selected', b.getAttribute('data-subtab') === targetTab);
         });
-        renderSubView();
+        refresh();
       });
     });
 
-    // Quick-Filter Chips
     mount.querySelectorAll('.vd-chip-btn').forEach(chipBtn => {
       chipBtn.addEventListener('click', () => {
-        const chipId = chipBtn.getAttribute('data-chip');
-        state.chip = chipId;
-
-        // Synchronize primary and subcategory dropdowns based on chip
-        if (chipId === 'all') {
-          state.cat = 'all';
-          state.subCat = 'all';
-          state.limOnly = false;
-        } else if (chipId === 'limited') {
-          state.limOnly = true;
-          state.cat = 'all';
-          state.subCat = 'all';
-        } else if (['cooking', 'books', 'tailoring', 'leatherworking', 'blacksmithing', 'alchemy', 'engineering', 'enchanting'].includes(chipId)) {
-          state.cat = 'recipes';
-          state.subCat = chipId;
-          state.limOnly = false;
-        } else if (chipId === 'bags') {
-          state.cat = 'bags_tools';
-          state.subCat = 'bagstool_bags';
-          state.limOnly = false;
-        } else if (chipId === 'mounts_pets') {
-          state.cat = 'mounts_pets';
-          state.subCat = 'all';
-          state.limOnly = false;
-        } else if (chipId === 'weapons') {
-          state.cat = 'weapons';
-          state.subCat = 'all';
-          state.limOnly = false;
-        } else if (chipId === 'armor') {
-          state.cat = 'armor';
-          state.subCat = 'all';
-          state.limOnly = false;
-        } else if (chipId === 'food') {
-          state.cat = 'consumables';
-          state.subCat = 'cons_food';
-          state.limOnly = false;
-        } else if (chipId === 'potions') {
-          state.cat = 'consumables';
-          state.subCat = 'cons_potions';
-          state.limOnly = false;
-        } else if (chipId === 'poisons') {
-          state.cat = 'consumables';
-          state.subCat = 'cons_poisons';
-          state.limOnly = false;
-        }
-
-        // Re-render to update active chip and taxonomy dropdowns
+        const chip = QUICK_CHIPS.find(c => c.id === chipBtn.getAttribute('data-chip'));
+        if (!chip) return;
+        state.chip = chip.id;
+        state.cat = chip.cat;
+        state.subCat = chip.sub;
+        state.limOnly = !!chip.limOnly;
+        state.limit = PAGE_SIZE;
         window.renderVendors();
       });
     });
 
-    // Primary Category Select
     const catSelect = mount.querySelector('#vd-cat-select');
     if (catSelect) {
       catSelect.addEventListener('change', (e) => {
         state.cat = e.target.value;
         state.subCat = 'all';
         state.chip = 'all';
+        state.limit = PAGE_SIZE;
         window.renderVendors();
       });
     }
 
-    // Subcategory Select
     const subcatSelect = mount.querySelector('#vd-subcat-select');
     if (subcatSelect) {
       subcatSelect.addEventListener('change', (e) => {
         state.subCat = e.target.value;
-        renderSubView();
+        refresh();
       });
     }
 
-    // Quality Select
     const qualitySelect = mount.querySelector('#vd-quality-select');
     if (qualitySelect) {
       qualitySelect.addEventListener('change', (e) => {
         state.quality = e.target.value;
-        renderSubView();
+        refresh();
       });
     }
 
-    // Currency Select
     const currSelect = mount.querySelector('#vd-curr-select');
     if (currSelect) {
       currSelect.addEventListener('change', (e) => {
         state.currencyType = e.target.value;
-        renderSubView();
+        refresh();
       });
     }
 
-    // Search input
     const searchInput = mount.querySelector('#vd-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         state.q = e.target.value.trim();
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-          renderSubView();
-        }, 200);
+        debounceTimer = setTimeout(refresh, 200);
       });
     }
 
-    // Clear search
     const clearBtn = mount.querySelector('#vd-search-clear');
     if (clearBtn) {
       clearBtn.addEventListener('click', () => {
         state.q = '';
         if (searchInput) searchInput.value = '';
-        renderSubView();
+        refresh();
       });
     }
 
-    // Faction buttons
     mount.querySelectorAll('[data-faction]').forEach(btn => {
       btn.addEventListener('click', () => {
         state.faction = btn.getAttribute('data-faction');
         mount.querySelectorAll('[data-faction]').forEach(b => b.classList.toggle('active', b === btn));
-        renderSubView();
+        refresh();
       });
     });
 
-    // Supply toggles
     const allSupplyBtn = mount.querySelector('#vd-toggle-all-supply');
     const limBtn = mount.querySelector('#vd-toggle-lim');
     const seenBtn = mount.querySelector('#vd-toggle-seen');
@@ -1227,7 +899,7 @@
         state.limOnly = false;
         allSupplyBtn.classList.add('active');
         if (limBtn) limBtn.classList.remove('active');
-        renderSubView();
+        refresh();
       });
     }
 
@@ -1236,7 +908,7 @@
         state.limOnly = !state.limOnly;
         limBtn.classList.toggle('active', state.limOnly);
         if (allSupplyBtn) allSupplyBtn.classList.toggle('active', !state.limOnly);
-        renderSubView();
+        refresh();
       });
     }
 
@@ -1244,20 +916,19 @@
       seenBtn.addEventListener('click', () => {
         state.seenOnly = !state.seenOnly;
         seenBtn.classList.toggle('active', state.seenOnly);
-        renderSubView();
+        refresh();
       });
     }
 
-    // Sort select
     const sortSelect = mount.querySelector('#vd-sort-select');
     if (sortSelect) {
       sortSelect.addEventListener('change', (e) => {
         state.sort = e.target.value;
-        renderSubView();
+        refresh();
       });
     }
 
-    // Delegated Hover Tooltip Handlers for Vendor Directory items
+    // Delegated hover tooltips for items
     const subviewContainer = mount.querySelector('#vd-subview-container');
     if (subviewContainer && !subviewContainer._hasTooltipEvents) {
       subviewContainer._hasTooltipEvents = true;
@@ -1293,11 +964,7 @@
     }
   }
 
-  // Initialize on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
-    if (window.WOW_VENDORS_DATA) {
-      ensureIndex();
-    }
+    if (window.WOW_VENDORS_DATA) ensureIndex();
   });
-
 })();
