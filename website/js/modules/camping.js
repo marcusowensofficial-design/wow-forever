@@ -77,7 +77,7 @@ function renderCozySleepingBag() {
               <span class="deepdive-badge badge-exclusive"><span>✦</span> Level 14+ Essential</span>
             </div>
             <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0.2rem 0 0;">
-              Deploy anywhere outdoors or inside camp: rest for 3 minutes to gain <strong>+3% Experience from all sources (Monsters & Quests) for 2 hours</strong>.
+              Lie in the bag for up to 3 minutes: each minute adds <strong>+1% experience (max +3%)</strong>, and the buff lasts <strong>1 hour</strong>. You also count as rested while in the bag.
             </p>
           </div>
         </div>
@@ -114,7 +114,7 @@ function renderCozySleepingBag() {
               <span>0m: +0% XP</span>
               <span>1m: +1% XP</span>
               <span>2m: +2% XP</span>
-              <span>3m: +3% (2h)</span>
+              <span>3m: +3% (1h)</span>
             </div>
             <div style="display: flex; gap: 0.5rem;">
               <button type="button" class="btn-primary" id="btn-simulate-bag-rest" style="flex: 1; padding: 0.5rem; font-size: 0.85rem; cursor: pointer; background: linear-gradient(135deg, #ca8a04, #eab308); color: #000; font-weight: 700; border: none; border-radius: 4px;">
@@ -139,7 +139,7 @@ function renderCozySleepingBag() {
               </div>
             </div>
             <p style="font-size: 0.8rem; color: #cbd5e1; margin: 0.4rem 0 0; line-height: 1.4;">
-              Heals <strong>500 HP</strong> immediately + <strong>1,050 over 12s</strong>, and restores <strong>900 mana / 50 rage / 100 energy</strong> on a 5-minute cooldown. You earn 12 free bags across the questline!
+              ${escapeHtml((bagData && bagData.studentFodder && bagData.studentFodder.use) || 'Regenerates health in Forever. 5-minute cooldown, stacks to 30.')}
             </p>
           </div>
         </div>
@@ -177,9 +177,11 @@ function renderCozySleepingBag() {
                   </div>
                 `}
 
-                <div style="margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed rgba(255,255,255,0.08); font-size: 0.78rem; color: #34d399;">
-                  <strong>🎁 Rewards:</strong> ${escapeHtml(step.rewards)}
-                </div>
+                ${step.rewards ? `
+                  <div style="margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed rgba(255,255,255,0.08); font-size: 0.78rem; color: #34d399;">
+                    <strong>🎁 Reward:</strong> ${escapeHtml(step.rewards)}
+                  </div>
+                ` : ''}
               </div>
             `).join('')}
           </div>
@@ -210,7 +212,7 @@ function renderCozySleepingBag() {
         }
         if (simStatus) {
           if (currentRestMinutes === 3) {
-            simStatus.innerHTML = `<strong>Max Bonus Active!</strong> +3% XP from all sources for 2 hours (7,200s).`;
+            simStatus.innerHTML = `<strong>Max Bonus Active!</strong> +3% XP for 1 hour.`;
           } else {
             simStatus.textContent = `Resting in bag: ${currentRestMinutes} min complete (+${currentRestMinutes}% XP). Keep resting!`;
           }
@@ -475,11 +477,11 @@ function renderCampingStations(filter) {
         if (profLower.includes('leatherworking')) {
           const rack = window.WOW_ATLAS_DATA?.campingRecipes?.tanningRack;
           fieldRecipes = rack?.highlightRecipes || (Array.isArray(rack) ? rack : []);
-          stationLabel = `Tanning Rack (${rack?.totalRecipes || 48} Recipes)`;
+          stationLabel = 'Tanning Rack';
         } else if (profLower.includes('tailoring')) {
           const wheel = window.WOW_ATLAS_DATA?.campingRecipes?.spinningWheel;
           fieldRecipes = wheel?.highlightRecipes || (Array.isArray(wheel) ? wheel : []);
-          stationLabel = `Spinning Wheel (${wheel?.totalRecipes || 74} Recipes)`;
+          stationLabel = 'Spinning Wheel';
         }
 
         if (!fieldRecipes || fieldRecipes.length === 0) return '';
@@ -522,9 +524,8 @@ window.toggleCampingRecipes = function(profSlug) {
     if (btn) btn.innerHTML = '▲ Hide Field Recipes';
   } else {
     drawer.setAttribute('hidden', '');
-    const count = profSlug.includes('leather') ? 48 : 74;
     const label = profSlug.includes('leather') ? 'Tanning Rack' : 'Spinning Wheel';
-    if (btn) btn.innerHTML = `📜 View ${count} Field Recipes (${label})`;
+    if (btn) btn.innerHTML = `📜 View Field Recipes: ${label}`;
   }
 };
 

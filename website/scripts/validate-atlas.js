@@ -33,8 +33,8 @@ console.log('✓ 40 Library Books count:', atlasData.libraryBooks.books.length);
 console.log('✓ 14 PvP Ranks count:', atlasData.pvp.ranks.length);
 console.log('✓ Battlegrounds count:', atlasData.pvp.battlegrounds.length);
 console.log('✓ 65 Legacy Challenges total:', atlasData.legacyChallenges.total);
-console.log('✓ 48 Tanning Rack recipes total:', atlasData.campingRecipes.tanningRack.totalRecipes);
-console.log('✓ 74 Spinning Wheel recipes total:', atlasData.campingRecipes.spinningWheel.totalRecipes);
+console.log('✓ Tanning Rack sample recipes:', atlasData.campingRecipes.tanningRack.highlightRecipes.length);
+console.log('✓ Spinning Wheel sample recipes:', atlasData.campingRecipes.spinningWheel.highlightRecipes.length);
 console.log('✓ Expanded Dungeons:', Object.keys(atlasData.expandedDungeons));
 
 if (allPass && atlasData.rares.length === 34 && atlasData.libraryBooks.books.length === 40) {

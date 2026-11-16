@@ -1,64 +1,60 @@
 {
   "item": {
     "name": "Cozy Sleeping Bag",
+    "itemId": 211527,
     "itemLevel": 40,
     "bind": "Binds when picked up",
     "unique": true,
-    "cd": "60 Min Cooldown",
-    "groundDuration": "20 Minutes",
-    "deployCast": "15 Seconds (Standing Still)"
+    "cd": "1 Hour Cooldown"
   },
   "buff": {
-    "name": "Well-Rested",
-    "duration": "2 Hours (7,200 seconds)",
-    "stacks": "Up to 3 Stacks (+1% per minute rested)",
-    "maxBonus": "+3% Experience from all sources (Monsters AND Quests)",
-    "restingSynergy": "Resting in the bag counts as Resting in an Inn, accelerating Rested XP velocity."
+    "duration": "1 hour",
+    "stacks": "+1% experience per minute rested, up to 3 stacks",
+    "maxBonus": "+3% experience",
+    "restingSynergy": "You also count as rested while lying in the bag."
   },
   "studentFodder": {
     "name": "Student Fodder",
+    "itemId": 216619,
     "itemLevel": 33,
-    "use": "Heals 500 HP immediately + 1,050 over 12s; restores 900 mana / 50 rage / 100 energy (5 min CD, stacks to 30)."
+    "use": "Regenerates health in Forever. 5-minute cooldown, stacks to 30. The questline hands out 5 in total."
   },
+  "source": "Wowhead Forever guide: Cozy Sleeping Bag: Quests, Locations and Rewards",
   "questRoadmap": [
     {
       "step": 1,
       "name": "...and that note you found",
       "levelReq": 14,
       "factionStart": {
-        "alliance": "Alexston Farmstead, Westfall (37.4, 50.6) - Burned-Out Remains in scorched field",
-        "horde": "Field of Giants, The Barrens (46.4, 73.9) - Burned-Out Remains by ruined tower"
+        "alliance": "Alexston Farmstead, Westfall (37, 50): click the Burned-Out Remains in the cart wreckage",
+        "horde": "Burnt tower south of Camp Taurajo, The Barrens (46, 74): click the Burned-Out Remains"
       },
-      "task": "Click the Burned-Out Remains to loot the traveler's note and initiate the cross-continent trail.",
-      "rewards": "Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir"
+      "task": "Accept the quest from the Burned-Out Remains in your faction's starting spot."
     },
     {
       "step": 2,
       "name": "Stepping Stones",
-      "location": "Opposite Continent's Burned Remains (Barrens for Alliance / Westfall for Horde)",
-      "task": "Journey to the enemy continent and turn in the note at the Nailed Plank.",
-      "rewards": "2x 12-Slot Bags (Sturdy Lunchbox & Old Toolbox) + Farmer's Shovel / Mining Pick + Simple Wood & Flint"
+      "location": "The other faction's starting spot (Barrens for Alliance, Westfall for Horde)",
+      "task": "Turn in \"...and that note you found\" at the other Burned-Out Remains and accept Stepping Stones."
     },
     {
       "step": 3,
-      "name": "Scramble & Wet Job",
-      "location": "Webwinder Path, Stonetalon Mountains (Path at 50.9, 52.3 -> Camp at 40.7, 52.4 -> Dirt Mound at 39.6, 49.9)",
-      "task": "Climb the mountain path north of Sun Rock Retreat, click Pocket Litter at abandoned tent, and jump the ravine to the Mound of Dirt.",
-      "rewards": "Choice of Thrown/Ranged Weapon (Silver Star / Moonsight Rifle / Precision Bow) + 4x Student Fodder"
+      "name": "Scramble",
+      "location": "Stonetalon Mountains (path 50.9, 52.3 · camp 40.6, 52.4 · Mound of Dirt 39.6, 49.8)",
+      "task": "Click the Pocket Litter in the abandoned camp northeast of Sun Rock Retreat, then jump to the Mound of Dirt to complete Scramble and accept Wet Job. Optional: complete Rekindle at the camp's campfire."
     },
     {
       "step": 4,
-      "name": "Eagle's Fist",
-      "location": "Stonewrought Dam, Loch Modan (49.4, 12.9)",
-      "task": "Walk onto the dam crest and drop down onto the giant dwarf stone carvings facing the Wetlands to retrieve the Carved Figurine.",
-      "rewards": "Hickory Pipe + Rumsey Rum Light (+5 Stamina)"
+      "name": "Wet Job",
+      "location": "Loch Modan dam (49.4, 12.9)",
+      "task": "Jump onto the carved heads facing the Wetlands and click the Eagle Figurine to complete Wet Job and accept Eagle's Fist."
     },
     {
       "step": 5,
-      "name": "This Must Be The Place",
-      "location": "Thoradin's Wall, Hillsbrad / Arathi (87.4, 49.7 Cart -> 22.4, 24.2 Messenger Bag)",
-      "task": "Climb the abandoned supply cart south of Durnholde, scale the ramparts, reach the interior room, and click the Hastily Rolled-Up Satchel.",
-      "rewards": "Cozy Sleeping Bag (+3% XP for 2 hours) + 8x Student Fodder"
+      "name": "Eagle's Fist / This Must Be The Place",
+      "location": "Thoradin's Wall, Hillsbrad side (cart 87.3, 49.6)",
+      "task": "Climb into the wall from the cart, click the hanging Messenger Bag, then the Hastily Rolled-Up Satchel below it.",
+      "rewards": "Cozy Sleeping Bag"
     }
   ]
 }

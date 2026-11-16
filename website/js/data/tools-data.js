@@ -1698,6 +1698,7 @@ Several late leveling recipes **require** a 300 station — Master Forge (Blacks
 
 ### Camp Rules
 • Sit or craft by the fire for **1 minute** to receive every object's buff; buffs last **1 hour**.
+• **Pouch of Violet Dust** (toy, item 289439; a Twitch drop from the Forever Launch Celebration): throw it into a campfire to turn the flames purple. Everyone at that fire then gets **2-hour** camp buffs instead of 1 hour. 30-minute cooldown.
 • Each player can add **one** object to a camp, and your camp objects share a **1-hour cooldown**.
 • No other campfire can be placed within 100 yards.
 • Camp buffs do not stack with the class buff they copy (for example the Fish Bowl and Blessing of Kings) — the stronger one applies.
@@ -2069,24 +2070,28 @@ Every class possesses signature rite-of-passage questlines between levels 10 and
     },
     {
       id: "guide-rested-xp-stacking",
-      title: "Rested XP & Tent Stacking Deep Dive (+200% Leveling Surge)",
+      title: "Rested XP in Forever: Inns, Camp Tents & the Cozy Sleeping Bag",
       category: "Leveling & Quests",
-      source: "Wowhead · Warcraft Tavern · Classic+",
+      source: "Classic rested-XP rules · Wowhead Forever item tooltips (Camp Tent, Cozy Sleeping Bag)",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
-      summary: "Stacking the Cozy Sleeping Bag, Tier 2/3 Camping Tents, and Capital City Inns for 200% rested generation and Student Fodder optimization.",
-      content: `### The Science of Accelerated Leveling
-In WoW Forever, Rested Experience is a deeply customizable system rather than a passive waiting game. By combining tradeskill camping shelters with field artifacts, rested bars fill in minutes.
-
-### Rested XP Acceleration Tiers
-
-| Resting Environment | Rested Rate | Time to Earn 1 Full Level Rested |
-| **Standard Wilderness** | 1x (Base) | 160 Hours (Nearly 7 days) |
-| **Capital City Inn** | 4x | 40 Hours |
-| **Leatherworking Camp Tent (at a campfire)** | Instant top-up | Raises rested XP to 5% of a level after 30 sec (1-hour cooldown) |
+      summary: "How rested experience builds up, and the two Forever extras that add to it: the Leatherworking Camp Tent and the Cozy Sleeping Bag.",
+      content: `### How Rested XP Builds Up (Classic rules)
+• Logged out (or idle) in an **inn or capital city**, you earn **5% of a level every 8 hours**. A full level of rested XP takes about **160 hours**.
+• Outside a rest area it builds at **a quarter of that speed**.
+• Rested XP caps at **1.5 levels**. While you have it, **monster kills give double experience** until it runs out. Quest XP does not use it.
 
 ---
 
-### Student Fodder Rules
+### Forever Extras
+
+| Source | What it does |
+|---|---|
+| **Camp Tent** (Leatherworking 20, at a campfire) | Tops your rested XP up to **5% of a level**. No effect if you already have more. Shares the 1-hour camp cooldown. The Tanning Rack and Sewing Machine keep this benefit. |
+| **Cozy Sleeping Bag** (level-14 questline) | Lie in it for up to 3 minutes for **+1% XP per minute (max +3%) for 1 hour**. You also count as rested while lying in the bag. |
+
+---
+
+### Student Fodder
 • The Cozy Sleeping Bag questline hands out 5 Student Fodder in total.
 • In Forever, **Student Fodder** regenerates health (5-minute cooldown, stacks to 30). It does not grant rested experience.`
     },
@@ -2697,7 +2702,7 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
 | **Two-Hand (Alt)** | **Excavator's Heavy Mallet** | Excavation Site: Wetlands (Wetlands) | 28.4 DPS, +12 Str, +6 Sta |
 | **Chest** | **Excavator's Tunic** | Excavation Site: Wetlands (Foreman) | 168 Armor, +10 Agi, +8 Sta, +4 Str |
 | **Legs** | **Triprunner Dungarees** | Gnomeregan Quest (*The Grand Betrayal*) | 132 Armor, +18 Agi, +2 Str |
-| **Belt** | **Prowler's Leather Belt** | Camping Tanning Rack Craft (Skill 150) | 88 Armor, +8 Agi, +6 Sta, +1% Crit |
+| **Belt** | **Prowler's Leather Belt** | Leatherworking 150, needs a Tanning Rack | 63 Armor, +9 Str, +6 Agi, +6 Sta, +4 Int |
 | **One-Hand (Resto)** | **Gavel of the Crystal Lake** | Excavation Site: Wetlands | 22.0 DPS, +14 Healing Power, +6 Int |
 | **Two-Hand (Boomkin)** | **Rod of the Sleepwalker** | Blackfathom Deeps (Twilight Lord Kelris) | +11 Spell Damage, +7 Int, +5 Spi |
 
@@ -2750,7 +2755,7 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
       id: "guide-camping-crafting-stations",
       title: "Camping Crafting Stations: Tanning Rack & Spinning Wheel",
       category: "Economy & Professions",
-      source: "Wowhead Forever item tooltips · datamined camping matrix · data/forever_vendors.json",
+      source: "Wowhead Forever item tooltips and spell pages · datamined camping matrix · data/forever_vendors.json",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_pelt_wolf_01.jpg",
       summary: "What the skill-140 tier camp stations for Leatherworking and Tailoring actually do, where their blueprints come from, and how they replace your skill-20 camp object.",
       content: `### What a Camp Station Is
@@ -2784,10 +2789,17 @@ Both stations follow the general camp rules: they **need a campfire nearby**, an
 
 ---
 
-### 3. What the Stations Do *Not* Do
-• The stations make **reagents**. Forever's new leather and cloth gear (Defender's Leather Kilt, Prowler's Leather Belt, Pristine Leggings, the Gilded set and others) shows **no station requirement** in its Wowhead recipe tooltip. You craft that gear the normal way.
-• The recipes that **do** need a station need the skill-300 ones: the Leatherworking **Sewing Machine** and the Tailoring **Loom** ("usable for recipes that require it").
-• Many of the new Forever patterns use **Pristine Leather**, a Scarce crafting reagent (item 249427). Check the Wowhead item page for where it drops.
+### 3. Recipes That Need a Station
+Many leather and cloth recipes can only be crafted next to the matching station. The Wowhead Forever spell page for each one says **"Requires Tanning Rack"** or **"Requires Spinning Wheel"**. This includes Forever's new patterns and some Classic recipes. (The in-game item tooltip leaves this line out, so check the spell page.)
+
+| Station | Examples (skill) |
+|---|---|
+| **Tanning Rack** | Defender's / Totemic / Wisdom's / Stormrider's Leather Kilts and Leggings, Brawler's and Trapper's Leather Legguards (125) · Prowler's, Warden's, Skirmisher's, Skulker's and Mender's Leather Belts (150) · Prowler's and Skulker's Leather Gloves (175) · Stalker's and Skycaller's Mail Boots (200) · Wolfshead Helm (200) |
+| **Spinning Wheel** | Pristine, Silky, Flame and Shadow Leggings (125) · Gilded, Frothing, Fiery and Radiant Slippers (140) · Gilded and Frothing Handwraps (165) · Gilded Cord (190) · Dreamweave Vest (190) · Nethergeld Shoulders (195) · Nethergeld Cuffs (205) |
+
+• The Camping page's "Field Recipes" lists show each one's reagents.
+• Many of these patterns use **Pristine Leather**, a Scarce crafting reagent (item 249427).
+• The skill-300 stations work the same way for their recipes: the Leatherworking **Sewing Machine** and the Tailoring **Loom**.
 
 ---
 
@@ -2799,53 +2811,70 @@ Both stations follow the general camp rules: they **need a campfire nearby**, an
     },
     {
       id: "guide-zephras-isle-zone",
-      title: "Zephras Isle Field Manual: Skyborne Starting Realm & Airship Transit",
+      title: "Zephras Isle: Skyborne Starting Zone, Skyboats & Trainers",
       category: "Leveling & Quests",
-      source: "core-data.js · Wowhead · Blizzplanet",
+      source: "Wowhead Forever: Zephras Isle Zone Overview",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_pet_moth.jpg",
-      summary: "Master the Level 1–12 Skyborne starting experience in Skywall: floating settlement hubs, updraft thermal gliding, class trainers, and scheduled skyboat connections to Dalaran and Thunder Bluff.",
-      content: `### The Skywall Realm: Starting Realm of the Skyborne
-**Zephras Isle** is the breathtaking starting zone (Levels 1–12) for the **Skyborne** race in WoW Forever. Suspended in the upper atmospheric boundaries of Skywall high above Kalimdor, Zephras Isle features crystalline architecture, bioluminescent flora, and aerial navigation mechanics never before seen in Classic.
+      summary: "The Skyborne starting zone (levels 1–12): how the two skyboats connect Valanaar to Dalaran and Thunder Bluff, where every trainer stands, and the quest rewards worth grabbing.",
+      content: `### Overview
+**Zephras Isle** is Forever's new starting zone for **Skyborne** characters, for levels **1–12**. Playing a Skyborne and doing the zone's starting questline needs the **Skyborne Heroic pack** or a higher edition. Anyone can still travel to the island.
 
-### Unique Environmental Mechanic: Updraft Thermal Gliding
-
-Throughout the floating plateaus of Zephras Isle, natural elemental vents channel vertical updrafts:
-• **Launching Vents:** Stepping into an active cyan updraft launches your character high into the sky, granting a 12-second directional glide buff.
-• **Zero Fall Damage:** While traversing between the floating islands of Zephras Isle, fall damage is completely disabled—missed jumps catch updraft safety cushions that deposit you back onto the nearest ledge.
-• **Racial Synergy:** Skyborne characters utilize their active racial **Gale Step / Walk on Air** for 10-second directional boosts to access hidden treasure chests atop wind spires.
+Its three settlements are **Thendall Village** (first class trainers, up to level 6), **Shen'dar Village** and **Valanaar**.
 
 ---
 
-### Settlement Hubs & Leveling Flow (1–12)
+### Skyboats (about every 5 minutes)
+Two skyboats run to and from **Valanaar**. Both factions can take either one; the Dalaran boat is meant for Alliance and the Thunder Bluff boat for Horde.
 
-The quest flow follows a streamlined U-shaped path across the archipelagos:
-
-#### 1. Thendall Village (Levels 1–6)
-• **Arrival:** Awaken in the Celestial Nursery. Complete basic weapon training and unlock your two active racials (*Read Leyline* and *Gale Step*).
-• **Key Quest:** *An Echo in the Wind* — Attune with the Ancient Sky Conduit (\`48.2, 72.4\`) to receive your first 6-slot bag and racial crest.
-
-#### 2. Shen'dar Village (Levels 6–10)
-• **Settlement:** The agricultural and beast-training capital of the lower isles.
-• **Trainers:** Apprentice gathering and production trainers (Herbalism, Skinning, Mining, Alchemy, Tailoring, Leatherworking).
-• **Key Quest:** *The Great Outdoors* (level 5) — introduces Forever's camping system: sit at a campfire, then learn the Basic Campfire Kit from a cooking trainer.
-
-#### 3. Valanaar, Citadel of the Skies (Levels 10–12)
-• **The Capital:** Grand floating citadel housing the Skyborne High Council, Journeyman profession trainers, bank, and class trainers.
-• **Faction Alignment:** At Level 10, players complete the *Two Paths Above the Clouds* ceremony, selecting allegiance with **The High Order** (Alliance-aligned) or **The Windshapers** (Horde-aligned).
-• **Mount Vendor:** Stablemaster Kaelis teaches apprentice riding and sells the majestic *Galestrider* ground mounts.
+| Route | Zephras Isle dock | Other end |
+|---|---|---|
+| **Dalaran** | Easternmost dock in Valanaar (\`65.9, 83.5\`) | North side of Dalaran, Alterac Mountains (\`12.5, 51.8\`) |
+| **Thunder Bluff** | Westernmost dock in Valanaar (\`57.9, 80.9\`) | Cliffs just south of Skywatcher Plateau, Mulgore (\`34.3, 25.8\`) |
 
 ---
 
-### Scheduled Skyboat Flight Network (5-Minute Cadence)
+### Class Trainers
+Skyborne can be Druid, Hunter, Mage, Rogue, Shaman or Warrior. Each class has three trainers on the isle:
 
-To travel between Zephras Isle and the surface continents of Azeroth, two massive arcane airships run scheduled passenger routes every 5 minutes:
-
-| Faction / Route | Zephras Isle Terminal | Continental Destination | Transit Notes |
+| Class | Thendall Village (to level 6) | Shen'dar Village | Valanaar |
 |---|---|---|---|
-| **Alliance (High Order)** | **Valanaar East Skyport** (\`65.9, 83.5\`) | **Dalaran North Dock** (\`12.5, 51.8\`, Hillsbrad/Alterac border) | Direct aerial connection to the Eastern Kingdoms and Dalaran perimeter |
-| **Horde (Windshapers)** | **Valanaar West Skyport** (\`57.9, 80.9\`) | **Thunder Bluff Skywatcher Plateau** (\`34.3, 25.8\`, Mulgore) | Direct landing pad beside the Great Lift in central Kalimdor |
+| Druid | Xyton Silverwind (\`41.6, 23.4\`) | Naeluna Swiftmend (\`45.2, 44.2\`) | Lotheluum Starbreeze (\`64.0, 75.0\`) |
+| Hunter | Tai'ree Farsight (\`42.4, 23.6\`) | Elayaa Easewind (\`45.2, 44.2\`) | Quel'ana Quickgale (\`59.6, 72.6\`) |
+| Mage | Dorii Brightwhisper (\`41.6, 23.6\`) | Shenaan Spellwind (\`45.0, 45.8\`) | Anathamaas Aetherwind (\`65.8, 80.4\`) |
+| Rogue | Akeri Duskblade (\`43.6, 24.2\`) | Miriaan Mistblade (\`43.2, 43.2\`) | Eltheen Nightbreeze (\`59.8, 72.6\`) |
+| Shaman | Windshaper Boro (\`42.8, 23.6\`) | Aarnor Galestrike (\`43.6, 44.8\`) | Sessaria Skystride (\`58.2, 78.6\`) |
+| Warrior | Blademaster Ren (\`43.6, 24.2\`) | Corsan Earthrazer (\`44.8, 45.2\`) | Seena Skybreaker (\`59.8, 72.8\`) |
 
-💡 **Pro-Tip:** If you miss an airship boarding gate, speak with **Skywarden Elidyr** at the Valanaar central landing. For 10 copper, he summons an elemental gust that launches you directly onto the departing skyboat's deck!`
+---
+
+### Profession Trainers
+• **Crafting:** most teach Apprentice only (to 75). Those marked * teach up to Journeyman (150).
+  - Alchemy: Nyassa Swiftdraught (Shen'dar), Iaadaria Bitterwind and Valiena Swiftgale (Valanaar)
+  - Blacksmithing: Aedi Thriceforged (Shen'dar), Daeann Steelwind* (Valanaar)
+  - Enchanting: Nasalanna Windsinger (Shen'dar), Eaysaa Brightgust (Valanaar)
+  - Engineering: Strange Hermit, Shadowgale Forest (\`54.0, 39.0\`)
+  - Leatherworking: Indari Sunseam (Shen'dar), Emerii Tallgust* (Valanaar)
+  - Tailoring: Taleen Shimmerthread* (Shen'dar), Othesia Evengale* (Valanaar)
+• **Gathering:** all teach up to **Artisan (300)**: Halassa Fernbreeze / Syriel Nightrain (Herbalism), Messana Crestwind / Halavuul Cragwind (Mining), Mendalass Tattermend / Ishlee Breezewhisper (Skinning).
+• **Secondary:** up to Journeyman (150): Zerril Softbreeze / Nyalah Brightfire (Cooking), Naleeia Tattermend / Melasa Fairmend (First Aid), Fenn Fairweather / Baelann Swiftcurrent (Fishing).
+
+---
+
+### Quest Rewards Worth Grabbing
+| Quest | Reward | Requirement |
+|---|---|---|
+| The Problem With Prideclaws | Simple Leather Satchel (bag) | Level 4+ |
+| Meddlesome Mages | Idol of Shifting Tides / Totem of Charged Flames | Level 4+, Horde Druid / Shaman |
+| Boughs in the Wind | Windbough Wand | Level 10+, Mage |
+
+Skyborne Shamans should also finish **Call of Earth** and **Call of Fire** for their Earth and Fire Totems.
+
+---
+
+### Reputation
+• **The High Order** (Alliance): Skyborne descendants of the Highborne magisters of Eldre'Thalas.
+• **The Windshapers** (Horde): the Skyborne's shamanistic spiritual leaders.
+Most quests on the isle give reputation with the faction that matches yours.`
     },
     {
       id: "guide-dungeon-quests-master-tour",

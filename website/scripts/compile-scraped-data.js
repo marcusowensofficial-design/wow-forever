@@ -599,54 +599,168 @@ const LIBRARY_BOOKS_DATA = {
 
 // 3. Compile Camping Field Station Recipes
 const CAMPING_RECIPES_DATA = {
-  tanningRack: {
-    name: "Tanning Rack",
-    prof: "Leatherworking",
-    reqSkill: 140,
-    blueprintSource: "Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)",
-    reagents: "5x Medium Leather, 3x Fine Thread, 2x Simple Wood",
-    duration: "15 minutes (Replaces Camp Tent, grants Tent bonuses + 1hr CD)",
-    totalRecipes: 48,
-    highlightRecipes: [
-      { skill: 125, name: "Defender's Leather Kilt", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Elixir of Minor Fortitude" },
-      { skill: 125, name: "Totemic Leather Leggings", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Sulfuric Acid" },
-      { skill: 125, name: "Brawler's Leather Legguards", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Shadowgem" },
-      { skill: 125, name: "Trapper's Leather Legguards", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Deviate Scale" },
-      { skill: 125, name: "Stormrider's Leather Kilt", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Cerulean Dye" },
-      { skill: 125, name: "Wisdom's Leather Leggings", reagents: "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Small Lustrous Pearl" },
-      { skill: 150, name: "Prowler's Leather Belt", reagents: "8x Heavy Leather, 2x Cured Med Hide, 1x Jade" },
-      { skill: 150, name: "Warden's Leather Belt", reagents: "8x Heavy Leather, 2x Cured Med Hide, 1x Elemental Earth" },
-      { skill: 150, name: "Skirmisher's Leather Belt", reagents: "8x Heavy Leather, 2x Cured Med Hide, 1x Citrine" },
-      { skill: 150, name: "Skulker's Leather Belt", reagents: "8x Heavy Leather, 2x Cured Med Hide, 1x Spider's Silk" },
-      { skill: 175, name: "Prowler's Leather Gloves", reagents: "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Jade" },
-      { skill: 175, name: "Skulker's Leather Gloves", reagents: "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Spider's Silk" },
-      { skill: 200, name: "Stalker's Mail Boots", reagents: "8x Heavy Leather, 2x Cured Med Hide, 2x Elemental Air" },
-      { skill: 200, name: "Skycaller's Mail Boots", reagents: "8x Heavy Leather, 2x Cured Med Hide, 2x Elemental Water" },
-      { skill: 220, name: "Wolfshead Helm", type: "Classic Rework", reagents: "18x Thick Leather, 2x Thick Wolfhide, 8x Wicked Claw, 2x Cured Thick Hide" }
+  "tanningRack": {
+    "name": "Tanning Rack",
+    "prof": "Leatherworking",
+    "reqSkill": 125,
+    "blueprintSource": "Blueprint: Tanning Rack: drops from Razorclaw the Butcher, Shadowfang Keep (Wowhead ~7.7%); also sold by the Happy Camper for 15s",
+    "reagents": "5x Medium Leather, 3x Fine Thread, 2x Simple Wood",
+    "duration": "Needs a campfire nearby; replaces a Camp Tent and keeps its rested-XP benefit; shares the 1-hour camp cooldown",
+    "note": "Recipes below show \"Requires Tanning Rack\" on their Wowhead Forever spell page. The list is a sample, not every recipe.",
+    "highlightRecipes": [
+      {
+        "skill": 125,
+        "name": "Defender's Leather Kilt",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Elixir of Minor Fortitude"
+      },
+      {
+        "skill": 125,
+        "name": "Totemic Leather Leggings",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Sulfuric Acid"
+      },
+      {
+        "skill": 125,
+        "name": "Brawler's Leather Legguards",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Shadowgem"
+      },
+      {
+        "skill": 125,
+        "name": "Trapper's Leather Legguards",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Deviate Scale"
+      },
+      {
+        "skill": 125,
+        "name": "Stormrider's Leather Kilt",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Cerulean Dye"
+      },
+      {
+        "skill": 125,
+        "name": "Wisdom's Leather Leggings",
+        "reagents": "12x Medium Leather, 4x Cured Medium Hide, 8x Pristine Leather, 3x Fine Thread, 8x Small Lustrous Pearl"
+      },
+      {
+        "skill": 150,
+        "name": "Prowler's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 1x Jade"
+      },
+      {
+        "skill": 150,
+        "name": "Warden's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 1x Elemental Earth"
+      },
+      {
+        "skill": 150,
+        "name": "Skirmisher's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 1x Citrine"
+      },
+      {
+        "skill": 150,
+        "name": "Skulker's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 1x Spider's Silk"
+      },
+      {
+        "skill": 175,
+        "name": "Prowler's Leather Gloves",
+        "reagents": "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Silken Thread, 2x Jade, 1x Pristine Leather"
+      },
+      {
+        "skill": 175,
+        "name": "Skulker's Leather Gloves",
+        "reagents": "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Silken Thread, 2x Spider's Silk, 1x Pristine Leather"
+      },
+      {
+        "skill": 200,
+        "name": "Stalker's Mail Boots",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 2x Elemental Air"
+      },
+      {
+        "skill": 200,
+        "name": "Skycaller's Mail Boots",
+        "reagents": "8x Heavy Leather, 2x Cured Medium Hide, 2x Elemental Water"
+      },
+      {
+        "skill": 200,
+        "name": "Wolfshead Helm",
+        "reagents": "18x Thick Leather, 2x Thick Wolfhide, 8x Wicked Claw, 4x Heavy Silken Thread, 2x Cured Thick Hide",
+        "type": "Classic recipe, now needs the station"
+      }
     ]
   },
-  spinningWheel: {
-    name: "Spinning Wheel",
-    prof: "Tailoring",
-    reqSkill: 140,
-    blueprintSource: "Unstable Sentinel (City of Dalaran)",
-    reagents: "5x Bolt of Silk Cloth, 3x Fine Thread, 2x Simple Wood",
-    duration: "15 minutes (Replaces Faction Banner, preserves Spirit buff)",
-    totalRecipes: 74,
-    highlightRecipes: [
-      { skill: 125, name: "Pristine Leggings", reagents: "14x Bolt of Silk, 8x Cerulean Dye, 8x Pristine Leather, 2x Silver Bar, 3x Greater Astral Essence" },
-      { skill: 125, name: "Silky Leggings", reagents: "14x Bolt of Silk, 8x Cerulean Dye, 8x Spider's Silk, 2x Silver Bar, 3x Greater Astral Essence" },
-      { skill: 125, name: "Flame Leggings", reagents: "14x Bolt of Silk, 8x Cerulean Dye, 8x Fire Oil, 2x Silver Bar, 3x Greater Astral Essence" },
-      { skill: 125, name: "Shadow Leggings", reagents: "14x Bolt of Silk, 8x Cerulean Dye, 8x Shadowgem, 2x Silver Bar, 3x Greater Astral Essence" },
-      { skill: 140, name: "Gilded Slippers", reagents: "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Gold Bar" },
-      { skill: 140, name: "Frothing Slippers", reagents: "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Globe of Water" },
-      { skill: 140, name: "Fiery Slippers", reagents: "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Heart of Fire" },
-      { skill: 165, name: "Gilded Handwraps", reagents: "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Gold Bar" },
-      { skill: 165, name: "Frothing Handwraps", reagents: "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Globe of Water" },
-      { skill: 190, name: "Gilded Cord", reagents: "28x Bolt of Mageweave, 6x Magenta Dye, 4x Cerulean Dye, 12x Gold Bar" },
-      { skill: 195, name: "Nethergeld Shoulders", reagents: "16x Bolt of Mageweave, 4x Magenta Dye, 8x Gold Bar, 2x Greater Nether Essence" },
-      { skill: 205, name: "Nethergeld Cuffs", reagents: "18x Bolt of Mageweave, 6x Magenta Dye, 10x Gold Bar, 4x Greater Nether Essence" },
-      { skill: 205, name: "Dreamweave Vest", type: "Classic Rework", reagents: "6x Bolt of Mageweave, 6x Wildvine, 2x Heart of the Wild" }
+  "spinningWheel": {
+    "name": "Spinning Wheel",
+    "prof": "Tailoring",
+    "reqSkill": 140,
+    "blueprintSource": "Blueprint: Spinning Wheel: drops from Unstable Sentinel, City of Dalaran (Wowhead ~6.6%); also sold by the Happy Camper for 15s",
+    "reagents": "2x Simple Wood, 5x Bolt of Silk Cloth, 3x Fine Thread",
+    "duration": "Needs a campfire nearby; replaces a Faction Banner and keeps its Spirit buff; shares the 1-hour camp cooldown",
+    "note": "Recipes below show \"Requires Spinning Wheel\" on their Wowhead Forever spell page. The list is a sample, not every recipe.",
+    "highlightRecipes": [
+      {
+        "skill": 125,
+        "name": "Pristine Leggings",
+        "reagents": "14x Bolt of Silk Cloth, 3x Fine Thread, 8x Cerulean Dye, 8x Pristine Leather, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Silky Leggings",
+        "reagents": "14x Bolt of Silk Cloth, 3x Fine Thread, 8x Cerulean Dye, 8x Spider's Silk, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Flame Leggings",
+        "reagents": "14x Bolt of Silk Cloth, 3x Fine Thread, 8x Cerulean Dye, 8x Fire Oil, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Shadow Leggings",
+        "reagents": "14x Bolt of Silk Cloth, 3x Fine Thread, 8x Cerulean Dye, 8x Shadowgem, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 140,
+        "name": "Gilded Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Cerulean Dye, 2x Gold Bar"
+      },
+      {
+        "skill": 140,
+        "name": "Frothing Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Cerulean Dye, 2x Globe of Water"
+      },
+      {
+        "skill": 140,
+        "name": "Fiery Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Cerulean Dye, 2x Heart of Fire"
+      },
+      {
+        "skill": 165,
+        "name": "Gilded Handwraps",
+        "reagents": "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 1x Cerulean Dye, 4x Gold Bar"
+      },
+      {
+        "skill": 165,
+        "name": "Frothing Handwraps",
+        "reagents": "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 1x Cerulean Dye, 4x Globe of Water"
+      },
+      {
+        "skill": 190,
+        "name": "Gilded Cord",
+        "reagents": "28x Bolt of Mageweave, 4x Heavy Silken Thread, 6x Magenta Dye, 4x Cerulean Dye, 12x Gold Bar"
+      },
+      {
+        "skill": 195,
+        "name": "Nethergeld Shoulders",
+        "reagents": "16x Bolt of Mageweave, 3x Heavy Silken Thread, 4x Magenta Dye, 3x Cerulean Dye, 8x Gold Bar, 2x Greater Nether Essence"
+      },
+      {
+        "skill": 205,
+        "name": "Nethergeld Cuffs",
+        "reagents": "18x Bolt of Mageweave, 3x Heavy Silken Thread, 6x Magenta Dye, 4x Cerulean Dye, 10x Gold Bar, 4x Greater Nether Essence"
+      },
+      {
+        "skill": 190,
+        "name": "Dreamweave Vest",
+        "reagents": "6x Bolt of Mageweave, 6x Wildvine, 2x Heart of the Wild, 2x Heavy Silken Thread",
+        "type": "Classic recipe, now needs the station"
+      }
     ]
   }
 };
@@ -1875,66 +1989,62 @@ const MERCHANTS_FAVOR_DATA = {
 
 // 9. Cozy Sleeping Bag System & Questline
 const COZY_SLEEPING_BAG_DATA = {
-  item: {
-    name: "Cozy Sleeping Bag",
-    itemLevel: 40,
-    bind: "Binds when picked up",
-    unique: true,
-    cd: "60 Min Cooldown",
-    groundDuration: "20 Minutes",
-    deployCast: "15 Seconds (Standing Still)"
+  "item": {
+    "name": "Cozy Sleeping Bag",
+    "itemId": 211527,
+    "itemLevel": 40,
+    "bind": "Binds when picked up",
+    "unique": true,
+    "cd": "1 Hour Cooldown"
   },
-  buff: {
-    name: "Well-Rested",
-    duration: "2 Hours (7,200 seconds)",
-    stacks: "Up to 3 Stacks (+1% per minute rested)",
-    maxBonus: "+3% Experience from all sources (Monsters AND Quests)",
-    restingSynergy: "Resting in the bag counts as Resting in an Inn, accelerating Rested XP velocity."
+  "buff": {
+    "duration": "1 hour",
+    "stacks": "+1% experience per minute rested, up to 3 stacks",
+    "maxBonus": "+3% experience",
+    "restingSynergy": "You also count as rested while lying in the bag."
   },
-  studentFodder: {
-    name: "Student Fodder",
-    itemLevel: 33,
-    use: "Heals 500 HP immediately + 1,050 over 12s; restores 900 mana / 50 rage / 100 energy (5 min CD, stacks to 30)."
+  "studentFodder": {
+    "name": "Student Fodder",
+    "itemId": 216619,
+    "itemLevel": 33,
+    "use": "Regenerates health in Forever. 5-minute cooldown, stacks to 30. The questline hands out 5 in total."
   },
-  questRoadmap: [
+  "source": "Wowhead Forever guide: Cozy Sleeping Bag: Quests, Locations and Rewards",
+  "questRoadmap": [
     {
-      step: 1,
-      name: "...and that note you found",
-      levelReq: 14,
-      factionStart: {
-        alliance: "Alexston Farmstead, Westfall (37.4, 50.6) - Burned-Out Remains in scorched field",
-        horde: "Field of Giants, The Barrens (46.4, 73.9) - Burned-Out Remains by ruined tower"
+      "step": 1,
+      "name": "...and that note you found",
+      "levelReq": 14,
+      "factionStart": {
+        "alliance": "Alexston Farmstead, Westfall (37, 50): click the Burned-Out Remains in the cart wreckage",
+        "horde": "Burnt tower south of Camp Taurajo, The Barrens (46, 74): click the Burned-Out Remains"
       },
-      task: "Click the Burned-Out Remains to loot the traveler's note and initiate the cross-continent trail.",
-      rewards: "Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir"
+      "task": "Accept the quest from the Burned-Out Remains in your faction's starting spot."
     },
     {
-      step: 2,
-      name: "Stepping Stones",
-      location: "Opposite Continent's Burned Remains (Barrens for Alliance / Westfall for Horde)",
-      task: "Journey to the enemy continent and turn in the note at the Nailed Plank.",
-      rewards: "2x 12-Slot Bags (Sturdy Lunchbox & Old Toolbox) + Farmer's Shovel / Mining Pick + Simple Wood & Flint"
+      "step": 2,
+      "name": "Stepping Stones",
+      "location": "The other faction's starting spot (Barrens for Alliance, Westfall for Horde)",
+      "task": "Turn in \"...and that note you found\" at the other Burned-Out Remains and accept Stepping Stones."
     },
     {
-      step: 3,
-      name: "Scramble & Wet Job",
-      location: "Webwinder Path, Stonetalon Mountains (Path at 50.9, 52.3 -> Camp at 40.7, 52.4 -> Dirt Mound at 39.6, 49.9)",
-      task: "Climb the mountain path north of Sun Rock Retreat, click Pocket Litter at abandoned tent, and jump the ravine to the Mound of Dirt.",
-      rewards: "Choice of Thrown/Ranged Weapon (Silver Star / Moonsight Rifle / Precision Bow) + 4x Student Fodder"
+      "step": 3,
+      "name": "Scramble",
+      "location": "Stonetalon Mountains (path 50.9, 52.3 · camp 40.6, 52.4 · Mound of Dirt 39.6, 49.8)",
+      "task": "Click the Pocket Litter in the abandoned camp northeast of Sun Rock Retreat, then jump to the Mound of Dirt to complete Scramble and accept Wet Job. Optional: complete Rekindle at the camp's campfire."
     },
     {
-      step: 4,
-      name: "Eagle's Fist",
-      location: "Stonewrought Dam, Loch Modan (49.4, 12.9)",
-      task: "Walk onto the dam crest and drop down onto the giant dwarf stone carvings facing the Wetlands to retrieve the Carved Figurine.",
-      rewards: "Hickory Pipe + Rumsey Rum Light (+5 Stamina)"
+      "step": 4,
+      "name": "Wet Job",
+      "location": "Loch Modan dam (49.4, 12.9)",
+      "task": "Jump onto the carved heads facing the Wetlands and click the Eagle Figurine to complete Wet Job and accept Eagle's Fist."
     },
     {
-      step: 5,
-      name: "This Must Be The Place",
-      location: "Thoradin's Wall, Hillsbrad / Arathi (87.4, 49.7 Cart -> 22.4, 24.2 Messenger Bag)",
-      task: "Climb the abandoned supply cart south of Durnholde, scale the ramparts, reach the interior room, and click the Hastily Rolled-Up Satchel.",
-      rewards: "Cozy Sleeping Bag (+3% XP for 2 hours) + 8x Student Fodder"
+      "step": 5,
+      "name": "Eagle's Fist / This Must Be The Place",
+      "location": "Thoradin's Wall, Hillsbrad side (cart 87.3, 49.6)",
+      "task": "Climb into the wall from the cart, click the hanging Messenger Bag, then the Hastily Rolled-Up Satchel below it.",
+      "rewards": "Cozy Sleeping Bag"
     }
   ]
 };
