@@ -252,7 +252,7 @@ function renderMasterDetailReader(mountElem, filteredGuides) {
           <div class="guide-reader-badges">
             <span class="guide-category-badge">${escapeHtml(currentGuide.category)}</span>
             <span class="guide-source-badge">Verified Source: ${escapeHtml(currentGuide.source || 'Wowhead · Warcraft Tavern')}</span>
-            <span class="guide-phase-badge">Phase 2 Cap (Level 30)</span>
+            <span class="guide-phase-badge">Live Realms · Level 1–60</span>
           </div>
           <div class="guide-reader-actions">
             ${classSlug ? `
@@ -299,7 +299,7 @@ function renderMasterDetailReader(mountElem, filteredGuides) {
           <div class="guide-footer-left">
             <span>📖 World of Warcraft: Forever Living Compendium</span>
             <span style="color: #64748b;">•</span>
-            <span>Closed Beta Phase 2 Verified</span>
+            <span>Checked against live realms · Nov 2026</span>
           </div>
           <button type="button" class="guide-back-to-top-btn" onclick="window.scrollToGuideTop()">
             <span>▲</span> Back to Top

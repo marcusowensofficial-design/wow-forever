@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of November 13, 2026 (Live build 1.60.1.70707)
+ * Up-to-date as of November 17, 2026 (Live build 1.60.1.70707)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -22,7 +22,7 @@ const WOW_FOREVER_DATA = {
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 13, 2026"
+    "lastUpdated": "November 17, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -197,6 +197,48 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-87",
+      "title": "WoW: Forever Hotfixes — November 16, 2026: Fishing Rack Lures, Windfury Totem Fixes, Vampiric Embrace Halved & Drowned City Tweaks",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 16, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "The Fishing Rack now gives lures to everyone, Windfury Totem and several Shaman, Priest, Druid, Rogue and Warrior bugs are fixed, and Vampiric Embrace healing drops to 10% of Shadow damage.",
+      "content": `Hotfixes deployed November 16, 2026:
+
+• **Camping:** The Fishing Rack now provides lures for everyone, and Bloated Fish from the rack have a higher drop chance with adjusted loot tables.
+• **Druid:** Wild Growth ranks now go on cooldown; Genesis now increases Pounce's bleed damage.
+• **Priest:** Dark Inspiration no longer stacks across multiple Shadow priests in a party. Vampiric Embrace healing is now 10% of Shadow damage (was 20%), and the caster gets 100% increased healing from it, so solo play is unchanged.
+• **Rogue:** Poison ranks can no longer exceed the maximum rank; Shank no longer removes combo points from other targets.
+• **Shaman:** Multiple Windfury Totem fixes (armor now applies, internal cooldown added, extra attacks no longer generate Rage, and several abilities can no longer incorrectly trigger it). Enhancement: Maelstrom Weapon no longer benefits two casts; Thundering Strikes works without a weapon.
+• **Warrior:** Revered Champion now offers Legacy of Valor to qualified Warriors. Fury: Cleave and Heroic Strike correctly trigger Unbridled Wrath and Reckless Swings and no longer consume Flurry stacks.
+• **Dungeons:** Drowned City — Captain Dreadrise is no longer stun-immune, Braxton responds to combat, and the Abyssal Bubble can no longer block, dodge or parry. Sunken Temple — Atal'alarion statues in the Pit of Refuse no longer lock if activated out of order.
+• **Items:** Formula: Enchant Boots - Speed is now Bind-on-Pickup; Outrider's Gloves work correctly; the Violet Tragan no longer breaks crowd control.
+• **PvP:** Dying in the Arathi Basin Gold Mine should no longer send you to a graveyard in Riverglades.
+• **Quests:** Several fixes, including Witch Doctor Zum'rah spawning in "The Talisman of Kazdor," party credit for "No Soldier Left Behind," and a progress blocker in "The Return of the King?" in Theramore.`
+    },
+    {
+      "id": "news-86",
+      "title": "WoW: Forever Hotfixes — November 13, 2026: Trivial Dungeon Kills Give No XP, Wild Growth Changes & Windfury Totem Update",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 13, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Dungeon kills that are trivial to any party member now give zero XP, Restoration Wild Growth can no longer be cast while moving, and a wide round of item, quest and spawn fixes lands.",
+      "content": `Hotfixes deployed November 13, 2026:
+
+• **Dungeons:** Enemy kills in dungeons give zero experience if the enemy is trivial to one or more party members. Drowned City non-boss enemies now respawn after 2 hours (was 1). Defeating Balnazzar in Stratholme counts toward the Master Spelunker Legacy Challenge.
+• **Classes:** Players now get diminishing returns against creature stuns. Restoration Druid Wild Growth can no longer be cast while moving, with its spell healing coefficient raised to 6.6% (was 3.3%). Judgement of Command now counts as a melee attack (other Judgements remain ranged). Windfury Totem now activates from all melee abilities except off-hand strikes. Berserker Rage removes Sap; Frost Nova breaks from proc and Blizzard damage.
+• **Items:** Blessed Band of Light lost its Hit stat and Channeler's Ring now has Spell Power; players can permanently exchange the Band for the Ring at Pix Xizzix's vendor until raids open. Taran Icebreaker behaves as a two-handed Mace, and several item stat and text corrections were made.
+• **World:** Higher tiger, panther and raptor spawns in Stranglethorn Vale, reduced Quillboar and Venture Co. spawns in Mulgore's starting area, and Nethergarde Keep guards no longer drop loot.
+• **Stranglethorn Fishing Extravaganza:** The weekly tournament now lets many more players per ruleset win.
+• **UI:** Fixed Action Bar settings resetting at logout for players with Secondary Talents.`
+    },
     {
       "id": "news-85",
       "title": "What's Next for WoW: Forever — Tier 1 Raids Dec 9, Hardcore This Winter, New Raids in 2027",

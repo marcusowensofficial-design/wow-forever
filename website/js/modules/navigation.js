@@ -95,7 +95,7 @@ function initBetaDurationTracker() {
   if (progressFill) progressFill.style.width = `${percent}%`;
   if (progressText) {
     if (isPostBeta) {
-      progressText.textContent = `Beta Concluded (${totalDays} of ${totalDays} Days • All 4 Phases Complete • Preparing for Launch)`;
+      progressText.textContent = `Beta Concluded (${totalDays} of ${totalDays} Days • All 4 Phases Complete • Launched Nov 4)`;
     } else {
       progressText.textContent = `Day ${daysElapsed} of ${totalDays} Days (${percent}% elapsed • ${daysRemaining} days remaining)`;
     }
