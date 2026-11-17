@@ -1,0 +1,10 @@
+# Keep text files LF in the repo and working tree (stops the CRLF warnings on
+# Windows with core.autocrlf=true). The WoW client reads either.
+* text=auto eol=lf
+
+*.tga binary
+*.blp binary
+*.png binary
+*.jpg binary
+*.mp3 binary
+*.ogg binary

@@ -3192,12 +3192,8 @@ do
     FDJ.QUEST_START_MAPS[94890] = RIFTAN
 
     -- Separate prerequisite records avoid cross-faction completion checks.
-    -- The Horde's Twilight's Hammer chain (2.0.20; a Wowhead Forever comment
-    -- on 94968, players' quest logs on Discord): The Wayward Warrior, then
-    -- Break Their Chains, Carving a Path and Rise Up!, then Bring Me His
-    -- Head, which opens A Token of Vengeance (Da'grosh); It Is Time,
-    -- Brother... then opens Eye of Mugg (Krom'rosh) and Tome of Twilight
-    -- (Tran'gul) at Rog'mar.
+    -- The Horde chains set here are replaced by the full Rog'mar questline
+    -- in kroldokchains2 below (Rise Up! turned out not to be needed).
     local HORDE_TWILIGHT = {
         { id = 94744, name = "The Wayward Warrior" },
         { id = 94748, name = "Break Their Chains" },
@@ -3313,9 +3309,9 @@ end
 -- and News to Farholde from Wowhead Forever (Bring Me His Head's series,
 -- "available once Kilgar has been killed" on 94982, "this quest area leads
 -- to Eye of Mugg and Twilight Mementos" on 94886). Twilight Mementos:
--- starts with Saving Sunnyglade (Mobalytics). Horde: Encroaching Twilight
--- first (Mobalytics), then Clugfist's Decree > The Wayward Warrior
--- (Wowhead series) and the steps of the Wowhead comment on 94968.
+-- starts with Saving Sunnyglade (Mobalytics). Horde: the full Rog'mar
+-- questline from A Message in Blood to It Is Time, Brother... (a player's
+-- walkthrough, Nov 2026; spots from Wowhead Forever).
 do
     local M = 2548
     local BRANT = { mapID = M, x = 0.666, y = 0.810, label = "Demar Brant — Farholde Keep, Riverglades", targetName = "Demar Brant" }
@@ -3390,15 +3386,35 @@ do
         note = "Handing it in opens Eye of Mugg (Demar Brant).",
     }
 
-    -- Horde
+    -- Horde: one long Rog'mar questline (a player's walkthrough, Nov 2026,
+    -- listing every step; givers, levels, rewards and NPC/objective spots
+    -- from each step's Wowhead Forever page). Steps on the same line of the
+    -- walkthrough are done together. Rise Up! is not needed.
+    local CLUBTOE = { mapID = M, x = 0.499, y = 0.470, label = "Clubtoe — Sunnyglade, Riverglades", targetName = "Clubtoe" }
+    local AT_TRANGUL = "Tran'gul, Rog'mar, Riverglades (59.4, 44.0)"
+    local AT_CLUBTOE = "Clubtoe, Sunnyglade, Riverglades (49.9, 47.0)"
+    local AT_CLUGFIST = "Clugfist, Bolder'ok, Riverglades (64.4, 14.8)"
+    local function Spot(x, y, label, target)
+        return { mapID = M, x = x, y = y, label = label, targetName = target }
+    end
     local horde = {
+        { id = 93786, name = "A Message in Blood" },
+        { id = 93787, name = "Food for the Taking" },
         { id = 94483, name = "Show Them How It's Done" },
         { id = 94672, name = "Encroaching Twilight" },
+        { id = 94680, name = "Twilight Missives" },
+        { id = 94727, name = "Digging for Answers" },
+        { id = 95417, name = "The Purple Ones" },
+        { id = 95602, name = "Sickening Lights" },
+        { id = 95427, name = "Twilight No More!" },
+        { id = 95420, name = "Land of Giants" },
+        { id = 95425, name = "Unworthy Champion" },
+        { id = 95424, name = "Might Makes Right" },
         { id = 95428, name = "Clugfist's Decree" },
         { id = 94744, name = "The Wayward Warrior" },
-        { id = 94748, name = "Break Their Chains" },
         { id = 94745, name = "Carving a Path" },
-        { id = 95432, name = "Rise Up!" },
+        { id = 94748, name = "Break Their Chains" },
+        { id = 95431, name = "Rumblings of Discontent" },
         { id = 94768, name = "Bring Me His Head" },
     }
     local withMissive = Copy(horde)
@@ -3406,24 +3422,92 @@ do
     FDJ.QUEST_PREREQ_CHAINS[94968] = withMissive
     FDJ.QUEST_PREREQ_CHAINS[94972] = Copy(withMissive)
     FDJ.QUEST_PREREQ_CHAINS[94975] = Copy(horde)
-    D[94483] = {
-        level = 42, requires = 38,
-        objective = "Slay 8 Farholde Priests and 12 Farholde Scouts south of the river.",
-        pickup = "Riverglades (giver not known yet)", turnin = "Riverglades (not known yet)",
-        note = "Needed before the Twilight's Hammer quests (a player's report on the Discord).",
+
+    D[93786] = {
+        level = 36, requires = 35,
+        objective = "Slay 12 Meadowsbrook Farmhands, then return to Krom'rosh with news of your success.",
+        pickup = AT_KROM, turnin = AT_KROM, map = KROM, turninMap = KROM,
+        objectiveMap = Spot(0.461, 0.820, "Meadowsbrook Farmhands — Meadowsbrook farm, Riverglades", "Meadowsbrook Farmhand"),
+        note = "First step of the Horde questline. Done alongside Food for the Taking.",
     }
-    FDJ.FOREVER_QUEST_XP_FALLBACK[94483] = 3000
+    D[93787] = {
+        level = 36, requires = 36,
+        objective = "Steal 6 Feed Satchels from the Alliance farm in Meadowsbrook, then return to Krom'rosh.",
+        pickup = AT_KROM, turnin = AT_KROM, map = KROM, turninMap = KROM,
+        objectiveMap = Spot(0.455, 0.810, "Meadowsbrook farm, Riverglades (the Feed Satchels lie around the farm)"),
+        note = "Done alongside A Message in Blood.",
+    }
+    D[94483] = {
+        level = 39, requires = 36,
+        objective = "Slay 8 Farholde Priests and 12 Farholde Scouts south of the river.",
+        pickup = AT_KROM, turnin = AT_KROM, map = KROM, turninMap = KROM,
+        objectiveMap = Spot(0.450, 0.642, "Farholde Priests (45.0, 64.2); Farholde Scouts around (51.4, 70.2)", "Farholde Priest"),
+    }
     D[94672] = {
         level = 41, requires = 36,
-        objective = "Defeat 8 Twilight Raiders, 8 Twilight Shadowmancers and 8 Twilight Neophytes within Sunnyglade for Tran'gul in Rog'mar.",
-        pickup = "Tran'gul, Rog'mar, Riverglades (59.4, 44.0)", turnin = "Tran'gul, Rog'mar, Riverglades",
-        map = TRANGUL, turninMap = TRANGUL,
-        note = "Start of the Horde chains (Mobalytics); what leads from it to Clugfist's Decree is not confirmed yet.",
+        objective = "Defeat 8 Twilight Raiders and 8 Twilight Neophytes within Sunnyglade for Tran'gul in Rog'mar.",
+        pickup = AT_TRANGUL, turnin = AT_TRANGUL, map = TRANGUL, turninMap = TRANGUL,
+        objectiveMap = Spot(0.495, 0.495, "Twilight Raiders and Neophytes — Sunnyglade, Riverglades", "Twilight Raider"),
+        note = "Done alongside Twilight Missives.",
+    }
+    D[94680] = {
+        level = 41, requires = 36,
+        objective = "Retrieve 3 Twilight Missives from Twilight Shadowmancers in Sunnyglade for Tran'gul in Rog'mar.",
+        pickup = AT_TRANGUL, turnin = AT_TRANGUL, map = TRANGUL, turninMap = TRANGUL,
+        objectiveMap = Spot(0.479, 0.500, "Twilight Shadowmancers — Sunnyglade, Riverglades", "Twilight Shadowmancer"),
+        note = "Done alongside Encroaching Twilight.",
+    }
+    D[94727] = {
+        level = 40, requires = 36,
+        objective = "Convince a Twilight's Hammer miner in Sunnyglade to divulge their secrets.",
+        pickup = AT_TRANGUL, turnin = AT_CLUBTOE, map = TRANGUL, turninMap = CLUBTOE,
+        note = "The miner is Clubtoe, who gives the next quests.",
+    }
+    D[95417] = {
+        level = 40, requires = 36,
+        objective = "Find missing ogres in the caves beneath Sunnyglade for Clubtoe.",
+        pickup = AT_CLUBTOE, map = CLUBTOE,
+        turnin = "Twilight Brute, in the caves beneath Sunnyglade, Riverglades (49.2, 46.8)",
+        turninMap = Spot(0.492, 0.468, "Twilight Brute — caves beneath Sunnyglade, Riverglades", "Twilight Brute"),
+        note = "Done alongside Sickening Lights. The cave entrance is at (49.0, 46.0).",
+    }
+    D[95602] = {
+        level = 40, requires = 36,
+        objective = "Destroy 5 Twilight Ritual Circles found throughout the caves underneath Sunnyglade.",
+        pickup = AT_CLUBTOE, turnin = AT_CLUBTOE, map = CLUBTOE, turninMap = CLUBTOE,
+        objectiveMap = Spot(0.490, 0.460, "Sunnyglade cave entrance — the Ritual Circles are throughout the caves"),
+        note = "Done alongside The Purple Ones. The cave entrance is at (49.0, 46.0); the circles are spread through the caves.",
+    }
+    D[95427] = {
+        level = 41, requires = 36,
+        objective = "Kill Chogg'Zac in the Sunnyglade cave and collect their heads for Clubtoe.",
+        pickup = AT_CLUBTOE, turnin = AT_CLUBTOE, map = CLUBTOE, turninMap = CLUBTOE,
+        objectiveMap = Spot(0.490, 0.460, "Sunnyglade cave entrance — Chogg'Zac is at the very back of the cave", "Chogg'Zac"),
+        note = "Chogg'Zac (elite) is at the very back of the cave; the entrance is at (49.0, 46.0).",
+    }
+    D[95420] = {
+        level = 40, requires = 36,
+        objective = "Deliver Chogg's head to the ogre city to the north.",
+        pickup = AT_TRANGUL, turnin = AT_CLUGFIST, map = TRANGUL, turninMap = CLUGFIST,
+    }
+    D[95425] = {
+        level = 42, requires = 36,
+        objective = "Collect Skullthumper from Klunk for Clugfist in Bolder'ok.",
+        pickup = AT_CLUGFIST, turnin = AT_CLUGFIST, map = CLUGFIST, turninMap = CLUGFIST,
+        objectiveMap = Spot(0.738, 0.266, "Klunk — Riverglades", "Klunk"),
+        note = "Done alongside Might Makes Right.",
+    }
+    D[95424] = {
+        level = 41, requires = 36,
+        objective = "Kill 7 Twilight Maulers and 7 Twilight Firecallers for Clugfist in Bolder'ok.",
+        pickup = AT_CLUGFIST, turnin = AT_CLUGFIST, map = CLUGFIST, turninMap = CLUGFIST,
+        objectiveMap = Spot(0.750, 0.274, "Twilight Maulers and Firecallers — Riverglades", "Twilight Mauler"),
+        note = "Done alongside Unworthy Champion.",
     }
     D[95428] = {
         level = 41, requires = 36,
         objective = "Report to Krom'rosh in Rog'mar.",
-        pickup = "Clugfist, Riverglades (64.4, 14.8)", turnin = AT_KROM,
+        pickup = AT_CLUGFIST, turnin = AT_KROM,
         map = CLUGFIST, turninMap = KROM,
     }
     D[94744] = {
@@ -3431,31 +3515,44 @@ do
         objective = "Find Da'grosh in the hills west of Rog'mar.",
         pickup = AT_KROM, turnin = AT_DAGROSH, map = KROM, turninMap = DAGROSH,
     }
-    D[94748] = D[94748] or {}
-    D[94748].level, D[94748].requires = 44, 38
-    D[94748].note = "Done alongside Carving a Path and Rise Up!."
     D[94745] = {
         level = 44, requires = 38,
         objective = "Defeat 8 Twilight Fanatics, 8 Twilight Corrupters and 8 Twilight Champions within the Twilight's Shroud for Da'grosh.",
         pickup = AT_DAGROSH, turnin = AT_DAGROSH, map = DAGROSH, turninMap = DAGROSH,
-        note = "Done alongside Break Their Chains and Rise Up!.",
+        objectiveMap = Spot(0.276, 0.407, "Twilight's Shroud, Riverglades", "Twilight Corrupter"),
+        note = "Done alongside Break Their Chains and Rumblings of Discontent.",
     }
-    D[95432] = {
-        level = 43, requires = 36,
-        objective = "Recruit 5 Ogre Miners.",
-        pickup = "Crag'rog, Riverglades (27.4, 37.0)", turnin = "Crag'rog, Riverglades (27.4, 37.0)",
-        map = CRAGROG, turninMap = CRAGROG,
-        note = "Done alongside Break Their Chains and Carving a Path.",
+    D[94748] = D[94748] or {}
+    D[94748].level, D[94748].requires = 44, 38
+    D[94748].objectiveMap = Spot(0.259, 0.439, "Twilight Champions (they drop the Twilight Keys) — Twilight's Shroud", "Twilight Champion")
+    D[94748].note = "Done alongside Carving a Path and Rumblings of Discontent. Twilight Champions drop the Twilight Keys."
+    D[95431] = {
+        level = 41, requires = 38,
+        objective = "Look for the Bolder'ok ogre in the nearby cave.",
+        pickup = AT_DAGROSH, turnin = "Crag'rog, Riverglades (27.4, 37.0)",
+        map = DAGROSH, turninMap = CRAGROG,
+        note = "Done alongside Carving a Path and Break Their Chains. Crag'rog then offers Rise Up!, which isn't needed for the dungeon quests.",
     }
+    if D[94768] then
+        D[94768].objectiveMap = Spot(0.262, 0.446, "Overlord Kilgar — Twilight's Shroud, Riverglades", "Overlord Kilgar")
+        D[94768].note = "Horde version. Handing it in to Da'grosh opens A Token of Vengeance and It Is Time, Brother..."
+    end
     D[95278] = D[95278] or {}
     D[95278].level, D[95278].requires = 45, 38
     D[95278].pickup = AT_DAGROSH
     D[95278].map = DAGROSH
     D[95278].providedItem = {0, "Blood and Battle", 1, "Given by Da'grosh when you accept the quest"}
+    D[95278].note = "Take it together with A Token of Vengeance. Handing it in opens Eye of Mugg (Krom'rosh) and Tome of Twilight (Tran'gul, inside the building)."
 
     local XP = FDJ.FOREVER_QUEST_XP_FALLBACK
     XP[94877] = 3150; XP[94886] = 380; XP[94888] = 3750; XP[94889] = 3750; XP[94891] = 4050
     XP[94672] = 3300; XP[95428] = 330
+    XP[93786] = 2800; XP[93787] = 2800; XP[94680] = 2450; XP[94727] = 315
+    XP[95417] = 315; XP[95602] = 3150; XP[95427] = 3300; XP[95420] = 315
+    XP[95425] = 3450; XP[95424] = 3300; XP[95431] = 330
+    local MONEY = FDJ.PREREQ_REWARD_MONEY_FALLBACK
+    MONEY[94483] = 3500; MONEY[94672] = 5500; MONEY[95427] = 2500
+    MONEY[95424] = 5500; MONEY[94745] = 6500
 end
 -- END kroldokchains2
 -- END kroldokquests

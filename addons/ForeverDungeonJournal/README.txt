@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.7.6 by Exehn
+Forever Dungeon Journal v1.7.7 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,16 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.7.7
+- Eye of Mugg & Tome of Twilight (Horde): replaced the Krol'dok Stronghold
+  prerequisite chain with the full Rog'mar questline (A Message in Blood
+  through It Is Time, Brother...), with Wowhead Forever giver, turn-in, and
+  objective waypoints, levels, XP, and money for every step; shared with
+  A Token of Vengeance up to Bring Me His Head.
+- Sunnyglade (Deadwind Pass) cave quests: Sickening Lights and Twilight No
+  More! now point to the cave entrance at (49, 46) with notes for the
+  Twilight Ritual Circles and Chogg'Zac at the back of the cave.
 
 CHANGES IN 1.7.6
 - Rituals of Power (SM Library Mage chain): added Journey to the Marsh (1947)

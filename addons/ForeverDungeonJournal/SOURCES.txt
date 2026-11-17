@@ -384,3 +384,26 @@ Forever item/source cross-checks:
   - Added Alliance dungeon quest Lost in the Thicket Things (95647) connecting Seeking Caitlin to Heartwoven (95809).
   - Wired bidirectional quest links (leadsToQuestLink and startQuestLink) with name-based fallback navigation in SelectQuestByID.
   - Enhanced ShowQuestStartOnMap and questMapButton to support quest.startMap directly for all new dig site quests.
+
+2026-11-16 Krol'dok Stronghold: full Horde questline to Eye of Mugg / Tome of Twilight
+=======================================================================================
+- Replaced the Horde prerequisite chain of Eye of Mugg (94968), Tome of Twilight
+  (94972) and A Token of Vengeance (94975) with the full Rog'mar questline a
+  player reported walking: A Message in Blood + Food for the Taking > Show Them
+  How It's Done > Encroaching Twilight + Twilight Missives > Digging for Answers
+  > The Purple Ones + Sickening Lights > Twilight No More! > Land of Giants >
+  Unworthy Champion + Might Makes Right > Clugfist's Decree > The Wayward Warrior
+  > Carving a Path + Break Their Chains + Rumblings of Discontent > Bring Me His
+  Head > It Is Time, Brother... (Rise Up! dropped: not needed).
+- Givers/turn-ins, NPC and objective coordinates (Riverglades), levels, XP and
+  money from each quest's Wowhead Forever page (mapper data and scaling rewards):
+  Sources: https://www.wowhead.com/forever/quest=93786  93787  94483  94672
+           94680  94727  95417  95602  95427  95420  95425  95424  95428
+           94744  94745  94748  95431  94768  95278
+- Wowhead has no spots for the Feed Satchels or Twilight Ritual Circles; the
+  Feed Satchel waypoint is the Meadowsbrook farm (same area as the Farmhands).
+  Wowhead's series puts Spread the Word before Land of Giants; the player's
+  walkthrough skips it, so it is not in the chain.
+- Sunnyglade cave (a player, 2026-11-16): the entrance is at (49, 46); the
+  Twilight Ritual Circles are inside, and Chogg'Zac (elite) is at the very back.
+  Sickening Lights and Twilight No More! now point at the entrance.
