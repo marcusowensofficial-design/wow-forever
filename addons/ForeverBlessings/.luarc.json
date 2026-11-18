@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "Lua 5.1",
+  "runtime.builtin": {
+    "io": "disable",
+    "os": "disable",
+    "package": "disable",
+    "debug": "disable"
+  },
+  "workspace.library": [
+    "C:/Users/marco/wow-tools/api-stubs/Annotations/Core",
+    "C:/Users/marco/wow-tools/api-stubs/Annotations/FrameXML"
+  ],
+  "workspace.checkThirdParty": false,
+  "workspace.ignoreDir": [
+    ".git",
+    "_merge_preview",
+    "_merge_preview_2.0.4",
+    "scratch",
+    "tools",
+    "Libs",
+    "Libraries"
+  ],
+  "diagnostics.disable": [
+    "lowercase-global"
+  ]
+}

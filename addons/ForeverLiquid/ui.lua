@@ -1080,8 +1080,11 @@ function FL:InitializeUI()
 
     
     bagGauge:SetScript("OnMouseUp", function(self, button)
+        if InCombatLockdown and InCombatLockdown() then
+            return
+        end
         if ToggleAllBags then
-            ToggleAllBags()
+            pcall(ToggleAllBags)
             PlaySound(SOUNDKIT.IG_BACKPACK_OPEN)
         end
     end)
@@ -1256,11 +1259,13 @@ function FL:InitializeUI()
     
     gpsPod:SetScript("OnMouseUp", function(self, button)
         if button == "LeftButton" then
-            if ToggleWorldMap then
-                pcall(ToggleWorldMap)
-            elseif OpenWorldMap then
-                pcall(OpenWorldMap)
-            end
+            -- Do not call ToggleWorldMap/OpenWorldMap from addon code: it taints QuestDataProvider's
+            -- Supertracking.OnChanged callback and triggers SetPassThroughButtons() ADDON_ACTION_BLOCKED.
+            local zone, subzone, x, y = FL:GetPlayerLocationInfo()
+            local t = FL:GetActiveTheme()
+            local place = (subzone and subzone ~= "" and subzone ~= zone) and (zone .. " - " .. subzone) or (zone or "Unknown")
+            local coords = (x and y) and string.format("%.1f, %.1f", x, y) or "Unavailable"
+            print(string.format("%s[ForeverLiquid]|r GPS: %s (%s) — Press M to open World Map.", t.accent.hex, place, coords))
             PlaySound(SOUNDKIT.IG_MAINMENU_OPEN)
         elseif button == "RightButton" then
             FL:ShowContextMenu()
@@ -1280,7 +1285,7 @@ function FL:InitializeUI()
         GameTooltip:AddDoubleLine("Coordinates:", coordStr, 0.7, 0.7, 0.7, t.accent.r, t.accent.g, t.accent.b)
         GameTooltip:AddDoubleLine("Territory Danger:", string.format("%s%s|r", pvpColor.hex, pvpColor.label), 0.7, 0.7, 0.7, pvpColor.r, pvpColor.g, pvpColor.b)
         GameTooltip:AddLine(" ")
-        GameTooltip:AddLine(string.format("%sLeft-Click|r to toggle World Map.", t.accent.hex), 0.6, 0.8, 0.7)
+        GameTooltip:AddLine(string.format("%sLeft-Click|r to print coordinates (Press M for World Map).", t.accent.hex), 0.6, 0.8, 0.7)
         GameTooltip:AddLine(string.format("%sRight-Click|r for Quick Actions.", t.accent.hex), 0.6, 0.8, 0.7)
         GameTooltip:Show()
     end)
@@ -3595,8 +3600,8 @@ function FL:UpdateDashboard()
                         SlashCmdList["FOREVERDUNGEONJOURNAL"]("")
                     elseif SlashCmdList["FDJ"] then
                         SlashCmdList["FDJ"]("")
-                    else
-                        if ToggleEncounterJournal then ToggleEncounterJournal() end
+                    elseif not (InCombatLockdown and InCombatLockdown()) then
+                        if ToggleEncounterJournal then pcall(ToggleEncounterJournal) end
                     end
                 end)
                 jBtn:SetScript("OnEnter", function(self)
