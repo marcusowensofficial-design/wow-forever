@@ -473,3 +473,10 @@ Source: https://www.wowhead.com/forever/guide/sunken-temple-level-50-class-quest
   only from the item's own lines so a recipe does not take its crafted item's
   level). Recipes are 0, as before; quest-reward gear with no level requirement
   is left out so the Loot Explorer keeps placing it by the quest's level.
+
+2026-11-18 v1.8.2 required levels for older journal items
+=========================================================
+- 273 more entries in Data/ItemReqLevels.lua for journal items that had none,
+  from Wowhead Forever item tooltips (same method as v1.8.1). Left out: 81
+  quest / trade items with no level requirement, and items 11743 and 11768,
+  which Wowhead Forever does not list.

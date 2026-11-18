@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.8.1 by Exehn
+Forever Dungeon Journal v1.8.2 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,11 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.8.2
+- Loot Explorer: about 270 more items from the older dungeons now have their
+  required level built in, so they show under a level bracket right away
+  instead of waiting for the game to load them.
 
 CHANGES IN 1.8.1
 - Loot Explorer: the items added in 1.8.0 now show up when a level bracket
