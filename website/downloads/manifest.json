@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-18T18:37:47.662Z",
+  "generatedAt": "2026-11-18T18:44:46.455Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
-    "sizeKb": 82766,
-    "sha256": "ffe40578479ad6ba2e7d4cf627f4a44123f8b018cf0718b359459f49145c4010",
+    "sizeKb": 67530,
+    "sha256": "98b6db5446379db6e4b3f58a2d90a10961519529e09a9b25de0ad0ce2cb7660e",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -37,8 +37,8 @@
       "name": "ForeverDungeonJournal",
       "version": "1.8.0",
       "filename": "ForeverDungeonJournal-v1.8.0.zip",
-      "sizeKb": 81587,
-      "sha256": "c65d23519c1fdae5f54cb73f4047c2460a6f7fae2cb1ea755638ba47d368ad9f",
+      "sizeKb": 66350,
+      "sha256": "17ed3d3cff4b7b011c1306bcebe727fa47ddd4bafd78df6aa4e23bcf92a30f36",
       "downloadPath": "downloads/ForeverDungeonJournal-v1.8.0.zip"
     },
     {

@@ -70,7 +70,35 @@ function getAddonVersion(addonFolder) {
   return '1.0.0';
 }
 
-function collectFiles(baseDir, prefix = '') {
+/**
+ * Reads the `ignore:` list from an addon's .pkgmeta (the same list CurseForge /
+ * BigWigs packagers use) so files the addon no longer needs stay out of the zip.
+ * Entries are addon-relative paths; `*` is a wildcard. An entry without a `/`
+ * (e.g. `*.py`) matches that name at any depth; a folder entry covers its contents.
+ */
+function loadPkgmetaIgnores(addonSrc) {
+  const pkgmetaPath = path.join(addonSrc, '.pkgmeta');
+  if (!fs.existsSync(pkgmetaPath)) return [];
+  const lines = fs.readFileSync(pkgmetaPath, 'utf8').split(/\r?\n/);
+  const patterns = [];
+  let inIgnore = false;
+  for (const line of lines) {
+    if (/^\S/.test(line)) {
+      inIgnore = /^ignore\s*:/.test(line);
+      continue;
+    }
+    const m = inIgnore && line.match(/^\s+-\s+(.+?)\s*$/);
+    if (!m) continue;
+    const entry = m[1].replace(/^["']|["']$/g, '').replace(/\\/g, '/').replace(/\/+$/, '');
+    const body = entry.split('*').map(s => s.replace(/[.+?^${}()|[\]\\]/g, '\\$&')).join('[^/]*');
+    patterns.push(entry.includes('/')
+      ? new RegExp(`^${body}(/|$)`, 'i')
+      : new RegExp(`(^|/)${body}(/|$)`, 'i'));
+  }
+  return patterns;
+}
+
+function collectFiles(baseDir, prefix = '', pkgIgnores = [], addonRoot = prefix) {
   let results = [];
   const entries = fs.readdirSync(baseDir, { withFileTypes: true });
 
@@ -79,9 +107,11 @@ function collectFiles(baseDir, prefix = '') {
     const relPath = prefix ? `${prefix}/${entry.name}` : entry.name;
 
     if (!shouldInclude(relPath)) continue;
+    const addonRel = addonRoot ? relPath.slice(addonRoot.length + 1) : relPath;
+    if (pkgIgnores.some(re => re.test(addonRel))) continue;
 
     if (entry.isDirectory()) {
-      results = results.concat(collectFiles(fullPath, relPath));
+      results = results.concat(collectFiles(fullPath, relPath, pkgIgnores, addonRoot));
     } else if (entry.isFile()) {
       const stat = fs.statSync(fullPath);
       results.push({
@@ -123,7 +153,9 @@ for (const folder of ADDON_FOLDERS) {
   }
 
   const version = getAddonVersion(folder);
-  const files = collectFiles(addonSrc, folder);
+  const pkgIgnores = loadPkgmetaIgnores(addonSrc);
+  const files = collectFiles(addonSrc, folder, pkgIgnores);
+  if (pkgIgnores.length) console.log(`   (.pkgmeta: ${pkgIgnores.length} ignore rules)`);
   const zipName = `${folder}-v${version}.zip`;
   const zipPath = path.join(DOWNLOADS_DIR, zipName);
 
