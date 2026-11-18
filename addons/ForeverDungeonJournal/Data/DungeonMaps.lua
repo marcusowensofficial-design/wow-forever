@@ -79,19 +79,76 @@ FDJ.DUNGEON_MAPS = {
     },
 
     -- Boss positions: OMGmacros's numbered map on Discord (12 Nov 2026), via DungeonJournal 2.0.4.
+    -- Atal'Byzal floor, swim spots/exits and Umbra/Braxton pins: DungeonJournal 2.0.12 (M's marked map).
     ["The Drowned City"] = {
-        floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DrownedCityMap", texBottom = 683 / 1024 } },
+        -- Two distinct published maps; Atal'Byzal is the underground level.
+        floors = {
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DrownedCityMap", texBottom = 683 / 1024, label = "The Drowned City" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DrownedCityAtalByzalMap", texBottom = 683 / 1024, label = "Atal'Byzal" },
+        },
         entrance = { floor = 1, x = 0.846, y = 0.521, angle = 0 }, -- the swirl in Sunken Hollow
+        -- drownedpins (2.0.9, M 16 Nov 2026, his marked map): where to swim
+        -- down to Atal'Byzal (his green dot).
+        transitions = {
+            { floor = 1, to = 2, x = 0.575, y = 0.599, tipKey = "MAP_SWIM_HERE" }, -- (M: the text on hover only)
+            { floor = 1, to = 2, x = 0.590, y = 0.837, tipKey = "MAP_SWIM_HERE" }, -- the other way down, by Umbra (M's black dot): a swim too
+            -- drownedexits (2.0.9, M 16 Nov 2026, his marked Atal'Byzal map): the two ways
+            -- back up, at the corridor's ends
+            { floor = 2, to = 1, x = 0.679, y = 0.113, labelKey = "MAP_SHARK_EXIT", color = { 1.00, 0.25, 0.20 } }, -- red: danger (M)
+            { floor = 2, to = 1, x = 0.262, y = 0.792, labelKey = "MAP_SAFE_EXIT" },
+        },
         bosses = {
             { name = "Zul'Alai",            floor = 1, x = 0.697, y = 0.572 },
             -- In the round flooded room east of Var'Taka (OMGmacros's update, same
             -- thread): reached by swimming, from the pool to the south or from
             -- the big basin; the 2nd boss for most groups.
-            { name = "Primeval Elemental",  floor = 1, x = 0.618, y = 0.672 },
+            -- drownedpins (2.0.9, M 16 Nov 2026): on the Atal'Byzal page, in
+            -- its round chamber (M said the second page; the spot on it is ours)
+            { name = "Primeval Elemental",  floor = 2, x = 0.667, y = 0.550 },
+            { name = "Umbra",               floor = 1, x = 0.545, y = 0.829 }, -- drownedpins: M's black dot
+            { name = "\"Pyromancer\" Braxton", floor = 1, x = 0.495, y = 0.368 }, -- drownedpins: M's orange dot
             { name = "Var'Taka",            floor = 1, x = 0.514, y = 0.689 },
             { name = "Captain Dreadrise",   floor = 1, x = 0.546, y = 0.344 }, -- he paths around there
             { name = "Deathless Marrow",    floor = 1, x = 0.349, y = 0.536 },
             { name = "Min'loth the Serpent", floor = 1, x = 0.196, y = 0.539 },
+        },
+    },
+    -- Blackmaw Hold: Santiago Reyes' Forever dungeon maps, via DungeonJournal 2.0.12. No boss pins yet.
+    ["Blackmaw Hold"] = {
+        floors = {
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldGroveMap",          texBottom = 683 / 1024, label = "Blackmaw Grove" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldFesteringGrottoMap", texBottom = 683 / 1024, label = "Festering Grotto" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldFallenGroveMap",    texBottom = 683 / 1024, label = "Depths of the Fallen Grove" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldEldersMap",         texBottom = 683 / 1024, label = "Depths of the Elders" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldBurrowMap",         texBottom = 683 / 1024, label = "Depths of the Burrow" },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\BlackmawHoldForbiddenMagicMap", texBottom = 683 / 1024, label = "Depths of Forbidden Magic" },
+        },
+        -- Entrance swirl visible west of Blackmaw Grove on the original map.
+        entrance = { floor = 1, x = 0.183, y = 0.740, angle = 90 },
+        bosses = {}, -- Locations unverified; no fabricated boss markers.
+    },
+    -- Upper Blackrock Spire: map and pins via DungeonJournal 2.0.11.
+    ["Upper Blackrock Spire"] = {
+        -- ubrsmap (2.0.11, M 18 Nov 2026: "can we add this map without all the
+        -- helper text but just with the right boss pins"): the Blackrock Spire
+        -- parchment M sent, a guide's copy with its labels, arrows and route
+        -- lines painted out (the halls' own names kept). Laid out as M asked:
+        -- on the left the Hall of Binding and the Rookery above Dragonspire
+        -- Hall (with the entrance); on the right the main spire (Hall of
+        -- Blackhand to Spire Throne). Pins where that guide had them; Gyth
+        -- just above Rend in the stadium, where Rend rides him in.
+        floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\UpperBlackrockSpireMap", texBottom = 683 / 1024 } },
+        entrance = { floor = 1, x = 0.186, y = 0.855, angle = 0 }, -- the swirl at the foot of Dragonspire Hall
+        bosses = {
+            { name = "Pyroguard Emberseer",     x = 0.131, y = 0.289 },
+            { name = "Solakar Flamewreath",     x = 0.226, y = 0.416 },
+            { name = "Jed Runewatcher",         x = 0.479, y = 0.438 },
+            { name = "Goraluk Anvilcrack",      x = 0.430, y = 0.438 },
+            { name = "Gyth",                    x = 0.615, y = 0.394 },
+            { name = "Warchief Rend Blackhand", x = 0.615, y = 0.433 },
+            { name = "The Beast",               x = 0.794, y = 0.506 },
+            { name = "Lord Valthalak",          x = 0.807, y = 0.564 },
+            { name = "General Drakkisath",      x = 0.459, y = 0.730 },
         },
     },
     -- Boss positions: falling/Ekiroth's numbered map on Discord (12 Nov 2026), via DungeonJournal 2.0.4.

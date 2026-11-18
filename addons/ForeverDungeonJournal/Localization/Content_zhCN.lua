@@ -60,6 +60,9 @@ FDJ.ContentLocales.zhCN.slotParts = {
     ["Engineering"] = "工程学", ["Quest Item"] = "任务物品", ["Head"] = "头部", ["Shoulder"] = "肩部",
     ["Bow"] = "弓", ["Crossbow"] = "弩", ["Fist Weapon"] = "拳套",
     ["Leatherworking Recipe"] = "制皮配方", ["Held In Off-hand"] = "副手物品",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "箭袋",
+    ["Ammo Pouch"] = "弹药袋",
 }
 
 FDJ.ContentLocales.zhCN.bosses = {

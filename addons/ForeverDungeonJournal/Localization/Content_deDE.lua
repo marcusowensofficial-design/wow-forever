@@ -474,6 +474,29 @@ FDJ.ContentLocales.deDE.bosses = {
     ["Fallen Champion"] = "Gestürzter Held",
     ["Ironspine"] = "Eisenrücken",
     ["Bloodmage Thalnos"] = "Blutmagier Thalnos",
+    -- via DungeonJournal 2.0.12
+    ["Obsidian Sentinel"] = "Obsidianschildwache",
+    ["Spirestone Battle Lord"] = "Kampflord der Felsspitzoger",
+    ["Spirestone Lord Magus"] = "Maguslord der Felsspitzoger",
+    ["Atrexis the Grave Knight"] = "Atrexis der Grabritter",
+    ["Arcane Anomaly"] = "Arkananomalie",
+    ["Fel Ancient"] = "Teufelsurtum",
+    ["Unstable Sentinel"] = "Instabile Schildwache",
+    ["Mana Devourer"] = "Manaschlinger",
+    ["Arcanic Enigma"] = "Arkanes Mysterium",
+    ["Saltspine"] = "Salzrücken",
+    ["Shadetooth"] = "Schemenzahn",
+    ["\"Pyromancer\" Braxton"] = "\"Pyromant\" Braxton",
+    ["Min'loth the Serpent"] = "Min'loth die Schlange",
+    ["Slavecrusher Grox"] = "Sklavenbrecher Grox",
+    ["Twilight Commander Zarmok"] = "Twilight-Kommandant Zarmok",
+    ["War Handler Ashka"] = "Kriegswärterin Ashka",
+    ["Nar'gurk"] = "Nar'guk",
+    ["Bossman Toof"] = "Bossmann Toof",
+    ["Overlord Mugg"] = "Oberanführer Mugg",
+    ["Moontouched Wanderer"] = "Mondbestrahlter Wanderer",
+    ["Gortek the Apprentice"] = "Gortek der Lehrling",
+    ["Tunnelweb Matriarch"] = "Tunnelnetzmatriarchin",
 }
 
 FDJ.ContentLocales.deDE.slotParts = {
@@ -514,6 +537,9 @@ FDJ.ContentLocales.deDE.slotParts = {
     ["Fist Weapon"] = "Faustwaffe",
     ["Leatherworking Recipe"] = "Lederverarbeitungsrezept",
     ["Held In Off-hand"] = "In Schildhand getragen",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "Köcher",
+    ["Ammo Pouch"] = "Munitionsbeutel",
 }
 
 FDJ.ContentLocales.deDE.replacements = {

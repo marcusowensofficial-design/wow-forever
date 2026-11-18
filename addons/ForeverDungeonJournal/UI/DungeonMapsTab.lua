@@ -413,6 +413,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                         self:SetBackdropBorderColor(0.88, 0.38, 0.28, 1.0)
                         GameTooltip:SetOwner(self, "ANCHOR_LEFT")
                         GameTooltip:SetText(L("MAP_FLOOR", self.floorIndex), 1, 0.82, 0.20)
+                        if self.floorLabel then GameTooltip:AddLine(self.floorLabel, 1, 1, 1) end
                         GameTooltip:AddLine(string.format(L("MAP_LEVEL_TOOLTIP") or "Click to view Level %d map.", self.floorIndex), 0.9, 0.9, 0.9, true)
                         GameTooltip:Show()
                     end)
@@ -433,6 +434,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 end
 
                 btn.floorIndex = i
+                btn.floorLabel = floors[i] and floors[i].label or nil
                 local floorText = L("MAP_FLOOR", i)
                 btn:SetText(floorText)
                 if btn.text then
@@ -854,6 +856,7 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
                 t:SetScript("OnEnter", function(self)
                     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
                     GameTooltip:SetText(self.toFloor and L("MAP_FLOOR", self.toFloor) or self.noteText or "", 0.35, 1, 0.35)
+                    if self.tipText then GameTooltip:AddLine(self.tipText, 0.9, 0.9, 0.9, true) end
                     GameTooltip:Show()
                 end)
                 t:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -868,6 +871,10 @@ function FDJ.RenderCustomDungeonMap(data, floorIndex)
             t:SetPoint("CENTER", holder, "TOPLEFT", tr.x * artW, -(tr.y * artH))
             t.noteText = tr.note and L(tr.labelKey) or nil
             t.label:SetText(tr.note and "" or L(tr.labelKey or "MAP_FLOOR", tr.to))
+            -- Optional per-transition colour and hover-only hint (e.g. Drowned City swims).
+            local tc = tr.color
+            if tc then t.label:SetTextColor(tc[1], tc[2], tc[3]) else t.label:SetTextColor(0.35, 1.00, 0.35) end
+            t.tipText = tr.tipKey and L(tr.tipKey, tr.to) or nil
             t:Show()
         end
     end

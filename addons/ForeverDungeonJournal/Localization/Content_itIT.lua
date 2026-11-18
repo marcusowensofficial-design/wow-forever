@@ -466,6 +466,9 @@ FDJ.ContentLocales.itIT.slotParts = {
     ["Fist Weapon"] = "Arma da pugno",
     ["Leatherworking Recipe"] = "Ricetta di conciatura",
     ["Held In Off-hand"] = "Tenuto nella mano secondaria",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "Faretra",
+    ["Ammo Pouch"] = "Borsa per munizioni",
 }
 
 FDJ.ContentLocales.itIT.replacements = {

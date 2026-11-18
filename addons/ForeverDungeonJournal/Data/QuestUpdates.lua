@@ -4041,3 +4041,37 @@ do
     }
 end
 -- END onyxiaattunement
+
+-- New quest: Ever After (82062, the Blackrock Depths secret ledge), via DungeonJournal 2.0.12.
+-- Sources: Wowhead Forever quest 82062 (items 221315, 221316, 216619); route and door:
+-- endgametools.com and the 17 Nov 2026 hotfixes. Level 56, requires 48, not shareable.
+do
+    local XP = FDJ.FOREVER_QUEST_XP_FALLBACK
+    local db = FDJ.DB and FDJ.DB["Blackrock Depths"]
+    if db then
+        db.quests = db.quests or {}
+        local present = false
+        for _, q in ipairs(db.quests) do
+            if q.id == 82062 then present = true break end
+        end
+        if not present then
+            table.insert(db.quests, {
+                id = 82062, name = "Ever After",
+                faction = "Both", level = 56, requires = 48, startsInDungeon = true,
+                pickup = "Rugged Traveler, on a hidden ledge above the lava, Blackrock Depths",
+                objective = "Speak with the Rugged Traveler.",
+                turnin = "Rugged Traveler, Blackrock Depths",
+                liveXPFallback = 8400,
+                rewardSummary = "85s  •  +300 with your faction's capitals",
+                rewardItems = {
+                    { 221316, "Premo's Poise-Demanding Uniform", 1 },
+                    { 216619, "Student Fodder", 2, 3 },
+                    { 221315, "Traveler's Symbols", 3 },
+                },
+                note = "Take the bridge just east of the Ring of Law that runs north over the lava and clear it. On its left side, by the small brazier, jump from the railing onto the platform against the wall, follow it to the corner and keep your left shoulder on the wall until you drop onto the rock ledge below: the Rugged Traveler is there. The door on the ledge takes you to a ledge above Lord Incendius; there is no way back. Not shareable.",
+            })
+            if XP then XP[82062] = 8400 end
+        end
+    end
+    if FDJ.QUEST_SHAREABILITY_AUDIT then FDJ.QUEST_SHAREABILITY_AUDIT[82062] = false end
+end

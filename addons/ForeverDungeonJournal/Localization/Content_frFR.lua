@@ -519,6 +519,9 @@ FDJ.ContentLocales.frFR.slotParts = {
     ["Fist Weapon"] = "Arme de pugilat",
     ["Leatherworking Recipe"] = "Recette de travail du cuir",
     ["Held In Off-hand"] = "Tenu en main gauche",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "Carquois",
+    ["Ammo Pouch"] = "Giberne",
 }
 
 FDJ.ContentLocales.frFR.replacements = {

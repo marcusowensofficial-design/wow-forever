@@ -1258,6 +1258,8 @@ ITEM_SOURCES.deDE = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "Gemeldeter zufälliger Fundort in den Ruinen von Lordaeron; Türme, Nebenräume und den Bereich von Bjork prüfen",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Belohnung der Quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Belohnung der Quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Dunkelküste. Den verlangten Corrupted Kor Gem lassen Blackfathom Tide Priestesses und Oracles am Eingang der Tiefschwarzen Grotten sowie Blackfathom Sea Witches im Inneren fallen.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Erbeutet von Satyrn und Wichteln in der Schwarzschlundfeste",
 }
 ITEM_SOURCES.frFR = {
     ["Dropped by: Dark Iron Agents"] = "Butin de : Dark Iron Agents",
@@ -1282,6 +1284,8 @@ ITEM_SOURCES.frFR = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "Apparition aléatoire signalée dans les Ruines de Lordaeron ; vérifiez les tours, les salles latérales et la zone de Bjork",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Récompense de la quête Bailor's Ore Shipment : Bailor Stonehand, Thelsamar, Loch Modan",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Récompense de la quête Seeking the Kor Gem : Thundris Windweaver, Auberdine, Sombrivage. La Corrupted Kor Gem demandée tombe sur les Blackfathom Tide Priestesses et Oracles à l'entrée des Profondeurs de Brassenoire et sur les Blackfathom Sea Witches à l'intérieur.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Ramassé sur les satyres et les diablotins du Repaire des Noiregueules",
 }
 ITEM_SOURCES.esES = {
     ["Dropped by: Dark Iron Agents"] = "Lo suelta: Dark Iron Agents",
@@ -1306,6 +1310,8 @@ ITEM_SOURCES.esES = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "Aparición aleatoria notificada dentro de las Ruinas de Lordaeron; revisa torres, salas laterales y la zona de Bjork",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Recompensa de la misión Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Recompensa de la misión Seeking the Kor Gem: Thundris Windweaver, Auberdine, Costa Oscura. La Corrupted Kor Gem que pide la sueltan las Blackfathom Tide Priestesses y Oracles en la entrada de las Cavernas de Brazanegra y las Blackfathom Sea Witches en el interior.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Se despoja de sátiros y diablillos en el Bastión Faucenegra",
 }
 ITEM_SOURCES.itIT = {
     ["Dropped by: Dark Iron Agents"] = "Bottino di: Dark Iron Agents",
@@ -1330,6 +1336,8 @@ ITEM_SOURCES.itIT = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "Comparsa casuale segnalata nelle Rovine di Lordaeron; controlla torri, stanze laterali e la zona di Bjork",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Ricompensa della missione Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Ricompensa della missione Seeking the Kor Gem: Thundris Windweaver, Auberdine, Rivafosca. La Corrupted Kor Gem richiesta è bottino di Blackfathom Tide Priestess e Oracle all'ingresso degli Abissi di Fondocupo e di Blackfathom Sea Witch all'interno.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Saccheggiato da satiri e folletti a Blackmaw Hold",
 }
 ITEM_SOURCES.ptBR = {
     ["Dropped by: Dark Iron Agents"] = "Saqueado de: Dark Iron Agents",
@@ -1354,6 +1362,8 @@ ITEM_SOURCES.ptBR = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "Surgimento aleatório relatado nas Ruínas de Lordaeron; verifique torres, salas laterais e a área de Bjork",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Recompensa da missão Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Recompensa da missão Seeking the Kor Gem: Thundris Windweaver, Auberdine, Costa Negra. A Corrupted Kor Gem pedida cai de Blackfathom Tide Priestesses e Oracles na entrada das Profundezas Negras e de Blackfathom Sea Witches lá dentro.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Saqueado de sátiros e diabretes na Gruta Bocanera",
 }
 ITEM_SOURCES.ruRU = {
     ["Dropped by: Dark Iron Agents"] = "Добывается с: Dark Iron Agents",
@@ -1378,6 +1388,8 @@ ITEM_SOURCES.ruRU = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "По сообщениям, появляется в случайном месте в Руинах Лордерона; проверьте башни, боковые комнаты и зону Бьорка",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "Награда за задание Bailor's Ore Shipment: Bailor Stonehand, Телсамар, Лок Модан",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "Награда за задание Seeking the Kor Gem: Thundris Windweaver, Аубердин, Темные берега. Нужный Corrupted Kor Gem падает с Blackfathom Tide Priestess и Oracle у входа в Непроглядную Пучину и с Blackfathom Sea Witch внутри.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "Добывается с сатиров и бесов в Крепости Черночревов",
 }
 ITEM_SOURCES.koKR = {
     ["Dropped by: Dark Iron Agents"] = "드롭: Dark Iron Agents",
@@ -1402,6 +1414,8 @@ ITEM_SOURCES.koKR = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "로데론의 폐허 안에서 무작위로 나타난다고 보고됨; 탑, 옆방, 비요크 구역을 확인하세요",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "퀘스트 Bailor's Ore Shipment 보상: Bailor Stonehand, 텔사마, 모단 호수",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "퀘스트 Seeking the Kor Gem 보상: Thundris Windweaver, 아우버다인, 어둠의 해안. 필요한 Corrupted Kor Gem은 검은심연 나락 입구의 Blackfathom Tide Priestess와 Oracle, 내부의 Blackfathom Sea Witch가 드롭합니다.",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "검은아귀 요새의 사티로스와 임프에게서 획득",
 }
 ITEM_SOURCES.zhCN = {
     ["Dropped by: Dark Iron Agents"] = "掉落自：Dark Iron Agents",
@@ -1426,6 +1440,8 @@ ITEM_SOURCES.zhCN = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "据报告在洛丹伦废墟内随机刷新；请检查塔楼、侧室和比约克区域",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "任务Bailor's Ore Shipment的奖励：Bailor Stonehand，塞尔萨玛，洛克莫丹",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "任务Seeking the Kor Gem的奖励：Thundris Windweaver，奥伯丁，黑海岸。所需的Corrupted Kor Gem由黑暗深渊入口处的Blackfathom Tide Priestess和Oracle以及副本内的Blackfathom Sea Witch掉落。",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "从黑喉要塞的萨特和小鬼身上拾取",
 }
 ITEM_SOURCES.zhTW = {
     ["Dropped by: Dark Iron Agents"] = "掉落自：Dark Iron Agents",
@@ -1450,6 +1466,8 @@ ITEM_SOURCES.zhTW = {
     ["Reported random spawn inside Ruins of Lordaeron; check towers, side rooms and the Bjork area"] = "據回報在羅德隆廢墟內隨機出現；請檢查塔樓、側室和比約克區域",
     ["Reward from the quest Bailor's Ore Shipment: Bailor Stonehand, Thelsamar, Loch Modan"] = "任務Bailor's Ore Shipment的獎勵：Bailor Stonehand，塞爾薩瑪，洛克莫丹",
     ["Reward from the quest Seeking the Kor Gem: Thundris Windweaver, Auberdine, Darkshore. The Corrupted Kor Gem he asks for drops from Blackfathom Tide Priestesses and Oracles at the Blackfathom Deeps entrance and from Blackfathom Sea Witches inside."] = "任務Seeking the Kor Gem的獎勵：Thundris Windweaver，奧伯丁，黑海岸。所需的Corrupted Kor Gem由黑暗深淵入口處的Blackfathom Tide Priestess和Oracle以及副本內的Blackfathom Sea Witch掉落。",
+    -- via DungeonJournal 2.0.12
+    ["Looted from satyrs and imps in Blackmaw Hold"] = "從黑喉要塞的薩特和小鬼身上拾取",
 }
 for lang, strings in pairs(ITEM_SOURCES) do
     local target = FDJ.ContentLocales[lang] or {}

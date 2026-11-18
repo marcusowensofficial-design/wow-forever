@@ -542,6 +542,9 @@ FDJ.ContentLocales.ruRU.slotParts = {
     ["Fist Weapon"] = "Кистевое оружие",
     ["Leatherworking Recipe"] = "Рецепт кожевничества",
     ["Held In Off-hand"] = "Предмет для левой руки",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "Колчан",
+    ["Ammo Pouch"] = "Подсумок",
 }
 
 FDJ.ContentLocales.ruRU.replacements = {

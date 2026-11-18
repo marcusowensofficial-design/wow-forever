@@ -407,3 +407,60 @@ Forever item/source cross-checks:
 - Sunnyglade cave (a player, 2026-11-16): the entrance is at (49, 46); the
   Twilight Ritual Circles are inside, and Chogg'Zac (elite) is at the very back.
   Sickening Lights and Twilight No More! now point at the entrance.
+
+2026-11-18 Merge from DungeonJournal 2.0.12 (the original author's version)
+===========================================================================
+Compared entry by entry against DungeonJournal 2.0.12 and took data we were
+missing. Nothing of ours was overwritten except the quest fields listed below.
+His own sources (recorded in his SOURCES.txt) are carried over as he cites them:
+- Boss portraits: 201 new pre-rendered portraits (plus 104 at 128 px), photographed
+  in-game with his /dj bake (15-16 Nov 2026). Systems/BakedPortraits.lua taken whole.
+- Dungeon maps: Blackmaw Hold (6 levels, Santiago Reyes' Forever dungeon maps),
+  Upper Blackrock Spire (Blackrock Spire parchment with guide labels painted out,
+  pins as in that guide), The Drowned City level 2 Atal'Byzal + swim spots / exits
+  and Umbra / Braxton pins (his marked map, 16 Nov 2026).
+- Boss loot: Forever recipe drops (Plans / Patterns / Schematics) on bosses from
+  Wailing Caverns to Blackrock Spire, as recorded on Wowhead Forever / Icy Veins
+  Forever (his 2.0.35 recipe audit); missing boss drops (Stratholme, Scholomance,
+  Dire Maul, UBRS/LBRS, BRD) and Trash Drops lists for 14 dungeons
+  (https://www.wowhead.com/forever/npc=<id> loot tabs).
+- New boss entries: Altar Bosses (Sunken Temple, the six troll guardians as one
+  entry), Death Knight Darkreaver, Kormok, Jarien and Sothos, Mor Grayhoof, Ezra
+  Grimm, Burning Felguard, Knot Thimblejack's Cache.
+- Quest rewards (Wowhead Forever quest pages): The Love Potion, The Last Element,
+  Lethtendris's Web (both), Pusillin and the Elder Azj'Tordin, Divino-matic Rod,
+  Tiara of the Deep, Jammal'an the Prophet, The God Hakkar, Lost Tablets of Will,
+  Uldaman Reagent Run (both), Hurley Blackbreath, Lost Thunderbrew Recipe,
+  Disharmony of Fire, Jail Break!, Operation: Death to Angerforge, A Taste of
+  Flame, The Demon Forge, Kirtonos the Herald, The Lich Ras Frostwhisper, Houses
+  of the Holy, A Tale Spun Around the Fire, Findings for the Explorer's League,
+  Blueleaf Tubers, Vorrel's Revenge, Source of Power, The Grave Knight.
+- Quests: A Brother In Need > By The Light's Grace > Aeonas the Vindicated
+  (Paladin, Cathedral) with its Strange Orb chain (Wowhead Forever quests 79946,
+  78088-78093, 96438, 79939, 79940, 79945, 79963, 79970); Ever After (82062,
+  BRD; Wowhead Forever, endgametools.com, 17 Nov 2026 hotfixes); Razorfen Kraul
+  now lists An Unholy Alliance part 1 (6522, Small Scroll) instead of 6521.
+- Blackmaw Magic (Horde) turn-in and A Lost Memento source / turn-in (Unele,
+  Ursolan, Azshara) from his data.
+- 18 boss display IDs, 93 trash-mob display IDs, 22 German boss names, Quiver /
+  Ammo Pouch slot names, map strings (Shark exit / Safe exit / Swim here).
+Not taken (to check first): his 83 quest-XP corrections (could not confirm on
+Wowhead at max level), Sunken Temple single-vs-choice reward flags, ~26 quest-giver
+coordinate tweaks, his merged Sunken Temple dragon entries, Sunken Temple map art
+(ours already uses the game's map), and his new systems (Tier Sets, Onyxia page,
+run log, walking arrow, character export).
+
+2026-11-18 Sunken Temple class quests (Wowhead Forever guide)
+=============================================================
+Source: https://www.wowhead.com/forever/guide/sunken-temple-level-50-class-quest-walkthrough
+(Serenal, updated 2026-11-16).
+- Forever gives all three rewards, no choice: rewardChoice = false on A Better
+  Ingredient (9053), The Green Drake (8232), Destroy Morphaz (8253), Forging the
+  Mightstone (8418), Blood of Morphaz (8257), The Azure Key (8236), Da Voodoo
+  (8413), Trolls of a Feather (8422), Voodoo Feathers (8425). Agrees with
+  DungeonJournal 2.0.12, which settles the open item from the merge above.
+- The Azure Key turns in to Archmage Xylem, Azshara (29, 40; via Sanath Lim-yo's
+  teleport at 28, 50), not Lord Jorach Ravenholdt (turnin + QuestLocations pin).
+- Voodoo Feathers by troll (2 of each): Amber = Gasher and Zul'Lor, Blue = Hukku
+  and Mijan, Green = Zolo and Loro (notes on 8418/8413/8422/8425 and Altar Bosses).
+- Per-class farming tips for the earlier chain steps added to each quest's note.

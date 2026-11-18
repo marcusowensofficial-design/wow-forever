@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.7.7 by Exehn
+Forever Dungeon Journal v1.8.0 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,28 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.8.0
+- New dungeon maps: Blackmaw Hold (all 6 levels; hover a level button for
+  its name), Upper Blackrock Spire with boss pins, and The Drowned City's
+  lower level Atal'Byzal with the swim-down spots and the two ways back up.
+- About 200 more boss portraits now show instantly, with sharper pictures
+  where the portrait is shown large.
+- Boss loot: Forever's recipe drops (Plans / Patterns / Schematics) on bosses
+  from Wailing Caverns to Blackrock Spire, missing boss drops (Stratholme,
+  Scholomance, Dire Maul, Blackrock Spire, BRD), and Trash Drops lists for
+  14 more dungeons.
+- New entries: Altar Bosses (Sunken Temple's six troll guardians), Death
+  Knight Darkreaver, Kormok, Jarien and Sothos, Mor Grayhoof, Ezra Grimm,
+  Burning Felguard and Knot Thimblejack's Cache.
+- Quest rewards corrected for about 30 quests (The Love Potion, Jail Break!,
+  Lethtendris's Web, Uldaman Reagent Run and more).
+- New quests: the Paladin chain A Brother In Need (Scarlet Monastery
+  Cathedral) and Ever After (Blackrock Depths secret ledge).
+- Sunken Temple class quests: all give every reward (no choice), The Azure
+  Key turns in to Archmage Xylem in Azshara, which troll drops which Voodoo
+  Feather, and farming tips for the earlier steps.
+- Thanks to Exehn: much of this release comes from DungeonJournal 2.0.12.
 
 CHANGES IN 1.7.7
 - Eye of Mugg & Tome of Twilight (Horde): replaced the Krol'dok Stronghold

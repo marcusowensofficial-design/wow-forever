@@ -60,6 +60,9 @@ FDJ.ContentLocales.koKR.slotParts = {
     ["Engineering"] = "기계공학", ["Quest Item"] = "퀘스트 아이템", ["Head"] = "머리", ["Shoulder"] = "어깨",
     ["Bow"] = "활", ["Crossbow"] = "석궁", ["Fist Weapon"] = "장착 무기",
     ["Leatherworking Recipe"] = "가죽세공 도안", ["Held In Off-hand"] = "보조장비 착용",
+    -- via DungeonJournal 2.0.12
+    ["Quiver"] = "화살통",
+    ["Ammo Pouch"] = "탄환 주머니",
 }
 
 FDJ.ContentLocales.koKR.bosses = {
