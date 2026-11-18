@@ -464,3 +464,12 @@ Source: https://www.wowhead.com/forever/guide/sunken-temple-level-50-class-quest
 - Voodoo Feathers by troll (2 of each): Amber = Gasher and Zul'Lor, Blue = Hukku
   and Mijan, Green = Zolo and Loro (notes on 8418/8413/8422/8425 and Altar Bosses).
 - Per-class farming tips for the earlier chain steps added to each quest's note.
+
+2026-11-18 v1.8.1 required levels for merged items
+==================================================
+- 350 entries in Data/ItemReqLevels.lua for the items merged from DungeonJournal
+  2.0.12, from Wowhead Forever item tooltips
+  (https://nether.wowhead.com/forever/tooltip/item/<id>, "Requires Level", read
+  only from the item's own lines so a recipe does not take its crafted item's
+  level). Recipes are 0, as before; quest-reward gear with no level requirement
+  is left out so the Loot Explorer keeps placing it by the quest's level.

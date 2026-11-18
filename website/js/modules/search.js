@@ -197,7 +197,7 @@ function buildSearchIndex() {
       targetId: 'card-foreverliquid'
     },
     {
-      title: 'ForeverDungeonJournal (v1.8.0) — Classic+ Encounter Atlas & BiS Wishlist',
+      title: 'ForeverDungeonJournal (v1.8.1) — Classic+ Encounter Atlas & BiS Wishlist',
       icon: '📖',
       desc: 'All 13 Classic+ dungeons, 3D boss viewer, calibrated maps, and /fj import in-game BiS wishlist starring.',
       targetId: 'card-foreverjournal'
