@@ -70,17 +70,19 @@ function buildSearchIndex() {
     targetId: 'tab-tierlist'
   });
 
-  // 3. Level 30 Beta BiS Lists
-  if (window.WOW_BIS_DATA?.classes) {
-    WOW_BIS_DATA.classes.forEach(c => {
-      const clsData = WOW_BIS_DATA[c.id];
+  // 3. Level 60 Pre-Raid BiS Lists (fallback to Level 30 if loaded)
+  const bisSource = window.WOW_BIS_DATA_60?.classes ? window.WOW_BIS_DATA_60 : window.WOW_BIS_DATA;
+  if (bisSource?.classes) {
+    const isLvl60 = bisSource === window.WOW_BIS_DATA_60;
+    bisSource.classes.forEach(c => {
+      const clsData = bisSource[c.id];
       if (clsData && clsData.specs) {
         clsData.specs.forEach(s => {
           searchIndex.push({
             title: `${c.name}: ${s.name} BiS List`,
-            category: 'Midway BiS Gear',
+            category: isLvl60 ? 'Level 60 Pre-Raid BiS' : 'Midway BiS Gear',
             icon: '🛡️',
-            desc: `Midway Level 30 progression BiS gear • ${s.role}`,
+            desc: `${isLvl60 ? 'Level 60 Pre-Raid BiS gear' : 'Midway Level 30 progression BiS gear'} • ${s.role}`,
             tab: 'bis',
             targetId: 'tab-bis',
             bisClass: c.id,
@@ -226,10 +228,10 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
-    title: 'Complete Item Database & Market (22,493 Items & 28 Dungeon Loot Tables)',
+    title: 'Complete Item Database & Market (23,975 Items & 28 Dungeon Loot Tables)',
     category: 'Database & Loot',
     icon: '📦',
-    desc: 'Search all 22,493 items, 4,121 new Forever items, BoE auction market valuations, and 28 dungeon boss drop tables.',
+    desc: 'Search all 23,975 items, 4,639 new Forever items, BoE auction market valuations, and 28 dungeon boss drop tables.',
     tab: 'database',
     targetId: 'tab-database'
   });
@@ -546,9 +548,23 @@ function setupSearchModalEvents() {
   if (!modal || !input) return;
 
   // Open modal
+  let lazyWarmed = false;
   const openModal = () => {
     if (searchIndex.length < 500) {
       buildSearchIndex();
+    }
+    if (!lazyWarmed && window.WOW_DATA_LOADER) {
+      lazyWarmed = true;
+      Promise.all([
+        window.WOW_DATA_LOADER.ensure('professions'),
+        window.WOW_DATA_LOADER.ensure('changes'),
+        window.WOW_DATA_LOADER.ensure('database')
+      ]).then(() => {
+        buildSearchIndex();
+        if (modal.classList.contains('is-open')) {
+          performSearch(input.value.trim());
+        }
+      }).catch(() => {});
     }
     modal.classList.add('is-open');
     modal.removeAttribute('hidden');

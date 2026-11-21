@@ -99,12 +99,13 @@
     }
   }
 
+  let professionsHashListenerBound = false;
+
   function initProfessionsHub() {
     const container = document.getElementById('tab-professions');
     if (!container) return;
 
     if (!window.WOW_PROFESSIONS_DATA) {
-      console.warn('WOW_PROFESSIONS_DATA not loaded yet.');
       return;
     }
 
@@ -120,12 +121,15 @@
     renderMasterLayout(container);
 
     // Live hash listener for seamless subtab/profession browsing
-    window.addEventListener('hashchange', () => {
-      const targetHash = (window.location.hash || '').toLowerCase();
-      if (targetHash.includes('professions') || (window.WOW_PROFESSIONS_DATA && Object.keys(window.WOW_PROFESSIONS_DATA).some(k => targetHash.includes(k)))) {
-        handleProfessionsHashRoute();
-      }
-    });
+    if (!professionsHashListenerBound) {
+      professionsHashListenerBound = true;
+      window.addEventListener('hashchange', () => {
+        const targetHash = (window.location.hash || '').toLowerCase();
+        if (targetHash.includes('professions') || (window.WOW_PROFESSIONS_DATA && Object.keys(window.WOW_PROFESSIONS_DATA).some(k => targetHash.includes(k)))) {
+          handleProfessionsHashRoute();
+        }
+      });
+    }
   }
 
   function renderMasterLayout(container) {

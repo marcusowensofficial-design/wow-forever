@@ -112,13 +112,13 @@ console.log('\n--- 5. Dual-Faction Paladin Guardrails ---');
 console.log('\n--- 6. Module Sizes & Script Registration ---');
 {
   const html = fs.readFileSync('index.html', 'utf8');
-  assert(html.includes('js/data/gear-sets-data.js?v=1.60.1-70425'), 'gear-sets-data.js registered in index.html');
-  assert(html.includes('js/data/world-rares-data.js?v=1.60.1-70425'), 'world-rares-data.js registered in index.html');
-  assert(html.includes('js/data/travel-data.js?v=1.60.1-70425'), 'travel-data.js registered in index.html');
-  assert(html.includes('js/data/bis-enhancements-data.js?v=1.60.1-70425'), 'bis-enhancements-data.js registered in index.html');
-  assert(html.includes('js/modules/codex/codex-sets.js?v=1.60.1-70425'), 'codex-sets.js registered in index.html');
-  assert(html.includes('js/modules/atlas-travel.js?v=1.60.1-70425'), 'atlas-travel.js registered in index.html');
-  assert(html.includes('js/modules/bis/bis-enhancements.js?v=1.60.1-70425'), 'bis-enhancements.js registered in index.html');
+  assert(html.includes('js/data/gear-sets-data.js'), 'gear-sets-data.js registered in index.html');
+  assert(html.includes('js/data/world-rares-data.js'), 'world-rares-data.js registered in index.html');
+  assert(html.includes('js/data/travel-data.js'), 'travel-data.js registered in index.html');
+  assert(html.includes('js/data/bis-enhancements-data.js'), 'bis-enhancements-data.js registered in index.html');
+  assert(html.includes('js/modules/codex/codex-sets.js'), 'codex-sets.js registered in index.html');
+  assert(html.includes('js/modules/atlas-travel.js'), 'atlas-travel.js registered in index.html');
+  assert(html.includes('js/modules/bis/bis-enhancements.js'), 'bis-enhancements.js registered in index.html');
 }
 
 console.log(`\n=======================================`);

@@ -69,7 +69,6 @@
       const bracket = profile.brackets[bracketIdx] || profile.brackets[0];
       const levels = bracket.levels || [30, 39];
       const bracketLabel = levels[0] === levels[1] ? `Level ${levels[0]}` : `Levels ${levels[0]}–${levels[1]}`;
-      const isBetaCap = levels[1] === 30 || levels[0] === 30;
       const isSpeculation = Boolean(bracket.speculation || levels[0] > 30);
 
       const priorities = bracket.priority || [];

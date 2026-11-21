@@ -159,7 +159,7 @@
           <div class="prof-quiz-questions" style="display: flex; flex-direction: column; gap: 1.5rem;">
     `;
 
-    data.questions.forEach((q, qIndex) => {
+    data.questions.forEach((q) => {
       const isAnswered = userAnswers[q.id] !== null;
       html += `
         <div class="quiz-card" style="background: rgba(16,26,42,0.85); border: 1px solid ${isAnswered ? 'rgba(197,160,89,0.5)' : 'rgba(255,255,255,0.08)'}; border-radius: 8px; padding: 1.25rem;">

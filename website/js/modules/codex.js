@@ -402,7 +402,7 @@ window.openDungeonLootModal = function(dungeonId) {
           iLvl: `Lvl ${foreverInst.minLevel || 60}`,
           dropRate: it.source || 'Drop',
           slot: 'Instance Loot',
-          stats: 'Confirmed drop in Build 1.60.1.70707'
+          stats: 'Confirmed drop in Build 1.60.1.71037'
         }))
       };
     });

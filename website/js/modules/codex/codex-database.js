@@ -1,5 +1,5 @@
 /**
- * World of Warcraft: Forever - Complete Item Database (22,493 Items)
+ * World of Warcraft: Forever - Complete Item Database (23,975 Items)
  * Interactive search, category/slot/rarity/class/level/dungeon filtering,
  * vendor/AH price display, and boss drop source attribution.
  */
@@ -407,7 +407,7 @@
     // Header block (icon + item name + badges)
     let html = `
       <div style="display:flex;align-items:flex-start;gap:0.65rem;margin-bottom:0.45rem;">
-        <img src="https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg"
+        <img src="${/^https?:\/\//i.test(iconName) ? esc(iconName) : `https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg`}"
              alt="" width="38" height="38"
              style="border-radius:5px;border:1.5px solid ${Q_COLORS[q]};background:#0f172a;flex-shrink:0;box-shadow:0 0 8px rgba(0,0,0,0.6);"
              onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg'">
@@ -843,7 +843,7 @@
       <tr class="codex-db-row" data-row-idx="${i}" data-item-id="${id}" style="border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.84rem;">
         <td style="padding:0.55rem 0.65rem;">
           <div style="display:flex;align-items:center;gap:0.65rem;">
-            <img src="https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg"
+            <img src="${/^https?:\/\//i.test(iconName) ? esc(iconName) : `https://wow.zamimg.com/images/wow/icons/medium/${esc(iconName)}.jpg`}"
                  alt="" width="34" height="34" loading="lazy"
                  style="border-radius:6px;border:1.5px solid ${Q_COLORS[q]};background:#0f172a;flex-shrink:0;"
                  onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg'">
@@ -883,7 +883,7 @@
     countEl.textContent = `${total.toLocaleString('en-US')} item${total === 1 ? '' : 's'} matched`;
 
     if (total === 0) {
-      const totalDbItems = (window.WOW_ITEM_DATABASE?.totalItems || 22493).toLocaleString('en-US');
+      const totalDbItems = (window.WOW_ITEM_DATABASE?.totalItems || 23975).toLocaleString('en-US');
       tbody.innerHTML = `<tr><td colspan="6" style="padding:2rem;text-align:center;color:#94a3b8;">No items match your current filters. Click "Reset Filters" to view all ${totalDbItems} items.</td></tr>`;
       moreBtn.style.display = 'none';
       return;

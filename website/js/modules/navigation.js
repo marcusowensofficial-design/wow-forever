@@ -167,6 +167,25 @@ function initNavigation() {
         b.classList.toggle('active', cat === activeCat || (activeCat === 'resources' && cat === 'codex'));
       });
 
+      const runWithTabData = (tabKey, mountId, label, fn) => {
+        const loader = window.WOW_DATA_LOADER;
+        const mount = mountId ? document.getElementById(mountId) : null;
+        if (!loader || typeof loader.ensureForTab !== 'function') {
+          fn();
+          return;
+        }
+        const loadingShown = mount && (!mount.hasChildNodes() || mount.children.length === 0);
+        if (loadingShown) {
+          mount.innerHTML = `<div style="padding:2.5rem;text-align:center;color:#94a3b8;font-size:0.95rem;">⚡ Loading ${label}...</div>`;
+        }
+        loader.ensureForTab(tabKey).then(() => {
+          if (loadingShown && mount) mount.innerHTML = '';
+          fn();
+        }).catch(() => {
+          fn();
+        });
+      };
+
       if (targetTab === 'talents') {
         const mount = document.getElementById('talents-standalone-mount');
         if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
@@ -175,26 +194,65 @@ function initNavigation() {
           }
         }
       } else if (targetTab === 'weapons') {
-        if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.init === 'function') {
-          const mount = document.getElementById('weapons-hub-mount');
+        runWithTabData('weapons', 'weapons-hub-mount', '1–60 Weapon Progression', () => {
+          if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.init === 'function') {
+            const mount = document.getElementById('weapons-hub-mount');
+            if (!mount || !mount.hasChildNodes() || mount.children.length === 0) {
+              window.WOW_WEAPONS_HUB.init();
+            }
+          }
+        });
+      } else if (targetTab === 'deepdives') {
+        runWithTabData('deepdives', null, 'Class Progression Data', () => {
+          if (typeof window.renderDeepDiveContent === 'function') {
+            window.renderDeepDiveContent();
+          }
+        });
+      } else if (targetTab === 'professions') {
+        runWithTabData('professions', 'professions-interactive-mount', 'Professions Database (1–300)', () => {
+          const mount = document.getElementById('professions-interactive-mount');
           if (!mount || !mount.hasChildNodes() || mount.children.length === 0) {
-            window.WOW_WEAPONS_HUB.init();
+            if (typeof window.initProfessionsHub === 'function') {
+              window.initProfessionsHub();
+            }
           }
-        }
+        });
+      } else if (targetTab === 'changes') {
+        runWithTabData('changes', 'changes-mount-point', "What's Changed Database", () => {
+          const mount = document.getElementById('changes-mount-point');
+          if (!mount || !mount.hasChildNodes() || mount.children.length === 0) {
+            if (typeof window.initChangesModule === 'function') {
+              window.initChangesModule();
+            }
+          }
+        });
       } else if (targetTab === 'database') {
-        const mount = document.getElementById('codex-database-mount');
-        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
-          if (typeof window.renderCodexItemDatabase === 'function') {
-            window.renderCodexItemDatabase();
+        runWithTabData('database', 'codex-database-mount', '23,975-Item Database & Market', () => {
+          const mount = document.getElementById('codex-database-mount');
+          if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+            if (typeof window.renderCodexItemDatabase === 'function') {
+              window.renderCodexItemDatabase();
+            }
           }
+        });
+      } else if (targetTab === 'codex') {
+        if (window.WOW_DATA_LOADER) {
+          window.WOW_DATA_LOADER.ensureForTab('codex').then(() => {
+            const mount = document.getElementById('codex-database-mount');
+            if (mount && (!mount.hasChildNodes() || mount.children.length === 0) && typeof window.renderCodexItemDatabase === 'function') {
+              window.renderCodexItemDatabase();
+            }
+          }).catch(() => {});
         }
       } else if (targetTab === 'vendors') {
-        const mount = document.getElementById('vendors-mount');
-        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
-          if (typeof window.renderVendors === 'function') {
-            window.renderVendors();
+        runWithTabData('vendors', 'vendors-mount', 'Vendor Directory & Market', () => {
+          const mount = document.getElementById('vendors-mount');
+          if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+            if (typeof window.renderVendors === 'function') {
+              window.renderVendors();
+            }
           }
-        }
+        });
       }
 
       if (!isRestoringHistoryState) {
@@ -333,21 +391,32 @@ function initNavigation() {
       if (tabName === 'professions') {
         const profSlug = subRoute || (professionSlugs.includes(hash.split('/')[0]) ? hash.split('/')[0] : 'overview');
         const profSubtab = subSubRoute || 'recipes';
-        if (window.WOW_PROFESSIONS && typeof window.WOW_PROFESSIONS.selectProfession === 'function') {
-          window.WOW_PROFESSIONS.selectProfession(profSlug, profSubtab, undefined, undefined, { noPush: true });
-        }
+        const runProf = () => {
+          if (!document.getElementById('professions-interactive-mount')?.hasChildNodes() && typeof window.initProfessionsHub === 'function') {
+            window.initProfessionsHub();
+          }
+          if (window.WOW_PROFESSIONS && typeof window.WOW_PROFESSIONS.selectProfession === 'function') {
+            window.WOW_PROFESSIONS.selectProfession(profSlug, profSubtab, undefined, undefined, { noPush: true });
+          }
+        };
+        (window.WOW_DATA_LOADER ? window.WOW_DATA_LOADER.ensureForTab('professions') : Promise.resolve()).then(runProf).catch(() => {});
       } else if (tabName === 'bis') {
         if (typeof window.handleBiSHashRouting === 'function') {
           window.handleBiSHashRouting();
         }
       } else if (tabName === 'weapons') {
-        if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.selectClass === 'function') {
-          window.WOW_WEAPONS_HUB.selectClass(subRoute || 'warrior', subSubRoute || null, { noPushState: true });
-        }
+        const runWeapons = () => {
+          if (window.WOW_WEAPONS_HUB && typeof window.WOW_WEAPONS_HUB.selectClass === 'function') {
+            window.WOW_WEAPONS_HUB.selectClass(subRoute || 'warrior', subSubRoute || null, { noPushState: true });
+          }
+        };
+        (window.WOW_DATA_LOADER ? window.WOW_DATA_LOADER.ensureForTab('weapons') : Promise.resolve()).then(runWeapons).catch(() => {});
       } else if (subRoute) {
         const safeSubSelector = window.CSS && CSS.escape ? CSS.escape(subRoute) : subRoute;
         if (tabName === 'deepdives' && typeof window.switchDeepDiveClass === 'function') {
-          window.switchDeepDiveClass(subRoute);
+          (window.WOW_DATA_LOADER ? window.WOW_DATA_LOADER.ensureForTab('deepdives') : Promise.resolve()).then(() => {
+            window.switchDeepDiveClass(subRoute);
+          }).catch(() => {});
         } else if (tabName === 'guides' && typeof window.navigateToGuide === 'function') {
           window.navigateToGuide(subRoute);
         } else if (tabName === 'codex') {

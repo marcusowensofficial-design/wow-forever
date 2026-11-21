@@ -92,12 +92,13 @@
     return { classSlug: slug, category: cat };
   }
 
+  let changesHashListenerBound = false;
+
   function initChangesModule() {
     const container = document.getElementById('changes-mount-point');
     if (!container) return;
 
     if (!window.WOW_CHANGES_DATA) {
-      console.warn('WOW_CHANGES_DATA not loaded yet.');
       return;
     }
 
@@ -109,14 +110,17 @@
 
     renderModule();
 
-    window.addEventListener('hashchange', () => {
-      const r = parseHash();
-      if (r && window.WOW_CHANGES_DATA.classes[r.classSlug]) {
-        currentClass = r.classSlug;
-        if (r.category) currentCategory = r.category;
-        renderModule();
-      }
-    });
+    if (!changesHashListenerBound) {
+      changesHashListenerBound = true;
+      window.addEventListener('hashchange', () => {
+        const r = parseHash();
+        if (r && window.WOW_CHANGES_DATA && window.WOW_CHANGES_DATA.classes[r.classSlug]) {
+          currentClass = r.classSlug;
+          if (r.category) currentCategory = r.category;
+          renderModule();
+        }
+      });
+    }
   }
 
   function renderModule() {

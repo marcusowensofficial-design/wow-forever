@@ -36,7 +36,7 @@
     return '';
   }
 
-  function renderSpawnAtlasView(isMining) {
+  function renderSpawnAtlasView(_isMining) {
     const atlas = window.WOW_GATHERING_ZONES_DATA;
     if (!atlas || !atlas.zones) {
       return `<div style="padding:2rem;text-align:center;color:#94a3b8;">Gathering zone spawn coordinates loading...</div>`;
