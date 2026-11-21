@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Battlegrounds & Tactical Objectives
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
+ * Datamined from WoW Forever Client (Build 1.60.1.71037 / Nov 17 Hotfixes)
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_BATTLEGROUNDS_DATA = [
@@ -154,7 +154,7 @@ window.WOW_BATTLEGROUNDS_DATA = [
     "winCondition": "Defeat enemy General (Vanndar Stormpike / Drek'Thar)",
     "isNewInForever": false,
     "players": "40v40",
-    "levelBrackets": "51–60",
+    "levelBrackets": "51–60 (Battle for Alterac Valley quests require Level 58 per Nov 17 hotfix)",
     "factionContext": "Stormpike Guard (Alliance) vs Frostwolf Clan (Horde)",
     "objectives": [
       {

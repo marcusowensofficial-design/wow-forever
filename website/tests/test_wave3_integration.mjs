@@ -83,13 +83,13 @@ console.log('\n--- 3. Special Quests, Riddles & Mysteries ---');
 }
 
 // 4. New Classic+ Quests Database
-console.log('\n--- 4. 279 New Forever Quests Database ---');
+console.log('\n--- 4. New Forever Quests Database (722 Live Quests) ---');
 {
   const code = fs.readFileSync('js/data/forever-quests-data.js', 'utf8');
   const window = {};
   eval(code);
   assert(Array.isArray(window.WOW_FOREVER_NEW_QUESTS_DATA), 'WOW_FOREVER_NEW_QUESTS_DATA is an Array');
-  assert(window.WOW_FOREVER_NEW_QUESTS_DATA.length === 279, `Expected 279 new quests, got ${window.WOW_FOREVER_NEW_QUESTS_DATA.length}`);
+  assert(window.WOW_FOREVER_NEW_QUESTS_DATA.length >= 722, `Expected >= 722 new quests, got ${window.WOW_FOREVER_NEW_QUESTS_DATA.length}`);
 
   const bookInv = window.WOW_FOREVER_NEW_QUESTS_DATA.find(q => q.id === 92124);
   assert(bookInv && bookInv.title === 'Book Inventory', 'Quest 92124 (Book Inventory) present');

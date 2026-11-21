@@ -216,6 +216,7 @@ function parseTooltip(tt) {
     let m;
     if ((m = l.match(/^\+(\d+) (Strength|Agility|Stamina|Intellect|Spirit)$/))) bits.push(`+${m[1]} ${STAT_ABBR[m[2]]}`);
     else if ((m = l.match(/^\+(\d+) (Fire|Frost|Nature|Shadow|Arcane) Resistance$/))) bits.push(`+${m[1]} ${m[2]} Res`);
+    else if ((m = l.match(/^\+(\d+) (Spell Power|Healing|Attack Power|Ranged Attack Power|Critical Strike|Hit|Defense|MP5|Spell Critical Strike|Spell Hit|Haste)$/i))) bits.push(`+${m[1]} ${m[2]}`);
     else if ((m = l.match(/^\(([\d.]+) damage per second\)$/))) bits.unshift(`${m[1]} DPS`);
     else if (/^Equip:/.test(l)) { const s = shortEquip(l); if (s) bits.push(s); else bits.push('Equip effect'); }
     else if (/^(Chance on hit|Use):/.test(l)) bits.push(l.startsWith('Use') ? 'Use effect' : 'Chance on hit');
@@ -325,12 +326,63 @@ function classify(id, name) {
     res.source = 'Classic raid loot. This raid is not in Forever';
     return res;
   }
+  // Live ForeverDB verified source fallback (when Wowhead listviews were unavailable)
+  const fdbSrc = (rec.fdbSource || '').replace(/\s*;\s*Sold by\s*;\s*/i, ': ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+  if (fdbSrc && !/^(Not known yet\.?|New in Forever: where it comes from isn't known yet\.?)$/i.test(fdbSrc)) {
+    const cleanSrc = fdbSrc.split(';')[0].replace(/\s*\((?:seen in WoW Forever|Forever client|Classic data)\)/gi, '').trim();
+    if (/Onyxia|Barrow Deeps|Hyjal Summit/i.test(fdbSrc)) {
+      res.cat = 'raid'; res.avail = 'raid';
+      res.source = `${cleanSrc}. Raid opens December 9`;
+      return res;
+    }
+    if (/Molten Core|Blackwing Lair|Zul'Gurub|Ahn'Qiraj|Naxxramas|Four Horsemen Chest/i.test(fdbSrc)) {
+      res.cat = 'raid'; res.avail = 'unavailable';
+      res.source = `${cleanSrc}. Classic raid not in Forever`;
+      return res;
+    }
+    if (/^World drop/i.test(cleanSrc)) {
+      res.cat = 'world'; res.avail = 'available';
+      res.source = cleanSrc;
+      return res;
+    }
+    if (/^Crafted with /i.test(cleanSrc)) {
+      res.cat = 'craft'; res.avail = 'available';
+      res.source = cleanSrc.replace(/^Crafted with /i, '') + ' (Crafted)';
+      return res;
+    }
+    if (/^Sold by /i.test(cleanSrc)) {
+      res.cat = 'vendor'; res.avail = 'available';
+      const detailVend = fdbSrc.match(/Sold by[^;]*:\s*([^;]+)/i);
+      res.source = detailVend ? `Sold by ${detailVend[1].replace(/\s*\((?:seen in WoW Forever|Classic data)\)/gi, '').trim()}` : cleanSrc;
+      return res;
+    }
+    if (/^Quest reward from /i.test(cleanSrc) || /^Reward from /i.test(cleanSrc)) {
+      res.cat = 'quest'; res.avail = 'available';
+      res.source = cleanSrc.replace(/^(?:Quest )?reward from /i, 'Quest: ');
+      return res;
+    }
+    if (/^Drops from /i.test(cleanSrc)) {
+      const isDungeon = /Blackrock|Stratholme|Scholomance|Dire Maul|Maraudon|Sunken Temple|Zul'Farrak|Uldaman|Dalaran|Drowned City|Kroldok|Alcaz|Blackmaw|Shaper/i.test(cleanSrc);
+      res.cat = isDungeon ? 'dungeon' : 'world';
+      res.avail = 'available';
+      res.source = cleanSrc.replace(/^Drops from /i, '');
+      return res;
+    }
+  }
+  // Tooltip faction reputation fallback (e.g. The Watchers reputation rewards)
+  const plainTip = tooltipLines(rec.tt && rec.tt.html).join('\n');
+  const repM = plainTip.match(/Requires (The Watchers|Darkspear Raiders|Theramore Expeditionary Force|Warsong Outriders|Silverwing Sentinels|The Defilers|League of Arathor|Stormpike Guard|Frostwolf Clan|Timbermaw Hold|Argent Dawn) - (Friendly|Honored|Revered|Exalted)/i);
+  if (repM) {
+    res.cat = 'vendor'; res.avail = 'available';
+    res.source = `${repM[1]} Reputation Reward (${repM[2]})`;
+    return res;
+  }
   if (!rec.tt) {
     res.cat = 'raid'; res.avail = 'raid';
     res.source = 'Phase 1 raid tier piece. Stats are still hidden; raids open December 9';
     return res;
   }
-  res.source = 'Source not checked yet: see the item on Wowhead';
+  res.source = 'Source not yet confirmed in live ForeverDB';
   return res;
 }
 
@@ -456,7 +508,7 @@ for (const [classId] of CLASSES) {
       level: 60,
       status,
       talentSpecId: talentSpec,
-      sourceUrl: `https://www.wowhead.com/forever/guide/classes/${whPath}`,
+      sourceUrl: (raw && raw.url) ? raw.url : `https://www.wowhead.com/forever/guide/classes/${whPath}`,
       sourceUpdated: raw && raw.updated ? raw.updated.replace(/\//g, '-') : null,
       description: ROLE_NOTES[role],
       doll: { alliance: doll, horde: doll },
@@ -468,13 +520,13 @@ for (const [classId] of CLASSES) {
 }
 
 const meta = {
-  version: '1.60.1.70938',
+  version: '1.60.1.71037',
   level: 60,
   title: 'Level 60 Pre-Raid BiS',
   phase: 'Pre-raid (raids open December 9, 2026)',
   lastUpdated: SRC.collectedAt,
-  source: 'Wowhead WoW: Forever class guides (gear planner on each spec\'s BiS page)',
-  sourceUrl: 'https://www.wowhead.com/forever/guides/classes',
+  source: 'Wowhead & ForeverDB WoW: Forever Level 60 class pre-raid BiS lists',
+  sourceUrl: 'https://foreverdb.net/bis',
   stats,
 };
 

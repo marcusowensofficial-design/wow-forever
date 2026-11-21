@@ -114,7 +114,7 @@
               <span class="blizzard-dropdown-icon">🛡️</span> Level 60 Pre-Raid BiS Planner
             </button>
             <button type="button" class="blizzard-dropdown-link" data-target-tab="tierlist">
-              <span class="blizzard-dropdown-icon">🏆</span> Level 30 Tier List Maker
+              <span class="blizzard-dropdown-icon">🏆</span> Class Tier List Maker
             </button>
             <button type="button" class="blizzard-dropdown-link" data-target-tab="database">
               <span class="blizzard-dropdown-icon">📦</span> Complete Item DB &amp; Market
@@ -198,7 +198,7 @@
           <span class="status-badge-highlight">Classic+ Standalone</span>
           <span><strong>Rulesets:</strong> PvP • PvE • RP • RP-PvP • Hardcore (coming winter)</span>
           <span><strong>Engine:</strong> DX12 RT GI</span>
-          <span><strong>Build:</strong> 1.60.1.70707</span>
+          <span><strong>Build:</strong> 1.60.1.71037</span>
         </div>
       </aside>
 
@@ -369,7 +369,7 @@
               <span class="nav-tile-label">World Atlas<br>&amp; Rares</span>
             </button>
 
-            <button type="button" class="nav-tab-btn" data-tab="tierlist" title="Level 30 Class Tier List Maker">
+            <button type="button" class="nav-tab-btn" data-tab="tierlist" title="Class Tier List Maker">
               <span class="nav-tile-icon">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2" stroke="#ca8a04"/>
@@ -1426,7 +1426,7 @@
               </div>
             </div>
             <div class="phase2-card-actions">
-              <a href="#bis" class="btn-action-gold" onclick="document.querySelector('[data-tab=bis]').click();">🛡️ Explore Level 30 BiS Tables</a>
+              <a href="#bis" class="btn-action-gold" onclick="document.querySelector('[data-tab=bis]').click();">🛡️ Explore Pre-Raid &amp; Leveling BiS</a>
               <button type="button" class="btn-action-ghost" onclick="document.getElementById('btn-open-guides').click();">📖 View Community Guides</button>
             </div>
           </div>
@@ -1464,7 +1464,7 @@
               </div>
             </div>
             <div class="phase2-card-actions">
-              <a href="#deepdives" class="btn-action-gold" onclick="document.querySelector('[data-tab=deepdives]').click();">⚡ Review Level 30 Class Builds</a>
+              <a href="#deepdives" class="btn-action-gold" onclick="document.querySelector('[data-tab=deepdives]').click();">⚡ Review Class Builds &amp; Deep Dives</a>
               <a href="https://www.warcrafttavern.com/forever/news/warlockguy-wins-the-wow-forever-open-1v1-dueling-tournament/" target="_blank" rel="noopener noreferrer" class="btn-action-ghost">🏆 Read Full Tournament Results</a>
             </div>
           </div>
@@ -1620,7 +1620,7 @@
           <div style="margin-bottom: 1rem;">
             <span class="countdown-label" style="color: var(--text-gold);">System Mechanics</span>
             <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">⚖️ Combat Formulas & Modernized Rules</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Verified Build 1.60.1.70707 stat interactions, downranking thresholds, and unified scaling</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Verified Build 1.60.1.71037 stat interactions, downranking thresholds, and unified scaling</p>
           </div>
           <div id="combat-rules-container">
             <!-- Rendered dynamically by js/modules/camping.js -->
@@ -1634,7 +1634,7 @@
         <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
           <div>
             <h3><span>📖</span> Curated Classic+ Guides &amp; Field Manuals</h3>
-            <p class="section-subtext">Deep gameplay primers: Level 30 PvP brackets, rare spawns, deterministic currencies, transmog rules, and hidden forms</p>
+            <p class="section-subtext">Deep gameplay primers: PvP brackets (10–60), rare spawns, deterministic currencies, transmog rules, and hidden forms</p>
           </div>
           <button type="button" class="btn-action-gold" onclick="window.navigateToGuide ? window.navigateToGuide() : (document.querySelector('.nav-tab-btn[data-tab=guides]').click())" style="align-self: flex-start; margin-top: 0.5rem;">
             <span>📖</span> Open Dedicated Guides Hub ➔
@@ -2047,10 +2047,10 @@
       <div class="section-heading-bar">
         <div>
           <h2><span>🎯</span> Class Deep Dives</h2>
-          <p class="section-subtext">Class revamps, abilities, and mechanics, based on Sodapoppin's beta class videos and beta coverage. Every talent and ability description was re-checked against the live game (build 1.60.1.70938) on November 13, 2026.</p>
+          <p class="section-subtext">Live 1–60 class revamps, abilities, and mechanics verified against the live WoW: Forever game (build 1.60.1.71037) and official hotfixes through November 20, 2026.</p>
         </div>
         <div class="deepdive-source-pill">
-          <span>🎙️ Beta coverage · Talents checked vs. live game</span>
+          <span>⚔️ Verified vs. live 1.60.1.71037 (Nov 20)</span>
         </div>
       </div>
 
@@ -2176,7 +2176,7 @@
             <ul style="list-style: none; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
               <li>✦ <strong>Three campfire tiers (Cooking):</strong> Basic (skill 1, 3 objects), Journeyman (blueprint at 90, 5 objects) and Expert (220, 10 objects).</li>
               <li>✦ <strong>Rested XP comes from Leatherworking:</strong> the Camp Tent (skill 20) tops your rested XP up to 5% of a level; the Tanning Rack and Sewing Machine keep that effect.</li>
-              <li>✦ <strong>Cozy Sleeping Bag Synergy:</strong> Resting in a tent with a sleeping bag grants +5% bonus monster kill EXP for 2 hours.</li>
+              <li>✦ <strong>Cozy Sleeping Bag:</strong> Rest in it for up to 3 minutes for +1% XP per minute (max +3% for 1 hour); counts as rested with a visible Resting aura and cannot be used while mounted (Nov 17 hotfix).</li>
               <li>✦ <strong>Camp Cooking Feasts (+5% Kill XP):</strong> Well Fed meals provide primary stats plus +6 MP5 (Sagefish) and +5% bonus EXP.</li>
               <li>✦ <strong>Dedicated Reagent Bag Slot:</strong> Trade materials pull directly into on-site camp stations without inventory clutter.</li>
             </ul>
@@ -2505,7 +2505,7 @@
              ========================================================================== -->
         <div style="grid-column: 1 / -1; margin: 1.5rem 0 0.5rem 0; text-align: center;">
           <span class="status-pulse-badge" style="background: rgba(57, 255, 20, 0.15); border-color: #39ff14; color: #86efac; font-weight: 700; font-size: 0.85rem; padding: 0.35rem 0.85rem;">
-            ⚡ OFFICIAL COMPANION ADDON SUITE • TESTED FOR BUILD 1.60.1.70707
+            ⚡ OFFICIAL COMPANION ADDON SUITE • TESTED FOR BUILD 1.60.1.71037
           </span>
           <h2 style="font-size: 1.65rem; color: #fff; margin-top: 0.5rem; font-family: var(--font-heading); letter-spacing: 0.05em;">
             Engineered for WoW Forever (Camelot 12.0 Engine & TOC 16001)

@@ -129,7 +129,7 @@
       group.innerHTML = `
         <span style="font-size: 0.78rem; color: #94a3b8; font-weight: 600;">Level Bracket:</span>
         <button class="filter-pill poison-lvl-btn ${poisonLevelFilter === 'all' ? 'active' : ''}" data-lvl="all">All Poisons</button>
-        <button class="filter-pill poison-lvl-btn ${poisonLevelFilter === 'beta' ? 'active' : ''}" data-lvl="beta">Level 20–30 (Beta Cap)</button>
+        <button class="filter-pill poison-lvl-btn ${poisonLevelFilter === 'beta' ? 'active' : ''}" data-lvl="beta">Level 20–30 (Early Ranks)</button>
         <button class="filter-pill poison-lvl-btn ${poisonLevelFilter === 'endgame' ? 'active' : ''}" data-lvl="endgame">Level 32–60 (Endgame)</button>
       `;
 

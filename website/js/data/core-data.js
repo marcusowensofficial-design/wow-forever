@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of November 17, 2026 (Live build 1.60.1.70707)
+ * Up-to-date as of November 20, 2026 (Live build 1.60.1.71037)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -16,13 +16,13 @@ const WOW_FOREVER_DATA = {
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
     "currentBetaPhase": "WoW Forever Live Worldwide (Level 60 Progression Active • Tier 1 Raids Unlock Dec 9)",
-    "clientBuild": "1.60.1.70707",
+    "clientBuild": "1.60.1.71037",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 17, 2026"
+    "lastUpdated": "November 20, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -197,6 +197,73 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-90",
+      "title": "WoW: Forever Hotfixes — November 20, 2026: 5 Dungeon Resets/Hr Cap, Stormshroud 3pc Nerf, Blade Flurry/Shank & Demonic Aegis Fixes",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 20, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Dungeon resets capped at 5 per hour (was 10), Stormshroud Armor 3-piece energy proc lowered to 3% for 18 energy, Combat Blade Flurry now cleaves Shank, Demonic Aegis snapshotting fixed, and LFG group visibility resolved.",
+      "content": `Hotfixes deployed November 20, 2026:
+
+• **Dungeons:** Players can now reset and enter each dungeon a maximum of **5 times per hour** (was 10). In Blackrock Spire, a stone pillar should no longer trap players.
+• **Classes:**
+  - **Rogue (Combat):** *Blade Flurry* now correctly causes *Shank*'s damage to hit an additional target.
+  - **Warlock (Demonology):** Fixed a bug where *Demonic Aegis* could be snapshotted into *Demon Armor* or *Demon Skin* and retained after unlearning talents. *Demonic Aegis* and *Demon Skin* are now removed when talents are unlearned.
+• **Items:** *Stormshroud Armor* 3-piece bonus changed to a **3% chance** (was 4%) on melee attack of restoring **18 energy** (was 30).
+• **Professions:** Toron Rockhoof has repaired his forge and anvil in Summit of Eternity so they are usable for Blacksmithing and Smelting.
+• **Quests & World:** *Witch Doctor Ti'ik* (Hinterlands) now drops multiple copies of his head for party members on the quest; *Perfect Yeti Hide* (Feralas) no longer drops again if already on the quest; *Gor'marok* (Tanaris) respawns faster for "The Dunemaul Compound"; *Dunston Willis* (Riverglades) no longer runs partway through "Dunston Checks Out"; Orgrimmar's Mayhoa Skyhoof no longer has glowing eyes.
+• **UI:** Resolved an issue causing some players to see fewer groups than intended when looking for a group.`
+    },
+    {
+      "id": "news-89",
+      "title": "WoW: Forever Hotfixes — November 19, 2026: Seed Hybridizer Re-Enabled, Retribution 2H Holy Damage, Soulbound Motes & Skyborne Riding Discount",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 19, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Seed Hybridizer returns with adjusted values and a failure chance (no Scarce Herb Seeds), Retribution Two-Handed Weapon Spec boosts all Holy damage, Motes of Unstable Magic become soulbound, and Skyborne Honored riding discounts work.",
+      "content": `Hotfixes deployed November 19, 2026:
+
+• **Camping:** The **Seed Hybridizer** has been re-enabled with adjusted values and a chance of failure when combining seeds. *Scarce Herb Seeds* can no longer be used in the Seed Hybridizer.
+• **Classes (Paladin — Retribution):** *Two-Handed Weapon Specialization* now correctly increases all **Holy Damage** dealt while a two-handed weapon is equipped.
+• **Dungeons:**
+  - *City of Dalaran:* *Shade of the Archmage* should no longer despawn immediately upon entering combat.
+  - *The Shaper's Terrace:* *Vitrix's Poison Shock* now deals less damage.
+• **Items:** *Motes of Unstable Magic* are now **soulbound**. *Squall-breaker's Potion* can now be deleted.
+• **Races:**
+  - *Skyborne:* Fixed an issue preventing Skyborne players from receiving the Honored 10% gold discount on Apprentice and Journeyman Riding skills from Genn Fairweather on Zephras Isle.
+  - *Tauren:* *Cultivation* succeeds more reliably on herbs you have the Herbalism skill for and now works properly with *Purple Lotus*.
+• **World & Quests:** Fixed a Silithid Hive Drone stuck under the world near Rustmaul Dig Site (Shimmering Flats) and a bug preventing *Mosh'gra* in Riverglades from dropping rare loot. Fixed Booty Bay Rix Xizzix's strange tome access after "Rift Away", Ensorcelled Parchment replacement for "Stormpike's Deciphering", and creature-type requirements for "Hunting for Ectoplasm".`
+    },
+    {
+      "id": "news-88",
+      "title": "WoW: Forever Hotfixes — November 17, 2026: UBRS Tuning Restored, Soulforge Spell Power, Sleeping Bag Rules, AV Level 58 & 1c AH Deposits Live",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 17, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "UBRS enemy health and damage restored, Paladin Soulforge tank set changed to Spell Power, Cozy Sleeping Bag gets a Resting aura and dismount rule, AV quests set to Level 58, and 1-copper minimum AH deposits go live.",
+      "content": `Hotfixes deployed November 17, 2026 (alongside the weekly maintenance cycle):
+
+• **Economy / Maintenance:** The **Auction House minimum deposit** reduction from 1 silver to **1 copper** went live with the November 17/18 weekly maintenance.
+• **Dungeons (Upper Blackrock Spire):** Corrected an issue causing enemy health and damage to be significantly lower than intended, restoring UBRS to full group difficulty.
+• **Camping (Cozy Sleeping Bag):** Mounted players can no longer sleep atop the Cozy Sleeping Bag; it can now be placed in specific spots (like hunter traps) and displays a **Resting aura** indicating when you are within its area of effect.
+• **Classes & Buffs:**
+  - *Global:* *Might of Stormwind* and *Warchief's Blessing* now reliably cancel on death and apply only to players.
+  - *Shaman:* Fixed *Flurry* incorrectly losing stacks when *Windfury Totem* attacks landed.
+  - *Paladin:* **Soulforge Armor** (upgraded Dungeon Set for tanks) now has **Spell Power** (was Strength) to support Paladin tanks favoring Spell Power for threat and damage.
+• **Items:** *Whiteout Staff* and *Crackling Staff* standardized to **25 Stamina, 25 Intellect, and 74 Spell Power**. Shadow Priests can now hold a *Night Watchman's Torch*; *Escape Plan* range and damage corrected.
+• **PvP:** Fixed mounting inside Warsong Gulch starting rooms. *The Battle for Alterac Valley* quests now require **Level 58** to accept.
+• **Legacy, Professions & Quests:** Fixed *Reagent Economy* randomly stopping; Waylaid Crate obsolete turn-in conversions exchangeable; *Bronze Mace* is now BoE (eligible for Transmog); *The Old Ways* grants Orcish War Leggings recipe via item (recoverable from Sumi); Herbalism *Cultivation* works on Mageroyal; Mathias Shaw now gives rogues "The Manor, Ravenholdt"; *Agamaggan's Blood* is no longer a Dungeon Quest; Shen'dralas party credit, Spectral Iron Ore tracking/spawns, ignore-list persistence, and Master Blacksmithing UI fixes.`
+    },
     {
       "id": "news-87",
       "title": "WoW: Forever Hotfixes — November 16, 2026: Fishing Rack Lures, Windfury Totem Fixes, Vampiric Embrace Halved & Drowned City Tweaks",

@@ -1047,7 +1047,7 @@
             "icon": "inv_fabric_silk_02"
           }
         ],
-        "desc": "12-slot mid-tier bag crafted before the Phase 2 Beta cap."
+        "desc": "12-slot mid-tier leveling bag crafted with Silk Cloth."
       },
       {
         "name": "Runecloth Bag",
@@ -1212,7 +1212,7 @@
             "icon": "inv_fabric_silk_02"
           }
         ],
-        "desc": "WoW Forever Custom: Dedicated 12-slot reagent container (Phase 2 Beta Cap)."
+        "desc": "WoW Forever Custom: Dedicated 12-slot mid-level reagent container."
       },
       {
         "name": "Runecloth Reagent Bag",
@@ -1596,7 +1596,7 @@
             "icon": "inv_misc_pelt_04"
           }
         ],
-        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of arrows (Phase 2 Beta Cap BiS!)."
+        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of arrows (mid-game upgrade)."
       },
       {
         "name": "Ancient Sinew Wrapped Lamina",
@@ -1681,7 +1681,7 @@
             "icon": "inv_misc_pelt_04"
           }
         ],
-        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of bullets (Phase 2 Beta Cap BiS!)."
+        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of bullets (mid-game upgrade)."
       }
     ],
     "reagentBags": [

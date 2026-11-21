@@ -506,12 +506,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Rage Generation Formula",
-        category: "Unconfirmed",
-        details: "Underlying Rage generation formula changes remain unverified in level-38 build",
-        status: "🎙️ Open Balance Question",
-        statusType: "demo",
-        source: "Sodapoppin Commentary"
+        feature: "Normalized Rage Generation Formula",
+        category: "Core Mechanics",
+        details: "Auto-attacks generate fixed rage by weapon speed (~7–9/swing or ~3.46 RPS for 1H; ~14–17/swing or ~4.5 RPS for 2H) rather than scaling with damage dealt. Critical strikes grant +100% (double) rage. Incoming damage rage assumes 50% armor reduction and ignores absorbs (Power Word: Shield no longer starves rage).",
+        status: "Confirmed Live 1.60.1",
+        statusType: "verified",
+        source: "Blizzard Live 1.60.1 Mechanics"
       }
     ],
     betaBuilds: {

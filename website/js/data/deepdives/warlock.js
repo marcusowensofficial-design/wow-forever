@@ -67,11 +67,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "Retained across WoW Forever: a dedicated 6th inventory bag slot designed for Soul Bags, soul shards, healthstones, and spellstones."
       },
       {
-        title: "Unconfirmed Metamorphosis Status",
-        status: "demo",
-        statusLabel: "🎙️ Sodapoppin Demo Finding",
-        badge: "Major Mystery",
-        desc: "Viewers noted an entry/icon for Metamorphosis in Demonology interface clips; however, it was locked and inaccessible on the level-38 character, leaving its exact mechanics and availability unconfirmed."
+        title: "No Metamorphosis — Pet Scaling & Demonic Pact Identity",
+        status: "verified",
+        statusLabel: "Confirmed Live 1.60.1",
+        badge: "Demonology Identity",
+        desc: "Metamorphosis is not in live WoW: Forever (unlike Season of Discovery). Level 60 Demonology centers on pet scaling, Soul Link, Demonic Brand, and the Demonic Pact capstone (benefiting from an active demon alongside a sacrificed demon buff). Per the Nov 20 hotfix, Demonic Aegis and Demon Skin are cleared when talents are unlearned."
       },
       {
         title: "Native Cooldown Manager: Warlock Essentials",
@@ -477,11 +477,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         feature: "Metamorphosis Status",
-        category: "Unconfirmed",
-        details: "Seen in Demonology interface/clips; locked/unconfirmed in level-38 build",
-        status: "🎙️ Visible But Unconfirmed",
-        statusType: "demo",
-        source: "Sodapoppin Demo Commentary"
+        category: "Demonology Identity",
+        details: "Confirmed NOT in live WoW: Forever; Demonology focuses on pet scaling, Soul Link, Demonic Brand, and the Demonic Pact capstone",
+        status: "Confirmed Live 1.60.1",
+        statusType: "verified",
+        source: "Live Level 60 Verification"
       }
     ],
     betaBuilds: {

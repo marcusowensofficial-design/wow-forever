@@ -509,12 +509,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Shadow Word: Death Status",
-        category: "Unconfirmed",
-        details: "Visible in trainer lists for later level progression; not in level-38 build",
-        status: "🎙️ Expected at Level 40+",
-        statusType: "demo",
-        source: "Sodapoppin Commentary"
+        feature: "Shadow Word: Death",
+        category: "Core Mechanics",
+        details: "Baseline Priest spell learned at Level 32 (scaling to 60); instant cast, 30-yd range, 18s CD. Deals 30% max-HP backlash if the target survives (no backlash on miss). Note: Vampiric Embrace party healing is 10% of Shadow damage (+100% self-healing so solo unchanged, Nov 16 hotfix).",
+        status: "Confirmed Live 1.60.1",
+        statusType: "verified",
+        source: "Live Level 60 & Nov 16 Hotfix"
       }
     ],
     betaBuilds: {

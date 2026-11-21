@@ -326,10 +326,10 @@
           <div>
             <h4 style="color: #fbbf24; font-size: 1.3rem; margin: 0 0 0.25rem;">⚡ What Changed for Pets in WoW Forever</h4>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
-              ${escapeHtml(changes.betaCapNotice || "Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.")}
+              ${escapeHtml(changes.betaCapNotice || "Read from the WoW Forever client and set against Classic Era. Each ability is shown at the rank a pet learns by Level 30.")}
             </p>
           </div>
-          <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Beta Cap Level 30</span>
+          <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Level 30 Rank Snapshot</span>
         </div>
 
         <!-- Cross-Navigation Action Bar -->
@@ -352,7 +352,7 @@
         <!-- Quick Section Jump Navigation -->
         <div class="pet-quick-nav">
           <a href="#pet-sec-changes" class="pet-nav-pill"><span>🦊</span> New Fox & Owl Rename</a>
-          <a href="#pet-sec-new-abilities" class="pet-nav-pill"><span>⚡</span> 10 New Abilities (Beta Cap)</a>
+          <a href="#pet-sec-new-abilities" class="pet-nav-pill"><span>⚡</span> 10 New Abilities (Lvl 30 Ranks)</a>
           <a href="#pet-sec-dash-removed" class="pet-nav-pill"><span>💨</span> Dash Expansion & Removed</a>
           <a href="#pet-sec-changed-diff" class="pet-nav-pill"><span>⚖️</span> Abilities Changed (Classic Diff)</a>
           <a href="#pet-sec-universal" class="pet-nav-pill"><span>📊</span> Universal Pet Mechanics</a>
@@ -366,7 +366,7 @@
               <span>🦊</span> New Fox Family & Bird of Prey
             </h4>
             <span style="font-size: 0.8rem; color: #94a3b8; font-style: italic;">
-              ${escapeHtml(changes.betaCapNotice || "Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.")}
+              ${escapeHtml(changes.betaCapNotice || "Read from the WoW Forever client and set against Classic Era. Each ability is shown at the rank a pet learns by Level 30.")}
             </span>
           </div>
 
@@ -435,7 +435,7 @@
                 <span>⚡</span> 10 New Family Abilities Added in Forever
               </h4>
               <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.2rem 0 0;">
-                Each ability is shown at the rank a pet can have at level 30, the closed beta's level cap.
+                Each ability is shown at the rank a pet learns by Level 30 (higher ranks continue scaling up to Level 60).
               </p>
             </div>
             <span class="deepdive-badge badge-exclusive"><span>✦</span> 10 Abilities Total</span>
@@ -504,10 +504,10 @@
           <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
             <div>
               <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-                <span>⚖️</span> Abilities Forever Changed (Beta vs Classic Side-by-Side)
+                <span>⚖️</span> Abilities Forever Changed (Forever vs Classic Side-by-Side)
               </h4>
               <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.2rem 0 0;">
-                Same abilities as in Classic, with altered numbers. Each is shown at Level 30 beta cap rank: Classic above, Forever below.
+                Same abilities as in Classic, with altered numbers. Each is compared at its Level 30 rank: Classic above, Forever below.
               </p>
             </div>
             <span class="deepdive-badge badge-demo"><span>🔍</span> Forensic Diff</span>
@@ -681,8 +681,8 @@
           <div class="pet-changes-cta-content">
             <div class="pet-changes-cta-title">
               <span>⚡</span>
-              <span>Looking for Closed Beta Pet Changes & Reworks?</span>
-              <span class="pet-changes-cta-tag">Beta Cap Lvl 30 Diff</span>
+              <span>Looking for WoW Forever Pet Changes & Reworks?</span>
+              <span class="pet-changes-cta-tag">Classic vs Forever Diff</span>
             </div>
             <p class="pet-changes-cta-desc">
               Explore the brand new Fox family, Bird of Prey rename, 10 new family abilities, Dash expansion on 8 families, pruned abilities, side-by-side Classic vs Forever ability diffs, and universal pet mechanics.
@@ -731,7 +731,7 @@
             <span style="font-size: 0.72rem; color: #94a3b8; align-self: center; font-weight: 600; margin-right: 0.2rem;">Level Bracket:</span>
             <button class="pet-level-filter-btn active" data-level-filter="all">All Levels</button>
             <button class="pet-level-filter-btn" data-level-filter="10-19">Lvl 10–19 (Starters)</button>
-            <button class="pet-level-filter-btn" data-level-filter="20-30">Lvl 20–30 (Beta Cap)</button>
+            <button class="pet-level-filter-btn" data-level-filter="20-30">Lvl 20–30 (Mid-Game)</button>
             <button class="pet-level-filter-btn" data-level-filter="30plus">Lvl 30+ (Endgame)</button>
             <button class="pet-level-filter-btn" data-level-filter="fast">⚡ Fast Swing (≤1.6s)</button>
             <span id="pet-results-counter-badge" class="pet-results-counter-badge" style="display: none;"></span>

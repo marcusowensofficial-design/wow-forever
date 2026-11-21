@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Camping System Matrix Data
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
+ * Datamined from WoW Forever Client (Build 1.60.1.71037 / Nov 19 Hotfixes)
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_CAMPING_MATRIX = [
@@ -562,7 +562,7 @@ window.WOW_CAMPING_MATRIX = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=8365"
       }
     ],
-    "effects": "Places a Fishing Rack that grants the ability to catch uncommon fish for 1 hour, provides Fishing Skill lures, and provides all of the benefits of a Fish Bowl.",
+    "effects": "Places a Fishing Rack that grants the ability to catch uncommon fish for 1 hour, provides Fishing Skill lures for everyone interacting with it (Nov 16 hotfix: higher Bloated Fish drop chance), and provides all of the benefits of a Fish Bowl.",
     "mutualExclusion": null,
     "wowheadUrl": "https://www.wowhead.com/forever/item=279965"
   },
@@ -897,7 +897,7 @@ window.WOW_CAMPING_MATRIX = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14047"
       }
     ],
-    "effects": "Places a Seed Hybridizer that allows seeds to be multiplied or combined into rarer tiers, and provides all of the benefits of an Incense Candle.",
+    "effects": "Places a Seed Hybridizer that allows seeds to be multiplied or combined into rarer tiers (Nov 19 hotfix: re-enabled with adjusted values and a chance of failure; Scarce Herb Seeds cannot be used), and provides all of the benefits of an Incense Candle.",
     "mutualExclusion": null,
     "wowheadUrl": "https://www.wowhead.com/forever/item=279947"
   },

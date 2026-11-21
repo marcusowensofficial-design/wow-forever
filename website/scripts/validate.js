@@ -535,32 +535,33 @@ check('Addon spotlight cards in index.html have live download links and synced v
   }
 });
 
-check('Launch Build 1.60.1.70707 / 70425 consistency across core-data.js and index.html without stale builds', () => {
+check('Live Build 1.60.1.71037 consistency across core-data.js, index.html, and bis-60-data.js without stale builds', () => {
+  const VALID_LIVE_BUILDS = ['1.60.1.71037', '1.60.1.70959', '1.60.1.70938', '1.60.1.70707'];
   const coreCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'core-data.js'), 'utf8');
   const clientBuildMatch = coreCode.match(/"clientBuild":\s*"([^"]+)"/);
-  if (!clientBuildMatch || (clientBuildMatch[1] !== '1.60.1.70707' && clientBuildMatch[1] !== '1.60.1.70425')) {
-    throw new Error(`Expected core-data.js clientBuild to be '1.60.1.70707' or '1.60.1.70425', got '${clientBuildMatch ? clientBuildMatch[1] : 'missing'}'`);
+  if (!clientBuildMatch || !VALID_LIVE_BUILDS.includes(clientBuildMatch[1])) {
+    throw new Error(`Expected core-data.js clientBuild to be a verified 1.60.1 build, got '${clientBuildMatch ? clientBuildMatch[1] : 'missing'}'`);
   }
-  if (!indexHtml.includes('1.60.1.70707') && !indexHtml.includes('1.60.1.70425')) {
-    throw new Error('index.html missing reference to Launch Build 1.60.1.70707 or 1.60.1.70425');
+  if (!indexHtml.includes(clientBuildMatch[1])) {
+    throw new Error(`index.html missing reference to active build ${clientBuildMatch[1]}`);
   }
   if (indexHtml.includes('71890')) {
-    throw new Error('Found stale build 71890 reference in index.html; should be updated to 1.60.1.70425');
+    throw new Error('Found stale build 71890 reference in index.html');
   }
   if (indexHtml.includes('72140')) {
-    throw new Error('Found stale build 72140 reference in index.html; should be updated to 1.60.1.70425');
+    throw new Error('Found stale build 72140 reference in index.html');
+  }
+  if (indexHtml.includes('+5% bonus monster kill EXP for 2 hours')) {
+    throw new Error('Stale Cozy Sleeping Bag figure (+5% / 2h) found in index.html; Forever value is +3% / 1h');
   }
 
   const bisCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'bis-data.js'), 'utf8');
   const bisVersionMatch = bisCode.match(/"version":\s*"([^"]+)"/);
-  if (!bisVersionMatch || (bisVersionMatch[1] !== '1.60.1.70707' && bisVersionMatch[1] !== '1.60.1.70425')) {
-    throw new Error(`Expected bis-data.js version to be '1.60.1.70707' or '1.60.1.70425', got '${bisVersionMatch ? bisVersionMatch[1] : 'missing'}'`);
+  if (!bisVersionMatch || !['1.60.1.71037', '1.60.1.70959', '1.60.1.70938', '1.60.1.70707', '1.60.1.70425'].includes(bisVersionMatch[1])) {
+    throw new Error(`Expected bis-data.js version to be a valid 1.60.1 build, got '${bisVersionMatch ? bisVersionMatch[1] : 'missing'}'`);
   }
-  if (bisCode.includes('71890')) {
-    throw new Error('Found stale build 71890 reference in bis-data.js; should be updated to 1.60.1.70425');
-  }
-  if (bisCode.includes('72140')) {
-    throw new Error('Found stale build 72140 reference in bis-data.js; should be updated to 1.60.1.70425');
+  if (bisCode.includes('71890') || bisCode.includes('72140')) {
+    throw new Error('Found stale build reference in bis-data.js');
   }
 
   const deepdiveFiles = fs.readdirSync(path.join(ROOT, 'js', 'data', 'deepdives'))
@@ -570,12 +571,19 @@ check('Launch Build 1.60.1.70707 / 70425 consistency across core-data.js and ind
   for (const filePath of deepdiveFiles) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const relPath = path.relative(ROOT, filePath).replace(/\\/g, '/');
-    if (fileContent.includes('71890')) {
-      throw new Error(`Found stale build 71890 reference in ${relPath}; should be updated to 1.60.1.70425`);
+    if (fileContent.includes('71890') || fileContent.includes('72140')) {
+      throw new Error(`Found stale build reference in ${relPath}`);
     }
-    if (fileContent.includes('72140')) {
-      throw new Error(`Found stale build 72140 reference in ${relPath}; should be updated to 1.60.1.70425`);
-    }
+  }
+
+  // Content freshness regression guards (post-launch Level 60)
+  const colRaw = fs.readFileSync(path.join(ROOT, 'js', 'data', 'collections-data.js'), 'utf8');
+  if (/above the beta's level 30 cap/i.test(colRaw)) {
+    throw new Error('Found stale beta level 30 cap speculation text in collections-data.js');
+  }
+  const ddBuildsRaw = fs.readFileSync(path.join(ROOT, 'js', 'modules', 'deepdives', 'deepdives-builds.js'), 'utf8');
+  if (ddBuildsRaw.includes('Closed Beta Phase 2 • Level 30 Cap (Live Today!)')) {
+    throw new Error('Found stale "Closed Beta Phase 2 • Level 30 Cap (Live Today!)" banner in deepdives-builds.js');
   }
 });
 
@@ -1492,8 +1500,11 @@ check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () =>
   const fqCode = fs.readFileSync(path.join(ROOT, 'js/data/forever-quests-data.js'), 'utf8');
   const fqWin = {};
   eval(fqCode.replace('window.', 'fqWin.'));
-  if (!Array.isArray(fqWin.WOW_FOREVER_NEW_QUESTS_DATA) || fqWin.WOW_FOREVER_NEW_QUESTS_DATA.length !== 279) {
-    throw new Error(`Expected 279 quests in WOW_FOREVER_NEW_QUESTS_DATA, found ${fqWin.WOW_FOREVER_NEW_QUESTS_DATA?.length}`);
+  if (!Array.isArray(fqWin.WOW_FOREVER_NEW_QUESTS_DATA) || fqWin.WOW_FOREVER_NEW_QUESTS_DATA.length < 722) {
+    throw new Error(`Expected >= 722 quests in WOW_FOREVER_NEW_QUESTS_DATA, found ${fqWin.WOW_FOREVER_NEW_QUESTS_DATA?.length}`);
+  }
+  if (fqWin.WOW_FOREVER_NEW_QUESTS_DATA.some(q => q.giver === 'Unknown NPC')) {
+    throw new Error('Found placeholder "Unknown NPC" giver in WOW_FOREVER_NEW_QUESTS_DATA');
   }
 
   const bgCode = fs.readFileSync(path.join(ROOT, 'js/data/battlegrounds-data.js'), 'utf8');

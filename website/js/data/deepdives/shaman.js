@@ -272,9 +272,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "name": "Raid Tanking Verdict",
-        "status": "demo",
-        "statusLabel": "🎙️ Sodapoppin Demo Finding",
-        "desc": "No player-targeted taunt (like Taunt or Growl) was found in the accessible build. Shamans are fully capable 5-man dungeon tanks and off-tanks, but main-tanking raid bosses with tank-swap mechanics remains unconfirmed."
+        "status": "verified",
+        "statusLabel": "Confirmed Live 1.60.1",
+        "desc": "Confirmed at live Level 60: Shamans have no forced-target taunt in 1.60.1, relying on Rockbiter Weapon + Spirit Weapons (+30% threat), Earth Shock high threat, and Stoneclaw Totem pulsing threat. They excel as 5-man dungeon tanks and off-tanks, while raid main-tanking remains limited by lack of a boss taunt and active mitigation (Blizzard indicated any Shaman talent rework is early 2027 at earliest)."
       }
     ]
   },

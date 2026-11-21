@@ -87,7 +87,7 @@
                 const bLevels = b.levels || [];
                 const bLbl = bLevels[0] === bLevels[1] ? `Level ${bLevels[0]}` : `Lv ${bLevels[0]}–${bLevels[1]}`;
                 const isSelected = idx === bracketIdx;
-                const badge = bLevels[0] === 30 ? ' (Beta Cap)' : (bLevels[0] >= 40 ? ' (Launch)' : '');
+                const badge = bLevels[0] === 30 ? ' (Mid-Game)' : (bLevels[0] >= 40 ? ' (Endgame)' : '');
                 return `
                   <button type="button" class="coach-bracket-btn ${isSelected ? 'active' : ''}" data-idx="${idx}">
                     ${bLbl}${badge}

@@ -516,7 +516,7 @@
                 ? 'Level 60 Endgame Cap • 51 Talent Points' 
                 : (state.capMode === 'lvl30_base' 
                     ? 'Level 30 Base Cap • 21 Talent Points (Standard Progression)' 
-                    : 'Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 \'Talented\' Legacy Perk)')}
+                    : 'Level 30 Leveling Bracket • 26 Talent Points (21 Standard + 5 \'Talented\' Legacy Perk)')}
             </div>
           </div>
         </div>
@@ -547,7 +547,7 @@
 
           <!-- Theorycrafting Cap Selector -->
           <div class="bis-cap-selector-group" title="Select theorycrafting points cap">
-            <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_perk' ? 'active' : ''}" data-cap="lvl30_perk" title="Level 30 Beta Cap (26 pts with Talented perk)">Lvl 30 (26p)</button>
+            <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_perk' ? 'active' : ''}" data-cap="lvl30_perk" title="Level 30 Leveling Bracket (26 pts with Talented perk)">Lvl 30 (26p)</button>
             <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_base' ? 'active' : ''}" data-cap="lvl30_base" title="Level 30 Standard Cap (21 pts without perk)">Lvl 30 (21p)</button>
             <button type="button" class="bis-cap-btn ${state.capMode === 'lvl60' ? 'active' : ''}" data-cap="lvl60" title="Level 60 Endgame Theorycrafting (51 pts)">Lvl 60 (51p)</button>
           </div>

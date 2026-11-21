@@ -11,7 +11,7 @@
     "duration": "1 hour",
     "stacks": "+1% experience per minute rested, up to 3 stacks",
     "maxBonus": "+3% experience",
-    "restingSynergy": "You also count as rested while lying in the bag."
+    "restingSynergy": "You also count as rested while lying in the bag, with a visible Resting aura indicating its area of effect. Cannot be used while mounted (Nov 17 hotfix)."
   },
   "studentFodder": {
     "name": "Student Fodder",

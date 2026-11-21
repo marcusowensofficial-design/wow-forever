@@ -97,9 +97,9 @@
         <div class="beta-builds-header-callout">
           <div class="beta-callout-top">
             <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20 & Level 30 Closed Beta Theorycraft & Spec Builds</h3>
-              <span class="beta-disclaimer-badge">Closed Beta Phase 2 • Level 30 Cap (Live Today!)</span>
-              <span class="deepdive-badge badge-verified"><span>✓</span> 21 Talent Points Active</span>
+              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20 & Level 30 Leveling Spec Builds</h3>
+              <span class="beta-disclaimer-badge">Leveling Milestone • Levels 20 &amp; 30</span>
+              <span class="deepdive-badge badge-verified"><span>✓</span> 21 Talent Points (+5 w/ Talented)</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
               <button type="button" class="talent-calc-link-btn" onclick="window.navigateToGuide ? window.navigateToGuide((({hunter: 'guide-hunter-pets', warrior: 'guide-class-warrior', paladin: 'guide-class-paladin', rogue: 'guide-class-rogue', priest: 'guide-class-priest', shaman: 'guide-class-shaman', mage: 'guide-battle-mage', warlock: 'guide-class-warlock', druid: 'guide-druid-forms'}[cData.id]) || ('guide-class-' + cData.id))) : (document.querySelector('.nav-tab-btn[data-tab=&quot;guides&quot;]')?.click())" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; background: linear-gradient(135deg, rgba(243, 192, 67, 0.25), rgba(180, 83, 9, 0.4)); border-color: var(--border-gold); color: #fff; cursor: pointer;">
@@ -114,22 +114,22 @@
             </div>
           </div>
           <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0.5rem 0 0.8rem; line-height: 1.55;">
-            These are <strong>Level 20 and Level 30 leveling builds</strong> from the beta. A level 30 character has <strong>21 talent points</strong>, or <strong>26</strong> with the Legacy <em>Talented</em> perk (talent points from level 5 instead of 10). For level 60 builds, see the Talents tab.
+            These are <strong>Level 20 and Level 30 leveling milestone builds</strong>. A level 30 character has <strong>21 talent points</strong>, or <strong>26</strong> with the Legacy <em>Talented</em> perk (talent points from level 5 instead of 10). For Level 60 endgame builds, open the Talents tab.
           </p>
           <div style="font-size: 0.78rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-            <span>⚠️ <em>Built during the beta. Talent values were re-checked against the live game on November 13, 2026, but some leveling advice may have shifted since launch.</em></span>
+            <span>ℹ️ <em>Talent values verified against live WoW: Forever (build 1.60.1). Use the Talents tab for full 51-point Level 60 raid specs.</em></span>
           </div>
         </div>
 
         <!-- Level Bracket Toggle -->
         ${hasLevelVariants ? `
           <div class="level-bracket-toggle-wrap">
-            <span class="level-toggle-label">Active Bracket:</span>
+            <span class="level-toggle-label">Leveling Bracket:</span>
             <button class="level-bracket-btn ${activeLevel === '30' ? 'active' : ''}" data-build-level="30">
-              <span class="bracket-badge">Live Phase 2</span> Level 30 Cap (21 Talent Points)
+              <span class="bracket-badge">Mid-Game</span> Level 30 Milestone (21 Talent Points)
             </button>
             <button class="level-bracket-btn ${activeLevel === '20' ? 'active' : ''}" data-build-level="20">
-              <span class="bracket-badge">Phase 1</span> Level 20 Cap (11 Talent Points)
+              <span class="bracket-badge">Early</span> Level 20 Milestone (11 Talent Points)
             </button>
           </div>
         ` : ''}

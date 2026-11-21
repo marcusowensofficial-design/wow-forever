@@ -1,14 +1,148 @@
 {
- "collectedAt": "2026-11-15",
+ "collectedAt": "2026-11-20",
  "source": "https://www.wowhead.com/forever/guides/classes",
  "specs": {
   "druid/balance/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/druid/balance/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/druid/balance",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "96",
-     "slots": []
+     "name": "Level 60 Pre-Raid (ForeverDB)",
+     "slots": [
+      [
+       1,
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       22403,
+       "Nacreous Shell Necklace",
+       3,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
+      ],
+      [
+       3,
+       15067,
+       "Ironfeather Shoulders",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
+       []
+      ],
+      [
+       5,
+       280057,
+       "Robes of Dark Summons",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       13253,
+       "Hands of Power",
+       3,
+       [
+        "fdb:0:gloves-arcane-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
+       []
+      ],
+      [
+       7,
+       252486,
+       "Ironfeather Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       8,
+       226774,
+       "Feralheart Galoshes",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
+       []
+      ],
+      [
+       12,
+       21836,
+       "Ritssyn's Ring of Chaos",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       23027,
+       "Warmth of Forgiveness",
+       4,
+       []
+      ],
+      [
+       16,
+       17780,
+       "Blade of Eternal Darkness",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19315,
+       "Therazane's Touch",
+       4,
+       [
+        "fdb:0:off-hand-superior-intellect"
+       ]
+      ]
+     ]
     }
    ]
   },
@@ -840,177 +974,594 @@
    ]
   },
   "hunter/survival/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/hunter/survival/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/hunter/survival",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "4",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
-       0,
-       18714,
-       "Ancient Sinew Wrapped Lamina",
-       4,
-       []
-      ],
-      [
        1,
-       16465,
-       "Field Marshal's Chain Helm",
+       252605,
+       "Black Dragonscale Helm",
        4,
-       []
+       [
+        "fdb:0:falcon-s-call"
+       ]
       ],
       [
        2,
-       19377,
-       "Prestor's Talisman of Connivery",
+       18404,
+       "Onyxia Tooth Pendant",
        4,
-       []
+       [
+        "fdb:0:necklace-agility"
+       ]
       ],
       [
        3,
-       21665,
-       "Mantle of Wicked Revenge",
+       271955,
+       "Theramore Pauldrons",
        4,
-       []
+       [
+        "fdb:0:might-of-the-scourge"
+       ]
       ],
       [
-       4,
-       11840,
-       "Master Builder's Shirt",
-       1,
-       []
+       15,
+       272414,
+       "Howler's Furs",
+       3,
+       [
+        "fdb:0:cloak-agility"
+       ]
       ],
       [
        5,
-       22436,
-       "Cryptstalker Tunic",
+       252483,
+       "Dawn Armor",
        4,
-       []
+       [
+        "fdb:0:chest-living-stats"
+       ]
+      ],
+      [
+       9,
+       19582,
+       "Windtalker's Wristguards",
+       4,
+       [
+        "fdb:0:bracer-superior-agility"
+       ]
+      ],
+      [
+       10,
+       19157,
+       "Chromatic Gauntlets",
+       4,
+       [
+        "fdb:0:gloves-superior-agility"
+       ]
       ],
       [
        6,
-       21586,
-       "Belt of Never-ending Agony",
-       4,
+       20043,
+       "Highlander's Chain Girdle",
+       3,
        []
       ],
       [
        7,
-       22437,
-       "Cryptstalker Legguards",
+       22748,
+       "Sentinel's Chain Leggings",
        4,
-       []
+       [
+        "fdb:0:falcon-s-call"
+       ]
       ],
       [
        8,
-       22440,
-       "Cryptstalker Boots",
-       4,
-       []
-      ],
-      [
-       9,
-       22443,
-       "Cryptstalker Wristguards",
-       4,
-       []
-      ],
-      [
-       10,
-       21672,
-       "Gloves of Enforcement",
-       4,
-       []
+       13967,
+       "Windreaver Greaves",
+       3,
+       [
+        "fdb:0:boots-greater-agility"
+       ]
       ],
       [
        11,
-       23038,
-       "Band of Unnatural Forces",
+       19325,
+       "Don Julio's Band",
        4,
        []
       ],
       [
        12,
-       22961,
-       "Band of Reanimation",
+       275981,
+       "Warden's Signet of Ferocity",
        4,
        []
       ],
       [
        13,
-       23041,
-       "Slayer's Crest",
-       4,
+       13209,
+       "Seal of the Dawn",
+       3,
        []
       ],
       [
        14,
-       19406,
-       "Drake Fang Talisman",
-       4,
-       []
-      ],
-      [
-       15,
-       21710,
-       "Cloak of the Fallen God",
-       4,
+       280065,
+       "Behemoth Bones",
+       3,
        []
       ],
       [
        16,
-       21242,
-       "Blessed Qiraji War Axe",
-       4,
-       []
-      ],
-      [
-       17,
-       19019,
-       "Thunderfury, Blessed Blade of the Windseeker",
-       5,
-       []
+       250619,
+       "Legionite Glaive",
+       3,
+       [
+        "fdb:0:2h-weapon-agility"
+       ]
       ],
       [
        18,
-       272594,
-       "Premier High Warlord's Recurve",
+       272841,
+       "Premier Grand Marshal's Bullseye",
        4,
-       []
-      ],
-      [
-       19,
-       22999,
-       "Tabard of the Argent Dawn",
-       1,
-       []
-      ],
-      [
-       24,
-       274387,
-       "Swiftfeather Arrow",
-       4,
-       []
+       [
+        "fdb:0:sniper-scope"
+       ]
       ]
      ]
     }
    ]
   },
   "mage/arcane/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/mage/arcane/bis-gear",
-   "updated": "2026/11/15",
-   "sets": []
+   "url": "https://foreverdb.net/bis/mage/arcane",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
+   "sets": [
+    {
+     "name": "Level 60 Pre-Raid (ForeverDB)",
+     "slots": [
+      [
+       1,
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       19426,
+       "Orb of the Darkmoon",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
+      ],
+      [
+       3,
+       19050,
+       "Mantle of the Timbermaw",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
+       []
+      ],
+      [
+       5,
+       14152,
+       "Robe of the Archmage",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       14146,
+       "Gloves of Spell Mastery",
+       4,
+       [
+        "fdb:0:gloves-arcane-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
+       []
+      ],
+      [
+       7,
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       8,
+       226931,
+       "Sorcerer's Sandals",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
+       []
+      ],
+      [
+       12,
+       20632,
+       "Mindtear Band",
+       4,
+       []
+      ],
+      [
+       13,
+       18468,
+       "Royal Seal of Eldre'Thalas",
+       3,
+       []
+      ],
+      [
+       14,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       16,
+       17780,
+       "Blade of Eternal Darkness",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19315,
+       "Therazane's Touch",
+       4,
+       [
+        "fdb:0:off-hand-wisdom"
+       ]
+      ],
+      [
+       18,
+       13938,
+       "Bonecreeper Stylus",
+       3,
+       []
+      ]
+     ]
+    }
+   ]
   },
   "mage/fire/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/mage/fire/bis-gear",
-   "updated": "2026/11/14",
-   "sets": []
+   "url": "https://foreverdb.net/bis/mage/fire",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
+   "sets": [
+    {
+     "name": "Level 60 Pre-Raid (ForeverDB)",
+     "slots": [
+      [
+       1,
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       18404,
+       "Onyxia Tooth Pendant",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
+      ],
+      [
+       3,
+       19050,
+       "Mantle of the Timbermaw",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
+       []
+      ],
+      [
+       5,
+       14152,
+       "Robe of the Archmage",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       14146,
+       "Gloves of Spell Mastery",
+       4,
+       [
+        "fdb:0:gloves-fire-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
+       []
+      ],
+      [
+       7,
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       8,
+       22064,
+       "Sorcerer's Boots",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23237,
+       "Ring of the Eternal Flame",
+       4,
+       []
+      ],
+      [
+       12,
+       23025,
+       "Seal of the Damned",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       20036,
+       "Fire Ruby",
+       3,
+       []
+      ],
+      [
+       16,
+       22266,
+       "Flarethorn",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19311,
+       "Tome of Fiery Arcana",
+       4,
+       [
+        "fdb:0:off-hand-superior-intellect"
+       ]
+      ],
+      [
+       18,
+       11748,
+       "Pyric Caduceus",
+       3,
+       []
+      ]
+     ]
+    }
+   ]
   },
   "mage/frost/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/mage/frost/bis-gear",
-   "updated": "2026/11/14",
-   "sets": []
+   "url": "https://foreverdb.net/bis/mage/frost",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
+   "sets": [
+    {
+     "name": "Level 60 Pre-Raid (ForeverDB)",
+     "slots": [
+      [
+       1,
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       19426,
+       "Orb of the Darkmoon",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
+      ],
+      [
+       3,
+       19050,
+       "Mantle of the Timbermaw",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
+       []
+      ],
+      [
+       5,
+       14152,
+       "Robe of the Archmage",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       14146,
+       "Gloves of Spell Mastery",
+       4,
+       [
+        "fdb:0:gloves-frost-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
+       []
+      ],
+      [
+       7,
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       8,
+       22064,
+       "Sorcerer's Boots",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
+       []
+      ],
+      [
+       12,
+       21836,
+       "Ritssyn's Ring of Chaos",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       13968,
+       "Eye of the Beast",
+       3,
+       []
+      ],
+      [
+       16,
+       944,
+       "Elemental Mage Staff",
+       4,
+       [
+        "fdb:0:2h-weapon-spellblasting"
+       ]
+      ],
+      [
+       18,
+       19108,
+       "Wand of Biting Cold",
+       3,
+       []
+      ]
+     ]
+    }
+   ]
   },
   "paladin/holy/bis-gear": {
    "url": "https://www.wowhead.com/forever/guide/classes/paladin/holy/bis-gear",
@@ -1279,267 +1830,432 @@
    ]
   },
   "paladin/retribution/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/paladin/retribution/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/paladin/retribution",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "1",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
        1,
-       21387,
-       "Avenger's Crown",
+       250599,
+       "Stalwart Helm",
        4,
        [
-        "spell:1293806:wardens-signet-of-ferocity"
+        "fdb:0:death-s-embrace"
        ]
       ],
       [
        2,
-       23053,
-       "Stormrage's Talisman of Seething",
+       18404,
+       "Onyxia Tooth Pendant",
        4,
        [
-        "spell:1249019:enchant-necklace-strength"
+        "fdb:0:necklace-strength"
        ]
       ],
       [
        3,
-       21391,
-       "Avenger's Pauldrons",
-       4,
+       12927,
+       "Truestrike Shoulders",
+       3,
        [
-        "spell:29483:might-of-the-scourge"
+        "fdb:0:might-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272414,
+       "Howler's Furs",
+       3,
+       [
+        "fdb:0:cloak-agility"
        ]
       ],
       [
        5,
-       21389,
-       "Avenger's Breastplate",
+       252484,
+       "Timbermaw Tunic",
        4,
        [
-        "spell:20025:enchant-chest-greater-stats"
-       ]
-      ],
-      [
-       6,
-       21586,
-       "Belt of Never-ending Agony",
-       4,
-       []
-      ],
-      [
-       7,
-       21390,
-       "Avenger's Legguards",
-       4,
-       [
-        "spell:22840:arcanum-of-rapidity"
-       ]
-      ],
-      [
-       8,
-       21388,
-       "Avenger's Greaves",
-       4,
-       [
-        "spell:20023:enchant-boots-greater-agility"
+        "fdb:0:chest-living-stats"
        ]
       ],
       [
        9,
-       21602,
-       "Qiraji Execution Bracers",
-       4,
+       12936,
+       "Battleborn Armbraces",
+       3,
        [
-        "spell:20010:enchant-bracer-superior-strength"
+        "fdb:0:bracer-superior-strength"
        ]
       ],
       [
        10,
-       21581,
-       "Gauntlets of Annihilation",
+       19157,
+       "Chromatic Gauntlets",
        4,
        [
-        "spell:1248640:enchant-gloves-superior-strength"
+        "fdb:0:gloves-superior-strength"
+       ]
+      ],
+      [
+       6,
+       20216,
+       "Belt of Preserved Heads",
+       3,
+       []
+      ],
+      [
+       7,
+       22672,
+       "Sentinel's Plate Legguards",
+       4,
+       [
+        "fdb:0:death-s-embrace"
+       ]
+      ],
+      [
+       8,
+       14616,
+       "Bloodmail Boots",
+       3,
+       [
+        "fdb:0:forceful-rugged-armor-kit"
        ]
       ],
       [
        11,
-       23038,
-       "Band of Unnatural Forces",
+       23025,
+       "Seal of the Damned",
        4,
        []
       ],
       [
        12,
-       19384,
-       "Master Dragonslayer's Ring",
+       19325,
+       "Don Julio's Band",
        4,
        []
       ],
       [
        13,
-       22954,
-       "Kiss of the Spider",
-       4,
+       13209,
+       "Seal of the Dawn",
+       3,
        []
       ],
       [
        14,
-       19406,
-       "Drake Fang Talisman",
-       4,
+       280065,
+       "Behemoth Bones",
+       3,
        []
-      ],
-      [
-       15,
-       21710,
-       "Cloak of the Fallen God",
-       4,
-       [
-        "spell:13882:enchant-cloak-lesser-agility"
-       ]
       ],
       [
        16,
-       17182,
-       "Sulfuras, Hand of Ragnaros",
-       5,
-       []
-      ],
-      [
-       18,
-       272435,
-       "Libram of Law",
-       3,
-       []
+       19167,
+       "Blackfury",
+       4,
+       [
+        "fdb:0:2h-weapon-strength"
+       ]
       ]
      ]
     }
    ]
   },
   "priest/discipline/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/priest/discipline/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/priest/discipline",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "1",
-     "slots": []
-    }
-   ]
-  },
-  "priest/holy/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/priest/holy/bis-gear",
-   "updated": "2026/11/14",
-   "sets": [
-    {
-     "race": "1",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
        1,
-       22514,
-       "Circlet of Faith",
-       4,
-       []
+       260212,
+       "Bad Hat",
+       3,
+       [
+        "fdb:0:prophetic-aura"
+       ]
       ],
       [
        2,
-       21712,
-       "Amulet of the Fallen God",
+       20685,
+       "Wavefront Necklace",
        4,
-       []
+       [
+        "fdb:0:necklace-healing-power"
+       ]
       ],
       [
        3,
-       22515,
-       "Shoulderpads of Faith",
+       14139,
+       "Mooncloth Shoulders",
+       3,
+       [
+        "fdb:0:resilience-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       18510,
+       "Hide of the Wild",
        4,
        []
       ],
       [
        5,
-       22512,
-       "Robe of Faith",
+       14154,
+       "Truefaith Vestments",
        4,
-       []
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-healing-power"
+       ]
+      ],
+      [
+       10,
+       20717,
+       "Desert Bloom Gloves",
+       3,
+       [
+        "fdb:0:gloves-healing-power"
+       ]
       ],
       [
        6,
-       21582,
-       "Grasp of the Old God",
-       4,
+       18327,
+       "Whipvine Cord",
+       3,
        []
       ],
       [
        7,
-       22513,
-       "Leggings of Faith",
-       4,
-       []
+       18386,
+       "Padre's Trousers",
+       3,
+       [
+        "fdb:0:prophetic-aura"
+       ]
       ],
       [
        8,
-       22516,
-       "Sandals of Faith",
-       4,
-       []
-      ],
-      [
-       9,
-       21604,
-       "Bracelets of Royal Redemption",
-       4,
-       []
-      ],
-      [
-       10,
-       22517,
-       "Gloves of Faith",
-       4,
-       []
+       275609,
+       "Swarmtender's Footpads",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
       ],
       [
        11,
-       23061,
-       "Ring of Faith",
+       19140,
+       "Cauterizing Band",
        4,
        []
       ],
       [
        12,
-       22939,
-       "Band of Unanswered Prayers",
+       275983,
+       "Warden's Signet of Resolve",
        4,
        []
       ],
       [
        13,
-       19395,
-       "Rejuvenating Gem",
-       4,
+       18469,
+       "Royal Seal of Eldre'Thalas",
+       3,
        []
       ],
       [
        14,
-       23047,
-       "Eye of the Dead",
-       4,
-       []
-      ],
-      [
-       15,
-       21583,
-       "Cloak of Clarity",
-       4,
+       272439,
+       "Serenity Field",
+       3,
        []
       ],
       [
        16,
-       21275,
-       "Blessed Qiraji Augur Staff",
+       2816,
+       "Death Speaker Scepter",
+       3,
+       [
+        "fdb:0:weapon-healing-power"
+       ]
+      ],
+      [
+       17,
+       19312,
+       "Lei of the Lifegiver",
+       4,
+       [
+        "fdb:0:off-hand-wisdom"
+       ]
+      ],
+      [
+       18,
+       279246,
+       "Torch of Light",
        4,
        []
+      ]
+     ]
+    }
+   ]
+  },
+  "priest/holy/bis-gear": {
+   "url": "https://foreverdb.net/bis/priest/holy",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
+   "sets": [
+    {
+     "name": "Level 60 Pre-Raid (ForeverDB)",
+     "slots": [
+      [
+       1,
+       260212,
+       "Bad Hat",
+       3,
+       [
+        "fdb:0:prophetic-aura"
+       ]
+      ],
+      [
+       2,
+       20685,
+       "Wavefront Necklace",
+       4,
+       [
+        "fdb:0:necklace-healing-power"
+       ]
+      ],
+      [
+       3,
+       14139,
+       "Mooncloth Shoulders",
+       3,
+       [
+        "fdb:0:resilience-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       18510,
+       "Hide of the Wild",
+       4,
+       []
+      ],
+      [
+       5,
+       14154,
+       "Truefaith Vestments",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-healing-power"
+       ]
+      ],
+      [
+       10,
+       20717,
+       "Desert Bloom Gloves",
+       3,
+       [
+        "fdb:0:gloves-healing-power"
+       ]
+      ],
+      [
+       6,
+       18327,
+       "Whipvine Cord",
+       3,
+       []
+      ],
+      [
+       7,
+       18386,
+       "Padre's Trousers",
+       3,
+       [
+        "fdb:0:prophetic-aura"
+       ]
+      ],
+      [
+       8,
+       275609,
+       "Swarmtender's Footpads",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       19140,
+       "Cauterizing Band",
+       4,
+       []
+      ],
+      [
+       12,
+       275983,
+       "Warden's Signet of Resolve",
+       4,
+       []
+      ],
+      [
+       13,
+       18469,
+       "Royal Seal of Eldre'Thalas",
+       3,
+       []
+      ],
+      [
+       14,
+       272439,
+       "Serenity Field",
+       3,
+       []
+      ],
+      [
+       16,
+       2816,
+       "Death Speaker Scepter",
+       3,
+       [
+        "fdb:0:weapon-healing-power"
+       ]
+      ],
+      [
+       17,
+       19312,
+       "Lei of the Lifegiver",
+       4,
+       [
+        "fdb:0:off-hand-excellent-spirit"
+       ]
       ],
       [
        18,
@@ -2590,52 +3306,150 @@
    ]
   },
   "warlock/affliction/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/warlock/affliction/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/warlock/affliction",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "2",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
        1,
-       280887,
-       "Head",
-       null,
-       []
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       19426,
+       "Orb of the Darkmoon",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
       ],
       [
        3,
-       280882,
-       "Shoulders",
-       null,
+       14112,
+       "Felcloth Shoulders",
+       2,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
        []
       ],
       [
        5,
-       280883,
-       "Chest",
-       null,
+       14153,
+       "Robe of the Void",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       18407,
+       "Felcloth Gloves",
+       3,
+       [
+        "fdb:0:gloves-shadow-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
        []
       ],
       [
        7,
-       280886,
-       "Legs",
-       null,
-       []
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
       ],
       [
        8,
-       280889,
-       "Feet",
-       null,
+       254113,
+       "Black Sandals",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
        []
       ],
       [
-       10,
-       280888,
-       "Hands",
-       null,
+       12,
+       21836,
+       "Ritssyn's Ring of Chaos",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       13213,
+       "Smolderweb's Eye",
+       3,
+       []
+      ],
+      [
+       16,
+       18372,
+       "Blade of the New Moon",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19309,
+       "Tome of Shadow Force",
+       4,
+       [
+        "fdb:0:off-hand-superior-intellect"
+       ]
+      ],
+      [
+       18,
+       13396,
+       "Skul's Ghastly Touch",
+       3,
        []
       ]
      ]
@@ -2643,52 +3457,150 @@
    ]
   },
   "warlock/demonology/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/warlock/demonology/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/warlock/demonology",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "2",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
        1,
-       280887,
-       "Head",
-       null,
-       []
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       19426,
+       "Orb of the Darkmoon",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
       ],
       [
        3,
-       280882,
-       "Shoulders",
-       null,
+       19050,
+       "Mantle of the Timbermaw",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
        []
       ],
       [
        5,
-       280883,
-       "Chest",
-       null,
+       14153,
+       "Robe of the Void",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       22077,
+       "Deathmist Wraps",
+       4,
+       [
+        "fdb:0:gloves-shadow-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
        []
       ],
       [
        7,
-       280886,
-       "Legs",
-       null,
-       []
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
       ],
       [
        8,
-       280889,
-       "Feet",
-       null,
+       272552,
+       "Premier Felweave Boots",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
        []
       ],
       [
-       10,
-       280888,
-       "Hands",
-       null,
+       12,
+       21836,
+       "Ritssyn's Ring of Chaos",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       13213,
+       "Smolderweb's Eye",
+       3,
+       []
+      ],
+      [
+       16,
+       18372,
+       "Blade of the New Moon",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19315,
+       "Therazane's Touch",
+       4,
+       [
+        "fdb:0:off-hand-superior-intellect"
+       ]
+      ],
+      [
+       18,
+       22408,
+       "Ritssyn's Wand of Bad Mojo",
+       3,
        []
       ]
      ]
@@ -2696,52 +3608,150 @@
    ]
   },
   "warlock/destruction/bis-gear": {
-   "url": "https://www.wowhead.com/forever/guide/classes/warlock/destruction/bis-gear",
-   "updated": "2026/11/14",
+   "url": "https://foreverdb.net/bis/warlock/destruction",
+   "sourceProvider": "ForeverDB",
+   "updated": "2026-11-20",
    "sets": [
     {
-     "race": "2",
+     "name": "Level 60 Pre-Raid (ForeverDB)",
      "slots": [
       [
        1,
-       280887,
-       "Head",
-       null,
-       []
+       22267,
+       "Spellweaver's Turban",
+       3,
+       [
+        "fdb:0:presence-of-sight"
+       ]
+      ],
+      [
+       2,
+       18404,
+       "Onyxia Tooth Pendant",
+       4,
+       [
+        "fdb:0:necklace-spell-power"
+       ]
       ],
       [
        3,
-       280882,
-       "Shoulders",
-       null,
+       19050,
+       "Mantle of the Timbermaw",
+       3,
+       [
+        "fdb:0:power-of-the-scourge"
+       ]
+      ],
+      [
+       15,
+       272411,
+       "Arcanoweave Cloak",
+       3,
        []
       ],
       [
        5,
-       280883,
-       "Chest",
-       null,
+       14153,
+       "Robe of the Void",
+       4,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       9,
+       19595,
+       "Dryad's Wrist Bindings",
+       4,
+       [
+        "fdb:0:bracer-greater-spellpower"
+       ]
+      ],
+      [
+       10,
+       14146,
+       "Gloves of Spell Mastery",
+       4,
+       [
+        "fdb:0:gloves-fire-power"
+       ]
+      ],
+      [
+       6,
+       18405,
+       "Belt of the Archmage",
+       4,
        []
       ],
       [
        7,
-       280886,
-       "Legs",
-       null,
-       []
+       19165,
+       "Flarecore Leggings",
+       4,
+       [
+        "fdb:0:presence-of-sight"
+       ]
       ],
       [
        8,
-       280889,
-       "Feet",
-       null,
+       13369,
+       "Fire Striders",
+       3,
+       [
+        "fdb:0:mystic-rugged-armor-kit"
+       ]
+      ],
+      [
+       11,
+       23025,
+       "Seal of the Damned",
+       4,
        []
       ],
       [
-       10,
-       280888,
-       "Hands",
-       null,
+       12,
+       23237,
+       "Ring of the Eternal Flame",
+       4,
+       []
+      ],
+      [
+       13,
+       272438,
+       "Weakness Analyzer",
+       3,
+       []
+      ],
+      [
+       14,
+       13968,
+       "Eye of the Beast",
+       3,
+       []
+      ],
+      [
+       16,
+       22266,
+       "Flarethorn",
+       3,
+       [
+        "fdb:0:weapon-spell-power"
+       ]
+      ],
+      [
+       17,
+       19311,
+       "Tome of Fiery Arcana",
+       4,
+       [
+        "fdb:0:off-hand-superior-intellect"
+       ]
+      ],
+      [
+       18,
+       13938,
+       "Bonecreeper Stylus",
+       3,
        []
       ]
      ]
@@ -3254,6 +4264,17 @@
     ]
    }
   },
+  "944": {
+   "id": 944,
+   "tt": {
+    "name": "Elemental Mage Staff",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Elemental Mage Staff<br><!--ilvl-->61<br>Item level 61<br>Binds when equipped<br>Two-Hand (Staff)<br>147 - 221 damage, speed 3.20<br>57.5 damage per second<br>+10 Fire Resistance<br>+10 Frost Resistance<br>+100 Fire Damage Done<br>+100 Frost Damage Done<br>+26 Intellect<br>+8 Spell Penetration<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "World drop (Classic data)",
+   "fetched": true
+  },
   "2243": {
    "id": 2243,
    "tt": {
@@ -3313,6 +4334,17 @@
      }
     ]
    }
+  },
+  "2816": {
+   "id": 2816,
+   "tt": {
+    "name": "Death Speaker Scepter",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Death Speaker Scepter<br><!--ilvl-->33<br>Item level 33<br>Binds when picked up<br>Main Hand (Mace)<br>42 - 78 damage, speed 2.80<br>21.4 damage per second<br>+12 Health per 5 sec<br>+68 Healing Power<br>+28 Shadow Damage Done<br><!--rlvl-->28<br>Requires level 28"
+   },
+   "fdbSource": "Drops from Death Speaker Jargba (boss) in Razorfen Kraul , 20% (Classic drop rate) (seen in WoW Forever)",
+   "fetched": true
   },
   "10249": {
    "id": 10249,
@@ -3493,6 +4525,18 @@
     "icon": "inv_jewelry_talisman_06",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Uther's Strength</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->52</span><!--bo--><br>Binds when equipped<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->47<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->18</span> and damage done by up to <span><!--rtg42-->6</span> for all magical spells and effects.</span><br><br><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=8397/uthers-light\" class=\"q2\">2% chance when struck in melee to gain a holy shield, absorbing 216 damage for 15 sec. This chance is doubled in Wasteland and Haunted areas. (Proc chance: 4%)</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">27</span> <span class=\"moneycopper\">22</span></div></td></tr></table><!--i?11302:1:60:47-->"
    },
+   "fetched": true,
+   "fdbSource": "Drops from Colossus of Zora, 10% (Classic data) ; Drops from Colossus of Regal, 10% (Classic data) ; Drops from Colossus of Ashi, 10% (Classic data)"
+  },
+  "11748": {
+   "id": 11748,
+   "tt": {
+    "name": "Item 11748",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->53<br>Item level 53<br>Binds when picked up<br>Ranged (Wand)<br>66 - 123 Fire damage, speed 1.80<br>52.5 damage per second<br>+13 Fire Damage Done<br>+3 Spirit<br><!--rlvl-->48<br>Requires level 48"
+   },
+   "fdbSource": "Drops from Pyromancer Loregrain (boss) in Blackrock Depths , 27% (Classic drop rate) (seen in WoW Forever)",
    "fetched": true
   },
   "11840": {
@@ -3577,7 +4621,8 @@
     "icon": "inv_chest_plate10",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Enchanted Thorium Breastplate</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Chest</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->657 Armor</span><br><span><!--stat4-->+12 Strength</span><br><span><!--stat7-->+26 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 135 / 135</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->9.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">39</span> <span class=\"moneycopper\">72</span></div></td></tr></table><!--i?12618:1:60:58-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Blacksmithing (Forever client)"
   },
   "12625": {
    "id": 12625,
@@ -3679,6 +4724,28 @@
    },
    "fetched": true
   },
+  "12927": {
+   "id": 12927,
+   "tt": {
+    "name": "Item 12927",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Shoulder (Leather)<br>129 Armor<br>+15 Hit<br>+24 Attack Power<br>+10 Stamina<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Drops from Pyroguard Emberseer (boss) in Blackrock Spire , 20% (Classic data)",
+   "fetched": true
+  },
+  "12936": {
+   "id": 12936,
+   "tt": {
+    "name": "Item 12936",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Wrist (Plate)<br>287 Armor<br>+10 Hit<br>+14 Critical Strike<br>+7 Spirit<br><!--rlvl-->58<br>Requires level 58"
+   },
+   "fdbSource": "Drops from Warchief Rend Blackhand (boss) in Blackrock Spire , 20% (Classic data)",
+   "fetched": true
+  },
   "13208": {
    "id": 13208,
    "tt": {
@@ -3700,6 +4767,39 @@
      }
     ]
    },
+   "fetched": true
+  },
+  "13209": {
+   "id": 13209,
+   "tt": {
+    "name": "Item 13209",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Trinket (Miscellaneous)<br>Equip: +78 Attack Power against Undead. Allows the acquisition of Scourgestones on behalf of the Argent Dawn.<br>Unique-Equipped: Trinket of the Dawn (1)<br>Revealed 7 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). Changed in the live client ( build 70938 ) since beta build 70450: Stats: +78 Attack Power Vs Undead → none; Effects: nothing → “Equip: +78 Attack Power against Undead. Allows the acquisition of Scourgestones on behalf of the Argent Dawn.”."
+   },
+   "fdbSource": "Quest reward from The Active Agent (level 60), a choice of rewards (Classic data)",
+   "fetched": true
+  },
+  "13213": {
+   "id": 13213,
+   "tt": {
+    "name": "Item 13213",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Trinket (Miscellaneous)<br>+10 Hit<br>+5 Nature Resistance<br><!--rlvl-->55<br>Requires level 55<br>Use: Remove 1 Disarm effect from target ally."
+   },
+   "fdbSource": "Drops from Mother Smolderweb (boss) in Blackrock Spire , 35% (Classic drop rate) (seen in WoW Forever)",
+   "fetched": true
+  },
+  "13253": {
+   "id": 13253,
+   "tt": {
+    "name": "Item 13253",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Hands (Cloth)<br>53 Armor<br>+8 Spirit<br>+9 Intellect<br>+23 Spell Power<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Drops from Quartermaster Zigris (boss) in Blackrock Spire , 14% (Classic data)",
    "fetched": true
   },
   "13346": {
@@ -3756,6 +4856,72 @@
     ]
    }
   },
+  "13369": {
+   "id": 13369,
+   "tt": {
+    "name": "Item 13369",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Feet (Cloth)<br>61 Armor<br>+5 Spirit<br>+13 Fire Resistance<br>+29 Fire Damage Done<br><!--rlvl-->58<br>Requires level 58"
+   },
+   "fdbSource": "Drops from Balnazzar (boss) in Stratholme , 20% (Classic data)",
+   "fetched": true
+  },
+  "13396": {
+   "id": 13396,
+   "tt": {
+    "name": "Item 13396",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Ranged (Wand)<br>75 - 140 Shadow damage, speed 1.80<br>59.7 damage per second<br>+14 Shadow Damage Done<br>+3 Shadow Resistance<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Drops from Skul (boss) in Stratholme , 33% (Classic data)",
+   "fetched": true
+  },
+  "13938": {
+   "id": 13938,
+   "tt": {
+    "name": "Item 13938",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Ranged (Wand)<br>83 - 155 Arcane damage, speed 1.90<br>62.6 damage per second<br>+5 Intellect<br>+11 Spell Power<br><!--rlvl-->57<br>Requires level 57"
+   },
+   "fdbSource": "Drops from Darkmaster Gandling (boss) in Scholomance , 14% (Classic data)",
+   "fetched": true
+  },
+  "13967": {
+   "id": 13967,
+   "tt": {
+    "name": "Item 13967",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Feet (Mail)<br>247 Armor<br>+20 Agility<br>+10 Hit<br>+4 Intellect<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Drops from Kirtonos the Herald, 11% (Classic data)",
+   "fetched": true
+  },
+  "13968": {
+   "id": 13968,
+   "tt": {
+    "name": "Item 13968",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Trinket (Miscellaneous)<br>Equip: Improves your chance to get a Critical Strike with Spells by 1.0%.<br>Use: Increases your Spell Hit chance by 7% for 20 sec."
+   },
+   "fdbSource": "Quest reward from For The Horde! (level 60), a choice of rewards, Horde (Classic data) ; Quest reward from General Drakkisath's Demise (level 60), a choice of rewards, Alliance (Classic data)",
+   "fetched": true
+  },
+  "14112": {
+   "id": 14112,
+   "tt": {
+    "name": "Felcloth Shoulders",
+    "q": 2,
+    "icon": "inv_misc_questionmark",
+    "html": "Felcloth Shoulders<br><!--ilvl-->62<br>Item level 62<br>Binds when equipped<br>Shoulder (Cloth)<br>60 Armor<br>+5 Spirit<br>+26 Shadow Damage Done<br><!--rlvl-->57<br>Requires level 57"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
+  },
   "14139": {
    "id": 14139,
    "tt": {
@@ -3784,6 +4950,51 @@
      }
     ]
    },
+   "fetched": true,
+   "fdbSource": "Crafted: Tailoring 275 (Forever client). Learn it at skill 275 . Some effort: craft it or buy it from a crafter."
+  },
+  "14146": {
+   "id": 14146,
+   "tt": {
+    "name": "Gloves of Spell Mastery",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Gloves of Spell Mastery<br><!--ilvl-->62<br>Item level 62<br>Binds when equipped<br>Hands (Cloth)<br>60 Armor<br>+10 Intellect<br>+9 Spell Power<br>+28 Critical Strike<br>Classes: Priest, Mage, Warlock<br><!--rlvl-->57<br>Requires level 57"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client) ; World drop (Classic data)",
+   "fetched": true
+  },
+  "14152": {
+   "id": 14152,
+   "tt": {
+    "name": "Robe of the Archmage",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Robe of the Archmage<br><!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Chest (Cloth)<br>96 Armor<br>+12 Intellect<br>+40 Spell Power<br>+14 Critical Strike<br>Classes: Mage<br><!--rlvl-->57<br>Requires level 57<br>Use: Restores 375 to 625 mana."
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
+  },
+  "14153": {
+   "id": 14153,
+   "tt": {
+    "name": "Robe of the Void",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Robe of the Void<br><!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Chest (Cloth)<br>96 Armor<br>+10 Stamina<br>+9 Intellect<br>+46 Spell Power<br>Classes: Warlock<br><!--rlvl-->57<br>Requires level 57<br>Use: Heal your pet for 450 to 750."
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
+  },
+  "14154": {
+   "id": 14154,
+   "tt": {
+    "name": "Truefaith Vestments",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Truefaith Vestments<br><!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Chest (Cloth)<br>96 Armor<br>+14 Stamina<br>+73 Healing Power<br>+25 Spell Damage<br>+16 Spirit<br>Classes: Priest<br><!--rlvl-->57<br>Requires level 57<br>Equip: Reduces the cooldown of your Fade ability by 2 sec."
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
    "fetched": true
   },
   "14553": {
@@ -3846,6 +5057,17 @@
    },
    "fetched": true
   },
+  "14616": {
+   "id": 14616,
+   "tt": {
+    "name": "Item 14616",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Feet (Mail)<br>247 Armor<br>+10 Stamina<br>+10 Intellect<br>+9 Strength<br>+8 Agility<br>+10 Hit<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Drops from Lord Alexei Barov (boss) in Scholomance , 3.7% (Classic data) ; Drops from Lady Illucia Barov (boss) in Scholomance , 1.1% (Classic data)",
+   "fetched": true
+  },
   "15047": {
    "id": 15047,
    "tt": {
@@ -3854,6 +5076,18 @@
     "icon": "inv_chest_chain_06",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Red Dragonscale Breastplate</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Chest</td><th><!--scstart4:3--><span class=\"q1\">Mail</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->360 Armor</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+20 Fire Resistance<!--e--><!--ps--><br>Durability 120 / 120</td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->57</span> and damage done by up to <span><!--rtg42-->19</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">98</span> <span class=\"moneycopper\">36</span></div></td></tr></table><!--i?15047:1:60:56-->"
    },
+   "fetched": true,
+   "fdbSource": "Crafted with Leatherworking (Forever client)"
+  },
+  "15067": {
+   "id": 15067,
+   "tt": {
+    "name": "Ironfeather Shoulders",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Ironfeather Shoulders<br><!--ilvl-->54<br>Item level 54<br>Binds when equipped<br>Shoulder (Leather)<br>117 Armor<br>+20 Intellect<br>+8 Spirit<br>+15 Spell Power<br><!--rlvl-->49<br>Requires level 49"
+   },
+   "fdbSource": "Crafted with Leatherworking (Forever client)",
    "fetched": true
   },
   "15283": {
@@ -4139,6 +5373,50 @@
    },
    "fetched": true
   },
+  "17780": {
+   "id": 17780,
+   "tt": {
+    "name": "Item 17780",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->54<br>Item level 54<br>Binds when picked up<br>Main Hand (Dagger)<br>41 - 77 damage, speed 1.50<br>39.3 damage per second<br>+62 Spell Power<br><!--rlvl-->49<br>Requires level 49<br>Equip: Chance on landing a damaging spell to deal 112 Shadow damage and restore 104 mana to you."
+   },
+   "fdbSource": "Drops from Princess Theradras (boss) in Maraudon , 0.5% (Classic data)",
+   "fetched": true
+  },
+  "18327": {
+   "id": 18327,
+   "tt": {
+    "name": "Item 18327",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->59<br>Item level 59<br>Binds when picked up<br>Waist (Cloth)<br>47 Armor<br>+9 Intellect<br>+6 Mana per 5 sec<br>+29 Healing Power<br>+10 Spell Damage<br><!--rlvl-->54<br>Requires level 54"
+   },
+   "fdbSource": "Drops from Alzzin the Wildshaper (boss) in Dire Maul , 20% (Classic data)",
+   "fetched": true
+  },
+  "18372": {
+   "id": 18372,
+   "tt": {
+    "name": "Item 18372",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Main Hand (Dagger)<br>40 - 74 damage, speed 1.40<br>40.7 damage per second<br>+15 Stamina<br>+88 Shadow Damage Done<br><!--rlvl-->57<br>Requires level 57"
+   },
+   "fdbSource": "Drops from Immol'thar (boss) in Dire Maul , 20% (Classic data)",
+   "fetched": true
+  },
+  "18386": {
+   "id": 18386,
+   "tt": {
+    "name": "Item 18386",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Legs (Cloth)<br>76 Armor<br>+20 Intellect<br>+7 Mana per 5 sec<br>+37 Healing Power<br>+12 Spell Damage<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Drops from Illyanna Ravenoak (boss) in Dire Maul , 25% (Classic drop rate) (seen in WoW Forever)",
+   "fetched": true
+  },
   "18404": {
    "id": 18404,
    "tt": {
@@ -4147,7 +5425,8 @@
     "icon": "inv_jewelry_necklace_09",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Onyxia Tooth Pendant</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Neck</td><th><!--scstart4:-3--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat3-->+7 Agility</span><br><span><!--stat7-->+8 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+10 Fire Resistance<!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: Improves your chance to get a critical strike by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">3</span> <span class=\"moneysilver\">38</span> <span class=\"moneycopper\">58</span></div></td></tr></table><!--i?18404:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward: For All To See (a choice) (needs a raid drop), level 60 · Horde (Classic data)."
   },
   "18405": {
    "id": 18405,
@@ -4177,7 +5456,19 @@
       "skill": 295
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Tailoring 295 (Forever client). Learn it at skill 295 . Some effort: craft it or buy it from a crafter."
+  },
+  "18407": {
+   "id": 18407,
+   "tt": {
+    "name": "Felcloth Gloves",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Felcloth Gloves<br><!--ilvl-->62<br>Item level 62<br>Binds when equipped<br>Hands (Cloth)<br>55 Armor<br>+9 Stamina<br>+33 Shadow Damage Done<br><!--rlvl-->57<br>Requires level 57"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
   },
   "18409": {
    "id": 18409,
@@ -4187,6 +5478,29 @@
     "icon": "inv_gauntlets_17",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Mooncloth Gloves</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Hands</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->55 Armor</span><br><span><!--stat7-->+9 Stamina</span><br><span><!--stat5-->+16 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 30 / 30</td></tr></table><table><tr><td>Requires Level <!--rlvl-->57<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->33</span> and damage done by up to <span><!--rtg42-->11</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">12</span> <span class=\"moneycopper\">19</span></div></td></tr></table><!--i?18409:1:60:57-->"
    },
+   "fetched": true,
+   "fdbSource": "Crafted with Tailoring (Forever client)"
+  },
+  "18468": {
+   "id": 18468,
+   "tt": {
+    "name": "Item 18468",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+15 Nature Resistance<br>+4 Mana per 5 sec<br>+21 Arcane Damage Done<br>Classes: Mage<br>\"Blessed by the Shen'dralar Ancients.\"<br>Revealed 10 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). New in the live client ( build 70888 ): this item wasn't in beta build 70450.<br>Changes from Classic Era<br>Stats: +10 Fire Resistance in Classic Era; +15 Nature Resistance, +4 Mana per 5 sec, +21 Arcane Damage Done in Forever"
+   },
+   "fdbSource": "Quest reward from The Arcanist's Cookbook (level 60) (Classic data)",
+   "fetched": true
+  },
+  "18469": {
+   "id": 18469,
+   "tt": {
+    "name": "Item 18469",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+15 Nature Resistance<br>+22 Healing Power<br>+7 Spell Damage<br>Classes: Priest<br>Equip: Increases Spirit by 16 in Cavernous or Underground areas.<br>\"Blessed by the Shen'dralar Ancients.\"<br>Revealed 11 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). New in the live client ( build 70938 ): this item wasn't in beta build 70450.<br>Changes from Classic Era<br>Stats: +10 Fire Resistance in Classic Era; +15 Nature Resistance, +22 Healing Power, +7 Spell Damage in Forever<br>Effects in Classic Era: Increase Healing 33 , Increased Mana Regen"
+   },
+   "fdbSource": "Quest reward from Holy Bologna: What the Light Won't Tell You (level 60) (Classic data)",
    "fetched": true
   },
   "18470": {
@@ -4292,7 +5606,8 @@
      }
     ]
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted: Leatherworking 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
   },
   "18511": {
    "id": 18511,
@@ -4302,7 +5617,8 @@
     "icon": "inv_misc_cape_20",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Shifting Cloak</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Back</td></tr></table><!--rf--><span><!--amr-->48 Armor</span><br><span><!--stat3-->+17 Agility</span><br><span><!--stat7-->+8 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->57<br><!--rr--><span class=\"q2\">Equip: Increases your chance to Dodge an attack by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">9</span> <span class=\"moneycopper\">71</span></div></td></tr></table><!--i?18511:1:60:57-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Leatherworking (Forever client)"
   },
   "18714": {
    "id": 18714,
@@ -4507,7 +5823,8 @@
       "skill": 290
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Tailoring 290 (Forever client). Learn it at skill 290 . Some effort: craft it or buy it from a crafter."
   },
   "19104": {
    "id": 19104,
@@ -4517,7 +5834,8 @@
     "icon": "inv_hammer_21",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Stormstrike Hammer</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>One-Hand</td><th><!--scstart2:4--><span class=\"q1\">Mace</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->80 - 150 Damage</span></td>\n    <th>Speed <!--spd-->2.70</th>\n</tr></table><!--dps-->(42.59 damage per second)<br><span><!--stat4-->+15 Strength</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 90 / 90</td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires Stormpike Guard - Revered<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">6</span> <span class=\"moneysilver\">42</span> <span class=\"moneycopper\">27</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Thanthaldis Snowgleam (seen in WoW Forever) ; Sold by ; Thanthaldis Snowgleam &lt;Stormpike Supply Officer&gt;, Alterac Mountains (Alliance): 32g 11s 37c (seen in WoW Forever) ; Gaelden Hammersmith &lt;Stormpike Supply Officer&gt;, Alterac Valley (Alliance): 32g 11s 37c (Classic data)"
   },
   "19107": {
    "id": 19107,
@@ -4527,6 +5845,40 @@
     "icon": "inv_weapon_crossbow_07",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Bloodseeker</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Ranged</td><th><!--scstart2:18--><span class=\"q1\">Crossbow</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->85 - 128 Damage</span></td>\n    <th>Speed <!--spd-->3.30</th>\n</tr></table><!--dps-->(32.27 damage per second)<br><span><!--stat4-->+8 Strength</span><br><span><!--stat3-->+7 Agility</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 75 / 75</td></tr></table><table><tr><td><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">41</span> <span class=\"moneycopper\">71</span></div></td></tr></table>"
    },
+   "fetched": true,
+   "fdbSource": "Quest reward from The Legend of Korrak (level 60), a choice of rewards, Horde (Classic data) ; Quest reward from Korrak the Bloodrager (level 60), a choice of rewards, Alliance (Classic data) ; Quest reward from Hero of the Stormpike (level 60), a choice of rewards, Alliance (Classic data) ; Quest reward from Hero of the Frostwolf (level 60), a choice of rewards, Horde (Classic data)"
+  },
+  "19108": {
+   "id": 19108,
+   "tt": {
+    "name": "Wand of Biting Cold",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Wand of Biting Cold<br><!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Ranged (Wand)<br>67 - 125 Frost damage, speed 1.50<br>64.0 damage per second<br>+16 Frost Damage Done"
+   },
+   "fdbSource": "Quest reward from The Legend of Korrak (level 60), a choice of rewards, Horde (Classic data) ; Quest reward from Korrak the Bloodrager (level 60), a choice of rewards, Alliance (Classic data) ; Quest reward from Hero of the Stormpike (level 60), a choice of rewards, Alliance (Classic data) ; Quest reward from Hero of the Frostwolf (level 60), a choice of rewards, Horde (Classic data)",
+   "fetched": true
+  },
+  "19140": {
+   "id": 19140,
+   "tt": {
+    "name": "Cauterizing Band",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Cauterizing Band<br><!--ilvl-->71<br>Item level 71<br>Binds when picked up<br>Finger (Miscellaneous)<br>+12 Intellect<br>+9 Stamina<br>+46 Healing Power<br>+15 Spell Damage<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Drops from Flamewaker Elite, 0.46% (Classic data) ; Drops from Flamewaker Healer, 0.14% (Classic data) ; Found in Cache of the Firelord, 20% (Classic data)",
+   "fetched": true
+  },
+  "19157": {
+   "id": 19157,
+   "tt": {
+    "name": "Chromatic Gauntlets",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Chromatic Gauntlets<br><!--ilvl-->70<br>Item level 70<br>Binds when equipped<br>Hands (Mail)<br>279 Armor<br>+5 Fire Resistance<br>+5 Nature Resistance<br>+5 Frost Resistance<br>+5 Shadow Resistance<br>+44 Attack Power<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Crafted with Leatherworking (Forever client)",
    "fetched": true
   },
   "19159": {
@@ -4537,6 +5889,18 @@
     "icon": "inv_misc_herb_15",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Woven Ivy Necklace</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->51</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Neck</td><th><!--scstart4:-3--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat4-->+6 Strength</span><br><span><!--stat3-->+9 Agility</span><br><span><!--stat7-->+10 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">11</span> <span class=\"moneycopper\">41</span></div></td></tr></table>"
    },
+   "fetched": true,
+   "fdbSource": "Quest reward from Wanted: Vile Priestess Hexx and Her Minions (level 51), a choice of rewards, Horde (seen in WoW Forever)"
+  },
+  "19165": {
+   "id": 19165,
+   "tt": {
+    "name": "Flarecore Leggings",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Flarecore Leggings<br><!--ilvl-->70<br>Item level 70<br>Binds when equipped<br>Legs (Cloth)<br>94 Armor<br>+21 Stamina<br>+16 Fire Resistance<br>+43 Spell Power<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
    "fetched": true
   },
   "19166": {
@@ -4568,6 +5932,17 @@
      }
     ]
    }
+  },
+  "19167": {
+   "id": 19167,
+   "tt": {
+    "name": "Blackfury",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Blackfury<br><!--ilvl-->66<br>Item level 66<br>Binds when equipped<br>Two-Hand (Polearm)<br>105 - 158 damage, speed 2.10<br>62.6 damage per second<br>+35 Strength<br>+15 Stamina<br>+10 Fire Resistance<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Crafted with Blacksmithing (Forever client)",
+   "fetched": true
   },
   "19169": {
    "id": 19169,
@@ -4622,6 +5997,50 @@
      }
     ]
    }
+  },
+  "19309": {
+   "id": 19309,
+   "tt": {
+    "name": "Tome of Shadow Force",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Tome of Shadow Force<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Unique<br>Held In Off-hand (Miscellaneous)<br>+7 Stamina<br>+31 Shadow Damage Done<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Drops from Grunnda Wolfheart, 0.02% (Classic data)",
+   "fetched": true
+  },
+  "19311": {
+   "id": 19311,
+   "tt": {
+    "name": "Tome of Fiery Arcana",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Tome of Fiery Arcana<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Unique<br>Held In Off-hand (Miscellaneous)<br>+37 Fire Damage Done<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Drops from Grunnda Wolfheart, 0.02% (Classic data)",
+   "fetched": true
+  },
+  "19312": {
+   "id": 19312,
+   "tt": {
+    "name": "Lei of the Lifegiver",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Lei of the Lifegiver<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Unique<br>Held In Off-hand (Miscellaneous)<br>+37 Healing Power<br>+5 Mana per 5 sec<br>+12 Spell Damage<br>+11 Stamina<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Drops from Grunnda Wolfheart, 0.02% (Classic data)",
+   "fetched": true
+  },
+  "19315": {
+   "id": 19315,
+   "tt": {
+    "name": "Therazane's Touch",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Therazane's Touch<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Unique<br>Held In Off-hand (Miscellaneous)<br>+29 Spell Power<br><!--rlvl-->55<br>Requires level 55"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Drops from Grunnda Wolfheart, 0.02% (Classic data)",
+   "fetched": true
   },
   "19324": {
    "id": 19324,
@@ -4753,7 +6172,8 @@
      }
     ]
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Thanthaldis Snowgleam in Alterac Mountains (39.5, 81.7) for 75g 55s 55c (Seen in Forever)."
   },
   "19377": {
    "id": 19377,
@@ -4915,7 +6335,8 @@
       ]
      }
     ]
-   }
+   },
+   "fdbSource": "Sold by Gelvas Grimegate in Elwynn Forest (41.5, 69) (Seen in Forever)."
   },
   "19491": {
    "id": 19491,
@@ -4997,6 +6418,18 @@
     "icon": "inv_bracer_06",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Berserker Bracers</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Wrist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->323 Armor</span><br><span><!--stat4-->+19 Strength</span><br><span><!--stat3-->+8 Agility</span><br><span><!--stat7-->+11 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 55 / 55</td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires Silverwing Sentinels - Exalted<br>Requires Warsong Outriders - Exalted<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">76</span> <span class=\"moneycopper\">99</span></div></td></tr></table>"
    },
+   "fetched": true,
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Sold by ; Illiyana Moonblaze &lt;Silverwing Supply Officer&gt;, Ashenvale (Alliance): 8g 84s 97c (seen in WoW Forever) ; Kelm Hargunth &lt;Warsong Supply Officer&gt;, The Barrens (Horde): 8g 84s 97c (seen in WoW Forever)"
+  },
+  "19582": {
+   "id": 19582,
+   "tt": {
+    "name": "Windtalker's Wristguards",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Windtalker's Wristguards<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Wrist (Mail)<br>182 Armor<br>+8 Intellect<br>+7 Spirit<br>+8 Stamina<br>+38 Attack Power<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Sold by ; Illiyana Moonblaze <Silverwing Supply Officer>, Ashenvale (Alliance): 12g 11s 3c (seen in WoW Forever) ; Kelm Hargunth <Warsong Supply Officer>, The Barrens (Horde): 12g 11s 3c (seen in WoW Forever)",
    "fetched": true
   },
   "19595": {
@@ -5037,7 +6470,30 @@
       ]
      }
     ]
-   }
+   },
+   "fdbSource": "Sold by Illiyana Moonblaze in Ashenvale (61.5, 83.8) for 8g 75s 49c (Seen in Forever)."
+  },
+  "20036": {
+   "id": 20036,
+   "tt": {
+    "name": "Item 20036",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->52<br>Item level 52<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+14 Fire Damage Done<br>Classes: Mage<br>Use: Refreshes the cooldown of Fire Ward and causes Fire damage absorbed by it to increase the damage of your next Fire Blast cast within 1 min by 50% of the damage absorbed.<br>\"Unpredictability leads to both victory and death.\""
+   },
+   "fdbSource": "Quest reward from Destroy Morphaz (level 52), a choice of rewards (Classic data)",
+   "fetched": true
+  },
+  "20043": {
+   "id": 20043,
+   "tt": {
+    "name": "Highlander's Chain Girdle",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Highlander's Chain Girdle<br><!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Unique<br>Waist (Mail)<br>208 Armor<br>+10 Stamina<br>+14 Critical Strike<br>+34 Attack Power<br><!--rlvl-->58<br>Requires level 58<br>Requires The League of Arathor - Honored"
+   },
+   "fdbSource": "Sold by Samuel Hawke (seen in WoW Forever) ; Sold by ; Samuel Hawke <League of Arathor Supply Officer>, Arathi Highlands (Alliance): 8g 80s 66c (seen in WoW Forever)",
+   "fetched": true
   },
   "20061": {
    "id": 20061,
@@ -5074,7 +6530,8 @@
     "icon": "inv_misc_cape_02",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Deathguard's Cloak</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Back</td></tr></table><!--rf--><span><!--amr-->50 Armor</span><br><span><!--stat3-->+5 Agility</span><br><span><!--stat7-->+11 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=510/the-defilers\" class=\"q1\">The Defilers</a> - Exalted<br>Requires The Defilers - Exalted<br><!--rr--><span class=\"q2\">Equip: +<!--rtg38-->34 Attack Power.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">63</span> <span class=\"moneycopper\">53</span></div></td></tr></table><!--i?20068:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Rutherford Twing (seen in WoW Forever) ; Sold by ; Rutherford Twing &lt;Defilers Supply Officer&gt;, Arathi Highlands (Horde): 13g 17s 69c (seen in WoW Forever)"
   },
   "20070": {
    "id": 20070,
@@ -5130,6 +6587,28 @@
    },
    "fetched": true
   },
+  "20216": {
+   "id": 20216,
+   "tt": {
+    "name": "Belt of Preserved Heads",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Belt of Preserved Heads<br><!--ilvl-->70<br>Item level 70<br>Binds when picked up<br>Waist (Leather)<br>108 Armor<br>+15 Agility<br>+14 Strength<br>+11 Stamina<br>+10 Hit"
+   },
+   "fdbSource": "Quest reward from A Collection of Heads (level 60), a choice of rewards (Classic data)",
+   "fetched": true
+  },
+  "20632": {
+   "id": 20632,
+   "tt": {
+    "name": "Mindtear Band",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Mindtear Band<br><!--ilvl-->71<br>Item level 71<br>Binds when picked up<br>Unique<br>Finger (Miscellaneous)<br>+6 Intellect<br>+6 Stamina<br>+22 Spell Power<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Drops from Taerar, 14% (Classic data)",
+   "fetched": true
+  },
   "20685": {
    "id": 20685,
    "tt": {
@@ -5151,7 +6630,19 @@
       "cls": 3
      }
     ]
-   }
+   },
+   "fdbSource": "Drops from Lord Skwol, 30% (Classic data). Some effort: farm the creature."
+  },
+  "20717": {
+   "id": 20717,
+   "tt": {
+    "name": "Desert Bloom Gloves",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Desert Bloom Gloves<br><!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Hands (Cloth)<br>56 Armor<br>+5 Stamina<br>+5 Intellect<br>+5 Spirit<br>+51 Healing Power<br>+17 Spell Damage"
+   },
+   "fdbSource": "Quest reward from Armaments of War (level 60) (Classic data)",
+   "fetched": true
   },
   "21181": {
    "id": 21181,
@@ -5161,7 +6652,8 @@
     "icon": "inv_misc_herb_02",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Grace of Earth</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->66</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=25892/grace-of-earth\" class=\"q2\">Reduces your threat to enemy targets within 30 yards, making them less likely to attack you.</a> (5 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">16</span> <span class=\"moneycopper\">12</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Not known yet."
   },
   "21182": {
    "id": 21182,
@@ -5193,7 +6685,8 @@
     "icon": "inv_bracer_07",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Deeprock Bracers</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Wrist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->309 Armor</span><br><span><!--stat4-->+19 Strength</span><br><span><!--stat3-->+10 Agility</span><br><span><!--stat7-->+8 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 55 / 55</td></tr></table><table><tr><td><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">44</span> <span class=\"moneycopper\">25</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Not known yet."
   },
   "21187": {
    "id": 21187,
@@ -5741,6 +7234,17 @@
     ]
    }
   },
+  "21836": {
+   "id": 21836,
+   "tt": {
+    "name": "Ritssyn's Ring of Chaos",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Ritssyn's Ring of Chaos<br><!--ilvl-->71<br>Item level 71<br>Binds when picked up<br>Unique<br>Finger (Miscellaneous)<br>+6 Stamina<br>+25 Spell Power<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Drops from Vekniss Stinger in Ahn'Qiraj Temple , 0.34% (Classic data) ; Drops from Qiraji Lasher, 0.31% (Classic data) ; Drops from Vekniss Warrior in Ahn'Qiraj Temple , 0.29% (Classic data) ; Drops from Qiraji Brainwasher in Ahn'Qiraj Temple , 0.24% (Classic data) ; Drops from Vekniss Wasp in Ahn'Qiraj Temple , 0.2% (Classic data) ; Drops from Vekniss Soldier in Ahn'Qiraj Temple , 0.19% (Classic data)",
+   "fetched": true
+  },
   "21994": {
    "id": 21994,
    "tt": {
@@ -5749,7 +7253,8 @@
     "icon": "inv_belt_34",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Belt of Heroism</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Waist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->380 Armor</span><br><span><!--stat4-->+15 Strength</span><br><span><!--stat3-->+9 Agility</span><br><span><!--stat7-->+12 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 45 / 45</td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->7.</span><!--itemEffects:1--><br /><br /><span class=\"q\"><a href=\"/forever/item-set=511/battlegear-of-heroism\" class=\"q\">Battlegear of Heroism</a> (0/8)</span><div class=\"q0 indent\"><span><!--si21994--><a href=\"/forever/item=21994/belt-of-heroism\">Belt of Heroism</a></span><br /><span><!--si21995--><a href=\"/forever/item=21995/boots-of-heroism\">Boots of Heroism</a></span><br /><span><!--si21996--><a href=\"/forever/item=21996/bracers-of-heroism\">Bracers of Heroism</a></span><br /><span><!--si21997--><a href=\"/forever/item=21997/breastplate-of-heroism\">Breastplate of Heroism</a></span><br /><span><!--si21998--><a href=\"/forever/item=21998/gauntlets-of-heroism\">Gauntlets of Heroism</a></span><br /><span><!--si21999--><a href=\"/forever/item=21999/helm-of-heroism\">Helm of Heroism</a></span><br /><span><!--si22000--><a href=\"/forever/item=22000/legplates-of-heroism\">Legplates of Heroism</a></span><br /><span><!--si22001--><a href=\"/forever/item=22001/spaulders-of-heroism\">Spaulders of Heroism</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=18679/increased-all-resist-08\">+8 All Resistances.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=27419/warriors-resolve\">Chance on melee attack to heal you for 88 to 132.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span><br /><span>(8) Set : <a href=\"/forever/spell=14803/increased-armor-200\">+200 Armor.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">24</span> <span class=\"moneycopper\">76</span></div></td></tr></table><!--i?21994:1:60:58-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward from Just Compensation (level 60), Alliance (Classic data) ; Quest reward from Just Compensation (level 60), Horde (Classic data)"
   },
   "21995": {
    "id": 21995,
@@ -5759,7 +7264,8 @@
     "icon": "inv_boots_plate_03",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Boots of Heroism</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->470 Armor</span><br><span><!--stat4-->+20 Strength</span><br><span><!--stat7-->+20 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 75 / 75</td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><!--itemEffects:1--><br /><br /><span class=\"q\"><a href=\"/forever/item-set=511/battlegear-of-heroism\" class=\"q\">Battlegear of Heroism</a> (0/8)</span><div class=\"q0 indent\"><span><!--si21994--><a href=\"/forever/item=21994/belt-of-heroism\">Belt of Heroism</a></span><br /><span><!--si21995--><a href=\"/forever/item=21995/boots-of-heroism\">Boots of Heroism</a></span><br /><span><!--si21996--><a href=\"/forever/item=21996/bracers-of-heroism\">Bracers of Heroism</a></span><br /><span><!--si21997--><a href=\"/forever/item=21997/breastplate-of-heroism\">Breastplate of Heroism</a></span><br /><span><!--si21998--><a href=\"/forever/item=21998/gauntlets-of-heroism\">Gauntlets of Heroism</a></span><br /><span><!--si21999--><a href=\"/forever/item=21999/helm-of-heroism\">Helm of Heroism</a></span><br /><span><!--si22000--><a href=\"/forever/item=22000/legplates-of-heroism\">Legplates of Heroism</a></span><br /><span><!--si22001--><a href=\"/forever/item=22001/spaulders-of-heroism\">Spaulders of Heroism</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=18679/increased-all-resist-08\">+8 All Resistances.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=27419/warriors-resolve\">Chance on melee attack to heal you for 88 to 132.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span><br /><span>(8) Set : <a href=\"/forever/spell=14803/increased-armor-200\">+200 Armor.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">96</span> <span class=\"moneycopper\">24</span></div></td></tr></table><!--i?21995:1:60:58-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward from Anthion's Parting Words (level 60), Alliance (Classic data) ; Quest reward from Anthion's Parting Words (level 60), Horde (Classic data)"
   },
   "21996": {
    "id": 21996,
@@ -5769,7 +7275,8 @@
     "icon": "inv_bracer_18",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Bracers of Heroism</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Wrist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->296 Armor</span><br><span><!--stat4-->+9 Strength</span><br><span><!--stat3-->+5 Agility</span><br><span><!--stat7-->+14 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 45 / 45</td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->3.</span><!--itemEffects:1--><br /><br /><span class=\"q\"><a href=\"/forever/item-set=511/battlegear-of-heroism\" class=\"q\">Battlegear of Heroism</a> (0/8)</span><div class=\"q0 indent\"><span><!--si21994--><a href=\"/forever/item=21994/belt-of-heroism\">Belt of Heroism</a></span><br /><span><!--si21995--><a href=\"/forever/item=21995/boots-of-heroism\">Boots of Heroism</a></span><br /><span><!--si21996--><a href=\"/forever/item=21996/bracers-of-heroism\">Bracers of Heroism</a></span><br /><span><!--si21997--><a href=\"/forever/item=21997/breastplate-of-heroism\">Breastplate of Heroism</a></span><br /><span><!--si21998--><a href=\"/forever/item=21998/gauntlets-of-heroism\">Gauntlets of Heroism</a></span><br /><span><!--si21999--><a href=\"/forever/item=21999/helm-of-heroism\">Helm of Heroism</a></span><br /><span><!--si22000--><a href=\"/forever/item=22000/legplates-of-heroism\">Legplates of Heroism</a></span><br /><span><!--si22001--><a href=\"/forever/item=22001/spaulders-of-heroism\">Spaulders of Heroism</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=18679/increased-all-resist-08\">+8 All Resistances.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=27419/warriors-resolve\">Chance on melee attack to heal you for 88 to 132.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span><br /><span>(8) Set : <a href=\"/forever/spell=14803/increased-armor-200\">+200 Armor.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">25</span> <span class=\"moneycopper\">68</span></div></td></tr></table><!--i?21996:1:60:58-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward from An Earnest Proposition (level 60), Alliance (Classic data) ; Quest reward from An Earnest Proposition (level 60), Horde (Classic data)"
   },
   "21997": {
    "id": 21997,
@@ -5789,7 +7296,8 @@
     "icon": "inv_pants_04",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Legplates of Heroism</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->66</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Legs</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->601 Armor</span><br><span><!--stat4-->+25 Strength</span><br><span><!--stat3-->+11 Agility</span><br><span><!--stat7-->+16 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 100 / 100</td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->5.</span><!--itemEffects:1--><br /><br /><span class=\"q\"><a href=\"/forever/item-set=511/battlegear-of-heroism\" class=\"q\">Battlegear of Heroism</a> (0/8)</span><div class=\"q0 indent\"><span><!--si21994--><a href=\"/forever/item=21994/belt-of-heroism\">Belt of Heroism</a></span><br /><span><!--si21995--><a href=\"/forever/item=21995/boots-of-heroism\">Boots of Heroism</a></span><br /><span><!--si21996--><a href=\"/forever/item=21996/bracers-of-heroism\">Bracers of Heroism</a></span><br /><span><!--si21997--><a href=\"/forever/item=21997/breastplate-of-heroism\">Breastplate of Heroism</a></span><br /><span><!--si21998--><a href=\"/forever/item=21998/gauntlets-of-heroism\">Gauntlets of Heroism</a></span><br /><span><!--si21999--><a href=\"/forever/item=21999/helm-of-heroism\">Helm of Heroism</a></span><br /><span><!--si22000--><a href=\"/forever/item=22000/legplates-of-heroism\">Legplates of Heroism</a></span><br /><span><!--si22001--><a href=\"/forever/item=22001/spaulders-of-heroism\">Spaulders of Heroism</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=18679/increased-all-resist-08\">+8 All Resistances.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=27419/warriors-resolve\">Chance on melee attack to heal you for 88 to 132.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span><br /><span>(8) Set : <a href=\"/forever/spell=14803/increased-armor-200\">+200 Armor.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">67</span> <span class=\"moneycopper\">86</span></div></td></tr></table><!--i?22000:1:60:58-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward from Anthion's Parting Words (level 60), Alliance (Classic data) ; Quest reward from Anthion's Parting Words (level 60), Horde (Classic data)"
   },
   "22001": {
    "id": 22001,
@@ -5799,7 +7307,8 @@
     "icon": "inv_shoulder_30",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Spaulders of Heroism</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Shoulder</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->507 Armor</span><br><span><!--stat4-->+12 Strength</span><br><span><!--stat3-->+12 Agility</span><br><span><!--stat7-->+18 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 80 / 80</td></tr></table><table><tr><td><!--rr--><!--itemEffects:0--><br /><span class=\"q\"><a href=\"/forever/item-set=511/battlegear-of-heroism\" class=\"q\">Battlegear of Heroism</a> (0/8)</span><div class=\"q0 indent\"><span><!--si21994--><a href=\"/forever/item=21994/belt-of-heroism\">Belt of Heroism</a></span><br /><span><!--si21995--><a href=\"/forever/item=21995/boots-of-heroism\">Boots of Heroism</a></span><br /><span><!--si21996--><a href=\"/forever/item=21996/bracers-of-heroism\">Bracers of Heroism</a></span><br /><span><!--si21997--><a href=\"/forever/item=21997/breastplate-of-heroism\">Breastplate of Heroism</a></span><br /><span><!--si21998--><a href=\"/forever/item=21998/gauntlets-of-heroism\">Gauntlets of Heroism</a></span><br /><span><!--si21999--><a href=\"/forever/item=21999/helm-of-heroism\">Helm of Heroism</a></span><br /><span><!--si22000--><a href=\"/forever/item=22000/legplates-of-heroism\">Legplates of Heroism</a></span><br /><span><!--si22001--><a href=\"/forever/item=22001/spaulders-of-heroism\">Spaulders of Heroism</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=18679/increased-all-resist-08\">+8 All Resistances.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=27419/warriors-resolve\">Chance on melee attack to heal you for 88 to 132.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span><br /><span>(8) Set : <a href=\"/forever/spell=14803/increased-armor-200\">+200 Armor.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">92</span> <span class=\"moneycopper\">3</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Quest reward from Anthion's Parting Words (level 60), Alliance (Classic data) ; Quest reward from Anthion's Parting Words (level 60), Horde (Classic data)"
   },
   "22004": {
    "id": 22004,
@@ -5921,6 +7430,28 @@
     ]
    }
   },
+  "22064": {
+   "id": 22064,
+   "tt": {
+    "name": "Sorcerer's Boots",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Sorcerer's Boots<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Feet (Cloth)<br>64 Armor<br>+10 Spirit<br>+16 Intellect<br>+14 Stamina<br>+21 Spell Power"
+   },
+   "fdbSource": "Quest reward from Anthion's Parting Words (level 60), Alliance (Classic data) ; Quest reward from Anthion's Parting Words (level 60), Horde (Classic data)",
+   "fetched": true
+  },
+  "22077": {
+   "id": 22077,
+   "tt": {
+    "name": "Deathmist Wraps",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Deathmist Wraps<br><!--ilvl-->55<br>Item level 55<br>Binds when picked up<br>Hands (Cloth)<br>54 Armor<br>+16 Stamina<br>+13 Intellect<br>+13 Spell Power<br>+10 Hit"
+   },
+   "fdbSource": "Quest reward from Just Compensation (level 60), Alliance (Classic data) ; Quest reward from Just Compensation (level 60), Horde (Classic data)",
+   "fetched": true
+  },
   "22095": {
    "id": 22095,
    "tt": {
@@ -6031,6 +7562,28 @@
     ]
    }
   },
+  "22266": {
+   "id": 22266,
+   "tt": {
+    "name": "Item 22266",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->57<br>Item level 57<br>Binds when picked up<br>Main Hand (Dagger)<br>47 - 88 damage, speed 1.80<br>37.5 damage per second<br>+5 Intellect<br>+81 Fire Damage Done<br>+12 Fire Resistance<br><!--rlvl-->52<br>Requires level 52"
+   },
+   "fdbSource": "Drops from Gorosh the Dervish, 15% (Classic data)",
+   "fetched": true
+  },
+  "22267": {
+   "id": 22267,
+   "tt": {
+    "name": "Item 22267",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Head (Cloth)<br>73 Armor<br>+13 Spirit<br>+33 Spell Power<br>+10 Hit<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Drops from General Drakkisath (boss) in Blackrock Spire , 25% (Classic data)",
+   "fetched": true
+  },
   "22347": {
    "id": 22347,
    "tt": {
@@ -6112,6 +7665,28 @@
      }
     ]
    }
+  },
+  "22403": {
+   "id": 22403,
+   "tt": {
+    "name": "Item 22403",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Neck (Miscellaneous)<br>+7 Stamina<br>+8 Intellect<br>+10 Hit<br>+9 Spell Power<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Drops from Cannon Master Willey (boss) in Stratholme , 20% (Classic data)",
+   "fetched": true
+  },
+  "22408": {
+   "id": 22408,
+   "tt": {
+    "name": "Item 22408",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Ranged (Wand)<br>58 - 108 Shadow damage, speed 1.30<br>63.8 damage per second<br>+5 Stamina<br>+11 Spell Power<br><!--rlvl-->58<br>Requires level 58"
+   },
+   "fdbSource": "Drops from Baron Rivendare (boss) in Stratholme , 20% (Classic data)",
+   "fetched": true
   },
   "22436": {
    "id": 22436,
@@ -6561,7 +8136,8 @@
     "icon": "inv_pants_plate_20",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Outrider's Plate Legguards</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Legs</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->646 Armor</span><br><span><!--stat4-->+28 Strength</span><br><span><!--stat7-->+27 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires Warsong Outriders - Exalted<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: Improves your chance to get a critical strike by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">3</span> <span class=\"moneysilver\">31</span> <span class=\"moneycopper\">47</span></div></td></tr></table><!--i?22651:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Kelm Hargunth (seen in WoW Forever) ; Sold by ; Kelm Hargunth &lt;Warsong Supply Officer&gt;, The Barrens (Horde): 16g 57s 37c (seen in WoW Forever)"
   },
   "22659": {
    "id": 22659,
@@ -6571,6 +8147,18 @@
     "icon": "inv_jewelry_amulet_04",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Medallion of the Dawn</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Neck</td><th><!--scstart4:-3--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+12 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Improves your chance to get a critical strike by 1.0%.</span><br><span class=\"q2\">Equip: +<!--rtg38-->24 Attack Power.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">3</span> <span class=\"moneysilver\">36</span> <span class=\"moneycopper\">25</span></div></td></tr></table><!--i?22659:1:60:55-->"
    },
+   "fetched": true,
+   "fdbSource": "Not known yet."
+  },
+  "22672": {
+   "id": 22672,
+   "tt": {
+    "name": "Sentinel's Plate Legguards",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Sentinel's Plate Legguards<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Legs (Plate)<br>646 Armor<br>+28 Strength<br>+27 Stamina<br>+14 Critical Strike<br>+10 Hit<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Sold by Illiyana Moonblaze (seen in WoW Forever) ; Sold by ; Illiyana Moonblaze <Silverwing Supply Officer>, Ashenvale (Alliance): 16g 63s 47c (seen in WoW Forever)",
    "fetched": true
   },
   "22681": {
@@ -6581,7 +8169,8 @@
     "icon": "inv_jewelry_ring_33",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Band of Piety</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->66</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+10 Stamina</span><br><span><!--stat5-->+10 Intellect</span><!--ebstats--><br><span class=\"q2\">Restores +<!--rtg43-->4 mana per 5 sec.</span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->22</span> and damage done by up to <span><!--rtg42-->7</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">7</span> <span class=\"moneycopper\">9</span></div></td></tr></table><!--i?22681:1:60:55-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Not known yet."
   },
   "22689": {
    "id": 22689,
@@ -6628,6 +8217,17 @@
      }
     ]
    }
+  },
+  "22748": {
+   "id": 22748,
+   "tt": {
+    "name": "Sentinel's Chain Leggings",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Sentinel's Chain Leggings<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Legs (Mail)<br>364 Armor<br>+35 Agility<br>+15 Stamina<br>+14 Critical Strike<br>+10 Hit<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Sold by Illiyana Moonblaze (seen in WoW Forever) ; Sold by ; Illiyana Moonblaze <Silverwing Supply Officer>, Ashenvale (Alliance): 24g 22s 7c (seen in WoW Forever)",
+   "fetched": true
   },
   "22939": {
    "id": 22939,
@@ -6750,6 +8350,28 @@
      }
     ]
    }
+  },
+  "23025": {
+   "id": 23025,
+   "tt": {
+    "name": "Seal of the Damned",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Seal of the Damned<br><!--ilvl-->85<br>Item level 85<br>Binds when picked up<br>Unique<br>Finger (Miscellaneous)<br>+17 Stamina<br>+21 Spell Power<br>+10 Hit<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Found in Four Horsemen Chest, 17% (Classic data)",
+   "fetched": true
+  },
+  "23027": {
+   "id": 23027,
+   "tt": {
+    "name": "Warmth of Forgiveness",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Warmth of Forgiveness<br><!--ilvl-->85<br>Item level 85<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+10 Mana per 5 sec<br><!--rlvl-->60<br>Requires level 60<br>Use: Restores 500 mana."
+   },
+   "fdbSource": "Found in Four Horsemen Chest, 17% (Classic data)",
+   "fetched": true
   },
   "23031": {
    "id": 23031,
@@ -7142,6 +8764,39 @@
     ]
    }
   },
+  "23237": {
+   "id": 23237,
+   "tt": {
+    "name": "Ring of the Eternal Flame",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Ring of the Eternal Flame<br><!--ilvl-->83<br>Item level 83<br>Binds when picked up<br>Unique<br>Finger (Miscellaneous)<br>+10 Intellect<br>+34 Fire Damage Done<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "World drop from level 60–63 creatures (Classic data)",
+   "fetched": true
+  },
+  "226774": {
+   "id": 226774,
+   "tt": {
+    "name": "Feralheart Galoshes",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Feralheart Galoshes<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Feet (Leather)<br>127 Armor<br>+10 Spirit<br>+11 Stamina<br>+16 Intellect<br>+22 Spell Power<br>Classes: Druid"
+   },
+   "fdbSource": "Not known yet.",
+   "fetched": true
+  },
+  "226931": {
+   "id": 226931,
+   "tt": {
+    "name": "Sorcerer's Sandals",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Sorcerer's Sandals<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Feet (Cloth)<br>64 Armor<br>+12 Stamina<br>+16 Intellect<br>+11 Spirit<br>+21 Spell Power<br>Classes: Mage"
+   },
+   "fdbSource": "Not known yet.",
+   "fetched": true
+  },
   "249398": {
    "id": 249398,
    "tt": {
@@ -7150,7 +8805,8 @@
     "icon": "spell_shaman_totemrecall",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Polished Driftwood Icon</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->25</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Relic</td><th><!--scstart4:9--><span class=\"q1\">Totem</span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=7/shaman\" class=\"c7\">Shaman</a></div></td></tr></table><table><tr><td>Requires Level <!--rlvl-->20<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=1248756/meditation\" class=\"q2\">Allows 8% of your Mana regeneration to continue while casting.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">4</span> <span class=\"moneycopper\">99</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Enchanting (Forever client)"
   },
   "249469": {
    "id": 249469,
@@ -7190,7 +8846,8 @@
     "icon": "inv_gauntlets_22",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Sentinel's Gloves</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->55</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Hands</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->361 Armor</span><br><span><!--stat4-->+9 Strength</span><br><span><!--stat7-->+16 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->50<br><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->11.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">66</span> <span class=\"moneycopper\">20</span></div></td></tr></table><!--i?250552:1:60:50-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Blacksmithing (Forever client)"
   },
   "250553": {
    "id": 250553,
@@ -7550,7 +9207,8 @@
       "skill": 300
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Blacksmithing 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
   },
   "250600": {
    "id": 250600,
@@ -7650,7 +9308,8 @@
     "icon": "inv_misc_monsterclaw_03",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Bagh Nakh</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>One-Hand</td><th><!--scstart2:13--><span class=\"q1\">Fist Weapon</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->78 - 146 Damage</span></td>\n    <th>Speed <!--spd-->2.70</th>\n</tr></table><!--dps-->(41.48 damage per second)<br><span><!--stat3-->+13 Agility</span><br><span><!--stat7-->+5 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">5</span> <span class=\"moneysilver\">98</span> <span class=\"moneycopper\">91</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Blacksmithing (Forever client)"
   },
   "250619": {
    "id": 250619,
@@ -7680,7 +9339,30 @@
       "skill": 300
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Blacksmithing 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
+  },
+  "252483": {
+   "id": 252483,
+   "tt": {
+    "name": "Dawn Armor",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Dawn Armor<br><!--ilvl-->61<br>Item level 61<br>Binds when equipped<br>Chest (Leather)<br>187 Armor<br>+37 Agility<br>+14 Critical Strike<br>+10 Hit<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Crafted with Leatherworking (Forever client)",
+   "fetched": true
+  },
+  "252484": {
+   "id": 252484,
+   "tt": {
+    "name": "Timbermaw Tunic",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Timbermaw Tunic<br><!--ilvl-->61<br>Item level 61<br>Binds when equipped<br>Chest (Leather)<br>187 Armor<br>+18 Agility<br>+33 Strength<br>+14 Critical Strike<br><!--rlvl-->56<br>Requires level 56"
+   },
+   "fdbSource": "Crafted with Leatherworking (Forever client)",
+   "fetched": true
   },
   "252486": {
    "id": 252486,
@@ -7710,7 +9392,8 @@
       "skill": 300
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Leatherworking 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
   },
   "252561": {
    "id": 252561,
@@ -7800,7 +9483,8 @@
       "skill": 300
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Leatherworking 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
   },
   "254013": {
    "id": 254013,
@@ -7832,6 +9516,17 @@
     ]
    }
   },
+  "254113": {
+   "id": 254113,
+   "tt": {
+    "name": "Black Sandals",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Black Sandals<br><!--ilvl-->55<br>Item level 55<br>Binds when picked up<br>Feet (Cloth)<br>54 Armor<br>+9 Intellect<br>+13 Stamina<br>+20 Shadow Damage Done<br><!--rlvl-->50<br>Requires level 50"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
+  },
   "260212": {
    "id": 260212,
    "tt": {
@@ -7860,7 +9555,8 @@
       "side": 2
      }
     ]
-   }
+   },
+   "fdbSource": "Where it comes from isn't known yet: the Companion and Helper addons record it when players get one. Not known: where it comes from isn't known yet."
   },
   "260824": {
    "id": 260824,
@@ -7870,7 +9566,8 @@
     "icon": "inv_misc_enggizmos_06",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Gnomish Poultryizer</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=1270941/poultryizer\" class=\"q2\">Turns the target into a chicken for 15 sec. Well, that is assuming the transmogrification polarity has not been reversed...</a> (5 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">50</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Engineering (Forever client)"
   },
   "270226": {
    "id": 270226,
@@ -7880,7 +9577,8 @@
     "icon": "inv_misc_food_24",
     "html": "<table><tr><td><!--nstart--><b class=\"q2\">Golden Banana</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->50</span><!--bo--><br>Binds when picked up<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=1287571/monkey-business\" class=\"q2\">Increases all attributes by 16 for 15 sec. Effect and duration are doubled in Forest and Grassland areas.</a> (5 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">92</span> <span class=\"moneycopper\">97</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "New in Forever: where it comes from isn't known yet."
   },
   "270275": {
    "id": 270275,
@@ -7904,6 +9602,17 @@
    },
    "fetched": true
   },
+  "271955": {
+   "id": 271955,
+   "tt": {
+    "name": "Theramore Pauldrons",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Theramore Pauldrons<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Shoulder (Leather)<br>148 Armor<br>+27 Agility<br>+12 Stamina<br>+14 Critical Strike<br><!--rlvl-->60<br>Requires level 60<br>Requires Theramore Expeditionary Force - Exalted"
+   },
+   "fdbSource": "Sold by Bryanna Embreeze (seen in WoW Forever) ; Sold by ; Bryanna Embreeze, The Barrens (Horde): 15g 89s 59c (seen in WoW Forever)",
+   "fetched": true
+  },
   "272095": {
    "id": 272095,
    "tt": {
@@ -7912,7 +9621,8 @@
     "icon": "inv_gauntlets_29",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Raider Gauntlets</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Hands</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->461 Armor</span><br><span><!--stat4-->+27 Strength</span><br><span><!--stat3-->+11 Agility</span><br><span><!--stat7-->+15 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=2798/darkspear-raiders\" class=\"q1\">Darkspear Raiders</a> - Exalted<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">83</span> <span class=\"moneycopper\">29</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Creeg Bothunk (seen in WoW Forever) ; Sold by ; Creeg Bothunk, The Barrens (Horde): 14g 16s 47c (seen in WoW Forever)"
   },
   "272105": {
    "id": 272105,
@@ -7983,7 +9693,8 @@
     "icon": "inv_belt_33",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Valiant's Waistguard</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Waist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->385 Armor</span><br><span><!--stat4-->+14 Strength</span><br><span><!--stat3-->+24 Agility</span><br><span><!--stat7-->+11 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=1/warrior\" class=\"c1\">Warrior</a></div></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">5</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Pix Xizzix (seen in WoW Forever) ; Sold by ; Pix Xizzix, Stranglethorn Vale (Horde): 100 Tarnished Undermine Real (seen in WoW Forever)"
   },
   "272406": {
    "id": 272406,
@@ -8061,7 +9772,8 @@
     "icon": "inv_jewelry_ring_01",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Cutthroat's Signet</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat3-->+14 Agility</span><br><span><!--stat7-->+8 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">54</span> <span class=\"moneycopper\">57</span></div></td></tr></table><!--i?272408:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Pix Xizzix (seen in WoW Forever) ; Sold by ; Pix Xizzix, Stranglethorn Vale (Horde): 75 Tarnished Undermine Real (seen in WoW Forever)"
   },
   "272411": {
    "id": 272411,
@@ -8095,7 +9807,8 @@
       ]
      }
     ]
-   }
+   },
+   "fdbSource": "Sold by Pix Xizzix in Stranglethorn Vale (28.5, 75.8) (Seen in Forever)."
   },
   "272413": {
    "id": 272413,
@@ -8163,7 +9876,8 @@
      }
     ]
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Pix Xizzix in Stranglethorn Vale (28.5, 75.8) (Seen in Forever)."
   },
   "272427": {
    "id": 272427,
@@ -8367,7 +10081,8 @@
       ]
      }
     ]
-   }
+   },
+   "fdbSource": "Sold by Pix Xizzix in Stranglethorn Vale (28.5, 75.8) (Seen in Forever)."
   },
   "272439": {
    "id": 272439,
@@ -8401,7 +10116,8 @@
      }
     ]
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Sold by Pix Xizzix in Stranglethorn Vale (28.5, 75.8) (Seen in Forever)."
   },
   "272440": {
    "id": 272440,
@@ -8436,6 +10152,17 @@
      }
     ]
    }
+  },
+  "272552": {
+   "id": 272552,
+   "tt": {
+    "name": "Premier Felweave Boots",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Premier Felweave Boots<br><!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Feet (Cloth)<br>59 Armor<br>+19 Stamina<br>+7 Intellect<br>+14 Spell Power<br>Classes: Warlock<br><!--rlvl-->55<br>Requires level 55<br>Part of the Champion's Threads set. New in WoW Forever: not in Classic Era."
+   },
+   "fdbSource": "New in Forever: where it comes from isn't known yet.",
+   "fetched": true
   },
   "272594": {
    "id": 272594,
@@ -8556,6 +10283,17 @@
     "icon": "inv_boots_08",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Premier Knight-Champion's Beasthide Boots</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:2--><span class=\"q1\">Leather</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->136 Armor</span><br><span><!--stat4-->+14 Strength</span><br><span><!--stat3-->+10 Agility</span><br><span><!--stat7-->+26 Stamina</span><br><span><!--stat5-->+8 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=11/druid\" class=\"c11\">Druid</a></div></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><!--itemEffects:0--><br /><span class=\"q\"><a href=\"/forever/item-set=397/field-marshals-sanctuary\" class=\"q\">Field Marshal's Sanctuary</a> (0/6)</span><div class=\"q0 indent\"><span><!--si272757--><a href=\"/forever/item=272757/premier-lieutenant-commanders-beasthide-gauntlets\">Premier Lieutenant Commander's Beasthide Gauntlets</a></span><br /><span><!--si272768--><a href=\"/forever/item=272768/premier-knight-champions-beasthide-boots\">Premier Knight-Champion's Beasthide Boots</a></span><br /><span><!--si272759--><a href=\"/forever/item=272759/premier-marshals-beasthide-legguards\">Premier Marshal's Beasthide Legguards</a></span><br /><span><!--si272761--><a href=\"/forever/item=272761/premier-field-marshals-beasthide-breastplate\">Premier Field Marshal's Beasthide Breastplate</a></span><br /><span><!--si272758--><a href=\"/forever/item=272758/premier-marshals-beasthide-spaulders\">Premier Marshal's Beasthide Spaulders</a></span><br /><span><!--si272760--><a href=\"/forever/item=272760/premier-field-marshals-beasthide-helmet\">Premier Field Marshal's Beasthide Helmet</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=14467/increased-stamina-20\">+20 Stamina.</a></span><br /><span>(3) Set : <a href=\"/forever/spell=23218/feral-move-speed-increase\">Increases your movement speed by 15% while in Bear, Cat, or Travel Form. &nbsp;Only active outdoors.</a></span><br /><span>(6) Set : <a href=\"/forever/spell=14049/attack-power-40\">+40 Attack Power.</a></span></span><br><!--pvpEquip--><!--pvpEquip--></td></tr></table>"
    },
+   "fetched": true
+  },
+  "272841": {
+   "id": 272841,
+   "tt": {
+    "name": "Premier Grand Marshal's Bullseye",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Premier Grand Marshal's Bullseye<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Ranged (Bow)<br>53 - 80 damage, speed 1.80<br>36.9 damage per second<br>+6 Stamina<br>+32 Attack Power<br><!--rlvl-->60<br>Requires level 60"
+   },
+   "fdbSource": "Sold by 2 vendors (seen in WoW Forever) ; Sold by ; Nixi Fireclaw, Alterac Mountains: 10 × Darkspear Islands Mark of Honor + 12,000 Honor Points (seen in WoW Forever) ; Captain O'Neal <Weapons Quartermaster>, Stormwind City: 10 × Darkspear Islands Mark of Honor + 12,000 Honor Points (seen in WoW Forever)",
    "fetched": true
   },
   "272848": {
@@ -8682,6 +10420,17 @@
     ]
    }
   },
+  "275609": {
+   "id": 275609,
+   "tt": {
+    "name": "Swarmtender's Footpads",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "Swarmtender's Footpads<br><!--ilvl-->58<br>Item level 58<br>Binds when equipped<br>Feet (Cloth)<br>57 Armor<br>+4 Nature Resistance<br>+10 Stamina<br>+43 Healing Power<br>+14 Spell Damage<br><!--rlvl-->53<br>Requires level 53"
+   },
+   "fdbSource": "Crafted with Tailoring (Forever client)",
+   "fetched": true
+  },
   "275621": {
    "id": 275621,
    "tt": {
@@ -8690,7 +10439,8 @@
     "icon": "inv_boots_chain_12",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Broodwatcher's Treaders</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->58</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:3--><span class=\"q1\">Mail</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->236 Armor</span><br><span><!--stat7-->+10 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+4 Nature Resistance<!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->53<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->43</span> and damage done by up to <span><!--rtg42-->14</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">1</span> <span class=\"moneycopper\">52</span></div></td></tr></table><!--i?275621:1:60:53-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Leatherworking (Forever client)"
   },
   "275736": {
    "id": 275736,
@@ -8721,7 +10471,8 @@
     "icon": "inv_jewelry_ring_25",
     "html": "<table><tr><td><!--nstart--><b class=\"q3\">Tracker's Signet of Ferocity</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->68</span><!--bo--><br>Binds when picked up<!--ue--><br>Unique-Equipped: Watcher's Ring (1)<!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+11 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=2819/the-watchers\" class=\"q1\">The Watchers</a> - Honored<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: +<!--rtg38-->24 Attack Power.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?275972:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "New in Forever: where it comes from isn't known yet."
   },
   "275976": {
    "id": 275976,
@@ -8731,7 +10482,8 @@
     "icon": "inv_jewelry_ring_25",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Watcher's Signet of Ferocity</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><br>Unique-Equipped: Watcher's Ring (1)<!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+13 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=2819/the-watchers\" class=\"q1\">The Watchers</a> - Revered<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: +<!--rtg38-->30 Attack Power.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?275976:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "New in Forever: where it comes from isn't known yet."
   },
   "275977": {
    "id": 275977,
@@ -8741,7 +10493,8 @@
     "icon": "inv_jewelry_ring_09",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Watcher's Signet of Brilliance</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><br>Unique-Equipped: Watcher's Ring (1)<!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+10 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=2819/the-watchers\" class=\"q1\">The Watchers</a> - Revered<br><!--rr--><span class=\"q2\">Equip: Improves your chance to get a critical strike by 1.0%.</span><br><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->15</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?275977:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "New in Forever: where it comes from isn't known yet."
   },
   "275980": {
    "id": 275980,
@@ -8751,6 +10504,29 @@
     "icon": "inv_jewelry_ring_10",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Watcher's Signet of Vigilance</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><br>Unique-Equipped: Watcher's Ring (1)<!--ue--><table width=\"100%\"><tr><td>Finger</td><th><!--scstart4:-2--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+16 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br>Requires <a href=\"/forever/faction=2819/the-watchers\" class=\"q1\">The Watchers</a> - Revered<br><!--rr--><span class=\"q2\">Equip: Increased Defense +<!--rtg12-->8.</span><br><span class=\"q2\">Equip: Reduces chance to be Dodged or Parried by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?275980:1:60:60-->"
    },
+   "fetched": true,
+   "fdbSource": "New in Forever: where it comes from isn't known yet."
+  },
+  "275981": {
+   "id": 275981,
+   "tt": {
+    "name": "Ferocious Watcher's Signet",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Ferocious Watcher's Signet<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Finger (Miscellaneous)<br>+34 Attack Power<br>+14 Stamina<br>+10 Hit<br><!--rlvl-->60<br>Requires level 60<br>Requires The Watchers - Exalted<br>Unique-Equipped: Watcher's Ring (1)"
+   },
+   "fdbSource": "New in Forever: where it comes from isn't known yet.",
+   "fetched": true
+  },
+  "275983": {
+   "id": 275983,
+   "tt": {
+    "name": "Vigilant Watcher's Signet",
+    "q": 4,
+    "icon": "inv_misc_questionmark",
+    "html": "Vigilant Watcher's Signet<br><!--ilvl-->65<br>Item level 65<br>Binds when picked up<br>Finger (Miscellaneous)<br>+37 Healing Power<br>+14 Spirit<br>+10 Stamina<br>+12 Spell Damage<br><!--rlvl-->60<br>Requires level 60<br>Requires The Watchers - Exalted<br>Unique-Equipped: Watcher's Ring (1)"
+   },
+   "fdbSource": "New in Forever: where it comes from isn't known yet.",
    "fetched": true
   },
   "276337": {
@@ -8802,7 +10578,8 @@
       "skill": 300
      }
     ]
-   }
+   },
+   "fdbSource": "Crafted: Enchanting 300 (Forever client). Learn it at skill 300 . Some effort: craft it or buy it from a crafter."
   },
   "279248": {
    "id": 279248,
@@ -8842,7 +10619,8 @@
     "icon": "inv_sword_07",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Ironwood Blade</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when equipped<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>One-Hand</td><th><!--scstart2:7--><span class=\"q1\">Sword</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->79 - 148 Damage</span></td>\n    <th>Speed <!--spd-->2.40</th>\n</tr></table><!--dps-->(47.29 damage per second)<br><span><!--stat4-->+8 Strength</span><br><span><!--stat7-->+12 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">8</span> <span class=\"moneysilver\">65</span></div></td></tr></table><!--i?279259:1:60:60-->"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Blacksmithing (Forever client)"
   },
   "279262": {
    "id": 279262,
@@ -8882,7 +10660,8 @@
     "icon": "inv_pants_plate_15",
     "html": "<table><tr><td><!--nstart--><b class=\"q4\">Azerothium Legplates</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->65</span><!--bo--><br>Binds when equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Legs</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->646 Armor</span><br><span><!--stat4-->+24 Strength</span><br><span><!--stat3-->+18 Agility</span><br><span><!--stat7-->+27 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">5</span> <span class=\"moneysilver\">74</span> <span class=\"moneycopper\">92</span></div></td></tr></table>"
    },
-   "fetched": true
+   "fetched": true,
+   "fdbSource": "Crafted with Blacksmithing (Forever client)"
   },
   "279269": {
    "id": 279269,
@@ -8913,6 +10692,28 @@
      }
     ]
    }
+  },
+  "280057": {
+   "id": 280057,
+   "tt": {
+    "name": "Robes of Dark Summons",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->59<br>Item level 59<br>Binds when picked up<br>Chest (Cloth)<br>84 Armor<br>+21 Spell Power<br>+14 Stamina<br>+18 Hit<br><!--rlvl-->54<br>Requires level 54"
+   },
+   "fdbSource": "New in Forever: where it comes from isn't known yet.",
+   "fetched": true
+  },
+  "280065": {
+   "id": 280065,
+   "tt": {
+    "name": "Behemoth Bones",
+    "q": 3,
+    "icon": "inv_misc_questionmark",
+    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Trinket (Miscellaneous)<br>+34 Attack Power<br><!--rlvl-->56<br>Requires level 56<br>Use: Crack open the bone, healing yourself for 480 to 530 and your nearest ally for 480 to 530."
+   },
+   "fdbSource": "New in Forever: where it comes from isn't known yet.",
+   "fetched": true
   },
   "280882": {
    "id": 280882,

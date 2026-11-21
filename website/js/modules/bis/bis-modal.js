@@ -173,7 +173,7 @@ function openBiSTalentModal() {
               ${currentClass.name}: ${currentSpec.name} Talents
             </h3>
             <div class="bis-talent-subtitle">
-              Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
+              Level 30 Leveling Bracket • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
             </div>
           </div>
         </div>

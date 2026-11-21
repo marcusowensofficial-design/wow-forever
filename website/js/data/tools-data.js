@@ -951,7 +951,7 @@ const WOW_TOOLS_DATA = {
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
       summary: "A level-14 questline across both continents that rewards the Cozy Sleeping Bag: lie in it for up to 3 minutes for a 1%-per-minute XP buff (max 3%) that lasts an hour, plus Student Fodder along the way.",
       content: `### What the Cozy Sleeping Bag Does
-The **Cozy Sleeping Bag** (first seen in Season of Discovery) puts down a sleeping bag. Lie in it to get **+1% experience for every minute you rest, up to 3%**. The buff lasts **1 hour**, and you also count as rested while you lie in the bag.
+The **Cozy Sleeping Bag** (first seen in Season of Discovery) puts down a sleeping bag. Lie in it to get **+1% experience for every minute you rest, up to 3%**. The buff lasts **1 hour**, and you also count as rested while you lie in the bag, with a visible **Resting aura** indicating its area of effect. Per the November 17 hotfix, mounted players cannot sleep atop the Cozy Sleeping Bag.
 
 | Item Attribute | Value |
 |---|---|
@@ -995,7 +995,7 @@ Alliance and Horde start at opposite ends, then share the rest of the route. Wow
       category: "Classes & Pets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beasttaming.jpg",
-      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 520 overhauled spawns at the Level 30 cap.",
+      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 520 overhauled spawns through Level 60.",
       content: `### Pet Mechanics Overhaul in WoW Forever
 Pet normalization and ability scaling in WoW Forever preserve the distinct advantages of famous rare beasts while balancing family modifiers across PvE and PvP.
 
@@ -1027,7 +1027,7 @@ Attack speed determines the frequency of spell-casting pushback on opposing cast
 
 ---
 
-### Phase 2 Ability Training Locations (Level 30 Cap)
+### Mid-Game Ability Training Locations (Through Level 30)
 
 | Ability & Rank | Level Req | Beast & Location | Coordinates |
 | Claw Rank 5 | Lvl 28 | Elder Ashenvale Bear (Ashenvale) | \`40.2, 65.4\` |
@@ -1377,15 +1377,15 @@ For sanctioned duels, Warsong Gulch tournaments, and Arathi Basin rated play:
     },
     {
       id: "guide-pvp-ranks",
-      title: "PvP Honor Ranks 1–14 & Level 30 Warsong Gulch Bracket",
+      title: "PvP Honor Ranks 1–14, Battlegrounds & Warsong Gulch Guide",
       category: "PvP & Tournaments",
-      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      source: "Blizzard Official Hotfixes · ForeverDB · ForeverChanges.pro",
       icon: "https://render.worldofwarcraft.com/us/icons/56/pvpcurrency-conquest-alliance.jpg",
-      summary: "Level 30 bracket honor calculations, Rank 1-4 rewards, insignia trinkets, and flag running routes in Warsong Gulch.",
-      content: `### Phase 2 PvP Honor Structure
-In Closed Beta Phase 2, character level is capped at 30. The classic honor system has been adjusted so progression aligns with active bracket milestones.
+      summary: "Live Level 60 PvP Honor Ranks 1–14 structure, Battleground Mark stacking, AV Level 58 quest requirement, and Warsong Gulch tactics.",
+      content: `### Live WoW: Forever PvP Honor Structure (Level 1–60)
+With live realms at the **Level 60 cap**, full Honor Ranks 1 through 14 are active across Warsong Gulch (10–60), Arathi Basin (20–60), Darkspear Islands (30–60), and Alterac Valley (51–60).
 
-### Phase 2 Rank Progression Cap (Rank 1 to 4)
+### Early Rank Milestones (Ranks 1 to 4)
 
 | Rank | Alliance Title | Horde Title | CP Required | Unlocked Reward |
 | **Rank 1** | Private | Scout | 15 HKs | **Private's / Scout's Tabard** |
@@ -1393,9 +1393,10 @@ In Closed Beta Phase 2, character level is capped at 30. The classic honor syste
 | **Rank 3** | Sergeant | Sergeant | 5,000 CP | **10% Faction Vendor Discount** |
 | **Rank 4** | Master Sergeant | Senior Sergeant | 10,000 CP | **Superior PvP Cloak** (+7 Sta, +5 primary stat) |
 
-🔒 *Ranks 5 through 14 (First Sergeant to Grand Marshal / High Warlord) remain capped until Phase 3 and launch level caps unlock.*
-
-• **Battleground Marks of Honor:** Marks of Honor now stack up to **30** (increased from 20), reducing bag space clutter during Warsong Gulch honor pushes.
+• **Ranks 5–14 Active at Launch:** Progression continues up through Marshal / General (Rank 12–13 epic PvP sets) and Grand Marshal / High Warlord (Rank 14 weapons), with Season 1 PvP refreshes scheduled on Blizzard's 2027 roadmap.
+• **Battleground Marks of Honor:** Marks of Honor stack up to **30** (increased from 20).
+• **November 17 Hotfix Updates:** *The Battle for Alterac Valley* quests require **Level 58** to accept, and mounting inside Warsong Gulch starting rooms has been disabled.
+• **November 16 Hotfix Update:** Dying in the Arathi Basin Gold Mine no longer sends players to a Riverglades graveyard.
 
 ---
 
@@ -1494,7 +1495,7 @@ Spells learned below character **Level 20** receive a scaling coefficient penalt
 
 ---
 
-### Priest Healing Rank Efficiency (Level 30 Cap)
+### Priest Healing Rank Efficiency (Level 30 Milestone)
 
 | Spell & Rank | Mana Cost | Base Heal | Cast Time | Heal per Mana (HPM) | Ideal Scenario |
 | **Flash Heal Rank 1** | 125 Mana | 193–237 | 1.5s | 1.72 HPM | Fast emergency save |
@@ -1916,7 +1917,7 @@ Paladins in WoW Forever receive critical quality-of-life adjustments that elevat
       source: "Wowhead · Warcraft Tavern · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
       summary: "Energy tick pooling, 14-second stunlock loops, Instant & Crippling Poison at 30, and dual-wield weapon swing timing.",
-      content: `### Shadow Lethality at the Level 30 Cap
+      content: `### Shadow Lethality at Level 30
 Rogues combine precise 100-Energy management, deadly crowd control diminishing returns, and custom poison brews to dominate both open-world skirmishes and dungeon DPS meters.
 
 ### Spec Pathways at Level 30
@@ -1938,7 +1939,7 @@ Rogues combine precise 100-Energy management, deadly crowd control diminishing r
 
 ---
 
-### Poison Application Strategy (Level 30 Cap)
+### Poison Application Strategy (Level 30 Milestone)
 
 • **Main Hand:** Instant Poison Rank 2 (Chance to deal 35 Nature damage on hit).
 • **Off-Hand:** Crippling Poison (Reduces movement speed by 50% for 12 seconds). Prevents runners from pulling extra dungeon packs!`
@@ -2567,8 +2568,8 @@ Navigating between Kalimdor and the Eastern Kingdoms is a critical rite of passa
       source: "Wowhead · Warcraft Tavern · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beastmastery.jpg",
       summary: "Optimal 21-point Beast Mastery and Marksmanship talent builds, Pet Diet & Rank 4 ability training, ammo crafting, and Excavation Site: Wetlands dungeon rotation.",
-      content: `### Ranged Supremacy at the Level 30 Cap
-In Closed Beta Phase 2, Hunters excel in both solo open-world grinding and group dungeon runs thanks to 21 available talent points, Tier 2 camping stat food buffs, and Rank 4 pet abilities.
+      content: `### Ranged Supremacy at Level 30
+At the Level 30 leveling milestone, Hunters excel in both solo open-world grinding and group dungeon runs thanks to 21 available talent points (+5 with the Talented Legacy perk), Tier 2 camping stat food buffs, and Rank 4 pet abilities.
 
 ### 1. Beast Mastery Leveling Spec (21 Points)
 • **Core Focus:** Maximum pet speed, attack power, and aggro generation for zero-downtime solo play.
@@ -2614,7 +2615,7 @@ In Closed Beta Phase 2, Hunters excel in both solo open-world grinding and group
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg",
       summary: "Level 30 Frost AoE grinding pulls, Frostbite + Shatter 50% crit combos, Blizzard snare kite paths, and mana efficiency rotations for Beta Phase 2.",
       content: `### Master of the Bitter Cold
-At the Level 30 cap, Frost Mages dominate open-world leveling speed through controlled Blizzard AoE pulls and achieve unmatched burst lethality in PvP through the iconic **Shatter Combo**.
+At the Level 30 leveling milestone, Frost Mages dominate open-world leveling speed through controlled Blizzard AoE pulls and achieve strong burst lethality in PvP through the iconic **Shatter Combo**.
 
 ### 1. Level 30 Frost Shatter Spec (21 Points)
 • **Point Distribution (0/0/21):**
@@ -2884,7 +2885,7 @@ Most quests on the isle give reputation with the faction that matches yours.`
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_prayerofshadowprotection.jpg",
       summary: "Complete quest directory, prerequisites, and single-run routing for all 12 Phase 2 dungeons. Maximize leveling speed following the Phase 2 dungeon mob XP rebalance.",
       content: `### The Single-Run Questing Meta in WoW Forever
-In Phase 2 Beta of WoW Forever, grinding dungeon mobs repeatedly for experience was reduced by ~50% raw mob XP. In its place, Blizzard significantly increased dungeon quest turn-in experience and item rewards. 
+In WoW Forever, dungeon quest turn-in experience and item rewards are heavily buffed. On live realms, Blizzard also increased dungeon enemy kill XP by **+50%** (Nov 9 hotfix), set dungeon kills trivial to any party member to **0 XP** (Nov 13 hotfix), and capped dungeon resets at **5 per hour** (Nov 20 hotfix).
 
 **The result is clear:** The most mathematically efficient leveling strategy is to gather every single quest for a dungeon beforehand, execute a single clean full-clear run, and turn in all quests at once!
 

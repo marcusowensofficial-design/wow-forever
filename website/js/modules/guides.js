@@ -216,7 +216,7 @@ function renderMasterDetailReader(mountElem, filteredGuides) {
         <div class="guides-sidebar-header">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
             <span class="guide-count-label">FIELD MANUALS (${filteredGuides.length})</span>
-            <span class="guide-phase-tag">Phase 2 • Level 30</span>
+            <span class="guide-phase-tag">WoW Forever • 1–60</span>
           </div>
           <div class="guides-sidebar-status">
             ${activeGuideCategory !== 'all' ? `<span class="active-category-indicator">${escapeHtml(activeGuideCategory.toUpperCase())}</span>` : '<span>ALL CATEGORIES</span>'}
@@ -533,7 +533,7 @@ function showDungeonItemTooltip(e, itemId) {
         <img src="https://wow.zamimg.com/images/wow/icons/medium/${escapeHtml(item.icon || 'inv_misc_questionmark')}.jpg" alt="" class="dungeon-tip-icon ${item.quality || 'q2'}" />
         <div class="dungeon-tip-header-meta">
           <span class="dungeon-tip-source-tag">Encounter Drop</span>
-          <div class="dungeon-tip-ilvl">Item Level ${item.iLvl} • Phase 2 Beta</div>
+          <div class="dungeon-tip-ilvl">Item Level ${item.iLvl} • WoW Forever</div>
         </div>
       </div>
       <div class="dungeon-tip-body">

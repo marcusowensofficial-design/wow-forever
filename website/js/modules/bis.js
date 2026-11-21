@@ -260,7 +260,7 @@ function renderBiSApp() {
             <h3 class="bis-panel-title">
               <span style="color: ${currentClass.color};">${currentClass.name}</span>: ${currentSpec.name} Best in Slot
             </h3>
-            <p class="bis-panel-subtitle">${lvl60 ? 'Level 60 pre-raid gear' : 'Equipped for the level 30 beta cap'} • Weapon Preference: ${currentSpec.weaponType || 'Standard'}</p>
+            <p class="bis-panel-subtitle">${lvl60 ? 'Level 60 pre-raid gear' : 'Level 30 leveling milestone gear'} • Weapon Preference: ${currentSpec.weaponType || 'Standard'}</p>
           </div>
           <span class="bis-slot-count">${(currentSpec.slots && currentSpec.slots.length) || 0} Slots Ranked</span>
         </div>
@@ -347,9 +347,9 @@ function renderBiSApp() {
           </div>
         </div>
 
-        <!-- Beta Itemization Note Card -->
+        <!-- Level 30 Itemization Note Card -->
         <div class="bis-info-card">
-          <h4><span>💡</span> WoW Forever Beta Itemization</h4>
+          <h4><span>💡</span> WoW Forever Level 30 Itemization</h4>
           <p>
             In WoW Forever Build 1.60.1, level 30 characters gain access to newly re-itemized content from the 
             <strong>City of Dalaran (Level 26–32)</strong> and <strong>Excavation Site: Wetlands (Level 27–34)</strong>, 
@@ -357,7 +357,7 @@ function renderBiSApp() {
           </p>
           <div class="bis-tip-item">
             <span>🛡️</span>
-            <div><strong>Launch Build 1.60.1.70707:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
+            <div><strong>Live Build 1.60.1.71037:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
           </div>
         </div>
         `}
