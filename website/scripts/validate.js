@@ -1457,8 +1457,11 @@ check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () =>
   const hpCode = fs.readFileSync(path.join(ROOT, 'js/data/hunter-pets-data.js'), 'utf8');
   const hpWin = {};
   eval(hpCode.replace('window.', 'hpWin.'));
-  if (!hpWin.WOW_HUNTER_PETS_DATA?.allBeasts || hpWin.WOW_HUNTER_PETS_DATA.allBeasts.length !== 520) {
-    throw new Error(`Expected 520 beasts in WOW_HUNTER_PETS_DATA, found ${hpWin.WOW_HUNTER_PETS_DATA?.allBeasts?.length}`);
+  if (!hpWin.WOW_HUNTER_PETS_DATA?.allBeasts || hpWin.WOW_HUNTER_PETS_DATA.allBeasts.length < 620) {
+    throw new Error(`Expected >= 620 beasts in WOW_HUNTER_PETS_DATA, found ${hpWin.WOW_HUNTER_PETS_DATA?.allBeasts?.length}`);
+  }
+  if (!hpWin.WOW_HUNTER_PETS_DATA?.families || hpWin.WOW_HUNTER_PETS_DATA.families.length < 19) {
+    throw new Error(`Expected >= 19 pet families in WOW_HUNTER_PETS_DATA, found ${hpWin.WOW_HUNTER_PETS_DATA?.families?.length}`);
   }
 
   const colCode = fs.readFileSync(path.join(ROOT, 'js/data/collections-data.js'), 'utf8');

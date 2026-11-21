@@ -1,7 +1,6 @@
 /**
  * World of Warcraft: Forever - Spec Rotation & Priority Coach Profiles
- * Datamined from WoW Forever Client (Build 1.60.1.70707) & Closed Beta Simulations
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Synced from ForeverDB live addon data (Build 1.60.1.70959, GPL-3.0 attribution)
  */
 window.WOW_SPEC_COACH_DATA = {
   "druid-balance": {
@@ -11,8 +10,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Balance",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -37,8 +36,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.061,
-            "why": "Keep it on the target: up 96% of the sim's fight; worth 6.1% of your DPS",
+            "why": "Keep it on the target: up 94% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -46,17 +44,15 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 5178,
+            "spell": 2912,
             "ids": [
-              5176,
-              5177,
-              5178,
-              5179
+              2912,
+              8949
             ],
-            "name": "Wrath",
+            "name": "Starfire",
             "when": "filler",
-            "value": 0.848,
-            "why": "Your filler: cast it when nothing above is ready; worth 84.8% of your DPS",
+            "value": 0.832,
+            "why": "Your filler: cast it when nothing above is ready; worth 83.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -70,8 +66,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 8925,
             "name": "Moonfire",
             "on": "target",
-            "min_uptime": 0.95,
-            "value": 0.061,
+            "min_uptime": 0.9,
             "src": [
               "sim",
               "client"
@@ -81,10 +76,11 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.038,
+            "kind": "buff",
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -92,9 +88,72 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.03,
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.052,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.052,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.052,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.037,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -103,13 +162,13 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 53.3,
+          "dps": 48.1,
           "fight_s": 60,
           "build": "balance-20-dungeon",
           "limits": [
             "Omen of Clarity (the client has no proc rate for it)",
             "Faerie Fire (no damage)",
-            "Moonkin Form (not learned by 30)"
+            "Moonkin Form (not modelled yet)"
           ]
         }
       },
@@ -128,8 +187,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.064,
-            "why": "Keep it on the target: up 91% of the sim's fight; worth 6.4% of your DPS",
+            "value": 0.039,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 3.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -149,8 +208,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.101,
-            "why": "Keep it on the target: up 93% of the sim's fight; worth 10.1% of your DPS",
+            "value": 0.07,
+            "why": "Keep it on the target: up 93% of the sim's fight; worth 7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -166,8 +225,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Starfire",
             "when": "filler",
-            "value": 0.66,
-            "why": "Your filler: cast it when nothing above is ready; worth 66% of your DPS",
+            "value": 0.701,
+            "why": "Your filler: cast it when nothing above is ready; worth 70.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -196,7 +255,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.064,
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -207,7 +266,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.101,
+            "value": 0.07,
             "src": [
               "sim",
               "client"
@@ -218,9 +277,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.065,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.057,
             "src": [
               "sim",
               "client"
@@ -228,9 +287,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.061,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.054,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -239,13 +309,13 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 89,
+          "dps": 101.1,
           "fight_s": 60,
           "build": "balance-30-dungeon",
           "limits": [
             "Omen of Clarity (the client has no proc rate for it)",
             "Faerie Fire (no damage)",
-            "Moonkin Form (not learned by 30)"
+            "Moonkin Form (not modelled yet)"
           ]
         }
       },
@@ -265,8 +335,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.059,
-            "why": "Keep it on the target: up 91% of the sim's fight; worth 5.9% of your DPS",
+            "value": 0.032,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 3.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -288,8 +358,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.017,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 1.7% of your DPS",
+            "why": "Keep it on the target: up 84% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -306,8 +375,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Starfire",
             "when": "filler",
-            "value": 0.613,
-            "why": "Your filler: cast it when nothing above is ready; worth 61.3% of your DPS",
+            "value": 0.679,
+            "why": "Your filler: cast it when nothing above is ready; worth 67.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -336,7 +405,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.059,
+            "value": 0.032,
             "src": [
               "sim",
               "client"
@@ -346,8 +415,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 8929,
             "name": "Moonfire",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.017,
+            "min_uptime": 0.8,
             "src": [
               "sim",
               "client"
@@ -357,11 +425,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.068,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.071,
             "src": [
               "sim",
               "client"
@@ -369,10 +436,41 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.056,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.055,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.05,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.061,
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -383,7 +481,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.052,
+            "value": 0.044,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -391,50 +499,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.048,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.041,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.038,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.03,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.023,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -442,18 +510,16 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 128.1,
+          "dps": 150.3,
           "fight_s": 60,
           "build": "balance-40-dungeon",
           "limits": [
             "Omen of Clarity (the client has no proc rate for it)",
             "Faerie Fire (no damage)",
-            "Moonkin Form (not learned by 30)"
+            "Moonkin Form (not modelled yet)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -472,8 +538,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.044,
-            "why": "Keep it on the target: up 90% of the sim's fight; worth 4.4% of your DPS",
+            "value": 0.05,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -497,8 +563,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.031,
-            "why": "Keep it on the target: up 76% of the sim's fight; worth 3.1% of your DPS",
+            "why": "Keep it on the target: up 77% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -517,8 +582,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Starfire",
             "when": "filler",
-            "value": 0.598,
-            "why": "Your filler: cast it when nothing above is ready; worth 59.8% of your DPS",
+            "value": 0.661,
+            "why": "Your filler: cast it when nothing above is ready; worth 66.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -547,7 +612,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.044,
+            "value": 0.05,
             "src": [
               "sim",
               "client"
@@ -558,7 +623,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Moonfire",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -568,11 +632,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.086,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.085,
             "src": [
               "sim",
               "client"
@@ -580,10 +643,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.066,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.081,
+            "value": 0.063,
             "src": [
               "sim",
               "client"
@@ -594,7 +668,37 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.068,
+            "value": 0.059,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.057,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.049,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -602,50 +706,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.061,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.032,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.03,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.016,
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -653,18 +717,16 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 156,
+          "dps": 223.2,
           "fight_s": 60,
           "build": "balance-50-dungeon",
           "limits": [
             "Omen of Clarity (the client has no proc rate for it)",
             "Faerie Fire (no damage)",
-            "Moonkin Form (not learned by 30)"
+            "Moonkin Form (not modelled yet)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -684,32 +746,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.061,
-            "why": "Keep it on the target: up 92% of the sim's fight; worth 6.1% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 9835,
-            "ids": [
-              8921,
-              8924,
-              8925,
-              8926,
-              8927,
-              8928,
-              8929,
-              9833,
-              9834,
-              9835
-            ],
-            "name": "Moonfire",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "why": "Keep it on the target: up 75% of the sim's fight; the sim gains little from it",
+            "value": 0.019,
+            "why": "Keep it on the target: up 83% of the sim's fight; worth 1.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -729,8 +767,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Starfire",
             "when": "filler",
-            "value": 0.65,
-            "why": "Your filler: cast it when nothing above is ready; worth 65% of your DPS",
+            "value": 0.4,
+            "why": "Your filler: cast it when nothing above is ready; worth 40% of your DPS",
             "src": [
               "sim",
               "client",
@@ -758,18 +796,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 24977,
             "name": "Insect Swarm",
             "on": "target",
-            "min_uptime": 0.9,
-            "value": 0.061,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "aura": 9835,
-            "name": "Moonfire",
-            "on": "target",
-            "min_uptime": 0.7,
+            "min_uptime": 0.8,
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -779,44 +807,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.095,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.087,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.065,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.048,
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -824,9 +818,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.019,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -834,9 +828,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.016,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -844,42 +838,133 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.015,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.013,
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.029,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Moonfire out of single-target fights at level 60: the simulator's 180 s fight did 4.7% more damage without it.",
+            "name": "Moonfire",
+            "spell": 9835,
+            "value": -0.047,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Moonfire here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 385.6,
-          "fight_s": 60,
+          "dps": 159.8,
+          "fight_s": 180,
           "build": "balance-60-dungeon",
           "limits": [
             "Omen of Clarity (the client has no proc rate for it)",
             "Faerie Fire (no damage)",
-            "Moonkin Form (not learned by 30)"
+            "Moonkin Form (not modelled yet)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -893,7 +978,21 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "druid-balance-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+3.8% DPS in the simulator); then Briny Seafood Stew (+3%).",
+        "text": "Best consumable at levels 20-29: Scroll of Intellect IV (+5.2% DPS in the simulator); then Greater Arcane Elixir (+2.8%).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "druid-balance-20-partybuff",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +6.1% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -907,7 +1006,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "druid-balance-20-mix",
-        "text": "Where your damage comes from at levels 20-29: Wrath 84%, Moonfire 16% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: Starfire 83%, Moonfire 17% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
@@ -919,11 +1018,65 @@ window.WOW_SPEC_COACH_DATA = {
         "confidence": "sim"
       },
       {
-        "id": "druid-balance-20-worth-moonfire",
-        "text": "Moonfire is worth 6.1% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 96% of the time.",
+        "id": "druid-balance-20-oom",
+        "text": "Mana runs short at levels 20-29: in the simulator's 60 s fight you spend 9.8 s unable to cast. Drink between pulls and start full.",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "druid-balance-30-proc-nature-s-grace",
+        "text": "Nature's Grace: Cast Starfire within 15 sec, before it fades. In the simulator it comes 2.447 times a 60 s fight.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "druid-balance-30-consumable",
+        "text": "Best consumable at levels 30-39: Greater Arcane Elixir (+5.7% DPS in the simulator); then Baked Salmon (+5.4%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "druid-balance-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Arcane Intellect from a Mage: +1% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "druid-balance-30-mix",
+        "text": "Where your damage comes from at levels 30-39: Starfire 70%, Moonfire 16%, Insect Swarm 14% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim"
@@ -940,8 +1093,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Feral Combat",
     "role": "tank",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -1112,6 +1265,20 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "spell": 1328617,
+            "ids": [
+              1328617,
+              1328616
+            ],
+            "name": "Lacerate",
+            "when": "debuff_missing_or_ending",
+            "why": "Talent (tank build): stack it up to 5 times on the main target and refresh it before it runs out.",
+            "src": [
+              "guides",
+              "client"
+            ]
+          },
+          {
             "spell": 6809,
             "ids": [
               6807,
@@ -1173,6 +1340,15 @@ window.WOW_SPEC_COACH_DATA = {
           {
             "aura": 1735,
             "name": "Demoralizing Roar",
+            "on": "target",
+            "src": [
+              "guides",
+              "client"
+            ]
+          },
+          {
+            "aura": 1328617,
+            "name": "Lacerate",
             "on": "target",
             "src": [
               "guides",
@@ -1245,13 +1421,28 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "spell": 1328616,
+            "ids": [
+              1328617,
+              1328616,
+              414644
+            ],
+            "name": "Lacerate",
+            "when": "debuff_missing_or_ending",
+            "why": "Talent (leveling and tank builds): stack it to 5 on the main target and keep it from running out. High threat, and the bleed feeds Rend and Tear.",
+            "src": [
+              "guides",
+              "client"
+            ]
+          },
+          {
             "spell": 407995,
             "ids": [
               407995
             ],
             "name": "Primal Bite",
             "when": "ready",
-            "why": "Talent (every level 40 Feral build takes it): use it whenever it's off cooldown, before Maul. Rank 2 at 36.",
+            "why": "Talent (leveling and tank builds): use it whenever it's off cooldown, before Maul. Rank 2 comes at 50.",
             "src": [
               "guides",
               "client"
@@ -1327,6 +1518,15 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "aura": 1328616,
+            "name": "Lacerate",
+            "on": "target",
+            "src": [
+              "guides",
+              "client"
+            ]
+          },
+          {
             "aura": 6795,
             "name": "Growl",
             "on": "target",
@@ -1369,9 +1569,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -1386,7 +1584,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Feral Charge",
             "when": "ready",
-            "why": "Talent (every level 50 Feral build takes it): charge a caster to interrupt it.",
+            "why": "Talent (leveling, tank and PvP builds): charge a caster to interrupt it.",
             "src": [
               "guides",
               "client"
@@ -1403,7 +1601,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lacerate",
             "when": "debuff_missing_or_ending",
-            "why": "Learned at 42, rank 2 at 50: stack it to 5 on the boss and keep it from running out. High threat, and the bleed feeds Rend and Tear.",
+            "why": "Talent, rank 4 at 50: stack it to 5 on the boss and keep it from running out. High threat, and the bleed feeds Rend and Tear.",
             "src": [
               "guides",
               "client"
@@ -1417,7 +1615,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Primal Bite",
             "when": "ready",
-            "why": "Talent: whenever it's off cooldown. Rank 3 at 48.",
+            "why": "Talent: whenever it's off cooldown. Rank 2 at 50.",
             "src": [
               "guides",
               "client"
@@ -1541,9 +1739,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -1575,7 +1771,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lacerate",
             "when": "debuff_missing_or_ending",
-            "why": "Rank 3 at 58: stack it to 5 on the boss and keep it up.",
+            "why": "Talent, rank 5 at 58: stack it to 5 on the boss and keep it up.",
             "src": [
               "guides",
               "client"
@@ -1590,7 +1786,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Primal Bite",
             "when": "ready",
-            "why": "Talent: whenever it's off cooldown. Rank 4 at 60.",
+            "why": "Talent: whenever it's off cooldown. Rank 3 at 60.",
             "src": [
               "guides",
               "client"
@@ -1652,7 +1848,7 @@ window.WOW_SPEC_COACH_DATA = {
             "pct": 30,
             "do": 5229,
             "do_name": "Enrage",
-            "why": "Instant Rage to open with; Furor (level 60 builds) also gives 10 Rage on each shift.",
+            "why": "Instant Rage to open with; Furor (every level 60 Feral build) also gives 10 Rage on each shift.",
             "src": [
               "guides",
               "client"
@@ -1714,13 +1910,175 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -1733,11 +2091,11 @@ window.WOW_SPEC_COACH_DATA = {
     },
     "tips": [
       {
-        "id": "druid-feral-30-weights",
-        "text": "Stat values at level 30 (simulator, 1 attack power = 1): Strength 2, Agility 1.71, hit rating 0.76.",
+        "id": "druid-feral-60-weights",
+        "text": "Stat values at level 60 (simulator, 1 attack power = 1): hit rating 3.72, Agility 2.49, Strength 2.4.",
         "levels": [
-          30,
-          30
+          60,
+          60
         ],
         "src": [
           "sim"
@@ -1772,6 +2130,74 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "druid-feral-40-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 40-49, with cooldowns and costs from the Forever client.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-feral-40-cd-frenzied-regeneration",
+        "text": "Frenzied Regeneration has a 3 min cooldown at levels 40-49 (client data): about once every second or third pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-feral-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-feral-50-cd-frenzied-regeneration",
+        "text": "Frenzied Regeneration has a 3 min cooldown at levels 50-59 (client data): about once every second or third pull.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-feral-60-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for level 60, with cooldowns and costs from the Forever client.",
+        "levels": [
+          60,
+          60
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -1782,8 +2208,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Restoration",
     "role": "healer",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -2199,9 +2625,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -2388,9 +2812,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -2580,13 +3002,283 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 12 s, then every 38 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256035": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 13 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -2638,6 +3330,74 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "druid-restoration-40-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 40-49, with cooldowns and costs from the Forever client.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-restoration-40-cd-nature-s-swiftness",
+        "text": "Nature's Swiftness has a 3 min cooldown at levels 40-49 (client data): about once every second or third pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-restoration-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-restoration-50-cd-nature-s-swiftness",
+        "text": "Nature's Swiftness has a 3 min cooldown at levels 50-59 (client data): about once every second or third pull.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "druid-restoration-60-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for level 60, with cooldowns and costs from the Forever client.",
+        "levels": [
+          60,
+          60
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -2648,8 +3408,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Beast Mastery",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -2673,8 +3433,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.023,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 2.3% of your DPS",
+            "value": 0.018,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 1.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -2688,11 +3448,28 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.079,
-            "why": "Cast it when it's ready (6 s cooldown); worth 7.9% of your DPS",
+            "value": 0.056,
+            "why": "Cast it when it's ready (6 s cooldown); worth 5.6% of your DPS",
             "src": [
               "sim",
               "client"
+            ]
+          },
+          {
+            "spell": 14282,
+            "ids": [
+              3044,
+              14281,
+              14282,
+              14283
+            ],
+            "name": "Arcane Shot",
+            "when": "filler",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           }
         ],
@@ -2702,8 +3479,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13550,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.023,
+            "min_uptime": 0.85,
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -2716,19 +3493,9 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.234,
+            "value": 0.223,
             "src": [
               "sim"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.043,
-            "src": [
-              "sim",
-              "client"
             ]
           },
           {
@@ -2736,7 +3503,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.038,
+            "value": 0.047,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -2744,20 +3521,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.032,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
             "value": 0.03,
             "src": [
               "sim",
@@ -2766,10 +3532,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.03,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -2777,10 +3543,31 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.027,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.025,
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -2788,18 +3575,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.023,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
             "value": 0.014,
             "src": [
               "sim",
@@ -2807,21 +3584,9 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Arcane Shot out of single-target fights at levels 20-29: the simulator's 60 s fight did 1.1% more damage without it.",
-            "name": "Arcane Shot",
-            "spell": 14282,
-            "value": -0.011,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Arcane Shot here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
+        "avoid": [],
         "sim": {
-          "dps": 60,
+          "dps": 62.7,
           "fight_s": 60,
           "build": "beast-mastery-20-dungeon",
           "limits": [
@@ -2851,8 +3616,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.021,
-            "why": "Keep it on the target: up 80% of the sim's fight; worth 2.1% of your DPS",
+            "value": 0.022,
+            "why": "Keep it on the target: up 77% of the sim's fight; worth 2.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -2866,8 +3631,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.069,
-            "why": "Cast it when it's ready (6 s cooldown); worth 6.9% of your DPS",
+            "value": 0.038,
+            "why": "Cast it when it's ready (6 s cooldown); worth 3.8% of your DPS",
             "src": [
               "sim",
               "client"
@@ -2912,7 +3677,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.021,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -2925,7 +3690,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.253,
+            "value": 0.244,
             "src": [
               "sim"
             ]
@@ -2935,7 +3700,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.045,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -2943,21 +3708,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.032,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.031,
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -2965,30 +3719,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.031,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.028,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.028,
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -2996,10 +3730,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.028,
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -3007,9 +3741,40 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.017,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.027,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.027,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.026,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -3018,7 +3783,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 101.2,
+          "dps": 105.7,
           "fight_s": 60,
           "build": "beast-mastery-30-dungeon",
           "limits": [
@@ -3049,8 +3814,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.027,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 2.7% of your DPS",
+            "value": 0.03,
+            "why": "Keep it on the target: up 79% of the sim's fight; worth 3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3064,8 +3829,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.093,
-            "why": "Cast it when it's ready (6 s cooldown); worth 9.3% of your DPS",
+            "value": 0.072,
+            "why": "Cast it when it's ready (6 s cooldown); worth 7.2% of your DPS",
             "src": [
               "sim",
               "client"
@@ -3083,8 +3848,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "value": 0.042,
-            "why": "Your filler: cast it when nothing above is ready; worth 4.2% of your DPS",
+            "value": 0.039,
+            "why": "Your filler: cast it when nothing above is ready; worth 3.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3111,21 +3876,37 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13552,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.027,
+            "min_uptime": 0.75,
+            "value": 0.03,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "cooldowns": [],
+        "cooldowns": [
+          {
+            "spell": 19574,
+            "ids": [
+              19574
+            ],
+            "name": "Bestial Wrath",
+            "use": "on_pull",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "value": 0.038,
+            "cd_s": 120
+          }
+        ],
         "prepull": [
           {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.25,
+            "value": 0.278,
             "src": [
               "sim"
             ]
@@ -3135,7 +3916,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.045,
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -3143,31 +3924,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.04,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.036,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
             "value": 0.033,
             "src": [
               "sim",
@@ -3175,11 +3934,43 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.03,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "buff",
-            "id": 1461,
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.03,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.027,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -3187,9 +3978,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.02,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -3197,19 +3988,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.02,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.012,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -3217,9 +3998,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 135.1,
+          "dps": 156.2,
           "fight_s": 60,
           "build": "beast-mastery-40-dungeon",
           "limits": [
@@ -3229,8 +4009,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -3253,8 +4032,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.04,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 4% of your DPS",
+            "value": 0.05,
+            "why": "Keep it on the target: up 73% of the sim's fight; worth 5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3268,8 +4047,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.042,
-            "why": "Cast it when it's ready (6 s cooldown); worth 4.2% of your DPS",
+            "why": "Cast it when it's ready (6 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client"
@@ -3288,8 +4066,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "value": 0.021,
-            "why": "Your filler: cast it when nothing above is ready; worth 2.1% of your DPS",
+            "value": 0.033,
+            "why": "Your filler: cast it when nothing above is ready; worth 3.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3317,22 +4095,49 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.04,
+            "value": 0.05,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "cooldowns": [],
+        "cooldowns": [
+          {
+            "spell": 19574,
+            "ids": [
+              19574
+            ],
+            "name": "Bestial Wrath",
+            "use": "on_pull",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "value": 0.039,
+            "cd_s": 120
+          }
+        ],
         "prepull": [
           {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.24,
+            "value": 0.282,
             "src": [
               "sim"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.039,
+            "src": [
+              "sim",
+              "client"
             ]
           },
           {
@@ -3340,7 +4145,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.049,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -3348,21 +4153,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.045,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.041,
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -3370,10 +4164,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.036,
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -3381,10 +4175,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.036,
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -3392,9 +4186,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.015,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -3402,9 +4196,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.015,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.018,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -3412,9 +4216,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 175.7,
+          "dps": 195.8,
           "fight_s": 60,
           "build": "beast-mastery-50-dungeon",
           "limits": [
@@ -3424,8 +4227,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -3449,8 +4251,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.017,
-            "why": "Keep it on the target: up 73% of the sim's fight; worth 1.7% of your DPS",
+            "value": 0.012,
+            "why": "Keep it on the target: up 33% of the sim's fight; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3464,32 +4266,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.045,
-            "why": "Cast it when it's ready (6 s cooldown); worth 4.5% of your DPS",
+            "why": "Cast it when it's ready (6 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client"
-            ]
-          },
-          {
-            "spell": 14287,
-            "ids": [
-              3044,
-              14281,
-              14282,
-              14283,
-              14284,
-              14285,
-              14286,
-              14287
-            ],
-            "name": "Arcane Shot",
-            "when": "filler",
-            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
             ]
           }
         ],
@@ -3512,86 +4292,88 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25295,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.017,
+            "min_uptime": 0.3,
+            "value": 0.012,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "cooldowns": [],
+        "cooldowns": [
+          {
+            "spell": 19574,
+            "ids": [
+              19574
+            ],
+            "name": "Bestial Wrath",
+            "use": "on_pull",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "value": 0.02,
+            "cd_s": 120
+          }
+        ],
         "prepull": [
           {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.15,
+            "value": 0.222,
             "src": [
               "sim"
             ]
           },
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.055,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.052,
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.044,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.035,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.034,
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Arcane Shot out of single-target fights at level 60: the simulator's 180 s fight did 2.5% more damage without it.",
+            "name": "Arcane Shot",
+            "spell": 14287,
+            "value": -0.025,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Arcane Shot here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 342,
-          "fight_s": 60,
+          "dps": 359.9,
+          "fight_s": 180,
           "build": "beast-mastery-60-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
@@ -3600,12 +4382,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -3619,7 +4491,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "hunter-beast-mastery-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+4.3% DPS in the simulator); then Elixir of Agility (+2.3%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+4.2% DPS in the simulator); then Elixir of Greater Agility (+2.2%).",
         "levels": [
           20,
           29
@@ -3633,7 +4505,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-beast-mastery-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3.8% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +4.7% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -3647,13 +4519,79 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-beast-mastery-20-pet",
-        "text": "Keep your pet out: without it the simulator's fight does 23.4% less damage at levels 20-29.",
+        "text": "Keep your pet out: without it the simulator's fight does 22.3% less damage at levels 20-29.",
         "levels": [
           20,
           29
         ],
         "src": [
           "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-beast-mastery-20-mix",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 52%, Pet: Melee 17%, Multi-Shot 14% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-beast-mastery-20-worth-multi-shot",
+        "text": "Multi-Shot is worth 5.6% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-beast-mastery-20-oom",
+        "text": "Mana runs short at levels 20-29: in the simulator's 60 s fight you spend 26.4 s unable to cast. Drink between pulls and start full.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-beast-mastery-30-mana-rapid-fire",
+        "text": "Use Rapid Fire when your mana drops under 95%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-beast-mastery-30-consumable",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.7% DPS in the simulator); then Flank au Poivre (+2.7%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
         ],
         "n": 0,
         "confidence": "sim"
@@ -3667,8 +4605,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Marksmanship",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -3692,8 +4630,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.011,
-            "why": "Keep it on the target: up 81% of the sim's fight; worth 1.1% of your DPS",
+            "why": "Keep it on the target: up 88% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -3708,8 +4645,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Aimed Shot",
             "when": "ready",
-            "value": 0.076,
-            "why": "Cast it when it's ready (6 s cooldown); worth 7.6% of your DPS",
+            "value": 0.09,
+            "why": "Cast it when it's ready (6 s cooldown); worth 9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3740,8 +4677,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13550,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.011,
+            "min_uptime": 0.85,
             "src": [
               "sim",
               "client"
@@ -3754,7 +4690,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.213,
+            "value": 0.195,
             "src": [
               "sim"
             ]
@@ -3771,9 +4707,10 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
             "value": 0.038,
             "src": [
               "sim",
@@ -3781,11 +4718,10 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.031,
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -3793,10 +4729,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.03,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -3804,20 +4740,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.028,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
             "value": 0.026,
             "src": [
               "sim",
@@ -3825,9 +4750,20 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.024,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
             "value": 0.02,
             "src": [
               "sim",
@@ -3836,9 +4772,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.013,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -3847,7 +4783,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 59.8,
+          "dps": 65.2,
           "fight_s": 60,
           "build": "marksmanship-20-dungeon",
           "limits": [
@@ -3877,8 +4813,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.024,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 2.4% of your DPS",
+            "value": 0.02,
+            "why": "Keep it on the target: up 93% of the sim's fight; worth 2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3894,8 +4830,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Aimed Shot",
             "when": "ready",
-            "value": 0.076,
-            "why": "Cast it when it's ready (6 s cooldown); worth 7.6% of your DPS",
+            "value": 0.139,
+            "why": "Cast it when it's ready (6 s cooldown); worth 13.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3913,7 +4849,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
+            "value": 0.042,
+            "why": "Your filler: cast it when nothing above is ready; worth 4.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3940,8 +4877,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13551,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.024,
+            "min_uptime": 0.9,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -3954,7 +4891,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.197,
+            "value": 0.17,
             "src": [
               "sim"
             ]
@@ -3964,7 +4901,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.054,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -3972,10 +4909,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.052,
+            "value": 0.053,
             "src": [
               "sim",
               "client"
@@ -3983,10 +4920,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.041,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -3994,19 +4931,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.031,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
             "value": 0.028,
             "src": [
               "sim",
@@ -4015,9 +4942,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.028,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.026,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.026,
             "src": [
               "sim",
               "client"
@@ -4025,10 +4962,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.027,
+            "value": 0.024,
             "src": [
               "sim",
               "client"
@@ -4036,9 +4973,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.017,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -4047,7 +4984,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 98.3,
+          "dps": 116,
           "fight_s": 60,
           "build": "marksmanship-30-dungeon",
           "limits": [
@@ -4078,8 +5015,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.026,
-            "why": "Keep it on the target: up 76% of the sim's fight; worth 2.6% of your DPS",
+            "value": 0.017,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 1.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4096,8 +5033,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Aimed Shot",
             "when": "ready",
-            "value": 0.107,
-            "why": "Cast it when it's ready (6 s cooldown); worth 10.7% of your DPS",
+            "value": 0.149,
+            "why": "Cast it when it's ready (6 s cooldown); worth 14.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4116,8 +5053,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "value": 0.022,
-            "why": "Your filler: cast it when nothing above is ready; worth 2.2% of your DPS",
+            "value": 0.036,
+            "why": "Your filler: cast it when nothing above is ready; worth 3.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4144,8 +5081,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13552,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.026,
+            "min_uptime": 0.85,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -4158,7 +5095,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.19,
+            "value": 0.167,
             "src": [
               "sim"
             ]
@@ -4168,7 +5105,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.051,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -4176,10 +5113,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.045,
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -4187,31 +5124,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.039,
+            "value": 0.046,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.035,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
             "value": 0.032,
             "src": [
               "sim",
@@ -4219,10 +5144,22 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.021,
+            "kind": "buff",
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.031,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -4230,9 +5167,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.021,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -4240,9 +5177,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.013,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -4250,9 +5187,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 133.5,
+          "dps": 154.9,
           "fight_s": 60,
           "build": "marksmanship-40-dungeon",
           "limits": [
@@ -4262,8 +5198,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -4286,8 +5221,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.038,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 3.8% of your DPS",
+            "value": 0.033,
+            "why": "Keep it on the target: up 73% of the sim's fight; worth 3.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4305,8 +5240,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Aimed Shot",
             "when": "ready",
-            "value": 0.08,
-            "why": "Cast it when it's ready (6 s cooldown); worth 8% of your DPS",
+            "value": 0.068,
+            "why": "Cast it when it's ready (6 s cooldown); worth 6.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4323,209 +5258,6 @@ window.WOW_SPEC_COACH_DATA = {
               14284,
               14285,
               14286
-            ],
-            "name": "Arcane Shot",
-            "when": "filler",
-            "value": 0.027,
-            "why": "Your filler: cast it when nothing above is ready; worth 2.7% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          }
-        ],
-        "triggers": [
-          {
-            "kind": "mana_below",
-            "pct": 95,
-            "do": 3045,
-            "do_name": "Rapid Fire",
-            "why": "The sim uses Rapid Fire when your mana is under 95%",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          }
-        ],
-        "keep_up": [
-          {
-            "aura": 13554,
-            "name": "Serpent Sting",
-            "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.038,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "cooldowns": [],
-        "prepull": [
-          {
-            "kind": "pet",
-            "id": 0,
-            "name": "pet",
-            "value": 0.181,
-            "src": [
-              "sim"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.052,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.047,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.045,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.035,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.035,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.016,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.016,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "avoid": [],
-        "speculation": true,
-        "sim": {
-          "dps": 173.2,
-          "fight_s": 60,
-          "build": "marksmanship-50-dungeon",
-          "limits": [
-            "Ammunition (the client gives arrows no damage)",
-            "Pet families' differences",
-            "Summon Hawk",
-            "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
-          ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
-      },
-      {
-        "levels": [
-          60,
-          60
-        ],
-        "priority": [
-          {
-            "spell": 25295,
-            "ids": [
-              1978,
-              13549,
-              13550,
-              13551,
-              13552,
-              13553,
-              13554,
-              13555,
-              25295
-            ],
-            "name": "Serpent Sting",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "value": 0.018,
-            "why": "Keep it on the target: up 49% of the sim's fight; worth 1.8% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 20904,
-            "ids": [
-              19434,
-              20900,
-              20901,
-              20902,
-              20903,
-              20904
-            ],
-            "name": "Aimed Shot",
-            "when": "ready",
-            "value": 0.038,
-            "why": "Cast it when it's ready (6 s cooldown); worth 3.8% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 14287,
-            "ids": [
-              3044,
-              14281,
-              14282,
-              14283,
-              14284,
-              14285,
-              14286,
-              14287
             ],
             "name": "Arcane Shot",
             "when": "filler",
@@ -4553,11 +5285,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
-            "aura": 25295,
+            "aura": 13554,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.45,
-            "value": 0.018,
+            "min_uptime": 0.7,
+            "value": 0.033,
             "src": [
               "sim",
               "client"
@@ -4570,17 +5302,17 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.106,
+            "value": 0.169,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.063,
+            "value": 0.052,
             "src": [
               "sim",
               "client"
@@ -4588,18 +5320,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.058,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.049,
@@ -4610,10 +5331,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.037,
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -4621,10 +5342,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.035,
+            "value": 0.032,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -4632,9 +5364,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.024,
             "src": [
               "sim",
               "client"
@@ -4642,9 +5374,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.01,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.019,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -4652,10 +5394,153 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 340.1,
+          "dps": 187.4,
           "fight_s": 60,
+          "build": "marksmanship-50-dungeon",
+          "limits": [
+            "Ammunition (the client gives arrows no damage)",
+            "Pet families' differences",
+            "Summon Hawk",
+            "Trueshot Aura's party bonus",
+            "Wing Clip and traps"
+          ]
+        }
+      },
+      {
+        "levels": [
+          60,
+          60
+        ],
+        "priority": [
+          {
+            "spell": 25295,
+            "ids": [
+              1978,
+              13549,
+              13550,
+              13551,
+              13552,
+              13553,
+              13554,
+              13555,
+              25295
+            ],
+            "name": "Serpent Sting",
+            "when": "debuff_missing_or_ending",
+            "ending_s": 0,
+            "why": "Keep it on the target: up 32% of the sim's fight; the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 20904,
+            "ids": [
+              19434,
+              20900,
+              20901,
+              20902,
+              20903,
+              20904
+            ],
+            "name": "Aimed Shot",
+            "when": "ready",
+            "value": 0.044,
+            "why": "Cast it when it's ready (6 s cooldown); worth 4.4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          }
+        ],
+        "triggers": [
+          {
+            "kind": "mana_below",
+            "pct": 95,
+            "do": 3045,
+            "do_name": "Rapid Fire",
+            "why": "The sim uses Rapid Fire when your mana is under 95%",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          }
+        ],
+        "keep_up": [
+          {
+            "aura": 25295,
+            "name": "Serpent Sting",
+            "on": "target",
+            "min_uptime": 0.3,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "cooldowns": [],
+        "prepull": [
+          {
+            "kind": "pet",
+            "id": 0,
+            "name": "pet",
+            "value": 0.138,
+            "src": [
+              "sim"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.02,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.016,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.014,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "avoid": [
+          {
+            "text": "Leave Arcane Shot out of single-target fights at level 60: the simulator's 180 s fight did 6.1% more damage without it.",
+            "name": "Arcane Shot",
+            "spell": 14287,
+            "value": -0.061,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Arcane Shot here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
+        "sim": {
+          "dps": 330.9,
+          "fight_s": 180,
           "build": "marksmanship-60-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
@@ -4664,12 +5549,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -4683,7 +5658,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "hunter-marksmanship-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+3.8% DPS in the simulator); then Elixir of Agility (+2%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+3.7% DPS in the simulator); then Elixir of Greater Agility (+2%).",
         "levels": [
           20,
           29
@@ -4711,13 +5686,79 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-marksmanship-20-pet",
-        "text": "Keep your pet out: without it the simulator's fight does 21.3% less damage at levels 20-29.",
+        "text": "Keep your pet out: without it the simulator's fight does 19.5% less damage at levels 20-29.",
         "levels": [
           20,
           29
         ],
         "src": [
           "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-marksmanship-20-mix",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 48%, Pet: Melee 16%, Aimed Shot 15% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-marksmanship-20-worth-aimed-shot",
+        "text": "Aimed Shot is worth 9% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-marksmanship-20-oom",
+        "text": "Mana runs short at levels 20-29: in the simulator's 60 s fight you spend 23 s unable to cast. Drink between pulls and start full.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-marksmanship-30-mana-rapid-fire",
+        "text": "Use Rapid Fire when your mana drops under 95%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-marksmanship-30-consumable",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.6% DPS in the simulator); then Flank au Poivre (+2.6%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
         ],
         "n": 0,
         "confidence": "sim"
@@ -4731,8 +5772,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Survival",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -4772,8 +5813,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.109,
-            "why": "Cast it when it's ready (6 s cooldown); worth 10.9% of your DPS",
+            "value": 0.107,
+            "why": "Cast it when it's ready (6 s cooldown); worth 10.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4791,8 +5832,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.043,
-            "why": "Keep it on the target: up 82% of the sim's fight; worth 4.3% of your DPS",
+            "value": 0.054,
+            "why": "Keep it on the target: up 82% of the sim's fight; worth 5.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4820,7 +5861,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.043,
+            "value": 0.054,
             "src": [
               "sim",
               "client"
@@ -4833,25 +5874,14 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.267,
+            "value": 0.265,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.032,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
             "value": 0.031,
@@ -4862,7 +5892,18 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.03,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
             "value": 0.029,
@@ -4873,8 +5914,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
+            "id": 250069,
+            "name": "Flank au Poivre",
             "value": 0.024,
             "src": [
               "sim",
@@ -4883,10 +5924,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.023,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -4894,7 +5935,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.015,
@@ -4905,8 +5946,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
             "value": 0.013,
             "src": [
               "sim",
@@ -4916,7 +5957,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 47.2,
+          "dps": 47.8,
           "fight_s": 60,
           "build": "survival-20-dungeon",
           "limits": [
@@ -4944,8 +5985,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 0,
             "aura_name": "Mongoose",
-            "value": 0.025,
-            "why": "Only while Mongoose is up; worth 2.5% of your DPS",
+            "value": 0.028,
+            "why": "Only while Mongoose is up; worth 2.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4959,8 +6000,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Strider Kick",
             "when": "ready",
-            "value": 0.139,
-            "why": "Cast it when it's ready (8 s cooldown); worth 13.9% of your DPS",
+            "value": 0.164,
+            "why": "Cast it when it's ready (8 s cooldown); worth 16.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4978,8 +6019,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.067,
-            "why": "Cast it when it's ready (6 s cooldown); worth 6.7% of your DPS",
+            "value": 0.116,
+            "why": "Cast it when it's ready (6 s cooldown); worth 11.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4998,8 +6039,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.022,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 2.2% of your DPS",
+            "value": 0.065,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 6.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5026,8 +6067,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13551,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.022,
+            "min_uptime": 0.85,
+            "value": 0.065,
             "src": [
               "sim",
               "client"
@@ -5040,36 +6081,14 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.206,
+            "value": 0.198,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.04,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.039,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
             "value": 0.037,
@@ -5080,18 +6099,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.037,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
             "value": 0.033,
@@ -5101,9 +6109,31 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.03,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.025,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
             "value": 0.019,
             "src": [
               "sim",
@@ -5112,8 +6142,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
+            "id": 250069,
+            "name": "Flank au Poivre",
             "value": 0.019,
             "src": [
               "sim",
@@ -5122,9 +6152,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
             "value": 0.011,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -5133,7 +6174,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 94.1,
+          "dps": 98.5,
           "fight_s": 60,
           "build": "survival-30-dungeon",
           "limits": [
@@ -5162,8 +6203,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 0,
             "aura_name": "Mongoose",
-            "value": 0.022,
-            "why": "Only while Mongoose is up; worth 2.2% of your DPS",
+            "value": 0.034,
+            "why": "Only while Mongoose is up; worth 3.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5177,8 +6218,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Strider Kick",
             "when": "ready",
-            "value": 0.133,
-            "why": "Cast it when it's ready (8 s cooldown); worth 13.3% of your DPS",
+            "value": 0.199,
+            "why": "Cast it when it's ready (8 s cooldown); worth 19.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5198,8 +6239,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.096,
-            "why": "Cast it when it's ready (6 s cooldown); worth 9.6% of your DPS",
+            "value": 0.109,
+            "why": "Cast it when it's ready (6 s cooldown); worth 10.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5219,8 +6260,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.043,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 4.3% of your DPS",
+            "value": 0.084,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 8.4% of your DPS",
             "src": [
               "sim",
               "client"
@@ -5246,8 +6287,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 13552,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.043,
+            "min_uptime": 0.85,
+            "value": 0.084,
             "src": [
               "sim",
               "client"
@@ -5260,17 +6301,17 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.22,
+            "value": 0.183,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.047,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -5278,21 +6319,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.043,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.043,
+            "value": 0.036,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.026,
             "src": [
               "sim",
               "client"
@@ -5303,7 +6343,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.037,
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -5311,10 +6351,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.029,
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -5322,8 +6362,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
+            "id": 250069,
+            "name": "Flank au Poivre",
             "value": 0.016,
             "src": [
               "sim",
@@ -5332,19 +6372,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.016,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.01,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -5352,9 +6382,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 113.1,
+          "dps": 135.6,
           "fight_s": 60,
           "build": "survival-40-dungeon",
           "limits": [
@@ -5364,8 +6393,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -5385,8 +6413,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 0,
             "aura_name": "Mongoose",
-            "value": 0.031,
-            "why": "Only while Mongoose is up; worth 3.1% of your DPS",
+            "value": 0.03,
+            "why": "Only while Mongoose is up; worth 3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5400,8 +6428,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Strider Kick",
             "when": "ready",
-            "value": 0.156,
-            "why": "Cast it when it's ready (8 s cooldown); worth 15.6% of your DPS",
+            "value": 0.152,
+            "why": "Cast it when it's ready (8 s cooldown); worth 15.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5422,8 +6450,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.135,
-            "why": "Cast it when it's ready (6 s cooldown); worth 13.5% of your DPS",
+            "value": 0.13,
+            "why": "Cast it when it's ready (6 s cooldown); worth 13% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5445,8 +6473,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.114,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 11.4% of your DPS",
+            "value": 0.13,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 13% of your DPS",
             "src": [
               "sim",
               "client"
@@ -5473,7 +6501,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.114,
+            "value": 0.13,
             "src": [
               "sim",
               "client"
@@ -5486,17 +6514,17 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.192,
+            "value": 0.187,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.045,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -5504,10 +6532,31 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.045,
+            "value": 0.043,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.02,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -5518,17 +6567,6 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.025,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
             "value": 0.019,
             "src": [
               "sim",
@@ -5537,9 +6575,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.012,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -5547,9 +6585,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.012,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -5557,9 +6595,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 161.3,
+          "dps": 165.1,
           "fight_s": 60,
           "build": "survival-50-dungeon",
           "limits": [
@@ -5569,8 +6606,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -5590,8 +6626,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 0,
             "aura_name": "Mongoose",
-            "value": 0.033,
-            "why": "Only while Mongoose is up; worth 3.3% of your DPS",
+            "value": 0.046,
+            "why": "Only while Mongoose is up; worth 4.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5605,8 +6641,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Strider Kick",
             "when": "ready",
-            "value": 0.207,
-            "why": "Cast it when it's ready (8 s cooldown); worth 20.7% of your DPS",
+            "value": 0.199,
+            "why": "Cast it when it's ready (8 s cooldown); worth 19.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5627,8 +6663,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.118,
-            "why": "Cast it when it's ready (6 s cooldown); worth 11.8% of your DPS",
+            "value": 0.177,
+            "why": "Cast it when it's ready (6 s cooldown); worth 17.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5651,8 +6687,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.095,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 9.5% of your DPS",
+            "value": 0.104,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.4% of your DPS",
             "src": [
               "sim",
               "client"
@@ -5678,8 +6714,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25295,
             "name": "Serpent Sting",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.095,
+            "min_uptime": 0.9,
+            "value": 0.104,
             "src": [
               "sim",
               "client"
@@ -5692,50 +6728,36 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.108,
+            "value": 0.128,
             "src": [
               "sim"
             ]
           },
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.042,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.041,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.026,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
             "value": 0.013,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -5743,10 +6765,9 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 324.5,
-          "fight_s": 60,
+          "dps": 362.4,
+          "fight_s": 180,
           "build": "survival-60-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
@@ -5755,12 +6776,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -5787,7 +6898,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-survival-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+2.4% DPS in the simulator); then Elixir of Agility (+1.3%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+2.4% DPS in the simulator); then Elixir of Greater Agility (+1.3%).",
         "levels": [
           20,
           29
@@ -5801,7 +6912,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-survival-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3.2% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +3.1% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -5809,6 +6920,71 @@ window.WOW_SPEC_COACH_DATA = {
         "src": [
           "sim",
           "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-survival-20-pet",
+        "text": "Keep your pet out: without it the simulator's fight does 26.5% less damage at levels 20-29.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-survival-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Raptor Strike 52%, Pet: Melee 21%, auto attacks 11% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-survival-20-worth-raptor-strike",
+        "text": "Raptor Strike is worth 10.7% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-survival-20-worth-serpent-sting",
+        "text": "Serpent Sting is worth 5.4% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 82% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "hunter-survival-20-oom",
+        "text": "Mana runs short at levels 20-29: in the simulator's 60 s fight you spend 16.4 s unable to cast. Drink between pulls and start full.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
         ],
         "n": 0,
         "confidence": "sim"
@@ -5822,8 +6998,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Arcane",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -5845,8 +7021,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.382,
-            "why": "Your filler: cast it when nothing above is ready; worth 38.2% of your DPS",
+            "value": 0.386,
+            "why": "Your filler: cast it when nothing above is ready; worth 38.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5898,8 +7074,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.028,
             "src": [
               "sim",
@@ -5908,8 +7084,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.022,
             "src": [
               "sim",
@@ -5919,7 +7095,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 43.6,
+          "dps": 43.8,
           "fight_s": 60,
           "build": "arcane-20-dungeon",
           "limits": [
@@ -5943,8 +7119,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.355,
-            "why": "Your filler: cast it when nothing above is ready; worth 35.5% of your DPS",
+            "value": 0.419,
+            "why": "Your filler: cast it when nothing above is ready; worth 41.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -5989,6 +7165,19 @@ window.WOW_SPEC_COACH_DATA = {
               "sim",
               "client"
             ]
+          },
+          {
+            "kind": "proc",
+            "aura": 400588,
+            "name": "Missile Barrage",
+            "do": 5145,
+            "do_name": "Arcane Missiles",
+            "within_s": 15,
+            "why": "Missile Barrage makes Arcane Missiles better: use it before it fades",
+            "src": [
+              "sim",
+              "client"
+            ]
           }
         ],
         "keep_up": [],
@@ -6011,8 +7200,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.051,
             "src": [
               "sim",
@@ -6021,53 +7210,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.048,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.017,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19850,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -6076,7 +7221,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 73.2,
+          "dps": 81.2,
           "fight_s": 60,
           "build": "arcane-30-dungeon",
           "limits": [
@@ -6102,8 +7247,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.5,
-            "why": "Your filler: cast it when nothing above is ready; worth 50% of your DPS",
+            "value": 0.551,
+            "why": "Your filler: cast it when nothing above is ready; worth 55.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6148,6 +7293,19 @@ window.WOW_SPEC_COACH_DATA = {
               "sim",
               "client"
             ]
+          },
+          {
+            "kind": "proc",
+            "aura": 400588,
+            "name": "Missile Barrage",
+            "do": 8417,
+            "do_name": "Arcane Missiles",
+            "within_s": 15,
+            "why": "Missile Barrage makes Arcane Missiles better: use it before it fades",
+            "src": [
+              "sim",
+              "client"
+            ]
           }
         ],
         "keep_up": [],
@@ -6170,9 +7328,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.03,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -6180,9 +7338,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.028,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -6190,16 +7348,14 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 130,
+          "dps": 142.7,
           "fight_s": 60,
           "build": "arcane-40-dungeon",
           "limits": [
             "Arcane Explosion (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -6221,8 +7377,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.518,
-            "why": "Your filler: cast it when nothing above is ready; worth 51.8% of your DPS",
+            "value": 0.586,
+            "why": "Your filler: cast it when nothing above is ready; worth 58.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6267,6 +7423,19 @@ window.WOW_SPEC_COACH_DATA = {
               "sim",
               "client"
             ]
+          },
+          {
+            "kind": "proc",
+            "aura": 400588,
+            "name": "Missile Barrage",
+            "do": 10211,
+            "do_name": "Arcane Missiles",
+            "within_s": 15,
+            "why": "Missile Barrage makes Arcane Missiles better: use it before it fades",
+            "src": [
+              "sim",
+              "client"
+            ]
           }
         ],
         "keep_up": [],
@@ -6289,9 +7458,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.024,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -6299,9 +7468,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.022,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -6309,16 +7478,14 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 173.3,
+          "dps": 221.2,
           "fight_s": 60,
           "build": "arcane-50-dungeon",
           "limits": [
             "Arcane Explosion (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -6340,8 +7507,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.607,
-            "why": "Your filler: cast it when nothing above is ready; worth 60.7% of your DPS",
+            "value": 0.446,
+            "why": "Your filler: cast it when nothing above is ready; worth 44.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6353,7 +7520,8 @@ window.WOW_SPEC_COACH_DATA = {
             "ids": [],
             "name": "Wand",
             "when": "out_of_mana",
-            "why": "Only when you're out of mana",
+            "value": 0.107,
+            "why": "Only when you're out of mana; worth 10.7% of your DPS",
             "src": [
               "sim"
             ]
@@ -6431,9 +7599,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.011,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -6441,9 +7609,29 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.01,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.024,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -6451,20 +7639,109 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 488.8,
-          "fight_s": 60,
+          "dps": 215.2,
+          "fight_s": 180,
           "build": "arcane-60-dungeon",
           "limits": [
             "Arcane Explosion (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -6515,6 +7792,73 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "sim"
+      },
+      {
+        "id": "mage-arcane-20-consumable",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.8% DPS in the simulator); then Baked Salmon (+2.2%).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-arcane-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Arcane Missiles 63%, Arcane Blast 37% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-arcane-30-mana-evocation",
+        "text": "Use Evocation when your mana drops under 15%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-arcane-30-cd-presence-of-mind",
+        "text": "Presence of Mind (3 min cooldown): the simulator uses it right before Arcane Blast at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-arcane-30-mana-arcane-blast",
+        "text": "Use Arcane Blast when your mana drops under 25%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
       }
     ]
   },
@@ -6525,8 +7869,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Fire",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -6567,8 +7911,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fireball",
             "when": "filler",
-            "value": 0.559,
-            "why": "Your filler: cast it when nothing above is ready; worth 55.9% of your DPS",
+            "value": 0.563,
+            "why": "Your filler: cast it when nothing above is ready; worth 56.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6594,8 +7938,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.026,
             "src": [
               "sim",
@@ -6604,8 +7948,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.021,
             "src": [
               "sim",
@@ -6626,7 +7970,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 54.5,
+          "dps": 54.9,
           "fight_s": 60,
           "build": "fire-20-dungeon",
           "limits": [
@@ -6649,8 +7993,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Scorch",
             "when": "ready",
-            "value": 0.062,
-            "why": "Cast it when it's ready; worth 6.2% of your DPS",
+            "value": 0.063,
+            "why": "Cast it when it's ready; worth 6.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6668,8 +8012,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fire Blast",
             "when": "ready",
-            "value": 0.047,
-            "why": "Cast it when it's ready (8 s cooldown); worth 4.7% of your DPS",
+            "value": 0.048,
+            "why": "Cast it when it's ready (8 s cooldown); worth 4.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6689,8 +8033,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fireball",
             "when": "filler",
-            "value": 0.351,
-            "why": "Your filler: cast it when nothing above is ready; worth 35.1% of your DPS",
+            "value": 0.353,
+            "why": "Your filler: cast it when nothing above is ready; worth 35.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6716,8 +8060,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.048,
             "src": [
               "sim",
@@ -6726,8 +8070,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.045,
             "src": [
               "sim",
@@ -6737,7 +8081,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 96.3,
+          "dps": 96.6,
           "fight_s": 60,
           "build": "fire-30-dungeon",
           "limits": [
@@ -6762,8 +8106,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Scorch",
             "when": "ready",
-            "value": 0.092,
-            "why": "Cast it when it's ready; worth 9.2% of your DPS",
+            "value": 0.085,
+            "why": "Cast it when it's ready; worth 8.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6782,8 +8126,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fire Blast",
             "when": "ready",
-            "value": 0.062,
-            "why": "Cast it when it's ready (8 s cooldown); worth 6.2% of your DPS",
+            "value": 0.068,
+            "why": "Cast it when it's ready (8 s cooldown); worth 6.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6805,8 +8149,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fireball",
             "when": "filler",
-            "value": 0.386,
-            "why": "Your filler: cast it when nothing above is ready; worth 38.6% of your DPS",
+            "value": 0.371,
+            "why": "Your filler: cast it when nothing above is ready; worth 37.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6832,9 +8176,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.032,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -6842,9 +8186,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.03,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -6852,16 +8196,14 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 151.6,
+          "dps": 150.3,
           "fight_s": 60,
           "build": "fire-40-dungeon",
           "limits": [
             "Blast Wave and Flamestrike (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -6882,8 +8224,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Scorch",
             "when": "ready",
-            "value": 0.074,
-            "why": "Cast it when it's ready; worth 7.4% of your DPS",
+            "value": 0.088,
+            "why": "Cast it when it's ready; worth 8.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6903,8 +8245,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fire Blast",
             "when": "ready",
-            "value": 0.114,
-            "why": "Cast it when it's ready (8 s cooldown); worth 11.4% of your DPS",
+            "value": 0.111,
+            "why": "Cast it when it's ready (8 s cooldown); worth 11.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6927,8 +8269,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fireball",
             "when": "filler",
-            "value": 0.372,
-            "why": "Your filler: cast it when nothing above is ready; worth 37.2% of your DPS",
+            "value": 0.426,
+            "why": "Your filler: cast it when nothing above is ready; worth 42.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6954,9 +8296,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.025,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.049,
             "src": [
               "sim",
               "client"
@@ -6964,9 +8306,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.023,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -6974,16 +8316,14 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 208.7,
+          "dps": 243,
           "fight_s": 60,
           "build": "fire-50-dungeon",
           "limits": [
             "Blast Wave and Flamestrike (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -7004,8 +8344,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Scorch",
             "when": "ready",
-            "value": 0.09,
-            "why": "Cast it when it's ready; worth 9% of your DPS",
+            "value": 0.113,
+            "why": "Cast it when it's ready; worth 11.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7025,8 +8365,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fire Blast",
             "when": "ready",
-            "value": 0.02,
-            "why": "Cast it when it's ready (8 s cooldown); worth 2% of your DPS",
+            "why": "Cast it when it's ready (8 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -7051,12 +8390,23 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fireball",
             "when": "filler",
-            "value": 0.523,
-            "why": "Your filler: cast it when nothing above is ready; worth 52.3% of your DPS",
+            "value": 0.335,
+            "why": "Your filler: cast it when nothing above is ready; worth 33.5% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 0,
+            "ids": [],
+            "name": "Wand",
+            "when": "out_of_mana",
+            "value": 0.096,
+            "why": "Only when you're out of mana; worth 9.6% of your DPS",
+            "src": [
+              "sim"
             ]
           }
         ],
@@ -7091,22 +8441,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.017,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.017,
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -7114,9 +8452,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.012,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -7124,9 +8462,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.011,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.025,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -7134,20 +8482,109 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 550.7,
-          "fight_s": 60,
+          "dps": 224.4,
+          "fight_s": 180,
           "build": "fire-60-dungeon",
           "limits": [
             "Blast Wave and Flamestrike (single target)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -7174,7 +8611,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "mage-fire-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+2.6% DPS in the simulator); then Briny Seafood Stew (+2.1%).",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.6% DPS in the simulator); then Baked Salmon (+2.1%).",
         "levels": [
           20,
           29
@@ -7199,6 +8636,72 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "sim"
+      },
+      {
+        "id": "mage-fire-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Fireball 78%, Fire Blast 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-fire-30-mana-evocation",
+        "text": "Use Evocation when your mana drops under 15%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-fire-30-consumable",
+        "text": "Best consumable at levels 30-39: Greater Arcane Elixir (+4.8% DPS in the simulator); then Baked Salmon (+4.5%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-fire-30-mix",
+        "text": "Where your damage comes from at levels 30-39: Fireball 55%, Scorch 21%, Fire Blast 20% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-fire-30-worth-scorch",
+        "text": "Scorch is worth 6.3% of your DPS at levels 30-39: the simulator's fight without it did that much less damage.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
       }
     ]
   },
@@ -7209,8 +8712,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Frost",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -7234,8 +8737,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Frostbolt",
             "when": "filler",
-            "value": 0.589,
-            "why": "Your filler: cast it when nothing above is ready; worth 58.9% of your DPS",
+            "value": 0.593,
+            "why": "Your filler: cast it when nothing above is ready; worth 59.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7261,8 +8764,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.025,
             "src": [
               "sim",
@@ -7271,8 +8774,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.02,
             "src": [
               "sim",
@@ -7294,7 +8797,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 58.1,
+          "dps": 58.4,
           "fight_s": 60,
           "build": "frost-20-dungeon",
           "limits": [
@@ -7341,8 +8844,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Frostbolt",
             "when": "filler",
-            "value": 0.505,
-            "why": "Your filler: cast it when nothing above is ready; worth 50.5% of your DPS",
+            "value": 0.507,
+            "why": "Your filler: cast it when nothing above is ready; worth 50.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7382,8 +8885,8 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.043,
             "src": [
               "sim",
@@ -7392,8 +8895,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.04,
             "src": [
               "sim",
@@ -7415,7 +8918,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 90.3,
+          "dps": 90.5,
           "fight_s": 60,
           "build": "frost-30-dungeon",
           "limits": [
@@ -7443,31 +8946,12 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 400647,
             "aura_name": "Fingers of Frost",
-            "value": 0.021,
-            "why": "Only while Fingers of Frost is up; worth 2.1% of your DPS",
+            "value": 0.022,
+            "why": "Only while Fingers of Frost is up; worth 2.2% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 8413,
-            "ids": [
-              2136,
-              2137,
-              2138,
-              8412,
-              8413,
-              10197
-            ],
-            "name": "Fire Blast",
-            "when": "ready",
-            "value": 0.056,
-            "why": "Cast it when it's ready (8 s cooldown); worth 5.6% of your DPS",
-            "src": [
-              "sim",
-              "client"
             ]
           },
           {
@@ -7484,8 +8968,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Frostbolt",
             "when": "filler",
-            "value": 0.548,
-            "why": "Your filler: cast it when nothing above is ready; worth 54.8% of your DPS",
+            "value": 0.547,
+            "why": "Your filler: cast it when nothing above is ready; worth 54.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7525,9 +9009,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.027,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -7535,49 +9019,45 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.026,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.038,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.012,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Fire Blast out of single-target fights at levels 40-49: the simulator's 60 s fight did 3% more damage without it.",
+            "name": "Fire Blast",
+            "spell": 8413,
+            "value": -0.03,
+            "src": [
+              "sim"
+            ]
+          }
+        ],
         "sim": {
-          "dps": 141.6,
+          "dps": 139.9,
           "fight_s": 60,
           "build": "frost-40-dungeon",
           "limits": [
             "Frost Nova and Ice Lance on frozen targets: a boss can't be frozen, so they aren't used",
             "Wand"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -7599,8 +9079,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 400647,
             "aura_name": "Fingers of Frost",
-            "value": 0.061,
-            "why": "Only while Fingers of Frost is up; worth 6.1% of your DPS",
+            "value": 0.054,
+            "why": "Only while Fingers of Frost is up; worth 5.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7620,8 +9100,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Fire Blast",
             "when": "ready",
-            "value": 0.046,
-            "why": "Cast it when it's ready (8 s cooldown); worth 4.6% of your DPS",
+            "value": 0.05,
+            "why": "Cast it when it's ready (8 s cooldown); worth 5% of your DPS",
             "src": [
               "sim",
               "client"
@@ -7643,8 +9123,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Frostbolt",
             "when": "filler",
-            "value": 0.612,
-            "why": "Your filler: cast it when nothing above is ready; worth 61.2% of your DPS",
+            "value": 0.63,
+            "why": "Your filler: cast it when nothing above is ready; worth 63% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7684,9 +9164,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.02,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -7694,31 +9174,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.019,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.012,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -7726,17 +9184,15 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 199.4,
+          "dps": 217.1,
           "fight_s": 60,
           "build": "frost-50-dungeon",
           "limits": [
             "Frost Nova and Ice Lance on frozen targets: a boss can't be frozen, so they aren't used",
             "Wand"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -7758,8 +9214,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "proc",
             "aura": 400647,
             "aura_name": "Fingers of Frost",
-            "value": 0.01,
-            "why": "Only while Fingers of Frost is up; worth 1% of your DPS",
+            "value": 0.048,
+            "why": "Only while Fingers of Frost is up; worth 4.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7783,12 +9239,23 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Frostbolt",
             "when": "filler",
-            "value": 0.673,
-            "why": "Your filler: cast it when nothing above is ready; worth 67.3% of your DPS",
+            "value": 0.528,
+            "why": "Your filler: cast it when nothing above is ready; worth 52.8% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 0,
+            "ids": [],
+            "name": "Wand",
+            "when": "out_of_mana",
+            "value": 0.065,
+            "why": "Only when you're out of mana; worth 6.5% of your DPS",
+            "src": [
+              "sim"
             ]
           }
         ],
@@ -7838,9 +9305,39 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.01,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.026,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -7849,30 +9346,119 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Fire Blast out of single-target fights at level 60: the simulator's 60 s fight did 2% more damage without it.",
+            "text": "Leave Fire Blast out of single-target fights at level 60: the simulator's 180 s fight did 11.3% more damage without it.",
             "name": "Fire Blast",
             "spell": 10199,
-            "value": -0.02,
+            "value": -0.113,
             "src": [
               "sim"
             ]
           }
         ],
-        "speculation": true,
         "sim": {
-          "dps": 491.5,
-          "fight_s": 60,
+          "dps": 235.6,
+          "fight_s": 180,
           "build": "frost-60-dungeon",
           "limits": [
             "Frost Nova and Ice Lance on frozen targets: a boss can't be frozen, so they aren't used",
             "Wand"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -7899,7 +9485,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "mage-frost-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+2.5% DPS in the simulator); then Briny Seafood Stew (+2%).",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.5% DPS in the simulator); then Baked Salmon (+2%).",
         "levels": [
           20,
           29
@@ -7923,6 +9509,72 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "sim"
+      },
+      {
+        "id": "mage-frost-30-mana-evocation",
+        "text": "Use Evocation when your mana drops under 15%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-frost-30-proc-fingers-of-frost",
+        "text": "Fingers of Frost (from Winter's Chill): Cast Ice Lance within 15 sec, before it fades. In the simulator it comes 2.187 times a 60 s fight.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-frost-30-consumable",
+        "text": "Best consumable at levels 30-39: Greater Arcane Elixir (+4.3% DPS in the simulator); then Baked Salmon (+4%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-frost-30-mix",
+        "text": "Where your damage comes from at levels 30-39: Frostbolt 67%, Fire Blast 24%, Ice Lance 9% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "mage-frost-30-worth-ice-lance",
+        "text": "Ice Lance is worth 3.3% of your DPS at levels 30-39: the simulator's fight without it did that much less damage.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
       }
     ]
   },
@@ -7933,8 +9585,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Holy",
     "role": "healer",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -8321,9 +9973,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -8479,9 +10129,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -8639,13 +10287,283 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 12 s, then every 38 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256035": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 13 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -8696,6 +10614,72 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "paladin-holy-20-cd-divine-protection",
+        "text": "Divine Protection has a 5 min cooldown and costs 35 Mana at levels 20-29 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-holy-30-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 30-39, with cooldowns and costs from the Forever client.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-holy-30-cd-divine-favor",
+        "text": "Divine Favor has a 2 min cooldown at levels 30-39 (client data): about once every second or third pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-holy-30-cd-blessing-of-protection",
+        "text": "Blessing of Protection has a 5 min cooldown and costs 45 Mana at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-holy-30-cd-lay-on-hands",
+        "text": "Lay on Hands has a 20 min cooldown at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -8706,8 +10690,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Protection",
     "role": "tank",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -9158,9 +11142,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -9366,9 +11348,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -9409,11 +11389,12 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 20928,
+            "spell": 1239570,
             "ids": [
               20925,
               20927,
-              20928
+              20928,
+              1239570
             ],
             "name": "Holy Shield",
             "when": "buff_missing",
@@ -9509,7 +11490,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "aura": 20928,
+            "aura": 1239570,
             "name": "Holy Shield",
             "on": "self",
             "src": [
@@ -9576,13 +11557,175 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -9634,6 +11777,74 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "paladin-protection-40-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 40-49, with cooldowns and costs from the Forever client.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-protection-40-cd-templar-s-bulwark",
+        "text": "Templar's Bulwark has a 5 min cooldown and costs 110 Mana at levels 40-49 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-protection-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-protection-50-cd-templar-s-bulwark",
+        "text": "Templar's Bulwark has a 5 min cooldown and costs 110 Mana at levels 50-59 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "paladin-protection-60-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for level 60, with cooldowns and costs from the Forever client.",
+        "levels": [
+          60,
+          60
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -9644,8 +11855,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Retribution",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -9682,8 +11893,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.454,
-            "why": "Cast it when it's ready (10 s cooldown); worth 45.4% of your DPS",
+            "value": 0.452,
+            "why": "Cast it when it's ready (10 s cooldown); worth 45.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9698,8 +11909,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.327,
-            "why": "Keep it up: 95% of the sim's fight; worth 32.7% of your DPS",
+            "value": 0.328,
+            "why": "Keep it up: 95% of the sim's fight; worth 32.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9733,7 +11944,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "on": "self",
             "min_uptime": 0.95,
-            "value": 0.327,
+            "value": 0.328,
             "src": [
               "sim",
               "client"
@@ -9747,7 +11958,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.03,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -9755,7 +11966,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
             "value": 0.027,
@@ -9766,8 +11977,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
             "value": 0.019,
             "src": [
               "sim",
@@ -9776,10 +11987,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.018,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -9787,8 +11998,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
+            "id": 250070,
+            "name": "Bear Bruscitti",
             "value": 0.012,
             "src": [
               "sim",
@@ -9797,19 +12008,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
             "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -9818,7 +12019,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 68.2,
+          "dps": 67.5,
           "fight_s": 60,
           "build": "retribution-20-dungeon",
           "limits": [
@@ -9844,8 +12045,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Seal of the Crusader",
             "when": "before_judgement",
-            "value": 0.152,
-            "why": "On elites and bosses, apply it once to judge it, then change seals; worth 15.2% of your DPS",
+            "value": 0.162,
+            "why": "On elites and bosses, apply it once to judge it, then change seals; worth 16.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9859,8 +12060,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.465,
-            "why": "Cast it when it's ready (10 s cooldown); worth 46.5% of your DPS",
+            "value": 0.485,
+            "why": "Cast it when it's ready (10 s cooldown); worth 48.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9876,8 +12077,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.325,
-            "why": "Keep it up: 96% of the sim's fight; worth 32.5% of your DPS",
+            "value": 0.351,
+            "why": "Keep it up: 96% of the sim's fight; worth 35.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9896,8 +12097,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Holy Strike",
             "when": "filler",
-            "value": 0.201,
-            "why": "Your filler: cast it when nothing above is ready; worth 20.1% of your DPS",
+            "value": 0.196,
+            "why": "Your filler: cast it when nothing above is ready; worth 19.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -9912,7 +12113,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "on": "self",
             "min_uptime": 0.95,
-            "value": 0.325,
+            "value": 0.351,
             "src": [
               "sim",
               "client"
@@ -9934,10 +12135,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.029,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -9945,10 +12146,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.021,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -9956,9 +12157,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.017,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -9966,9 +12167,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.015,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -9976,8 +12177,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
             "value": 0.013,
             "src": [
               "sim",
@@ -9986,9 +12187,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.013,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -9997,7 +12198,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 99,
+          "dps": 109.8,
           "fight_s": 60,
           "build": "retribution-30-dungeon",
           "limits": [
@@ -10024,8 +12225,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Seal of the Crusader",
             "when": "before_judgement",
-            "value": 0.191,
-            "why": "On elites and bosses, apply it once to judge it, then change seals; worth 19.1% of your DPS",
+            "value": 0.225,
+            "why": "On elites and bosses, apply it once to judge it, then change seals; worth 22.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10039,8 +12240,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.517,
-            "why": "Cast it when it's ready (10 s cooldown); worth 51.7% of your DPS",
+            "value": 0.599,
+            "why": "Cast it when it's ready (10 s cooldown); worth 59.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10057,8 +12258,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.387,
-            "why": "Keep it up: 96% of the sim's fight; worth 38.7% of your DPS",
+            "value": 0.485,
+            "why": "Keep it up: 75% of the sim's fight; worth 48.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10077,13 +12278,32 @@ window.WOW_SPEC_COACH_DATA = {
               5569
             ],
             "name": "Holy Strike",
-            "when": "filler",
-            "value": 0.207,
-            "why": "Your filler: cast it when nothing above is ready; worth 20.7% of your DPS",
+            "when": "ready",
+            "value": 0.177,
+            "why": "Cast it when it's ready (10 s cooldown); worth 17.7% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 20290,
+            "ids": [
+              20154,
+              20287,
+              20288,
+              20289,
+              20290,
+              20291
+            ],
+            "name": "Seal of Righteousness",
+            "when": "buff_missing",
+            "value": 0.149,
+            "why": "Keep it up: 22% of the sim's fight; worth 14.9% of your DPS",
+            "src": [
+              "sim",
+              "client"
             ]
           }
         ],
@@ -10093,8 +12313,19 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 20918,
             "name": "Seal of Command",
             "on": "self",
-            "min_uptime": 0.95,
-            "value": 0.387,
+            "min_uptime": 0.75,
+            "value": 0.485,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 20290,
+            "name": "Seal of Righteousness",
+            "on": "self",
+            "min_uptime": 0.2,
+            "value": 0.149,
             "src": [
               "sim",
               "client"
@@ -10105,10 +12336,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.033,
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -10127,10 +12358,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.021,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -10138,9 +12369,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.012,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -10148,9 +12379,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.011,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -10158,9 +12389,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -10168,9 +12399,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 152.7,
+          "dps": 197.7,
           "fight_s": 60,
           "build": "retribution-40-dungeon",
           "limits": [
@@ -10178,8 +12408,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Consecration (single target)",
             "Vindication (no proc rate in the client)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -10194,8 +12423,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.372,
-            "why": "Cast it when it's ready (10 s cooldown); worth 37.2% of your DPS",
+            "value": 0.432,
+            "why": "Cast it when it's ready (10 s cooldown); worth 43.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10213,8 +12442,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.265,
-            "why": "Keep it up: 96% of the sim's fight; worth 26.5% of your DPS",
+            "value": 0.336,
+            "why": "Keep it up: 78% of the sim's fight; worth 33.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10234,13 +12463,34 @@ window.WOW_SPEC_COACH_DATA = {
               10332
             ],
             "name": "Holy Strike",
-            "when": "filler",
-            "value": 0.227,
-            "why": "Your filler: cast it when nothing above is ready; worth 22.7% of your DPS",
+            "when": "ready",
+            "value": 0.192,
+            "why": "Cast it when it's ready (10 s cooldown); worth 19.2% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 20292,
+            "ids": [
+              20154,
+              20287,
+              20288,
+              20289,
+              20290,
+              20291,
+              20292,
+              20293
+            ],
+            "name": "Seal of Righteousness",
+            "when": "buff_missing",
+            "value": 0.1,
+            "why": "Keep it up: 20% of the sim's fight; worth 10% of your DPS",
+            "src": [
+              "sim",
+              "client"
             ]
           }
         ],
@@ -10250,8 +12500,19 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 20919,
             "name": "Seal of Command",
             "on": "self",
-            "min_uptime": 0.95,
-            "value": 0.265,
+            "min_uptime": 0.75,
+            "value": 0.336,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 20292,
+            "name": "Seal of Righteousness",
+            "on": "self",
+            "min_uptime": 0.15,
+            "value": 0.1,
             "src": [
               "sim",
               "client"
@@ -10262,10 +12523,21 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.052,
+            "value": 0.048,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -10276,7 +12548,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.038,
+            "value": 0.034,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -10284,10 +12566,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.026,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -10295,9 +12577,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.013,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -10305,9 +12587,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.011,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -10315,9 +12597,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.01,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.016,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -10326,10 +12619,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Seal of the Crusader out of single-target fights at levels 50-59: the simulator's 60 s fight did 2.1% more damage without it.",
+            "text": "Leave Seal of the Crusader out of single-target fights at levels 50-59: the simulator's 60 s fight did 2.2% more damage without it.",
             "name": "Seal of the Crusader",
             "spell": 20307,
-            "value": -0.021,
+            "value": -0.022,
             "src": [
               "sim"
             ],
@@ -10337,9 +12630,8 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The class guide's rotation card uses Seal of the Crusader here and the simulator disagrees: check it in game before trusting either"
           }
         ],
-        "speculation": true,
         "sim": {
-          "dps": 142.7,
+          "dps": 172.5,
           "fight_s": 60,
           "build": "retribution-50-dungeon",
           "limits": [
@@ -10347,8 +12639,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Consecration (single target)",
             "Vindication (no proc rate in the client)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -10357,14 +12648,33 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
+            "spell": 20308,
+            "ids": [
+              21082,
+              20162,
+              20305,
+              20306,
+              20307,
+              20308
+            ],
+            "name": "Seal of the Crusader",
+            "when": "before_judgement",
+            "why": "On elites and bosses, apply it once to judge it, then change seals; the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
             "spell": 20271,
             "ids": [
               20271
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.339,
-            "why": "Cast it when it's ready (10 s cooldown); worth 33.9% of your DPS",
+            "value": 0.393,
+            "why": "Cast it when it's ready (10 s cooldown); worth 39.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10383,8 +12693,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.244,
-            "why": "Keep it up: 96% of the sim's fight; worth 24.4% of your DPS",
+            "value": 0.355,
+            "why": "Keep it up: 75% of the sim's fight; worth 35.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -10405,13 +12715,34 @@ window.WOW_SPEC_COACH_DATA = {
               10333
             ],
             "name": "Holy Strike",
-            "when": "filler",
-            "value": 0.221,
-            "why": "Your filler: cast it when nothing above is ready; worth 22.1% of your DPS",
+            "when": "ready",
+            "value": 0.184,
+            "why": "Cast it when it's ready (10 s cooldown); worth 18.4% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 20293,
+            "ids": [
+              20154,
+              20287,
+              20288,
+              20289,
+              20290,
+              20291,
+              20292,
+              20293
+            ],
+            "name": "Seal of Righteousness",
+            "when": "buff_missing",
+            "value": 0.121,
+            "why": "Keep it up: 24% of the sim's fight; worth 12.1% of your DPS",
+            "src": [
+              "sim",
+              "client"
             ]
           }
         ],
@@ -10421,8 +12752,19 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 20920,
             "name": "Seal of Command",
             "on": "self",
-            "min_uptime": 0.95,
-            "value": 0.244,
+            "min_uptime": 0.75,
+            "value": 0.355,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 20293,
+            "name": "Seal of Righteousness",
+            "on": "self",
+            "min_uptime": 0.2,
+            "value": 0.121,
             "src": [
               "sim",
               "client"
@@ -10432,68 +12774,152 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.048,
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.036,
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.018,
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.016,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Seal of the Crusader out of single-target fights at level 60: the simulator's 60 s fight did 3.5% more damage without it.",
-            "name": "Seal of the Crusader",
-            "spell": 20308,
-            "value": -0.035,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Seal of the Crusader here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
-        "speculation": true,
+        "avoid": [],
         "sim": {
-          "dps": 302.9,
-          "fight_s": 60,
+          "dps": 335.7,
+          "fight_s": 180,
           "build": "retribution-60-dungeon",
           "limits": [
             "Exorcism (Undead and Demons only)",
             "Consecration (single target)",
             "Vindication (no proc rate in the client)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -10507,7 +12933,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "paladin-retribution-20-consumable",
-        "text": "Best consumable at levels 20-29: Elixir of Ogre Strength (+1.9% DPS in the simulator); then Bear Brisket (+1.2%).",
+        "text": "Best consumable at levels 20-29: Elixir of Greater Strength (+1.9% DPS in the simulator); then Bear Bruscitti (+1.2%).",
         "levels": [
           20,
           29
@@ -10521,7 +12947,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "paladin-retribution-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +2.9% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -10545,6 +12971,73 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "sim"
+      },
+      {
+        "id": "paladin-retribution-20-worth-judgement",
+        "text": "Judgement is worth 45.2% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "paladin-retribution-30-consumable",
+        "text": "Best consumable at levels 30-39: Bear Bruscitti (+1.6% DPS in the simulator); then Scroll of Strength IV (+1.4%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "paladin-retribution-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Kings from a Paladin: +3% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "paladin-retribution-30-mix",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 46%, Seal of Command 19%, Holy Strike 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "paladin-retribution-30-worth-judgement",
+        "text": "Judgement is worth 48.5% of your DPS at levels 30-39: the simulator's fight without it did that much less damage.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
       }
     ]
   },
@@ -10555,8 +13048,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Discipline",
     "role": "healer",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -11092,9 +13585,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -11306,9 +13797,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -11509,13 +13998,283 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 12 s, then every 38 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256035": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 13 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -11566,6 +14325,72 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "priest-discipline-20-cd-desperate-prayer",
+        "text": "Desperate Prayer has a 10 min cooldown at levels 20-29 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-discipline-30-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 30-39, with cooldowns and costs from the Forever client.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-discipline-30-cd-inner-focus",
+        "text": "Inner Focus has a 3 min cooldown at levels 30-39 (client data): about once every second or third pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-discipline-30-cd-contingency-plan",
+        "text": "Contingency Plan has a 10 min cooldown at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-discipline-30-cd-divine-grace",
+        "text": "Divine Grace has a 10 min cooldown at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -11576,8 +14401,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Holy",
     "role": "healer",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -11772,21 +14597,6 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 401937,
-            "ids": [
-              401937,
-              1240770,
-              1240771
-            ],
-            "name": "Binding Heal",
-            "when": "ready",
-            "why": "When you're hurt too: heals the target and you for 223 to 271 in one cast, and switching to it from Heal triggers Litany of Light.",
-            "src": [
-              "guides",
-              "client"
-            ]
-          },
-          {
             "spell": 9472,
             "ids": [
               2061,
@@ -11936,22 +14746,6 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 1240771,
-            "ids": [
-              401937,
-              1240770,
-              1240771,
-              1240772
-            ],
-            "name": "Binding Heal",
-            "when": "ready",
-            "why": "When you're hurt too: rank 3 (38) heals the target and you for 349 to 417.",
-            "src": [
-              "guides",
-              "client"
-            ]
-          },
-          {
             "spell": 9474,
             "ids": [
               2061,
@@ -12034,9 +14828,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -12106,24 +14898,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heal",
             "when": "ready",
             "why": "Rank 4 for lighter damage; switching between heals triggers Litany of Light.",
-            "src": [
-              "guides",
-              "client"
-            ]
-          },
-          {
-            "spell": 1240773,
-            "ids": [
-              401937,
-              1240770,
-              1240771,
-              1240772,
-              1240773,
-              1240774
-            ],
-            "name": "Binding Heal",
-            "when": "ready",
-            "why": "Rank 5 (50) heals the target and you for 589 to 699.",
             "src": [
               "guides",
               "client"
@@ -12217,9 +14991,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -12298,24 +15070,6 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 1240774,
-            "ids": [
-              401937,
-              1240770,
-              1240771,
-              1240772,
-              1240773,
-              1240774
-            ],
-            "name": "Binding Heal",
-            "when": "ready",
-            "why": "Rank 6 (56) heals the target and you for 757 to 893.",
-            "src": [
-              "guides",
-              "client"
-            ]
-          },
-          {
             "spell": 10917,
             "ids": [
               2061,
@@ -12387,13 +15141,283 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "prepull": [],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 12 s, then every 38 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256035": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 13 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -12444,6 +15468,74 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "client"
+      },
+      {
+        "id": "priest-holy-30-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 30-39, with cooldowns and costs from the Forever client.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-holy-30-cd-divine-grace",
+        "text": "Divine Grace has a 10 min cooldown at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-holy-40-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 40-49, with cooldowns and costs from the Forever client.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-holy-40-cd-divine-grace",
+        "text": "Divine Grace has a 10 min cooldown at levels 40-49 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "priest-holy-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -12454,8 +15546,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Shadow",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -12479,48 +15571,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.113,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 11.3% of your DPS",
+            "value": 0.117,
+            "why": "Keep it on the target: up 79% of the sim's fight; worth 11.7% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 2944,
-            "ids": [
-              2944,
-              19276
-            ],
-            "name": "Devouring Plague",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "why": "Keep it on the target: up 78% of the sim's fight; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 19296,
-            "ids": [
-              10797,
-              19296,
-              19299
-            ],
-            "name": "Starshards",
-            "when": "ready",
-            "value": 0.072,
-            "why": "Cast it when it's ready (30 s cooldown); worth 7.2% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "races": [
-              "Night Elf"
             ]
           },
           {
@@ -12533,8 +15589,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Blast",
             "when": "ready",
-            "value": 0.027,
-            "why": "Cast it when it's ready (8 s cooldown); worth 2.7% of your DPS",
+            "why": "Cast it when it's ready (8 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -12549,8 +15604,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Flay",
             "when": "filler",
-            "value": 0.077,
-            "why": "Your filler: cast it when nothing above is ready; worth 7.7% of your DPS",
+            "value": 0.097,
+            "why": "Your filler: cast it when nothing above is ready; worth 9.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -12562,8 +15617,8 @@ window.WOW_SPEC_COACH_DATA = {
             "ids": [],
             "name": "Wand",
             "when": "out_of_mana",
-            "value": 0.028,
-            "why": "Only when you're out of mana; worth 2.8% of your DPS",
+            "value": 0.052,
+            "why": "Only when you're out of mana; worth 5.2% of your DPS",
             "src": [
               "sim"
             ]
@@ -12576,17 +15631,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.113,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "aura": 2944,
-            "name": "Devouring Plague",
-            "on": "target",
-            "min_uptime": 0.75,
+            "value": 0.117,
             "src": [
               "sim",
               "client"
@@ -12597,30 +15642,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.042,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.04,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
             "value": 0.037,
             "src": [
               "sim",
@@ -12629,9 +15653,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
             "value": 0.035,
             "src": [
               "sim",
@@ -12639,11 +15663,32 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.032,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "buff",
-            "id": 5234,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.029,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.023,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -12651,9 +15696,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.019,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -12661,8 +15706,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.016,
             "src": [
               "sim",
@@ -12671,8 +15716,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
             "value": 0.011,
             "src": [
               "sim",
@@ -12680,14 +15725,27 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
+        "avoid": [
+          {
+            "text": "Leave Devouring Plague out of single-target fights at levels 20-29: the simulator's 60 s fight did 2.6% more damage without it.",
+            "name": "Devouring Plague",
+            "spell": 2944,
+            "value": -0.026,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Devouring Plague here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 56.8,
+          "dps": 52.7,
           "fight_s": 60,
           "build": "shadow-20-dungeon",
           "limits": [
             "Clipping Mind Flay early for Mind Blast",
-            "Shadowfiend and Shadowform (not learned by 30)"
+            "Shadowfiend (not modelled yet)",
+            "Racial spells (Starshards is Night Elf only, and the sim has no race)"
           ]
         }
       },
@@ -12709,33 +15767,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.081,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 8.1% of your DPS",
+            "value": 0.106,
+            "why": "Keep it on the target: up 79% of the sim's fight; worth 10.6% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 19299,
-            "ids": [
-              10797,
-              19296,
-              19299,
-              19302
-            ],
-            "name": "Starshards",
-            "when": "ready",
-            "value": 0.049,
-            "why": "Cast it when it's ready (30 s cooldown); worth 4.9% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "races": [
-              "Night Elf"
             ]
           },
           {
@@ -12749,8 +15786,24 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Blast",
             "when": "ready",
-            "value": 0.025,
-            "why": "Cast it when it's ready (8 s cooldown); worth 2.5% of your DPS",
+            "value": 0.064,
+            "why": "Cast it when it's ready (8 s cooldown); worth 6.4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 17311,
+            "ids": [
+              15407,
+              17311,
+              17312
+            ],
+            "name": "Mind Flay",
+            "when": "filler",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -12762,8 +15815,8 @@ window.WOW_SPEC_COACH_DATA = {
             "ids": [],
             "name": "Wand",
             "when": "out_of_mana",
-            "value": 0.065,
-            "why": "Only when you're out of mana; worth 6.5% of your DPS",
+            "value": 0.104,
+            "why": "Only when you're out of mana; worth 10.4% of your DPS",
             "src": [
               "sim"
             ]
@@ -12776,7 +15829,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.081,
+            "value": 0.106,
             "src": [
               "sim",
               "client"
@@ -12787,10 +15840,21 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.091,
+            "value": 0.051,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -12801,18 +15865,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.086,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19850,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.066,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -12820,39 +15873,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.055,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.055,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.047,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.035,
             "src": [
               "sim",
@@ -12861,9 +15883,40 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.033,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.033,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -12872,35 +15925,25 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Devouring Plague out of single-target fights at levels 30-39: the simulator's 60 s fight did 6.9% more damage without it.",
+            "text": "Leave Devouring Plague out of single-target fights at levels 30-39: the simulator's 60 s fight did 3.4% more damage without it.",
             "name": "Devouring Plague",
             "spell": 19276,
-            "value": -0.069,
+            "value": -0.034,
             "src": [
               "sim"
             ],
             "speculation": true,
             "reason": "The class guide's rotation card uses Devouring Plague here and the simulator disagrees: check it in game before trusting either"
-          },
-          {
-            "text": "Leave Mind Flay out of single-target fights at levels 30-39: the simulator's 60 s fight did 3.5% more damage without it.",
-            "name": "Mind Flay",
-            "spell": 17311,
-            "value": -0.035,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Mind Flay here and the simulator disagrees: check it in game before trusting either"
           }
         ],
         "sim": {
-          "dps": 89.4,
+          "dps": 85.1,
           "fight_s": 60,
           "build": "shadow-30-dungeon",
           "limits": [
             "Clipping Mind Flay early for Mind Blast",
-            "Shadowfiend and Shadowform (not learned by 30)"
+            "Shadowfiend (not modelled yet)",
+            "Racial spells (Starshards is Night Elf only, and the sim has no race)"
           ]
         }
       },
@@ -12923,8 +15966,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.113,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 11.3% of your DPS",
+            "value": 0.13,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 13% of your DPS",
             "src": [
               "sim",
               "client",
@@ -12932,36 +15975,61 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 19302,
+            "spell": 19277,
             "ids": [
-              10797,
-              19296,
-              19299,
-              19302,
-              19303
+              2944,
+              19276,
+              19277,
+              19278
             ],
-            "name": "Starshards",
-            "when": "ready",
-            "value": 0.023,
-            "why": "Cast it when it's ready (30 s cooldown); worth 2.3% of your DPS",
+            "name": "Devouring Plague",
+            "when": "debuff_missing_or_ending",
+            "ending_s": 0,
+            "value": 0.077,
+            "why": "Keep it on the target: up 80% of the sim's fight; worth 7.7% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ],
-            "races": [
-              "Night Elf"
             ]
           },
           {
-            "spell": 0,
-            "ids": [],
-            "name": "Wand",
-            "when": "out_of_mana",
-            "value": 0.081,
-            "why": "Only when you're out of mana; worth 8.1% of your DPS",
+            "spell": 8106,
+            "ids": [
+              8092,
+              8102,
+              8103,
+              8104,
+              8105,
+              8106,
+              10945
+            ],
+            "name": "Mind Blast",
+            "when": "ready",
+            "value": 0.229,
+            "why": "Cast it when it's ready (8 s cooldown); worth 22.9% of your DPS",
             "src": [
-              "sim"
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 17312,
+            "ids": [
+              15407,
+              17311,
+              17312,
+              17313
+            ],
+            "name": "Mind Flay",
+            "when": "filler",
+            "value": 0.135,
+            "why": "Your filler: cast it when nothing above is ready; worth 13.5% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           }
         ],
@@ -12971,8 +16039,19 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 2767,
             "name": "Shadow Word: Pain",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.113,
+            "min_uptime": 0.85,
+            "value": 0.13,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 19277,
+            "name": "Devouring Plague",
+            "on": "target",
+            "min_uptime": 0.8,
+            "value": 0.077,
             "src": [
               "sim",
               "client"
@@ -12982,44 +16061,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.05,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.046,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.044,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.044,
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -13027,91 +16072,26 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.023,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.022,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.021,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.035,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Devouring Plague out of single-target fights at levels 40-49: the simulator's 60 s fight did 11% more damage without it.",
-            "name": "Devouring Plague",
-            "spell": 19277,
-            "value": -0.11,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Devouring Plague here and the simulator disagrees: check it in game before trusting either"
-          },
-          {
-            "text": "Leave Mind Blast out of single-target fights at levels 40-49: the simulator's 60 s fight did 1% more damage without it.",
-            "name": "Mind Blast",
-            "spell": 8106,
-            "value": -0.01,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Mind Blast here and the simulator disagrees: check it in game before trusting either"
-          },
-          {
-            "text": "Leave Mind Flay out of single-target fights at levels 40-49: the simulator's 60 s fight did 4.8% more damage without it.",
-            "name": "Mind Flay",
-            "spell": 17312,
-            "value": -0.048,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Mind Flay here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
-        "speculation": true,
+        "avoid": [],
         "sim": {
-          "dps": 120.7,
+          "dps": 173,
           "fight_s": 60,
           "build": "shadow-40-dungeon",
           "limits": [
             "Clipping Mind Flay early for Mind Blast",
-            "Shadowfiend and Shadowform (not learned by 30)"
+            "Shadowfiend (not modelled yet)",
+            "Racial spells (Starshards is Night Elf only, and the sim has no race)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -13134,8 +16114,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.096,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 9.6% of your DPS",
+            "value": 0.167,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 16.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13154,36 +16134,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Devouring Plague",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.023,
-            "why": "Keep it on the target: up 78% of the sim's fight; worth 2.3% of your DPS",
+            "value": 0.072,
+            "why": "Keep it on the target: up 80% of the sim's fight; worth 7.2% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 19304,
-            "ids": [
-              10797,
-              19296,
-              19299,
-              19302,
-              19303,
-              19304,
-              19305
-            ],
-            "name": "Starshards",
-            "when": "ready",
-            "value": 0.132,
-            "why": "Cast it when it's ready (30 s cooldown); worth 13.2% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "races": [
-              "Night Elf"
             ]
           },
           {
@@ -13201,8 +16157,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Blast",
             "when": "ready",
-            "value": 0.048,
-            "why": "Cast it when it's ready (8 s cooldown); worth 4.8% of your DPS",
+            "value": 0.197,
+            "why": "Cast it when it's ready (8 s cooldown); worth 19.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13220,23 +16176,12 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Flay",
             "when": "filler",
-            "value": 0.014,
-            "why": "Your filler: cast it when nothing above is ready; worth 1.4% of your DPS",
+            "value": 0.222,
+            "why": "Your filler: cast it when nothing above is ready; worth 22.2% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 0,
-            "ids": [],
-            "name": "Wand",
-            "when": "out_of_mana",
-            "value": 0.042,
-            "why": "Only when you're out of mana; worth 4.2% of your DPS",
-            "src": [
-              "sim"
             ]
           }
         ],
@@ -13246,8 +16191,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 10893,
             "name": "Shadow Word: Pain",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.096,
+            "min_uptime": 0.85,
+            "value": 0.167,
             "src": [
               "sim",
               "client"
@@ -13257,8 +16202,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 19278,
             "name": "Devouring Plague",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.023,
+            "min_uptime": 0.8,
+            "value": 0.072,
             "src": [
               "sim",
               "client"
@@ -13268,44 +16213,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.054,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.05,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.049,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.04,
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -13313,39 +16224,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.027,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.019,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.016,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.015,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.033,
             "src": [
               "sim",
               "client"
@@ -13353,17 +16234,16 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 198.2,
+          "dps": 262.2,
           "fight_s": 60,
           "build": "shadow-50-dungeon",
           "limits": [
             "Clipping Mind Flay early for Mind Blast",
-            "Shadowfiend and Shadowform (not learned by 30)"
+            "Shadowfiend (not modelled yet)",
+            "Racial spells (Starshards is Night Elf only, and the sim has no race)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -13386,8 +16266,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.118,
-            "why": "Keep it on the target: up 96% of the sim's fight; worth 11.8% of your DPS",
+            "value": 0.074,
+            "why": "Keep it on the target: up 53% of the sim's fight; worth 7.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13407,36 +16287,11 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Devouring Plague",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.039,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 3.9% of your DPS",
+            "why": "Keep it on the target: up 48% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 19305,
-            "ids": [
-              10797,
-              19296,
-              19299,
-              19302,
-              19303,
-              19304,
-              19305
-            ],
-            "name": "Starshards",
-            "when": "ready",
-            "value": 0.049,
-            "why": "Cast it when it's ready (30 s cooldown); worth 4.9% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "races": [
-              "Night Elf"
             ]
           },
           {
@@ -13454,8 +16309,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Blast",
             "when": "ready",
-            "value": 0.091,
-            "why": "Cast it when it's ready (8 s cooldown); worth 9.1% of your DPS",
+            "why": "Cast it when it's ready (8 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -13474,8 +16328,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mind Flay",
             "when": "filler",
-            "value": 0.149,
-            "why": "Your filler: cast it when nothing above is ready; worth 14.9% of your DPS",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -13487,8 +16340,8 @@ window.WOW_SPEC_COACH_DATA = {
             "ids": [],
             "name": "Wand",
             "when": "out_of_mana",
-            "value": 0.012,
-            "why": "Only when you're out of mana; worth 1.2% of your DPS",
+            "value": 0.04,
+            "why": "Only when you're out of mana; worth 4% of your DPS",
             "src": [
               "sim"
             ]
@@ -13500,8 +16353,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 10894,
             "name": "Shadow Word: Pain",
             "on": "target",
-            "min_uptime": 0.95,
-            "value": 0.118,
+            "min_uptime": 0.5,
+            "value": 0.074,
             "src": [
               "sim",
               "client"
@@ -13511,8 +16364,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 19280,
             "name": "Devouring Plague",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.039,
+            "min_uptime": 0.45,
             "src": [
               "sim",
               "client"
@@ -13522,32 +16374,29 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.03,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.052,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.03,
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.033,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.026,
             "src": [
               "sim",
@@ -13555,11 +16404,10 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.016,
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -13567,21 +16415,111 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 447.3,
-          "fight_s": 60,
+          "dps": 273.8,
+          "fight_s": 180,
           "build": "shadow-60-dungeon",
           "limits": [
             "Clipping Mind Flay early for Mind Blast",
-            "Shadowfiend and Shadowform (not learned by 30)"
+            "Shadowfiend (not modelled yet)",
+            "Racial spells (Starshards is Night Elf only, and the sim has no race)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -13595,7 +16533,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "priest-shadow-20-consumable",
-        "text": "Best consumable at levels 20-29: Scroll of Intellect II (+3.7% DPS in the simulator); then Lesser Arcane Elixir (+1.9%).",
+        "text": "Best consumable at levels 20-29: Scroll of Intellect IV (+3.2% DPS in the simulator); then Greater Arcane Elixir (+2%).",
         "levels": [
           20,
           29
@@ -13609,7 +16547,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "priest-shadow-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +4.2% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +3.7% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -13623,10 +16561,77 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "priest-shadow-20-mix",
-        "text": "Where your damage comes from at levels 20-29: Mind Flay 33%, Starshards 19%, Shadow Word: Pain 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: Mind Flay 41%, Shadow Word: Pain 20%, Mind Blast 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "priest-shadow-20-worth-shadow-word-pain",
+        "text": "Shadow Word: Pain is worth 11.7% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 79% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "priest-shadow-20-worth-wand",
+        "text": "Wand is worth 5.2% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "priest-shadow-30-consumable",
+        "text": "Best consumable at levels 30-39: Greater Arcane Elixir (+3.5% DPS in the simulator); then Baked Salmon (+3.3%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "priest-shadow-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Arcane Intellect from a Mage: +5.1% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "priest-shadow-30-mix",
+        "text": "Where your damage comes from at levels 30-39: Mind Flay 35%, Shadow Word: Pain 21%, Mind Blast 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim"
@@ -13643,8 +16648,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Assassination",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -13664,10 +16669,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 30,
+            "min_power": 25,
             "combo_points": 3,
-            "value": 0.037,
-            "why": "Keep it up: 91% of the sim's fight; worth 3.7% of your DPS",
+            "value": 0.06,
+            "why": "Keep it up: 91% of the sim's fight; worth 6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13685,10 +16690,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 35,
+            "min_power": 40,
             "combo_points": 5,
-            "value": 0.045,
-            "why": "Cast it when it's ready; worth 4.5% of your DPS",
+            "value": 0.017,
+            "why": "Cast it when it's ready; worth 1.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13707,8 +16712,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 45,
-            "value": 0.405,
-            "why": "Your filler: cast it when nothing above is ready; worth 40.5% of your DPS",
+            "value": 0.367,
+            "why": "Your filler: cast it when nothing above is ready; worth 36.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13723,7 +16728,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.9,
-            "value": 0.037,
+            "value": 0.06,
             "src": [
               "sim",
               "client"
@@ -13734,21 +16739,20 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.055,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.052,
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -13759,17 +16763,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.051,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.05,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -13777,10 +16771,31 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.039,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.021,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.028,
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -13788,9 +16803,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.027,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -13798,19 +16813,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.017,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -13819,11 +16824,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 51.4,
+          "dps": 68.3,
           "fight_s": 60,
           "build": "assassination-20-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -13843,10 +16848,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 30,
+            "min_power": 25,
             "combo_points": 2,
-            "value": 0.034,
-            "why": "Keep it up: 92% of the sim's fight; worth 3.4% of your DPS",
+            "value": 0.046,
+            "why": "Keep it up: 90% of the sim's fight; worth 4.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13865,10 +16870,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 35,
+            "min_power": 40,
             "combo_points": 5,
-            "value": 0.071,
-            "why": "Cast it when it's ready; worth 7.1% of your DPS",
+            "value": 0.032,
+            "why": "Cast it when it's ready; worth 3.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -13889,11 +16894,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 45,
-            "value": 0.457,
-            "why": "Your filler: cast it when nothing above is ready; worth 45.7% of your DPS",
+            "value": 0.402,
+            "why": "Your filler: cast it when nothing above is ready; worth 40.2% of your DPS",
             "src": [
               "sim",
-              "client"
+              "client",
+              "guides"
             ]
           }
         ],
@@ -13903,8 +16909,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 5171,
             "name": "Slice and Dice",
             "on": "self",
-            "min_uptime": 0.9,
-            "value": 0.034,
+            "min_uptime": 0.85,
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -13924,28 +16930,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.021,
+            "value": 0.016,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.055,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.049,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -13956,27 +16951,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.047,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.031,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.031,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -13984,10 +16959,41 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.037,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.025,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.025,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.028,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -13995,19 +17001,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.019,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.011,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -14016,11 +17012,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 82.9,
+          "dps": 106.6,
           "fight_s": 60,
           "build": "assassination-30-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -14041,9 +17037,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 30,
+            "min_power": 25,
             "combo_points": 2,
-            "why": "Keep it up: 91% of the sim's fight; the sim gains little from it",
+            "value": 0.029,
+            "why": "Keep it up: 91% of the sim's fight; worth 2.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14066,8 +17063,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 35,
             "combo_points": 5,
-            "value": 0.094,
-            "why": "Cast it when it's ready; worth 9.4% of your DPS",
+            "value": 0.057,
+            "why": "Cast it when it's ready; worth 5.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14089,8 +17086,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 45,
-            "value": 0.471,
-            "why": "Your filler: cast it when nothing above is ready; worth 47.1% of your DPS",
+            "value": 0.423,
+            "why": "Your filler: cast it when nothing above is ready; worth 42.3% of your DPS",
             "src": [
               "sim",
               "client"
@@ -14104,6 +17101,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.9,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -14123,17 +17121,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.03,
+            "value": 0.022,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.058,
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -14141,10 +17139,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.053,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -14155,7 +17153,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.041,
+            "value": 0.032,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -14163,19 +17171,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.027,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
             "value": 0.022,
             "src": [
               "sim",
@@ -14184,9 +17182,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.022,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -14194,9 +17192,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.013,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -14204,19 +17202,17 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 110.9,
+          "dps": 134.8,
           "fight_s": 60,
           "build": "assassination-40-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -14225,202 +17221,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
-            "spell": 6774,
-            "ids": [
-              5171,
-              6774
-            ],
-            "name": "Slice and Dice",
-            "when": "buff_missing",
-            "min_power": 30,
-            "combo_points": 2,
-            "value": 0.011,
-            "why": "Keep it up: 93% of the sim's fight; worth 1.1% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 11299,
-            "ids": [
-              2098,
-              6760,
-              6761,
-              6762,
-              8623,
-              8624,
-              11299,
-              11300
-            ],
-            "name": "Eviscerate",
-            "speculation": true,
-            "when": "ready",
-            "min_power": 35,
-            "combo_points": 5,
-            "value": 0.147,
-            "why": "Cast it when it's ready; worth 14.7% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
-          },
-          {
-            "spell": 11293,
-            "ids": [
-              1752,
-              1757,
-              1758,
-              1759,
-              1760,
-              8621,
-              11293,
-              11294
-            ],
-            "name": "Sinister Strike",
-            "when": "filler",
-            "min_power": 45,
-            "value": 0.528,
-            "why": "Your filler: cast it when nothing above is ready; worth 52.8% of your DPS",
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "triggers": [],
-        "keep_up": [
-          {
-            "aura": 6774,
-            "name": "Slice and Dice",
-            "on": "self",
-            "min_uptime": 0.9,
-            "value": 0.011,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "cooldowns": [
-          {
-            "spell": 14177,
-            "ids": [
-              14177
-            ],
-            "name": "Cold Blood",
-            "use": "with:Eviscerate",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "value": 0.043,
-            "cd_s": 180
-          }
-        ],
-        "prepull": [
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.069,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.068,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.036,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.029,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.011,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "avoid": [],
-        "speculation": true,
-        "sim": {
-          "dps": 136.9,
-          "fight_s": 60,
-          "build": "assassination-50-dungeon",
-          "limits": [
-            "Poisons (not learned by 30)",
-            "Rupture and Garrote (Eviscerate does more in a short fight)",
-            "Riposte (needs a parry)",
-            "Expose Armor"
-          ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
-      },
-      {
-        "levels": [
-          60,
-          60
-        ],
-        "priority": [
-          {
-            "spell": 11269,
+            "spell": 11268,
             "ids": [
               8676,
               8724,
@@ -14446,10 +17247,212 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 25,
+            "min_power": 35,
             "combo_points": 2,
-            "value": 0.043,
-            "why": "Keep it up: 90% of the sim's fight; worth 4.3% of your DPS",
+            "value": 0.033,
+            "why": "Keep it up: 88% of the sim's fight; worth 3.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 11299,
+            "ids": [
+              2098,
+              6760,
+              6761,
+              6762,
+              8623,
+              8624,
+              11299,
+              11300
+            ],
+            "name": "Eviscerate",
+            "speculation": true,
+            "when": "ready",
+            "min_power": 35,
+            "combo_points": 5,
+            "value": 0.089,
+            "why": "Cast it when it's ready; worth 8.9% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
+          },
+          {
+            "spell": 11279,
+            "ids": [
+              53,
+              2589,
+              2590,
+              2591,
+              8721,
+              11279,
+              11280
+            ],
+            "name": "Backstab",
+            "when": "filler",
+            "min_power": 60,
+            "value": 0.431,
+            "why": "Your filler: cast it when nothing above is ready; worth 43.1% of your DPS",
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "triggers": [],
+        "keep_up": [
+          {
+            "aura": 6774,
+            "name": "Slice and Dice",
+            "on": "self",
+            "min_uptime": 0.85,
+            "value": 0.033,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "cooldowns": [
+          {
+            "spell": 14177,
+            "ids": [
+              14177
+            ],
+            "name": "Cold Blood",
+            "use": "with:Eviscerate",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "value": 0.031,
+            "cd_s": 180
+          }
+        ],
+        "prepull": [
+          {
+            "kind": "buff",
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.051,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.051,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.029,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.023,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.021,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.018,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.011,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "avoid": [],
+        "sim": {
+          "dps": 178.6,
+          "fight_s": 60,
+          "build": "assassination-50-dungeon",
+          "limits": [
+            "Deadly Poison (Instant Poison on both weapons instead)",
+            "Rupture and Garrote (Eviscerate does more in a short fight)",
+            "Riposte (needs a parry)",
+            "Expose Armor"
+          ]
+        }
+      },
+      {
+        "levels": [
+          60,
+          60
+        ],
+        "priority": [
+          {
+            "spell": 6774,
+            "ids": [
+              5171,
+              6774
+            ],
+            "name": "Slice and Dice",
+            "when": "buff_missing",
+            "min_power": 25,
+            "combo_points": 3,
+            "value": 0.014,
+            "why": "Keep it up: 90% of the sim's fight; worth 1.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14474,8 +17477,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 35,
             "combo_points": 5,
-            "value": 0.108,
-            "why": "Cast it when it's ready; worth 10.8% of your DPS",
+            "value": 0.124,
+            "why": "Cast it when it's ready; worth 12.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14484,23 +17487,22 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
           },
           {
-            "spell": 25300,
+            "spell": 11294,
             "ids": [
-              53,
-              2589,
-              2590,
-              2591,
-              8721,
-              11279,
-              11280,
-              11281,
-              25300
+              1752,
+              1757,
+              1758,
+              1759,
+              1760,
+              8621,
+              11293,
+              11294
             ],
-            "name": "Backstab",
+            "name": "Sinister Strike",
             "when": "filler",
-            "min_power": 60,
-            "value": 0.431,
-            "why": "Your filler: cast it when nothing above is ready; worth 43.1% of your DPS",
+            "min_power": 45,
+            "value": 0.501,
+            "why": "Your filler: cast it when nothing above is ready; worth 50.1% of your DPS",
             "src": [
               "sim",
               "client"
@@ -14513,8 +17515,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 6774,
             "name": "Slice and Dice",
             "on": "self",
-            "min_uptime": 0.85,
-            "value": 0.043,
+            "min_uptime": 0.9,
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -14534,50 +17536,16 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.024,
+            "value": 0.015,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.058,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.055,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.046,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.018,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -14585,9 +17553,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -14595,9 +17563,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.01,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.014,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -14605,23 +17583,112 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 337.3,
-          "fight_s": 60,
+          "dps": 331,
+          "fight_s": 180,
           "build": "assassination-60-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -14635,7 +17702,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "rogue-assassination-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+5% DPS in the simulator); then Elixir of Agility (+2.7%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+4% DPS in the simulator); then Elixir of Greater Agility (+2.1%).",
         "levels": [
           20,
           29
@@ -14649,7 +17716,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-assassination-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +5.5% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +4.2% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -14663,10 +17730,78 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-assassination-20-mix",
-        "text": "Where your damage comes from at levels 20-29: auto attacks 47%, Sinister Strike 26%, Off hand 23% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 37%, Instant Poison 25%, Sinister Strike 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-assassination-20-worth-slice-and-dice",
+        "text": "Slice and Dice is worth 6% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-assassination-30-cd-cold-blood",
+        "text": "Cold Blood (3 min cooldown): the simulator uses it right before Eviscerate; it's worth 1.6% of your DPS at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-assassination-30-consumable",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.5% DPS in the simulator); then Flank au Poivre (+2.5%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-assassination-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Might from a Paladin: +4.2% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-assassination-30-mix",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 34%, Instant Poison 24%, Sinister Strike 21% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim"
@@ -14683,8 +17818,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Combat",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -14706,7 +17841,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "buff_missing",
             "min_power": 25,
             "combo_points": 3,
-            "why": "Keep it up: 90% of the sim's fight; the sim gains little from it",
+            "value": 0.027,
+            "why": "Keep it up: 90% of the sim's fight; worth 2.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14745,8 +17881,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 40,
-            "value": 0.394,
-            "why": "Your filler: cast it when nothing above is ready; worth 39.4% of your DPS",
+            "value": 0.375,
+            "why": "Your filler: cast it when nothing above is ready; worth 37.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14761,6 +17897,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.85,
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -14771,21 +17908,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.056,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.052,
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -14796,7 +17922,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.051,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -14804,9 +17930,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.05,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -14814,10 +17940,31 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.038,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.021,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.028,
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -14825,9 +17972,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.027,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -14835,19 +17982,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.017,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -14856,11 +17993,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 49.5,
+          "dps": 69,
           "fight_s": 60,
           "build": "combat-20-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -14885,7 +18022,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 30,
+            "min_power": 35,
             "combo_points": 3,
             "value": 0.012,
             "why": "Cast it when it's ready; worth 1.2% of your DPS",
@@ -14909,8 +18046,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 40,
-            "value": 0.395,
-            "why": "Your filler: cast it when nothing above is ready; worth 39.5% of your DPS",
+            "value": 0.415,
+            "why": "Your filler: cast it when nothing above is ready; worth 41.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -14933,28 +18070,16 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.016,
             "cd_s": 120
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.058,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.051,
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -14965,27 +18090,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.049,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.033,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.033,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -14993,10 +18098,41 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.042,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.028,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.029,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -15004,9 +18140,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.02,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -15014,9 +18150,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.012,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -15025,10 +18161,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Slice and Dice out of single-target fights at levels 30-39: the simulator's 60 s fight did 3% more damage without it.",
+            "text": "Leave Slice and Dice out of single-target fights at levels 30-39: the simulator's 60 s fight did 2.7% more damage without it.",
             "name": "Slice and Dice",
             "spell": 5171,
-            "value": -0.03,
+            "value": -0.027,
             "src": [
               "sim"
             ],
@@ -15037,11 +18173,11 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 80.3,
+          "dps": 98.5,
           "fight_s": 60,
           "build": "combat-30-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -15068,10 +18204,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 30,
+            "min_power": 35,
             "combo_points": 3,
-            "value": 0.02,
-            "why": "Cast it when it's ready; worth 2% of your DPS",
+            "value": 0.018,
+            "why": "Cast it when it's ready; worth 1.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15093,8 +18229,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 40,
-            "value": 0.401,
-            "why": "Your filler: cast it when nothing above is ready; worth 40.1% of your DPS",
+            "value": 0.386,
+            "why": "Your filler: cast it when nothing above is ready; worth 38.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15117,17 +18253,16 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.016,
             "cd_s": 120
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.061,
+            "value": 0.053,
             "src": [
               "sim",
               "client"
@@ -15135,10 +18270,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.056,
+            "value": 0.048,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -15149,7 +18294,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.043,
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -15157,10 +18302,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.028,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -15168,9 +18313,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.024,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -15178,19 +18323,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.024,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.014,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -15199,10 +18334,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Slice and Dice out of single-target fights at levels 40-49: the simulator's 60 s fight did 8% more damage without it.",
+            "text": "Leave Slice and Dice out of single-target fights at levels 40-49: the simulator's 60 s fight did 5.5% more damage without it.",
             "name": "Slice and Dice",
             "spell": 5171,
-            "value": -0.08,
+            "value": -0.055,
             "src": [
               "sim"
             ],
@@ -15210,19 +18345,17 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The class guide's rotation card uses Slice and Dice here and the simulator disagrees: check it in game before trusting either"
           }
         ],
-        "speculation": true,
         "sim": {
-          "dps": 109,
+          "dps": 137.7,
           "fight_s": 60,
           "build": "combat-40-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -15230,6 +18363,43 @@ window.WOW_SPEC_COACH_DATA = {
           59
         ],
         "priority": [
+          {
+            "spell": 11268,
+            "ids": [
+              8676,
+              8724,
+              8725,
+              11267,
+              11268,
+              11269
+            ],
+            "name": "Ambush",
+            "when": "ready",
+            "min_power": 100,
+            "why": "Cast it when it's ready; the sim gains little from it",
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "spell": 6774,
+            "ids": [
+              5171,
+              6774
+            ],
+            "name": "Slice and Dice",
+            "when": "buff_missing",
+            "min_power": 25,
+            "combo_points": 2,
+            "value": 0.035,
+            "why": "Keep it up: 86% of the sim's fight; worth 3.5% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 11299,
             "ids": [
@@ -15245,10 +18415,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 25,
+            "min_power": 20,
             "combo_points": 5,
-            "value": 0.054,
-            "why": "Cast it when it's ready; worth 5.4% of your DPS",
+            "value": 0.05,
+            "why": "Cast it when it's ready; worth 5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15257,22 +18427,21 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
           },
           {
-            "spell": 11293,
+            "spell": 11279,
             "ids": [
-              1752,
-              1757,
-              1758,
-              1759,
-              1760,
-              8621,
-              11293,
-              11294
+              53,
+              2589,
+              2590,
+              2591,
+              8721,
+              11279,
+              11280
             ],
-            "name": "Sinister Strike",
+            "name": "Backstab",
             "when": "filler",
-            "min_power": 40,
-            "value": 0.461,
-            "why": "Your filler: cast it when nothing above is ready; worth 46.1% of your DPS",
+            "min_power": 60,
+            "value": 0.375,
+            "why": "Your filler: cast it when nothing above is ready; worth 37.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15281,7 +18450,19 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "triggers": [],
-        "keep_up": [],
+        "keep_up": [
+          {
+            "aura": 6774,
+            "name": "Slice and Dice",
+            "on": "self",
+            "min_uptime": 0.85,
+            "value": 0.035,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
         "cooldowns": [
           {
             "spell": 13877,
@@ -15295,16 +18476,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
+            "value": 0.012,
             "cd_s": 120
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.072,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -15312,10 +18494,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.072,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -15326,7 +18508,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.038,
+            "value": 0.034,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -15334,10 +18526,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.03,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -15345,9 +18537,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.019,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -15355,9 +18547,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.019,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -15365,41 +18557,27 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.011,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Slice and Dice out of single-target fights at levels 50-59: the simulator's 60 s fight did 1.6% more damage without it.",
-            "name": "Slice and Dice",
-            "spell": 6774,
-            "value": -0.016,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Slice and Dice here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
-        "speculation": true,
+        "avoid": [],
         "sim": {
-          "dps": 140.3,
+          "dps": 178,
           "fight_s": 60,
           "build": "combat-50-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -15434,10 +18612,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 30,
-            "combo_points": 2,
-            "value": 0.042,
-            "why": "Keep it up: 89% of the sim's fight; worth 4.2% of your DPS",
+            "min_power": 25,
+            "combo_points": 3,
+            "why": "Keep it up: 86% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -15460,10 +18637,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 25,
+            "min_power": 20,
             "combo_points": 5,
-            "value": 0.076,
-            "why": "Cast it when it's ready; worth 7.6% of your DPS",
+            "value": 0.109,
+            "why": "Cast it when it's ready; worth 10.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15486,9 +18663,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Backstab",
             "when": "filler",
-            "min_power": 65,
-            "value": 0.397,
-            "why": "Your filler: cast it when nothing above is ready; worth 39.7% of your DPS",
+            "min_power": 60,
+            "value": 0.464,
+            "why": "Your filler: cast it when nothing above is ready; worth 46.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15503,7 +18680,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.85,
-            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -15523,50 +18699,15 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.014,
             "cd_s": 120
           }
         ],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.06,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.058,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.048,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.019,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -15574,9 +18715,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.011,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -15584,9 +18725,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.011,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -15594,23 +18745,112 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 356.1,
-          "fight_s": 60,
+          "dps": 368.2,
+          "fight_s": 180,
           "build": "combat-60-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -15624,7 +18864,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "rogue-combat-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+5% DPS in the simulator); then Elixir of Agility (+2.7%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+3.9% DPS in the simulator); then Elixir of Greater Agility (+2.1%).",
         "levels": [
           20,
           29
@@ -15638,7 +18878,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-combat-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +5.6% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +4.1% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -15652,13 +18892,82 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-combat-20-mix",
-        "text": "Where your damage comes from at levels 20-29: auto attacks 48%, Sinister Strike 28%, Off hand 23% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 36%, Instant Poison 26%, Sinister Strike 20% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
         ],
         "src": [
           "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-combat-30-cd-blade-flurry",
+        "text": "Blade Flurry (2 min cooldown): the simulator uses it on the pull at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-combat-30-consumable",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.8% DPS in the simulator); then Flank au Poivre (+2.8%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-combat-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Might from a Paladin: +4.8% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-combat-30-mix",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 37%, Sinister Strike 26%, Off hand 18% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-combat-40-cd-blade-flurry",
+        "text": "Blade Flurry (2 min cooldown): the simulator uses it on the pull at levels 40-49.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "sim",
+          "client"
         ],
         "n": 0,
         "confidence": "sim"
@@ -15672,8 +18981,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Subtlety",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -15693,9 +19002,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 25,
+            "min_power": 35,
             "combo_points": 2,
-            "why": "Keep it up: 86% of the sim's fight; the sim gains little from it",
+            "value": 0.032,
+            "why": "Keep it up: 86% of the sim's fight; worth 3.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15724,21 +19034,6 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
           },
           {
-            "spell": 14278,
-            "ids": [
-              14278
-            ],
-            "name": "Ghostly Strike",
-            "when": "ready",
-            "min_power": 45,
-            "why": "Cast it when it's ready (20 s cooldown); the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
             "spell": 1758,
             "ids": [
               1752,
@@ -15749,8 +19044,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 45,
-            "value": 0.266,
-            "why": "Your filler: cast it when nothing above is ready; worth 26.6% of your DPS",
+            "value": 0.347,
+            "why": "Your filler: cast it when nothing above is ready; worth 34.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15765,6 +19060,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.85,
+            "value": 0.032,
             "src": [
               "sim",
               "client"
@@ -15775,21 +19071,20 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.056,
+            "value": 0.041,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.052,
+            "kind": "consumable",
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -15800,17 +19095,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.052,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.051,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -15818,10 +19103,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.039,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.028,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -15829,9 +19125,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.027,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -15839,9 +19135,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.018,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -15849,9 +19145,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.017,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -15860,11 +19156,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 45.7,
+          "dps": 63.7,
           "fight_s": 60,
           "build": "subtlety-20-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -15886,7 +19182,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "buff_missing",
             "min_power": 30,
             "combo_points": 3,
-            "why": "Keep it up: 90% of the sim's fight; the sim gains little from it",
+            "value": 0.02,
+            "why": "Keep it up: 90% of the sim's fight; worth 2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15938,8 +19235,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Hemorrhage",
             "when": "filler",
             "min_power": 35,
-            "value": 0.029,
-            "why": "Your filler: cast it when nothing above is ready; worth 2.9% of your DPS",
+            "value": 0.03,
+            "why": "Your filler: cast it when nothing above is ready; worth 3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -15954,6 +19251,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.85,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -15964,10 +19262,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.059,
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -15975,10 +19273,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.052,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -15989,7 +19287,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.047,
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -15997,9 +19295,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.034,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -16007,9 +19305,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.034,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -16017,10 +19315,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.03,
+            "value": 0.024,
             "src": [
               "sim",
               "client"
@@ -16028,19 +19326,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.02,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.012,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -16049,11 +19337,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 74.2,
+          "dps": 94.4,
           "fight_s": 60,
           "build": "subtlety-30-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
@@ -16082,8 +19370,7 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 40,
             "combo_points": 4,
-            "value": 0.011,
-            "why": "Cast it when it's ready; worth 1.1% of your DPS",
+            "why": "Cast it when it's ready",
             "src": [
               "sim",
               "client",
@@ -16114,8 +19401,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Hemorrhage",
             "when": "filler",
             "min_power": 35,
-            "value": 0.026,
-            "why": "Your filler: cast it when nothing above is ready; worth 2.6% of your DPS",
+            "value": 0.027,
+            "why": "Your filler: cast it when nothing above is ready; worth 2.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16129,10 +19416,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.065,
+            "value": 0.054,
             "src": [
               "sim",
               "client"
@@ -16140,10 +19427,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.059,
+            "value": 0.049,
             "src": [
               "sim",
               "client"
@@ -16154,7 +19441,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.047,
+            "value": 0.039,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -16162,19 +19459,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.03,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
             "value": 0.025,
             "src": [
               "sim",
@@ -16183,9 +19470,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.025,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -16193,9 +19480,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.015,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -16204,10 +19491,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Slice and Dice out of single-target fights at levels 40-49: the simulator's 60 s fight did 4.8% more damage without it.",
+            "text": "Leave Slice and Dice out of single-target fights at levels 40-49: the simulator's 60 s fight did 2.1% more damage without it.",
             "name": "Slice and Dice",
             "spell": 5171,
-            "value": -0.048,
+            "value": -0.021,
             "src": [
               "sim"
             ],
@@ -16215,19 +19502,17 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The class guide's rotation card uses Slice and Dice here and the simulator disagrees: check it in game before trusting either"
           }
         ],
-        "speculation": true,
         "sim": {
-          "dps": 94.9,
+          "dps": 115.2,
           "fight_s": 60,
           "build": "subtlety-40-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -16235,6 +19520,27 @@ window.WOW_SPEC_COACH_DATA = {
           59
         ],
         "priority": [
+          {
+            "spell": 11268,
+            "ids": [
+              8676,
+              8724,
+              8725,
+              11267,
+              11268,
+              11269
+            ],
+            "name": "Ambush",
+            "when": "ready",
+            "min_power": 100,
+            "value": 0.039,
+            "why": "Cast it when it's ready; worth 3.9% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 11299,
             "ids": [
@@ -16250,10 +19556,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 40,
-            "combo_points": 3,
-            "value": 0.021,
-            "why": "Cast it when it's ready; worth 2.1% of your DPS",
+            "min_power": 35,
+            "combo_points": 5,
+            "value": 0.018,
+            "why": "Cast it when it's ready; worth 1.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16262,15 +19568,14 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The simulator uses Classic's rule here (Eviscerate at 5 combo points (Classic: 3% of attack power per combo point)); the Forever client doesn't give the number"
           },
           {
-            "spell": 16511,
+            "spell": 14278,
             "ids": [
-              16511
+              14278
             ],
-            "name": "Hemorrhage",
-            "when": "filler",
-            "min_power": 35,
-            "value": 0.016,
-            "why": "Your filler: cast it when nothing above is ready; worth 1.6% of your DPS",
+            "name": "Ghostly Strike",
+            "when": "ready",
+            "min_power": 40,
+            "why": "Cast it when it's ready (20 s cooldown); the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -16284,10 +19589,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.08,
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -16295,10 +19600,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.079,
+            "value": 0.06,
             "src": [
               "sim",
               "client"
@@ -16309,7 +19614,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.041,
+            "value": 0.036,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -16317,10 +19632,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.033,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -16328,9 +19643,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.021,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -16338,9 +19653,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.021,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -16348,9 +19663,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 1477,
-            "name": "Scroll of Agility II",
-            "value": 0.012,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -16359,10 +19674,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Slice and Dice out of single-target fights at levels 50-59: the simulator's 60 s fight did 7.5% more damage without it.",
+            "text": "Leave Slice and Dice out of single-target fights at levels 50-59: the simulator's 60 s fight did 2% more damage without it.",
             "name": "Slice and Dice",
             "spell": 6774,
-            "value": -0.075,
+            "value": -0.02,
             "src": [
               "sim"
             ],
@@ -16370,30 +19685,28 @@ window.WOW_SPEC_COACH_DATA = {
             "reason": "The class guide's rotation card uses Slice and Dice here and the simulator disagrees: check it in game before trusting either"
           },
           {
-            "text": "Leave Ghostly Strike out of single-target fights at levels 50-59: the simulator's 60 s fight did 2% more damage without it.",
-            "name": "Ghostly Strike",
-            "spell": 14278,
-            "value": -0.02,
+            "text": "Leave Hemorrhage out of single-target fights at levels 50-59: the simulator's 60 s fight did 2.9% more damage without it.",
+            "name": "Hemorrhage",
+            "spell": 16511,
+            "value": -0.029,
             "src": [
               "sim"
             ],
             "speculation": true,
-            "reason": "The class guide's rotation card uses Ghostly Strike here and the simulator disagrees: check it in game before trusting either"
+            "reason": "The class guide's rotation card uses Hemorrhage here and the simulator disagrees: check it in game before trusting either"
           }
         ],
-        "speculation": true,
         "sim": {
-          "dps": 113,
+          "dps": 151.6,
           "fight_s": 60,
           "build": "subtlety-50-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -16414,8 +19727,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Ambush",
             "when": "ready",
             "min_power": 100,
-            "value": 0.02,
-            "why": "Cast it when it's ready; worth 2% of your DPS",
+            "why": "Cast it when it's ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -16430,10 +19742,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slice and Dice",
             "when": "buff_missing",
-            "min_power": 25,
-            "combo_points": 2,
-            "value": 0.032,
-            "why": "Keep it up: 87% of the sim's fight; worth 3.2% of your DPS",
+            "min_power": 26,
+            "combo_points": 3,
+            "why": "Keep it up: 89% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -16456,10 +19767,10 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Eviscerate",
             "speculation": true,
             "when": "ready",
-            "min_power": 35,
+            "min_power": 37,
             "combo_points": 5,
-            "value": 0.038,
-            "why": "Cast it when it's ready; worth 3.8% of your DPS",
+            "value": 0.052,
+            "why": "Cast it when it's ready; worth 5.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16474,23 +19785,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Ghostly Strike",
             "when": "ready",
-            "min_power": 40,
+            "min_power": 41,
             "why": "Cast it when it's ready (20 s cooldown); the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 16511,
-            "ids": [
-              16511
-            ],
-            "name": "Hemorrhage",
-            "when": "filler",
-            "min_power": 35,
-            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -16505,7 +19801,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.85,
-            "value": 0.032,
             "src": [
               "sim",
               "client"
@@ -16515,44 +19810,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.064,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.061,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.051,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.019,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -16560,9 +19821,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.011,
+            "id": 250069,
+            "name": "Flank au Poivre",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -16570,33 +19831,144 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 287973,
-            "name": "Tender Wolf Steak",
-            "value": 0.011,
+            "id": 10309,
+            "name": "Scroll of Agility IV",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Hemorrhage out of single-target fights at level 60: the simulator's 180 s fight did 1.1% more damage without it.",
+            "name": "Hemorrhage",
+            "spell": 16511,
+            "value": -0.011,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Hemorrhage here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 316.9,
-          "fight_s": 60,
+          "dps": 335.2,
+          "fight_s": 180,
           "build": "subtlety-60-dungeon",
           "limits": [
-            "Poisons (not learned by 30)",
+            "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
             "Expose Armor"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -16610,7 +19982,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "rogue-subtlety-20-consumable",
-        "text": "Best consumable at levels 20-29: Tender Wolf Steak (+5.1% DPS in the simulator); then Elixir of Agility (+2.7%).",
+        "text": "Best consumable at levels 20-29: Flank au Poivre (+4% DPS in the simulator); then Elixir of Greater Agility (+2.1%).",
         "levels": [
           20,
           29
@@ -16624,7 +19996,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-subtlety-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +5.6% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Might from a Paladin: +4.1% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -16638,13 +20010,81 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "rogue-subtlety-20-mix",
-        "text": "Where your damage comes from at levels 20-29: auto attacks 50%, Off hand 24%, Sinister Strike 20% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 37%, Instant Poison 26%, Sinister Strike 18% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
         ],
         "src": [
           "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-subtlety-20-worth-slice-and-dice",
+        "text": "Slice and Dice is worth 3.2% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-subtlety-30-consumable",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.9% DPS in the simulator); then Flank au Poivre (+2.9%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-subtlety-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Might from a Paladin: +4.7% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-subtlety-30-mix",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 37%, Instant Poison 20%, Hemorrhage 19% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "rogue-subtlety-40-consumable",
+        "text": "Best consumable at levels 40-49: Elixir of Greater Agility (+3.6% DPS in the simulator); then Flank au Poivre (+2.1%).",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "sim",
+          "client"
         ],
         "n": 0,
         "confidence": "sim"
@@ -16658,8 +20098,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Elemental",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -16680,8 +20120,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.101,
-            "why": "Keep it up: 97% of the sim's fight; worth 10.1% of your DPS",
+            "value": 0.086,
+            "why": "Keep it up: 97% of the sim's fight; worth 8.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16698,8 +20138,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.016,
-            "why": "Keep it on the target: up 70% of the sim's fight; worth 1.6% of your DPS",
+            "value": 0.037,
+            "why": "Keep it on the target: up 70% of the sim's fight; worth 3.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16717,8 +20157,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lightning Bolt",
             "when": "filler",
-            "value": 0.682,
-            "why": "Your filler: cast it when nothing above is ready; worth 68.2% of your DPS",
+            "value": 0.67,
+            "why": "Your filler: cast it when nothing above is ready; worth 67% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16733,7 +20173,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.65,
-            "value": 0.016,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -16744,10 +20184,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.07,
+            "value": 0.077,
             "src": [
               "sim",
               "client"
@@ -16755,10 +20195,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.066,
+            "value": 0.073,
             "src": [
               "sim",
               "client"
@@ -16766,9 +20206,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.058,
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.066,
             "src": [
               "sim",
               "client"
@@ -16779,7 +20219,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.058,
+            "value": 0.066,
             "src": [
               "sim",
               "client"
@@ -16787,7 +20227,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.04,
@@ -16798,9 +20238,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.028,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -16808,9 +20248,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.022,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -16818,8 +20258,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
             "value": 0.019,
             "src": [
               "sim",
@@ -16829,11 +20269,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 48.2,
+          "dps": 53.8,
           "fight_s": 60,
           "build": "elemental-20-dungeon",
           "limits": [
-            "Chain Lightning and Lava Burst (not learned by 30)",
+            "Chain Lightning (not modelled yet)",
             "Mana Spring Totem and other party totems"
           ]
         }
@@ -16853,8 +20293,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.072,
-            "why": "Keep it up: 99% of the sim's fight; worth 7.2% of your DPS",
+            "value": 0.044,
+            "why": "Keep it up: 99% of the sim's fight; worth 4.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16871,8 +20311,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.039,
-            "why": "Keep it on the target: up 92% of the sim's fight; worth 3.9% of your DPS",
+            "value": 0.068,
+            "why": "Keep it on the target: up 92% of the sim's fight; worth 6.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16892,8 +20332,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lightning Bolt",
             "when": "filler",
-            "value": 0.754,
-            "why": "Your filler: cast it when nothing above is ready; worth 75.4% of your DPS",
+            "value": 0.746,
+            "why": "Your filler: cast it when nothing above is ready; worth 74.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16923,7 +20363,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.039,
+            "value": 0.068,
             "src": [
               "sim",
               "client"
@@ -16934,9 +20374,9 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.06,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.05,
             "src": [
               "sim",
               "client"
@@ -16944,9 +20384,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.056,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -16954,10 +20394,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.029,
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -16965,10 +20405,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.027,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -16987,8 +20427,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.019,
             "src": [
               "sim",
@@ -16997,7 +20437,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.019,
@@ -17008,9 +20448,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.016,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -17019,11 +20459,11 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 93.6,
+          "dps": 116.5,
           "fight_s": 60,
           "build": "elemental-30-dungeon",
           "limits": [
-            "Chain Lightning and Lava Burst (not learned by 30)",
+            "Chain Lightning (not modelled yet)",
             "Mana Spring Totem and other party totems"
           ]
         }
@@ -17044,8 +20484,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.04,
-            "why": "Keep it up: 84% of the sim's fight; worth 4% of your DPS",
+            "value": 0.015,
+            "why": "Keep it up: 88% of the sim's fight; worth 1.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17063,7 +20503,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 72% of the sim's fight; the sim gains little from it",
+            "why": "Keep it on the target: up 80% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -17084,8 +20524,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lightning Bolt",
             "when": "filler",
-            "value": 0.724,
-            "why": "Your filler: cast it when nothing above is ready; worth 72.4% of your DPS",
+            "value": 0.744,
+            "why": "Your filler: cast it when nothing above is ready; worth 74.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17114,7 +20554,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 10447,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.7,
+            "min_uptime": 0.75,
             "src": [
               "sim",
               "client"
@@ -17124,11 +20564,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.069,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.103,
             "src": [
               "sim",
               "client"
@@ -17136,10 +20575,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.068,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.065,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -17150,17 +20600,16 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.052,
+            "value": 0.059,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.048,
             "src": [
               "sim",
@@ -17168,10 +20617,11 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.035,
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -17179,9 +20629,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.034,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -17189,19 +20639,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.032,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.02,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -17209,17 +20649,15 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 134.9,
+          "dps": 190.4,
           "fight_s": 60,
           "build": "elemental-40-dungeon",
           "limits": [
-            "Chain Lightning and Lava Burst (not learned by 30)",
+            "Chain Lightning (not modelled yet)",
             "Mana Spring Totem and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -17227,24 +20665,6 @@ window.WOW_SPEC_COACH_DATA = {
           59
         ],
         "priority": [
-          {
-            "spell": 10437,
-            "ids": [
-              3599,
-              6363,
-              6364,
-              6365,
-              10437
-            ],
-            "name": "Searing Totem",
-            "when": "buff_missing",
-            "why": "Keep it up: 88% of the sim's fight; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
           {
             "spell": 10447,
             "ids": [
@@ -17257,8 +20677,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.01,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 1% of your DPS",
+            "why": "Keep it on the target: up 73% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -17281,8 +20700,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lightning Bolt",
             "when": "filler",
-            "value": 0.804,
-            "why": "Your filler: cast it when nothing above is ready; worth 80.4% of your DPS",
+            "value": 0.832,
+            "why": "Your filler: cast it when nothing above is ready; worth 83.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17312,7 +20731,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -17322,11 +20740,10 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.076,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.093,
             "src": [
               "sim",
               "client"
@@ -17334,10 +20751,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.08,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.073,
+            "value": 0.078,
             "src": [
               "sim",
               "client"
@@ -17355,11 +20783,21 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.055,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.051,
+            "value": 0.053,
             "src": [
               "sim",
               "client"
@@ -17367,9 +20805,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.033,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -17377,47 +20815,37 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.031,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.027,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.023,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.039,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Searing Totem out of single-target fights at levels 50-59: the simulator's 60 s fight did 2.1% more damage without it.",
+            "name": "Searing Totem",
+            "spell": 10437,
+            "value": -0.021,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Searing Totem here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 152.7,
+          "dps": 264.6,
           "fight_s": 60,
           "build": "elemental-50-dungeon",
           "limits": [
-            "Chain Lightning and Lava Burst (not learned by 30)",
+            "Chain Lightning (not modelled yet)",
             "Mana Spring Totem and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -17425,25 +20853,6 @@ window.WOW_SPEC_COACH_DATA = {
           60
         ],
         "priority": [
-          {
-            "spell": 10438,
-            "ids": [
-              3599,
-              6363,
-              6364,
-              6365,
-              10437,
-              10438
-            ],
-            "name": "Searing Totem",
-            "when": "buff_missing",
-            "why": "Keep it up: 92% of the sim's fight; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
           {
             "spell": 29228,
             "ids": [
@@ -17457,7 +20866,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 92% of the sim's fight; the sim gains little from it",
+            "value": 0.012,
+            "why": "Keep it on the target: up 44% of the sim's fight; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17480,8 +20890,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Lightning Bolt",
             "when": "filler",
-            "value": 0.853,
-            "why": "Your filler: cast it when nothing above is ready; worth 85.3% of your DPS",
+            "value": 0.672,
+            "why": "Your filler: cast it when nothing above is ready; worth 67.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17510,7 +20920,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 29228,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.9,
+            "min_uptime": 0.4,
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -17520,32 +20931,19 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.042,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.044,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.041,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.038,
             "src": [
               "sim",
@@ -17553,11 +20951,10 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.024,
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -17565,41 +20962,132 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.02,
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.029,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Searing Totem out of single-target fights at level 60: the simulator's 180 s fight did 3.3% more damage without it.",
+            "name": "Searing Totem",
+            "spell": 10438,
+            "value": -0.033,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Searing Totem here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 377.7,
-          "fight_s": 60,
+          "dps": 199.5,
+          "fight_s": 180,
           "build": "elemental-60-dungeon",
           "limits": [
-            "Chain Lightning and Lava Burst (not learned by 30)",
+            "Chain Lightning (not modelled yet)",
             "Mana Spring Totem and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -17613,7 +21101,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "shaman-elemental-20-consumable",
-        "text": "Best consumable at levels 20-29: Scroll of Intellect II (+5.8% DPS in the simulator); then Lesser Arcane Elixir (+2.8%).",
+        "text": "Best consumable at levels 20-29: Scroll of Intellect IV (+6.6% DPS in the simulator); then Greater Arcane Elixir (+2.5%).",
         "levels": [
           20,
           29
@@ -17627,7 +21115,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-elemental-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +7% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +7.7% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -17641,13 +21129,80 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-elemental-20-mix",
-        "text": "Where your damage comes from at levels 20-29: Lightning Bolt 73%, Searing Totem 15%, Flame Shock 12% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: Lightning Bolt 72%, Flame Shock 14%, Searing Totem 13% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
         ],
         "src": [
           "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-elemental-20-worth-searing-totem",
+        "text": "Searing Totem is worth 8.6% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-elemental-20-worth-flame-shock",
+        "text": "Flame Shock is worth 3.7% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 70% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-elemental-20-oom",
+        "text": "Mana runs short at levels 20-29: in the simulator's 60 s fight you spend 12.5 s unable to cast. Drink between pulls and start full.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-elemental-30-proc-clearcasting",
+        "text": "Clearcasting (from Elemental Focus): Your next damage spell has its mana cost reduced by 100%. Cast Lightning Bolt within 15 sec, before it fades. In the simulator it comes 2.74 times a 60 s fight.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-elemental-30-consumable",
+        "text": "Best consumable at levels 30-39: Greater Arcane Elixir (+5% DPS in the simulator); then Baked Salmon (+4.7%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
         ],
         "n": 0,
         "confidence": "sim"
@@ -17661,8 +21216,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Enhancement",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -17683,8 +21238,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.104,
-            "why": "Keep it up: 99% of the sim's fight; worth 10.4% of your DPS",
+            "value": 0.087,
+            "why": "Keep it up: 99% of the sim's fight; worth 8.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17701,8 +21256,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.063,
-            "why": "Keep it on the target: up 89% of the sim's fight; worth 6.3% of your DPS",
+            "value": 0.084,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 8.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17719,8 +21274,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.14,
-            "why": "Your filler: cast it when nothing above is ready; worth 14% of your DPS",
+            "value": 0.162,
+            "why": "Your filler: cast it when nothing above is ready; worth 16.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17735,7 +21290,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.063,
+            "value": 0.084,
             "src": [
               "sim",
               "client"
@@ -17749,7 +21304,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.034,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -17757,10 +21312,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.026,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -17768,31 +21323,42 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.024,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 6192,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.023,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
+            "value": 0.025,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.021,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
             "value": 0.019,
             "src": [
               "sim",
@@ -17801,40 +21367,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.016,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
             "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.01,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -17843,7 +21378,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 55.5,
+          "dps": 59.1,
           "fight_s": 60,
           "build": "enhancement-20-dungeon",
           "limits": [
@@ -17868,8 +21403,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.08,
-            "why": "Keep it up: 98% of the sim's fight; worth 8% of your DPS",
+            "value": 0.07,
+            "why": "Keep it up: 98% of the sim's fight; worth 7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17883,8 +21418,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.127,
-            "why": "Keep it up: 46% of the sim's fight; worth 12.7% of your DPS",
+            "value": 0.103,
+            "why": "Keep it up: 47% of the sim's fight; worth 10.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17901,8 +21436,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.031,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 3.1% of your DPS",
+            "value": 0.067,
+            "why": "Keep it on the target: up 83% of the sim's fight; worth 6.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17920,8 +21455,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.073,
-            "why": "Your filler: cast it when nothing above is ready; worth 7.3% of your DPS",
+            "value": 0.107,
+            "why": "Your filler: cast it when nothing above is ready; worth 10.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17936,7 +21471,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.031,
+            "value": 0.067,
             "src": [
               "sim",
               "client"
@@ -17950,17 +21485,6 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.042,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
             "value": 0.038,
             "src": [
               "sim",
@@ -17969,10 +21493,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.035,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.036,
+            "value": 0.033,
             "src": [
               "sim",
               "client"
@@ -17980,10 +21515,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 6192,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.032,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -17991,10 +21526,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.025,
+            "value": 0.026,
             "src": [
               "sim",
               "client"
@@ -18002,18 +21537,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
+            "id": 250070,
+            "name": "Bear Bruscitti",
             "value": 0.016,
             "src": [
               "sim",
@@ -18022,8 +21547,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
             "value": 0.015,
             "src": [
               "sim",
@@ -18032,9 +21557,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.014,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -18042,10 +21567,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.01,
+            "value": 0.012,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -18054,7 +21589,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 111.4,
+          "dps": 123.3,
           "fight_s": 60,
           "build": "enhancement-30-dungeon",
           "limits": [
@@ -18080,8 +21615,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.076,
-            "why": "Keep it up: 96% of the sim's fight; worth 7.6% of your DPS",
+            "value": 0.063,
+            "why": "Keep it up: 96% of the sim's fight; worth 6.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18095,8 +21630,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.136,
-            "why": "Keep it up: 48% of the sim's fight; worth 13.6% of your DPS",
+            "value": 0.101,
+            "why": "Keep it up: 48% of the sim's fight; worth 10.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18114,8 +21649,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.035,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 3.5% of your DPS",
+            "value": 0.073,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 7.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18134,8 +21669,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.065,
-            "why": "Your filler: cast it when nothing above is ready; worth 6.5% of your DPS",
+            "value": 0.102,
+            "why": "Your filler: cast it when nothing above is ready; worth 10.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18150,7 +21685,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.035,
+            "value": 0.073,
             "src": [
               "sim",
               "client"
@@ -18161,10 +21696,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.042,
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -18172,21 +21707,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.038,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.032,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -18197,7 +21721,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.032,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -18205,10 +21729,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 25289,
+            "name": "Battle Shout",
+            "from": "warrior",
+            "value": 0.033,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.029,
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -18216,10 +21751,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.017,
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -18227,9 +21762,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.014,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -18237,9 +21772,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.012,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -18247,9 +21782,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.011,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -18257,9 +21792,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 146.5,
+          "dps": 170.4,
           "fight_s": 60,
           "build": "enhancement-40-dungeon",
           "limits": [
@@ -18267,8 +21801,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Lightning Shield (damages attackers only)",
             "Strength of Earth and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -18287,8 +21820,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.024,
-            "why": "Keep it up: 93% of the sim's fight; worth 2.4% of your DPS",
+            "value": 0.016,
+            "why": "Keep it up: 93% of the sim's fight; worth 1.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18302,8 +21835,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.128,
-            "why": "Keep it up: 47% of the sim's fight; worth 12.8% of your DPS",
+            "value": 0.086,
+            "why": "Keep it up: 47% of the sim's fight; worth 8.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18322,8 +21855,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.026,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 2.6% of your DPS",
+            "value": 0.095,
+            "why": "Keep it on the target: up 84% of the sim's fight; worth 9.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18342,8 +21875,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.121,
-            "why": "Your filler: cast it when nothing above is ready; worth 12.1% of your DPS",
+            "value": 0.15,
+            "why": "Your filler: cast it when nothing above is ready; worth 15% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18357,8 +21890,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 10447,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.026,
+            "min_uptime": 0.8,
+            "value": 0.095,
             "src": [
               "sim",
               "client"
@@ -18369,10 +21902,10 @@ window.WOW_SPEC_COACH_DATA = {
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.048,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -18380,10 +21913,21 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 11549,
+            "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.048,
+            "value": 0.042,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -18394,28 +21938,16 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.037,
+            "value": 0.031,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.034,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
             "value": 0.026,
             "src": [
               "sim",
@@ -18423,11 +21955,21 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.02,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.018,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -18435,9 +21977,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.011,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -18445,19 +21987,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.01,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -18465,9 +21997,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 166.6,
+          "dps": 185.3,
           "fight_s": 60,
           "build": "enhancement-50-dungeon",
           "limits": [
@@ -18475,8 +22006,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Lightning Shield (damages attackers only)",
             "Strength of Earth and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -18485,34 +22015,14 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
-            "spell": 10438,
-            "ids": [
-              3599,
-              6363,
-              6364,
-              6365,
-              10437,
-              10438
-            ],
-            "name": "Searing Totem",
-            "when": "buff_missing",
-            "value": 0.012,
-            "why": "Keep it up: 92% of the sim's fight; worth 1.2% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
             "spell": 17364,
             "ids": [
               17364
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.12,
-            "why": "Keep it up: 41% of the sim's fight; worth 12% of your DPS",
+            "value": 0.109,
+            "why": "Keep it up: 66% of the sim's fight; worth 10.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18532,8 +22042,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.04,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 4% of your DPS",
+            "value": 0.038,
+            "why": "Keep it on the target: up 56% of the sim's fight; worth 3.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18553,8 +22063,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.106,
-            "why": "Your filler: cast it when nothing above is ready; worth 10.6% of your DPS",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -18568,8 +22077,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 29228,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.04,
+            "min_uptime": 0.55,
+            "value": 0.038,
             "src": [
               "sim",
               "client"
@@ -18579,78 +22088,164 @@ window.WOW_SPEC_COACH_DATA = {
         "cooldowns": [],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 11549,
-            "name": "Battle Shout",
-            "from": "warrior",
-            "value": 0.043,
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.041,
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.038,
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.025,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.012,
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Searing Totem out of single-target fights at level 60: the simulator's 180 s fight did 2% more damage without it.",
+            "name": "Searing Totem",
+            "spell": 10438,
+            "value": -0.02,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Searing Totem here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 358,
-          "fight_s": 60,
+          "dps": 332.6,
+          "fight_s": 180,
           "build": "enhancement-60-dungeon",
           "limits": [
             "Dual wielding (not in Forever)",
             "Lightning Shield (damages attackers only)",
             "Strength of Earth and other party totems"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -18664,7 +22259,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "shaman-enhancement-20-consumable",
-        "text": "Best consumable at levels 20-29: Elixir of Ogre Strength (+1.6% DPS in the simulator); then Bear Brisket (+1%).",
+        "text": "Best consumable at levels 20-29: Elixir of Greater Strength (+1.4% DPS in the simulator).",
         "levels": [
           20,
           29
@@ -18678,7 +22273,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-enhancement-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3.4% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3.7% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -18692,10 +22287,77 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-enhancement-20-mix",
-        "text": "Where your damage comes from at levels 20-29: auto attacks 55%, Earth Shock 14%, Searing Totem 12% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 50%, Earth Shock 16%, Flame Shock 13% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-enhancement-20-worth-searing-totem",
+        "text": "Searing Totem is worth 8.7% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-enhancement-20-worth-flame-shock",
+        "text": "Flame Shock is worth 8.4% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 89% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-enhancement-30-consumable",
+        "text": "Best consumable at levels 30-39: Bear Bruscitti (+1.6% DPS in the simulator); then Scroll of Strength IV (+1.5%).",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-enhancement-30-partybuff",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Kings from a Paladin: +3.8% DPS in the simulator.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "shaman-enhancement-30-mix",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 39%, Windfury Attack 16%, Stormstrike 14% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim"
@@ -18712,8 +22374,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Restoration",
     "role": "healer",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -18989,7 +22651,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Riptide",
             "when": "buff_missing",
-            "why": "On the tank whenever it's ready: an instant heal plus a heal over 15 seconds.",
+            "why": "On the tank whenever it's ready (every 12 seconds): it heals over 15 seconds with nothing up front, so cast it before the damage lands.",
             "src": [
               "guides",
               "client"
@@ -19110,9 +22772,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -19264,9 +22924,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -19421,13 +23079,283 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 12 s, then every 38 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256035": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Dispel it; first at 13 s",
+          "roles": [
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -19479,8 +23407,74 @@ window.WOW_SPEC_COACH_DATA = {
           "client"
         ],
         "n": 0,
-        "confidence": "speculation",
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "confidence": "client"
+      },
+      {
+        "id": "shaman-restoration-40-cd-nature-s-swiftness",
+        "text": "Nature's Swiftness has a 3 min cooldown at levels 40-49 (client data): about once every second or third pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "shaman-restoration-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "shaman-restoration-50-cd-nature-s-swiftness",
+        "text": "Nature's Swiftness has a 3 min cooldown at levels 50-59 (client data): about once every second or third pull.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "shaman-restoration-60-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for level 60, with cooldowns and costs from the Forever client.",
+        "levels": [
+          60,
+          60
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "shaman-restoration-60-cd-nature-s-swiftness",
+        "text": "Nature's Swiftness has a 3 min cooldown at level 60 (client data): about once every second or third pull.",
+        "levels": [
+          60,
+          60
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
       }
     ]
   },
@@ -19491,8 +23485,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Affliction",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -19530,8 +23524,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.129,
-            "why": "Keep it on the target: up 87% of the sim's fight; worth 12.9% of your DPS",
+            "value": 0.125,
+            "why": "Keep it on the target: up 87% of the sim's fight; worth 12.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19548,8 +23542,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.098,
-            "why": "Keep it on the target: up 78% of the sim's fight; worth 9.8% of your DPS",
+            "value": 0.095,
+            "why": "Keep it on the target: up 78% of the sim's fight; worth 9.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19585,8 +23579,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.159,
-            "why": "Your filler: cast it when nothing above is ready; worth 15.9% of your DPS",
+            "value": 0.156,
+            "why": "Your filler: cast it when nothing above is ready; worth 15.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19624,7 +23618,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.129,
+            "value": 0.125,
             "src": [
               "sim",
               "client"
@@ -19635,7 +23629,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.098,
+            "value": 0.095,
             "src": [
               "sim",
               "client"
@@ -19674,14 +23668,14 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.105,
+            "value": 0.128,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.036,
@@ -19692,19 +23686,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.025,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.024,
             "src": [
               "sim",
@@ -19713,7 +23696,18 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.023,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.022,
@@ -19724,9 +23718,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.02,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -19734,8 +23728,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.019,
             "src": [
               "sim",
@@ -19755,8 +23749,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
             "value": 0.014,
             "src": [
               "sim",
@@ -19766,7 +23760,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 60.7,
+          "dps": 62.3,
           "fight_s": 60,
           "build": "affliction-20-dungeon",
           "limits": [
@@ -19811,8 +23805,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.122,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 12.2% of your DPS",
+            "value": 0.121,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 12.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19830,8 +23824,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.118,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 11.8% of your DPS",
+            "value": 0.117,
+            "why": "Keep it on the target: up 84% of the sim's fight; worth 11.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19938,7 +23932,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.122,
+            "value": 0.121,
             "src": [
               "sim",
               "client"
@@ -19949,7 +23943,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.118,
+            "value": 0.117,
             "src": [
               "sim",
               "client"
@@ -19997,15 +23991,15 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.096,
+            "value": 0.101,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.052,
             "src": [
               "sim",
@@ -20014,9 +24008,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.049,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -20024,7 +24018,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.029,
@@ -20035,7 +24029,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.022,
@@ -20049,7 +24043,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.016,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -20057,8 +24051,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.015,
             "src": [
               "sim",
@@ -20067,7 +24061,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.015,
@@ -20078,8 +24072,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
             "value": 0.011,
             "src": [
               "sim",
@@ -20089,7 +24083,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 92.4,
+          "dps": 93.1,
           "fight_s": 60,
           "build": "affliction-30-dungeon",
           "limits": [
@@ -20116,8 +24110,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.036,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 3.6% of your DPS",
+            "value": 0.037,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 3.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20136,8 +24130,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.133,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 13.3% of your DPS",
+            "value": 0.12,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 12% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20156,8 +24150,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.102,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 10.2% of your DPS",
+            "value": 0.103,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 10.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20174,29 +24168,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 87% of the sim's fight; the sim gains little from it",
+            "value": 0.022,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 2.2% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
-            ]
-          },
-          {
-            "spell": 11665,
-            "ids": [
-              348,
-              707,
-              1094,
-              2941,
-              11665
-            ],
-            "name": "Immolate",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "why": "Keep it on the target: up 65% of the sim's fight; the sim gains little from it",
-            "src": [
-              "sim",
-              "client"
             ]
           },
           {
@@ -20212,8 +24189,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.167,
-            "why": "Your filler: cast it when nothing above is ready; worth 16.7% of your DPS",
+            "value": 0.17,
+            "why": "Your filler: cast it when nothing above is ready; worth 17% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20255,7 +24232,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.036,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -20265,8 +24242,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11711,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.133,
+            "min_uptime": 0.85,
+            "value": 0.12,
             "src": [
               "sim",
               "client"
@@ -20277,7 +24254,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.102,
+            "value": 0.103,
             "src": [
               "sim",
               "client"
@@ -20288,16 +24265,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "on": "target",
             "min_uptime": 0.85,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "aura": 11665,
-            "name": "Immolate",
-            "on": "target",
-            "min_uptime": 0.65,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -20325,16 +24293,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.09,
+            "value": 0.093,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.037,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.057,
             "src": [
               "sim",
               "client"
@@ -20342,9 +24310,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.035,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.052,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -20352,7 +24330,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.024,
@@ -20363,7 +24341,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.015,
@@ -20384,21 +24362,40 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.013,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.01,
+            "value": 0.013,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Immolate out of single-target fights at levels 40-49: the simulator's 60 s fight did 1.1% more damage without it.",
+            "name": "Immolate",
+            "spell": 11665,
+            "value": -0.011,
+            "src": [
+              "sim"
+            ]
+          }
+        ],
         "sim": {
-          "dps": 146,
+          "dps": 142.2,
           "fight_s": 60,
           "build": "affliction-40-dungeon",
           "limits": [
@@ -20407,8 +24404,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -20427,8 +24423,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.059,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 5.9% of your DPS",
+            "value": 0.058,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 5.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20448,8 +24444,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.118,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 11.8% of your DPS",
+            "value": 0.126,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 12.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20469,8 +24465,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.084,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 8.4% of your DPS",
+            "value": 0.092,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 9.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20488,8 +24484,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.02,
-            "why": "Keep it on the target: up 89% of the sim's fight; worth 2% of your DPS",
+            "value": 0.012,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20509,7 +24505,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 74% of the sim's fight; the sim gains little from it",
+            "why": "Keep it on the target: up 72% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client"
@@ -20529,8 +24525,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.228,
-            "why": "Your filler: cast it when nothing above is ready; worth 22.8% of your DPS",
+            "value": 0.263,
+            "why": "Your filler: cast it when nothing above is ready; worth 26.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20572,7 +24568,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.059,
+            "value": 0.058,
             "src": [
               "sim",
               "client"
@@ -20583,7 +24579,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.118,
+            "value": 0.126,
             "src": [
               "sim",
               "client"
@@ -20594,7 +24590,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.084,
+            "value": 0.092,
             "src": [
               "sim",
               "client"
@@ -20605,7 +24601,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.02,
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -20643,16 +24639,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.095,
+            "value": 0.079,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.031,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.062,
             "src": [
               "sim",
               "client"
@@ -20660,9 +24656,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.029,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.049,
             "src": [
               "sim",
               "client"
@@ -20670,21 +24666,31 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.012,
+            "value": 0.019,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.014,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -20695,6 +24701,16 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
+            "value": 0.013,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.01,
             "src": [
               "sim",
@@ -20703,9 +24719,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 206.1,
+          "dps": 237.8,
           "fight_s": 60,
           "build": "affliction-50-dungeon",
           "limits": [
@@ -20714,8 +24729,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -20734,8 +24748,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.07,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 7% of your DPS",
+            "value": 0.08,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20755,8 +24769,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.09,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 9% of your DPS",
+            "value": 0.13,
+            "why": "Keep it on the target: up 92% of the sim's fight; worth 13% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20777,8 +24791,27 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.065,
-            "why": "Keep it on the target: up 87% of the sim's fight; worth 6.5% of your DPS",
+            "value": 0.103,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 10.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 18881,
+            "ids": [
+              18265,
+              18879,
+              18880,
+              18881
+            ],
+            "name": "Siphon Life",
+            "when": "debuff_missing_or_ending",
+            "ending_s": 0,
+            "value": 0.013,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 1.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20800,7 +24833,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 71% of the sim's fight; the sim gains little from it",
+            "why": "Keep it on the target: up 72% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client"
@@ -20822,8 +24855,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.382,
-            "why": "Your filler: cast it when nothing above is ready; worth 38.2% of your DPS",
+            "value": 0.254,
+            "why": "Your filler: cast it when nothing above is ready; worth 25.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -20865,7 +24898,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.07,
+            "value": 0.08,
             "src": [
               "sim",
               "client"
@@ -20875,8 +24908,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11713,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.09,
+            "min_uptime": 0.9,
+            "value": 0.13,
             "src": [
               "sim",
               "client"
@@ -20887,7 +24920,18 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.065,
+            "value": 0.103,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 18881,
+            "name": "Siphon Life",
+            "on": "target",
+            "min_uptime": 0.85,
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -20925,17 +24969,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.046,
+            "value": 0.061,
             "src": [
               "sim"
             ]
           },
           {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.015,
+            "kind": "consumable",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -20943,42 +24986,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.012,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.033,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Siphon Life out of single-target fights at level 60: the simulator's 60 s fight did 1.2% more damage without it.",
-            "name": "Siphon Life",
-            "spell": 18881,
-            "value": -0.012,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Siphon Life here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
-        "speculation": true,
+        "avoid": [],
         "sim": {
-          "dps": 548.2,
-          "fight_s": 60,
+          "dps": 317.9,
+          "fight_s": 180,
           "build": "affliction-60-dungeon",
           "limits": [
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
@@ -20986,12 +25006,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -21032,7 +25142,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warlock-affliction-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+2.5% DPS in the simulator); then Briny Seafood Stew (+2%).",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.4% DPS in the simulator); then Baked Salmon (+1.9%).",
         "levels": [
           20,
           29
@@ -21040,6 +25150,72 @@ window.WOW_SPEC_COACH_DATA = {
         "src": [
           "sim",
           "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-affliction-20-partybuff",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +3.6% DPS in the simulator.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-affliction-20-pet",
+        "text": "Keep your Imp out: without it the simulator's fight does 12.8% less damage at levels 20-29.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-affliction-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Shadow Bolt 40%, Bane of Agony 18%, Corruption 17% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-affliction-20-worth-bane-of-agony",
+        "text": "Bane of Agony is worth 12.5% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 87% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-affliction-20-worth-corruption",
+        "text": "Corruption is worth 9.5% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 78% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
         ],
         "n": 0,
         "confidence": "sim"
@@ -21053,8 +25229,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Demonology",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -21075,8 +25251,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.012,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 1.2% of your DPS",
+            "value": 0.013,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 1.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21093,8 +25269,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.136,
-            "why": "Keep it on the target: up 92% of the sim's fight; worth 13.6% of your DPS",
+            "value": 0.131,
+            "why": "Keep it on the target: up 92% of the sim's fight; worth 13.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21111,8 +25287,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.065,
-            "why": "Keep it on the target: up 71% of the sim's fight; worth 6.5% of your DPS",
+            "value": 0.062,
+            "why": "Keep it on the target: up 71% of the sim's fight; worth 6.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21129,8 +25305,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.023,
-            "why": "Keep it on the target: up 66% of the sim's fight; worth 2.3% of your DPS",
+            "value": 0.022,
+            "why": "Keep it on the target: up 66% of the sim's fight; worth 2.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21148,8 +25324,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.154,
-            "why": "Your filler: cast it when nothing above is ready; worth 15.4% of your DPS",
+            "value": 0.15,
+            "why": "Your filler: cast it when nothing above is ready; worth 15% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21177,7 +25353,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.012,
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -21188,7 +25364,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.136,
+            "value": 0.131,
             "src": [
               "sim",
               "client"
@@ -21199,7 +25375,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.065,
+            "value": 0.062,
             "src": [
               "sim",
               "client"
@@ -21210,7 +25386,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.65,
-            "value": 0.023,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -21223,14 +25399,14 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.155,
+            "value": 0.186,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.024,
@@ -21241,9 +25417,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.023,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -21251,9 +25427,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.019,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -21261,8 +25437,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.014,
             "src": [
               "sim",
@@ -21282,7 +25458,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.01,
@@ -21294,7 +25470,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 59.1,
+          "dps": 61.5,
           "fight_s": 60,
           "build": "demonology-20-dungeon",
           "limits": [
@@ -21339,8 +25515,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.105,
-            "why": "Keep it on the target: up 87% of the sim's fight; worth 10.5% of your DPS",
+            "value": 0.104,
+            "why": "Keep it on the target: up 87% of the sim's fight; worth 10.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21358,8 +25534,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.061,
-            "why": "Keep it on the target: up 71% of the sim's fight; worth 6.1% of your DPS",
+            "value": 0.06,
+            "why": "Keep it on the target: up 71% of the sim's fight; worth 6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21396,8 +25572,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.165,
-            "why": "Your filler: cast it when nothing above is ready; worth 16.5% of your DPS",
+            "value": 0.164,
+            "why": "Your filler: cast it when nothing above is ready; worth 16.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21436,7 +25612,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.105,
+            "value": 0.104,
             "src": [
               "sim",
               "client"
@@ -21447,7 +25623,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.061,
+            "value": 0.06,
             "src": [
               "sim",
               "client"
@@ -21470,16 +25646,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.174,
+            "value": 0.182,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.047,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -21487,9 +25663,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.044,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -21497,10 +25673,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.023,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -21508,7 +25684,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.018,
@@ -21530,8 +25706,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.011,
             "src": [
               "sim",
@@ -21540,7 +25716,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.011,
@@ -21552,7 +25728,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 97.8,
+          "dps": 98.7,
           "fight_s": 60,
           "build": "demonology-30-dungeon",
           "limits": [
@@ -21579,8 +25755,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.043,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 4.3% of your DPS",
+            "value": 0.042,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 4.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21599,8 +25775,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.104,
-            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.4% of your DPS",
+            "value": 0.113,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 11.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21619,8 +25795,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.054,
-            "why": "Keep it on the target: up 72% of the sim's fight; worth 5.4% of your DPS",
+            "value": 0.057,
+            "why": "Keep it on the target: up 78% of the sim's fight; worth 5.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21639,8 +25815,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.012,
-            "why": "Keep it on the target: up 72% of the sim's fight; worth 1.2% of your DPS",
+            "value": 0.015,
+            "why": "Keep it on the target: up 76% of the sim's fight; worth 1.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21660,8 +25836,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.195,
-            "why": "Your filler: cast it when nothing above is ready; worth 19.5% of your DPS",
+            "value": 0.199,
+            "why": "Your filler: cast it when nothing above is ready; worth 19.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21689,7 +25865,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.043,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -21699,8 +25875,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11711,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.104,
+            "min_uptime": 0.8,
+            "value": 0.113,
             "src": [
               "sim",
               "client"
@@ -21710,8 +25886,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 7648,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.054,
+            "min_uptime": 0.75,
+            "value": 0.057,
             "src": [
               "sim",
               "client"
@@ -21721,8 +25897,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11665,
             "name": "Immolate",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.012,
+            "min_uptime": 0.75,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -21735,16 +25911,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.184,
+            "value": 0.19,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.031,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -21752,9 +25928,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.029,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.044,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -21762,10 +25948,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.02,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -21773,7 +25959,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.014,
@@ -21795,9 +25981,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 152.2,
+          "dps": 147.4,
           "fight_s": 60,
           "build": "demonology-40-dungeon",
           "limits": [
@@ -21806,8 +25991,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -21826,8 +26010,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.069,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 6.9% of your DPS",
+            "value": 0.07,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21847,8 +26031,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.099,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 9.9% of your DPS",
+            "value": 0.109,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 10.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21868,8 +26052,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.037,
-            "why": "Keep it on the target: up 81% of the sim's fight; worth 3.7% of your DPS",
+            "value": 0.046,
+            "why": "Keep it on the target: up 82% of the sim's fight; worth 4.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21889,8 +26073,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.028,
-            "why": "Keep it on the target: up 74% of the sim's fight; worth 2.8% of your DPS",
+            "value": 0.015,
+            "why": "Keep it on the target: up 71% of the sim's fight; worth 1.5% of your DPS",
             "src": [
               "sim",
               "client"
@@ -21910,8 +26094,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.24,
-            "why": "Your filler: cast it when nothing above is ready; worth 24% of your DPS",
+            "value": 0.284,
+            "why": "Your filler: cast it when nothing above is ready; worth 28.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21939,7 +26123,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.069,
+            "value": 0.07,
             "src": [
               "sim",
               "client"
@@ -21950,7 +26134,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.099,
+            "value": 0.109,
             "src": [
               "sim",
               "client"
@@ -21961,7 +26145,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.037,
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -21972,7 +26156,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.028,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -21985,16 +26169,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.18,
+            "value": 0.156,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.027,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.054,
             "src": [
               "sim",
               "client"
@@ -22002,9 +26186,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.025,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.043,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -22012,19 +26206,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
+            "id": 25290,
+            "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.01,
             "src": [
@@ -22034,9 +26217,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 209.3,
+          "dps": 242.2,
           "fight_s": 60,
           "build": "demonology-50-dungeon",
           "limits": [
@@ -22045,8 +26227,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -22065,8 +26246,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.069,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 6.9% of your DPS",
+            "value": 0.081,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 8.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22086,8 +26267,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.082,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 8.2% of your DPS",
+            "value": 0.109,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 10.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22108,8 +26289,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.02,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 2% of your DPS",
+            "value": 0.047,
+            "why": "Keep it on the target: up 78% of the sim's fight; worth 4.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22131,7 +26312,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 75% of the sim's fight; the sim gains little from it",
+            "value": 0.036,
+            "why": "Keep it on the target: up 75% of the sim's fight; worth 3.6% of your DPS",
             "src": [
               "sim",
               "client"
@@ -22153,8 +26335,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.436,
-            "why": "Your filler: cast it when nothing above is ready; worth 43.6% of your DPS",
+            "value": 0.245,
+            "why": "Your filler: cast it when nothing above is ready; worth 24.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22182,7 +26364,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.069,
+            "value": 0.081,
             "src": [
               "sim",
               "client"
@@ -22192,8 +26374,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11713,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.082,
+            "min_uptime": 0.9,
+            "value": 0.109,
             "src": [
               "sim",
               "client"
@@ -22203,8 +26385,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25311,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.02,
+            "min_uptime": 0.75,
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -22215,6 +26397,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.7,
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -22227,27 +26410,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.083,
+            "value": 0.128,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.012,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -22255,9 +26427,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.011,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -22265,10 +26437,9 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 562.6,
-          "fight_s": 60,
+          "dps": 299.1,
+          "fight_s": 180,
           "build": "demonology-60-dungeon",
           "limits": [
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
@@ -22276,12 +26447,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -22308,7 +26569,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warlock-demonology-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+2.3% DPS in the simulator); then Briny Seafood Stew (+1.9%).",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.2% DPS in the simulator); then Baked Salmon (+1.8%).",
         "levels": [
           20,
           29
@@ -22333,6 +26594,71 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "n": 0,
         "confidence": "sim"
+      },
+      {
+        "id": "warlock-demonology-20-pet",
+        "text": "Keep your Imp out: without it the simulator's fight does 18.6% less damage at levels 20-29.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-demonology-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Shadow Bolt 36%, Bane of Agony 20%, Imp: Firebolt 18% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-demonology-20-worth-bane-of-agony",
+        "text": "Bane of Agony is worth 13.1% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 92% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-demonology-20-worth-corruption",
+        "text": "Corruption is worth 6.2% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 71% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-demonology-30-mana-life-tap",
+        "text": "Use Life Tap when your mana drops under 35%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
       }
     ]
   },
@@ -22343,8 +26669,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Destruction",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -22382,8 +26708,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.102,
-            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.2% of your DPS",
+            "value": 0.099,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 9.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22400,8 +26726,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.024,
-            "why": "Keep it on the target: up 72% of the sim's fight; worth 2.4% of your DPS",
+            "value": 0.023,
+            "why": "Keep it on the target: up 72% of the sim's fight; worth 2.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22418,8 +26744,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.089,
-            "why": "Keep it on the target: up 69% of the sim's fight; worth 8.9% of your DPS",
+            "value": 0.086,
+            "why": "Keep it on the target: up 69% of the sim's fight; worth 8.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22434,8 +26760,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadowburn",
             "when": "ready",
-            "value": 0.011,
-            "why": "Cast it when it's ready (15 s cooldown); worth 1.1% of your DPS",
+            "value": 0.01,
+            "why": "Cast it when it's ready (15 s cooldown); worth 1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22453,8 +26779,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.115,
-            "why": "Your filler: cast it when nothing above is ready; worth 11.5% of your DPS",
+            "value": 0.113,
+            "why": "Your filler: cast it when nothing above is ready; worth 11.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22492,7 +26818,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.102,
+            "value": 0.099,
             "src": [
               "sim",
               "client"
@@ -22503,7 +26829,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.024,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -22514,7 +26840,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.65,
-            "value": 0.089,
+            "value": 0.086,
             "src": [
               "sim",
               "client"
@@ -22527,16 +26853,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.119,
+            "value": 0.144,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.028,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -22544,10 +26870,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.028,
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -22555,8 +26881,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.022,
             "src": [
               "sim",
@@ -22568,7 +26894,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.02,
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -22576,8 +26902,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.016,
             "src": [
               "sim",
@@ -22586,7 +26912,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
             "value": 0.014,
@@ -22597,7 +26923,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.013,
@@ -22608,8 +26934,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
             "value": 0.011,
             "src": [
               "sim",
@@ -22619,7 +26945,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 53.8,
+          "dps": 55.4,
           "fight_s": 60,
           "build": "destruction-20-dungeon",
           "limits": [
@@ -22683,8 +27009,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.044,
-            "why": "Keep it on the target: up 68% of the sim's fight; worth 4.4% of your DPS",
+            "value": 0.043,
+            "why": "Keep it on the target: up 68% of the sim's fight; worth 4.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22717,8 +27043,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.07,
-            "why": "Keep it on the target: up 58% of the sim's fight; worth 7% of your DPS",
+            "value": 0.068,
+            "why": "Keep it on the target: up 58% of the sim's fight; worth 6.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22805,7 +27131,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.65,
-            "value": 0.044,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -22816,7 +27142,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.55,
-            "value": 0.07,
+            "value": 0.068,
             "src": [
               "sim",
               "client"
@@ -22829,15 +27155,15 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.099,
+            "value": 0.105,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
             "value": 0.052,
             "src": [
               "sim",
@@ -22846,8 +27172,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
+            "id": 13935,
+            "name": "Baked Salmon",
             "value": 0.049,
             "src": [
               "sim",
@@ -22856,7 +27182,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19850,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
             "value": 0.025,
@@ -22867,10 +27193,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 1461,
+            "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.014,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -22878,8 +27204,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
             "value": 0.013,
             "src": [
               "sim",
@@ -22888,7 +27214,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.013,
@@ -22911,7 +27237,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 91.1,
+          "dps": 91.9,
           "fight_s": 60,
           "build": "destruction-30-dungeon",
           "limits": [
@@ -22938,8 +27264,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.043,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 4.3% of your DPS",
+            "value": 0.038,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 3.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22958,8 +27284,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.079,
-            "why": "Keep it on the target: up 91% of the sim's fight; worth 7.9% of your DPS",
+            "value": 0.071,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 7.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22978,8 +27304,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.024,
-            "why": "Keep it on the target: up 76% of the sim's fight; worth 2.4% of your DPS",
+            "why": "Keep it on the target: up 80% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client"
@@ -22995,8 +27320,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Conflagrate",
             "when": "ready",
-            "value": 0.048,
-            "why": "Cast it when it's ready (10 s cooldown); worth 4.8% of your DPS",
+            "value": 0.053,
+            "why": "Cast it when it's ready (10 s cooldown); worth 5.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23015,8 +27340,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.131,
-            "why": "Keep it on the target: up 52% of the sim's fight; worth 13.1% of your DPS",
+            "value": 0.148,
+            "why": "Keep it on the target: up 52% of the sim's fight; worth 14.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23034,8 +27359,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadowburn",
             "when": "ready",
-            "value": 0.018,
-            "why": "Cast it when it's ready (15 s cooldown); worth 1.8% of your DPS",
+            "value": 0.014,
+            "why": "Cast it when it's ready (15 s cooldown); worth 1.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23055,8 +27380,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.055,
-            "why": "Your filler: cast it when nothing above is ready; worth 5.5% of your DPS",
+            "value": 0.047,
+            "why": "Your filler: cast it when nothing above is ready; worth 4.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23084,7 +27409,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.043,
+            "value": 0.038,
             "src": [
               "sim",
               "client"
@@ -23094,8 +27419,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11711,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.9,
-            "value": 0.079,
+            "min_uptime": 0.85,
+            "value": 0.071,
             "src": [
               "sim",
               "client"
@@ -23105,8 +27430,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 7648,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.024,
+            "min_uptime": 0.8,
             "src": [
               "sim",
               "client"
@@ -23117,7 +27441,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.5,
-            "value": 0.131,
+            "value": 0.148,
             "src": [
               "sim",
               "client"
@@ -23130,16 +27454,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.104,
+            "value": 0.11,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.037,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.059,
             "src": [
               "sim",
               "client"
@@ -23147,9 +27471,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.035,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.053,
             "src": [
               "sim",
               "client"
@@ -23157,21 +27481,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.023,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.011,
+            "kind": "consumable",
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -23182,7 +27505,39 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.011,
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.021,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10308,
+            "name": "Scroll of Intellect IV",
+            "value": 0.02,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -23190,9 +27545,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 129.5,
+          "dps": 122.4,
           "fight_s": 60,
           "build": "destruction-40-dungeon",
           "limits": [
@@ -23201,8 +27555,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -23221,8 +27574,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.055,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 5.5% of your DPS",
+            "value": 0.062,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 6.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23242,8 +27595,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.065,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 6.5% of your DPS",
+            "value": 0.08,
+            "why": "Keep it on the target: up 85% of the sim's fight; worth 8% of your DPS",
             "src": [
               "sim",
               "client"
@@ -23263,7 +27616,7 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
             "value": 0.012,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 1.2% of your DPS",
+            "why": "Keep it on the target: up 76% of the sim's fight; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client"
@@ -23280,8 +27633,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Conflagrate",
             "when": "ready",
-            "value": 0.05,
-            "why": "Cast it when it's ready (10 s cooldown); worth 5% of your DPS",
+            "value": 0.039,
+            "why": "Cast it when it's ready (10 s cooldown); worth 3.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23301,8 +27654,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.153,
-            "why": "Keep it on the target: up 56% of the sim's fight; worth 15.3% of your DPS",
+            "value": 0.126,
+            "why": "Keep it on the target: up 58% of the sim's fight; worth 12.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23321,8 +27674,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadowburn",
             "when": "ready",
-            "value": 0.023,
-            "why": "Cast it when it's ready (15 s cooldown); worth 2.3% of your DPS",
+            "value": 0.018,
+            "why": "Cast it when it's ready (15 s cooldown); worth 1.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23343,8 +27696,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.055,
-            "why": "Your filler: cast it when nothing above is ready; worth 5.5% of your DPS",
+            "value": 0.079,
+            "why": "Your filler: cast it when nothing above is ready; worth 7.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23372,7 +27725,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.055,
+            "value": 0.062,
             "src": [
               "sim",
               "client"
@@ -23383,7 +27736,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.065,
+            "value": 0.08,
             "src": [
               "sim",
               "client"
@@ -23405,7 +27758,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.55,
-            "value": 0.153,
+            "value": 0.126,
             "src": [
               "sim",
               "client"
@@ -23418,16 +27771,26 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.105,
+            "value": 0.092,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.029,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.057,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -23435,10 +27798,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19852,
+            "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.029,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -23446,62 +27809,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.027,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 1461,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250353,
-            "name": "Elixir of Lesser Intellect",
-            "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2290,
-            "name": "Scroll of Intellect II",
-            "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.013,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -23509,9 +27819,8 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 186,
+          "dps": 212.4,
           "fight_s": 60,
           "build": "destruction-50-dungeon",
           "limits": [
@@ -23520,8 +27829,7 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -23540,8 +27848,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.071,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 7.1% of your DPS",
+            "value": 0.08,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23561,8 +27869,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.066,
-            "why": "Keep it on the target: up 87% of the sim's fight; worth 6.6% of your DPS",
+            "value": 0.086,
+            "why": "Keep it on the target: up 93% of the sim's fight; worth 8.6% of your DPS",
             "src": [
               "sim",
               "client"
@@ -23582,11 +27890,54 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.013,
-            "why": "Keep it on the target: up 80% of the sim's fight; worth 1.3% of your DPS",
+            "value": 0.032,
+            "why": "Keep it on the target: up 75% of the sim's fight; worth 3.2% of your DPS",
             "src": [
               "sim",
               "client"
+            ]
+          },
+          {
+            "spell": 18932,
+            "ids": [
+              1293817,
+              1293818,
+              17962,
+              18930,
+              18931,
+              18932
+            ],
+            "name": "Conflagrate",
+            "when": "ready",
+            "value": 0.038,
+            "why": "Cast it when it's ready (10 s cooldown); worth 3.8% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 25309,
+            "ids": [
+              348,
+              707,
+              1094,
+              2941,
+              11665,
+              11667,
+              11668,
+              25309
+            ],
+            "name": "Immolate",
+            "when": "debuff_missing_or_ending",
+            "ending_s": 0,
+            "value": 0.146,
+            "why": "Keep it on the target: up 63% of the sim's fight; worth 14.6% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           },
           {
@@ -23601,7 +27952,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadowburn",
             "when": "ready",
-            "why": "Cast it when it's ready (15 s cooldown); the sim gains little from it",
+            "value": 0.014,
+            "why": "Cast it when it's ready (15 s cooldown); worth 1.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23624,8 +27976,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.199,
-            "why": "Your filler: cast it when nothing above is ready; worth 19.9% of your DPS",
+            "value": 0.085,
+            "why": "Your filler: cast it when nothing above is ready; worth 8.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23653,7 +28005,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.071,
+            "value": 0.08,
             "src": [
               "sim",
               "client"
@@ -23663,8 +28015,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11713,
             "name": "Bane of Agony",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.066,
+            "min_uptime": 0.9,
+            "value": 0.086,
             "src": [
               "sim",
               "client"
@@ -23674,8 +28026,19 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25311,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.013,
+            "min_uptime": 0.75,
+            "value": 0.032,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "aura": 25309,
+            "name": "Immolate",
+            "on": "target",
+            "min_uptime": 0.6,
+            "value": 0.146,
             "src": [
               "sim",
               "client"
@@ -23688,27 +28051,16 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.05,
+            "value": 0.075,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "consumable",
-            "id": 250342,
-            "name": "Lesser Arcane Elixir",
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 19852,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.013,
+            "id": 13454,
+            "name": "Greater Arcane Elixir",
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -23716,43 +28068,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 274971,
-            "name": "Briny Seafood Stew",
-            "value": 0.012,
+            "id": 13935,
+            "name": "Baked Salmon",
+            "value": 0.034,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [
-          {
-            "text": "Leave Conflagrate out of single-target fights at level 60: the simulator's 60 s fight did 5.5% more damage without it.",
-            "name": "Conflagrate",
-            "spell": 18932,
-            "value": -0.055,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Conflagrate here and the simulator disagrees: check it in game before trusting either"
-          },
-          {
-            "text": "Leave Immolate out of single-target fights at level 60: the simulator's 60 s fight did 2.4% more damage without it.",
-            "name": "Immolate",
-            "spell": 25309,
-            "value": -0.024,
-            "src": [
-              "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Immolate here and the simulator disagrees: check it in game before trusting either"
-          }
-        ],
-        "speculation": true,
+        "avoid": [],
         "sim": {
-          "dps": 503.1,
-          "fight_s": 60,
+          "dps": 265,
+          "fight_s": 180,
           "build": "destruction-60-dungeon",
           "limits": [
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
@@ -23760,12 +28088,102 @@ window.WOW_SPEC_COACH_DATA = {
             "Imp mana (assumed enough)",
             "Decimation's low-health bonus"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-18",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -23792,7 +28210,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warlock-destruction-20-consumable",
-        "text": "Best consumable at levels 20-29: Lesser Arcane Elixir (+2.8% DPS in the simulator); then Briny Seafood Stew (+2.2%).",
+        "text": "Best consumable at levels 20-29: Greater Arcane Elixir (+2.7% DPS in the simulator); then Baked Salmon (+2.2%).",
         "levels": [
           20,
           29
@@ -23806,7 +28224,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warlock-destruction-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +2.8% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Wisdom from a Paladin: +2.7% DPS in the simulator.",
         "levels": [
           20,
           29
@@ -23814,6 +28232,71 @@ window.WOW_SPEC_COACH_DATA = {
         "src": [
           "sim",
           "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-destruction-20-pet",
+        "text": "Keep your Imp out: without it the simulator's fight does 14.4% less damage at levels 20-29.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-destruction-20-mix",
+        "text": "Where your damage comes from at levels 20-29: Shadow Bolt 31%, Immolate 17%, Bane of Agony 16% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-destruction-20-worth-bane-of-agony",
+        "text": "Bane of Agony is worth 9.9% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 90% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-destruction-20-worth-immolate",
+        "text": "Immolate is worth 8.6% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 69% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warlock-destruction-30-mana-life-tap",
+        "text": "Use Life Tap when your mana drops under 35%: that is where the simulator uses it at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim"
         ],
         "n": 0,
         "confidence": "sim"
@@ -23827,8 +28310,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Arms",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -23852,8 +28335,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
             "min_power": 19,
-            "value": 0.066,
-            "why": "Keep it on the target: up 94% of the sim's fight; worth 6.6% of your DPS",
+            "value": 0.061,
+            "why": "Keep it on the target: up 94% of the sim's fight; worth 6.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23868,10 +28351,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 10,
+            "min_power": 9,
             "combo_points": 1,
-            "value": 0.046,
-            "why": "Only after the target dodges; worth 4.6% of your DPS",
+            "value": 0.056,
+            "why": "Only after the target dodges; worth 5.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23886,8 +28369,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slam",
             "when": "ready",
             "min_power": 19,
-            "value": 0.127,
-            "why": "Cast it when it's ready (18 s cooldown); worth 12.7% of your DPS",
+            "value": 0.144,
+            "why": "Cast it when it's ready (15 s cooldown); worth 14.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23904,9 +28387,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Heroic Strike",
             "when": "filler",
-            "min_power": 39,
-            "value": 0.031,
-            "why": "Your filler: cast it when nothing above is ready; worth 3.1% of your DPS",
+            "min_power": 38,
+            "value": 0.029,
+            "why": "Your filler: cast it when nothing above is ready; worth 2.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -23921,7 +28404,240 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.066,
+            "value": 0.061,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "cooldowns": [
+          {
+            "spell": 2687,
+            "ids": [
+              2687
+            ],
+            "name": "Bloodrage",
+            "use": "on_pull",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "value": 0.013,
+            "cd_s": 60
+          }
+        ],
+        "prepull": [
+          {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.039,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 25291,
+            "name": "Blessing of Might",
+            "from": "paladin",
+            "value": 0.037,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.023,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.01,
+            "src": [
+              "sim",
+              "client"
+            ]
+          }
+        ],
+        "avoid": [],
+        "sim": {
+          "dps": 44.8,
+          "fight_s": 60,
+          "build": "arms-20-dungeon",
+          "limits": [
+            "Stance dancing (the sim stays in Battle Stance)",
+            "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
+            "Spearing Strike (not in the recommended builds)"
+          ]
+        }
+      },
+      {
+        "levels": [
+          30,
+          39
+        ],
+        "priority": [
+          {
+            "spell": 5308,
+            "ids": [
+              5308,
+              20658
+            ],
+            "name": "Execute",
+            "speculation": true,
+            "when": "target_health_below",
+            "pct": 20,
+            "min_power": 18,
+            "value": 0.039,
+            "why": "Only below 20% target health; worth 3.9% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ],
+            "reason": "The simulator uses Classic's rule here (Execute below 20% (Classic: 3 damage per extra Rage)); the Forever client doesn't give the number"
+          },
+          {
+            "spell": 6548,
+            "ids": [
+              772,
+              6546,
+              6547,
+              6548
+            ],
+            "name": "Rend",
+            "when": "debuff_missing_or_ending",
+            "ending_s": 0,
+            "min_power": 16,
+            "value": 0.04,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 7887,
+            "ids": [
+              7384,
+              7887
+            ],
+            "name": "Overpower",
+            "when": "after_dodge",
+            "min_power": 10,
+            "combo_points": 1,
+            "value": 0.067,
+            "why": "Only after the target dodges; worth 6.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1464,
+            "ids": [
+              1240193,
+              1464,
+              8820
+            ],
+            "name": "Slam",
+            "when": "ready",
+            "min_power": 22,
+            "value": 0.121,
+            "why": "Cast it when it's ready (15 s cooldown); worth 12.1% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1608,
+            "ids": [
+              78,
+              284,
+              285,
+              1608,
+              11564
+            ],
+            "name": "Heroic Strike",
+            "when": "filler",
+            "min_power": 38,
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          }
+        ],
+        "triggers": [
+          {
+            "kind": "health_below",
+            "pct": 20,
+            "do": 5308,
+            "do_name": "Execute",
+            "why": "Execute works once the target is under 20% health",
+            "src": [
+              "client",
+              "sim"
+            ]
+          }
+        ],
+        "keep_up": [
+          {
+            "aura": 6548,
+            "name": "Rend",
+            "on": "target",
+            "min_uptime": 0.85,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -23951,7 +28667,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.041,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -23959,19 +28675,20 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.038,
+            "value": 0.039,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
             "value": 0.025,
             "src": [
               "sim",
@@ -23979,11 +28696,10 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.022,
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -23991,9 +28707,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.014,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -24001,9 +28717,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.014,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -24011,9 +28727,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.011,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -24022,244 +28738,13 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 44.1,
-          "fight_s": 60,
-          "build": "arms-20-dungeon",
-          "limits": [
-            "Stance dancing (the sim stays in Battle Stance)",
-            "Hamstring and Sunder Armor",
-            "Spearing Strike (not in the recommended builds)"
-          ]
-        }
-      },
-      {
-        "levels": [
-          30,
-          39
-        ],
-        "priority": [
-          {
-            "spell": 5308,
-            "ids": [
-              5308,
-              20658
-            ],
-            "name": "Execute",
-            "speculation": true,
-            "when": "target_health_below",
-            "pct": 20,
-            "min_power": 18,
-            "value": 0.041,
-            "why": "Only below 20% target health; worth 4.1% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "reason": "The simulator uses Classic's rule here (Execute below 20% (Classic: 3 damage per extra Rage)); the Forever client doesn't give the number"
-          },
-          {
-            "spell": 6548,
-            "ids": [
-              772,
-              6546,
-              6547,
-              6548
-            ],
-            "name": "Rend",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "min_power": 22,
-            "value": 0.049,
-            "why": "Keep it on the target: up 89% of the sim's fight; worth 4.9% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 7887,
-            "ids": [
-              7384,
-              7887
-            ],
-            "name": "Overpower",
-            "when": "after_dodge",
-            "min_power": 10,
-            "combo_points": 1,
-            "value": 0.053,
-            "why": "Only after the target dodges; worth 5.3% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 1464,
-            "ids": [
-              1240193,
-              1464,
-              8820
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 20,
-            "value": 0.097,
-            "why": "Cast it when it's ready (18 s cooldown); worth 9.7% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 1608,
-            "ids": [
-              78,
-              284,
-              285,
-              1608,
-              11564
-            ],
-            "name": "Heroic Strike",
-            "when": "filler",
-            "min_power": 39,
-            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          }
-        ],
-        "triggers": [
-          {
-            "kind": "health_below",
-            "pct": 20,
-            "do": 5308,
-            "do_name": "Execute",
-            "why": "Execute works once the target is under 20% health",
-            "src": [
-              "client",
-              "sim"
-            ]
-          }
-        ],
-        "keep_up": [
-          {
-            "aura": 6548,
-            "name": "Rend",
-            "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.049,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "cooldowns": [
-          {
-            "spell": 2687,
-            "ids": [
-              2687
-            ],
-            "name": "Bloodrage",
-            "use": "on_pull",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ],
-            "value": 0.013,
-            "cd_s": 60
-          }
-        ],
-        "prepull": [
-          {
-            "kind": "buff",
-            "id": 19835,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.044,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.042,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 5234,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.026,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.021,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.019,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.018,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
-        "avoid": [],
-        "sim": {
-          "dps": 75.4,
+          "dps": 80.4,
           "fight_s": 60,
           "build": "arms-30-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
         }
@@ -24282,9 +28767,9 @@ window.WOW_SPEC_COACH_DATA = {
             "speculation": true,
             "when": "target_health_below",
             "pct": 20,
-            "min_power": 19,
-            "value": 0.073,
-            "why": "Only below 20% target health; worth 7.3% of your DPS",
+            "min_power": 16,
+            "value": 0.013,
+            "why": "Only below 20% target health; worth 1.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24304,13 +28789,43 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 14,
-            "value": 0.045,
-            "why": "Keep it on the target: up 97% of the sim's fight; worth 4.5% of your DPS",
+            "min_power": 12,
+            "why": "Keep it on the target: up 93% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 12294,
+            "ids": [
+              12294,
+              21551
+            ],
+            "name": "Mortal Strike",
+            "when": "ready",
+            "min_power": 31,
+            "value": 0.015,
+            "why": "Cast it when it's ready (6 s cooldown); worth 1.5% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 25,
+            "why": "Cast it when it's ready (10 s cooldown); the sim gains little from it",
+            "src": [
+              "sim",
+              "client"
             ]
           },
           {
@@ -24322,10 +28837,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 10,
+            "min_power": 6,
             "combo_points": 1,
-            "value": 0.058,
-            "why": "Only after the target dodges; worth 5.8% of your DPS",
+            "value": 0.056,
+            "why": "Only after the target dodges; worth 5.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24341,32 +28856,10 @@ window.WOW_SPEC_COACH_DATA = {
               11604
             ],
             "name": "Slam",
-            "when": "ready",
-            "min_power": 22,
-            "value": 0.111,
-            "why": "Cast it when it's ready (18 s cooldown); worth 11.1% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 11565,
-            "ids": [
-              78,
-              284,
-              285,
-              1608,
-              11564,
-              11565,
-              11566
-            ],
-            "name": "Heroic Strike",
             "when": "filler",
-            "min_power": 38,
-            "value": 0.011,
-            "why": "Your filler: cast it when nothing above is ready; worth 1.1% of your DPS",
+            "min_power": 16,
+            "value": 0.054,
+            "why": "Your filler: cast it when nothing above is ready; worth 5.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24392,8 +28885,7 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11572,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.95,
-            "value": 0.045,
+            "min_uptime": 0.9,
             "src": [
               "sim",
               "client"
@@ -24413,17 +28905,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.024,
+            "value": 0.039,
             "cd_s": 60
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.048,
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -24434,7 +28926,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.037,
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -24442,9 +28934,39 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
+            "value": 0.034,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.03,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.026,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
             "value": 0.025,
             "src": [
               "sim",
@@ -24453,39 +28975,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.015,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.011,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -24493,18 +28985,17 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 102.7,
+          "dps": 117.1,
           "fight_s": 60,
           "build": "arms-40-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -24526,8 +29017,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "target_health_below",
             "pct": 20,
             "min_power": 16,
-            "value": 0.105,
-            "why": "Only below 20% target health; worth 10.5% of your DPS",
+            "value": 0.041,
+            "why": "Only below 20% target health; worth 4.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24548,13 +29039,45 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 18,
-            "value": 0.048,
-            "why": "Keep it on the target: up 98% of the sim's fight; worth 4.8% of your DPS",
+            "min_power": 12,
+            "value": 0.016,
+            "why": "Keep it on the target: up 93% of the sim's fight; worth 1.6% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 21551,
+            "ids": [
+              12294,
+              21551,
+              21552
+            ],
+            "name": "Mortal Strike",
+            "when": "ready",
+            "min_power": 30,
+            "value": 0.018,
+            "why": "Cast it when it's ready (6 s cooldown); worth 1.8% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 25,
+            "why": "Cast it when it's ready (10 s cooldown); the sim gains little from it",
+            "src": [
+              "sim",
+              "client"
             ]
           },
           {
@@ -24566,10 +29089,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 9,
+            "min_power": 6,
             "combo_points": 1,
-            "value": 0.052,
-            "why": "Only after the target dodges; worth 5.2% of your DPS",
+            "value": 0.06,
+            "why": "Only after the target dodges; worth 6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24586,31 +29109,8 @@ window.WOW_SPEC_COACH_DATA = {
               11605
             ],
             "name": "Slam",
-            "when": "ready",
-            "min_power": 23,
-            "value": 0.09,
-            "why": "Cast it when it's ready (18 s cooldown); worth 9% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 11566,
-            "ids": [
-              78,
-              284,
-              285,
-              1608,
-              11564,
-              11565,
-              11566,
-              11567
-            ],
-            "name": "Heroic Strike",
             "when": "filler",
-            "min_power": 38,
+            "min_power": 16,
             "value": 0.042,
             "why": "Your filler: cast it when nothing above is ready; worth 4.2% of your DPS",
             "src": [
@@ -24638,8 +29138,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 11573,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.95,
-            "value": 0.048,
+            "min_uptime": 0.9,
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -24659,17 +29159,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.022,
+            "value": 0.033,
             "cd_s": 60
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.046,
+            "value": 0.062,
             "src": [
               "sim",
               "client"
@@ -24680,7 +29180,27 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.034,
+            "value": 0.044,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.038,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -24688,10 +29208,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.024,
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -24699,9 +29219,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.012,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -24709,9 +29229,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.011,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -24719,18 +29239,17 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 130.6,
+          "dps": 151.8,
           "fight_s": 60,
           "build": "arms-50-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -24738,6 +29257,22 @@ window.WOW_SPEC_COACH_DATA = {
           60
         ],
         "priority": [
+          {
+            "spell": 1329555,
+            "ids": [
+              1329555
+            ],
+            "name": "Reckless Swings",
+            "when": "buff_missing",
+            "min_power": 1,
+            "value": 0.037,
+            "why": "Keep it up: 53% of the sim's fight; worth 3.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 20662,
             "ids": [
@@ -24751,9 +29286,8 @@ window.WOW_SPEC_COACH_DATA = {
             "speculation": true,
             "when": "target_health_below",
             "pct": 20,
-            "min_power": 16,
-            "value": 0.08,
-            "why": "Only below 20% target health; worth 8% of your DPS",
+            "min_power": 13,
+            "why": "Only below 20% target health; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -24775,13 +29309,46 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 19,
-            "value": 0.022,
-            "why": "Keep it on the target: up 97% of the sim's fight; worth 2.2% of your DPS",
+            "min_power": 13,
+            "why": "Keep it on the target: up 81% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 21553,
+            "ids": [
+              12294,
+              21551,
+              21552,
+              21553
+            ],
+            "name": "Mortal Strike",
+            "when": "ready",
+            "min_power": 31,
+            "value": 0.096,
+            "why": "Cast it when it's ready (6 s cooldown); worth 9.6% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 26,
+            "value": 0.029,
+            "why": "Cast it when it's ready (10 s cooldown); worth 2.9% of your DPS",
+            "src": [
+              "sim",
+              "client"
             ]
           },
           {
@@ -24794,10 +29361,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 11,
+            "min_power": 6,
             "combo_points": 1,
-            "value": 0.051,
-            "why": "Only after the target dodges; worth 5.1% of your DPS",
+            "value": 0.071,
+            "why": "Only after the target dodges; worth 7.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24815,33 +29382,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Slam",
             "when": "ready",
-            "min_power": 29,
-            "value": 0.096,
-            "why": "Cast it when it's ready (18 s cooldown); worth 9.6% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 25286,
-            "ids": [
-              78,
-              284,
-              285,
-              1608,
-              11564,
-              11565,
-              11566,
-              11567,
-              25286
-            ],
-            "name": "Heroic Strike",
-            "when": "filler",
-            "min_power": 38,
-            "value": 0.06,
-            "why": "Your filler: cast it when nothing above is ready; worth 6% of your DPS",
+            "min_power": 16,
+            "value": 0.065,
+            "why": "Cast it when it's ready (15 s cooldown); worth 6.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24864,11 +29407,21 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
+            "aura": 1329555,
+            "name": "Reckless Swings",
+            "on": "self",
+            "min_uptime": 0.5,
+            "value": 0.037,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "aura": 11574,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.95,
-            "value": 0.022,
+            "min_uptime": 0.8,
             "src": [
               "sim",
               "client"
@@ -24888,62 +29441,171 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.018,
+            "value": 0.03,
             "cd_s": 60
           }
         ],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.038,
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.026,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.038,
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.016,
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.015,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Heroic Strike out of single-target fights at level 60: the simulator's 180 s fight did 1.9% more damage without it.",
+            "name": "Heroic Strike",
+            "spell": 25286,
+            "value": -0.019,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Heroic Strike here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 307,
-          "fight_s": 60,
+          "dps": 375.2,
+          "fight_s": 180,
           "build": "arms-60-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -24957,7 +29619,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "warrior-arms-20-cd-bloodrage",
-        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull; it's worth 1.7% of your DPS at levels 20-29.",
+        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull; it's worth 1.3% of your DPS at levels 20-29.",
         "levels": [
           20,
           29
@@ -24971,7 +29633,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warrior-arms-20-consumable",
-        "text": "Best consumable at levels 20-29: Elixir of Ogre Strength (+2.5% DPS in the simulator); then Bear Brisket (+1.4%).",
+        "text": "Best consumable at levels 20-29: Elixir of Greater Strength (+2.3% DPS in the simulator); then Bear Bruscitti (+1.5%).",
         "levels": [
           20,
           29
@@ -24985,10 +29647,77 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warrior-arms-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +4.1% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +3.9% DPS in the simulator.",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-arms-20-mix",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 56%, Slam 15%, Heroic Strike 15% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-arms-20-worth-slam",
+        "text": "Slam is worth 14.4% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-arms-20-worth-rend",
+        "text": "Rend is worth 6.1% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 94% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-arms-30-cd-bloodrage",
+        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull; it's worth 1.7% of your DPS at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-arms-30-consumable",
+        "text": "Best consumable at levels 30-39: Bear Bruscitti (+2% DPS in the simulator); then Scroll of Strength IV (+1.7%).",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim",
@@ -25006,8 +29735,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Fury",
     "role": "dps",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -25028,26 +29757,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 9,
+            "min_power": 16,
             "combo_points": 1,
-            "value": 0.061,
-            "why": "Only after the target dodges; worth 6.1% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 1240193,
-            "ids": [
-              1240193
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 18,
-            "value": 0.057,
-            "why": "Cast it when it's ready (18 s cooldown); worth 5.7% of your DPS",
+            "value": 0.063,
+            "why": "Only after the target dodges; worth 6.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25064,9 +29777,9 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 13,
-            "value": 0.033,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 3.3% of your DPS",
+            "min_power": 18,
+            "value": 0.036,
+            "why": "Keep it on the target: up 93% of the sim's fight; worth 3.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25084,8 +29797,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heroic Strike",
             "when": "filler",
             "min_power": 30,
-            "value": 0.076,
-            "why": "Your filler: cast it when nothing above is ready; worth 7.6% of your DPS",
+            "value": 0.101,
+            "why": "Your filler: cast it when nothing above is ready; worth 10.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25099,8 +29812,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 6547,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.033,
+            "min_uptime": 0.9,
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -25120,7 +29833,6 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.019,
             "cd_s": 60
           }
         ],
@@ -25130,7 +29842,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.05,
+            "value": 0.052,
             "src": [
               "sim",
               "client"
@@ -25138,10 +29850,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.045,
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -25149,9 +29861,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.027,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -25159,7 +29871,7 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
             "value": 0.026,
@@ -25170,9 +29882,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.016,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -25180,9 +29892,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.016,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -25190,9 +29902,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.013,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -25201,12 +29913,13 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 50,
+          "dps": 46.4,
           "fight_s": 60,
           "build": "fury-20-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
         }
@@ -25218,6 +29931,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
+            "spell": 1329555,
+            "ids": [
+              1329555
+            ],
+            "name": "Reckless Swings",
+            "when": "buff_missing",
+            "min_power": 15,
+            "value": 0.044,
+            "why": "Keep it up: 34% of the sim's fight; worth 4.4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
             "spell": 5308,
             "ids": [
               5308,
@@ -25228,8 +29957,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "target_health_below",
             "pct": 20,
             "min_power": 16,
-            "value": 0.051,
-            "why": "Only below 20% target health; worth 5.1% of your DPS",
+            "value": 0.078,
+            "why": "Only below 20% target health; worth 7.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25245,28 +29974,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 8,
+            "min_power": 10,
             "combo_points": 1,
-            "value": 0.048,
-            "why": "Only after the target dodges; worth 4.8% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 1464,
-            "ids": [
-              1240193,
-              1464,
-              8820
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 19,
-            "value": 0.059,
-            "why": "Cast it when it's ready (18 s cooldown); worth 5.9% of your DPS",
+            "value": 0.05,
+            "why": "Only after the target dodges; worth 5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25284,9 +29995,9 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 12,
-            "value": 0.023,
-            "why": "Keep it on the target: up 87% of the sim's fight; worth 2.3% of your DPS",
+            "min_power": 20,
+            "value": 0.028,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 2.8% of your DPS",
             "src": [
               "sim",
               "client"
@@ -25304,8 +30015,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heroic Strike",
             "when": "filler",
             "min_power": 31,
-            "value": 0.034,
-            "why": "Your filler: cast it when nothing above is ready; worth 3.4% of your DPS",
+            "value": 0.085,
+            "why": "Your filler: cast it when nothing above is ready; worth 8.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -25328,11 +30039,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
+            "aura": 1329555,
+            "name": "Reckless Swings",
+            "on": "self",
+            "min_uptime": 0.3,
+            "value": 0.044,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "aura": 6548,
             "name": "Rend",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.023,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -25352,7 +30074,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.012,
+            "value": 0.013,
             "cd_s": 60
           },
           {
@@ -25367,17 +30089,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.09,
+            "value": 0.091,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19835,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.053,
+            "value": 0.05,
             "src": [
               "sim",
               "client"
@@ -25388,7 +30110,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.049,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -25396,10 +30118,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 5234,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.03,
+            "value": 0.026,
             "src": [
               "sim",
               "client"
@@ -25407,9 +30129,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.027,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -25417,18 +30139,8 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.024,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
             "value": 0.021,
             "src": [
               "sim",
@@ -25437,9 +30149,19 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.018,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.017,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -25448,12 +30170,13 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 95,
+          "dps": 93.1,
           "fight_s": 60,
           "build": "fury-30-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
         }
@@ -25464,6 +30187,22 @@ window.WOW_SPEC_COACH_DATA = {
           49
         ],
         "priority": [
+          {
+            "spell": 1329555,
+            "ids": [
+              1329555
+            ],
+            "name": "Reckless Swings",
+            "when": "buff_missing",
+            "min_power": 4,
+            "value": 0.063,
+            "why": "Keep it up: 26% of the sim's fight; worth 6.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 20660,
             "ids": [
@@ -25477,14 +30216,47 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "target_health_below",
             "pct": 20,
             "min_power": 11,
-            "value": 0.127,
-            "why": "Only below 20% target health; worth 12.7% of your DPS",
+            "value": 0.084,
+            "why": "Only below 20% target health; worth 8.4% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
             ],
             "reason": "The simulator uses Classic's rule here (Execute below 20% (Classic: 3 damage per extra Rage)); the Forever client doesn't give the number"
+          },
+          {
+            "spell": 23881,
+            "ids": [
+              23881,
+              23892
+            ],
+            "name": "Bloodthirst",
+            "when": "ready",
+            "min_power": 31,
+            "value": 0.07,
+            "why": "Cast it when it's ready (6 s cooldown); worth 7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 26,
+            "value": 0.033,
+            "why": "Cast it when it's ready (10 s cooldown); worth 3.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
           },
           {
             "spell": 7887,
@@ -25497,26 +30269,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "after_dodge",
             "min_power": 7,
             "combo_points": 1,
-            "value": 0.049,
-            "why": "Only after the target dodges; worth 4.9% of your DPS",
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "spell": 8820,
-            "ids": [
-              1240193,
-              1464,
-              8820,
-              11604
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 19,
-            "value": 0.043,
-            "why": "Cast it when it's ready (18 s cooldown); worth 4.3% of your DPS",
+            "value": 0.047,
+            "why": "Only after the target dodges; worth 4.7% of your DPS",
             "src": [
               "sim",
               "client"
@@ -25534,34 +30288,12 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 15,
-            "value": 0.022,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 2.2% of your DPS",
+            "min_power": 12,
+            "value": 0.014,
+            "why": "Keep it on the target: up 81% of the sim's fight; worth 1.4% of your DPS",
             "src": [
               "sim",
               "client"
-            ]
-          },
-          {
-            "spell": 11565,
-            "ids": [
-              78,
-              284,
-              285,
-              1608,
-              11564,
-              11565,
-              11566
-            ],
-            "name": "Heroic Strike",
-            "when": "filler",
-            "min_power": 30,
-            "value": 0.063,
-            "why": "Your filler: cast it when nothing above is ready; worth 6.3% of your DPS",
-            "src": [
-              "sim",
-              "client",
-              "guides"
             ]
           }
         ],
@@ -25580,11 +30312,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
+            "aura": 1329555,
+            "name": "Reckless Swings",
+            "on": "self",
+            "min_uptime": 0.25,
+            "value": 0.063,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "aura": 11572,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.022,
+            "min_uptime": 0.8,
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -25604,7 +30347,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.027,
+            "value": 0.022,
             "cd_s": 60
           },
           {
@@ -25619,17 +30362,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.093,
+            "value": 0.096,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.047,
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -25640,7 +30383,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.035,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -25648,10 +30391,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.025,
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -25659,9 +30402,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.014,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -25669,9 +30412,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.012,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -25679,9 +30422,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.011,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -25689,28 +30432,39 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.011,
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.017,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
+        "avoid": [
+          {
+            "text": "Leave Heroic Strike out of single-target fights at levels 40-49: the simulator's 60 s fight did 1.2% more damage without it.",
+            "name": "Heroic Strike",
+            "spell": 11565,
+            "value": -0.012,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Heroic Strike here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 141.2,
+          "dps": 177.4,
           "fight_s": 60,
           "build": "fury-40-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -25718,6 +30472,22 @@ window.WOW_SPEC_COACH_DATA = {
           59
         ],
         "priority": [
+          {
+            "spell": 1329555,
+            "ids": [
+              1329555
+            ],
+            "name": "Reckless Swings",
+            "when": "buff_missing",
+            "min_power": 4,
+            "value": 0.064,
+            "why": "Keep it up: 24% of the sim's fight; worth 6.4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 20661,
             "ids": [
@@ -25731,15 +30501,48 @@ window.WOW_SPEC_COACH_DATA = {
             "speculation": true,
             "when": "target_health_below",
             "pct": 20,
-            "min_power": 10,
-            "value": 0.129,
-            "why": "Only below 20% target health; worth 12.9% of your DPS",
+            "min_power": 11,
+            "value": 0.103,
+            "why": "Only below 20% target health; worth 10.3% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
             ],
             "reason": "The simulator uses Classic's rule here (Execute below 20% (Classic: 3 damage per extra Rage)); the Forever client doesn't give the number"
+          },
+          {
+            "spell": 23892,
+            "ids": [
+              23881,
+              23892,
+              23893
+            ],
+            "name": "Bloodthirst",
+            "when": "ready",
+            "min_power": 31,
+            "value": 0.067,
+            "why": "Cast it when it's ready (6 s cooldown); worth 6.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 26,
+            "why": "Cast it when it's ready (10 s cooldown); the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
           },
           {
             "spell": 11584,
@@ -25750,29 +30553,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 8,
+            "min_power": 7,
             "combo_points": 1,
-            "value": 0.041,
-            "why": "Only after the target dodges; worth 4.1% of your DPS",
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "spell": 11604,
-            "ids": [
-              1240193,
-              1464,
-              8820,
-              11604,
-              11605
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 20,
-            "value": 0.038,
-            "why": "Cast it when it's ready (18 s cooldown); worth 3.8% of your DPS",
+            "value": 0.034,
+            "why": "Only after the target dodges; worth 3.4% of your DPS",
             "src": [
               "sim",
               "client"
@@ -25791,9 +30575,9 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 14,
-            "value": 0.025,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 2.5% of your DPS",
+            "min_power": 13,
+            "value": 0.017,
+            "why": "Keep it on the target: up 82% of the sim's fight; worth 1.7% of your DPS",
             "src": [
               "sim",
               "client"
@@ -25814,8 +30598,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heroic Strike",
             "when": "filler",
             "min_power": 30,
-            "value": 0.059,
-            "why": "Your filler: cast it when nothing above is ready; worth 5.9% of your DPS",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -25838,11 +30621,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
+            "aura": 1329555,
+            "name": "Reckless Swings",
+            "on": "self",
+            "min_uptime": 0.2,
+            "value": 0.064,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "aura": 11573,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.025,
+            "min_uptime": 0.8,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -25862,7 +30656,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.023,
+            "value": 0.024,
             "cd_s": 60
           },
           {
@@ -25877,17 +30671,17 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.085,
+            "value": 0.098,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
             "kind": "buff",
-            "id": 19836,
+            "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.061,
+            "value": 0.07,
             "src": [
               "sim",
               "client"
@@ -25898,7 +30692,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.044,
+            "value": 0.051,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -25906,10 +30710,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 8907,
+            "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.032,
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -25917,9 +30721,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 250074,
-            "name": "Bear Brisket",
-            "value": 0.015,
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.033,
             "src": [
               "sim",
               "client"
@@ -25927,9 +30731,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 2289,
-            "name": "Scroll of Strength II",
-            "value": 0.013,
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -25937,19 +30741,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 3391,
-            "name": "Elixir of Ogre Strength",
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 8949,
-            "name": "Elixir of Agility",
-            "value": 0.01,
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -25957,18 +30751,17 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 159.5,
+          "dps": 199.7,
           "fight_s": 60,
           "build": "fury-50-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       },
       {
         "levels": [
@@ -25976,6 +30769,22 @@ window.WOW_SPEC_COACH_DATA = {
           60
         ],
         "priority": [
+          {
+            "spell": 1329555,
+            "ids": [
+              1329555
+            ],
+            "name": "Reckless Swings",
+            "when": "buff_missing",
+            "min_power": 3,
+            "value": 0.047,
+            "why": "Keep it up: 27% of the sim's fight; worth 4.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 20662,
             "ids": [
@@ -25990,14 +30799,48 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "target_health_below",
             "pct": 20,
             "min_power": 11,
-            "value": 0.122,
-            "why": "Only below 20% target health; worth 12.2% of your DPS",
+            "value": 0.09,
+            "why": "Only below 20% target health; worth 9% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
             ],
             "reason": "The simulator uses Classic's rule here (Execute below 20% (Classic: 3 damage per extra Rage)); the Forever client doesn't give the number"
+          },
+          {
+            "spell": 23894,
+            "ids": [
+              23881,
+              23892,
+              23893,
+              23894
+            ],
+            "name": "Bloodthirst",
+            "when": "ready",
+            "min_power": 31,
+            "value": 0.085,
+            "why": "Cast it when it's ready (6 s cooldown); worth 8.5% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1680,
+            "ids": [
+              1680
+            ],
+            "name": "Whirlwind",
+            "when": "ready",
+            "min_power": 26,
+            "why": "Cast it when it's ready (10 s cooldown); the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
           },
           {
             "spell": 11585,
@@ -26009,29 +30852,10 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Overpower",
             "when": "after_dodge",
-            "min_power": 8,
+            "min_power": 7,
             "combo_points": 1,
-            "value": 0.031,
-            "why": "Only after the target dodges; worth 3.1% of your DPS",
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "spell": 11605,
-            "ids": [
-              1240193,
-              1464,
-              8820,
-              11604,
-              11605
-            ],
-            "name": "Slam",
-            "when": "ready",
-            "min_power": 20,
-            "value": 0.029,
-            "why": "Cast it when it's ready (18 s cooldown); worth 2.9% of your DPS",
+            "value": 0.037,
+            "why": "Only after the target dodges; worth 3.7% of your DPS",
             "src": [
               "sim",
               "client"
@@ -26051,8 +30875,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Rend",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "min_power": 16,
-            "why": "Keep it on the target: up 87% of the sim's fight; the sim gains little from it",
+            "min_power": 13,
+            "why": "Keep it on the target: up 79% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client"
@@ -26074,8 +30898,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heroic Strike",
             "when": "filler",
             "min_power": 28,
-            "value": 0.104,
-            "why": "Your filler: cast it when nothing above is ready; worth 10.4% of your DPS",
+            "value": 0.01,
+            "why": "Your filler: cast it when nothing above is ready; worth 1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -26098,10 +30922,21 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "keep_up": [
           {
+            "aura": 1329555,
+            "name": "Reckless Swings",
+            "on": "self",
+            "min_uptime": 0.25,
+            "value": 0.047,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
             "aura": 11574,
             "name": "Rend",
             "on": "target",
-            "min_uptime": 0.85,
+            "min_uptime": 0.75,
             "src": [
               "sim",
               "client"
@@ -26121,6 +30956,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
+            "value": 0.013,
             "cd_s": 60
           },
           {
@@ -26135,39 +30971,46 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.085,
+            "value": 0.035,
             "cd_s": 180
           }
         ],
         "prepull": [
           {
-            "kind": "buff",
-            "id": 19836,
-            "name": "Blessing of Might",
-            "from": "paladin",
-            "value": 0.046,
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.04,
+            "kind": "consumable",
+            "id": 250070,
+            "name": "Bear Bruscitti",
+            "value": 0.025,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 8907,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.021,
+            "kind": "consumable",
+            "id": 10310,
+            "name": "Scroll of Strength IV",
+            "value": 0.022,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -26175,22 +31018,112 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "avoid": [],
-        "speculation": true,
         "sim": {
-          "dps": 387.6,
-          "fight_s": 60,
+          "dps": 429.6,
+          "fight_s": 180,
           "build": "fury-60-dungeon",
           "limits": [
             "Stance dancing (the sim stays in Battle Stance)",
             "Hamstring and Sunder Armor",
+            "Enrage (it needs the boss to hit you)",
             "Spearing Strike (not in the recommended builds)"
           ]
-        },
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        }
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3654": [
+        {
+          "cast": 7967,
+          "name": "Naralex's Nightmare",
+          "cue": "Hits a random player; first at 10 s, then every 18 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 12 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 11 s, then every 15 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 700,
+          "name": "Sleep",
+          "cue": "Hits a random player; first at 47 s, then every 24 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "5775": [
+        {
+          "cast": 8142,
+          "name": "Grasping Vines",
+          "cue": "Hits the group; first at 25 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 18399,
+          "name": "Flamestrike",
+          "cue": "Hits the group; first at 15 s, then every 14 s",
+          "roles": [
+            "healer",
+            "dps"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -26204,7 +31137,7 @@ window.WOW_SPEC_COACH_DATA = {
     "tips": [
       {
         "id": "warrior-fury-20-cd-bloodrage",
-        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull; it's worth 1.9% of your DPS at levels 20-29.",
+        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull at levels 20-29.",
         "levels": [
           20,
           29
@@ -26218,7 +31151,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warrior-fury-20-consumable",
-        "text": "Best consumable at levels 20-29: Elixir of Ogre Strength (+2.7% DPS in the simulator); then Bear Brisket (+1.6%).",
+        "text": "Best consumable at levels 20-29: Elixir of Greater Strength (+3% DPS in the simulator); then Bear Bruscitti (+1.9%).",
         "levels": [
           20,
           29
@@ -26232,10 +31165,77 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "warrior-fury-20-partybuff",
-        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +5% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 20-29 is Blessing of Kings from a Paladin: +5.2% DPS in the simulator.",
         "levels": [
           20,
           29
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-fury-20-mix",
+        "text": "Where your damage comes from at levels 20-29: auto attacks 39%, Off hand 26%, Heroic Strike 22% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-fury-20-worth-overpower",
+        "text": "Overpower is worth 6.3% of your DPS at levels 20-29: the simulator's fight without it did that much less damage.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-fury-20-worth-rend",
+        "text": "Rend is worth 3.6% of your DPS at levels 20-29: the simulator's fight without it did that much less damage. It kept it on the target 93% of the time.",
+        "levels": [
+          20,
+          29
+        ],
+        "src": [
+          "sim"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-fury-30-cd-bloodrage",
+        "text": "Bloodrage (1 min cooldown): the simulator uses it on the pull; it's worth 1.3% of your DPS at levels 30-39.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "sim",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "sim"
+      },
+      {
+        "id": "warrior-fury-30-cd-death-wish",
+        "text": "Death Wish (3 min cooldown): the simulator uses it on the pull; it's worth 9.1% of your DPS at levels 30-39.",
+        "levels": [
+          30,
+          39
         ],
         "src": [
           "sim",
@@ -26253,8 +31253,8 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Protection",
     "role": "tank",
-    "build": "1.60.1.70707",
-    "cap": 30,
+    "build": "1.60.1.70959",
+    "cap": 60,
     "evidence": {
       "logs": 0,
       "players": 0,
@@ -26940,9 +31940,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -27214,9 +32212,7 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       },
       {
         "levels": [
@@ -27491,13 +32487,175 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
-        "speculation": true,
-        "reason": "Above the level cap (30): the client has these levels, but nobody can play them yet"
+        "avoid": []
       }
     ],
-    "bosses": [],
-    "updated": "2026-10-31",
+    "bosses": {
+      "3669": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 96; first at 0 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3670": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 85; first at 1 s, then every 7 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 1,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3671": [
+        {
+          "cast": 8148,
+          "name": "Thorns Aura",
+          "cue": "Hits the tank for about 40; first at 10 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3673": [
+        {
+          "cast": 9532,
+          "name": "Lightning Bolt",
+          "cue": "Hits the tank for about 84; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "3674": [
+        {
+          "cast": 6254,
+          "name": "Chained Bolt",
+          "cue": "Hits the tank for about 59; first at 0 s, then every 5 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250483": [
+        {
+          "cast": 3358,
+          "name": "Leech Poison",
+          "cue": "Hits the tank for about 13; first at 12 s, then every 38 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250631": [
+        {
+          "cast": 1266011,
+          "name": "Life Drain",
+          "cue": "Hits the tank for about 35; first at 7 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250657": [
+        {
+          "cast": 13376,
+          "name": "Fire Shield",
+          "cue": "Hits the tank for about 25; first at 2 s, then every 3 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "250660": [
+        {
+          "cast": 17307,
+          "name": "Knockout",
+          "cue": "Hits the tank for about 178; first at 15 s, then every 16 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        },
+        {
+          "cast": 5568,
+          "name": "Trample",
+          "cue": "Hits the tank for about 60; first at 16 s, then every 13 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ],
+      "256097": [
+        {
+          "cast": 14099,
+          "name": "Mighty Blow",
+          "cue": "Hits the tank for about 71; first at 9 s, then every 8 s",
+          "roles": [
+            "tank",
+            "healer"
+          ],
+          "n": 2,
+          "src": [
+            "bosslogs"
+          ]
+        }
+      ]
+    },
+    "updated": "2026-11-20",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -27545,6 +32703,73 @@ window.WOW_SPEC_COACH_DATA = {
           39
         ],
         "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "warrior-protection-30-cd-shield-wall",
+        "text": "Shield Wall has a 15 min cooldown at levels 30-39 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          30,
+          39
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "warrior-protection-40-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 40-49, with cooldowns and costs from the Forever client.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "guides",
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "warrior-protection-40-cd-last-stand",
+        "text": "Last Stand has a 3 min cooldown at levels 40-49 (client data): about once every second or third pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "warrior-protection-40-cd-shield-wall",
+        "text": "Shield Wall has a 15 min cooldown at levels 40-49 (client data): plan on once per dungeon wing, not per pull.",
+        "levels": [
+          40,
+          49
+        ],
+        "src": [
+          "client"
+        ],
+        "n": 0,
+        "confidence": "client"
+      },
+      {
+        "id": "warrior-protection-50-order",
+        "text": "No simulation for this spec yet: the order here is the site's rotation card for levels 50-59, with cooldowns and costs from the Forever client.",
+        "levels": [
+          50,
+          59
+        ],
+        "src": [
+          "guides",
           "client"
         ],
         "n": 0,

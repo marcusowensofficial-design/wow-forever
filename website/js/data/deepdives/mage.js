@@ -382,7 +382,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Frostbolt Downranking & Ice Barrier Empowerment",
       "category": "Core Mechanics",
       "details": "Downranking penalization active; Frost Blast has been removed from trainers. Frost mages now utilize empowered Ice Barrier (+15% Frost Damage buff for 1 min, +20% while held) and Ice Lance on an 8s cooldown shared with Fire Blast.",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -390,7 +390,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Frostfire Bolt",
       "category": "Core Spells",
       "details": "Dual-school Fire/Frost spell learned from vendor; triggers Ignite and Fingers of Frost",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo & Vendor Intel"
     },
@@ -398,7 +398,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Comprehend Scroll",
       "category": "Class Flavor",
       "details": "Decipher untranslated scrolls found in the world via General tab ability",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo Spellbook & Mobalytics"
     },
@@ -406,7 +406,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Arcane Blast Redesign",
       "category": "Arcane",
       "details": "1.5s cast; grants 15% Int as Spell Damage per stack (up to 4x, 15s duration)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -414,7 +414,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Missile Barrage",
       "category": "Arcane",
       "details": "40% proc from AB, 20% from Fireball/Frostbolt/FFB; 0 mana, -50% channel, 0.5s rate",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -422,7 +422,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Arcane Crit Multiplier",
       "category": "Arcane",
       "details": "Doubles Arcane critical-strike damage bonus (200% crit damage)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -430,7 +430,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Improved Counterspell Silence",
       "category": "Arcane",
       "details": "Adds 2-second guaranteed silence effect to Counterspell",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -438,7 +438,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Hot Streak Stacks",
       "category": "Fire",
       "details": "-25% Pyroblast cast time per non-periodic crit (up to 3 = 1.5s cast); non-crits don't drop stacks",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -446,7 +446,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Combustion",
       "category": "Fire",
       "details": "+10% crit per hit until 4 non-periodic Fire crits occur",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -454,7 +454,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Blast Wave No Knockback",
       "category": "Fire",
       "details": "Applies 6s daze slow; knockback removed to prevent mob scattering in dungeons",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -462,7 +462,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Ice Lance",
       "category": "Frost",
       "details": "Instant cast in Frost tree; deals 200% increased damage to frozen targets (8s cooldown)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -470,7 +470,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Fingers of Frost",
       "category": "Frost",
       "details": "Procs from Chill; next 2 spells treat targets as frozen for Shatter combos",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -478,7 +478,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Winter's Chill",
       "category": "Frost",
       "details": "Stacks up to 5x; next Cone of Cold deals +5% dmg and gains 7% SP scaling per stack",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -486,7 +486,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Blizzard Slow Rebalance",
       "category": "Frost",
       "details": "AoE remains uncapped, but slow reduced to 15% base (~50% with Permafrost, down from 75%)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -494,7 +494,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Orc Hardiness Flat Reduction",
       "category": "Orc Racials",
       "details": "-20% stun duration replaces RNG resist mechanic",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -502,7 +502,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Orc Blood Fury Buff",
       "category": "Orc Racials",
       "details": "+10% AP and +10% Spell Power (2 min CD); healing debuff completely removed",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -510,7 +510,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Orc Shatter Curse",
       "category": "Orc Racials",
       "details": "Dispels all Curse and Bane effects; reduces magical damage taken by 5% for 8s (2m CD)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     }

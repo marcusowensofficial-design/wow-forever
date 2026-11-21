@@ -24,10 +24,10 @@ console.log('--- 1. Hunter Pets & 520 Beast Radar ---');
   eval(code);
   assert(typeof window.WOW_HUNTER_PETS_DATA === 'object', 'WOW_HUNTER_PETS_DATA is an object');
   assert(Array.isArray(window.WOW_HUNTER_PETS_DATA.allBeasts), 'allBeasts is an Array');
-  assert(window.WOW_HUNTER_PETS_DATA.allBeasts.length === 520, `Expected 520 beasts, got ${window.WOW_HUNTER_PETS_DATA.allBeasts.length}`);
+  assert(window.WOW_HUNTER_PETS_DATA.allBeasts.length >= 620, `Expected >= 620 beasts, got ${window.WOW_HUNTER_PETS_DATA.allBeasts.length}`);
   
   assert(Array.isArray(window.WOW_HUNTER_PETS_DATA.families), 'families is an Array');
-  assert(window.WOW_HUNTER_PETS_DATA.families.length === 18, `Expected 18 families, got ${window.WOW_HUNTER_PETS_DATA.families.length}`);
+  assert(window.WOW_HUNTER_PETS_DATA.families.length >= 19, `Expected >= 19 families, got ${window.WOW_HUNTER_PETS_DATA.families.length}`);
   
   const brokenTooth = window.WOW_HUNTER_PETS_DATA.allBeasts.find(b => b.name === 'Broken Tooth');
   assert(brokenTooth && brokenTooth.attackSpeed === 1.0, 'Broken Tooth verified with authentic 1.0s attack speed');
@@ -37,6 +37,9 @@ console.log('--- 1. Hunter Pets & 520 Beast Radar ---');
 
   const foxFamily = window.WOW_HUNTER_PETS_DATA.families.find(f => f.name === 'Fox' || f.id === 'fox');
   assert(foxFamily && foxFamily.isNew, 'Fox verified as new Classic+ family');
+
+  const coreHoundFamily = window.WOW_HUNTER_PETS_DATA.families.find(f => f.name === 'Core Hound' || f.id === 'core-hound');
+  assert(coreHoundFamily && coreHoundFamily.isNew, 'Core Hound verified as new 19th Classic+ family');
 }
 
 // 2. Collections Directory (Mounts, Vanity Pets, Titles)

@@ -503,8 +503,9 @@ function buildSearchIndex() {
   }
 
   // 15. Hunter Pets & Pet Families
-  if (window.WOW_ATLAS_DATA?.hunterPets?.families) {
-    window.WOW_ATLAS_DATA.hunterPets.families.forEach(f => {
+  const hunterPetsSource = window.WOW_HUNTER_PETS_DATA || window.WOW_ATLAS_DATA?.hunterPets;
+  if (hunterPetsSource?.families) {
+    hunterPetsSource.families.forEach(f => {
       const aliasTitle = f.id === 'bird-of-prey' ? 'Bird of Prey / Owls (Hunter Pet Family)' :
                          f.id === 'carrion-bird' ? 'Carrion Bird / Vultures (Hunter Pet Family)' :
                          `${f.name} (Hunter Pet Family)`;
@@ -520,9 +521,9 @@ function buildSearchIndex() {
     });
   }
 
-  // 16. All 520 Hunter Beasts
-  if (window.WOW_ATLAS_DATA?.hunterPets?.allBeasts) {
-    window.WOW_ATLAS_DATA.hunterPets.allBeasts.forEach(b => {
+  // 16. All Hunter Beasts
+  if (hunterPetsSource?.allBeasts) {
+    hunterPetsSource.allBeasts.forEach(b => {
       const isFast = b.speedNum && b.speedNum <= 1.5;
       const famSlug = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(b.family) : (b.family ? b.family.toLowerCase().replace(/[-_\s]+/g, '') : 'all');
       searchIndex.push({

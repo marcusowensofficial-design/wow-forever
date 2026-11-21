@@ -380,7 +380,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Daggerless Mutilate",
         category: "Assassination",
         details: "Mutilate strikes with both weapons (75% dmg), +20% on poisoned targets; no dagger requirement",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -388,7 +388,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Poisons Scale with AP & Crit",
         category: "Assassination",
         details: "Deadly, Instant, and Wound poisons can critically strike and scale with Attack Power",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -396,7 +396,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Venom Maintenance Finisher",
         category: "Assassination",
         details: "Finishing move grants +30% poison damage and +10% poison application chance",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -404,7 +404,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Seal Fate 3-CP Mutilate",
         category: "Assassination",
         details: "100% chance on generator crits for +1 combo point; Mutilate crit awards 3 combo points",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -412,7 +412,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Kidney Shot 10% Vulnerability",
         category: "Assassination",
         details: "Stunned target takes up to 10% more damage from Rogue's poisons and attacks",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -420,7 +420,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Expose Armor QoL",
         category: "Assassination",
         details: "-5 Energy cost and refunds 1 combo point when used at 5 combo points",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -428,7 +428,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Poison Charge Conservation",
         category: "Assassination",
         details: "50% chance on application not to consume a charge; +30% dispel resistance",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -436,7 +436,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Restless Blades Cooldown Cycling",
         category: "Combat",
         details: "Finishing moves reduce AR, Blade Flurry, Evasion, Sprint, Vanish CD by 2s per CP spent",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo (Later iterated to Flawless Execution)"
       },
@@ -444,7 +444,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Blade Flurry (20% Haste & Cleave)",
         category: "Combat",
         details: "2m CD, +20% attack speed, melee strikes hit 1 additional nearby target for 15s",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -452,7 +452,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Kick (2s Silence)",
         category: "Combat",
         details: "Kick gains a 2-second blanket silence in addition to normal spell school lockout",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -460,7 +460,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Combat Weapon Mastery (Hack and Slash)",
         category: "Combat",
         details: "5% chance on melee hit to trigger an additional attack with Axes",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -468,7 +468,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Weapon Expertise",
         category: "Combat",
         details: "Reduces enemy dodge and parry chances against the Rogue by up to 5%",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -476,7 +476,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Death Mark Burst Finisher",
         category: "Subtlety",
         details: "Rupture ticks reduce Hemorrhage/Backstab Energy cost by 3 (stacks up to 5 = -15 Energy)",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -484,7 +484,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Serrated Strike (+50% Rupture Dmg)",
         category: "Subtlety",
         details: "100% weapon dmg (145% dagger); target takes 50% more Rupture damage from Rogue",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -492,7 +492,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Dirty Deeds Frontal Garrote",
         category: "Subtlety",
         details: "-20% Cheap Shot/Garrote Energy cost; removes Garrote behind-target requirement",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -500,7 +500,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Blind Classified as Poison",
         category: "Subtlety / Utility",
         details: "5-min CD, cleansable by poison dispels, 50% cost reduction from Elusiveness",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -508,7 +508,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Absence of Cloak of Shadows",
         category: "Core Mechanics",
         details: "Cloak of Shadows is not in the accessible toolkit in this build",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -516,7 +516,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Troll Berserking Flat 10%",
         category: "Troll Racials",
         details: "Flat 10% attack and cast speed without missing-health scaling",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }

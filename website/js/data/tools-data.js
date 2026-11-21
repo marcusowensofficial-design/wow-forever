@@ -2000,7 +2000,7 @@ Shamans channel primal elements into bone-crushing melee swings, high-potency gr
 ---
 
 ### Raid-Wide Totem Architecture (No Twisting Required)
-In WoW Forever Build 1.60.1.70425, the legacy 10-second "totem twisting" chore has been permanently retired:
+In WoW Forever (1.60.1), the legacy 10-second "totem twisting" chore has been permanently retired:
 • **Raid-Wide Range (40 Yards):** All core elemental totems reach the entire 40-player raid or 5-man dungeon group within a 40-yard radius.
 • **Non-Exclusive Air Element Harmony:** **Windfury Totem** and **Grace of Air Totem** are non-exclusive; Windfury applies an instant extra-attack imbue aura while Grace of Air provides +Agility. Shamans no longer need to burn 300 mana every 9 seconds to alternate Air totems.
 • Plant your totems once, reposition only when moving encounters, and direct your active mana toward Shocks, Chain Heals, and Lightning Bolts!
@@ -2653,13 +2653,13 @@ Because spell travel time exists in WoW Forever, casting an instant spell immedi
       id: "guide-level30-druid",
       title: "Druid Level 30 Guide: Feral Powershifting, Bear Meatshield & Moonkin Burst",
       category: "Classes & Specs",
-      source: "ForeverChanges.pro · Wowhead · Build 1.60.1.70425 Forensics",
+      source: "ForeverChanges.pro · Wowhead · Build 1.60.1 Forensics",
       icon: "https://render.worldofwarcraft.com/us/icons/56/classicon_druid.jpg",
       summary: "Master the Level 30 Druid: smooth energy regen, Furor powershifting, Bear crit-rage scaling, Moonkin shatter armor, and Level 30 Pre-BiS.",
       content: `### Master of the Wild at Level 30
 In WoW Forever, Level 30 brings monumental architectural modernization for Druids across Feral, Balance, and Restoration. With the permanent removal of rigid 2.0s energy ticks, the restructuring of **Furor** into Feral Tier 1, and complete disarm immunity, Druids are premier dungeon tanks and versatile burst threats.
 
-### Core Build 1.60.1.70425 Innovations
+### Core WoW Forever 1.60.1 Innovations
 
 • **Smooth Energy Regeneration:** Cat Form energy now regenerates in a smooth, continuous flow rather than discrete 2-second ticks, providing fluid combat rhythm.
 • **Furor Powershifting (Feral Tier 1):** Furor now lives at Feral Tier 1 (Row 1 Col 3), granting 40 Energy immediately when shifting into Cat Form. (Shifting Power serves as the Level 60 Row 7 capstone on an 8s cooldown).
@@ -3260,7 +3260,7 @@ Because WoW Forever utilizes unified regional megarealms (Americas, Europe, Kore
 
 1. **Update Your Battle.net Game Client:**
    - Launch Battle.net Desktop App. Under the Game Version dropdown, select **World of Warcraft: Forever**.
-   - Verify that your client displays version **1.60.1.70707** or higher. Run a scan & repair to ensure texture files are cached.
+   - Verify that your client displays version **1.60.1.71037** or higher. Run a scan & repair to ensure texture files are cached.
 2. **Choose Your Realm Ruleset:**
    - WoW Forever operates on unified regional megarealms with seamless dynamic layering:
      - **Megarealm - PvP:** Open-world PvP enabled across all contested zones (Hillsbrad, Ashenvale, Stranglethorn).

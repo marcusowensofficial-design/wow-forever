@@ -369,7 +369,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Judgment of Fury (Taunt)",
         category: "Protection",
         details: "Deals Holy damage and taunts target for 4s; direct single-target taunt",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -377,7 +377,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Seal of Fury Absorb Shield",
         category: "Protection",
         details: "Holy dmg on melee; 50% absorb shield; mana restored when shield breaks",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -385,7 +385,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Block Mana Regeneration",
         category: "Protection",
         details: "Restores 6% of maximum mana every 3 seconds on successful block",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -393,7 +393,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Templar's Bulwark",
         category: "Protection",
         details: "100% max health absorb shield for 8s; triggers Forbearance (3m CD)",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -401,7 +401,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Righteous Fury -6% Damage",
         category: "Protection",
         details: "Reduces damage taken by 6% while Righteous Fury is active",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -409,7 +409,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Holy Shield Threat",
         category: "Protection",
         details: "10s CD, 4 charges, Holy dmg on block produces +20% threat",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -417,7 +417,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Unsealed Wrath (Seal Swapping)",
         category: "Retribution",
         details: "Seal swap creates an Echo consumed by next melee hit; modernizes seal twisting",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Demo & Retribution Tree"
       },
@@ -425,7 +425,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Sacred Arbiter Judgment Refresh",
         category: "Retribution",
         details: "+10% Holy Strike damage; refreshes all Judgment effects on target",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -433,7 +433,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Sheath of Light (100% Int)",
         category: "Retribution",
         details: "Converts up to 100% of Intellect into spell damage and healing",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -441,7 +441,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Judgment 60% Mana Refund",
         category: "Retribution",
         details: "100% chance on Judgments to refund 60% of mana cost",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -449,7 +449,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Light's Vigil AoE Healing",
         category: "Holy",
         details: "30s buff; next Holy Shock has 0 CD, heals party or damages enemies, refunds 75% mana",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -457,7 +457,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Holy Shock 10s Cooldown",
         category: "Holy",
         details: "Cooldown reduced from 30s to 10s; up to +15% crit chance from talents",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -465,7 +465,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Unbreakable Concentration",
         category: "Holy",
         details: "6 seconds immunity to silence and interrupt effects",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -473,7 +473,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "60-Minute Blessings",
         category: "Core Mechanics",
         details: "All Blessings extended from 5 minutes to 60 minutes",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin In-Game Tooltip"
       },
@@ -481,7 +481,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Holy Strike Baseline",
         category: "Core Mechanics",
         details: "Instant melee attack, 35% weapon damage + Holy damage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -497,7 +497,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Semi-Capped Consecration",
         category: "AoE Balance",
         details: "First 4 enemies take full damage; additional targets take reduced damage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -505,7 +505,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Undead Cannibalize & Touch",
         category: "Undead Racials",
         details: "Cannibalize 7% HP + 7% Mana; Touch of the Grave 5% chance to drain 5% max HP",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }

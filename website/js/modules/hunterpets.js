@@ -120,14 +120,14 @@
             <span class="pet-hero-badge">🐾 Official WoW Forever Beast Companion Registry</span>
             <h2 class="pet-hero-title">Hunter Pet Radar (${totalBeastsCount} Tameable Beasts)</h2>
             <p class="pet-hero-desc">
-              Complete index of all 18 families, including the new <strong>Fox</strong> family and 9 new/reworked abilities.
+              Complete index of all ${data.families?.length || 19} families, including the new <strong>Fox</strong> and <strong>Core Hound</strong> families plus 10 new/reworked abilities.
               Find authentic 1.0s attack speed beasts (Broken Tooth pushback), dietary needs, and exact Classic+ tame coordinates.
             </p>
           </div>
           <div class="pet-stats-summary">
             <div class="pet-stat-pill"><strong>${totalBeastsCount}</strong><span>Total Beasts</span></div>
-            <div class="pet-stat-pill"><strong>${data.families?.length || 18}</strong><span>Families</span></div>
-            <div class="pet-stat-pill"><strong>9</strong><span>New Spells</span></div>
+            <div class="pet-stat-pill"><strong>${data.families?.length || 19}</strong><span>Families</span></div>
+            <div class="pet-stat-pill"><strong>10</strong><span>New Spells</span></div>
             <div class="pet-stat-pill"><strong>1.0s</strong><span>Fastest AS</span></div>
           </div>
         </div>

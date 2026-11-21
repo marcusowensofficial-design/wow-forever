@@ -376,7 +376,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Penance",
         category: "Discipline",
         details: "Channeled Holy volley; heals ally or damages enemy over 2s; 10s cooldown",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -384,7 +384,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Soul Warding",
         category: "Discipline",
         details: "Removes Power Word: Shield cooldown; 15s Weakened Soul debuff remains",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -392,7 +392,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Divine Aegis",
         category: "Discipline",
         details: "Critical heals create an absorb shield equal to 50% of the healed amount",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -400,7 +400,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Holy Fire / Penance Synergy",
         category: "Discipline",
         details: "Smite and Penance deal +10% damage to targets affected by Holy Fire",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -408,7 +408,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Prayer of Mending",
         category: "Holy",
         details: "10s CD; bounces up to 5 times to injured party members upon taking damage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -416,7 +416,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Litany of Light (Alternating)",
         category: "Holy",
         details: "Healing with a different spell than previous restores 10% base mana cost",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -424,7 +424,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Spirit to Spell Power",
         category: "Holy",
         details: "Up to 5% total Spirit added as spell healing; 1% as spell damage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -432,7 +432,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Blessed Recovery",
         category: "Holy",
         details: "Crits or hits >30% HP heal 25% damage taken over 6s; refreshes and stacks",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -440,7 +440,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Inspiration (+25% Armor)",
         category: "Holy",
         details: "Non-periodic critical heals increase target's armor by 25% for 15s",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -448,7 +448,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Shadowform (50% Mana Reduction)",
         category: "Shadow",
         details: "+10% Shadow dmg, -50% Shadow mana cost, 200% crit bonus, -15% phys dmg",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -456,7 +456,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Devouring Plague Baseline",
         category: "Shadow",
         details: "Available across all Priest races; 1m CD; talents allow jumping on death",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -464,7 +464,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Critical Strike DoTs",
         category: "Core Mechanics",
         details: "Priest damage-over-time spells can critically strike",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -472,7 +472,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Mind Flay Ramping Damage & Range",
         category: "Shadow",
         details: "Each damage instance deals 10/20% more damage than previous; +10 yd range (30 yd total)",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Beta Patch Build 1.60.1.70425"
       },
@@ -480,7 +480,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Vampiric Embrace & Spirit Tap",
         category: "Shadow",
         details: "30s duration; heals party for 20% Shadow dmg; triggers Spirit Tap on kill assist",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -488,7 +488,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "In-Combat Shadowmeld",
         category: "Night Elf Racials",
         details: "Usable in combat (2m CD); does not exit combat but causes enemies to drop target",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -496,7 +496,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Elune's Light (+10% Crit)",
         category: "Night Elf Racials",
         details: "+10% critical-strike chance for all spells/attacks for 15s (2m CD)",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -504,7 +504,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Universal Fear Ward",
         category: "Core Mechanics",
         details: "Available to all races; 3m duration, 3m cooldown",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },

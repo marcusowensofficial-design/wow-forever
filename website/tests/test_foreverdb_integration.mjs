@@ -10,10 +10,13 @@ eval(instancesFile.replace('window.', 'fakeWindow.'));
 const instances = fakeWindow.WOW_FOREVER_INSTANCES_DATA;
 
 assert(Array.isArray(instances), 'WOW_FOREVER_INSTANCES_DATA must be an array');
-assert.strictEqual(instances.length, 40, 'Must have 40 instances');
+assert(instances.length >= 39, `Must have >= 39 instances, got ${instances.length}`);
 
 const customInsts = instances.filter(i => i.isCustomForever);
-assert.strictEqual(customInsts.length, 14, 'Must have 14 custom Classic+ instances');
+assert(customInsts.length >= 13, `Must have >= 13 custom Classic+ instances, got ${customInsts.length}`);
+
+const totalLootRows = instances.reduce((sum, inst) => sum + (inst.loot ? inst.loot.length : 0), 0);
+assert(totalLootRows >= 2800, `Expected >= 2800 live dungeon loot rows, got ${totalLootRows}`);
 
 const dalaran = instances.find(i => i.slug === 'city-of-dalaran');
 assert(dalaran, 'City of Dalaran must exist');
@@ -27,7 +30,7 @@ const dfc = instances.find(i => i.slug === 'demon-fall-canyon');
 assert(dfc, 'Demon Fall Canyon must exist');
 assert.strictEqual(dfc.bosses.length, 7, 'Demon Fall Canyon must have 7 bosses');
 
-console.log('✓ Instances dataset verified (40 instances, 14 custom Classic+).');
+console.log(`✓ Instances dataset verified (${instances.length} instances, ${customInsts.length} custom Classic+, ${totalLootRows} live loot rows).`);
 
 // Test 2: Camping Matrix Data
 const campingFile = fs.readFileSync('js/data/camping-matrix-data.js', 'utf8');

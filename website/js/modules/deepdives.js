@@ -713,7 +713,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🐾</span> 5. Pet Stable & Beast Abilities Matrix</h3>
-                <p>18 pet families, the new Fox family, 9 reworked/new beast abilities, and swing speed inheritances</p>
+                <p>19 pet families (including Fox & Core Hound), 10 reworked/new beast abilities, and swing speed inheritances</p>
               </div>
               ${(window.WOW_DEEPDIVES_HUNTER?.renderHunterPetStable || renderHunterPetStable)(cData)}
             </div>
@@ -729,7 +729,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 7. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -789,7 +789,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 7. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Shaman claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Shaman claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -841,7 +841,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Mage claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Mage claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -893,7 +893,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Paladin claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Paladin claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -945,7 +945,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Warrior claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Warrior claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -997,7 +997,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Warlock claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Warlock claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -1049,7 +1049,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Priest claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Priest claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -1101,7 +1101,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Druid claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Druid claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>
@@ -1153,7 +1153,7 @@ function initClassDeepDives() {
             <div class="dossier-section-block">
               <div class="dossier-block-header">
                 <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
-                <p>Cross-referenced validation of all Rogue claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
+                <p>Cross-referenced validation of all Rogue claims from BlizzCon hands-on demo against live WoW: Forever (1.60.1)</p>
               </div>
               ${(window.WOW_DEEPDIVES_BUILDS?.renderForensicMatrixSection || renderForensicMatrixSection)(cData)}
             </div>

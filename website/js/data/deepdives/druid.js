@@ -104,7 +104,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         title: "Lacerate Feral Progression",
         status: "verified",
-        statusLabel: "✦ Launch Build 1.60.1.70707",
+        statusLabel: "✦ Live Build 1.60.1.71037",
         badge: "Skill Progression",
         desc: "Lacerate is confirmed as a Tier 4 Feral Combat talent (Row 4, Col 2 under Savage Fury). Rank 1 is learned via talent, with Rank 2 learned at level 34 from trainers."
       },
@@ -354,7 +354,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Baseline Omen of Clarity",
         category: "Core Mechanics",
         details: "Omen of Clarity is baseline; Clearcasting not consumed by Wrath or free spells",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -362,7 +362,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Baseline Nature's Grasp",
         category: "Core Mechanics",
         details: "Learned as a baseline class spell; no talent points required",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -370,7 +370,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Revive (Standard Resurrection)",
         category: "Core Mechanics",
         details: "Standard out-of-combat resurrection spell for 5-man dungeon groups",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -378,7 +378,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Smooth Energy Regeneration",
         category: "Core Mechanics",
         details: "Cat Form energy regenerates smoothly rather than in 2-second 20-energy ticks",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -386,7 +386,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Furor Shifting Rework",
         category: "Core Mechanics",
         details: "Bear gains 10 Rage; Cat retains Energy even when shifting to Bear/Dire Bear",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Beta Patch Build 1.60.1.70425"
       },
@@ -394,7 +394,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Eclipse Starfire Reduction",
         category: "Balance",
         details: "Wrath reduces cast time of next 2 Starfires; stores up to 4 charges",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -402,7 +402,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Balance of Nature",
         category: "Balance",
         details: "Nature spells buff next Arcane spell; Arcane spells buff next Nature spell",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -410,7 +410,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Moonkin Form (360% Armor)",
         category: "Balance",
         details: "360% armor from items, +3% raid crit, Polymorph immunity",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Beta Patch Build 1.60.1.70425"
       },
@@ -418,7 +418,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Insect Swarm in Balance",
         category: "Balance",
         details: "Moved from Restoration into the Balance talent tree",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -426,7 +426,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Wild Growth (Level 40)",
         category: "Restoration",
         details: "Instant-cast party HoT over 7 seconds; high throughput",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -434,7 +434,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Swiftmend Early Placement",
         category: "Restoration",
         details: "Placed early in Restoration; does not consume active HoTs",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -450,7 +450,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "King of the Jungle & Tiger's Fury",
         category: "Feral",
         details: "Tiger's Fury +15% phys dmg (6s/30s CD); King of Jungle +10% dmg on bleeding targets",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -466,7 +466,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Cat Form Feral Charge",
         category: "Feral",
         details: "Dedicated Cat Form leap behind target; dazes enemy",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -474,7 +474,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Thick Hide",
         category: "Feral Tanking",
         details: "Defense rating above cap converts to armor, multiplied by Bear Form",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -482,7 +482,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Heart of the Wild Early Placement",
         category: "Feral",
         details: "Available earlier: +10% Int, +20% Bear Stamina, +10% Cat Strength",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -490,7 +490,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Skyborne Walk on Air",
         category: "Skyborne Racials",
         details: "10-second directional glide on a 2-minute cooldown",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }

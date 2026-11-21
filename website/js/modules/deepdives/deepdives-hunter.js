@@ -20,7 +20,7 @@
 
     if (!modal || !tableContainer) return;
 
-    const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
+    const petData = (typeof window !== 'undefined' && (window.WOW_HUNTER_PETS_DATA || (window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets))) || null;
     const allBeasts = (petData && petData.allBeasts) || [];
     const families = (petData && petData.families) || [];
     const familyIconMap = new Map();
@@ -340,10 +340,10 @@
           </div>
           <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
             <button class="btn-switch-pet-tab pet-cta-secondary-btn" data-target-subtab="pets" type="button">
-              🐾 CLICK HERE TO VIEW 520 TAMABLE BEASTS DIRECTORY ➔
+              🐾 CLICK HERE TO VIEW 622 TAMABLE BEASTS DIRECTORY ➔
             </button>
-            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button" title="Open master modal of 520 beasts">
-              <span class="pmd-btn-title">🐾 Open 520 Beasts Table</span>
+            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button" title="Open master modal of 622 beasts">
+              <span class="pmd-btn-title">🐾 Open 622 Beasts Table</span>
               <span class="pmd-badge">Open Table ↗</span>
             </button>
           </div>
@@ -638,15 +638,15 @@
           <div>
             <h4 style="color: #6ee7b7; margin: 0 0 0.25rem; font-size: 1.05rem;">Ready to tame your companion?</h4>
             <p style="color: #cbd5e1; margin: 0; font-size: 0.84rem;">
-              Filter all 18 families, check zone spawns, verify level brackets, and view all 520 beasts.
+              Filter all 19 families, check zone spawns, verify level brackets, and view all 622 beasts.
             </p>
           </div>
           <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
             <button class="btn-switch-pet-tab pet-cta-primary-btn" data-target-subtab="pets" type="button">
-              🐾 EXPLORE 18 FAMILIES & 520 BEASTS DIRECTORY ➔
+              🐾 EXPLORE 19 FAMILIES & 622 BEASTS DIRECTORY ➔
             </button>
             <button class="pet-master-directory-btn btn-open-modal-trigger" type="button">
-              <span class="pmd-btn-title">🐾 Open 520 Beasts Table</span>
+              <span class="pmd-btn-title">🐾 Open 622 Beasts Table</span>
               <span class="pmd-badge">Open Table ↗</span>
             </button>
           </div>
@@ -656,13 +656,14 @@
   }
 
   const NEW_SIGNATURE_ABILITY_FAMILIES = new Set([
-    'bat', 'bear', 'bird-of-prey', 'crab', 'crocolisk', 'fox', 'hyena', 'raptor', 'spider'
+    'bat', 'bear', 'bird-of-prey', 'core-hound', 'crab', 'crocolisk', 'fox', 'hyena', 'raptor', 'spider'
   ]);
 
   function renderHunterPetStable(_cData) {
-    const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
+    const petData = (typeof window !== 'undefined' && (window.WOW_HUNTER_PETS_DATA || (window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets))) || null;
     const families = (petData && petData.families) || [];
-    const totalBeastsCount = (petData && petData.allBeasts && petData.allBeasts.length) || 520;
+    const totalFamiliesCount = families.length || 19;
+    const totalBeastsCount = (petData && petData.allBeasts && petData.allBeasts.length) || 622;
 
     return `
       <div class="hunter-pet-stable-wrapper">
@@ -670,7 +671,7 @@
           <div>
             <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & ${totalBeastsCount} Tamable Beasts Directory</h4>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
-              Classic pet mechanics preserved and expanded: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), and ${totalBeastsCount} authentic tamable beasts in WoW Forever.
+              Classic pet mechanics preserved and expanded: ${totalFamiliesCount} families (including Fox & Core Hound), native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), and ${totalBeastsCount} authentic tamable beasts in WoW Forever.
             </p>
           </div>
           <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Living Classic+ Pets</span>
@@ -685,7 +686,7 @@
               <span class="pet-changes-cta-tag">Classic vs Forever Diff</span>
             </div>
             <p class="pet-changes-cta-desc">
-              Explore the brand new Fox family, Bird of Prey rename, 10 new family abilities, Dash expansion on 8 families, pruned abilities, side-by-side Classic vs Forever ability diffs, and universal pet mechanics.
+              Explore the brand new Fox & Core Hound families, Bird of Prey rename, 10 new family abilities, Dash expansion on 8 families, pruned abilities, side-by-side Classic vs Forever ability diffs, and universal pet mechanics.
             </p>
           </div>
           <div class="pet-changes-cta-actions">
@@ -699,11 +700,11 @@
           </div>
         </div>
 
-        <!-- SECTION: All 18 Pet Families & Beast Directory (${totalBeastsCount} Beasts) -->
+        <!-- SECTION: All ${totalFamiliesCount} Pet Families & Beast Directory (${totalBeastsCount} Beasts) -->
         <div id="pet-sec-families" class="pet-filter-bar" style="margin-top: 1rem;">
           <div class="filter-controls-header">
             <div>
-              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory (${totalBeastsCount} Beasts)</h4>
+              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All ${totalFamiliesCount} Pet Families & Beast Taming Directory (${totalBeastsCount} Beasts)</h4>
               <span style="font-size: 0.8rem; color: #94a3b8;">Filter by role, level progression bracket, zone, or fast attack speeds</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">

@@ -373,7 +373,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Baseline Tactical Mastery",
         category: "Core Mechanics",
         details: "Retains 10 Rage baseline across stance changes; no talent points required",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -381,7 +381,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Baseline Victory Rush",
         category: "Core Mechanics",
         details: "Instant strike heals 10% max HP within 20s of killing blow",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -389,7 +389,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Spearing Strike (Anti-Mount)",
         category: "Arms",
         details: "15 Rage, 20s CD; 40% wpn dmg, +80% vs Giants/Dragonkin/Mounted; dismounts riders",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Arms Tree"
       },
@@ -397,7 +397,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Unified Weaponmaster",
         category: "Arms",
         details: "Single talent replaces separate weapon specs; Maces/Staves grant 15% ArP",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -405,7 +405,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Rend Overpower (Taste for Blood)",
         category: "Arms",
         details: "Attacks on Rend target give 10% chance to trigger Overpower for 6s",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -413,7 +413,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Slam Pushback Immunity & Swing Flow",
         category: "Arms",
         details: "-0.5s cast/GCD, does NOT reset weapon swing timer, and immune to spell pushback",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Beta Patch Build 1.60.1.70425"
       },
@@ -421,7 +421,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Raging Blows (Dual Whirlwind)",
         category: "Fury",
         details: "Whirlwind strikes with main and off-hand; reduces Cleave cost by 2 Rage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -429,7 +429,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Dual Wield Overhaul",
         category: "Fury",
         details: "+25% offhand damage, +100% offhand rage generation, +10% offhand hit",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -437,7 +437,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Berserker Rage Snare Removal",
         category: "Fury",
         details: "Generates 10 Rage, removes movement impairing effects; 30s cooldown",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -445,7 +445,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Bloodthirst Movement Speed",
         category: "Fury",
         details: "Deals 35% AP + base damage, grants +10% movement speed, triggers Blood Craze",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -453,7 +453,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Vanguard",
         category: "Protection",
         details: "Allows Charge to be cast from Defensive Stance via Protection talent",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -461,7 +461,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Shield Avoidance Rage",
         category: "Protection",
         details: "Up to 100% chance to generate Rage on dodge/parry with shield equipped",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -469,7 +469,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Shield Bash",
         category: "Protection",
         details: "Shield Bash inflicts true silence rather than interrupt only",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -477,7 +477,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Shield Wall (9.5m CD)",
         category: "Protection",
         details: "15m baseline cooldown reduced by 5.5m to ~9.5 minutes via talent",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -485,7 +485,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "3-Minute Shouts",
         category: "Core Mechanics",
         details: "Battle Shout and Demoralizing Shout extended to 3 minutes",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -493,7 +493,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "15-Minute Retaliation",
         category: "Core Mechanics",
         details: "Cooldown reduced from 30 minutes to 15 minutes",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -501,7 +501,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Human Will to Survive",
         category: "Human Racials",
         details: "Instantly removes stun effects on a 3-minute cooldown",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },

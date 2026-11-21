@@ -1,16 +1,15 @@
 /**
  * World of Warcraft: Forever - Hunter Pets & Beast Radar Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Synced from ForeverDB live data (Build 1.60.1.70959, GPL-3.0 attribution)
  */
 window.WOW_HUNTER_PETS_DATA = {
   "summary": {
-    "totalFamilies": 18,
-    "newFamily": "Fox",
-    "newAbilitiesCount": 9,
-    "description": "WoW Forever preserves classic pet mechanics with normalized base speeds, native passive swing-speed inheritance, 18 pet families, the new Fox family, and 9 brand new or reworked family abilities.",
-    "totalBeasts": 520,
-    "fastestBeasts": 30
+    "totalFamilies": 19,
+    "newFamily": "Fox & Core Hound",
+    "newAbilitiesCount": 10,
+    "description": "WoW Forever preserves classic pet mechanics with normalized base speeds, native passive swing-speed inheritance, 19 pet families (including Fox and Core Hound), and 10 brand new or reworked family abilities.",
+    "totalBeasts": 622,
+    "fastestBeasts": 36
   },
   "families": [
     {
@@ -3491,6 +3490,32 @@ window.WOW_HUNTER_PETS_DATA = {
           "npcUrl": "https://www.wowhead.com/forever/npc=7432"
         }
       ]
+    },
+    {
+      "id": "core-hound",
+      "name": "Core Hound",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_corehound.jpg",
+      "damageMod": "+1%",
+      "armorMod": "0%",
+      "healthMod": "+5%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Lava Breath (Rank 1-2)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Lava Breath",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverdb.net/icons/135831.webp",
+        "cost": "Focus",
+        "cd": "Family Signature",
+        "desc": "Core Hound signature fire breath ability (Ranks 1–2, Level 48+) datamined in live Forever client 1.60.1."
+      },
+      "highlight": "New 19th pet family in live Forever client (+5% Health, +1% Damage, Lava Breath). No open-world Core Hounds are tameable yet; becomes available with Molten Core (Dec 9).",
+      "isNew": true,
+      "tameLocations": []
     },
     {
       "id": "crab",
@@ -9497,7 +9522,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2031",
       "id": 2031,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Scavenger",
@@ -9577,7 +9602,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2032",
       "id": 2032,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ragged Scavenger",
@@ -9637,7 +9662,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1985",
       "id": 1985,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Timber Wolf",
@@ -9697,7 +9722,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2966",
       "id": 2966,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mangy Duskbat",
@@ -9737,7 +9762,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2961",
       "id": 2961,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Night Web Spider",
@@ -9817,7 +9842,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1986",
       "id": 1986,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bristleback Battleboar",
@@ -9837,7 +9862,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2954",
       "id": 2954,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sarkoth",
@@ -9957,7 +9982,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1994",
       "id": 1994,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Juvenile Snow Leopard",
@@ -9987,7 +10012,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Wolf",
       "speed": "1.7s",
       "speedNum": 1.7,
-      "isFast": true,
+      "isFast": false,
       "faction": "Alliance",
       "zone": "Elwynn Forest",
       "subzone": "",
@@ -10017,7 +10042,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1688",
       "id": 1688,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Nightsaber",
@@ -10157,7 +10182,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2969",
       "id": 2969,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Black Bear",
@@ -10197,7 +10222,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2956",
       "id": 2956,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Black Bear",
@@ -10205,8 +10230,8 @@ window.WOW_HUNTER_PETS_DATA = {
       "minLevel": 6,
       "maxLevel": 7,
       "family": "Bear",
-      "speed": "2.0s",
-      "speedNum": 2,
+      "speed": "1.9s",
+      "speedNum": 1.95,
       "isFast": false,
       "faction": "Alliance",
       "zone": "Dun Morogh",
@@ -10427,7 +10452,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Wolf",
       "speed": "1.7s",
       "speedNum": 1.7,
-      "isFast": true,
+      "isFast": false,
       "faction": "Alliance",
       "zone": "Elwynn Forest",
       "subzone": "",
@@ -10937,7 +10962,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=14430",
       "id": 14430,
       "attackSpeed": 1.4,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Encrusted Surf Crawler",
@@ -10957,7 +10982,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3108",
       "id": 3108,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Flatland Prowler",
@@ -10997,7 +11022,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3068",
       "id": 3068,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Prairie Wolf Alpha",
@@ -11157,7 +11182,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1555",
       "id": 1555,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Corrupted Bloodtalon Scythemaw",
@@ -11197,7 +11222,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3225",
       "id": 3225,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Corrupted Scorpid",
@@ -11237,7 +11262,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3228",
       "id": 3228,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Coyote",
@@ -11277,7 +11302,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2034",
       "id": 2034,
       "attackSpeed": 1.5,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Forest Lurker",
@@ -11357,7 +11382,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=119",
       "id": 119,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Moonstalker Runt",
@@ -11557,7 +11582,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3231",
       "id": 3231,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Coyote Packleader",
@@ -11587,7 +11612,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Scorpid",
       "speed": "1.6s",
       "speedNum": 1.6,
-      "isFast": true,
+      "isFast": false,
       "faction": "Horde",
       "zone": "Durotar",
       "subzone": "South of Razor Hill near 60, 48 (Rare)",
@@ -11597,7 +11622,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5823",
       "id": 5823,
       "attackSpeed": 1.6,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Black Bear",
@@ -11697,7 +11722,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1961",
       "id": 1961,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mottled Worg",
@@ -11937,7 +11962,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1780",
       "id": 1780,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Moss Stalker",
@@ -11957,7 +11982,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1780",
       "id": 1780,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Savannah Highmane",
@@ -11997,7 +12022,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2232",
       "id": 2232,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Goretusk",
@@ -12037,7 +12062,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1184",
       "id": 1184,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Dishu",
@@ -12057,7 +12082,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5865",
       "id": 5865,
       "attackSpeed": 1.5,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Fleshripper",
@@ -12097,7 +12122,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=12431",
       "id": 12431,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Grizzled Black Bear",
@@ -12117,7 +12142,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1188",
       "id": 1188,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Kolkar Packhound",
@@ -12157,7 +12182,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1781",
       "id": 1781,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sand Crawler",
@@ -12177,7 +12202,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=830",
       "id": 830,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Shadowclaw",
@@ -12337,7 +12362,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1191",
       "id": 1191,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Moonstalker",
@@ -12377,7 +12402,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=12432",
       "id": 12432,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Savannah Prowler",
@@ -12457,7 +12482,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3634",
       "id": 3634,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Hecklefang Hyena",
@@ -12497,7 +12522,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=12433",
       "id": 12433,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Lord Condar",
@@ -12617,7 +12642,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=831",
       "id": 831,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Tarantula",
@@ -12657,7 +12682,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1189",
       "id": 1189,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bloodsnout Worg",
@@ -12677,7 +12702,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1923",
       "id": 1923,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Deepmoss Creeper",
@@ -12757,7 +12782,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1192",
       "id": 1192,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Great Goretusk",
@@ -12797,7 +12822,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=154",
       "id": 154,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Grizzled Thistle Bear",
@@ -12927,7 +12952,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Cat",
       "speed": "1.7s",
       "speedNum": 1.7,
-      "isFast": true,
+      "isFast": false,
       "faction": "Horde",
       "zone": "The Barrens",
       "subzone": "",
@@ -13397,7 +13422,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2236",
       "id": 2236,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Silithid Creeper",
@@ -14177,7 +14202,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5834",
       "id": 5834,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Black Ravager Mastiff",
@@ -14237,7 +14262,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4117",
       "id": 4117,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Crag Stalker",
@@ -14247,7 +14272,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Cat",
       "speed": "1.6s",
       "speedNum": 1.6,
-      "isFast": true,
+      "isFast": false,
       "faction": "Contested",
       "zone": "Thousand Needles",
       "subzone": "",
@@ -14377,7 +14402,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3472",
       "id": 3472,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Moss Creeper",
@@ -14397,7 +14422,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2348",
       "id": 2348,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mottled Razormaw",
@@ -14457,7 +14482,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4118",
       "id": 4118,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Vultros",
@@ -14497,7 +14522,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=14280",
       "id": 14280,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Cloud Serpent",
@@ -14517,7 +14542,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4119",
       "id": 4119,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Feral Mountain Lion",
@@ -14537,7 +14562,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2385",
       "id": 2385,
       "attackSpeed": 1.2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ghostpaw Alpha",
@@ -14617,7 +14642,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4124",
       "id": 4124,
       "attackSpeed": 1.2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Pesterhide Snarler",
@@ -14697,7 +14722,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3811",
       "id": 3811,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sarltooth",
@@ -14737,7 +14762,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=12347",
       "id": 12347,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Highland Strider",
@@ -14777,7 +14802,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1150",
       "id": 1150,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Salt Flats Scavenger",
@@ -14817,7 +14842,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4696",
       "id": 4696,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Snapjaw",
@@ -14857,7 +14882,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4142",
       "id": 4142,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Starving Bonepaw",
@@ -14877,7 +14902,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4689",
       "id": 4689,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Panther",
@@ -14917,7 +14942,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=855",
       "id": 855,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Stranglethorn Tiger",
@@ -15077,7 +15102,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=977",
       "id": 977,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Kurzen War Tiger",
@@ -15097,7 +15122,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=976",
       "id": 976,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mistvale Gorilla",
@@ -15117,7 +15142,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1108",
       "id": 1108,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mountain Lion",
@@ -15197,7 +15222,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4144",
       "id": 4144,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bonepaw Hyena",
@@ -15217,7 +15242,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4688",
       "id": 4688,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Highland Thrasher",
@@ -15237,7 +15262,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2560",
       "id": 2560,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Hulking Mountain Lion",
@@ -15297,7 +15322,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=685",
       "id": 685,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Lashtail Raptor",
@@ -15317,7 +15342,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=856",
       "id": 856,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Stranglethorn Tiger",
@@ -15337,7 +15362,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1085",
       "id": 1085,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Giggler",
@@ -15397,7 +15422,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4697",
       "id": 4697,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sparkleshell Snapper",
@@ -15437,7 +15462,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=14222",
       "id": 14222,
       "attackSpeed": 1.4,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bloodfen Raptor",
@@ -15457,7 +15482,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4351",
       "id": 4351,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Carrion Horror",
@@ -15477,7 +15502,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4695",
       "id": 4695,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Crag Coyote",
@@ -15497,7 +15522,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2727",
       "id": 2727,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Darkmist Spider",
@@ -15517,7 +15542,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4376",
       "id": 4376,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Drywallow Crocolisk",
@@ -15537,7 +15562,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4341",
       "id": 4341,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Giant Plains Creeper",
@@ -15577,7 +15602,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=686",
       "id": 686,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Noxious Flayer",
@@ -15617,7 +15642,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1151",
       "id": 1151,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Snapjaw Crocolisk",
@@ -15637,7 +15662,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1152",
       "id": 1152,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Spot",
@@ -15657,7 +15682,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4950",
       "id": 4950,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Starving Buzzard",
@@ -15677,7 +15702,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2829",
       "id": 2829,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Vile Sting",
@@ -15717,7 +15742,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1084",
       "id": 1084,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bloodfen Screecher",
@@ -15737,7 +15762,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4352",
       "id": 4352,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Darkmist Recluse",
@@ -15757,7 +15782,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4378",
       "id": 4378,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Dread Flyer",
@@ -15777,7 +15802,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4693",
       "id": 4693,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Highland Fleshstalker",
@@ -15817,7 +15842,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4690",
       "id": 4690,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ridge Stalker",
@@ -15837,7 +15862,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2731",
       "id": 2731,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sorrow Spinner",
@@ -15857,7 +15882,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=858",
       "id": 858,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Swamp Jaguar",
@@ -15877,7 +15902,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=767",
       "id": 767,
       "attackSpeed": 1.2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Young Jungle Stalker",
@@ -15897,7 +15922,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=854",
       "id": 854,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Broken Tooth",
@@ -15937,7 +15962,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2830",
       "id": 2830,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Darkfang Venomspitter",
@@ -15957,7 +15982,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4414",
       "id": 4414,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Drywallow Snapper",
@@ -15977,7 +16002,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4343",
       "id": 4343,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Mesa Buzzard",
@@ -15997,7 +16022,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2580",
       "id": 2580,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Feral Crag Coyote",
@@ -16017,7 +16042,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2728",
       "id": 2728,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Jungle Thunderer",
@@ -16037,7 +16062,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1114",
       "id": 1114,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Magram Bonepaw",
@@ -16057,7 +16082,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4662",
       "id": 4662,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mudrock Spikeshell",
@@ -16117,7 +16142,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=729",
       "id": 729,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Barnabus",
@@ -16157,7 +16182,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4412",
       "id": 4412,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Darkmist Silkspinner",
@@ -16177,7 +16202,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4379",
       "id": 4379,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Dart",
@@ -16217,7 +16242,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2635",
       "id": 2635,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mottled Drywallow Crocolisk",
@@ -16237,7 +16262,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4344",
       "id": 4344,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Noxious Shredder",
@@ -16277,7 +16302,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2732",
       "id": 2732,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sawtooth Crocolisk",
@@ -16297,7 +16322,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1082",
       "id": 1082,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Scorpashi Venomlash",
@@ -16317,7 +16342,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4699",
       "id": 4699,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bloodfen Razormaw",
@@ -16357,7 +16382,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4694",
       "id": 4694,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Elder Crag Coyote",
@@ -16377,7 +16402,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2729",
       "id": 2729,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Giant Buzzard",
@@ -16397,7 +16422,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2831",
       "id": 2831,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ripscale",
@@ -16427,7 +16452,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Cat",
       "speed": "1.6s",
       "speedNum": 1.6,
-      "isFast": true,
+      "isFast": false,
       "faction": "Contested",
       "zone": "Swamp of Sorrows",
       "subzone": "Rebel Camp & Lake Nazferiti",
@@ -16437,7 +16462,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=768",
       "id": 768,
       "attackSpeed": 1.6,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bhag'thera",
@@ -16457,7 +16482,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=728",
       "id": 728,
       "attackSpeed": 1.5,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Bloodfen Lashtail",
@@ -16517,7 +16542,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=769",
       "id": 769,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Drywallow Daggermaw",
@@ -16557,7 +16582,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1557",
       "id": 1557,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Giant Darkfang Spider",
@@ -16577,7 +16602,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=4415",
       "id": 4415,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Jungle Stalker",
@@ -16597,7 +16622,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=687",
       "id": 687,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Longtooth Runner",
@@ -16617,7 +16642,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5286",
       "id": 5286,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ridge Stalker Patriarch",
@@ -16637,7 +16662,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2734",
       "id": 2734,
       "attackSpeed": 1.3,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Scorpid Hunter",
@@ -16657,7 +16682,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5422",
       "id": 5422,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Silt Crawler",
@@ -16677,7 +16702,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=922",
       "id": 922,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Southern Sand Crawler",
@@ -16697,7 +16722,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2544",
       "id": 2544,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Hayoc",
@@ -16737,7 +16762,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5268",
       "id": 5268,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Mangy Silvermane",
@@ -16757,7 +16782,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2923",
       "id": 2923,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Roc",
@@ -16777,7 +16802,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5428",
       "id": 5428,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Sawtooth Snapper",
@@ -16797,7 +16822,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1087",
       "id": 1087,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Starving Blisterpaw",
@@ -16817,7 +16842,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5425",
       "id": 5425,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Vale Screecher",
@@ -16857,7 +16882,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1713",
       "id": 1713,
       "attackSpeed": 1.5,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Groddoc Ape",
@@ -16877,7 +16902,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5260",
       "id": 5260,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Kurmokk",
@@ -16997,7 +17022,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=14123",
       "id": 14123,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Fire Roc",
@@ -17017,7 +17042,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5429",
       "id": 5429,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Glassweb Spider",
@@ -17037,7 +17062,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5856",
       "id": 5856,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "King Bangalash",
@@ -17057,7 +17082,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=731",
       "id": 731,
       "attackSpeed": 1.4,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Longtooth Howler",
@@ -17157,7 +17182,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5423",
       "id": 5423,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Silvermane Wolf",
@@ -17197,7 +17222,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=730",
       "id": 730,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Blisterpaw Hyena",
@@ -17217,7 +17242,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5426",
       "id": 5426,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Grizzled Ironfur Bear",
@@ -17257,7 +17282,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=5308",
       "id": 5308,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Witherbark Broodguard",
@@ -17777,7 +17802,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=2505",
       "id": 2505,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Snickerfang Hyena",
@@ -17817,7 +17842,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1809",
       "id": 1809,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Coralshell Tortoise",
@@ -17937,7 +17962,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=3581",
       "id": 3581,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Skymane Gorilla",
@@ -17977,7 +18002,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1822",
       "id": 1822,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Vilebranch Raiding Wolf",
@@ -17987,7 +18012,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "family": "Wolf",
       "speed": "1.7s",
       "speedNum": 1.7,
-      "isFast": true,
+      "isFast": false,
       "faction": "Contested",
       "zone": "The Hinterlands",
       "subzone": "",
@@ -18037,7 +18062,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "npcUrl": "https://www.wowhead.com/forever/npc=1815",
       "id": 1815,
       "attackSpeed": 2,
-      "isForeverVerified": false
+      "isForeverVerified": true
     },
     {
       "name": "Ember Worg",
@@ -18625,8 +18650,8 @@ window.WOW_HUNTER_PETS_DATA = {
       "minLevel": 56,
       "maxLevel": 56,
       "family": "Bear",
-      "speed": "2.0s",
-      "speedNum": 2,
+      "speed": "2.4s",
+      "speedNum": 2.4,
       "isFast": false,
       "faction": "Contested",
       "zone": "Winterspring",
@@ -19445,8 +19470,8 @@ window.WOW_HUNTER_PETS_DATA = {
       "minLevel": 35,
       "maxLevel": 37,
       "family": "Carrion Bird",
-      "speed": "2.0s",
-      "speedNum": 2,
+      "speed": "1.7s",
+      "speedNum": 1.66,
       "isFast": false,
       "faction": "Contested",
       "zone": "Badlands",
@@ -19456,7 +19481,7 @@ window.WOW_HUNTER_PETS_DATA = {
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=6013",
       "id": 6013,
-      "attackSpeed": 2,
+      "attackSpeed": 1.66,
       "isForeverVerified": true
     },
     {
@@ -19778,6 +19803,2046 @@ window.WOW_HUNTER_PETS_DATA = {
       "id": 263685,
       "attackSpeed": 2,
       "isForeverVerified": true
+    },
+    {
+      "name": "Razormane Wolf",
+      "level": "7–8",
+      "minLevel": 7,
+      "maxLevel": 8,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "The Barrens",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 57, 22.8",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3939",
+      "id": 3939,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Bleak Worg",
+      "level": "18–19",
+      "minLevel": 18,
+      "maxLevel": 19,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3861",
+      "id": 3861,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Slavering Worg",
+      "level": "18–19",
+      "minLevel": 18,
+      "maxLevel": 19,
+      "family": "Wolf",
+      "speed": "1.2s",
+      "speedNum": 1.2,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite — Faster Attack VI",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3862",
+      "id": 3862,
+      "attackSpeed": 1.2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Frostwolf",
+      "level": "50–51",
+      "minLevel": 50,
+      "maxLevel": 51,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Alterac Valley",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 48.9, 70.4",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10981",
+      "id": 10981,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Bloodaxe Worg Pup",
+      "level": "52–53",
+      "minLevel": 52,
+      "maxLevel": 53,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10221",
+      "id": 10221,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Diseased Wolf",
+      "level": "53–54",
+      "minLevel": 53,
+      "maxLevel": 54,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1817",
+      "id": 1817,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Scarshield Worg",
+      "level": "53–54",
+      "minLevel": 53,
+      "maxLevel": 54,
+      "family": "Wolf",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=9416",
+      "id": 9416,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Bloodaxe Worg",
+      "level": "56–57",
+      "minLevel": 56,
+      "maxLevel": 57,
+      "family": "Wolf",
+      "speed": "1.8s",
+      "speedNum": 1.8,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=9696",
+      "id": 9696,
+      "attackSpeed": 1.8,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Ghost Saber",
+      "level": "1",
+      "minLevel": 1,
+      "maxLevel": 1,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Alliance",
+      "zone": "Redridge Mountains",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 76.3, 43",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3619",
+      "id": 3619,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Snow Leopard Prowler",
+      "level": "6",
+      "minLevel": 6,
+      "maxLevel": 6,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Alliance",
+      "zone": "Dun Morogh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 27.3, 64.1",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=269075",
+      "id": 269075,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Echeyakee",
+      "level": "16",
+      "minLevel": 16,
+      "maxLevel": 16,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "The Barrens",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 56.1, 18.3",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3475",
+      "id": 3475,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Panther",
+      "level": "32–43",
+      "minLevel": 32,
+      "maxLevel": 43,
+      "family": "Cat",
+      "speed": "1.3s",
+      "speedNum": 1.3,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack V — Spawns near 29.9, 10",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=736",
+      "id": 736,
+      "attackSpeed": 1.3,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Stranglethorn Tiger",
+      "level": "32–33",
+      "minLevel": 32,
+      "maxLevel": 33,
+      "family": "Cat",
+      "speed": "1.3s",
+      "speedNum": 1.3,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack V — Spawns near 45.5, 10.7",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=682",
+      "id": 682,
+      "attackSpeed": 1.3,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Bloodscalp Tiger",
+      "level": "34–35",
+      "minLevel": 34,
+      "maxLevel": 35,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 22.1, 8.9",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=698",
+      "id": 698,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Shadowmaw Panther",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Cat",
+      "speed": "1.5s",
+      "speedNum": 1.5,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack III — Spawns near 38.3, 43.1",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=684",
+      "id": 684,
+      "attackSpeed": 1.5,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Stranglethorn Tigress",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Cat",
+      "speed": "1.3s",
+      "speedNum": 1.3,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack V — Spawns near 42, 30",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=772",
+      "id": 772,
+      "attackSpeed": 1.3,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Skullsplitter Panther",
+      "level": "41–42",
+      "minLevel": 41,
+      "maxLevel": 42,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Stranglethorn Vale",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 46.8, 40.3",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=756",
+      "id": 756,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Shy-Rotam",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Cat",
+      "speed": "1.5s",
+      "speedNum": 1.54,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10737",
+      "id": 10737,
+      "attackSpeed": 1.54,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Sian-Rotam",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10741",
+      "id": 10741,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Zulian Cub",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11360",
+      "id": 11360,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Zulian Panther",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11365",
+      "id": 11365,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Zulian Tiger",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11361",
+      "id": 11361,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Zulian Stalker",
+      "level": "61",
+      "minLevel": 61,
+      "maxLevel": 61,
+      "family": "Cat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=15067",
+      "id": 15067,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Ridgeshade Creeper",
+      "level": "5–6",
+      "minLevel": 5,
+      "maxLevel": 6,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "Durotar",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 53, 60.2",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=266850",
+      "id": 266850,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Ridgeshade Lurker",
+      "level": "5–6",
+      "minLevel": 5,
+      "maxLevel": 6,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "Durotar",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 52.6, 60.2",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=266849",
+      "id": 266849,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Befouled Webwood",
+      "level": "10–11",
+      "minLevel": 10,
+      "maxLevel": 11,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Alliance",
+      "zone": "Teldrassil",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 48.7, 49.7",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=272096",
+      "id": 272096,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Deepmoss Hatchling",
+      "level": "14",
+      "minLevel": 14,
+      "maxLevel": 14,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "Stonetalon Mountains",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 53.7, 75.6",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4263",
+      "id": 4263,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Deepmoss Matriarch",
+      "level": "22",
+      "minLevel": 22,
+      "maxLevel": 22,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "Stonetalon Mountains",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 53.7, 75.6",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4264",
+      "id": 4264,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Darkfang Spider",
+      "level": "35–36",
+      "minLevel": 35,
+      "maxLevel": 36,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 55.7, 30.2",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4413",
+      "id": 4413,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Darkfang Lurker",
+      "level": "36–37",
+      "minLevel": 36,
+      "maxLevel": 37,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 55.9, 24",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4411",
+      "id": 4411,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Darkmist Lurker",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Spider",
+      "speed": "1.6s",
+      "speedNum": 1.64,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4377",
+      "id": 4377,
+      "attackSpeed": 1.64,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Carrion Lurker",
+      "level": "52–53",
+      "minLevel": 52,
+      "maxLevel": 53,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1821",
+      "id": 1821,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Plague Lurker",
+      "level": "54–55",
+      "minLevel": 54,
+      "maxLevel": 55,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1824",
+      "id": 1824,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Spire Spiderling",
+      "level": "55–56",
+      "minLevel": 55,
+      "maxLevel": 56,
+      "family": "Spider",
+      "speed": "1.5s",
+      "speedNum": 1.5,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack III",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10375",
+      "id": 10375,
+      "attackSpeed": 1.5,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Razzashi Venombrood",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Spider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=14532",
+      "id": 14532,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Razzashi Broodwidow",
+      "level": "61",
+      "minLevel": 61,
+      "maxLevel": 61,
+      "family": "Spider",
+      "speed": "2.7s",
+      "speedNum": 2.7,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite — Slower Attack III",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11370",
+      "id": 11370,
+      "attackSpeed": 2.7,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Scrawny Ursera",
+      "level": "3–4",
+      "minLevel": 3,
+      "maxLevel": 4,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 40, 27.4",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=250926",
+      "id": 250926,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Ursera Scavenger",
+      "level": "4",
+      "minLevel": 4,
+      "maxLevel": 4,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 38.3, 27.3",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=250937",
+      "id": 250937,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Urs'anah",
+      "level": "5",
+      "minLevel": 5,
+      "maxLevel": 5,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 35.7, 25",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=251115",
+      "id": 251115,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Highlands Ursera",
+      "level": "7–8",
+      "minLevel": 7,
+      "maxLevel": 8,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 49.7, 57.7",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=250928",
+      "id": 250928,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Shadowgale Ursera",
+      "level": "10–11",
+      "minLevel": 10,
+      "maxLevel": 11,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 55.8, 38.7",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=250927",
+      "id": 250927,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Diseased Grizzly",
+      "level": "55–56",
+      "minLevel": 55,
+      "maxLevel": 56,
+      "family": "Bear",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1816",
+      "id": 1816,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Agam'ar",
+      "level": "24–25",
+      "minLevel": 24,
+      "maxLevel": 25,
+      "family": "Boar",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4511",
+      "id": 4511,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Raging Agam'ar",
+      "level": "25–26",
+      "minLevel": 25,
+      "maxLevel": 26,
+      "family": "Boar",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4514",
+      "id": 4514,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Rotting Agam'ar",
+      "level": "28",
+      "minLevel": 28,
+      "maxLevel": 28,
+      "family": "Boar",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4512",
+      "id": 4512,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Ashmane Boar",
+      "level": "48–49",
+      "minLevel": 48,
+      "maxLevel": 49,
+      "family": "Boar",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5992",
+      "id": 5992,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deviate Crocolisk",
+      "level": "18–19",
+      "minLevel": 18,
+      "maxLevel": 19,
+      "family": "Crocolisk",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5053",
+      "id": 5053,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Drywallow Vicejaw",
+      "level": "36–37",
+      "minLevel": 36,
+      "maxLevel": 37,
+      "family": "Crocolisk",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 34.8, 37.7",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4342",
+      "id": 4342,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Zulian Crocolisk",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Crocolisk",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=15043",
+      "id": 15043,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Low Plains Buzzard",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Carrion Bird",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Riverglades",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 68.5, 61.4",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=263343",
+      "id": 263343,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Plaguewing Vulture",
+      "level": "57",
+      "minLevel": 57,
+      "maxLevel": 57,
+      "family": "Carrion Bird",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Western Plaguelands",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 31.8, 67.5",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1811",
+      "id": 1811,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Kriecher",
+      "level": "11–12",
+      "minLevel": 11,
+      "maxLevel": 12,
+      "family": "Crab",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Alliance",
+      "zone": "Westfall",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 26, 63.9",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=6250",
+      "id": 6250,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Skittering Crustacean",
+      "level": "22–23",
+      "minLevel": 22,
+      "maxLevel": 23,
+      "family": "Crab",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4821",
+      "id": 4821,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Snapping Crustacean",
+      "level": "23–24",
+      "minLevel": 23,
+      "maxLevel": 24,
+      "family": "Crab",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4822",
+      "id": 4822,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Barbed Crustacean",
+      "level": "25–26",
+      "minLevel": 25,
+      "maxLevel": 26,
+      "family": "Crab",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4823",
+      "id": 4823,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Enraged Silverback Gorilla",
+      "level": "41–42",
+      "minLevel": 41,
+      "maxLevel": 42,
+      "family": "Gorilla",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1511",
+      "id": 1511,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Konda",
+      "level": "43",
+      "minLevel": 43,
+      "maxLevel": 43,
+      "family": "Gorilla",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=1516",
+      "id": 1516,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Un'Goro Gorilla",
+      "level": "50–51",
+      "minLevel": 50,
+      "maxLevel": 51,
+      "family": "Gorilla",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=6514",
+      "id": 6514,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Un'Goro Stomper",
+      "level": "51–52",
+      "minLevel": 51,
+      "maxLevel": 52,
+      "family": "Gorilla",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=6513",
+      "id": 6513,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Un'Goro Thunderer",
+      "level": "52–53",
+      "minLevel": 52,
+      "maxLevel": 53,
+      "family": "Gorilla",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=6516",
+      "id": 6516,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deviate Guardian",
+      "level": "18–19",
+      "minLevel": 18,
+      "maxLevel": 19,
+      "family": "Raptor",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3637",
+      "id": 3637,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deviate Ravager",
+      "level": "18–19",
+      "minLevel": 18,
+      "maxLevel": 19,
+      "family": "Raptor",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3636",
+      "id": 3636,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Ishamuhale",
+      "level": "19",
+      "minLevel": 19,
+      "maxLevel": 19,
+      "family": "Raptor",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Horde",
+      "zone": "The Barrens",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 59.8, 30.3",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3257",
+      "id": 3257,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Bloodfen Scytheclaw",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Raptor",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 44.9, 28.8",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4355",
+      "id": 4355,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Razzashi Raptor",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Raptor",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=14821",
+      "id": 14821,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Galestrider",
+      "level": "5–6",
+      "minLevel": 5,
+      "maxLevel": 6,
+      "family": "Tallstrider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Zephras Isle",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 41.4, 42.6",
+      "isNew": true,
+      "npcUrl": "https://www.wowhead.com/forever/npc=251661",
+      "id": 251661,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Sandstrider",
+      "level": "30–31",
+      "minLevel": 30,
+      "maxLevel": 31,
+      "family": "Tallstrider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Desolace",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 37.9, 30.4",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4724",
+      "id": 4724,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Crazed Sandstrider",
+      "level": "37–38",
+      "minLevel": 37,
+      "maxLevel": 38,
+      "family": "Tallstrider",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Desolace",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 31.2, 75.2",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4725",
+      "id": 4725,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Cleft Scorpid",
+      "level": "35–36",
+      "minLevel": 35,
+      "maxLevel": 36,
+      "family": "Scorpid",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=7078",
+      "id": 7078,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Venomlash Scorpid",
+      "level": "39–40",
+      "minLevel": 39,
+      "maxLevel": 40,
+      "family": "Scorpid",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=7022",
+      "id": 7022,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deadly Cleft Scorpid",
+      "level": "42–43",
+      "minLevel": 42,
+      "maxLevel": 43,
+      "family": "Scorpid",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=7405",
+      "id": 7405,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Scorpid Duneburrower",
+      "level": "46–47",
+      "minLevel": 46,
+      "maxLevel": 47,
+      "family": "Scorpid",
+      "speed": "1.5s",
+      "speedNum": 1.52,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=7803",
+      "id": 7803,
+      "attackSpeed": 1.52,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Scorpok Stinger",
+      "level": "50–51",
+      "minLevel": 50,
+      "maxLevel": 51,
+      "family": "Scorpid",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5988",
+      "id": 5988,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Kresh",
+      "level": "20",
+      "minLevel": 20,
+      "maxLevel": 20,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3653",
+      "id": 3653,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Aku'mai Fisher",
+      "level": "23–24",
+      "minLevel": 23,
+      "maxLevel": 24,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4824",
+      "id": 4824,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Ghamoo-ra",
+      "level": "25",
+      "minLevel": 25,
+      "maxLevel": 25,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4887",
+      "id": 4887,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Aku'mai Snapjaw",
+      "level": "26–27",
+      "minLevel": 26,
+      "maxLevel": 27,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4825",
+      "id": 4825,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Mudrock Tortoise",
+      "level": "36–37",
+      "minLevel": 36,
+      "maxLevel": 37,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 62.1, 32.9",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4396",
+      "id": 4396,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Mudrock Burrower",
+      "level": "39–40",
+      "minLevel": 39,
+      "maxLevel": 40,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 48.7, 40.4",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4398",
+      "id": 4398,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Mudrock Snapjaw",
+      "level": "41–42",
+      "minLevel": 41,
+      "maxLevel": 42,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4400",
+      "id": 4400,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Mudrock Borer",
+      "level": "42–43",
+      "minLevel": 42,
+      "maxLevel": 43,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Dustwallow Marsh",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 62.5, 53.1",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4399",
+      "id": 4399,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Stolid Snapjaw",
+      "level": "46–47",
+      "minLevel": 46,
+      "maxLevel": 47,
+      "family": "Turtle",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=13599",
+      "id": 13599,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Vile Bat",
+      "level": "22–23",
+      "minLevel": 22,
+      "maxLevel": 23,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3866",
+      "id": 3866,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Blood Seeker",
+      "level": "23–24",
+      "minLevel": 23,
+      "maxLevel": 24,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=3868",
+      "id": 3868,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Kraul Bat",
+      "level": "30–31",
+      "minLevel": 30,
+      "maxLevel": 31,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4538",
+      "id": 4538,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Blind Hunter",
+      "level": "32",
+      "minLevel": 32,
+      "maxLevel": 32,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Rare Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4425",
+      "id": 4425,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Greater Kraul Bat",
+      "level": "32",
+      "minLevel": 32,
+      "maxLevel": 32,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4539",
+      "id": 4539,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Shrike Bat",
+      "level": "38–39",
+      "minLevel": 38,
+      "maxLevel": 39,
+      "family": "Bat",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4861",
+      "id": 4861,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Bloodseeker Bat",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Bat",
+      "speed": "1.0s",
+      "speedNum": 1,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Faster Attack VII",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11368",
+      "id": 11368,
+      "attackSpeed": 1,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Steelsnap",
+      "level": "30",
+      "minLevel": 30,
+      "maxLevel": 30,
+      "family": "Hyena",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Thousand Needles",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 14.9, 33.1",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4548",
+      "id": 4548,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Scarlet Tracking Hound",
+      "level": "33–34",
+      "minLevel": 33,
+      "maxLevel": 34,
+      "family": "Hyena",
+      "speed": "1.5s",
+      "speedNum": 1.5,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite — Faster Attack III",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4304",
+      "id": 4304,
+      "attackSpeed": 1.5,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Maraudine Bonepaw",
+      "level": "37",
+      "minLevel": 37,
+      "maxLevel": 37,
+      "family": "Hyena",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Desolace",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 39.5, 61.3",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=4660",
+      "id": 4660,
+      "attackSpeed": 2,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Starving Snickerfang",
+      "level": "45–46",
+      "minLevel": 45,
+      "maxLevel": 46,
+      "family": "Hyena",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5984",
+      "id": 5984,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Scarlet Hound",
+      "level": "52–53",
+      "minLevel": 52,
+      "maxLevel": 53,
+      "family": "Hyena",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Synced from live ForeverDB beast index",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10979",
+      "id": 10979,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Stormpike Owl",
+      "level": "53–54",
+      "minLevel": 53,
+      "maxLevel": 54,
+      "family": "Bird of Prey",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Alterac Valley",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Spawns near 53.7, 7.3",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=14283",
+      "id": 14283,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deviate Dreadfang",
+      "level": "20–21",
+      "minLevel": 20,
+      "maxLevel": 21,
+      "family": "Wind Serpent",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5056",
+      "id": 5056,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Deviate Venomwing",
+      "level": "20–21",
+      "minLevel": 20,
+      "maxLevel": 21,
+      "family": "Wind Serpent",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5756",
+      "id": 5756,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Young Arikara",
+      "level": "20",
+      "minLevel": 20,
+      "maxLevel": 20,
+      "family": "Wind Serpent",
+      "speed": "1.5s",
+      "speedNum": 1.51,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Thousand Needles",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite — Faster Attack III — Spawns near 45.2, 49.5",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10581",
+      "id": 10581,
+      "attackSpeed": 1.51,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Arikara",
+      "level": "28",
+      "minLevel": 28,
+      "maxLevel": 28,
+      "family": "Wind Serpent",
+      "speed": "1.4s",
+      "speedNum": 1.44,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Thousand Needles",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite — Spawns near 38.2, 35.5",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=10882",
+      "id": 10882,
+      "attackSpeed": 1.44,
+      "isForeverVerified": true
+    },
+    {
+      "name": "Spawn of Hakkar",
+      "level": "51",
+      "minLevel": 51,
+      "maxLevel": 51,
+      "family": "Wind Serpent",
+      "speed": "1.2s",
+      "speedNum": 1.23,
+      "isFast": true,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=5708",
+      "id": 5708,
+      "attackSpeed": 1.23,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Son of Hakkar",
+      "level": "60",
+      "minLevel": 60,
+      "maxLevel": 60,
+      "family": "Wind Serpent",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11357",
+      "id": 11357,
+      "attackSpeed": 2,
+      "isForeverVerified": false
+    },
+    {
+      "name": "Soulflayer",
+      "level": "61",
+      "minLevel": 61,
+      "maxLevel": 61,
+      "family": "Wind Serpent",
+      "speed": "2.0s",
+      "speedNum": 2,
+      "isFast": false,
+      "faction": "Both",
+      "zone": "Instance / Dungeon",
+      "subzone": "",
+      "teaches": "",
+      "notes": "Elite",
+      "isNew": false,
+      "npcUrl": "https://www.wowhead.com/forever/npc=11359",
+      "id": 11359,
+      "attackSpeed": 2,
+      "isForeverVerified": false
     }
   ]
 };

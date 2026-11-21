@@ -422,7 +422,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Stormstrike Cooldown (8s)",
       "category": "Enhancement",
       "details": "Cooldown reduced from 20s to 8s; increases Nature damage by 20%",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo & Talent Tree"
     },
@@ -430,7 +430,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Improved Stormstrike Reset",
       "category": "Enhancement",
       "details": "100% mana regen while casting; 100% CD reset chance on dodge/parry",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -438,7 +438,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Rage of the Farseer",
       "category": "Enhancement",
       "details": "3m CD, +30% melee and +30% spellcast speed for 25s",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -446,7 +446,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Maelstrom Lightning Reduction",
       "category": "Enhancement",
       "details": "Melee hits reduce next Lightning Bolt cast time and mana by 20% (up to 5 stacks)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -454,7 +454,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Spirit Weapons",
       "category": "Tanking",
       "details": "+Parry chance; -30% threat without Rockbiter, +30% threat with Rockbiter",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -462,7 +462,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Rockbiter Weapon Threat",
       "category": "Tanking",
       "details": "Increased Attack Power and high bonus threat on melee attacks",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -470,7 +470,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Earth Shock Taunt Status",
       "category": "Tanking",
       "details": "Interrupts and causes high threat, but is NOT a taunt",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Live Combat Test"
     },
@@ -486,7 +486,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Call of the Ancestors",
       "category": "Totem Management",
       "details": "Drops up to 4 totems simultaneously in 1 GCD; supports saved totem sets",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -494,7 +494,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "60-Minute Weapon Imbues",
       "category": "Core QoL",
       "details": "Imbue duration extended from 5 minutes to 60 minutes",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Live In-Game Tooltip"
     },
@@ -502,7 +502,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Indoor Ghost Wolf",
       "category": "Core QoL",
       "details": "Castable indoors; talents reduce cast time by up to 2 seconds",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -510,7 +510,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Call of Thunder + Lightning Mastery",
       "category": "Elemental",
       "details": "+5% Lightning Bolt/Chain Lightning crit; capstone renames Elemental Mastery to Lightning Mastery",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -518,7 +518,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Lightning Overload",
       "category": "Elemental",
       "details": "9% chance for free duplicate Lightning Bolt / Chain Lightning at 50% dmg, 0 threat",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -526,7 +526,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Riptide + Chain Heal",
       "category": "Restoration",
       "details": "Instant HoT heal; increases next Chain Heal on target by 25%",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -534,7 +534,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Water Shield On-Crit Regen",
       "category": "Restoration",
       "details": "3 charges, 10m duration; critical hits received restore 2% max mana (reactive)",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -542,7 +542,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Dwarf Stoneform + Artisan's Precision",
       "category": "Dwarf Racials",
       "details": "Stoneform 10% phys reduction; Artisan's Precision +1% hit chance with spells and attacks",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     }

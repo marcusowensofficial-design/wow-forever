@@ -348,7 +348,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "In-Combat Freezing Trap",
       "category": "Core Mechanics",
       "details": "Can drop Freezing Trap while in combat; no Feign Death required",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo & Beta Build 1.15.8"
     },
@@ -356,7 +356,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "8-Yard Dead Zone",
       "category": "Core Mechanics",
       "details": "Dead zone retained between 5 and 8 yards",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -364,7 +364,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Strider Kick",
       "category": "Survival (Melee)",
       "details": "Instant melee attack, 100% weapon damage, 8s cooldown",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo & Talent Tree Datamining"
     },
@@ -372,7 +372,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Lacerating Strikes",
       "category": "Survival (Melee)",
       "details": "21-second bleed equal to 40% of Mongoose Bite damage",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -380,7 +380,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Melee Dual-Wield / Crit",
       "category": "Survival (Melee)",
       "details": "+30% melee crit damage, +50% off-hand weapon damage",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -388,7 +388,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Lone Wolf",
       "category": "Marksmanship",
       "details": "+20% all attack damage when no active pet is summoned",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo & Icy-Veins Talent Calculator"
     },
@@ -396,7 +396,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Sniper Shot",
       "category": "Marksmanship",
       "details": "4.0s cast, 15s cooldown high-impact burst shot",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -404,7 +404,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Summon Hawk",
       "category": "Beast Mastery",
       "details": "Summons hawk for 18s (max 2), shares cooldown with Arcane Shot",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     },
@@ -412,7 +412,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Plains Running Speed Ramp",
       "category": "Tauren Racials",
       "details": "2% speed per stack up to 60% with displacement check; mounted speed removed",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -420,7 +420,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Dual Active Trap Limit (Fire & Ice)",
       "category": "Core Mechanics",
       "details": "1 Fire Trap + 1 Ice Trap active simultaneously; Fire traps scale with AP",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -428,7 +428,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Auto Shot Stand-Still Rule",
       "category": "Core Mechanics",
       "details": "Requires standing still for 0.5s before shooting; continues while casting Aimed Shot",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -436,7 +436,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Tauren Herb Duplication",
       "category": "Tauren Racials",
       "details": "Cultivation 15m CD; picking wild herb nodes still requires Herbalism",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Beta Patch Build 1.60.1.70425"
     },
@@ -452,7 +452,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "feature": "Dedicated Reagent Bag",
       "category": "Inventory Systems",
       "details": "Extra 6th bag slot purely for reagents and tradeskill items",
-      "status": "Verified in Closed Beta",
+      "status": "Verified Live (1.60.1)",
       "statusType": "verified",
       "source": "Sodapoppin Demo & Blizzard QoL Notes"
     }

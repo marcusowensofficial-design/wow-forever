@@ -343,7 +343,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Pandemic (Critical DoTs)",
         category: "Affliction",
         details: "Enables Corruption, Banes, and Drains to crit; +100% crit damage bonus",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Tooltip"
       },
@@ -351,7 +351,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Drain Hope (DoT Amplifier)",
         category: "Affliction",
         details: "6s channeled filler damages every 1s and boosts active Shadow DoTs by 10%",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -359,7 +359,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Improved Drains Execute",
         category: "Affliction",
         details: "Up to +18% damage/healing; tripled to +54% below 20% HP; +10 yd range",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -367,7 +367,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Soul Harvest Mana Sustain",
         category: "Affliction",
         details: "Killing target grants 10s of full mana regen while casting and doubled regen",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -375,7 +375,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Demonic Pact (Dual-Pet Buff)",
         category: "Demonology",
         details: "Retains sacrifice buff while summoning and commanding a different active pet",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo & Demonology Tree"
       },
@@ -383,7 +383,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Demonic Sacrifice (11-pt Tier)",
         category: "Demonology",
         details: "Costs 0 Soul Shards; Succubus gives +15% Fire dmg, Felhunter heals 12% max HP",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -391,7 +391,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Soul Link & SL/SL Viability",
         category: "Demonology",
         details: "Moved to 21-pt tier; transfers ~30% damage to demon; Siphon Life + Soul Link enabled",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -399,7 +399,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Felhunter Spell Lock Silence",
         category: "Demonology",
         details: "30s CD; applies 3-second blanket silence; talents reduce CD by up to 6s",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -407,7 +407,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Bane of Havoc (15% Transfer)",
         category: "Destruction",
         details: "5 min duration; transfers 50% of damage dealt to other targets onto Havoc target",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -415,7 +415,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Shadow and Flame Weaving",
         category: "Destruction",
         details: "Conflagrate gives +20% Shadow dmg; Shadowburn gives +20% Fire dmg and refunds Shard",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -423,7 +423,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Incinerate",
         category: "Destruction",
         details: "2.5s cast Fire nuke dealing additional damage if Immolate is active on target",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -431,7 +431,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Molten Skin (10% DR)",
         category: "Destruction",
         details: "Reduces all damage taken by up to 10%",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -439,7 +439,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Ruin (100% Crit Bonus)",
         category: "Destruction",
         details: "Increases critical-strike damage bonus of Destruction spells by 100%",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -447,7 +447,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Aftermath",
         category: "Destruction",
         details: "100% chance to daze target and +25% critical-strike chance",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -455,7 +455,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Modernized Firestone & Spellstone",
         category: "Core Mechanics",
         details: "Firestone grants +1% crit and +14 Fire dmg; Spellstone grants +1% haste and Shadow dmg",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -463,7 +463,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Gnome Escape Artist (3s Immunity)",
         category: "Gnome Racials",
         details: "2m CD; removes snares and grants 3 seconds of movement impairment immunity",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
@@ -471,7 +471,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         feature: "Gnome Spell Burst Racial",
         category: "Gnome Racials",
         details: "2m CD; next 3 damaging abilities cost 50% less mana and deal 10% more damage",
-        status: "Verified in Closed Beta",
+        status: "Verified Live (1.60.1)",
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       },
