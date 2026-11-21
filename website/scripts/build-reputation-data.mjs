@@ -60,8 +60,8 @@ async function build() {
         { rank: 'Revered', min: 21000, max: 42000 },
         { rank: 'Exalted', min: 42000, max: 43000 }
       ],
-      build: '1.60.1.70707',
-      updatedAt: '2026-11-02'
+      build: data.build || '1.60.1.70959',
+      updatedAt: '2026-11-20'
     },
     factions: enrichedFactions
   };
@@ -71,8 +71,8 @@ async function build() {
 
   const jsContent = `/**
  * World of Warcraft: Forever - Factions & Reputation Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Datamined from WoW Forever Client (Build ${dataset.meta.build})
+ * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
  */
 (function () {
   'use strict';

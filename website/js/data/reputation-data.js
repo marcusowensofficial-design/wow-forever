@@ -1,7 +1,7 @@
 /**
  * World of Warcraft: Forever - Factions & Reputation Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Datamined from WoW Forever Client (Build 1.60.1.70959)
+ * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
  */
 (function () {
   'use strict';
@@ -20,8 +20,8 @@
       "Revered",
       "Exalted"
     ],
-    "build": "1.60.1.70707",
-    "updatedAt": "2026-11-02"
+    "build": "1.60.1.70959",
+    "updatedAt": "2026-11-20"
   },
   "factions": [
     {
@@ -109,7 +109,7 @@
           "name": "Samuel Hawke",
           "zone": "Arathi Highlands",
           "x": 46,
-          "y": 45.2,
+          "y": 45.4,
           "side": "Alliance"
         }
       ],
@@ -124,7 +124,15 @@
       "side": "Alliance",
       "isNewInForever": true,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Bryanna Embreeze",
+          "zone": "The Barrens",
+          "x": 63.4,
+          "y": 58.7,
+          "side": "Horde"
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -221,7 +229,7 @@
           "name": "Rutherford Twing",
           "zone": "Arathi Highlands",
           "x": 73.4,
-          "y": 29.7,
+          "y": 29.9,
           "side": "Horde"
         }
       ],
@@ -248,7 +256,15 @@
       "side": "Neutral",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Gezzy Gunkgear",
+          "zone": "Stranglethorn Vale",
+          "x": 28.4,
+          "y": 74.8,
+          "side": "Horde"
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -272,7 +288,14 @@
       "side": "Neutral",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Rettrick",
+          "zone": "Tanaris",
+          "x": 51.7,
+          "y": 28.7
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -284,7 +307,14 @@
       "side": "Neutral",
       "isNewInForever": true,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Friz Frazzlespark",
+          "zone": "Riverglades",
+          "x": 77.1,
+          "y": 52.9
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -330,12 +360,6 @@
       "minLevel": 1,
       "quartermasters": [
         {
-          "name": "Argent Quartermaster Lightspark",
-          "zone": "Alterac Mountains",
-          "x": 78.9,
-          "y": 28.6
-        },
-        {
           "name": "Quartermaster Miranda Breechlock",
           "zone": "Eastern Plaguelands",
           "x": 71.8,
@@ -343,9 +367,15 @@
         },
         {
           "name": "Argent Quartermaster Hasana",
-          "zone": "Tirisfal Glades",
-          "x": 83.3,
-          "y": 68.1
+          "zone": "Western Plaguelands",
+          "x": 26.6,
+          "y": 55.2
+        },
+        {
+          "name": "Argent Quartermaster Lightspark",
+          "zone": "Western Plaguelands",
+          "x": 42.8,
+          "y": 83.7
         }
       ],
       "rewardsCount": 0,
@@ -363,8 +393,8 @@
         {
           "name": "Tamelyn Aldridge",
           "zone": "Redridge Mountains",
-          "x": 10.7,
-          "y": 71.3,
+          "x": 10.6,
+          "y": 71.4,
           "side": "Alliance"
         }
       ],
@@ -513,7 +543,7 @@
           "name": "Sutara Plainstalker",
           "zone": "Mulgore",
           "x": 34.5,
-          "y": 23,
+          "y": 22.9,
           "side": "Horde"
         }
       ],
@@ -600,7 +630,14 @@
       "side": "Alliance",
       "isNewInForever": true,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Archmage Alvareaux",
+          "zone": "Alterac Mountains",
+          "x": 14,
+          "y": 63.4
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -624,7 +661,14 @@
       "side": "Neutral",
       "isNewInForever": true,
       "minLevel": 1,
-      "quartermasters": [],
+      "quartermasters": [
+        {
+          "name": "Vayn Moongaze",
+          "zone": "Zephras Isle",
+          "x": 63.7,
+          "y": 36.1
+        }
+      ],
       "rewardsCount": 0,
       "rewards": []
     },
@@ -711,9 +755,9 @@
       "quartermasters": [
         {
           "name": "Meilosh",
-          "zone": "Moonglade",
-          "x": 32.7,
-          "y": 95.2
+          "zone": "Felwood",
+          "x": 65.7,
+          "y": 2.8
         }
       ],
       "rewardsCount": 0,

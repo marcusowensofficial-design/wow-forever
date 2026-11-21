@@ -8,13 +8,13 @@
       "heroDesc": "Every World of Warcraft: Forever talent and spell change, compared with Classic: 113 new talents, 300 changed talents and 261 changed spells across the nine classes. Pick a class to read its changes.",
       "races": [],
       "stats": {
-        "allChanges": 777,
-        "talentsChanged": 300,
-        "talentsNew": 124,
+        "allChanges": 800,
+        "talentsChanged": 315,
+        "talentsNew": 125,
         "talentsRemoved": 85,
-        "spellsChanged": 268,
-        "spellsTotal": 422,
-        "everything": 987
+        "spellsChanged": 275,
+        "spellsTotal": 429,
+        "everything": 1002
       }
     },
     "warrior": {
@@ -106,13 +106,13 @@
         }
       ],
       "stats": {
-        "allChanges": 77,
-        "talentsChanged": 37,
+        "allChanges": 78,
+        "talentsChanged": 38,
         "talentsNew": 10,
         "talentsRemoved": 10,
         "spellsChanged": 20,
         "spellsTotal": 33,
-        "everything": 95
+        "everything": 96
       }
     },
     "hunter": {
@@ -188,13 +188,13 @@
         }
       ],
       "stats": {
-        "allChanges": 76,
-        "talentsChanged": 28,
+        "allChanges": 81,
+        "talentsChanged": 31,
         "talentsNew": 14,
         "talentsRemoved": 10,
-        "spellsChanged": 24,
-        "spellsTotal": 49,
-        "everything": 109
+        "spellsChanged": 26,
+        "spellsTotal": 51,
+        "everything": 114
       }
     },
     "mage": {
@@ -344,13 +344,13 @@
         }
       ],
       "stats": {
-        "allChanges": 79,
-        "talentsChanged": 34,
+        "allChanges": 82,
+        "talentsChanged": 35,
         "talentsNew": 9,
         "talentsRemoved": 7,
-        "spellsChanged": 29,
-        "spellsTotal": 47,
-        "everything": 107
+        "spellsChanged": 31,
+        "spellsTotal": 49,
+        "everything": 110
       }
     },
     "priest": {
@@ -410,13 +410,13 @@
         }
       ],
       "stats": {
-        "allChanges": 95,
-        "talentsChanged": 33,
+        "allChanges": 97,
+        "talentsChanged": 35,
         "talentsNew": 15,
         "talentsRemoved": 9,
         "spellsChanged": 38,
         "spellsTotal": 48,
-        "everything": 110
+        "everything": 112
       }
     },
     "warlock": {
@@ -468,13 +468,13 @@
         }
       ],
       "stats": {
-        "allChanges": 93,
-        "talentsChanged": 33,
+        "allChanges": 96,
+        "talentsChanged": 36,
         "talentsNew": 17,
         "talentsRemoved": 16,
         "spellsChanged": 27,
         "spellsTotal": 45,
-        "everything": 113
+        "everything": 116
       }
     },
     "paladin": {
@@ -510,13 +510,13 @@
         }
       ],
       "stats": {
-        "allChanges": 104,
-        "talentsChanged": 31,
+        "allChanges": 106,
+        "talentsChanged": 32,
         "talentsNew": 24,
         "talentsRemoved": 13,
-        "spellsChanged": 36,
-        "spellsTotal": 49,
-        "everything": 117
+        "spellsChanged": 37,
+        "spellsTotal": 50,
+        "everything": 119
       }
     },
     "druid": {
@@ -560,13 +560,13 @@
         }
       ],
       "stats": {
-        "allChanges": 97,
-        "talentsChanged": 35,
+        "allChanges": 100,
+        "talentsChanged": 37,
         "talentsNew": 17,
         "talentsRemoved": 10,
-        "spellsChanged": 35,
-        "spellsTotal": 51,
-        "everything": 115
+        "spellsChanged": 36,
+        "spellsTotal": 52,
+        "everything": 118
       }
     },
     "shaman": {
@@ -618,13 +618,13 @@
         }
       ],
       "stats": {
-        "allChanges": 86,
-        "talentsChanged": 32,
-        "talentsNew": 12,
+        "allChanges": 90,
+        "talentsChanged": 34,
+        "talentsNew": 13,
         "talentsRemoved": 8,
-        "spellsChanged": 34,
-        "spellsTotal": 49,
-        "everything": 107
+        "spellsChanged": 35,
+        "spellsTotal": 50,
+        "everything": 111
       }
     }
   },
@@ -53741,6 +53741,239 @@
       "summary": "Replaces Lava Burst as Tier 5 1-point talent. Increases critical strike chance of Lightning Bolt and Chain Lightning by 5%.",
       "changes": [
         "Lava Burst removed and replaced with Call of Thunder."
+      ]
+    },
+    {
+      "id": "calc-shaman-enhancement-stormstrike-nov10",
+      "name": "Stormstrike",
+      "class": "shaman",
+      "kind": "talent",
+      "tree_name": "Enhancement",
+      "icon": "ability_shaman_stormstrike",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-10",
+      "summary": "Nov 10 hotfix: Lowered to 100% weapon damage with an 8 sec cooldown; increases damage of next Lightning Bolt, Chain Lightning, or Earth Shock by 20% for 12 sec.",
+      "changes": [
+        "Weapon damage reduced to 100%, cooldown adjusted to 8 sec (Nov 10 hotfix)."
+      ]
+    },
+    {
+      "id": "calc-shaman-enhancement-maelstrom-weapon-nov10",
+      "name": "Maelstrom Weapon",
+      "class": "shaman",
+      "kind": "talent",
+      "tree_name": "Enhancement",
+      "icon": "spell_shaman_maelstromweapon",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 10/16 hotfixes: Grants a flat 20% cast time and mana cost reduction per stack with rank-based 6–10 procs per minute; fixed bug where Maelstrom Weapon could benefit two casts.",
+      "changes": [
+        "Flat 20% cast/mana reduction per stack (6–10 PPM by rank, Nov 10).",
+        "No longer incorrectly benefits two casts (Nov 16)."
+      ]
+    },
+    {
+      "id": "spellbook-shaman-windfury-totem-nov16",
+      "name": "Windfury Totem",
+      "class": "shaman",
+      "kind": "spell",
+      "icon": "spell_nature_windfury",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-17",
+      "summary": "Nov 10–17 hotfixes: Weapon imbues and weapon totems can now be active together; Windfury Totem triggers from melee abilities (except off-hand strikes), now applies armor, has an internal cooldown, no longer generates Rage, and no longer causes Flurry to drop stacks.",
+      "changes": [
+        "Active alongside weapon imbues (Nov 10).",
+        "Activates from melee abilities except off-hand strikes (Nov 13).",
+        "Armor applies, internal cooldown added, extra attacks generate no Rage (Nov 16).",
+        "Fixed Flurry losing stacks on Windfury Totem extra attacks (Nov 17)."
+      ]
+    },
+    {
+      "id": "calc-priest-shadow-vampiric-embrace-nov16",
+      "name": "Vampiric Embrace",
+      "class": "priest",
+      "kind": "talent",
+      "tree_name": "Shadow",
+      "icon": "spell_shadow_unsummonbuilding",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 16 hotfix: Party healing reduced to 10% of Shadow damage dealt (was 20%), while the casting Priest receives 100% increased healing from the effect so solo healing is unchanged.",
+      "changes": [
+        "Party healing lowered from 20% to 10% of Shadow damage; +100% self-healing so solo play is unchanged (Nov 16)."
+      ]
+    },
+    {
+      "id": "calc-priest-shadow-dark-inspiration-nov16",
+      "name": "Dark Inspiration",
+      "class": "priest",
+      "kind": "talent",
+      "tree_name": "Shadow",
+      "icon": "spell_shadow_shadowform",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 16 hotfix: Dark Inspiration no longer stacks across multiple Shadow Priests in the same party.",
+      "changes": [
+        "No longer stacks from multiple Shadow Priests in a party (Nov 16)."
+      ]
+    },
+    {
+      "id": "calc-warlock-affliction-soul-siphon-nov10",
+      "name": "Soul Siphon",
+      "class": "warlock",
+      "kind": "talent",
+      "tree_name": "Affliction",
+      "icon": "spell_shadow_lifedrain02",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-10",
+      "summary": "Nov 10 hotfix: Boosts Drain Life, Drain Soul, and Wrack by 4/8/12% per Corruption, Siphon Life, or Bane of Agony on the target (up to 36%).",
+      "changes": [
+        "Scales Drain Life, Drain Soul, and Wrack by 4/8/12% per Affliction DoT up to 36% (Nov 10)."
+      ]
+    },
+    {
+      "id": "calc-warlock-affliction-wrack-nov10",
+      "name": "Wrack",
+      "class": "warlock",
+      "kind": "talent",
+      "tree_name": "Affliction",
+      "icon": "ability_deathknight_hemorrhagicfever",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-10",
+      "summary": "Nov 10 hotfix: Direct damage lowered 30%, but channeling Wrack now accelerates Corruption, Siphon Life, and Bane of Agony DoT tick rates.",
+      "changes": [
+        "Direct damage reduced 30%; accelerates Corruption, Siphon Life, and Bane of Agony ticks while channeled (Nov 10)."
+      ]
+    },
+    {
+      "id": "calc-warlock-demonology-demonic-aegis-nov20",
+      "name": "Demonic Aegis",
+      "class": "warlock",
+      "kind": "talent",
+      "tree_name": "Demonology",
+      "icon": "spell_shadow_ragingscream",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-20",
+      "summary": "Nov 20 hotfix: Fixed talent snapshotting exploit with Demon Armor / Demon Skin; Demonic Aegis and Demon Skin are now removed when talents are unlearned.",
+      "changes": [
+        "Fixed Demonic Aegis snapshotting into Demon Armor/Skin; removed on talent unlearn (Nov 20)."
+      ]
+    },
+    {
+      "id": "calc-druid-restoration-wild-growth-nov13",
+      "name": "Wild Growth",
+      "class": "druid",
+      "kind": "talent",
+      "tree_name": "Restoration",
+      "icon": "ability_druid_flourish",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 10–16 hotfixes: Nature's Swiftness makes Wild Growth instant; cannot be cast while moving; spell healing coefficient raised to 6.6% (was 3.3%); all ranks now share cooldown.",
+      "changes": [
+        "Works with Nature's Swiftness (Nov 10).",
+        "Cannot be cast while moving; spell healing coefficient doubled to 6.6% (Nov 13).",
+        "All ranks properly go on cooldown (Nov 16)."
+      ]
+    },
+    {
+      "id": "calc-druid-balance-genesis-nov16",
+      "name": "Genesis",
+      "class": "druid",
+      "kind": "talent",
+      "tree_name": "Balance",
+      "icon": "spell_arcane_arcane03",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 16 hotfix: Genesis now correctly increases Pounce's bleed damage.",
+      "changes": [
+        "Applies bonus damage to Pounce bleed (Nov 16)."
+      ]
+    },
+    {
+      "id": "spellbook-paladin-judgement-nov11",
+      "name": "Judgement",
+      "class": "paladin",
+      "kind": "spell",
+      "icon": "spell_holy_righteousfury",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-13",
+      "summary": "Nov 11/13 hotfixes: Judgement is now a Ranged Attack using Ranged hit chance and no longer triggers melee procs; Judgement of Command counts as a melee attack (other Judgements remain ranged).",
+      "changes": [
+        "Judgement classified as Ranged Attack using Ranged hit and no longer triggering melee procs (Nov 11).",
+        "Judgement of Command counts as a melee attack (Nov 13)."
+      ]
+    },
+    {
+      "id": "calc-paladin-retribution-2h-spec-nov19",
+      "name": "Two-Handed Weapon Specialization",
+      "class": "paladin",
+      "kind": "talent",
+      "tree_name": "Retribution",
+      "icon": "inv_hammer_04",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-19",
+      "summary": "Nov 19 hotfix: Now correctly increases all Holy Damage dealt while a two-handed weapon is equipped.",
+      "changes": [
+        "Fixed to increase all Holy Damage while a two-handed weapon is equipped (Nov 19)."
+      ]
+    },
+    {
+      "id": "calc-rogue-combat-blade-flurry-nov20",
+      "name": "Blade Flurry",
+      "class": "rogue",
+      "kind": "talent",
+      "tree_name": "Combat",
+      "icon": "ability_warrior_punishingblow",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-20",
+      "summary": "Nov 20 hotfix: Blade Flurry now correctly causes Shank's damage to hit an additional nearby target. Nov 16: Shank no longer removes combo points from other targets.",
+      "changes": [
+        "Blade Flurry now cleaves Shank damage to an additional target (Nov 20).",
+        "Shank no longer removes combo points from other targets (Nov 16)."
+      ]
+    },
+    {
+      "id": "spellbook-hunter-volley-nov11",
+      "name": "Volley",
+      "class": "hunter",
+      "kind": "spell",
+      "icon": "ability_marksmanship",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-11",
+      "summary": "Nov 11 hotfix: Volley no longer activates procs and stops channeling when moving. Nov 10: Pet health corrected to 115% (was 150%), Arcane Shot & Summon Hawk cost 11% base mana, Hawk melee damage +~80%.",
+      "changes": [
+        "No longer activates procs and stops channeling on movement (Nov 11).",
+        "Hunter pet health normalized to 115%, Summon Hawk melee +~80% (Nov 10)."
+      ]
+    },
+    {
+      "id": "calc-warrior-fury-flurry-cleave-nov16",
+      "name": "Flurry & Unbridled Wrath",
+      "class": "warrior",
+      "kind": "talent",
+      "tree_name": "Fury",
+      "icon": "ability_ghoulfrenzy",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-16",
+      "summary": "Nov 16 hotfix: Cleave and Heroic Strike now correctly trigger Unbridled Wrath and Reckless Swings, and no longer consume Flurry stacks. Nov 10: Sweeping Strikes keeps charges if no second target is hit. Nov 13: Berserker Rage removes Sap.",
+      "changes": [
+        "Cleave and Heroic Strike trigger Unbridled Wrath/Reckless Swings without consuming Flurry (Nov 16).",
+        "Sweeping Strikes retains charges if no second target is hit (Nov 10).",
+        "Berserker Rage removes Sap (Nov 13)."
       ]
     }
   ]

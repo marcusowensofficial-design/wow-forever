@@ -58,9 +58,9 @@ async function build() {
   const dataset = {
     meta: {
       totalEvents: enrichedEvents.length,
-      build: data.build || '1.60.1.70707',
-      extracted: data.extracted || '2026-10-31',
-      updatedAt: '2026-11-02'
+      build: data.build || '1.60.1.70959',
+      extracted: data.extracted || '2026-11-20',
+      updatedAt: '2026-11-20'
     },
     events: enrichedEvents
   };
@@ -70,8 +70,8 @@ async function build() {
 
   const jsContent = `/**
  * World of Warcraft: Forever - World Events & Holiday Schedules Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Datamined from WoW Forever Client (Build ${dataset.meta.build})
+ * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
  */
 (function () {
   'use strict';

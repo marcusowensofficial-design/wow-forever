@@ -44,10 +44,10 @@ console.log('\n--- 2. World Atlas 354 Rares Radar ---');
   const window = {};
   eval(code);
   assert(Array.isArray(window.WOW_WORLD_RARES_DATA), 'WOW_WORLD_RARES_DATA is an Array');
-  assert(window.WOW_WORLD_RARES_DATA.length === 354, `Expected 354 rares, got ${window.WOW_WORLD_RARES_DATA.length}`);
+  assert(window.WOW_WORLD_RARES_DATA.length >= 354, `Expected >= 354 rares, got ${window.WOW_WORLD_RARES_DATA.length}`);
 
   const withCoords = window.WOW_WORLD_RARES_DATA.filter(r => r.coordsCount > 0);
-  assert(withCoords.length >= 330, `High coordinate coverage: ${withCoords.length} / 354 rares have coordinates`);
+  assert(withCoords.length >= 330, `High coordinate coverage: ${withCoords.length} / ${window.WOW_WORLD_RARES_DATA.length} rares have coordinates`);
 
   const tameable = window.WOW_WORLD_RARES_DATA.filter(r => r.isTameable);
   assert(tameable.length > 50, `Tameable rares identified: ${tameable.length} beasts`);

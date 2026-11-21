@@ -1,7 +1,7 @@
 /**
  * World of Warcraft: Forever - World Events & Holiday Schedules Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
- * Ingested from ForeverDB open data under GPL-3.0 attribution
+ * Datamined from WoW Forever Client (Build 1.60.1.70959)
+ * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
  */
 (function () {
   'use strict';
@@ -9,9 +9,9 @@
   window.WOW_EVENTS_DATA = {
   "meta": {
     "totalEvents": 15,
-    "build": "1.60.1.70707",
-    "extracted": "2026-10-31",
-    "updatedAt": "2026-11-02"
+    "build": "1.60.1.70959",
+    "extracted": "2026-11-20",
+    "updatedAt": "2026-11-20"
   },
   "events": [
     {
@@ -72,22 +72,22 @@
       "vendorsCount": 0,
       "posts": [
         {
+          "id": "forums-us-30732723",
+          "date": "2026-11-03",
+          "title": "WoW Forever Beta Development Notes – Updated November 2",
+          "quote": "In the Darkspear Islands battleground, dropping the flag no longer places the “Recently Dropped Flag” debuff on the player who dropped it."
+        },
+        {
+          "id": "forums-eu-6463566",
+          "date": "2026-10-29",
+          "title": "World of Warcraft: Forever Now Live!",
+          "quote": "Battle for the Darkspear Islands"
+        },
+        {
           "id": "forums-us-30675695",
           "date": "2026-10-29",
           "title": "World of Warcraft: Forever Goes Live Globally November 4!",
           "quote": "Battle for the Darkspear Islands"
-        },
-        {
-          "id": "forums-us-30673599",
-          "date": "2026-10-29",
-          "title": "Return to Azeroth in World of Warcraft: Forever",
-          "quote": "Battle for the Darkspear Islands"
-        },
-        {
-          "id": "forums-us-30407581",
-          "date": "2026-10-09",
-          "title": "Battlegrounds, Builds, and Beyond in This Week's WoW Weekly",
-          "quote": "Battle for the Darkspear Islands in World of Warcraft: Forever"
         }
       ]
     },
@@ -928,7 +928,7 @@
       "challenge": null,
       "questsCount": 8,
       "itemsCount": 81,
-      "vendorsCount": 24,
+      "vendorsCount": 6,
       "posts": []
     },
     {
@@ -1237,7 +1237,14 @@
       "questsCount": 1,
       "itemsCount": 4,
       "vendorsCount": 0,
-      "posts": []
+      "posts": [
+        {
+          "id": "forums-us-30899768",
+          "date": "2026-11-14",
+          "title": "WoW: Forever Hotfixes - November 13, 2026",
+          "quote": "Stranglethorn Fishing Extravaganza"
+        }
+      ]
     },
     {
       "slug": "darkmoon-faire",
@@ -1246,7 +1253,7 @@
       "kind": "faire",
       "icon": 133301,
       "isNewInForever": false,
-      "minLevel": 6,
+      "minLevel": 1,
       "schedules": [
         {
           "holiday": 263,
@@ -1535,9 +1542,9 @@
       "battleground": null,
       "factions": [],
       "challenge": null,
-      "questsCount": 2,
-      "itemsCount": 17,
-      "vendorsCount": 3,
+      "questsCount": 6,
+      "itemsCount": 22,
+      "vendorsCount": 4,
       "posts": []
     }
   ]

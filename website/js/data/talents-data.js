@@ -3356,7 +3356,7 @@ if (typeof window !== 'undefined') {
         "spellId": 13877,
         "req": null,
         "descriptions": [
-          "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec."
+          "Increases your melee attack speed by 20% and your melee attacks (including Shank per Nov 20 hotfix) strike an additional nearby opponent. Lasts 15 sec."
         ]
       },
       {
@@ -4643,7 +4643,7 @@ if (typeof window !== 'undefined') {
         "spellId": 15286,
         "req": null,
         "descriptions": [
-          "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec."
+          "Afflicts your target with Shadow energy that causes all party members to be healed for 10% of any Shadow spell damage you deal for 30 sec. The casting Priest receives 100% increased healing from this effect, leaving solo healing unchanged. (Nov 16 hotfix)"
         ]
       },
       {
@@ -7049,8 +7049,8 @@ if (typeof window !== 'undefined') {
         "spellId": 1235316,
         "req": null,
         "descriptions": [
-          "Increases the effectiveness of your Demon Skin and Demon Armor spells by 15%.",
-          "Increases the effectiveness of your Demon Skin and Demon Armor spells by 30%."
+          "Increases the effectiveness of your Demon Skin and Demon Armor spells by 15%. Removed along with Demon Skin when talents are unlearned. (Nov 20 hotfix)",
+          "Increases the effectiveness of your Demon Skin and Demon Armor spells by 30%. Removed along with Demon Skin when talents are unlearned. (Nov 20 hotfix)"
         ]
       },
       {
@@ -8535,7 +8535,7 @@ if (typeof window !== 'undefined') {
         "maxRank": 1,
         "spellId": 408120,
         "descriptions": [
-          "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+          "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration. Cannot be cast while moving; spell healing coefficient 6.6% and all ranks share cooldown. (Nov 13/16 hotfixes)"
         ],
         "req": 467
       }

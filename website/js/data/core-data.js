@@ -131,23 +131,33 @@ const WOW_FOREVER_DATA = {
   },
   "quickLinks": [
     {
-      "name": "ForeverChanges.pro: Database & Changelog",
+      "name": "ForeverChanges.pro: Live Changelog & Diffs",
       "url": "https://foreverchanges.pro/",
       "icon": "🔄"
     },
     {
-      "name": "WoW Forever Tools: Roster & Analyzer",
-      "url": "https://wowforevertools.com/",
-      "icon": "🛠️"
+      "name": "ForeverDB.net: Live Item, Quest & BiS DB",
+      "url": "https://foreverdb.net/",
+      "icon": "📦"
     },
     {
-      "name": "Zockify Forever: Leveling & News",
-      "url": "https://www.zockify.com/forever/",
-      "icon": "⚡"
+      "name": "The Forever Era: Talents, BiS & Atlas",
+      "url": "https://theforeverera.com/",
+      "icon": "🗺️"
     },
     {
-      "name": "Wowhead: Everything We Know",
-      "url": "https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827",
+      "name": "MythicSim: WoW Forever DPS Simulator",
+      "url": "https://mythicsim.com/wow-forever/",
+      "icon": "📊"
+    },
+    {
+      "name": "Playfulls: Guides, Professions & Live AH",
+      "url": "https://playfulls.com/",
+      "icon": "💰"
+    },
+    {
+      "name": "Wowhead: WoW Forever Portal & DB",
+      "url": "https://www.wowhead.com/forever",
       "icon": "🌐"
     },
     {
@@ -156,9 +166,14 @@ const WOW_FOREVER_DATA = {
       "icon": "🍺"
     },
     {
-      "name": "Mobalytics: Class Tier Lists & Meta",
-      "url": "https://mobalytics.gg/wow-forever",
-      "icon": "📊"
+      "name": "Method.gg: Class Guides & Raid Hub",
+      "url": "https://www.method.gg/wow-forever",
+      "icon": "⚔️"
+    },
+    {
+      "name": "Zockify Forever: Leveling & News",
+      "url": "https://www.zockify.com/forever/",
+      "icon": "⚡"
     },
     {
       "name": "Icy Veins Talent Calculator",
@@ -166,34 +181,19 @@ const WOW_FOREVER_DATA = {
       "icon": "⚡"
     },
     {
-      "name": "wow4ever.quest: Beta Database & Quests",
-      "url": "https://wow4ever.quest/",
-      "icon": "🗺️"
-    },
-    {
-      "name": "wowforever.co: Open-Source Tracker",
-      "url": "https://wowforever.co/",
-      "icon": "📡"
-    },
-    {
       "name": "Wowhead Legacy Calculator",
       "url": "https://www.wowhead.com/forever/legacy-calculator",
       "icon": "🏆"
     },
     {
-      "name": "Method.gg: Launch Hub & Guides",
-      "url": "https://www.method.gg/wow-forever",
-      "icon": "⚔️"
-    },
-    {
-      "name": "Classic WoW Forever: Guides & Talents",
+      "name": "Classic WoW Forever: Guides & Patch Notes",
       "url": "https://classicwowforever.com/",
       "icon": "🛡️"
     },
     {
-      "name": "Method.gg Racials Breakdown",
-      "url": "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever",
-      "icon": "🦅"
+      "name": "Mobalytics: Class Tier Lists & Meta",
+      "url": "https://mobalytics.gg/wow-forever",
+      "icon": "📈"
     }
   ],
   "newsFeed": [
