@@ -252,9 +252,9 @@ function renderBooksTracker() {
   const progressBar = document.getElementById('books-progress-fill') || document.getElementById('books-progress-bar');
   const searchInput = document.getElementById('atlas-book-search') || document.getElementById('books-search-input');
   const filterPills = document.querySelectorAll('#atlas-book-filters .atlas-pill');
-  if (!container || !window.WOW_ATLAS_DATA?.libraryBooks) return;
+  const data = window.WOW_LIBRARY_BOOKS_DATA || window.WOW_ATLAS_DATA?.libraryBooks;
+  if (!container || !data) return;
 
-  const data = window.WOW_ATLAS_DATA.libraryBooks;
   const books = data.books || [];
   let bookFilter = 'all';
 
@@ -329,6 +329,13 @@ function renderBooksTracker() {
 
     container.innerHTML = filtered.map(book => {
       const isCollected = collectedIds.has(book.id);
+      const questLinks = book.quests && typeof book.quests === 'object'
+        ? Object.entries(book.quests).map(([side, qid]) => {
+            const label = side === 'A' ? 'Alliance' : (side === 'H' ? 'Horde' : 'Quest');
+            const color = side === 'A' ? '#60a5fa' : (side === 'H' ? '#f87171' : '#34d399');
+            return `<a href="https://www.wowhead.com/forever/quest=${qid}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" style="font-size:0.7rem;font-weight:700;color:${color};background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:0.1rem 0.4rem;border-radius:4px;text-decoration:none;">📜 ${label} Quest #${qid} ↗</a>`;
+          }).join(' ')
+        : '';
       return `
         <div class="atlas-book-row ${isCollected ? 'collected' : ''}" onclick="toggleLibraryBook('${book.id}')">
           <input type="checkbox" class="book-checkbox" aria-label="Mark ${escapeHtml(book.name)} as collected" ${isCollected ? 'checked' : ''} onclick="event.stopPropagation(); toggleLibraryBook('${book.id}');" />
@@ -337,8 +344,9 @@ function renderBooksTracker() {
             <div class="book-title-row">
               <span class="book-name">${escapeHtml(book.name)}</span>
               <span class="book-zone">📍 ${escapeHtml(book.zone)}</span>
+              ${book.verifiedSeen ? '<span style="font-size:0.68rem;color:#34d399;background:rgba(16,185,129,0.14);border:1px solid rgba(16,185,129,0.3);padding:0.05rem 0.35rem;border-radius:4px;font-weight:700;">✓ Live Verified</span>' : ''}
             </div>
-            <div class="book-coords-text">Coords: <strong>${escapeHtml(book.coords)}</strong></div>
+            <div class="book-coords-text">Coords: <strong>${escapeHtml(book.coords)}</strong>${questLinks ? ` &nbsp;${questLinks}` : ''}</div>
             <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.15rem;">${escapeHtml(book.desc)}</div>
           </div>
           <button type="button" class="btn-copy-macro tomtom" style="margin-left: auto; align-self: center;" onclick="event.stopPropagation(); copyMacroToClipboard('/way ${escapeHtml(book.zone)} ${escapeHtml(book.coords)} ${escapeHtml(book.name)}', this)" title="Copy TomTom waypoint command">

@@ -991,11 +991,11 @@ Alliance and Horde start at opposite ends, then share the rest of the route. Wow
     },
     {
       id: "guide-hunter-pets",
-      title: "Hunter Pets & 520 Beasts Master Index (Attack Speeds & Ranks)",
+      title: "Hunter Pets & 622 Beasts Master Index (19 Families, Attack Speeds & Ranks)",
       category: "Classes & Pets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beasttaming.jpg",
-      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 520 overhauled spawns through Level 60.",
+      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 19 families (including Fox & Core Hound) and 622 spawns through Level 60.",
       content: `### Pet Mechanics Overhaul in WoW Forever
 Pet normalization and ability scaling in WoW Forever preserve the distinct advantages of famous rare beasts while balancing family modifiers across PvE and PvP.
 
@@ -1253,7 +1253,7 @@ A community-run 1v1 dueling tournament played on Level 30 Horde characters durin
 
 • **Filled Supply Crates:** Dropped by level 10–30 humanoids and chests. Fill with matching trade goods (e.g. 20x Copper Bar, 10x Medium Leather, 8x Minor Healing Potion) for **250–500 Favor + 1.5–3 Gold** per turn-in!
 • **Daily Dungeon Quests:** Completing Excavation Site: Wetlands, City of Dalaran, and Blackfathom Deeps daily bounties awards **4 Merchant's Favor** each.
-• **World Rare Kills:** Slaying any of the 34 datamined world rares grants **1 Merchant's Favor** (capped at 5 daily).
+• **World Rare Kills:** Slaying any of the 381 live world rares grants **1 Merchant's Favor** (capped at 5 daily).
 
 ---
 
@@ -1414,15 +1414,15 @@ With live realms at the **Level 60 cap**, full Honor Ranks 1 through 14 are acti
     },
     {
       id: "guide-rares-30",
-      title: "34 Datamined World Rares & Guaranteed Drops (Level 10–30)",
+      title: "World Rares & Guaranteed Drops Guide (381 Live Rares Across Azeroth)",
       category: "Exploration & Secrets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_head_dragon_bronze.jpg",
-      summary: "Spawn timers, coordinates, and exclusive item drops for all 34 overhauled rare mobs across Westfall, Barrens, Ashenvale, and Wetlands.",
+      summary: "Spawn timers, coordinates, and notable drops for overhauled early-level rares across Westfall, Barrens, Ashenvale, and Wetlands — see the World Atlas tab for all 381 live Level 1–60 rares.",
       content: `### Overhauled World Rare Mechanics
 In WoW Forever, open-world rare spawns are no longer trivial recolors with 8-hour dead periods. They now feature **dynamic 45–90 minute respawn timers**, guaranteed rare quality loot tables, and grant **1 Merchant's Favor** upon defeat!
 
-### Top 10 High-Value World Rares (Phase 2)
+### Top 10 High-Value Early World Rares (Levels 10–30)
 
 | Rare Mob | Zone | Coords | Level | Top Item Drop | Item Stats |
 | **Lord Condar** | Loch Modan | \`75.2, 38.6\` | Lvl 26 | *Condar's Feathery Mantle* | Leather Shoulders: +8 Agi, +6 Sta |
@@ -1446,7 +1446,7 @@ In WoW Forever, open-world rare spawns are no longer trivial recolors with 8-hou
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_druid_travelform.jpg",
       summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the Embrace of the Viper Snake Form appearance.",
       content: `### Druid Shape-Shifting Progression in WoW Forever
-Druids possess unparalleled flexibility across Phase 2, with early access to full land and aquatic mobility tools.
+Druids possess unparalleled flexibility throughout leveling and endgame in WoW Forever, with early access to full land and aquatic mobility tools.
 
 ### Form Breakdown & Quest Roadmaps
 
@@ -1500,7 +1500,7 @@ Spells learned below character **Level 20** receive a scaling coefficient penalt
 | Spell & Rank | Mana Cost | Base Heal | Cast Time | Heal per Mana (HPM) | Ideal Scenario |
 | **Flash Heal Rank 1** | 125 Mana | 193–237 | 1.5s | 1.72 HPM | Fast emergency save |
 | **Flash Heal Rank 2** | 155 Mana | 258–314 | 1.5s | 1.84 HPM | Sustained dungeon single-target |
-| **Flash Heal Rank 3** | 185 Mana | 327–393 | 1.5s | 1.94 HPM | Max Phase 2 burst triage |
+| **Flash Heal Rank 3** | 185 Mana | 327–393 | 1.5s | 1.94 HPM | Level 30 burst triage |
 | **Heal Rank 1** | 155 Mana | 295–341 | 3.0s | **2.05 HPM** | Mana-efficient slow maintenance |
 | **Heal Rank 2** | 205 Mana | 429–491 | 3.0s | **2.24 HPM** | Highest HPM tank healing |
 
@@ -1519,7 +1519,7 @@ Spells learned below character **Level 20** receive a scaling coefficient penalt
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_borrowedtime.jpg",
       summary: "Optimized route from 1 to 30 integrating Cozy Sleeping Bag checkpoints, rested camping stations, and high-density dungeon quest hubs.",
       content: `### Fast Leveling Architecture: 1 to 30 in Under 16 Hours
-By combining the **+3% Cozy Sleeping Bag buff**, rested tents, and dense Classic+ quest clusters, players can reach the Phase 2 cap of 30 faster than ever before.
+By combining the **+3% Cozy Sleeping Bag buff**, rested tents, and dense Classic+ quest clusters, players can blast through the 1–30 leveling bracket faster than ever before.
 
 ### Alliance Optimized Speedrun Path
 
@@ -1832,7 +1832,7 @@ The Classic+ counterpart to the legendary Savory Deviate Delight is the **Savory
 Eating a Savory Whimsyfin Delight triggers the **"Yum!"** buff with one of two random 60-minute cosmetic illusions:
 • **Orcish Buccaneer:** Transforms your character into a swaggering Orc Pirate complete with tricorne hat, eyepatch, and cutlass.
 • **Kek Ninja:** Transforms your character into a masked stealth ninja with smoke-bomb jump animations.
-• 💰 **Auction House Economy:** Fresh Whimsyfin and cooked Delights sell for upwards of 40–60 Silver each on the Auction House during Phase 2 tournaments!`
+• 💰 **Auction House Economy:** Fresh Whimsyfin and cooked Delights sell for upwards of 40–60 Silver each on the Auction House for PvP and raid prep!`
     },
     {
       id: "guide-class-warrior",
@@ -1856,7 +1856,7 @@ In WoW Forever, Level 30 represents a monumental power spike for Warriors. Reach
 ### Core Mechanics & Classic+ Additions
 
 #### 1. Spearing Strike (Arms Talent / Battle Stance)
-• **Cost:** 15 Rage (Requires Battle Stance; usable with 1H or 2H weapons following the Phase 2 update).
+• **Cost:** 15 Rage (Requires Battle Stance; usable with 1H or 2H weapons in WoW Forever).
 • **Effect:** Impales the target for 110% weapon damage, **dismounting mounted players and pinning/slowing fleeing targets** (30s cooldown). In open-world PvP and Warsong Gulch, landing Spearing Strike locks down flag carriers and runners immediately.
 
 #### 2. Sweeping Strikes (Arms Capstone at 30)
@@ -2458,12 +2458,12 @@ Navigating between Kalimdor and the Eastern Kingdoms is a critical rite of passa
 
   <!-- 8. Zephras Charter Ferry: Menethil Harbor <-> Zephras Isle -->
   <path d="M 620 215 Q 520 280 470 305" fill="none" stroke="#34d399" stroke-width="2.2" stroke-dasharray="5,4">
-    <title>Charter Ferry: Menethil Harbor &lt;--&gt; Zephras Isle. Travel Time: 1m 45s. Phase 2 charter ferry service.</title>
+    <title>Charter Ferry: Menethil Harbor &lt;--&gt; Zephras Isle. Travel Time: 1m 45s. Live WoW Forever charter ferry service.</title>
   </path>
 
   <!-- 9. Zephras Charter Ferry: Ratchet <-> Zephras Isle -->
   <path d="M 280 260 Q 360 300 420 315" fill="none" stroke="#34d399" stroke-width="2.2" stroke-dasharray="5,4">
-    <title>Charter Ferry: Ratchet &lt;--&gt; Zephras Isle. Travel Time: 1m 55s. Phase 2 charter ferry service.</title>
+    <title>Charter Ferry: Ratchet &lt;--&gt; Zephras Isle. Travel Time: 1m 55s. Live WoW Forever charter ferry service.</title>
   </path>
 
   <!-- STATIONS / PORTS (KALIMDOR) -->
@@ -2613,7 +2613,7 @@ At the Level 30 leveling milestone, Hunters excel in both solo open-world grindi
       category: "Classes & Pets",
       source: "Wowhead · Warcraft Tavern · Classic+",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg",
-      summary: "Level 30 Frost AoE grinding pulls, Frostbite + Shatter 50% crit combos, Blizzard snare kite paths, and mana efficiency rotations for Beta Phase 2.",
+      summary: "Level 30 Frost AoE grinding pulls, Frostbite + Shatter 50% crit combos, Blizzard snare kite paths, and mana efficiency rotations for the Level 30 leveling milestone.",
       content: `### Master of the Bitter Cold
 At the Level 30 leveling milestone, Frost Mages dominate open-world leveling speed through controlled Blizzard AoE pulls and achieve strong burst lethality in PvP through the iconic **Shatter Combo**.
 
@@ -2645,7 +2645,7 @@ Because spell travel time exists in WoW Forever, casting an instant spell immedi
 
 ---
 
-### 4. Phase 2 Mana & Consumable Engine
+### 4. Level 30 Mana & Consumable Engine
 • Always conjure **Mana Agate** (Restores 280–420 mana on use) before pulling.
 • Stack **Tier 2 Silk Tent Rested XP** and consume *Cooked Crab Claws* (+8 Spirit) to maximize passive mana regeneration between Blizzard sweeps.`
     },
@@ -2883,7 +2883,7 @@ Most quests on the isle give reputation with the faction that matches yours.`
       category: "Leveling & Quests",
       source: "data/forever_dungeons.json · ForeverChanges.pro · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_prayerofshadowprotection.jpg",
-      summary: "Complete quest directory, prerequisites, and single-run routing for all 12 Phase 2 dungeons. Maximize leveling speed following the Phase 2 dungeon mob XP rebalance.",
+      summary: "Complete quest directory, prerequisites, and single-run routing for all 12 Level 13–30 dungeons. Maximize leveling speed under WoW Forever live dungeon XP rules.",
       content: `### The Single-Run Questing Meta in WoW Forever
 In WoW Forever, dungeon quest turn-in experience and item rewards are heavily buffed. On live realms, Blizzard also increased dungeon enemy kill XP by **+50%** (Nov 9 hotfix), set dungeon kills trivial to any party member to **0 XP** (Nov 13 hotfix), and capped dungeon resets at **5 per hour** (Nov 20 hotfix).
 

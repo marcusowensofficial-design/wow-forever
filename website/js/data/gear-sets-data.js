@@ -1,11 +1,8 @@
 /**
- * WoW Forever Armor Sets & Set Pieces Database (228 Sets, 1,272 Set Pieces)
- * Pure Data Layer — Loaded under index.html Data Layer
+ * World of Warcraft: Forever - Complete Armor & Gear Sets Dataset (228 Sets)
+ * Enriched with live ForeverDB itemsets.json set bonuses & Classic Era diffs (Build 1.60.1.71037, GPL-3.0)
  */
-(function () {
-    'use strict';
-
-    window.WOW_GEAR_SETS = [
+window.WOW_GEAR_SETS = [
   {
     "id": 1,
     "name": "The Gladiator",
@@ -76,6 +73,51 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1301126,
+        "text": "Reduces the hit chance of Fear effects against you by 8%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9331,
+        "text": "+20 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301123,
+        "text": "Chance on hit to gain 5% attack speed for 10 sec. Attacks while no allies are within 20 yds are 2 times as likely to activate this effect."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1314795,
+        "text": "Improves your chance to get a critical strike by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9761,
+        "text": "+20 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7514,
+        "text": "Increased Defense +2."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 5,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      }
     ]
   },
   {
@@ -108,7 +150,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14056,
+        "text": "+50 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 65,
@@ -140,7 +190,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 17332,
+        "text": "Chance on Hit: Immobilizes the target and lowers their armor by 100 for 10 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 81,
@@ -201,6 +259,61 @@
         "icon": "inv_pants_06",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1302376,
+        "text": "Increases run speed by 8%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302380,
+        "text": "Falling below 25% health grants Return to Sender, reflecting the next spell cast on you within 6 sec. Can only occur once every 3 min."
+      },
+      {
+        "pieces": 5,
+        "spellId": 432639,
+        "text": "Improves your chance to hit by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9764,
+        "text": "+50 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 14590,
+        "text": "+10 Fire Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 14712,
+        "text": "+10 Arcane Resistance."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9417,
+        "text": "Increases damage and healing done by magical spells and effects by up to 12."
+      },
+      {
+        "pieces": 5,
+        "spellId": 9106,
+        "text": "+10 Intellect."
+      },
+      {
+        "pieces": 5,
+        "spellId": 17498,
+        "text": "Increases run speed by 5%."
       }
     ]
   },
@@ -264,6 +377,51 @@
         "isNew": false,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1292546,
+        "text": "Reduces the duration of all movement impairing effects on you by 10%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18676,
+        "text": "+5 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 460230,
+        "text": "Improves your chance to hit by 2.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7516,
+        "text": "Increased Defense +3."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18686,
+        "text": "+15 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 15465,
+        "text": "Improves your chance to hit by 2%."
+      }
     ]
   },
   {
@@ -325,6 +483,51 @@
         "icon": "inv_chest_cloth_43",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1299734,
+        "text": "Improves your chance to hit by 0.5%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1299737,
+        "text": "Harmful spell casts have a chance to steal 28 life from the target enemy."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18676,
+        "text": "+5 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7516,
+        "text": "Increased Defense +3."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7495,
+        "text": "+5 Intellect."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18686,
+        "text": "+15 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
       }
     ]
   },
@@ -388,6 +591,51 @@
         "isNew": false,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1299740,
+        "text": "Grants your melee attacks a chance to wound the target, causing them to Bleed for 70 damage over 10 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18676,
+        "text": "+5 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1299738,
+        "text": "Improves your chance to get a critical strike by 1.5%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7516,
+        "text": "Increased Defense +3."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18686,
+        "text": "+15 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      }
     ]
   },
   {
@@ -450,6 +698,51 @@
         "isNew": false,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7516,
+        "text": "Increased Defense +3."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1299743,
+        "text": "Grants a chance when struck in combat to increase damage and healing done by magical spells and effects by up to 70 for 10 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18676,
+        "text": "+5 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1213289,
+        "text": "Reduces the chance for your attacks to be dodged or parried by 2%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7516,
+        "text": "Increased Defense +3."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9764,
+        "text": "+50 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 18686,
+        "text": "+15 All Resistances."
+      },
+      {
+        "pieces": 5,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      }
     ]
   },
   {
@@ -491,6 +784,21 @@
         "icon": "inv_shoulder_13",
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 9233,
+        "text": "5% chance of dealing 30 to 50 Fire damage on a successful melee attack."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 9233,
+        "text": "5% chance of dealing 15 to 25 Fire damage on a successful melee attack."
       }
     ]
   },
@@ -544,7 +852,43 @@
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18979,
+        "text": "10% chance of dealing 15 to 25 Nature damage on a successful melee attack."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23863,
+        "text": "3% chance on melee attack of restoring 18 energy. (Nov 20 Hotfix; was 4% / 30 energy)"
+      },
+      {
+        "pieces": 4,
+        "spellId": 9142,
+        "text": "+14 Attack Power."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18979,
+        "text": "5% chance of dealing 15 to 25 Nature damage on a successful melee attack."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23863,
+        "text": "2% chance on melee attack of restoring 30 energy."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9142,
+        "text": "+14 Attack Power."
+      }
+    ],
+    "hotfixNote": "Nov 20 Hotfix: 3-piece energy proc lowered to 3% chance for 18 energy (was 4% for 30 energy)."
   },
   {
     "id": 143,
@@ -575,6 +919,21 @@
         "icon": "inv_gauntlets_26",
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 460230,
+        "text": "Improves your chance to hit by 2.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 15465,
+        "text": "Improves your chance to hit by 2%."
       }
     ]
   },
@@ -608,7 +967,15 @@
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14799,
+        "text": "Increases damage and healing done by magical spells and effects by up to 20."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 161,
@@ -669,6 +1036,51 @@
         "icon": "inv_pants_12",
         "isNew": false,
         "source": "Drop: Defias Overseer"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14707,
+        "text": "+5 Arcane Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1292025,
+        "text": "+15 Attack Power against Humanoids."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1292028,
+        "text": "Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 75 Physical damage over 5 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 7534,
+        "text": "Increased Daggers +1."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9760,
+        "text": "+10 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 14707,
+        "text": "+5 Arcane Resistance."
+      },
+      {
+        "pieces": 4,
+        "spellId": 7534,
+        "text": "Increased Daggers +1."
+      },
+      {
+        "pieces": 5,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
       }
     ]
   },
@@ -731,6 +1143,51 @@
         "icon": "inv_shirt_16",
         "isNew": false,
         "source": "Boss: Lord Pythas"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9106,
+        "text": "+10 Intellect."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9140,
+        "text": "+10 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1291796,
+        "text": "Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1291807,
+        "text": "Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7694,
+        "text": "Increases damage done by Nature spells and effects by up to 7."
+      },
+      {
+        "pieces": 3,
+        "spellId": 20607,
+        "text": "Increased Staves +2."
+      },
+      {
+        "pieces": 4,
+        "spellId": 7679,
+        "text": "Increases healing done by spells and effects by up to 11."
+      },
+      {
+        "pieces": 5,
+        "spellId": 9106,
+        "text": "+10 Intellect."
       }
     ]
   },
@@ -803,6 +1260,61 @@
         "icon": "inv_bracer_03",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14673,
+        "text": "+10 Shadow Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18074,
+        "text": "+30 Attack Power against Undead."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1293674,
+        "text": "Taking damage has a 15% chance to grant Enraging Light for 10 sec, causing your melee attacks to deal 20 Holy damage. Deals 3 times as much damage to Undead."
+      },
+      {
+        "pieces": 5,
+        "spellId": 432639,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1293670,
+        "text": "Taking damage while at or below 20% health grants you a shield, absorbing ? damage for 10 sec. This effect can only trigger once every 4 min."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9760,
+        "text": "+10 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7513,
+        "text": "Increased Defense +1."
+      },
+      {
+        "pieces": 4,
+        "spellId": 14668,
+        "text": "+5 Shadow Resistance."
+      },
+      {
+        "pieces": 5,
+        "spellId": 20606,
+        "text": "+15 Attack Power when fighting Undead."
+      },
+      {
+        "pieces": 6,
+        "spellId": 15464,
+        "text": "Improves your chance to hit by 1%."
       }
     ]
   },
@@ -896,6 +1408,56 @@
         "isNew": false,
         "source": "Boss: Hearthsinger Forresten"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27867,
+        "text": "When struck in combat has a 2% chance of freezing the attacker in place for 3 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450527,
+        "text": "Your spellcasts have a 5% chance to energize you for 200 mana."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29091,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30777,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27867,
+        "text": "When struck in combat has a chance of freezing the attacker in place for 3 sec."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      }
     ]
   },
   {
@@ -987,6 +1549,56 @@
         "icon": "inv_chest_cloth_11",
         "isNew": false,
         "source": "Boss: General Drakkisath"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27778,
+        "text": "When struck in combat has a 2% chance of shielding the wearer in a protective shield which will absorb 488 damage. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450576,
+        "text": "Your spellcasts have a 5% chance to energize you for 200 mana."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30779,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27778,
+        "text": "When struck in combat has a chance of shielding the wearer in a protective shield which will absorb 350 damage."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
       }
     ]
   },
@@ -1080,6 +1692,56 @@
         "isNew": false,
         "source": "Boss: Lorekeeper Polkelt"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27780,
+        "text": "When struck in combat has a 2% chance of causing the attacker to flee in terror for 2 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450585,
+        "text": "Your spellcasts have a 5% chance to heal you for 270 to 330."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29090,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30778,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27780,
+        "text": "When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      }
     ]
   },
   {
@@ -1171,6 +1833,56 @@
         "icon": "inv_helmet_41",
         "isNew": false,
         "source": "Drop: Darkmaster Gandling"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9336,
+        "text": "+30 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302698,
+        "text": "When struck in combat, has a 5% chance to remove a Snare effect from yourself. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 27787,
+        "text": "Chance on melee attack to restore 20 Energy."
+      },
+      {
+        "pieces": 6,
+        "spellId": 21347,
+        "text": "Restores 15 health per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29096,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30771,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27787,
+        "text": "Chance on melee attack to restore 35 energy."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
       }
     ]
   },
@@ -1264,6 +1976,66 @@
         "isNew": false,
         "source": "Boss: The Unforgiven"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9336,
+        "text": "+30 Attack Power."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302708,
+        "text": "When struck in combat, has a 5% chance to increase your movement speed by 10% for 8 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450608,
+        "text": "Chance on spellcast to restore 200 Mana, on melee attack to regenerate 20 Energy over 5 sec, and when struck by a melee attack to generate 10 Rage."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29097,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9334,
+        "text": "+26 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9344,
+        "text": "Increases damage and healing done by magical spells and effects by up to 15."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27781,
+        "text": "When struck in combat has a chance of returning 300 mana, 10 rage, or 40 energy to the wearer."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      }
     ]
   },
   {
@@ -1355,6 +2127,56 @@
         "icon": "inv_gauntlets_10",
         "isNew": false,
         "source": "Boss: War Master Voone"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9336,
+        "text": "+30 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302712,
+        "text": "When struck in combat, has a 8% chance to remove a Root effect from yourself. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450577,
+        "text": "Your melee and ranged autoattacks have a 5% chance to energize you for 200 mana."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29094,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30772,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27785,
+        "text": "Your normal ranged attacks have a 4% chance of restoring 200 mana."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
       }
     ]
   },
@@ -1448,6 +2270,56 @@
         "isNew": false,
         "source": "Boss: General Drakkisath"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302718,
+        "text": "When struck in melee combat, has a 5% chance of Disarming the attacker for 4 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450626,
+        "text": "Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29095,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30780,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27774,
+        "text": "Chance on spell cast to increase your damage and healing by up to 95 for 10 sec."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      }
     ]
   },
   {
@@ -1539,6 +2411,56 @@
         "icon": "inv_helmet_08",
         "isNew": false,
         "source": "Drop: Darkmaster Gandling"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302716,
+        "text": "When struck by a harmful spell, has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450625,
+        "text": "Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 18378,
+        "text": "Restores 8 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29093,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30775,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27498,
+        "text": "Chance on melee attack to increase your damage and healing done by magical spells and effects by up to 95 for 10 sec."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
       }
     ]
   },
@@ -1632,6 +2554,56 @@
         "isNew": false,
         "source": "Drop: Warchief Rend Blackhand"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 13198,
+        "text": "+15 Strength."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302721,
+        "text": "When struck in combat, has a 10% chance to remove a Disarm effect from yourself. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 450587,
+        "text": "Chance on melee attack to heal for 88 to 132 and generate 10 Rage"
+      },
+      {
+        "pieces": 6,
+        "spellId": 21347,
+        "text": "Restores 15 health per 5 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 29092,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 30770,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 27419,
+        "text": "Chance on melee attack to heal you for 88 to 132."
+      },
+      {
+        "pieces": 8,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      }
     ]
   },
   {
@@ -1724,7 +2696,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 9346,
+        "text": "Increases damage and healing done by magical spells and effects by up to 18."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26175,
+        "text": "Decreases the magical resistances of your spell targets by 10."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23545,
+        "text": "Decreases the threat generated by your spells by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 202,
@@ -1815,6 +2805,41 @@
         "icon": "inv_bracer_09",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21973,
+        "text": "-0.1 sec to the casting time of your Flash Heal spell."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21092,
+        "text": "Improves your chance to get a critical strike with spells by 2.0%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23550,
+        "text": "Increases your chance of a critical hit with Prayer of Healing by 25%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21973,
+        "text": "-0.1 sec to the casting time of your Flash Heal spell."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21092,
+        "text": "Improves your chance to get a critical strike with Holy spells by 2%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23550,
+        "text": "Increases your chance of a critical hit with Prayer of Healing by 25%."
       }
     ]
   },
@@ -1908,7 +2933,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23554,
+        "text": "Health or Mana gained from Drain Life and Drain Mana increased by 15%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21741,
+        "text": "Your pet gains 15 stamina and 100 spell resistance against all schools of magic."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23553,
+        "text": "Mana cost of Shadow spells reduced by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 204,
@@ -2000,7 +3043,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21874,
+        "text": "Reduces the cooldown of your Vanish ability by 30 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21975,
+        "text": "Increases your maximum Energy by 10."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23582,
+        "text": "Heals the rogue for 500 when Vanish is performed."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 205,
@@ -2091,6 +3152,41 @@
         "icon": "inv_shoulder_07",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23557,
+        "text": "Damage dealt by Thorns increased by 4 and duration increased by 50%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 18382,
+        "text": "Improves your chance to get a critical strike with spells by 2.0%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23556,
+        "text": "Reduces the cooldown of your Tranquility and Hurricane spells by 50%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23557,
+        "text": "Damage dealt by Thorns increased by 4 and duration increased by 50%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 18382,
+        "text": "Improves your chance to get a critical strike with spells by 2%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23556,
+        "text": "Reduces the cooldown of your Tranquility and Hurricane spells by 50%."
       }
     ]
   },
@@ -2184,7 +3280,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23560,
+        "text": "Increases the range of your Mend Pet spell by 50% and the effect by 10%.  Also reduces the cost by 30%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21926,
+        "text": "Increases your pet's stamina by 30 and all spell resistances by 40."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23566,
+        "text": "Increases the damage of Multi-shot and Volley by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 207,
@@ -2276,7 +3390,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21895,
+        "text": "The radius of your totems that affect friendly targets is increased to 30 yd."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23572,
+        "text": "After casting your Healing Wave or Lesser Healing Wave spell, gives you a 25% chance to gain Mana equal to 35% of the base cost of the spell."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23573,
+        "text": "Your Healing Wave will now jump to additional nearby targets. Each jump reduces the effectiveness of the heal by 80%, and the spell will jump to up to two additional targets."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 208,
@@ -2367,6 +3499,51 @@
         "icon": "inv_shoulder_20",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23564,
+        "text": "Increases the chance of triggering a Judgement of Light heal by 10%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 21747,
+        "text": "Gives the Paladin a chance on every melee hit to heal your party for 189 to 211."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23564,
+        "text": "Increases the chance of triggering a Judgement of Light heal by 10%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 21747,
+        "text": "Gives the Paladin a chance on every melee hit to heal your party for 189 to 211."
       }
     ]
   },
@@ -2460,7 +3637,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23562,
+        "text": "Increases the block value of your shield by 30."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21838,
+        "text": "Gives you a 20% chance to generate an additional Rage point whenever damage is dealt to you."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23561,
+        "text": "Increases the threat generated by Sunder Armor by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 210,
@@ -2552,7 +3747,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21879,
+        "text": "Reduces the threat generated by your Scorch,  Arcane Missiles, Fireball, and Frostbolt spells."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23549,
+        "text": "Increases the radius of Arcane Explosion, Flamestrike, and Blizzard by 25%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 22007,
+        "text": "10% chance after casting Arcane Missiles, Fireball, or Frostbolt that your next spell with a casting time under 10 seconds cast instantly."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 211,
@@ -2644,7 +3857,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21894,
+        "text": "Allows 15% of your Mana regeneration to continue while casting."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21853,
+        "text": "When struck in melee there is a 50% chance you will Fade for 4 sec."
+      },
+      {
+        "pieces": 8,
+        "spellId": 22010,
+        "text": "Your Greater Heals now have a heal over time component equivalent to a rank 5 Renew."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 212,
@@ -2736,7 +3967,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21922,
+        "text": "Your pet gains 20 stamina and 130 spell resistance against all schools of magic."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23555,
+        "text": "Reduces the threat generated by your Destruction spells by 20%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 213,
@@ -2828,7 +4077,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21881,
+        "text": "Increases the chance to apply poisons to your target by 5%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23558,
+        "text": "Improves the threat reduction of Feint by 25%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23581,
+        "text": "Gives the Rogue a chance to inflict 283 to 317 damage on the target and heal the Rogue for 50 health every 1 sec. for 6 sec. on a melee hit."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 214,
@@ -2920,7 +4187,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21894,
+        "text": "Allows 15% of your Mana regeneration to continue while casting."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21872,
+        "text": "Reduces the casting time of your Regrowth spell by 0.2 sec."
+      },
+      {
+        "pieces": 8,
+        "spellId": 21871,
+        "text": "Increases the duration of your Rejuvenation spell by 3 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 215,
@@ -3012,7 +4297,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23559,
+        "text": "Increases the Ranged Attack Power bonus of your Aspect of the Hawk by 20%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21928,
+        "text": "Increases your pet's stamina by 40 and all spell resistances by 60."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23578,
+        "text": "You have a chance whenever you deal ranged damage to apply an Expose Weakness effect to the target. Expose Weakness increases the Ranged Attack Power of all attackers against that target by 450 for 7 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 216,
@@ -3103,6 +4406,41 @@
         "icon": "inv_pants_03",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21899,
+        "text": "Increases the amount healed by Chain Heal to targets beyond the first by 30%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23570,
+        "text": "Improves your chance to get a critical strike with spells by 3%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23551,
+        "text": "When you cast a Healing Wave or Lesser Healing Wave, there is a 25% chance the target also receives a free Lightning Shield that causes 50 Nature damage to attacker on hit."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21899,
+        "text": "Increases the amount healed by Chain Heal to targets beyond the first by 30%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23570,
+        "text": "Improves your chance to get a critical strike with Nature spells by 3%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23551,
+        "text": "When you cast a Healing Wave or Lesser Healing Wave, there is a 25% chance the target also receives a free Lightning Shield that causes 50 Nature damage to attacker on hit."
       }
     ]
   },
@@ -3196,7 +4534,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23565,
+        "text": "Increases the radius of a Paladin's auras by 10."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24196,
+        "text": "Increases damage and healing done by magical spells and effects by up to 47."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23591,
+        "text": "Inflicts 60 to 66 additional Holy damage on the target of a Paladin's Judgement."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 218,
@@ -3288,7 +4644,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 23563,
+        "text": "Increases the attack power granted by Battle Shout by 30."
+      },
+      {
+        "pieces": 5,
+        "spellId": 21890,
+        "text": "20% chance after using an offensive ability requiring rage that your next offensive ability requires 5 less rage to use."
+      },
+      {
+        "pieces": 8,
+        "spellId": 23548,
+        "text": "4% chance to parry the next attack after a block."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 221,
@@ -3360,6 +4734,21 @@
         "isNew": false,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 6,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 6,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      }
     ]
   },
   {
@@ -3391,6 +4780,26 @@
         "icon": "inv_misc_monsterscales_15",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18681,
+        "text": "+10 All Resistances."
+      },
+      {
+        "pieces": 2,
+        "spellId": 1308237,
+        "text": "Increases damage done to Dragonkin by magical spells and effects by up to 53."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18681,
+        "text": "+10 All Resistances."
       }
     ]
   },
@@ -3443,6 +4852,31 @@
         "icon": "inv_belt_12",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1298478,
+        "text": "+30 Attack Power against Humanoids."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1314828,
+        "text": "Improves your chance to get a critical strike by 1.0%. This effect is doubled at Night."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22648,
+        "text": "1% chance on a melee hit to call forth the spirit of Eskhandar to protect you in battle for 2 min."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 4,
+        "spellId": 22648,
+        "text": "1% chance on a melee critical hit to call forth the spirit of Eskhandar to protect you in battle for 2 min."
       }
     ]
   },
@@ -3516,6 +4950,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -3588,6 +5057,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -3659,6 +5163,41 @@
         "icon": "inv_helmet_09",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -3752,6 +5291,51 @@
         "isNew": true,
         "source": "Crafted: Blacksmithing (1)"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13385,
+        "text": "Increased Defense +7."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1251990,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302372,
+        "text": "Imperial discipline prevents your movement speed from being reduced below 80%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1251984,
+        "text": "+20 Strength."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1251991,
+        "text": "Improves your chance to get a critical strike by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 15666,
+        "text": "+100 Armor."
+      },
+      {
+        "pieces": 4,
+        "spellId": 9335,
+        "text": "+28 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14465,
+        "text": "+18 Stamina."
+      }
     ]
   },
   {
@@ -3824,7 +5408,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 342,
@@ -3896,7 +5498,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 343,
@@ -3967,6 +5587,41 @@
         "icon": "inv_helmet_24",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -4040,6 +5695,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -4111,6 +5801,41 @@
         "icon": "inv_chest_leather_01",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -4184,6 +5909,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -4256,7 +6016,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 348,
@@ -4327,6 +6105,41 @@
         "icon": "inv_helmet_42",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -4400,6 +6213,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -4471,6 +6319,41 @@
         "icon": "inv_helmet_21",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13665,
+        "text": "Increases your chance to parry an attack by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -4544,6 +6427,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
+      }
     ]
   },
   {
@@ -4615,6 +6533,41 @@
         "icon": "inv_helmet_09",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -4688,7 +6641,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 384,
@@ -4760,7 +6731,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 386,
@@ -4832,7 +6821,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 387,
@@ -4904,7 +6911,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 388,
@@ -4976,7 +7001,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 389,
@@ -5048,7 +7091,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 390,
@@ -5120,7 +7181,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 391,
@@ -5192,7 +7271,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 392,
@@ -5264,7 +7361,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 393,
@@ -5336,7 +7451,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 394,
@@ -5408,7 +7541,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 395,
@@ -5480,7 +7631,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 396,
@@ -5552,7 +7721,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 397,
@@ -5624,7 +7811,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 398,
@@ -5696,7 +7901,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 401,
@@ -5767,6 +7990,46 @@
         "icon": "inv_helmet_05",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7496,
+        "text": "+6 Intellect."
+      },
+      {
+        "pieces": 2,
+        "spellId": 28118,
+        "text": "Improves your chance to get a critical strike by 1%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14462,
+        "text": "+15 Stamina."
       }
     ]
   },
@@ -5840,6 +8103,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
     ]
   },
   {
@@ -5881,6 +8179,21 @@
         "icon": "inv_boots_cloth_02",
         "isNew": false,
         "source": "Crafted: Tailoring (1)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 18382,
+        "text": "Improves your chance to get a critical strike with spells by 2.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 18382,
+        "text": "Improves your chance to get a critical strike with spells by 2%."
       }
     ]
   },
@@ -5924,6 +8237,21 @@
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 24090,
+        "text": "Minor increase to running and swimming speed. Does not stack with similar effects."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 3,
+        "spellId": 24090,
+        "text": "Minor increase to running and swimming speed."
+      }
     ]
   },
   {
@@ -5955,6 +8283,31 @@
         "icon": "inv_shoulder_23",
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      },
+      {
+        "pieces": 2,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      },
+      {
+        "pieces": 2,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
       }
     ]
   },
@@ -5998,7 +8351,15 @@
         "isNew": false,
         "source": "Crafted: Blacksmithing (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21636,
+        "text": "Restores 12 mana per 5 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 444,
@@ -6040,7 +8401,15 @@
         "isNew": false,
         "source": "Crafted: Blacksmithing (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 21416,
+        "text": "Increased Defense +20."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 461,
@@ -6072,7 +8441,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 15763,
+        "text": "Increased Swords +6."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 462,
@@ -6103,6 +8480,31 @@
         "icon": "inv_jewelry_ring_46",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9396,
+        "text": "Increases damage and healing done by magical spells and effects by up to 6."
+      },
+      {
+        "pieces": 2,
+        "spellId": 23727,
+        "text": "Improves your chance to hit with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9396,
+        "text": "Increases damage and healing done by magical spells and effects by up to 6."
+      },
+      {
+        "pieces": 2,
+        "spellId": 23727,
+        "text": "Improves your chance to hit with spells by 1%."
       }
     ]
   },
@@ -6136,7 +8538,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 24256,
+        "text": "Grants a small chance when ranged or melee damage is dealt to infuse the wielder with a blessing from the Primal Gods. Ranged and melee attack power increased by 300 for 12 seconds."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 464,
@@ -6168,7 +8578,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13669,
+        "text": "Increases your chance to dodge an attack by 1%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 465,
@@ -6200,7 +8618,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9318,
+        "text": "Increases healing done by spells and effects by up to 33."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 466,
@@ -6232,7 +8658,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9336,
+        "text": "+30 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 467,
@@ -6273,6 +8707,31 @@
         "icon": "inv_shoulder_01",
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
       }
     ]
   },
@@ -6316,6 +8775,31 @@
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      }
     ]
   },
   {
@@ -6357,6 +8841,31 @@
         "icon": "inv_shoulder_01",
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
       }
     ]
   },
@@ -6400,6 +8909,31 @@
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
+      }
     ]
   },
   {
@@ -6441,6 +8975,31 @@
         "icon": "inv_shoulder_24",
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
       }
     ]
   },
@@ -6484,6 +9043,31 @@
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
+      }
     ]
   },
   {
@@ -6525,6 +9109,31 @@
         "icon": "inv_shoulder_24",
         "isNew": false,
         "source": "Vendor: Samuel Hawke"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
       }
     ]
   },
@@ -6588,7 +9197,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Vindicator's Breastplate (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 13675,
+        "text": "Increases your chance to block attacks with a shield by 2%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24456,
+        "text": "Decreases the cooldown of Intimidating Shout by 15 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24431,
+        "text": "Decrease the rage cost of Whirlwind by 3."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 475,
@@ -6650,7 +9277,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Freethinker's Breastplate (level 61)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 21618,
+        "text": "Restores 4 mana per 5 sec."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24457,
+        "text": "Reduces the casting time of your Holy Light spell by 0.1 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24460,
+        "text": "Increases the duration of all Blessings by 10%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 476,
@@ -6712,7 +9357,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Augur's Hauberk (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 21618,
+        "text": "Restores 4 mana per 5 sec."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24461,
+        "text": "Improves the duration of your Frost Shock spell by 1 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24462,
+        "text": "Increase the range of your Lightning Bolt spell by 5 yds."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 477,
@@ -6774,7 +9437,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Predator's Mantle (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9331,
+        "text": "+20 Attack Power."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24465,
+        "text": "Decreases the cooldown of Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24467,
+        "text": "Increases the duration of Serpent Sting by 3 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 478,
@@ -6836,7 +9517,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Madcap's Tunic (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9331,
+        "text": "+20 Attack Power."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24469,
+        "text": "Decreases the cooldown of Blind by 20 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24471,
+        "text": "Decrease the energy cost of Eviscerate and Rupture by 5."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 479,
@@ -6898,7 +9597,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Haruspex's Tunic (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 21618,
+        "text": "Restores 4 mana per 5 sec."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24479,
+        "text": "Increases the duration of Faerie Fire by 5 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24480,
+        "text": "Increases the critical hit chance of your Starfire spell 3%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 480,
@@ -6960,7 +9677,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Confessor's Mantle (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9408,
+        "text": "Increases healing done by spells and effects by up to 22."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24482,
+        "text": "Increase the range of your Smite and Holy Fire spells by 5 yds."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24483,
+        "text": "Reduces the casting time of your Mind Control spell by 0.5 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 481,
@@ -7022,7 +9757,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Demoniac's Robes (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9417,
+        "text": "Increases damage and healing done by magical spells and effects by up to 12."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24486,
+        "text": "Increases the damage of Corruption by 2%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24487,
+        "text": "Decreases the cooldown of Death Coil by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 482,
@@ -7084,7 +9837,25 @@
         "isNew": false,
         "source": "Quest: Paragons of Power: The Illusionist's Robes (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 9417,
+        "text": "Increases damage and healing done by magical spells and effects by up to 12."
+      },
+      {
+        "pieces": 3,
+        "spellId": 24489,
+        "text": "Decreases the mana cost of Arcane Intellect and Arcane Brilliance by 5%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 24491,
+        "text": "Reduces the casting time of your Flamestrike spell by 0.5 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 483,
@@ -7125,6 +9896,31 @@
         "icon": "inv_belt_20",
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
       }
     ]
   },
@@ -7168,6 +9964,31 @@
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      }
     ]
   },
   {
@@ -7209,6 +10030,31 @@
         "icon": "inv_belt_17",
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
       }
     ]
   },
@@ -7252,6 +10098,31 @@
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
+      }
     ]
   },
   {
@@ -7293,6 +10164,31 @@
         "icon": "inv_shoulder_01",
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike with melee attacks by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7597,
+        "text": "Improves your chance to get a critical strike by 1%."
       }
     ]
   },
@@ -7336,6 +10232,31 @@
         "isNew": false,
         "source": "Vendor: Rutherford Twing"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 7503,
+        "text": "+5 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18384,
+        "text": "Improves your chance to get a critical strike with spells by 1%."
+      }
     ]
   },
   {
@@ -7377,6 +10298,36 @@
         "icon": "inv_shoulder_01",
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 15464,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7598,
+        "text": "Improves your chance to get a critical strike with melee attacks by 2.0%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 15464,
+        "text": "Improves your chance to hit by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 7598,
+        "text": "Improves your chance to get a critical strike by 2%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 14590,
+        "text": "+10 Fire Resistance."
       }
     ]
   },
@@ -7420,7 +10371,20 @@
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 21625,
+        "text": "Restores 3 mana per 5 sec."
+      },
+      {
+        "pieces": 3,
+        "spellId": 21894,
+        "text": "Allows 15% of your Mana regeneration to continue while casting."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 491,
@@ -7462,7 +10426,20 @@
         "isNew": false,
         "source": "Crafted: Leatherworking (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18675,
+        "text": "+4 All Resistances."
+      },
+      {
+        "pieces": 3,
+        "spellId": 14127,
+        "text": "Increases damage and healing done by magical spells and effects by up to 28."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 492,
@@ -7504,7 +10481,15 @@
         "isNew": false,
         "source": "Drop: Twilight Avenger"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 24746,
+        "text": "Bestows the wearer with the evil aura of a Twilight's Hammer cultist."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 493,
@@ -7566,7 +10551,25 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 15693,
+        "text": "+150 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 18196,
+        "text": "Increased Defense +15."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26106,
+        "text": "Reduces the cooldown of Rebirth by 10 minutes."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 494,
@@ -7608,7 +10611,15 @@
         "isNew": false,
         "source": "Quest: Mace of Unending Life (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26107,
+        "text": "Your finishing moves now refund 30 energy on a Miss, Dodge, Block, or Parry."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 495,
@@ -7650,7 +10661,15 @@
         "isNew": false,
         "source": "Quest: Signet of Unyielding Strength (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26111,
+        "text": "-2 rage cost to Intercept."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 496,
@@ -7712,7 +10731,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26109,
+        "text": "Decreases the rage cost of all Warrior shouts by 35%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26110,
+        "text": "Increase the Slow effect and damage of Thunder Clap by 50%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 497,
@@ -7774,7 +10806,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26112,
+        "text": "Reduces the cooldown of your Evasion ability by -1 min."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26113,
+        "text": "15% increased damage to your Eviscerate ability."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 498,
@@ -7816,7 +10861,15 @@
         "isNew": false,
         "source": "Quest: Dagger of Veiled Shadows (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26114,
+        "text": "-10 energy cost for your Slice and Dice ability."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 499,
@@ -7878,7 +10931,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26116,
+        "text": "5% increased damage on your Immolate spell."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26117,
+        "text": "Reduces the mana cost of Shadow Bolt by 15%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 500,
@@ -7920,7 +10986,15 @@
         "isNew": false,
         "source": "Quest: Shroud of Unspoken Names (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26118,
+        "text": "5% increased damage from your summoned pets' melee attacks and damage spells."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 501,
@@ -7982,7 +11056,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26119,
+        "text": "Your Lightning Bolt, Chain Lightning, and Shock spells have a 20% chance to grant up to 50 Nature damage to spells for 8 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26122,
+        "text": "-0.4 seconds on the casting time of your Chain Heal spell."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 502,
@@ -8024,7 +11111,15 @@
         "isNew": false,
         "source": "Quest: Ring of the Gathering Storm (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26123,
+        "text": "Increases the chain target damage multiplier of your Chain Lightning spell by 5%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 503,
@@ -8086,7 +11181,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26127,
+        "text": "Your Blizzard spell has a 30% chance to be uninterruptible."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26128,
+        "text": "Grants +5% increased spell hit chance for 20 sec when one of your spells is resisted."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 504,
@@ -8128,7 +11236,15 @@
         "isNew": false,
         "source": "Quest: Drape of Vaulted Secrets (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26131,
+        "text": "15% increase to the total damage absorbed by Mana Shield."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 505,
@@ -8190,7 +11306,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26130,
+        "text": "Increases the duration of your Judgements by 20%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 23929,
+        "text": "Increases damage and healing done by magical spells and effects by up to 71."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 506,
@@ -8232,7 +11361,15 @@
         "isNew": false,
         "source": "Quest: Ring of Eternal Justice (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26135,
+        "text": "20% chance to regain 100 mana when you cast a Judgement."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 507,
@@ -8294,7 +11431,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26169,
+        "text": "20% chance that your heals on others will also heal you 10% of the amount healed."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26171,
+        "text": "Increases the duration of your Renew spell by 3 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 508,
@@ -8336,7 +11486,15 @@
         "isNew": false,
         "source": "Quest: Shroud of Infinite Wisdom (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26172,
+        "text": "Increases the damage of your Shadow Word: Pain spell by 5%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 509,
@@ -8398,7 +11556,20 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26173,
+        "text": "Reduces the cost of your Arcane Shots by 10%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 26174,
+        "text": "Reduces the cooldown of your Rapid Fire ability by 2 minutes."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 510,
@@ -8440,7 +11611,15 @@
         "isNew": false,
         "source": "Quest: Signet of the Unseen Path (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 26176,
+        "text": "Increases your pet's damage by 3%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 511,
@@ -8532,7 +11711,30 @@
         "isNew": false,
         "source": "Quest: Anthion's Parting Words (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27419,
+        "text": "Chance on melee attack to heal you for 88 to 132."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 512,
@@ -8623,6 +11825,51 @@
         "icon": "inv_chest_leather_07",
         "isNew": false,
         "source": "Quest: Saving the Best for Last (level 60)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27787,
+        "text": "Chance on melee attack to restore 20 Energy."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27787,
+        "text": "Chance on melee attack to restore 35 energy."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
       }
     ]
   },
@@ -8716,7 +11963,35 @@
         "isNew": false,
         "source": "Quest: Saving the Best for Last (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27781,
+        "text": "When struck in combat has a chance of returning 300 mana, 10 rage, or 40 energy to the wearer."
+      },
+      {
+        "pieces": 6,
+        "spellId": 9334,
+        "text": "+26 Attack Power."
+      },
+      {
+        "pieces": 6,
+        "spellId": 9344,
+        "text": "Increases damage and healing done by magical spells and effects by up to 15."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 514,
@@ -8807,6 +12082,51 @@
         "icon": "inv_pants_08",
         "isNew": false,
         "source": "Quest: Anthion's Parting Words (level 60)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27778,
+        "text": "When struck in combat has a 2% chance of shielding the wearer in a protective shield which will absorb 488 damage. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27778,
+        "text": "When struck in combat has a chance of shielding the wearer in a protective shield which will absorb 350 damage."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
       }
     ]
   },
@@ -8900,7 +12220,30 @@
         "isNew": false,
         "source": "Quest: Saving the Best for Last (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27785,
+        "text": "Your normal ranged attacks have a 4% chance of restoring 200 mana."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 516,
@@ -8992,7 +12335,53 @@
         "isNew": false,
         "source": "Quest: Anthion's Parting Words (level 60)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27498,
+        "text": "Chance on melee attack to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27498,
+        "text": "Chance on melee attack to increase your damage and healing done by magical spells and effects by up to 95 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "hotfixNote": "Nov 17 Hotfix: Soulforge Armor tank pieces now feature Spell Power (was Strength) to support Paladin tank threat."
   },
   {
     "id": 517,
@@ -9083,6 +12472,51 @@
         "icon": "inv_chest_cloth_25",
         "isNew": false,
         "source": "Quest: Saving the Best for Last (level 60)"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27867,
+        "text": "When struck in combat has a 2% chance of freezing the attacker in place for 3 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27867,
+        "text": "When struck in combat has a chance of freezing the attacker in place for 3 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
       }
     ]
   },
@@ -9176,6 +12610,51 @@
         "isNew": false,
         "source": "Quest: Just Compensation (level 60)"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27780,
+        "text": "When struck in combat has a 2% chance of causing the attacker to flee in terror for 2 sec. Can only occur once every 60 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27780,
+        "text": "When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
     ]
   },
   {
@@ -9268,6 +12747,51 @@
         "isNew": false,
         "source": "Quest: Saving the Best for Last (level 60)"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27774,
+        "text": "Chance on spell cast to increase your damage and healing by up to 65 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 18679,
+        "text": "+8 All Resistances."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27774,
+        "text": "Chance on spell cast to increase your damage and healing by up to 95 for 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      }
     ]
   },
   {
@@ -9359,6 +12883,46 @@
         "icon": "inv_chest_cloth_48",
         "isNew": false,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14803,
+        "text": "+200 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 26283,
+        "text": "Decreases the magical resistances of your spell targets by 5."
+      },
+      {
+        "pieces": 4,
+        "spellId": 27733,
+        "text": "Reduces the hit chance of Silence and Interrupt effects against you by 10%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1302374,
+        "text": "The Ironweave hardens under duress, reducing damage taken while Stunned by 15%."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 4,
+        "spellId": 27733,
+        "text": "Increases your chance to resist Silence and Interrupt effects by 10%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 14803,
+        "text": "+200 Armor."
       }
     ]
   },
@@ -9462,7 +13026,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28716,
+        "text": "Your Rejuvenation ticks have a chance to restore 60 mana, 8 energy, or 2 rage to your target."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28743,
+        "text": "Reduces the mana cost of your Healing Touch, Regrowth, Rejuvenation,  and Tranquility spells by 3%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28744,
+        "text": "Your initial cast and Regrowth ticks will increase the maximum health of your target by up to 50, stacking up to 7 times."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28719,
+        "text": "On Healing Touch critical hits, you regain 30% of the mana cost of the spell."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 522,
@@ -9534,7 +13121,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 523,
@@ -9636,7 +13241,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28844,
+        "text": "Increases the damage done by your Revenge ability by 75."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28843,
+        "text": "Improves your chance to hit with Taunt and Challenging Shout by 5%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28842,
+        "text": "Improves your chance to hit with Sunder Armor, Heroic Strike, Revenge, and Shield Slam by 5%."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28845,
+        "text": "When your health drops below 20%, for the next 5 seconds healing spells cast on you help you to Cheat Death, increasing healing done by up to 160."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 524,
@@ -9738,7 +13366,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28816,
+        "text": "Your normal melee swings have a chance to Invigorate you, healing you for 90 to 110."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28812,
+        "text": "Your Backstab, Sinister Strike, and Hemorrhage critical hits cause you to regain 5 energy."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28811,
+        "text": "Reduces the threat from your Backstab, Sinister Strike, Hemorrhage, and Eviscerate abilities."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28814,
+        "text": "Your Eviscerate has a chance per combo point to reveal a flaw in your opponent's armor, granting a 100% critical hit chance for your next Backstab, Sinister Strike, or Hemorrhage."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 525,
@@ -9840,7 +13491,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28807,
+        "text": "Reduces the mana cost of your Renew spell by 12%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28809,
+        "text": "On Greater Heal critical hits, your target will gain Armor of Faith, absorbing up to 500 damage."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28808,
+        "text": "Reduces the threat from your healing spells."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28802,
+        "text": "Each spell you cast can trigger an Epiphany, increasing your mana regeneration by 24 for 30 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 526,
@@ -9942,7 +13616,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28763,
+        "text": "Reduces cooldown on your Evocation by 1 minute."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28764,
+        "text": "Gives your Mage Armor a chance when struck by a harmful spell to increase resistance against that school of magic by 35 for 30 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28771,
+        "text": "Your damage spells have a chance to cause your target to take up to 200 increased damage from subsequent spells."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28761,
+        "text": "Your damage spells have a chance to displace you, causing the next spell cast to generate no threat."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 527,
@@ -10044,7 +13741,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28818,
+        "text": "Reduces the mana cost of your totem spells by 12%."
+      },
+      {
+        "pieces": 4,
+        "spellId": 29171,
+        "text": "Increases the mana gained from your Mana Spring totems by 25%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28823,
+        "text": "Your Healing Wave and Lesser Healing Wave spells have a chance to imbue your target with Totemic Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28821,
+        "text": "Your Lightning Shield spell also grants you 15 mana per 5 sec. while active."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 528,
@@ -10146,7 +13866,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28775,
+        "text": "Increases the amount healed by your Judgement of Light by 20."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28774,
+        "text": "Reduces cooldown on your Lay on Hands by 12 min."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28789,
+        "text": "Your Flash of Light and Holy Light spells have a chance to imbue your target with Holy Power."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28787,
+        "text": "Your Cleanse spell also heals the target for 200."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 529,
@@ -10248,7 +13991,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28831,
+        "text": "Your Shadow Bolts now have a chance to heal you for 270 to 330."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28829,
+        "text": "Increases damage caused by your Corruption by 12%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28746,
+        "text": "Your spell critical hits generate 25% less threat.  In addition, Corruption, Immolate, Curse of Agony, and Siphon Life generate 25% less threat."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28830,
+        "text": "Reduces health cost of your Life Tap by 12%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 530,
@@ -10350,7 +14116,30 @@
         "isNew": false,
         "source": "Boss: Kel'Thuzad"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 28755,
+        "text": "Increases the duration of your Rapid Fire by 4 secs."
+      },
+      {
+        "pieces": 4,
+        "spellId": 28756,
+        "text": "Increases Attack Power by 50 for both you and your pet."
+      },
+      {
+        "pieces": 6,
+        "spellId": 28752,
+        "text": "Your ranged critical hits cause an Adrenaline Rush, granting you 50 mana."
+      },
+      {
+        "pieces": 8,
+        "spellId": 28751,
+        "text": "Reduces the mana cost of your Multi-Shot and Aimed Shot by 20."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 533,
@@ -10392,7 +14181,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 29068,
+        "text": "Increases your damage against undead by 2%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 534,
@@ -10434,7 +14231,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 29068,
+        "text": "Increases your damage against undead by 2%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 535,
@@ -10476,7 +14281,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 29068,
+        "text": "Increases your damage against undead by 2%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 536,
@@ -10518,7 +14331,15 @@
         "isNew": false,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 29068,
+        "text": "Increases your damage against undead by 2%."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 537,
@@ -10590,7 +14411,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 538,
@@ -10662,7 +14501,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 539,
@@ -10733,6 +14590,41 @@
         "icon": "inv_helmet_09",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
       }
     ]
   },
@@ -10806,7 +14698,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 541,
@@ -10878,7 +14788,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 542,
@@ -10950,7 +14878,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 543,
@@ -11022,7 +14968,25 @@
         "isNew": false,
         "source": "Vendor: Lady Palanseer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 544,
@@ -11094,7 +15058,25 @@
         "isNew": false,
         "source": "Vendor: Captain Dirgehammer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 545,
@@ -11166,7 +15148,25 @@
         "isNew": false,
         "source": "Vendor: Captain Dirgehammer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22738,
+        "text": "Reduces the cooldown of your Intercept ability by 5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 546,
@@ -11238,7 +15238,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23025,
+        "text": "Reduces the cooldown of your Blink spell by 1.5 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 547,
@@ -11310,7 +15328,25 @@
         "isNew": false,
         "source": "Vendor: Captain Dirgehammer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23047,
+        "text": "Reduces the casting time of your Immolate spell by 0.2  sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 548,
@@ -11382,7 +15418,25 @@
         "isNew": false,
         "source": "Vendor: Captain Dirgehammer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23048,
+        "text": "Reduces the cooldown of your Gouge ability by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 549,
@@ -11454,7 +15508,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 550,
@@ -11526,7 +15598,25 @@
         "isNew": false,
         "source": "Vendor: Captain Dirgehammer"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14384,
+        "text": "+20 Agility."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23158,
+        "text": "Reduces the cooldown of your Concussive Shot by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 551,
@@ -11597,6 +15687,41 @@
         "icon": "inv_helmet_09",
         "isNew": true,
         "source": "Drop"
+      }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
       }
     ]
   },
@@ -11690,6 +15815,41 @@
         "isNew": true,
         "source": "Drop"
       }
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1240571,
+        "text": "While Shock and Awe is active, Crusader Strike and Exorcism grant you Holy Power, increasing all Holy damage you deal by 20%, stacking up to 3 times."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1226462,
+        "text": "Divine Storm, Holy Shock, and Holy Wrath consume all your Holy Power, dealing 100% increased damage per Holy Power you have accumulated, 50% effective against player controlled targets."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1240573,
+        "text": "Consuming Holy Power increases your Spell Power by 8 to 18% per Holy Power consumed for 10 sec."
+      }
+    ],
+    "changedVsEra": true,
+    "eraBonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1240571,
+        "text": "While Shock and Awe is active, Crusader Strike and Exorcism grant you Holy Power, increasing all Holy damage you deal by 10%, stacking up to 3 times."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1226462,
+        "text": "Divine Storm, Holy Shock, and Holy Wrath consume all your Holy Power, dealing 100% increased damage per Holy Power you have accumulated, 50% effective against player controlled targets."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1240573,
+        "text": "Consuming Holy Power increases your Spell Power by 8 to 18% per Holy Power consumed for 10 sec."
+      }
     ]
   },
   {
@@ -11782,7 +15942,35 @@
         "isNew": true,
         "source": "Crafted: Blacksmithing (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14673,
+        "text": "+10 Shadow Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1252009,
+        "text": "+20 Strength."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1302375,
+        "text": "All party members within 30 yds are blessed, restoring 20 health every 5 sec."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1252013,
+        "text": "Improves your chance to hit by 2.0%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 21518,
+        "text": "Increases damage done by Holy spells and effects by up to 29."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 1969,
@@ -11824,7 +16012,9 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [],
+    "changedVsEra": false
   },
   {
     "id": 1972,
@@ -11896,7 +16086,20 @@
         "isNew": false,
         "source": "Crafted: Tailoring (1)"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 3,
+        "spellId": 1258496,
+        "text": "+10 Spirit."
+      },
+      {
+        "pieces": 6,
+        "spellId": 1258494,
+        "text": "Increases healing done by spells and effects by up to 22 and damage done by spells and effects by up to 8."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2071,
@@ -11928,7 +16131,15 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1294087,
+        "text": "Your attacks have a chance to increase your Attack Power by 40 and your healing spells have a chance to increase your Intellect by 20 for 15 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2072,
@@ -12000,7 +16211,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2073,
@@ -12072,7 +16301,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2074,
@@ -12144,7 +16391,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2075,
@@ -12216,7 +16481,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23044,
+        "text": "Increases the duration of your Psychic Scream spell by 1 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2076,
@@ -12288,7 +16571,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2077,
@@ -12360,7 +16661,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2078,
@@ -12432,7 +16751,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2079,
@@ -12504,7 +16841,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2080,
@@ -12576,7 +16931,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2081,
@@ -12648,7 +17021,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23218,
+        "text": "Increases your movement speed by 15% while in Bear, Cat, or Travel Form.  Only active outdoors."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2082,
@@ -12720,7 +17111,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2083,
@@ -12792,7 +17201,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2084,
@@ -12864,7 +17291,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2085,
@@ -12936,7 +17381,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2086,
@@ -13008,7 +17471,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2087,
@@ -13080,7 +17561,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 23302,
+        "text": "Reduces the cooldown of your Hammer of Justice by 10 sec."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2088,
@@ -13152,7 +17651,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2089,
@@ -13224,7 +17741,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14049,
+        "text": "+40 Attack Power."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2090,
@@ -13296,7 +17831,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2091,
@@ -13368,7 +17921,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2092,
@@ -13440,7 +18011,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2093,
@@ -13512,7 +18101,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 467550,
+        "text": "Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2094,
@@ -13584,7 +18191,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2095,
@@ -13656,7 +18281,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2096,
@@ -13728,7 +18371,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      },
+      {
+        "pieces": 4,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2097,
@@ -13800,7 +18461,25 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14467,
+        "text": "+20 Stamina."
+      },
+      {
+        "pieces": 3,
+        "spellId": 22804,
+        "text": "Improves your chance to get a critical strike with all Shock spells by 2%."
+      },
+      {
+        "pieces": 6,
+        "spellId": 14047,
+        "text": "Increases damage and healing done by magical spells and effects by up to 23."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2098,
@@ -13872,7 +18551,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300947,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301013,
+        "text": "Reduces the cooldown of your Counterspell by 5 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301079,
+        "text": "Increases damage done by your spells and effects by up to 21 when fighting Elementals."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301488,
+        "text": "Your Frostfire Bolt spell has a 10% increased chance to trigger Missile Barrage, gains 10% increased critical strike chance while your Combustion spell is active, and has a 10% increased chance to trigger Fingers of Frost."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2099,
@@ -13944,7 +18646,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300956,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301047,
+        "text": "Reduces the cooldown of your Kidney Shot ability by 3 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301088,
+        "text": "+36 Attack Power against Humanoids."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301708,
+        "text": "Reduces the cost of your Eviscerate and Death Mark abilities by 5 Energy."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2100,
@@ -14016,7 +18741,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300966,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301068,
+        "text": "Reduces the cast time of your Banish spell by 1.5 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301094,
+        "text": "Increases damage done by your spells and effects by up to 21 when fighting Demons."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301715,
+        "text": "Your Life Tap generates 20% more Mana at no additional Health cost."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2101,
@@ -14088,7 +18836,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300945,
+        "text": "Increases your attack speed and casting speed by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301012,
+        "text": "Reduces the cooldown of your Frost Trap and Freezing Trap abilities by 3 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301078,
+        "text": "+36 Attack Power against Beasts."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301252,
+        "text": "Reduces the cooldown of your Aimed Shot and Multi-Shot abilities by 1 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2102,
@@ -14160,7 +18931,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300968,
+        "text": "Increases your attack speed and casting speed by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301069,
+        "text": "Reduces the cooldown of your Intimidating Shout ability by 30 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301095,
+        "text": "+36 Attack Power against Humanoids."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301721,
+        "text": "Reduces the cooldown of your Recklessness ability by 30 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2103,
@@ -14232,7 +19026,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300970,
+        "text": "Increased Defense +7"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301071,
+        "text": "Reduces the cooldown of your Intervene ability by 10 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301096,
+        "text": "Reduces the chance for your melee attacks to be Dodged or Parried by 1.2%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301722,
+        "text": "Reduces the cooldown of your Shield Wall ability by 30 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2104,
@@ -14304,7 +19121,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300954,
+        "text": "Increased Spirit +10"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301041,
+        "text": "Reduces the cooldown of your Fear Ward spell by 60 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301085,
+        "text": "Increases healing done by up to 26 and damage done by up to 9 for all magical spells and effects."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301703,
+        "text": "Reduces the cooldown of your Penance and Prayer of Mending spells by 1 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2105,
@@ -14376,7 +19216,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300955,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301045,
+        "text": "Increases the duration of your Shackle Undead spell by 10 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301087,
+        "text": "Increases damage done by your spells and effects by up to 21 when fighting Undead."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301706,
+        "text": "Reduces the cooldown of your Devouring Plague spell by 60 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2106,
@@ -14448,7 +19311,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300951,
+        "text": "Increases your attack speed and casting speed by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301036,
+        "text": "Reduces the cooldown of your Hammer of Justice spell by 5 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301084,
+        "text": "+36 Attack Power against Undead."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301702,
+        "text": "Reduces the cooldown of your Judgement spell by 0.5 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2107,
@@ -14520,7 +19406,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300948,
+        "text": "Increased Spirit +10"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301014,
+        "text": "Reduces the cooldown of your Blessing of Protection spell by 30 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301080,
+        "text": "Increases healing done by up to 26 and damage done by up to 9 for all magical spells and effects."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301694,
+        "text": "Reduces the cooldown of your Holy Shock spell by 1 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2108,
@@ -14592,7 +19501,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300949,
+        "text": "Increased Defense +7"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301015,
+        "text": "Reduces the cast time on your Turn Undead spell by 1.5 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301083,
+        "text": "Reduces the chance for your melee attacks to be Dodged or Parried by 1.2%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301697,
+        "text": "Reduces the duration of Forbearance any time you gain it by 10.0 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2109,
@@ -14664,7 +19596,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300960,
+        "text": "Increased Spirit +10"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301059,
+        "text": "Increases the radius of effect of your beneficial Fire and Water totems by 10 yds."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301093,
+        "text": "Increases healing done by up to 26 and damage done by up to 9 for all magical spells and effects."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301713,
+        "text": "Reduces the cooldown of your Riptide spell by 1 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2110,
@@ -14736,7 +19691,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300957,
+        "text": "Increases your attack speed and casting speed by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301051,
+        "text": "Increases the radius of effect of your beneficial Air and Earth totems by 10 yds."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301090,
+        "text": "+36 Attack Power against Elementals."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301709,
+        "text": "Reduces the cooldown of your Stormstrike ability by 0.5 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2111,
@@ -14808,7 +19786,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300959,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301053,
+        "text": "Reduces the cooldown of your Earthbind Totem spell by 2 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301092,
+        "text": "Increases damage done by your spells and effects by up to 21 when fighting Elementals."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301711,
+        "text": "Reduces the cooldown of your Lava Burst spell by 1 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2112,
@@ -14880,7 +19881,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300943,
+        "text": "Increased Spirit +10"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301006,
+        "text": "Reduces the cooldown of your Barkskin spell by 10 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301077,
+        "text": "Increases healing done by up to 26 and damage done by up to 9 for all magical spells and effects."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301250,
+        "text": "Reduces the cooldown of your Swiftmend spell by 3.0 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2113,
@@ -14952,7 +19976,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300942,
+        "text": "Increased Defense +7"
+      },
+      {
+        "pieces": 3,
+        "spellId": 1301005,
+        "text": "Your Rebirth spell is now castable in Bear Form and Dire Bear Form and its cast time is reduced by 2.0 sec while you are in Bear Form or Dire Bear Form."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301076,
+        "text": "Reduces the chance for your melee attacks to be Dodged or Parried by 1.2%."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301249,
+        "text": "Reduces the cooldown of your Berserk ability by 15.0 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2114,
@@ -15024,7 +20071,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300940,
+        "text": "Improves your chance to hit by 1.0%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1300975,
+        "text": "Reduces the cooldown of your Nature's Grasp spell by 15 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301073,
+        "text": "Increases damage done by your spells and effects by up to 21 when fighting Demons."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301242,
+        "text": "Increases the duration of your Insect Swarm spell by 3 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2115,
@@ -15096,7 +20166,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1300934,
+        "text": "Increases your attack speed and casting speed by 1%."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1300999,
+        "text": "Your Hibernate spell is now castable in Cat Form and its cast time is reduced by 1.5 sec while you are in Cat Form, but Hibernate gains a cooldown of 15 sec."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1301075,
+        "text": "+36 Attack Power against Demons."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1301247,
+        "text": "Reduces the cooldown of your Shifting Power ability by 1.0 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2130,
@@ -15138,7 +20231,20 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1315080,
+        "text": "Increases movement speed while mounted by 5% in Eastern and Western Plaguelands."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1330858,
+        "text": "Chance on melee attack to lash the target, inflicting 140 Shadow damage."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2131,
@@ -15170,7 +20276,20 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1317038,
+        "text": "+22 Strength."
+      },
+      {
+        "pieces": 2,
+        "spellId": 1317039,
+        "text": "Chance on melee swing to become Angry, increasing Strength by 50 for 10 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2132,
@@ -15212,7 +20331,15 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1318244,
+        "text": "Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2133,
@@ -15274,7 +20401,30 @@
         "isNew": true,
         "source": "Drop: NPC 250622"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 14668,
+        "text": "+5 Shadow Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 9106,
+        "text": "+10 Intellect."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1321560,
+        "text": "When your Mana falls below 15%, restore 200 Mana over 10 sec. Restores twice as much Mana in Haunted and Wasteland areas. May only occur once every 5 min."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1321587,
+        "text": "Grants your healing spells a chance to heal for an additional 40 Health every 3 sec for 15 sec."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2134,
@@ -15336,7 +20486,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1324311,
+        "text": "+5 Arcane Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1324312,
+        "text": "+10 Spirit."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1324318,
+        "text": "Chance on damaging spell to allow 15% of your Mana regeneration to continue while casting for 15 sec. This Mana Regeneration is doubled in Strongholds and Cities."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1324323,
+        "text": "Chance on damaging spell to summon an Arcane elemental to aid you in combat."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2135,
@@ -15398,7 +20571,30 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1324287,
+        "text": "+100 Armor."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1324288,
+        "text": "Increased Defense +5."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1324298,
+        "text": "Chance on block to heal for 14 to 23. Healing is doubled in Strongholds and Cities."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1324309,
+        "text": "Taking damage has a high chance to increase your Stamina by 1 for 30 sec, stacking up to 20 times."
+      }
+    ],
+    "changedVsEra": false
   },
   {
     "id": 2136,
@@ -15460,8 +20656,43 @@
         "isNew": true,
         "source": "Drop"
       }
-    ]
+    ],
+    "bonuses": [
+      {
+        "pieces": 2,
+        "spellId": 1324673,
+        "text": "+10 Fire Resistance."
+      },
+      {
+        "pieces": 3,
+        "spellId": 1324674,
+        "text": "+15 Stamina."
+      },
+      {
+        "pieces": 4,
+        "spellId": 1324675,
+        "text": "Increased Swords +1."
+      },
+      {
+        "pieces": 5,
+        "spellId": 1324684,
+        "text": "Melee attacks have a chance to increase your Critical Strike chance by 2% for 20 sec. This effect is doubled in swamps."
+      }
+    ],
+    "changedVsEra": false
   }
 ];
-    window.WOW_GEAR_SETS_ITEM_MAP = {"6473":{"setId":162,"setName":"Embrace of the Viper","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"7948":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Waist"},"7949":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Legs"},"7950":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Chest"},"7951":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Hands"},"7952":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Feet"},"7953":{"setId":221,"setName":"Garb of Thero-shan","setKind":"other","piecesCount":6,"className":"Rogue","slotName":"Head"},"10010":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Legs"},"10011":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Hands"},"10020":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Chest"},"10032":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Head"},"10038":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Shoulder"},"10039":{"setId":1972,"setName":"Stormcloth Regalia","setKind":"other","piecesCount":6,"className":"All","slotName":"Feet"},"10328":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Chest"},"10329":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Waist"},"10330":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Legs"},"10331":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Hands"},"10332":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Feet"},"10333":{"setId":163,"setName":"Chain of the Scarlet Crusade","setKind":"other","piecesCount":6,"className":"All","slotName":"Wrist"},"10399":{"setId":161,"setName":"Defias Leather","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"10400":{"setId":161,"setName":"Defias Leather","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"10401":{"setId":161,"setName":"Defias Leather","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"10402":{"setId":161,"setName":"Defias Leather","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"10403":{"setId":161,"setName":"Defias Leather","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"10410":{"setId":162,"setName":"Embrace of the Viper","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"10411":{"setId":162,"setName":"Embrace of the Viper","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"10412":{"setId":162,"setName":"Embrace of the Viper","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"10413":{"setId":162,"setName":"Embrace of the Viper","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"11726":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Chest"},"11728":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Legs"},"11729":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Head"},"11730":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Hands"},"11731":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Feet"},"12422":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Chest"},"12424":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Waist"},"12425":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Wrist"},"12426":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Feet"},"12427":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Head"},"12428":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Shoulder"},"12429":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Legs"},"12939":{"setId":41,"setName":"Dal'Rend's Arms","setKind":"other","piecesCount":2,"className":"All","slotName":"Off Hand"},"12940":{"setId":41,"setName":"Dal'Rend's Arms","setKind":"other","piecesCount":2,"className":"All","slotName":"Main Hand"},"13183":{"setId":65,"setName":"Spider's Kiss","setKind":"other","piecesCount":2,"className":"All","slotName":"One-Hand"},"13218":{"setId":65,"setName":"Spider's Kiss","setKind":"other","piecesCount":2,"className":"All","slotName":"One-Hand"},"13388":{"setId":81,"setName":"The Postmaster","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"13389":{"setId":81,"setName":"The Postmaster","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"13390":{"setId":81,"setName":"The Postmaster","setKind":"other","piecesCount":5,"className":"All","slotName":"Head"},"13391":{"setId":81,"setName":"The Postmaster","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"13392":{"setId":81,"setName":"The Postmaster","setKind":"other","piecesCount":5,"className":"All","slotName":"Finger"},"14611":{"setId":123,"setName":"Bloodmail Regalia","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"14612":{"setId":123,"setName":"Bloodmail Regalia","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"14614":{"setId":123,"setName":"Bloodmail Regalia","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"14615":{"setId":123,"setName":"Bloodmail Regalia","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"14616":{"setId":123,"setName":"Bloodmail Regalia","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"14620":{"setId":124,"setName":"Deathbone Guardian","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"14621":{"setId":124,"setName":"Deathbone Guardian","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"14622":{"setId":124,"setName":"Deathbone Guardian","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"14623":{"setId":124,"setName":"Deathbone Guardian","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"14624":{"setId":124,"setName":"Deathbone Guardian","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"14626":{"setId":122,"setName":"Necropile Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"14629":{"setId":122,"setName":"Necropile Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Wrist"},"14631":{"setId":122,"setName":"Necropile Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"14632":{"setId":122,"setName":"Necropile Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"14633":{"setId":122,"setName":"Necropile Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Shoulder"},"14636":{"setId":121,"setName":"Cadaverous Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"14637":{"setId":121,"setName":"Cadaverous Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"14638":{"setId":121,"setName":"Cadaverous Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"14640":{"setId":121,"setName":"Cadaverous Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"14641":{"setId":121,"setName":"Cadaverous Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"15045":{"setId":490,"setName":"Green Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"15046":{"setId":490,"setName":"Green Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"15048":{"setId":491,"setName":"Blue Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"15049":{"setId":491,"setName":"Blue Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"15050":{"setId":489,"setName":"Black Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"15051":{"setId":489,"setName":"Black Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"15052":{"setId":489,"setName":"Black Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"15053":{"setId":141,"setName":"Volcanic Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"15054":{"setId":141,"setName":"Volcanic Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"15055":{"setId":141,"setName":"Volcanic Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"15056":{"setId":142,"setName":"Stormshroud Armor","setKind":"other","piecesCount":4,"className":"All","slotName":"Chest"},"15057":{"setId":142,"setName":"Stormshroud Armor","setKind":"other","piecesCount":4,"className":"All","slotName":"Legs"},"15058":{"setId":142,"setName":"Stormshroud Armor","setKind":"other","piecesCount":4,"className":"All","slotName":"Shoulder"},"15062":{"setId":143,"setName":"Devilsaur Armor","setKind":"other","piecesCount":2,"className":"All","slotName":"Legs"},"15063":{"setId":143,"setName":"Devilsaur Armor","setKind":"other","piecesCount":2,"className":"All","slotName":"Hands"},"15066":{"setId":144,"setName":"Ironfeather Armor","setKind":"other","piecesCount":2,"className":"All","slotName":"Chest"},"15067":{"setId":144,"setName":"Ironfeather Armor","setKind":"other","piecesCount":2,"className":"All","slotName":"Shoulder"},"16485":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"16487":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"16489":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"16490":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"16491":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"16492":{"setId":341,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"16498":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"16499":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"16505":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"16506":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"16507":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"16508":{"setId":347,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"16666":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16667":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16668":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16669":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16670":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16671":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16672":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16673":{"setId":187,"setName":"The Elements","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16674":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16675":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16676":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16677":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16678":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16679":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16680":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16681":{"setId":186,"setName":"Beaststalker Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16682":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16683":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16684":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16685":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16686":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16687":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16688":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16689":{"setId":181,"setName":"Magister's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16690":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16691":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16692":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16693":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16694":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16695":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16696":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16697":{"setId":182,"setName":"Vestments of the Devout","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16698":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16699":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16700":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16701":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16702":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16703":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16704":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16705":{"setId":183,"setName":"Dreadmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16706":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16707":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16708":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16709":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16710":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16711":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16712":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16713":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16714":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16715":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16716":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16717":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16718":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16719":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16720":{"setId":185,"setName":"Wildheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16721":{"setId":184,"setName":"Shadowcraft Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16722":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16723":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16724":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16725":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16726":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16727":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16728":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16729":{"setId":188,"setName":"Lightforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16730":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"16731":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"16732":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"16733":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"16734":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"16735":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"16736":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"16737":{"setId":189,"setName":"Battlegear of Valor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"16795":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Head"},"16796":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Legs"},"16797":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Shoulder"},"16798":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Chest"},"16799":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Wrist"},"16800":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Feet"},"16801":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Hands"},"16802":{"setId":201,"setName":"Arcanist Regalia","setKind":"t1","piecesCount":8,"className":"All","slotName":"Waist"},"16803":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Feet"},"16804":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Wrist"},"16805":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Hands"},"16806":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Waist"},"16807":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Shoulder"},"16808":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Head"},"16809":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Chest"},"16810":{"setId":203,"setName":"Felheart Raiment","setKind":"t1","piecesCount":8,"className":"All","slotName":"Legs"},"16811":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Feet"},"16812":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Hands"},"16813":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Head"},"16814":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Legs"},"16815":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Chest"},"16816":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Shoulder"},"16817":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Waist"},"16818":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Waist"},"16819":{"setId":202,"setName":"Vestments of Prophecy","setKind":"t1","piecesCount":8,"className":"Priest","slotName":"Wrist"},"16820":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Chest"},"16821":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Head"},"16822":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Legs"},"16823":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Shoulder"},"16824":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Feet"},"16825":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Wrist"},"16826":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Hands"},"16827":{"setId":204,"setName":"Nightslayer Armor","setKind":"t1","piecesCount":8,"className":"Rogue","slotName":"Waist"},"16828":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Waist"},"16829":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Feet"},"16830":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Wrist"},"16831":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Hands"},"16832":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Shoulder"},"16833":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Chest"},"16834":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Head"},"16835":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Legs"},"16836":{"setId":205,"setName":"Cenarion Raiment","setKind":"t1","piecesCount":8,"className":"Druid","slotName":"Shoulder"},"16837":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Feet"},"16838":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Waist"},"16839":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Hands"},"16840":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Wrist"},"16841":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Chest"},"16842":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Head"},"16843":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Legs"},"16844":{"setId":207,"setName":"The Earthfury","setKind":"t1","piecesCount":8,"className":"Shaman","slotName":"Shoulder"},"16845":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Chest"},"16846":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Head"},"16847":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Legs"},"16848":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Shoulder"},"16849":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Feet"},"16850":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Wrist"},"16851":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Waist"},"16852":{"setId":206,"setName":"Giantstalker Armor","setKind":"t1","piecesCount":8,"className":"Hunter","slotName":"Hands"},"16853":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Chest"},"16854":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Head"},"16855":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Legs"},"16856":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Shoulder"},"16857":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Wrist"},"16858":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Waist"},"16859":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Feet"},"16860":{"setId":208,"setName":"Lawbringer Armor","setKind":"t1","piecesCount":8,"className":"All","slotName":"Hands"},"16861":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Wrist"},"16862":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Feet"},"16863":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Hands"},"16864":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Waist"},"16865":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Chest"},"16866":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Head"},"16867":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Legs"},"16868":{"setId":209,"setName":"Battlegear of Might","setKind":"t1","piecesCount":8,"className":"All","slotName":"Shoulder"},"16897":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Chest"},"16898":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Feet"},"16899":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Hands"},"16900":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Head"},"16901":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Legs"},"16902":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Shoulder"},"16903":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Waist"},"16904":{"setId":214,"setName":"Stormrage Raiment","setKind":"t2","piecesCount":8,"className":"Druid","slotName":"Wrist"},"16905":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Chest"},"16906":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Feet"},"16907":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Hands"},"16908":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Head"},"16909":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Legs"},"16910":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Waist"},"16911":{"setId":213,"setName":"Bloodfang Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Wrist"},"16912":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Feet"},"16913":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Hands"},"16914":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Head"},"16915":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Legs"},"16916":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Chest"},"16917":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Shoulder"},"16918":{"setId":210,"setName":"Netherwind Regalia","setKind":"t2","piecesCount":8,"className":"Mage","slotName":"Wrist"},"16919":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Feet"},"16920":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Hands"},"16921":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Head"},"16922":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Legs"},"16923":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Chest"},"16924":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Shoulder"},"16925":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Waist"},"16926":{"setId":211,"setName":"Vestments of Transcendence","setKind":"t2","piecesCount":8,"className":"Priest","slotName":"Wrist"},"16927":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Feet"},"16928":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Hands"},"16929":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Head"},"16930":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Legs"},"16931":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Chest"},"16932":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Shoulder"},"16933":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Waist"},"16934":{"setId":212,"setName":"Nemesis Raiment","setKind":"t2","piecesCount":8,"className":"All","slotName":"Wrist"},"16935":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Wrist"},"16936":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Waist"},"16937":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Shoulder"},"16938":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Legs"},"16939":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Head"},"16940":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Hands"},"16941":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Feet"},"16942":{"setId":215,"setName":"Dragonstalker Armor","setKind":"t2","piecesCount":8,"className":"Hunter","slotName":"Chest"},"16943":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Wrist"},"16944":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Waist"},"16945":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Shoulder"},"16946":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Legs"},"16947":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Head"},"16948":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Hands"},"16949":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Feet"},"16950":{"setId":216,"setName":"The Ten Storms","setKind":"t2","piecesCount":8,"className":"All","slotName":"Chest"},"16951":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Wrist"},"16952":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Waist"},"16953":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Shoulder"},"16954":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Legs"},"16955":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Head"},"16956":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Hands"},"16957":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Feet"},"16958":{"setId":217,"setName":"Judgement Armor","setKind":"t2","piecesCount":8,"className":"All","slotName":"Chest"},"16959":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Wrist"},"16960":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Waist"},"16961":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Shoulder"},"16962":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Legs"},"16963":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Head"},"16964":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Hands"},"16965":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Feet"},"16966":{"setId":218,"setName":"Battlegear of Wrath","setKind":"t2","piecesCount":8,"className":"All","slotName":"Chest"},"17064":{"setId":241,"setName":"Scale of the Gods","setKind":"other","piecesCount":2,"className":"All","slotName":"Trinket"},"17610":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"17611":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"17612":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"17613":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"17616":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"17617":{"setId":342,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"18202":{"setId":261,"setName":"Spirit of Eskhandar","setKind":"other","piecesCount":4,"className":"All","slotName":"Off Hand"},"18203":{"setId":261,"setName":"Spirit of Eskhandar","setKind":"other","piecesCount":4,"className":"All","slotName":"Main Hand"},"18204":{"setId":261,"setName":"Spirit of Eskhandar","setKind":"other","piecesCount":4,"className":"All","slotName":"Back"},"18205":{"setId":261,"setName":"Spirit of Eskhandar","setKind":"other","piecesCount":4,"className":"All","slotName":"Neck"},"19577":{"setId":474,"setName":"Vindicator's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Neck"},"19588":{"setId":475,"setName":"Freethinker's Armor","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Neck"},"19594":{"setId":480,"setName":"Confessor's Raiment","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Neck"},"19601":{"setId":482,"setName":"Illusionist's Attire","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Neck"},"19605":{"setId":481,"setName":"Demoniac's Threads","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Neck"},"19609":{"setId":476,"setName":"Augur's Regalia","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Neck"},"19613":{"setId":479,"setName":"Haruspex's Garb","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Neck"},"19617":{"setId":478,"setName":"Madcap's Outfit","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Neck"},"19621":{"setId":477,"setName":"Predator's Armor","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Neck"},"19682":{"setId":421,"setName":"Bloodvine Garb","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"19683":{"setId":421,"setName":"Bloodvine Garb","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"19684":{"setId":421,"setName":"Bloodvine Garb","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"19685":{"setId":441,"setName":"Primal Batskin","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"19686":{"setId":441,"setName":"Primal Batskin","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"19687":{"setId":441,"setName":"Primal Batskin","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"19688":{"setId":442,"setName":"Blood Tiger Harness","setKind":"other","piecesCount":2,"className":"All","slotName":"Chest"},"19689":{"setId":442,"setName":"Blood Tiger Harness","setKind":"other","piecesCount":2,"className":"All","slotName":"Shoulder"},"19690":{"setId":443,"setName":"Bloodsoul Embrace","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"19691":{"setId":443,"setName":"Bloodsoul Embrace","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"19692":{"setId":443,"setName":"Bloodsoul Embrace","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"19693":{"setId":444,"setName":"The Darksoul","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"19694":{"setId":444,"setName":"The Darksoul","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"19695":{"setId":444,"setName":"The Darksoul","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"19822":{"setId":474,"setName":"Vindicator's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Chest"},"19823":{"setId":474,"setName":"Vindicator's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Waist"},"19824":{"setId":474,"setName":"Vindicator's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Wrist"},"19825":{"setId":475,"setName":"Freethinker's Armor","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Chest"},"19826":{"setId":475,"setName":"Freethinker's Armor","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Waist"},"19827":{"setId":475,"setName":"Freethinker's Armor","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Wrist"},"19828":{"setId":476,"setName":"Augur's Regalia","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Chest"},"19829":{"setId":476,"setName":"Augur's Regalia","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Waist"},"19830":{"setId":476,"setName":"Augur's Regalia","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Wrist"},"19831":{"setId":477,"setName":"Predator's Armor","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Shoulder"},"19832":{"setId":477,"setName":"Predator's Armor","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Waist"},"19833":{"setId":477,"setName":"Predator's Armor","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Wrist"},"19834":{"setId":478,"setName":"Madcap's Outfit","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Chest"},"19835":{"setId":478,"setName":"Madcap's Outfit","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Shoulder"},"19836":{"setId":478,"setName":"Madcap's Outfit","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Wrist"},"19838":{"setId":479,"setName":"Haruspex's Garb","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Chest"},"19839":{"setId":479,"setName":"Haruspex's Garb","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Waist"},"19840":{"setId":479,"setName":"Haruspex's Garb","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Wrist"},"19841":{"setId":480,"setName":"Confessor's Raiment","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Shoulder"},"19842":{"setId":480,"setName":"Confessor's Raiment","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Waist"},"19843":{"setId":480,"setName":"Confessor's Raiment","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Wrist"},"19845":{"setId":482,"setName":"Illusionist's Attire","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Shoulder"},"19846":{"setId":482,"setName":"Illusionist's Attire","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Wrist"},"19848":{"setId":481,"setName":"Demoniac's Threads","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Wrist"},"19849":{"setId":481,"setName":"Demoniac's Threads","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Shoulder"},"19863":{"setId":465,"setName":"Prayer of the Primal","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19865":{"setId":461,"setName":"The Twin Blades of Hakkari","setKind":"other","piecesCount":2,"className":"All","slotName":"Main Hand"},"19866":{"setId":461,"setName":"The Twin Blades of Hakkari","setKind":"other","piecesCount":2,"className":"All","slotName":"Off Hand"},"19873":{"setId":464,"setName":"Overlord's Resolution","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19893":{"setId":462,"setName":"Zanzil's Concentration","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19896":{"setId":463,"setName":"Primal Blessing","setKind":"other","piecesCount":2,"className":"All","slotName":"Main Hand"},"19898":{"setId":466,"setName":"Major Mojo Infusion","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19905":{"setId":462,"setName":"Zanzil's Concentration","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19910":{"setId":463,"setName":"Primal Blessing","setKind":"other","piecesCount":2,"className":"All","slotName":"Off Hand"},"19912":{"setId":464,"setName":"Overlord's Resolution","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19920":{"setId":465,"setName":"Prayer of the Primal","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19925":{"setId":466,"setName":"Major Mojo Infusion","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"19951":{"setId":474,"setName":"Vindicator's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Trinket"},"19952":{"setId":475,"setName":"Freethinker's Armor","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Trinket"},"19953":{"setId":477,"setName":"Predator's Armor","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Trinket"},"19954":{"setId":478,"setName":"Madcap's Outfit","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Trinket"},"19955":{"setId":479,"setName":"Haruspex's Garb","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Trinket"},"19956":{"setId":476,"setName":"Augur's Regalia","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Trinket"},"19957":{"setId":481,"setName":"Demoniac's Threads","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Trinket"},"19958":{"setId":480,"setName":"Confessor's Raiment","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Trinket"},"19959":{"setId":482,"setName":"Illusionist's Attire","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Trinket"},"20033":{"setId":481,"setName":"Demoniac's Threads","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Chest"},"20034":{"setId":482,"setName":"Illusionist's Attire","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Chest"},"20041":{"setId":467,"setName":"The Highlander's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20042":{"setId":468,"setName":"The Highlander's Resolve","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20043":{"setId":469,"setName":"The Highlander's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20044":{"setId":470,"setName":"The Highlander's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20045":{"setId":471,"setName":"The Highlander's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20046":{"setId":472,"setName":"The Highlander's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20047":{"setId":473,"setName":"The Highlander's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20048":{"setId":467,"setName":"The Highlander's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20049":{"setId":468,"setName":"The Highlander's Resolve","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20050":{"setId":469,"setName":"The Highlander's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20051":{"setId":470,"setName":"The Highlander's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20052":{"setId":471,"setName":"The Highlander's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20053":{"setId":472,"setName":"The Highlander's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20054":{"setId":473,"setName":"The Highlander's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20055":{"setId":469,"setName":"The Highlander's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20056":{"setId":470,"setName":"The Highlander's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20057":{"setId":467,"setName":"The Highlander's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20058":{"setId":468,"setName":"The Highlander's Resolve","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20059":{"setId":471,"setName":"The Highlander's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20060":{"setId":472,"setName":"The Highlander's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20061":{"setId":473,"setName":"The Highlander's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20150":{"setId":483,"setName":"The Defiler's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20154":{"setId":483,"setName":"The Defiler's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20158":{"setId":483,"setName":"The Defiler's Determination","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20159":{"setId":485,"setName":"The Defiler's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20163":{"setId":485,"setName":"The Defiler's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20167":{"setId":488,"setName":"The Defiler's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20171":{"setId":488,"setName":"The Defiler's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20175":{"setId":488,"setName":"The Defiler's Will","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20176":{"setId":485,"setName":"The Defiler's Intent","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20186":{"setId":486,"setName":"The Defiler's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20190":{"setId":486,"setName":"The Defiler's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20194":{"setId":486,"setName":"The Defiler's Purpose","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20195":{"setId":484,"setName":"The Defiler's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20199":{"setId":484,"setName":"The Defiler's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20203":{"setId":484,"setName":"The Defiler's Fortitude","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20204":{"setId":487,"setName":"The Defiler's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"20208":{"setId":487,"setName":"The Defiler's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Feet"},"20212":{"setId":487,"setName":"The Defiler's Resolution","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20295":{"setId":491,"setName":"Blue Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Legs"},"20296":{"setId":490,"setName":"Green Dragon Mail","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"20406":{"setId":492,"setName":"Twilight Trappings","setKind":"other","piecesCount":3,"className":"All","slotName":"Shoulder"},"20407":{"setId":492,"setName":"Twilight Trappings","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"20408":{"setId":492,"setName":"Twilight Trappings","setKind":"other","piecesCount":3,"className":"All","slotName":"Head"},"21278":{"setId":142,"setName":"Stormshroud Armor","setKind":"other","piecesCount":4,"className":"All","slotName":"Hands"},"21326":{"setId":2071,"setName":"Teachings of the Furbolgs","setKind":"other","piecesCount":2,"className":"All","slotName":"Trinket"},"21329":{"setId":496,"setName":"Conqueror's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Head"},"21330":{"setId":496,"setName":"Conqueror's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Shoulder"},"21331":{"setId":496,"setName":"Conqueror's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Chest"},"21332":{"setId":496,"setName":"Conqueror's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Legs"},"21333":{"setId":496,"setName":"Conqueror's Battlegear","setKind":"other","piecesCount":5,"className":"Warrior","slotName":"Feet"},"21334":{"setId":499,"setName":"Doomcaller's Attire","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Chest"},"21335":{"setId":499,"setName":"Doomcaller's Attire","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Shoulder"},"21336":{"setId":499,"setName":"Doomcaller's Attire","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Legs"},"21337":{"setId":499,"setName":"Doomcaller's Attire","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Head"},"21338":{"setId":499,"setName":"Doomcaller's Attire","setKind":"other","piecesCount":5,"className":"Warlock","slotName":"Feet"},"21343":{"setId":503,"setName":"Enigma Vestments","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Chest"},"21344":{"setId":503,"setName":"Enigma Vestments","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Feet"},"21345":{"setId":503,"setName":"Enigma Vestments","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Shoulder"},"21346":{"setId":503,"setName":"Enigma Vestments","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Legs"},"21347":{"setId":503,"setName":"Enigma Vestments","setKind":"other","piecesCount":5,"className":"Mage","slotName":"Head"},"21348":{"setId":507,"setName":"Garments of the Oracle","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Head"},"21349":{"setId":507,"setName":"Garments of the Oracle","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Feet"},"21350":{"setId":507,"setName":"Garments of the Oracle","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Shoulder"},"21351":{"setId":507,"setName":"Garments of the Oracle","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Chest"},"21352":{"setId":507,"setName":"Garments of the Oracle","setKind":"other","piecesCount":5,"className":"Priest","slotName":"Legs"},"21353":{"setId":493,"setName":"Genesis Raiment","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Head"},"21354":{"setId":493,"setName":"Genesis Raiment","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Shoulder"},"21355":{"setId":493,"setName":"Genesis Raiment","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Feet"},"21356":{"setId":493,"setName":"Genesis Raiment","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Legs"},"21357":{"setId":493,"setName":"Genesis Raiment","setKind":"other","piecesCount":5,"className":"Druid","slotName":"Chest"},"21359":{"setId":497,"setName":"Deathdealer's Embrace","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Feet"},"21360":{"setId":497,"setName":"Deathdealer's Embrace","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Head"},"21361":{"setId":497,"setName":"Deathdealer's Embrace","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Shoulder"},"21362":{"setId":497,"setName":"Deathdealer's Embrace","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Legs"},"21364":{"setId":497,"setName":"Deathdealer's Embrace","setKind":"other","piecesCount":5,"className":"Rogue","slotName":"Chest"},"21365":{"setId":509,"setName":"Striker's Garb","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Feet"},"21366":{"setId":509,"setName":"Striker's Garb","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Head"},"21367":{"setId":509,"setName":"Striker's Garb","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Shoulder"},"21368":{"setId":509,"setName":"Striker's Garb","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Legs"},"21370":{"setId":509,"setName":"Striker's Garb","setKind":"other","piecesCount":5,"className":"Hunter","slotName":"Chest"},"21372":{"setId":501,"setName":"Stormcaller's Garb","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Head"},"21373":{"setId":501,"setName":"Stormcaller's Garb","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Feet"},"21374":{"setId":501,"setName":"Stormcaller's Garb","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Chest"},"21375":{"setId":501,"setName":"Stormcaller's Garb","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Legs"},"21376":{"setId":501,"setName":"Stormcaller's Garb","setKind":"other","piecesCount":5,"className":"Shaman","slotName":"Shoulder"},"21387":{"setId":505,"setName":"Avenger's Battlegear","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Head"},"21388":{"setId":505,"setName":"Avenger's Battlegear","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Feet"},"21389":{"setId":505,"setName":"Avenger's Battlegear","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Chest"},"21390":{"setId":505,"setName":"Avenger's Battlegear","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Legs"},"21391":{"setId":505,"setName":"Avenger's Battlegear","setKind":"other","piecesCount":5,"className":"Paladin","slotName":"Shoulder"},"21392":{"setId":495,"setName":"Battlegear of Unyielding Strength","setKind":"other","piecesCount":3,"className":"Warrior","slotName":"One-Hand"},"21393":{"setId":495,"setName":"Battlegear of Unyielding Strength","setKind":"other","piecesCount":3,"className":"Warrior","slotName":"Finger"},"21394":{"setId":495,"setName":"Battlegear of Unyielding Strength","setKind":"other","piecesCount":3,"className":"Warrior","slotName":"Back"},"21395":{"setId":506,"setName":"Battlegear of Eternal Justice","setKind":"other","piecesCount":3,"className":"Paladin","slotName":"Main Hand"},"21396":{"setId":506,"setName":"Battlegear of Eternal Justice","setKind":"other","piecesCount":3,"className":"Paladin","slotName":"Finger"},"21397":{"setId":506,"setName":"Battlegear of Eternal Justice","setKind":"other","piecesCount":3,"className":"Paladin","slotName":"Back"},"21398":{"setId":502,"setName":"Gift of the Gathering Storm","setKind":"other","piecesCount":3,"className":"Shaman","slotName":"Main Hand"},"21399":{"setId":502,"setName":"Gift of the Gathering Storm","setKind":"other","piecesCount":3,"className":"Shaman","slotName":"Finger"},"21400":{"setId":502,"setName":"Gift of the Gathering Storm","setKind":"other","piecesCount":3,"className":"Shaman","slotName":"Back"},"21401":{"setId":510,"setName":"Trappings of the Unseen Path","setKind":"other","piecesCount":3,"className":"Hunter","slotName":"One-Hand"},"21402":{"setId":510,"setName":"Trappings of the Unseen Path","setKind":"other","piecesCount":3,"className":"Hunter","slotName":"Finger"},"21403":{"setId":510,"setName":"Trappings of the Unseen Path","setKind":"other","piecesCount":3,"className":"Hunter","slotName":"Back"},"21404":{"setId":498,"setName":"Emblems of Veiled Shadows","setKind":"other","piecesCount":3,"className":"Rogue","slotName":"One-Hand"},"21405":{"setId":498,"setName":"Emblems of Veiled Shadows","setKind":"other","piecesCount":3,"className":"Rogue","slotName":"Finger"},"21406":{"setId":498,"setName":"Emblems of Veiled Shadows","setKind":"other","piecesCount":3,"className":"Rogue","slotName":"Back"},"21407":{"setId":494,"setName":"Symbols of Unending Life","setKind":"other","piecesCount":3,"className":"Druid","slotName":"Main Hand"},"21408":{"setId":494,"setName":"Symbols of Unending Life","setKind":"other","piecesCount":3,"className":"Druid","slotName":"Finger"},"21409":{"setId":494,"setName":"Symbols of Unending Life","setKind":"other","piecesCount":3,"className":"Druid","slotName":"Back"},"21410":{"setId":508,"setName":"Finery of Infinite Wisdom","setKind":"other","piecesCount":3,"className":"Priest","slotName":"Main Hand"},"21411":{"setId":508,"setName":"Finery of Infinite Wisdom","setKind":"other","piecesCount":3,"className":"Priest","slotName":"Finger"},"21412":{"setId":508,"setName":"Finery of Infinite Wisdom","setKind":"other","piecesCount":3,"className":"Priest","slotName":"Back"},"21413":{"setId":504,"setName":"Trappings of Vaulted Secrets","setKind":"other","piecesCount":3,"className":"Mage","slotName":"Main Hand"},"21414":{"setId":504,"setName":"Trappings of Vaulted Secrets","setKind":"other","piecesCount":3,"className":"Mage","slotName":"Finger"},"21415":{"setId":504,"setName":"Trappings of Vaulted Secrets","setKind":"other","piecesCount":3,"className":"Mage","slotName":"Back"},"21416":{"setId":500,"setName":"Implements of Unspoken Names","setKind":"other","piecesCount":3,"className":"Warlock","slotName":"One-Hand"},"21417":{"setId":500,"setName":"Implements of Unspoken Names","setKind":"other","piecesCount":3,"className":"Warlock","slotName":"Finger"},"21418":{"setId":500,"setName":"Implements of Unspoken Names","setKind":"other","piecesCount":3,"className":"Warlock","slotName":"Back"},"21994":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"21995":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"21996":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"21997":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"21998":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"21999":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22000":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22001":{"setId":511,"setName":"Battlegear of Heroism","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22002":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22003":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22004":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22005":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22006":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22007":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22008":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22009":{"setId":512,"setName":"Darkmantle Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22010":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22011":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22013":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22015":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22016":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22017":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22060":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22061":{"setId":515,"setName":"Beastmaster Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22062":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22063":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22064":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22065":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22066":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22067":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22068":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22069":{"setId":517,"setName":"Sorcerer's Regalia","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22070":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22071":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22072":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22073":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22074":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22075":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22076":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22077":{"setId":518,"setName":"Deathmist Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22078":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22079":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22080":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22081":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22082":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22083":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22084":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22085":{"setId":514,"setName":"Vestments of the Virtuous","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22086":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22087":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22088":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22089":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22090":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22091":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22092":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22093":{"setId":516,"setName":"Soulforge Armor","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22095":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22096":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22097":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22098":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22099":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22100":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22101":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22102":{"setId":519,"setName":"The Five Thunders","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22106":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Waist"},"22107":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Feet"},"22108":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Wrist"},"22109":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Head"},"22110":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Hands"},"22111":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Legs"},"22112":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Shoulder"},"22113":{"setId":513,"setName":"Feralheart Raiment","setKind":"dungeon","piecesCount":8,"className":"All","slotName":"Chest"},"22301":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Chest"},"22302":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Head"},"22303":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Legs"},"22304":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Hands"},"22305":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Shoulder"},"22306":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Waist"},"22311":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Feet"},"22313":{"setId":520,"setName":"Ironweave Battlesuit","setKind":"other","piecesCount":8,"className":"All","slotName":"Wrist"},"22416":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Chest"},"22417":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Legs"},"22418":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Head"},"22419":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Shoulder"},"22420":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Feet"},"22421":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Hands"},"22422":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Waist"},"22423":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Wrist"},"22424":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Wrist"},"22425":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Chest"},"22426":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Hands"},"22427":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Legs"},"22428":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Head"},"22429":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Shoulder"},"22430":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Feet"},"22431":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Waist"},"22436":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Chest"},"22437":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Legs"},"22438":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Head"},"22439":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Shoulder"},"22440":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Feet"},"22441":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Hands"},"22442":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Waist"},"22443":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Wrist"},"22464":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Chest"},"22465":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Legs"},"22466":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Head"},"22467":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Shoulder"},"22468":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Feet"},"22469":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Hands"},"22470":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Waist"},"22471":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Wrist"},"22476":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Chest"},"22477":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Legs"},"22478":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Head"},"22479":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Shoulder"},"22480":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Feet"},"22481":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Hands"},"22482":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Waist"},"22483":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Wrist"},"22488":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Chest"},"22489":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Legs"},"22490":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Head"},"22491":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Shoulder"},"22492":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Feet"},"22493":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Hands"},"22494":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Waist"},"22495":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Wrist"},"22496":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Chest"},"22497":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Legs"},"22498":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Head"},"22499":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Shoulder"},"22500":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Feet"},"22501":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Hands"},"22502":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Waist"},"22503":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Wrist"},"22504":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Chest"},"22505":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Legs"},"22506":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Head"},"22507":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Shoulder"},"22508":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Feet"},"22509":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Hands"},"22510":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Waist"},"22511":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Wrist"},"22512":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Chest"},"22513":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Legs"},"22514":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Head"},"22515":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Shoulder"},"22516":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Feet"},"22517":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Hands"},"22518":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Waist"},"22519":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Wrist"},"22843":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"22855":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"22857":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"22858":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"22859":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"22860":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"22862":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"22865":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"22867":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"22868":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"22869":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"22870":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"22872":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"22873":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"22874":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"22875":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"22876":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"22881":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"22882":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"22883":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"22884":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"22885":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"22886":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"22887":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"23059":{"setId":523,"setName":"Dreadnaught's Battlegear","setKind":"t3","piecesCount":9,"className":"Warrior","slotName":"Finger"},"23060":{"setId":524,"setName":"Bonescythe Armor","setKind":"t3","piecesCount":9,"className":"Rogue","slotName":"Finger"},"23061":{"setId":525,"setName":"Vestments of Faith","setKind":"t3","piecesCount":9,"className":"Priest","slotName":"Finger"},"23062":{"setId":526,"setName":"Frostfire Regalia","setKind":"t3","piecesCount":9,"className":"Mage","slotName":"Finger"},"23063":{"setId":529,"setName":"Plagueheart Raiment","setKind":"t3","piecesCount":9,"className":"Warlock","slotName":"Finger"},"23064":{"setId":521,"setName":"Dreamwalker Raiment","setKind":"t3","piecesCount":9,"className":"Druid","slotName":"Finger"},"23065":{"setId":527,"setName":"The Earthshatterer","setKind":"t3","piecesCount":9,"className":"Shaman","slotName":"Finger"},"23066":{"setId":528,"setName":"Redemption Armor","setKind":"t3","piecesCount":9,"className":"Paladin","slotName":"Finger"},"23067":{"setId":530,"setName":"Cryptstalker Armor","setKind":"t3","piecesCount":9,"className":"Hunter","slotName":"Finger"},"23078":{"setId":533,"setName":"Battlegear of Undead Slaying","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"23081":{"setId":534,"setName":"Undead Slayer's Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"23082":{"setId":535,"setName":"Garb of the Undead Slayer","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"23084":{"setId":536,"setName":"Regalia of Undead Cleansing","setKind":"other","piecesCount":3,"className":"All","slotName":"Hands"},"23085":{"setId":536,"setName":"Regalia of Undead Cleansing","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"23087":{"setId":533,"setName":"Battlegear of Undead Slaying","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"23088":{"setId":535,"setName":"Garb of the Undead Slayer","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"23089":{"setId":534,"setName":"Undead Slayer's Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"23090":{"setId":533,"setName":"Battlegear of Undead Slaying","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"23091":{"setId":536,"setName":"Regalia of Undead Cleansing","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"23092":{"setId":535,"setName":"Garb of the Undead Slayer","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"23093":{"setId":534,"setName":"Undead Slayer's Armor","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"23243":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"23244":{"setId":537,"setName":"Champion's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"23251":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"23252":{"setId":543,"setName":"Champion's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"23255":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"23256":{"setId":541,"setName":"Champion's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"23259":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"23260":{"setId":538,"setName":"Champion's Stormcaller","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"23261":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"23262":{"setId":540,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"23263":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"23264":{"setId":542,"setName":"Champion's Arcanum","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"23272":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"23273":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"23274":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"23275":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"23276":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"23277":{"setId":544,"setName":"Lieutenant Commander's Redoubt","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"23278":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"23279":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"23282":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"23283":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"23284":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"23285":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"23286":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"23287":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"23292":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"23293":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"23296":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"23297":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"23298":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"23299":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"23300":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"23301":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"23306":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"23307":{"setId":550,"setName":"Lieutenant Commander's Pursuance","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"23310":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"23311":{"setId":547,"setName":"Lieutenant Commander's Dreadgear","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"23312":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"23313":{"setId":548,"setName":"Lieutenant Commander's Guard","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"23314":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"23315":{"setId":545,"setName":"Lieutenant Commander's Battlearmor","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"246055":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Hands"},"246056":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Wrist"},"246057":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Feet"},"246058":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Legs"},"246059":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Waist"},"246060":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Chest"},"246061":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Shoulder"},"246062":{"setId":1963,"setName":"Inquisition Shockplate","setKind":"other","piecesCount":8,"className":"Paladin","slotName":"Head"},"250586":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Shoulder"},"250587":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Feet"},"250588":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Hands"},"250589":{"setId":321,"setName":"Imperial Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Hands"},"250590":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Wrist"},"250591":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Legs"},"250592":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Waist"},"250593":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Head"},"250594":{"setId":1968,"setName":"Blessed Plate","setKind":"other","piecesCount":8,"className":"All","slotName":"Chest"},"251769":{"setId":1969,"setName":"Goliaths' Adaptive Garments","setKind":"other","piecesCount":3,"className":"All","slotName":"Chest"},"251770":{"setId":1969,"setName":"Goliaths' Adaptive Garments","setKind":"other","piecesCount":3,"className":"All","slotName":"Wrist"},"251771":{"setId":1969,"setName":"Goliaths' Adaptive Garments","setKind":"other","piecesCount":3,"className":"All","slotName":"Waist"},"268873":{"setId":2071,"setName":"Teachings of the Furbolgs","setKind":"other","piecesCount":2,"className":"All","slotName":"Trinket"},"271207":{"setId":2133,"setName":"Rotmender's Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"271214":{"setId":2133,"setName":"Rotmender's Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"272453":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"272455":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"272457":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"272458":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"272459":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"272462":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"272464":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"272467":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"272469":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272470":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272471":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272472":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"272473":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"272474":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"272475":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"272476":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"272477":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"272478":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"272479":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"272480":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"272481":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"272484":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"272485":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"272486":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"272487":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"272488":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"272489":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"272490":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"272491":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"272492":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"272495":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"272496":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"272498":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"272499":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"272500":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"272501":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"272504":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"272505":{"setId":387,"setName":"Warlord's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"272506":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"272507":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"272508":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"272509":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"272510":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"272513":{"setId":383,"setName":"Warlord's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"272514":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"272515":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272516":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272517":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272519":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"272520":{"setId":398,"setName":"Warlord's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"272523":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"272525":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"272526":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"272527":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"272528":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"272529":{"setId":393,"setName":"Warlord's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"272530":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"272531":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"272532":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"272533":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"272534":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"272536":{"setId":396,"setName":"Warlord's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"272538":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"272539":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"272542":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"272543":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"272544":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"272545":{"setId":386,"setName":"Warlord's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"272548":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"272549":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"272552":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"272553":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"272554":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"272556":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"272558":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"272559":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"272560":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"272561":{"setId":391,"setName":"Warlord's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"272562":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272563":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"272564":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"272565":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272568":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"272569":{"setId":549,"setName":"Champion's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"272570":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"272572":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"272574":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272575":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272576":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"272577":{"setId":390,"setName":"Warlord's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"272606":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"272608":{"setId":522,"setName":"Champion's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"272609":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"272611":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"272614":{"setId":382,"setName":"Champion's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"272617":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"272619":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"272625":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"272626":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"272627":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272630":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"272634":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"272636":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"272637":{"setId":281,"setName":"Champion's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"272640":{"setId":361,"setName":"Champion's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"272641":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272642":{"setId":539,"setName":"Champion's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272643":{"setId":345,"setName":"Champion's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"272647":{"setId":301,"setName":"Champion's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"272648":{"setId":2094,"setName":"Champion's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"272649":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272650":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272656":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272657":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"272663":{"setId":2072,"setName":"Champion's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"272669":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272670":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272671":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"272677":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272678":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272680":{"setId":546,"setName":"Champion's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"272701":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"272703":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"272704":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"272705":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"272708":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"272709":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"272713":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"272715":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"272716":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"272717":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"272718":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"272719":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"272722":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"272723":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"272724":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"272725":{"setId":343,"setName":"Lieutenant Commander's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"272726":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"272727":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"272728":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"272729":{"setId":348,"setName":"Lieutenant Commander's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"272730":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"272731":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272732":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272733":{"setId":381,"setName":"Lieutenant Commander's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272734":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"272735":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"272736":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"272737":{"setId":362,"setName":"Lieutenant Commander's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"272738":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"272739":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"272740":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"272741":{"setId":282,"setName":"Lieutenant Commander's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"272742":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"272743":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"272744":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"272745":{"setId":2086,"setName":"Lieutenant Commander's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"272746":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Feet"},"272749":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Hands"},"272750":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Head"},"272751":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Legs"},"272752":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Chest"},"272753":{"setId":388,"setName":"Field Marshal's Regalia","setKind":"pvp","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"272755":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Feet"},"272757":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"272758":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"272759":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"272760":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"272761":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"272762":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Chest"},"272763":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Hands"},"272764":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Head"},"272765":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Legs"},"272766":{"setId":394,"setName":"Field Marshal's Vestments","setKind":"pvp","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"272768":{"setId":397,"setName":"Field Marshal's Sanctuary","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"272771":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Feet"},"272772":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Hands"},"272774":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Head"},"272775":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Chest"},"272776":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Legs"},"272777":{"setId":395,"setName":"Field Marshal's Pursuit","setKind":"pvp","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"272780":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"272781":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"272782":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"272783":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"272784":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"272785":{"setId":2087,"setName":"Field Marshal's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"272786":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Chest"},"272787":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Head"},"272788":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Legs"},"272789":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"272792":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Feet"},"272793":{"setId":384,"setName":"Field Marshal's Battlegear","setKind":"pvp","piecesCount":6,"className":"Warrior","slotName":"Hands"},"272794":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"272796":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"272800":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"272801":{"setId":346,"setName":"Lieutenant Commander's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"272802":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Head"},"272803":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Legs"},"272804":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"272805":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Chest"},"272807":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Feet"},"272808":{"setId":392,"setName":"Field Marshal's Threads","setKind":"pvp","piecesCount":6,"className":"Warlock","slotName":"Hands"},"272810":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"272812":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"272814":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272815":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"272816":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"272817":{"setId":344,"setName":"Lieutenant Commander's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272818":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"272819":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"272820":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"272821":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"272823":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"272824":{"setId":389,"setName":"Field Marshal's Raiment","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"272852":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"272853":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"272854":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"272855":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"273044":{"setId":2134,"setName":"Violet Sorcerer's Vestments","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"273051":{"setId":2134,"setName":"Violet Sorcerer's Vestments","setKind":"other","piecesCount":5,"className":"All","slotName":"Shoulder"},"273329":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"273330":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"273331":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"273332":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"273333":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"273334":{"setId":402,"setName":"Field Marshal's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"273336":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"273337":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"273340":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"273341":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"273342":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"273343":{"setId":2095,"setName":"Warlord's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"273344":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"273345":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"273348":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"273349":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"273350":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"273351":{"setId":2091,"setName":"Warlord's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"273355":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"273356":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"273357":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"273358":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"273359":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"273360":{"setId":2090,"setName":"Champion's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"273363":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"273365":{"setId":401,"setName":"Lieutenant Commander's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"273368":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273370":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273371":{"setId":2081,"setName":"Lieutenant Commander's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273373":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273374":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273375":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273377":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273379":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273380":{"setId":551,"setName":"Lieutenant Commander's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273382":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273383":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273384":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273385":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273386":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273387":{"setId":2080,"setName":"Champion's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273391":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273392":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273393":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273394":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273395":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273396":{"setId":2078,"setName":"Field Marshal's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273399":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273400":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273401":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273402":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273403":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273404":{"setId":2077,"setName":"Field Marshal's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273405":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273406":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273407":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273408":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273410":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273411":{"setId":2079,"setName":"Warlord's Wildhide","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273413":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Chest"},"273414":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Head"},"273415":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"273416":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Legs"},"273418":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Feet"},"273419":{"setId":2076,"setName":"Warlord's Refuge","setKind":"pvp","piecesCount":6,"className":"Druid","slotName":"Hands"},"273421":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"273422":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"273423":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"273424":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"273426":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"273427":{"setId":2074,"setName":"Field Marshal's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"273429":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"273431":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"273433":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"273434":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Head"},"273435":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"273436":{"setId":2073,"setName":"Warlord's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"273443":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Feet"},"273445":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Hands"},"273447":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Legs"},"273448":{"setId":2075,"setName":"Lieutenant Commander's Investiture","setKind":"pvp","piecesCount":6,"className":"Priest","slotName":"Chest"},"274176":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274177":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274178":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274179":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274180":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274181":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274183":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274184":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274187":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274188":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274189":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274190":{"setId":2089,"setName":"Field Marshal's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274192":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274193":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274194":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274195":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274196":{"setId":2088,"setName":"Lieutenant Commander's Earthshaker","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274197":{"setId":2096,"setName":"Lieutenant Commander's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274198":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274199":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274202":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274203":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274204":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274205":{"setId":2097,"setName":"Field Marshal's Thunderfist","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274206":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274207":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274210":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274211":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274212":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274213":{"setId":2093,"setName":"Field Marshal's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274217":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Feet"},"274218":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Head"},"274219":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Chest"},"274220":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Hands"},"274221":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Legs"},"274222":{"setId":2092,"setName":"Lieutenant Commander's Wartide","setKind":"pvp","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"274226":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"274227":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"274230":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"274231":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"274232":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"274233":{"setId":2084,"setName":"Champion's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"274236":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"274237":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"274238":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"274239":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"274240":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"274241":{"setId":2085,"setName":"Warlord's Vindication","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"274244":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"274245":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"274246":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"274247":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"274250":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"274251":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"274252":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Chest"},"274253":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Head"},"274254":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Legs"},"274255":{"setId":2083,"setName":"Warlord's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"274256":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Hands"},"274258":{"setId":2082,"setName":"Champion's Aegis","setKind":"pvp","piecesCount":6,"className":"Paladin","slotName":"Feet"},"275005":{"setId":2135,"setName":"Krol'dok Battlegear","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"275006":{"setId":2135,"setName":"Krol'dok Battlegear","setKind":"other","piecesCount":5,"className":"All","slotName":"Head"},"276741":{"setId":2136,"setName":"Defias Enforcer's Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Shoulder"},"276746":{"setId":2136,"setName":"Defias Enforcer's Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"277117":{"setId":1,"setName":"The Gladiator","setKind":"other","piecesCount":6,"className":"All","slotName":"Shoulder"},"278476":{"setId":241,"setName":"Scale of the Gods","setKind":"other","piecesCount":2,"className":"All","slotName":"Trinket"},"280450":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Chest"},"280451":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Hands"},"280452":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Feet"},"280453":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Legs"},"280454":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Shoulder"},"280455":{"setId":2098,"setName":"Manaflare Regalia","setKind":"forever","piecesCount":6,"className":"Mage","slotName":"Head"},"280872":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Legs"},"280875":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Hands"},"280876":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Shoulder"},"280877":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Head"},"280878":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Feet"},"280879":{"setId":2099,"setName":"Grimstitch Armor","setKind":"forever","piecesCount":6,"className":"Rogue","slotName":"Chest"},"280882":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Shoulder"},"280883":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Chest"},"280886":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Legs"},"280887":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Head"},"280888":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Hands"},"280889":{"setId":2100,"setName":"Demonheart Raiment","setKind":"forever","piecesCount":6,"className":"Warlock","slotName":"Feet"},"280893":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Hands"},"280894":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Feet"},"280895":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Legs"},"280896":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Chest"},"280897":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Shoulder"},"280898":{"setId":2101,"setName":"Wildstalker Armor","setKind":"forever","piecesCount":6,"className":"Hunter","slotName":"Head"},"280899":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Hands"},"280900":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Feet"},"280901":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Legs"},"280902":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Chest"},"280903":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"280904":{"setId":2102,"setName":"Battlegear of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Head"},"280905":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Hands"},"280906":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Feet"},"280907":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Legs"},"280908":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Chest"},"280909":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Shoulder"},"280910":{"setId":2103,"setName":"Battleplate of Glory","setKind":"forever","piecesCount":6,"className":"Warrior","slotName":"Head"},"280912":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Chest"},"280913":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Hands"},"280914":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Feet"},"280915":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Legs"},"280917":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"280918":{"setId":2104,"setName":"Vestments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Head"},"280919":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Chest"},"280920":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Hands"},"280921":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Feet"},"280922":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Legs"},"280923":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Shoulder"},"280924":{"setId":2105,"setName":"Raiments of Conviction","setKind":"forever","piecesCount":6,"className":"Priest","slotName":"Head"},"280925":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Hands"},"280926":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Feet"},"280927":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Legs"},"280928":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Chest"},"280929":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"280930":{"setId":2106,"setName":"Justice Battlegear","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Head"},"280931":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Hands"},"280932":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Feet"},"280933":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Legs"},"280934":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Chest"},"280935":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"280936":{"setId":2107,"setName":"Justice Armor","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Head"},"280937":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Head"},"280938":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Hands"},"280939":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Feet"},"280940":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Legs"},"280941":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Chest"},"280942":{"setId":2108,"setName":"Justice Battleplate","setKind":"forever","piecesCount":6,"className":"Paladin","slotName":"Shoulder"},"280944":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"280945":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Feet"},"280947":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Legs"},"280949":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Hands"},"280950":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Chest"},"280951":{"setId":2109,"setName":"The Spiritcaller","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Head"},"280952":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Hands"},"280953":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Feet"},"280954":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Legs"},"280955":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Chest"},"280956":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"280957":{"setId":2110,"setName":"The Spiritcaller's Rage","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Head"},"280958":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Hands"},"280959":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Feet"},"280960":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Legs"},"280961":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Chest"},"280962":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Shoulder"},"280963":{"setId":2111,"setName":"The Spiritcaller's Storm","setKind":"forever","piecesCount":6,"className":"Shaman","slotName":"Head"},"280965":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Hands"},"280967":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Feet"},"280971":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Legs"},"280974":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Chest"},"280976":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"280977":{"setId":2112,"setName":"Grovekeeper Raiment","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Head"},"280986":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Head"},"280987":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"280988":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Chest"},"280989":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Legs"},"280990":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Feet"},"280991":{"setId":2113,"setName":"Grovekeeper Rage","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Hands"},"280992":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Head"},"280993":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"280994":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Chest"},"280995":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Legs"},"280996":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Feet"},"280997":{"setId":2115,"setName":"Grovekeeper Ferocity","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Hands"},"280998":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Head"},"280999":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Shoulder"},"281000":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Chest"},"281001":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Legs"},"281002":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Feet"},"281003":{"setId":2114,"setName":"Grovekeeper Eclipse","setKind":"forever","piecesCount":6,"className":"Druid","slotName":"Hands"},"284100":{"setId":2130,"setName":"Rider of the Plaguelands","setKind":"other","piecesCount":3,"className":"All","slotName":"Back"},"284101":{"setId":2130,"setName":"Rider of the Plaguelands","setKind":"other","piecesCount":3,"className":"All","slotName":"Main Hand"},"284102":{"setId":2130,"setName":"Rider of the Plaguelands","setKind":"other","piecesCount":3,"className":"All","slotName":"Finger"},"284715":{"setId":2131,"setName":"Partners in Crime","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"284716":{"setId":2131,"setName":"Partners in Crime","setKind":"other","piecesCount":2,"className":"All","slotName":"Finger"},"285329":{"setId":2132,"setName":"Blessing of Kalimdor","setKind":"other","piecesCount":3,"className":"All","slotName":"Back"},"285330":{"setId":2132,"setName":"Blessing of Kalimdor","setKind":"other","piecesCount":3,"className":"All","slotName":"Finger"},"285331":{"setId":2132,"setName":"Blessing of Kalimdor","setKind":"other","piecesCount":3,"className":"All","slotName":"Neck"},"286978":{"setId":2133,"setName":"Rotmender's Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"286979":{"setId":2133,"setName":"Rotmender's Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"286980":{"setId":2133,"setName":"Rotmender's Raiment","setKind":"other","piecesCount":5,"className":"All","slotName":"Waist"},"286987":{"setId":2134,"setName":"Violet Sorcerer's Vestments","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"},"286988":{"setId":2134,"setName":"Violet Sorcerer's Vestments","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"286989":{"setId":2134,"setName":"Violet Sorcerer's Vestments","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"287012":{"setId":2135,"setName":"Krol'dok Battlegear","setKind":"other","piecesCount":5,"className":"All","slotName":"Hands"},"287013":{"setId":2135,"setName":"Krol'dok Battlegear","setKind":"other","piecesCount":5,"className":"All","slotName":"Legs"},"287014":{"setId":2135,"setName":"Krol'dok Battlegear","setKind":"other","piecesCount":5,"className":"All","slotName":"Shoulder"},"287019":{"setId":2136,"setName":"Defias Enforcer's Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Head"},"287020":{"setId":2136,"setName":"Defias Enforcer's Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Chest"},"287021":{"setId":2136,"setName":"Defias Enforcer's Garb","setKind":"other","piecesCount":5,"className":"All","slotName":"Feet"}};
-})();
+
+window.WOW_GEAR_SETS_ITEM_MAP = {};
+window.WOW_GEAR_SETS.forEach(function (set) {
+  (set.pieces || []).forEach(function (p) {
+    window.WOW_GEAR_SETS_ITEM_MAP[p.itemId] = {
+      setId: set.id,
+      setName: set.name,
+      setKind: set.kind,
+      piecesCount: set.piecesCount,
+      className: set.className,
+      slotName: p.slotName
+    };
+  });
+});

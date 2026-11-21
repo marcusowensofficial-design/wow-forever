@@ -7,7 +7,7 @@
 
   const KIND_LABELS = {
     all: 'All Sets',
-    t1: 'Tier 1 (MC)',
+    t1: 'Tier 1 Class Sets',
     t2: 'Tier 2 (BWL)',
     t3: 'Tier 3 (Naxx)',
     dungeon: 'Dungeon Sets',
@@ -29,6 +29,7 @@
     search: '',
     kind: 'all',
     cls: 'all',
+    changedOnly: false,
     shown: 24
   };
 
@@ -46,6 +47,7 @@
     const raw = window.WOW_GEAR_SETS || [];
     return raw.filter((s) => {
       if (state.kind !== 'all' && s.kind !== state.kind) return false;
+      if (state.changedOnly && !s.changedVsEra) return false;
       if (state.cls !== 'all') {
         const clsLower = state.cls.toLowerCase();
         const setCls = (s.className || '').toLowerCase();
@@ -55,7 +57,8 @@
         const q = state.search.toLowerCase();
         const matchesName = s.name.toLowerCase().includes(q);
         const matchesPiece = s.pieces.some(p => p.name.toLowerCase().includes(q));
-        if (!matchesName && !matchesPiece) return false;
+        const matchesBonus = Array.isArray(s.bonuses) && s.bonuses.some(b => (b.text || '').toLowerCase().includes(q));
+        if (!matchesName && !matchesPiece && !matchesBonus) return false;
       }
       return true;
     });
@@ -64,6 +67,7 @@
   function renderSetCard(s) {
     const kindBadge = KIND_LABELS[s.kind] || s.kind;
     const isForever = s.kind === 'forever' || s.pieces.some(p => p.isNew);
+    const isChanged = Boolean(s.changedVsEra);
     const clsBadge = s.className && s.className !== 'All' ? s.className : 'All Classes';
     const factionBadge = s.faction === 'Horde' ? '<span style="color:#ef4444;background:rgba(239,68,68,0.15);padding:0.1rem 0.4rem;border-radius:4px;font-size:0.7rem;font-weight:700;">Horde</span>'
       : (s.faction === 'Alliance' ? '<span style="color:#3b82f6;background:rgba(59,130,246,0.15);padding:0.1rem 0.4rem;border-radius:4px;font-size:0.7rem;font-weight:700;">Alliance</span>' : '');
@@ -83,13 +87,42 @@
       `;
     }).join('');
 
+    const bonusesHtml = Array.isArray(s.bonuses) && s.bonuses.length > 0 ? `
+      <div class="gear-set-bonuses" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.65rem;display:flex;flex-direction:column;gap:0.3rem;">
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:#94a3b8;font-weight:700;margin-bottom:0.1rem;">Set Bonuses (Live 1.60.1)</div>
+        ${s.bonuses.map((b) => `
+          <div style="font-size:0.78rem;line-height:1.4;color:#4ade80;">
+            <strong style="color:#86efac;">(${b.pieces}) Set:</strong> ${esc(b.text)}
+          </div>
+        `).join('')}
+        ${s.hotfixNote ? `
+          <div style="margin-top:0.25rem;font-size:0.73rem;color:#fbbf24;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.28);padding:0.35rem 0.5rem;border-radius:4px;">
+            ⚡ ${esc(s.hotfixNote)}
+          </div>
+        ` : ''}
+        ${isChanged && Array.isArray(s.eraBonuses) && s.eraBonuses.length > 0 ? `
+          <details style="margin-top:0.3rem;font-size:0.74rem;color:#94a3b8;background:rgba(15,23,42,0.7);border:1px solid rgba(56,189,248,0.2);border-radius:5px;padding:0.35rem 0.55rem;">
+            <summary style="cursor:pointer;color:#38bdf8;font-weight:700;user-select:none;">Compare vs. Classic Era Bonuses</summary>
+            <div style="margin-top:0.4rem;display:flex;flex-direction:column;gap:0.2rem;">
+              ${s.eraBonuses.map((eb) => `
+                <div style="color:#94a3b8;text-decoration:line-through;text-decoration-color:rgba(248,113,113,0.5);">
+                  <strong>(${eb.pieces}) Era:</strong> ${esc(eb.text)}
+                </div>
+              `).join('')}
+            </div>
+          </details>
+        ` : ''}
+      </div>
+    ` : '';
+
     return `
-      <div class="gear-set-card" style="background:#0f172a;border:1px solid ${isForever ? 'rgba(52,211,153,0.35)' : 'rgba(255,255,255,0.08)'};border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:0.75rem;">
+      <div class="gear-set-card" style="background:#0f172a;border:1px solid ${isForever ? 'rgba(52,211,153,0.35)' : (isChanged ? 'rgba(56,189,248,0.3)' : 'rgba(255,255,255,0.08)')};border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:0.75rem;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:0.6rem;">
           <div>
-            <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
               <h4 style="margin:0;font-size:1.05rem;color:#f8fafc;font-weight:700;">${esc(s.name)}</h4>
               ${isForever ? '<span style="background:rgba(16,185,129,0.25);color:#34d399;border:1px solid rgba(16,185,129,0.4);font-size:0.65rem;font-weight:800;padding:0.1rem 0.4rem;border-radius:4px;">FOREVER EXCLUSIVE</span>' : ''}
+              ${isChanged ? '<span style="background:rgba(56,189,248,0.18);color:#38bdf8;border:1px solid rgba(56,189,248,0.35);font-size:0.65rem;font-weight:800;padding:0.1rem 0.4rem;border-radius:4px;">✦ CHANGED IN FOREVER</span>' : ''}
             </div>
             <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;font-size:0.75rem;color:#94a3b8;flex-wrap:wrap;">
               <span style="color:#a855f7;font-weight:600;">${esc(kindBadge)}</span>
@@ -106,6 +139,7 @@
         <div class="gear-set-pieces-list">
           ${piecesHtml}
         </div>
+        ${bonusesHtml}
       </div>
     `;
   }
@@ -125,7 +159,7 @@
         <!-- Controls Bar -->
         <div style="background:rgba(15,23,42,0.8);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.85rem;display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;justify-content:space-between;">
           <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;flex:1;min-width:280px;">
-            <input type="text" id="codex-sets-search-input" placeholder="Search 228 armor sets or piece names..."
+            <input type="text" id="codex-sets-search-input" placeholder="Search 228 armor sets, pieces, or set bonuses..."
                    value="${esc(state.search)}"
                    aria-label="Search armor sets"
                    style="background:#1e293b;border:1px solid rgba(255,255,255,0.12);color:#f8fafc;padding:0.45rem 0.75rem;border-radius:6px;font-size:0.85rem;min-width:220px;flex:1;">
@@ -148,6 +182,11 @@
               <option value="Warlock" ${state.cls === 'Warlock' ? 'selected' : ''}>Warlock</option>
               <option value="Druid" ${state.cls === 'Druid' ? 'selected' : ''}>Druid</option>
             </select>
+
+            <button type="button" id="codex-sets-changed-toggle"
+                    style="background:${state.changedOnly ? 'rgba(56,189,248,0.25)' : '#1e293b'};border:1px solid ${state.changedOnly ? '#38bdf8' : 'rgba(255,255,255,0.12)'};color:${state.changedOnly ? '#38bdf8' : '#cbd5e1'};padding:0.45rem 0.7rem;border-radius:6px;font-size:0.82rem;font-weight:700;cursor:pointer;white-space:nowrap;">
+              ✦ Changed in Forever Only
+            </button>
           </div>
           <div style="font-size:0.8rem;color:#94a3b8;font-weight:600;">
             Showing <span style="color:#f8fafc;">${slice.length}</span> of <span style="color:#38bdf8;">${filtered.length}</span> sets
@@ -193,6 +232,15 @@
     if (clsSelect) {
       clsSelect.addEventListener('change', (e) => {
         state.cls = e.target.value;
+        state.shown = 24;
+        renderView();
+      });
+    }
+
+    const changedToggle = document.getElementById('codex-sets-changed-toggle');
+    if (changedToggle) {
+      changedToggle.addEventListener('click', () => {
+        state.changedOnly = !state.changedOnly;
         state.shown = 24;
         renderView();
       });

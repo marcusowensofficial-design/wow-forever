@@ -148744,7 +148744,7 @@ window.WOW_PROFESSIONS_DATA = {
     },
     "synergy": "Goes with Blacksmithing, or Engineering.",
     "shopping": {
-      "title": "Ore & Bars (Mining smelting route + Blacksmithing partner)",
+      "title": "Ore & Bars (1–300 Mining smelting route + Blacksmithing partner)",
       "subtitle": "Gathering has no reagent cost — this is what your gathering feeds. Totals come from the matching crafting route on this site.",
       "groups": [
         {

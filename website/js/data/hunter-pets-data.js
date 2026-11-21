@@ -3513,7 +3513,7 @@ window.WOW_HUNTER_PETS_DATA = {
         "cd": "Family Signature",
         "desc": "Core Hound signature fire breath ability (Ranks 1–2, Level 48+) datamined in live Forever client 1.60.1."
       },
-      "highlight": "New 19th pet family in live Forever client (+5% Health, +1% Damage, Lava Breath). No open-world Core Hounds are tameable yet; becomes available with Molten Core (Dec 9).",
+      "highlight": "New 19th pet family in live Forever client (+5% Health, +1% Damage, Lava Breath). No open-world Core Hounds are tameable yet; becomes available in a future raid tier.",
       "isNew": true,
       "tameLocations": []
     },

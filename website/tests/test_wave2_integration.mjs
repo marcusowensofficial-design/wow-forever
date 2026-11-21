@@ -35,6 +35,16 @@ console.log('--- 1. Armor Sets & Item DB Cross-Indexing ---');
   // Test set item lookup
   const piece = window.WOW_GEAR_SETS_ITEM_MAP[16802]; // Arcanist Crown
   assert(piece && piece.setName === 'Arcanist Regalia', 'Item 16802 maps to Arcanist Regalia');
+
+  // Test live Forever set bonuses & Classic Era diffs
+  const withBonuses = window.WOW_GEAR_SETS.filter(s => Array.isArray(s.bonuses) && s.bonuses.length > 0);
+  assert(withBonuses.length >= 225, `Expected >= 225 sets with live bonuses, got ${withBonuses.length}`);
+
+  const changedSets = window.WOW_GEAR_SETS.filter(s => s.changedVsEra && Array.isArray(s.eraBonuses) && s.eraBonuses.length > 0);
+  assert(changedSets.length >= 70, `Expected >= 70 sets with Classic vs Forever diffs, got ${changedSets.length}`);
+
+  const stormshroud = window.WOW_GEAR_SETS.find(s => s.id === 142);
+  assert(stormshroud && stormshroud.bonuses.some(b => b.pieces === 3 && b.text.includes('18 energy')), 'Stormshroud 3pc reflects Nov 20 hotfix (18 energy)');
 }
 
 // 2. World Rares Radar Expansion
