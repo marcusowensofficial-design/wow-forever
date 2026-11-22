@@ -2,7 +2,7 @@
   "name": "wow-forever-web",
   "version": "1.60.6",
   "private": true,
-  "description": "World of Warcraft: Forever — Classic+ Beta Hub, Codex, BiS Planner & Character Tools",
+  "description": "World of Warcraft: Forever — Classic+ Hub, Codex, BiS Planner & Character Tools",
   "type": "module",
   "scripts": {
     "dev": "npx serve . -l 3000",

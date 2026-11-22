@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Druid Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "WoW Forever's Druid Looks Absolutely Insane!" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "WoW Forever's Druid Looks Absolutely Insane!" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=neTPC3rkJRs
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: WoW Forever's Druid Looks Absolutely Insane!",
     videoUrl: "https://www.youtube.com/watch?v=neTPC3rkJRs",
-    sourceAttribution: "Sodapoppin video \"WoW Forever's Druid Looks Absolutely Insane!\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"WoW Forever's Druid Looks Absolutely Insane!\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever transforms the Druid experience across all roles: baseline Omen of Clarity and Nature's Grasp, smooth energy regeneration and reworked Furor shifting mechanics, standard out-of-combat resurrection via Revive, alternating-school Eclipse and Balance of Nature in Balance, early Swiftmend and Wild Growth in Restoration, and defense-scaling Bear tanking with King of the Jungle Cat DPS.",
 
     subTabs: [
@@ -239,7 +239,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cd: "6 sec Cooldown",
           duration: "7 sec Duration",
           status: "verified",
-          desc: "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+          desc: "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration. Hotfixes: works with Nature's Swiftness (Nov 10), cannot be cast while moving and healing coefficient doubled to 6.6% (Nov 13), all ranks share the cooldown (Nov 16)."
         },
         {
           name: "Swiftmend (Early Placement)",

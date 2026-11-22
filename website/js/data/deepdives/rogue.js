@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Rogue Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "Rogues Just Got a MASSIVE Rework in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "Rogues Just Got a MASSIVE Rework in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=FiNZrJ24shk
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: Rogues Just Got a MASSIVE Rework in WoW Forever",
     videoUrl: "https://www.youtube.com/watch?v=FiNZrJ24shk",
-    sourceAttribution: "Sodapoppin video \"Rogues Just Got a MASSIVE Rework in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"Rogues Just Got a MASSIVE Rework in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever preserves the classic Rogue control kit while introducing major modernizations: Mutilate usable without daggers, critical-strike and AP-scaling poisons, Restless Blades cooldown cycling for Adrenaline Rush and Vanish, and a transformative Death Mark burst finisher in Subtlety that stores attack damage (at double rate for Garrote and Rupture) before bursting.",
 
     subTabs: [
@@ -184,7 +184,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cd: "2 min Cooldown",
           duration: "15 sec Duration",
           status: "verified",
-          desc: "Increases attack speed by 20% and causes melee attacks to strike 1 additional nearby target for 15 seconds. Cooldown is rapidly cycled by Restless Blades."
+          desc: "Increases attack speed by 20% and causes melee attacks to strike 1 additional nearby target for 15 seconds, including Shank's damage (Nov 20 hotfix). Cooldown is rapidly cycled by Restless Blades."
         },
         {
           name: "Adrenaline Rush (100% Energy Regen)",
@@ -652,7 +652,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Precision", points: "3/3", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 3%." },
               { name: "Riposte", points: "1/1", tree: "Combat (Tier 3 Keystone)", desc: "A strike that becomes active after parrying an opponent's attack. Deals 150% weapon damage and disarms the target for 6 sec on a 6s cooldown." },
               { name: "Dual Wield Specialization", points: "5/5", tree: "Combat (Tier 4)", desc: "Increases the damage done by your off-hand weapon by 50%." },
-              { name: "Blade Flurry", points: "1/1", tree: "Combat (Tier 5 Keystone)", desc: "Increases attack speed by 20% and causes your attacks to strike an additional nearby opponent for 15 sec on a 2-minute cooldown." },
+              { name: "Blade Flurry", points: "1/1", tree: "Combat (Tier 5 Keystone)", desc: "Increases attack speed by 20% and causes your attacks to strike an additional nearby opponent for 15 sec on a 2-minute cooldown. Since the Nov 20 hotfix, Shank's damage also cleaves." },
               { name: "Endurance", points: "2/2", tree: "Combat (Tier 3)", desc: "Reduces the cooldown of your Sprint and Evasion abilities by 60%." }
             ],
             legacyNotes: "Extra points from the Legacy Talented perk unlock 5/5 Hack and Slash (5% chance to get an extra swing) and Weapon Expertise.",

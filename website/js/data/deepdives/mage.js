@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Mage Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "WoW Forever Mage Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "WoW Forever Mage Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  */
 
 if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
@@ -15,7 +15,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "hasData": true,
   "videoTitle": "Sodapoppin: WoW Forever Mage Class Deep Dive",
   "videoUrl": "https://www.youtube.com/watch?v=y2j8C277C_g",
-  "sourceAttribution": "Sodapoppin video \"WoW Forever Mage Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+  "sourceAttribution": "Sodapoppin video \"WoW Forever Mage Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
   "summary": "WoW Forever delivers transformative evolution to the Mage: the historic arrival of Orc Mages wielding Blood Fury (+10% Spell Power) and Shatter Curse magic mitigation, the return of Downranking, baseline Comprehend Scroll mechanics, Frostfire Bolt dual-school integration, Arcane Blast stacking loops with free Missile Barrage procs, Hot Streak 3-stack cast-time reductions for 1.5s Pyroblasts, instant Ice Lance with Fingers of Frost shatter combos, and rebalanced uncapped Blizzard AoE farming.",
   "subTabs": [
     {

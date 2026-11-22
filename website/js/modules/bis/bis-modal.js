@@ -711,7 +711,8 @@ function renderFloatingTooltip(card, e, tooltip) {
   }
 
   if (isForeverDiscovery) {
-    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.1.70425)</div>`;
+    const liveBuild = window.WOW_FOREVER_DATA?.metadata?.clientBuild || '1.60.1.71037';
+    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 New in WoW Forever (Live Build ${escapeHtml(liveBuild)})</div>`;
   }
 
   const market = window.WOW_MARKET_SCAN_DATA;

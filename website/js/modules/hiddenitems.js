@@ -1,7 +1,7 @@
 /**
  * World of Warcraft: Forever - Hidden Items & Obfuscation Tracker Module
  * Tracks Blizzard's anti-datamining item obfuscation, 3D flip card,
- * and live beta discovery feeds.
+ * and live-realm discovery feeds.
  */
 
 function initHiddenItemsTracker() {
@@ -46,7 +46,7 @@ function renderHiddenItemsUI() {
           <span class="hidden-progress-text">${stats.revealedPercent}% Discovered Across Realms</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem; font-size: 0.8rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 8px;">
-          <div><span>Classic Items Preserved:</span> <strong style="color: #fff;">${stats.classicRevealed} / ${stats.classicItemsHidden}</strong></div>
+          <div><span>Classic Items Revealed:</span> <strong style="color: #fff;">${stats.classicRevealed} / ${stats.classicItemsHidden}</strong></div>
           <div><span>SoD Assets Deprecated:</span> <strong style="color: #fff;">${stats.sodLeftovers}</strong></div>
           <div><span>Cache Snapshot:</span> <strong style="color: #c084fc;">${stats.lastUpdated}</strong></div>
         </div>
@@ -58,7 +58,7 @@ function renderHiddenItemsUI() {
       <div style="text-align: center; margin-bottom: 1rem;">
         <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0 0 0.35rem;">Interactive Discovery: Flip the Obfuscated Item</h4>
         <p style="color: #94a3b8; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          Hover or tap the card below to see what the client files look like before and after a player loots the item in the closed beta.
+          Hover or tap the card below to see what the client files look like before and after a player loots the item on a live realm.
         </p>
       </div>
 
@@ -136,7 +136,7 @@ function renderHiddenItemsUI() {
         <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 1rem;">
           <span style="display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #10b981; color: #fff; text-align: center; line-height: 22px; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.4rem;">4</span>
           <strong style="display: block; color: #fff; font-size: 0.9rem;">Community Confirmed</strong>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.4;">Cache telemetry aggregates across all beta testers to confirm stats on our portal!</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.4;">Cache data from players on live realms confirms item stats on our portal.</p>
         </div>
       </div>
     </div>

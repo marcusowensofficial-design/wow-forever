@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Shaman Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "WoW Forever Shaman Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "WoW Forever Shaman Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  */
 
 if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
@@ -15,7 +15,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "hasData": true,
   "videoTitle": "Sodapoppin: WoW Forever Shaman Class Deep Dive",
   "videoUrl": "https://www.youtube.com/watch?v=WfB5HLAZxwg",
-  "sourceAttribution": "Sodapoppin video \"WoW Forever Shaman Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+  "sourceAttribution": "Sodapoppin video \"WoW Forever Shaman Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
   "summary": "WoW Forever introduces historic milestones for the Shaman: Dwarf Shamans bringing Bloodlust and Windfury to the Alliance, Stormstrike (100% weapon damage on an 8-second cooldown after the Nov 10 hotfix), Spirit Weapons dual-threat scaling for 5-man dungeon tanking, indoor Ghost Wolf, 60-minute weapon imbues, Call of the Ancestors 4-totem dropping, Totemic Call, and rotation upgrades like Call of Thunder and Riptide.",
   "subTabs": [
     {
@@ -197,7 +197,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "type": "Melee-to-Spell Synergy",
         "cast": "Passive Proc",
         "status": "verified",
-        "desc": "When you deal damage with a melee attack, you have a chance (10 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix) (at 5/5)"
+        "desc": "When you deal damage with a melee attack, you have a chance (10 procs per minute) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20% per application. Stacks up to 5 times. Lasts 30 sec. (Nov 10 hotfix; Nov 16 fix stops one stack set from benefiting two casts) (at 5/5)"
       },
       {
         "name": "Shamanistic Focus",

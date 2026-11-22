@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Changes Master Dataset
- * Auto-synced from data/forever_changes.json (Updated November 20, 2026 — Build 1.60.1.71037)
+ * Auto-synced from data/forever_changes.json (Updated November 22, 2026 — Build 1.60.1.71037)
  */
 window.WOW_CHANGES_DATA = {
   "classes": {
@@ -53868,6 +53868,36 @@ window.WOW_CHANGES_DATA = {
       "summary": "Nov 20 hotfix: Fixed talent snapshotting exploit with Demon Armor / Demon Skin; Demonic Aegis and Demon Skin are now removed when talents are unlearned.",
       "changes": [
         "Fixed Demonic Aegis snapshotting into Demon Armor/Skin; removed on talent unlearn (Nov 20)."
+      ]
+    },
+    {
+      "id": "calc-priest-chastise-nov20",
+      "name": "Chastise",
+      "class": "priest",
+      "kind": "spell",
+      "tree_name": "Holy",
+      "icon": "spell_holy_chastise",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-20",
+      "summary": "Nov 20 hotfix: Chastise can now be cast while in Shadowform.",
+      "changes": [
+        "Castable in Shadowform (Nov 20)."
+      ]
+    },
+    {
+      "id": "calc-warlock-destruction-intensity-nov20",
+      "name": "Intensity",
+      "class": "warlock",
+      "kind": "talent",
+      "tree_name": "Destruction",
+      "icon": "spell_fire_lavaspawn",
+      "reported_change_kind": "modified",
+      "evidence_status": "official_notes",
+      "discovered_at": "2026-11-20",
+      "summary": "Nov 20 hotfix: Intensity now also applies to Incinerate, giving it up to a 70% chance to not lose casting time when you take damage.",
+      "changes": [
+        "Now affects Incinerate (Nov 20)."
       ]
     },
     {

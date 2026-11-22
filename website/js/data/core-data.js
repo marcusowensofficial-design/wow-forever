@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of November 20, 2026 (Live build 1.60.1.71037)
+ * Up-to-date as of November 22, 2026 (Live build 1.60.1.71037)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -22,7 +22,7 @@ const WOW_FOREVER_DATA = {
     "currentBetaCap": 60,
     "preloadSize": "~50 GB (Battle.net)",
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "November 20, 2026"
+    "lastUpdated": "November 22, 2026"
   },
   "betaSchedule": {
     "totalDays": 37,
@@ -198,6 +198,25 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-91",
+      "title": "Unannounced Hotfixes — November 21–22, 2026: Containers Open Straight to Bags, Gustberry Juice Price Up & Crafted Tier 1 Stat Rework",
+      "source": "ForeverChanges.pro (client & cache diffs)",
+      "sourceType": "community",
+      "author": "ForeverChanges.pro",
+      "date": "November 22, 2026",
+      "tag": "Unconfirmed Hotfix",
+      "url": "https://foreverchanges.pro/patch-notes",
+      "summary": "Server-side changes spotted on live realms with no Blizzard notes yet: lockboxes and other containers now loot straight into your bags, Gustberry Juice costs 1s 25c (was 25c), and 10 crafted Spiritcaller/Grovekeeper Tier 1 pieces have new stats.",
+      "content": `These changes were found in live-realm game caches on top of client build 1.60.1.71037. **Blizzard has not posted notes for them**, so treat them as unconfirmed until official hotfix notes appear.
+
+• **Nov 22 — Containers:** Lockboxes, junkboxes, Darkmoon prizes, sacks of gems and similar containers (e.g. *Pirate's Footlocker*, *Thaurissan Family Jewels*) now put their contents directly into your bags when opened instead of showing a loot window.
+• **Nov 21 — Vendor price:** *Gustberry Juice* now costs **1 silver 25 copper** from vendors (was 25 copper). Its sell price is 6 copper (was 5).
+• **Nov 21 — Crafted Tier 1 armor:** 10 pieces of *Spiritcaller's Rage* (Shaman) and *Grovekeeper Rage / Ferocity* (Druid) were re-statted:
+  - The four Spiritcaller pieces (Treads, Spaulders, Grips, Leggings) now carry **+11 to +13 Spell Power** in place of Agility, Hit, Crit or Expertise.
+  - Grovekeeper tank pieces swapped Dodge/Hit/Expertise around and gained Stamina; *Grovekeeper Kilt* lost its +30 Attack Power and +14 Hit for more Strength and Intellect.
+• **Also found (Nov 20 cache):** *Feralheart Raiment* 4-piece now restores energy over 5 sec (was mana); *Filcher's Cowl* no longer requires level 50; clam foods (Boiled Clams, Clam Chowder, Undermine Clam Chowder, Clam Linguine) now give Well Fed Stamina buffs; *Goblin Deviled Clams* Well Fed is +5 Stamina (was +6 Stamina, +6 Spirit); *Centaur Hoofwarmers* is now a Leatherworking recipe; learning *Goblin Mortar* also teaches *The Mortar: Reloaded*.`
+    },
+    {
       "id": "news-90",
       "title": "WoW: Forever Hotfixes — November 20, 2026: 5 Dungeon Resets/Hr Cap, Stormshroud 3pc Nerf, Blade Flurry/Shank & Demonic Aegis Fixes",
       "source": "Blizzard Official Hotfixes",
@@ -211,7 +230,9 @@ const WOW_FOREVER_DATA = {
 
 • **Dungeons:** Players can now reset and enter each dungeon a maximum of **5 times per hour** (was 10). In Blackrock Spire, a stone pillar should no longer trap players.
 • **Classes:**
+  - **Priest:** *Chastise* can now be cast while in *Shadowform*.
   - **Rogue (Combat):** *Blade Flurry* now correctly causes *Shank*'s damage to hit an additional target.
+  - **Warlock (Destruction):** *Intensity* now also applies to *Incinerate* (up to a 70% chance to not lose casting time when taking damage).
   - **Warlock (Demonology):** Fixed a bug where *Demonic Aegis* could be snapshotted into *Demon Armor* or *Demon Skin* and retained after unlearning talents. *Demonic Aegis* and *Demon Skin* are now removed when talents are unlearned.
 • **Items:** *Stormshroud Armor* 3-piece bonus changed to a **3% chance** (was 4%) on melee attack of restoring **18 energy** (was 30).
 • **Professions:** Toron Rockhoof has repaired his forge and anvil in Summit of Eternity so they are usable for Blacksmithing and Smelting.

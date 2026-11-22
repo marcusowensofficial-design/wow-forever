@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Priest Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "A Deep Dive Into the New Priest Class in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "A Deep Dive Into the New Priest Class in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=TQiUy-g_TJ4
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: A Deep Dive Into the New Priest Class in WoW Forever",
     videoUrl: "https://www.youtube.com/watch?v=TQiUy-g_TJ4",
-    sourceAttribution: "Sodapoppin video \"A Deep Dive Into the New Priest Class in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"A Deep Dive Into the New Priest Class in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever brings an expansive revitalization to the Priest: Penance and cooldown-free Power Word: Shield (Soul Warding) in Discipline, Prayer of Mending (5 bounces) and alternating-heal mana sustain (Litany of Light) in Holy, critical-strike DoTs and 50% mana reduction in Shadowform, and universal access to Devouring Plague and Fear Ward across all Priest races.",
 
     subTabs: [
@@ -264,7 +264,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           cast: "Instant",
           duration: "30 sec Duration",
           status: "verified",
-          desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec."
+          desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 10% of any Shadow spell damage you deal for 30 sec, while you are healed for 20% (party healing halved and self-healing doubled in the Nov 16 hotfix)."
         },
         {
           name: "Silence (45s CD / 3s Lockout)",
@@ -649,7 +649,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Mind Flay", points: "1/1", tree: "Shadow (Tier 3 Keystone)", desc: "Assaults the target's mind with Shadow energy, dealing Shadow damage and slowing movement by 50% over 3 sec." },
               { name: "Improved Mind Flay", points: "2/2", tree: "Shadow (Tier 3)", desc: "Each instance of damage of Mind Flay deals 20% more damage than its previous instance of damage." },
               { name: "Dark Inspiration", points: "5/5", tree: "Shadow (Tier 4)", desc: "Your Mind Blast and fully channeled Mind Flay causes Dark Inspiration, increasing yours and your party's Spirit by 15% for 10 sec." },
-              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec." },
+              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts your target with Shadow energy that causes all party members to be healed for 10% of any Shadow spell damage you deal for 30 sec, while you are healed for 20% (party healing halved and self-healing doubled in the Nov 16 hotfix)." },
               { name: "Shadow Weaving", points: "3/3", tree: "Shadow (Tier 4)", desc: "Your Shadow damage spells have a 100% chance to increase the Shadow damage the target takes from you by 2% for 15 sec, stacking up to 5 times." }
             ],
             legacyNotes: "Extra points from the Legacy Talented perk unlock Silence (5-second ranged spell silence) and Shadow Focus for spell hit rating.",

@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Warrior Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "WoW Forever Warrior Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "WoW Forever Warrior Class Deep Dive" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=NxlK8bDPSrw
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: WoW Forever Warrior Class Deep Dive",
     videoUrl: "https://www.youtube.com/watch?v=NxlK8bDPSrw",
-    sourceAttribution: "Sodapoppin video \"WoW Forever Warrior Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"WoW Forever Warrior Class Deep Dive\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever preserves the iconic weight and stance-dancing rhythm of the Classic Warrior while delivering surgical quality-of-life upgrades: baseline Tactical Mastery (10 Rage retained) and Victory Rush, a consolidated Weaponmaster talent tree, the anti-mount Spearing Strike in Arms, massive dual-wield scaling with Raging Blows in Fury, and Defensive Stance Charge with Shield Bash silencing in Protection.",
 
     subTabs: [
@@ -684,7 +684,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Excavation Digging Axe",
             talents: [
               { name: "Cruelty", points: "5/5", tree: "Fury (Tier 1)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
-              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon." },
+              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon. Since the Nov 16 hotfix, Cleave and Heroic Strike trigger it without consuming Flurry charges." },
               { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." },
               { name: "Blood Craze", points: "3/3", tree: "Fury (Tier 3)", desc: "Regenerates 3% of your total health over 6 sec after being the victim of a critical strike." },
               { name: "Improved Battle Shout", points: "2/5", tree: "Fury (Tier 2)", desc: "Increases the melee attack power bonus of your Battle Shout by 25%." },

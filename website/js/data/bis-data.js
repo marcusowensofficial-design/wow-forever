@@ -1,5 +1,5 @@
 /**
- * World of Warcraft: Forever - Beta BiS (Best in Slot) Master Dataset
+ * World of Warcraft: Forever - Level 30 Leveling BiS (Best in Slot) Dataset
  * Midway Leveling BiS (Level 30 Milestone) • Build 1.60.1.70425 (October 24, 2026)
  * 
  * Contains FULL comprehensive BiS data extracted from Beta Build 70425 across ALL 9 Classes & Specs:
@@ -11,8 +11,8 @@
 
 const WOW_BIS_METADATA = {
   "version": "1.60.1.70707",
-  "title": "Level 30 Pre-Raid & Dungeon BiS (Launch Build 1.60.1.70707)",
-  "phase": "Pre-Launch Window (Midway Level 30 BiS Milestone)",
+  "title": "Level 30 Leveling BiS (Launch Build 1.60.1.70707)",
+  "phase": "Leveling reference (Level 30 milestone, compiled before launch)",
   "lastUpdated": "November 4, 2026",
   "sourceNotice": "Curated directly from Launch Build 70707 discovering logs, itemcache, and Official Game Tables.",
   "totalSpecs": 39,

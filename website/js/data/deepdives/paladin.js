@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Paladin Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "Paladins Just Got a MASSIVE Revamp in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "Paladins Just Got a MASSIVE Revamp in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=CGEOZoZ_8I4
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: Paladins Just Got a MASSIVE Revamp in WoW Forever",
     videoUrl: "https://www.youtube.com/watch?v=CGEOZoZ_8I4",
-    sourceAttribution: "Sodapoppin video \"Paladins Just Got a MASSIVE Revamp in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"Paladins Just Got a MASSIVE Revamp in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever brings a monumental overhaul to the Paladin class: the historic introduction of Undead Paladins with the custom 'Forsaken Charger' skeletal warhorse, a dedicated single-target taunt via Judgment of Fury, block-based mana regeneration, AoE healing with Light's Vigil and 10s Holy Shock, baseline Holy Strike, 60-minute Blessings, and official seal-twisting mechanics supported by the Unsealed Wrath seal-swapping capstone.",
 
     subTabs: [

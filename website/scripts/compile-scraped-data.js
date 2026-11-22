@@ -8,6 +8,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// js/data/atlas-data.js has been hand-maintained since Nov 2026 (slimmed bundle, hunterPets
+// delegated to WOW_HUNTER_PETS_DATA, later hotfix edits). The hardcoded datasets below predate
+// that, so running this script would silently revert live content. Require an explicit opt-in.
+if (!process.argv.includes('--force')) {
+  console.error('[Compiler] Refusing to run: this would overwrite js/data/atlas-data.js and data/*.json with older hardcoded data.');
+  console.error('[Compiler] Edit js/data/atlas-data.js directly, or re-run with --force after porting its current contents into this script.');
+  process.exit(1);
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

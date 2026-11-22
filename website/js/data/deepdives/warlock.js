@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Warlock Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "The New Warlock Class in WoW Forever Looks BROKEN!" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "The New Warlock Class in WoW Forever Looks BROKEN!" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  * Video URL: https://www.youtube.com/watch?v=l4hl0EoNoa8
  */
 
@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     hasData: true,
     videoTitle: "Sodapoppin: The New Warlock Class in WoW Forever Looks BROKEN!",
     videoUrl: "https://www.youtube.com/watch?v=l4hl0EoNoa8",
-    sourceAttribution: "Sodapoppin video \"The New Warlock Class in WoW Forever Looks BROKEN!\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+    sourceAttribution: "Sodapoppin video \"The New Warlock Class in WoW Forever Looks BROKEN!\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
     summary: "WoW Forever delivers an exhilarating modernization to the Warlock class: Pandemic enables all Affliction DoTs to critically strike with a 100% damage bonus, Drain Hope acts as a DoT-amplifying channeled filler, Demonic Pact allows running an active pet while retaining the sacrifice buff of another, the infamous SL/SL (Siphon Life + Soul Link) build returns through restructured talent tiers, and Destruction gains Bane of Havoc and seamless dual-school Shadow and Flame weaving.",
 
     subTabs: [
@@ -698,7 +698,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Ruin", points: "1/1", tree: "Destruction (Tier 5 Keystone)", desc: "Increases the critical strike damage bonus of your Destruction spells by 100%!" },
               { name: "Shadow and Flame", points: "2/2", tree: "Destruction (Tier 5)", desc: "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 20% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 20% for 20 sec. In addition, Conflagrate has a 100% chance not to consume Immolate, and Shadowburn has a 100% chance to instantly refund a Soul Shard. (at 5/5)" }
             ],
-            legacyNotes: "Extra points from the Legacy Talented perk should be invested into Conflagrate and Intensity (reduces pushback on Rain of Fire/Hellfire by 70%).",
+            legacyNotes: "Extra points from the Legacy Talented perk should be invested into Conflagrate and Intensity (70% chance for Destruction spells, including Incinerate since the Nov 20 hotfix, to not lose casting time when you take damage).",
             rotation: [
               { label: "Bane of Havoc Cleave", desc: "Apply Bane of Havoc to secondary elite mob (copies 15% of your damage onto it for 5 min)." },
               { label: "Single-Target Burn", desc: "Cast Bane-hastened Immolate -> Incinerate -> Shadow Bolt on main target." },

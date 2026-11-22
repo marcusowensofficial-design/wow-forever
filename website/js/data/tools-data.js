@@ -336,13 +336,13 @@ const WOW_TOOLS_DATA = {
   // 3. ITEMS BLIZZARD IS HIDING (OBFUSCATION TRACKER)
   hiddenItems: {
     stats: {
-      totalNewItems: 2425,
-      revealedNewItems: 684,
-      revealedPercent: 28.21,
-      classicItemsHidden: 5006,
-      classicRevealed: 3190,
+      totalNewItems: 4639,
+      revealedNewItems: 1476,
+      revealedPercent: 31.82,
+      classicItemsHidden: 19336,
+      classicRevealed: 8052,
       sodLeftovers: 5168,
-      lastUpdated: "November 4, 2026"
+      lastUpdated: "November 20, 2026 (ForeverDB sync)"
     },
     demoItem: {
       id: 273049,

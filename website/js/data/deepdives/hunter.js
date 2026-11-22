@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Hunter Class Deep Dive Dataset
- * Primary Source: Sodapoppin video "Hunter Gets Some Big Changes in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026
+ * Primary Source: Sodapoppin video "Hunter Gets Some Big Changes in WoW Forever" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026
  */
 
 if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
@@ -15,7 +15,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "hasData": true,
   "videoTitle": "Sodapoppin: Hunter Gets Some Big Changes in WoW Forever",
   "videoUrl": "https://www.youtube.com/watch?v=9RdIJQQpggM&t=449s",
-  "sourceAttribution": "Sodapoppin video \"Hunter Gets Some Big Changes in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.70938 on Nov 13, 2026",
+  "sourceAttribution": "Sodapoppin video \"Hunter Gets Some Big Changes in WoW Forever\" (beta) — talent values re-checked against live build 1.60.1.71037 and hotfixes through Nov 22, 2026",
   "coreRules": [
     {
       "title": "Pet Ability Retention Fixed",
