@@ -744,6 +744,7 @@ do
             local where = WhereText(w, true)
             if where and (not details.description or details.description == "") then
                 details.description = where
+                details.autoDescription = true
                 filled.text = filled.text + 1
             end
         end

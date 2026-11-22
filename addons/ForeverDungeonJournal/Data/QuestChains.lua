@@ -805,9 +805,10 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [2933] = {
         level = 43, requires = 40,
         objective = "Bring a Venom Bottle to an apothecary in Tarren Mill.",
+        description = "Go into the Hinterlands from Tarren Mill if you do not have the flight path. Once you get into the zone, turn right and hug the wall. You will run into a Witherbark Troll camp. The bottle is on a table in the middle of the camp. It's the bottle that's lying down on the table, not one that's standing. Use the Show on Map button for a location marker.",
         pickup = "Venom Bottle",
         turnin = "Apothecary Lydon, Hillsbrad Foothills",
-        startObject = {"Venom Bottle", "Interface\\Icons\\INV_Potion_19", "On the ground in the Witherbark troll camps, The Hinterlands"},
+        startObject = {"Venom Bottle", "Interface\\Icons\\INV_Potion_19", "On a table in the middle of the Witherbark Troll camp, The Hinterlands (the bottle lying down)"},
         map = { mapID = 1425, x = 0.230, y = 0.578, label = "Venom Bottles — The Hinterlands", targetName = "Venom Bottle" },
     },
     [2934] = {
@@ -827,6 +828,7 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [3520] = {
         level = 44, requires = 40,
         objective = "Capture the spirits of 3 screechers in Feralas, then return to Yeh'kinya in Steamwheedle Port.",
+        description = "Fly to Gadgetzan. Click Show on Map under Starts at Yeh'kinya, Tanaris. Run to collect the quest from Yeh'kinya at Steamwheedle Port in northeastern Tanaris called 'Screecher Spirits'. After collecting the quest, run back to Gadgetzan and fly to Feralas or fly to Desolace and run into Feralas. Once in Feralas, click 'Find Screecher Spirit' to mark your map for the Wind Serpents you must kill and use Yeh'kinya's Bramble on. Follow the road until you reach the screecher spirits by the coast. You will kill red Wind Serpents called \"Rogue Vale Screecher\". 3 kills total, use Yeh'kinya's Bramble on their dead bodies and right-click the spirit for dialogue after each one. After collecting all 3, return to Yeh'kinya at Steamwheedle Port in northeastern Tanaris to turn the quest in and obtain the final quest of the chain, 'The Prophecy of Mosh'aru', which sends you to retrieve tablets from two bosses in ZF: Theka the Martyr and Hydromancer Velratha.",
         pickup = "Yeh'kinya, Tanaris",
         turnin = "Yeh'kinya, Tanaris",
         map = { mapID = 1446, x = 0.670, y = 0.224, label = "Yeh'kinya — Tanaris", targetName = "Yeh'kinya" },

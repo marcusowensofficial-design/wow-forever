@@ -1586,7 +1586,10 @@ local function RefreshPrerequisiteQuestDetail(step)
         if type(GetQuestLogQuestText) == "function" then
             local ok, desc, obj = pcall(GetQuestLogQuestText, logIndex)
             if ok then
-                if not FDJ.IsSecret(desc) and type(desc) == "string" and desc ~= "" then description = desc end
+                if (not description or description == "" or details.autoDescription)
+                    and not FDJ.IsSecret(desc) and type(desc) == "string" and desc ~= "" then
+                    description = desc
+                end
                 if not FDJ.IsSecret(obj) and type(obj) == "string" and obj ~= "" then objectiveText = obj end
             end
         end
