@@ -29,12 +29,18 @@
     onlyDrops: false,
     onlySets: false,
     onlyAH: false,
+    onlyFlips: false,
+    onlyDeals: false,
+    onlyWatch: false,
     minLvl: 1,
     maxLvl: 60,
     sort: 'new',
     dir: -1,
     shown: 50
   };
+  const INITIAL_STATE = { ...state };
+  let listsListenerBound = false;
+  const MT = () => window.WOW_MARKET_TOOLS;
 
   let indexCache = null;
   let filteredIndices = [];
@@ -617,6 +623,15 @@
         const qtyStr = marketEntry.qty > 1 ? ` (${marketEntry.qty} avail)` : '';
         const medStr = marketEntry.med14 && marketEntry.med14 !== marketEntry.minBuyout ? ` · 14d Med: ${formatCopper(marketEntry.med14)}` : '';
         html += `<div style="color:#facc15;margin-top:0.18rem;">🪙 Live PvE AH Buyout: <strong>${formatCopper(marketEntry.minBuyout)}</strong>${qtyStr}${medStr}</div>`;
+        const mt = MT();
+        if (mt) {
+          const spark = mt.sparklineSvg(marketEntry);
+          if (spark) html += `<div style="color:#facc15;margin-top:0.3rem;"><div style="font-size:0.68rem;color:#94a3b8;">Lowest price per day (dashed = median)</div>${spark}</div>`;
+          const hint = mt.sellHint(marketEntry);
+          if (hint) html += `<div style="margin-top:0.2rem;font-size:0.74rem;color:#cbd5e1;">${mt.sellHintChip(marketEntry)} ${esc(hint.why)}</div>`;
+          if (!mt.isListed(marketEntry)) html += `<div style="margin-top:0.15rem;font-size:0.7rem;color:#64748b;">Last seen on the AH ${new Date(marketEntry.lastSeen * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>`;
+          if (mt.watchlist.has(id)) html += `<div style="margin-top:0.15rem;font-size:0.72rem;color:#fbbf24;">⭐ Watching: alert at ${formatCopper(mt.watchlist.target(id))}</div>`;
+        }
         if (sell > 0 && marketEntry.minBuyout < sell) {
           const profit = sell - marketEntry.minBuyout;
           html += `<div style="color:#4ade80;font-weight:700;margin-top:0.15rem;">🔥 Vendor Arbitrage Flip: +${formatCopper(profit)} instant profit vendoring this item!</div>`;
@@ -699,6 +714,10 @@
     const minL = state.minLvl || 1;
     const maxL = state.maxLvl || 60;
     const hasLvlFilter = minL > 1 || maxL < 60;
+    const mt = MT();
+    // The flips pill counts the curated list from the sync (min profit applied), so filter by it too.
+    const flipIds = new Set((window.WOW_MARKET_SCAN_DATA?.vendorFlips || []).map((f) => f.id));
+    const watchIds = new Set(mt ? mt.watchlist.ids() : []);
 
     for (let i = 0; i < n; i++) {
       const r = rows[i];
@@ -711,7 +730,9 @@
       if (state.onlyDrops && (!r[13] || r[13].length === 0)) continue;
       if (state.onlySets && (!window.WOW_GEAR_SETS_ITEM_MAP || !window.WOW_GEAR_SETS_ITEM_MAP[r[0]])) continue;
       if (state.onlyAH && !(window.WOW_MARKET_SCAN_DATA?.prices?.[r[0]]?.minBuyout > 0)) continue;
-      if (state.onlyFlips && !(window.WOW_MARKET_SCAN_DATA?.prices?.[r[0]]?.minBuyout > 0 && (r[9] || 0) > window.WOW_MARKET_SCAN_DATA.prices[r[0]].minBuyout)) continue;
+      if (state.onlyFlips && !flipIds.has(r[0])) continue;
+      if (state.onlyDeals && !(mt && mt.isDeal(mt.price(r[0])))) continue;
+      if (state.onlyWatch && !watchIds.has(r[0])) continue;
 
       const req = r[4] || 1;
       if (hasLvlFilter && (req < minL || req > maxL)) continue;
@@ -759,7 +780,11 @@
       if (sortMode === 'name') {
         return ra[1] < rb[1] ? -1 * dir : ra[1] > rb[1] ? 1 * dir : ra[0] - rb[0];
       }
-      if (sortMode === 'ah') {
+      if (sortMode === 'deal' && mt) {
+        const da = mt.isDeal(mt.price(ra[0])) ? mt.discount(mt.price(ra[0])) : -1;
+        const db = mt.isDeal(mt.price(rb[0])) ? mt.discount(mt.price(rb[0])) : -1;
+        if (da !== db) return db - da;
+      } else if (sortMode === 'ah') {
         const pa = window.WOW_MARKET_SCAN_DATA?.prices?.[ra[0]]?.minBuyout || 0;
         const pb = window.WOW_MARKET_SCAN_DATA?.prices?.[rb[0]]?.minBuyout || 0;
         if (pa !== pb) return (pa > pb ? 1 : -1) * dir;
@@ -826,9 +851,16 @@
     const marketEntry = window.WOW_MARKET_SCAN_DATA?.prices?.[id];
     const marketPrice = marketEntry?.minBuyout || 0;
     const isArbitrage = marketPrice > 0 && sell > marketPrice;
+    const mt = MT();
+    const deal = mt && mt.isDeal(marketEntry);
+    const watched = mt && mt.watchlist.has(id);
+    const flipQty = marketEntry?.qty || 1;
     const priceDisplay = marketPrice > 0
-      ? `<span style="color:#facc15;font-weight:700;" title="Live PvE AH Buyout (${marketEntry.qty || 1} available)">${formatCopper(marketPrice)}</span>${isArbitrage ? `<span style="display:block;color:#4ade80;font-size:0.72rem;font-weight:700;">+${formatCopper(sell - marketPrice)} Flip</span>` : `<span style="display:block;color:#64748b;font-size:0.72rem;">${marketEntry.qty || 1} on AH</span>`}`
+      ? `<span style="color:#facc15;font-weight:700;" title="Live PvE AH Buyout (${flipQty} available)">${formatCopper(marketPrice)}</span>${isArbitrage ? `<span style="display:block;color:#4ade80;font-size:0.72rem;font-weight:700;" title="Buy and vendor: ${formatCopper(sell - marketPrice)} each">+${formatCopper(sell - marketPrice)} Flip${flipQty > 1 ? ` (×${flipQty} = ${formatCopper((sell - marketPrice) * flipQty)})` : ''}</span>` : `<span style="display:block;color:#64748b;font-size:0.72rem;">${flipQty} on AH</span>`}${deal ? `<span style="display:block;color:#f472b6;font-size:0.72rem;font-weight:700;" title="Usually goes for about ${formatCopper(mt.typicalLow(marketEntry))} at the low end">🏷 −${Math.round(mt.discount(marketEntry) * 100)}% vs usual</span>` : ''}${mt && marketEntry ? `<span style="display:block;margin-top:0.15rem;">${mt.sellHintChip(marketEntry)}</span>` : ''}`
       : `<span style="color:#94a3b8;font-size:0.78rem;">Vendor: ${formatCopper(sell)}</span>`;
+    const starBtn = mt && marketPrice > 0
+      ? `<button type="button" data-star-id="${id}" aria-pressed="${watched}" aria-label="${watched ? 'Stop watching' : 'Watch'} ${esc(name)}" title="${watched ? 'Watching. Click to stop' : 'Watch this item for a price drop'}" style="background:none;border:none;padding:0 0.1rem;cursor:pointer;font-size:0.95rem;line-height:1;color:${watched ? '#fbbf24' : '#475569'};">${watched ? '★' : '☆'}</button>`
+      : '';
 
     const bindBadge = bind
       ? `<span style="display:inline-block;padding:0.12rem 0.45rem;border-radius:4px;font-size:0.72rem;font-weight:700;background:${bind === 'BoE' ? 'rgba(34,197,94,0.16)' : 'rgba(245,158,11,0.16)'};color:${bind === 'BoE' ? '#4ade80' : '#fbbf24'};">${bind}</span>`
@@ -849,6 +881,7 @@
                  onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg'">
             <div style="min-width:0;">
               <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+                ${starBtn}
                 <a href="https://www.wowhead.com/forever/item=${id}" target="_blank" rel="noopener noreferrer"
                    style="color:${Q_COLORS[q]};font-weight:700;text-decoration:none;">${esc(name)}</a>
                 ${isNew ? '<span style="background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.4);padding:0.05rem 0.38rem;border-radius:4px;font-size:0.66rem;font-weight:800;letter-spacing:0.04em;">NEW IN FOREVER</span>' : ''}
@@ -925,6 +958,15 @@
     const marketCount = market?.totalItems || Object.keys(market?.prices || {}).length || 0;
     const flipsCount = market?.vendorFlips?.length || 0;
     const scanDateStr = market?.lastScanTime ? new Date(market.lastScanTime * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+    const mtools = MT();
+    const age = mtools ? mtools.scanAge() : null;
+    const dealCount = mtools ? Object.values(market?.prices || {}).filter((p) => mtools.isDeal(p)).length : 0;
+    const pillStyle = (rgb, on) => `display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(${rgb},${on ? 0.32 : 0.12});border:1px solid rgba(${rgb},0.45);font-size:0.75rem;font-weight:700;cursor:pointer;`;
+    const watchLabel = () => {
+      const n = mtools.watchlist.ids().length;
+      const hits = mtools.watchlist.hits().length;
+      return `Watchlist (${n})${hits ? ` · ${hits} at target!` : ''}`;
+    };
 
     mount.innerHTML = `
       <div class="codex-db-wrapper" style="display:flex;flex-direction:column;gap:1.1rem;">
@@ -933,8 +975,8 @@
             <h2><span>📦</span> WoW Forever Item Database &amp; Market (${db.totalItems.toLocaleString('en-US')} Items)</h2>
             <p class="section-subtext">Search every weapon, armor piece, recipe, reagent, and boss drop extracted directly from the Build 1.60.6 game client — including ${db.newInForeverItems.toLocaleString('en-US')} brand-new Classic+ items, ${db.revealedItems.toLocaleString('en-US')} detailed items, and live BoE auction valuations.</p>
             <div style="display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem;flex-wrap:wrap;">
-              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);color:#facc15;font-size:0.75rem;font-weight:600;" title="${marketCount > 0 ? `Scanned ${scanDateStr} on ${market.activeRealm || 'PvE'}` : 'Requires ForeverMarket in-game scan'}">
-                <span>💰</span> ${marketCount > 0 ? `PvE AH: ${marketCount.toLocaleString('en-US')} Prices (scanned ${scanDateStr})` : 'AH Pricing Ready'}
+              <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:${age?.stale ? 'rgba(239,68,68,0.14)' : 'rgba(234,179,8,0.12)'};border:1px solid ${age?.stale ? 'rgba(239,68,68,0.4)' : 'rgba(234,179,8,0.3)'};color:${age?.stale ? '#fca5a5' : '#facc15'};font-size:0.75rem;font-weight:600;" title="${marketCount > 0 ? `Scanned ${scanDateStr} on ${market.activeRealm || 'PvE'}${market.sources > 1 ? ` from ${market.sources} players' scans` : ''}` : 'Requires ForeverMarket in-game scan'}">
+                <span>💰</span> ${marketCount > 0 ? `PvE AH: ${marketCount.toLocaleString('en-US')} Prices (scanned ${age ? age.ago : scanDateStr})${age?.stale ? ' · prices may have moved' : ''}` : 'AH Pricing Ready'}
               </span>
               ${flipsCount > 0 ? `
                 <button type="button" id="codex-db-flips-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:${state.onlyFlips ? 'rgba(249,115,22,0.35)' : 'rgba(249,115,22,0.14)'};border:1px solid rgba(249,115,22,0.5);color:#fb923c;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Toggle guaranteed vendor arbitrage flips">
@@ -944,6 +986,22 @@
               ${marketCount > 0 && typeof window.renderCraftProfitFinder === 'function' ? `
                 <button type="button" id="codex-db-craft-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(74,222,128,0.14);border:1px solid rgba(74,222,128,0.45);color:#4ade80;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Rank every recipe by profit at current AH prices">
                   <span>⚒️</span> Craft Profit Finder →
+                </button>
+              ` : ''}
+              ${marketCount > 0 && typeof window.renderDisenchantFlips === 'function' ? `
+                <button type="button" id="codex-db-de-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(168,85,247,0.14);border:1px solid rgba(168,85,247,0.45);color:#c084fc;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Items worth more disenchanted than their AH price">
+                  <span>✨</span> Disenchant Flips →
+                </button>
+              ` : ''}
+              ${mtools && marketCount > 0 ? `
+                <button type="button" id="codex-db-deals-pill" aria-pressed="${state.onlyDeals}" style="${pillStyle('244,114,182', state.onlyDeals)}color:#f472b6;" title="Listed 40%+ under what they usually sell for at the low end (needs 5+ days of price history)">
+                  <span>🏷</span> ${dealCount} Deals ${state.onlyDeals ? '✓' : ''}
+                </button>
+                <button type="button" id="codex-db-watch-pill" aria-pressed="${state.onlyWatch}" style="${pillStyle('251,191,36', state.onlyWatch)}color:#fbbf24;" title="Starred items. Click to filter; open your lists from the 🛒 button">
+                  <span>⭐</span> <span id="codex-db-watch-label">${watchLabel()}</span> ${state.onlyWatch ? '✓' : ''}
+                </button>
+                <button type="button" id="codex-db-lists-pill" style="${pillStyle('56,189,248', false)}color:#7dd3fc;" title="Your watchlist alert prices and shopping list">
+                  <span>🛒</span> <span id="codex-db-shop-label">Lists (${mtools.shopping.count()})</span>
                 </button>
               ` : ''}
               <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#7dd3fc;font-size:0.75rem;font-weight:600;">
@@ -1025,6 +1083,7 @@
                 <option value="new" ${state.sort === 'new' ? 'selected' : ''}>Sort: Newest / Forever First</option>
                 <option value="ah" ${state.sort === 'ah' ? 'selected' : ''}>Sort: AH Buyout (High → Low)</option>
                 <option value="ah_asc" ${state.sort === 'ah_asc' ? 'selected' : ''}>Sort: AH Buyout (Low → High)</option>
+                <option value="deal" ${state.sort === 'deal' ? 'selected' : ''}>Sort: Biggest Deal</option>
                 <option value="ilvl" ${state.sort === 'ilvl' ? 'selected' : ''}>Sort: Item Level (High → Low)</option>
                 <option value="req" ${state.sort === 'req' ? 'selected' : ''}>Sort: Req Level (High → Low)</option>
                 <option value="quality" ${state.sort === 'quality' ? 'selected' : ''}>Sort: Rarity (High → Low)</option>
@@ -1111,6 +1170,14 @@
         if (e.target.closest('button')) {
           hideCodexItemTooltip();
         }
+        const star = e.target.closest('[data-star-id]');
+        if (star && MT()) {
+          const on = MT().watchlist.toggle(Number(star.dataset.starId));
+          star.textContent = on ? '★' : '☆';
+          star.style.color = on ? '#fbbf24' : '#475569';
+          star.setAttribute('aria-pressed', String(on));
+          star.title = on ? 'Watching. Click to stop' : 'Watch this item for a price drop';
+        }
       });
     }
 
@@ -1150,13 +1217,38 @@
       hideCodexItemTooltip();
       window.renderCraftProfitFinder();
     });
+    mount.querySelector('#codex-db-de-pill')?.addEventListener('click', () => {
+      hideCodexItemTooltip();
+      window.renderDisenchantFlips();
+    });
+    mount.querySelector('#codex-db-deals-pill')?.addEventListener('click', () => {
+      state.onlyDeals = !state.onlyDeals;
+      if (state.onlyDeals) { state.sort = 'deal'; state.dir = -1; }
+      window.renderCodexItemDatabase();
+    });
+    mount.querySelector('#codex-db-watch-pill')?.addEventListener('click', () => {
+      state.onlyWatch = !state.onlyWatch;
+      window.renderCodexItemDatabase();
+    });
+    mount.querySelector('#codex-db-lists-pill')?.addEventListener('click', () => {
+      if (typeof window.openMarketPanel === 'function') window.openMarketPanel(MT()?.watchlist.hits().length ? 'watch' : 'shop');
+    });
+    if (!listsListenerBound && mtools) {
+      listsListenerBound = true;
+      window.addEventListener('wowf-market-change', () => {
+        const w = document.getElementById('codex-db-watch-label');
+        const s = document.getElementById('codex-db-shop-label');
+        if (w) w.textContent = watchLabel();
+        if (s) s.textContent = `Lists (${MT().shopping.count()})`;
+      });
+    }
     mount.querySelector('#codex-db-sort')?.addEventListener('change', (e) => {
       state.sort = e.target.value;
       state.dir = (state.sort === 'name' || state.sort === 'ah_asc') ? 1 : -1;
       refresh();
     });
     mount.querySelector('#codex-db-reset')?.addEventListener('click', () => {
-      state = { q: '', cat: 'all', cls: -1, minQuality: 0, bind: '', inst: '', onlyNew: false, onlyDrops: false, onlySets: false, onlyAH: false, onlyFlips: false, minLvl: 1, maxLvl: 60, sort: 'new', dir: -1, shown: 50 };
+      state = { ...INITIAL_STATE };
       window.renderCodexItemDatabase();
     });
     mount.querySelector('#codex-db-more')?.addEventListener('click', () => {
