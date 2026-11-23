@@ -23,9 +23,15 @@ fc_bis_cache/
 # Agent logs and scratch
 .agents/
 .playwright-mcp/
-scratch/
 website/.playwright-mcp/
-website/scratch/
+# Ignore the contents of scratch folders (not the folders themselves), so the files below can be
+# re-included: git cannot un-ignore a file inside an ignored directory.
+**/scratch/*
+# ForeverDB addon-data exports read by website/scripts/build-foreverdb-data.mjs: keep them versioned.
+!website/scratch/Camp.lua
+!website/scratch/Coach.lua
+!website/scratch/Dungeons.lua
+!website/scratch/SearchNames.lua
 
 # Private In-House Market Scanner Addon (Local Only)
 addons/ForeverMarket/
