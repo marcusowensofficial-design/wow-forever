@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const CACHE_VERSION = '1.60.1-71037.1122c';
+  const CACHE_VERSION = '1.60.1-71037.1122d';
   const inflight = new Map();
 
   const BUNDLES = {
