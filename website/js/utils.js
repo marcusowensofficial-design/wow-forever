@@ -13,6 +13,17 @@ function escapeHtml(string) {
 }
 
 /**
+ * Converts **bold** and *italic* markers in text that has ALREADY been passed through escapeHtml.
+ * A "*" followed by a space (a list bullet) is left alone, and so are asterisks inside words.
+ */
+function formatInlineEmphasis(escaped) {
+  if (!escaped) return '';
+  return String(escaped)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^\w*])\*(?!\s)([^*\n]+?)(?<!\s)\*(?![\w*])/g, '$1<em>$2</em>');
+}
+
+/**
  * Universal clipboard copy with modern API and fallback support
  */
 function copyTextToClipboard(text, onSuccess, onError) {
@@ -113,6 +124,7 @@ function positionTooltip(event, tooltip) {
 
 if (typeof window !== 'undefined') {
   window.escapeHtml = escapeHtml;
+  window.formatInlineEmphasis = formatInlineEmphasis;
   window.copyTextToClipboard = copyTextToClipboard;
   window.showToast = showToast;
   window.positionTooltip = positionTooltip;

@@ -602,7 +602,7 @@ function bindGuideItemTooltips(mountElem) {
 function formatInlineGuide(str) {
   if (!str) return '';
   let escaped = escapeHtml(str);
-  escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  escaped = window.formatInlineEmphasis ? window.formatInlineEmphasis(escaped) : escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   escaped = escaped.replace(/`([^`]+)`/g, '<code class="guide-inline-code">$1</code>');
   escaped = escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)"']+|#[^\s)"']+|\/[^\s)"']+)\)/g, (match, label, href) => {
     const isExternal = href.startsWith('http');
@@ -667,7 +667,7 @@ function formatGuideMarkdown(content, isPage = false) {
     }
 
     // End list if line is not a list item
-    if (inList && !trimmed.startsWith('•') && !trimmed.startsWith('-') && !trimmed.startsWith('*')) {
+    if (inList && !trimmed.startsWith('•') && !trimmed.startsWith('-') && !trimmed.startsWith('* ')) {
       html += '</ul>';
       inList = false;
     }
@@ -750,8 +750,8 @@ function formatGuideMarkdown(content, isPage = false) {
       continue;
     }
 
-    // Bullet points
-    if (trimmed.startsWith('•') || trimmed.startsWith('-') || trimmed.startsWith('*')) {
+    // Bullet points ("* " needs a space: a line starting with **bold** is a paragraph, not a bullet)
+    if (trimmed.startsWith('•') || trimmed.startsWith('-') || trimmed.startsWith('* ')) {
       if (!inList) {
         html += '<ul class="guide-bullet-list">';
         inList = true;

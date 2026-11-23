@@ -190,7 +190,9 @@ window.openNewsModal = function(id) {
     if (modalTitle) modalTitle.textContent = article.title;
     if (modalAuthor) modalAuthor.textContent = `Author: ${article.author}`;
     
+    // News content is written in light markdown (**bold**, *italic*); render it after escaping.
     let bodyContent = escapeHtml(article.content);
+    if (window.formatInlineEmphasis) bodyContent = window.formatInlineEmphasis(bodyContent);
     if (article.url && (article.url.startsWith('https://') || article.url.startsWith('http://'))) {
       const safeUrl = encodeURI(article.url);
       bodyContent += `\n\n🔗 Official Link: <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" style="color: var(--color-sky); text-decoration: underline;">${escapeHtml(article.url)}</a>`;
