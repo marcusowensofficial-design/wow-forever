@@ -29,6 +29,16 @@ if (typeof window !== 'undefined') {
         buildUrl: '/talents/mage?b=0500052--053530033121311251&l=30&tl=5',
         submittedAt: '2026-11-23',
         notes: '12/0/39 Arcane/Frost — Improved Channeling, Clearcasting & Missile Barrage paired with Deep Frost (Ice Shards, Shatter, Fingers of Frost, Winter\'s Chill, Ice Barrier).'
+      },
+      {
+        id: 'marcus-60-frost-cone-of-cold-variant',
+        name: 'Marcus level 60 frost build cone of cold variant',
+        author: 'Marcus',
+        spec: 'Frost',
+        capMode: 'lvl60',
+        buildUrl: '/talents/mage?b=0500032--053530033121331251&l=30&tl=5',
+        submittedAt: '2026-11-23',
+        notes: '10/0/41 Arcane/Frost — Shifts 2 points from Arcane Concentration (3/5) to max Improved Cone of Cold (3/3) for stronger AoE/shatter burst.'
       }
     ],
     warlock: [],
