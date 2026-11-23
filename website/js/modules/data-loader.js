@@ -6,7 +6,19 @@
 (function () {
   'use strict';
 
-  const CACHE_VERSION = '1.60.1-71037.1122e';
+  const CACHE_VERSION = '1.60.1-71037.1122f';
+  // Per-file content hashes for the lazy bundles, written by scripts/stamp-data-versions.mjs.
+  // A bundle is only re-downloaded when its own content changes, not on every CACHE_VERSION bump.
+  // FILE_VERSIONS:BEGIN
+  const FILE_VERSIONS = {
+    "js/data/bis-data.js": "949bb94bf8",
+    "js/data/changes-data.js": "78b73a5b06",
+    "js/data/class-progression-data.js": "0c811d2e6c",
+    "js/data/item-database-data.js": "5b07b5cb7e",
+    "js/data/market-data.js": "30b0b0bb6c",
+    "js/data/professions-data.js": "11dcc6cd14"
+  };
+  // FILE_VERSIONS:END
   const inflight = new Map();
 
   const BUNDLES = {
@@ -49,7 +61,7 @@
         return;
       }
       const script = document.createElement('script');
-      script.src = `${src}?v=${CACHE_VERSION}`;
+      script.src = `${src}?v=${FILE_VERSIONS[src] || CACHE_VERSION}`;
       script.async = true;
       script.onload = () => resolve();
       script.onerror = (err) => {

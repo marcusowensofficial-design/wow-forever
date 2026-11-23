@@ -912,7 +912,10 @@
     if (!mount) return;
     const idx = ensureIndex();
     if (!idx) {
-      mount.innerHTML = `<div style="padding:2rem;text-align:center;color:#94a3b8;">Item database loading...</div>`;
+      // The item database is lazy-loaded (WOW_DATA_LOADER 'database'). Leave the mount EMPTY: the
+      // tab handlers in navigation.js show their own loading message and only render into an empty
+      // mount, so a placeholder written here (e.g. by codex.js at startup) blocked the real render.
+      mount.innerHTML = '';
       return;
     }
 
