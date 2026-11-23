@@ -340,9 +340,11 @@ export const GUIDES = [
     },
     tips: [
       'Seal of Ascension (Classic steps): the Unadorned Seal drops in LBRS; add the three gemstones and hand it to Vaelan by the LBRS entrance, then charge the forged seal by defeating Emberstrife in Dustwallow Marsh. Collect all three gemstones in one run if you can.',
-      'Several Onyxia attunement steps send you through LBRS on the way to UBRS.'
+      'Horde players start the Onyxia attunement here with Warlord\'s Command (Omokk, Voone and Wyrmthalak): see the [Onyxia Attunement guide](#guides/guide-onyxia-attunement).'
     ],
-    forever: []
+    forever: [
+      { date: 'Oct 20, 2026', source: 'Blizzard raid overview', text: 'The Horde Onyxia attunement says to fight Warchief Rend Blackhand in Lower Blackrock Spire. In Classic, and in Wowhead\'s Forever loot data, he is in Upper Blackrock Spire, which is where this site lists him.' }
+    ]
   },
   {
     slug: 'upper-blackrock-spire',
@@ -370,11 +372,12 @@ export const GUIDES = [
     },
     tips: [
       'Bring fire resistance gear and potions: three of the four main bosses deal heavy fire damage.',
-      'Drakkisath\'s room completes Blood of the Black Dragon Champion (Horde) and the Alliance Onyxia attunement step.'
+      'Drakkisath\'s room completes Blood of the Black Dragon Champion (Horde) and the Alliance Onyxia attunement step. Full chains: [Onyxia Attunement guide](#guides/guide-onyxia-attunement).'
     ],
     forever: [
       { date: 'Nov 17, 2026', source: 'Blizzard hotfix', text: 'Fixed enemy health and damage being much lower than intended; UBRS is back to full group difficulty.' },
-      { date: 'Nov 20, 2026', source: 'Blizzard hotfix', text: 'A stone pillar in Blackrock Spire no longer traps players.' }
+      { date: 'Nov 20, 2026', source: 'Blizzard hotfix', text: 'A stone pillar in Blackrock Spire no longer traps players.' },
+      { date: 'Oct 20, 2026', source: 'Blizzard raid overview', text: 'The Horde Onyxia attunement says to fight Warchief Rend Blackhand in Lower Blackrock Spire. In Classic, and in Wowhead\'s Forever loot data, he is in Upper Blackrock Spire. If he is not here, check the other wing.' }
     ]
   },
   {

@@ -3210,7 +3210,7 @@ World buffs still work in the open world, but they have **no effect inside raid 
 
 ### Attunements
 • **Barrow Deeps & Hyjal Summit:** Current reporting says neither raid has an attunement questline at launch, and there is no confirmed requirement to clear Barrow Deeps before Hyjal Summit.
-• **Onyxia's Lair:** Still requires the **Drakefire Amulet**, earned through the faction-specific attunement questline. Start it before December 9 so your raid is ready on day one.
+• **Onyxia's Lair:** Still requires the **Drakefire Amulet**, earned through the faction-specific attunement questline. Start it before December 9 so your raid is ready on day one. Every step for both factions: [Onyxia Attunement guide](#guides/guide-onyxia-attunement).
 
 ---
 

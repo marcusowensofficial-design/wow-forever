@@ -216,7 +216,7 @@ function buildGuide(g, tooltips) {
 
   out.push('---', '', '### Tips', '');
   g.tips.forEach(t => out.push(`- ${t}`));
-  out.push('', `*Data: ForeverDB live instance data (build 1.60.1.70959), WoW: Forever item database, Level 60 BiS lists and Wowhead Forever quest data, compiled ${BUILD_DATE}.*`);
+  out.push('', `📦 Data: ForeverDB live instance data (build 1.60.1.70959), WoW: Forever item database, Level 60 BiS lists and Wowhead Forever quest data, compiled ${BUILD_DATE}.`);
 
   const summaryBits = [`Levels ${lvMin}–${lvMax} in ${g.zone.split(' (')[0]}`, `${routeBosses.length} bosses`];
   if (quests.length) summaryBits.push(`${quests.length} quests`);

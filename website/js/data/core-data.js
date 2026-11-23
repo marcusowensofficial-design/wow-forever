@@ -3839,6 +3839,11 @@ Several of these were walked back in the October 26 racial pass.`,
       "id": "step-27",
       "text": "Gear up for Tier 1 raids opening December 9: Barrow Deeps (10-player) and Hyjal Summit (20-player)",
       "cat": "Raid Prep"
+    },
+    {
+      "id": "step-28",
+      "text": "Earn the Drakefire Amulet (Onyxia attunement) - every raider needs it in their bags for Onyxia's Lair (40-player) on December 9",
+      "cat": "Raid Prep"
     }
   ],
   "classDeepDives": {}
