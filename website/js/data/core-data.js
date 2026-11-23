@@ -209,7 +209,7 @@ const WOW_FOREVER_DATA = {
       "summary": "Server-side changes spotted on live realms with no Blizzard notes yet: lockboxes and other containers now loot straight into your bags, Gustberry Juice costs 1s 25c (was 25c), and 10 crafted Spiritcaller/Grovekeeper Tier 1 pieces have new stats.",
       "content": `These changes were found in live-realm game caches on top of client build 1.60.1.71037. **Blizzard has not posted notes for them**, so treat them as unconfirmed until official hotfix notes appear.
 
-• **Nov 22 — Containers:** Lockboxes, junkboxes, Darkmoon prizes, sacks of gems and similar containers (e.g. *Pirate's Footlocker*, *Thaurissan Family Jewels*) now put their contents directly into your bags when opened instead of showing a loot window.
+• **Nov 22 — Containers:** Lockboxes, junkboxes, Darkmoon prizes, sacks of gems and similar containers (e.g. *Pirate's Footlocker*, *Thaurissan Family Jewels*) now put their contents directly into your bags when opened instead of showing a loot window. Wowhead reports this closes an exploit: rogues could peek inside an opened lockbox before handing it back, and the preview showed different loot than the owner received.
 • **Nov 21 — Vendor price:** *Gustberry Juice* now costs **1 silver 25 copper** from vendors (was 25 copper). Its sell price is 6 copper (was 5).
 • **Nov 21 — Crafted Tier 1 armor:** 10 pieces of *Spiritcaller's Rage* (Shaman) and *Grovekeeper Rage / Ferocity* (Druid) were re-statted:
   - The four Spiritcaller pieces (Treads, Spaulders, Grips, Leggings) now carry **+11 to +13 Spell Power** in place of Agility, Hit, Crit or Expertise.
@@ -3459,10 +3459,17 @@ Several of these were walked back in the October 26 racial pass.`,
     },
     {
       "name": "Riverglades",
-      "level": "30 – 45",
+      "level": "36 – 45",
       "continent": "Eastern Kingdoms",
-      "description": "A new Eastern Kingdoms zone on the coast of the Forbidding Sea, home to the Krol'dok Stronghold dungeon.",
+      "description": "A new Eastern Kingdoms zone on the east coast, bordering the Burning Steppes, Redridge Mountains, Swamp of Sorrows and Badlands. Reached by the Steamwheedle sea route from Tanaris to Powderfuse Port; home to the Krol'dok Stronghold dungeon.",
       "features": "Farholde Keep, Powderfuse Port, Terral's Watch, Windstead, Turner's Logging Camp, Twilight's Shroud and Krol'dok Stronghold."
+    },
+    {
+      "name": "Shen'dralas",
+      "level": "38 – 49",
+      "continent": "Kalimdor",
+      "description": "A long-hidden region south of Desolace through the Valley of Bones, tied to the Shen'dralar, Eldre'Thalas (Dire Maul) and the centaur tribes of Desolace.",
+      "features": "30 new quests; the Valley of Bones approach; Shen'dralar and centaur storylines that lead toward Dire Maul."
     },
     {
       "name": "Mount Hyjal",
