@@ -22,6 +22,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -63,12 +64,26 @@ if (importIdx > 0) {
       items[rec.id] = cur;
     }
   }
-  const out = { collectedAt: new Date().toISOString().slice(0, 10), source: 'https://www.wowhead.com/forever/guides/classes', specs, items };
+  const out = { collectedAt: new Date().toLocaleDateString('en-CA'), source: 'https://www.wowhead.com/forever/guides/classes', specs, items };
   fs.writeFileSync(SOURCES_FILE, JSON.stringify(out, null, 1));
   console.log(`Imported ${Object.keys(specs).length} specs and ${Object.keys(items).length} items into ${path.relative(ROOT, SOURCES_FILE)}`);
 }
 
 const SRC = JSON.parse(fs.readFileSync(SOURCES_FILE, 'utf8'));
+
+// Icon fallback: some scraped tooltips (mostly new Forever items) carry only the question-mark icon.
+// js/data/item-database-data.js stores an icon index per item (row[7] -> meta.icons).
+const ITEM_DB_ICONS = (() => {
+  const ctx = { window: {} };
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'data', 'item-database-data.js'), 'utf8'), ctx);
+  const db = ctx.window.WOW_ITEM_DATABASE;
+  return new Map(db.rows.filter(r => r[7] >= 0).map(r => [String(r[0]), db.meta.icons[r[7]]]));
+})();
+function resolveIcon(id, tt) {
+  const icon = tt && tt.icon && tt.icon !== 'inv_misc_questionmark' ? tt.icon : ITEM_DB_ICONS.get(String(id));
+  return `${icon || 'inv_misc_questionmark'}.jpg`;
+}
 
 // ---------------------------------------------------------------------------------------------
 // 2. ForeverDungeonJournal loot + quest rewards (item id -> source)
@@ -444,7 +459,7 @@ function buildItem(slotEntry, rank) {
     itemId: String(id),
     tipId: String(id),
     name: unrevealed && /^(Head|Shoulders|Chest|Legs|Feet|Hands)$/.test(name) ? `Tier set ${name.toLowerCase()} (unrevealed)` : name,
-    icon: tt && tt.icon ? `${tt.icon}.jpg` : 'inv_misc_questionmark.jpg',
+    icon: resolveIcon(id, tt),
     side: cls.side,
     source: cls.source,
     sourceDetails: [cls.source],
@@ -524,7 +539,8 @@ const meta = {
   level: 60,
   title: 'Level 60 Pre-Raid BiS',
   phase: 'Pre-raid (raids open December 9, 2026)',
-  lastUpdated: SRC.collectedAt,
+  // Latest of the planner scrape and any per-item tooltip refresh (scripts/refresh-bis-60-placeholders.mjs).
+  lastUpdated: [SRC.collectedAt, ...Object.values(SRC.items).map(r => r.ttRefreshed)].filter(Boolean).sort().pop(),
   source: 'Wowhead & ForeverDB WoW: Forever Level 60 class pre-raid BiS lists',
   sourceUrl: 'https://foreverdb.net/bis',
   stats,

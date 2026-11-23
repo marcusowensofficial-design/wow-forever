@@ -4531,13 +4531,14 @@
   "11748": {
    "id": 11748,
    "tt": {
-    "name": "Item 11748",
+    "name": "Pyric Caduceus",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->53<br>Item level 53<br>Binds when picked up<br>Ranged (Wand)<br>66 - 123 Fire damage, speed 1.80<br>52.5 damage per second<br>+13 Fire Damage Done<br>+3 Spirit<br><!--rlvl-->48<br>Requires level 48"
+    "icon": "inv_staff_13",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Pyric Caduceus</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->53</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Ranged</td><th><!--scstart2:19--><span class=\"q1\">Wand</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->66 - 123 Fire Damage</span></td>\n    <th>Speed <!--spd-->1.80</th>\n</tr></table><!--dps-->(52.50 damage per second)<br><span><!--stat6-->+3 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->48<br><!--rr--><span class=\"q2\">Equip: Increases damage done by Fire spells and effects by up to <!--rtg85-->13.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">52</span> <span class=\"moneycopper\">85</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Pyromancer Loregrain</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 23.75%</div></td></tr></table><!--i?11748:1:60:48-->"
    },
    "fdbSource": "Drops from Pyromancer Loregrain (boss) in Blackrock Depths , 27% (Classic drop rate) (seen in WoW Forever)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "11840": {
    "id": 11840,
@@ -4727,24 +4728,26 @@
   "12927": {
    "id": 12927,
    "tt": {
-    "name": "Item 12927",
+    "name": "Truestrike Shoulders",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Shoulder (Leather)<br>129 Armor<br>+15 Hit<br>+24 Attack Power<br>+10 Stamina<br><!--rlvl-->56<br>Requires level 56"
+    "icon": "inv_shoulder_10",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Truestrike Shoulders</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Shoulder</td><th><!--scstart4:2--><span class=\"q1\">Leather</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->129 Armor</span><br><span><!--stat7-->+10 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 60 / 60</td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.5%.</span><br><span class=\"q2\">Equip: +<!--rtg38-->24 Attack Power.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">96</span> <span class=\"moneycopper\">38</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Pyroguard Emberseer</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 19.19%</div></td></tr></table><!--i?12927:1:60:56-->"
    },
    "fdbSource": "Drops from Pyroguard Emberseer (boss) in Blackrock Spire , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "12936": {
    "id": 12936,
    "tt": {
-    "name": "Item 12936",
+    "name": "Battleborn Armbraces",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Wrist (Plate)<br>287 Armor<br>+10 Hit<br>+14 Critical Strike<br>+7 Spirit<br><!--rlvl-->58<br>Requires level 58"
+    "icon": "inv_bracer_17",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Battleborn Armbraces</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Wrist</td><th><!--scstart4:4--><span class=\"q1\">Plate</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->287 Armor</span><br><span><!--stat6-->+7 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 45 / 45</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: Improves your chance to get a critical strike by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">2</span> <span class=\"moneycopper\">69</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Warchief Rend Blackhand</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 19.15%</div></td></tr></table><!--i?12936:1:60:58-->"
    },
    "fdbSource": "Drops from Warchief Rend Blackhand (boss) in Blackrock Spire , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13208": {
    "id": 13208,
@@ -4772,35 +4775,38 @@
   "13209": {
    "id": 13209,
    "tt": {
-    "name": "Item 13209",
+    "name": "Seal of the Dawn",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Trinket (Miscellaneous)<br>Equip: +78 Attack Power against Undead. Allows the acquisition of Scourgestones on behalf of the Argent Dawn.<br>Unique-Equipped: Trinket of the Dawn (1)<br>Revealed 7 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). Changed in the live client ( build 70938 ) since beta build 70450: Stats: +78 Attack Power Vs Undead → none; Effects: nothing → “Equip: +78 Attack Power against Undead. Allows the acquisition of Scourgestones on behalf of the Argent Dawn.”."
+    "icon": "inv_misc_armorkit_18",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Seal of the Dawn</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><br>Unique-Equipped: Trinket of the Dawn (1)<!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=23930/seal-of-the-dawn\" class=\"q2\">+78 Attack Power against Undead. &nbsp;Allows the acquisition of Scourgestones on behalf of the Argent Dawn.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--></td></tr></table>"
    },
    "fdbSource": "Quest reward from The Active Agent (level 60), a choice of rewards (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13213": {
    "id": 13213,
    "tt": {
-    "name": "Item 13213",
+    "name": "Smolderweb's Eye",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Trinket (Miscellaneous)<br>+10 Hit<br>+5 Nature Resistance<br><!--rlvl-->55<br>Requires level 55<br>Use: Remove 1 Disarm effect from target ally."
+    "icon": "inv_misc_gem_pearl_01",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Smolderweb's Eye</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs-->+5 Nature Resistance<!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->55<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><br><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=1308917/mothers-watch\" class=\"q2\">Remove 1 Disarm effect from target ally.</a> (8 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">98</span> <span class=\"moneycopper\">96</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Mother Smolderweb</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 25.11%</div></td></tr></table><!--i?13213:1:60:55-->"
    },
    "fdbSource": "Drops from Mother Smolderweb (boss) in Blackrock Spire , 35% (Classic drop rate) (seen in WoW Forever)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13253": {
    "id": 13253,
    "tt": {
-    "name": "Item 13253",
+    "name": "Hands of Power",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Hands (Cloth)<br>53 Armor<br>+8 Spirit<br>+9 Intellect<br>+23 Spell Power<br><!--rlvl-->55<br>Requires level 55"
+    "icon": "inv_gauntlets_14",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Hands of Power</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Hands</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->53 Armor</span><br><span><!--stat5-->+9 Intellect</span><br><span><!--stat6-->+8 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 30 / 30</td></tr></table><table><tr><td>Requires Level <!--rlvl-->55<br><!--rr--><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->23</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">99</span> <span class=\"moneycopper\">48</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Quartermaster Zigris</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 10.31%</div></td></tr></table><!--i?13253:1:60:55-->"
    },
    "fdbSource": "Drops from Quartermaster Zigris (boss) in Blackrock Spire , 14% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13346": {
    "id": 13346,
@@ -4859,57 +4865,62 @@
   "13369": {
    "id": 13369,
    "tt": {
-    "name": "Item 13369",
+    "name": "Fire Striders",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Feet (Cloth)<br>61 Armor<br>+5 Spirit<br>+13 Fire Resistance<br>+29 Fire Damage Done<br><!--rlvl-->58<br>Requires level 58"
+    "icon": "inv_boots_05",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Fire Striders</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->61 Armor</span><br><span><!--stat6-->+5 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+13 Fire Resistance<!--e--><!--ps--><br>Durability 40 / 40</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><span class=\"q2\">Equip: Increases damage done by Fire spells and effects by up to <!--rtg85-->29.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">72</span> <span class=\"moneycopper\">74</span></div></td></tr></table><!--i?13369:1:60:58-->"
    },
    "fdbSource": "Drops from Balnazzar (boss) in Stratholme , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13396": {
    "id": 13396,
    "tt": {
-    "name": "Item 13396",
+    "name": "Skul's Ghastly Touch",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->60<br>Item level 60<br>Binds when picked up<br>Ranged (Wand)<br>75 - 140 Shadow damage, speed 1.80<br>59.7 damage per second<br>+14 Shadow Damage Done<br>+3 Shadow Resistance<br><!--rlvl-->55<br>Requires level 55"
+    "icon": "inv_misc_bone_elfskull_01",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Skul's Ghastly Touch</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->60</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Ranged</td><th><!--scstart2:19--><span class=\"q1\">Wand</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->75 - 140 Shadow Damage</span></td>\n    <th>Speed <!--spd-->1.80</th>\n</tr></table><!--dps-->(59.72 damage per second)<!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+3 Shadow Resistance<!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->55<br><!--rr--><span class=\"q2\">Equip: Increases damage done by Shadow spells and effects by up to <!--rtg88-->14.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">3</span> <span class=\"moneysilver\">73</span> <span class=\"moneycopper\">6</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Skul</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 30.14%</div></td></tr></table><!--i?13396:1:60:55-->"
    },
    "fdbSource": "Drops from Skul (boss) in Stratholme , 33% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13938": {
    "id": 13938,
    "tt": {
-    "name": "Item 13938",
+    "name": "Bonecreeper Stylus",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Ranged (Wand)<br>83 - 155 Arcane damage, speed 1.90<br>62.6 damage per second<br>+5 Intellect<br>+11 Spell Power<br><!--rlvl-->57<br>Requires level 57"
+    "icon": "inv_misc_bone_taurenskull_01",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Bonecreeper Stylus</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Ranged</td><th><!--scstart2:19--><span class=\"q1\">Wand</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->83 - 155 Arcane Damage</span></td>\n    <th>Speed <!--spd-->1.90</th>\n</tr></table><!--dps-->(62.63 damage per second)<br><span><!--stat5-->+5 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->57<br><!--rr--><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->11</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">11</span> <span class=\"moneycopper\">30</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Darkmaster Gandling</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 12.67%</div></td></tr></table><!--i?13938:1:60:57-->"
    },
    "fdbSource": "Drops from Darkmaster Gandling (boss) in Scholomance , 14% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13967": {
    "id": 13967,
    "tt": {
-    "name": "Item 13967",
+    "name": "Windreaver Greaves",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Feet (Mail)<br>247 Armor<br>+20 Agility<br>+10 Hit<br>+4 Intellect<br><!--rlvl-->56<br>Requires level 56"
+    "icon": "inv_boots_plate_04",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Windreaver Greaves</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:3--><span class=\"q1\">Mail</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->247 Armor</span><br><span><!--stat3-->+20 Agility</span><br><span><!--stat5-->+4 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 60 / 60</td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">36</span> <span class=\"moneycopper\">7</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Kirtonos the Herald</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 17.69%</div></td></tr></table><!--i?13967:1:60:56-->"
    },
    "fdbSource": "Drops from Kirtonos the Herald, 11% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "13968": {
    "id": 13968,
    "tt": {
-    "name": "Item 13968",
+    "name": "Eye of the Beast",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Trinket (Miscellaneous)<br>Equip: Improves your chance to get a Critical Strike with Spells by 1.0%.<br>Use: Increases your Spell Hit chance by 7% for 20 sec."
+    "icon": "inv_jewelry_talisman_08",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Eye of the Beast</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td><!--rr--><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=1318956/increased-critical-1-spell\" class=\"q2\">Improves your chance to get a Critical Strike with Spells by 1.0%.</a><!--useEffect:1--></span><!--useText:1--><br><br><!--useText:0:2--><span id=\"useText2\" class=\"q2\">Use: <!--useEffect:0:2--><a href=\"/forever/spell=1287840/eye-of-the-beast\" class=\"q2\">Increases your Spell Hit chance by 7% for 20 sec.</a> (5 Min Cooldown)<!--useEffect:2--></span><!--useText:2--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">30</span> <span class=\"moneycopper\">33</span></div></td></tr></table>"
    },
    "fdbSource": "Quest reward from For The Horde! (level 60), a choice of rewards, Horde (Classic data) ; Quest reward from General Drakkisath's Demise (level 60), a choice of rewards, Alliance (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "14112": {
    "id": 14112,
@@ -5060,13 +5071,14 @@
   "14616": {
    "id": 14616,
    "tt": {
-    "name": "Item 14616",
+    "name": "Bloodmail Boots",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Feet (Mail)<br>247 Armor<br>+10 Stamina<br>+10 Intellect<br>+9 Strength<br>+8 Agility<br>+10 Hit<br><!--rlvl-->56<br>Requires level 56"
+    "icon": "inv_boots_01",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Bloodmail Boots</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Feet</td><th><!--scstart4:3--><span class=\"q1\">Mail</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->247 Armor</span><br><span><!--stat4-->+9 Strength</span><br><span><!--stat3-->+8 Agility</span><br><span><!--stat7-->+10 Stamina</span><br><span><!--stat5-->+10 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 60 / 60</td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><!--itemEffects:1--><br /><br /><span class=\"q\"><a href=\"/forever/item-set=123/bloodmail-regalia\" class=\"q\">Bloodmail Regalia</a> (0/5)</span><div class=\"q0 indent\"><span><!--si14614--><a href=\"/forever/item=14614/bloodmail-belt\">Bloodmail Belt</a></span><br /><span><!--si14616--><a href=\"/forever/item=14616/bloodmail-boots\">Bloodmail Boots</a></span><br /><span><!--si14615--><a href=\"/forever/item=14615/bloodmail-gauntlets\">Bloodmail Gauntlets</a></span><br /><span><!--si14611--><a href=\"/forever/item=14611/bloodmail-hauberk\">Bloodmail Hauberk</a></span><br /><span><!--si14612--><a href=\"/forever/item=14612/bloodmail-legguards\">Bloodmail Legguards</a></span></div><br /><span class=\"q0\"><span>(2) Set : <a href=\"/forever/spell=9140/attack-power-10\">+10 Attack Power.</a></span><br /><span>(3) Set : <a href=\"/forever/spell=1299740/bloodmail\">Grants your melee attacks a chance to wound the target, causing them to Bleed for 70 damage over 10 sec.</a></span><br /><span>(4) Set : <a href=\"/forever/spell=18676/increased-all-resist-05\">+5 All Resistances.</a></span><br /><span>(5) Set : <a href=\"/forever/spell=1299738/increased-critical-1-5-all\">Improves your chance to get a critical strike by 1.5%.</a></span></span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">36</span> <span class=\"moneycopper\">7</span></div></td></tr></table><!--i?14616:1:60:56-->"
    },
    "fdbSource": "Drops from Lord Alexei Barov (boss) in Scholomance , 3.7% (Classic data) ; Drops from Lady Illucia Barov (boss) in Scholomance , 1.1% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "15047": {
    "id": 15047,
@@ -5376,46 +5388,50 @@
   "17780": {
    "id": 17780,
    "tt": {
-    "name": "Item 17780",
-    "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->54<br>Item level 54<br>Binds when picked up<br>Main Hand (Dagger)<br>41 - 77 damage, speed 1.50<br>39.3 damage per second<br>+62 Spell Power<br><!--rlvl-->49<br>Requires level 49<br>Equip: Chance on landing a damaging spell to deal 112 Shadow damage and restore 104 mana to you."
+    "name": "Blade of Eternal Darkness",
+    "q": 4,
+    "icon": "inv_sword_09",
+    "html": "<table><tr><td><!--nstart--><b class=\"q4\">Blade of Eternal Darkness</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->54</span><!--bo--><br>Binds when picked up<br>Unique-Equipped<!--ue--><!--ue--><table width=\"100%\"><tr><td>Main Hand</td><th><!--scstart2:15--><span class=\"q1\">Dagger</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->21 - 57 Damage</span></td>\n    <th>Speed <!--spd-->1.50</th>\n</tr></table><!--dps-->(26.07 damage per second)<!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 75 / 75</td></tr></table><table><tr><td>Requires Level <!--rlvl-->49<br><!--rr--><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->62</span>.</span><br><br><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=21978/engulfing-shadows\" class=\"q2\">Chance on landing a damaging spell to deal 112 Shadow damage and restore 104 mana to you. (100ms cooldown)</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">76</span> <span class=\"moneycopper\">49</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Princess Theradras</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 0.18%</div></td></tr></table><!--i?17780:1:60:49-->"
    },
    "fdbSource": "Drops from Princess Theradras (boss) in Maraudon , 0.5% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18327": {
    "id": 18327,
    "tt": {
-    "name": "Item 18327",
+    "name": "Whipvine Cord",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->59<br>Item level 59<br>Binds when picked up<br>Waist (Cloth)<br>47 Armor<br>+9 Intellect<br>+6 Mana per 5 sec<br>+29 Healing Power<br>+10 Spell Damage<br><!--rlvl-->54<br>Requires level 54"
+    "icon": "inv_belt_17",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Whipvine Cord</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->59</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Waist</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->47 Armor</span><br><span><!--stat5-->+9 Intellect</span><!--ebstats--><br><span class=\"q2\">Restores +<!--rtg43-->6 mana per 5 sec.</span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 30 / 30</td></tr></table><table><tr><td>Requires Level <!--rlvl-->54<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->29</span> and damage done by up to <span><!--rtg42-->10</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneysilver\">94</span> <span class=\"moneycopper\">74</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Alzzin the Wildshaper</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 18.90%</div></td></tr></table><!--i?18327:1:60:54-->"
    },
    "fdbSource": "Drops from Alzzin the Wildshaper (boss) in Dire Maul , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18372": {
    "id": 18372,
    "tt": {
-    "name": "Item 18372",
+    "name": "Blade of the New Moon",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Main Hand (Dagger)<br>40 - 74 damage, speed 1.40<br>40.7 damage per second<br>+15 Stamina<br>+88 Shadow Damage Done<br><!--rlvl-->57<br>Requires level 57"
+    "icon": "inv_weapon_shortblade_18",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Blade of the New Moon</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Main Hand</td><th><!--scstart2:15--><span class=\"q1\">Dagger</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->26 - 50 Damage</span></td>\n    <th>Speed <!--spd-->1.40</th>\n</tr></table><!--dps-->(27.14 damage per second)<br><span><!--stat7-->+15 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->57<br><!--rr--><span class=\"q2\">Equip: Increases damage done by Shadow spells and effects by up to <!--rtg88-->88.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">5</span> <span class=\"moneysilver\">48</span> <span class=\"moneycopper\">40</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Immol'thar</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 17.76%</div></td></tr></table><!--i?18372:1:60:57-->"
    },
    "fdbSource": "Drops from Immol'thar (boss) in Dire Maul , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18386": {
    "id": 18386,
    "tt": {
-    "name": "Item 18386",
+    "name": "Padre's Trousers",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Legs (Cloth)<br>76 Armor<br>+20 Intellect<br>+7 Mana per 5 sec<br>+37 Healing Power<br>+12 Spell Damage<br><!--rlvl-->56<br>Requires level 56"
+    "icon": "inv_pants_06",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Padre's Trousers</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Legs</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->76 Armor</span><br><span><!--stat5-->+20 Intellect</span><!--ebstats--><br><span class=\"q2\">Restores +<!--rtg43-->7 mana per 5 sec.</span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->37</span> and damage done by up to <span><!--rtg42-->12</span> for all magical spells and effects.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">8</span> <span class=\"moneycopper\">91</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Illyanna Ravenoak</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 17.72%</div></td></tr></table><!--i?18386:1:60:56-->"
    },
    "fdbSource": "Drops from Illyanna Ravenoak (boss) in Dire Maul , 25% (Classic drop rate) (seen in WoW Forever)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18404": {
    "id": 18404,
@@ -5484,24 +5500,26 @@
   "18468": {
    "id": 18468,
    "tt": {
-    "name": "Item 18468",
+    "name": "Royal Seal of Eldre'Thalas",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+15 Nature Resistance<br>+4 Mana per 5 sec<br>+21 Arcane Damage Done<br>Classes: Mage<br>\"Blessed by the Shen'dralar Ancients.\"<br>Revealed 10 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). New in the live client ( build 70888 ): this item wasn't in beta build 70450.<br>Changes from Classic Era<br>Stats: +10 Fire Resistance in Classic Era; +15 Nature Resistance, +4 Mana per 5 sec, +21 Arcane Damage Done in Forever"
+    "icon": "inv_jewelry_talisman_10",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Royal Seal of Eldre'Thalas</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><span class=\"q2\">Restores +<!--rtg43-->4 mana per 5 sec.</span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+15 Nature Resistance<!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=8/mage\" class=\"c8\">Mage</a></div></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increases damage done by Arcane spells and effects by up to <!--rtg89-->21.</span><!--itemEffects:1--><br><span class=\"q\">&quot;Blessed by the Shen'dralar Ancients.&quot;</span><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?18468:1:60:54-->"
    },
    "fdbSource": "Quest reward from The Arcanist's Cookbook (level 60) (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18469": {
    "id": 18469,
    "tt": {
-    "name": "Item 18469",
+    "name": "Royal Seal of Eldre'Thalas",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->62<br>Item level 62<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+15 Nature Resistance<br>+22 Healing Power<br>+7 Spell Damage<br>Classes: Priest<br>Equip: Increases Spirit by 16 in Cavernous or Underground areas.<br>\"Blessed by the Shen'dralar Ancients.\"<br>Revealed 11 November 2026: one of the items Blizzard hid from dataminers until a player found it ( hidden items ). New in the live client ( build 70938 ): this item wasn't in beta build 70450.<br>Changes from Classic Era<br>Stats: +10 Fire Resistance in Classic Era; +15 Nature Resistance, +22 Healing Power, +7 Spell Damage in Forever<br>Effects in Classic Era: Increase Healing 33 , Increased Mana Regen"
+    "icon": "inv_jewelry_talisman_10",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Royal Seal of Eldre'Thalas</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->62</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs-->+15 Nature Resistance<!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=5/priest\" class=\"c5\">Priest</a></div></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increases healing done by up to <span><!--rtg41-->22</span> and damage done by up to <span><!--rtg42-->7</span> for all magical spells and effects.</span><br><br><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Equip: <!--useEffect:0:1--><a href=\"/forever/spell=1318480/royal-seal-of-eldrethalas\" class=\"q2\">Increases Spirit by 16 in Cavernous or Underground areas.</a><!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><span class=\"q\">&quot;Blessed by the Shen'dralar Ancients.&quot;</span><br><!--pvpEquip--><!--pvpEquip--></td></tr></table><!--i?18469:1:60:54-->"
    },
    "fdbSource": "Quest reward from Holy Bologna: What the Light Won't Tell You (level 60) (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "18470": {
    "id": 18470,
@@ -6476,13 +6494,14 @@
   "20036": {
    "id": 20036,
    "tt": {
-    "name": "Item 20036",
+    "name": "Fire Ruby",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->52<br>Item level 52<br>Binds when picked up<br>Unique<br>Trinket (Miscellaneous)<br>+14 Fire Damage Done<br>Classes: Mage<br>Use: Refreshes the cooldown of Fire Ward and causes Fire damage absorbed by it to increase the damage of your next Fire Blast cast within 1 min by 50% of the damage absorbed.<br>\"Unpredictability leads to both victory and death.\""
+    "icon": "inv_misc_gem_bloodstone_02",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Fire Ruby</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->52</span><!--bo--><br>Binds when picked up<br>Unique<!--ue--><!--ue--><table width=\"100%\"><tr><td>Trinket</td><th><!--scstart4:-4--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"/forever/class=8/mage\" class=\"c8\">Mage</a></div></td></tr></table><table><tr><td><!--rr--><span class=\"q2\">Equip: Increases damage done by Fire spells and effects by up to <!--rtg85-->14.</span><br><br><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=24389/chaos-fire\" class=\"q2\">Refreshes the cooldown of Fire Ward and causes Fire damage absorbed by it to increase the damage of your next Fire Blast cast within 1 min by 50% of the damage absorbed.</a> (5 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><span class=\"q\">&quot;Unpredictability leads to both victory and death.&quot;</span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">27</span> <span class=\"moneycopper\">22</span></div></td></tr></table><!--i?20036:1:60:50-->"
    },
    "fdbSource": "Quest reward from Destroy Morphaz (level 52), a choice of rewards (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "20043": {
    "id": 20043,
@@ -7565,24 +7584,26 @@
   "22266": {
    "id": 22266,
    "tt": {
-    "name": "Item 22266",
+    "name": "Flarethorn",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->57<br>Item level 57<br>Binds when picked up<br>Main Hand (Dagger)<br>47 - 88 damage, speed 1.80<br>37.5 damage per second<br>+5 Intellect<br>+81 Fire Damage Done<br>+12 Fire Resistance<br><!--rlvl-->52<br>Requires level 52"
+    "icon": "inv_spear_01",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Flarethorn</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->57</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Main Hand</td><th><!--scstart2:15--><span class=\"q1\">Dagger</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->31 - 59 Damage</span></td>\n    <th>Speed <!--spd-->1.80</th>\n</tr></table><!--dps-->(25.00 damage per second)<br><span><!--stat5-->+5 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><br>+12 Fire Resistance<!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->52<br><!--rr--><span class=\"q2\">Equip: Increases damage done by Fire spells and effects by up to <!--rtg85-->81.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">25</span> <span class=\"moneycopper\">63</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Gorosh the Dervish</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 28.17%</div></td></tr></table><!--i?22266:1:60:52-->"
    },
    "fdbSource": "Drops from Gorosh the Dervish, 15% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "22267": {
    "id": 22267,
    "tt": {
-    "name": "Item 22267",
+    "name": "Spellweaver's Turban",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Head (Cloth)<br>73 Armor<br>+13 Spirit<br>+33 Spell Power<br>+10 Hit<br><!--rlvl-->60<br>Requires level 60"
+    "icon": "inv_helmet_62",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Spellweaver's Turban</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Head</td><th><!--scstart4:1--><span class=\"q1\">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->73 Armor</span><br><span><!--stat6-->+13 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 50 / 50</td></tr></table><table><tr><td>Requires Level <!--rlvl-->60<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->33</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">1</span> <span class=\"moneysilver\">72</span> <span class=\"moneycopper\">74</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: General Drakkisath</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 22.47%</div></td></tr></table><!--i?22267:1:60:60-->"
    },
    "fdbSource": "Drops from General Drakkisath (boss) in Blackrock Spire , 25% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "22347": {
    "id": 22347,
@@ -7669,24 +7690,26 @@
   "22403": {
    "id": 22403,
    "tt": {
-    "name": "Item 22403",
+    "name": "Nacreous Shell Necklace",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->61<br>Item level 61<br>Binds when picked up<br>Neck (Miscellaneous)<br>+7 Stamina<br>+8 Intellect<br>+10 Hit<br>+9 Spell Power<br><!--rlvl-->56<br>Requires level 56"
+    "icon": "inv_jewelry_necklace_10",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Nacreous Shell Necklace</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->61</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Neck</td><th><!--scstart4:-3--><span class=\"q1\"></span><!--scend--></th></tr></table><!--rf--><span><!--stat7-->+7 Stamina</span><br><span><!--stat5-->+8 Intellect</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--></td></tr></table><table><tr><td>Requires Level <!--rlvl-->56<br><!--rr--><span class=\"q2\">Equip: Improves your chance to hit by 1.0%.</span><br><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->9</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">2</span> <span class=\"moneysilver\">8</span> <span class=\"moneycopper\">91</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Cannon Master Willey</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 20.28%</div></td></tr></table><!--i?22403:1:60:56-->"
    },
    "fdbSource": "Drops from Cannon Master Willey (boss) in Stratholme , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "22408": {
    "id": 22408,
    "tt": {
-    "name": "Item 22408",
+    "name": "Ritssyn's Wand of Bad Mojo",
     "q": 3,
-    "icon": "inv_misc_questionmark",
-    "html": "<!--ilvl-->63<br>Item level 63<br>Binds when picked up<br>Ranged (Wand)<br>58 - 108 Shadow damage, speed 1.30<br>63.8 damage per second<br>+5 Stamina<br>+11 Spell Power<br><!--rlvl-->58<br>Requires level 58"
+    "icon": "inv_wand_07",
+    "html": "<table><tr><td><!--nstart--><b class=\"q3\">Ritssyn's Wand of Bad Mojo</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->63</span><!--bo--><br>Binds when picked up<!--ue--><!--ue--><table width=\"100%\"><tr><td>Ranged</td><th><!--scstart2:19--><span class=\"q1\">Wand</span><!--scend--></th></tr></table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->58 - 108 Shadow Damage</span></td>\n    <th>Speed <!--spd-->1.30</th>\n</tr></table><!--dps-->(63.85 damage per second)<br><span><!--stat7-->+5 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 65 / 65</td></tr></table><table><tr><td>Requires Level <!--rlvl-->58<br><!--rr--><span class=\"q2\">Equip: Increases damage and healing done by magical spells and effects by up to <span><!--rtg41-->11</span>.</span><!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">4</span> <span class=\"moneysilver\">31</span> <span class=\"moneycopper\">86</span></div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Baron Rivendare</div><div class=\"whtt-extra whtt-dropchance\">Drop Chance: 16.56%</div></td></tr></table><!--i?22408:1:60:58-->"
    },
    "fdbSource": "Drops from Baron Rivendare (boss) in Stratholme , 20% (Classic data)",
-   "fetched": true
+   "fetched": true,
+   "ttRefreshed": "2026-11-22"
   },
   "22436": {
    "id": 22436,
