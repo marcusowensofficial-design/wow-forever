@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - World Events & Holiday Schedules Dataset
- * Datamined from WoW Forever Client (Build 1.60.1.70959)
+ * Datamined from WoW Forever Client (Build 1.60.1.71037)
  * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
  */
 (function () {
@@ -9,8 +9,8 @@
   window.WOW_EVENTS_DATA = {
   "meta": {
     "totalEvents": 15,
-    "build": "1.60.1.70959",
-    "extracted": "2026-11-20",
+    "build": "1.60.1.71037",
+    "extracted": "2026-11-22",
     "updatedAt": "2026-11-20"
   },
   "events": [
@@ -928,7 +928,7 @@
       "challenge": null,
       "questsCount": 8,
       "itemsCount": 81,
-      "vendorsCount": 6,
+      "vendorsCount": 3,
       "posts": []
     },
     {

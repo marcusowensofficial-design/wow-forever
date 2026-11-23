@@ -645,7 +645,6 @@ function renderDungeonCurve() {
       </div>
       <div class="curve-badges">
         ${d.isNew ? '<span class="badge-forever-new">✦ New Forever Dungeon</span>' : '<span class="badge-classic-staple">Classic Staple</span>'}
-        ${d.betaActive ? '<span class="badge-beta-active">Beta Active</span>' : ''}
       </div>
     </div>
   `).join('');

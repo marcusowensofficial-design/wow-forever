@@ -1,6 +1,7 @@
 /**
  * World of Warcraft: Forever - Spec Rotation & Priority Coach Profiles
- * Synced from ForeverDB live addon data (Build 1.60.1.70959, GPL-3.0 attribution)
+ * Datamined from WoW Forever Client (Build 1.60.1.71037) with ForeverDB simulator results
+ * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_SPEC_COACH_DATA = {
   "druid-balance": {
@@ -10,7 +11,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Balance",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -746,8 +747,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.019,
-            "why": "Keep it on the target: up 83% of the sim's fight; worth 1.9% of your DPS",
+            "value": 0.023,
+            "why": "Keep it on the target: up 84% of the sim's fight; worth 2.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -767,8 +768,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Starfire",
             "when": "filler",
-            "value": 0.4,
-            "why": "Your filler: cast it when nothing above is ready; worth 40% of your DPS",
+            "value": 0.412,
+            "why": "Your filler: cast it when nothing above is ready; worth 41.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -797,7 +798,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Insect Swarm",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.019,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -810,7 +811,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.044,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -820,7 +821,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9179,
             "name": "Elixir of Greater Intellect",
-            "value": 0.043,
+            "value": 0.038,
             "src": [
               "sim",
               "client"
@@ -830,7 +831,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13935,
             "name": "Baked Salmon",
-            "value": 0.035,
+            "value": 0.036,
             "src": [
               "sim",
               "client"
@@ -840,7 +841,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10308,
             "name": "Scroll of Intellect IV",
-            "value": 0.029,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -849,10 +850,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Moonfire out of single-target fights at level 60: the simulator's 180 s fight did 4.7% more damage without it.",
+            "text": "Leave Moonfire out of single-target fights at level 60: the simulator's 180 s fight did 4.3% more damage without it.",
             "name": "Moonfire",
             "spell": 9835,
-            "value": -0.047,
+            "value": -0.043,
             "src": [
               "sim"
             ],
@@ -861,7 +862,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 159.8,
+          "dps": 161.3,
           "fight_s": 180,
           "build": "balance-60-dungeon",
           "limits": [
@@ -964,7 +965,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -1093,7 +1094,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Feral Combat",
     "role": "tank",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -2078,7 +2079,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -2208,7 +2209,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Druid",
     "specName": "Restoration",
     "role": "healer",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -3278,7 +3279,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -3408,7 +3409,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Beast Mastery",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -3592,7 +3593,6 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -3616,8 +3616,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.022,
-            "why": "Keep it on the target: up 77% of the sim's fight; worth 2.2% of your DPS",
+            "why": "Keep it on the target: up 78% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -3631,11 +3630,27 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.038,
-            "why": "Cast it when it's ready (6 s cooldown); worth 3.8% of your DPS",
+            "value": 0.012,
+            "why": "Cast it when it's ready (6 s cooldown); worth 1.2% of your DPS",
             "src": [
               "sim",
               "client"
+            ]
+          },
+          {
+            "spell": 1293241,
+            "ids": [
+              1293241,
+              1293525
+            ],
+            "name": "Summon Hawk",
+            "when": "ready",
+            "value": 0.093,
+            "why": "Cast it when it's ready (6 s cooldown); worth 9.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           },
           {
@@ -3677,7 +3692,6 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -3690,20 +3704,9 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.244,
+            "value": 0.218,
             "src": [
               "sim"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.043,
-            "src": [
-              "sim",
-              "client"
             ]
           },
           {
@@ -3711,7 +3714,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.041,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -3722,7 +3725,18 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.036,
+            "value": 0.037,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -3733,7 +3747,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.03,
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -3743,7 +3757,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.027,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -3753,7 +3767,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250069,
             "name": "Flank au Poivre",
-            "value": 0.027,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -3764,7 +3778,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.026,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -3774,7 +3788,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10309,
             "name": "Scroll of Agility IV",
-            "value": 0.016,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -3783,13 +3797,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 105.7,
+          "dps": 116.5,
           "fight_s": 60,
           "build": "beast-mastery-30-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -3814,8 +3827,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.03,
-            "why": "Keep it on the target: up 79% of the sim's fight; worth 3% of your DPS",
+            "value": 0.013,
+            "why": "Keep it on the target: up 79% of the sim's fight; worth 1.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -3829,11 +3842,28 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Multi-Shot",
             "when": "ready",
-            "value": 0.072,
-            "why": "Cast it when it's ready (6 s cooldown); worth 7.2% of your DPS",
+            "value": 0.053,
+            "why": "Cast it when it's ready (6 s cooldown); worth 5.3% of your DPS",
             "src": [
               "sim",
               "client"
+            ]
+          },
+          {
+            "spell": 1293525,
+            "ids": [
+              1293241,
+              1293525,
+              1293526
+            ],
+            "name": "Summon Hawk",
+            "when": "ready",
+            "value": 0.075,
+            "why": "Cast it when it's ready (6 s cooldown); worth 7.5% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           },
           {
@@ -3848,8 +3878,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "value": 0.039,
-            "why": "Your filler: cast it when nothing above is ready; worth 3.9% of your DPS",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -3877,7 +3906,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.03,
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -3897,7 +3926,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.038,
+            "value": 0.035,
             "cd_s": 120
           }
         ],
@@ -3906,7 +3935,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.278,
+            "value": 0.257,
             "src": [
               "sim"
             ]
@@ -3927,17 +3956,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.033,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 9187,
-            "name": "Elixir of Greater Agility",
-            "value": 0.03,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -3948,7 +3967,17 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.03,
+            "value": 0.029,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9187,
+            "name": "Elixir of Greater Agility",
+            "value": 0.028,
             "src": [
               "sim",
               "client"
@@ -3959,7 +3988,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.028,
+            "value": 0.027,
             "src": [
               "sim",
               "client"
@@ -3970,7 +3999,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.023,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -3980,7 +4009,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250069,
             "name": "Flank au Poivre",
-            "value": 0.018,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -3990,7 +4019,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10309,
             "name": "Scroll of Agility IV",
-            "value": 0.015,
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -3999,13 +4028,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 156.2,
+          "dps": 169,
           "fight_s": 60,
           "build": "beast-mastery-40-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -4032,8 +4060,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.05,
-            "why": "Keep it on the target: up 73% of the sim's fight; worth 5% of your DPS",
+            "value": 0.035,
+            "why": "Keep it on the target: up 73% of the sim's fight; worth 3.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4041,16 +4069,20 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 2643,
+            "spell": 1293526,
             "ids": [
-              2643
+              1293241,
+              1293525,
+              1293526
             ],
-            "name": "Multi-Shot",
+            "name": "Summon Hawk",
             "when": "ready",
-            "why": "Cast it when it's ready (6 s cooldown); the sim gains little from it",
+            "value": 0.051,
+            "why": "Cast it when it's ready (6 s cooldown); worth 5.1% of your DPS",
             "src": [
               "sim",
-              "client"
+              "client",
+              "guides"
             ]
           },
           {
@@ -4066,8 +4098,7 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Shot",
             "when": "filler",
-            "value": 0.033,
-            "why": "Your filler: cast it when nothing above is ready; worth 3.3% of your DPS",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -4095,7 +4126,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.7,
-            "value": 0.05,
+            "value": 0.035,
             "src": [
               "sim",
               "client"
@@ -4115,7 +4146,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.039,
+            "value": 0.036,
             "cd_s": 120
           }
         ],
@@ -4124,17 +4155,17 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.282,
+            "value": 0.265,
             "src": [
               "sim"
             ]
           },
           {
             "kind": "buff",
-            "id": 9885,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.039,
+            "id": 10157,
+            "name": "Arcane Intellect",
+            "from": "mage",
+            "value": 0.046,
             "src": [
               "sim",
               "client"
@@ -4145,7 +4176,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.037,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -4153,10 +4184,10 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "buff",
-            "id": 10157,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.035,
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
+            "value": 0.041,
             "src": [
               "sim",
               "client"
@@ -4198,7 +4229,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250069,
             "name": "Flank au Poivre",
-            "value": 0.018,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -4215,15 +4246,24 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
+        "avoid": [
+          {
+            "text": "Leave Multi-Shot out of single-target fights at levels 50-59: the simulator's 60 s fight did 1.5% more damage without it.",
+            "name": "Multi-Shot",
+            "spell": 2643,
+            "value": -0.015,
+            "src": [
+              "sim"
+            ]
+          }
+        ],
         "sim": {
-          "dps": 195.8,
+          "dps": 206.2,
           "fight_s": 60,
           "build": "beast-mastery-50-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -4251,8 +4291,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.012,
-            "why": "Keep it on the target: up 33% of the sim's fight; worth 1.2% of your DPS",
+            "value": 0.01,
+            "why": "Keep it on the target: up 33% of the sim's fight; worth 1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -4260,16 +4300,42 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 2643,
+            "spell": 1293527,
             "ids": [
-              2643
+              1293241,
+              1293525,
+              1293526,
+              1293527
             ],
-            "name": "Multi-Shot",
+            "name": "Summon Hawk",
             "when": "ready",
-            "why": "Cast it when it's ready (6 s cooldown); the sim gains little from it",
+            "value": 0.081,
+            "why": "Cast it when it's ready (6 s cooldown); worth 8.1% of your DPS",
             "src": [
               "sim",
-              "client"
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 14287,
+            "ids": [
+              3044,
+              14281,
+              14282,
+              14283,
+              14284,
+              14285,
+              14286,
+              14287
+            ],
+            "name": "Arcane Shot",
+            "when": "filler",
+            "why": "Your filler: cast it when nothing above is ready; the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
             ]
           }
         ],
@@ -4293,7 +4359,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.3,
-            "value": 0.012,
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -4313,7 +4379,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.02,
+            "value": 0.019,
             "cd_s": 120
           }
         ],
@@ -4322,7 +4388,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.222,
+            "value": 0.207,
             "src": [
               "sim"
             ]
@@ -4331,7 +4397,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.019,
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -4341,7 +4407,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250069,
             "name": "Flank au Poivre",
-            "value": 0.016,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -4351,7 +4417,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10309,
             "name": "Scroll of Agility IV",
-            "value": 0.013,
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -4360,25 +4426,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Arcane Shot out of single-target fights at level 60: the simulator's 180 s fight did 2.5% more damage without it.",
-            "name": "Arcane Shot",
-            "spell": 14287,
-            "value": -0.025,
+            "text": "Leave Multi-Shot out of single-target fights at level 60: the simulator's 180 s fight did 1.3% more damage without it.",
+            "name": "Multi-Shot",
+            "spell": 2643,
+            "value": -0.013,
             "src": [
               "sim"
-            ],
-            "speculation": true,
-            "reason": "The class guide's rotation card uses Arcane Shot here and the simulator disagrees: check it in game before trusting either"
+            ]
           }
         ],
         "sim": {
-          "dps": 359.9,
+          "dps": 387.8,
           "fight_s": 180,
           "build": "beast-mastery-60-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -4477,7 +4540,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -4584,7 +4647,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "hunter-beast-mastery-30-consumable",
-        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.7% DPS in the simulator); then Flank au Poivre (+2.7%).",
+        "text": "Best consumable at levels 30-39: Elixir of Greater Agility (+2.5% DPS in the simulator); then Flank au Poivre (+2.5%).",
         "levels": [
           30,
           39
@@ -4605,7 +4668,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Marksmanship",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -4789,9 +4852,9 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
+            "Wing Clip and traps",
+            "Not simulated yet (found in the client automatically): Sniper Shot"
           ]
         }
       },
@@ -4990,9 +5053,9 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
+            "Wing Clip and traps",
+            "Not simulated yet (found in the client automatically): Sniper Shot"
           ]
         }
       },
@@ -5194,9 +5257,9 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
+            "Wing Clip and traps",
+            "Not simulated yet (found in the client automatically): Sniper Shot"
           ]
         }
       },
@@ -5401,9 +5464,9 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
+            "Wing Clip and traps",
+            "Not simulated yet (found in the client automatically): Sniper Shot"
           ]
         }
       },
@@ -5545,9 +5608,9 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
-            "Wing Clip and traps"
+            "Wing Clip and traps",
+            "Not simulated yet (found in the client automatically): Sniper Shot"
           ]
         }
       }
@@ -5644,7 +5707,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -5772,7 +5835,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Hunter",
     "specName": "Survival",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -5963,7 +6026,6 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -6180,7 +6242,6 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -6389,7 +6450,6 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -6602,7 +6662,6 @@ window.WOW_SPEC_COACH_DATA = {
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -6641,8 +6700,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Strider Kick",
             "when": "ready",
-            "value": 0.199,
-            "why": "Cast it when it's ready (8 s cooldown); worth 19.9% of your DPS",
+            "value": 0.197,
+            "why": "Cast it when it's ready (8 s cooldown); worth 19.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6663,8 +6722,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Raptor Strike",
             "when": "ready",
-            "value": 0.177,
-            "why": "Cast it when it's ready (6 s cooldown); worth 17.7% of your DPS",
+            "value": 0.178,
+            "why": "Cast it when it's ready (6 s cooldown); worth 17.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -6687,8 +6746,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.104,
-            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.4% of your DPS",
+            "value": 0.106,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.6% of your DPS",
             "src": [
               "sim",
               "client"
@@ -6715,7 +6774,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Serpent Sting",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.104,
+            "value": 0.106,
             "src": [
               "sim",
               "client"
@@ -6728,7 +6787,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "pet",
-            "value": 0.128,
+            "value": 0.131,
             "src": [
               "sim"
             ]
@@ -6766,13 +6825,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 362.4,
+          "dps": 356,
           "fight_s": 180,
           "build": "survival-60-dungeon",
           "limits": [
             "Ammunition (the client gives arrows no damage)",
             "Pet families' differences",
-            "Summon Hawk",
             "Trueshot Aura's party bonus",
             "Wing Clip and traps"
           ]
@@ -6871,7 +6929,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -6998,7 +7056,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Arcane",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -7013,6 +7071,22 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
+            "spell": 2137,
+            "ids": [
+              2136,
+              2137,
+              2138
+            ],
+            "name": "Fire Blast",
+            "when": "ready",
+            "why": "Cast it when it's ready (8 s cooldown); the sim gains little from it",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
             "spell": 5144,
             "ids": [
               5143,
@@ -7021,8 +7095,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.386,
-            "why": "Your filler: cast it when nothing above is ready; worth 38.6% of your DPS",
+            "value": 0.314,
+            "why": "Your filler: cast it when nothing above is ready; worth 31.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7095,11 +7169,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 43.8,
+          "dps": 44,
           "fight_s": 60,
           "build": "arcane-20-dungeon",
           "limits": [
-            "Arcane Explosion (single target)"
+            "Arcane Explosion (single target)",
+            "Not simulated yet (found in the client automatically): Arcane Wrath"
           ]
         }
       },
@@ -7110,6 +7185,25 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "priority": [
           {
+            "spell": 8412,
+            "ids": [
+              2136,
+              2137,
+              2138,
+              8412,
+              8413
+            ],
+            "name": "Fire Blast",
+            "when": "ready",
+            "value": 0.067,
+            "why": "Cast it when it's ready (8 s cooldown); worth 6.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
             "spell": 5145,
             "ids": [
               5143,
@@ -7119,8 +7213,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.419,
-            "why": "Your filler: cast it when nothing above is ready; worth 41.9% of your DPS",
+            "value": 0.295,
+            "why": "Your filler: cast it when nothing above is ready; worth 29.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7202,7 +7296,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.051,
+            "value": 0.047,
             "src": [
               "sim",
               "client"
@@ -7212,7 +7306,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13935,
             "name": "Baked Salmon",
-            "value": 0.048,
+            "value": 0.044,
             "src": [
               "sim",
               "client"
@@ -7221,11 +7315,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 81.2,
+          "dps": 87,
           "fight_s": 60,
           "build": "arcane-30-dungeon",
           "limits": [
-            "Arcane Explosion (single target)"
+            "Arcane Explosion (single target)",
+            "Not simulated yet (found in the client automatically): Arcane Wrath"
           ]
         }
       },
@@ -7235,6 +7330,26 @@ window.WOW_SPEC_COACH_DATA = {
           49
         ],
         "priority": [
+          {
+            "spell": 8413,
+            "ids": [
+              2136,
+              2137,
+              2138,
+              8412,
+              8413,
+              10197
+            ],
+            "name": "Fire Blast",
+            "when": "ready",
+            "value": 0.031,
+            "why": "Cast it when it's ready (8 s cooldown); worth 3.1% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 8417,
             "ids": [
@@ -7247,8 +7362,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.551,
-            "why": "Your filler: cast it when nothing above is ready; worth 55.1% of your DPS",
+            "value": 0.42,
+            "why": "Your filler: cast it when nothing above is ready; worth 42% of your DPS",
             "src": [
               "sim",
               "client",
@@ -7330,7 +7445,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13935,
             "name": "Baked Salmon",
-            "value": 0.045,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -7340,7 +7455,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.041,
+            "value": 0.039,
             "src": [
               "sim",
               "client"
@@ -7349,11 +7464,12 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 142.7,
+          "dps": 147.2,
           "fight_s": 60,
           "build": "arcane-40-dungeon",
           "limits": [
-            "Arcane Explosion (single target)"
+            "Arcane Explosion (single target)",
+            "Not simulated yet (found in the client automatically): Arcane Wrath"
           ]
         }
       },
@@ -7363,6 +7479,27 @@ window.WOW_SPEC_COACH_DATA = {
           59
         ],
         "priority": [
+          {
+            "spell": 10197,
+            "ids": [
+              2136,
+              2137,
+              2138,
+              8412,
+              8413,
+              10197,
+              10199
+            ],
+            "name": "Fire Blast",
+            "when": "ready",
+            "value": 0.044,
+            "why": "Cast it when it's ready (8 s cooldown); worth 4.4% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
           {
             "spell": 10211,
             "ids": [
@@ -7377,12 +7514,22 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Arcane Missiles",
             "when": "filler",
-            "value": 0.586,
-            "why": "Your filler: cast it when nothing above is ready; worth 58.6% of your DPS",
+            "value": 0.436,
+            "why": "Your filler: cast it when nothing above is ready; worth 43.6% of your DPS",
             "src": [
               "sim",
               "client",
               "guides"
+            ]
+          },
+          {
+            "spell": 0,
+            "ids": [],
+            "name": "Wand",
+            "when": "out_of_mana",
+            "why": "Only when you're out of mana",
+            "src": [
+              "sim"
             ]
           }
         ],
@@ -7455,35 +7602,15 @@ window.WOW_SPEC_COACH_DATA = {
             "cd_s": 180
           }
         ],
-        "prepull": [
-          {
-            "kind": "consumable",
-            "id": 13454,
-            "name": "Greater Arcane Elixir",
-            "value": 0.048,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 13935,
-            "name": "Baked Salmon",
-            "value": 0.039,
-            "src": [
-              "sim",
-              "client"
-            ]
-          }
-        ],
+        "prepull": [],
         "avoid": [],
         "sim": {
-          "dps": 221.2,
+          "dps": 231.3,
           "fight_s": 60,
           "build": "arcane-50-dungeon",
           "limits": [
-            "Arcane Explosion (single target)"
+            "Arcane Explosion (single target)",
+            "Not simulated yet (found in the client automatically): Arcane Wrath"
           ]
         }
       },
@@ -7644,7 +7771,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 180,
           "build": "arcane-60-dungeon",
           "limits": [
-            "Arcane Explosion (single target)"
+            "Arcane Explosion (single target)",
+            "Not simulated yet (found in the client automatically): Fire Blast, Arcane Wrath"
           ]
         }
       }
@@ -7741,7 +7869,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -7781,7 +7909,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "mage-arcane-20-proc-clearcasting",
-        "text": "Clearcasting (from Arcane Concentration): Your next damage spell has its mana cost reduced by 100%. Cast Arcane Blast within 15 sec, before it fades. In the simulator it comes 2.543 times a 60 s fight.",
+        "text": "Clearcasting (from Arcane Concentration): Your next damage spell has its mana cost reduced by 100%. Cast Arcane Blast within 15 sec, before it fades. In the simulator it comes 2.17 times a 60 s fight.",
         "levels": [
           20,
           29
@@ -7809,7 +7937,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "mage-arcane-20-mix",
-        "text": "Where your damage comes from at levels 20-29: Arcane Missiles 63%, Arcane Blast 37% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 20-29: Arcane Missiles 51%, Arcane Blast 32%, Fire Blast 18% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           20,
           29
@@ -7869,7 +7997,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Fire",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -8584,7 +8712,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -8712,7 +8840,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Mage",
     "specName": "Frost",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -9458,7 +9586,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -9585,7 +9713,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Holy",
     "role": "healer",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -10563,7 +10691,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -10690,7 +10818,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Protection",
     "role": "tank",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -11725,7 +11853,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -11855,7 +11983,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Paladin",
     "specName": "Retribution",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -12673,8 +12801,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Judgement",
             "when": "ready",
-            "value": 0.393,
-            "why": "Cast it when it's ready (10 s cooldown); worth 39.3% of your DPS",
+            "value": 0.397,
+            "why": "Cast it when it's ready (10 s cooldown); worth 39.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -12693,8 +12821,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "speculation": true,
             "when": "buff_missing",
-            "value": 0.355,
-            "why": "Keep it up: 75% of the sim's fight; worth 35.5% of your DPS",
+            "value": 0.356,
+            "why": "Keep it up: 75% of the sim's fight; worth 35.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -12716,8 +12844,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Holy Strike",
             "when": "ready",
-            "value": 0.184,
-            "why": "Cast it when it's ready (10 s cooldown); worth 18.4% of your DPS",
+            "value": 0.187,
+            "why": "Cast it when it's ready (10 s cooldown); worth 18.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -12753,7 +12881,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Seal of Command",
             "on": "self",
             "min_uptime": 0.75,
-            "value": 0.355,
+            "value": 0.356,
             "src": [
               "sim",
               "client"
@@ -12777,7 +12905,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.025,
+            "value": 0.024,
             "src": [
               "sim",
               "client"
@@ -12807,7 +12935,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.015,
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -12816,7 +12944,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 335.7,
+          "dps": 339.9,
           "fight_s": 180,
           "build": "retribution-60-dungeon",
           "limits": [
@@ -12919,7 +13047,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -13048,7 +13176,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Discipline",
     "role": "healer",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -14274,7 +14402,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -14401,7 +14529,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Holy",
     "role": "healer",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -15417,7 +15545,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -15546,7 +15674,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Priest",
     "specName": "Shadow",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -16266,8 +16394,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.074,
-            "why": "Keep it on the target: up 53% of the sim's fight; worth 7.4% of your DPS",
+            "value": 0.069,
+            "why": "Keep it on the target: up 53% of the sim's fight; worth 6.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -16287,29 +16415,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Devouring Plague",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "why": "Keep it on the target: up 48% of the sim's fight; the sim gains little from it",
-            "src": [
-              "sim",
-              "client",
-              "guides"
-            ]
-          },
-          {
-            "spell": 10947,
-            "ids": [
-              8092,
-              8102,
-              8103,
-              8104,
-              8105,
-              8106,
-              10945,
-              10946,
-              10947
-            ],
-            "name": "Mind Blast",
-            "when": "ready",
-            "why": "Cast it when it's ready (8 s cooldown); the sim gains little from it",
+            "why": "Keep it on the target: up 49% of the sim's fight; the sim gains little from it",
             "src": [
               "sim",
               "client",
@@ -16354,7 +16460,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Shadow Word: Pain",
             "on": "target",
             "min_uptime": 0.5,
-            "value": 0.074,
+            "value": 0.069,
             "src": [
               "sim",
               "client"
@@ -16377,7 +16483,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9179,
             "name": "Elixir of Greater Intellect",
-            "value": 0.052,
+            "value": 0.056,
             "src": [
               "sim",
               "client"
@@ -16387,7 +16493,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10308,
             "name": "Scroll of Intellect IV",
-            "value": 0.033,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -16414,9 +16520,21 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           }
         ],
-        "avoid": [],
+        "avoid": [
+          {
+            "text": "Leave Mind Blast out of single-target fights at level 60: the simulator's 180 s fight did 1.1% more damage without it.",
+            "name": "Mind Blast",
+            "spell": 10947,
+            "value": -0.011,
+            "src": [
+              "sim"
+            ],
+            "speculation": true,
+            "reason": "The class guide's rotation card uses Mind Blast here and the simulator disagrees: check it in game before trusting either"
+          }
+        ],
         "sim": {
-          "dps": 273.8,
+          "dps": 277.3,
           "fight_s": 180,
           "build": "shadow-60-dungeon",
           "limits": [
@@ -16519,7 +16637,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -16648,7 +16766,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Assassination",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -17451,8 +17569,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "buff_missing",
             "min_power": 25,
             "combo_points": 3,
-            "value": 0.014,
-            "why": "Keep it up: 90% of the sim's fight; worth 1.4% of your DPS",
+            "value": 0.017,
+            "why": "Keep it up: 91% of the sim's fight; worth 1.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17477,8 +17595,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 35,
             "combo_points": 5,
-            "value": 0.124,
-            "why": "Cast it when it's ready; worth 12.4% of your DPS",
+            "value": 0.123,
+            "why": "Cast it when it's ready; worth 12.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -17501,8 +17619,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Sinister Strike",
             "when": "filler",
             "min_power": 45,
-            "value": 0.501,
-            "why": "Your filler: cast it when nothing above is ready; worth 50.1% of your DPS",
+            "value": 0.498,
+            "why": "Your filler: cast it when nothing above is ready; worth 49.8% of your DPS",
             "src": [
               "sim",
               "client"
@@ -17516,7 +17634,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Slice and Dice",
             "on": "self",
             "min_uptime": 0.9,
-            "value": 0.014,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -17545,7 +17663,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.021,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -17565,7 +17683,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10309,
             "name": "Scroll of Agility IV",
-            "value": 0.014,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -17688,7 +17806,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -17818,7 +17936,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Combat",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -18639,8 +18757,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 20,
             "combo_points": 5,
-            "value": 0.109,
-            "why": "Cast it when it's ready; worth 10.9% of your DPS",
+            "value": 0.111,
+            "why": "Cast it when it's ready; worth 11.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18664,8 +18782,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Backstab",
             "when": "filler",
             "min_power": 60,
-            "value": 0.464,
-            "why": "Your filler: cast it when nothing above is ready; worth 46.4% of your DPS",
+            "value": 0.463,
+            "why": "Your filler: cast it when nothing above is ready; worth 46.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -18707,7 +18825,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.022,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -18737,7 +18855,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.013,
+            "value": 0.012,
             "src": [
               "sim",
               "client"
@@ -18746,7 +18864,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 368.2,
+          "dps": 371.8,
           "fight_s": 180,
           "build": "combat-60-dungeon",
           "limits": [
@@ -18850,7 +18968,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -18981,7 +19099,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Rogue",
     "specName": "Subtlety",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -19163,7 +19281,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
-            "Expose Armor"
+            "Expose Armor",
+            "Not simulated yet (found in the client automatically): Death Mark"
           ]
         }
       },
@@ -19344,7 +19463,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
-            "Expose Armor"
+            "Expose Armor",
+            "Not simulated yet (found in the client automatically): Death Mark"
           ]
         }
       },
@@ -19510,7 +19630,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
-            "Expose Armor"
+            "Expose Armor",
+            "Not simulated yet (found in the client automatically): Death Mark"
           ]
         }
       },
@@ -19704,7 +19825,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
-            "Expose Armor"
+            "Expose Armor",
+            "Not simulated yet (found in the client automatically): Death Mark"
           ]
         }
       },
@@ -19727,7 +19849,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Ambush",
             "when": "ready",
             "min_power": 100,
-            "why": "Cast it when it's ready; the sim gains little from it",
+            "value": 0.01,
+            "why": "Cast it when it's ready; worth 1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19769,8 +19892,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "ready",
             "min_power": 37,
             "combo_points": 5,
-            "value": 0.052,
-            "why": "Cast it when it's ready; worth 5.2% of your DPS",
+            "value": 0.053,
+            "why": "Cast it when it's ready; worth 5.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -19843,7 +19966,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.014,
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -19852,10 +19975,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Hemorrhage out of single-target fights at level 60: the simulator's 180 s fight did 1.1% more damage without it.",
+            "text": "Leave Hemorrhage out of single-target fights at level 60: the simulator's 180 s fight did 1.4% more damage without it.",
             "name": "Hemorrhage",
             "spell": 16511,
-            "value": -0.011,
+            "value": -0.014,
             "src": [
               "sim"
             ],
@@ -19864,14 +19987,15 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 335.2,
+          "dps": 333.3,
           "fight_s": 180,
           "build": "subtlety-60-dungeon",
           "limits": [
             "Deadly Poison (Instant Poison on both weapons instead)",
             "Rupture and Garrote (Eviscerate does more in a short fight)",
             "Riposte (needs a parry)",
-            "Expose Armor"
+            "Expose Armor",
+            "Not simulated yet (found in the client automatically): Death Mark"
           ]
         }
       }
@@ -19968,7 +20092,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -20098,7 +20222,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Elemental",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -20273,8 +20397,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 60,
           "build": "elemental-20-dungeon",
           "limits": [
-            "Chain Lightning (not modelled yet)",
-            "Mana Spring Totem and other party totems"
+            "Mana Spring Totem and other party totems",
+            "Not simulated yet (found in the client automatically): Chain Lightning"
           ]
         }
       },
@@ -20463,8 +20587,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 60,
           "build": "elemental-30-dungeon",
           "limits": [
-            "Chain Lightning (not modelled yet)",
-            "Mana Spring Totem and other party totems"
+            "Mana Spring Totem and other party totems",
+            "Not simulated yet (found in the client automatically): Chain Lightning"
           ]
         }
       },
@@ -20654,8 +20778,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 60,
           "build": "elemental-40-dungeon",
           "limits": [
-            "Chain Lightning (not modelled yet)",
-            "Mana Spring Totem and other party totems"
+            "Mana Spring Totem and other party totems",
+            "Not simulated yet (found in the client automatically): Chain Lightning"
           ]
         }
       },
@@ -20842,8 +20966,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 60,
           "build": "elemental-50-dungeon",
           "limits": [
-            "Chain Lightning (not modelled yet)",
-            "Mana Spring Totem and other party totems"
+            "Mana Spring Totem and other party totems",
+            "Not simulated yet (found in the client automatically): Chain Lightning"
           ]
         }
       },
@@ -20989,8 +21113,8 @@ window.WOW_SPEC_COACH_DATA = {
           "fight_s": 180,
           "build": "elemental-60-dungeon",
           "limits": [
-            "Chain Lightning (not modelled yet)",
-            "Mana Spring Totem and other party totems"
+            "Mana Spring Totem and other party totems",
+            "Not simulated yet (found in the client automatically): Chain Lightning"
           ]
         }
       }
@@ -21087,7 +21211,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -21216,7 +21340,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Enhancement",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -21403,8 +21527,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.07,
-            "why": "Keep it up: 98% of the sim's fight; worth 7% of your DPS",
+            "value": 0.06,
+            "why": "Keep it up: 98% of the sim's fight; worth 6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21418,8 +21542,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.103,
-            "why": "Keep it up: 47% of the sim's fight; worth 10.3% of your DPS",
+            "value": 0.15,
+            "why": "Keep it up: 56% of the sim's fight; worth 15% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21436,8 +21560,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.067,
-            "why": "Keep it on the target: up 83% of the sim's fight; worth 6.7% of your DPS",
+            "value": 0.063,
+            "why": "Keep it on the target: up 84% of the sim's fight; worth 6.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21455,8 +21579,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.107,
-            "why": "Your filler: cast it when nothing above is ready; worth 10.7% of your DPS",
+            "value": 0.108,
+            "why": "Your filler: cast it when nothing above is ready; worth 10.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21471,7 +21595,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.067,
+            "value": 0.063,
             "src": [
               "sim",
               "client"
@@ -21485,7 +21609,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.038,
+            "value": 0.04,
             "src": [
               "sim",
               "client"
@@ -21496,7 +21620,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.035,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -21507,7 +21631,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.033,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -21518,7 +21642,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
-            "value": 0.029,
+            "value": 0.03,
             "src": [
               "sim",
               "client"
@@ -21529,7 +21653,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.026,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -21539,7 +21663,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250070,
             "name": "Bear Bruscitti",
-            "value": 0.016,
+            "value": 0.017,
             "src": [
               "sim",
               "client"
@@ -21556,21 +21680,21 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "consumable",
-            "id": 9206,
-            "name": "Elixir of Greater Strength",
-            "value": 0.013,
+            "kind": "buff",
+            "id": 25290,
+            "name": "Blessing of Wisdom",
+            "from": "paladin",
+            "value": 0.015,
             "src": [
               "sim",
               "client"
             ]
           },
           {
-            "kind": "buff",
-            "id": 25290,
-            "name": "Blessing of Wisdom",
-            "from": "paladin",
-            "value": 0.012,
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.013,
             "src": [
               "sim",
               "client"
@@ -21589,7 +21713,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 123.3,
+          "dps": 130.1,
           "fight_s": 60,
           "build": "enhancement-30-dungeon",
           "limits": [
@@ -21615,8 +21739,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.063,
-            "why": "Keep it up: 96% of the sim's fight; worth 6.3% of your DPS",
+            "value": 0.059,
+            "why": "Keep it up: 96% of the sim's fight; worth 5.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21630,8 +21754,32 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.101,
-            "why": "Keep it up: 48% of the sim's fight; worth 10.1% of your DPS",
+            "value": 0.177,
+            "why": "Keep it up: 52% of the sim's fight; worth 17.7% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 10391,
+            "ids": [
+              403,
+              529,
+              548,
+              915,
+              943,
+              6041,
+              10391,
+              10392
+            ],
+            "name": "Lightning Bolt",
+            "when": "proc",
+            "aura": 408498,
+            "aura_name": "Maelstrom Weapon",
+            "value": 0.05,
+            "why": "Only while Maelstrom Weapon is up; worth 5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21649,8 +21797,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.073,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 7.3% of your DPS",
+            "value": 0.064,
+            "why": "Keep it on the target: up 84% of the sim's fight; worth 6.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21669,8 +21817,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.102,
-            "why": "Your filler: cast it when nothing above is ready; worth 10.2% of your DPS",
+            "value": 0.088,
+            "why": "Your filler: cast it when nothing above is ready; worth 8.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21684,8 +21832,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 10447,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.073,
+            "min_uptime": 0.8,
+            "value": 0.064,
             "src": [
               "sim",
               "client"
@@ -21699,29 +21847,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.036,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 9885,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.034,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.034,
+            "value": 0.037,
             "src": [
               "sim",
               "client"
@@ -21732,7 +21858,29 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25289,
             "name": "Battle Shout",
             "from": "warrior",
+            "value": 0.034,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 9885,
+            "name": "Mark of the Wild",
+            "from": "druid",
             "value": 0.033,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "buff",
+            "id": 20217,
+            "name": "Blessing of Kings",
+            "from": "paladin",
+            "value": 0.031,
             "src": [
               "sim",
               "client"
@@ -21743,7 +21891,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.031,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -21754,7 +21902,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.027,
+            "value": 0.023,
             "src": [
               "sim",
               "client"
@@ -21774,7 +21922,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.016,
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -21784,7 +21932,17 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10310,
             "name": "Scroll of Strength IV",
-            "value": 0.015,
+            "value": 0.016,
+            "src": [
+              "sim",
+              "client"
+            ]
+          },
+          {
+            "kind": "consumable",
+            "id": 9206,
+            "name": "Elixir of Greater Strength",
+            "value": 0.01,
             "src": [
               "sim",
               "client"
@@ -21793,7 +21951,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 170.4,
+          "dps": 207.2,
           "fight_s": 60,
           "build": "enhancement-40-dungeon",
           "limits": [
@@ -21820,8 +21978,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Searing Totem",
             "when": "buff_missing",
-            "value": 0.016,
-            "why": "Keep it up: 93% of the sim's fight; worth 1.6% of your DPS",
+            "value": 0.012,
+            "why": "Keep it up: 93% of the sim's fight; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21835,8 +21993,34 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.086,
-            "why": "Keep it up: 47% of the sim's fight; worth 8.6% of your DPS",
+            "value": 0.172,
+            "why": "Keep it up: 50% of the sim's fight; worth 17.2% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 15207,
+            "ids": [
+              403,
+              529,
+              548,
+              915,
+              943,
+              6041,
+              10391,
+              10392,
+              15207,
+              15208
+            ],
+            "name": "Lightning Bolt",
+            "when": "proc",
+            "aura": 408498,
+            "aura_name": "Maelstrom Weapon",
+            "value": 0.064,
+            "why": "Only while Maelstrom Weapon is up; worth 6.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21855,8 +22039,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.095,
-            "why": "Keep it on the target: up 84% of the sim's fight; worth 9.5% of your DPS",
+            "value": 0.069,
+            "why": "Keep it on the target: up 82% of the sim's fight; worth 6.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21875,8 +22059,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Earth Shock",
             "when": "filler",
-            "value": 0.15,
-            "why": "Your filler: cast it when nothing above is ready; worth 15% of your DPS",
+            "value": 0.124,
+            "why": "Your filler: cast it when nothing above is ready; worth 12.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -21891,7 +22075,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "on": "target",
             "min_uptime": 0.8,
-            "value": 0.095,
+            "value": 0.069,
             "src": [
               "sim",
               "client"
@@ -21905,7 +22089,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25291,
             "name": "Blessing of Might",
             "from": "paladin",
-            "value": 0.043,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -21927,7 +22111,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 9885,
             "name": "Mark of the Wild",
             "from": "druid",
-            "value": 0.035,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -21938,7 +22122,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 20217,
             "name": "Blessing of Kings",
             "from": "paladin",
-            "value": 0.031,
+            "value": 0.029,
             "src": [
               "sim",
               "client"
@@ -21948,7 +22132,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.026,
+            "value": 0.025,
             "src": [
               "sim",
               "client"
@@ -21969,7 +22153,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.019,
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -21989,7 +22173,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.012,
+            "value": 0.011,
             "src": [
               "sim",
               "client"
@@ -21998,7 +22182,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 185.3,
+          "dps": 231.9,
           "fight_s": 60,
           "build": "enhancement-50-dungeon",
           "limits": [
@@ -22021,8 +22205,34 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Stormstrike",
             "when": "ready",
-            "value": 0.109,
-            "why": "Keep it up: 66% of the sim's fight; worth 10.9% of your DPS",
+            "value": 0.203,
+            "why": "Keep it up: 61% of the sim's fight; worth 20.3% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 15208,
+            "ids": [
+              403,
+              529,
+              548,
+              915,
+              943,
+              6041,
+              10391,
+              10392,
+              15207,
+              15208
+            ],
+            "name": "Lightning Bolt",
+            "when": "proc",
+            "aura": 408498,
+            "aura_name": "Maelstrom Weapon",
+            "value": 0.045,
+            "why": "Only while Maelstrom Weapon is up; worth 4.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22042,8 +22252,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Flame Shock",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.038,
-            "why": "Keep it on the target: up 56% of the sim's fight; worth 3.8% of your DPS",
+            "value": 0.018,
+            "why": "Keep it on the target: up 54% of the sim's fight; worth 1.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -22077,8 +22287,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 29228,
             "name": "Flame Shock",
             "on": "target",
-            "min_uptime": 0.55,
-            "value": 0.038,
+            "min_uptime": 0.5,
+            "value": 0.018,
             "src": [
               "sim",
               "client"
@@ -22111,7 +22321,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.018,
+            "value": 0.015,
             "src": [
               "sim",
               "client"
@@ -22121,7 +22331,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10310,
             "name": "Scroll of Strength IV",
-            "value": 0.015,
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -22130,10 +22340,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Searing Totem out of single-target fights at level 60: the simulator's 180 s fight did 2% more damage without it.",
+            "text": "Leave Searing Totem out of single-target fights at level 60: the simulator's 180 s fight did 1.3% more damage without it.",
             "name": "Searing Totem",
             "spell": 10438,
-            "value": -0.02,
+            "value": -0.013,
             "src": [
               "sim"
             ],
@@ -22142,7 +22352,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 332.6,
+          "dps": 425.8,
           "fight_s": 180,
           "build": "enhancement-60-dungeon",
           "limits": [
@@ -22245,7 +22455,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -22326,7 +22536,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-enhancement-30-consumable",
-        "text": "Best consumable at levels 30-39: Bear Bruscitti (+1.6% DPS in the simulator); then Scroll of Strength IV (+1.5%).",
+        "text": "Best consumable at levels 30-39: Bear Bruscitti (+1.7% DPS in the simulator); then Scroll of Strength IV (+1.5%).",
         "levels": [
           30,
           39
@@ -22340,7 +22550,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-enhancement-30-partybuff",
-        "text": "The party buff that helps you most at levels 30-39 is Blessing of Kings from a Paladin: +3.8% DPS in the simulator.",
+        "text": "The party buff that helps you most at levels 30-39 is Blessing of Kings from a Paladin: +4% DPS in the simulator.",
         "levels": [
           30,
           39
@@ -22354,7 +22564,7 @@ window.WOW_SPEC_COACH_DATA = {
       },
       {
         "id": "shaman-enhancement-30-mix",
-        "text": "Where your damage comes from at levels 30-39: auto attacks 39%, Windfury Attack 16%, Stormstrike 14% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
+        "text": "Where your damage comes from at levels 30-39: auto attacks 38%, Windfury Attack 20%, Stormstrike 13% (simulator: recommended build, best gear for the level, 60 s single-target fight).",
         "levels": [
           30,
           39
@@ -22374,7 +22584,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Shaman",
     "specName": "Restoration",
     "role": "healer",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -23355,7 +23565,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "ehps",
@@ -23485,7 +23695,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Affliction",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -24110,8 +24320,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.037,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 3.7% of your DPS",
+            "value": 0.045,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 4.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24130,8 +24340,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.12,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 12% of your DPS",
+            "value": 0.219,
+            "why": "Keep it on the target: up 87% of the sim's fight; worth 21.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24150,8 +24360,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.103,
-            "why": "Keep it on the target: up 85% of the sim's fight; worth 10.3% of your DPS",
+            "value": 0.204,
+            "why": "Keep it on the target: up 86% of the sim's fight; worth 20.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24168,8 +24378,23 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.022,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 2.2% of your DPS",
+            "value": 0.132,
+            "why": "Keep it on the target: up 89% of the sim's fight; worth 13.2% of your DPS",
+            "src": [
+              "sim",
+              "client",
+              "guides"
+            ]
+          },
+          {
+            "spell": 1316697,
+            "ids": [
+              1316697
+            ],
+            "name": "Wrack",
+            "when": "ready",
+            "value": 0.113,
+            "why": "Cast it when it's ready; worth 11.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24189,8 +24414,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.17,
-            "why": "Your filler: cast it when nothing above is ready; worth 17% of your DPS",
+            "value": 0.068,
+            "why": "Your filler: cast it when nothing above is ready; worth 6.8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24232,7 +24457,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.037,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -24243,7 +24468,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.12,
+            "value": 0.219,
             "src": [
               "sim",
               "client"
@@ -24253,8 +24478,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 7648,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.8,
-            "value": 0.103,
+            "min_uptime": 0.85,
+            "value": 0.204,
             "src": [
               "sim",
               "client"
@@ -24265,7 +24490,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.022,
+            "value": 0.132,
             "src": [
               "sim",
               "client"
@@ -24293,7 +24518,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.093,
+            "value": 0.083,
             "src": [
               "sim"
             ]
@@ -24319,43 +24544,11 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "kind": "consumable",
-            "id": 9179,
-            "name": "Elixir of Greater Intellect",
-            "value": 0.025,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
             "kind": "buff",
             "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.024,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 10157,
-            "name": "Arcane Intellect",
-            "from": "mage",
-            "value": 0.015,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
-            "value": 0.015,
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -24363,20 +24556,9 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 10308,
-            "name": "Scroll of Intellect IV",
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 9885,
-            "name": "Mark of the Wild",
-            "from": "druid",
-            "value": 0.013,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.014,
             "src": [
               "sim",
               "client"
@@ -24385,17 +24567,17 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Immolate out of single-target fights at levels 40-49: the simulator's 60 s fight did 1.1% more damage without it.",
+            "text": "Leave Immolate out of single-target fights at levels 40-49: the simulator's 60 s fight did 1.2% more damage without it.",
             "name": "Immolate",
             "spell": 11665,
-            "value": -0.011,
+            "value": -0.012,
             "src": [
               "sim"
             ]
           }
         ],
         "sim": {
-          "dps": 142.2,
+          "dps": 160.2,
           "fight_s": 60,
           "build": "affliction-40-dungeon",
           "limits": [
@@ -24423,8 +24605,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.058,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 5.8% of your DPS",
+            "value": 0.061,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 6.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24444,8 +24626,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.126,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 12.6% of your DPS",
+            "value": 0.191,
+            "why": "Keep it on the target: up 88% of the sim's fight; worth 19.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24465,8 +24647,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.092,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 9.2% of your DPS",
+            "value": 0.16,
+            "why": "Keep it on the target: up 87% of the sim's fight; worth 16% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24484,8 +24666,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.012,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 1.2% of your DPS",
+            "value": 0.085,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 8.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24493,22 +24675,18 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 11667,
+            "spell": 1316697,
             "ids": [
-              348,
-              707,
-              1094,
-              2941,
-              11665,
-              11667
+              1316697
             ],
-            "name": "Immolate",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "why": "Keep it on the target: up 72% of the sim's fight; the sim gains little from it",
+            "name": "Wrack",
+            "when": "ready",
+            "value": 0.075,
+            "why": "Cast it when it's ready; worth 7.5% of your DPS",
             "src": [
               "sim",
-              "client"
+              "client",
+              "guides"
             ]
           },
           {
@@ -24525,8 +24703,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.263,
-            "why": "Your filler: cast it when nothing above is ready; worth 26.3% of your DPS",
+            "value": 0.08,
+            "why": "Your filler: cast it when nothing above is ready; worth 8% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24568,7 +24746,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.058,
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -24579,7 +24757,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.126,
+            "value": 0.191,
             "src": [
               "sim",
               "client"
@@ -24590,7 +24768,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.092,
+            "value": 0.16,
             "src": [
               "sim",
               "client"
@@ -24600,18 +24778,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 18880,
             "name": "Siphon Life",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.012,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "aura": 11667,
-            "name": "Immolate",
-            "on": "target",
-            "min_uptime": 0.7,
+            "min_uptime": 0.9,
+            "value": 0.085,
             "src": [
               "sim",
               "client"
@@ -24639,7 +24807,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.079,
+            "value": 0.073,
             "src": [
               "sim"
             ]
@@ -24648,7 +24816,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.062,
+            "value": 0.061,
             "src": [
               "sim",
               "client"
@@ -24658,7 +24826,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13935,
             "name": "Baked Salmon",
-            "value": 0.049,
+            "value": 0.048,
             "src": [
               "sim",
               "client"
@@ -24669,17 +24837,7 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 25290,
             "name": "Blessing of Wisdom",
             "from": "paladin",
-            "value": 0.019,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "consumable",
-            "id": 9179,
-            "name": "Elixir of Greater Intellect",
-            "value": 0.014,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -24690,17 +24848,6 @@ window.WOW_SPEC_COACH_DATA = {
             "id": 10157,
             "name": "Arcane Intellect",
             "from": "mage",
-            "value": 0.014,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "kind": "buff",
-            "id": 20217,
-            "name": "Blessing of Kings",
-            "from": "paladin",
             "value": 0.013,
             "src": [
               "sim",
@@ -24709,18 +24856,28 @@ window.WOW_SPEC_COACH_DATA = {
           },
           {
             "kind": "consumable",
-            "id": 10308,
-            "name": "Scroll of Intellect IV",
-            "value": 0.01,
+            "id": 9179,
+            "name": "Elixir of Greater Intellect",
+            "value": 0.012,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
+        "avoid": [
+          {
+            "text": "Leave Immolate out of single-target fights at levels 50-59: the simulator's 60 s fight did 2% more damage without it.",
+            "name": "Immolate",
+            "spell": 11667,
+            "value": -0.02,
+            "src": [
+              "sim"
+            ]
+          }
+        ],
         "sim": {
-          "dps": 237.8,
+          "dps": 257,
           "fight_s": 60,
           "build": "affliction-50-dungeon",
           "limits": [
@@ -24769,8 +24926,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.13,
-            "why": "Keep it on the target: up 92% of the sim's fight; worth 13% of your DPS",
+            "value": 0.207,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 20.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24791,8 +24948,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.103,
-            "why": "Keep it on the target: up 86% of the sim's fight; worth 10.3% of your DPS",
+            "value": 0.181,
+            "why": "Keep it on the target: up 87% of the sim's fight; worth 18.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24810,8 +24967,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Siphon Life",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.013,
-            "why": "Keep it on the target: up 88% of the sim's fight; worth 1.3% of your DPS",
+            "value": 0.103,
+            "why": "Keep it on the target: up 90% of the sim's fight; worth 10.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24819,24 +24976,18 @@ window.WOW_SPEC_COACH_DATA = {
             ]
           },
           {
-            "spell": 25309,
+            "spell": 1316697,
             "ids": [
-              348,
-              707,
-              1094,
-              2941,
-              11665,
-              11667,
-              11668,
-              25309
+              1316697
             ],
-            "name": "Immolate",
-            "when": "debuff_missing_or_ending",
-            "ending_s": 0,
-            "why": "Keep it on the target: up 72% of the sim's fight; the sim gains little from it",
+            "name": "Wrack",
+            "when": "ready",
+            "value": 0.092,
+            "why": "Cast it when it's ready; worth 9.2% of your DPS",
             "src": [
               "sim",
-              "client"
+              "client",
+              "guides"
             ]
           },
           {
@@ -24855,8 +25006,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.254,
-            "why": "Your filler: cast it when nothing above is ready; worth 25.4% of your DPS",
+            "value": 0.084,
+            "why": "Your filler: cast it when nothing above is ready; worth 8.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -24909,7 +25060,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.13,
+            "value": 0.207,
             "src": [
               "sim",
               "client"
@@ -24920,7 +25071,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.85,
-            "value": 0.103,
+            "value": 0.181,
             "src": [
               "sim",
               "client"
@@ -24930,18 +25081,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 18881,
             "name": "Siphon Life",
             "on": "target",
-            "min_uptime": 0.85,
-            "value": 0.013,
-            "src": [
-              "sim",
-              "client"
-            ]
-          },
-          {
-            "aura": 25309,
-            "name": "Immolate",
-            "on": "target",
-            "min_uptime": 0.7,
+            "min_uptime": 0.9,
+            "value": 0.103,
             "src": [
               "sim",
               "client"
@@ -24969,7 +25110,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.061,
+            "value": 0.057,
             "src": [
               "sim"
             ]
@@ -24978,7 +25119,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.041,
+            "value": 0.042,
             "src": [
               "sim",
               "client"
@@ -24988,16 +25129,26 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13935,
             "name": "Baked Salmon",
-            "value": 0.033,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
             ]
           }
         ],
-        "avoid": [],
+        "avoid": [
+          {
+            "text": "Leave Immolate out of single-target fights at level 60: the simulator's 180 s fight did 1.9% more damage without it.",
+            "name": "Immolate",
+            "spell": 25309,
+            "value": -0.019,
+            "src": [
+              "sim"
+            ]
+          }
+        ],
         "sim": {
-          "dps": 317.9,
+          "dps": 350.9,
           "fight_s": 180,
           "build": "affliction-60-dungeon",
           "limits": [
@@ -25101,7 +25252,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -25229,7 +25380,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Demonology",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -26246,8 +26397,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.081,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 8.1% of your DPS",
+            "value": 0.083,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 8.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -26267,8 +26418,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.109,
-            "why": "Keep it on the target: up 91% of the sim's fight; worth 10.9% of your DPS",
+            "value": 0.107,
+            "why": "Keep it on the target: up 91% of the sim's fight; worth 10.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -26289,8 +26440,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.047,
-            "why": "Keep it on the target: up 78% of the sim's fight; worth 4.7% of your DPS",
+            "value": 0.045,
+            "why": "Keep it on the target: up 78% of the sim's fight; worth 4.5% of your DPS",
             "src": [
               "sim",
               "client",
@@ -26312,8 +26463,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.036,
-            "why": "Keep it on the target: up 75% of the sim's fight; worth 3.6% of your DPS",
+            "value": 0.034,
+            "why": "Keep it on the target: up 76% of the sim's fight; worth 3.4% of your DPS",
             "src": [
               "sim",
               "client"
@@ -26335,8 +26486,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.245,
-            "why": "Your filler: cast it when nothing above is ready; worth 24.5% of your DPS",
+            "value": 0.249,
+            "why": "Your filler: cast it when nothing above is ready; worth 24.9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -26364,7 +26515,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.081,
+            "value": 0.083,
             "src": [
               "sim",
               "client"
@@ -26375,7 +26526,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Bane of Agony",
             "on": "target",
             "min_uptime": 0.9,
-            "value": 0.109,
+            "value": 0.107,
             "src": [
               "sim",
               "client"
@@ -26386,7 +26537,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "on": "target",
             "min_uptime": 0.75,
-            "value": 0.047,
+            "value": 0.045,
             "src": [
               "sim",
               "client"
@@ -26396,8 +26547,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25309,
             "name": "Immolate",
             "on": "target",
-            "min_uptime": 0.7,
-            "value": 0.036,
+            "min_uptime": 0.75,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -26410,7 +26561,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "pet",
             "id": 0,
             "name": "Imp",
-            "value": 0.128,
+            "value": 0.127,
             "src": [
               "sim"
             ]
@@ -26419,7 +26570,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.037,
+            "value": 0.038,
             "src": [
               "sim",
               "client"
@@ -26438,7 +26589,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 299.1,
+          "dps": 301.8,
           "fight_s": 180,
           "build": "demonology-60-dungeon",
           "limits": [
@@ -26542,7 +26693,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -26669,7 +26820,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warlock",
     "specName": "Destruction",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -26952,7 +27103,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
             "Soul shards",
             "Imp mana (assumed enough)",
-            "Decimation's low-health bonus"
+            "Decimation's low-health bonus",
+            "Not simulated yet (found in the client automatically): Incinerate"
           ]
         }
       },
@@ -27244,7 +27396,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
             "Soul shards",
             "Imp mana (assumed enough)",
-            "Decimation's low-health bonus"
+            "Decimation's low-health bonus",
+            "Not simulated yet (found in the client automatically): Incinerate"
           ]
         }
       },
@@ -27553,7 +27706,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
             "Soul shards",
             "Imp mana (assumed enough)",
-            "Decimation's low-health bonus"
+            "Decimation's low-health bonus",
+            "Not simulated yet (found in the client automatically): Incinerate"
           ]
         }
       },
@@ -27827,7 +27981,8 @@ window.WOW_SPEC_COACH_DATA = {
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
             "Soul shards",
             "Imp mana (assumed enough)",
-            "Decimation's low-health bonus"
+            "Decimation's low-health bonus",
+            "Not simulated yet (found in the client automatically): Incinerate"
           ]
         }
       },
@@ -27848,8 +28003,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.08,
-            "why": "Keep it on the target: up 100% of the sim's fight; worth 8% of your DPS",
+            "value": 0.084,
+            "why": "Keep it on the target: up 100% of the sim's fight; worth 8.4% of your DPS",
             "src": [
               "sim",
               "client",
@@ -27890,8 +28045,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Corruption",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.032,
-            "why": "Keep it on the target: up 75% of the sim's fight; worth 3.2% of your DPS",
+            "value": 0.034,
+            "why": "Keep it on the target: up 75% of the sim's fight; worth 3.4% of your DPS",
             "src": [
               "sim",
               "client"
@@ -27909,8 +28064,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Conflagrate",
             "when": "ready",
-            "value": 0.038,
-            "why": "Cast it when it's ready (10 s cooldown); worth 3.8% of your DPS",
+            "value": 0.042,
+            "why": "Cast it when it's ready (10 s cooldown); worth 4.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -27932,8 +28087,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "when": "debuff_missing_or_ending",
             "ending_s": 0,
-            "value": 0.146,
-            "why": "Keep it on the target: up 63% of the sim's fight; worth 14.6% of your DPS",
+            "value": 0.151,
+            "why": "Keep it on the target: up 63% of the sim's fight; worth 15.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -27952,8 +28107,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadowburn",
             "when": "ready",
-            "value": 0.014,
-            "why": "Cast it when it's ready (15 s cooldown); worth 1.4% of your DPS",
+            "value": 0.016,
+            "why": "Cast it when it's ready (15 s cooldown); worth 1.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -27976,8 +28131,8 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Shadow Bolt",
             "when": "filler",
-            "value": 0.085,
-            "why": "Your filler: cast it when nothing above is ready; worth 8.5% of your DPS",
+            "value": 0.09,
+            "why": "Your filler: cast it when nothing above is ready; worth 9% of your DPS",
             "src": [
               "sim",
               "client",
@@ -28005,7 +28160,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Curse of the Elements",
             "on": "target",
             "min_uptime": 0.95,
-            "value": 0.08,
+            "value": 0.084,
             "src": [
               "sim",
               "client"
@@ -28026,8 +28181,8 @@ window.WOW_SPEC_COACH_DATA = {
             "aura": 25311,
             "name": "Corruption",
             "on": "target",
-            "min_uptime": 0.75,
-            "value": 0.032,
+            "min_uptime": 0.7,
+            "value": 0.034,
             "src": [
               "sim",
               "client"
@@ -28038,7 +28193,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Immolate",
             "on": "target",
             "min_uptime": 0.6,
-            "value": 0.146,
+            "value": 0.151,
             "src": [
               "sim",
               "client"
@@ -28060,7 +28215,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 13454,
             "name": "Greater Arcane Elixir",
-            "value": 0.042,
+            "value": 0.043,
             "src": [
               "sim",
               "client"
@@ -28079,14 +28234,15 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 265,
+          "dps": 266.2,
           "fight_s": 180,
           "build": "destruction-60-dungeon",
           "limits": [
             "Drain Soul and Drain Life (lower damage per second than Shadow Bolt)",
             "Soul shards",
             "Imp mana (assumed enough)",
-            "Decimation's low-health bonus"
+            "Decimation's low-health bonus",
+            "Not simulated yet (found in the client automatically): Incinerate"
           ]
         }
       }
@@ -28183,7 +28339,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-18",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -28310,7 +28466,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Arms",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -29265,8 +29421,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Reckless Swings",
             "when": "buff_missing",
             "min_power": 1,
-            "value": 0.037,
-            "why": "Keep it up: 53% of the sim's fight; worth 3.7% of your DPS",
+            "value": 0.033,
+            "why": "Keep it up: 53% of the sim's fight; worth 3.3% of your DPS",
             "src": [
               "sim",
               "client",
@@ -29327,9 +29483,9 @@ window.WOW_SPEC_COACH_DATA = {
             ],
             "name": "Mortal Strike",
             "when": "ready",
-            "min_power": 31,
-            "value": 0.096,
-            "why": "Cast it when it's ready (6 s cooldown); worth 9.6% of your DPS",
+            "min_power": 32,
+            "value": 0.097,
+            "why": "Cast it when it's ready (6 s cooldown); worth 9.7% of your DPS",
             "src": [
               "sim",
               "client",
@@ -29344,8 +29500,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Whirlwind",
             "when": "ready",
             "min_power": 26,
-            "value": 0.029,
-            "why": "Cast it when it's ready (10 s cooldown); worth 2.9% of your DPS",
+            "value": 0.026,
+            "why": "Cast it when it's ready (10 s cooldown); worth 2.6% of your DPS",
             "src": [
               "sim",
               "client"
@@ -29363,8 +29519,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "after_dodge",
             "min_power": 6,
             "combo_points": 1,
-            "value": 0.071,
-            "why": "Only after the target dodges; worth 7.1% of your DPS",
+            "value": 0.066,
+            "why": "Only after the target dodges; worth 6.6% of your DPS",
             "src": [
               "sim",
               "client",
@@ -29411,7 +29567,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Reckless Swings",
             "on": "self",
             "min_uptime": 0.5,
-            "value": 0.037,
+            "value": 0.033,
             "src": [
               "sim",
               "client"
@@ -29441,7 +29597,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.03,
+            "value": 0.025,
             "cd_s": 60
           }
         ],
@@ -29450,7 +29606,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.026,
+            "value": 0.024,
             "src": [
               "sim",
               "client"
@@ -29460,7 +29616,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250070,
             "name": "Bear Bruscitti",
-            "value": 0.017,
+            "value": 0.02,
             "src": [
               "sim",
               "client"
@@ -29470,7 +29626,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10310,
             "name": "Scroll of Strength IV",
-            "value": 0.015,
+            "value": 0.016,
             "src": [
               "sim",
               "client"
@@ -29489,10 +29645,10 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [
           {
-            "text": "Leave Heroic Strike out of single-target fights at level 60: the simulator's 180 s fight did 1.9% more damage without it.",
+            "text": "Leave Heroic Strike out of single-target fights at level 60: the simulator's 180 s fight did 2.1% more damage without it.",
             "name": "Heroic Strike",
             "spell": 25286,
-            "value": -0.019,
+            "value": -0.021,
             "src": [
               "sim"
             ],
@@ -29501,7 +29657,7 @@ window.WOW_SPEC_COACH_DATA = {
           }
         ],
         "sim": {
-          "dps": 375.2,
+          "dps": 378.2,
           "fight_s": 180,
           "build": "arms-60-dungeon",
           "limits": [
@@ -29605,7 +29761,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -29735,7 +29891,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Fury",
     "role": "dps",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -30777,8 +30933,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Reckless Swings",
             "when": "buff_missing",
             "min_power": 3,
-            "value": 0.047,
-            "why": "Keep it up: 27% of the sim's fight; worth 4.7% of your DPS",
+            "value": 0.051,
+            "why": "Keep it up: 27% of the sim's fight; worth 5.1% of your DPS",
             "src": [
               "sim",
               "client",
@@ -30799,8 +30955,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "target_health_below",
             "pct": 20,
             "min_power": 11,
-            "value": 0.09,
-            "why": "Only below 20% target health; worth 9% of your DPS",
+            "value": 0.092,
+            "why": "Only below 20% target health; worth 9.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -30854,8 +31010,8 @@ window.WOW_SPEC_COACH_DATA = {
             "when": "after_dodge",
             "min_power": 7,
             "combo_points": 1,
-            "value": 0.037,
-            "why": "Only after the target dodges; worth 3.7% of your DPS",
+            "value": 0.039,
+            "why": "Only after the target dodges; worth 3.9% of your DPS",
             "src": [
               "sim",
               "client"
@@ -30898,8 +31054,8 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Heroic Strike",
             "when": "filler",
             "min_power": 28,
-            "value": 0.01,
-            "why": "Your filler: cast it when nothing above is ready; worth 1% of your DPS",
+            "value": 0.012,
+            "why": "Your filler: cast it when nothing above is ready; worth 1.2% of your DPS",
             "src": [
               "sim",
               "client",
@@ -30926,7 +31082,7 @@ window.WOW_SPEC_COACH_DATA = {
             "name": "Reckless Swings",
             "on": "self",
             "min_uptime": 0.25,
-            "value": 0.047,
+            "value": 0.051,
             "src": [
               "sim",
               "client"
@@ -30956,7 +31112,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.013,
+            "value": 0.015,
             "cd_s": 60
           },
           {
@@ -30971,7 +31127,7 @@ window.WOW_SPEC_COACH_DATA = {
               "client",
               "guides"
             ],
-            "value": 0.035,
+            "value": 0.039,
             "cd_s": 180
           }
         ],
@@ -30980,7 +31136,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9206,
             "name": "Elixir of Greater Strength",
-            "value": 0.031,
+            "value": 0.026,
             "src": [
               "sim",
               "client"
@@ -30990,7 +31146,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 250070,
             "name": "Bear Bruscitti",
-            "value": 0.025,
+            "value": 0.022,
             "src": [
               "sim",
               "client"
@@ -31000,7 +31156,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 10310,
             "name": "Scroll of Strength IV",
-            "value": 0.022,
+            "value": 0.021,
             "src": [
               "sim",
               "client"
@@ -31010,7 +31166,7 @@ window.WOW_SPEC_COACH_DATA = {
             "kind": "consumable",
             "id": 9187,
             "name": "Elixir of Greater Agility",
-            "value": 0.02,
+            "value": 0.019,
             "src": [
               "sim",
               "client"
@@ -31019,7 +31175,7 @@ window.WOW_SPEC_COACH_DATA = {
         ],
         "avoid": [],
         "sim": {
-          "dps": 429.6,
+          "dps": 425.4,
           "fight_s": 180,
           "build": "fury-60-dungeon",
           "limits": [
@@ -31123,7 +31279,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",
@@ -31253,7 +31409,7 @@ window.WOW_SPEC_COACH_DATA = {
     "className": "Warrior",
     "specName": "Protection",
     "role": "tank",
-    "build": "1.60.1.70959",
+    "build": "1.60.1.71037",
     "cap": 60,
     "evidence": {
       "logs": 0,
@@ -32655,7 +32811,7 @@ window.WOW_SPEC_COACH_DATA = {
         }
       ]
     },
-    "updated": "2026-11-20",
+    "updated": "2026-11-22",
     "learning": {
       "v": 3,
       "metric": "dps",

@@ -20,6 +20,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.
 const OUT = path.join(ROOT, 'js', 'data', 'dungeon-guides-classic-data.js');
 const CACHE = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'scraped', 'classic-dungeon-wowhead-cache.json'), 'utf8'));
 const BUILD_DATE = 'November 22, 2026';
+// Client build of the ForeverDB export, read from the data file's header comment.
+const INSTANCES_BUILD = (fs.readFileSync(path.join(ROOT, 'js', 'data', 'forever-instances-data.js'), 'utf8')
+  .match(/Build (1\.60\.1\.\d+)/) || [])[1] || 'unknown';
 
 const ctx = { window: {} };
 vm.createContext(ctx);
@@ -216,7 +219,7 @@ function buildGuide(g, tooltips) {
 
   out.push('---', '', '### Tips', '');
   g.tips.forEach(t => out.push(`- ${t}`));
-  out.push('', `📦 Data: ForeverDB live instance data (build 1.60.1.70959), WoW: Forever item database, Level 60 BiS lists and Wowhead Forever quest data, compiled ${BUILD_DATE}.`);
+  out.push('', `📦 Data: ForeverDB live instance data (build ${INSTANCES_BUILD}), WoW: Forever item database, Level 60 BiS lists and Wowhead Forever quest data, compiled ${BUILD_DATE}.`);
 
   const summaryBits = [`Levels ${lvMin}–${lvMax} in ${g.zone.split(' (')[0]}`, `${routeBosses.length} bosses`];
   if (quests.length) summaryBits.push(`${quests.length} quests`);

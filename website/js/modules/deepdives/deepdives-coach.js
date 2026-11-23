@@ -53,7 +53,7 @@
       // Fallback: If no coach profile exists, keep existing fallback or simple message
       container.innerHTML = `
         <div style="padding: 1.5rem; text-align: center; color: var(--text-muted); background: rgba(0,0,0,0.25); border-radius: var(--radius-sm);">
-          <p>Rotational priorities for this specialization are compiling from the live beta client.</p>
+          <p>Rotational priorities for this specialization are still being compiled from the live client.</p>
         </div>
       `;
       return;

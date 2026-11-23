@@ -967,7 +967,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       ],
       "loyaltyNote": "Your pet must gain a loyalty level before higher rank abilities can be taught. Beta players report loyalty progresses very slowly.",
       "tameRules": "You can tame beasts up to 2 levels above your character level. Beast Lore (which reveals a beast's stats and known abilities before taming) is learned at Level 24.",
-      "betaBugAlert": "⚠️ Beta Bug Notice: Pets tamed from the Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. This is a recognized beta bug, not intended design.",
+      "betaBugAlert": "⚠️ Known issue (first reported in beta): Pets tamed from the Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. It is a bug, not intended design; check the latest hotfix notes before relying on it.",
       "attackSpeedInfo": "All pets in WoW Forever have a normalized 2.0s base attack speed, modified by innate Faster Attack I–VII or Slower Attack passives matching Classic Era values (e.g. Broken Tooth 1.0s, Savannah Cub 1.2s, Ravage 1.3s, Mystmane 1.6s). Because individual hits are currently not penalized for fast swings in beta, faster-swinging pets deal higher sustained DPS."
     }
   }

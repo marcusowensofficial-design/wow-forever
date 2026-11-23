@@ -244,7 +244,7 @@
         <div class="leveling-header-title">
           <h3>
             ${escapeHtml(leveling.title || 'LEVELING FROM 1 TO 300')}
-            <span class="beta-cap-tag">${escapeHtml(leveling.capNote || "225 is the beta's cap for now")}</span>
+            <span class="beta-cap-tag">${escapeHtml(leveling.capNote || "Cap: 300 (Artisan)")}</span>
           </h3>
           <p>${escapeHtml(leveling.desc || "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.")}</p>
         </div>

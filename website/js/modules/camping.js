@@ -932,7 +932,7 @@ function renderGameEditions() {
     const checkColor = isEpic ? 'var(--text-gold)' : isHeroic ? '#38bdf8' : '#10b981';
     const checkIcon = isEpic ? '★' : isHeroic ? '✦' : '✓';
     const footerNote = isEpic
-      ? 'Includes instant Beta access, game time & 3 invite passes for your squad.'
+      ? 'Includes game time & 3 invite passes for your squad.'
       : isHeroic
         ? 'Unlocks playable Skyborne race, Zephras Isle starter zone, and Prideclaw mount.'
         : 'Access through standard Battle.net Client with monthly active subscription.';

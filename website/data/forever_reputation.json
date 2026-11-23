@@ -252,8 +252,8 @@
         {
           "name": "Gezzy Gunkgear",
           "zone": "Stranglethorn Vale",
-          "x": 28.4,
-          "y": 74.8,
+          "x": 28.3,
+          "y": 74.9,
           "side": "Horde"
         }
       ],
@@ -657,7 +657,7 @@
         {
           "name": "Vayn Moongaze",
           "zone": "Zephras Isle",
-          "x": 63.7,
+          "x": 63.8,
           "y": 36.1
         }
       ],

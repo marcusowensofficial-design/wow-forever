@@ -322,7 +322,7 @@
     if (fieldGuide > 0) bonuses.push({ label: 'Camp Feature Cooldown', val: `-${[0, 8, 17, 25][fieldGuide] || (fieldGuide * 8)}%`, desc: 'Faster placement cooldown on campsite workstations', icon: '⛺' });
 
     const talented = allocations['adv-5'] || 0;
-    if (talented > 0) bonuses.push({ label: 'Talented (Early Talents)', val: `+${talented} Pts (from L${10 - talented})`, desc: 'Gain talent points starting earlier than level 10 (+5 points at L30 beta cap!)', icon: '✨', linkTab: 'planner' });
+    if (talented > 0) bonuses.push({ label: 'Talented (Early Talents)', val: `+${talented} Pts (from L${10 - talented})`, desc: 'Gain talent points starting earlier than level 10.', icon: '✨', linkTab: 'planner' });
 
     const highAlert = allocations['adv-6'] || 0;
     if (highAlert > 0) bonuses.push({ label: 'Stealth Detection Level', val: `+${highAlert * 1} Effective Level${highAlert > 1 ? 's' : ''}`, desc: 'Enhanced sight against rogues & prowlers in open world', icon: '👁️' });

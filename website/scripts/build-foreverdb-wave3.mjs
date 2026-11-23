@@ -2,6 +2,19 @@ import fs from 'node:fs';
 
 console.log('--- Starting ForeverDB Wave 3 Data Builder ---');
 
+// hunter-pets-data.js (Core Hound family + 102 extra beasts) and collections-data.js (mount speed,
+// cost, images, full vendor lists) were enriched by hand after this script last produced them.
+// Regenerating them from ForeverDB alone loses that work, so they are only written on request.
+const WRITE_ENRICHED = process.argv.includes('--overwrite-enriched');
+function writeEnriched(file, content, summary) {
+  if (WRITE_ENRICHED) {
+    fs.writeFileSync(file, content);
+    console.log(`Wrote ${file} (${summary}).`);
+  } else {
+    console.log(`Skipped ${file} (hand-enriched; pass --overwrite-enriched to replace it). Fresh data: ${summary}.`);
+  }
+}
+
 // Helper to fetch text with timeout
 async function fetchText(url) {
   const res = await fetch(url);
@@ -86,8 +99,7 @@ const hunterPetsJs = `/**
  */
 window.WOW_HUNTER_PETS_DATA = ${JSON.stringify(hunterPetsData, null, 2)};
 `;
-fs.writeFileSync('js/data/hunter-pets-data.js', hunterPetsJs);
-console.log(`Wrote js/data/hunter-pets-data.js (${enhancedBeasts.length} beasts, ${hunterPetsData.families.length} families).`);
+writeEnriched('js/data/hunter-pets-data.js', hunterPetsJs, `${enhancedBeasts.length} beasts, ${hunterPetsData.families.length} families`);
 
 // ---------------------------------------------------------------------------
 // 2. INGEST COLLECTIONS (Mounts, Vanity Pets, Titles)
@@ -234,8 +246,7 @@ const collectionsJs = `/**
  */
 window.WOW_COLLECTIONS_DATA = ${JSON.stringify(collectionsData, null, 2)};
 `;
-fs.writeFileSync('js/data/collections-data.js', collectionsJs);
-console.log(`Wrote js/data/collections-data.js (${mounts.length} mounts, ${vanityPets.length} pets, ${titles.length} titles).`);
+writeEnriched('js/data/collections-data.js', collectionsJs, `${mounts.length} mounts, ${vanityPets.length} pets, ${titles.length} titles`);
 
 // ---------------------------------------------------------------------------
 // 3. INGEST SPECIAL QUESTS & RIDDLES (SpecialQuests.lua)
@@ -319,20 +330,27 @@ console.log('Ingesting New Forever Quests...');
 const questsLua = await fetchText('https://foreverdb.net/downloads/addon-data/Quests.lua?v=a71fe00c76');
 const newQuestsMatches = [...questsLua.matchAll(/\{(\d+),"([^"]+)",(\d+),"([^"]*)",(\d+),([0-9.]+),([0-9.]+),"([^"]*)"\}/g)];
 
-const newQuestsList = newQuestsMatches.map(m => ({
-  id: parseInt(m[1], 10),
-  title: m[2],
-  level: parseInt(m[3], 10),
-  zone: m[4] || 'Azeroth',
-  mapId: parseInt(m[5], 10),
-  coords: `${m[6]}, ${m[7]}`,
-  giver: m[8] || 'Unknown NPC',
-  wowheadUrl: `https://www.wowhead.com/forever/quest=${m[1]}`
-}));
+// Quests with no giver in ForeverDB start from an item or world object (writs, books, loot).
+// Label them that way instead of a placeholder NPC (scripts/validate.js rejects "Unknown NPC").
+const ITEM_STARTER = 'Item / World Object Starter';
+const newQuestsList = newQuestsMatches.map(m => {
+  const noGiver = !m[8];
+  const noPosition = Number(m[6]) === 0 && Number(m[7]) === 0;
+  return {
+    id: parseInt(m[1], 10),
+    title: m[2],
+    level: parseInt(m[3], 10),
+    zone: m[4] || 'Azeroth',
+    mapId: parseInt(m[5], 10),
+    coords: noGiver && noPosition ? 'World / Item Drop' : `${m[6]}, ${m[7]}`,
+    giver: noGiver ? ITEM_STARTER : m[8],
+    wowheadUrl: `https://www.wowhead.com/forever/quest=${m[1]}`
+  };
+});
 
 const newQuestsJs = `/**
- * World of Warcraft: Forever - 279 New Forever Quests
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
+ * World of Warcraft: Forever - ${newQuestsList.length} New Forever Quests
+ * Datamined from WoW Forever Client (Build ${(questsLua.match(/build (1\.60\.1\.\d+)/) || [])[1] || 'unknown'})
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_FOREVER_NEW_QUESTS_DATA = ${JSON.stringify(newQuestsList, null, 2)};

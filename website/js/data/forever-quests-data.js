@@ -1,7 +1,7 @@
 /**
- * World of Warcraft: Forever - 722 New Forever Quests
- * Datamined from WoW Forever Client (Build 1.60.1.70959)
- * Ingested from ForeverDB open data under GPL-3.0 attribution (Updated 2026-11-20)
+ * World of Warcraft: Forever - 800 New Forever Quests
+ * Datamined from WoW Forever Client (Build 1.60.1.71037)
+ * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_FOREVER_NEW_QUESTS_DATA = [
   {
@@ -90,7 +90,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Elwynn Forest",
     "mapId": 1429,
-    "coords": "42.1, 66",
+    "coords": "42.1, 66.0",
     "giver": "Marshal Dughan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=91775"
   },
@@ -280,7 +280,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 7,
     "zone": "Elwynn Forest",
     "mapId": 1429,
-    "coords": "42.1, 66",
+    "coords": "42.1, 66.0",
     "giver": "Marshal Dughan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=91777"
   },
@@ -310,7 +310,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 8,
     "zone": "Elwynn Forest",
     "mapId": 1429,
-    "coords": "65, 69.8",
+    "coords": "65.0, 69.8",
     "giver": "Hamish Bergwort",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=91723"
   },
@@ -320,7 +320,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Elwynn Forest",
     "mapId": 1429,
-    "coords": "65, 69.8",
+    "coords": "65.0, 69.8",
     "giver": "Hamish Bergwort",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=91724"
   },
@@ -390,7 +390,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 4,
     "zone": "Dun Morogh",
     "mapId": 1426,
-    "coords": "25, 61.9",
+    "coords": "25.0, 61.9",
     "giver": "Minor Manifestation of Earth",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94375"
   },
@@ -460,7 +460,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Dun Morogh",
     "mapId": 1426,
-    "coords": "33.4, 71.9",
+    "coords": "33.5, 71.9",
     "giver": "Mountaineer Thalos",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96628"
   },
@@ -480,7 +480,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 7,
     "zone": "Dun Morogh",
     "mapId": 1426,
-    "coords": "45.3, 52",
+    "coords": "45.3, 52.0",
     "giver": "Tognus Flintfire",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98321"
   },
@@ -530,7 +530,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 8,
     "zone": "Dun Morogh",
     "mapId": 1426,
-    "coords": "44.1, 57",
+    "coords": "44.1, 57.0",
     "giver": "Mountaineer Gretchen",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98319"
   },
@@ -550,7 +550,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 8,
     "zone": "Dun Morogh",
     "mapId": 1426,
-    "coords": "44.1, 57",
+    "coords": "44.1, 57.0",
     "giver": "Mountaineer Gretchen",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98323"
   },
@@ -579,9 +579,9 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "title": "Call of Fire",
     "level": 10,
     "zone": "Dun Morogh",
-    "mapId": 1455,
-    "coords": "47.5, 13.7",
-    "giver": "Eldrun Stormbreaker",
+    "mapId": 1426,
+    "coords": "47.5, 52.0",
+    "giver": "Ingrid Dunwald",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94449"
   },
   {
@@ -665,6 +665,26 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96393"
   },
   {
+    "id": 97188,
+    "title": "Learning to Ride",
+    "level": 40,
+    "zone": "Dun Morogh",
+    "mapId": 1426,
+    "coords": "49.2, 48.1",
+    "giver": "Binjy Featherwhistle",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=97188"
+  },
+  {
+    "id": 97046,
+    "title": "Your First Mechanostrider",
+    "level": 40,
+    "zone": "Dun Morogh",
+    "mapId": 1426,
+    "coords": "49.2, 48.0",
+    "giver": "Milli Featherwhistle",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=97046"
+  },
+  {
     "id": 98576,
     "title": "Glyphic Parchment",
     "level": 1,
@@ -700,7 +720,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97900"
   },
@@ -710,7 +730,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96655"
   },
@@ -720,7 +740,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97901"
   },
@@ -730,7 +750,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97902"
   },
@@ -740,7 +760,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97903"
   },
@@ -750,7 +770,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97904"
   },
@@ -760,7 +780,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97905"
   },
@@ -770,7 +790,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97906"
   },
@@ -780,7 +800,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97907"
   },
@@ -790,7 +810,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97908"
   },
@@ -800,7 +820,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96102"
   },
@@ -810,7 +830,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "55.9, 74",
+    "coords": "55.9, 74.0",
     "giver": "Vel'rin Fang",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96821"
   },
@@ -830,7 +850,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "52, 47.3",
+    "coords": "52.0, 47.3",
     "giver": "Brakk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96604"
   },
@@ -850,7 +870,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 7,
     "zone": "Durotar",
     "mapId": 1411,
-    "coords": "54, 42.6",
+    "coords": "54.0, 42.6",
     "giver": "Turroc",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96822"
   },
@@ -980,7 +1000,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 4,
     "zone": "Mulgore",
     "mapId": 1412,
-    "coords": "42.5, 90.1",
+    "coords": "42.6, 90.1",
     "giver": "Seer Graytongue",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95805"
   },
@@ -1120,7 +1140,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 9,
     "zone": "Mulgore",
     "mapId": 1412,
-    "coords": "46.7, 62.9",
+    "coords": "46.8, 62.9",
     "giver": "Brave Wildrunner",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=99079"
   },
@@ -1130,7 +1150,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 9,
     "zone": "Mulgore",
     "mapId": 1412,
-    "coords": "46.7, 62.9",
+    "coords": "46.8, 62.9",
     "giver": "Brave Wildrunner",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=99101"
   },
@@ -1180,7 +1200,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Mulgore",
     "mapId": 1412,
-    "coords": "54.2, 64.2",
+    "coords": "52.9, 63.8",
     "giver": "Morin Cloudstalker",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98427"
   },
@@ -1273,6 +1293,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "34.5, 22.9",
     "giver": "Sutara Plainstalker",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97196"
+  },
+  {
+    "id": 96775,
+    "title": "Zum'rah's Head",
+    "level": 46,
+    "zone": "Mulgore",
+    "mapId": 1412,
+    "coords": "32.5, 20.7",
+    "giver": "Mazu'kon",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=96775"
   },
   {
     "id": 97979,
@@ -1410,7 +1440,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 9,
     "zone": "Teldrassil",
     "mapId": 1438,
-    "coords": "56, 59.5",
+    "coords": "56.0, 59.5",
     "giver": "Sentinel Kyra Starsong",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=99046"
   },
@@ -1670,13 +1700,13 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 4,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "43.3, 24",
+    "coords": "43.3, 24.0",
     "giver": "Dalia the Collector",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93552"
   },
   {
     "id": 92597,
-    "title": "Reading the Ley Lines",
+    "title": "Reading the Leylines",
     "level": 4,
     "zone": "Zephras Isle",
     "mapId": 2521,
@@ -1710,7 +1740,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 5,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "38.4, 30.2",
+    "coords": "38.3, 30.2",
     "giver": "Hanaa Nightwind",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92544"
   },
@@ -1740,7 +1770,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "45, 46.4",
+    "coords": "45.0, 46.4",
     "giver": "Rathiril Sunlance",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94413"
   },
@@ -1880,7 +1910,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "45, 46.4",
+    "coords": "45.0, 46.4",
     "giver": "Rathiril Sunlance",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92596"
   },
@@ -1940,7 +1970,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 7,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "44.4, 45",
+    "coords": "44.4, 45.0",
     "giver": "Teeri Wellwind",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92516"
   },
@@ -1950,7 +1980,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 7,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "44.4, 45",
+    "coords": "44.4, 45.0",
     "giver": "Teeri Wellwind",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93319"
   },
@@ -1970,7 +2000,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 8,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "42.4, 62",
+    "coords": "42.4, 62.0",
     "giver": "Peacekeeper Vaaniel",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93927"
   },
@@ -2060,7 +2090,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 9,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93746"
   },
@@ -2150,7 +2180,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 9,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93735"
   },
@@ -2250,7 +2280,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "62.9, 77.3",
+    "coords": "62.9, 77.4",
     "giver": "Belann Windwood",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93797"
   },
@@ -2270,7 +2300,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "62.9, 77.3",
+    "coords": "62.9, 77.4",
     "giver": "Belann Windwood",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93791"
   },
@@ -2280,7 +2310,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "69.8, 61.6",
+    "coords": "69.8, 61.7",
     "giver": "Urs'endris",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94638"
   },
@@ -2330,7 +2360,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "64, 75.1",
+    "coords": "64.0, 75.1",
     "giver": "Lotheluum Starbreeze",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94006"
   },
@@ -2360,7 +2390,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "52, 69.4",
+    "coords": "52.0, 69.4",
     "giver": "Fillion Flamebreeze",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92850"
   },
@@ -2410,7 +2440,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93740"
   },
@@ -2470,7 +2500,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92871"
   },
@@ -2550,7 +2580,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "56, 58.8",
+    "coords": "56.0, 58.8",
     "giver": "Dead Cultist",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92644"
   },
@@ -2560,7 +2590,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "64, 75.1",
+    "coords": "64.0, 75.1",
     "giver": "Lotheluum Starbreeze",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94484"
   },
@@ -2580,7 +2610,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92708"
   },
@@ -2610,7 +2640,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "61.1, 71",
+    "coords": "61.2, 71.0",
     "giver": "Valennia Stormfist",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92947"
   },
@@ -2650,7 +2680,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93836"
   },
@@ -2690,7 +2720,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 13,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "54, 38.9",
+    "coords": "54.0, 38.9",
     "giver": "Strange Hermit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93172"
   },
@@ -2710,7 +2740,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 13,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "59.1, 79.8",
+    "coords": "59.1, 79.7",
     "giver": "Ayessa Dawnsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95349"
   },
@@ -2720,7 +2750,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 13,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "54, 38.9",
+    "coords": "54.0, 38.9",
     "giver": "Strange Hermit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93160"
   },
@@ -2730,7 +2760,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 13,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "54, 38.9",
+    "coords": "54.0, 38.9",
     "giver": "Strange Hermit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93159"
   },
@@ -2760,7 +2790,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Zephras Isle",
     "mapId": 2521,
-    "coords": "53.8, 81.2",
+    "coords": "53.8, 81.3",
     "giver": "Genn Fairweather",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97205"
   },
@@ -2855,6 +2885,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97956"
   },
   {
+    "id": 97958,
+    "title": "Camping 101: Leatherworking",
+    "level": 6,
+    "zone": "Tirisfal Glades",
+    "mapId": 1420,
+    "coords": "57.2, 55.4",
+    "giver": "Eleanor Shackleton",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=97958"
+  },
+  {
     "id": 97959,
     "title": "Camping 101: Mining",
     "level": 6,
@@ -2900,7 +2940,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 6,
     "zone": "Tirisfal Glades",
     "mapId": 1420,
-    "coords": "32.1, 66",
+    "coords": "32.1, 66.0",
     "giver": "Executor Arren",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96656"
   },
@@ -2980,7 +3020,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Tirisfal Glades",
     "mapId": 1420,
-    "coords": "58, 48.5",
+    "coords": "58.2, 48.5",
     "giver": "Junior Apothecary Holland",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=99142"
   },
@@ -3050,7 +3090,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Tirisfal Glades",
     "mapId": 1420,
-    "coords": "22, 44.8",
+    "coords": "22.0, 44.8",
     "giver": "Leonid Barthalomew the Revered",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96896"
   },
@@ -3090,7 +3130,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Tirisfal Glades",
     "mapId": 1420,
-    "coords": "22, 44.8",
+    "coords": "22.0, 44.8",
     "giver": "Leonid Barthalomew the Revered",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98545"
   },
@@ -3190,7 +3230,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Tirisfal Glades",
     "mapId": 1416,
-    "coords": "9.9, 63.3",
+    "coords": "9.8, 63.0",
     "giver": "Magus Olvek",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96800"
   },
@@ -3230,7 +3270,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 11,
     "zone": "Darnassus",
     "mapId": 1457,
-    "coords": "40.3, 88.3",
+    "coords": "40.3, 88.2",
     "giver": "Lariia",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98065"
   },
@@ -3250,7 +3290,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Darnassus",
     "mapId": 1457,
-    "coords": "35.2, 8.3",
+    "coords": "35.2, 8.1",
     "giver": "Mathrengyl Bearwalker",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98393"
   },
@@ -3259,8 +3299,8 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "title": "Darkspear Islands Clash",
     "level": 39,
     "zone": "Darnassus",
-    "mapId": 1416,
-    "coords": "39.3, 82.5",
+    "mapId": 1417,
+    "coords": "45.7, 45.8",
     "giver": "Alliance Brigadier General",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98895"
   },
@@ -3315,6 +3355,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=86614"
   },
   {
+    "id": 86776,
+    "title": "Ingredients for the Forge",
+    "level": 30,
+    "zone": "Loch Modan",
+    "mapId": 1432,
+    "coords": "34.1, 46.6",
+    "giver": "Morhan Coppertongue",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=86776"
+  },
+  {
     "id": 94913,
     "title": "Moonglade",
     "level": 10,
@@ -3365,6 +3415,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98823"
   },
   {
+    "id": 94293,
+    "title": "Craftsman's Writ: Guardian Cloak",
+    "level": 60,
+    "zone": "Thunder Bluff",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94293"
+  },
+  {
     "id": 94243,
     "title": "Craftsman's Writ: Heavy Quiver",
     "level": 60,
@@ -3375,12 +3435,22 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94243"
   },
   {
+    "id": 94231,
+    "title": "Craftsman's Writ: Moonsight Rifle",
+    "level": 60,
+    "zone": "Thunder Bluff",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94231"
+  },
+  {
     "id": 92744,
     "title": "Murloc Gills",
     "level": 12,
     "zone": "Westfall",
     "mapId": 1436,
-    "coords": "52.5, 53",
+    "coords": "52.5, 53.0",
     "giver": "Alba Fairmoon",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92744"
   },
@@ -3390,7 +3460,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Westfall",
     "mapId": 1436,
-    "coords": "52.5, 53",
+    "coords": "52.5, 53.0",
     "giver": "Alba Fairmoon",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92742"
   },
@@ -3400,7 +3470,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 14,
     "zone": "Westfall",
     "mapId": 1436,
-    "coords": "52.5, 53",
+    "coords": "52.5, 53.0",
     "giver": "Alba Fairmoon",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92745"
   },
@@ -3415,32 +3485,12 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92909"
   },
   {
-    "id": 92910,
-    "title": "Harvesting the Harvesters",
-    "level": 15,
-    "zone": "Westfall",
-    "mapId": 0,
-    "coords": "World / Item Drop",
-    "giver": "Item / World Object Starter",
-    "wowheadUrl": "https://www.wowhead.com/forever/quest=92910"
-  },
-  {
-    "id": 92911,
-    "title": "Harvesting the Harvesters",
-    "level": 15,
-    "zone": "Westfall",
-    "mapId": 1436,
-    "coords": "51.6, 32.2",
-    "giver": "Ozwin Ironsprocket",
-    "wowheadUrl": "https://www.wowhead.com/forever/quest=92911"
-  },
-  {
     "id": 92747,
     "title": "Moonbrook Espionage",
     "level": 15,
     "zone": "Westfall",
     "mapId": 1436,
-    "coords": "52.5, 53",
+    "coords": "52.5, 53.0",
     "giver": "Alba Fairmoon",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92747"
   },
@@ -3450,7 +3500,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 16,
     "zone": "Westfall",
     "mapId": 1436,
-    "coords": "52.5, 53",
+    "coords": "52.5, 53.0",
     "giver": "Alba Fairmoon",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92748"
   },
@@ -3490,7 +3540,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "44, 40.8",
+    "coords": "44.0, 40.8",
     "giver": "Shadow Priest Allister",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95981"
   },
@@ -3500,7 +3550,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 22,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "43.4, 41",
+    "coords": "43.4, 41.0",
     "giver": "Trevan Rol",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=91859"
   },
@@ -3580,7 +3630,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 24,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "43.4, 41",
+    "coords": "43.4, 41.0",
     "giver": "Lumina Windsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95034"
   },
@@ -3590,7 +3640,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 25,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "43.4, 41",
+    "coords": "43.4, 41.0",
     "giver": "Lumina Windsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95036"
   },
@@ -3600,7 +3650,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 25,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "43.4, 41",
+    "coords": "43.4, 41.0",
     "giver": "Trevan Rol",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95111"
   },
@@ -3610,7 +3660,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 26,
     "zone": "Silverpine Forest",
     "mapId": 1421,
-    "coords": "43.4, 41",
+    "coords": "43.4, 41.0",
     "giver": "Lumina Windsinger",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95140"
   },
@@ -3690,7 +3740,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 18,
     "zone": "The Barrens",
     "mapId": 1413,
-    "coords": "42, 11.4",
+    "coords": "42.0, 11.4",
     "giver": "Walton",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95621"
   },
@@ -3700,7 +3750,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 18,
     "zone": "The Barrens",
     "mapId": 1413,
-    "coords": "42, 11.4",
+    "coords": "42.0, 11.4",
     "giver": "Walton",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95508"
   },
@@ -3720,7 +3770,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "The Barrens",
     "mapId": 1413,
-    "coords": "52, 31.6",
+    "coords": "52.0, 31.6",
     "giver": "Mankrik",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95774"
   },
@@ -3793,6 +3843,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "World / Item Drop",
     "giver": "Item / World Object Starter",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94220"
+  },
+  {
+    "id": 94297,
+    "title": "Craftsman's Writ: Quickdraw Quiver",
+    "level": 60,
+    "zone": "The Barrens",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94297"
   },
   {
     "id": 94223,
@@ -3870,7 +3930,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 21,
     "zone": "Redridge Mountains",
     "mapId": 1433,
-    "coords": "28.3, 49",
+    "coords": "28.3, 49.0",
     "giver": "Marshal Marris",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98387"
   },
@@ -3950,7 +4010,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 15,
     "zone": "Orgrimmar",
     "mapId": 1454,
-    "coords": "37.2, 29",
+    "coords": "37.2, 28.8",
     "giver": "Thra",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97326"
   },
@@ -3985,6 +4045,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95697"
   },
   {
+    "id": 94230,
+    "title": "Craftsman's Writ: Explosive Sheep",
+    "level": 60,
+    "zone": "Orgrimmar",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94230"
+  },
+  {
     "id": 94217,
     "title": "Craftsman's Writ: Lesser Troll's Blood Elixir",
     "level": 60,
@@ -3993,6 +4063,26 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "World / Item Drop",
     "giver": "Item / World Object Starter",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94217"
+  },
+  {
+    "id": 94250,
+    "title": "Craftsman's Writ: Small Silk Pack",
+    "level": 60,
+    "zone": "Orgrimmar",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94250"
+  },
+  {
+    "id": 94303,
+    "title": "Craftsman's Writ: Thick Leather Ammo Pouch",
+    "level": 60,
+    "zone": "Orgrimmar",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94303"
   },
   {
     "id": 94313,
@@ -4230,7 +4320,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "65.6, 37.9",
+    "coords": "65.5, 37.9",
     "giver": "Tanis Alderwood",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94434"
   },
@@ -4240,7 +4330,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 12,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "65.6, 37.9",
+    "coords": "65.5, 37.9",
     "giver": "Tanis Alderwood",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94435"
   },
@@ -4270,7 +4360,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 21,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "46, 62.1",
+    "coords": "46.0, 62.1",
     "giver": "Unfinished Abomination",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97290"
   },
@@ -4320,7 +4410,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 22,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "46.6, 71.9",
+    "coords": "46.5, 71.9",
     "giver": "Theodore Griffs",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95216"
   },
@@ -4330,7 +4420,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 33,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "46.6, 74.3",
+    "coords": "46.5, 74.3",
     "giver": "Doctor Martin Felben",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96988"
   },
@@ -4350,7 +4440,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 33,
     "zone": "Undercity",
     "mapId": 1458,
-    "coords": "49.1, 69.9",
+    "coords": "49.2, 69.9",
     "giver": "Calder Gray",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97985"
   },
@@ -4460,7 +4550,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 31,
     "zone": "Ashenvale",
     "mapId": 1440,
-    "coords": "35, 48.5",
+    "coords": "35.0, 48.5",
     "giver": "Llana",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95737"
   },
@@ -4480,7 +4570,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "54.6, 75",
+    "coords": "54.6, 75.0",
     "giver": "Great Cat Spirit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98731"
   },
@@ -4490,7 +4580,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "54.6, 75",
+    "coords": "54.6, 75.0",
     "giver": "Great Cat Spirit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98739"
   },
@@ -4500,7 +4590,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "44, 73.5",
+    "coords": "44.0, 73.5",
     "giver": "Avatar of Saeyleenan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98738"
   },
@@ -4510,7 +4600,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "54.6, 75",
+    "coords": "54.6, 75.0",
     "giver": "Great Cat Spirit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98342"
   },
@@ -4530,7 +4620,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "54.6, 75",
+    "coords": "54.6, 75.0",
     "giver": "Great Cat Spirit",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98396"
   },
@@ -4560,7 +4650,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 20,
     "zone": "Moonglade",
     "mapId": 1450,
-    "coords": "44, 73.5",
+    "coords": "44.0, 73.5",
     "giver": "Avatar of Saeyleenan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98404"
   },
@@ -4630,7 +4720,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 27,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "8.6, 55.8",
+    "coords": "8.5, 55.8",
     "giver": "James Halloran",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98072"
   },
@@ -4650,7 +4740,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 28,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "8.6, 55.8",
+    "coords": "8.5, 55.8",
     "giver": "James Halloran",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98815"
   },
@@ -4660,7 +4750,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 29,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "8, 55.9",
+    "coords": "8.0, 55.9",
     "giver": "Sylessa Duskwhisper",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98208"
   },
@@ -4670,7 +4760,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 29,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "8, 55.9",
+    "coords": "8.0, 55.9",
     "giver": "Sylessa Duskwhisper",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98209"
   },
@@ -4740,7 +4830,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 30,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "45.7, 16.8",
+    "coords": "45.7, 16.7",
     "giver": "Captive Fire Elemental",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=87491"
   },
@@ -4750,7 +4840,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 31,
     "zone": "Wetlands",
     "mapId": 1437,
-    "coords": "50, 18.2",
+    "coords": "50.0, 18.2",
     "giver": "Ashlan Stonesmirk",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=88756"
   },
@@ -4935,6 +5025,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98071"
   },
   {
+    "id": 98059,
+    "title": "Hillsbrad's Hoard",
+    "level": 27,
+    "zone": "Hillsbrad Foothills",
+    "mapId": 1424,
+    "coords": "46.5, 50.2",
+    "giver": "Captain McManus",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=98059"
+  },
+  {
     "id": 93680,
     "title": "Key to the City",
     "level": 33,
@@ -4960,7 +5060,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 33,
     "zone": "Hillsbrad Foothills",
     "mapId": 1424,
-    "coords": "51.5, 58.7",
+    "coords": "51.5, 58.6",
     "giver": "Barkeep Kelly",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98463"
   },
@@ -4990,7 +5090,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Hillsbrad Foothills",
     "mapId": 1424,
-    "coords": "50.5, 57",
+    "coords": "50.5, 57.1",
     "giver": "Loremaster Dibbs",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95799"
   },
@@ -5000,7 +5100,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Hillsbrad Foothills",
     "mapId": 1424,
-    "coords": "50.5, 57",
+    "coords": "50.5, 57.1",
     "giver": "Loremaster Dibbs",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95788"
   },
@@ -5010,7 +5110,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Hillsbrad Foothills",
     "mapId": 1424,
-    "coords": "50.5, 57",
+    "coords": "50.5, 57.1",
     "giver": "Loremaster Dibbs",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95787"
   },
@@ -5020,7 +5120,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Hillsbrad Foothills",
     "mapId": 1424,
-    "coords": "50.5, 57",
+    "coords": "50.5, 57.1",
     "giver": "Loremaster Dibbs",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95798"
   },
@@ -5090,7 +5190,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 10,
     "zone": "Ironforge",
     "mapId": 1455,
-    "coords": "68, 44.3",
+    "coords": "68.0, 44.3",
     "giver": "Jemma Quikswitch",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95041"
   },
@@ -5110,7 +5210,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 15,
     "zone": "Ironforge",
     "mapId": 1455,
-    "coords": "33.3, 47.9",
+    "coords": "33.4, 47.9",
     "giver": "Afadra Dunwall",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96394"
   },
@@ -5133,16 +5233,6 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "World / Item Drop",
     "giver": "Item / World Object Starter",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95534"
-  },
-  {
-    "id": 95384,
-    "title": "Partial Mystical Notes",
-    "level": 40,
-    "zone": "Ironforge",
-    "mapId": 0,
-    "coords": "World / Item Drop",
-    "giver": "Item / World Object Starter",
-    "wowheadUrl": "https://www.wowhead.com/forever/quest=95384"
   },
   {
     "id": 93644,
@@ -5195,6 +5285,46 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92754"
   },
   {
+    "id": 92814,
+    "title": "I Need a Tailor",
+    "level": 35,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "35.7, 92.2",
+    "giver": "Molkar",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=92814"
+  },
+  {
+    "id": 92817,
+    "title": "Leather Technique",
+    "level": 35,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "34.5, 87.0",
+    "giver": "Talra",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=92817"
+  },
+  {
+    "id": 92755,
+    "title": "Mysterious Mysticism",
+    "level": 35,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "35.5, 92.1",
+    "giver": "Halea",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=92755"
+  },
+  {
+    "id": 93044,
+    "title": "A Cleansing Cry",
+    "level": 38,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "36.3, 79.3",
+    "giver": "Uthek the Wise",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93044"
+  },
+  {
     "id": 94841,
     "title": "Lost Shipping Crate",
     "level": 38,
@@ -5215,6 +5345,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94895"
   },
   {
+    "id": 93034,
+    "title": "Valley of Bones",
+    "level": 38,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "36.3, 79.3",
+    "giver": "Uthek the Wise",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93034"
+  },
+  {
     "id": 92743,
     "title": "A Conqueror's Crown",
     "level": 40,
@@ -5230,7 +5370,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Desolace",
     "mapId": 1443,
-    "coords": "66.6, 10.9",
+    "coords": "66.7, 11.0",
     "giver": "Captain Pentigast",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93224"
   },
@@ -5260,9 +5400,29 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 42,
     "zone": "Desolace",
     "mapId": 1443,
-    "coords": "43.5, 79",
+    "coords": "43.4, 79.0",
     "giver": "Umarak",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96222"
+  },
+  {
+    "id": 93227,
+    "title": "Buying Friendship: Gelkis",
+    "level": 45,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "66.7, 11.0",
+    "giver": "Captain Pentigast",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93227"
+  },
+  {
+    "id": 94873,
+    "title": "Buying Friendship: Gelkis",
+    "level": 45,
+    "zone": "Desolace",
+    "mapId": 1443,
+    "coords": "56.3, 59.6",
+    "giver": "Gurda Wildmane",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94873"
   },
   {
     "id": 93226,
@@ -5270,7 +5430,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 45,
     "zone": "Desolace",
     "mapId": 1443,
-    "coords": "66.6, 10.9",
+    "coords": "66.7, 11.0",
     "giver": "Captain Pentigast",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93226"
   },
@@ -5350,7 +5510,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Arathi Highlands",
     "mapId": 1417,
-    "coords": "74.7, 36.4",
+    "coords": "74.7, 36.3",
     "giver": "Tor'gan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95143"
   },
@@ -5370,7 +5530,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 39,
     "zone": "Arathi Highlands",
     "mapId": 1417,
-    "coords": "27.1, 57",
+    "coords": "27.1, 57.0",
     "giver": "Groundskeeper Lomar",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92867"
   },
@@ -5460,7 +5620,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Stranglethorn Vale",
     "mapId": 1434,
-    "coords": "44.3, 8",
+    "coords": "44.3, 8.0",
     "giver": "Wendel Mathers",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97048"
   },
@@ -5470,7 +5630,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Stranglethorn Vale",
     "mapId": 1434,
-    "coords": "44.3, 8",
+    "coords": "44.3, 8.0",
     "giver": "Wendel Mathers",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97047"
   },
@@ -5490,9 +5650,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Stranglethorn Vale",
     "mapId": 1434,
-    "coords": "32.8, 28.5",
+    "coords": "32.8, 28.4",
     "giver": "Gemmil",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97453"
+  },
+  {
+    "id": 95326,
+    "title": "The Big Payback",
+    "level": 39,
+    "zone": "Stranglethorn Vale",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95326"
   },
   {
     "id": 96078,
@@ -5515,6 +5685,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95786"
   },
   {
+    "id": 95322,
+    "title": "Get the Goods",
+    "level": 40,
+    "zone": "Stranglethorn Vale",
+    "mapId": 1434,
+    "coords": "27.3, 74.1",
+    "giver": "Caravaneer Ruzzgot",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95322"
+  },
+  {
     "id": 95770,
     "title": "Locating the Lost City",
     "level": 40,
@@ -5525,12 +5705,22 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95770"
   },
   {
+    "id": 95384,
+    "title": "Partial Mystical Notes",
+    "level": 40,
+    "zone": "Stranglethorn Vale",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95384"
+  },
+  {
     "id": 95789,
     "title": "Shady Saltseers",
     "level": 40,
     "zone": "Stranglethorn Vale",
     "mapId": 1434,
-    "coords": "27, 77.2",
+    "coords": "27.0, 77.2",
     "giver": "Krazek",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95789"
   },
@@ -5560,9 +5750,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Stranglethorn Vale",
     "mapId": 1434,
-    "coords": "27, 77.2",
+    "coords": "27.0, 77.2",
     "giver": "Krazek",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95791"
+  },
+  {
+    "id": 95325,
+    "title": "We've Been Robbed!",
+    "level": 40,
+    "zone": "Stranglethorn Vale",
+    "mapId": 1434,
+    "coords": "27.3, 74.1",
+    "giver": "Caravaneer Ruzzgot",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95325"
   },
   {
     "id": 95385,
@@ -5585,6 +5785,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97386"
   },
   {
+    "id": 94294,
+    "title": "Craftsman's Writ: Dusky Bracers",
+    "level": 60,
+    "zone": "Stranglethorn Vale",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94294"
+  },
+  {
     "id": 98233,
     "title": "Sword in the Slime",
     "level": 42,
@@ -5600,7 +5810,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 34,
     "zone": "Swamp of Sorrows",
     "mapId": 1435,
-    "coords": "22.3, 50.4",
+    "coords": "22.3, 50.3",
     "giver": "Father Tuttle",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93585"
   },
@@ -5613,6 +5823,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "25.1, 54.2",
     "giver": "Amaryllis Webb",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93176"
+  },
+  {
+    "id": 93464,
+    "title": "The Visiting Mage",
+    "level": 38,
+    "zone": "Swamp of Sorrows",
+    "mapId": 1435,
+    "coords": "26.1, 31.6",
+    "giver": "Magtoor",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93464"
   },
   {
     "id": 97617,
@@ -5700,7 +5920,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 36,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.9, 46",
+    "coords": "59.9, 46.0",
     "giver": "Kreza Darkthorn",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93976"
   },
@@ -5750,7 +5970,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "61.7, 58.8",
+    "coords": "61.6, 58.8",
     "giver": "Picked Carcass",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95983"
   },
@@ -5760,7 +5980,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "61.7, 58.8",
+    "coords": "61.6, 58.8",
     "giver": "Picked Carcass",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96103"
   },
@@ -5770,7 +5990,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "58.7, 44.7",
+    "coords": "58.7, 44.6",
     "giver": "Gorg",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94481"
   },
@@ -5800,7 +6020,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.9, 46",
+    "coords": "59.9, 46.0",
     "giver": "Kreza Darkthorn",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93788"
   },
@@ -5810,7 +6030,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.9, 46",
+    "coords": "59.9, 46.0",
     "giver": "Kreza Darkthorn",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94535"
   },
@@ -5910,7 +6130,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "68.1, 48.7",
+    "coords": "68.1, 48.6",
     "giver": "Sleebo Fizzlespout",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96063"
   },
@@ -5990,7 +6210,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94613"
   },
@@ -6000,7 +6220,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "76, 52.6",
+    "coords": "76.0, 52.6",
     "giver": "Jasper Geartoggle",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95982"
   },
@@ -6010,7 +6230,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 38,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95329"
   },
@@ -6120,7 +6340,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 39,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "46.1, 71",
+    "coords": "46.1, 71.0",
     "giver": "Curly",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94857"
   },
@@ -6210,7 +6430,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "79, 54.2",
+    "coords": "79.0, 54.2",
     "giver": "Fimbo Greasemitz",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95121"
   },
@@ -6270,7 +6490,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "65.5, 79",
+    "coords": "65.5, 79.0",
     "giver": "Brother Lowley",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96083"
   },
@@ -6280,7 +6500,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.5, 44",
+    "coords": "59.5, 44.0",
     "giver": "Tran'gul",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94727"
   },
@@ -6290,9 +6510,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "65.5, 79",
+    "coords": "65.5, 79.0",
     "giver": "Brother Lowley",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96082"
+  },
+  {
+    "id": 95163,
+    "title": "Drive Them Back",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "70.7, 28.2",
+    "giver": "Na'zok",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95163"
   },
   {
     "id": 96107,
@@ -6315,6 +6545,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94885"
   },
   {
+    "id": 95295,
+    "title": "I Know a Guy",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "77.2, 52.9",
+    "giver": "Friz Frazzlespark",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95295"
+  },
+  {
     "id": 95643,
     "title": "Indiscriminate Purge",
     "level": 40,
@@ -6323,6 +6563,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "47.7, 47.4",
     "giver": "Apprentice Claire",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95643"
+  },
+  {
+    "id": 95420,
+    "title": "Land of Giants",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "59.5, 44.0",
+    "giver": "Tran'gul",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95420"
   },
   {
     "id": 96108,
@@ -6340,7 +6590,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "68.1, 48.7",
+    "coords": "68.1, 48.6",
     "giver": "Sleebo Fizzlespout",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96067"
   },
@@ -6350,7 +6600,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94877"
   },
@@ -6363,6 +6613,26 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "66.7, 81.1",
     "giver": "Ashe Amberhall",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94879"
+  },
+  {
+    "id": 95296,
+    "title": "Shipping and Handling",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "77.2, 52.9",
+    "giver": "Friz Frazzlespark",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95296"
+  },
+  {
+    "id": 95602,
+    "title": "Sickening Lights",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "49.9, 46.9",
+    "giver": "Clubtoe",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95602"
   },
   {
     "id": 94533,
@@ -6395,6 +6665,36 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96084"
   },
   {
+    "id": 95418,
+    "title": "Spread the Word",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "49.9, 46.9",
+    "giver": "Clubtoe",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95418"
+  },
+  {
+    "id": 95417,
+    "title": "The Purple Ones",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "49.9, 46.9",
+    "giver": "Clubtoe",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95417"
+  },
+  {
+    "id": 95601,
+    "title": "The Purple Ones",
+    "level": 40,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "49.2, 46.8",
+    "giver": "Twilight Brute",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95601"
+  },
+  {
     "id": 94829,
     "title": "What We Lost",
     "level": 40,
@@ -6410,9 +6710,29 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 40,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "65.5, 79",
+    "coords": "65.5, 79.0",
     "giver": "Brother Lowley",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96081"
+  },
+  {
+    "id": 94734,
+    "title": "A Boar's Delight",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "66.9, 17.2",
+    "giver": "Gobam",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94734"
+  },
+  {
+    "id": 94737,
+    "title": "A Treat for a Friend",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "66.9, 17.2",
+    "giver": "Gobam",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94737"
   },
   {
     "id": 94884,
@@ -6423,6 +6743,36 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "47.7, 47.4",
     "giver": "Apprentice Claire",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94884"
+  },
+  {
+    "id": 94668,
+    "title": "Bloodmaster's Ring",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "64.5, 14.8",
+    "giver": "Clugfist",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94668"
+  },
+  {
+    "id": 94670,
+    "title": "Bloodmaster's Ring",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94670"
+  },
+  {
+    "id": 95428,
+    "title": "Clugfist's Decree",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "64.5, 14.8",
+    "giver": "Clugfist",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95428"
   },
   {
     "id": 95562,
@@ -6440,7 +6790,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 41,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.5, 44",
+    "coords": "59.5, 44.0",
     "giver": "Tran'gul",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94672"
   },
@@ -6465,6 +6815,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95975"
   },
   {
+    "id": 94974,
+    "title": "Key Ingredients",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "59.9, 46.0",
+    "giver": "Kreza Darkthorn",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94974"
+  },
+  {
     "id": 95986,
     "title": "King of the Wild Plains",
     "level": 41,
@@ -6485,6 +6845,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96105"
   },
   {
+    "id": 94973,
+    "title": "Krol'dok Moulding",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94973"
+  },
+  {
     "id": 94980,
     "title": "Krol'dok Moulding",
     "level": 41,
@@ -6493,6 +6863,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "World / Item Drop",
     "giver": "Item / World Object Starter",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94980"
+  },
+  {
+    "id": 95424,
+    "title": "Might Makes Right",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "64.5, 14.8",
+    "giver": "Clugfist",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95424"
   },
   {
     "id": 95033,
@@ -6505,6 +6885,46 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95033"
   },
   {
+    "id": 94733,
+    "title": "Our Ogre Friend",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94733"
+  },
+  {
+    "id": 95162,
+    "title": "Paletusk Harvesting",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "70.7, 28.2",
+    "giver": "Na'zok",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95162"
+  },
+  {
+    "id": 94669,
+    "title": "Pay to Play",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94669"
+  },
+  {
+    "id": 95431,
+    "title": "Rumblings of Discontent",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95431"
+  },
+  {
     "id": 95118,
     "title": "Saltwater Savages",
     "level": 41,
@@ -6515,14 +6935,74 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95118"
   },
   {
+    "id": 95183,
+    "title": "Step One: Rock",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "67.2, 21.7",
+    "giver": "Hamur",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95183"
+  },
+  {
+    "id": 96026,
+    "title": "Step Two: More Rock",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "67.2, 21.7",
+    "giver": "Hamur",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=96026"
+  },
+  {
     "id": 94680,
     "title": "Twilight Missives",
     "level": 41,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "59.5, 44",
+    "coords": "59.5, 44.0",
     "giver": "Tran'gul",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94680"
+  },
+  {
+    "id": 95427,
+    "title": "Twilight No More!",
+    "level": 41,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "49.9, 46.9",
+    "giver": "Clubtoe",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95427"
+  },
+  {
+    "id": 94975,
+    "title": "A Token of Vengeance",
+    "level": 42,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94975"
+  },
+  {
+    "id": 94739,
+    "title": "Bloodmaster's Ring",
+    "level": 42,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94739"
+  },
+  {
+    "id": 94962,
+    "title": "Bloodmaster's Ring",
+    "level": 42,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94962"
   },
   {
     "id": 95792,
@@ -6530,7 +7010,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 42,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.3, 69",
+    "coords": "30.2, 69.0",
     "giver": "Gelinda Coppergleam",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95792"
   },
@@ -6545,12 +7025,22 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95261"
   },
   {
+    "id": 94556,
+    "title": "Jom-jom's Escape",
+    "level": 42,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "73.4, 24.7",
+    "giver": "Jom-jom",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94556"
+  },
+  {
     "id": 95934,
     "title": "Proof of Profit",
     "level": 42,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.3, 69",
+    "coords": "30.2, 69.0",
     "giver": "Gelinda Coppergleam",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95934"
   },
@@ -6600,9 +7090,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 42,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94983"
+  },
+  {
+    "id": 95425,
+    "title": "Unworthy Champion",
+    "level": 42,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "64.5, 14.8",
+    "giver": "Clugfist",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95425"
   },
   {
     "id": 96085,
@@ -6670,9 +7170,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 43,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96015"
+  },
+  {
+    "id": 94964,
+    "title": "Bloodmaster's Ring",
+    "level": 43,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94964"
   },
   {
     "id": 96125,
@@ -6685,6 +7195,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96125"
   },
   {
+    "id": 95432,
+    "title": "Rise Up!",
+    "level": 43,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "27.4, 37.0",
+    "giver": "Crag'rog",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95432"
+  },
+  {
     "id": 95288,
     "title": "Smuggler's Paradise",
     "level": 43,
@@ -6693,6 +7213,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "77.2, 52.9",
     "giver": "Friz Frazzlespark",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95288"
+  },
+  {
+    "id": 94744,
+    "title": "The Wayward Warrior",
+    "level": 43,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "59.4, 45.7",
+    "giver": "Krom'rosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94744"
   },
   {
     "id": 95119,
@@ -6745,12 +7275,42 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=96126"
   },
   {
+    "id": 94965,
+    "title": "Bloodmaster's Ring",
+    "level": 44,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94965"
+  },
+  {
+    "id": 94748,
+    "title": "Break Their Chains",
+    "level": 44,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94748"
+  },
+  {
+    "id": 94745,
+    "title": "Carving a Path",
+    "level": 44,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94745"
+  },
+  {
     "id": 94889,
     "title": "Carving a Path",
     "level": 44,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94889"
   },
@@ -6770,7 +7330,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 44,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94888"
   },
@@ -6790,9 +7350,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 44,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94886"
+  },
+  {
+    "id": 94972,
+    "title": "Tome of Twilight",
+    "level": 44,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "59.5, 44.0",
+    "giver": "Tran'gul",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94972"
   },
   {
     "id": 94984,
@@ -6825,14 +7395,44 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95124"
   },
   {
+    "id": 95063,
+    "title": "Bloodmaster's Ring",
+    "level": 45,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "65.6, 21.3",
+    "giver": "Jezap Jinglesprocket",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95063"
+  },
+  {
+    "id": 94968,
+    "title": "Eye of Mugg",
+    "level": 45,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "59.4, 45.7",
+    "giver": "Krom'rosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94968"
+  },
+  {
     "id": 94982,
     "title": "Eye of Mugg",
     "level": 45,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94982"
+  },
+  {
+    "id": 95278,
+    "title": "It Is Time, Brother...",
+    "level": 45,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95278"
   },
   {
     "id": 94894,
@@ -6840,9 +7440,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 45,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94894"
+  },
+  {
+    "id": 94768,
+    "title": "Bring Me His Head",
+    "level": 46,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "33.4, 38.0",
+    "giver": "Da'grosh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94768"
   },
   {
     "id": 94890,
@@ -6850,9 +7460,19 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 46,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94890"
+  },
+  {
+    "id": 95433,
+    "title": "Death to the Executioner",
+    "level": 46,
+    "zone": "Riverglades",
+    "mapId": 2548,
+    "coords": "27.4, 37.0",
+    "giver": "Crag'rog",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95433"
   },
   {
     "id": 94891,
@@ -6860,7 +7480,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 46,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "30.7, 49",
+    "coords": "30.7, 49.0",
     "giver": "Sergeant Riftan",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94891"
   },
@@ -6870,7 +7490,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 47,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94893"
   },
@@ -6890,9 +7510,39 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 47,
     "zone": "Riverglades",
     "mapId": 2548,
-    "coords": "66.6, 81",
+    "coords": "66.6, 81.0",
     "giver": "Demar Brant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=94887"
+  },
+  {
+    "id": 94259,
+    "title": "Craftsman's Writ: Nature Protection Potion",
+    "level": 60,
+    "zone": "Riverglades",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=94259"
+  },
+  {
+    "id": 93041,
+    "title": "Facing the Truth",
+    "level": 38,
+    "zone": "Shen'dralas",
+    "mapId": 2652,
+    "coords": "21.0, 22.7",
+    "giver": "Nerlokh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93041"
+  },
+  {
+    "id": 93035,
+    "title": "Ravaging Ravagers",
+    "level": 38,
+    "zone": "Shen'dralas",
+    "mapId": 2652,
+    "coords": "21.0, 22.7",
+    "giver": "Nerlokh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93035"
   },
   {
     "id": 92894,
@@ -6913,6 +7563,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "35.7, 12.8",
     "giver": "Orgrul",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=92846"
+  },
+  {
+    "id": 93037,
+    "title": "Outing Outcasts",
+    "level": 40,
+    "zone": "Shen'dralas",
+    "mapId": 2652,
+    "coords": "21.0, 22.7",
+    "giver": "Nerlokh",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93037"
   },
   {
     "id": 96010,
@@ -7050,7 +7710,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 43,
     "zone": "Shen'dralas",
     "mapId": 2652,
-    "coords": "59.2, 54",
+    "coords": "59.2, 54.0",
     "giver": "Hagiak",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93072"
   },
@@ -7090,7 +7750,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 43,
     "zone": "Shen'dralas",
     "mapId": 2652,
-    "coords": "59.2, 54",
+    "coords": "59.2, 54.0",
     "giver": "Hagiak",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93188"
   },
@@ -7110,7 +7770,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 43,
     "zone": "Shen'dralas",
     "mapId": 2652,
-    "coords": "59.2, 54",
+    "coords": "59.2, 54.0",
     "giver": "Hagiak",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93129"
   },
@@ -7135,6 +7795,16 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93594"
   },
   {
+    "id": 93574,
+    "title": "Corpsefeeder's Carapace",
+    "level": 45,
+    "zone": "Shen'dralas",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=93574"
+  },
+  {
     "id": 93568,
     "title": "Partially Digested Collar",
     "level": 45,
@@ -7150,7 +7820,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 49,
     "zone": "Shen'dralas",
     "mapId": 2652,
-    "coords": "69.5, 72",
+    "coords": "69.5, 72.0",
     "giver": "Woodwyrd",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=93404"
   },
@@ -7160,7 +7830,7 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 29,
     "zone": "Feralas",
     "mapId": 1444,
-    "coords": "89.3, 46.2",
+    "coords": "89.4, 46.2",
     "giver": "Kristy Grant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98156"
   },
@@ -7170,19 +7840,29 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 29,
     "zone": "Feralas",
     "mapId": 1444,
-    "coords": "89.3, 46.2",
+    "coords": "89.4, 46.2",
     "giver": "Kristy Grant",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=98155"
   },
   {
-    "id": 86615,
-    "title": "Treaty Obligations",
-    "level": 51,
-    "zone": "The Hinterlands",
-    "mapId": 1425,
-    "coords": "11.9, 46.8",
-    "giver": "Tove Redstone",
-    "wowheadUrl": "https://www.wowhead.com/forever/quest=86615"
+    "id": 95599,
+    "title": "The Old Key",
+    "level": 42,
+    "zone": "Feralas",
+    "mapId": 0,
+    "coords": "World / Item Drop",
+    "giver": "Item / World Object Starter",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95599"
+  },
+  {
+    "id": 92878,
+    "title": "Lost for Words",
+    "level": 43,
+    "zone": "Feralas",
+    "mapId": 1444,
+    "coords": "74.9, 44.0",
+    "giver": "Blaise Montgomery",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=92878"
   },
   {
     "id": 95144,
@@ -7193,6 +7873,46 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "coords": "52.5, 27.9",
     "giver": "Innkeeper Fizzgrimble",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=95144"
+  },
+  {
+    "id": 95312,
+    "title": "Coming to Collect",
+    "level": 40,
+    "zone": "Tanaris",
+    "mapId": 1446,
+    "coords": "67.4, 23.9",
+    "giver": "Tazzik",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95312"
+  },
+  {
+    "id": 95472,
+    "title": "Consolation Prize",
+    "level": 40,
+    "zone": "Tanaris",
+    "mapId": 1446,
+    "coords": "67.4, 23.9",
+    "giver": "Tazzik",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95472"
+  },
+  {
+    "id": 95383,
+    "title": "Shipping and Handling",
+    "level": 40,
+    "zone": "Tanaris",
+    "mapId": 1446,
+    "coords": "67.6, 23.1",
+    "giver": "Wharfmaster Steamfizzle",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95383"
+  },
+  {
+    "id": 95321,
+    "title": "Tazzik's Dues",
+    "level": 40,
+    "zone": "Tanaris",
+    "mapId": 1446,
+    "coords": "51.7, 27.8",
+    "giver": "Fizbuz Mithril",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=95321"
   },
   {
     "id": 97536,
@@ -7220,8 +7940,68 @@ window.WOW_FOREVER_NEW_QUESTS_DATA = [
     "level": 47,
     "zone": "Tanaris",
     "mapId": 1446,
-    "coords": "67, 23.9",
+    "coords": "67.0, 23.9",
     "giver": "Security Chief Bilgewhizzle",
     "wowheadUrl": "https://www.wowhead.com/forever/quest=97530"
+  },
+  {
+    "id": 86620,
+    "title": "Fledgling Rescue",
+    "level": 51,
+    "zone": "The Hinterlands",
+    "mapId": 1425,
+    "coords": "9.8, 44.5",
+    "giver": "Gryphon Master Talonaxe",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=86620"
+  },
+  {
+    "id": 86615,
+    "title": "Treaty Obligations",
+    "level": 51,
+    "zone": "The Hinterlands",
+    "mapId": 1425,
+    "coords": "11.9, 46.8",
+    "giver": "Tove Redstone",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=86615"
+  },
+  {
+    "id": 88857,
+    "title": "Saving a Sentinel",
+    "level": 47,
+    "zone": "Azshara",
+    "mapId": 1447,
+    "coords": "20.6, 61.9",
+    "giver": "Sentinel Keldara Sunblade",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=88857"
+  },
+  {
+    "id": 89013,
+    "title": "Gettin' Buzzed",
+    "level": 48,
+    "zone": "Azshara",
+    "mapId": 1447,
+    "coords": "12.6, 77.3",
+    "giver": "Berdun Cliffbrew",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=89013"
+  },
+  {
+    "id": 89001,
+    "title": "Home on the Range",
+    "level": 48,
+    "zone": "Azshara",
+    "mapId": 1447,
+    "coords": "12.6, 77.3",
+    "giver": "Berdun Cliffbrew",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=89001"
+  },
+  {
+    "id": 88807,
+    "title": "Slay the Spitelash",
+    "level": 48,
+    "zone": "Azshara",
+    "mapId": 1447,
+    "coords": "11.8, 78.3",
+    "giver": "Commander Truesong",
+    "wowheadUrl": "https://www.wowhead.com/forever/quest=88807"
   }
 ];

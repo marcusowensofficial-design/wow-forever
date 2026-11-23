@@ -47,7 +47,7 @@ function renderHiddenItemsUI() {
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem; font-size: 0.8rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 8px;">
           <div><span>Classic Items Revealed:</span> <strong style="color: #fff;">${stats.classicRevealed} / ${stats.classicItemsHidden}</strong></div>
-          <div><span>SoD Assets Deprecated:</span> <strong style="color: #fff;">${stats.sodLeftovers}</strong></div>
+          <div><span>SoD Assets Deprecated (launch client count):</span> <strong style="color: #fff;">${stats.sodLeftovers}</strong></div>
           <div><span>Cache Snapshot:</span> <strong style="color: #c084fc;">${stats.lastUpdated}</strong></div>
         </div>
       </div>

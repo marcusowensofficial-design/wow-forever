@@ -222,6 +222,18 @@
       "level": 44,
       "objective": "Recover all three gems and a power source for the necklace from Uldaman, and then bring them to Jarkal Mossmeld in Kargath. Jarkal believes a power source might be found on the strongest construct present in Uldaman. From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz"
     },
+    "2340": {
+      "id": 2340,
+      "name": "Deliver the Gems",
+      "level": 44,
+      "objective": "Deliver the Necklace and Gem Salvage to Dran Droffers in Orgrimmar."
+    },
+    "2341": {
+      "id": 2341,
+      "name": "Necklace Recovery, Take 3",
+      "level": 44,
+      "objective": "Visit Jarkal Mossmeld in Kargath to see if he was successful."
+    },
     "2342": {
       "id": 2342,
       "name": "Reclaimed Treasures",
@@ -516,11 +528,23 @@
       "level": 52,
       "objective": "Find Commander Gor'shak in Blackrock Depths. You recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort."
     },
+    "3982": {
+      "id": 3982,
+      "name": "What Is Going On?",
+      "level": 54,
+      "objective": "Defend Gor'shak."
+    },
     "4001": {
       "id": 4001,
       "name": "What Is Going On?",
       "level": 54,
       "objective": "Speak with Kharan Mighthammer and gather information about Princess Moira Bronzebeard's kidnapping. Take that information to Thrall in Orgrimmar. You recall Gor'shak mentioning that Kharan is being held in a cell nearby."
+    },
+    "4003": {
+      "id": 4003,
+      "name": "The Royal Rescue",
+      "level": 59,
+      "objective": "Slay Emperor Dagran Thaurissan and free Princess Moira Bronzebeard from his evil spell."
     },
     "4024": {
       "id": 4024,
@@ -606,17 +630,41 @@
       "level": 54,
       "objective": "Travel to Blackrock Mountain in the northwest and enter Blackrock Depths. Find out what became of Marshal Windsor. You recall Ragged John talking about Windsor being dragged off to a prison."
     },
+    "4242": {
+      "id": 4242,
+      "name": "Abandoned Hope",
+      "level": 54,
+      "objective": "Give Marshal Maxwell the bad news."
+    },
     "4263": {
       "id": 4263,
       "name": "Incendius!",
       "level": 56,
       "objective": "Find Lord Incendius in Blackrock Depths and destroy him!"
     },
+    "4264": {
+      "id": 4264,
+      "name": "A Crumpled Up Note",
+      "level": 58,
+      "objective": "You may have just stumbled on to something that Marshal Windsor would be interested in seeing. There may be hope, after all."
+    },
+    "4282": {
+      "id": 4282,
+      "name": "A Shred of Hope",
+      "level": 58,
+      "objective": "Return Marshal Windsor's Lost Information. Marshal Windsor believes that the information is being held by Golem Lord Argelmach and General Angerforge."
+    },
     "4286": {
       "id": 4286,
       "name": "The Good Stuff",
       "level": 56,
       "objective": "Travel to Blackrock Depths and recover 20 Dark Iron Fanny Packs. Return to Oralius when you have completed this task. You assume that the Dark Iron dwarves inside Blackrock Depths carry these 'fanny pack' contraptions."
+    },
+    "4322": {
+      "id": 4322,
+      "name": "Jail Break!",
+      "level": 58,
+      "objective": "Help Marshal Windsor get his gear back and free his friends. Return to Marshal Maxwell if you succeed."
     },
     "4324": {
       "id": 4324,
@@ -629,6 +677,30 @@
       "name": "Kharan Mighthammer",
       "level": 59,
       "objective": "Travel to Blackrock Depths and find Kharan Mighthammer. The King mentioned that Kharan was being held prisoner there - perhaps you should try looking for a prison."
+    },
+    "4342": {
+      "id": 4342,
+      "name": "Kharan's Tale",
+      "level": 59,
+      "objective": "Listen as Kharan Mighthammer tells his story."
+    },
+    "4361": {
+      "id": 4361,
+      "name": "The Bearer of Bad News",
+      "level": 59,
+      "objective": "Return to Ironforge and deliver the bad news to King Magni Bronzebeard."
+    },
+    "4362": {
+      "id": 4362,
+      "name": "The Fate of the Kingdom",
+      "level": 59,
+      "objective": "Return to Blackrock Depths and rescue Princess Moira Bronzebeard from the evil clutches of Emperor Dagran Thaurissan."
+    },
+    "4363": {
+      "id": 4363,
+      "name": "The Princess's Surprise",
+      "level": 59,
+      "objective": "Return to Ironforge and speak with King Magni Bronzebeard."
     },
     "4601": {
       "id": 4601,
@@ -702,6 +774,12 @@
       "level": 60,
       "objective": "Bring Doomrigger's Clasp to Mayara Brightwing in the Burning Steppes."
     },
+    "4768": {
+      "id": 4768,
+      "name": "The Darkstone Tablet",
+      "level": 60,
+      "objective": "Bring the Darkstone Tablet to Shadow Mage Vivian Lagrave in Kargath."
+    },
     "4862": {
       "id": 4862,
       "name": "En-Ay-Es-Tee-Why",
@@ -720,6 +798,12 @@
       "level": 60,
       "objective": "Read Warosh's Scroll. Bring Warosh's Mojo to Warosh."
     },
+    "4903": {
+      "id": 4903,
+      "name": "Warlord's Command",
+      "level": 60,
+      "objective": "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished."
+    },
     "4974": {
       "id": 4974,
       "name": "For The Horde!",
@@ -731,6 +815,12 @@
       "name": "Operative Bijou",
       "level": 59,
       "objective": "Travel to Blackrock Spire and find out what happened to Bijou."
+    },
+    "4982": {
+      "id": 4982,
+      "name": "Bijou's Belongings",
+      "level": 59,
+      "objective": "Find Bijou's Belongings and return them to her. You recall her mentioning that she stashed them on the bottom floor of the city."
     },
     "5102": {
       "id": 5102,
@@ -785,6 +875,12 @@
       "name": "Barov Family Fortune",
       "level": 60,
       "objective": "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Weldon Barov when you have completed this task."
+    },
+    "5382": {
+      "id": 5382,
+      "name": "Doctor Theolen Krastinov, the Butcher",
+      "level": 60,
+      "objective": "Find Doctor Theolen Krastinov inside the Scholomance. Destroy him, then burn the Remains of Eva Sarkhoff and the Remains of Lucien Sarkhoff. Return to Eva Sarkhoff when the task is complete."
     },
     "5518": {
       "id": 5518,
@@ -918,6 +1014,12 @@
       "level": 60,
       "objective": "Search Dire Maul for Telmius Dreamseeker. Report back to Scholar Runethorn at Feathermoon with whatever information that you may find."
     },
+    "7488": {
+      "id": 7488,
+      "name": "Lethtendris's Web",
+      "level": 57,
+      "objective": "Bring Lethtendris' Web to Latronicus Moonspear at the Feathermoon Stronghold in Feralas."
+    },
     "7489": {
       "id": 7489,
       "name": "Lethtendris's Web",
@@ -935,6 +1037,12 @@
       "name": "Feathermoon Stronghold",
       "level": 57,
       "objective": "Speak with Latronicus Moonspear at the Feathermoon Stronghold in Feralas."
+    },
+    "93404": {
+      "id": 93404,
+      "name": "Rot and Regret",
+      "level": 49,
+      "objective": "Venture to Maraudon and recover a Vial of Earth Song Water and return it to Woodwyrd at the Forlorn Gardens in Desolace."
     },
     "96770": {
       "id": 96770,

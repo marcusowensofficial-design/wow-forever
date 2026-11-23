@@ -5,6 +5,8 @@ console.log('--- Starting ForeverDB Data Builder ---');
 // 1. Load Item Names
 console.log('Loading item names...');
 const searchNamesText = fs.readFileSync('scratch/SearchNames.lua', 'utf8');
+// Client build the ForeverDB export was made from (its header says "build 1.60.1.NNNNN").
+const SOURCE_BUILD = (searchNamesText.match(/build (1\.60\.1\.\d+)/) || [])[1] || 'unknown';
 const itemNames = {};
 const nameRegex = /\[(\d+)\]="([^"]+)"/g;
 let m;
@@ -184,13 +186,19 @@ console.log(`Parsed ${campMatrix.length} camp matrix entries.`);
 
 const campJsContent = `/**
  * World of Warcraft: Forever - Camping System Matrix Data
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
+ * Datamined from WoW Forever Client (Build ${SOURCE_BUILD})
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_CAMPING_MATRIX = ${JSON.stringify(campMatrix, null, 2)};
 `;
-fs.writeFileSync('js/data/camping-matrix-data.js', campJsContent);
-console.log('Wrote js/data/camping-matrix-data.js');
+// camping-matrix-data.js carries hand-written hotfix notes (Nov 17/19) that Camp.lua does not have,
+// so it is only regenerated on request.
+if (process.argv.includes('--with-camping')) {
+  fs.writeFileSync('js/data/camping-matrix-data.js', campJsContent);
+  console.log('Wrote js/data/camping-matrix-data.js');
+} else {
+  console.log('Skipped js/data/camping-matrix-data.js (hand-edited; pass --with-camping to regenerate)');
+}
 
 // ---------------------------------------------------------------------------
 // 4. Parse Dungeons.lua -> js/data/forever-instances-data.js
@@ -298,7 +306,7 @@ console.log(`Parsed ${instancesData.length} instances.`);
 
 const instancesJsContent = `/**
  * World of Warcraft: Forever - Custom & Revamped Instances Data
- * Datamined from WoW Forever Client (Build 1.60.1.70707)
+ * Datamined from WoW Forever Client (Build ${SOURCE_BUILD})
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_FOREVER_INSTANCES_DATA = ${JSON.stringify(instancesData, null, 2)};
@@ -332,7 +340,7 @@ console.log(`Successfully parsed ${Object.keys(coachProfiles).length} spec coach
 
 const coachJsContent = `/**
  * World of Warcraft: Forever - Spec Rotation & Priority Coach Profiles
- * Datamined from WoW Forever Client (Build 1.60.1.70707) & Closed Beta Simulations
+ * Datamined from WoW Forever Client (Build ${SOURCE_BUILD}) with ForeverDB simulator results
  * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_SPEC_COACH_DATA = ${JSON.stringify(coachProfiles, null, 2)};

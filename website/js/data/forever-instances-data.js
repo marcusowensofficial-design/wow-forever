@@ -1,6 +1,7 @@
 /**
  * World of Warcraft: Forever - Custom & Revamped Instances Data
- * Synced from ForeverDB live addon data (Build 1.60.1.70959, GPL-3.0 attribution)
+ * Datamined from WoW Forever Client (Build 1.60.1.71037)
+ * Ingested from ForeverDB open data under GPL-3.0 attribution
  */
 window.WOW_FOREVER_INSTANCES_DATA = [
   {
@@ -1033,6 +1034,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
       },
       {
+        "itemId": 3194,
+        "name": "Black Malice",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3194"
+      },
+      {
         "itemId": 252773,
         "name": "Pattern: Defender's Leather Armor",
         "bossOrder": 0,
@@ -1080,6 +1088,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3039"
+      },
+      {
+        "itemId": 3040,
+        "name": "Hunter's Muzzle Loader",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3040"
+      },
+      {
+        "itemId": 3057,
+        "name": "Forest Leather Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3057"
       },
       {
         "itemId": 3184,
@@ -1236,6 +1258,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6593"
       },
       {
+        "itemId": 7554,
+        "name": "Willow Branch",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=7554"
+      },
+      {
         "itemId": 7558,
         "name": "Shimmering Stave",
         "bossOrder": 0,
@@ -1248,6 +1277,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=9776"
+      },
+      {
+        "itemId": 9777,
+        "name": "Bandit Bracers",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9777"
+      },
+      {
+        "itemId": 9780,
+        "name": "Bandit Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9780"
       },
       {
         "itemId": 9782,
@@ -1325,6 +1368,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=14171"
+      },
+      {
+        "itemId": 15211,
+        "name": "Militant Shortsword",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15211"
       },
       {
         "itemId": 15222,
@@ -1488,6 +1538,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248688"
       },
       {
+        "itemId": 267361,
+        "name": "Enchanted Silver Ingot",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=267361"
+      },
+      {
         "itemId": 1738,
         "name": "Laced Mail Belt",
         "bossOrder": 0,
@@ -1507,6 +1564,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1742"
+      },
+      {
+        "itemId": 1743,
+        "name": "Laced Mail Pants",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1743"
       },
       {
         "itemId": 1745,
@@ -1530,13 +1594,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1752"
       },
       {
-        "itemId": 1764,
-        "name": "Canvas Shoes",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1764"
-      },
-      {
         "itemId": 1766,
         "name": "Canvas Cloak",
         "bossOrder": 0,
@@ -1549,6 +1606,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1767"
+      },
+      {
+        "itemId": 1769,
+        "name": "Canvas Shoulderpads",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1769"
       },
       {
         "itemId": 1775,
@@ -1586,13 +1650,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1790"
       },
       {
-        "itemId": 1793,
-        "name": "Patched Leather Shoulderpads",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1793"
-      },
-      {
         "itemId": 1796,
         "name": "Rawhide Boots",
         "bossOrder": 0,
@@ -1607,18 +1664,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1800"
       },
       {
-        "itemId": 1812,
-        "name": "Short-handled Battle Axe",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1812"
-      },
-      {
         "itemId": 1813,
         "name": "Chipped Quarterstaff",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1813"
+      },
+      {
+        "itemId": 1814,
+        "name": "Battered Mallet",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1814"
       },
       {
         "itemId": 1816,
@@ -2125,6 +2182,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1205"
+      },
+      {
+        "itemId": 929,
+        "name": "Healing Potion",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=929"
       },
       {
         "itemId": 1777,
@@ -2869,6 +2933,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6562"
       },
       {
+        "itemId": 6574,
+        "name": "Defender Bracers",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6574"
+      },
+      {
         "itemId": 6577,
         "name": "Defender Gauntlets",
         "bossOrder": 0,
@@ -2902,13 +2973,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=8183"
-      },
-      {
-        "itemId": 9794,
-        "name": "Ivycloth Cloak",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=9794"
       },
       {
         "itemId": 9795,
@@ -2974,11 +3038,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15269"
       },
       {
-        "itemId": 1478,
-        "name": "Scroll of Protection II",
+        "itemId": 211784,
+        "name": "Scroll: WUBBA WUBBA",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1478"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=211784"
       },
       {
         "itemId": 211853,
@@ -3343,6 +3407,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2287"
       },
       {
+        "itemId": 4698,
+        "name": "Seer's Mantle",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4698"
+      },
+      {
         "itemId": 7997,
         "name": "Red Defias Mask",
         "bossOrder": 1,
@@ -3516,6 +3587,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=253910"
+      },
+      {
+        "itemId": 251341,
+        "name": "Plans: Guard's Chain Shirt",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=251341"
       },
       {
         "itemId": 1210,
@@ -5058,6 +5136,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2991"
       },
       {
+        "itemId": 2992,
+        "name": "Burnished Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2992"
+      },
+      {
         "itemId": 3205,
         "name": "Inscribed Leather Bracers",
         "bossOrder": 0,
@@ -5070,6 +5155,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4293"
+      },
+      {
+        "itemId": 4294,
+        "name": "Pattern: Hillman's Belt",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4294"
       },
       {
         "itemId": 4567,
@@ -5114,13 +5206,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=5543"
       },
       {
-        "itemId": 5972,
-        "name": "Pattern: Fine Leather Pants",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5972"
-      },
-      {
         "itemId": 6378,
         "name": "Seer's Cape",
         "bossOrder": 0,
@@ -5140,6 +5225,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6539"
+      },
+      {
+        "itemId": 6546,
+        "name": "Soldier's Leggings",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6546"
       },
       {
         "itemId": 6547,
@@ -5196,13 +5288,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6581"
-      },
-      {
-        "itemId": 6583,
-        "name": "Scouting Bracers",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=6583"
       },
       {
         "itemId": 7554,
@@ -5359,13 +5444,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4359"
       },
       {
-        "itemId": 4361,
-        "name": "Copper Tube",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=4361"
-      },
-      {
         "itemId": 4363,
         "name": "Copper Modulator",
         "bossOrder": 0,
@@ -5392,6 +5470,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6994"
+      },
+      {
+        "itemId": 10405,
+        "name": "Bandit Shoulders",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10405"
       },
       {
         "itemId": 211784,
@@ -5923,6 +6008,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15018"
+      },
+      {
+        "itemId": 15110,
+        "name": "Rigid Belt",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15110"
       },
       {
         "itemId": 6443,
@@ -7318,6 +7410,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1819"
       },
       {
+        "itemId": 1776,
+        "name": "Brocade Pants",
+        "bossOrder": 7,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1776"
+      },
+      {
         "itemId": 6627,
         "name": "Mutant Scale Breastplate",
         "bossOrder": 8,
@@ -7542,6 +7641,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=10413"
       },
       {
+        "itemId": 12976,
+        "name": "Ironpatch Blade",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12976"
+      },
+      {
         "itemId": 12978,
         "name": "Stormbringer Belt",
         "bossOrder": 0,
@@ -7577,18 +7683,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2601"
       },
       {
+        "itemId": 2882,
+        "name": "Plans: Silvered Bronze Shoulders",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2882"
+      },
+      {
         "itemId": 2969,
         "name": "Spellbinder Vest",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=2969"
-      },
-      {
-        "itemId": 3184,
-        "name": "Hook Dagger",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3184"
       },
       {
         "itemId": 3193,
@@ -7668,6 +7774,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=5207"
       },
       {
+        "itemId": 5212,
+        "name": "Blazing Wand",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5212"
+      },
+      {
         "itemId": 6531,
         "name": "Barbaric Cloth Robe",
         "bossOrder": 0,
@@ -7710,6 +7823,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14109"
       },
       {
+        "itemId": 14114,
+        "name": "Aboriginal Footwraps",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14114"
+      },
+      {
         "itemId": 14119,
         "name": "Aboriginal Loincloth",
         "bossOrder": 0,
@@ -7738,13 +7858,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14122"
       },
       {
-        "itemId": 14125,
-        "name": "Ritual Leggings",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=14125"
-      },
-      {
         "itemId": 14131,
         "name": "Ritual Belt",
         "bossOrder": 0,
@@ -7757,6 +7870,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=14159"
+      },
+      {
+        "itemId": 14164,
+        "name": "Pagan Belt",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14164"
       },
       {
         "itemId": 14364,
@@ -8011,13 +8131,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4606"
       },
       {
-        "itemId": 5574,
-        "name": "White Leather Bag",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5574"
-      },
-      {
         "itemId": 5635,
         "name": "Sharp Claw",
         "bossOrder": 0,
@@ -8065,6 +8178,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1742"
+      },
+      {
+        "itemId": 1743,
+        "name": "Laced Mail Pants",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1743"
       },
       {
         "itemId": 1744,
@@ -8268,18 +8388,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=274152"
       },
       {
-        "itemId": 274155,
-        "name": "Geomancer Headdress",
-        "bossOrder": 1,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=274155"
-      },
-      {
         "itemId": 274149,
         "name": "Thornweaver Drape",
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=274149"
+      },
+      {
+        "itemId": 274155,
+        "name": "Geomancer Headdress",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=274155"
       },
       {
         "itemId": 1705,
@@ -8294,6 +8414,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6601"
+      },
+      {
+        "itemId": 15556,
+        "name": "Pillager's Bracers",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15556"
       },
       {
         "itemId": 15351,
@@ -8352,11 +8479,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2319"
       },
       {
+        "itemId": 2450,
+        "name": "Briarthorn",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2450"
+      },
+      {
         "itemId": 2455,
         "name": "Minor Mana Potion",
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=2455"
+      },
+      {
+        "itemId": 4538,
+        "name": "Snapvine Watermelon",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4538"
       },
       {
         "itemId": 4606,
@@ -8387,6 +8528,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6681"
       },
       {
+        "itemId": 274158,
+        "name": "Death Prophet Spine",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=274158"
+      },
+      {
         "itemId": 251353,
         "name": "Plans: Acolyte's Chain Helm",
         "bossOrder": 2,
@@ -8408,18 +8556,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=262888"
       },
       {
-        "itemId": 274158,
-        "name": "Death Prophet Spine",
-        "bossOrder": 2,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=274158"
-      },
-      {
         "itemId": 3870,
         "name": "Plans: Green Iron Shoulders",
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3870"
+      },
+      {
+        "itemId": 4633,
+        "name": "Heavy Bronze Lockbox",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4633"
       },
       {
         "itemId": 5007,
@@ -8471,6 +8619,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
       },
       {
+        "itemId": 2592,
+        "name": "Wool Cloth",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
+      },
+      {
         "itemId": 858,
         "name": "Lesser Healing Potion",
         "bossOrder": 2,
@@ -8492,18 +8647,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2319"
       },
       {
-        "itemId": 2592,
-        "name": "Wool Cloth",
-        "bossOrder": 2,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
-      },
-      {
         "itemId": 211784,
         "name": "Scroll: WUBBA WUBBA",
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=211784"
+      },
+      {
+        "itemId": 1782,
+        "name": "Cross-stitched Cloak",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1782"
       },
       {
         "itemId": 1825,
@@ -8555,6 +8710,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15556"
       },
       {
+        "itemId": 6611,
+        "name": "Sage's Sash",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6611"
+      },
+      {
         "itemId": 15524,
         "name": "Sentry's Surcoat",
         "bossOrder": 3,
@@ -8569,6 +8731,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
       },
       {
+        "itemId": 2592,
+        "name": "Wool Cloth",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
+      },
+      {
         "itemId": 1205,
         "name": "Melon Juice",
         "bossOrder": 3,
@@ -8576,11 +8745,32 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1205"
       },
       {
-        "itemId": 2592,
-        "name": "Wool Cloth",
+        "itemId": 2450,
+        "name": "Briarthorn",
         "bossOrder": 3,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2450"
+      },
+      {
+        "itemId": 2452,
+        "name": "Swiftthistle",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2452"
+      },
+      {
+        "itemId": 1825,
+        "name": "Bulky Bludgeon",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1825"
+      },
+      {
+        "itemId": 1831,
+        "name": "Oaken War Staff",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1831"
       },
       {
         "itemId": 274161,
@@ -8616,6 +8806,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 4,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6679"
+      },
+      {
+        "itemId": 15250,
+        "name": "Glimmering Flamberge",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15250"
+      },
+      {
+        "itemId": 15351,
+        "name": "Headhunter's Bands",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15351"
       },
       {
         "itemId": 3042,
@@ -8772,20 +8976,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4234"
       },
       {
-        "itemId": 2677,
-        "name": "Boar Ribs",
-        "bossOrder": 5,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2677"
-      },
-      {
-        "itemId": 2838,
-        "name": "Heavy Stone",
-        "bossOrder": 5,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2838"
-      },
-      {
         "itemId": 3172,
         "name": "Boar Intestines",
         "bossOrder": 5,
@@ -8807,6 +8997,41 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
       },
       {
+        "itemId": 2592,
+        "name": "Wool Cloth",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
+      },
+      {
+        "itemId": 2677,
+        "name": "Boar Ribs",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2677"
+      },
+      {
+        "itemId": 2838,
+        "name": "Heavy Stone",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2838"
+      },
+      {
+        "itemId": 5635,
+        "name": "Sharp Claw",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5635"
+      },
+      {
+        "itemId": 5637,
+        "name": "Large Fang",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5637"
+      },
+      {
         "itemId": 3403,
         "name": "Ivory Boar Tusk",
         "bossOrder": 5,
@@ -8821,18 +9046,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6694"
       },
       {
-        "itemId": 6692,
-        "name": "Pronged Reaver",
-        "bossOrder": 6,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=6692"
-      },
-      {
         "itemId": 6693,
         "name": "Agamaggan's Clutch",
         "bossOrder": 6,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6693"
+      },
+      {
+        "itemId": 6692,
+        "name": "Pronged Reaver",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6692"
       },
       {
         "itemId": 273103,
@@ -8870,6 +9095,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
       },
       {
+        "itemId": 2318,
+        "name": "Light Leather",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2318"
+      },
+      {
         "itemId": 2592,
         "name": "Wool Cloth",
         "bossOrder": 6,
@@ -8877,11 +9109,32 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2592"
       },
       {
+        "itemId": 3172,
+        "name": "Boar Intestines",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3172"
+      },
+      {
+        "itemId": 3385,
+        "name": "Lesser Mana Potion",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3385"
+      },
+      {
         "itemId": 4234,
         "name": "Heavy Leather",
         "bossOrder": 6,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4234"
+      },
+      {
+        "itemId": 4538,
+        "name": "Snapvine Watermelon",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4538"
       },
       {
         "itemId": 211853,
@@ -8912,11 +9165,39 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1823"
       },
       {
+        "itemId": 1830,
+        "name": "Long Bastard Sword",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1830"
+      },
+      {
+        "itemId": 2222,
+        "name": "Tower Shield",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2222"
+      },
+      {
+        "itemId": 3380,
+        "name": "Cross-stitched Belt",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3380"
+      },
+      {
         "itemId": 3803,
         "name": "Hardened Cloak",
         "bossOrder": 6,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3803"
+      },
+      {
+        "itemId": 4438,
+        "name": "Pugilist Bracers",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4438"
       },
       {
         "itemId": 6688,
@@ -8954,6 +9235,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6697"
       },
       {
+        "itemId": 2072,
+        "name": "Dwarven Magestaff",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2072"
+      },
+      {
+        "itemId": 3039,
+        "name": "Short Ash Bow",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3039"
+      },
+      {
         "itemId": 3186,
         "name": "Viking Sword",
         "bossOrder": 0,
@@ -8975,6 +9270,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3206"
       },
       {
+        "itemId": 3869,
+        "name": "Plans: Shadow Crescent Axe",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3869"
+      },
+      {
         "itemId": 4296,
         "name": "Pattern: Dark Leather Shoulders",
         "bossOrder": 0,
@@ -8989,11 +9291,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4350"
       },
       {
-        "itemId": 9769,
-        "name": "Greenweave Branch",
+        "itemId": 4634,
+        "name": "Iron Lockbox",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=9769"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4634"
       },
       {
         "itemId": 12008,
@@ -9059,6 +9361,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14373"
       },
       {
+        "itemId": 14377,
+        "name": "Sanguine Handwraps",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14377"
+      },
+      {
         "itemId": 14406,
         "name": "Resilient Cord",
         "bossOrder": 0,
@@ -9092,6 +9401,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15118"
+      },
+      {
+        "itemId": 15147,
+        "name": "Ghostwalker Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15147"
       },
       {
         "itemId": 15231,
@@ -9150,13 +9466,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15341"
       },
       {
-        "itemId": 15347,
-        "name": "Pathfinder Belt",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=15347"
-      },
-      {
         "itemId": 15354,
         "name": "Headhunter's Cloak",
         "bossOrder": 0,
@@ -9206,6 +9515,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15541"
       },
       {
+        "itemId": 15542,
+        "name": "Wicked Chain Shoulder Pads",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15542"
+      },
+      {
         "itemId": 15544,
         "name": "Thick Scale Sabatons",
         "bossOrder": 0,
@@ -9220,11 +9536,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15548"
       },
       {
+        "itemId": 15974,
+        "name": "Pagan Rod",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15974"
+      },
+      {
         "itemId": 248706,
         "name": "Waylaid Crate: Journeyman Ingots",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=248706"
+      },
+      {
+        "itemId": 248710,
+        "name": "Waylaid Crate: Expert Parts",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=248710"
       },
       {
         "itemId": 249428,
@@ -9241,32 +9571,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1478"
       },
       {
-        "itemId": 2318,
-        "name": "Light Leather",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2318"
-      },
-      {
         "itemId": 4232,
         "name": "Medium Hide",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4232"
-      },
-      {
-        "itemId": 5635,
-        "name": "Sharp Claw",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5635"
-      },
-      {
-        "itemId": 5637,
-        "name": "Large Fang",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5637"
       },
       {
         "itemId": 5825,
@@ -9339,18 +9648,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1758"
       },
       {
-        "itemId": 1761,
-        "name": "Reinforced Chain Vest",
+        "itemId": 1759,
+        "name": "Reinforced Chain Pants",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1761"
-      },
-      {
-        "itemId": 1772,
-        "name": "Brocade Shoes",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1772"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1759"
       },
       {
         "itemId": 1777,
@@ -9367,11 +9669,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1780"
       },
       {
-        "itemId": 1783,
-        "name": "Cross-stitched Gloves",
+        "itemId": 1784,
+        "name": "Cross-stitched Pants",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1783"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1784"
       },
       {
         "itemId": 1785,
@@ -9423,25 +9725,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1809"
       },
       {
-        "itemId": 1810,
-        "name": "Tough Leather Armor",
+        "itemId": 1819,
+        "name": "Gouging Pick",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1810"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1819"
       },
       {
-        "itemId": 1830,
-        "name": "Long Bastard Sword",
+        "itemId": 2295,
+        "name": "Large Boar Tusk",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1830"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2295"
       },
       {
-        "itemId": 1831,
-        "name": "Oaken War Staff",
+        "itemId": 2766,
+        "name": "Deft Stiletto",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1831"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2766"
       },
       {
         "itemId": 2785,
@@ -9465,13 +9767,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3780"
       },
       {
-        "itemId": 3781,
-        "name": "Broad Claymore",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3781"
-      },
-      {
         "itemId": 3795,
         "name": "Interlaced Cloak",
         "bossOrder": 0,
@@ -9484,6 +9779,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3801"
+      },
+      {
+        "itemId": 11392,
+        "name": "Severed Bat Claw",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11392"
+      },
+      {
+        "itemId": 11393,
+        "name": "Small Bat Skull",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11393"
       }
     ],
     "quests": [
@@ -9743,6 +10052,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6995"
+      },
+      {
+        "itemId": 4232,
+        "name": "Medium Hide",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4232"
       },
       {
         "itemId": 1820,
@@ -10270,6 +10586,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2220"
       },
       {
+        "itemId": 251354,
+        "name": "Plans: Crusader's Chain Helm",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=251354"
+      },
+      {
         "itemId": 273841,
         "name": "Twilight Maul",
         "bossOrder": 4,
@@ -10310,6 +10633,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 4,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
+      },
+      {
+        "itemId": 1803,
+        "name": "Tough Leather Belt",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1803"
+      },
+      {
+        "itemId": 1807,
+        "name": "Tough Leather Gloves",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1807"
       },
       {
         "itemId": 1831,
@@ -10907,6 +11244,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2271"
       },
       {
+        "itemId": 2567,
+        "name": "Evocator's Blade",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2567"
+      },
+      {
         "itemId": 3413,
         "name": "Doomspike",
         "bossOrder": 0,
@@ -10970,6 +11314,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3608"
       },
       {
+        "itemId": 3611,
+        "name": "Plans: Green Iron Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3611"
+      },
+      {
         "itemId": 3740,
         "name": "Decapitating Sword",
         "bossOrder": 0,
@@ -10982,6 +11333,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4296"
+      },
+      {
+        "itemId": 5543,
+        "name": "Plans: Iridescent Hammer",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5543"
       },
       {
         "itemId": 6044,
@@ -11054,6 +11412,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11982"
       },
       {
+        "itemId": 11983,
+        "name": "Chrome Ring",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11983"
+      },
+      {
         "itemId": 11994,
         "name": "Coral Band",
         "bossOrder": 0,
@@ -11108,6 +11473,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=14187"
+      },
+      {
+        "itemId": 14375,
+        "name": "Sanguine Cuffs",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14375"
       },
       {
         "itemId": 14377,
@@ -11166,13 +11538,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14746"
       },
       {
-        "itemId": 14747,
-        "name": "Hulking Gauntlets",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=14747"
-      },
-      {
         "itemId": 14756,
         "name": "Slayer's Slippers",
         "bossOrder": 0,
@@ -11215,6 +11580,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15211"
       },
       {
+        "itemId": 15223,
+        "name": "Jagged Star",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15223"
+      },
+      {
         "itemId": 15230,
         "name": "Ridge Cleaver",
         "bossOrder": 0,
@@ -11234,6 +11606,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15330"
+      },
+      {
+        "itemId": 15347,
+        "name": "Pathfinder Belt",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15347"
       },
       {
         "itemId": 15500,
@@ -11283,6 +11662,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15532"
+      },
+      {
+        "itemId": 15537,
+        "name": "Wicked Chain Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15537"
       },
       {
         "itemId": 15891,
@@ -11362,13 +11748,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1712"
       },
       {
-        "itemId": 4232,
-        "name": "Medium Hide",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=4232"
-      },
-      {
         "itemId": 4235,
         "name": "Heavy Hide",
         "bossOrder": 0,
@@ -11446,6 +11825,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=211854"
       },
       {
+        "itemId": 248684,
+        "name": "Waylaid Crate: Apprentice Textiles",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=248684"
+      },
+      {
         "itemId": 248686,
         "name": "Waylaid Crate: Journeyman Herbs",
         "bossOrder": 0,
@@ -11467,13 +11853,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248688"
       },
       {
-        "itemId": 248689,
-        "name": "Waylaid Crate: Journeyman Curiosities",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=248689"
-      },
-      {
         "itemId": 1746,
         "name": "Linked Chain Belt",
         "bossOrder": 0,
@@ -11493,13 +11872,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1748"
-      },
-      {
-        "itemId": 1749,
-        "name": "Linked Chain Cloak",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1749"
       },
       {
         "itemId": 1750,
@@ -11668,6 +12040,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1805"
+      },
+      {
+        "itemId": 1806,
+        "name": "Tough Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1806"
       },
       {
         "itemId": 1818,
@@ -11911,6 +12290,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=274425"
       },
       {
+        "itemId": 274428,
+        "name": "Dark Golem Breastplate",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=274428"
+      },
+      {
         "itemId": 274430,
         "name": "Rock Sentinel Slicer",
         "bossOrder": 4,
@@ -12079,6 +12465,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=7666"
       },
       {
+        "itemId": 7909,
+        "name": "Aquamarine",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=7909"
+      },
+      {
         "itemId": 9399,
         "name": "Precision Arrow",
         "bossOrder": 0,
@@ -12091,6 +12484,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=12010"
+      },
+      {
+        "itemId": 1177,
+        "name": "Oil of Olaf",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1177"
       },
       {
         "itemId": 1645,
@@ -12121,6 +12521,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4338"
       },
       {
+        "itemId": 4424,
+        "name": "Scroll of Spirit III",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4424"
+      },
+      {
         "itemId": 4599,
         "name": "Cured Ham Steak",
         "bossOrder": 0,
@@ -12133,6 +12540,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4601"
+      },
+      {
+        "itemId": 5637,
+        "name": "Large Fang",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5637"
       },
       {
         "itemId": 6149,
@@ -12168,6 +12582,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=12037"
+      },
+      {
+        "itemId": 3817,
+        "name": "Reinforced Buckler",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3817"
       }
     ],
     "quests": [
@@ -12189,7 +12610,9 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       2201,
       1360,
       2342,
+      2340,
       2339,
+      2341,
       2204,
       2361,
       1139,
@@ -12564,6 +12987,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6593"
       },
       {
+        "itemId": 9857,
+        "name": "Archer's Bracers",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9857"
+      },
+      {
         "itemId": 4306,
         "name": "Silk Cloth",
         "bossOrder": 3,
@@ -12676,6 +13106,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=251350"
       },
       {
+        "itemId": 251354,
+        "name": "Plans: Crusader's Chain Helm",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=251354"
+      },
+      {
+        "itemId": 9865,
+        "name": "Renegade Bracers",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9865"
+      },
+      {
         "itemId": 9845,
         "name": "Conjurer's Shoes",
         "bossOrder": 4,
@@ -12688,13 +13132,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 4,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=9861"
-      },
-      {
-        "itemId": 9865,
-        "name": "Renegade Bracers",
-        "bossOrder": 4,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=9865"
       },
       {
         "itemId": 1705,
@@ -13089,6 +13526,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=865"
       },
       {
+        "itemId": 1206,
+        "name": "Moss Agate",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1206"
+      },
+      {
         "itemId": 2819,
         "name": "Cross Dagger",
         "bossOrder": 0,
@@ -13152,6 +13596,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4713"
       },
       {
+        "itemId": 4716,
+        "name": "Combat Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4716"
+      },
+      {
         "itemId": 5214,
         "name": "Wand of Eventide",
         "bossOrder": 0,
@@ -13192,6 +13643,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6603"
+      },
+      {
+        "itemId": 6604,
+        "name": "Dervish Cape",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6604"
       },
       {
         "itemId": 6610,
@@ -13248,6 +13706,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=8184"
+      },
+      {
+        "itemId": 9794,
+        "name": "Ivycloth Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9794"
       },
       {
         "itemId": 9798,
@@ -13425,6 +13890,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=7191"
       },
       {
+        "itemId": 9153,
+        "name": "Rig Blueprints",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9153"
+      },
+      {
         "itemId": 9326,
         "name": "Grime-Encrusted Ring",
         "bossOrder": 0,
@@ -13465,6 +13937,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1748"
+      },
+      {
+        "itemId": 1749,
+        "name": "Linked Chain Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1749"
+      },
+      {
+        "itemId": 1751,
+        "name": "Linked Chain Pants",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1751"
       },
       {
         "itemId": 1752,
@@ -13544,6 +14030,27 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1826"
       },
       {
+        "itemId": 1827,
+        "name": "Meat Cleaver",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1827"
+      },
+      {
+        "itemId": 1830,
+        "name": "Long Bastard Sword",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1830"
+      },
+      {
+        "itemId": 1831,
+        "name": "Oaken War Staff",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1831"
+      },
+      {
         "itemId": 2222,
         "name": "Tower Shield",
         "bossOrder": 0,
@@ -13565,6 +14072,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2785"
       },
       {
+        "itemId": 2786,
+        "name": "Oiled Blunderbuss",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2786"
+      },
+      {
         "itemId": 3381,
         "name": "Cross-stitched Bracers",
         "bossOrder": 0,
@@ -13577,6 +14091,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3805"
+      },
+      {
+        "itemId": 3806,
+        "name": "Hardened Leather Shoulderpads",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3806"
       },
       {
         "itemId": 3808,
@@ -13745,6 +14266,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=20025"
       },
       {
+        "itemId": 10795,
+        "name": "Drakeclaw Band",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10795"
+      },
+      {
         "itemId": 10806,
         "name": "Vestments of the Atal'ai Prophet",
         "bossOrder": 8,
@@ -13792,6 +14320,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=10802"
+      },
+      {
+        "itemId": 4338,
+        "name": "Mageweave Cloth",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4338"
       }
     ],
     "quests": [
@@ -13855,18 +14390,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
     ],
     "loot": [
       {
-        "itemId": 10776,
-        "name": "Silky Spider Cape",
-        "bossOrder": 1,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=10776"
-      },
-      {
         "itemId": 10777,
         "name": "Arachnid Gloves",
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=10777"
+      },
+      {
+        "itemId": 10776,
+        "name": "Silky Spider Cape",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10776"
       },
       {
         "itemId": 10775,
@@ -13895,6 +14430,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=10766"
+      },
+      {
+        "itemId": 10760,
+        "name": "Swine Fists",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10760"
       },
       {
         "itemId": 10769,
@@ -13939,18 +14481,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=252898"
       },
       {
+        "itemId": 10758,
+        "name": "X'caliboar",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10758"
+      },
+      {
+        "itemId": 10768,
+        "name": "Boar Champion's Belt",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10768"
+      },
+      {
         "itemId": 10772,
         "name": "Glutton's Cleaver",
         "bossOrder": 5,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=10772"
-      },
-      {
-        "itemId": 10774,
-        "name": "Fleshhide Shoulders",
-        "bossOrder": 5,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=10774"
       },
       {
         "itemId": 274385,
@@ -13960,18 +14509,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=274385"
       },
       {
+        "itemId": 10774,
+        "name": "Fleshhide Shoulders",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10774"
+      },
+      {
+        "itemId": 10315,
+        "name": "Pattern: Red Mageweave Shoulders",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10315"
+      },
+      {
         "itemId": 15160,
         "name": "Nocturnal Wristbands",
         "bossOrder": 5,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15160"
-      },
-      {
-        "itemId": 10763,
-        "name": "Icemetal Barbute",
-        "bossOrder": 6,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=10763"
       },
       {
         "itemId": 274381,
@@ -13981,18 +14537,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=274381"
       },
       {
-        "itemId": 10761,
-        "name": "Coldrage Dagger",
-        "bossOrder": 6,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=10761"
-      },
-      {
         "itemId": 10762,
         "name": "Robes of the Lich",
         "bossOrder": 6,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=10762"
+      },
+      {
+        "itemId": 10763,
+        "name": "Icemetal Barbute",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10763"
+      },
+      {
+        "itemId": 10761,
+        "name": "Coldrage Dagger",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=10761"
       },
       {
         "itemId": 10764,
@@ -14030,11 +14593,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1529"
       },
       {
+        "itemId": 1990,
+        "name": "Ballast Maul",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1990"
+      },
+      {
         "itemId": 4636,
         "name": "Strong Iron Lockbox",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4636"
+      },
+      {
+        "itemId": 7458,
+        "name": "Knight's Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=7458"
       },
       {
         "itemId": 11970,
@@ -14056,6 +14633,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=14411"
+      },
+      {
+        "itemId": 14415,
+        "name": "Stonecloth Britches",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14415"
+      },
+      {
+        "itemId": 14589,
+        "name": "Hawkeye's Shoes",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14589"
       },
       {
         "itemId": 15134,
@@ -14093,6 +14684,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1710"
       },
       {
+        "itemId": 2319,
+        "name": "Medium Leather",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2319"
+      },
+      {
         "itemId": 2677,
         "name": "Boar Ribs",
         "bossOrder": 0,
@@ -14107,11 +14705,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3172"
       },
       {
+        "itemId": 3827,
+        "name": "Mana Potion",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3827"
+      },
+      {
         "itemId": 4232,
         "name": "Medium Hide",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4232"
+      },
+      {
+        "itemId": 4234,
+        "name": "Heavy Leather",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4234"
       },
       {
         "itemId": 4304,
@@ -14198,11 +14810,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3785"
       },
       {
+        "itemId": 3799,
+        "name": "Interlaced Vest",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3799"
+      },
+      {
         "itemId": 3806,
         "name": "Hardened Leather Shoulderpads",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3806"
+      },
+      {
+        "itemId": 3810,
+        "name": "Double Mail Bracers",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3810"
       },
       {
         "itemId": 3813,
@@ -14411,11 +15037,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6530"
       },
       {
-        "itemId": 3812,
-        "name": "Double Mail Gloves",
+        "itemId": 1708,
+        "name": "Sweet Nectar",
         "bossOrder": 1,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3812"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1708"
+      },
+      {
+        "itemId": 8746,
+        "name": "Interlaced Cowl",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=8746"
       },
       {
         "itemId": 7685,
@@ -14481,6 +15114,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248694"
       },
       {
+        "itemId": 248692,
+        "name": "Waylaid Crate: Expert Ore",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=248692"
+      },
+      {
         "itemId": 3456,
         "name": "Dog Whistle",
         "bossOrder": 3,
@@ -14514,6 +15154,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 3,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=274292"
+      },
+      {
+        "itemId": 5805,
+        "name": "Heart of Zeal",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5805"
       },
       {
         "itemId": 7713,
@@ -14782,6 +15429,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=863"
       },
       {
+        "itemId": 1206,
+        "name": "Moss Agate",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1206"
+      },
+      {
         "itemId": 1529,
         "name": "Jade",
         "bossOrder": 0,
@@ -14852,6 +15506,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4725"
       },
       {
+        "itemId": 5002,
+        "name": "Glowing Green Talisman",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=5002"
+      },
+      {
         "itemId": 5003,
         "name": "Crystal Starfire Medallion",
         "bossOrder": 0,
@@ -14859,25 +15520,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=5003"
       },
       {
-        "itemId": 5774,
-        "name": "Pattern: Green Silk Pack",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5774"
-      },
-      {
         "itemId": 6421,
         "name": "Glyphed Belt",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=6421"
-      },
-      {
-        "itemId": 6599,
-        "name": "Battleforge Shield",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=6599"
       },
       {
         "itemId": 7146,
@@ -14992,6 +15639,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=7909"
       },
       {
+        "itemId": 9820,
+        "name": "Durable Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9820"
+      },
+      {
         "itemId": 9849,
         "name": "Conjurer's Hood",
         "bossOrder": 0,
@@ -15006,18 +15660,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=9855"
       },
       {
-        "itemId": 9857,
-        "name": "Archer's Bracers",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=9857"
-      },
-      {
         "itemId": 9858,
         "name": "Archer's Buckler",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=9858"
+      },
+      {
+        "itemId": 9867,
+        "name": "Renegade Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=9867"
       },
       {
         "itemId": 9877,
@@ -15118,13 +15772,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248710"
       },
       {
-        "itemId": 1708,
-        "name": "Sweet Nectar",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1708"
-      },
-      {
         "itemId": 1710,
         "name": "Greater Healing Potion",
         "bossOrder": 0,
@@ -15209,13 +15856,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=5536"
       },
       {
-        "itemId": 5805,
-        "name": "Heart of Zeal",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=5805"
-      },
-      {
         "itemId": 12203,
         "name": "Red Wolf Meat",
         "bossOrder": 0,
@@ -15223,18 +15863,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=12203"
       },
       {
-        "itemId": 14635,
-        "name": "Pattern: Gem-studded Leather Belt",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=14635"
-      },
-      {
         "itemId": 16883,
         "name": "Worn Junkbox",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=16883"
+      },
+      {
+        "itemId": 213543,
+        "name": "Scroll: UPDOG",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=213543"
       },
       {
         "itemId": 213544,
@@ -15249,13 +15889,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=213545"
-      },
-      {
-        "itemId": 213546,
-        "name": "Scroll: SHOOBEEDOOP",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=213546"
       },
       {
         "itemId": 213547,
@@ -15300,13 +15933,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248690"
       },
       {
-        "itemId": 248692,
-        "name": "Waylaid Crate: Expert Ore",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=248692"
-      },
-      {
         "itemId": 248693,
         "name": "Waylaid Crate: Expert Textiles",
         "bossOrder": 0,
@@ -15321,11 +15947,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=273169"
       },
       {
-        "itemId": 1786,
-        "name": "Cross-stitched Vest",
+        "itemId": 1754,
+        "name": "Reinforced Chain Belt",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1786"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1754"
+      },
+      {
+        "itemId": 1782,
+        "name": "Cross-stitched Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1782"
       },
       {
         "itemId": 1806,
@@ -15335,18 +15968,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1806"
       },
       {
-        "itemId": 1809,
-        "name": "Tough Leather Shoulderpads",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1809"
-      },
-      {
         "itemId": 1826,
         "name": "Rock Maul",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1826"
+      },
+      {
+        "itemId": 1827,
+        "name": "Meat Cleaver",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1827"
       },
       {
         "itemId": 1828,
@@ -15356,6 +15989,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1828"
       },
       {
+        "itemId": 1830,
+        "name": "Long Bastard Sword",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1830"
+      },
+      {
         "itemId": 2766,
         "name": "Deft Stiletto",
         "bossOrder": 0,
@@ -15363,11 +16003,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2766"
       },
       {
-        "itemId": 3381,
-        "name": "Cross-stitched Bracers",
+        "itemId": 2785,
+        "name": "Stiff Recurve Bow",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3381"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2785"
+      },
+      {
+        "itemId": 2786,
+        "name": "Oiled Blunderbuss",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2786"
       },
       {
         "itemId": 3778,
@@ -15461,6 +16108,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3795"
       },
       {
+        "itemId": 3796,
+        "name": "Interlaced Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3796"
+      },
+      {
         "itemId": 3797,
         "name": "Interlaced Pants",
         "bossOrder": 0,
@@ -15517,6 +16171,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3810"
       },
       {
+        "itemId": 3812,
+        "name": "Double Mail Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3812"
+      },
+      {
+        "itemId": 3813,
+        "name": "Double Mail Pants",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3813"
+      },
+      {
         "itemId": 3814,
         "name": "Double Mail Shoulderpads",
         "bossOrder": 0,
@@ -15536,13 +16204,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3816"
-      },
-      {
-        "itemId": 8746,
-        "name": "Interlaced Cowl",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=8746"
       },
       {
         "itemId": 8747,
@@ -15621,6 +16282,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       }
     ],
     "loot": [
+      {
+        "itemId": 274651,
+        "name": "Zealot Plate",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=274651"
+      },
+      {
+        "itemId": 274652,
+        "name": "Wall of Water",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=274652"
+      },
       {
         "itemId": 9234,
         "name": "Tiara of the Deep",
@@ -15783,11 +16458,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=9477"
       },
       {
+        "itemId": 11086,
+        "name": "Jang'thraze the Protector",
+        "bossOrder": 8,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11086"
+      },
+      {
         "itemId": 9523,
         "name": "Troll Temper",
         "bossOrder": 8,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=9523"
+      },
+      {
+        "itemId": 12470,
+        "name": "Sandstalker Ankleguards",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12470"
       },
       {
         "itemId": 274647,
@@ -15823,6 +16512,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4637"
+      },
+      {
+        "itemId": 3928,
+        "name": "Superior Healing Potion",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3928"
+      },
+      {
+        "itemId": 4599,
+        "name": "Cured Ham Steak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4599"
       },
       {
         "itemId": 8151,
@@ -15963,6 +16666,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=13167"
       },
       {
+        "itemId": 13168,
+        "name": "Plate of the Shaman King",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13168"
+      },
+      {
         "itemId": 12336,
         "name": "Gemstone of Spirestone",
         "bossOrder": 1,
@@ -15984,6 +16694,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=12654"
       },
       {
+        "itemId": 13255,
+        "name": "Trueaim Gauntlets",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13255"
+      },
+      {
         "itemId": 16712,
         "name": "Shadowcraft Gloves",
         "bossOrder": 2,
@@ -15996,6 +16713,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 3,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=12582"
+      },
+      {
+        "itemId": 13173,
+        "name": "Flightblade Throwing Axe",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13173"
+      },
+      {
+        "itemId": 13177,
+        "name": "Talisman of Evasion",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13177"
       },
       {
         "itemId": 16676,
@@ -16019,6 +16750,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=13213"
       },
       {
+        "itemId": 13244,
+        "name": "Gilded Gauntlets",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13244"
+      },
+      {
         "itemId": 13258,
         "name": "Slaghide Gauntlets",
         "bossOrder": 5,
@@ -16038,6 +16776,55 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 5,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=12712"
+      },
+      {
+        "itemId": 12835,
+        "name": "Plans: Annihilator",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12835"
+      },
+      {
+        "itemId": 13212,
+        "name": "Halycon's Spiked Collar",
+        "bossOrder": 7,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13212"
+      },
+      {
+        "itemId": 22313,
+        "name": "Ironweave Bracers",
+        "bossOrder": 7,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=22313"
+      },
+      {
+        "itemId": 13206,
+        "name": "Wolfshear Leggings",
+        "bossOrder": 8,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13206"
+      },
+      {
+        "itemId": 13163,
+        "name": "Relentless Scythe",
+        "bossOrder": 9,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13163"
+      },
+      {
+        "itemId": 16679,
+        "name": "Beaststalker's Mantle",
+        "bossOrder": 9,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=16679"
+      },
+      {
+        "itemId": 12337,
+        "name": "Gemstone of Bloodaxe",
+        "bossOrder": 9,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12337"
       },
       {
         "itemId": 12929,
@@ -16090,6 +16877,7 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       }
     ],
     "quests": [
+      4982,
       4862,
       4729,
       4981,
@@ -16102,7 +16890,9 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       5102,
       4866,
       4742,
-      4867
+      4768,
+      4867,
+      4903
     ],
     "guide": "",
     "isCustomForever": false
@@ -16243,6 +17033,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11625"
       },
       {
+        "itemId": 11626,
+        "name": "Blackveil Cape",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11626"
+      },
+      {
         "itemId": 11630,
         "name": "Rockshard Pellets",
         "bossOrder": 2,
@@ -16264,11 +17061,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11627"
       },
       {
+        "itemId": 11628,
+        "name": "Houndmaster's Bow",
+        "bossOrder": 3,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11628"
+      },
+      {
         "itemId": 11747,
         "name": "Flamestrider Robes",
         "bossOrder": 5,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=11747"
+      },
+      {
+        "itemId": 11748,
+        "name": "Pyric Caduceus",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11748"
       },
       {
         "itemId": 11750,
@@ -16278,6 +17089,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11750"
       },
       {
+        "itemId": 11207,
+        "name": "Formula: Enchant Weapon - Fiery Weapon",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11207"
+      },
+      {
+        "itemId": 11764,
+        "name": "Cinderhide Armsplints",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11764"
+      },
+      {
         "itemId": 11765,
         "name": "Pyremail Wristguards",
         "bossOrder": 6,
@@ -16285,11 +17110,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11765"
       },
       {
+        "itemId": 11767,
+        "name": "Emberplate Armguards",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11767"
+      },
+      {
         "itemId": 19268,
         "name": "Ace of Elementals",
         "bossOrder": 6,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=19268"
+      },
+      {
+        "itemId": 11126,
+        "name": "Tablet of Kurniya",
+        "bossOrder": 6,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11126"
       },
       {
         "itemId": 11784,
@@ -16325,6 +17164,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 9,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=11802"
+      },
+      {
+        "itemId": 11803,
+        "name": "Force of Magma",
+        "bossOrder": 9,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11803"
       },
       {
         "itemId": 11805,
@@ -16376,6 +17222,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11819"
       },
       {
+        "itemId": 11823,
+        "name": "Luminary Kilt",
+        "bossOrder": 11,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11823"
+      },
+      {
         "itemId": 11268,
         "name": "Head of Argelmach",
         "bossOrder": 11,
@@ -16390,11 +17243,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11465"
       },
       {
+        "itemId": 11735,
+        "name": "Ragefury Eyepatch",
+        "bossOrder": 12,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11735"
+      },
+      {
         "itemId": 18043,
         "name": "Coal Miner Boots",
         "bossOrder": 12,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=18043"
+      },
+      {
+        "itemId": 18044,
+        "name": "Hurley's Tankard",
+        "bossOrder": 12,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=18044"
       },
       {
         "itemId": 22275,
@@ -16432,6 +17299,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11612"
       },
       {
+        "itemId": 2663,
+        "name": "Ribbly's Bandolier",
+        "bossOrder": 14,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2663"
+      },
+      {
         "itemId": 11313,
         "name": "Ribbly's Head",
         "bossOrder": 14,
@@ -16444,6 +17318,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 15,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=12793"
+      },
+      {
+        "itemId": 11809,
+        "name": "Flame Wrath",
+        "bossOrder": 17,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11809"
       },
       {
         "itemId": 11812,
@@ -16465,6 +17346,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 19,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=22400"
+      },
+      {
+        "itemId": 11924,
+        "name": "Robes of the Royal Crown",
+        "bossOrder": 21,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11924"
       },
       {
         "itemId": 11931,
@@ -16516,11 +17404,32 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=11078"
       },
       {
+        "itemId": 11129,
+        "name": "Essence of the Elements",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=11129"
+      },
+      {
         "itemId": 11269,
         "name": "Intact Elemental Core",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=11269"
+      },
+      {
+        "itemId": 12203,
+        "name": "Red Wolf Meat",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12203"
+      },
+      {
+        "itemId": 12208,
+        "name": "Tender Wolf Meat",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12208"
       },
       {
         "itemId": 14047,
@@ -16537,10 +17446,12 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       4081,
       4136,
       4324,
+      4242,
       4082,
       4241,
       7201,
       4201,
+      3982,
       4001,
       4126,
       4134,
@@ -16550,10 +17461,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       3907,
       4263,
       4286,
+      4264,
+      4282,
       4024,
       4122,
+      4322,
       4063,
-      4341
+      4341,
+      4342,
+      4361,
+      4362,
+      4363,
+      4003
     ],
     "guide": "",
     "isCustomForever": false
@@ -16841,7 +17760,8 @@ window.WOW_FOREVER_INSTANCES_DATA = [
     "quests": [
       5529,
       5341,
-      5343
+      5343,
+      5382
     ],
     "guide": "",
     "isCustomForever": false
@@ -17035,6 +17955,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=13402"
       },
       {
+        "itemId": 13403,
+        "name": "Grimgore Noose",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=13403"
+      },
+      {
         "itemId": 276397,
         "name": "Hand of the Zealous",
         "bossOrder": 3,
@@ -17091,6 +18018,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=18735"
       },
       {
+        "itemId": 18726,
+        "name": "Magistrate's Cuffs",
+        "bossOrder": 11,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=18726"
+      },
+      {
+        "itemId": 12382,
+        "name": "Key to the City",
+        "bossOrder": 11,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12382"
+      },
+      {
         "itemId": 276455,
         "name": "Swordsmith Mitts",
         "bossOrder": 14,
@@ -17110,6 +18051,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 16,
         "source": "Client Datamined",
         "wowheadUrl": "https://www.wowhead.com/forever/item=276396"
+      },
+      {
+        "itemId": 12735,
+        "name": "Frayed Abomination Stitching",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12735"
+      },
+      {
+        "itemId": 12811,
+        "name": "Righteous Orb",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=12811"
       },
       {
         "itemId": 15768,
@@ -17159,125 +18114,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Client Datamined",
         "wowheadUrl": "https://www.wowhead.com/forever/item=276456"
-      },
-      {
-        "itemId": 280060,
-        "name": "Lucky Shovelnose Tuft",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280060"
-      },
-      {
-        "itemId": 280061,
-        "name": "Spike Crested Bracers",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280061"
-      },
-      {
-        "itemId": 280062,
-        "name": "Cloak of the Fleshborer",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280062"
-      },
-      {
-        "itemId": 280063,
-        "name": "Bloodfur Bulwark",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280063"
-      },
-      {
-        "itemId": 280064,
-        "name": "Withering Grips",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280064"
-      },
-      {
-        "itemId": 280065,
-        "name": "Behemoth Bones",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280065"
-      },
-      {
-        "itemId": 280066,
-        "name": "Trousers of the Ebon Giant",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280066"
-      },
-      {
-        "itemId": 280067,
-        "name": "Blackmaw Chain Belt",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280067"
-      },
-      {
-        "itemId": 280068,
-        "name": "Bloody Claws of Attack",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280068"
-      },
-      {
-        "itemId": 280069,
-        "name": "Shamanic Wristguards",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280069"
-      },
-      {
-        "itemId": 280070,
-        "name": "Veilpiercer Girdle",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280070"
-      },
-      {
-        "itemId": 280071,
-        "name": "Flamebreak Talisman",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280071"
-      },
-      {
-        "itemId": 280072,
-        "name": "Cowl of Dark Ambition",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280072"
-      },
-      {
-        "itemId": 280073,
-        "name": "Burnished Pridescales",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280073"
-      },
-      {
-        "itemId": 280074,
-        "name": "Scalding Flamehoof",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280074"
-      },
-      {
-        "itemId": 280075,
-        "name": "Bleak Eye Shoulderplates",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280075"
-      },
-      {
-        "itemId": 280076,
-        "name": "Horns of Varrox",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=280076"
       }
     ],
     "quests": [
@@ -17412,6 +18248,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=17719"
       },
       {
+        "itemId": 17752,
+        "name": "Satyr's Lash",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=17752"
+      },
+      {
         "itemId": 17754,
         "name": "Infernal Trickster Leggings",
         "bossOrder": 4,
@@ -17452,6 +18295,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 5,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=17740"
+      },
+      {
+        "itemId": 4338,
+        "name": "Mageweave Cloth",
+        "bossOrder": 5,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4338"
       },
       {
         "itemId": 17684,
@@ -17601,11 +18451,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4304"
       },
       {
-        "itemId": 4338,
-        "name": "Mageweave Cloth",
+        "itemId": 4306,
+        "name": "Silk Cloth",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=4338"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4306"
+      },
+      {
+        "itemId": 4602,
+        "name": "Moon Harvest Pumpkin",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4602"
       },
       {
         "itemId": 4606,
@@ -17629,11 +18486,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=4608"
       },
       {
+        "itemId": 8169,
+        "name": "Thick Hide",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=8169"
+      },
+      {
         "itemId": 8170,
         "name": "Rugged Leather",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=8170"
+      },
+      {
+        "itemId": 8836,
+        "name": "Arthas' Tears",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=8836"
       },
       {
         "itemId": 10286,
@@ -17655,6 +18526,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=17765"
+      },
+      {
+        "itemId": 3937,
+        "name": "Crochet Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3937"
       }
     ],
     "quests": [
@@ -17666,6 +18544,7 @@ window.WOW_FOREVER_INSTANCES_DATA = [
       7041,
       7067,
       7044,
+      93404,
       7046,
       7064,
       7065,
@@ -17718,18 +18597,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=272998"
       },
       {
-        "itemId": 272999,
-        "name": "Barbaric Crossbow",
-        "bossOrder": 1,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=272999"
-      },
-      {
         "itemId": 272996,
         "name": "Trogg Scepter",
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=272996"
+      },
+      {
+        "itemId": 272999,
+        "name": "Barbaric Crossbow",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=272999"
       },
       {
         "itemId": 252774,
@@ -18005,6 +18884,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3040"
       },
       {
+        "itemId": 3305,
+        "name": "Brackwater Leggings",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3305"
+      },
+      {
         "itemId": 4566,
         "name": "Sturdy Quarterstaff",
         "bossOrder": 2,
@@ -18129,6 +19015,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 2,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1794"
+      },
+      {
+        "itemId": 2780,
+        "name": "Light Hunting Bow",
+        "bossOrder": 2,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2780"
       },
       {
         "itemId": 14150,
@@ -18453,6 +19346,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=248704"
       },
       {
+        "itemId": 1210,
+        "name": "Shadowgem",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1210"
+      },
+      {
         "itemId": 3302,
         "name": "Brackwater Boots",
         "bossOrder": 4,
@@ -18465,6 +19365,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 4,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4577"
+      },
+      {
+        "itemId": 14365,
+        "name": "Mystic's Cape",
+        "bossOrder": 4,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14365"
       },
       {
         "itemId": 15491,
@@ -18565,6 +19472,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=2075"
       },
       {
+        "itemId": 2553,
+        "name": "Recipe: Elixir of Minor Agility",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2553"
+      },
+      {
         "itemId": 3036,
         "name": "Heavy Shortbow",
         "bossOrder": 0,
@@ -18579,11 +19493,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3288"
       },
       {
-        "itemId": 3305,
-        "name": "Brackwater Leggings",
+        "itemId": 3292,
+        "name": "Ancestral Tunic",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3305"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3292"
       },
       {
         "itemId": 3314,
@@ -18698,18 +19612,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14364"
       },
       {
-        "itemId": 14365,
-        "name": "Mystic's Cape",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=14365"
-      },
-      {
         "itemId": 14559,
         "name": "Prospector's Sash",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=14559"
+      },
+      {
+        "itemId": 14563,
+        "name": "Prospector's Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=14563"
       },
       {
         "itemId": 14722,
@@ -18731,6 +19645,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15016"
+      },
+      {
+        "itemId": 15210,
+        "name": "Raider Shortsword",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15210"
       },
       {
         "itemId": 15268,
@@ -18796,6 +19717,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=15945"
       },
       {
+        "itemId": 15969,
+        "name": "Beaded Orb",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15969"
+      },
+      {
         "itemId": 248703,
         "name": "Waylaid Crate: Apprentice Ingots",
         "bossOrder": 0,
@@ -18808,6 +19736,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=2455"
+      },
+      {
+        "itemId": 2657,
+        "name": "Red Leather Bag",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2657"
       },
       {
         "itemId": 3013,
@@ -18824,11 +19759,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3286"
       },
       {
+        "itemId": 3290,
+        "name": "Ancestral Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3290"
+      },
+      {
         "itemId": 3303,
         "name": "Brackwater Bracers",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=3303"
+      },
+      {
+        "itemId": 3304,
+        "name": "Brackwater Gauntlets",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=3304"
       },
       {
         "itemId": 3311,
@@ -18880,6 +19829,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=14115"
       },
       {
+        "itemId": 15015,
+        "name": "Lupine Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=15015"
+      },
+      {
         "itemId": 15300,
         "name": "Grizzly Gloves",
         "bossOrder": 0,
@@ -18913,13 +19869,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=211787"
-      },
-      {
-        "itemId": 248682,
-        "name": "Waylaid Crate: Apprentice Herbs",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=248682"
       },
       {
         "itemId": 248683,
@@ -18997,6 +19946,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1516"
+      },
+      {
+        "itemId": 1735,
+        "name": "Worn Mail Pants",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1735"
       },
       {
         "itemId": 2215,
@@ -19414,20 +20370,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=19258"
       },
       {
-        "itemId": 21326,
-        "name": "Defender of the Timbermaw",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=21326"
-      },
-      {
-        "itemId": 268873,
-        "name": "Defender of the Barkskin",
-        "bossOrder": 0,
-        "source": "Client Datamined",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=268873"
-      },
-      {
         "itemId": 277559,
         "name": "Shen'dralar Relic",
         "bossOrder": 0,
@@ -19438,6 +20380,7 @@ window.WOW_FOREVER_INSTANCES_DATA = [
     "quests": [
       7492,
       7494,
+      7488,
       7489,
       7441,
       7482,
@@ -20907,25 +21850,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=6602"
       },
       {
+        "itemId": 6612,
+        "name": "Sage's Boots",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6612"
+      },
+      {
         "itemId": 9817,
         "name": "Fortified Spaulders",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=9817"
-      },
-      {
-        "itemId": 11983,
-        "name": "Chrome Ring",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=11983"
-      },
-      {
-        "itemId": 12008,
-        "name": "Savannah Ring",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=12008"
       },
       {
         "itemId": 3182,
@@ -20989,6 +21925,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1828"
+      },
+      {
+        "itemId": 2221,
+        "name": "Targe Shield",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2221"
       }
     ],
     "quests": [
@@ -21118,6 +22061,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=774"
       },
       {
+        "itemId": 2073,
+        "name": "Dwarven Hatchet",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2073"
+      },
+      {
         "itemId": 2632,
         "name": "Curved Dagger",
         "bossOrder": 1,
@@ -21158,6 +22108,20 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 1,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4567"
+      },
+      {
+        "itemId": 4569,
+        "name": "Staunch Hammer",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=4569"
+      },
+      {
+        "itemId": 6539,
+        "name": "Willow Belt",
+        "bossOrder": 1,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=6539"
       },
       {
         "itemId": 6541,
@@ -21664,18 +22628,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=9777"
       },
       {
-        "itemId": 271215,
-        "name": "Coldspire Staff",
-        "bossOrder": 7,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=271215"
-      },
-      {
         "itemId": 271213,
         "name": "Mirror of Rath'mael",
         "bossOrder": 7,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=271213"
+      },
+      {
+        "itemId": 271215,
+        "name": "Coldspire Staff",
+        "bossOrder": 7,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=271215"
       },
       {
         "itemId": 271214,
@@ -21762,13 +22726,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=3195"
       },
       {
-        "itemId": 3196,
-        "name": "Edged Bastard Sword",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=3196"
-      },
-      {
         "itemId": 3652,
         "name": "Hunting Buckler",
         "bossOrder": 0,
@@ -21795,13 +22752,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=4701"
-      },
-      {
-        "itemId": 6539,
-        "name": "Willow Belt",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=6539"
       },
       {
         "itemId": 6546,
@@ -21839,6 +22789,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=9786"
       },
       {
+        "itemId": 248704,
+        "name": "Waylaid Crate: Apprentice Parts",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=248704"
+      },
+      {
         "itemId": 955,
         "name": "Scroll of Intellect",
         "bossOrder": 0,
@@ -21846,11 +22803,11 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=955"
       },
       {
-        "itemId": 2972,
-        "name": "Spellbinder Gloves",
+        "itemId": 2971,
+        "name": "Spellbinder Boots",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2972"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2971"
       },
       {
         "itemId": 3643,
@@ -21916,18 +22873,18 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=280438"
       },
       {
-        "itemId": 1503,
-        "name": "Warped Leather Boots",
+        "itemId": 1495,
+        "name": "Calico Shoes",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1503"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1495"
       },
       {
-        "itemId": 1510,
-        "name": "Heavy Hammer",
+        "itemId": 1515,
+        "name": "Rough Wooden Staff",
         "bossOrder": 0,
         "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=1510"
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1515"
       },
       {
         "itemId": 1731,
@@ -21937,11 +22894,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1731"
       },
       {
+        "itemId": 1734,
+        "name": "Worn Mail Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1734"
+      },
+      {
         "itemId": 1743,
         "name": "Laced Mail Pants",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1743"
+      },
+      {
+        "itemId": 1766,
+        "name": "Canvas Cloak",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1766"
       },
       {
         "itemId": 1768,
@@ -21951,11 +22922,25 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "wowheadUrl": "https://www.wowhead.com/forever/item=1768"
       },
       {
+        "itemId": 1793,
+        "name": "Patched Leather Shoulderpads",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1793"
+      },
+      {
         "itemId": 1812,
         "name": "Short-handled Battle Axe",
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=1812"
+      },
+      {
+        "itemId": 1813,
+        "name": "Chipped Quarterstaff",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=1813"
       },
       {
         "itemId": 2216,
@@ -21970,13 +22955,6 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=2764"
-      },
-      {
-        "itemId": 2780,
-        "name": "Light Hunting Bow",
-        "bossOrder": 0,
-        "source": "Confirmed Drop",
-        "wowheadUrl": "https://www.wowhead.com/forever/item=2780"
       }
     ],
     "quests": [
@@ -22270,6 +23248,13 @@ window.WOW_FOREVER_INSTANCES_DATA = [
         "bossOrder": 0,
         "source": "Confirmed Drop",
         "wowheadUrl": "https://www.wowhead.com/forever/item=15933"
+      },
+      {
+        "itemId": 2972,
+        "name": "Spellbinder Gloves",
+        "bossOrder": 0,
+        "source": "Confirmed Drop",
+        "wowheadUrl": "https://www.wowhead.com/forever/item=2972"
       },
       {
         "itemId": 2979,

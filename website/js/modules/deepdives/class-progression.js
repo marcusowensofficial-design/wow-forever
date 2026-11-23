@@ -39,7 +39,7 @@
     if (!data || !data.levels || data.levels.length === 0) {
       return `
         <div class="progression-empty-state">
-          <p>⚠️ No spellbook data available for this class in current Beta Build.</p>
+          <p>⚠️ No spellbook data available for this class in the current build.</p>
         </div>
       `;
     }
@@ -604,7 +604,7 @@
       title: 'Level 1 to 60 Wand Upgrade Path',
       icon: '🪄',
       desc: 'Dedicated wand progression for spellcasters: optimal wand spikes every bracket, fast shoot speeds, quest rewards, and high-DPS crafting.',
-      emptyMsg: '⚠️ No wand progression recorded for this class in current Beta Build.',
+      emptyMsg: '⚠️ No wand progression recorded for this class in the current build.',
       filterId: 'wand-faction-toggle',
       sourceFilterId: 'wand-source-toggle',
       getFaction: () => activeWandFaction,
@@ -622,13 +622,13 @@
     let title = 'Level 1 to 60 Caster Off-Hand Progression';
     let icon = '🔮';
     let desc = 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.';
-    let emptyMsg = '⚠️ No off-hand progression recorded for this class in current Beta Build.';
+    let emptyMsg = '⚠️ No off-hand progression recorded for this class in the current build.';
 
     if (isShieldClass) {
       title = 'Level 1 to 60 Shield Upgrade Path';
       icon = '🛡️';
       desc = 'Best-in-slot shields for leveling and tanking: optimal armor, block value, stamina, and key dungeon boss drops.';
-      emptyMsg = '⚠️ No shield progression recorded for this class in current Beta Build.';
+      emptyMsg = '⚠️ No shield progression recorded for this class in the current build.';
     } else if (isDruid) {
       title = 'Level 1 to 60 Off-Hand & Idol Progression';
       icon = '🔮';

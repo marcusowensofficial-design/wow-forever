@@ -175,7 +175,7 @@ function initClassRacePlanner() {
             <div style="display: flex; align-items: center; gap: 0.6rem;">
               <span style="font-size: 1.3rem;">${cls.icon}</span>
               <strong style="color: ${cls.color}; font-size: 1.02rem;">Sodapoppin BlizzCon Hands-On Deep Dive Available!</strong>
-              <span class="deepdive-badge badge-verified" style="font-size: 0.7rem;">Verified Beta Intel</span>
+              <span class="deepdive-badge badge-verified" style="font-size: 0.7rem;">Verified Intel</span>
             </div>
             <p style="font-size: 0.86rem; color: #cbd5e1; margin: 0.3rem 0 0; line-height: 1.4;">
               ${escapeHtml(deepDiveData.summary || `Complete forensic breakdown on ${cls.name} talent trees, ability updates, and racials testing.`)}

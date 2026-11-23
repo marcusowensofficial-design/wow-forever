@@ -12,7 +12,7 @@
     "test:addons": "node scripts/validate-addons.mjs",
     "package:addons": "node scripts/package-addons.js",
     "lint": "npx eslint js/ scripts/",
-    "build:data": "node scripts/compile-scraped-data.js",
+    "build:data": "node scripts/export-atlas-json.mjs",
     "scrape": "node scripts/scrape-foreverchanges.js",
     "rebuild:weapons": "node scripts/rebuild-weapon-paths.mjs && node scripts/validate.js",
     "pipeline:progression": "node scripts/cache-forever-items.mjs && node scripts/rebuild-weapon-paths.mjs && node scripts/validate.js"

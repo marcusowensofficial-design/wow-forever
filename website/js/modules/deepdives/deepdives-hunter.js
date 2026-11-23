@@ -95,7 +95,7 @@
               <th>Zone / Subzone</th>
               <th>Faction</th>
               <th>Teaches</th>
-              <th>Notes / Beta Tag</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -107,7 +107,7 @@
               </tr>
             ` : filtered.map(b => {
               const icon = familyIconMap.get(b.family.toLowerCase()) || 'https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_cat.jpg';
-              const zoneText = b.zone || 'WoW Forever Beta Spawn';
+              const zoneText = b.zone || 'WoW Forever spawn';
               return `
                 <tr>
                   <td>
@@ -540,7 +540,7 @@
                   <!-- Forever Version (Below) -->
                   <div class="diff-version forever">
                     <div class="diff-version-label">
-                      <span>✦ Forever Beta</span>
+                      <span>✦ Forever</span>
                     </div>
                     <p class="diff-version-text">${escapeHtml(ca.forever)}</p>
                   </div>
@@ -596,7 +596,7 @@
                 Training still works as in Classic Era through a 3-step loop. Loyalty gates progression and swing speeds remain non-normalized.
               </p>
             </div>
-            <span class="deepdive-badge badge-demo"><span>🎙️</span> Beta Forensics Guide</span>
+            <span class="deepdive-badge badge-demo"><span>🎙️</span> Pet Training Guide</span>
           </div>
 
           <div class="pet-steps-grid">
@@ -621,12 +621,12 @@
             </div>
 
             <div class="pet-beta-bug-alert">
-              ${escapeHtml(trainingGuide.betaBugAlert || "⚠️ Beta Bug Notice: Pets tamed from Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. This is a recognized beta bug, not intended design.")}
+              ${escapeHtml(trainingGuide.betaBugAlert || "⚠️ Known issue (first reported in beta): Pets tamed from Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. This is a recognized beta bug, not intended design.")}
             </div>
           </div>
 
           <div class="pet-speed-box">
-            <strong style="color: #38bdf8; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">⚡ Attack Speed & Damage Mechanics in Beta:</strong>
+            <strong style="color: #38bdf8; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">⚡ Attack Speed & Damage Mechanics:</strong>
             <p style="font-size: 0.79rem; color: #bae6fd; margin: 0; line-height: 1.45;">
               ${escapeHtml(trainingGuide.attackSpeedInfo || "All pets swing at 2.0s base, modified by innate Faster Attack I–VII passives (Broken Tooth 1.0s, Savannah Cub 1.2s, Ravage 1.3s, Mystmane 1.6s). Because individual hits are not penalized for fast swings in beta, faster-swinging pets deal higher sustained DPS.")}
             </p>
@@ -845,7 +845,7 @@
                                        fam.id === 'carrion-bird' ? 'vulture vultures carrion bird' :
                                        fam.id === 'wind-serpent' ? 'wind serpent windserpent' : fam.name;
                     const searchStr = `${b.name} ${b.zone || ''} ${b.subzone || ''} ${b.teaches || ''} ${fam.name} ${famAliases}`.toLowerCase();
-                    const zoneDisplay = b.zone ? b.zone : 'WoW Forever Beta Spawn';
+                    const zoneDisplay = b.zone ? b.zone : 'WoW Forever spawn';
                     return `
                       <div class="tame-beast-row" 
                         data-min-level="${b.minLevel || 1}" 

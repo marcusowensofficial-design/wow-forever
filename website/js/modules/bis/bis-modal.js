@@ -588,9 +588,9 @@ function renderFloatingTooltip(card, e, tooltip) {
   `;
 
   if (fullItem && fullItem.ilvl) {
-    html += `<div class="wow-tip-ilvl">Item Level ${fullItem.ilvl} • Level 30 Beta</div>`;
+    html += `<div class="wow-tip-ilvl">Item Level ${fullItem.ilvl} • Level 30 Leveling List</div>`;
   } else {
-    html += `<div class="wow-tip-ilvl">Item Level 35 • Level 30 Beta</div>`;
+    html += `<div class="wow-tip-ilvl">Item Level 35 • Level 30 Leveling List</div>`;
   }
 
   if (fullItem && fullItem.lines && fullItem.lines.length > 0) {

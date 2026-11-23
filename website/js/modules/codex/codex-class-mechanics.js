@@ -277,7 +277,7 @@
                 </td>
                 <td style="padding: 0.75rem;">
                   <span style="color: ${p.level <= 30 ? '#38bdf8' : '#94a3b8'}; font-weight: 700;">
-                    Lvl ${p.level} ${p.level <= 30 ? '✓ Beta' : ''}
+                    Lvl ${p.level}
                   </span>
                 </td>
                 <td style="padding: 0.75rem; color: #cbd5e1;">${escapeHtml(p.skill)}</td>
