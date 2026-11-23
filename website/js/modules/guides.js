@@ -8,7 +8,7 @@ let activeGuideCategory = 'all';
 let activeGuideId = 'guide-sleeping-bag';
 let guideSearchQuery = '';
 let guideViewLayout = 'reader'; // 'reader' | 'cards'
-let activeDungeonSubfilter = 'all'; // 'all' | 'custom' | 'alliance' | 'horde' | 'lvl13-20' | 'lvl21-34'
+let activeDungeonSubfilter = 'all'; // 'all' | 'custom' | 'alliance' | 'horde' | 'lvl13-20' | 'lvl21-34' | 'lvl35-49' | 'lvl50-60'
 
 const GUIDE_CATEGORY_MAP = {
   all: null,
@@ -75,6 +75,9 @@ function getFilteredGuides() {
       if (activeDungeonSubfilter === 'alliance' && meta.faction !== 'Alliance' && meta.faction !== 'Both') return false;
       if (activeDungeonSubfilter === 'horde' && meta.faction !== 'Horde' && meta.faction !== 'Both') return false;
       if (activeDungeonSubfilter === 'lvl13-20' && meta.levelMin > 20) return false;
+      if (activeDungeonSubfilter === 'lvl21-34' && meta.levelMin > 34) return false;
+      if (activeDungeonSubfilter === 'lvl35-49' && (meta.levelMax < 35 || meta.levelMin > 49)) return false;
+      if (activeDungeonSubfilter === 'lvl50-60' && meta.levelMax < 50) return false;
       if (activeDungeonSubfilter === 'lvl21-34' && meta.levelMax < 21) return false;
     }
 
@@ -109,7 +112,9 @@ function renderDungeonSubfilters() {
     { id: 'alliance', label: 'Alliance Path', icon: '🦁' },
     { id: 'horde', label: 'Horde Path', icon: '🐺' },
     { id: 'lvl13-20', label: 'Levels 13–20', icon: '⚔️' },
-    { id: 'lvl21-34', label: 'Levels 21–34', icon: '🛡️' }
+    { id: 'lvl21-34', label: 'Levels 21–34', icon: '🛡️' },
+    { id: 'lvl35-49', label: 'Levels 35–49', icon: '🏹' },
+    { id: 'lvl50-60', label: 'Levels 50–60', icon: '👑' }
   ];
 
   container.innerHTML = subfilters.map(f => `

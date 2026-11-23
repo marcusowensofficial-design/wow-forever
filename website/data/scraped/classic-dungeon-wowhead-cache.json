@@ -1,0 +1,966 @@
+{
+  "quests": {
+    "17": {
+      "id": 17,
+      "name": "Uldaman Reagent Run",
+      "level": 42,
+      "objective": "Bring 12 Magenta Fungus Caps to Ghak Healtouch in Thelsamar."
+    },
+    "704": {
+      "id": 704,
+      "name": "Agmond's Fate",
+      "level": 38,
+      "objective": "Bring 4 Carved Stone Urns to Prospector Ironband in Loch Modan."
+    },
+    "709": {
+      "id": 709,
+      "name": "Solution to Doom",
+      "level": 40,
+      "objective": "Bring the Tablet of Ryun'eh to Theldurin the Lost."
+    },
+    "721": {
+      "id": 721,
+      "name": "A Sign of Hope",
+      "level": 35,
+      "objective": "Find Hammertoe Grez in Uldaman."
+    },
+    "722": {
+      "id": 722,
+      "name": "Amulet of Secrets",
+      "level": 40,
+      "objective": "Find Hammertoe's Amulet and return it to him in Uldaman."
+    },
+    "771": {
+      "id": 771,
+      "name": "Rite of Vision",
+      "level": null,
+      "objective": "Collect 2 Well Stones and 2 Ambercorn and bring them back to Zarlman Two-Moons in Bloodhoof Village."
+    },
+    "1048": {
+      "id": 1048,
+      "name": "Into The Scarlet Monastery",
+      "level": 42,
+      "objective": "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity."
+    },
+    "1049": {
+      "id": 1049,
+      "name": "Compendium of the Fallen",
+      "level": 38,
+      "objective": "Retrieve the Compendium of the Fallen from the Monastery in Tirisfal Glades and return to Sage Truthseeker in Thunder Bluff."
+    },
+    "1050": {
+      "id": 1050,
+      "name": "Mythology of the Titans",
+      "level": 38,
+      "objective": "Retrieve Mythology of the Titans from the Monastery and bring it to Librarian Mae Paledust in Ironforge."
+    },
+    "1051": {
+      "id": 1051,
+      "name": "Vorrel's Revenge",
+      "level": 33,
+      "objective": "Return Vorrel Sengutz's wedding ring to Monika Sengutz in Tarren Mill."
+    },
+    "1053": {
+      "id": 1053,
+      "name": "In the Name of the Light",
+      "level": 40,
+      "objective": "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Raleigh the Devout in Southshore."
+    },
+    "1101": {
+      "id": 1101,
+      "name": "The Crone of the Kraul",
+      "level": 34,
+      "objective": "Bring Razorflank's Medallion to Falfindel Waywarder in Thalanaar."
+    },
+    "1102": {
+      "id": 1102,
+      "name": "A Vengeful Fate",
+      "level": 34,
+      "objective": "Bring Razorflank's Heart to Auld Stonespire in Thunder Bluff."
+    },
+    "1109": {
+      "id": 1109,
+      "name": "Going, Going, Guano!",
+      "level": 33,
+      "objective": "Bring 1 pile of Kraul Guano to Master Apothecary Faranell in the Undercity."
+    },
+    "1113": {
+      "id": 1113,
+      "name": "Hearts of Zeal",
+      "level": 33,
+      "objective": "Master Apothecary Faranell in the Undercity wants 20 Hearts of Zeal."
+    },
+    "1139": {
+      "id": 1139,
+      "name": "The Lost Tablets of Will",
+      "level": 45,
+      "objective": "Find the Tablet of Will, and return them to Advisor Belgrum in Ironforge."
+    },
+    "1142": {
+      "id": 1142,
+      "name": "Mortality Wanes",
+      "level": 30,
+      "objective": "Find and return Treshala's Pendant to Treshala Fallowbrook in Darnassus."
+    },
+    "1144": {
+      "id": 1144,
+      "name": "Willix the Importer",
+      "level": 30,
+      "objective": "Escort Willix the Importer out of Razorfen Kraul."
+    },
+    "1160": {
+      "id": 1160,
+      "name": "Test of Lore",
+      "level": 36,
+      "objective": "Find The Beginnings of the Undead Threat, and return it to Parqual Fintallas in Undercity."
+    },
+    "1221": {
+      "id": 1221,
+      "name": "Blueleaf Tubers",
+      "level": 26,
+      "objective": "Grab a Crate with Holes. Grab a Snufflenose Command Stick. Grab and read the Snufflenose Owner's Manual. In Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers. Bring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate "
+    },
+    "1360": {
+      "id": 1360,
+      "name": "Reclaimed Treasures",
+      "level": 43,
+      "objective": "Get Krom Stoutarm's treasured possession from his chest in the North Common Hall of Uldaman, and bring it to him in Ironforge."
+    },
+    "1445": {
+      "id": 1445,
+      "name": "The Temple of Atal'Hakkar",
+      "level": 50,
+      "objective": "Collect 20 Fetishes of Hakkar and bring them to Fel'Zerul in Stonard."
+    },
+    "1446": {
+      "id": 1446,
+      "name": "Jammal'an the Prophet",
+      "level": 53,
+      "objective": "The Atal'ai Exile in The Hinterlands wants the Head of Jammal'an."
+    },
+    "1475": {
+      "id": 1475,
+      "name": "Into The Temple of Atal'Hakkar",
+      "level": 50,
+      "objective": "Gather 10 Atal'ai Tablets for Brohann Caskbelly in Stormwind."
+    },
+    "2198": {
+      "id": 2198,
+      "name": "The Shattered Necklace",
+      "level": 41,
+      "objective": "Search for the original creator of the shattered necklace to learn of its potential value."
+    },
+    "2199": {
+      "id": 2199,
+      "name": "Lore for a Price",
+      "level": 41,
+      "objective": "Bring five silver bars to Talvash del Kissel in Ironforge."
+    },
+    "2200": {
+      "id": 2200,
+      "name": "Back to Uldaman",
+      "level": 42,
+      "objective": "Search for clues as to the current disposition of Talvash's necklace within Uldaman. The slain paladin he mentioned was the person who has it last."
+    },
+    "2201": {
+      "id": 2201,
+      "name": "Find the Gems",
+      "level": 43,
+      "objective": "Find the ruby, sapphire, and topaz that are scattered throughout Uldaman. Once acquired, contact Talvash del Kissel remotely by using the Phial of Scrying he previously gave you. From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz has been hidden in an urn in one of t"
+    },
+    "2202": {
+      "id": 2202,
+      "name": "Uldaman Reagent Run",
+      "level": 42,
+      "objective": "Bring 12 Magenta Fungus Caps to Jarkal Mossmeld in Kargath."
+    },
+    "2204": {
+      "id": 2204,
+      "name": "Restoring the Necklace",
+      "level": 44,
+      "objective": "Obtain a power source from the most powerful construct you can find in Uldaman, and deliver it to Talvash del Kissel in Ironforge."
+    },
+    "2240": {
+      "id": 2240,
+      "name": "The Hidden Chamber",
+      "level": 40,
+      "objective": "Read Baelog's Journal, explore the hidden chamber, then report to Prospector Stormpike."
+    },
+    "2278": {
+      "id": 2278,
+      "name": "The Platinum Discs",
+      "level": 47,
+      "objective": "Speak with stone watcher and learn what ancient lore it keeps. Once you have learned what lore it has to offer, activate the Discs of Norgannon."
+    },
+    "2279": {
+      "id": 2279,
+      "name": "The Platinum Discs",
+      "level": null,
+      "objective": "Take the miniature version of the Discs of Norgannon to the Explorers' League in Ironforge."
+    },
+    "2280": {
+      "id": 2280,
+      "name": "The Platinum Discs",
+      "level": 47,
+      "objective": "Take the miniature version of the Discs of Norgannon to the one of the sages in Thunder Bluff."
+    },
+    "2283": {
+      "id": 2283,
+      "name": "Necklace Recovery",
+      "level": 41,
+      "objective": "Look for a valuable necklace within the Uldaman dig site and bring it back to Dran Droffers in Orgrimmar. The necklace may be damaged."
+    },
+    "2284": {
+      "id": 2284,
+      "name": "Necklace Recovery, Take 2",
+      "level": 41,
+      "objective": "Find a clue as to the gems' whereabouts in the depths of Uldaman."
+    },
+    "2339": {
+      "id": 2339,
+      "name": "Find the Gems and Power Source",
+      "level": 44,
+      "objective": "Recover all three gems and a power source for the necklace from Uldaman, and then bring them to Jarkal Mossmeld in Kargath. Jarkal believes a power source might be found on the strongest construct present in Uldaman. From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz"
+    },
+    "2342": {
+      "id": 2342,
+      "name": "Reclaimed Treasures",
+      "level": 43,
+      "objective": "Get Patrick Garrett's family treasure from their family chest in the South Common Hall of Uldaman, and bring it to him in the Undercity."
+    },
+    "2361": {
+      "id": 2361,
+      "name": "Restoring the Necklace",
+      "level": 44,
+      "objective": "I gladly give you this necklace, mighty &lt;class&gt;. You have done me an invaluable service, and for that I thank you. Wear it with pride, and make sure you mention loudly and repeatedly who made it for you! Also, if you could toss in the fact that it really isn't cursed, that would be great."
+    },
+    "2398": {
+      "id": 2398,
+      "name": "The Lost Dwarves",
+      "level": 40,
+      "objective": "Find Baelog in Uldaman."
+    },
+    "2418": {
+      "id": 2418,
+      "name": "Power Stones",
+      "level": 36,
+      "objective": "Bring 8 Dentrium Power Stones and 8 An'Alleum Power Stones to Rigglefuzz in the Badlands."
+    },
+    "2768": {
+      "id": 2768,
+      "name": "Divino-matic Rod",
+      "level": 47,
+      "objective": "Bring the Divino-matic Rod to Chief Engineer Bilgewhizzle in Gadgetzan."
+    },
+    "2770": {
+      "id": 2770,
+      "name": "Gahz'rilla",
+      "level": 50,
+      "objective": "Bring Gahz'rilla's Electrified Scale to Wizzle Brassbolts in the Shimmering Flats."
+    },
+    "2841": {
+      "id": 2841,
+      "name": "Rig Wars",
+      "level": 35,
+      "objective": "Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar."
+    },
+    "2842": {
+      "id": 2842,
+      "name": "Chief Engineer Scooty",
+      "level": null,
+      "objective": "Speak with Scooty in Booty Bay."
+    },
+    "2843": {
+      "id": 2843,
+      "name": "Gnomer-gooooone!",
+      "level": null,
+      "objective": "Wait for Scooty to calibrate the Goblin Transponder."
+    },
+    "2846": {
+      "id": 2846,
+      "name": "Tiara of the Deep",
+      "level": 46,
+      "objective": "Bring the Tiara of the Deep to Tabetha in Dustwallow Marsh."
+    },
+    "2861": {
+      "id": 2861,
+      "name": "Tabetha's Task",
+      "level": 46,
+      "objective": "Speak with Tabetha in Dustwallow Marsh."
+    },
+    "2864": {
+      "id": 2864,
+      "name": "Tran'rek",
+      "level": 45,
+      "objective": "Speak with Tran'rek in Gadgetzan."
+    },
+    "2865": {
+      "id": 2865,
+      "name": "Scarab Shells",
+      "level": 45,
+      "objective": "Bring 5 Uncracked Scarab Shells to Tran'rek in Gadgetzan."
+    },
+    "2904": {
+      "id": 2904,
+      "name": "A Fine Mess",
+      "level": 30,
+      "objective": "Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay."
+    },
+    "2922": {
+      "id": 2922,
+      "name": "Save Techbot's Brain!",
+      "level": 26,
+      "objective": "Bring Techbot's Memory Core to Tinkmaster Overspark in Ironforge."
+    },
+    "2923": {
+      "id": 2923,
+      "name": "Tinkmaster Overspark",
+      "level": 26,
+      "objective": "Speak with Tinkmaster Overspark in Ironforge."
+    },
+    "2924": {
+      "id": 2924,
+      "name": "Essential Artificials",
+      "level": 30,
+      "objective": "Bring 12 Essential Artificials to Klockmort Spannerspan in Ironforge."
+    },
+    "2925": {
+      "id": 2925,
+      "name": "Klockmort's Essentials",
+      "level": 30,
+      "objective": "Speak with Klockmort Spannerspan in Ironforge."
+    },
+    "2926": {
+      "id": 2926,
+      "name": "Gnogaine",
+      "level": 27,
+      "objective": "Use the Empty Leaden Collection Phial on Irradiated Invaders or Irradiated Pillagers to collect radioactive fallout. Once it is full, take it back to Ozzie Togglevolt in Kharanos."
+    },
+    "2927": {
+      "id": 2927,
+      "name": "The Day After",
+      "level": 27,
+      "objective": "Speak with Ozzie Togglevolt in Kharanos."
+    },
+    "2928": {
+      "id": 2928,
+      "name": "Gyrodrillmatic Excavationators",
+      "level": 30,
+      "objective": "Bring twenty-four Robo-mechanical Guts to Shoni in Stormwind."
+    },
+    "2929": {
+      "id": 2929,
+      "name": "The Grand Betrayal",
+      "level": 35,
+      "objective": "Venture to Gnomeregan and kill Mekgineer Thermaplugg. Return to High Tinker Mekkatorque when the task is complete."
+    },
+    "2930": {
+      "id": 2930,
+      "name": "Data Rescue",
+      "level": 30,
+      "objective": "Bring a Prismatic Punch Card to Master Mechanic Castpipe in Ironforge."
+    },
+    "2931": {
+      "id": 2931,
+      "name": "Castpipe's Task",
+      "level": 28,
+      "objective": "Speak with Master Mechanic Castpipe in Ironforge."
+    },
+    "2936": {
+      "id": 2936,
+      "name": "The Spider God",
+      "level": 45,
+      "objective": "Read from the Tablet of Theka to learn the name of the Witherbark spider god, then return to Master Gadrin."
+    },
+    "2945": {
+      "id": 2945,
+      "name": "Grime-Encrusted Ring",
+      "level": 34,
+      "objective": "Figure out a way to remove the grime from the Grime-Encrusted Ring."
+    },
+    "2947": {
+      "id": 2947,
+      "name": "Return of the Ring",
+      "level": 34,
+      "objective": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band."
+    },
+    "2949": {
+      "id": 2949,
+      "name": "Return of the Ring",
+      "level": 34,
+      "objective": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band."
+    },
+    "2951": {
+      "id": 2951,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "Insert a Grime-Encrusted Item into the Sparklematic 5200, and be sure to have three silver coins to start the machine."
+    },
+    "2952": {
+      "id": 2952,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "As quickly as it started, the Sparklematic 5200 comes to an abrupt halt. A simple \"ding\" is heard from the machine, and the mouth of the machine spirals upward. Inside the Sparklematic 5200 is a small box wrapped in a little bow. The machine would appear to wrap an object up after eliminating its grime-encrusted status"
+    },
+    "2953": {
+      "id": 2953,
+      "name": "More Sparklematic Action",
+      "level": 30,
+      "objective": "The Sparklematic 5200 is empty, awaiting a grime-encrusted object to clean and three silver coins to start!"
+    },
+    "2962": {
+      "id": 2962,
+      "name": "The Only Cure is More Green Glow",
+      "level": 30,
+      "objective": "Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly. Ozzie will also require your Heavy Leaden Collection Phial when the task is complete."
+    },
+    "2991": {
+      "id": 2991,
+      "name": "Nekrum's Medallion",
+      "level": 47,
+      "objective": "Bring Nekrum's Medallion to Thadius Grimshade in the Blasted Lands."
+    },
+    "3042": {
+      "id": 3042,
+      "name": "Troll Temper",
+      "level": 45,
+      "objective": "Bring 20 Vials of Troll Temper to Trenton Lighthammer in Gadgetzan."
+    },
+    "3341": {
+      "id": 3341,
+      "name": "Bring the End",
+      "level": 42,
+      "objective": "Andrew Brownell wants you to kill Amnennar the Coldbringer and return his skull."
+    },
+    "3373": {
+      "id": 3373,
+      "name": "The Essence of Eranikus",
+      "level": 55,
+      "objective": "Place the Essence of Eranikus in the Essence Font located in this lair in the Sunken Temple."
+    },
+    "3375": {
+      "id": 3375,
+      "name": "Replacement Phial",
+      "level": null,
+      "objective": "Bring a Mana Potion, Coal, and Sweet Nectar to Talvash del Kissel in Ironforge to get a replacement for Talvash's Phial of Scrying."
+    },
+    "3380": {
+      "id": 3380,
+      "name": "The Sunken Temple",
+      "level": 51,
+      "objective": "Find Marvon Rivetseeker in Tanaris."
+    },
+    "3446": {
+      "id": 3446,
+      "name": "Into the Depths",
+      "level": 51,
+      "objective": "Find the Altar of Hakkar in the Sunken Temple in Swamp of Sorrows."
+    },
+    "3447": {
+      "id": 3447,
+      "name": "Secret of the Circle",
+      "level": 51,
+      "objective": "Travel into the Sunken Temple and discover the secret hidden in the circle of statues."
+    },
+    "3523": {
+      "id": 3523,
+      "name": "Scourge of the Downs",
+      "level": 37,
+      "objective": "If you agree to aid Belnistrasz, speak with him again and hand the Oathstone he gave you back to him."
+    },
+    "3525": {
+      "id": 3525,
+      "name": "Extinguishing the Idol",
+      "level": 37,
+      "objective": "Escort Belnistrasz to the Quilboar's idol in Razorfen Downs. Protect Belnistrasz while he performs the ritual to shut down the idol."
+    },
+    "3527": {
+      "id": 3527,
+      "name": "The Prophecy of Mosh'aru",
+      "level": 47,
+      "objective": "Bring the First and Second Mosh'aru Tablets to Yeh'kinya in Tanaris."
+    },
+    "3528": {
+      "id": 3528,
+      "name": "The God Hakkar",
+      "level": 53,
+      "objective": "Bring the Filled Egg of Hakkar to Yeh'kinya in Tanaris."
+    },
+    "3636": {
+      "id": 3636,
+      "name": "Bring the Light",
+      "level": 42,
+      "objective": "Archbishop Bendictus wants you to slay Amnennar the Coldbringer in Razorfen Downs."
+    },
+    "3801": {
+      "id": 3801,
+      "name": "Dark Iron Legacy",
+      "level": 52,
+      "objective": "Speak with Franclorn Forgewright if you are interested in obtaining a key to the city major."
+    },
+    "3802": {
+      "id": 3802,
+      "name": "Dark Iron Legacy",
+      "level": 52,
+      "objective": "Slay Fineous Darkvire and recover the great hammer, Ironfel. Take Ironfel to the Shrine of Thaurissan and place it on the statue of Franclorn Forgewright."
+    },
+    "3907": {
+      "id": 3907,
+      "name": "Disharmony of Fire",
+      "level": 56,
+      "objective": "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart."
+    },
+    "3981": {
+      "id": 3981,
+      "name": "Commander Gor'shak",
+      "level": 52,
+      "objective": "Find Commander Gor'shak in Blackrock Depths. You recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort."
+    },
+    "4001": {
+      "id": 4001,
+      "name": "What Is Going On?",
+      "level": 54,
+      "objective": "Speak with Kharan Mighthammer and gather information about Princess Moira Bronzebeard's kidnapping. Take that information to Thrall in Orgrimmar. You recall Gor'shak mentioning that Kharan is being held in a cell nearby."
+    },
+    "4024": {
+      "id": 4024,
+      "name": "A Taste of Flame",
+      "level": 58,
+      "objective": "Travel to Blackrock Depths and slay Bael'Gar. You only know that the giant resides inside Blackrock Depths. Remember to use the Altered Black Dragonflight Molt on Bael'Gar's remains to capture the Fiery Essence. Return the Encased Fiery Essence to Cyrus Therepentous."
+    },
+    "4063": {
+      "id": 4063,
+      "name": "The Rise of the Machines",
+      "level": 58,
+      "objective": "Find and slay Golem Lord Argelmach. Return his head to Lotwil. You will also need to collect 10 Intact Elemental Cores from the Ragereaver Golems and Warbringer Constructs protecting Argelmach. You know this because you are psychic."
+    },
+    "4081": {
+      "id": 4081,
+      "name": "KILL ON SIGHT: Dark Iron Dwarves",
+      "level": 52,
+      "objective": "Venture to Blackrock Depths and destroy the vile aggressors! Warlord Goretooth wants you to kill 15 Anvilrage Guardsmen, 10 Anvilrage Wardens and 5 Anvilrage Footmen. Return to him once your task is complete."
+    },
+    "4082": {
+      "id": 4082,
+      "name": "KILL ON SIGHT: High Ranking Dark Iron Officials",
+      "level": 54,
+      "objective": "Venture to Blackrock Depths and destroy the vile aggressors! Warlord Goretooth wants you to kill 10 Anvilrage Medics, 10 Anvilrage Soldiers and 10 Anvilrage Officers. Return to him once your task is complete."
+    },
+    "4122": {
+      "id": 4122,
+      "name": "Grark Lorkrub",
+      "level": 58,
+      "objective": "Travel to the Burning Steppes and find Grark Lorkrub. You recall Lexlort mentioning that he was last seen in a massive Blackrock fortress. When you find Grark Lorkrub, use the Thorium Shackles to bind him and then lead him back through Blackrock Mountain to the Searing Gorge. Lexlort will have his men waiting on the ot"
+    },
+    "4123": {
+      "id": 4123,
+      "name": "The Heart of the Mountain",
+      "level": 55,
+      "objective": "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes."
+    },
+    "4126": {
+      "id": 4126,
+      "name": "Hurley Blackbreath",
+      "level": 55,
+      "objective": "Bring the Lost Thunderbrew Recipe to Ragnar Thunderbrew in Kharanos."
+    },
+    "4128": {
+      "id": 4128,
+      "name": "Ragnar Thunderbrew",
+      "level": 55,
+      "objective": "Speak with Ragnar Thunderbrew."
+    },
+    "4133": {
+      "id": 4133,
+      "name": "Vivian Lagrave",
+      "level": 55,
+      "objective": "Speak with Shadowmaster Vivian Lagrave in Kargath."
+    },
+    "4134": {
+      "id": 4134,
+      "name": "Lost Thunderbrew Recipe",
+      "level": 55,
+      "objective": "Bring the Lost Thunderbrew Recipe to Vivian Lagrave in Kargath."
+    },
+    "4136": {
+      "id": 4136,
+      "name": "Ribbly Screwspigot",
+      "level": 53,
+      "objective": "Bring Ribbly's Head to Yuka Screwspigot in the Burning Steppes."
+    },
+    "4146": {
+      "id": 4146,
+      "name": "Zapper Fuel",
+      "level": 52,
+      "objective": "Deliver the Unloaded Zapper and 5 samples of Atal'ai Haze to Larion in Marshal's Refuge."
+    },
+    "4201": {
+      "id": 4201,
+      "name": "The Love Potion",
+      "level": 54,
+      "objective": "Bring 4 Gromsblood, 10 Giant Silver Veins and Nagmara's Filled Vial to Mistress Nagmara in Blackrock Depths."
+    },
+    "4241": {
+      "id": 4241,
+      "name": "Marshal Windsor",
+      "level": 54,
+      "objective": "Travel to Blackrock Mountain in the northwest and enter Blackrock Depths. Find out what became of Marshal Windsor. You recall Ragged John talking about Windsor being dragged off to a prison."
+    },
+    "4263": {
+      "id": 4263,
+      "name": "Incendius!",
+      "level": 56,
+      "objective": "Find Lord Incendius in Blackrock Depths and destroy him!"
+    },
+    "4286": {
+      "id": 4286,
+      "name": "The Good Stuff",
+      "level": 56,
+      "objective": "Travel to Blackrock Depths and recover 20 Dark Iron Fanny Packs. Return to Oralius when you have completed this task. You assume that the Dark Iron dwarves inside Blackrock Depths carry these 'fanny pack' contraptions."
+    },
+    "4324": {
+      "id": 4324,
+      "name": "Yuka Screwspigot",
+      "level": 53,
+      "objective": "Speak with Yuka Screwspigot in the Burning Steppes."
+    },
+    "4341": {
+      "id": 4341,
+      "name": "Kharan Mighthammer",
+      "level": 59,
+      "objective": "Travel to Blackrock Depths and find Kharan Mighthammer. The King mentioned that Kharan was being held prisoner there - perhaps you should try looking for a prison."
+    },
+    "4601": {
+      "id": 4601,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "Insert a Grime-Encrusted Item into the Sparklematic 5200, and be sure to have three silver coins to start the machine."
+    },
+    "4602": {
+      "id": 4602,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "Insert a Grime-Encrusted Item into the Sparklematic 5200, and be sure to have three silver coins to start the machine."
+    },
+    "4603": {
+      "id": 4603,
+      "name": "More Sparklematic Action",
+      "level": 30,
+      "objective": "The Sparklematic 5200 is empty, awaiting a grime-encrusted object to clean and three silver coins to start!"
+    },
+    "4604": {
+      "id": 4604,
+      "name": "More Sparklematic Action",
+      "level": 30,
+      "objective": "The Sparklematic 5200 is empty, awaiting a grime-encrusted object to clean and three silver coins to start!"
+    },
+    "4605": {
+      "id": 4605,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "As quickly as it started, the Sparklematic 5200 comes to an abrupt halt. A simple \"ding\" is heard from the machine, and the mouth of the machine spirals upward. Inside the Sparklematic 5200 is a small box wrapped in a little bow. The machine would appear to wrap an object up after eliminating its grime-encrusted status"
+    },
+    "4606": {
+      "id": 4606,
+      "name": "The Sparklematic 5200!",
+      "level": 30,
+      "objective": "As quickly as it started, the Sparklematic 5200 comes to an abrupt halt. A simple \"ding\" is heard from the machine, and the mouth of the machine spirals upward. Inside the Sparklematic 5200 is a small box wrapped in a little bow. The machine would appear to wrap an object up after eliminating its grime-encrusted status"
+    },
+    "4701": {
+      "id": 4701,
+      "name": "Put Her Down",
+      "level": 59,
+      "objective": "Travel to Blackrock Spire and destroy the source of the worg menace. As you left Helendis, he shouted a name: Halycon. It is what the orcs refer to in regards to the worg."
+    },
+    "4724": {
+      "id": 4724,
+      "name": "The Pack Mistress",
+      "level": 59,
+      "objective": "Slay Halycon, pack mistress of the Bloodaxe worg."
+    },
+    "4729": {
+      "id": 4729,
+      "name": "Kibler's Exotic Pets",
+      "level": 59,
+      "objective": "Travel to Blackrock Spire and find Bloodaxe Worg Pups. Use the cage to carry the ferocious little beasts. Bring back a Caged Worg Pup to Kibler."
+    },
+    "4734": {
+      "id": 4734,
+      "name": "Egg Freezing",
+      "level": 60,
+      "objective": "Use the Eggscilloscope Prototype on an egg in the Rookery."
+    },
+    "4742": {
+      "id": 4742,
+      "name": "Seal of Ascension",
+      "level": 60,
+      "objective": "Find the three gemstones of command: The Gemstone of Smolderthorn, Gemstone of Spirestone, and Gemstone of Bloodaxe. Return them, along with the Unadorned Seal of Ascension, to Vaelan. The Generals, as told to you by Vaelan, are: War Master Voone of the Smolderthorn; Highlord Omokk of the Spirestone; and Overlord Wyrmt"
+    },
+    "4764": {
+      "id": 4764,
+      "name": "Doomrigger's Clasp",
+      "level": 60,
+      "objective": "Bring Doomrigger's Clasp to Mayara Brightwing in the Burning Steppes."
+    },
+    "4862": {
+      "id": 4862,
+      "name": "En-Ay-Es-Tee-Why",
+      "level": 59,
+      "objective": "Travel to Blackrock Spire and collect 15 Spire Spider Eggs for Kibler. By the sound of it, these eggs could be found near spiders."
+    },
+    "4866": {
+      "id": 4866,
+      "name": "Mother's Milk",
+      "level": 60,
+      "objective": "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you."
+    },
+    "4867": {
+      "id": 4867,
+      "name": "Urok Doomhowl",
+      "level": 60,
+      "objective": "Read Warosh's Scroll. Bring Warosh's Mojo to Warosh."
+    },
+    "4974": {
+      "id": 4974,
+      "name": "For The Horde!",
+      "level": 60,
+      "objective": "Travel to Blackrock Spire and slay Warchief Rend Blackhand. Take his head and return to Orgrimmar."
+    },
+    "4981": {
+      "id": 4981,
+      "name": "Operative Bijou",
+      "level": 59,
+      "objective": "Travel to Blackrock Spire and find out what happened to Bijou."
+    },
+    "5102": {
+      "id": 5102,
+      "name": "General Drakkisath's Demise",
+      "level": 60,
+      "objective": "Travel to Blackrock Spire and destroy General Drakkisath. Return to Marshal Maxwell when the job is done."
+    },
+    "5212": {
+      "id": 5212,
+      "name": "The Flesh Does Not Lie",
+      "level": 60,
+      "objective": "Recover 20 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample."
+    },
+    "5213": {
+      "id": 5213,
+      "name": "The Active Agent",
+      "level": 60,
+      "objective": "Travel to Stratholme and search the ziggurats. Find and return new Scourge Data to Betina Bigglezink."
+    },
+    "5214": {
+      "id": 5214,
+      "name": "The Great Ezra Grimm",
+      "level": 60,
+      "objective": "Find Ezra Grimm's smoke shop in Stratholme and recover a box of Grimm's Premium Tobacco. Return to Smokey LaRue when the job is done."
+    },
+    "5243": {
+      "id": 5243,
+      "name": "Houses of the Holy",
+      "level": 60,
+      "objective": "Travel to Stratholme, in the north. Search the supply crates that litter the city and recover 5 Stratholme Holy Water. Return to Leonid Barthalomew the Revered when you have collected enough of the blessed fluid."
+    },
+    "5251": {
+      "id": 5251,
+      "name": "The Archivist",
+      "level": 60,
+      "objective": "Travel to Stratholme and find Archivist Galford of the Scarlet Crusade. Destroy him and burn down the Scarlet Archive."
+    },
+    "5282": {
+      "id": 5282,
+      "name": "The Restless Souls",
+      "level": 60,
+      "objective": "Use Egan's Blaster on the ghostly and spectral citizens of Stratholme. When the restless souls break free from their ghostly shells, use the blaster again - freedom will be theirs! Free 15 Restless Souls and return to Egan."
+    },
+    "5341": {
+      "id": 5341,
+      "name": "Barov Family Fortune",
+      "level": 60,
+      "objective": "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Alexi Barov when you have completed this task."
+    },
+    "5343": {
+      "id": 5343,
+      "name": "Barov Family Fortune",
+      "level": 60,
+      "objective": "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Weldon Barov when you have completed this task."
+    },
+    "5518": {
+      "id": 5518,
+      "name": "The Gordok Ogre Suit",
+      "level": 60,
+      "objective": "Bring 4 Bolts of Runecloth, 8 Rugged Leather, 2 Rune Threads, and Ogre Tannin to Knot Thimblejack. He is currently chained inside the Gordok wing of Dire Maul."
+    },
+    "5529": {
+      "id": 5529,
+      "name": "Plagued Hatchlings",
+      "level": 58,
+      "objective": "Kill 20 Plagued Hatchlings, then return to Betina Bigglezink at the Light's Hope Chapel."
+    },
+    "5848": {
+      "id": 5848,
+      "name": "Of Love and Family",
+      "level": 60,
+      "objective": "Travel to Stratholme, in the northern part of the Plaguelands. It is in the Scarlet Bastion that you will find the painting 'Of Love and Family,' hidden behind another painting depicting the twin moons of our world. Return the painting to Tirion Fordring."
+    },
+    "6502": {
+      "id": 6502,
+      "name": "Drakefire Amulet",
+      "level": 60,
+      "objective": "You must retrieve the Blood of the Black Dragon Champion from General Drakkisath. Drakkisath can be found in his throne room behind the Halls of Ascension in Blackrock Spire."
+    },
+    "6521": {
+      "id": 6521,
+      "name": "An Unholy Alliance",
+      "level": 36,
+      "objective": "Bring Ambassador Malcin's Head to Varimathras in the Undercity."
+    },
+    "6522": {
+      "id": 6522,
+      "name": "An Unholy Alliance",
+      "level": 36,
+      "objective": "Take the Small Scroll to Varimathras in the Undercity."
+    },
+    "6626": {
+      "id": 6626,
+      "name": "A Host of Evil",
+      "level": 35,
+      "objective": "Kill 8 Razorfen Battleguard, 8 Razorfen Thornweavers, and 8 Death's Head Cultists and return to Myriam Moonsinger near the entrance to Razorfen Downs."
+    },
+    "7028": {
+      "id": 7028,
+      "name": "Twisted Evils",
+      "level": 47,
+      "objective": "Collect 25 Theradric Crystal Carvings for Willow in Desolace."
+    },
+    "7029": {
+      "id": 7029,
+      "name": "Vyletongue Corruption",
+      "level": 47,
+      "objective": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon. Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge. Heal 8 plants by killing these Noxxious Scion, then return to Vark Battlescar in Shadowprey Village."
+    },
+    "7041": {
+      "id": 7041,
+      "name": "Vyletongue Corruption",
+      "level": 47,
+      "objective": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon. Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge. Heal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point."
+    },
+    "7044": {
+      "id": 7044,
+      "name": "Legends of Maraudon",
+      "level": 49,
+      "objective": "Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond. Find a way to speak with Celebras."
+    },
+    "7046": {
+      "id": 7046,
+      "name": "The Scepter of Celebras",
+      "level": 49,
+      "objective": "Assist Celebras the Redeemed while he creates the Scepter of Celebras. Speak with him when the ritual is complete."
+    },
+    "7064": {
+      "id": 7064,
+      "name": "Corruption of Earth and Seed",
+      "level": 51,
+      "objective": "Slay Princess Theradras and return to Selendra near Shadowprey Village in Desolace."
+    },
+    "7065": {
+      "id": 7065,
+      "name": "Corruption of Earth and Seed",
+      "level": 51,
+      "objective": "Slay Princess Theradras and return to Keeper Marandis at Nijel's Point in Desolace."
+    },
+    "7066": {
+      "id": 7066,
+      "name": "Seed of Life",
+      "level": 51,
+      "objective": "Seek out Remulos in Moonglade and give him the Seed of Life."
+    },
+    "7067": {
+      "id": 7067,
+      "name": "The Pariah's Instructions",
+      "level": 48,
+      "objective": "Read the Pariah's Instructions. Afterwards, obtain the Amulet of Union from Maraudon and return it to the Centaur Pariah in southern Desolace."
+    },
+    "7068": {
+      "id": 7068,
+      "name": "Shadowshard Fragments",
+      "level": 42,
+      "objective": "Collect 10 Shadowshard Fragments from Maraudon and return them to Uthel'nay in Orgrimmar."
+    },
+    "7070": {
+      "id": 7070,
+      "name": "Shadowshard Fragments",
+      "level": 42,
+      "objective": "Collect 10 Shadowshard Fragments from Maraudon and return them to Archmage Tervosh in Theramore on the coast of Dustwallow Marsh."
+    },
+    "7201": {
+      "id": 7201,
+      "name": "The Last Element",
+      "level": 54,
+      "objective": "Travel to Blackrock Depths and recover 10 Essence of the Elements. Your first inclination is to search the golems and golem makers. You remember Vivian Lagrave also muttering something about elementals."
+    },
+    "7441": {
+      "id": 7441,
+      "name": "Pusillin and the Elder Azj'Tordin",
+      "level": 58,
+      "objective": "Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary. Return to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations."
+    },
+    "7461": {
+      "id": 7461,
+      "name": "The Madness Within",
+      "level": 60,
+      "objective": "You must destroy the guardians surrounding the 5 Pylons that power the Prison of Immol'thar. Once the Pylons have powered down, the force field surrounding Immol'thar will have dissipated. Enter the Prison of Immol'thar and eradicate the foul demon that stands at its heart. Finally, confront Prince Tortheldrin in Athen"
+    },
+    "7482": {
+      "id": 7482,
+      "name": "Elven Legends",
+      "level": 60,
+      "objective": "Search Dire Maul for Telmius Dreamseeker. Report back to Scholar Runethorn at Feathermoon with whatever information that you may find."
+    },
+    "7489": {
+      "id": 7489,
+      "name": "Lethtendris's Web",
+      "level": 57,
+      "objective": "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas."
+    },
+    "7492": {
+      "id": 7492,
+      "name": "Camp Mojache",
+      "level": 57,
+      "objective": "Speak with Talo Thornhoof at Camp Mojache in Feralas."
+    },
+    "7494": {
+      "id": 7494,
+      "name": "Feathermoon Stronghold",
+      "level": 57,
+      "objective": "Speak with Latronicus Moonspear at the Feathermoon Stronghold in Feralas."
+    },
+    "96770": {
+      "id": 96770,
+      "name": "The Witch Doctor's Head",
+      "level": 46,
+      "objective": "Slay Witch Doctor Zum'rah and bring Zum'rah's Head to Archmage Lan'dalock in Dalaran."
+    },
+    "96773": {
+      "id": 96773,
+      "name": "The Coldbringer's Eye",
+      "level": 41,
+      "objective": "Recover The Coldbringer's Eye from Razorfen Downs."
+    },
+    "96800": {
+      "id": 96800,
+      "name": "Past Due",
+      "level": 38,
+      "objective": "Retrieve the book The Lost Magic of the Runemasters from the Scarlet Monastery."
+    },
+    "97196": {
+      "id": 97196,
+      "name": "The Coldbringer's Eye",
+      "level": 41,
+      "objective": "Recover The Coldbringer's Eye from Razorfen Downs."
+    }
+  },
+  "items": {},
+  "fetchedAt": "2026-11-23"
+}
